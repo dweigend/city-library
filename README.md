@@ -24,15 +24,28 @@ The implementation target is TypeScript throughout the engine, with APIs suited 
 
 ```mermaid
 flowchart TD
-    Blocks["Choose your building blocks<br/>Terrain · Buildings · Agents · Rules"]
-    Model["Compose your model<br/>Simple TypeScript scripts"]
-    Data["Run the logic<br/>Model state and geometry"]
-    App["Connect your application<br/>Visualization and UI"]
+    Tools["Focused tools<br/>Geometry · Random · Graphs · Fields"]
+    Generators["Independent generators<br/>Terrain · Layouts · Buildings"]
+    Models["Simulation and domain models<br/>Agents · Mobility · Economy · Supply"]
+    Kits["Composable kits<br/>Reusable combinations with replaceable parts"]
+    Scripts["Your TypeScript scripts"]
+    Data["Public model data and geometric results"]
+    Apps["Your application<br/>2D · 3D · UI · Export · Analysis"]
 
-    Blocks --> Model --> Data --> App
+    Tools --> Generators
+    Tools --> Models
+    Generators --> Kits
+    Models --> Kits
+    Scripts --> Generators
+    Scripts --> Models
+    Scripts --> Kits
+    Generators --> Data
+    Models --> Data
+    Kits --> Data
+    Data --> Apps
 ```
 
-Choose only the modules you need and combine them in TypeScript. The engine produces model data; your application decides how to display it. Visualization and grids are optional, and the model can run headlessly.
+This is a composition map, not a mandatory startup sequence. You can stop at a generator result, use the simulation directly, or let a kit assemble several modules. An application can also change explicitly exposed model inputs; rendering does not own the simulation's state or clock.
 
 ## Clear modules, clear public entry points
 
