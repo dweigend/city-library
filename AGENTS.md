@@ -2,7 +2,7 @@
 
 ## Read and preserve
 
-Read [README.md](README.md), [PLAN.md](PLAN.md) and [docs/DESIGN.md](docs/DESIGN.md). Consult [docs/PROVENANCE.md](docs/PROVENANCE.md) when evaluating old code or conflicting vocabulary. Check actual branch/status and preserve concurrent work. Discuss work in German; write code, documentation, filenames, comments and commits in English.
+Read [README.md](README.md), [PLAN.md](PLAN.md) and [docs/DESIGN.md](docs/DESIGN.md). Consult the design document’s source notes when evaluating old code or conflicting vocabulary. Check actual branch/status and preserve concurrent work. Discuss work in German; write code, documentation, filenames, comments and commits in English.
 
 PLAN owns current progress and sequencing. DESIGN owns local design direction. Neither examples nor old source experiments prove implemented exports. Update actual status only with target evidence. Keep the README and approved diagram stable unless the task changes them.
 
@@ -10,7 +10,7 @@ PLAN owns current progress and sequencing. DESIGN owns local design direction. N
 
 Start with the author task, minimal public script, invariants, inputs/results, units, ownership and failures. Compare exact local reuse, external candidates and focused new work. Retain source revisions, adaptations and notices. Do not transfer unrelated UI/tests or import the old checkout at runtime.
 
-Use strict TypeScript and the existing Bun workflow. Prefer ordinary functions, direct typed properties, native collections and explicit composition. Keep dependencies acyclic and public exports deliberate. Add only files and abstractions needed by a real slice; no empty module stubs or all-purpose managers. Work areas coordinate tasks, not mandatory packages or initialization layers.
+Use strict TypeScript and the existing Bun workflow. Prefer ordinary functions, direct typed properties, native collections and explicit composition. Keep dependencies acyclic and public exports deliberate. Add only files and abstractions needed by a real slice; no empty module stubs or all-purpose managers. The six areas are Simulation, Spatial Structures, Graphs, Generation, City Models, and Data & Experiments. They coordinate tasks, not mandatory packages or initialization layers. Agent Loom is design lineage within Simulation, not a second engine. Keep graph tools independently usable without spatial coordinates or World.
 
 ## Keep ownership and boundaries clear
 

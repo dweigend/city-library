@@ -51,21 +51,20 @@ This is a composition map, not a mandatory startup sequence. You can stop at a g
 
 Each library area should have a small, intentional public interface. Its internal algorithms can change without making every consumer follow the implementation file structure. Applications and kits use those public interfaces rather than reaching into private helpers.
 
-Here is the proposed division of responsibilities. Names describe capability areas, not an implemented package export list.
+The engine is organized into six areas. These describe the intended public responsibilities, not an implemented export list.
 
 | Area | Responsibility |
 | --- | --- |
-| Geometry and spatial tools | Points, polygons, volumes, bounds, transformations, and the operations concrete generators need. |
-| Randomness | Explicit, reproducible random streams and useful sampling operations. |
-| Grids and fields | Optional cells, neighborhoods, spatial values, and field calculations. |
-| Graphs and networks | Nodes, edges, connectivity, routes, and clearly defined network algorithms. |
-| Terrain | Landscape generation and the spatial queries a consumer actually needs. |
-| Layouts and zoning | Streets, blocks, parcels, buildable envelopes, and declared development rules. |
-| Buildings | Alternative generators for volumes, parts, floors, and explicitly described access points. |
-| Simulation | World execution, ticks, agent lifecycle, identity, and optional spatial context. |
-| City models | Focused mobility, household, allocation, economic, and infrastructure rules. |
-| Kits | Convenient combinations built from the same public capabilities available to model authors. |
-| Analysis and storage | Measurements and explicit saving/loading of supported model state or selected data. |
+| **Simulation** | Agents, World, tick, lifecycle, execution and events. Spatial context and grids are optional. |
+| **Spatial Structures** | Geometry, planar and volumetric grids, fields, neighborhoods and spatial queries. |
+| **Graphs** | Nodes, edges, directed/weighted relationships, routes, network generation and analysis, with or without coordinates. |
+| **Generation** | Procedural terrain, streets, parcels, zoning, buildings and assemblies. |
+| **City Models** | Mobility, residents, allocation, economy, social decisions, infrastructure and supply. |
+| **Data & Experiments** | Parameters, measurements, statistics, histories, experiment runs and one save/load area. |
+
+Agent Loom's modeling principles are incorporated into City Library's Simulation area. They do not introduce a second engine or a separate required package. Graph algorithms remain independently usable; Simulation coordinates live membership and City Models adds transport or supply semantics. Street geometry belongs to Generation.
+
+Focused tools such as random streams and polygon operations remain directly accessible. Kits combine public operations from the six areas; they are a way to use the library, not a seventh area. The diagram above shows composition roles rather than the area directory structure.
 
 Not every area needs to become a separate npm package. We will start with focused modules and deliberate exports, then split distribution only when a real dependency or usage boundary justifies it. “Clear endpoints” means predictable library entry points and contracts here, not a required HTTP service.
 
@@ -73,12 +72,12 @@ Not every area needs to become a separate npm package. We will start with focuse
 
 A useful prototype should begin with a readable script. Define data, create objects, connect the pieces, write one step, and run it. Ordinary TypeScript supplies functions, conditions, loops, arrays, and your own modeling vocabulary.
 
-The authoring direction follows the Agent Loom API design: simple defaults, direct typed properties, native collections, and explicit composition. More detailed usage should grow from the same objects instead of requiring a second framework.
+The Simulation authoring direction builds on the Agent Loom API design: simple defaults, direct typed properties, native collections, and explicit composition. More detailed usage should grow from the same objects instead of requiring a second framework.
 
-**Design example only:** this excerpt illustrates that style using the proposed Agent Loom vocabulary. City Library does not implement these imports yet; it is not an installation or execution example.
+**Design example only:** this excerpt uses the intended City Library authoring style inherited from Agent Loom. The names are proposals, not available exports; this is not an installation or execution example.
 
 ```ts
-import { Agent, World, run } from "agent-loom";
+import { Agent, World, run } from "city-library";
 
 const person = Agent.add({ energy: 10 });
 const world = World.add();
