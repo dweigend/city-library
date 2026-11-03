@@ -1,29 +1,29 @@
 # Working instructions
 
-## Start here
+## Read and preserve
 
-Read [README.md](README.md) and [PLAN.md](PLAN.md) before making changes. Verify the actual checkout, branch, Git status, and task scope. Preserve concurrent work and stage only owned files. Discuss work in German; write repository documentation, code, filenames, comments, and commits in English.
+Read [README.md](README.md), [PLAN.md](PLAN.md) and [docs/DESIGN.md](docs/DESIGN.md). Consult [docs/PROVENANCE.md](docs/PROVENANCE.md) when evaluating old code or conflicting vocabulary. Check actual branch/status and preserve concurrent work. Discuss work in German; write code, documentation, filenames, comments and commits in English.
 
-This repository is currently a scaffold. Proposed APIs are not available exports. Read the applicable accepted contract before implementing a capability; do not infer implementation from a README example or an older source experiment.
+PLAN owns current progress and sequencing. DESIGN owns local design direction. Neither examples nor old source experiments prove implemented exports. Update actual status only with target evidence. Keep the README and approved diagram stable unless the task changes them.
 
-## Design from the author task
+## Build one useful capability
 
-Begin with the smallest useful public script. Identify required inputs, invariants, outputs, state ownership, and failure behavior before choosing code. Evaluate local reuse, external dependencies, and focused new implementation. Adopt existing algorithms only when they satisfy the intended contract; retain provenance and meaningful behavioral differences.
+Start with the author task, minimal public script, invariants, inputs/results, units, ownership and failures. Compare exact local reuse, external candidates and focused new work. Retain source revisions, adaptations and notices. Do not transfer unrelated UI/tests or import the old checkout at runtime.
 
-Use strict TypeScript and the existing Bun workflow. Prefer ordinary functions, typed properties, arrays, and explicit composition. Add abstractions only for a demonstrated modeling need. Keep module imports acyclic and expose intentional public interfaces. Kits use those same public interfaces and caller-owned execution state.
+Use strict TypeScript and the existing Bun workflow. Prefer ordinary functions, direct typed properties, native collections and explicit composition. Keep dependencies acyclic and public exports deliberate. Add only files and abstractions needed by a real slice; no empty module stubs or all-purpose managers. Work areas coordinate tasks, not mandatory packages or initialization layers.
 
-## Keep logic independent
+## Keep ownership and boundaries clear
 
-The engine owns model logic, domain geometry, identity, relationships, and execution. It must not import DOM, rendering libraries, application code, or the source checkout. No built-in colors, symbols, drawing commands, labels, cameras, widgets, or appearance defaults. Custom model properties remain ordinary data without implicit presentation effects.
+The engine owns logic, domain geometry, state and execution. Presentation, DOM, rendering libraries, Drawing, cameras, widgets and appearance defaults stay outside it. User-defined properties such as name, color or symbol remain ordinary data with no automatic display behavior.
 
-Grids and spatial context are optional. Static generators and detached calculations must not require a simulation World unless their responsibility genuinely requires live state. Binding generated descriptions creates canonical live objects; consumers must not maintain duplicate mutable state. The model owns execution order; kits must not start hidden clocks.
+Space and grids are optional. Detached generators/calculations do not require World. Binding is explicit; each live value has one owner. Graphs and kits reuse canonical objects. Kits use public operations and caller-owned execution, with no hidden clocks or duplicate occupancy/balances.
 
-Use the latest approved authoring vocabulary consistently. Agent Loom references guide API design but do not establish delivered City Library exports. Older preparation records may contain superseded Group, Drawing, appearance, or clock syntax. Identify conflicts explicitly rather than copying them.
+Follow locally recorded authoring decisions; do not copy superseded vocabulary from historical references. State any unresolved operation contract instead of inventing an API to fill a gap.
 
 ## Verify and document
 
-Run `bun run typecheck` for relevant changes. As implementation arrives, add focused behavioral tests, public-import checks, builds, and downstream consumer checks appropriate to the slice. Never report a proposed example as executed or an existing source test as a target result. Document units, defaults, mutations, errors, determinism boundaries, and lifecycle semantics.
+Run `bun run typecheck` when relevant, plus real behavior/build/public-consumer checks as introduced by the slice. Do not claim unavailable test/build commands passed. Use independently tasked agents for substantial design and transfer reviews when authorized; retain findings and distinguish author fixes from independent approval.
 
-Use independent reviews for substantial design and migration work when authorized. Record findings and distinguish author corrections from independent approval. Browser-facing applications need real-browser behavior checks and separate visual decisions; headless tests do not establish visual quality.
+Every delivered capability needs its task, example, inputs/results, units/defaults, mutations/errors, lifecycle, dependencies and evidence. Mark design sketches and source-only results explicitly. Keep references/tutorials/decisions/provenance distinct and repository links portable. Never commit secrets or installed dependencies.
 
-Keep all documentation in English with relative repository links where practical. Separate overview, API reference, tutorials, decisions, and provenance. Prefer complete, checked examples for delivered APIs and clearly label design sketches. Do not add secrets, generated dependencies, or machine-specific credentials to Git.
+Browser-facing applications require real-browser checks and separate visual decisions; headless library checks establish neither appearance nor scientific validity. Technical setup changes and runtime implementation require their own task scope, not assumptions from a planning table.
