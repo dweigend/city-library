@@ -2,7 +2,7 @@
 import { createHash } from "node:crypto";
 const root = "experiments/catalog";
 const sha256 = (value: string) => createHash("sha256").update(value).digest("hex");
-export const stages = ["selected", "source-audited", "contract-frozen", "implemented", "headless-verified", "browser-verified", "reviewed"] as const;
+export const stages = ["selected", "source-audited", "contract-frozen", "implemented", "headless-verified", "browser-verified", "baseline-compared", "reviewed"] as const;
 export type Stage = typeof stages[number];
 export interface Milestone { done: boolean; evidence: string[]; basis?: string }
 export interface ProgressRow {
@@ -53,11 +53,11 @@ export async function verifyProgress() {
 async function report() {
   const rows = await verifyProgress();
   const counts = Object.fromEntries(stages.map(stage => [stage, rows.filter(row => row.stages[stage].done).length]));
-  const complete = rows.filter(row => stages.every(stage => row.stages[stage].done)).length;
+  const complete = rows.filter(row => stages.every(stage => row.stages[stage].done) && row.blockers.length === 0).length;
   const summary = { selected: 200, outsideCurrentScope: 350, stages: counts, fullyVerified: complete, remainingAcceptance: 200 - complete };
   await Bun.write(`${root}/progress-summary.json`, JSON.stringify(summary, null, 2) + "\n");
   const quote = (value: string) => `"${value.replaceAll('"', '""')}"`;
-  await Bun.write(`${root}/progress.csv`, ["path,slug,batch," + stages.join(",") + ",complete,blockers", ...rows.map(row => [row.path, row.slug, row.batch, ...stages.map(stage => row.stages[stage].done ? "yes" : "pending"), stages.every(stage => row.stages[stage].done) ? "yes" : "pending", row.blockers.join("; ")].map(quote).join(","))].join("\n") + "\n");
+  await Bun.write(`${root}/progress.csv`, ["path,slug,batch," + stages.join(",") + ",complete,blockers", ...rows.map(row => [row.path, row.slug, row.batch, ...stages.map(stage => row.stages[stage].done ? "yes" : "pending"), stages.every(stage => row.stages[stage].done) && row.blockers.length === 0 ? "yes" : "pending", row.blockers.join("; ")].map(quote).join(","))].join("\n") + "\n");
   console.log(JSON.stringify(summary));
 }
 if (import.meta.main) {
