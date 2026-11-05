@@ -10,6 +10,7 @@
 
 ## Implementation coordination
 
+- Follow PLAN's [example-first delivery gate](PLAN.md#example-first-delivery-gate): write four or five asserted public example scripts per expansion phase before runtime implementation. Preserve their accepted syntax and expectations; fix implementations rather than weakening examples. Clean public API design takes priority over implementation convenience.
 - Delegate runtime implementation to scoped subagents or implementation threads; the coordinating agent owns sequencing, integration and evidence. Preserve concurrent work.
 - Use Antigravity `gemini-4-argon` for independent review of substantial design or transfer work. Confirm provider/model availability; do not substitute silently. Record findings and responses separately from independent approval.
 - Consult `gpt-6-astra` with high reasoning only for tasks requiring deep logical analysis, not routine implementation or review.

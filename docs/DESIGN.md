@@ -8,6 +8,8 @@ These rules are mandatory throughout the project, including libraries, applicati
 
 ### Ten architectural principles
 
+Public authoring examples precede runtime implementation. Follow the [example-first delivery gate](../PLAN.md#example-first-delivery-gate): four or five executable scripts per expansion phase define accepted syntax and observable results before implementation begins. Clean design of the specified public API takes priority over implementation convenience. Examples use public contracts and expected-result assertions; they must not be retrofitted to implementation limitations. Substantive changes require an explicit recorded design decision and user agreement, while the binding specification remains authoritative. Focused behavior and type tests supplement these end-to-end author tasks.
+
 | Principle | Required rule |
 | --- | --- |
 | Separation of concerns | Separate distinct responsibilities. Each module has one clearly defined purpose. |

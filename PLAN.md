@@ -72,9 +72,31 @@ These milestones describe the broader city roadmap after the agent core. They do
 
 Simple data export can happen before M6. The C04 feasibility subtrack and other research-heavy tasks do not block unrelated headless tools. Documentation, provenance, tests and packaging checks accompany every slice rather than waiting for a final integration phase.
 
+## Example-first delivery gate
+
+Clean public API design is the highest implementation priority. For every expansion phase, write four or five complete TypeScript example scripts before writing its runtime implementation. Examples must express real author tasks through the specified public API, with explicit expected results and executable assertions. They are acceptance contracts, not demonstrations rewritten to fit an implementation.
+
+Keep scripts under `examples/` grouped by delivery phase. Record their target operation IDs, inputs, expected outputs, mutations and expected failures before implementation. Resolve unspecified or conflicting syntax against the binding specification explicitly. Do not silently edit the specification or invent convenience APIs. A phase containing multiple implementation slices defines its example set first; each slice additionally identifies the scripts and assertions it must enable.
+
+Initially, examples may fail because their planned public exports do not exist. Record that state honestly; do not add mocks, empty runtime stubs, private imports or disabled assertions to make them pass. Freeze the scripts and expected results before handing off implementation. Correct the implementation when an example fails. Any substantive change to an accepted example's syntax, scope or expectations requires a recorded design reason and explicit user agreement; implementation inconvenience is not a reason to weaken the contract. Editorial corrections that preserve the contract may be recorded directly.
+
+A phase is complete only when all of its four or five scripts typecheck and run through public imports with their assertions enabled, alongside focused behavior and type tests. Keep earlier phases' examples passing as regression checks. Example execution does not replace edge-case tests or establish browser compatibility. Record actual commands and outcomes. Do not claim example acceptance while public entry-name mapping remains unresolved.
+
+### A1 example briefs — scripts not written yet
+
+| Planned script | Author task and required result |
+| --- | --- |
+| `examples/a1/01-energy-model.ts` | Create an Agent with typed energy, attach it to a non-spatial World and run five steps: energy changes from 10 to 5 and tick from 0 to 5. |
+| `examples/a1/02-independent-worlds.ts` | Interleave two models; state, membership and clocks remain independent. Verify independent default Random identities and the accepted stream behavior, without construction-time draws. |
+| `examples/a1/03-membership-lifecycle.ts` | Attach original references, deduplicate a batch, reject foreign ownership atomically, detach without deleting, then explicitly delete an agent. Caller-owned collections retain their references. |
+| `examples/a1/04-copy-and-custom-state.ts` | Create agents from nested supported data, copy an agent into a detached living identity and verify the reference's copying rules; contrast initialization copying with later ordinary reference assignment. |
+| `examples/a1/05-execution-errors.ts` | Throw during a model step: earlier effects remain, the failed step adds no tick, and execution stops. Also demonstrate zero-step execution and same-World reentrancy rejection with explicit assertions. |
+
+These are task briefs, not delivered scripts or verified behavior. Before implementation, reconcile their complete operation closure with the specification, write all five scripts and fix the public import mapping explicitly. Boundary/type tests cover additional cases such as reserved keys, iterator failures, thenables and numeric tick progress.
+
 ## Acceptance for every implementation slice
 
-1. Write the author task and smallest public example first; freeze inputs/results, units, bounds, defaults, mutation and failure behavior.
+1. Apply the example-first delivery gate: write and freeze the phase's four or five public scripts before runtime implementation; define the slice's author task and freeze inputs/results, units, bounds, defaults, mutation and failure behavior.
 2. Compare exact local candidates, external libraries and a focused new implementation. Record source revision, required adaptations and notices; no blind cherry-picking.
 3. Implement only the accepted closure, without imports from the old checkout, presentation code or unrelated experiment infrastructure.
 4. Execute relevant behavior tests and type checks. Establish public imports and an external consumer when that slice introduces a package entry. Preserve deterministic streams and independent instances.
