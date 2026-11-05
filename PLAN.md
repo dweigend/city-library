@@ -23,6 +23,8 @@ All entries are planned. P0 = coherent preparation; P1 = first standalone capabi
 
 ## Active UI refactor and reference-model validation
 
+The authorized [full NetLogo Web catalog experiment](docs/development/netlogo-web-catalog-plan.md) extends this work to every entry of the actual served launcher catalog, tracked in [Epic #1](https://github.com/dweigend/city-library/issues/1). It runs in a dedicated bound worktree from dfd0584. The first new vertical slice is [Segregation](docs/development/segregation-contract.md); five asserted public model scripts were committed before its runtime. Catalog capture, row-level audit, implementation, target verification and independent approval remain separate acceptance states. The four existing ports do not establish complete catalog coverage.
+
 The user authorized replacement of the historical Agend_Lab application. The [refactor assignment](docs/development/agent-lab-refactor.md) owns the shared top-level ui toolkit, ui/agent-lab application, automatically discovered experiments/*/{model.ts,ui.ts}, provenance and four NetLogo comparisons. This is active work, not completed acceptance. Existing frozen core examples and headless factories remain compatible. Required spatial/grid/observation capabilities must be explicit example-first core slices, not duplicate infrastructure hidden in experiments or UI. Runtime work follows consistency review and executable author examples; browser comparisons are separate evidence.
 
 ## Shared tools, kits and integration
