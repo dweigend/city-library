@@ -21,6 +21,7 @@ export function mountNetwork(
       getComputedStyle(canvas).getPropertyValue("--muted").trim() || "#626262"
     );
   }
+  function edgeTheme() { return labelTheme(); }
   cy.style([
     {
       selector: "node",
@@ -41,7 +42,11 @@ export function mountNetwork(
     },
     {
       selector: "edge",
-      style: { width: 1, "line-color": "#969696", opacity: 0.65 },
+      style: { width: "data(width)", "line-color": "data(color)", "target-arrow-color": "data(color)", "curve-style": "bezier", opacity: 0.65 },
+    },
+    {
+      selector: "edge[directed = 1]",
+      style: { "target-arrow-shape": "triangle", "arrow-scale": 1 },
     },
   ]);
   let first = true;
@@ -50,8 +55,10 @@ export function mountNetwork(
   let disposed = false;
   const appearance = window.matchMedia("(prefers-color-scheme: dark)");
   function updateTheme() {
-    if (!disposed)
+    if (!disposed) {
       cy.style().selector("node").style({ color: labelTheme() }).update();
+      cy.edges().filter(edge => edge.data("defaultColor")).data("color", edgeTheme());
+    }
   }
   appearance.addEventListener("change", updateTheme);
   cy.on("tap", "node", (event) => select(event.target.id()));
@@ -123,7 +130,27 @@ export function mountNetwork(
       edges: readonly NetworkEdge[],
       selected: string | null,
     ) {
-      const ids = new Set(nodes.map((node) => node.id));
+      // Validate the complete projection before touching the currently displayed graph.
+      const ids = new Set<string>();
+      for (const node of nodes) {
+        if (!node.id || ids.has(node.id)) throw new Error("Network node IDs must be nonempty and unique.");
+        ids.add(node.id);
+        if (node.size !== undefined && (!Number.isFinite(node.size) || node.size <= 0))
+          throw new Error("Network node size must be positive and finite.");
+        if (node.position && (!Number.isFinite(node.position.x) || !Number.isFinite(node.position.y)))
+          throw new Error("Network presentation coordinates must be finite.");
+        if (node.color !== undefined && !CSS.supports("color", node.color)) throw new Error("Invalid network node color.");
+      }
+      const edgeIds = new Set<string>();
+      for (const edge of edges) {
+        if (!edge.id || ids.has(edge.id) || edgeIds.has(edge.id)) throw new Error("Network edge IDs must be nonempty and unique.");
+        edgeIds.add(edge.id);
+        if (!ids.has(edge.from) || !ids.has(edge.to)) throw new Error("Network edge endpoints must exist.");
+        if (edge.width !== undefined && (!Number.isFinite(edge.width) || edge.width <= 0))
+          throw new Error("Network edge width must be positive and finite.");
+        if (edge.color !== undefined && !CSS.supports("color", edge.color)) throw new Error("Invalid network edge color.");
+      }
+      const defaultEdgeColor = edgeTheme();
       cy.batch(() => {
         cy.nodes()
           .filter((node) => !ids.has(node.id()))
@@ -135,7 +162,7 @@ export function mountNetwork(
             element = cy.add({
               group: "nodes",
               data: { id: node.id },
-              position: {
+              position: node.position ?? {
                 x: Math.cos(angle) * Math.sqrt(index + 1) * 34,
                 y: Math.sin(angle) * Math.sqrt(index + 1) * 34,
               },
@@ -148,16 +175,18 @@ export function mountNetwork(
           });
           element.toggleClass("selected", selected === node.id);
         }
-        const edgeIds = new Set(edges.map((edge) => edge.id));
         cy.edges()
           .filter((edge) => !edgeIds.has(edge.id()))
           .remove();
-        for (const edge of edges)
-          if (cy.getElementById(edge.id).empty())
-            cy.add({
-              group: "edges",
-              data: { id: edge.id, source: edge.from, target: edge.to },
-            });
+        for (const edge of edges) {
+          let element = cy.getElementById(edge.id);
+          if (element.nonempty() && (element.source().id() !== edge.from || element.target().id() !== edge.to)) {
+            element.remove();
+            element = cy.getElementById(edge.id);
+          }
+          if (element.empty()) element = cy.add({ group: "edges", data: { id: edge.id, source: edge.from, target: edge.to } });
+          element.data({ directed: edge.directed ? 1 : 0, color: edge.color ?? defaultEdgeColor, defaultColor: edge.color === undefined, width: edge.width ?? 1 });
+        }
       });
       const nextIds = nodes.map((node) => node.id).join("\n");
       if (nextIds !== nodeIds) {

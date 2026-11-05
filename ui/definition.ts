@@ -12,11 +12,17 @@ export interface NetworkNode {
   readonly color?: string;
   /** Symbol diameter in CSS pixels; never a physical collision radius. */
   readonly size?: number;
+  /** Initial view coordinates only; later dragging/layout is presentation-owned. */
+  readonly position?: { readonly x: number; readonly y: number };
 }
 export interface NetworkEdge {
   readonly id: string;
   readonly from: string;
   readonly to: string;
+  readonly directed?: boolean;
+  readonly color?: string;
+  /** Positive finite stroke width in CSS pixels. */
+  readonly width?: number;
 }
 export interface Cell {
   readonly id: string;
@@ -107,6 +113,8 @@ export interface UISpec<P extends object, M extends ModelInstance> {
     readonly run: (model: M, selected: string | null) => void;
     readonly enabled?: (state: Snapshot<M>, selected: string | null) => boolean;
     readonly pressed?: (state: Snapshot<M>) => boolean;
+    /** Independent host cadence; never scientific model time. */
+    readonly repeat?: { readonly label: string; readonly intervalMs: number };
   }[];
   readonly live?: readonly {
     readonly widget?: "color";

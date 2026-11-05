@@ -10,6 +10,7 @@ import { mountNetwork } from "./views/network.ts";
 import { mountCanvas } from "./views/canvas.ts";
 import { mountChart } from "./views/chart.ts";
 import { createPlayback } from "./playback.ts";
+import { createRepeatedAction } from "./actions/repeat.ts";
 
 /** Concrete model types stay here; only the bound mounted handle enters the catalog. */
 export function defineUI<P extends object, M extends ModelInstance>(
@@ -47,6 +48,8 @@ export function defineUI<P extends object, M extends ModelInstance>(
       let selected: string | null = null;
       let disposed = false;
       let speed = 100;
+      const repeats: { stop(): void; sync(): void }[] = [];
+      function stopRepeats() { for (const repeat of repeats) repeat.stop(); }
       const views: {
         render: (state: Snapshot<M>) => void;
         dispose: () => void;
@@ -70,6 +73,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
       }
       function fail(error: unknown) {
         playback.stop();
+        stopRepeats();
         status.textContent = errorMessage(error);
         status.dataset.state = "error";
       }
@@ -108,6 +112,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
           live.control.disabled = !(live.enabled?.(state) ?? true);
         }
         for (const view of views) view.render(state);
+        for (const repeat of repeats) repeat.sync();
       }
       function act(action: (model: M) => void, message: string) {
         if (!instance || disposed) return false;
@@ -163,7 +168,11 @@ export function defineUI<P extends object, M extends ModelInstance>(
           status.textContent = "Paused.";
           return;
         }
-        if (instance && !completed(read(instance))) playback.start();
+        try {
+          if (instance && !completed(read(instance))) playback.start();
+        } catch (error) {
+          fail(error);
+        }
       });
       buttons.push({ element: run, stepping: true });
       for (const count of [1, 10, 100]) {
@@ -203,6 +212,32 @@ export function defineUI<P extends object, M extends ModelInstance>(
           enabled: action.enabled,
           pressed: action.pressed,
         });
+        if (action.repeat) {
+          const toggle = button(action.repeat.label, () => {
+            if (repeat.running) repeat.stop();
+            else repeat.start();
+          });
+          toggle.setAttribute("aria-pressed", "false");
+          const repeat = createRepeatedAction({
+            current: () => disposed ? undefined : instance,
+            enabled: (model: M) => action.enabled?.(read(model), selected) ?? true,
+            perform: (model: M) => {
+              action.run(model, selected);
+              render();
+              status.textContent = "Action repeated.";
+              status.dataset.state = "success";
+            },
+            changed: running => toggle.setAttribute("aria-pressed", String(running)),
+            failed: fail,
+            intervalMs: action.repeat.intervalMs,
+            schedule: (tick, intervalMs) => {
+              const id = window.setInterval(tick, intervalMs);
+              return () => window.clearInterval(id);
+            },
+          });
+          repeats.push(repeat);
+          buttons.push({ element: toggle, enabled: action.enabled });
+        }
       }
       if (spec.live?.length) {
         const group = document.createElement("div");
@@ -409,6 +444,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
         (event) => {
           event.preventDefault();
           playback.stop();
+          stopRepeats();
           if (!setup.form.reportValidity()) return;
           let next: M | undefined;
           try {
@@ -468,11 +504,13 @@ export function defineUI<P extends object, M extends ModelInstance>(
       return {
         pause() {
           playback.stop();
+          stopRepeats();
         },
         dispose() {
           if (disposed) return;
           disposed = true;
           playback.stop();
+          stopRepeats();
           events.abort();
           disposeViews();
           instance?.dispose?.();
