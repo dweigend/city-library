@@ -60,8 +60,14 @@ function add(
   input: Space | { random?: Random } = {},
   options?: { boundary?: Space["boundary"]; random?: Random },
 ): World {
-  if (arguments.length > 2)
-    throw new TypeError("World.add accepts Space and options.");
+  if (
+    arguments.length > 2 ||
+    (arguments.length > 0 && arguments[0] === undefined) ||
+    (arguments.length > 1 && arguments[1] === undefined)
+  )
+    throw new TypeError(
+      "World.add accepts Space and options without placeholders.",
+    );
   const spatial =
     typeof input === "object" &&
     input !== null &&
@@ -122,7 +128,9 @@ function add(
                 .some(
                   (axis) =>
                     point[axis]! < -space[axis]! / 2 ||
-                    point[axis]! > space[axis]! / 2,
+                    (space.boundary[axis] === "wrap"
+                      ? point[axis]! >= space[axis]! / 2
+                      : point[axis]! > space[axis]! / 2),
                 )
             )
               throw new RangeError("Agent outside World Space.");

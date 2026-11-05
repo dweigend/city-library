@@ -113,7 +113,7 @@ export const ui = defineUI(model, {
         },
         {
           label: "Wolves",
-          color: "#222222",
+          color: "currentColor",
           points: state.history.map((point) => ({
             x: point.tick,
             y: point.wolves,
@@ -124,10 +124,12 @@ export const ui = defineUI(model, {
               {
                 label: "Grass / 4",
                 color: "#60ad2c",
-                points: state.history.filter((point) => point.grassAvailable).map((point) => ({
-                  x: point.tick,
-                  y: point.grass / 4,
-                })),
+                points: state.history
+                  .filter((point) => point.grassAvailable)
+                  .map((point) => ({
+                    x: point.tick,
+                    y: point.grass / 4,
+                  })),
               },
             ]
           : []),

@@ -148,3 +148,104 @@ test("World admission retains concrete Grid payload and mixed-batch identities",
   assert.equal(world.grids.length, 0);
   assert.equal(world.agents[0], animal);
 });
+
+test("hard clipping handles limiting-boundary roundoff and rejects an invalid origin", () => {
+  const hard = { x: 4, y: 4 };
+  const clipped = Agent.add({}, { position: { x: -1.1, y: 0 } });
+  clipped.move({ by: { x: 6, y: 1 }, space: hard });
+  assert.equal(clipped.x, 2);
+  assert.ok(Math.abs(clipped.y - 3.1 / 6) < 1e-15);
+  const outside = Agent.add({}, { position: { x: 5, y: 0 } });
+  assert.throws(
+    () => outside.move({ by: { x: 2, y: 1 }, space: hard }),
+    RangeError,
+  );
+  assert.deepEqual([outside.x, outside.y], [5, 0]);
+  assert.throws(() => outside.move(0, { space: hard }), RangeError);
+});
+
+test("World attachment respects half-open wraps and retains atomic batches", () => {
+  const wrapping = World.add({ x: 4, y: 4, boundary: "wrap" });
+  const valid = Agent.add();
+  const upper = Agent.add({}, { position: { x: 2, y: 0 } });
+  assert.throws(() => wrapping.add([valid, upper]), RangeError);
+  assert.equal(wrapping.agents.length, 0);
+  assert.equal(valid.world, undefined);
+  assert.equal(upper.world, undefined);
+  const hard = World.add({ x: 4, y: 4 });
+  hard.add(upper);
+  upper.move(0);
+  assert.equal(upper.x, 2);
+});
+
+test("position inputs reject accessors, foreign frameworks and non-data shapes before reads", () => {
+  let reads = 0;
+  const accessor = Object.defineProperty({ y: 0 }, "x", {
+    get() {
+      reads += 1;
+      return 0;
+    },
+  });
+  const inherited = Object.create({ x: 0, y: 0 });
+  const extra = { x: 0, y: 0, label: "unexpected" };
+  const agent = Agent.add();
+  const grid = Grid.add({ x: 2, y: 2 });
+  for (const target of [
+    accessor,
+    inherited,
+    extra,
+    World.add(),
+    Random.add(),
+    grid,
+  ]) {
+    assert.throws(() => agent.move({ to: target as never }));
+    assert.throws(() => agent.distanceTo(target as never));
+    assert.throws(() => grid.fieldAt(target as never));
+    assert.throws(() => Agent.add({}, { position: target as never }));
+  }
+  assert.equal(reads, 0);
+  const field = grid.fields[0]!;
+  const fromField = Agent.add({}, { position: field });
+  agent.move({ to: fromField });
+  assert.deepEqual([agent.x, agent.y], [field.x, field.y]);
+  assert.equal(grid.fieldAt(agent), field);
+});
+
+test("new spatial and Grid APIs reject argument placeholders, excess arity and string sources", () => {
+  const agent = Agent.add();
+  const grid = Grid.add({ x: 2, y: 2 });
+  const cell = grid.fields[0]!;
+  const invoke = (fn: Function, ...args: unknown[]) => fn(...args);
+  for (const args of [
+    [undefined],
+    [undefined, {}],
+    [{ x: 2, y: 2 }, undefined],
+    [{}, {}, {}],
+  ]) {
+    assert.throws(() => invoke(World.add, ...args), TypeError);
+    assert.throws(() => invoke(Grid.add, ...args), TypeError);
+  }
+  assert.throws(() => invoke(agent.move, { by: { x: 1 } }, {}), TypeError);
+  assert.throws(
+    () => invoke(agent.rotate, { towards: { x: 1, y: 0 } }, {}),
+    TypeError,
+  );
+  assert.throws(() => invoke(agent.move, 1, {}, 2), TypeError);
+  assert.throws(() => invoke(agent.rotate, 1, {}, 2), TypeError);
+  assert.throws(
+    () => invoke(agent.distanceTo, { x: 0, y: 0 }, {}, 2),
+    TypeError,
+  );
+  assert.throws(
+    () => invoke(agent.directionTo, { x: 0, y: 0 }, undefined),
+    TypeError,
+  );
+  assert.throws(() => invoke(agent.neighbors, {}, {}), TypeError);
+  assert.throws(() => invoke(grid.fieldAt, cell, {}), TypeError);
+  assert.throws(() => invoke(grid.neighbors, cell, undefined), TypeError);
+  assert.throws(() => invoke(grid.agentsAt, cell, undefined), TypeError);
+  assert.throws(() => invoke(grid.diffuse, "missing", {}, 2), TypeError);
+  assert.throws(() => agent.neighbors({ source: "" as never }), TypeError);
+  assert.throws(() => grid.agentsAt(cell, { source: "" as never }), TypeError);
+  assert.deepEqual([agent.x, agent.y, agent.heading], [0, 0, 0]);
+});

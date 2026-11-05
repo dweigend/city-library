@@ -1,10 +1,5 @@
 import type { World } from "../world/world.ts";
-import {
-  frameworkRecord,
-  issueId,
-  registerFramework,
-  requireLivingAgent,
-} from "./lifecycle.ts";
+import { issueId, registerFramework, requireLivingAgent } from "./lifecycle.ts";
 import { cloneState, validateOptions } from "./state.ts";
 import {
   createSpatial,
@@ -31,14 +26,15 @@ function add<S extends object>(
   state?: S,
   options: SpatialOptions = {},
 ): Agent<S> {
-  if (arguments.length > 2)
+  if (
+    arguments.length > 2 ||
+    (arguments.length > 1 && arguments[1] === undefined)
+  )
     throw new TypeError("Agent.add accepts state and spatial options.");
   const opts = validateOptions(options, [
     "position",
     "orientation",
   ]) as SpatialOptions;
-  if (opts.position !== undefined && !frameworkRecord(opts.position))
-    validateOptions(opts.position, ["x", "y", "z"]);
   const cloned = cloneState(arguments.length === 0 ? ({} as S) : (state as S));
   const agent = Object.create(Object.getPrototypeOf(cloned)) as Agent<S>;
   Object.defineProperties(agent, Object.getOwnPropertyDescriptors(cloned));

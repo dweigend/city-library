@@ -1,3 +1,4 @@
+import { frameworkRecord } from "../agent/lifecycle.ts";
 import { validateOptions } from "../agent/state.ts";
 export interface Position {
   readonly x: number;
@@ -86,20 +87,29 @@ export function normalizeSpace(
   Object.freeze(result.boundary);
   return Object.freeze(result);
 }
+function coordinateValues(value: Position): Record<string, unknown> {
+  const framework = frameworkRecord(value);
+  if (framework) {
+    if (framework.kind !== "agent" && framework.kind !== "field") {
+      throw new TypeError("Only Agent and Field identities are positions.");
+    }
+    return { x: value.x, y: value.y, z: value.z };
+  }
+  return validateOptions(value, ["x", "y", "z"]);
+}
 export function dimension(value: Position): 2 | 3 {
-  return value.z === undefined ? 2 : 3;
+  return coordinateValues(value).z === undefined ? 2 : 3;
 }
 export function position(value: Position, dimensions?: 2 | 3): Position {
-  if (typeof value !== "object" || value === null)
-    throw new TypeError("Expected a position.");
-  const dim = dimension(value);
+  const values = coordinateValues(value);
+  const dim = values.z === undefined ? 2 : 3;
   if (dimensions !== undefined && dim !== dimensions)
     throw new TypeError("Position dimensions disagree.");
   const result: { x: number; y: number; z?: number } = {
-    x: finite(value.x),
-    y: finite(value.y),
+    x: finite(values.x),
+    y: finite(values.y),
   };
-  if (dim === 3) result.z = finite(value.z);
+  if (dim === 3) result.z = finite(values.z);
   return result;
 }
 export function equalSpace(a: NormalizedSpace, b: NormalizedSpace): boolean {
@@ -163,19 +173,44 @@ export function relativePosition(
   by: Position,
   space?: NormalizedSpace,
 ): Position {
-  const dim = dimension(from);
+  const start = position(from);
+  const dim = dimension(start);
+  const delta = position(by, dim);
   let fraction = 1;
-  if (space)
-    for (const axis of axes.slice(0, dim))
-      if (space.boundary[axis] === "hard" && by[axis] !== 0) {
-        const delta = by[axis]!;
-        const limit = delta > 0 ? space[axis]! / 2 : -space[axis]! / 2;
-        fraction = Math.min(fraction, (limit - from[axis]!) / delta);
+  const intersections = new Map<
+    (typeof axes)[number],
+    { fraction: number; boundary: number }
+  >();
+  if (space) {
+    for (const axis of axes.slice(0, dim)) {
+      if (space.boundary[axis] !== "hard") continue;
+      const half = space[axis]! / 2;
+      if (start[axis]! < -half || start[axis]! > half) {
+        throw new RangeError("Relative movement starts outside hard Space.");
       }
-  const result = {
-    x: finite(from.x + by.x * fraction),
-    y: finite(from.y + by.y * fraction),
-    ...(dim === 3 ? { z: finite(from.z! + by.z! * fraction) } : {}),
+      if (delta[axis] === 0) continue;
+      const boundary = delta[axis]! > 0 ? half : -half;
+      const intersection = (boundary - start[axis]!) / delta[axis]!;
+      intersections.set(axis, { fraction: intersection, boundary });
+      fraction = Math.min(fraction, intersection);
+    }
+  }
+  const result: { x: number; y: number; z?: number } = {
+    x: finite(start.x + delta.x * fraction),
+    y: finite(start.y + delta.y * fraction),
+    ...(dim === 3 ? { z: finite(start.z! + delta.z! * fraction) } : {}),
   };
+  if (space) {
+    for (const axis of axes.slice(0, dim)) {
+      if (space.boundary[axis] !== "hard") continue;
+      const intersection = intersections.get(axis);
+      const half = space[axis]! / 2;
+      // A limiting coordinate is exact; other coordinates only clamp clip roundoff.
+      result[axis] =
+        intersection?.fraction === fraction
+          ? intersection.boundary
+          : Math.max(-half, Math.min(half, result[axis]!));
+    }
+  }
   return space ? normalizePosition(result, space)! : result;
 }

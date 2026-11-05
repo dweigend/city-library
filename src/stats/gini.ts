@@ -1,7 +1,9 @@
 /** Population Gini over finite nonnegative holdings; no sampling correction. */
 export function gini(values: Iterable<number>): number {
+  if (arguments.length > 1) throw new TypeError("Gini accepts one iterable.");
   if (
     values == null ||
+    (typeof values !== "object" && typeof values !== "function") ||
     typeof (values as { [Symbol.iterator]?: unknown })[Symbol.iterator] !==
       "function"
   )

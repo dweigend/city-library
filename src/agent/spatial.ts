@@ -46,10 +46,15 @@ export interface SpatialMethods {
   }): readonly Agent[];
 }
 export function createSpatial(agent: Agent, options: SpatialOptions) {
-  let coordinates = position(options.position ?? { x: 0, y: 0 });
+  let coordinates = position(
+    options.position === undefined ? { x: 0, y: 0 } : options.position,
+  );
   const dim = dimension(coordinates);
   let orientation = basis(
-    validateOptions(options.orientation ?? {}, ["heading", "pitch", "roll"]),
+    validateOptions(
+      options.orientation === undefined ? {} : options.orientation,
+      ["heading", "pitch", "roll"],
+    ),
     dim,
   );
   function context(explicit?: Space): NormalizedSpace | undefined {
@@ -62,6 +67,16 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
     if (result && result.dimensions !== dim)
       throw new TypeError("Space dimensions disagree.");
     return result;
+  }
+  function checkArguments(args: IArguments, min: number, max: number) {
+    if (
+      args.length < min ||
+      args.length > max ||
+      Array.from(args).some((value) => value === undefined)
+    )
+      throw new TypeError(
+        "Invalid spatial method arguments or undefined placeholder.",
+      );
   }
   function requireLive() {
     requireLivingAgent(agent);
@@ -87,10 +102,13 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
           },
     );
   }
-  const move: SpatialMethods["move"] = ((
+  const move: SpatialMethods["move"] = function move(
     input: number | { by?: Vector; to?: Position; space?: Space } = 1,
     extra: { space?: Space } = {},
-  ) => {
+  ) {
+    checkArguments(arguments, 0, 2);
+    if (typeof input !== "number" && arguments.length > 1)
+      throw new TypeError("Options-form move accepts one argument.");
     requireLive();
     let by: Position | undefined;
     let to: Position | undefined;
@@ -126,13 +144,16 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
         : to
       : relativePosition(coordinates, by!, space);
     coordinates = next;
-  }) as SpatialMethods["move"];
+  } as SpatialMethods["move"];
   const methods: SpatialMethods = {
     move,
-    rotate: ((
+    rotate: function rotate(
       input: number | { towards: Position; space?: Space } = 0,
       extra: { axis?: "x" | "y" | "z" } = {},
-    ) => {
+    ) {
+      checkArguments(arguments, 0, 2);
+      if (typeof input !== "number" && arguments.length > 1)
+        throw new TypeError("Options-form rotate accepts one argument.");
       requireLive();
       if (typeof input === "number") {
         const opts = validateOptions(extra, ["axis"]);
@@ -148,17 +169,20 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
         );
         if (facing) orientation = basis(facing, dim);
       }
-    }) as SpatialMethods["rotate"],
+    } as SpatialMethods["rotate"],
     distanceTo(target, opts = {}) {
+      checkArguments(arguments, 1, 2);
       const values = validateOptions(opts, ["space"]);
       const d = delta(target, values.space as Space | undefined);
       return finite(Math.hypot(d.x, d.y, d.z ?? 0));
     },
     directionTo(target, opts = {}) {
+      checkArguments(arguments, 1, 2);
       const values = validateOptions(opts, ["space"]);
       return direction(target, values.space as Space | undefined);
     },
-    neighbors: ((opts = {}) => {
+    neighbors: function neighbors(opts = {}) {
+      checkArguments(arguments, 0, 1);
       requireLive();
       const values = validateOptions(opts, [
         "source",
@@ -171,9 +195,16 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
         angle = finite(values.angle ?? 360);
       if (radius < 0 || angle < 0 || angle > 360)
         throw new RangeError("Invalid perception bounds.");
-      const source = values.source ?? agent.world?.agents;
+      const source =
+        values.source === undefined ? agent.world?.agents : values.source;
       if (source === undefined)
         throw new TypeError("Detached agent requires a source.");
+      if (
+        (typeof source !== "object" && typeof source !== "function") ||
+        source === null ||
+        typeof (source as Iterable<Agent>)[Symbol.iterator] !== "function"
+      )
+        throw new TypeError("Expected an iterable Agent source.");
       const population = [...new Set(source as Iterable<Agent>)];
       for (const candidate of population) {
         requireAgent(candidate);
@@ -197,7 +228,7 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
           );
         }),
       );
-    }) as SpatialMethods["neighbors"],
+    } as SpatialMethods["neighbors"],
   };
   return {
     methods,

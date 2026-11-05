@@ -16,6 +16,11 @@ export function mountNetwork(
     maxZoom: 4,
     autounselectify: true,
   });
+  function labelTheme() {
+    return (
+      getComputedStyle(canvas).getPropertyValue("--muted").trim() || "#626262"
+    );
+  }
   cy.style([
     {
       selector: "node",
@@ -27,7 +32,7 @@ export function mountNetwork(
         "font-size": 11,
         "text-valign": "bottom",
         "text-margin-y": 5,
-        color: "#777",
+        color: labelTheme(),
       },
     },
     {
@@ -43,6 +48,12 @@ export function mountNetwork(
   let fitted = true;
   let adjusting = false;
   let disposed = false;
+  const appearance = window.matchMedia("(prefers-color-scheme: dark)");
+  function updateTheme() {
+    if (!disposed)
+      cy.style().selector("node").style({ color: labelTheme() }).update();
+  }
+  appearance.addEventListener("change", updateTheme);
   cy.on("tap", "node", (event) => select(event.target.id()));
   function fit() {
     if (!disposed) {
@@ -167,6 +178,7 @@ export function mountNetwork(
     },
     dispose() {
       disposed = true;
+      appearance.removeEventListener("change", updateTheme);
       resize.disconnect();
       cy.destroy();
       actions.remove();

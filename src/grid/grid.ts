@@ -66,6 +66,14 @@ function add<F extends object>(
   input: Space = { x: 40, y: 40 },
   options: { state?: F; cellSize?: number; boundary?: Space["boundary"] } = {},
 ): Grid<F> {
+  if (
+    arguments.length > 2 ||
+    (arguments.length > 0 && arguments[0] === undefined) ||
+    (arguments.length > 1 && arguments[1] === undefined)
+  )
+    throw new TypeError(
+      "Grid.add accepts Space and options without placeholders.",
+    );
   const opts = validateOptions(options, ["state", "cellSize", "boundary"]);
   const space = normalizeSpace(input, opts.boundary as Space["boundary"]);
   const cellSize = finite(opts.cellSize ?? 1);
@@ -82,6 +90,16 @@ function add<F extends object>(
   cloneModelState(initial, reserved, "Field");
   const fields: Field<F>[] = [];
   const indices = new Map<Field<F>, number>();
+  function checkArguments(args: IArguments, min: number, max: number) {
+    if (
+      args.length < min ||
+      args.length > max ||
+      Array.from(args).some((value) => value === undefined)
+    )
+      throw new TypeError(
+        "Invalid Grid method arguments or undefined placeholder.",
+      );
+  }
   function requireField(field: Field<F>): number {
     const index = indices.get(field);
     if (index === undefined)
@@ -144,6 +162,7 @@ function add<F extends object>(
       return Object.freeze([...fields]);
     },
     fieldAt(value) {
+      checkArguments(arguments, 1, 1);
       const normalized = normalizePosition(
         position(value, space.dimensions),
         space,
@@ -161,6 +180,7 @@ function add<F extends object>(
       return at(index);
     },
     neighbors(field, options = {}) {
+      checkArguments(arguments, 1, 2);
       const index = coordinates(requireField(field));
       const opts = validateOptions(options, ["neighborhood"]);
       const result = new Set<Field<F>>();
@@ -170,12 +190,27 @@ function add<F extends object>(
       }
       return Object.freeze([...result]);
     },
-    agentsAt: ((field: Field<F>, options?: { source: Iterable<Agent> }) => {
+    agentsAt: function agentsAt(
+      field: Field<F>,
+      options?: { source: Iterable<Agent> },
+    ) {
+      checkArguments(arguments, 1, 2);
       requireField(field);
-      const opts = validateOptions(options ?? {}, ["source"]);
-      const source = opts.source ?? frameworkRecord(grid)?.world?.agents;
+      const opts = validateOptions(arguments.length === 1 ? {} : options, [
+        "source",
+      ]);
+      const source =
+        opts.source === undefined
+          ? frameworkRecord(grid)?.world?.agents
+          : opts.source;
       if (source === undefined)
         throw new TypeError("Detached Grid requires an explicit source.");
+      if (
+        (typeof source !== "object" && typeof source !== "function") ||
+        source === null ||
+        typeof (source as Iterable<Agent>)[Symbol.iterator] !== "function"
+      )
+        throw new TypeError("Expected an iterable Agent source.");
       const candidates = [...new Set(source as Iterable<Agent>)];
       for (const agent of candidates) {
         requireAgent(agent);
@@ -187,8 +222,9 @@ function add<F extends object>(
           (agent) => agent.alive && grid.fieldAt(agent) === field,
         ),
       );
-    }) as Grid<F>["agentsAt"],
+    } as Grid<F>["agentsAt"],
     diffuse(property, options = {}) {
+      checkArguments(arguments, 1, 2);
       const opts = validateOptions(options, ["rate", "neighborhood"]);
       const rate = finite(opts.rate ?? 0.25);
       if (rate < 0 || rate > 1)

@@ -120,7 +120,7 @@ export const ui = defineUI(model, {
         { label: "Wealth", color: "#d94838", points: state.lorenz },
         {
           label: "Equality",
-          color: "#555555",
+          color: "currentColor",
           points: [
             { x: 0, y: 0 },
             { x: 100, y: 100 },

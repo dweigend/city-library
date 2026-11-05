@@ -84,16 +84,16 @@ Counts were verified by matching all paired semantic/API anchors and `###` opera
 | [api-56](../agent-loom/api-table.md#agent-heading) | `agent.heading` | A1 / A3 | Partial | A1: immutable default readback; A3: explicit spatial initialization and updates. A1 evidence: [five scripts](a1.md#author-task-and-frozen-examples), [tests and checks](a1-evidence.md); review findings and author responses recorded. |
 | [api-57](../agent-loom/api-table.md#agent-pitch) | `agent.pitch` | A1 / A3 | Partial | A1: immutable default readback; A3: explicit spatial initialization and updates. A1 evidence: [five scripts](a1.md#author-task-and-frozen-examples), [tests and checks](a1-evidence.md); review findings and author responses recorded. |
 | [api-58](../agent-loom/api-table.md#agent-roll) | `agent.roll` | A1 / A3 | Partial | A1: immutable default readback; A3: explicit spatial initialization and updates. A1 evidence: [five scripts](a1.md#author-task-and-frozen-examples), [tests and checks](a1-evidence.md); review findings and author responses recorded. |
-| [api-40](../agent-loom/api-table.md#agent-move) | `agent.move` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
-| [api-41](../agent-loom/api-table.md#agent-move-2) | `agent.move` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
-| [api-42](../agent-loom/api-table.md#agent-move-3) | `agent.move` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
+| [api-40](../agent-loom/api-table.md#agent-move) | `agent.move` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-41](../agent-loom/api-table.md#agent-move-2) | `agent.move` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-42](../agent-loom/api-table.md#agent-move-3) | `agent.move` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
 | [api-43](../agent-loom/api-table.md#agent-move-4) | `agent.move` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
-| [api-44](../agent-loom/api-table.md#agent-rotate) | `agent.rotate` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
-| [api-45](../agent-loom/api-table.md#agent-rotate-2) | `agent.rotate` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
-| [api-46](../agent-loom/api-table.md#agent-distance-to) | `agent.distanceTo` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
-| [api-47](../agent-loom/api-table.md#agent-neighbors) | `agent.neighbors` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
-| [api-48](../agent-loom/api-table.md#agent-neighbors-2) | `agent.neighbors` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
-| [api-49](../agent-loom/api-table.md#agent-direction-to) | `agent.directionTo` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
+| [api-44](../agent-loom/api-table.md#agent-rotate) | `agent.rotate` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-45](../agent-loom/api-table.md#agent-rotate-2) | `agent.rotate` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-46](../agent-loom/api-table.md#agent-distance-to) | `agent.distanceTo` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-47](../agent-loom/api-table.md#agent-neighbors) | `agent.neighbors` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-48](../agent-loom/api-table.md#agent-neighbors-2) | `agent.neighbors` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-49](../agent-loom/api-table.md#agent-direction-to) | `agent.directionTo` | A3 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
 | [api-50](../agent-loom/api-table.md#agent-can-move) | `agent.canMove` | A3 | Planned | Spatial operations, perception and path continuation in bounded slices. |
 | [api-52](../agent-loom/api-table.md#agent-gradient) | `agent.gradient` | A4 | Planned | Requires Grid/Field and numeric neighborhood rules. |
 | [api-39](../agent-loom/api-table.md#agent-delete) | `agent.delete` | A1 / A5 | Partial | A1: living state and World removal; A5: incident graph/tie cleanup. A1 evidence: [five scripts](a1.md#author-task-and-frozen-examples), [tests and checks](a1-evidence.md); review findings and author responses recorded. |
@@ -104,27 +104,27 @@ Counts were verified by matching all paired semantic/API anchors and `###` opera
 
 | Source entry ID | Operation / type | Delivery | Status | Scope / evidence needed |
 | --- | --- | --- | --- | --- |
-| [api-62](../agent-loom/api-table.md#grid-add) | `Grid.add` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-63](../agent-loom/api-table.md#grid-add-2) | `Grid.add` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-59](../agent-loom/api-table.md#grid-space) | `grid.space` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-72](../agent-loom/api-table.md#grid-cell-size) | `grid.cellSize` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-73](../agent-loom/api-table.md#grid-fields) | `grid.fields` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-64](../agent-loom/api-table.md#grid-field-at) | `grid.fieldAt` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-65](../agent-loom/api-table.md#grid-neighbors) | `grid.neighbors` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-66](../agent-loom/api-table.md#grid-agents-at) | `grid.agentsAt` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-67](../agent-loom/api-table.md#grid-agents-at-2) | `grid.agentsAt` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-68](../agent-loom/api-table.md#grid-diffuse) | `grid.diffuse` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
+| [api-62](../agent-loom/api-table.md#grid-add) | `Grid.add` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-63](../agent-loom/api-table.md#grid-add-2) | `Grid.add` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-59](../agent-loom/api-table.md#grid-space) | `grid.space` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-72](../agent-loom/api-table.md#grid-cell-size) | `grid.cellSize` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-73](../agent-loom/api-table.md#grid-fields) | `grid.fields` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-64](../agent-loom/api-table.md#grid-field-at) | `grid.fieldAt` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-65](../agent-loom/api-table.md#grid-neighbors) | `grid.neighbors` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-66](../agent-loom/api-table.md#grid-agents-at) | `grid.agentsAt` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-67](../agent-loom/api-table.md#grid-agents-at-2) | `grid.agentsAt` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-68](../agent-loom/api-table.md#grid-diffuse) | `grid.diffuse` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
 
 ## Field
 
 | Source entry ID | Operation / type | Delivery | Status | Scope / evidence needed |
 | --- | --- | --- | --- | --- |
-| [api-60](../agent-loom/api-table.md#field-id) | `field.id` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-61](../agent-loom/api-table.md#field-grid) | `field.grid` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-69](../agent-loom/api-table.md#field-x) | `field.x` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-70](../agent-loom/api-table.md#field-y) | `field.y` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-71](../agent-loom/api-table.md#field-z) | `field.z` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
-| [api-4](../agent-loom/api-table.md#type-field) | `Field` | A4 | Planned | Detached square/cubic topology, field state and explicit World participation. |
+| [api-60](../agent-loom/api-table.md#field-id) | `field.id` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-61](../agent-loom/api-table.md#field-grid) | `field.grid` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-69](../agent-loom/api-table.md#field-x) | `field.x` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-70](../agent-loom/api-table.md#field-y) | `field.y` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-71](../agent-loom/api-table.md#field-z) | `field.z` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-4](../agent-loom/api-table.md#type-field) | `Field` | A4 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
 
 ## Graph
 
@@ -248,11 +248,11 @@ Counts were verified by matching all paired semantic/API anchors and `###` opera
 | Source entry ID | Operation / type | Delivery | Status | Scope / evidence needed |
 | --- | --- | --- | --- | --- |
 | [api-162](../agent-loom/api-table.md#stats-describe) | `stats.describe` | A7 | Planned | Validated inputs or pure observation contracts. |
-| [api-163](../agent-loom/api-table.md#stats-histogram) | `stats.histogram` | A7 | Planned | Validated inputs or pure observation contracts. |
-| [api-164](../agent-loom/api-table.md#stats-gini) | `stats.gini` | A7 | Planned | Validated inputs or pure observation contracts. |
+| [api-163](../agent-loom/api-table.md#stats-histogram) | `stats.histogram` | A7 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
+| [api-164](../agent-loom/api-table.md#stats-gini) | `stats.gini` | A7 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
 | [api-165](../agent-loom/api-table.md#stats-alignment) | `stats.alignment` | A7 | Planned | Validated inputs or pure observation contracts. |
 | [api-166](../agent-loom/api-table.md#type-summary) | `Summary` | A7 | Planned | Validated inputs or pure observation contracts. |
-| [api-167](../agent-loom/api-table.md#type-histogram) | `Histogram` | A7 | Planned | Validated inputs or pure observation contracts. |
+| [api-167](../agent-loom/api-table.md#type-histogram) | `Histogram` | A7 | Partial | Bounded reference-model slice verified by frozen spatial/Grid/stats examples and targeted regressions; complete target contracts remain tracked separately. See [refactor evidence](agent-lab-evidence.md). |
 
 ## geometry
 

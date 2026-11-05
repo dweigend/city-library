@@ -138,6 +138,11 @@ dt {
 dd {
   margin: 0;
 }
+.inspector dt,
+.inspector dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .status,
 #catalog-status {
   font-size: 0.875rem;
@@ -299,6 +304,9 @@ th {
   .status {
     order: 3;
     margin: 0.25rem 0;
+  }
+  .monitors.inspector {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   }
   .views {
     order: 4;

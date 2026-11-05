@@ -330,7 +330,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
             });
           } else if (view.type === "inspector") {
             const values = document.createElement("dl");
-            values.className = "monitors";
+            values.className = "monitors inspector";
             figure.append(values);
             views.push({
               render(state) {
