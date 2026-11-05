@@ -1,0 +1,7757 @@
+{
+  "schemaVersion": 1,
+  "scope": "Binding selected200 only; false means pending, not failed. Historical evidence is retained with explicit basis; final acceptance requires every milestone.",
+  "stages": [
+    "selected",
+    "source-audited",
+    "contract-frozen",
+    "implemented",
+    "headless-verified",
+    "browser-verified",
+    "reviewed"
+  ],
+  "rows": [
+    {
+      "path": "Sample Models/Networks/Preferential Attachment",
+      "slug": "preferential-attachment",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-reference-sources.md",
+            "docs/development/agent-lab-evidence.md"
+          ],
+          "basis": "historical source audit reconciled to identical captured Web bytes"
+        },
+        "contract-frozen": {
+          "done": true,
+          "evidence": [
+            "docs/development/agent-lab-examples.md",
+            "docs/development/netlogo-reference-sources.md"
+          ],
+          "basis": "frozen library closure and recorded reference-model contracts"
+        },
+        "implemented": {
+          "done": true,
+          "evidence": [
+            "experiments/preferential-attachment/model.ts",
+            "experiments/preferential-attachment/ui.ts"
+          ],
+          "basis": "public headless composition and shared UI"
+        },
+        "headless-verified": {
+          "done": true,
+          "evidence": [
+            "tests/netlogo-reference-models.test.ts",
+            "docs/development/netlogo-web-catalog-evidence.md"
+          ],
+          "basis": "executed current check after index integration; historical source adaptations retained"
+        },
+        "browser-verified": {
+          "done": true,
+          "evidence": [
+            "docs/development/agent-lab-browser-evidence.md",
+            "docs/development/agent-lab-evidence.md"
+          ],
+          "basis": "historical real-browser report retained; exact source hash matched; refresh planned before final 200 acceptance"
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": [
+        "current catalog-level independent final review and fresh browser confirmation pending"
+      ]
+    },
+    {
+      "path": "Sample Models/Social Science/Voting",
+      "slug": "voting",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-reference-sources.md",
+            "docs/development/agent-lab-evidence.md"
+          ],
+          "basis": "historical source audit reconciled to identical captured Web bytes"
+        },
+        "contract-frozen": {
+          "done": true,
+          "evidence": [
+            "docs/development/agent-lab-examples.md",
+            "docs/development/netlogo-reference-sources.md"
+          ],
+          "basis": "frozen library closure and recorded reference-model contracts"
+        },
+        "implemented": {
+          "done": true,
+          "evidence": [
+            "experiments/voting/model.ts",
+            "experiments/voting/ui.ts"
+          ],
+          "basis": "public headless composition and shared UI"
+        },
+        "headless-verified": {
+          "done": true,
+          "evidence": [
+            "tests/netlogo-reference-models.test.ts",
+            "docs/development/netlogo-web-catalog-evidence.md"
+          ],
+          "basis": "executed current check after index integration; historical source adaptations retained"
+        },
+        "browser-verified": {
+          "done": true,
+          "evidence": [
+            "docs/development/agent-lab-browser-evidence.md",
+            "docs/development/agent-lab-evidence.md"
+          ],
+          "basis": "historical real-browser report retained; exact source hash matched; refresh planned before final 200 acceptance"
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": [
+        "current catalog-level independent final review and fresh browser confirmation pending"
+      ]
+    },
+    {
+      "path": "Sample Models/Biology/Wolf Sheep Predation",
+      "slug": "wolf-sheep-predation",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-reference-sources.md",
+            "docs/development/agent-lab-evidence.md"
+          ],
+          "basis": "historical source audit reconciled to identical captured Web bytes"
+        },
+        "contract-frozen": {
+          "done": true,
+          "evidence": [
+            "docs/development/agent-lab-examples.md",
+            "docs/development/netlogo-reference-sources.md"
+          ],
+          "basis": "frozen library closure and recorded reference-model contracts"
+        },
+        "implemented": {
+          "done": true,
+          "evidence": [
+            "experiments/wolf-sheep-predation/model.ts",
+            "experiments/wolf-sheep-predation/ui.ts"
+          ],
+          "basis": "public headless composition and shared UI"
+        },
+        "headless-verified": {
+          "done": true,
+          "evidence": [
+            "tests/netlogo-reference-models.test.ts",
+            "docs/development/netlogo-web-catalog-evidence.md"
+          ],
+          "basis": "executed current check after index integration; historical source adaptations retained"
+        },
+        "browser-verified": {
+          "done": true,
+          "evidence": [
+            "docs/development/agent-lab-browser-evidence.md",
+            "docs/development/agent-lab-evidence.md"
+          ],
+          "basis": "historical real-browser report retained; exact source hash matched; refresh planned before final 200 acceptance"
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": [
+        "current catalog-level independent final review and fresh browser confirmation pending"
+      ]
+    },
+    {
+      "path": "Sample Models/Social Science/Economics/Wealth Distribution",
+      "slug": "wealth-distribution",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-reference-sources.md",
+            "docs/development/agent-lab-evidence.md"
+          ],
+          "basis": "historical source audit reconciled to identical captured Web bytes"
+        },
+        "contract-frozen": {
+          "done": true,
+          "evidence": [
+            "docs/development/agent-lab-examples.md",
+            "docs/development/netlogo-reference-sources.md"
+          ],
+          "basis": "frozen library closure and recorded reference-model contracts"
+        },
+        "implemented": {
+          "done": true,
+          "evidence": [
+            "experiments/wealth-distribution/model.ts",
+            "experiments/wealth-distribution/ui.ts"
+          ],
+          "basis": "public headless composition and shared UI"
+        },
+        "headless-verified": {
+          "done": true,
+          "evidence": [
+            "tests/netlogo-reference-models.test.ts",
+            "docs/development/netlogo-web-catalog-evidence.md"
+          ],
+          "basis": "executed current check after index integration; historical source adaptations retained"
+        },
+        "browser-verified": {
+          "done": true,
+          "evidence": [
+            "docs/development/agent-lab-browser-evidence.md",
+            "docs/development/agent-lab-evidence.md"
+          ],
+          "basis": "historical real-browser report retained; exact source hash matched; refresh planned before final 200 acceptance"
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": [
+        "current catalog-level independent final review and fresh browser confirmation pending"
+      ]
+    },
+    {
+      "path": "Sample Models/Social Science/Segregation",
+      "slug": "segregation",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": true,
+          "evidence": [
+            "docs/development/segregation-contract.md",
+            "experiments/segregation/NOTICE.md"
+          ],
+          "basis": "source hash and rules reviewed"
+        },
+        "contract-frozen": {
+          "done": true,
+          "evidence": [
+            "examples/segregation/SHA256SUMS",
+            "docs/development/segregation-contract.md"
+          ],
+          "basis": "2682bfa precedes runtime"
+        },
+        "implemented": {
+          "done": true,
+          "evidence": [
+            "experiments/segregation/model.ts",
+            "experiments/segregation/ui.ts"
+          ],
+          "basis": "public headless composition and shared UI"
+        },
+        "headless-verified": {
+          "done": true,
+          "evidence": [
+            "tests/segregation.test.ts",
+            "tests/segregation-continuation.test.ts",
+            "docs/development/netlogo-web-catalog-evidence.md"
+          ],
+          "basis": "executed current check after index integration; historical source adaptations retained"
+        },
+        "browser-verified": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-web-catalog-evidence.md",
+            "docs/development/netlogo-catalog-evidence/segregation-target-setup.png",
+            "docs/development/netlogo-catalog-evidence/segregation-target-tick10.png",
+            "docs/development/netlogo-catalog-evidence/segregation-mobile-dark-final.png"
+          ],
+          "basis": "real Chromium desktop/mobile interactions and screenshot report at7653491"
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": [
+        "independent review of indexed occupancy pending"
+      ]
+    },
+    {
+      "path": "Sample Models/Networks/Giant Component",
+      "slug": "giant-component",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Networks/Small Worlds",
+      "slug": "small-worlds",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Networks/Diffusion on a Directed Network",
+      "slug": "diffusion-on-a-directed-network",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Networks/Virus on a Network",
+      "slug": "virus-on-a-network",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Networks/Team Assembly",
+      "slug": "team-assembly",
+      "batch": "B01",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Consumer Choice",
+      "slug": "consumer-choice",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Rebellion",
+      "slug": "rebellion",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Language Change",
+      "slug": "language-change",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Party",
+      "slug": "party",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Ethnocentrism",
+      "slug": "ethnocentrism",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Minority Game",
+      "slug": "minority-game",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Rumor Mill",
+      "slug": "rumor-mill",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Philosophy/Signaling Game",
+      "slug": "signaling-game",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Psychology/Piaget-Vygotsky Game",
+      "slug": "piaget-vygotsky-game",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "IABM Textbook/chapter 2/Heroes and Cowards",
+      "slug": "heroes-and-cowards",
+      "batch": "B02",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Economics/Fruit Wars",
+      "slug": "fruit-wars",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Economics/Limited Order Book",
+      "slug": "limited-order-book",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Economics/Bidding Market",
+      "slug": "bidding-market",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Economics/Hotelling's Law",
+      "slug": "hotellings-law",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Economics/Braess Paradox",
+      "slug": "braess-paradox",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Economics/Unverified/Cash Flow",
+      "slug": "cash-flow",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Economics/Unverified/Bank Reserves",
+      "slug": "bank-reserves",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Prisoner's Dilemma/Prisoner's Dilemma Basic",
+      "slug": "prisoners-dilemma-basic",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Prisoner's Dilemma/Prisoner's Dilemma Two Person Iterated",
+      "slug": "prisoners-dilemma-two-person-iterated",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "IABM Textbook/chapter 3/El Farol Extensions/El Farol",
+      "slug": "el-farol",
+      "batch": "B03",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Paths",
+      "slug": "paths",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Traffic 2 Lanes",
+      "slug": "traffic-2-lanes",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Traffic Grid",
+      "slug": "traffic-grid",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Taxi Cabs",
+      "slug": "taxi-cabs",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Traffic Basic",
+      "slug": "traffic-basic",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Social Science/Unverified/Traffic Intersection",
+      "slug": "traffic-intersection",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Structure from Randomness 1",
+      "slug": "urban-suite-structure-from-randomness-1",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "IABM Textbook/chapter 5/Traffic Grid Goal",
+      "slug": "traffic-grid-goal",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Positive Feedback",
+      "slug": "urban-suite-positive-feedback",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Path Dependence",
+      "slug": "urban-suite-path-dependence",
+      "batch": "B04",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Cells",
+      "slug": "urban-suite-cells",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Structure from Randomness 2",
+      "slug": "urban-suite-structure-from-randomness-2",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Tijuana Bordertowns",
+      "slug": "urban-suite-tijuana-bordertowns",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Pollution",
+      "slug": "urban-suite-pollution",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Economic Disparity",
+      "slug": "urban-suite-economic-disparity",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Awareness",
+      "slug": "urban-suite-awareness",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Recycling",
+      "slug": "urban-suite-recycling",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Urban Suite/Urban Suite - Sprawl Effect",
+      "slug": "urban-suite-sprawl-effect",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Earth Science/Climate Change",
+      "slug": "climate-change",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Earth Science/Erosion",
+      "slug": "erosion",
+      "batch": "B05",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Simple Birth Rates",
+      "slug": "simple-birth-rates",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Daisyworld",
+      "slug": "daisyworld",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Termites",
+      "slug": "termites",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Shepherds",
+      "slug": "shepherds",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Rabbits Grass Weeds",
+      "slug": "rabbits-grass-weeds",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Invasive Plants",
+      "slug": "invasive-plants",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Ants",
+      "slug": "ants",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Heatbugs",
+      "slug": "heatbugs",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Flocking",
+      "slug": "flocking",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Fireflies",
+      "slug": "fireflies",
+      "batch": "B06",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Chloroplasts and Food",
+      "slug": "chloroplasts-and-food",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Slime",
+      "slug": "slime",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Fur",
+      "slug": "fur",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Blood Sugar Regulation",
+      "slug": "blood-sugar-regulation",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Honeycomb",
+      "slug": "honeycomb",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Autumn",
+      "slug": "autumn",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Membrane Formation",
+      "slug": "membrane-formation",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Sunflower Emergent",
+      "slug": "sunflower-emergent",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Tumor",
+      "slug": "tumor",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Muscle Development",
+      "slug": "muscle-development",
+      "batch": "B07",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Mimicry",
+      "slug": "mimicry",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Anisogamy",
+      "slug": "anisogamy",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Peppered Moths",
+      "slug": "peppered-moths",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Baldwin Effect",
+      "slug": "baldwin-effect",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Mammoths",
+      "slug": "mammoths",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Sex Ratio Equilibrium",
+      "slug": "sex-ratio-equilibrium",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Bacterial Infection",
+      "slug": "bacterial-infection",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Vision Evolution",
+      "slug": "vision-evolution",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Evolution/Genetic Drift/GenDrift T interact",
+      "slug": "gendrift-t-interact",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/CT-STEM/Mendelian Inheritance",
+      "slug": "mendelian-inheritance",
+      "batch": "B08",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Disease Solo",
+      "slug": "disease-solo",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Repressilator 1D",
+      "slug": "repressilator-1d",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/HIV",
+      "slug": "hiv",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Virus",
+      "slug": "virus",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/CRISPR/CRISPR Bacterium",
+      "slug": "crispr-bacterium",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/CRISPR/CRISPR Ecosystem",
+      "slug": "crispr-ecosystem",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/epiDEM/epiDEM Basic",
+      "slug": "epidem-basic",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/epiDEM/epiDEM Travel and Control",
+      "slug": "epidem-travel-and-control",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/GenEvo/GenEvo 1 Genetic Switch",
+      "slug": "genevo-1-genetic-switch",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/BEAGLE Evolution/DNA Protein Synthesis",
+      "slug": "dna-protein-synthesis",
+      "batch": "B09",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Ant Lines",
+      "slug": "ant-lines",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/BeeSmart Hive Finding",
+      "slug": "beesmart-hive-finding",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Moths",
+      "slug": "moths",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Flocking Vee Formations",
+      "slug": "flocking-vee-formations",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Slime Mold Network",
+      "slug": "slime-mold-network",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Rock Paper Scissors",
+      "slug": "rock-paper-scissors",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Fairy Circles",
+      "slug": "fairy-circles",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Unverified/Plant Growth",
+      "slug": "plant-growth",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Biology/Unverified/Algae",
+      "slug": "algae",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/CT-STEM/Habitat Preference Behavior",
+      "slug": "habitat-preference-behavior",
+      "batch": "B10",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Sandpile",
+      "slug": "sandpile",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Ising",
+      "slug": "ising",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Sand",
+      "slug": "sand",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Solid Diffusion",
+      "slug": "solid-diffusion",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Interstitial Diffusion",
+      "slug": "interstitial-diffusion",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Heat Diffusion",
+      "slug": "heat-diffusion",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Crystallization/Crystallization Basic",
+      "slug": "crystallization-basic",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Diffusion Limited Aggregation/DLA",
+      "slug": "dla",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Earth Science/Fire",
+      "slug": "fire",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-grid-batch-contract.md",
+            "experiments/fire/source.nlogox",
+            "experiments/fire/NOTICE.md"
+          ],
+          "basis": "source audit only; runtime pending"
+        },
+        "contract-frozen": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-grid-batch-contract.md",
+            "examples/netlogo-grid-batch/SHA256SUMS"
+          ],
+          "basis": "242cc12 precedes runtime"
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Earth Science/Percolation",
+      "slug": "percolation",
+      "batch": "B11",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-grid-batch-contract.md",
+            "experiments/percolation/source.nlogox",
+            "experiments/percolation/NOTICE.md"
+          ],
+          "basis": "source audit only; runtime pending"
+        },
+        "contract-frozen": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-grid-batch-contract.md",
+            "examples/netlogo-grid-batch/SHA256SUMS"
+          ],
+          "basis": "242cc12 precedes runtime"
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Hydrogen Gas Production",
+      "slug": "hydrogen-gas-production",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Thermostat",
+      "slug": "thermostat",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Gas Chromatography",
+      "slug": "gas-chromatography",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Boiling",
+      "slug": "boiling",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/GasLab/GasLab Maxwells Demon",
+      "slug": "gaslab-maxwells-demon",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/GasLab/GasLab Free Gas",
+      "slug": "gaslab-free-gas",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/GasLab/GasLab Adiabatic Piston",
+      "slug": "gaslab-adiabatic-piston",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/GasLab/GasLab Single Collision",
+      "slug": "gaslab-single-collision",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/GasLab/GasLab Atmosphere",
+      "slug": "gaslab-atmosphere",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/GasLab/GasLab Isothermal Piston",
+      "slug": "gaslab-isothermal-piston",
+      "batch": "B12",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Chaos in a Box",
+      "slug": "chaos-in-a-box",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Kicked Rotator",
+      "slug": "kicked-rotator",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Polymer Dynamics",
+      "slug": "polymer-dynamics",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Monte Carlo Lennard-Jones",
+      "slug": "monte-carlo-lennard-jones",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Molecular Dynamics Lennard-Jones",
+      "slug": "molecular-dynamics-lennard-jones",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Mechanics/Unverified/N-Bodies",
+      "slug": "n-bodies",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Mechanics/Unverified/Gravitation",
+      "slug": "gravitation",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Unverified/Osmotic Pressure",
+      "slug": "osmotic-pressure",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Unverified/Scattering",
+      "slug": "scattering",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/CT-STEM/Pendulum",
+      "slug": "pendulum",
+      "batch": "B13",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Current in a Semiconductor",
+      "slug": "current-in-a-semiconductor",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Dislocation Motion and Deformation",
+      "slug": "dislocation-motion-and-deformation",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Waves/Wave Machine",
+      "slug": "wave-machine",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Waves/Lattice Gas Automaton",
+      "slug": "lattice-gas-automaton",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Waves/Rope",
+      "slug": "rope",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Waves/Chladni Figures",
+      "slug": "chladni-figures",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Waves/Unverified/Doppler",
+      "slug": "doppler",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/NIELS/Current in a Wire",
+      "slug": "current-in-a-wire",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/NIELS/Parallel Circuit",
+      "slug": "parallel-circuit",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/NIELS/Electrostatics",
+      "slug": "electrostatics",
+      "batch": "B14",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Materials Science/Radical Polymerization with Chains",
+      "slug": "radical-polymerization-with-chains",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Chemical Reactions/Simple Kinetics 2",
+      "slug": "simple-kinetics-2",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Chemical Reactions/Radical Polymerization",
+      "slug": "radical-polymerization",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Chemical Reactions/Chemical Equilibrium",
+      "slug": "chemical-equilibrium",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Chemical Reactions/B-Z Reaction",
+      "slug": "b-z-reaction",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Chemical Reactions/Enzyme Kinetics",
+      "slug": "enzyme-kinetics",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Chemical Reactions/Acids and Bases/Weak Acid",
+      "slug": "weak-acid",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Chemical Reactions/Acids and Bases/Buffer",
+      "slug": "buffer",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Chemistry & Physics/Radioactivity/Decay",
+      "slug": "decay",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Curricular Models/Connected Chemistry/Connected Chemistry Solid Combustion",
+      "slug": "connected-chemistry-solid-combustion",
+      "batch": "B15",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/3D Solids",
+      "slug": "3d-solids",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Vector Fields",
+      "slug": "vector-fields",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Pursuit",
+      "slug": "pursuit",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/3D Surface",
+      "slug": "3d-surface",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Turtles Circling",
+      "slug": "turtles-circling",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Voronoi",
+      "slug": "voronoi",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Conic Sections/Emergent Shapes - Ellipse",
+      "slug": "emergent-shapes-ellipse",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Fractals/Tree Simple",
+      "slug": "tree-simple",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Fractals/Koch Curve",
+      "slug": "koch-curve",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Fractals/L-System Fractals",
+      "slug": "l-system-fractals",
+      "batch": "B16",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/Birthdays",
+      "slug": "birthdays",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/Galton Box",
+      "slug": "galton-box",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/Binomial Rabbits",
+      "slug": "binomial-rabbits",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/Three Doors",
+      "slug": "three-doors",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/ProbLab/Stochastic Patchwork",
+      "slug": "stochastic-patchwork",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Expected Value",
+      "slug": "expected-value",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Partition Permutation Distribution",
+      "slug": "partition-permutation-distribution",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Central Limit Theorem",
+      "slug": "central-limit-theorem",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Random Combinations and Permutations",
+      "slug": "random-combinations-and-permutations",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Mathematics/Fractals/Mandelbrot",
+      "slug": "mandelbrot",
+      "batch": "B17",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Robby the Robot",
+      "slug": "robby-the-robot",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Artificial Neural Net - Perceptron",
+      "slug": "artificial-neural-net-perceptron",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Dining Philosophers",
+      "slug": "dining-philosophers",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Simple Genetic Algorithm",
+      "slug": "simple-genetic-algorithm",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Robotic Factory",
+      "slug": "robotic-factory",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Particle Swarm Optimization",
+      "slug": "particle-swarm-optimization",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Artificial Neural Net - Multilayer",
+      "slug": "artificial-neural-net-multilayer",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/PageRank",
+      "slug": "pagerank",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/K-Means Clustering",
+      "slug": "k-means-clustering",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Unverified/Simulated Annealing",
+      "slug": "simulated-annealing",
+      "batch": "B18",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/SmoothLife",
+      "slug": "smoothlife",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Hex Cell Aggregation",
+      "slug": "hex-cell-aggregation",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Vants",
+      "slug": "vants",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Turing Machine 2D",
+      "slug": "turing-machine-2d",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Cellular Automata/Life",
+      "slug": "life",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-grid-batch-contract.md",
+            "experiments/life/source.nlogox",
+            "experiments/life/NOTICE.md"
+          ],
+          "basis": "source audit only; runtime pending"
+        },
+        "contract-frozen": {
+          "done": true,
+          "evidence": [
+            "docs/development/netlogo-grid-batch-contract.md",
+            "examples/netlogo-grid-batch/SHA256SUMS"
+          ],
+          "basis": "242cc12 precedes runtime"
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": [
+        "shared brush/recolor UI contract must be delivered; selected-cell substitute is incomplete"
+      ]
+    },
+    {
+      "path": "Sample Models/Computer Science/Cellular Automata/CA 1D Elementary",
+      "slug": "ca-1d-elementary",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Cellular Automata/CA Continuous",
+      "slug": "ca-continuous",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Cellular Automata/Brian's Brain",
+      "slug": "brians-brain",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Cellular Automata/Cyclic CA",
+      "slug": "cyclic-ca",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Computer Science/Cellular Automata/CA Stochastic",
+      "slug": "ca-stochastic",
+      "batch": "B19",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Games/Minesweeper",
+      "slug": "minesweeper",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Games/Planarity",
+      "slug": "planarity",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Games/Lunar Lander",
+      "slug": "lunar-lander",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Games/Pac-Man",
+      "slug": "pac-man",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Sample Models/Games/Tetris",
+      "slug": "tetris",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Code Examples/State Machine Example",
+      "slug": "state-machine-example",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Code Examples/Moore & Von Neumann Example",
+      "slug": "moore-von-neumann-example",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Code Examples/Vision Cone Example",
+      "slug": "vision-cone-example",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Code Examples/Extensions Examples/nw/NW General Examples",
+      "slug": "nw-general-examples",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    },
+    {
+      "path": "Code Examples/Extensions Examples/gis/GIS General Examples",
+      "slug": "gis-general-examples",
+      "batch": "B20",
+      "stages": {
+        "selected": {
+          "done": true,
+          "evidence": [
+            "experiments/catalog/selection/selection.json"
+          ]
+        },
+        "source-audited": {
+          "done": false,
+          "evidence": []
+        },
+        "contract-frozen": {
+          "done": false,
+          "evidence": []
+        },
+        "implemented": {
+          "done": false,
+          "evidence": []
+        },
+        "headless-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "browser-verified": {
+          "done": false,
+          "evidence": []
+        },
+        "reviewed": {
+          "done": false,
+          "evidence": []
+        }
+      },
+      "blockers": []
+    }
+  ]
+}
