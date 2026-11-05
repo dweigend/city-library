@@ -32,6 +32,6 @@
     "build": "bun build index.ts --target browser --format esm --outdir dist && tsc -p tsconfig.build.json",
     "consumer": "bun scripts/consumer.ts",
     "check": "bun run typecheck && bun run test && bun run examples && bun run build && bun run consumer",
-    "dev:ui": "bun Agend_Lab/host/server.ts"
+    "dev:ui": "bun scripts/agent-lab.ts"
   }
 }

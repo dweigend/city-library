@@ -1,6 +1,6 @@
 # NetLogo reference models: source audit
 
-Status: source and widget audit completed on 5 November 2026. Browser checkpoints are recorded separately below when actually captured; no target-port or trajectory parity is claimed.
+Status: source and widget audit and reference-browser captures completed on 5 November 2026. No target-port or trajectory parity is claimed.
 
 ## Source identity and attribution
 
@@ -85,3 +85,42 @@ Core closure: wrapped Grid/Field, Moore diffusion, spatial movement/rotation, ce
 ## Required comparison evidence
 
 Capture reference and target at the same viewport and declared defaults: uninitialized, setup, and a recorded progressed tick. Compare controls and enabled states, initialization, reporters, legend/scales, spatial boundaries, terminal behavior and plot meanings. Screenshots verify presentation; hand-computed fixtures verify mechanisms. Different random trajectories are expected and must be distinguished from changed algorithm semantics. No browser or target checks are claimed by this source audit alone.
+
+## Captured reference browser checkpoints
+
+Captured in an owned T3 preview browser tab at **1280x800**, then saved and individually opened for visual inspection. The tab was closed after capture. These are reference-only checks; no target UI was verified here. Exact paths are in [browser-evidence.json](../../experiments/reference-sources/browser-evidence.json); images are retained under [evidence/](../../experiments/reference-sources/evidence/). Source files identify NetLogo 7.0.4; no explicit random seed was set, so counts are one stochastic realization, not target expectations.
+
+| Model / step | Verified state and behavior | Evidence |
+| --- | --- | --- |
+| Preferential Attachment / initial | Black view, zero count, execution disabled | `preferential-attachment-initial.png` |
+| Preferential Attachment / setup | Tick 0, 2 nodes and 1 visible edge, degree histogram populated | `preferential-attachment-setup.png` |
+| Preferential Attachment / progress | 25 actual go-once activations; tick 25 and node monitor 27; hubs and degree plots visible | `preferential-attachment-progress.png` |
+| Voting / initial | Black view, both switches off, go disabled | `voting-initial.png` |
+| Voting / setup | Tick 0; green 11263, blue 11538, total 22801 | `voting-setup.png` |
+| Voting / progress | Forever go started and stopped at tick 20; green 10665, blue 12136; contiguous regions visible | `voting-progress.png` |
+| Wolf Sheep / initial | Default sheep-wolves mode, 100/50 initial population inputs, energy label switch off, go disabled | `wolf-sheep-predation-initial.png` |
+| Wolf Sheep / setup | Tick 0, sheep 100/wolves 50. Energy labels were switched ON during capture; scientific parameters otherwise default | `wolf-sheep-predation-setup-labels.png` |
+| Wolf Sheep / progress | Run started/stopped at tick 20, sheep 140/wolves 55; energy labels on | `wolf-sheep-predation-progress-labels.png` |
+| Wolf Sheep grass / setup | Chooser switched to grass mode, setup reset tick 0, population 100/50, displayed grass/4=316 | `wolf-sheep-predation-grass-setup-labels.png` |
+| Wolf Sheep grass / progress | Run started/stopped at tick 20, sheep 93/wolves 43, displayed grass/4=324 | `wolf-sheep-predation-grass-progress-labels.png` |
+| Wealth / initial | Source defaults visible, black view, go disabled, empty plots | `wealth-distribution-initial.png` |
+| Wealth / setup | Tick 0, people 250, resource landscape and class histogram populated | `wealth-distribution-setup.png` |
+| Wealth / progress | Run started/stopped at tick 20; people remained 250; resource/class patterns changed | `wealth-distribution-progress.png` |
+| Wealth / plots | Same paused tick 20, page scrolled down: class histories, current Lorenz curve and Gini history visible. Source gini reserve=53.575184392100894, so widget Gini=0.42860147513680713 | `wealth-distribution-plots.png` |
+
+Observed UI strengths: setup enables execution; parameters, view and reporters are model-specific; view-only controls are visibly separate in the network model. Visible limitations relevant to the new host: the tall Wolf Sheep view/plots and Wealth's lower plots extend below the first 800px viewport; several states are encoded mainly by color. This is not a full keyboard, screenreader, contrast, mobile or performance audit. No exact seeded cross-engine agreement or broad distribution study was performed.
+
+## Implemented port scope and explicit adaptations
+
+The four model entries now use public City Library operations and the shared headless input descriptor validator. This section records implementation choices; separate target browser and independent review evidence must establish acceptance.
+
+- **Shared execution:** new `advance(n)` validates its entire count before acting. Successful updates run through `run`; history is recorded afterwards. Voting first computes a candidate so its no-change invocation adds no tick. Wolf source preflight conditions are retained; a step in which extinction occurs still contributes its successful tick before the next call would stop.
+- **Randomness:** Mulberry replaces NetLogo's runtime RNG. Random integer headings, random population snapshots and newborn/dead visitation semantics are preserved where scientifically relevant. Display-only color initialization draws and independent, order-insensitive patch activation draws are not duplicated. Initialization distributions and mechanisms are the comparison target, not bit-identical seeded trajectories.
+- **History:** each model-specific buffer retains the initial sample plus the latest 1000 completed-step samples. Voting `setVotes` replaces its latest same-tick sample; live rule changes do not add a sample. This is explicitly bounded model-local recording, not delivery of the full planned History library. Source NetLogo plot buffers are not subject to this same declared cap.
+- **Preferential Attachment:** graph growth and degree/log-degree measurements are headless. Layout/camera/resize consume no model RNG and do not change topology. The shared view supplies its own layout and Fit/Reset controls; exact NetLogo spring coordinates are not reproduced. The original `plot?`, repeated `redo layout` and resize mode are presentation controls; target screenshots and UI review must identify the supplied equivalents rather than pretend the original widget set was copied.
+- **Voting:** exact 151x151 default and source threshold/tie/close-call rules are retained. Public `setVotes` enables deterministic scientific fixtures. Current counts come from binary votes rather than display colors. Width/height and seed are additional explicit setup inputs. Live rule toggles display canonical values and reset stale terminal status so an intervention can restart the model.
+- **Wolf Sheep:** both modes, 51x51 periodic movement, source food/reproduction/countdown ordering, energy<0 death and no-newborn-revisit behavior are retained. Web's 10000-sheep/no-wolf cap is reported as an explicit stop reason. Neutral circle/triangle animal glyphs replace NetLogo's supplied sheep/wolf vector shapes. Energy observations are public, and UI selectors supply rounded labels for wolves and grass-mode sheep for the shared renderer's label option. The source grass monitor is rounded `count/4`; the plot keeps fractional `count/4`; raw grass count remains headless.
+- **Wealth:** 51x51 grid, source Moore diffusion, strict cardinal tie priority, two-pass harvest, population-preserving rebirth, old-tick growth check, classes and inequality are retained. Population is deliberately setup-only, avoiding the source inconsistency where changing `num-people` live changes inequality loop bounds without creating/deleting people. Individual life/vision/metabolism bounds still affect later rebirths; growth controls act each step. Cross-field life bounds are validated atomically. Zero-total wealth yields Gini 0 and an equality Lorenz curve rather than source division failure. These guards are explicit adaptations. Person glyphs use neutral direction triangles rather than source person shapes.
+- **Provenance:** each model module includes source attribution/license/change notices; each UI includes an original-model link and model information exposes attribution. Source snapshots remain unchanged with full notices. Generic Grid/Space/stats/UI implementation is independent library/application code, not copied model code.
+
+Executed checks during port implementation: `bun run typecheck` passed; all five frozen lab scripts and all five frozen statistics scripts ran unchanged; `bun test tests/netlogo-reference-models.test.ts tests/stats-runtime.test.ts` passed 9 tests / 57 assertions. These checks cover seeded repeatability, tree invariants, Voting's fixed point and rule restart, malformed inputs and detached reads, both Wolf modes, zero-energy death/tick behavior, Wealth equations and same-ID rebirth, histogram boundaries, Gini scale/permutation invariance and observation purity. No claim of a large-sample statistical equivalence study is made.

@@ -13,3 +13,5 @@ b7360e47930a2b093a72c3220a9e258679a1bbf7fc317598f783be29e78644a0  01-histogram-b
 a0d8a7f89e7b92ccae877d03255e94762f44673712f62bdb270f7902d06eb4db  04-independent-observation.ts
 ac4a29561fde13ee318e3aa15d847cd7333ac1fb9b81b7e4f65e0ae1cea99b5e  05-detached-distributions.ts
 ```
+
+After implementation: all five scripts pass unchanged through public imports; `bun run typecheck` passes; targeted stats tests pass. Root integration owns complete-suite/browser/independent-review evidence. Runtime closure remains two functions only (`histogram`, `gini`).

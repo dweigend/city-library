@@ -108,7 +108,7 @@ Initially, examples may fail because their planned public exports do not exist. 
 
 A phase is complete only when all of its four or five scripts typecheck and run through public imports with their assertions enabled, alongside focused behavior and type tests. Keep earlier phases' examples passing as regression checks. Example execution does not replace edge-case tests or establish browser compatibility. Record actual commands and outcomes. Do not claim example acceptance while public entry-name mapping remains unresolved.
 
-### A1 example briefs — scripts not written yet
+### Historical A1 example briefs — subsequently delivered
 
 | Planned script | Author task and required result |
 | --- | --- |
@@ -118,7 +118,7 @@ A phase is complete only when all of its four or five scripts typecheck and run 
 | `examples/a1/04-copy-and-custom-state.ts` | Create agents from nested supported data, copy an agent into a detached living identity and verify the reference's copying rules; contrast initialization copying with later ordinary reference assignment. |
 | `examples/a1/05-execution-errors.ts` | Throw during a model step: earlier effects remain, the failed step adds no tick, and execution stops. Also demonstrate zero-step execution and same-World reentrancy rejection with explicit assertions. |
 
-These are task briefs, not delivered scripts or verified behavior. Before implementation, reconcile their complete operation closure with the specification, write all five scripts and fix the public import mapping explicitly. Boundary/type tests cover additional cases such as reserved keys, iterator failures, thenables and numeric tick progress.
+These are the original task briefs. Their scripts and acceptance were subsequently delivered in A1; see the A1 assignment and evidence above. Their example-first ordering remains mandatory for new phases. Boundary/type tests cover reserved keys, iterator failures, thenables and numeric tick progress.
 
 ## Acceptance for every implementation slice
 

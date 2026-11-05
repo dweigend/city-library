@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { createPlayback } from "../Agend_Lab/ui/application/playback.ts";
+import { createPlayback } from "../ui/playback.ts";
 
 test("playback owns a single cancellable caller timer and stops at model completion", () => {
   let tick: (() => void) | undefined;

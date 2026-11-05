@@ -2,7 +2,7 @@
 
 A modular, TypeScript-first toolkit for procedural cities and agent-based models. Use focused geometry, graph and simulation capabilities independently, then compose the parts your model needs. Applications own visualization; the library owns domain logic and state.
 
-> **Work in progress.** A1, bounded A2a and the A5a graph kernel are implemented: typed Agent data, non-spatial World membership, Tick, synchronous run, standard Mulberry sampling/continuation and canonical graph contacts. The test lab now runs a headless network-diffusion simulation with community bridges, ring and hub topologies. Broader APIs remain planned; no package is published. See [A5a usage](docs/development/a5a-usage.md) and [the local test UI](Agend_Lab/README.md) for scope and commands.
+> **Work in progress.** A1, bounded A2a and the A5a graph kernel are implemented. The active Lab refactor adds bounded spatial/Grid and measurement capabilities plus modular NetLogo reference experiments; broader APIs remain planned and acceptance is tracked separately. No package is published. See [A5a usage](docs/development/a5a-usage.md), [Agent Lab](ui/agent-lab/README.md) and [refactor evidence](docs/development/agent-lab-evidence.md) for scope and commands.
 
 ## Purpose
 

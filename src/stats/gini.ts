@@ -1,10 +1,18 @@
 /** Population Gini over finite nonnegative holdings; no sampling correction. */
 export function gini(values: Iterable<number>): number {
+  if (
+    values == null ||
+    typeof (values as { [Symbol.iterator]?: unknown })[Symbol.iterator] !==
+      "function"
+  )
+    throw new TypeError("Gini requires an iterable.");
   const sorted = Array.from(values);
   let total = 0;
   for (const value of sorted) {
-    if (typeof value !== "number") throw new TypeError("Gini values must be numbers.");
-    if (!Number.isFinite(value) || value < 0) throw new RangeError("Gini values must be finite and nonnegative.");
+    if (typeof value !== "number")
+      throw new TypeError("Gini values must be numbers.");
+    if (!Number.isFinite(value) || value < 0)
+      throw new RangeError("Gini values must be finite and nonnegative.");
     total += value;
     if (!Number.isFinite(total)) throw new RangeError("Gini total overflow.");
   }
@@ -15,6 +23,7 @@ export function gini(values: Iterable<number>): number {
     weighted += (2 * (i + 1) - sorted.length - 1) * (sorted[i]! / total);
   }
   const result = weighted / sorted.length;
-  if (!Number.isFinite(result)) throw new RangeError("Gini arithmetic overflow.");
+  if (!Number.isFinite(result))
+    throw new RangeError("Gini arithmetic overflow.");
   return Math.max(0, Math.min(1, result));
 }

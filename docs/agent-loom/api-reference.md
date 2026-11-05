@@ -1,6 +1,6 @@
 # Agent Loom API reference
 
-&gt; **Specification only.** City Library has no implemented public APIs yet. The signatures and examples below define the phase-one target; they cannot currently be run against this repository.
+&gt; **Binding target reference.** The signatures and examples below define the phase-one target. Only the bounded subsets recorded in PLAN.md and the delivery inventory are implemented; do not infer availability from a signature here.
 
 [Overview](README.md) · [API inventory](api-table.md)
 
