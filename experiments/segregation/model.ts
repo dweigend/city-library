@@ -113,14 +113,16 @@ export function create(options: Partial<SegregationParameters> = {}) {
     if (population.length === fields.length) return "no-vacancy";
     return null;
   }
-  function findNewSpot(resident: Resident, population: readonly Resident[]) {
+  function findNewSpot(resident: Resident) {
     // Source recursively turns and walks again on an occupied cell. This loop
     // preserves that search, without a recursion limit or a uniform-cell shortcut.
     for (;;) {
       resident.rotate(random.number() * 360);
       resident.move(random.number() * 10);
       const field = grid.fieldAt(resident)!;
-      if (grid.agentsAt(field, { source: population }).every((other) => other === resident)) {
+      // World membership is exactly the resident population. The implicit query
+      // observes preceding moves through the library's canonical occupancy index.
+      if (grid.agentsAt(field).every((other) => other === resident)) {
         resident.move({ to: field });
         return;
       }
@@ -130,7 +132,7 @@ export function create(options: Partial<SegregationParameters> = {}) {
     const population = residents();
     const unhappy = population.filter((resident) => !resident.happy);
     for (const resident of random.sample(unhappy, { count: unhappy.length })) {
-      findNewSpot(resident, population);
+      findNewSpot(resident);
     }
     updateResidents();
   }

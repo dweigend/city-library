@@ -1,4 +1,5 @@
 import type { Agent } from "../agent/agent.ts";
+import { createOccupancyIndex } from "./occupancy.ts";
 import {
   frameworkRecord,
   issueId,
@@ -89,6 +90,7 @@ function add<F extends object>(
   cloneModelState(initial, reserved, "Field");
   const fields: Field<F>[] = [];
   const indices = new Map<Field<F>, number>();
+  let occupancy: ReturnType<typeof createOccupancyIndex<Field<F>>> | undefined;
   function checkArguments(args: IArguments, min: number, max: number) {
     if (
       args.length < min ||
@@ -203,12 +205,15 @@ function add<F extends object>(
       const opts = validateOptions(arguments.length === 1 ? {} : options, [
         "source",
       ]);
-      const source =
-        opts.source === undefined
-          ? frameworkRecord(grid)?.world?.agents
-          : opts.source;
-      if (source === undefined)
-        throw new TypeError("Detached Grid requires an explicit source.");
+      if (opts.source === undefined) {
+        const world = frameworkRecord(grid)?.world;
+        if (!world) throw new TypeError("Detached Grid requires an explicit source.");
+        if (!occupancy?.matches(world))
+          occupancy = createOccupancyIndex(world, grid, space.dimensions,
+            (agent) => fieldAtCoordinates(agent.x, agent.y, agent.z));
+        return occupancy.query(field);
+      }
+      const source = opts.source;
       if (
         (typeof source !== "object" && typeof source !== "function") ||
         source === null ||

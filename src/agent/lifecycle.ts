@@ -9,6 +9,12 @@ interface FrameworkRecord {
   world?: World;
   detach?: () => void;
   readonly deletionParticipants: Set<DeletionParticipant>;
+  worldObservers?: Set<WorldObserver>;
+}
+/** Private derived-query coordination; observers never own domain state. */
+interface WorldObserver {
+  membership(component: object, attached: boolean): void;
+  movement(agent: object): void;
 }
 const identities = new WeakMap<object, FrameworkRecord>();
 let issued = 0n;
@@ -33,4 +39,19 @@ export function requireLivingAgent(value: unknown): FrameworkRecord {
   const record = requireAgent(value);
   if (!record.alive) throw new TypeError("The Agent has been deleted.");
   return record;
+}
+export function observeWorld(world: World, observer: WorldObserver): () => void {
+  const record = frameworkRecord(world)!;
+  const observers = record.worldObservers ??= new Set();
+  observers.add(observer);
+  return () => { observers.delete(observer); };
+}
+export function notifyMembership(world: World, component: object, attached: boolean): void {
+  for (const observer of [...(frameworkRecord(world)?.worldObservers ?? [])])
+    observer.membership(component, attached);
+}
+export function notifyMovement(agent: object): void {
+  const world = frameworkRecord(agent)?.world;
+  if (world) for (const observer of frameworkRecord(world)?.worldObservers ?? [])
+    observer.movement(agent);
 }
