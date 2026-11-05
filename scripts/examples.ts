@@ -7,6 +7,7 @@ const phases = {
   grid: ["01-field-identities", "02-neighborhood-and-wrapping", "03-synchronous-diffusion", "04-canonical-occupancy", "05-synchronous-vote-composition"],
   stats: ["01-histogram-boundaries", "02-gini-known-values", "03-invalid-measurements", "04-independent-observation", "05-detached-distributions"],
   segregation: ["01-setup", "02-neighbor-metrics", "03-terminal-intervention", "04-movement", "05-validation-purity"],
+  occupancy: ["01-live-movement-order", "02-canonical-lifecycle", "03-grid-reattachment", "04-source-and-boundaries", "05-observation-purity"],
 };
 for (const [phase, examples] of Object.entries(phases)) {
   for (const example of examples) {

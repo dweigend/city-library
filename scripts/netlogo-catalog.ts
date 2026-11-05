@@ -2,7 +2,10 @@
 import { createHash } from "node:crypto";
 import { mkdir } from "node:fs/promises";
 
-const root = "experiments/catalog";
+const outputFlag = Bun.argv.indexOf("--output");
+if (outputFlag !== -1 && (!Bun.argv[outputFlag + 1] || Bun.argv[outputFlag + 1]!.startsWith("--")))
+  throw new Error("--output requires a snapshot directory.");
+const root = outputFlag === -1 ? "experiments/catalog" : Bun.argv[outputFlag + 1]!;
 const cache = ".cache/netlogo-catalog";
 const origin = "https://www.netlogoweb.org";
 const upstream = {
@@ -38,7 +41,20 @@ const known: Record<string, string> = {
   "Sample Models/Networks/Preferential Attachment": "preferential-attachment", "Sample Models/Social Science/Voting": "voting",
   "Sample Models/Biology/Wolf Sheep Predation": "wolf-sheep-predation", "Sample Models/Social Science/Economics/Wealth Distribution": "wealth-distribution",
 };
-function extract(xml: string) {
+export function widgetCounts(xml: string): Record<string, number> {
+  const counts: Record<string, number> = {};
+  const markup = xml.replace(/<!\[CDATA\[[\s\S]*?\]\]>|<!--[\s\S]*?-->/g, "");
+  let depth = 0;
+  for (const match of markup.matchAll(/<\/?([a-zA-Z][\w-]*)\b[^>]*>/g)) {
+    if (match[0].startsWith("</")) depth -= 1;
+    else {
+      if (depth === 0) counts[match[1]!] = (counts[match[1]!] ?? 0) + 1;
+      if (!match[0].endsWith("/>")) depth += 1;
+    }
+  }
+  return counts;
+}
+export function extract(xml: string) {
   const code = tag(xml, "code");
   // Signals are lexical candidates, not a semantic NetLogo parser or acceptance audit.
   const statements = code.replace(/;[^\n]*/g, "").replace(/"(?:\\.|[^"\\])*"/g, '""');
@@ -67,9 +83,9 @@ function extract(xml: string) {
     procedures: [...code.matchAll(/^\s*to(-report)?\s+([^\s\[]+)/gmi)].map(m => ({ name: m[2], reporter: Boolean(m[1]) })),
     extensions, includes,
     mechanismSignals: Object.entries(signals).filter(([name, expression]) => expression.test(name === "systemDynamics" ? xml : statements)).map(([name]) => name),
-    widgetCounts: Object.fromEntries(unique([...widgets.matchAll(/<([a-zA-Z][\w-]*)(?:\s|>)/g)].map(m => m[1] ?? "")).map(name => [name, [...widgets.matchAll(new RegExp(`<${name}(?:\\s|>)`, "g"))].length])),
+    widgetCounts: widgetCounts(widgets),
     widgetsXml: widgets,
-    licenseNotice: info.split(/^## COPYRIGHT AND LICENSE\s*$/mi)[1]?.trim() ?? code.match(/;[^\n]*(?:Public Domain|Copyright|license)[^\n]*(?:\n;[^\n]*)*/i)?.[0] ?? null,
+    licenseNotice: info.split(/^## COPYRIGHT AND LICENSE\s*$/mi)[1]?.trim() ?? ([...code.matchAll(/^[ \t]*;[^\n]*(?:Public Domain|Copyright|license)[^\n]*(?:\n[ \t]*;[^\n]*)*/gmi)].map(match => match[0]).join("\n\n") || null),
     creditsNotice: info.split(/^## CREDITS AND REFERENCES\s*$/mi)[1]?.split(/^## /m)[0]?.trim() ?? null,
     citationNotice: info.split(/^## HOW TO CITE\s*$/mi)[1]?.split(/^## /m)[0]?.trim() ?? null,
     licenseUrls: unique((info.match(/https?:\/\/[^\s<>\])]+/g) ?? []).filter(url => /creativecommons\.org\/licenses|opensource\.org|gnu\.org\/licenses/i.test(url))),
@@ -77,7 +93,16 @@ function extract(xml: string) {
     codeSha256: hash(new TextEncoder().encode(code)),
   };
 }
+export function sourceBlockers(metadata: Pick<ReturnType<typeof extract>, "extensions" | "includes" | "mechanismSignals">): string[] {
+  return [
+    ...(metadata.extensions.length ? ["extension-semantics-require-audit"] : []),
+    ...(metadata.includes ? ["included-source-closure-requires-audit"] : []),
+    ...(metadata.mechanismSignals.some(x => ["files", "hubnet", "userInteraction", "dynamicExecution", "systemDynamics"].includes(x)) ? ["host-or-special-runtime-signals-require-audit"] : []),
+  ];
+}
 async function capture() {
+  if (await Bun.file(`${root}/inventory.json`).exists())
+    throw new Error("Snapshot already exists; delivery evidence is immutable to capture. Use capture --output <new-directory>, then reconcile revisions explicitly.");
   await mkdir(`${root}/pinned`, { recursive: true });
   await mkdir(cache, { recursive: true });
   const evidence: Evidence[] = [];
@@ -136,7 +161,7 @@ async function capture() {
           desktopModels: { revision: upstream.models, blobSha1: mFile?.sha ?? null, matchesServedBytes: mFile?.sha === blob },
           ...metadata,
           delivery: { experiment: known[relative] ?? (relative === "Sample Models/Social Science/Segregation" ? "segregation" : null), implementation: known[relative] ? "existing-reference-port-pending-catalog-audit" : relative === "Sample Models/Social Science/Segregation" ? "first-new-slice-planned" : "open", sourceAudit: "pending", headlessVerification: "pending-catalog-acceptance", browserVerification: "pending-catalog-acceptance", independentApproval: "pending" },
-          blockers: [ ...(metadata.extensions.length ? ["extension-semantics-require-audit"] : []), ...(metadata.includes ? ["included-source-closure-requires-audit"] : []), ...(metadata.mechanismSignals.some(x => ["files", "hubnet", "userInteraction", "dynamicExecution", "systemDynamics"].includes(x)) ? ["host-or-special-runtime-signals-require-audit"] : []) ],
+          blockers: sourceBlockers(metadata),
         };
       } catch (error) { rows[index] = { ...base, retrieval: "failed", error: String(error), delivery: { implementation: relative === "Sample Models/Social Science/Segregation" ? "first-new-slice-planned" : "open", sourceAudit: "blocked-source-retrieval", headlessVerification: "pending", browserVerification: "pending", independentApproval: "pending" } }; }
       if ((index + 1) % 50 === 0) console.log(`Captured ${index + 1}/${list.length}`);
@@ -198,6 +223,7 @@ async function reextract() {
     const bytes = new Uint8Array(await Bun.file(`${cache}/${row.sha256}.nlogox`).arrayBuffer());
     if (hash(bytes) !== row.sha256) throw new Error(`Cached source hash mismatch: ${row.id}`);
     Object.assign(row, extract(decode(bytes)));
+    Object.assign(row, { blockers: sourceBlockers(row) });
     if (row.id === "Sample Models/Social Science/Segregation" && row.delivery.experiment === null) {
       row.delivery.experiment = "segregation";
       row.delivery.implementation = "first-new-slice-planned";
@@ -206,9 +232,11 @@ async function reextract() {
   await json(`${root}/inventory.json`, inventory);
   await report();
 }
-const command = Bun.argv[2];
-if (command === "capture") await capture();
-else if (command === "reextract") await reextract();
-else if (command === "report") await report();
-else if (command === "verify") await verify(Bun.argv.includes("--remote"));
-else throw new Error("Usage: bun scripts/netlogo-catalog.ts capture | verify [--remote] | reextract | report");
+if (import.meta.main) {
+  const command = Bun.argv[2];
+  if (command === "capture") await capture();
+  else if (command === "reextract") await reextract();
+  else if (command === "report") await report();
+  else if (command === "verify") await verify(Bun.argv.includes("--remote"));
+  else throw new Error("Usage: bun scripts/netlogo-catalog.ts capture | verify [--remote] | reextract | report [--output <snapshot-directory>]");
+}

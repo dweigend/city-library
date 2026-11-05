@@ -58,8 +58,8 @@ Extension declarations include `sr`, `sound`, `palette`, `ls`, `time`, `csv`, `v
 Run from the repository root with Bun 1.4.2:
 
 ```sh
-# New live snapshot; replaces inventory and initial delivery states. Review before using.
-bun scripts/netlogo-catalog.ts capture
+# New live snapshot in a new directory; existing snapshots are never overwritten.
+bun scripts/netlogo-catalog.ts capture --output /tmp/netlogo-catalog-next
 # Verify pinned mechanism artifacts and every locally cached model hash.
 bun scripts/netlogo-catalog.ts verify
 # Independently retrieve all originals at immutable matched Galapagos URLs.
@@ -71,6 +71,8 @@ bun scripts/netlogo-catalog.ts report
 ```
 
 The capture command discovers the fingerprinted launcher module and its list-fetching direct import, rejects changed/missing mechanisms, validates unique served rows and rejects truncated upstream trees. Fetches use eight workers, finite timeouts and at most three attempts. A failed model retrieval remains a row with its concrete error; verification fails on any uncaptured row. Verify checks retained artifact hashes/byte sizes, row-to-list identity/order, unique slugs and every model's SHA-256/size. Remote verification refuses a model without proven immutable source correspondence rather than silently reading an unpinned live URL.
+
+After independent review, `capture` refuses any directory already containing `inventory.json` before network access, preserving delivery evidence even if later fetches fail. Use `--output <new-directory>` for a subsequent revision, verify it with the same flag, then explicitly reconcile added/changed/removed rows. `reextract` retains delivery fields and recomputes only source-derived blockers and metadata. Widget counts include only direct widget elements, ignoring CDATA and nested plot/chooser tags. Comment notices retain all matching blocks, including the multiple notices in the sr examples; legal review remains separate.
 
 Executed: full capture retrieved 550/550 models; local verification checked all 9 mechanism/source artifacts and 550/550 model hashes. `bun run typecheck` passed after the coordinator installed the existing lockfile dependencies. The first attempt before installation failed with TS2688 (missing Bun type definitions); no dependency versions were changed. Remote verification result is recorded below after completion. No browser or target model behavior checks were performed by this inventory task.
 
