@@ -17,3 +17,15 @@ model.advance();
 assert.deepEqual(model.read().cells, afterRule.cells);
 assert.equal(model.read().tick, 2);
 assert.equal(model.read().done, false); // stable states still tick
+
+// The original browser confirms 0^0=1. All-zero input is defined at alpha0.
+model.setRules({ alpha: 0 });
+model.setActivities(model.read().cells.map(() => 0));
+model.advance();
+assert.ok(model.read().cells.every(cell => cell.activity === 1));
+assert.equal(model.read().totalActivity, 441);
+model.setActivities(model.read().cells.map(() => 0));
+model.setRules({ alpha: 1.1 });
+const zero = model.read();
+assert.throws(() => model.advance(), /normaliz/i);
+assert.deepEqual(model.read(), zero); // source zero-divisor failure never ticks

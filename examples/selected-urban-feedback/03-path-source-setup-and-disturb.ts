@@ -22,3 +22,15 @@ assert.equal(model.read().tick, 1);
 assert.deepEqual(model.read().counts, { firms: 1, settled: 0, searching: 1 });
 assert.equal(model.read().largestPopulation, 1); // source population includes searching firms
 assert.equal(model.read().done, false);
+
+// Empty birth is an actual original ASK/NOBODY error, not a no-op or new firm.
+const emptyBirth = create({ initialFirms: 0, birth: true });
+const empty = emptyBirth.read();
+emptyBirth.advance(0);
+assert.deepEqual(emptyBirth.read(), empty);
+assert.throws(() => emptyBirth.advance(), /parent/i);
+assert.deepEqual(emptyBirth.read(), empty);
+emptyBirth.setRules({ birth: false });
+emptyBirth.advance();
+assert.equal(emptyBirth.read().tick, 1);
+assert.equal(emptyBirth.read().counts.firms, 0);

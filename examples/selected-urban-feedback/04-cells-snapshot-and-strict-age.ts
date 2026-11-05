@@ -24,3 +24,17 @@ aging.addRandomSeed();
 assert.equal(aging.read().tick, before.tick);
 assert.equal(aging.read().counts.on, 1);
 assert.ok(aging.read().cells.some(cell => cell.on && cell.seed && cell.onTime === 3));
+
+// Source-timed color memory is canonical field data, independent of host cadence.
+const palette = create({ probability: 0, ageLimit: 0 });
+assert.equal(palette.read().cells.find(cell => cell.seed)!.colorNumber, 9.9);
+const paletteStream = palette.read().randomState;
+palette.cycleColors();
+assert.ok(Math.abs(palette.read().cells.find(cell => cell.seed)!.colorNumber - 9.89) < 1e-12);
+assert.equal(palette.read().tick, 0);
+assert.deepEqual(palette.read().randomState, paletteStream); // declared omitted display-only source shuffle
+palette.setCells(palette.read().cells.map(cell => ({ on: cell.seed, onTime: 0, seed: cell.seed, colorNumber: 0 })));
+palette.cycleColors();
+assert.equal(palette.read().cells.find(cell => cell.seed)!.colorNumber, 139.99);
+palette.advance();
+assert.equal(palette.read().cells.find(cell => cell.seed)!.colorNumber, 139.99); // seed skips normal recolor
