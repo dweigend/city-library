@@ -2254,8 +2254,13 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-feedback-contracts.md",
+            "experiments/urban-suite-positive-feedback/source.nlogox",
+            "experiments/urban-suite-positive-feedback/NOTICE.md"
+          ],
+          "basis": "complete source Procedures/Widgets/Info audited; exact XML matched both served inventory and research archive; unresolved source/host edge cases explicitly retained"
         },
         "contract-frozen": {
           "done": false,
@@ -2293,7 +2298,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "sourcebrowser boundaries and Cells color contract pending; five example proposals not yet coordinator-frozen; runtime not implemented"
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Path Dependence",
@@ -2307,8 +2314,13 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-feedback-contracts.md",
+            "experiments/urban-suite-path-dependence/source.nlogox",
+            "experiments/urban-suite-path-dependence/NOTICE.md"
+          ],
+          "basis": "complete source Procedures/Widgets/Info audited; exact XML matched both served inventory and research archive; unresolved source/host edge cases explicitly retained"
         },
         "contract-frozen": {
           "done": false,
@@ -2346,7 +2358,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "sourcebrowser boundaries and Cells color contract pending; five example proposals not yet coordinator-frozen; runtime not implemented"
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Cells",
@@ -2360,8 +2374,13 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-feedback-contracts.md",
+            "experiments/urban-suite-cells/source.nlogox",
+            "experiments/urban-suite-cells/NOTICE.md"
+          ],
+          "basis": "complete source Procedures/Widgets/Info audited; exact XML matched both served inventory and research archive; unresolved source/host edge cases explicitly retained"
         },
         "contract-frozen": {
           "done": false,
@@ -2399,7 +2418,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "sourcebrowser boundaries and Cells color contract pending; five example proposals not yet coordinator-frozen; runtime not implemented"
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Structure from Randomness 2",
