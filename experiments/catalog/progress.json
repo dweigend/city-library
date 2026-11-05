@@ -2515,12 +2515,21 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-contracts.md",
+            "experiments/urban-suite-pollution/source.nlogox",
+            "experiments/urban-suite-pollution/NOTICE.md"
+          ],
+          "basis": "complete source Procedures/Widgets/Info inspected; source hashes matched independent inventory and research archive"
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-contracts.md",
+            "examples/selected-urban/SHA256SUMS"
+          ],
+          "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
         "implemented": {
           "done": false,
@@ -2554,7 +2563,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "headless implementation delegated; UI integration, paired original/target browser evidence and independent technical review pending"
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Economic Disparity",
@@ -2621,12 +2632,21 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-contracts.md",
+            "experiments/urban-suite-awareness/source.nlogox",
+            "experiments/urban-suite-awareness/NOTICE.md"
+          ],
+          "basis": "complete source Procedures/Widgets/Info inspected; source hashes matched independent inventory and research archive"
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-contracts.md",
+            "examples/selected-urban/SHA256SUMS"
+          ],
+          "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
         "implemented": {
           "done": false,
@@ -2660,7 +2680,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "headless implementation delegated; UI integration, paired original/target browser evidence and independent technical review pending"
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Recycling",
@@ -2674,12 +2696,21 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-contracts.md",
+            "experiments/urban-suite-recycling/source.nlogox",
+            "experiments/urban-suite-recycling/NOTICE.md"
+          ],
+          "basis": "complete source Procedures/Widgets/Info inspected; source hashes matched independent inventory and research archive"
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-contracts.md",
+            "examples/selected-urban/SHA256SUMS"
+          ],
+          "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
         "implemented": {
           "done": false,
@@ -2713,7 +2744,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "headless implementation delegated; UI integration, paired original/target browser evidence and independent technical review pending"
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Sprawl Effect",
