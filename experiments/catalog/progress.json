@@ -376,13 +376,19 @@
             "docs/development/netlogo-web-catalog-evidence.md",
             "docs/development/netlogo-catalog-evidence/segregation-target-setup.png",
             "docs/development/netlogo-catalog-evidence/segregation-target-tick10.png",
-            "docs/development/netlogo-catalog-evidence/segregation-mobile-dark-final.png"
+            "docs/development/netlogo-catalog-evidence/segregation-mobile-dark-final.png",
+            "docs/development/netlogo-catalog-evidence/segregation-integrated-tick10.png"
           ],
           "basis": "real Chromium desktop/mobile interactions and screenshot report at7653491"
         },
         "reviewed": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/indexed-occupancy-review.md",
+            "docs/development/segregation-browser-report.md",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "independent Argon APPROVE43f42b6 for occupancy and Segregation transfer; coordinator final row acceptance after completed research and integrated Chromium regression at7e4d6db; no new independent UI/research peer review inferred"
         },
         "baseline-compared": {
           "done": true,
@@ -408,9 +414,7 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": [
-        "final row acceptance pending after shared UI integration; existing scoped technical approval and research acceptance retained"
-      ],
+      "blockers": [],
       "technicalReview": {
         "decision": "APPROVE",
         "commit": "43f42b6",
@@ -2532,25 +2536,41 @@
           "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/urban-suite-pollution/model.ts",
+            "experiments/urban-suite-pollution/ui.ts"
+          ],
+          "basis": "headless public compositionsb05174e and thin shared UI7e4d6db"
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-urban-models.test.ts",
+            "examples/selected-urban/SHA256SUMS",
+            "docs/development/urban-pollution-browser-report.md"
+          ],
+          "basis": "integrated check158tests3947assertions65publicexamples/types/build/packedconsumer;5frozenUrbanexamples unchanged"
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/urban-pollution-browser-report.md",
+            "docs/development/urban-pollution-evidence/SHA256SUMS.json"
+          ],
+          "basis": "actual original/targetChromium; paired setup/tick13,liveparameters,stopping,mobilelightdark,loaded-sourceSHA and exact sourcefixture vsfrozenheadlessfixture"
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/urban-pollution-browser-report.md",
+            "docs/development/urban-pollution-evidence/SHA256SUMS.json"
+          ],
+          "basis": "actual original/targetChromium; paired setup/tick13,liveparameters,stopping,mobilelightdark,loaded-sourceSHA and exact sourcefixture vsfrozenheadlessfixture"
         },
         "research-verified": {
           "done": true,
@@ -2564,7 +2584,7 @@
         }
       },
       "blockers": [
-        "headless implementation delegated; UI integration, paired original/target browser evidence and independent technical review pending"
+        "independent Argon technical review pending; provider quota exhausted"
       ]
     },
     {
@@ -2649,25 +2669,45 @@
           "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/urban-suite-awareness/model.ts",
+            "experiments/urban-suite-awareness/ui.ts"
+          ],
+          "basis": "headless public compositionsb05174e and thin shared UI7e4d6db"
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-urban-models.test.ts",
+            "examples/selected-urban/SHA256SUMS",
+            "docs/development/urban-pollution-browser-report.md"
+          ],
+          "basis": "integrated check158tests3947assertions65publicexamples/types/build/packedconsumer;5frozenUrbanexamples unchanged"
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/urban-awareness-recycling-browser-report.md",
+            "docs/development/urban-reference-browser.md",
+            "docs/development/urban-target-evidence/SHA256SUMS.json",
+            "docs/development/urban-reference-evidence/SHA256SUMS.json"
+          ],
+          "basis": "separately scoped actual NetLogooriginal/targetChromium sessions; loadedsourceSHA/pairedsetup+progress/nativeactions/mobilelightdark; coordinator report integration with stochastic/label/brush adaptations explicit"
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/urban-awareness-recycling-browser-report.md",
+            "docs/development/urban-reference-browser.md",
+            "docs/development/urban-target-evidence/SHA256SUMS.json",
+            "docs/development/urban-reference-evidence/SHA256SUMS.json"
+          ],
+          "basis": "separately scoped actual NetLogooriginal/targetChromium sessions; loadedsourceSHA/pairedsetup+progress/nativeactions/mobilelightdark; coordinator report integration with stochastic/label/brush adaptations explicit"
         },
         "research-verified": {
           "done": true,
@@ -2681,7 +2721,7 @@
         }
       },
       "blockers": [
-        "headless implementation delegated; UI integration, paired original/target browser evidence and independent technical review pending"
+        "independent Argon technical review pending; provider quota exhausted"
       ]
     },
     {
@@ -2713,25 +2753,45 @@
           "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/urban-suite-recycling/model.ts",
+            "experiments/urban-suite-recycling/ui.ts"
+          ],
+          "basis": "headless public compositionsb05174e and thin shared UI7e4d6db"
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-urban-models.test.ts",
+            "examples/selected-urban/SHA256SUMS",
+            "docs/development/urban-pollution-browser-report.md"
+          ],
+          "basis": "integrated check158tests3947assertions65publicexamples/types/build/packedconsumer;5frozenUrbanexamples unchanged"
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/urban-awareness-recycling-browser-report.md",
+            "docs/development/urban-reference-browser.md",
+            "docs/development/urban-target-evidence/SHA256SUMS.json",
+            "docs/development/urban-reference-evidence/SHA256SUMS.json"
+          ],
+          "basis": "separately scoped actual NetLogooriginal/targetChromium sessions; loadedsourceSHA/pairedsetup+progress/nativeactions/mobilelightdark; coordinator report integration with stochastic/label/brush adaptations explicit"
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/urban-awareness-recycling-browser-report.md",
+            "docs/development/urban-reference-browser.md",
+            "docs/development/urban-target-evidence/SHA256SUMS.json",
+            "docs/development/urban-reference-evidence/SHA256SUMS.json"
+          ],
+          "basis": "separately scoped actual NetLogooriginal/targetChromium sessions; loadedsourceSHA/pairedsetup+progress/nativeactions/mobilelightdark; coordinator report integration with stochastic/label/brush adaptations explicit"
         },
         "research-verified": {
           "done": true,
@@ -2745,7 +2805,7 @@
         }
       },
       "blockers": [
-        "headless implementation delegated; UI integration, paired original/target browser evidence and independent technical review pending"
+        "independent Argon technical review pending; provider quota exhausted"
       ]
     },
     {
