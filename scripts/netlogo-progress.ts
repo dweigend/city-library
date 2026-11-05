@@ -2,7 +2,7 @@
 import { createHash } from "node:crypto";
 const root = "experiments/catalog";
 const sha256 = (value: string) => createHash("sha256").update(value).digest("hex");
-export const stages = ["selected", "source-audited", "contract-frozen", "implemented", "headless-verified", "browser-verified", "baseline-compared", "reviewed"] as const;
+export const stages = ["selected", "source-audited", "contract-frozen", "implemented", "headless-verified", "browser-verified", "baseline-compared", "research-verified", "reviewed"] as const;
 export type Stage = typeof stages[number];
 export interface Milestone { done: boolean; evidence: string[]; basis?: string }
 export interface ProgressRow {

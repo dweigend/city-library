@@ -9,6 +9,7 @@
     "headless-verified",
     "browser-verified",
     "baseline-compared",
+    "research-verified",
     "reviewed"
   ],
   "rows": [
@@ -74,6 +75,11 @@
             "docs/development/agent-lab-browser-evidence.md"
           ],
           "basis": "historical real source/target browser reports and functional audit retained after source hash reconciliation; refresh before final acceptance"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": [
@@ -142,6 +148,11 @@
             "docs/development/agent-lab-browser-evidence.md"
           ],
           "basis": "historical real source/target browser reports and functional audit retained after source hash reconciliation; refresh before final acceptance"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": [
@@ -210,6 +221,11 @@
             "docs/development/agent-lab-browser-evidence.md"
           ],
           "basis": "historical real source/target browser reports and functional audit retained after source hash reconciliation; refresh before final acceptance"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": [
@@ -278,6 +294,11 @@
             "docs/development/agent-lab-browser-evidence.md"
           ],
           "basis": "historical real source/target browser reports and functional audit retained after source hash reconciliation; refresh before final acceptance"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": [
@@ -331,6 +352,7 @@
         "browser-verified": {
           "done": true,
           "evidence": [
+            "docs/development/segregation-browser-report.md",
             "docs/development/netlogo-web-catalog-evidence.md",
             "docs/development/netlogo-catalog-evidence/segregation-target-setup.png",
             "docs/development/netlogo-catalog-evidence/segregation-target-tick10.png",
@@ -345,6 +367,7 @@
         "baseline-compared": {
           "done": true,
           "evidence": [
+            "docs/development/segregation-browser-report.md",
             "docs/development/netlogo-web-catalog-evidence.md",
             "docs/development/segregation-contract.md",
             "docs/development/netlogo-catalog-evidence/segregation-reference-setup.png",
@@ -353,6 +376,11 @@
             "docs/development/netlogo-catalog-evidence/segregation-target-tick10.png"
           ],
           "basis": "paired real Chromium source/target defaults and tick10 plus exact source-rule audit/invariants; stochastic trajectories differ"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": [
@@ -398,6 +426,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -441,6 +474,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -484,6 +522,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -527,6 +570,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -570,6 +618,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -613,6 +666,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -656,6 +714,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -699,6 +762,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -742,6 +810,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -785,6 +858,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -828,6 +906,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -871,6 +954,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -914,6 +1002,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -957,6 +1050,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1000,6 +1098,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1043,6 +1146,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1086,6 +1194,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1129,6 +1242,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1172,6 +1290,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1215,6 +1338,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1258,6 +1386,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1301,6 +1434,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1344,6 +1482,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1387,6 +1530,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1430,6 +1578,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1473,6 +1626,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1516,6 +1674,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1559,6 +1722,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1602,6 +1770,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1645,6 +1818,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1688,6 +1866,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1731,6 +1914,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1774,6 +1962,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1817,6 +2010,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1860,6 +2058,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1903,6 +2106,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1946,6 +2154,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -1989,6 +2202,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2032,6 +2250,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2075,6 +2298,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2118,6 +2346,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2161,6 +2394,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2204,6 +2442,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2247,6 +2490,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2290,6 +2538,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2333,6 +2586,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2376,6 +2634,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2419,6 +2682,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2462,6 +2730,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2505,6 +2778,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2548,6 +2826,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2591,6 +2874,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2634,6 +2922,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2677,6 +2970,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2720,6 +3018,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2763,6 +3066,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2806,6 +3114,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2849,6 +3162,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2892,6 +3210,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2935,6 +3258,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -2978,6 +3306,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3021,6 +3354,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3064,6 +3402,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3107,6 +3450,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3150,6 +3498,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3193,6 +3546,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3236,6 +3594,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3279,6 +3642,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3322,6 +3690,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3365,6 +3738,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3408,6 +3786,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3451,6 +3834,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3494,6 +3882,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3537,6 +3930,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3580,6 +3978,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3623,6 +4026,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3666,6 +4074,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3709,6 +4122,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3752,6 +4170,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3795,6 +4218,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3838,6 +4266,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3881,6 +4314,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3924,6 +4362,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -3967,6 +4410,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4010,6 +4458,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4053,6 +4506,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4096,6 +4554,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4139,6 +4602,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4182,6 +4650,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4225,6 +4698,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4268,6 +4746,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4311,6 +4794,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4354,6 +4842,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4397,6 +4890,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4440,6 +4938,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4483,6 +4986,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4526,6 +5034,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4569,6 +5082,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4612,6 +5130,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4655,6 +5178,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4698,6 +5226,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4741,6 +5274,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4784,6 +5322,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4836,6 +5379,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4888,6 +5436,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4931,6 +5484,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -4974,6 +5532,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5017,6 +5580,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5060,6 +5628,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5103,6 +5676,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5146,6 +5724,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5189,6 +5772,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5232,6 +5820,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5275,6 +5868,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5318,6 +5916,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5361,6 +5964,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5404,6 +6012,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5447,6 +6060,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5490,6 +6108,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5533,6 +6156,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5576,6 +6204,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5619,6 +6252,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5662,6 +6300,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5705,6 +6348,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5748,6 +6396,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5791,6 +6444,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5834,6 +6492,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5877,6 +6540,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5920,6 +6588,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -5963,6 +6636,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6006,6 +6684,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6049,6 +6732,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6092,6 +6780,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6135,6 +6828,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6178,6 +6876,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6221,6 +6924,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6264,6 +6972,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6307,6 +7020,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6350,6 +7068,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6393,6 +7116,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6436,6 +7164,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6479,6 +7212,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6522,6 +7260,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6565,6 +7308,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6608,6 +7356,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6651,6 +7404,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6694,6 +7452,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6737,6 +7500,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6780,6 +7548,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6823,6 +7596,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6866,6 +7644,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6909,6 +7692,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6952,6 +7740,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -6995,6 +7788,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7038,6 +7836,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7081,6 +7884,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7124,6 +7932,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7167,6 +7980,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7210,6 +8028,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7253,6 +8076,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7296,6 +8124,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7339,6 +8172,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7382,6 +8220,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7425,6 +8268,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7468,6 +8316,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7511,6 +8364,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7554,6 +8412,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7597,6 +8460,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7640,6 +8508,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7683,6 +8556,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7726,6 +8604,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7769,6 +8652,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7812,6 +8700,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7855,6 +8748,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7898,6 +8796,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7941,6 +8844,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -7984,6 +8892,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8027,6 +8940,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8070,6 +8988,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8122,6 +9045,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": [
@@ -8167,6 +9095,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8210,6 +9143,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8253,6 +9191,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8296,6 +9239,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8339,6 +9287,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8382,6 +9335,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8425,6 +9383,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8468,6 +9431,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8511,6 +9479,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8554,6 +9527,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8597,6 +9575,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8640,6 +9623,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8683,6 +9671,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8726,6 +9719,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
@@ -8769,6 +9767,11 @@
           "done": false,
           "evidence": [],
           "basis": "pending actual reference and target browser comparison"
+        },
+        "research-verified": {
+          "done": false,
+          "evidence": [],
+          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
       "blockers": []
