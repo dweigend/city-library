@@ -10,8 +10,13 @@ test("typed views reject noncanonical numeric-looking extra properties", () => {
   }
 });
 
-test("copy rejects reserved future members assigned after creation", () => {
-  for (const key of ["move", "rotate", "distanceTo", "directionTo", "neighbors", "canMove", "gradient"]) {
+test("delivered spatial members reject overriding and future members reject copying", () => {
+  for (const key of ["move", "rotate", "distanceTo", "directionTo", "neighbors"]) {
+    const person = Agent.add({ energy: 1 });
+    assert.throws(() => Object.defineProperty(person, key, { value: 123, enumerable: true }), TypeError);
+    assert.equal(person.copy().energy, 1);
+  }
+  for (const key of ["canMove", "gradient"]) {
     const person = Agent.add({ energy: 1 });
     Object.defineProperty(person, key, { value: 123, enumerable: true });
     assert.throws(() => person.copy(), TypeError);
@@ -56,8 +61,9 @@ test("closed constructor options reject accessors and malformed values", () => {
   const accessor = Object.defineProperty({}, "random", { get() { reads += 1; } });
   assert.throws(() => World.add(accessor));
   assert.equal(reads, 0);
-  for (const value of [null, 1, [], { x: 3, y: 4 }, { boundary: "hard" }, { other: 1 }, { random: {} }]) assert.throws(() => World.add(value as never));
-  assert.throws(() => (Agent.add as Function)({}, { position: { x: 1, y: 2 } }));
+  for (const value of [null, 1, [], { boundary: "hard" }, { other: 1 }, { random: {} }]) assert.throws(() => World.add(value as never));
+  assert.equal(Agent.add({}, { position: { x: 1, y: 2 } }).x, 1);
+  assert.equal(World.add({ x: 3, y: 4 }).space?.x, 3);
   assert.throws(() => Agent.add(new Date()));
   assert.throws(() => Agent.add(() => 1));
 });

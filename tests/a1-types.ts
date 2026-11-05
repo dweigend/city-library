@@ -17,7 +17,7 @@ function typeContracts() {
   run(world, async () => {});
   // @ts-expect-error Explicit Promise return rejects statically.
   run(world, () => Promise.resolve());
-  // @ts-expect-error Partial A1 Agent does not advertise movement.
+  // Spatial expansion preserves direct public movement typing.
   person.move();
   return [energy, copied, batch];
 }

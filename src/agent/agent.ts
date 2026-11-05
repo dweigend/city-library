@@ -1,54 +1,93 @@
 import type { World } from "../world/world.ts";
-import { issueId, registerFramework, requireLivingAgent } from "./lifecycle.ts";
-import { cloneState } from "./state.ts";
-interface AgentMembers<S extends object> {
+import {
+  frameworkRecord,
+  issueId,
+  registerFramework,
+  requireLivingAgent,
+} from "./lifecycle.ts";
+import { cloneState, validateOptions } from "./state.ts";
+import {
+  createSpatial,
+  type SpatialMethods,
+  type SpatialOptions,
+} from "./spatial.ts";
+interface AgentMembers<S extends object> extends SpatialMethods {
   readonly id: string;
   readonly alive: boolean;
   readonly world: World | undefined;
   readonly x: number;
   readonly y: number;
-  readonly z: undefined;
+  readonly z: number | undefined;
   readonly heading: number;
-  readonly pitch: undefined;
-  readonly roll: undefined;
+  readonly pitch: number | undefined;
+  readonly roll: number | undefined;
   copy(): Agent<S>;
   delete(): void;
 }
 export type Agent<S extends object = {}> = S & AgentMembers<S>;
 function add(): Agent<{}>;
-function add<S extends object>(state: S): Agent<S>;
-function add<S extends object>(state?: S): Agent<S> {
-  if (arguments.length > 1) throw new TypeError("Spatial Agent options are not delivered in A1.");
-  const cloned = cloneState(arguments.length === 0 ? {} as S : state as S);
+function add<S extends object>(state: S, options?: SpatialOptions): Agent<S>;
+function add<S extends object>(
+  state?: S,
+  options: SpatialOptions = {},
+): Agent<S> {
+  if (arguments.length > 2)
+    throw new TypeError("Agent.add accepts state and spatial options.");
+  const opts = validateOptions(options, [
+    "position",
+    "orientation",
+  ]) as SpatialOptions;
+  if (opts.position !== undefined && !frameworkRecord(opts.position))
+    validateOptions(opts.position, ["x", "y", "z"]);
+  const cloned = cloneState(arguments.length === 0 ? ({} as S) : (state as S));
   const agent = Object.create(Object.getPrototypeOf(cloned)) as Agent<S>;
   Object.defineProperties(agent, Object.getOwnPropertyDescriptors(cloned));
   const record = registerFramework(agent, "agent");
+  const spatial = createSpatial(agent, opts);
   const properties: PropertyDescriptorMap = {
     id: { value: issueId(), enumerable: true },
     alive: { get: () => record.alive, enumerable: true },
     world: { get: () => record.world, enumerable: true },
-    x: { value: 0, enumerable: true }, y: { value: 0, enumerable: true },
-    z: { value: undefined, enumerable: true }, heading: { value: 0, enumerable: true },
-    pitch: { value: undefined, enumerable: true }, roll: { value: undefined, enumerable: true },
-    copy: { value: function copy() {
-      if (arguments.length) throw new TypeError("Agent.copy accepts no options.");
-      requireLivingAgent(agent);
-      const state = Object.create(Object.getPrototypeOf(agent)) as S;
-      for (const key of Reflect.ownKeys(agent)) {
-        if (typeof key === "string" && Object.hasOwn(properties, key)) continue;
-        Object.defineProperty(state, key, Object.getOwnPropertyDescriptor(agent, key)!);
-      }
-      return add(state);
-    } },
-    delete: { value: () => {
-      if (!record.alive) return;
-      const participants = [...record.deletionParticipants];
-      for (const participant of participants) participant.validate();
-      record.detach?.();
-      for (const participant of participants) participant.commit();
-      record.alive = false;
-    } },
+    x: { get: () => spatial.position().x, enumerable: true },
+    y: { get: () => spatial.position().y, enumerable: true },
+    z: { get: () => spatial.position().z, enumerable: true },
+    heading: { get: () => spatial.orientation().heading, enumerable: true },
+    pitch: { get: () => spatial.orientation().pitch, enumerable: true },
+    roll: { get: () => spatial.orientation().roll, enumerable: true },
+    copy: {
+      value: function copy() {
+        if (arguments.length)
+          throw new TypeError("Agent.copy accepts no options.");
+        requireLivingAgent(agent);
+        const state = Object.create(Object.getPrototypeOf(agent)) as S;
+        for (const key of Reflect.ownKeys(agent)) {
+          if (typeof key === "string" && Object.hasOwn(properties, key))
+            continue;
+          Object.defineProperty(
+            state,
+            key,
+            Object.getOwnPropertyDescriptor(agent, key)!,
+          );
+        }
+        return add(state, {
+          position: spatial.position(),
+          orientation: spatial.orientation(),
+        });
+      },
+    },
+    delete: {
+      value: () => {
+        if (!record.alive) return;
+        const participants = [...record.deletionParticipants];
+        for (const participant of participants) participant.validate();
+        record.detach?.();
+        for (const participant of participants) participant.commit();
+        record.alive = false;
+      },
+    },
   };
+  for (const [name, method] of Object.entries(spatial.methods))
+    properties[name] = { value: method };
   Object.defineProperties(agent, properties);
   return agent;
 }

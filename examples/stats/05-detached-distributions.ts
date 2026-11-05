@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import { stats } from "city-library";
+const edges = [0, 1, 2];
+const result = stats.histogram([], { edges });
+edges[1] = 0.5;
+assert.deepEqual(result, { edges: [0, 1, 2], counts: [0, 0], underflow: 0, overflow: 0 });
+const wealth = [9, 0, 0];
+const sorted = [...wealth].sort((a, b) => a - b);
+const total = sorted.reduce((sum, value) => sum + value, 0);
+let cumulative = 0;
+const reserve = sorted.reduce((sum, value, i) => { cumulative += value; return sum + (i + 1) / sorted.length - cumulative / total; }, 0);
+assert.ok(Math.abs(stats.gini(wealth) - 2 * reserve / wealth.length) < 1e-12);
+assert.deepEqual(wealth, [9, 0, 0]);

@@ -1,0 +1,244 @@
+import type { Agent } from "../agent/agent.ts";
+import {
+  frameworkRecord,
+  issueId,
+  registerFramework,
+  requireAgent,
+} from "../agent/lifecycle.ts";
+import { cloneModelState, validateOptions } from "../agent/state.ts";
+import {
+  axes,
+  dimension,
+  finite,
+  normalizePosition,
+  normalizeSpace,
+  position,
+  type NormalizedSpace,
+  type Position,
+  type Space,
+} from "../geometry/space.ts";
+export type Field<F extends object = {}> = F & {
+  readonly id: string;
+  readonly grid: Grid<F>;
+  readonly x: number;
+  readonly y: number;
+  readonly z: number | undefined;
+};
+type NumericKey<F> = Extract<
+  { [K in keyof F]-?: F[K] extends number ? K : never }[keyof F],
+  string
+>;
+const gridIdentity: unique symbol = Symbol("Grid membership");
+/** State-independent admission type; it erases payload without widening it to any. */
+export interface GridMembership {
+  readonly [gridIdentity]: true;
+  readonly space: NormalizedSpace;
+}
+export interface Grid<F extends object = {}> extends GridMembership {
+  readonly space: NormalizedSpace;
+  readonly cellSize: number;
+  readonly fields: readonly Field<F>[];
+  fieldAt(position: Position): Field<F> | undefined;
+  neighbors(
+    field: Field<F>,
+    options?: { neighborhood?: "faces" | "moore" },
+  ): readonly Field<F>[];
+  agentsAt<T extends Agent>(
+    field: Field<F>,
+    options: { source: Iterable<T> },
+  ): readonly T[];
+  agentsAt(field: Field<F>): readonly Agent[];
+  diffuse(
+    property: NumericKey<F>,
+    options?: { rate?: number; neighborhood?: "faces" | "moore" },
+  ): void;
+}
+const reserved = new Set(["id", "grid", "x", "y", "z"]);
+function add<F extends object>(
+  space: Space,
+  options: { state: F; cellSize?: number; boundary?: Space["boundary"] },
+): Grid<F>;
+function add(
+  space?: Space,
+  options?: { cellSize?: number; boundary?: Space["boundary"] },
+): Grid<{}>;
+function add<F extends object>(
+  input: Space = { x: 40, y: 40 },
+  options: { state?: F; cellSize?: number; boundary?: Space["boundary"] } = {},
+): Grid<F> {
+  const opts = validateOptions(options, ["state", "cellSize", "boundary"]);
+  const space = normalizeSpace(input, opts.boundary as Space["boundary"]);
+  const cellSize = finite(opts.cellSize ?? 1);
+  if (cellSize <= 0) throw new RangeError("Cell size must be positive.");
+  const counts = axes
+    .slice(0, space.dimensions)
+    .map((axis) => space[axis]! / cellSize);
+  if (counts.some((count) => !Number.isSafeInteger(count) || count <= 0))
+    throw new RangeError("Space must contain whole cells.");
+  const size = counts.reduce((a, b) => a * b, 1);
+  if (!Number.isSafeInteger(size) || size > 1_000_000)
+    throw new RangeError("Too many fields.");
+  const initial = (Object.hasOwn(opts, "state") ? opts.state : {}) as F;
+  cloneModelState(initial, reserved, "Field");
+  const fields: Field<F>[] = [];
+  const indices = new Map<Field<F>, number>();
+  function requireField(field: Field<F>): number {
+    const index = indices.get(field);
+    if (index === undefined)
+      throw new TypeError("Expected a field of this Grid.");
+    return index;
+  }
+  function coordinates(index: number): number[] {
+    const x = index % counts[0]!,
+      y = Math.floor(index / counts[0]!) % counts[1]!;
+    return space.dimensions === 2
+      ? [x, y]
+      : [x, y, Math.floor(index / (counts[0]! * counts[1]!))];
+  }
+  function at(index: readonly number[]): Field<F> | undefined {
+    const actual: number[] = [];
+    for (let axis = 0; axis < space.dimensions; axis++) {
+      const count = counts[axis]!,
+        value = index[axis]!;
+      if (value < 0 || value >= count) {
+        if (space.boundary[axes[axis]!] !== "wrap") return undefined;
+        actual.push(((value % count) + count) % count);
+      } else actual.push(value);
+    }
+    return fields[
+      actual[0]! + counts[0]! * (actual[1]! + (actual[2] ?? 0) * counts[1]!)
+    ];
+  }
+  // Diffusion uses directional slots, including repeated/self targets on tiny wraps.
+  // Neighbor queries separately deduplicate canonical identities.
+  function slots(neighborhood: "faces" | "moore"): number[][] {
+    const result: number[][] = [];
+    for (
+      let z = space.dimensions === 3 ? -1 : 0;
+      z <= (space.dimensions === 3 ? 1 : 0);
+      z++
+    )
+      for (let y = -1; y <= 1; y++)
+        for (let x = -1; x <= 1; x++) {
+          if (x === 0 && y === 0 && z === 0) continue;
+          if (
+            neighborhood === "faces" &&
+            Math.abs(x) + Math.abs(y) + Math.abs(z) !== 1
+          )
+            continue;
+          result.push(space.dimensions === 2 ? [x, y] : [x, y, z]);
+        }
+    return result;
+  }
+  function neighborhood(value: unknown, defaultValue: "faces" | "moore") {
+    const result = value ?? defaultValue;
+    if (result !== "faces" && result !== "moore")
+      throw new TypeError("Invalid neighborhood.");
+    return result;
+  }
+  const grid: Grid<F> = {
+    [gridIdentity]: true,
+    space,
+    cellSize,
+    get fields() {
+      return Object.freeze([...fields]);
+    },
+    fieldAt(value) {
+      const normalized = normalizePosition(
+        position(value, space.dimensions),
+        space,
+        false,
+      );
+      if (!normalized) return undefined;
+      const index = axes
+        .slice(0, space.dimensions)
+        .map((axis, i) =>
+          Math.min(
+            counts[i]! - 1,
+            Math.floor((normalized[axis]! + space[axis]! / 2) / cellSize),
+          ),
+        );
+      return at(index);
+    },
+    neighbors(field, options = {}) {
+      const index = coordinates(requireField(field));
+      const opts = validateOptions(options, ["neighborhood"]);
+      const result = new Set<Field<F>>();
+      for (const offset of slots(neighborhood(opts.neighborhood, "moore"))) {
+        const found = at(index.map((value, i) => value + offset[i]!));
+        if (found && found !== field) result.add(found);
+      }
+      return Object.freeze([...result]);
+    },
+    agentsAt: ((field: Field<F>, options?: { source: Iterable<Agent> }) => {
+      requireField(field);
+      const opts = validateOptions(options ?? {}, ["source"]);
+      const source = opts.source ?? frameworkRecord(grid)?.world?.agents;
+      if (source === undefined)
+        throw new TypeError("Detached Grid requires an explicit source.");
+      const candidates = [...new Set(source as Iterable<Agent>)];
+      for (const agent of candidates) {
+        requireAgent(agent);
+        if (dimension(agent) !== space.dimensions)
+          throw new TypeError("Agent dimensions disagree with Grid.");
+      }
+      return Object.freeze(
+        candidates.filter(
+          (agent) => agent.alive && grid.fieldAt(agent) === field,
+        ),
+      );
+    }) as Grid<F>["agentsAt"],
+    diffuse(property, options = {}) {
+      const opts = validateOptions(options, ["rate", "neighborhood"]);
+      const rate = finite(opts.rate ?? 0.25);
+      if (rate < 0 || rate > 1)
+        throw new RangeError("Diffusion rate must be in [0,1].");
+      const offsets = slots(neighborhood(opts.neighborhood, "faces"));
+      // Validate all sources and outputs before committing any field.
+      const old = fields.map((field) => {
+        const descriptor = Object.getOwnPropertyDescriptor(field, property);
+        if (!descriptor || !("value" in descriptor) || !descriptor.writable)
+          throw new TypeError(
+            "Diffusion needs an own writable numeric property.",
+          );
+        return finite(descriptor.value);
+      });
+      if (rate === 0) return;
+      const next = old.map((value) => finite(value * (1 - rate)));
+      for (let source = 0; source < fields.length; source++) {
+        const index = coordinates(source),
+          share = finite((old[source]! * rate) / offsets.length);
+        for (const offset of offsets) {
+          const target = at(index.map((value, i) => value + offset[i]!));
+          const targetIndex = target ? indices.get(target)! : source;
+          next[targetIndex] = finite(next[targetIndex]! + share);
+        }
+      }
+      for (let index = 0; index < fields.length; index++)
+        Object.defineProperty(fields[index]!, property, { value: next[index] });
+    },
+  };
+  registerFramework(grid, "grid");
+  for (let index = 0; index < size; index++) {
+    const field = cloneModelState(initial, reserved, "Field") as Field<F>;
+    const indicesValue = coordinates(index);
+    const properties: PropertyDescriptorMap = {
+      id: { value: issueId(), enumerable: true },
+      grid: { value: grid, enumerable: true },
+    };
+    for (const [i, axis] of axes.entries())
+      properties[axis] = {
+        value:
+          i < space.dimensions
+            ? -space[axis]! / 2 + (indicesValue[i]! + 0.5) * cellSize
+            : undefined,
+        enumerable: true,
+      };
+    Object.defineProperties(field, properties);
+    registerFramework(field, "field");
+    fields.push(field);
+    indices.set(field, index);
+  }
+  return Object.freeze(grid);
+}
+export const Grid = Object.freeze({ add });
