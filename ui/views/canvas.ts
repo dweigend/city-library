@@ -76,7 +76,7 @@ export function mountCanvas(
           ctx.stroke();
         }
         ctx.restore();
-        if (showLabels && agent.label) {
+        if ((data.showLabels ?? showLabels) && agent.label) {
           ctx.font = `${12 * Math.min(devicePixelRatio, 2)}px system-ui, sans-serif`;
           ctx.lineWidth = 3;
           ctx.strokeStyle = "#151515";
@@ -110,7 +110,7 @@ export function mountCanvas(
     const y =
       data.height / 2 -
       ((event.clientY - rect.top) / rect.height) * data.height;
-    if ("agents" in data) {
+    if (!drawingEnabled && "agents" in data) {
       const nearest = [...data.agents].sort(
         (a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y),
       )[0];
@@ -154,12 +154,23 @@ export function mountCanvas(
     const cell = cellAt(event);
     if (cell) intent({ phase: "move", position: { x: cell.x, y: cell.y } });
   }
-  function pointerEnd(event: PointerEvent) {
-    if (pointer !== event.pointerId) return;
+  function endStroke() {
+    const active = pointer;
+    if (active === null) return;
     pointer = null;
+    if (canvas.hasPointerCapture(active)) canvas.releasePointerCapture(active);
     intent?.({ phase: "end" });
-    if (canvas.hasPointerCapture(event.pointerId))
-      canvas.releasePointerCapture(event.pointerId);
+  }
+  function stopDrawing() {
+    drawingEnabled = false;
+    canvas.style.touchAction = "auto";
+    endStroke();
+    // The end intent may synchronously render the old observation.
+    drawingEnabled = false;
+    canvas.style.touchAction = "auto";
+  }
+  function pointerEnd(event: PointerEvent) {
+    if (pointer === event.pointerId) endStroke();
   }
   canvas.addEventListener("pointerdown", pointerDown);
   canvas.addEventListener("pointermove", pointerMove);
@@ -200,7 +211,7 @@ export function mountCanvas(
     )
       return;
     const items =
-      "agents" in latest && latest.agents.length
+      !drawingEnabled && "agents" in latest && latest.agents.length
         ? latest.agents
         : (latest.cells ?? []);
     if (!items.length) return;
@@ -218,6 +229,7 @@ export function mountCanvas(
   canvas.addEventListener("keydown", key);
   return {
     update(data: GridData | SpatialData, id: string | null, drawing = false) {
+      if (!drawing) stopDrawing();
       drawingEnabled = Boolean(intent) && drawing;
       canvas.style.touchAction = drawingEnabled ? "none" : "auto";
       latest = data;
@@ -226,6 +238,7 @@ export function mountCanvas(
       selected = id;
       labelControl.hidden =
         !("agents" in data) ||
+        data.showLabels !== undefined ||
         !data.agents.some((agent) => Boolean(agent.label));
       canvas.setAttribute(
         "aria-label",
@@ -233,7 +246,9 @@ export function mountCanvas(
       );
       draw();
     },
+    stopDrawing,
     dispose() {
+      stopDrawing();
       resize.disconnect();
       canvas.removeEventListener("pointerdown", pointerDown);
       canvas.removeEventListener("pointermove", pointerMove);

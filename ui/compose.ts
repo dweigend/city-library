@@ -48,11 +48,14 @@ export function defineUI<P extends object, M extends ModelInstance>(
       let selected: string | null = null;
       let disposed = false;
       let speed = 100;
+      let drawingRequested = false;
+      let drawingToggle: HTMLButtonElement | undefined;
       const repeats: { stop(): void; sync(): void }[] = [];
       function stopRepeats() { for (const repeat of repeats) repeat.stop(); }
       const views: {
         render: (state: Snapshot<M>) => void;
         dispose: () => void;
+        stopDrawing?: () => void;
       }[] = [];
       const buttons: {
         element: HTMLButtonElement;
@@ -71,9 +74,15 @@ export function defineUI<P extends object, M extends ModelInstance>(
       function errorMessage(error: unknown) {
         return error instanceof Error ? error.message : String(error);
       }
+      function resetDrawing() {
+        drawingRequested = false;
+        drawingToggle?.setAttribute("aria-pressed", "false");
+        for (const view of views) view.stopDrawing?.();
+      }
       function fail(error: unknown) {
         playback.stop();
         stopRepeats();
+        resetDrawing();
         status.textContent = errorMessage(error);
         status.dataset.state = "error";
       }
@@ -110,6 +119,10 @@ export function defineUI<P extends object, M extends ModelInstance>(
             live.control.checked = Boolean(value);
           else live.control.value = String(value);
           live.control.disabled = !(live.enabled?.(state) ?? true);
+        }
+        if (spec.drawing && !spec.drawing.enabled(state)) {
+          drawingRequested = false;
+          drawingToggle?.setAttribute("aria-pressed", "false");
         }
         for (const view of views) view.render(state);
         for (const repeat of repeats) repeat.sync();
@@ -239,6 +252,18 @@ export function defineUI<P extends object, M extends ModelInstance>(
           buttons.push({ element: toggle, enabled: action.enabled });
         }
       }
+      if (spec.drawing?.toggleLabel) {
+        drawingToggle = button(spec.drawing.toggleLabel, () => {
+          drawingRequested = !drawingRequested;
+          try { render(); } catch (error) { fail(error); }
+        });
+        drawingToggle.setAttribute("aria-pressed", "false");
+        buttons.push({
+          element: drawingToggle,
+          enabled: state => spec.drawing!.enabled(state),
+          pressed: () => drawingRequested,
+        });
+      }
       if (spec.live?.length) {
         const group = document.createElement("div");
         group.className = "live-controls";
@@ -353,7 +378,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
             const adapter = mountCanvas(
               figure,
               pick,
-              view.type === "grid" && spec.drawing
+              spec.drawing
                 ? (intent) => {
                     playback.stop();
                     act(
@@ -368,9 +393,11 @@ export function defineUI<P extends object, M extends ModelInstance>(
                 adapter.update(
                   view.data(state),
                   selected,
-                  spec.drawing?.enabled(state) ?? false,
+                  Boolean(spec.drawing?.enabled(state)) &&
+                    (!spec.drawing?.toggleLabel || drawingRequested),
                 ),
               dispose: () => adapter.dispose(),
+              stopDrawing: () => adapter.stopDrawing(),
             });
           } else if (
             view.type === "line" ||
@@ -445,6 +472,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
           event.preventDefault();
           playback.stop();
           stopRepeats();
+          resetDrawing();
           if (!setup.form.reportValidity()) return;
           let next: M | undefined;
           try {
@@ -508,6 +536,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
         },
         dispose() {
           if (disposed) return;
+          resetDrawing();
           disposed = true;
           playback.stop();
           stopRepeats();

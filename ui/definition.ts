@@ -44,6 +44,8 @@ export interface SpatialAgent extends NetworkNode {
   readonly shape?: "circle" | "triangle";
 }
 export interface SpatialData {
+  /** Controlled label visibility; omit to retain the host Labels checkbox. */
+  readonly showLabels?: boolean;
   readonly width: number;
   readonly height: number;
   readonly cells?: readonly Cell[];
@@ -100,6 +102,8 @@ export type DrawingIntent =
 
 export interface UISpec<P extends object, M extends ModelInstance> {
   readonly drawing?: {
+    /** Optional host-owned mode toggle, initially off for each mounted instance. */
+    readonly toggleLabel?: string;
     readonly enabled: (state: Snapshot<M>) => boolean;
     readonly intent: (model: M, intent: DrawingIntent) => void;
   };
