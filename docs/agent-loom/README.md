@@ -1,41 +1,39 @@
-# Binding Agent Loom target — phase one
+# Agent Loom specification
 
-Accepted by the user on 5 November 2026. The complete general Agent Loom core is the first development phase of City Library, implemented incrementally in this repository.
+Agent Loom defines City Library's general modeling core: agents, worlds, spatial operations, graphs, randomness, events, experiments and storage. It is part of City Library, not a separate engine.
 
-- [API table](api-table.html): complete operation/type inventory and compact contracts.
-- [API reference](api-reference.html): detailed contracts and usage examples.
-- [Work plan](../../PLAN.md): delivery sequence, progress and acceptance evidence.
-- [Architecture](../DESIGN.md): ownership, dependency and implementation boundaries.
+**Status:** specification only. The repository has a Bun/TypeScript scaffold and prepared source directories, but no implemented public APIs or published package. All signatures and examples describe the phase-one target.
 
-## Authority and completion
+## Read the API
 
-Both HTML documents are binding target definitions for phase one. Their signatures, defaults, units, results, mutations, errors, ownership, lifecycle and examples guide the new implementation. They are frozen source copies, not evidence that their APIs already exist. City Library currently exports no capabilities; the HTML examples are not yet executable against this repository.
+- [API inventory](api-table.md): all 309 operation/type entries in 16 areas, with exact signatures and compact contracts.
+- [API reference](api-reference.md): detailed behavior, defaults, validation, errors and examples.
+- [Architecture](../DESIGN.md): state ownership, dependencies, domain layout and extension rules.
+- [Work plan](../../PLAN.md): delivery order and acceptance criteria.
 
-The full target covers World, Agent, Grid, Field, Graph, Node, Edge, Random, Input, stats, geometry, Agenda, experiments, storage, limits, and Exports and shared types. These are the table's 16 areas, spanning City Library's Simulation, Spatial Structures, Graphs, and Data & Experiments areas. They do not create a second engine or require 16 packages.
+## Scope
 
-Deliver small slices against these contracts. Track every target operation/type and its evidence before claiming completion. Work postponed to another slice remains unfinished target scope; compatibility features, codecs, advanced algorithms and continuation must not silently disappear. Do not treat the earlier historical function catalog or prototype exports as additional requirements.
+| Area | Purpose |
+| --- | --- |
+| World | Membership, tick and synchronous execution |
+| Agent | Typed model data, lifecycle, movement and perception |
+| Grid / Field | Square/cubic cells, field values, neighborhoods and diffusion |
+| Graph / Node / Edge | Connections, traversal, routing, analysis and network generation |
+| Random | Explicit streams, distributions, sampling and continuation |
+| Input | Validated edits to existing scalar properties |
+| stats / geometry | Pure measurements and spatial calculations |
+| Agenda | Explicit event queues with their own time cursor |
+| experiments | Independent runs, study design, evaluation and continuation |
+| storage | Snapshots, formats, validation and bounded observation history |
+| limits | Resource ceilings for named operations and adapters |
+| Exports and shared types | Public entry contracts and structural TypeScript types |
 
-If the table, reference, examples or local architecture conflict, record the exact passages and the affected operation before implementing it. Do not invent missing behavior, silently choose a conflicting interpretation, rename the API or weaken the target. Seek an explicit decision for a substantive contract change and retain the original source copies. Later explicit user decisions supersede this baseline and must be recorded separately.
+These groups cover all 16 inventory areas; Field, Node and Edge have individual inventory sections. Advanced algorithms, compatibility profiles, codecs and continuation are included in phase one. Hexagonal grids are a future extension.
 
-## New implementation and historical evidence
+## Reading conventions
 
-Build the runtime anew here. Old `city_game` code, tests and advisory threads may help locate algorithms, edge cases and known failures; they do not define the new runtime or override this target. Evaluate relevant candidates and external libraries, retain notices for any adopted code, and verify behavior through City Library's public API. No runtime import may depend on the old checkout.
+The inventory and reference jointly define the required signatures and behavior. Implementation proceeds in small working slices; an entry remains planned until its public API, example and behavior checks are delivered. Conflicting or unspecified contracts must be resolved explicitly before implementation.
 
-The advisory thread supplied by the user offers search assistance, not an implementation or approval: <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/d5b597da-7daf-4f76-993e-cd71270dae20>.
+Examples retain the specification's `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node` import paths. Their mapping to City Library package entries is unresolved. They are not installation instructions. Serialization identifiers and compatibility versions are also part of the specified contracts.
 
-## Frozen source identity
-
-Source repository: [city_game](https://github.com/dweigend/city_game), branch `t3/complete-agent-loom-api-spec`, revision `08b3efb66d0f93d023f0b1deb762578552f7b819`. Source-relative directory: `docs/agent-loom/`. The inspected source worktree was clean on 5 November 2026.
-
-| Local file | Bytes | SHA-256 |
-| --- | --- | --- |
-| `api-table.html` | 202684 | `5b9b2c48c590f743b801fab47b618622d31272e8f1faed69efe3a34a70b16f11` |
-| `api-reference.html` | 254280 | `35c9e984cee837f629cf2a67efaf031fff1b9cdfaf71c5f379dbbbea2d1bfc64` |
-
-Both files are copied byte for byte. Their styles are inline; the table's relative file links point only to the adjacent reference. The reference has no relative file dependencies. Keep the pair together; accessing the historical worktree is not required to read the target. Integrity and link checks establish documentation preservation, not runtime, browser or scientific validity.
-
-## Adoption verification
-
-Independent review on 5 November 2026 by Antigravity `gemini-4-argon` found no blocking issues. The reviewer verified byte identity and hashes, all 16 table areas (309 operation/type rows), 1081 local HTML links/fragments and 23 local Markdown links/anchors. Typecheck and whitespace checks passed. The retained 3 November inspection in DESIGN and the 5 November adoption refer to distinct historical checkpoints; this was informational, with no correction required.
-
-This review accepts documentation adoption only, not runtime implementation. Review evidence: <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/thread:delegated-task:command%3Amcp%3A727936d3-c33f-48e5-9e8f-2795dcf917fd%3Adelegate-task%3A97fa11f8-f5f4-4514-8c43-f5cd4b2a5bf3>.
+The specification originates from [city_game at revision 08b3efb](https://github.com/dweigend/city_game/tree/08b3efb66d0f93d023f0b1deb762578552f7b819/docs/agent-loom). It is maintained here as Markdown; the original HTML is available in Git history.

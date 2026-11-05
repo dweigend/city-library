@@ -1,10 +1,10 @@
-# Current design decisions
+# Architecture and design
 
-Status: binding phase-one Agent Loom target, domain layout and architecture; runtime not implemented. Updated: 5 November 2026. City Library has prepared domain directories but no delivered capability exports. The [work plan](../PLAN.md) owns progress, sequencing and C01–C06; this document owns design boundaries and concise source context. The [README](../README.md) remains the public introduction.
+Status: binding phase-one Agent Loom target, domain layout and architecture; runtime not implemented. Updated: 5 November 2026. City Library has prepared domain directories but no delivered capability exports. The [work plan](../PLAN.md) owns progress, sequencing and C01–C06; this document defines architecture and public-contract boundaries. The [README](../README.md) remains the public introduction.
 
 ## Binding architecture rules
 
-These rules are mandatory throughout the project, including libraries, applications, examples and future adapters. They are normative constraints, not claims of implemented functionality. The [frozen Agent Loom HTML target](agent-loom/README.md) is also binding for phase one. Broader city scenarios remain design sketches unless explicitly accepted.
+These rules are mandatory throughout the project, including libraries, applications, examples and future adapters. They are normative constraints, not claims of implemented functionality. The [Agent Loom specification](agent-loom/README.md) is also binding for phase one. Broader city scenarios remain design sketches unless explicitly accepted.
 
 ### Ten architectural principles
 
@@ -48,7 +48,7 @@ The UI is an interchangeable presentation and interaction layer. The library mus
 
 Keep UI components thin: accept input, invoke functions and display results. Never duplicate domain calculations in the UI. Core interfaces contain no Svelte stores, DOM elements or Three.js objects. Put persistence, network and browser access in separate explicit adapters; do not hide their side effects inside domain operations. An application layer is optional: simple UI actions may call public core functions directly. Introduce no unnecessary architecture.
 
-Direct typed properties remain valid inside model-authoring logic as described below; they do not authorize UI code to mutate domain state. Presentation-derived values are allowed in UI code, while domain-derived values belong to the logic layer.
+Direct typed properties remain valid inside model-authoring logic as specified by the API reference; they do not authorize UI code to mutate domain state. Presentation-derived values are allowed in UI code, while domain-derived values belong to the logic layer.
 
 **Architecture invariant:** every domain function must be callable through a public TypeScript API without UI. Replacing the UI must require no core changes.
 
@@ -56,9 +56,9 @@ For every implementation slice, verify public headless access, dependency direct
 
 ## Binding domain layout and extension rules
 
-Accepted by the user on 5 November 2026. Organize source directly by domain rather than inserting the six planning areas as mandatory directory layers. The following domain and extension boundaries are binding for implementation. The HTML target continues to own public operation contracts; this layout does not rename methods, add capabilities or establish working exports.
+Organize source by domain. The following boundaries are binding; the [API specification](agent-loom/README.md) defines public operations. The layout does not add capabilities or establish working exports.
 
-The user explicitly requested all agreed directories now. Otherwise empty leaf directories contain a `.gitkeep` placeholder; remove it when real content arrives. Proposed `.ts` filenames below describe implementation responsibilities and are not created as empty module stubs. Every domain receives a deliberate `index.ts` when its first working public capability is delivered. The existing repository-root `index.ts` remains the public root entry and currently exports nothing.
+All listed directories exist. Empty leaf directories contain `.gitkeep`; remove it when content arrives. The `.ts` files below are planned responsibilities, not existing modules. Add each domain's `index.ts` with its first working public capability. The root `index.ts` currently exports nothing.
 
 ```text
 src/
@@ -145,7 +145,7 @@ src/
 index.ts                        # Existing public root entry
 tests/                          # Domain contract and integration tests
 examples/                       # Executable public examples
-docs/agent-loom/                 # Frozen binding target
+docs/agent-loom/                 # Phase-one API specification
 ```
 
 Keep these domain and extension boundaries when files are delivered. Split or combine private helper files within their owning domain only when a real slice justifies it; record a substantive boundary change here rather than silently bypassing this architecture. File presence never proves capability delivery.
@@ -164,7 +164,7 @@ Grid topology is distinct from Field state, occupancy queries and update algorit
 
 Diffusion consumes the declared neighbors and applicable weights rather than calculating square-grid offsets itself. Its update rule still defines ordering, units, supported topologies and conservation tolerance. A reusable neighborhood algorithm does not establish a physical process or prove that identical weights are valid on every topology. Pure `geometry.neighbors` and orthogonal Grid neighborhoods must share the phase-one semantics rather than duplicating conflicting offset or boundary rules.
 
-The binding phase-one Grid remains square/cubic with `faces | moore` neighborhoods and its recorded defaults. A later hexagonal implementation uses the prepared topology boundary and an explicit additional contract for coordinates, cell size, neighborhoods, wrapping, supported dimensions and snapshot representation. It must preserve existing calls and results. Hexagonal support is not implemented or implicitly added to the frozen reference by this directory layout.
+The binding phase-one Grid remains square/cubic with `faces | moore` neighborhoods and its recorded defaults. A later hexagonal implementation uses the prepared topology boundary and an explicit additional contract for coordinates, cell size, neighborhoods, wrapping, supported dimensions and snapshot representation. It must preserve existing calls and results. Hexagonal support is not implemented or implicitly added to the reference by this directory layout.
 
 Treat topology as immutable for a delivered slice unless that slice explicitly defines topology mutation and revision/invalidated-cache behavior. A cached neighborhood must never silently outlive the topology it represents. Respect the extension boundary now, but establish a broader shared topology interface through real variants rather than speculative universal capabilities.
 
@@ -172,13 +172,9 @@ Treat topology as immutable for a delivered slice unless that slice explicitly d
 
 - Preserve one authority per live value: Agent owns spatial state and path progress; Grid owns topology and Field identities; Graph owns topology and Edge identities; World owns membership and Tick. Shared references retain their canonical identities. Observation buffers own samples, not simulation state.
 - Load Node worker execution only through the explicit `experiments/node` host entry. Generic/root imports remain headless and must not eagerly import Node workers, browser globals or I/O. Core Storage encodes supplied data without performing file/database/network access. UI and host adapters remain separate from the library logic.
-- Preserve the binding root, Storage and Node experiment entry contracts. Reconcile the `agent-loom` names in the frozen target with City Library packaging explicitly before distribution; do not silently rename or widen those public entry contracts. A domain's internal `index.ts` is not automatically a new package subpath.
+- Preserve the binding root, Storage and Node experiment entry contracts. Reconcile the `agent-loom` names in the specification with City Library packaging explicitly before distribution; do not silently rename or widen those public entry contracts. A domain's internal `index.ts` is not automatically a new package subpath.
 - Test public behavior rather than file layout or helper implementation. Each delivered variant must satisfy the applicable shared contracts for identity, deterministic order, boundaries, mutations, failures, time and RNG effects, plus its own explicit requirements. Verify quantity conservation only for update rules that promise it. Run composition tests for ties/lifecycle and continuation where those features are delivered.
 - Keep the complete 309-row operation/type inventory accountable across the 16 reference areas. Layout prepares extension points; executable public examples, behavior checks and consumer evidence establish actual delivery. Future features outside phase one need their own accepted scope.
-
-### Source comparison behind this decision
-
-The organizational pattern is informed by [NetworkX's small graph API and separate algorithms](https://networkx.org/documentation/stable/reference/introduction.html), [Graphology's independent algorithm/generator/layout families](https://graphology.github.io/standard-library/) and [Mesa's distinct orthogonal and hexagonal Grid implementations](https://mesa.readthedocs.io/stable/_modules/mesa/discrete_space/grid.html). These are comparative evidence, not additional City Library API requirements or dependencies. We adopt the separation of responsibilities, not their Python classes, unrelated features, rendering code or package organization wholesale.
 
 ## One library, independent capabilities
 
@@ -204,17 +200,17 @@ The following roles describe composition size and usage, not additional top-leve
 | Explicit compositions and prototyping kits | Assemble useful static or live models from public capabilities | Own assembly and handoff policy, not duplicate domain state or a hidden runtime |
 | External UI and applications | Rendering, interaction, editors, charts, host scheduling and I/O | Read public results and change explicitly exposed inputs; no access to private implementation |
 
-These logical work areas are not a package manifest or claim about current exports; the binding source layout is defined above. C01–C06 are the current planning areas. A01–A09 denote earlier source workstreams only, not a parallel organization. Several areas use the same graph, random or storage capability; there is one owner per accepted capability. Their numbering is not a dependency hierarchy. Neither these roles nor the work areas require an inheritance tree, universal base class, plugin framework, registry or initialization pipeline.
+These logical work areas are not a package manifest or claim about current exports; the binding source layout is defined above. Several areas use the same graph, random or storage capability; there is one owner per accepted capability. Their numbering is not a dependency hierarchy. Neither these roles nor the work areas require an inheritance tree, universal base class, plugin framework, registry or initialization pipeline.
 
 Start with the smallest useful author script and its invariants. Select only the necessary capabilities, compare precise reuse candidates with external libraries and focused new work, then test the contract with a second real variant before generalizing it.
 
 ## Reference basis and usage organization
 
-The binding Agent Loom [API table](agent-loom/api-table.html) supplies the operation/type inventory: **World, Agent, Grid, Field, Graph, Node, Edge, Random, Input, stats, geometry, Agenda, experiments, storage, limits, Exports and shared types** (the inspected source order, not a required City Library navigation order). The companion [API reference](agent-loom/api-reference.html) expands vocabulary, examples, inputs/defaults, effects and errors. Both frozen files are binding target specifications for the first development phase, not proof of implementation in either repository. [Target authority and source identity](agent-loom/README.md) records their scope and conflict policy.
+The binding Agent Loom [API table](agent-loom/api-table.md) supplies the operation/type inventory: **World, Agent, Grid, Field, Graph, Node, Edge, Random, Input, stats, geometry, Agenda, experiments, storage, limits, Exports and shared types** (reference order, not a required implementation order). The companion [API reference](agent-loom/api-reference.md) expands vocabulary, examples, inputs/defaults, effects and errors. Both Markdown documents define the phase-one target. [Specification overview](agent-loom/README.md) explains scope, status and unresolved package entries.
 
-Use their task-oriented table organization for future City Library reference pages. A compact row should identify the capability and accepted operation, summarize its contract, and point to detailed usage. Within an object area, prefer creation, readable properties, mutations, queries, advanced operations and types where applicable. Keep naturally related actions together. Field has no independent constructor; statistics and geometry are primarily functions; experiment design and execution have their own workflow. Do not manufacture lifecycle methods to fill a rigid template.
+Keep future reference pages task-oriented. Each entry identifies an operation, summarizes its contract and links to detailed usage. Within an object area, prefer creation, readable properties, mutations, queries, advanced operations and types where applicable. Keep naturally related actions together. Field has no independent constructor; statistics and geometry are primarily functions; experiment design and execution have their own workflow. Do not manufacture lifecycle methods to fill a rigid template.
 
-The following tables summarize responsibilities and usage progression; they do not replace the binding HTML signatures or narrow their scope. Advanced features, compatibility profiles and codecs specified there remain target work, delivered through bounded implementation slices. Report conflicting or unspecified behavior rather than silently changing the contract.
+The following tables summarize responsibilities and usage progression; they do not replace the binding API signatures or narrow their scope. Advanced features, compatibility profiles and codecs specified there remain target work, delivered through bounded implementation slices. Report conflicting or unspecified behavior rather than silently changing the contract.
 
 ## General modeling boundaries
 
@@ -227,11 +223,11 @@ The following tables summarize responsibilities and usage progression; they do n
 | Random | Create stream; draw/sample; inspect or restore continuation; copy/reseed; advanced profile-specific operations | Each stream owns its algorithm state and caches. No dependency on World, city generation or UI. Deliberate sharing is explicit. |
 | Input | Create bindings; expose an existing scalar property; inspect constraints; validate/set; remove binding | Owns binding descriptors, not another copy of the value. Validated writes target the original object. No widget, form schema or automatic interception of ordinary assignments. |
 | stats | Describe values, histogram, inequality and heading alignment; inspect detached results | Pure measurements over supplied values. No recorder, runtime, drawing or implicit sampling. Domain metrics select their own quantities and units first. |
-| geometry | Containment, normalization, displacement/distance/bearing, cell neighbors, orientation, path splitting, bounds and mapping | Pure spatial functions and structural data, with explicit dimensions/context. No Agent/Grid allocation or renderer. The source's planar GIS subset does not establish arbitrary solid geometry, polygon booleans or geodesy. |
+| geometry | Containment, normalization, displacement/distance/bearing, cell neighbors, orientation, path splitting, bounds and mapping | Pure spatial functions and structural data, with explicit dimensions/context. No Agent/Grid allocation or renderer. The specified planar GIS subset does not establish arbitrary solid geometry, polygon booleans or geodesy. |
 | Agenda | Create; inspect time; queue/cancel event data; advance to a horizon within a budget; explicitly handle returned events | Owns pending event data, handles, insertion order and its own time. No automatic callbacks, World step or wall-clock timer. |
 | experiments | Design scenarios; replicate seeds; create/run independent models; measure/summarize; optionally evaluate, select, hold out or resume | Owns study plan, budgets and outcomes; each model owns its state. The reference execution contract uses World plus a step procedure. Host workers and compatibility bindings are explicit optional integrations, not requirements for static tools. |
 | storage | Save/load supplied supported data; explicitly encode/decode; create and record bounded History; validate restored data | Owns snapshot/codec contracts and History buffers. Depends only on the selected data/component contracts; no file/database I/O in core. One area covers selected data and declared model state, with distinct guarantees. |
-| limits | Read documented resource budgets for specific operations or adapters | Immutable policy data, not a global allocation manager. Source profiles include NetLogo, GeoJSON, legacy networks, BehaviorSpace and studies; their ceilings do not become universal model limits. |
+| limits | Read documented resource budgets for specific operations or adapters | Immutable policy data, not a global allocation manager. Specified profiles include NetLogo, GeoJSON, legacy networks, BehaviorSpace and studies; their ceilings do not become universal model limits. |
 | Exports and shared types | Discover delivered public entry points and the structural types required by accepted calls | A documentation and compatibility responsibility, not a catch-all module. Reconcile the specified `agent-loom` entry names and subpaths with City Library packaging explicitly; do not silently discard or rename target entry contracts. |
 
 Field and Edge remain visible reference categories even if implemented alongside their owning Grid and Graph. Do not split them into competing ownership systems merely to obtain a module per heading. Likewise, detached graph and grid capabilities may be stateful objects: independent use does not require converting every capability into stateless functions.
@@ -262,11 +258,11 @@ Public entry points must be deliberate. Kits, applications and other domains use
 
 Before implementing an operation, document its task, minimal example, inputs/results, units, defaults, bounds, ordering, mutations, errors, ownership, lifecycle and dependencies. State whether returned data is detached, a snapshot of canonical references, or a live view; define empty/partial results and numerical tolerance. A frozen array does not make its objects immutable. Explicit adapters handle incompatible units, dimensions or coordinate systems; TypeScript shape similarity is not semantic compatibility.
 
-Runtime and distribution choices remain implementation decisions only where the binding HTML target leaves them unspecified; changes to specified entry or host contracts require an explicit decision. Static geometry, generators, graph analysis and field calculations must work headlessly without World, DOM or a renderer. Generic imports must not pull in Node worker execution, browser globals or file access just because an optional host supports them. Introduce only delivered exports, not speculative package splits or stubs.
+Runtime and distribution choices remain implementation decisions only where the binding API specification leaves them unspecified; changes to specified entry or host contracts require an explicit decision. Static geometry, generators, graph analysis and field calculations must work headlessly without World, DOM or a renderer. Generic imports must not pull in Node worker execution, browser globals or file access just because an optional host supports them. Introduce only delivered exports, not speculative package splits or stubs.
 
 ## Authoring vocabulary and canonical state
 
-Preserve the latest Agent Loom direction: ordinary TypeScript, direct typed properties, native arrays/sets/maps and explicit composition. Reference examples use `Agent.add(...)`, `World.add(...)`, `world.add(...)` and `run(world, step, steps)`. Model values remain `agent.energy`, not a generic `.value` wrapper. Use `Position` and `Space`, not parallel public `Like`/`Context` synonyms. Native array queries remain the ordinary selection path; specialized World activation is an explicit advanced scheduling operation.
+Use ordinary TypeScript, direct typed properties, native arrays/sets/maps and explicit composition. Reference examples use `Agent.add(...)`, `World.add(...)`, `world.add(...)` and `run(world, step, steps)`. Model values remain `agent.energy`, not a generic `.value` wrapper. Use `Position` and `Space`, not parallel public `Like`/`Context` synonyms. Native array queries remain the ordinary selection path; specialized World activation is an explicit advanced scheduling operation.
 
 Creation/copy semantics and later assignments are distinct. The reference clones supported initial custom data but retains framework references; later assignments use ordinary TypeScript reference semantics. An agent copy is detached; a graph copy owns independent edges while retaining node identities. Do not promise a deep model clone from the word `copy` alone. Reserved built-in keys, supported data and failures need delivered contracts.
 
@@ -279,7 +275,7 @@ Creation/copy semantics and later assignments are distinct. The reference clones
 | Generated descriptions | Generator result / caller | Valid without runtime. Admission to a live model explicitly supplies domain meaning, units and identity relationships. |
 | Observation samples | History or caller | Own detached samples, never simulation state. Old samples need not track later live changes. |
 
-Keep removal semantics receiver-specific: `world.delete(component)` detaches and requires its argument; `agent.delete()` deletes the individual; `graph.delete()` empties graph contents; `history.delete()` clears retained observations. Do not reintroduce historical aliases or infer a no-argument World reset. Caller-owned arrays are not automatically cleaned when an agent is deleted. Process-local framework identity is distinct from a persistent domain key.
+Keep removal semantics receiver-specific: `world.delete(component)` detaches and requires its argument; `agent.delete()` deletes the individual; `graph.delete()` empties graph contents; `history.delete()` clears retained observations. World has no no-argument reset operation. Caller-owned arrays are not automatically cleaned when an agent is deleted. Process-local framework identity is distinct from a persistent domain key.
 
 Live replacement is a coordinated domain operation. Demolishing an occupied building, shrinking capacity or removing an entrance must handle residents, allocation and stale routes explicitly. Runtime manages membership; the affected domain defines consequences; composition coordinates the change. Freeze one bounded policy before inventing a universal regeneration mechanism.
 
@@ -302,7 +298,7 @@ Retain one storage area with the reference vocabulary `storage.save(...)`, `stor
 | Complete continuation | Captured model/domain state, clocks, Agenda queue, RNG continuation, path progress and other required cursors; explicit rebinding of matching procedures | Resume of an arbitrary program from a seed or partial snapshot |
 | Study continuation | Model continuation plus plan position, completed outcomes, sampling policy and remaining budgets | Re-running completed work or equating a study checkpoint with a measurement file |
 
-Decoded custom state remains untrusted until validated; static types cannot validate serialized data. Custom formats are explicitly passed adapters, not a mandatory codec registry, and cannot bypass model-state validation. Unsupported versions or values fail clearly rather than disappear. Implement snapshot compatibility and format coverage specified by the binding reference in bounded slices; historical wire schemas outside that reference are not adopted automatically. Histories have explicit capacity, sampling and eviction behavior; streaming/backpressure needs its own contract.
+Decoded custom state remains untrusted until validated; static types cannot validate serialized data. Custom formats are explicitly passed adapters, not a mandatory codec registry, and cannot bypass model-state validation. Unsupported versions or values fail clearly rather than disappear. Implement snapshot compatibility and format coverage specified by the binding reference in bounded slices. Additional wire schemas require explicit contracts. Histories have explicit capacity, sampling and eviction behavior; streaming/backpressure needs its own contract.
 
 ## Concrete compositions
 
@@ -330,23 +326,10 @@ These gates define evidence requirements without claiming completion. The agent-
 5. **Data before continuation:** roundtrip selected data and verify observations leave state/time/RNG unchanged. Accept exact resume separately by comparing uninterrupted and restored runs with a declared state inventory and rebound behavior.
 6. **Evidence:** run the relevant type/behavior checks and a public downstream consumer when an entry point ships. Keep source-only, target-runtime, visual and scientific evidence separate. Independent review is a separate decision, not implied by passing tests or this design document.
 
-## Current source provenance and plan reconciliation
+## Open contracts
 
-Inspected on 3 November 2026 in source worktree `/home/david/.t3/worktrees/city_game/t3-ea6a26d7`, branch `t3/complete-agent-loom-api-spec`, HEAD `08b3efb66d0f93d023f0b1deb762578552f7b819`. Both inspected files had no working-tree changes:
+- **Package entries:** the specification uses `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node`. Their mapping to the City Library package must be decided before distribution. Preserve specified serialization identifiers separately from package naming.
+- **Shared lifecycle:** define the private coordination contract for identity, state copying, coupled movement and membership before implementing those interactions. Keep one owner and acyclic dependencies.
+- **Future topology:** hexagonal grids need explicit coordinates, neighborhoods, wrapping, dimensions and storage representation. They must preserve phase-one square/cubic behavior.
 
-| Source-relative path | SHA-256 of inspected content |
-| --- | --- |
-| `docs/agent-loom/api-table.html` | `5b9b2c48c590f743b801fab47b618622d31272e8f1faed69efe3a34a70b16f11` |
-| `docs/agent-loom/api-reference.html` | `35c9e984cee837f629cf2a67efaf031fff1b9cdfaf71c5f379dbbbea2d1bfc64` |
-
-These are optional author evidence locators, not required consumer files, public API imports or runtime dependencies. This document records the local design direction without requiring access to that worktree. The target was inspected on `main` at `8fa0cecd56d4aa046bfc00605a892deecb4effaf`; no implementation or transfer approval follows from those revisions.
-
-The current plan resolves the earlier nine-workstream organization into six areas. Agent Loom is incorporated as design lineage: execution is C01, spatial/grid contracts C02, graph contracts C03, and input/stats/experiments/storage C06. Buildings, terrain/layout and feasibility form C04; urban policies form C05. The retained reference tables describe source capability boundaries, not another package hierarchy or a second general engine. Graph and grid algorithms are independently usable; Simulation only coordinates lifecycle for attached world-owned objects.
-
-On 5 November 2026, the user made the complete HTML table and reference binding for phase one and requested a new implementation in this repository. Local byte-identical copies are retained in [docs/agent-loom](agent-loom/README.md). Their advanced operations are staged target commitments, not optional historical suggestions. Historical APIs outside that pair are not automatically adopted. Packaging and implementation choices may not silently alter specified contracts; report gaps and conflicts for explicit decisions. No runtime, dependencies, stubs or setup changes accompany this target-definition adoption.
-
-## Six-area revision checks
-
-The six-area consolidation was independently reviewed against the actual scaffold. No blocking finding or lost central capability was identified. Two P3 clarifications were applied: World membership is distinct from Graph/Grid ownership, and the source API heading order is historical rather than a new navigation requirement. Those changes are author responses, not a new independent approval.
-
-Typecheck, local Markdown links/code fences and whitespace checks passed. The README Mermaid, runtime entry, dependency/configuration files and lockfile were unchanged. No engine functions or source stubs were added. The separate provenance document and its links were removed as requested.
+The [work plan](../PLAN.md) tracks delivery; the [specification overview](agent-loom/README.md) identifies the API source.

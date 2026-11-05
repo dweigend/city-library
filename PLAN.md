@@ -1,14 +1,14 @@
 # City Library work plan
 
-Updated: 5 November 2026. Status: **binding target, architecture and prepared domain directories; runtime not implemented**. No city capability has been implemented or transferred. `index.ts` exports no APIs. All areas below are planned, not packages, delivered exports, or transfer approvals.
+Updated: 5 November 2026. Status: **specification and source scaffold; runtime not implemented**. `index.ts` exports no APIs. All capabilities below are planned.
 
 ## Reading order and ownership
 
-[README.md](README.md) introduces the product. This plan owns work areas, priorities, deliverables, and acceptance gates. [Design decisions](docs/DESIGN.md) owns current boundaries and authoring conventions. Concise source context is retained in the design document; there is no separate provenance document. [AGENTS.md](AGENTS.md) contains stable working instructions.
+[README.md](README.md) introduces the product. This plan owns work areas, priorities, deliverables, and acceptance gates. [Design decisions](docs/DESIGN.md) owns current boundaries and authoring conventions. [AGENTS.md](AGENTS.md) contains stable working instructions.
 
 ## Six work areas
 
-The engine is one composable library organized into six recognizable areas. Agent Loom is the source of the Simulation authoring direction, not a second product to integrate. Graphs is a separate area, independent of spatial coordinates, grids and World. These areas do not require six packages, compulsory initialization layers or empty source folders.
+The engine is one composable library organized into six recognizable areas. Agent Loom is the source of the Simulation authoring direction, not a second product to integrate. Graphs is a separate area, independent of spatial coordinates, grids and World. The work areas do not prescribe package boundaries or directory layers.
 
 All entries are planned. P0 = coherent preparation; P1 = first standalone capabilities; P2 = second variants and static composition; P3 = live city integration and broader models. Priority describes bounded slices rather than the delivery of an entire area.
 
@@ -29,15 +29,11 @@ Kits are compositions within or across the six areas. A static neighborhood prim
 
 Description-to-live binding is an explicit integration task: C04 describes geometry; C01 coordinates lifecycle; C05 owns occupancy/travel consequences; C06 records supported state. The model composes those operations. Removing a building or entrance must resolve affected references and policies, not silently discard residents or preserve stale routes. Start with one bounded replacement case, not a universal registry framework.
 
-The former A01–A09 workstreams remain source lineage, not parallel top-level areas. Buildings, terrain/layout and feasibility are C04 subtracks; grid/field work is C02; Agent Loom becomes C01; transport, households/economy and supply become C05; data/studies become C06. Generic graph work is explicitly C03 rather than hidden in transport or spatial tools. This paragraph preserves the historical mapping without maintaining a second area list.
-
 ## Delivery sequence
 
 ### Current focus: finish the agent modeling library incrementally
 
-The user has prioritized the agent library before further city capabilities. Simulation work now leads; building generation waits rather than running as the first implementation track. The six-area structure and independent-use boundaries remain unchanged.
-
-The user confirmed that “agent library” means the entire general Agent Loom core, delivered incrementally across C01, C02, C03 and C06. Agent/World/execution is the first delivery, not the completion boundary. The [frozen API table and reference](docs/agent-loom/README.md) are binding for phase one; this sequence divides their complete scope into deliveries rather than selecting which target contracts to retain.
+Phase one delivers the complete [Agent Loom specification](docs/agent-loom/README.md) across C01, C02, C03 and C06. It takes priority over city generation. Agent/World/execution is the first delivery; completion covers all 309 operation/type entries in the 16 reference areas, including compatibility profiles, codecs, advanced algorithms, limits and shared types.
 
 | Step | Bounded result | Acceptance evidence | Status |
 | --- | --- | --- | --- |
@@ -50,36 +46,24 @@ The user confirmed that “agent library” means the entire general Agent Loom 
 | A7 · Inputs and observations | Bind validated inputs to existing properties; pure stats and bounded History. | Writes affect canonical state; observations do not mutate model/time/RNG; History owns detached samples with explicit eviction. | Planned |
 | A8 · Experiments and storage | Independent experiment runs and selected-data save/load first; declared model and study continuation require separate later slices. | Reordered runs preserve per-run results; validated roundtrip rejects unsupported data; exact continuation is accepted only against uninterrupted execution with a complete state inventory. | Planned |
 
-Before A1 implementation, record an operation-level inventory from the binding reference table, compare historical algorithm candidates with focused new work and external alternatives, and report any contract gaps or conflicts for explicit resolution. Build the runtime anew in this repository; old-source evidence does not override the binding target. The first runtime slice also owns the toolchain/export/test setup it needs from the backlog below. Do not create empty modules for later steps.
+Before A1 implementation, record an operation-level inventory from the binding reference table, compare source algorithms with focused new work and external alternatives, and report any contract gaps or conflicts for explicit resolution. Build the runtime in this repository and verify its public behavior independently of source-project results. The first runtime slice also supplies its required toolchain, exports and tests. Do not create empty modules for later steps.
 
-Completion requires an explicit operation inventory covering every general reference area, including limits and public/shared types: each target operation/type must have a delivered public export, contract, executable example and target evidence. Deferred operations remain open work; exclusions and changes from the general reference scope require an explicit recorded decision. A small Agent implementation alone does not establish full Agent Loom completion. Compatibility profiles, broader graph algorithms, codecs and continuation specified by the HTML remain target work, delivered in bounded slices. Substantial design/transfer work receives an independent review under the orchestration policy below; author checks do not count as that approval.
-
-Planning evidence on 5 November: target `main` at `b289f3b99888d4a550f7305bc01fa13f36659e8b` was clean before this update. The source worktree at `08b3efb66d0f93d023f0b1deb762578552f7b819` was clean, and both API HTML hashes matched the source identities in [DESIGN.md](docs/DESIGN.md). That verifies the reference basis, not runtime behavior. No source code has been transferred.
-
-### Orchestration and review
-
-The coordinating agent owns sequencing, bounded briefs, integration and evidence. Delegate implementation to subagents or dedicated implementation threads; preserve concurrent work and give each writer an explicit scope. Implementation tasks rebuild the runtime here against the binding target. The old-project advisory thread is an optional source of search hints.
-
-Use Antigravity `gemini-4-argon` for independent review and feedback, as clarified and approved by the user on 5 November 2026. Confirm the actual provider/model identity before dispatch; do not silently substitute another model when unavailable. Consult `gpt-6-astra` with high reasoning only when a task requires deep logical analysis, not for routine implementation or review. Record review findings and author responses separately from independent approval.
-
-Binding target adoption is complete and independently reviewed with no blocking findings; see the [adoption verification](docs/agent-loom/README.md#adoption-verification). Runtime delivery remains unstarted; A1 is next.
+Completion requires an explicit operation inventory covering every general reference area, including limits and public/shared types: each target operation/type must have a delivered public export, contract, executable example and target evidence. Deferred operations remain open work; exclusions and changes from the general reference scope require an explicit recorded decision. A small Agent implementation alone does not establish full Agent Loom completion. Compatibility profiles, broader graph algorithms, codecs and continuation specified by the reference remain target work, delivered in bounded slices. Substantial design or transfer work requires independent review; author checks do not count as independent approval.
 
 ### Prepared domain layout
 
-On 5 November 2026, the user approved the domain-oriented layout and extension rules and explicitly requested that every agreed directory be created. The [binding domain layout](docs/DESIGN.md#binding-domain-layout-and-extension-rules) now defines the source boundaries. All agreed `src/` domains and nested algorithm, topology, format and host directories, plus `tests/` and `examples/`, exist. Empty leaf directories contain only `.gitkeep` so Git can retain this requested scaffold. This is an explicit exception to the earlier preference against empty future folders; it does not authorize empty TypeScript modules or speculative exports.
+The [domain layout and extension rules](docs/DESIGN.md#binding-domain-layout-and-extension-rules) define the source boundaries. All listed directories exist; empty leaf directories contain `.gitkeep`. Proposed TypeScript files are added only with working capabilities. No runtime, package exports, build pipeline or behavior tests have been delivered.
 
-The domain directories do not implement their proposed files. Hexagonal topology remains a future extension with its own explicit contract; phase one still delivers the binding square/cubic Grid behavior. No runtime source, package exports, dependencies, build pipeline or tests were introduced by this layout step. Typecheck, directory integrity, Markdown links/anchors and whitespace are checked for this change; independent architecture review is separate from these author checks.
-
-Independent review on 5 November 2026 by Antigravity `gemini-4-argon` found no blocking or non-blocking issues. It verified all 12 source domains, 12 nested directories, 20 empty leaf `.gitkeep` files, 26 local Markdown links/anchors, unchanged HTML hashes and absence of new TypeScript stubs. Typecheck and whitespace checks passed. The review narrative calls the nested directories “11” but explicitly lists all 12; the retained structure is complete. Review evidence: <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/thread:delegated-task:command%3Amcp%3A727936d3-c33f-48e5-9e8f-2795dcf917fd%3Adelegate-task%3Abc309cb4-37c5-4d41-9665-8b0811196834>. This accepts the scaffold and architecture documentation, not runtime delivery.
+Hexagonal topology remains a future extension. Phase one specifies square/cubic grids.
 
 ### Broader city milestones
 
-The current agent-first focus above overrides the earlier parallel house/agent ordering below. These milestones retain the broader city roadmap; their numbers do not require building generation before completion of the complete binding agent target.
+These milestones describe the broader city roadmap after the agent core. They do not change the phase-one delivery order.
 
 | Milestone | Bounded work | Evidence required to finish |
 | --- | --- | --- |
 | M0 · Coherent preparation | Maintain this plan, local decisions/provenance, and honest implementation status. Select first concrete inputs and output. | Relative links resolve; design conflicts are recorded; source/target status is explicit; no claims of delivered APIs. |
-| M1 · One house and one independent agent model | C04 buildings and C01 simulation can progress as separate slices. Introduce only their required tools; choose one implementation slice per commit. | Public examples execute headlessly, with focused behavior tests, independent instances and documented units/failures. The house needs no World; the agent model needs no grid. |
+| M1 · One house and one independent agent model | After the agent core, deliver an independent C04 building generator. Introduce only required tools and keep each slice focused. | Public examples execute headlessly, with focused behavior tests, independent instances and documented units/failures. The house needs no World; the agent model needs no grid. |
 | M2 · Real alternatives | Add a second building variant; independently exercise C02 and a C03 graph without coordinates. Introduce minimal C06 input/metrics as needed. | Shared contracts work for two real variants; unsupported cases fail clearly. No hidden RNG or state coupling. |
 | M3 · Static neighborhood | Compose C04 generators and C02 tools, with terrain or zoning only where required. | Reservations, parcels and houses agree; partial/empty results are valid where specified. Kit/manual public-call results agree. No live simulation required. |
 | M4 · Live connection | Connect descriptions to canonical objects; add homes/jobs, one commuter, and a bounded building or access change. | Shared identity, allocation limits, route revision and occupied-change policy are tested. No orphan references or silently duplicated state. |
@@ -108,16 +92,12 @@ Simple data export can happen before M6. The C04 feasibility subtrack and other 
 | Verify a packed downstream consumer | First distributable entry | Supported TypeScript/runtime/bundler consumers import the package rather than its checkout internals. Select and document the supported environments. |
 | Decide formatting/linting scope | First code slice | Reuse a small configured toolchain with meaningful checks; no speculative pipeline. |
 
-Keep the package publication guard (`private: true`) until release is explicitly in scope. Web-oriented is a target; browser/runtime compatibility must be demonstrated rather than inferred from TypeScript. No technical setup commands or dependencies were changed by this documentation revision.
+Keep the package publication guard (`private: true`) until release is explicitly in scope. Web-oriented is a target; browser/runtime compatibility must be demonstrated rather than inferred from TypeScript.
 
 ## Scope boundaries and unresolved decisions
 
-Rendering, materials, Drawing, symbols, cameras, widgets, picking, browser editors and presentation hosts are outside the engine work areas. An external application may use public data and explicitly exposed inputs. Its browser and visual acceptance is separate from this library plan.
+Rendering, materials, symbols, cameras, widgets, picking, browser editors and presentation hosts are outside the engine work areas. An external application may use public data and explicitly exposed inputs. Its browser and visual acceptance is separate from this library plan.
 
-The first-generator contract and city-domain admission/replacement remain later slice decisions. Numerical precision, coordinate conversion, packaging, runtime support, rights/notices and checkpoint details require slice decisions only where the binding target leaves them unspecified; specified contracts remain mandatory. Geometric capabilities may use declared abstract units; city-domain admission must make metric conversion explicit. No universal registry/token framework is frozen here.
+The first-generator contract and city-domain admission/replacement remain later slice decisions. Numerical precision, coordinate conversion, packaging, runtime support, rights/notices and checkpoint details require slice decisions only where the binding target leaves them unspecified; specified contracts remain mandatory. Geometric capabilities may use declared abstract units; city-domain admission must make metric conversion explicit. Shared infrastructure requires a concrete use case.
 
-The frozen HTML pair is the approved phase-one target definition. This documentation work copies that definition but does not transfer runtime code, install libraries, implement the areas, or approve the separate historical function catalog as public API. Implementation progress must replace this status only when supported by actual target results.
-
-## Source context
-
-The source project is [city_game](https://github.com/dweigend/city_game). Its locally inspected handover revision `59f05d1766e1775c6d5efaada96c605862cab3ec` inventories candidate mechanisms and gaps, not current City Library exports. Source families include Volume Houses, Grid Lab, Town Painter, Infrastructure Atlas, City Flow, NetLogo TS and TestFit research. The latest Agent Loom reference decisions supersede conflicting historical Group/Drawing/appearance/clock names. [DESIGN.md](docs/DESIGN.md) records the current direction and inspected reference identities. No separate provenance document is maintained.
+The [Markdown API specification](docs/agent-loom/README.md) defines phase one. Track implementation status against public examples and behavior checks, not source-project results.
