@@ -1,6 +1,184 @@
 # Current design decisions
 
-Status: proposed design, not implemented API. Updated: 3 November 2026. City Library remains a scaffold with no delivered capability exports. The [work plan](../PLAN.md) owns progress, sequencing and C01–C06; this document owns design boundaries and concise source context. The [README](../README.md) remains the public introduction.
+Status: binding phase-one Agent Loom target, domain layout and architecture; runtime not implemented. Updated: 5 November 2026. City Library has prepared domain directories but no delivered capability exports. The [work plan](../PLAN.md) owns progress, sequencing and C01–C06; this document owns design boundaries and concise source context. The [README](../README.md) remains the public introduction.
+
+## Binding architecture rules
+
+These rules are mandatory throughout the project, including libraries, applications, examples and future adapters. They are normative constraints, not claims of implemented functionality. The [frozen Agent Loom HTML target](agent-loom/README.md) is also binding for phase one. Broader city scenarios remain design sketches unless explicitly accepted.
+
+### Ten architectural principles
+
+| Principle | Required rule |
+| --- | --- |
+| Separation of concerns | Separate distinct responsibilities. Each module has one clearly defined purpose. |
+| High cohesion, low coupling | Keep related responsibilities together and minimize dependencies between modules. |
+| Dependency rule | Dependencies follow a controlled direction. Core code knows no applications, UI or concrete adapters. |
+| Encapsulation and information hiding | Hide implementation details; consumers use only defined public interfaces. |
+| Explicit contracts | Define inputs, outputs, errors and side effects unambiguously. |
+| Composition over inheritance | Combine independent building blocks rather than introducing deep inheritance hierarchies. |
+| Single source of truth | Give every state and domain fact one authoritative owner. |
+| Dependency inversion | Domain logic depends on stable abstractions rather than concrete infrastructure implementations. |
+| Functional core, imperative shell | Keep calculations and rules as pure as practical; isolate I/O, persistence and other side effects at explicit system boundaries. |
+| Evolutionary architecture | Support local changes; new capabilities should affect existing modules as little as possible. |
+
+### Strict separation of UI and domain logic
+
+The UI is an interchangeable presentation and interaction layer. The library must be fully usable and testable without a UI.
+
+| Rule | Mandatory requirement |
+| --- | --- |
+| Strict separation | Put UI and domain logic in separate modules; never mix them in one file or component. |
+| Unidirectional dependencies | UI may import logic; logic must never import UI components or UI frameworks. |
+| Headless core | All domain functionality runs without a browser, DOM, Svelte or Three.js. |
+| No business logic in UI | UI components implement no domain calculations, simulations or business rules. |
+| Explicit interfaces | Communicate through clearly defined, typed functions, data models and events. |
+| Single source of truth | Logic exclusively manages domain state. UI owns only temporary presentation state. |
+| No direct state mutation | UI changes domain state only through defined actions or functions, never direct assignment to domain objects. |
+| Framework independence | Domain logic uses no framework-specific types, stores, hooks or lifecycle mechanisms. |
+| Independent testing | Test all domain logic without UI; UI tests verify presentation and interaction. |
+| Replaceable UI | CLI, web applications and 3D visualizations reuse the same domain logic unchanged. |
+
+### Layers and implementation boundaries
+
+| Layer | Responsibilities and dependencies |
+| --- | --- |
+| UI / Presentation: Svelte, HTML, Three.js, CLI | Presentation, interaction and local UI state. Calls the application layer or public core functions using typed data, actions and events. |
+| Application / Controller (optional) | Use cases, orchestration and controlled state access. Depends on core contracts; introduces no UI dependency into the core. |
+| Core / Domain Library | Domain logic, models, rules and algorithms. Framework-independent and headless; depends on neither presentation nor application code. |
+
+Keep UI components thin: accept input, invoke functions and display results. Never duplicate domain calculations in the UI. Core interfaces contain no Svelte stores, DOM elements or Three.js objects. Put persistence, network and browser access in separate explicit adapters; do not hide their side effects inside domain operations. An application layer is optional: simple UI actions may call public core functions directly. Introduce no unnecessary architecture.
+
+Direct typed properties remain valid inside model-authoring logic as described below; they do not authorize UI code to mutate domain state. Presentation-derived values are allowed in UI code, while domain-derived values belong to the logic layer.
+
+**Architecture invariant:** every domain function must be callable through a public TypeScript API without UI. Replacing the UI must require no core changes.
+
+For every implementation slice, verify public headless access, dependency direction, explicit contracts and canonical state ownership. When UI is present, also verify that it uses defined actions and contains no domain rules. Use the existing slice checks and browser verification requirements; documentation alone does not establish compliance.
+
+## Binding domain layout and extension rules
+
+Accepted by the user on 5 November 2026. Organize source directly by domain rather than inserting the six planning areas as mandatory directory layers. The following domain and extension boundaries are binding for implementation. The HTML target continues to own public operation contracts; this layout does not rename methods, add capabilities or establish working exports.
+
+The user explicitly requested all agreed directories now. Otherwise empty leaf directories contain a `.gitkeep` placeholder; remove it when real content arrives. Proposed `.ts` filenames below describe implementation responsibilities and are not created as empty module stubs. Every domain receives a deliberate `index.ts` when its first working public capability is delivered. The existing repository-root `index.ts` remains the public root entry and currently exports nothing.
+
+```text
+src/
+├── agent/
+│   ├── agent.ts
+│   ├── state.ts
+│   ├── movement.ts
+│   ├── orientation.ts
+│   ├── perception.ts
+│   ├── path.ts
+│   └── gradient.ts
+├── world/
+│   ├── world.ts
+│   ├── membership.ts
+│   ├── tick.ts
+│   ├── run.ts
+│   └── activation/             # Activation, reporting, selection and compatibility
+├── grid/
+│   ├── grid.ts
+│   ├── field.ts
+│   ├── occupancy.ts
+│   ├── topology/
+│   │   ├── orthogonal.ts       # Square/cubic phase-one topology
+│   │   └── hexagonal.ts        # Future extension, not phase-one functionality
+│   └── algorithms/
+│       └── diffusion.ts
+├── graph/
+│   ├── graph.ts
+│   ├── nodes.ts
+│   ├── edge.ts
+│   ├── ties.ts
+│   ├── views.ts
+│   ├── data.ts
+│   ├── algorithms/
+│   │   ├── traversal.ts
+│   │   ├── connectivity.ts
+│   │   ├── routing.ts
+│   │   ├── centrality.ts
+│   │   ├── clustering.ts
+│   │   ├── communities.ts
+│   │   ├── cliques.ts
+│   │   ├── matching.ts
+│   │   ├── cycles.ts
+│   │   ├── trees.ts
+│   │   └── flow.ts
+│   ├── generators/
+│   └── layouts/
+├── geometry/
+│   ├── space.ts
+│   ├── position.ts
+│   ├── orientation.ts
+│   ├── distance.ts
+│   ├── neighborhood.ts
+│   ├── polygon.ts
+│   ├── path.ts
+│   └── bounds.ts
+├── random/
+│   ├── random.ts
+│   ├── algorithms/
+│   ├── distributions/
+│   ├── sampling.ts
+│   └── continuation.ts
+├── agenda/
+├── input/
+├── stats/
+├── experiments/
+│   ├── design.ts
+│   ├── replication.ts
+│   ├── run.ts
+│   ├── summarize.ts
+│   ├── calibration/
+│   ├── continuation.ts
+│   ├── behaviorspace.ts
+│   └── node/                   # Separate host entry and worker implementation
+├── storage/
+│   ├── snapshot.ts
+│   ├── validation.ts
+│   ├── history.ts
+│   ├── wire/
+│   ├── value-codec.ts
+│   └── formats/
+└── limits/
+
+index.ts                        # Existing public root entry
+tests/                          # Domain contract and integration tests
+examples/                       # Executable public examples
+docs/agent-loom/                 # Frozen binding target
+```
+
+Keep these domain and extension boundaries when files are delivered. Split or combine private helper files within their owning domain only when a real slice justifies it; record a substantive boundary change here rather than silently bypassing this architecture. File presence never proves capability delivery.
+
+### Kernels, algorithms and explicit variants
+
+- Keep each domain's state-owning kernel small. Put calculations, graph algorithm families, generators and layouts in focused functions. Existing method contracts such as `graph.findRoute(...)` delegate to these implementations without changing the binding authoring API.
+- Use ordinary functions, direct typed data and explicit composition. Define small, task-specific contracts for topologies, random algorithms, generators and codecs. Variants must be replaceable through those contracts without rebuilding the whole domain. Do not require a global plugin registry, a universal manager or a deep inheritance hierarchy.
+- Keep types with their semantic owner and export only the agreed public surface. `Field` belongs to Grid; node membership and `Edge` belong to Graph; `History` belongs to Storage. Nodes remain the caller's original objects, not instances of a new mandatory Node base class. Avoid catch-all `core/`, `utils/` and global `types/` modules.
+- Keep dependencies directed and acyclic. Detached Graph, Grid and Random work without World; their optional World participation uses focused private lifecycle contracts. Do not make World the owner of all identity, cloning or algorithm infrastructure merely to share code.
+- Define a single responsible internal protocol for shared identity, supported state copying and cross-domain lifecycle before implementing those interactions. Agent movement, edge ties and World membership must coordinate canonical objects through that protocol; separate registries or copied ownership state must not compete. Common mechanics must not require reciprocal runtime imports.
+
+### Topology as an extension boundary
+
+Grid topology is distinct from Field state, occupancy queries and update algorithms. Its contract must specify cell identification, supported dimensions, cell-center geometry, position-to-cell mapping, neighborhood enumeration and order, boundary handling and any topology-specific weights. Grid owns stable Field identities; each Field owns its values. Occupancy remains a query over canonical agents.
+
+Diffusion consumes the declared neighbors and applicable weights rather than calculating square-grid offsets itself. Its update rule still defines ordering, units, supported topologies and conservation tolerance. A reusable neighborhood algorithm does not establish a physical process or prove that identical weights are valid on every topology. Pure `geometry.neighbors` and orthogonal Grid neighborhoods must share the phase-one semantics rather than duplicating conflicting offset or boundary rules.
+
+The binding phase-one Grid remains square/cubic with `faces | moore` neighborhoods and its recorded defaults. A later hexagonal implementation uses the prepared topology boundary and an explicit additional contract for coordinates, cell size, neighborhoods, wrapping, supported dimensions and snapshot representation. It must preserve existing calls and results. Hexagonal support is not implemented or implicitly added to the frozen reference by this directory layout.
+
+Treat topology as immutable for a delivered slice unless that slice explicitly defines topology mutation and revision/invalidated-cache behavior. A cached neighborhood must never silently outlive the topology it represents. Respect the extension boundary now, but establish a broader shared topology interface through real variants rather than speculative universal capabilities.
+
+### State, hosts and verification
+
+- Preserve one authority per live value: Agent owns spatial state and path progress; Grid owns topology and Field identities; Graph owns topology and Edge identities; World owns membership and Tick. Shared references retain their canonical identities. Observation buffers own samples, not simulation state.
+- Load Node worker execution only through the explicit `experiments/node` host entry. Generic/root imports remain headless and must not eagerly import Node workers, browser globals or I/O. Core Storage encodes supplied data without performing file/database/network access. UI and host adapters remain separate from the library logic.
+- Preserve the binding root, Storage and Node experiment entry contracts. Reconcile the `agent-loom` names in the frozen target with City Library packaging explicitly before distribution; do not silently rename or widen those public entry contracts. A domain's internal `index.ts` is not automatically a new package subpath.
+- Test public behavior rather than file layout or helper implementation. Each delivered variant must satisfy the applicable shared contracts for identity, deterministic order, boundaries, mutations, failures, time and RNG effects, plus its own explicit requirements. Verify quantity conservation only for update rules that promise it. Run composition tests for ties/lifecycle and continuation where those features are delivered.
+- Keep the complete 309-row operation/type inventory accountable across the 16 reference areas. Layout prepares extension points; executable public examples, behavior checks and consumer evidence establish actual delivery. Future features outside phase one need their own accepted scope.
+
+### Source comparison behind this decision
+
+The organizational pattern is informed by [NetworkX's small graph API and separate algorithms](https://networkx.org/documentation/stable/reference/introduction.html), [Graphology's independent algorithm/generator/layout families](https://graphology.github.io/standard-library/) and [Mesa's distinct orthogonal and hexagonal Grid implementations](https://mesa.readthedocs.io/stable/_modules/mesa/discrete_space/grid.html). These are comparative evidence, not additional City Library API requirements or dependencies. We adopt the separation of responsibilities, not their Python classes, unrelated features, rendering code or package organization wholesale.
 
 ## One library, independent capabilities
 
@@ -26,17 +204,17 @@ The following roles describe composition size and usage, not additional top-leve
 | Explicit compositions and prototyping kits | Assemble useful static or live models from public capabilities | Own assembly and handoff policy, not duplicate domain state or a hidden runtime |
 | External UI and applications | Rendering, interaction, editors, charts, host scheduling and I/O | Read public results and change explicitly exposed inputs; no access to private implementation |
 
-These are proposed logical boundaries, not a package manifest, folder plan or claim about current exports. C01–C06 are the current work areas. A01–A09 denote earlier source workstreams only, not a parallel organization. Several areas use the same graph, random or storage capability; there is one owner per accepted capability. Their numbering is not a dependency hierarchy. Neither these roles nor the work areas require an inheritance tree, universal base class, plugin framework, registry or initialization pipeline.
+These logical work areas are not a package manifest or claim about current exports; the binding source layout is defined above. C01–C06 are the current planning areas. A01–A09 denote earlier source workstreams only, not a parallel organization. Several areas use the same graph, random or storage capability; there is one owner per accepted capability. Their numbering is not a dependency hierarchy. Neither these roles nor the work areas require an inheritance tree, universal base class, plugin framework, registry or initialization pipeline.
 
 Start with the smallest useful author script and its invariants. Select only the necessary capabilities, compare precise reuse candidates with external libraries and focused new work, then test the contract with a second real variant before generalizing it.
 
 ## Reference basis and usage organization
 
-The inspected Agent Loom `api-table.html` supplies the structural basis: **World, Agent, Grid, Field, Graph, Node, Edge, Random, Input, stats, geometry, Agenda, experiments, storage, limits, Exports and shared types** (the inspected source order, not a required City Library navigation order). The companion `api-reference.html` expands vocabulary, examples, inputs/defaults, effects and errors. These are target specifications, not proof of implementation in either repository.
+The binding Agent Loom [API table](agent-loom/api-table.html) supplies the operation/type inventory: **World, Agent, Grid, Field, Graph, Node, Edge, Random, Input, stats, geometry, Agenda, experiments, storage, limits, Exports and shared types** (the inspected source order, not a required City Library navigation order). The companion [API reference](agent-loom/api-reference.html) expands vocabulary, examples, inputs/defaults, effects and errors. Both frozen files are binding target specifications for the first development phase, not proof of implementation in either repository. [Target authority and source identity](agent-loom/README.md) records their scope and conflict policy.
 
 Use their task-oriented table organization for future City Library reference pages. A compact row should identify the capability and accepted operation, summarize its contract, and point to detailed usage. Within an object area, prefer creation, readable properties, mutations, queries, advanced operations and types where applicable. Keep naturally related actions together. Field has no independent constructor; statistics and geometry are primarily functions; experiment design and execution have their own workflow. Do not manufacture lifecycle methods to fill a rigid template.
 
-The following tables define responsibilities and usage progression, not new signatures or fixed exports. Existing reference names are evidence for the authoring direction only. Advanced source features, compatibility profiles and codecs require individual acceptance before transfer.
+The following tables summarize responsibilities and usage progression; they do not replace the binding HTML signatures or narrow their scope. Advanced features, compatibility profiles and codecs specified there remain target work, delivered through bounded implementation slices. Report conflicting or unspecified behavior rather than silently changing the contract.
 
 ## General modeling boundaries
 
@@ -54,7 +232,7 @@ The following tables define responsibilities and usage progression, not new sign
 | experiments | Design scenarios; replicate seeds; create/run independent models; measure/summarize; optionally evaluate, select, hold out or resume | Owns study plan, budgets and outcomes; each model owns its state. The reference execution contract uses World plus a step procedure. Host workers and compatibility bindings are explicit optional integrations, not requirements for static tools. |
 | storage | Save/load supplied supported data; explicitly encode/decode; create and record bounded History; validate restored data | Owns snapshot/codec contracts and History buffers. Depends only on the selected data/component contracts; no file/database I/O in core. One area covers selected data and declared model state, with distinct guarantees. |
 | limits | Read documented resource budgets for specific operations or adapters | Immutable policy data, not a global allocation manager. Source profiles include NetLogo, GeoJSON, legacy networks, BehaviorSpace and studies; their ceilings do not become universal model limits. |
-| Exports and shared types | Discover delivered public entry points and the structural types required by accepted calls | A documentation and compatibility responsibility, not a catch-all module. Source `agent-loom` entry names and subpaths do not prescribe City Library packaging. |
+| Exports and shared types | Discover delivered public entry points and the structural types required by accepted calls | A documentation and compatibility responsibility, not a catch-all module. Reconcile the specified `agent-loom` entry names and subpaths with City Library packaging explicitly; do not silently discard or rename target entry contracts. |
 
 Field and Edge remain visible reference categories even if implemented alongside their owning Grid and Graph. Do not split them into competing ownership systems merely to obtain a module per heading. Likewise, detached graph and grid capabilities may be stateful objects: independent use does not require converting every capability into stateless functions.
 
@@ -78,13 +256,13 @@ Architectural style that changes geometry belongs here: roof shape, facade openi
 
 General capabilities must not import city domains, kits or UI. Domains depend on selected general contracts; cross-domain relationships use explicit data/references and a composition that coordinates them. For example, mobility consumes destinations chosen by a household policy; it does not import that policy while the policy imports traffic. Kits depend on public general/domain operations; neither layer depends back on kits. Application and host adapters sit outside these boundaries.
 
-Keep the implementation graph acyclic as capabilities arrive. World registration and component lifecycle need a single internal ownership implementation, not reciprocal module imports or parallel identity registries. Co-locate tightly coupled lifecycle mechanics where necessary; keep detached algorithms independently callable. This design does not freeze the private file layout or require a public registration protocol.
+Keep the implementation graph acyclic as capabilities arrive. World registration and component lifecycle need a single internal ownership implementation, not reciprocal module imports or parallel identity registries. Co-locate tightly coupled lifecycle mechanics within the binding domain boundaries where necessary; keep detached algorithms independently callable. Private helper splits may evolve as described in the binding layout; no public registration protocol is required.
 
 Public entry points must be deliberate. Kits, applications and other domains use accepted public contracts, never deep imports into private helpers or source checkout paths. Shared types belong with the capability that defines their semantics. Do not collect unrelated types and algorithms in an all-purpose `utils` or `core` dependency.
 
 Before implementing an operation, document its task, minimal example, inputs/results, units, defaults, bounds, ordering, mutations, errors, ownership, lifecycle and dependencies. State whether returned data is detached, a snapshot of canonical references, or a live view; define empty/partial results and numerical tolerance. A frozen array does not make its objects immutable. Explicit adapters handle incompatible units, dimensions or coordinate systems; TypeScript shape similarity is not semantic compatibility.
 
-The supported runtime and distribution closure remain implementation decisions. Static geometry, generators, graph analysis and field calculations must work headlessly without World, DOM or a renderer. Generic imports must not pull in Node worker execution, browser globals or file access just because an optional host supports them. Introduce only delivered exports, not speculative package splits or stubs.
+Runtime and distribution choices remain implementation decisions only where the binding HTML target leaves them unspecified; changes to specified entry or host contracts require an explicit decision. Static geometry, generators, graph analysis and field calculations must work headlessly without World, DOM or a renderer. Generic imports must not pull in Node worker execution, browser globals or file access just because an optional host supports them. Introduce only delivered exports, not speculative package splits or stubs.
 
 ## Authoring vocabulary and canonical state
 
@@ -124,7 +302,7 @@ Retain one storage area with the reference vocabulary `storage.save(...)`, `stor
 | Complete continuation | Captured model/domain state, clocks, Agenda queue, RNG continuation, path progress and other required cursors; explicit rebinding of matching procedures | Resume of an arbitrary program from a seed or partial snapshot |
 | Study continuation | Model continuation plus plan position, completed outcomes, sampling policy and remaining budgets | Re-running completed work or equating a study checkpoint with a measurement file |
 
-Decoded custom state remains untrusted until validated; static types cannot validate serialized data. Custom formats are explicitly passed adapters, not a mandatory codec registry, and cannot bypass model-state validation. Unsupported versions or values fail clearly rather than disappear. Snapshot compatibility and format coverage remain accepted-slice decisions; the broad source wire schema is not adopted wholesale. Histories have explicit capacity, sampling and eviction behavior; streaming/backpressure needs its own contract.
+Decoded custom state remains untrusted until validated; static types cannot validate serialized data. Custom formats are explicitly passed adapters, not a mandatory codec registry, and cannot bypass model-state validation. Unsupported versions or values fail clearly rather than disappear. Implement snapshot compatibility and format coverage specified by the binding reference in bounded slices; historical wire schemas outside that reference are not adopted automatically. Histories have explicit capacity, sampling and eviction behavior; streaming/backpressure needs its own contract.
 
 ## Concrete compositions
 
@@ -143,7 +321,7 @@ External UI is optional for every scenario. Applications own drawing, appearance
 
 ## First acceptance criteria
 
-These gates refine the existing milestones without changing their order or claiming completion:
+These gates define evidence requirements without claiming completion. The agent-first sequence in PLAN now determines delivery order:
 
 1. **Contract and public boundary:** select one bounded task, write its minimal script and ownership/dependency contract, and record exact source revision/adaptations/notices. Export only the accepted closure; check that consumers need no private/deep import or old checkout.
 2. **Independent static capability:** generate one house without World/DOM; later exercise two real variants against the shared minimum contract. Independently verify a graph with non-spatial nodes and a grid/field calculation without runtime.
@@ -165,7 +343,7 @@ These are optional author evidence locators, not required consumer files, public
 
 The current plan resolves the earlier nine-workstream organization into six areas. Agent Loom is incorporated as design lineage: execution is C01, spatial/grid contracts C02, graph contracts C03, and input/stats/experiments/storage C06. Buildings, terrain/layout and feasibility form C04; urban policies form C05. The retained reference tables describe source capability boundaries, not another package hierarchy or a second general engine. Graph and grid algorithms are independently usable; Simulation only coordinates lifecycle for attached world-owned objects.
 
-Source export names, compatibility adapters and extensive advanced operations remain reference evidence, not commitments to implement them in early milestones. Exact packaging, first-generator contract, precision/units, live admission/replacement rules, runtime support, rights/notices and complete checkpoint scope remain slice decisions. No runtime, dependencies, stubs or setup changes accompany this design revision.
+On 5 November 2026, the user made the complete HTML table and reference binding for phase one and requested a new implementation in this repository. Local byte-identical copies are retained in [docs/agent-loom](agent-loom/README.md). Their advanced operations are staged target commitments, not optional historical suggestions. Historical APIs outside that pair are not automatically adopted. Packaging and implementation choices may not silently alter specified contracts; report gaps and conflicts for explicit decisions. No runtime, dependencies, stubs or setup changes accompany this target-definition adoption.
 
 ## Six-area revision checks
 
