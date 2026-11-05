@@ -8,6 +8,7 @@ const phases = {
   stats: ["01-histogram-boundaries", "02-gini-known-values", "03-invalid-measurements", "04-independent-observation", "05-detached-distributions"],
   segregation: ["01-setup", "02-neighbor-metrics", "03-terminal-intervention", "04-movement", "05-validation-purity"],
   occupancy: ["01-live-movement-order", "02-canonical-lifecycle", "03-grid-reattachment", "04-source-and-boundaries", "05-observation-purity"],
+  connectivity: ["01-weak-merge-lifecycle", "02-directed-strong-parts", "03-biconnected-overlap", "04-empty-and-invalid", "05-canonical-pure-observation"],
 };
 for (const [phase, examples] of Object.entries(phases)) {
   for (const example of examples) {

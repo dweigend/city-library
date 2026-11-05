@@ -3,6 +3,7 @@ import { validateOptions } from "../agent/state.ts";
 import { collectionGuard } from "./collections.ts";
 import { cloneEdgeState, createEdge, type Edge } from "./edge.ts";
 import { connects, direction, opposite, type Direction } from "./queries.ts";
+import { components, type ComponentMode } from "./algorithms/connectivity.ts";
 
 interface EdgeOptions<N extends object, E extends object> {
   from: N; to: N; directed?: boolean; key?: string; state?: E;
@@ -20,6 +21,8 @@ export interface Graph<N extends object = object, E extends object = {}> {
   hasNode(node: N): boolean;
   hasEdge(from: N, to: N): boolean;
   neighbors(node: N, options?: { direction?: Direction }): readonly N[];
+  components(options?: { mode?: "weak" | "strong" | "biconnected" }): readonly (readonly N[])[];
+  connected(options?: { mode?: "weak" | "strong" }): boolean;
   delete(options?: { edgesOnly?: boolean }): void;
 }
 interface GraphOptions<E extends object> { edgeState?: E; parallel?: boolean; selfLoops?: boolean }
@@ -61,6 +64,13 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
   function between(from: N, to: N, options?: { direction?: Direction }): readonly Edge<N, E>[] {
     const mode = direction(options);
     return Object.freeze([...edges].filter((edge) => connects(edge, from, to, mode)));
+  }
+  function connectivityMode(options: unknown, biconnected: boolean): ComponentMode {
+    const supplied = validateOptions(options, ["mode"]).mode;
+    const mode = supplied === undefined ? "weak" : supplied;
+    if (mode !== "weak" && mode !== "strong" && !(biconnected && mode === "biconnected"))
+      throw new TypeError("Invalid graph connectivity mode.");
+    return mode as ComponentMode;
   }
   const graph: Graph<N, E> = {
     parallel, selfLoops,
@@ -133,6 +143,16 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
         if (neighbor !== undefined) result.add(neighbor);
       }
       return Object.freeze([...result]);
+    },
+    components(options = {}) {
+      const mode = connectivityMode(options, true);
+      return components([...members], [...edges], mode);
+    },
+    connected(options = {}) {
+      const mode = connectivityMode(options, false);
+      const nodes = [...members];
+      const links = [...edges];
+      return nodes.length <= 1 || components(nodes, links, mode).length === 1;
     },
     delete(options = {}) {
       const edgesOnly = flag(validateOptions(options, ["edgesOnly"]).edgesOnly);
