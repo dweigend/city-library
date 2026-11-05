@@ -1,15 +1,37 @@
 {
   "name": "city-library",
+  "version": "0.0.0",
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "bun": "./index.ts",
+      "default": "./dist/index.js"
+    }
   },
-  "peerDependencies": {
-    "typescript": "^7"
+  "files": [
+    "index.ts",
+    "src/**/*.ts",
+    "dist"
+  ],
+  "packageManager": "bun@1.4.2",
+  "engines": {
+    "bun": "1.4.2"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4",
+    "cytoscape": "3.34.4",
+    "typescript": "7.0.2"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json",
+    "test": "bun test tests models/agent-lab/model.test.ts",
+    "examples": "bun scripts/examples.ts",
+    "build": "bun build index.ts --target browser --format esm --outdir dist && tsc -p tsconfig.build.json",
+    "consumer": "bun scripts/consumer.ts",
+    "check": "bun run typecheck && bun run test && bun run examples && bun run build && bun run consumer",
+    "dev:ui": "bun Agend_Lab/host/server.ts"
   }
 }

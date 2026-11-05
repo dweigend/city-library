@@ -1,6 +1,6 @@
 # Architecture and design
 
-Status: binding phase-one Agent Loom target, domain layout and architecture; runtime not implemented. Updated: 5 November 2026. City Library has prepared domain directories but no delivered capability exports. The [work plan](../PLAN.md) owns progress, sequencing and C01–C06; this document defines architecture and public-contract boundaries. The [README](../README.md) remains the public introduction.
+Status: binding phase-one Agent Loom target, domain layout and architecture; bounded A1, A2a standard Random and A5a non-spatial Graph are implemented, with acceptance evidence tracked separately. Updated: 5 November 2026. See [A1 usage](development/a1-usage.md) and [A5a usage](development/a5a-usage.md) for delivered subsets; later contracts remain planned. The [work plan](../PLAN.md) owns progress, sequencing and C01–C06; this document defines architecture and public-contract boundaries. The [README](../README.md) remains the public introduction.
 
 ## Binding architecture rules
 
@@ -54,13 +54,15 @@ Direct typed properties remain valid inside model-authoring logic as specified b
 
 **Architecture invariant:** every domain function must be callable through a public TypeScript API without UI. Replacing the UI must require no core changes.
 
+Within the external Agend Lab, keep application orchestration, DOM presentation, detached observation projection and concrete visualization separate. Renderer-specific types and dependencies belong to the visualization layer. Application actions resolve canonical identities; renderers receive detached records and report interaction intent. Canvas layout, dragging and camera state are presentation state, never model coordinates or another authority for topology, time or randomness. Renderer lifetime includes explicit resource cleanup. The [Cytoscape assignment](development/cytoscape.md) records the first concrete implementation and acceptance evidence for these boundaries.
+
 For every implementation slice, verify public headless access, dependency direction, explicit contracts and canonical state ownership. When UI is present, also verify that it uses defined actions and contains no domain rules. Use the existing slice checks and browser verification requirements; documentation alone does not establish compliance.
 
 ## Binding domain layout and extension rules
 
 Organize source by domain. The following boundaries are binding; the [API specification](agent-loom/README.md) defines public operations. The layout does not add capabilities or establish working exports.
 
-All listed directories exist. Empty leaf directories contain `.gitkeep`; remove it when content arrives. The `.ts` files below are planned responsibilities, not existing modules. Add each domain's `index.ts` with its first working public capability. The root `index.ts` currently exports nothing.
+All listed directories exist. Empty leaf directories contain `.gitkeep`; remove it when content arrives. The `.ts` files below are planned responsibilities, not a complete list of existing modules. Add each domain's `index.ts` with its first working public capability. The root `index.ts` deliberately exports Agent, World, Random, Graph and run, plus Tick, Edge and the delivered Mulberry RandomState type. The Graph/Edge exports cover the bounded non-spatial A5a kernel; broader Graph contracts remain open. Remaining domains have no runtime exports.
 
 ```text
 src/

@@ -2,7 +2,7 @@
 
 Agent Loom defines City Library's general modeling core: agents, worlds, spatial operations, graphs, randomness, events, experiments and storage. It is part of City Library, not a separate engine.
 
-**Status:** specification only. The repository has a Bun/TypeScript scaffold and prepared source directories, but no implemented public APIs or published package. All signatures and examples describe the phase-one target.
+**Status:** the complete specification remains the phase-one target. Bounded [A1](../development/a1-usage.md), [A2a standard Random](../development/a2a-usage.md) and [A5a non-spatial Graph](../development/a5a-usage.md) subsets are implemented; other operations and overloads remain planned. See [delivery coverage](../development/coverage.md) and [A5a acceptance evidence](../development/a5a-evidence.md). No package is published; this reference does not describe full delivered parity.
 
 ## Read the API
 
@@ -34,6 +34,6 @@ These groups cover all 16 inventory areas; Field, Node and Edge have individual 
 
 The inventory and reference jointly define the required signatures and behavior. Implementation proceeds in small working slices; an entry remains planned until its public API, example and behavior checks are delivered. Conflicting or unspecified contracts must be resolved explicitly before implementation.
 
-Examples retain the specification's `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node` import paths. Their mapping to City Library package entries is unresolved. They are not installation instructions. Serialization identifiers and compatibility versions are also part of the specified contracts.
+Examples retain the specification's `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node` import paths. A1 explicitly maps the root entry to `city-library`; future storage and Node experiment subpaths remain unresolved. They are not installation instructions. Serialization identifiers and compatibility versions are also part of the specified contracts.
 
 The specification originates from [city_game at revision 08b3efb](https://github.com/dweigend/city_game/tree/08b3efb66d0f93d023f0b1deb762578552f7b819/docs/agent-loom). It is maintained here as Markdown; the original HTML is available in Git history.

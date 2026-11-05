@@ -2,7 +2,7 @@
 
 A modular, TypeScript-first toolkit for procedural cities and agent-based models. Use focused geometry, graph and simulation capabilities independently, then compose the parts your model needs. Applications own visualization; the library owns domain logic and state.
 
-> **Work in progress.** The repository currently contains a Bun/TypeScript scaffold, prepared source directories and an API specification. No city or agent APIs are implemented, and no package is published.
+> **Work in progress.** A1, bounded A2a and the A5a graph kernel are implemented: typed Agent data, non-spatial World membership, Tick, synchronous run, standard Mulberry sampling/continuation and canonical graph contacts. The test lab now runs a headless network-diffusion simulation with community bridges, ring and hub topologies. Broader APIs remain planned; no package is published. See [A5a usage](docs/development/a5a-usage.md) and [the local test UI](Agend_Lab/README.md) for scope and commands.
 
 ## Purpose
 
@@ -16,7 +16,7 @@ The engine should make those concepts explicit and testable through simulation. 
 2. **Extend through focused libraries.** Add capabilities for city grids, traffic, resource cycles and energy systems. Develop each capability independently, then compose them into broader city simulations.
 3. **Compose a headless city engine.** Keep simulation logic and UI clearly separated. The complete engine must work without a browser or renderer, so scripts, experiments and different interfaces can use the same models.
 
-This is the intended development sequence; the capabilities below remain planned.
+This is the development sequence; A1 establishes the first headless agent subset. The broader capabilities below remain planned.
 
 ## Documentation
 

@@ -1,6 +1,6 @@
 # City Library work plan
 
-Updated: 5 November 2026. Status: **specification and source scaffold; runtime not implemented**. `index.ts` exports no APIs. All capabilities below are planned.
+Updated: 5 November 2026. Status: **A1, bounded A2a and the A5a non-spatial Graph kernel implemented and verified**. Fifteen frozen public scripts preceded their runtime changes. The current 83-test suite, type/build/package-consumer checks and lab browser acceptance pass. Network diffusion now demonstrates persistent contacts and topology-dependent propagation through the same headless model. A2b/A3/A4 and remaining A5–A8 contracts stay open; see [A5a evidence](docs/development/a5a-evidence.md).
 
 ## Reading order and ownership
 
@@ -37,11 +37,11 @@ Phase one delivers the complete [Agent Loom specification](docs/agent-loom/READM
 
 | Step | Bounded result | Acceptance evidence | Status |
 | --- | --- | --- | --- |
-| A1 · First headless agent model | Direct typed Agent data, explicit World membership, caller-written step, Tick and synchronous run. Freeze creation/copy/delete and supported custom-state contracts before implementation; include only the Random closure actually required by World. | Small public script changes energy from 10 to 5 in five steps; a second World stays independent. Verify detach versus deletion, canonical identity, failed-step tick behavior, initial copy versus later reference assignment, reserved keys and invalid inputs. | Next; no runtime implemented |
-| A2 · Independent random streams | Accept required draw/sampling operations and continuation behavior against recorded algorithm/version fixtures. | Same continuation gives matching results; separate streams stay isolated; construction, observation and execution draw only when documented. | Planned |
+| A1 · First headless agent model | Direct typed Agent data, explicit World membership, caller-written step, Tick and synchronous run. Freeze creation/copy/delete and supported custom-state contracts before implementation; include only the Random closure actually required by World. | Small public script changes energy from 10 to 5 in five steps; a second World stays independent. Verify detach versus deletion, canonical identity, failed-step tick behavior, initial copy versus later reference assignment, reserved keys and invalid inputs. | Delivered bounded A1; see evidence |
+| A2 · Independent random streams | A2a delivers standard Mulberry uniform draws, sampling and continuation; A2b retains distributions, entropy and pinned MT compatibility. | Same continuation gives matching results; separate streams stay isolated; construction, observation and execution draw only when documented. | A2a delivered; independent review has no blockers; A2b remains open |
 | A3 · Spatial agents | Optional Space, geometry, movement/orientation and perception, followed by path continuation in a separate bounded slice. | Detached and world-owned agents obey declared dimensions, units and hard/wrapped boundaries. Queries preserve position, time and RNG. Non-spatial A1 model still runs. | Planned |
 | A4 · Grids and fields | Detached Grid/Field state, lookup and neighborhoods; then diffusion and explicit World participation. | Stable cell identities, declared boundary/order behavior, independent initial state and quantity conservation within a stated tolerance; occupancy queries use canonical agents. | Planned |
-| A5 · Graphs | Non-spatial nodes/edges and membership first, then traversal/routing and selected analysis/generation families as separate slices. | Detached graph works without World/Space; nodes retain identity; detach/delete/copy rules hold; weighted costs and tie behavior are explicit. | Planned |
+| A5 · Graphs | Non-spatial nodes/edges and membership first, then traversal/routing and selected analysis/generation families as separate slices. | Detached graph works without World/Space; nodes retain identity; detach/delete/copy rules hold; weighted costs and tie behavior are explicit. | Bounded A5a kernel and headless network diffusion delivered; remaining A5 planned |
 | A6 · Events and advanced execution | Agenda with caller dispatch; advanced activation only after its ordering contract is frozen. | Event tie order, horizon and budget behavior are verified; Agenda and World Tick remain distinct; no hidden clock. | Planned |
 | A7 · Inputs and observations | Bind validated inputs to existing properties; pure stats and bounded History. | Writes affect canonical state; observations do not mutate model/time/RNG; History owns detached samples with explicit eviction. | Planned |
 | A8 · Experiments and storage | Independent experiment runs and selected-data save/load first; declared model and study continuation require separate later slices. | Reordered runs preserve per-run results; validated roundtrip rejects unsupported data; exact continuation is accepted only against uninterrupted execution with a complete state inventory. | Planned |
@@ -50,9 +50,31 @@ Before A1 implementation, record an operation-level inventory from the binding r
 
 Completion requires an explicit operation inventory covering every general reference area, including limits and public/shared types: each target operation/type must have a delivered public export, contract, executable example and target evidence. Deferred operations remain open work; exclusions and changes from the general reference scope require an explicit recorded decision. A small Agent implementation alone does not establish full Agent Loom completion. Compatibility profiles, broader graph algorithms, codecs and continuation specified by the reference remain target work, delivered in bounded slices. Substantial design or transfer work requires independent review; author checks do not count as independent approval.
 
+### Active A1 assignment
+
+The [A1 development assignment](docs/development/a1.md) freezes the public task, five example scripts, operation closure, supported-state rules, tests and a separate minimal HTML test host. The [complete delivery inventory](docs/development/coverage.md) tracks all 309 reference entries across 16 areas. Scripts were written and fingerprinted before runtime handoff; the initial public import failed as expected. Implementation must satisfy those scripts without adapting their accepted contracts.
+
+The root reference import `agent-loom` maps explicitly to the existing `city-library` package name for A1. Operation syntax and serialization identifiers remain unchanged. Future storage/Node subpaths remain open. The user explicitly requested the HTML test host; it consumes public operations outside the headless library and requires separate real-browser verification.
+
+A1 completion evidence: [checks, browser verification and review responses](docs/development/a1-evidence.md). The `gemini-4-argon` review found two copy-validation blockers, both fixed with regression tests; final author checks pass with 30 tests. This records remediation, not a second independent approval. A2a followed with five new scripts; A2b will likewise start with its own four or five scripts.
+
+The user-requested HTML visualization is an external test-host follow-up, not another library expansion phase. It renders selectable canonical-agent observations in an explicitly non-spatial layout and uses existing headless model actions only. See [visualization boundaries and evidence](docs/development/ui-visualization.md). Library code and the frozen A1 scripts remain unchanged.
+
+The subsequent user-authorized [Cytoscape visualization layer](docs/development/cytoscape.md) adds a network view to the external lab with separate application, DOM presentation, observation projection and renderer responsibilities. It visualizes existing agent observations and the last sampled Exchange pair only. Persistent relationships and A5 Graph remain future core work; view interactions must preserve model execution and RNG continuation.
+
+### Active A2a assignment
+
+The earlier bounded [A2a reproducible population dynamics](docs/development/a2a.md) expansion wrote five new public scripts and one reusable headless exchange composition before Random implementation. A2a covers numeric-seed Mulberry uniform draws, weighted/source-order/legacy sampling, in-place continuation, reseed/copy/local and raw double. Other distributions, entropy and the MT/NetLogo profile remain binding A2b work; the staged implementation must not advertise them as delivered.
+
+Author verification and remaining scope are recorded in [A2a evidence](docs/development/a2a-evidence.md); run bun run check for all ten public scripts and the current 60-test suite. The example starts 24 agents with 10 resource units each. Each caller-owned step samples two canonical World members and transfers one unit if the donor has any. Ordinary steps conserve total resources; explicit lifecycle edits are separate. The HTML test host imports this same composition and adds seed/population controls while preserving its layout. Selection and rendering are observations, not another simulation. Concurrent repository organization moved the existing host to Agend_Lab and its lifecycle model to models/agent-lab; this work preserves those paths and the existing six lifecycle tests.
+
+### Active A5a assignment
+
+The user requested substantial library progress and a real simulation with network effects. The [A5a assignment](docs/development/a5a.md) therefore brought forward an independent non-spatial Graph kernel and a headless network-diffusion composition. Five asserted public scripts were frozen before runtime implementation and now pass. Persistent graph contacts, synchronous propagation, disconnected communities, explicit bridges and hub-versus-ring effects are the default lab scenario. [Usage](docs/development/a5a-usage.md) and [acceptance evidence](docs/development/a5a-evidence.md) describe the delivered subset. A2b/A3/A4 remain open; graph algorithms, generators, spatial paths/ties and full World graph participation remain later work. The UI uses the same headless model and owns only presentation and explicit run controls.
+
 ### Prepared domain layout
 
-The [domain layout and extension rules](docs/DESIGN.md#binding-domain-layout-and-extension-rules) define the source boundaries. All listed directories exist; empty leaf directories contain `.gitkeep`. Proposed TypeScript files are added only with working capabilities. No runtime, package exports, build pipeline or behavior tests have been delivered.
+The [domain layout and extension rules](docs/DESIGN.md#binding-domain-layout-and-extension-rules) define the source boundaries. All listed directories exist; empty leaf directories contain `.gitkeep`. Proposed TypeScript files are added only with working capabilities. The prepared layout itself delivered no runtime. A1 now adds working Agent/World/Random modules, explicit root exports, build/check commands and behavior tests within those boundaries; later domains remain prepared directories.
 
 Hexagonal topology remains a future extension. Phase one specifies square/cubic grids.
 
@@ -103,15 +125,15 @@ These are task briefs, not delivered scripts or verified behavior. Before implem
 5. Use an independent agent review for substantial design/transfer work, record responses and distinguish author fixes from independent re-approval.
 6. Update implementation status, executable examples and remaining gaps. Old-source test reports do not count as target verification.
 
-## Technical setup backlog — not completed by this plan
+## Technical setup and remaining backlog
 
 | Setup task | When needed | Acceptance |
 | --- | --- | --- |
-| Deliver intentional exports within the accepted domain layout | First implementation slice | Domain directories and boundaries are already accepted and prepared. Export only delivered capabilities; add no empty module stubs or source-checkout paths. Reconcile the binding package entry names explicitly before distribution. |
-| Pin toolchain and development dependency policy | Before reproducible implementation checks | Exact supported versions and lockfile behavior documented; current `@types/bun: latest` is not a compatibility policy. |
-| Separate runtime and development typing | Before public library build | Public declarations do not require DOM, framework, or Bun ambient types; development scripts may use Bun. |
-| Add focused test/build/check commands and CI | As their real tasks arrive | Commands execute actual checks; no placeholder success scripts. Typecheck currently exists, build/test/CI do not. |
-| Verify a packed downstream consumer | First distributable entry | Supported TypeScript/runtime/bundler consumers import the package rather than its checkout internals. Select and document the supported environments. |
+| Deliver intentional exports within the accepted domain layout | First implementation slice | Domain directories and boundaries are already accepted and prepared. Export only delivered capabilities; add no empty module stubs or source-checkout paths. A1 maps the root name to city-library; future subpaths still require an explicit decision. |
+| Pin toolchain and development dependency policy | Before reproducible implementation checks | A1 pins Bun 1.4.2, TypeScript 7.0.2 and @types/bun 1.4.4 with a lockfile. Future upgrades require checks. |
+| Separate runtime and development typing | Before public library build | A1 separates ambient-free library types, Bun development scripts and DOM UI checking; the packed TypeScript consumer verifies no host ambient dependency. |
+| Add focused test/build/check commands and CI | As their real tasks arrive | Commands execute actual checks; no placeholder success scripts. A1 introduces typecheck/test/examples/build/consumer/check commands; CI remains open. |
+| Verify a packed downstream consumer | First distributable entry | Supported TypeScript/runtime/bundler consumers import the package rather than its checkout internals. A1 checks a packed archive on Bun 1.4.2, Node 26.8.2 and TypeScript 7.0.2; browser UI evidence is separate. |
 | Decide formatting/linting scope | First code slice | Reuse a small configured toolchain with meaningful checks; no speculative pipeline. |
 
 Keep the package publication guard (`private: true`) until release is explicitly in scope. Web-oriented is a target; browser/runtime compatibility must be demonstrated rather than inferred from TypeScript.
