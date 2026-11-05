@@ -409,7 +409,7 @@
         }
       },
       "blockers": [
-        "scientific three-publication research and final row acceptance pending"
+        "final row acceptance pending after shared UI integration; existing scoped technical approval and research acceptance retained"
       ],
       "technicalReview": {
         "decision": "APPROVE",
@@ -584,17 +584,24 @@
           "basis": "2fab83b real public-library composition; integrated type/tests/examples/build/consumer passed"
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/directed-diffusion-browser-report.md",
+            "docs/development/selected-network-evidence/SHA256SUMS.json"
+          ],
+          "basis": "coordinator-executed real Chromium original and target; paired setup/progress, native actions, responsive target, loaded-source SHA matched; adaptations explicit"
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/directed-diffusion-browser-report.md",
+            "docs/development/selected-network-evidence/SHA256SUMS.json"
+          ],
+          "basis": "coordinator-executed real Chromium original and target; paired setup/progress, native actions, responsive target, loaded-source SHA matched; adaptations explicit"
         },
         "research-verified": {
           "done": true,
@@ -608,7 +615,7 @@
         }
       },
       "blockers": [
-        "shared directed/flow renderer and independent keep-rewiring cadence pending; target browser/baseline report incomplete"
+        "independent technical review and final row acceptance pending"
       ]
     },
     {
@@ -660,17 +667,24 @@
           "basis": "2fab83b real public-library composition; integrated type/tests/examples/build/consumer passed"
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/virus-network-browser-report.md",
+            "docs/development/selected-network-evidence/SHA256SUMS.json"
+          ],
+          "basis": "coordinator-executed real Chromium original and target; paired setup/progress, native actions, responsive target, loaded-source SHA matched; adaptations explicit"
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/virus-network-browser-report.md",
+            "docs/development/selected-network-evidence/SHA256SUMS.json"
+          ],
+          "basis": "coordinator-executed real Chromium original and target; paired setup/progress, native actions, responsive target, loaded-source SHA matched; adaptations explicit"
         },
         "research-verified": {
           "done": true,
@@ -684,7 +698,7 @@
         }
       },
       "blockers": [
-        "final source/target browser report and independent transfer review pending"
+        "independent technical review and final row acceptance pending"
       ]
     },
     {
