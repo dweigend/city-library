@@ -35,3 +35,30 @@ Compare mechanisms, initialization, parameter effects, update order, terminal be
 7. Record actual evidence, library gaps and logical breaks, review responses and Git commits; inform the main development thread.
 
 Completion: automatic catalog without model-specific shell branches, four runnable modular reference entries, headless public access, provenance, browser evidence, no legacy runtime and honest remaining gaps. No claim of delivery until these checks execute.
+
+## Review responses and decisions
+
+GPT-6 Astra high completed a read-only architecture review on 5 November 2026. Its findings are recommendations, not runtime approval. Responses:
+
+- Accept: bind concrete model types in each UI entry before exposing a small mounted-session handle to the catalog. Do not create all-model unions, arbitrary string command buses or any-typed registries.
+- Accept: plain headless definition checked with TypeScript satisfies, not defineModel runtime. Inputs must share factory defaults and validation; a second form-only schema is forbidden.
+- Accept: observation/history failures after a committed run do not undo its tick; stop and identify the failure phase, never retry automatically. New-model recording follows successful run completion. Existing frozen diffusion behavior remains unchanged.
+- Accept: terminal-aware advance validates its entire count before mutation. Source-specific terminal rules must be audited: Voting can discover no changes and stop before incrementing a tick. A universal callback returning normally must not accidentally manufacture a successful tick.
+- Accept: initial factory validation failure preserves the previous paused instance. Full rollback of a failed view mount is not promised in the first slice; dispose candidate resources and show a recoverable error.
+- Accept: existing selected-agent actions are explicitly adapted; new action targets use IDs when needed. Pure inspection selection remains UI-owned.
+- Accept: spatial/grid/activation capabilities are separate public core slices with examples first, never private reusable simulation replacements in experiments.
+
+The comparison thread recommends retaining Preferential Attachment, Voting, Wolf Sheep Predation (both modes), and Wealth Distribution. Its source audit pins NetLogo/models commit bf0626a89358b48494066862843a91f36f2556cf; model files identify NetLogo 7.1.0-alpha1. Browser-source version must be recorded separately. Source/license capture and exact rule audit precede each port.
+
+Gemini 4 Argon completed the independent consistency audit on 5 November 2026 with six pre-implementation blockers. Responses (author decisions, not independent re-approval):
+
+1. Stage delivery by working closure: UI/network, Grid/Voting, spatial/occupancy/Wolf Sheep, then field diffusion/stats/Wealth. Five grid and five spatial scripts are frozen before those runtimes; stats gets its own example set.
+2. Preserve terminal-aware source semantics without changing run: compute Voting's candidate synchronous state before committing a successful tick; stable calls stop normally without tick/RNG/history advancement.
+3. Discovery preflights candidate pairs and reports invalid entries. Strict builds fail explicitly on invalid source; development may expose diagnostics without claiming every syntax error is recoverable. Serve every Bun chunk/asset, not only the first output.
+4. Top-level experiments is an application catalog, excluded from the root package's files/exports. src/experiments remains the headless study API. Asset-only reference-sources is not a catalog candidate.
+5. Preserve original attribution/license notices in source archives and adapted model folders. Generic core implementations follow the binding specification, without copying reference-model code/text. Sources and UI are excluded from the core distribution.
+6. Preserve existing factory/frozen script paths. Migrate former lab-specific tests and build/type configurations with runtime replacement. Historical negative tests that prohibit newly delivered spatial APIs must evolve explicitly while retaining their positive contracts.
+
+Other responses: selection is optional and renderer-neutral; detached grid buffers may be flat arrays/typed arrays for performance. Recording is independent of frames, but the recommendation to record inside the rule callback is not adopted for new models: new samples follow successful run completion, avoiding observations for failed steps. Existing accepted diffusion behavior remains unchanged. Historical stale status lines will be updated as documentation integration, without rewriting past evidence.
+
+Baseline verification executed before runtime: bun run check passed on 5 November 2026, including existing tests, 15 old public examples, type/build and packed consumer. New example-first evidence is separate in agent-lab-examples.md.
