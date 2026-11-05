@@ -77,9 +77,14 @@
           "basis": "historical real source/target browser reports and functional audit retained after source hash reconciliation; refresh before final acceptance"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/preferential-attachment.json",
+            "docs/research/netlogo-web/preferential-attachment.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": [
@@ -150,9 +155,14 @@
           "basis": "historical real source/target browser reports and functional audit retained after source hash reconciliation; refresh before final acceptance"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/voting.json",
+            "docs/research/netlogo-web/voting.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": [
@@ -223,9 +233,14 @@
           "basis": "historical real source/target browser reports and functional audit retained after source hash reconciliation; refresh before final acceptance"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/wolf-sheep-predation.json",
+            "docs/research/netlogo-web/wolf-sheep-predation.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": [
@@ -296,9 +311,14 @@
           "basis": "historical real source/target browser reports and functional audit retained after source hash reconciliation; refresh before final acceptance"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/wealth-distribution.json",
+            "docs/research/netlogo-web/wealth-distribution.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": [
@@ -378,9 +398,14 @@
           "basis": "paired real Chromium source/target defaults and tick10 plus exact source-rule audit/invariants; stochastic trajectories differ"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/segregation.json",
+            "docs/research/netlogo-web/segregation.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": [
@@ -414,8 +439,12 @@
           "basis": "immutable source hashes and source rules/widgets/notices audited; no browser or literature claim"
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/giant-component-contract.md",
+            "examples/giant-component/SHA256SUMS"
+          ],
+          "basis": "6a0cd3b before model runtime"
         },
         "implemented": {
           "done": false,
@@ -439,13 +468,18 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/giant-component.json",
+            "docs/research/netlogo-web/giant-component.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": [
-        "requires public Graph.components connectivity runtime and independent review before model delivery"
+        "public Graph connectivity now implemented; independent review precedes model runtime handoff"
       ]
     },
     {
@@ -489,9 +523,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/small-worlds.json",
+            "docs/research/netlogo-web/small-worlds.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -525,12 +564,24 @@
           "basis": "9d713fa precedes runtime"
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/diffusion-on-a-directed-network/model.ts",
+            "experiments/diffusion-on-a-directed-network/ui.ts",
+            "tests/selected-network-models.test.ts",
+            "examples/selected-network/SHA256SUMS"
+          ],
+          "basis": "2fab83b real public-library composition; integrated type/tests/examples/build/consumer passed"
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/diffusion-on-a-directed-network/model.ts",
+            "experiments/diffusion-on-a-directed-network/ui.ts",
+            "tests/selected-network-models.test.ts",
+            "examples/selected-network/SHA256SUMS"
+          ],
+          "basis": "2fab83b real public-library composition; integrated type/tests/examples/build/consumer passed"
         },
         "browser-verified": {
           "done": false,
@@ -546,12 +597,19 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/diffusion-on-a-directed-network.json",
+            "docs/research/netlogo-web/diffusion-on-a-directed-network.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "shared directed/flow renderer and independent keep-rewiring cadence pending; target browser/baseline report incomplete"
+      ]
     },
     {
       "path": "Sample Models/Networks/Virus on a Network",
@@ -582,12 +640,24 @@
           "basis": "9d713fa precedes runtime"
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/virus-on-a-network/model.ts",
+            "experiments/virus-on-a-network/ui.ts",
+            "tests/selected-network-models.test.ts",
+            "examples/selected-network/SHA256SUMS"
+          ],
+          "basis": "2fab83b real public-library composition; integrated type/tests/examples/build/consumer passed"
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/virus-on-a-network/model.ts",
+            "experiments/virus-on-a-network/ui.ts",
+            "tests/selected-network-models.test.ts",
+            "examples/selected-network/SHA256SUMS"
+          ],
+          "basis": "2fab83b real public-library composition; integrated type/tests/examples/build/consumer passed"
         },
         "browser-verified": {
           "done": false,
@@ -603,12 +673,19 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/virus-on-a-network.json",
+            "docs/research/netlogo-web/virus-on-a-network.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "final source/target browser report and independent transfer review pending"
+      ]
     },
     {
       "path": "Sample Models/Networks/Team Assembly",
@@ -651,9 +728,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/team-assembly.json",
+            "docs/research/netlogo-web/team-assembly.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -699,9 +781,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/consumer-choice.json",
+            "docs/research/netlogo-web/consumer-choice.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -747,9 +834,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/rebellion.json",
+            "docs/research/netlogo-web/rebellion.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -795,9 +887,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/language-change.json",
+            "docs/research/netlogo-web/language-change.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -843,9 +940,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/party.json",
+            "docs/research/netlogo-web/party.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -891,9 +993,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/ethnocentrism.json",
+            "docs/research/netlogo-web/ethnocentrism.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -939,9 +1046,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/minority-game.json",
+            "docs/research/netlogo-web/minority-game.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -987,9 +1099,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/rumor-mill.json",
+            "docs/research/netlogo-web/rumor-mill.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1035,9 +1152,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/signaling-game.json",
+            "docs/research/netlogo-web/signaling-game.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1083,9 +1205,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/piaget-vygotsky-game.json",
+            "docs/research/netlogo-web/piaget-vygotsky-game.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1131,9 +1258,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/heroes-and-cowards.json",
+            "docs/research/netlogo-web/heroes-and-cowards.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1179,9 +1311,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/fruit-wars.json",
+            "docs/research/netlogo-web/fruit-wars.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1227,9 +1364,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/limited-order-book.json",
+            "docs/research/netlogo-web/limited-order-book.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1275,9 +1417,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/bidding-market.json",
+            "docs/research/netlogo-web/bidding-market.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1323,9 +1470,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/hotellings-law.json",
+            "docs/research/netlogo-web/hotellings-law.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1371,9 +1523,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/braess-paradox.json",
+            "docs/research/netlogo-web/braess-paradox.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1419,9 +1576,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/cash-flow.json",
+            "docs/research/netlogo-web/cash-flow.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1467,9 +1629,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/bank-reserves.json",
+            "docs/research/netlogo-web/bank-reserves.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1515,9 +1682,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/prisoners-dilemma-basic.json",
+            "docs/research/netlogo-web/prisoners-dilemma-basic.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1563,9 +1735,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/prisoners-dilemma-two-person-iterated.json",
+            "docs/research/netlogo-web/prisoners-dilemma-two-person-iterated.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1611,9 +1788,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/el-farol.json",
+            "docs/research/netlogo-web/el-farol.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1659,9 +1841,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/paths.json",
+            "docs/research/netlogo-web/paths.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1707,9 +1894,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/traffic-2-lanes.json",
+            "docs/research/netlogo-web/traffic-2-lanes.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1755,9 +1947,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/traffic-grid.json",
+            "docs/research/netlogo-web/traffic-grid.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1803,9 +2000,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/taxi-cabs.json",
+            "docs/research/netlogo-web/taxi-cabs.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1851,9 +2053,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/traffic-basic.json",
+            "docs/research/netlogo-web/traffic-basic.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1899,9 +2106,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/traffic-intersection.json",
+            "docs/research/netlogo-web/traffic-intersection.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1947,9 +2159,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-structure-from-randomness-1.json",
+            "docs/research/netlogo-web/urban-suite-structure-from-randomness-1.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -1995,9 +2212,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/traffic-grid-goal.json",
+            "docs/research/netlogo-web/traffic-grid-goal.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2043,9 +2265,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-positive-feedback.json",
+            "docs/research/netlogo-web/urban-suite-positive-feedback.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2091,9 +2318,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-path-dependence.json",
+            "docs/research/netlogo-web/urban-suite-path-dependence.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2139,9 +2371,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-cells.json",
+            "docs/research/netlogo-web/urban-suite-cells.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2187,9 +2424,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-structure-from-randomness-2.json",
+            "docs/research/netlogo-web/urban-suite-structure-from-randomness-2.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2235,9 +2477,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-tijuana-bordertowns.json",
+            "docs/research/netlogo-web/urban-suite-tijuana-bordertowns.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2283,9 +2530,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-pollution.json",
+            "docs/research/netlogo-web/urban-suite-pollution.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2331,9 +2583,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-economic-disparity.json",
+            "docs/research/netlogo-web/urban-suite-economic-disparity.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2379,9 +2636,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-awareness.json",
+            "docs/research/netlogo-web/urban-suite-awareness.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2427,9 +2689,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-recycling.json",
+            "docs/research/netlogo-web/urban-suite-recycling.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2475,9 +2742,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/urban-suite-sprawl-effect.json",
+            "docs/research/netlogo-web/urban-suite-sprawl-effect.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2523,9 +2795,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/climate-change.json",
+            "docs/research/netlogo-web/climate-change.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2571,9 +2848,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/erosion.json",
+            "docs/research/netlogo-web/erosion.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2619,9 +2901,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/simple-birth-rates.json",
+            "docs/research/netlogo-web/simple-birth-rates.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2667,9 +2954,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/daisyworld.json",
+            "docs/research/netlogo-web/daisyworld.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2715,9 +3007,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/termites.json",
+            "docs/research/netlogo-web/termites.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2763,9 +3060,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/shepherds.json",
+            "docs/research/netlogo-web/shepherds.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2811,9 +3113,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/rabbits-grass-weeds.json",
+            "docs/research/netlogo-web/rabbits-grass-weeds.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2859,9 +3166,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/invasive-plants.json",
+            "docs/research/netlogo-web/invasive-plants.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2907,9 +3219,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/ants.json",
+            "docs/research/netlogo-web/ants.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -2955,9 +3272,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/heatbugs.json",
+            "docs/research/netlogo-web/heatbugs.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3003,9 +3325,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/flocking.json",
+            "docs/research/netlogo-web/flocking.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3051,9 +3378,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/fireflies.json",
+            "docs/research/netlogo-web/fireflies.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3099,9 +3431,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/chloroplasts-and-food.json",
+            "docs/research/netlogo-web/chloroplasts-and-food.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3147,9 +3484,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/slime.json",
+            "docs/research/netlogo-web/slime.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3195,9 +3537,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/fur.json",
+            "docs/research/netlogo-web/fur.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3243,9 +3590,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/blood-sugar-regulation.json",
+            "docs/research/netlogo-web/blood-sugar-regulation.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3291,9 +3643,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/honeycomb.json",
+            "docs/research/netlogo-web/honeycomb.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3339,9 +3696,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/autumn.json",
+            "docs/research/netlogo-web/autumn.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3387,9 +3749,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/membrane-formation.json",
+            "docs/research/netlogo-web/membrane-formation.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3435,9 +3802,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/sunflower-emergent.json",
+            "docs/research/netlogo-web/sunflower-emergent.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3483,9 +3855,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/tumor.json",
+            "docs/research/netlogo-web/tumor.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3531,9 +3908,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/muscle-development.json",
+            "docs/research/netlogo-web/muscle-development.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3579,9 +3961,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/mimicry.json",
+            "docs/research/netlogo-web/mimicry.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3627,9 +4014,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/anisogamy.json",
+            "docs/research/netlogo-web/anisogamy.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3675,9 +4067,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/peppered-moths.json",
+            "docs/research/netlogo-web/peppered-moths.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3723,9 +4120,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/baldwin-effect.json",
+            "docs/research/netlogo-web/baldwin-effect.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3771,9 +4173,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/mammoths.json",
+            "docs/research/netlogo-web/mammoths.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3819,9 +4226,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/sex-ratio-equilibrium.json",
+            "docs/research/netlogo-web/sex-ratio-equilibrium.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3867,9 +4279,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/bacterial-infection.json",
+            "docs/research/netlogo-web/bacterial-infection.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3915,9 +4332,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/vision-evolution.json",
+            "docs/research/netlogo-web/vision-evolution.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -3963,9 +4385,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gendrift-t-interact.json",
+            "docs/research/netlogo-web/gendrift-t-interact.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4011,9 +4438,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/mendelian-inheritance.json",
+            "docs/research/netlogo-web/mendelian-inheritance.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4059,9 +4491,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/disease-solo.json",
+            "docs/research/netlogo-web/disease-solo.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4107,9 +4544,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/repressilator-1d.json",
+            "docs/research/netlogo-web/repressilator-1d.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4155,9 +4597,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/hiv.json",
+            "docs/research/netlogo-web/hiv.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4203,9 +4650,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/virus.json",
+            "docs/research/netlogo-web/virus.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4251,9 +4703,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/crispr-bacterium.json",
+            "docs/research/netlogo-web/crispr-bacterium.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4299,9 +4756,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/crispr-ecosystem.json",
+            "docs/research/netlogo-web/crispr-ecosystem.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4347,9 +4809,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/epidem-basic.json",
+            "docs/research/netlogo-web/epidem-basic.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4395,9 +4862,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/epidem-travel-and-control.json",
+            "docs/research/netlogo-web/epidem-travel-and-control.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4443,9 +4915,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/genevo-1-genetic-switch.json",
+            "docs/research/netlogo-web/genevo-1-genetic-switch.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4491,9 +4968,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/dna-protein-synthesis.json",
+            "docs/research/netlogo-web/dna-protein-synthesis.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4539,9 +5021,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/ant-lines.json",
+            "docs/research/netlogo-web/ant-lines.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4587,9 +5074,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/beesmart-hive-finding.json",
+            "docs/research/netlogo-web/beesmart-hive-finding.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4635,9 +5127,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/moths.json",
+            "docs/research/netlogo-web/moths.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4683,9 +5180,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/flocking-vee-formations.json",
+            "docs/research/netlogo-web/flocking-vee-formations.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4731,9 +5233,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/slime-mold-network.json",
+            "docs/research/netlogo-web/slime-mold-network.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4779,9 +5286,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/rock-paper-scissors.json",
+            "docs/research/netlogo-web/rock-paper-scissors.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4827,9 +5339,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/fairy-circles.json",
+            "docs/research/netlogo-web/fairy-circles.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4875,9 +5392,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/plant-growth.json",
+            "docs/research/netlogo-web/plant-growth.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4923,9 +5445,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/algae.json",
+            "docs/research/netlogo-web/algae.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -4971,9 +5498,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/habitat-preference-behavior.json",
+            "docs/research/netlogo-web/habitat-preference-behavior.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5019,9 +5551,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/sandpile.json",
+            "docs/research/netlogo-web/sandpile.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5067,9 +5604,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/ising.json",
+            "docs/research/netlogo-web/ising.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5115,9 +5657,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/sand.json",
+            "docs/research/netlogo-web/sand.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5163,9 +5710,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/solid-diffusion.json",
+            "docs/research/netlogo-web/solid-diffusion.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5211,9 +5763,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/interstitial-diffusion.json",
+            "docs/research/netlogo-web/interstitial-diffusion.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5259,9 +5816,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/heat-diffusion.json",
+            "docs/research/netlogo-web/heat-diffusion.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5307,9 +5869,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/crystallization-basic.json",
+            "docs/research/netlogo-web/crystallization-basic.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5355,9 +5922,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/dla.json",
+            "docs/research/netlogo-web/dla.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5391,33 +5963,79 @@
           "basis": "242cc12 precedes runtime"
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/fire/model.ts",
+            "experiments/fire/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/fire-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/fire-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/fire-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/fire-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/fire/model.ts",
+            "experiments/fire/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/fire-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/fire-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/fire-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/fire-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/fire/model.ts",
+            "experiments/fire/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/fire-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/fire-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/fire-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/fire-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "experiments/fire/model.ts",
+            "experiments/fire/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/fire-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/fire-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/fire-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/fire-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/fire.json",
+            "docs/research/netlogo-web/fire.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "independent transfer/shared UI review pending"
+      ]
     },
     {
       "path": "Sample Models/Earth Science/Percolation",
@@ -5448,33 +6066,79 @@
           "basis": "242cc12 precedes runtime"
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/percolation/model.ts",
+            "experiments/percolation/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/percolation-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/percolation-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/percolation-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/percolation-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/percolation/model.ts",
+            "experiments/percolation/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/percolation-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/percolation-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/percolation-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/percolation-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/percolation/model.ts",
+            "experiments/percolation/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/percolation-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/percolation-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/percolation-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/percolation-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "experiments/percolation/model.ts",
+            "experiments/percolation/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/percolation-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/percolation-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/percolation-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/percolation-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/percolation.json",
+            "docs/research/netlogo-web/percolation.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "independent transfer/shared UI review pending"
+      ]
     },
     {
       "path": "Sample Models/Chemistry & Physics/Hydrogen Gas Production",
@@ -5517,9 +6181,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/hydrogen-gas-production.json",
+            "docs/research/netlogo-web/hydrogen-gas-production.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5565,9 +6234,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/thermostat.json",
+            "docs/research/netlogo-web/thermostat.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5613,9 +6287,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gas-chromatography.json",
+            "docs/research/netlogo-web/gas-chromatography.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5661,9 +6340,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/boiling.json",
+            "docs/research/netlogo-web/boiling.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5709,9 +6393,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gaslab-maxwells-demon.json",
+            "docs/research/netlogo-web/gaslab-maxwells-demon.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5757,9 +6446,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gaslab-free-gas.json",
+            "docs/research/netlogo-web/gaslab-free-gas.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5805,9 +6499,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gaslab-adiabatic-piston.json",
+            "docs/research/netlogo-web/gaslab-adiabatic-piston.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5853,9 +6552,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gaslab-single-collision.json",
+            "docs/research/netlogo-web/gaslab-single-collision.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5901,9 +6605,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gaslab-atmosphere.json",
+            "docs/research/netlogo-web/gaslab-atmosphere.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5949,9 +6658,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gaslab-isothermal-piston.json",
+            "docs/research/netlogo-web/gaslab-isothermal-piston.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -5997,9 +6711,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/chaos-in-a-box.json",
+            "docs/research/netlogo-web/chaos-in-a-box.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6045,9 +6764,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/kicked-rotator.json",
+            "docs/research/netlogo-web/kicked-rotator.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6093,9 +6817,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/polymer-dynamics.json",
+            "docs/research/netlogo-web/polymer-dynamics.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6141,9 +6870,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/monte-carlo-lennard-jones.json",
+            "docs/research/netlogo-web/monte-carlo-lennard-jones.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6189,9 +6923,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/molecular-dynamics-lennard-jones.json",
+            "docs/research/netlogo-web/molecular-dynamics-lennard-jones.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6237,9 +6976,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/n-bodies.json",
+            "docs/research/netlogo-web/n-bodies.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6285,9 +7029,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gravitation.json",
+            "docs/research/netlogo-web/gravitation.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6333,9 +7082,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/osmotic-pressure.json",
+            "docs/research/netlogo-web/osmotic-pressure.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6381,9 +7135,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/scattering.json",
+            "docs/research/netlogo-web/scattering.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6429,9 +7188,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/pendulum.json",
+            "docs/research/netlogo-web/pendulum.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6477,9 +7241,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/current-in-a-semiconductor.json",
+            "docs/research/netlogo-web/current-in-a-semiconductor.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6525,9 +7294,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/dislocation-motion-and-deformation.json",
+            "docs/research/netlogo-web/dislocation-motion-and-deformation.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6573,9 +7347,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/wave-machine.json",
+            "docs/research/netlogo-web/wave-machine.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6621,9 +7400,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/lattice-gas-automaton.json",
+            "docs/research/netlogo-web/lattice-gas-automaton.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6669,9 +7453,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/rope.json",
+            "docs/research/netlogo-web/rope.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6717,9 +7506,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/chladni-figures.json",
+            "docs/research/netlogo-web/chladni-figures.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6765,9 +7559,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/doppler.json",
+            "docs/research/netlogo-web/doppler.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6813,9 +7612,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/current-in-a-wire.json",
+            "docs/research/netlogo-web/current-in-a-wire.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6861,9 +7665,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/parallel-circuit.json",
+            "docs/research/netlogo-web/parallel-circuit.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6909,9 +7718,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/electrostatics.json",
+            "docs/research/netlogo-web/electrostatics.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -6957,9 +7771,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/radical-polymerization-with-chains.json",
+            "docs/research/netlogo-web/radical-polymerization-with-chains.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7005,9 +7824,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/simple-kinetics-2.json",
+            "docs/research/netlogo-web/simple-kinetics-2.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7053,9 +7877,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/radical-polymerization.json",
+            "docs/research/netlogo-web/radical-polymerization.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7101,9 +7930,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/chemical-equilibrium.json",
+            "docs/research/netlogo-web/chemical-equilibrium.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7149,9 +7983,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/b-z-reaction.json",
+            "docs/research/netlogo-web/b-z-reaction.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7197,9 +8036,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/enzyme-kinetics.json",
+            "docs/research/netlogo-web/enzyme-kinetics.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7245,9 +8089,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/weak-acid.json",
+            "docs/research/netlogo-web/weak-acid.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7293,9 +8142,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/buffer.json",
+            "docs/research/netlogo-web/buffer.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7341,9 +8195,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/decay.json",
+            "docs/research/netlogo-web/decay.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7389,9 +8248,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/connected-chemistry-solid-combustion.json",
+            "docs/research/netlogo-web/connected-chemistry-solid-combustion.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7437,9 +8301,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/3d-solids.json",
+            "docs/research/netlogo-web/3d-solids.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7485,9 +8354,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/vector-fields.json",
+            "docs/research/netlogo-web/vector-fields.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7533,9 +8407,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/pursuit.json",
+            "docs/research/netlogo-web/pursuit.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7581,9 +8460,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/3d-surface.json",
+            "docs/research/netlogo-web/3d-surface.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7629,9 +8513,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/turtles-circling.json",
+            "docs/research/netlogo-web/turtles-circling.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7677,9 +8566,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/voronoi.json",
+            "docs/research/netlogo-web/voronoi.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7725,9 +8619,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/emergent-shapes-ellipse.json",
+            "docs/research/netlogo-web/emergent-shapes-ellipse.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7773,9 +8672,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/tree-simple.json",
+            "docs/research/netlogo-web/tree-simple.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7821,9 +8725,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/koch-curve.json",
+            "docs/research/netlogo-web/koch-curve.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7869,9 +8778,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/l-system-fractals.json",
+            "docs/research/netlogo-web/l-system-fractals.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7917,9 +8831,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/birthdays.json",
+            "docs/research/netlogo-web/birthdays.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -7965,9 +8884,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/galton-box.json",
+            "docs/research/netlogo-web/galton-box.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8013,9 +8937,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/binomial-rabbits.json",
+            "docs/research/netlogo-web/binomial-rabbits.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8061,9 +8990,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/three-doors.json",
+            "docs/research/netlogo-web/three-doors.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8109,9 +9043,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/stochastic-patchwork.json",
+            "docs/research/netlogo-web/stochastic-patchwork.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8157,9 +9096,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/expected-value.json",
+            "docs/research/netlogo-web/expected-value.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8205,9 +9149,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/partition-permutation-distribution.json",
+            "docs/research/netlogo-web/partition-permutation-distribution.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8253,9 +9202,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/central-limit-theorem.json",
+            "docs/research/netlogo-web/central-limit-theorem.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8301,9 +9255,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/random-combinations-and-permutations.json",
+            "docs/research/netlogo-web/random-combinations-and-permutations.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8349,9 +9308,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/mandelbrot.json",
+            "docs/research/netlogo-web/mandelbrot.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8397,9 +9361,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/robby-the-robot.json",
+            "docs/research/netlogo-web/robby-the-robot.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8445,9 +9414,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/artificial-neural-net-perceptron.json",
+            "docs/research/netlogo-web/artificial-neural-net-perceptron.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8493,9 +9467,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/dining-philosophers.json",
+            "docs/research/netlogo-web/dining-philosophers.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8541,9 +9520,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/simple-genetic-algorithm.json",
+            "docs/research/netlogo-web/simple-genetic-algorithm.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8589,9 +9573,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/robotic-factory.json",
+            "docs/research/netlogo-web/robotic-factory.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8637,9 +9626,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/particle-swarm-optimization.json",
+            "docs/research/netlogo-web/particle-swarm-optimization.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8685,9 +9679,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/artificial-neural-net-multilayer.json",
+            "docs/research/netlogo-web/artificial-neural-net-multilayer.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8733,9 +9732,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/pagerank.json",
+            "docs/research/netlogo-web/pagerank.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8781,9 +9785,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/k-means-clustering.json",
+            "docs/research/netlogo-web/k-means-clustering.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8829,9 +9838,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/simulated-annealing.json",
+            "docs/research/netlogo-web/simulated-annealing.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8877,9 +9891,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/smoothlife.json",
+            "docs/research/netlogo-web/smoothlife.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8925,9 +9944,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/hex-cell-aggregation.json",
+            "docs/research/netlogo-web/hex-cell-aggregation.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -8973,9 +9997,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/vants.json",
+            "docs/research/netlogo-web/vants.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9021,9 +10050,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/turing-machine-2d.json",
+            "docs/research/netlogo-web/turing-machine-2d.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9057,34 +10091,78 @@
           "basis": "242cc12 precedes runtime"
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/life/model.ts",
+            "experiments/life/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/life-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/life-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/life-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/life-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/life/model.ts",
+            "experiments/life/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/life-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/life-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/life-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/life-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/life/model.ts",
+            "experiments/life/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/life-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/life-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/life-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/life-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "experiments/life/model.ts",
+            "experiments/life/ui.ts",
+            "docs/development/selected-grid-batch-report.md",
+            "docs/development/selected-grid-batch-source-audit.md",
+            "docs/development/selected-grid-batch-evidence/life-reference-setup.png",
+            "docs/development/selected-grid-batch-evidence/life-reference-progress.png",
+            "docs/development/selected-grid-batch-evidence/life-target-setup.png",
+            "docs/development/selected-grid-batch-evidence/life-target-progress.png"
+          ],
+          "basis": "actual headless and paired source/target Chromium author evidence; integrated commits ce742d2/37ed804/2c58d43; independent review pending"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/life.json",
+            "docs/research/netlogo-web/life.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": [
-        "shared brush/recolor UI contract must be delivered; selected-cell substitute is incomplete"
+        "independent transfer/shared UI review pending"
       ]
     },
     {
@@ -9128,9 +10206,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/ca-1d-elementary.json",
+            "docs/research/netlogo-web/ca-1d-elementary.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9176,9 +10259,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/ca-continuous.json",
+            "docs/research/netlogo-web/ca-continuous.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9224,9 +10312,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/brians-brain.json",
+            "docs/research/netlogo-web/brians-brain.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9272,9 +10365,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/cyclic-ca.json",
+            "docs/research/netlogo-web/cyclic-ca.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9320,9 +10418,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/ca-stochastic.json",
+            "docs/research/netlogo-web/ca-stochastic.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9368,9 +10471,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/minesweeper.json",
+            "docs/research/netlogo-web/minesweeper.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9416,9 +10524,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/planarity.json",
+            "docs/research/netlogo-web/planarity.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9464,9 +10577,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/lunar-lander.json",
+            "docs/research/netlogo-web/lunar-lander.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9512,9 +10630,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/pac-man.json",
+            "docs/research/netlogo-web/pac-man.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9560,9 +10683,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/tetris.json",
+            "docs/research/netlogo-web/tetris.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9608,9 +10736,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/state-machine-example.json",
+            "docs/research/netlogo-web/state-machine-example.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9656,9 +10789,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/moore-von-neumann-example.json",
+            "docs/research/netlogo-web/moore-von-neumann-example.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9704,9 +10842,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/vision-cone-example.json",
+            "docs/research/netlogo-web/vision-cone-example.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9752,9 +10895,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/nw-general-examples.json",
+            "docs/research/netlogo-web/nw-general-examples.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
@@ -9800,9 +10948,14 @@
           "basis": "pending actual reference and target browser comparison"
         },
         "research-verified": {
-          "done": false,
-          "evidence": [],
-          "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
+          "done": true,
+          "evidence": [
+            "docs/research/netlogo-web/gis-general-examples.json",
+            "docs/research/netlogo-web/gis-general-examples.md",
+            "docs/research/netlogo-web/status.json",
+            "docs/development/research-integration.md"
+          ],
+          "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
       "blockers": []
