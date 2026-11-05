@@ -10,6 +10,20 @@ export interface ProgressRow {
   stages: Record<Stage, Milestone>;
   blockers: string[];
 }
+export function validateProgressRow(row: ProgressRow): void {
+  if (!Array.isArray(row.blockers) || row.blockers.some(value => typeof value !== "string"))
+    throw new Error(`Invalid blockers: ${row.path}`);
+  for (const stage of stages) {
+    const milestone = row.stages[stage];
+    if (!milestone || typeof milestone.done !== "boolean" || !Array.isArray(milestone.evidence) || milestone.evidence.some(file => typeof file !== "string") || (milestone.done && milestone.evidence.length === 0))
+      throw new Error(`Missing evidence for ${stage}: ${row.path}`);
+  }
+  for (const stage of ["headless-verified", "browser-verified", "baseline-compared", "reviewed"] as const)
+    if (row.stages[stage].done && !row.stages.implemented.done)
+      throw new Error(`${stage} requires implementation: ${row.path}`);
+  if (row.stages["research-verified"].done && !row.stages["research-verified"].evidence.some(file => file.startsWith("docs/research/netlogo-web/")))
+    throw new Error(`Research evidence must use the reserved research tree: ${row.path}`);
+}
 
 export async function verifyProgress() {
   const selection = await Bun.file(`${root}/selection/selection.json`).json() as {
@@ -39,9 +53,9 @@ export async function verifyProgress() {
   for (const row of progress.rows) {
     const selected = paths.get(row.path);
     if (!selected || selected.slug !== row.slug || selected.deliveryBatch !== row.batch) throw new Error(`Progress identity mismatch: ${row.path}`);
+    validateProgressRow(row);
     for (const stage of stages) {
       const milestone = row.stages[stage];
-      if (!milestone || typeof milestone.done !== "boolean" || !Array.isArray(milestone.evidence) || (milestone.done && milestone.evidence.length === 0)) throw new Error(`Missing evidence for ${stage}: ${row.path}`);
       for (const file of milestone.evidence)
         if (!(await Bun.file(file).exists())) throw new Error(`Evidence missing: ${file}`);
     }

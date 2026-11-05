@@ -384,8 +384,14 @@
         }
       },
       "blockers": [
-        "independent review of indexed occupancy pending"
-      ]
+        "scientific three-publication research and final row acceptance pending"
+      ],
+      "technicalReview": {
+        "decision": "APPROVE",
+        "commit": "43f42b6",
+        "evidence": "docs/development/indexed-occupancy-review.md",
+        "limits": "research and final row acceptance excluded"
+      }
     },
     {
       "path": "Sample Models/Networks/Giant Component",
@@ -399,8 +405,13 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-network-contracts.md",
+            "experiments/giant-component/source.nlogox",
+            "experiments/giant-component/NOTICE.md"
+          ],
+          "basis": "immutable source hashes and source rules/widgets/notices audited; no browser or literature claim"
         },
         "contract-frozen": {
           "done": false,
@@ -433,7 +444,9 @@
           "basis": "dedicated root-chat research coordinator owns docs/research/netlogo-web; integration inspection required"
         }
       },
-      "blockers": []
+      "blockers": [
+        "requires public Graph.components connectivity runtime and independent review before model delivery"
+      ]
     },
     {
       "path": "Sample Models/Networks/Small Worlds",
@@ -495,12 +508,21 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-network-contracts.md",
+            "experiments/diffusion-on-a-directed-network/source.nlogox",
+            "experiments/diffusion-on-a-directed-network/NOTICE.md"
+          ],
+          "basis": "immutable source hashes and source rules/widgets/notices audited; no browser or literature claim"
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-network-contracts.md",
+            "examples/selected-network/SHA256SUMS"
+          ],
+          "basis": "9d713fa precedes runtime"
         },
         "implemented": {
           "done": false,
@@ -543,12 +565,21 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-network-contracts.md",
+            "experiments/virus-on-a-network/source.nlogox",
+            "experiments/virus-on-a-network/NOTICE.md"
+          ],
+          "basis": "immutable source hashes and source rules/widgets/notices audited; no browser or literature claim"
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-network-contracts.md",
+            "examples/selected-network/SHA256SUMS"
+          ],
+          "basis": "9d713fa precedes runtime"
         },
         "implemented": {
           "done": false,
