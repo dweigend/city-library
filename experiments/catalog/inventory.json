@@ -27943,9 +27943,9 @@
         "experiment": "segregation",
         "implementation": "implemented",
         "sourceAudit": "audited-with-explicit-adaptations",
-        "headlessVerification": "passed-d24d2f2",
-        "browserVerification": "pending-catalog-acceptance",
-        "independentApproval": "approved-headless-and-design-d24d2f2"
+        "headlessVerification": "passed-7653491",
+        "browserVerification": "passed-desktop-mobile-chromium-7653491",
+        "independentApproval": "headless-d24d2f2-approved-index-7653491-pending"
       },
       "blockers": [],
       "creditsNotice": "Schelling, T. (1978). Micromotives and Macrobehavior. New York: Norton.\n\nSee also: Rauch, J. (2002). Seeing Around Corners; The Atlantic Monthly; April 2002;Volume 289, No. 4; 35-48. https://www.theatlantic.com/magazine/archive/2002/04/seeing-around-corners/302471/",
@@ -27956,8 +27956,8 @@
         "examples": "examples/segregation/SHA256SUMS",
         "tests": "tests/segregation.test.ts",
         "review": "docs/development/netlogo-web-catalog-review.md",
-        "browser": "pending",
-        "performance": "open: first default step measured 3.66 seconds"
+        "browser": "docs/development/netlogo-web-catalog-evidence.md",
+        "performance": "first default step153.9ms; same full states/RNG ticks0..3; independent index review pending"
       }
     },
     {

@@ -21,3 +21,27 @@ Screenshots show changing neighborhood clusters and the two different plots (per
 ## Acceptance states
 
 Per-row catalog statuses will distinguish inventory extraction, audited rules, implemented port, headless checks, browser checks and independent approval. Pending runtime/review work must remain pending. Existing four ports retain historical source and browser evidence; baseline tests above do not re-establish full scientific parity against a newly captured catalog revision.
+
+## Segregation target browser and design QA
+
+Verified in real server Chromium through the configured T3 browser automation, consuming this worktree's Bun server on port 3110. Port 3100 was already occupied (`EADDRINUSE`); that process was preserved. No browser fallback or source-only substitute was used.
+
+At 1280×800, native Setup with defaults produced tick 0, 2483 residents, 424 unhappy, 49.5% similar. Native 10 steps produced tick 10, 2483 residents, 15 unhappy, 73.4% similar. [Setup](netlogo-catalog-evidence/segregation-target-setup.png) and [tick 10](netlogo-catalog-evidence/segregation-target-tick10.png) were captured again after indexed occupancy integration and opened for visual inspection. These are deterministic Mulberry seed-1 outcomes; the unseeded NetLogo reference above has different trajectories. Both show rising local similarity and falling unhappy counts; numerical equality is not claimed.
+
+Native Run, wait for an actual changed tick, then Pause stopped at tick 11 (2483 residents, 17 unhappy, 73.5% similar). At 390×844, selected a resident on the canvas and used ArrowRight; the inspector exposed canonical group, happiness and neighbor counts, with canvas focus retained. Changing similarity to 0 then Tab gave All happy, 0 unhappy and disabled Run without changing tick 10; restoring 30 re-enabled execution. Immediate Run/Pause was also verified independently of the later waited tick-11 run. Invalid setup density 100 triggered native validation (`Value must be less than or equal to 99.`) and preserved the existing tick-11 model; density was restored to 95.
+
+Mobile dark/light screenshots were captured after the indexed runtime and visually inspected: [dark](netlogo-catalog-evidence/segregation-mobile-dark-final.png), [light](netlogo-catalog-evidence/segregation-mobile-light-final.png). [Keyboard inspector](netlogo-catalog-evidence/segregation-mobile-dark-inspection.png) was captured before the equivalent index integration. No horizontal document overflow at either tested width. Runtime snapshots reported no console entries or failed network requests. All owned tabs were closed. No complete accessibility certification, other-browser testing or distribution-level scientific equivalence study is claimed.
+
+Applied frontend-design and web-design-guidelines to experiments/segregation/ui.ts and its affected shared flow. Latest Vercel rules fetched successfully from the official raw source before review. Labels, native form validation, live status, keyboard selection, focus, source link/notice, responsive layout and both themes were inspected. No unresolved finding in this bounded new adapter. Shared chart axis text is small on mobile and exact source square/X glyphs and shape chooser remain explicit presentation differences; numerical happiness is available in the inspector and monitors.
+
+## Indexed occupancy performance follow-up
+
+Five public examples were committed as f5fd2f0 before runtime 7653491. No public syntax changed. Agent coordinates and World membership remain canonical; Grid's private derived cell buckets observe successful movement and membership changes, release their listener on detach, preserve World insertion order, and retain the explicit-source fallback/validation. No model-owned occupancy index or uniform-cell relocation was added.
+
+Measured by the implementation agent: default setup 109.1 ms and first completed Segregation step 153.9 ms, compared with 3.66 seconds after scalar optimization and 14.35 seconds before it. Complete detached observations for ticks 0–3, removing only process-local resident IDs, matched the pre-index baseline exactly, including RNG continuation and history. Baseline JSON SHA-256: `7b332527a8441b38ac3c5de06e88ac9dec539a0d21b07401127b4dfdf04f4097`; temporary comparison file was not a delivered runtime dependency. Independent review of this new index is pending and is separate from d24d2f2 approval.
+
+Coordinator executed final `bun run check` after the implementation agent's cleanup: all type configurations, **119 tests / 1124 assertions**, **45 public scripts**, browser-target build/declarations and packed Bun/Node/ambient-free TypeScript consumer passed. Earlier 112-test/40-script and 103-test/35-script counts above remain historical checkpoints.
+
+## Scope update
+
+The user narrowed active delivery to exactly 200 selected models on 2026-11-05. The full inventory remains 550; selection supplied by the root chat is pending import. Five implemented mandatory entries exist (the four baseline references and Segregation); 195 selected implementations remain once that required subset is validated. Full completion is not claimed. The 350 other rows will be explicitly outside current scope. Fire/Life/Percolation contracts and five asserted model scripts are prepared at 242cc12, with no runtime yet and no assumption that their selection is already approved.
