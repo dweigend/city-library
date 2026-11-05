@@ -230,11 +230,13 @@ export function defineUI<P extends object, M extends ModelInstance>(
           } else {
             const input = document.createElement("input");
             input.type =
-              descriptor.kind === "boolean"
-                ? "checkbox"
-                : descriptor.kind === "number"
-                  ? "number"
-                  : "text";
+              live.widget === "color"
+                ? "color"
+                : descriptor.kind === "boolean"
+                  ? "checkbox"
+                  : descriptor.kind === "number"
+                    ? "number"
+                    : "text";
             if (descriptor.min !== undefined)
               input.min = String(descriptor.min);
             if (descriptor.max !== undefined)
@@ -313,9 +315,26 @@ export function defineUI<P extends object, M extends ModelInstance>(
               dispose: () => adapter.dispose(),
             });
           } else if (view.type === "grid" || view.type === "spatial") {
-            const adapter = mountCanvas(figure, pick);
+            const adapter = mountCanvas(
+              figure,
+              pick,
+              view.type === "grid" && spec.drawing
+                ? (intent) => {
+                    playback.stop();
+                    act(
+                      (model) => spec.drawing!.intent(model, intent),
+                      "Drawing updated.",
+                    );
+                  }
+                : undefined,
+            );
             views.push({
-              render: (state) => adapter.update(view.data(state), selected),
+              render: (state) =>
+                adapter.update(
+                  view.data(state),
+                  selected,
+                  spec.drawing?.enabled(state) ?? false,
+                ),
               dispose: () => adapter.dispose(),
             });
           } else if (
