@@ -1,0 +1,111 @@
+{
+  "slug": "urban-suite-sprawl-effect",
+  "name": "Urban Suite - Sprawl Effect",
+  "catalogPath": "Curricular Models/Urban Suite/Urban Suite - Sprawl Effect",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Sprawl%20Effect.nlogox",
+  "deliveryBatch": "B05",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether local attraction and declining site quality can generate dispersed development. In NetLogo's Urban Suite - Sprawl Effect model, seekers move toward attractive patches, settle probabilistically and reinforce activity, while overused sites undergo an abrupt attractiveness reset. The selected literature connects this mechanism to feedback-driven residential dispersion: the acknowledged SOME ancestry supplies an empirical modeling challenge [1]; historical urban-growth simulation offers a calibrated spatial comparator [2]; urban-expansion forecasts connect development patterns to environmental consequences [3]. The source acknowledges the reset as unrealistic; no zoning, market-clearing prices or infrastructure constraints are represented, so leapfrogging is a mechanism illustration. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Sprawl%20Effect.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Sprawl%20Effect.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/urban-suite-sprawl-effect.nlogox",
+    "sha256": "47a13701ed91c04aad70f39ad79d41709d01e27b5143328fe319f369e9ef0d3b",
+    "citation": "For the model itself: * Felsen, M. and Wilensky, U. (2007). NetLogo Urban Suite - Sprawl Effect model. http://ccl.northwestern.edu/netlogo/models/UrbanSuite-SprawlEffect. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model was based on a model originally written by William Rand and Derek Robinson as part of the Sluce Project at the University of Michigan. For more about the original model (SOME) that was the basis for this model, please see: Brown D.G., Robinson D.T., Nassauer J.I., An L., Page S.E., Low B., Rand W., Zellner M., and R. Riolo (In Press) \"Exurbia from the Bottom-Up: Agent-Based Modeling and Empirical Requirements.\" Geoforum. This model was then extended and expanded during the Sprawl/Swarm Class at Illinois Institute of Technology in Fall 2006 under the supervision of Sarah Dunn and Martin Felsen, by the following group of students: Christian Eichinger, Sara Martinez-Bravo, Kit Ottsen, John Wolters. See http://www.sprawlcity.us/ for more details. Further modifications and refinements were made by members of the Center for Connected Learning and Computer-Based Modeling before releasing it as an Urban Suite model. The Urban Suite models were developed as part of the Procedural Modeling of Cities project, under the sponsorship of NSF ITR award 0326542, Electronic Arts & Maxis. Please see the project web site ([http://ccl.northwestern.edu/cities/](http://ccl.northwestern.edu/cities/)) for more information.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/urban-suite-sprawl-effect.nlogox"
+  },
+  "publications": [
+    {
+      "id": "exurbia",
+      "creatorRole": "author",
+      "authors": [
+        "Daniel G. Brown",
+        "Derek T. Robinson",
+        "Li An",
+        "Joan I. Nassauer",
+        "Moira Zellner",
+        "William Rand",
+        "Rick Riolo",
+        "Scott E. Page",
+        "Bobbi Low",
+        "Zhifang Wang"
+      ],
+      "title": "Exurbia from the bottom-up: Confronting empirical challenges to characterizing a complex system",
+      "year": 2008,
+      "venue": "Geoforum",
+      "doi": "10.1016/j.geoforum.2007.02.010",
+      "url": "https://doi.org/10.1016/j.geoforum.2007.02.010",
+      "relevance": "the acknowledged SOME ancestry supplies an empirical modeling challenge",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.geoforum.2007.02.010",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/exurbia-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/exurbia-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "clarke",
+      "creatorRole": "author",
+      "authors": [
+        "K C Clarke",
+        "S Hoppen",
+        "L Gaydos"
+      ],
+      "title": "A Self-Modifying Cellular Automaton Model of Historical Urbanization in the San Francisco Bay Area",
+      "year": 1997,
+      "venue": "Environment and Planning B: Planning and Design",
+      "doi": "10.1068/b240247",
+      "url": "https://doi.org/10.1068/b240247",
+      "relevance": "historical urban-growth simulation offers a calibrated spatial comparator",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1068%2Fb240247",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/clarke-crossref.json",
+        "evidenceSummary": "In this paper we describe a cellular automaton (CA) simulation model developed to predict urban growth as part of a project for estimating the regional and broader impact of urbanization on the San Francisco Bay area's climate. The rules of the model are more complex than those of a typical CA and involve the use of multiple data sources, including topography, road networks, and existing settlement distributions, and their modification over time. In addition, the control parameters of the model are allowed to self-modify: that is, the CA adapts itself to the circumstances it generates, in particular, during periods of rapid growth or stagnation. In addition, the model was written to allow the accumulation of probabilistic estimates based on Monte Carlo methods. Calibration of the model has been accomplished by the use of historical maps to compare model predictions of urbanization, based",
+        "evidenceFile": "evidence/social-urban/clarke-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "seto",
+      "creatorRole": "author",
+      "authors": [
+        "Karen C. Seto",
+        "Burak Güneralp",
+        "Lucy R. Hutyra"
+      ],
+      "title": "Global forecasts of urban expansion to 2030 and direct impacts on biodiversity and carbon pools",
+      "year": 2012,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.1211658109",
+      "url": "https://doi.org/10.1073/pnas.1211658109",
+      "relevance": "urban-expansion forecasts connect development patterns to environmental consequences",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.1211658109",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/seto-crossref.json",
+        "evidenceSummary": "Urban land-cover change threatens biodiversity and affects ecosystem productivity through loss of habitat, biomass, and carbon storage. However, despite projections that world urban populations will increase to nearly 5 billion by 2030, little is known about future locations, magnitudes, and rates of urban expansion. Here we develop spatially explicit probabilistic forecasts of global urban land-cover change and explore the direct impacts on biodiversity hotspots and tropical carbon biomass. If current trends in population density continue and all areas with high probabilities of urban expansion undergo change, then by 2030, urban land cover will increase by 1.2 million km 2 , nearly tripling the global urban land area circa 2000. This increase would result in considerable loss of habitats in key biodiversity hotspots, with the highest rates of forecasted urban growth to take place in re",
+        "evidenceFile": "evidence/social-urban/seto-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

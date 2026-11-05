@@ -1,0 +1,201 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.36.1.48",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T15:58:10Z",
+        "timestamp": 1793894290447,
+        "version": "4.8.0"
+      },
+      "reference-count": 2,
+      "publisher": "National Academy of Sciences",
+      "issue": "1",
+      "content-domain": {
+        "domain": [
+          "www.pnas.org"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "Proc. Natl. Acad. Sci. U.S.A."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1950,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1073/pnas.36.1.48",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2006,
+            5,
+            30
+          ]
+        ],
+        "date-time": "2006-05-30T22:32:55Z",
+        "timestamp": 1149028375000
+      },
+      "page": "48-49",
+      "update-policy": "https://doi.org/10.1073/pnas.cm10313",
+      "source": "Crossref",
+      "is-referenced-by-count": 5631,
+      "title": [
+        "Equilibrium points in\n                    <i>n</i>\n                    -person games"
+      ],
+      "prefix": "10.1073",
+      "volume": "36",
+      "author": [
+        {
+          "suffix": "Jr.",
+          "given": "John F.",
+          "family": "Nash",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Princeton University"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "341",
+      "published-online": {
+        "date-parts": [
+          [
+            2011,
+            4,
+            25
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_3_2_1_2",
+          "first-page": "457",
+          "volume-title": "Duke Math. J",
+          "year": "1941",
+          "unstructured": "Kakutani, S., Duke Math. J., 8, 457\u2013 459 ( 1941)."
+        },
+        {
+          "key": "e_1_3_2_2_2",
+          "volume-title": "The Theory of Games and Economic Behaviour",
+          "year": "1947",
+          "unstructured": "Von Neumann, J., and Morgenstern, O., The Theory of Games and Economic Behaviour, Chap. 3, Princeton University Press, Princeton, 1947."
+        }
+      ],
+      "container-title": [
+        "Proceedings of the National Academy of Sciences"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://pnas.org/doi/pdf/10.1073/pnas.36.1.48",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2022,
+            4,
+            13
+          ]
+        ],
+        "date-time": "2022-04-13T09:41:55Z",
+        "timestamp": 1649842915000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://pnas.org/doi/full/10.1073/pnas.36.1.48"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1950,
+            1
+          ]
+        ]
+      },
+      "references-count": 2,
+      "journal-issue": {
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              1950,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1073/pnas.36.1.48"
+      ],
+      "URL": "https://doi.org/10.1073/pnas.36.1.48",
+      "relation": {},
+      "ISSN": [
+        "0027-8424",
+        "1091-6490"
+      ],
+      "issn-type": [
+        {
+          "value": "0027-8424",
+          "type": "print"
+        },
+        {
+          "value": "1091-6490",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1950,
+            1
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "2011-04-25",
+          "order": 2,
+          "name": "published",
+          "label": "Published",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        }
+      ]
+    }
+  }
+}

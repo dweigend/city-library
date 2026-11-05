@@ -1,0 +1,1203 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Local+dispersal+promotes+biodiversity+in+a+real-life+game+of+rock-paper-scissors+Kerr+Riley+Feldman+Bohannan+2002&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3281767,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                31
+              ]
+            ],
+            "date-time": "2026-10-31T22:54:09Z",
+            "timestamp": 1793487249946,
+            "version": "4.5.0"
+          },
+          "reference-count": 30,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "6894",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2002,
+                    7,
+                    1
+                  ]
+                ],
+                "date-time": "2002-07-01T00:00:00Z",
+                "timestamp": 1025481600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2002,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature00823",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                28
+              ]
+            ],
+            "date-time": "2002-07-28T17:36:01Z",
+            "timestamp": 1027877761000
+          },
+          "page": "171-174",
+          "source": "Crossref",
+          "is-referenced-by-count": 1462,
+          "title": [
+            "Local dispersal promotes biodiversity in a real-life game of rock\u2013paper\u2013scissors"
+          ],
+          "prefix": "10.1038",
+          "volume": "418",
+          "author": [
+            {
+              "given": "Benjamin",
+              "family": "Kerr",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Margaret A.",
+              "family": "Riley",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Marcus W.",
+              "family": "Feldman",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Brendan J. M.",
+              "family": "Bohannan",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BFnature00823_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "343",
+              "DOI": "10.1146/annurev.ecolsys.31.1.343",
+              "volume": "31",
+              "author": "P Chesson",
+              "year": "2000",
+              "unstructured": "Chesson, P. Mechanisms of maintenance of species diversity. Annu. Rev. Ecol. Syst. 31, 343\u2013366 (2000)",
+              "journal-title": "Annu. Rev. Ecol. Syst."
+            },
+            {
+              "key": "BFnature00823_CR2",
+              "first-page": "13",
+              "volume-title": "Species Diversity in Ecological Communities",
+              "author": "D Tilman",
+              "year": "1993",
+              "unstructured": "Tilman, D. & Pacala, S. in Species Diversity in Ecological Communities (eds Ricklefs, R. E. & Schluter, D.) 13\u201325 (Univ. Chicago Press, Chicago, 1993)"
+            },
+            {
+              "key": "BFnature00823_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "786",
+              "DOI": "10.1073/pnas.012399899",
+              "volume": "99",
+              "author": "TL Cz\u00e1r\u00e1n",
+              "year": "2002",
+              "unstructured": "Cz\u00e1r\u00e1n, T. L., Hoekstra, R. F. & Pagie, L. Chemical warfare between microbes promotes biodiversity. Proc. Natl Acad. Sci. USA 99, 786\u2013790 (2002)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature00823_CR4",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Dieckmann, U., Law, R. & Metz, J. A. J. (eds) The Geometry of Ecological Interactions: Simplifying Spatial Complexity (Cambridge Univ. Press, Cambridge, 2000)",
+              "DOI": "10.1017/CBO9780511525537"
+            },
+            {
+              "key": "BFnature00823_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "363",
+              "DOI": "10.1006/tpbi.1994.1032",
+              "volume": "46",
+              "author": "R Durrett",
+              "year": "1994",
+              "unstructured": "Durrett, R. & Levin, S. The importance of being discrete (and spatial). Theor. Pop. Biol. 46, 363\u2013394 (1994)",
+              "journal-title": "Theor. Pop. Biol."
+            },
+            {
+              "key": "BFnature00823_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "165",
+              "DOI": "10.1006/jtbi.1996.0292",
+              "volume": "185",
+              "author": "R Durrett",
+              "year": "1997",
+              "unstructured": "Durrett, R. & Levin, S. Allelopathy in spatially distributed populations. J. Theor. Biol. 185, 165\u2013171 (1997)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFnature00823_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "290",
+              "DOI": "10.1038/370290a0",
+              "volume": "370",
+              "author": "MP Hassell",
+              "year": "1994",
+              "unstructured": "Hassell, M. P., Comins, H. N. & May, R. M. Species coexistence and self-organizing spatial dynamics. Nature 370, 290\u2013292 (1994)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature00823_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "251",
+              "DOI": "10.1006/jtbi.1998.0838",
+              "volume": "196",
+              "author": "L Pagie",
+              "year": "1999",
+              "unstructured": "Pagie, L. & Hogeweg, P. Colicin diversity: A result of eco-evolutionary dynamics. J. Theor. Biol. 196, 251\u2013261 (1999)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFnature00823_CR9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Tilman, D. & Kareiva, P. (eds) Spatial Ecology: The Role of Space in Population Dynamics and Interspecific Interactions (Princeton Univ. Press, Princeton, 1997)",
+              "DOI": "10.1515/9780691188362"
+            },
+            {
+              "key": "BFnature00823_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "70",
+              "DOI": "10.1016/S0169-5347(96)20103-X",
+              "volume": "12",
+              "author": "P Rohani",
+              "year": "1997",
+              "unstructured": "Rohani, P., Lewis, T. J., Grunbaum, D. & Ruxton, G. D. Spatial self-organization in ecology: pretty patterns or robust reality? Trends Ecol. Evol. 12, 70\u201374 (1997)",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "BFnature00823_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "1323",
+              "DOI": "10.1098/rspb.2001.1670",
+              "volume": "268",
+              "author": "M Frean",
+              "year": "2001",
+              "unstructured": "Frean, M. & Abraham, E. R. Rock-scissors-paper and the survival of the weakest. Proc. R. Soc. Biol. Sci. B 268, 1323\u20131327 (2001)",
+              "journal-title": "Proc. R. Soc. Biol. Sci. B"
+            },
+            {
+              "key": "BFnature00823_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "240",
+              "DOI": "10.1038/380240a0",
+              "volume": "380",
+              "author": "B Sinervo",
+              "year": "1996",
+              "unstructured": "Sinervo, B. & Lively, C. M. The rock-paper-scissors game and the evolution of alternative male strategies. Nature 380, 240\u2013243 (1996)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature00823_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "223",
+              "DOI": "10.1086/283381",
+              "volume": "113",
+              "author": "LW Buss",
+              "year": "1979",
+              "unstructured": "Buss, L. W. & Jackson, J. B. C. Competitive networks: Nontransitive competitive relationships in cryptic coral reef environments. Am. Nat. 113, 223\u2013234 (1979)",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "BFnature00823_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "368",
+              "DOI": "10.1038/306368a0",
+              "volume": "306",
+              "author": "CE Paquin",
+              "year": "1983",
+              "unstructured": "Paquin, C. E. & Adams, J. Relative fitness can decrease in evolving asexual populations of S. cerevisiae. Nature 306, 368\u2013371 (1983)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature00823_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "362",
+              "DOI": "10.1046/j.1461-0248.2000.00161.x",
+              "volume": "3",
+              "author": "BJM Bohannan",
+              "year": "2000",
+              "unstructured": "Bohannan, B. J. M. & Lenski, R. E. Linking genetic change to community evolution: Insights from studies of bacteria and bacteriophage. Ecol. Lett. 3, 362\u2013377 (2000)",
+              "journal-title": "Ecol. Lett."
+            },
+            {
+              "key": "BFnature00823_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "9037",
+              "DOI": "10.1073/pnas.91.19.9037",
+              "volume": "91",
+              "author": "R Korona",
+              "year": "1994",
+              "unstructured": "Korona, R., Nakatsu, C. H., Forney, L. J. & Lenski, R. E. Evidence for multiple adaptive peaks from populations of bacteria evolving in a structured habitat. Proc. Natl Acad. Sci. USA 91, 9037\u20139041 (1994)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature00823_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "69",
+              "DOI": "10.1038/27900",
+              "volume": "394",
+              "author": "PB Rainey",
+              "year": "1998",
+              "unstructured": "Rainey, P. B. & Travisano, M. Adaptive radiation in a heterogeneous environment. Nature 394, 69\u201372 (1998)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature00823_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "369",
+              "DOI": "10.1007/BF01238189",
+              "volume": "8",
+              "author": "SA Frank",
+              "year": "1994",
+              "unstructured": "Frank, S. A. Spatial polymorphism of bacteriocins and other allelopathic traits. Evol. Ecol. 8, 369\u2013386 (1994)",
+              "journal-title": "Evol. Ecol."
+            },
+            {
+              "key": "BFnature00823_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "785",
+              "DOI": "10.1023/A:1006590431483",
+              "volume": "12",
+              "author": "Y Iwasa",
+              "year": "1998",
+              "unstructured": "Iwasa, Y., Nakamaru, M. & Levin, S. A. Allelopathy of bacteria in a lattice population: Competition between colicin-sensitive and colicin-producing strains. Evol. Ecol. 12, 785\u2013802 (1998)",
+              "journal-title": "Evol. Ecol."
+            },
+            {
+              "key": "BFnature00823_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "131",
+              "DOI": "10.1006/tpbi.1999.1448",
+              "volume": "57",
+              "author": "M Nakamaru",
+              "year": "2000",
+              "unstructured": "Nakamaru, M. & Iwasa, Y. Competition by allelopathy proceeds in traveling waves: Colicin-immune strain aids colicin-sensitive strain. Theor. Pop. Biol. 57, 131\u2013144 (2000)",
+              "journal-title": "Theor. Pop. Biol."
+            },
+            {
+              "key": "BFnature00823_CR21",
+              "doi-asserted-by": "crossref",
+              "first-page": "627",
+              "DOI": "10.1093/genetics/91.4.627",
+              "volume": "91",
+              "author": "J Adams",
+              "year": "1979",
+              "unstructured": "Adams, J., Kinney, T., Thompson, S., Rubin, L. & Helling, R. B. Frequency-dependent selection for plasmid-containing cells of Escherichia coli. Genetics 91, 627\u2013637 (1979)",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "BFnature00823_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "6324",
+              "DOI": "10.1073/pnas.78.10.6324",
+              "volume": "78",
+              "author": "L Chao",
+              "year": "1981",
+              "unstructured": "Chao, L. & Levin, B. R. Structured habitats and the evolution of anticompetitor toxins in bacteria. Proc. Natl Acad. Sci. USA 78, 6324\u20136328 (1981)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature00823_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "1270",
+              "DOI": "10.1111/j.1558-5646.1998.tb02008.x",
+              "volume": "52",
+              "author": "M Feldgarden",
+              "year": "1998",
+              "unstructured": "Feldgarden, M. & Riley, M. A. High levels of colicin resistance in Escherichia coli. Evolution 52, 1270\u20131276 (1998)",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "BFnature00823_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "1019",
+              "DOI": "10.1111/j.1558-5646.1999.tb04517.x",
+              "volume": "53",
+              "author": "M Feldgarden",
+              "year": "1999",
+              "unstructured": "Feldgarden, M. & Riley, M. A. The phenotypic and fitness effects of colicin resistance in Escherichia coli K-12. Evolution 53, 1019\u20131027 (1999)",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "BFnature00823_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "655",
+              "DOI": "10.1099/13500872-145-3-655",
+              "volume": "145",
+              "author": "DM Gordon",
+              "year": "1999",
+              "unstructured": "Gordon, D. M. & Riley, M. A. A theoretical and empirical investigation of the invasion dynamics of colicinogeny. Microbiology 145, 655\u2013661 (1999)",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "BFnature00823_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "1569",
+              "DOI": "10.1099/13500872-142-7-1569",
+              "volume": "142",
+              "author": "R James",
+              "year": "1996",
+              "unstructured": "James, R., Kleanthous, C. & Moore, G. R. The biology of E colicins: Paradigms and paradoxes. Microbiology 142, 1569\u20131580 (1996)",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "BFnature00823_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "129",
+              "DOI": "10.1016/S0966-842X(99)01459-6",
+              "volume": "7",
+              "author": "MA Riley",
+              "year": "1999",
+              "unstructured": "Riley, M. A. & Gordon, D. M. The ecological role of bacteriocins in bacterial competition. Trends Microbiol. 7, 129\u2013133 (1999)",
+              "journal-title": "Trends Microbiol."
+            },
+            {
+              "key": "BFnature00823_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "407",
+              "DOI": "10.1038/46540",
+              "volume": "402",
+              "author": "J Huisman",
+              "year": "1999",
+              "unstructured": "Huisman, J. & Weissing, F. J. Biodiversity of plankton by species oscillations and chaos. Nature 402, 407\u2013410 (1999)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature00823_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "408",
+              "DOI": "10.1046/j.1461-0248.2001.00256.x",
+              "volume": "4",
+              "author": "J Huisman",
+              "year": "2001",
+              "unstructured": "Huisman, J., Johansson, A. M., Folmer, E. O. & Weissing, F. J. Towards a solution of the plankton paradox: The importance of physiology and life history. Ecol. Lett. 4, 408\u2013411 (2001)",
+              "journal-title": "Ecol. Lett."
+            },
+            {
+              "key": "BFnature00823_CR30",
+              "volume-title": "Allelopathy",
+              "author": "EL Rice",
+              "year": "1984",
+              "unstructured": "Rice, E. L. Allelopathy (Academic Press, Orlando, 1984)"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nature00823.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature00823",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature00823.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T14:08:00Z",
+            "timestamp": 1684418880000
+          },
+          "score": 67.59016,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature00823"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2002,
+                7
+              ]
+            ]
+          },
+          "references-count": 30,
+          "journal-issue": {
+            "issue": "6894",
+            "published-print": {
+              "date-parts": [
+                [
+                  2002,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature00823"
+          ],
+          "URL": "https://doi.org/10.1038/nature00823",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2002,
+                7
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                30
+              ]
+            ],
+            "date-time": "2022-03-30T04:20:56Z",
+            "timestamp": 1648614056182
+          },
+          "reference-count": 0,
+          "publisher": "American Library Association",
+          "issue": "12",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Choice Reviews Online"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2009,
+                8,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.5860/choice.46-6876",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                1,
+                24
+              ]
+            ],
+            "date-time": "2013-01-24T08:50:30Z",
+            "timestamp": 1359017430000
+          },
+          "page": "46-6876-46-6876",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Rock, paper, scissors: game theory in everyday life"
+          ],
+          "prefix": "10.5860",
+          "volume": "46",
+          "member": "3932",
+          "container-title": [
+            "Choice Reviews Online"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2016,
+                8,
+                11
+              ]
+            ],
+            "date-time": "2016-08-11T20:40:18Z",
+            "timestamp": 1470948018000
+          },
+          "score": 42.312325,
+          "resource": {
+            "primary": {
+              "URL": "http://choicereviews.org/review/10.5860/CHOICE.46-6876"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                8,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "12",
+            "published-print": {
+              "date-parts": [
+                [
+                  2009,
+                  8,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.5860/choice.46-6876",
+          "ISSN": [
+            "0009-4978",
+            "1523-8253"
+          ],
+          "issn-type": [
+            {
+              "value": "0009-4978",
+              "type": "print"
+            },
+            {
+              "value": "1523-8253",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                8,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                9
+              ]
+            ],
+            "date-time": "2026-10-09T17:38:01Z",
+            "timestamp": 1791567481224,
+            "version": "4.3.4"
+          },
+          "reference-count": 31,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7157",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2007,
+                    8,
+                    1
+                  ]
+                ],
+                "date-time": "2007-08-01T00:00:00Z",
+                "timestamp": 1185926400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2007,
+                8
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature06095",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                8,
+                29
+              ]
+            ],
+            "date-time": "2007-08-29T14:53:45Z",
+            "timestamp": 1188399225000
+          },
+          "page": "1046-1049",
+          "source": "Crossref",
+          "is-referenced-by-count": 700,
+          "title": [
+            "Mobility promotes and jeopardizes biodiversity in rock\u2013paper\u2013scissors games"
+          ],
+          "prefix": "10.1038",
+          "volume": "448",
+          "author": [
+            {
+              "given": "Tobias",
+              "family": "Reichenbach",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Mauro",
+              "family": "Mobilia",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Erwin",
+              "family": "Frey",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BFnature06095_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "165",
+              "DOI": "10.1006/jtbi.1996.0292",
+              "volume": "185",
+              "author": "R Durrett",
+              "year": "1997",
+              "unstructured": "Durrett, R. & Levin, S. Allelopathy in spatially distributed populations. J. Theor. Biol. 185, 165\u2013171 (1997)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFnature06095_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "30",
+              "DOI": "10.1006/tpbi.1997.1338",
+              "volume": "53",
+              "author": "R Durrett",
+              "year": "1998",
+              "unstructured": "Durrett, R. & Levin, S. Spatial aspects of interspecific competition. Theor. Pop. Biol. 53, 30\u201343 (1998)",
+              "journal-title": "Theor. Pop. Biol."
+            },
+            {
+              "key": "BFnature06095_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "171",
+              "DOI": "10.1038/nature00823",
+              "volume": "418",
+              "author": "B Kerr",
+              "year": "2002",
+              "unstructured": "Kerr, B., Riley, M. A., Feldman, M. W. & Bohannan, B. J. M. Local dispersal promotes biodiversity in a real-life game of rock-paper-scissors. Nature 418, 171\u2013174 (2002)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature06095_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "786",
+              "DOI": "10.1073/pnas.012399899",
+              "volume": "99",
+              "author": "TL Cz\u00e1r\u00e1n",
+              "year": "2002",
+              "unstructured": "Cz\u00e1r\u00e1n, T. L., Hoekstra, R. F. & Pagie, L. Chemical warfare between microbes promotes biodiversity. Proc. Natl Acad. Sci. USA 99, 786\u2013790 (2002)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature06095_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "97",
+              "DOI": "10.1016/j.physrep.2007.04.004",
+              "volume": "446",
+              "author": "G Szab\u00f3",
+              "year": "2007",
+              "unstructured": "Szab\u00f3, G. & F\u00e1th, G. Evolutionary games on graphs. Phys. Rep. 446, 97\u2013216 (2007)",
+              "journal-title": "Phys. Rep."
+            },
+            {
+              "key": "BFnature06095_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "25",
+              "DOI": "10.1023/A:1000665216662",
+              "volume": "73",
+              "author": "DE Dykhuizen",
+              "year": "1998",
+              "unstructured": "Dykhuizen, D. E. Santa rosalia revisited: Why are there so many species of bacteria? Antonie Van Leeuwenhoek 73, 25\u201333 (1998)",
+              "journal-title": "Antonie Van Leeuwenhoek"
+            },
+            {
+              "key": "BFnature06095_CR7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9780511806292",
+              "volume-title": "Evolution and the Theory of Games",
+              "author": "JM Smith",
+              "year": "1982",
+              "unstructured": "Smith, J. M. Evolution and the Theory of Games (Cambridge Univ. Press, Cambridge, 1982)"
+            },
+            {
+              "key": "BFnature06095_CR8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9781139173179",
+              "volume-title": "Evolutionary Games and Population Dynamics",
+              "author": "J Hofbauer",
+              "year": "1998",
+              "unstructured": "Hofbauer, J. & Sigmund, K. Evolutionary Games and Population Dynamics (Cambridge Univ. Press, Cambdrige, 1998)"
+            },
+            {
+              "key": "BFnature06095_CR9",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.2307/j.ctvjghw98",
+              "volume-title": "Evolutionary Dynamics",
+              "author": "MA Nowak",
+              "year": "2006",
+              "unstructured": "Nowak, M. A. Evolutionary Dynamics (Belknap Press, Cambridge, Massachusetts, 2006)"
+            },
+            {
+              "key": "BFnature06095_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "243",
+              "DOI": "10.1137/0129022",
+              "volume": "29",
+              "author": "RM May",
+              "year": "1975",
+              "unstructured": "May, R. M. & Leonard, W. J. Nonlinear aspects of competition between species. SIAM J. Appl. Math. 29, 243\u2013253 (1975)",
+              "journal-title": "SIAM J. Appl. Math."
+            },
+            {
+              "key": "BFnature06095_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "655",
+              "DOI": "10.1098/rspb.2001.1948",
+              "volume": "269",
+              "author": "CR Johnson",
+              "year": "2002",
+              "unstructured": "Johnson, C. R. & Seinen, I. Selection for restraint in competitive ability in spatial competition systems. Proc. R. Soc. Lond. B 269, 655\u2013663 (2002)",
+              "journal-title": "Proc. R. Soc. Lond. B"
+            },
+            {
+              "key": "BFnature06095_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "051907",
+              "DOI": "10.1103/PhysRevE.74.051907",
+              "volume": "74",
+              "author": "T Reichenbach",
+              "year": "2006",
+              "unstructured": "Reichenbach, T., Mobilia, M. & Frey, E. Coexistence versus extinction in the stochastic cyclic Lotka-Volterra model. Phys. Rev. E 74, 051907 (2006)",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "BFnature06095_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "5160",
+              "DOI": "10.1073/pnas.72.12.5160",
+              "volume": "72",
+              "author": "JBC Jackson",
+              "year": "1975",
+              "unstructured": "Jackson, J. B. C. & Buss, L. Allelopathy and spatial competition among coral reef invertebrates. Proc. Natl Acad. Sci. USA 72, 5160\u20135163 (1975)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature06095_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "240",
+              "DOI": "10.1038/380240a0",
+              "volume": "380",
+              "author": "B Sinervo",
+              "year": "1996",
+              "unstructured": "Sinervo, B. & Lively, C. M. The rock\u2013scissors\u2013paper game and the evolution of alternative male strategies. Nature 380, 240\u2013243 (1996)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature06095_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "412",
+              "DOI": "10.1038/nature02429",
+              "volume": "428",
+              "author": "BC Kirkup",
+              "year": "2004",
+              "unstructured": "Kirkup, B. C. & Riley, M. A. Antibiotic-mediated antagonism leads to a bacterial game of rock\u2013paper\u2013scissors in vivo. Nature 428, 412\u2013414 (2004)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature06095_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "207",
+              "DOI": "10.1086/282900",
+              "volume": "108",
+              "author": "SA Levin",
+              "year": "1974",
+              "unstructured": "Levin, S. A. Dispersion and population interactions. Am. Nat. 108, 207\u2013228 (1974)",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "BFnature06095_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "255",
+              "DOI": "10.1038/353255a0",
+              "volume": "353",
+              "author": "PM Hassell",
+              "year": "1991",
+              "unstructured": "Hassell, P. M., Comins, H. N. & May, R. M. Spatial structure and chaos in insect population dynamics. Nature 353, 255\u2013258 (1991)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature06095_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "354",
+              "DOI": "10.1038/20676",
+              "volume": "399",
+              "author": "B Blasius",
+              "year": "1999",
+              "unstructured": "Blasius, B., Huppert, A. & Stone, L. Complex dynamics and phase synchronization in spatially extended ecological systems. Nature 399, 354\u2013359 (1999)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature06095_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "431",
+              "DOI": "10.1016/S0040-5809(03)00100-X",
+              "volume": "64",
+              "author": "AA King",
+              "year": "2003",
+              "unstructured": "King, A. A. & Hastings, A. Spatial mechanism for coexistence of species sharing a common natural enemy. Theor. Pop. Biol. 64, 431\u2013438 (2003)",
+              "journal-title": "Theor. Pop. Biol."
+            },
+            {
+              "key": "BFnature06095_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "363",
+              "DOI": "10.1006/tpbi.1994.1032",
+              "volume": "46",
+              "author": "R Durrett",
+              "year": "1994",
+              "unstructured": "Durrett, R. & Levin, S. The importance of being discrete (and spatial). Theor. Pop. Biol. 46, 363\u2013394 (1994)",
+              "journal-title": "Theor. Pop. Biol."
+            },
+            {
+              "key": "BFnature06095_CR21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9780511606014",
+              "volume-title": "A Guide to First-Passage Processes",
+              "author": "S Redner",
+              "year": "2001",
+              "unstructured": "Redner, S. A Guide to First-Passage Processes (Cambridge Univ. Press, Cambridge, 2001)"
+            },
+            {
+              "key": "BFnature06095_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "39",
+              "DOI": "10.1016/j.tree.2003.09.007",
+              "volume": "19",
+              "author": "A Hastings",
+              "year": "2004",
+              "unstructured": "Hastings, A. Transients: the key to long-term ecological understanding? Trends Ecol. Evol. 19, 39\u201345 (2004)",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "BFnature06095_CR23",
+              "volume-title": "coli in Motion",
+              "author": "HCE Berg",
+              "year": "2003",
+              "unstructured": "Berg, H. C. E. coli in Motion (Springer, New York, 2003)"
+            },
+            {
+              "key": "BFnature06095_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "4256",
+              "DOI": "10.1073/pnas.0400704101",
+              "volume": "101",
+              "author": "OA Igoshin",
+              "year": "2004",
+              "unstructured": "Igoshin, O. A., Welch, R., Kaiser, D. & Oster, G. Waves and aggregation patterns in myxobacteria. Proc. Natl Acad. Sci. USA 101, 4256\u20134261 (2004)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature06095_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "937",
+              "DOI": "10.1016/S0960-9822(95)00184-9",
+              "volume": "5",
+              "author": "F Siegert",
+              "year": "1995",
+              "unstructured": "Siegert, F. & Weijer, C. J. Spiral and concentric waves organize multicellular Dictyostelium mounds. Curr. Biol. 5, 937\u2013943 (1995)",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "BFnature06095_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "188103",
+              "DOI": "10.1103/PhysRevLett.93.188103",
+              "volume": "93",
+              "author": "R Thul",
+              "year": "2004",
+              "unstructured": "Thul, R. & Falcke, M. Stability of membrane bound reactions. Phys. Rev. Lett. 93, 188103 (2004)",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "BFnature06095_CR27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-662-02377-8",
+              "volume-title": "Handbook of Stochastic Methods",
+              "author": "CW Gardiner",
+              "year": "1983",
+              "unstructured": "Gardiner, C. W. Handbook of Stochastic Methods (Springer, Berlin, 1983)"
+            },
+            {
+              "key": "BFnature06095_CR28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-1-4757-4067-7",
+              "volume-title": "Introduction to Applied Nonlinear Dynamical Systems and Chaos",
+              "author": "S Wiggins",
+              "year": "1990",
+              "unstructured": "Wiggins, S. Introduction to Applied Nonlinear Dynamical Systems and Chaos Ch. 2 and 3 (Springer, New York, 1990)"
+            },
+            {
+              "key": "BFnature06095_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "99",
+              "DOI": "10.1103/RevModPhys.74.99",
+              "volume": "74",
+              "author": "IS Aranson",
+              "year": "2002",
+              "unstructured": "Aranson, I. S. & Kramer, L. The world of the complex Ginzburg-Landau equation. Rev. Mod. Phys. 74, 99\u2013143 (2002)",
+              "journal-title": "Rev. Mod. Phys."
+            },
+            {
+              "key": "BFnature06095_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "1129",
+              "DOI": "10.1126/science.1070582",
+              "volume": "296",
+              "author": "C Hauert",
+              "year": "2002",
+              "unstructured": "Hauert, C., de Monte, S., Hofbauer, J. & Sigmund, K. Volunteering as red queen mechanism for cooperation in public goods games. Science 296, 1129\u20131132 (2002)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature06095_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "403",
+              "DOI": "10.1016/0021-9991(76)90041-3",
+              "volume": "22",
+              "author": "DT Gillespie",
+              "year": "1976",
+              "unstructured": "Gillespie, D. T. A general method for numerically simulating the stochastic time evolution of coupled chemical reactions. J. Comput. Phys. 22, 403\u2013434 (1976)",
+              "journal-title": "J. Comput. Phys."
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nature06095.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature06095",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature06095.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T14:07:43Z",
+            "timestamp": 1684418863000
+          },
+          "score": 41.53233,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature06095"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2007,
+                8
+              ]
+            ]
+          },
+          "references-count": 31,
+          "journal-issue": {
+            "issue": "7157",
+            "published-print": {
+              "date-parts": [
+                [
+                  2007,
+                  8
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature06095"
+          ],
+          "URL": "https://doi.org/10.1038/nature06095",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1089690.544003",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1089690.544966",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2007,
+                8
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

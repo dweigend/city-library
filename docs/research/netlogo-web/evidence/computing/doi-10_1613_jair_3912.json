@@ -1,0 +1,184 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          5
+        ]
+      ],
+      "date-time": "2026-11-05T18:02:48Z",
+      "timestamp": 1793901768577,
+      "version": "4.8.0"
+    },
+    "reference-count": 0,
+    "publisher": "AI Access Foundation",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "jair"
+    ],
+    "abstract": "<jats:p>In this article we introduce the Arcade Learning Environment (ALE): both a challenge problem and a platform and methodology for evaluating the development of general, domain-independent AI technology.  ALE provides an interface to hundreds of Atari 2600 game environments, each one different, interesting, and designed to be a challenge for human players.  ALE presents significant research challenges for reinforcement learning, model learning, model-based planning, imitation learning, transfer learning, and intrinsic motivation.  Most importantly, it provides a rigorous testbed for evaluating and comparing approaches to these problems.  We illustrate the promise of ALE by developing and benchmarking domain-independent agents designed using well-established AI techniques for both reinforcement learning and planning.  In doing so, we also propose an evaluation methodology made possible by ALE, reporting empirical results on over 55 different games.  All of the software, including the benchmark agents, is publicly available.\n</jats:p>",
+    "DOI": "10.1613/jair.3912",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2018-07-18T09:56:24Z",
+      "timestamp": 1531907784000
+    },
+    "page": "253-279",
+    "source": "Crossref",
+    "is-referenced-by-count": 1031,
+    "title": [
+      "The Arcade Learning Environment: An Evaluation Platform for General Agents"
+    ],
+    "prefix": "10.1613",
+    "volume": "47",
+    "author": [
+      {
+        "given": "M. G.",
+        "family": "Bellemare",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Y.",
+        "family": "Naddaf",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J.",
+        "family": "Veness",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "M.",
+        "family": "Bowling",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "16860",
+    "published-online": {
+      "date-parts": [
+        [
+          2013,
+          6,
+          14
+        ]
+      ]
+    },
+    "container-title": [
+      "Journal of Artificial Intelligence Research"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://jair.org/index.php/jair/article/download/10819/25823",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://jair.org/index.php/jair/article/download/10819/25822",
+        "content-type": "application/postscript",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://jair.org/index.php/jair/article/download/10819/25823",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          10,
+          16
+        ]
+      ],
+      "date-time": "2019-10-16T18:29:06Z",
+      "timestamp": 1571250546000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://jair.org/index.php/jair/article/view/10819"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          6,
+          14
+        ]
+      ]
+    },
+    "references-count": 0,
+    "URL": "https://doi.org/10.1613/jair.3912",
+    "relation": {},
+    "ISSN": [
+      "1076-9757"
+    ],
+    "issn-type": [
+      {
+        "value": "1076-9757",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2013,
+          6,
+          14
+        ]
+      ]
+    }
+  }
+}

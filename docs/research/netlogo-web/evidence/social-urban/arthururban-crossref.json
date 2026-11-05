@@ -1,0 +1,3382 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Urban+systems+and+historical+path+dependence+Arthur+1988&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 7783559,
+      "items": [
+        {
+          "institution": [
+            {
+              "id": [
+                {
+                  "id": "https://ror.org/013cjyk83",
+                  "id-type": "ROR",
+                  "asserted-by": "publisher"
+                }
+              ],
+              "name": "Universit\u00e9 Paris sciences et lettres"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                30
+              ]
+            ],
+            "date-time": "2026-09-30T06:54:48Z",
+            "timestamp": 1790751288157,
+            "version": "4.1.0"
+          },
+          "reference-count": 345,
+          "publisher": "Agence Bibliographique de l'Enseignement Sup\u00e9rieur",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "abstract": "<jats:title>Le sentier non emprunt\u00e9 : application d\u2019un cadre de d\u00e9pendance au sentier aux processus historiques de d\u00e9croissance urbaine et \u00e0 l\u2019urbanisme institutionnel \u00e0 Sheffield et Saint-\u00c9tienne</jats:title>\n                <jats:p xml:lang=\"fr\">De nombreuses villes et r\u00e9gions ne r\u00e9pondent pas \u00e0 une dynamique de croissance, et font face \u00e0 une d\u00e9croissance d\u00e9mographique et \u00e9conomique, ce qui interroge la mani\u00e8re dont ces villes ont fait face \u00e0 ce d\u00e9clin dans le temps. Au prisme de l\u2019institutionnalisme historique, cette th\u00e8se adopte un cadre de d\u00e9pendance au sentier - qui s\u2019appuie sur les concepts de tournant d\u00e9cisif et r\u00e9troaction positive - afin d\u2019offrir une analyse int\u00e9gr\u00e9e, prenant en compte les dimensions temporelles, scalaires et spatiales de la d\u00e9croissance pour expliquer le r\u00f4le des processus urbains historiques sur cette d\u00e9croissance de mani\u00e8re diachronique. \u00c0 travers une approche ancr\u00e9e dans l\u2019espace des th\u00e9ories de d\u00e9pendance au sentier, un mod\u00e8le multidimensionnel est mobilis\u00e9 pour l\u2019examen de deux villes ayant fait face \u00e0 un long d\u00e9clin, Sheffield and Saint-\u00c9tienne, consid\u00e9rant \u00e0 la fois le contexte plus large autour de ces villes et le r\u00f4le de l\u2019urbanisme institutionnel local. Cette comparaison entre deux pays r\u00e9v\u00e8le que la d\u00e9croissance \u00e9tait in\u00e9vitable dans une certaine mesure, \u00e0 la lumi\u00e8re de la nature \u00e9conomique et institutionnel de ces villes et la mani\u00e8re dont l\u2019histoire a pes\u00e9 sur leurs caract\u00e9ristiques urbaines et socio-\u00e9conomiques, ainsi que des \u00e9v\u00e8nements exog\u00e8nes et stochastiques et le r\u00f4le d\u2019acteurs ext\u00e9rieurs \u00e0 ces villes. N\u00e9anmoins, les discours institutionnels locaux et les d\u00e9cisions prises ont eu une incidence sur l\u2019ampleur des ph\u00e9nom\u00e8nes de d\u00e9croissance dans les villes \u00e9tudi\u00e9es, soit par manque de prise de d\u00e9cision (le sentier non emprunt\u00e9) soit par la prise de d\u00e9cisions inappropri\u00e9es, les enfermant dans une d\u00e9pendance au sentier.</jats:p>",
+          "DOI": "10.70675/52268345z2c88z4584z9ea6zac4299c5e7db",
+          "type": "dissertation",
+          "created": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                8
+              ]
+            ],
+            "date-time": "2026-04-08T23:47:01Z",
+            "timestamp": 1775692021000
+          },
+          "approved": {
+            "date-parts": [
+              [
+                2024,
+                12,
+                6
+              ]
+            ]
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "The path not taken : applying a path dependence framework to historical urban shrinkage processes and planning institutions in Sheffield and Saint-\u00c9tienne"
+          ],
+          "prefix": "10.70675",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-5224-7895",
+              "authenticated-orcid": false,
+              "given": "Victoria",
+              "family": "Pinoncely",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "id": [
+                    {
+                      "id": "https://ror.org/013cjyk83",
+                      "id-type": "ROR",
+                      "asserted-by": "publisher"
+                    }
+                  ],
+                  "name": "Universit\u00e9 Paris sciences et lettres"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "51494",
+          "reference": [
+            {
+              "key": "224267_374_13",
+              "unstructured": "Hamilton Fazey I., Financial Times Survey: Sheffield, in: Financial Times, Sheffield City Archives",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_376_18",
+              "unstructured": "McKinnon D., 'Left-Behind' Places, Regional Inequalities and 'Levelling Up', 2021",
+              "type": "other"
+            },
+            {
+              "key": "224267_376_12",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Martin R., Pike A., Sunley P., Tyler P., Gardiner B., 'Levelling up' the UK: Reinforcing the policy agenda, in: Regional Studies, Regional Science, vol. 9, n\u00b0 1, p. 794-817, 2022, 10.1080/21681376.2022.2150562",
+              "DOI": "10.1080/21681376.2022.2150562",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_381_6",
+              "unstructured": "Sheffield Welcomes, (914.274 SQ), Sheffield Local Studies Library",
+              "type": "other"
+            },
+            {
+              "key": "224267_369_5",
+              "unstructured": "British Land, 1990-2015 Meadowhall Review 2015, 2016, https://www.britishland.com/media/Ohleitxq/meadowhall-review-2015.pdf",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_7",
+              "unstructured": "Elie B., 2 856 licenciements \u00e0 Manufrance et \u00e0 Paris-Outreou (Boulogne-sur-Mer), in: Le Monde, 1978, https://www.lemonde.fr/archives/article/1978/11/30/2-856-licenciements-a-manufrance-et-a-paris-outreou-boulogne-sur-mer_2995983_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_11",
+              "unstructured": "Tibi J., 700.000 habitants en 2000? Rien n'est moins s\u00fbr, Archives municipales de Saint-\u00c9tienne",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_5",
+              "unstructured": "Sheffield City Council, A City Centre for the People: Sheffield Central Area Local Plan (309.26 SQ), Sheffield Local Studies Library.",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_11",
+              "unstructured": "Sheffield City Council: Department of Employment and Economic Development, A Guide To The Department (2006/126), Sheffield City Archives., 1986",
+              "type": "other"
+            },
+            {
+              "key": "224267_382_6",
+              "unstructured": "Thermeau G.-M., A l'aube de la r\u00e9volution industrielle Saint-Etienne et son agglom\u00e9ration, Presses Universitaires de Saint-Etienne, 2002",
+              "type": "book"
+            },
+            {
+              "key": "224267_367_0",
+              "unstructured": "A la suite de l'annulation de plusieurs d\u00e9cisions municipales par la justice M. Dubanchet (UDF-CDS) se d\u00e9met de son mandat de maire de Saint-Etienne, in: Le Monde, 1994, https://www.lemonde.fr/archives/article/1994/04/23/a-la-suite-de-l-annulation-de-plusieurs-decisions-municipales-par-la-justice-m-dubanchet-udf-cds-se-demet-de-son-mandat-de-maire-de-saint-etienne_3823847_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_372_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "D\u00f6ringer S., Uchiyama Y., Penker M., Kohsaka R., A meta-analysis of shrinking cities in Europe and Japan. Towards an integrative research agenda, in: European Planning Studies, vol. 28, n\u00b0 9, p. 1693-1712, 2020, 10.1080/09654313.2019.1604635",
+              "DOI": "10.1080/09654313.2019.1604635",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_376_0",
+              "unstructured": "Levi M., A Model, a Method, and a Map: Rational Choice in Comparative and Historical Analysis, in: Comparative Politics: Rationality, Culture and Structure, Lichbach M. I. (Editeurs), Zuckerman A. S. (Editeurs), p. 19-41, Cambridge University Press, 1997",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_372_2",
+              "unstructured": "Drabble M., A Novelist in a Derelict City, in: The New York Times, 1985, https://www.nytimes.com/1985/04/14/magazine/a-novelist-in-a-derelict-city.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_384_9",
+              "unstructured": "Zappi S., A Saint-Etienne, le centre-ville min\u00e9 par la pauvret\u00e9, in: Le Monde, 2014, https://www.lemonde.fr/societe/article/2014/12/08/a-saint-etienne-le-centre-ville-mine-par-la-pauvrete_4536458_3224.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_370_7",
+              "unstructured": "Collectif, A Saint-Etienne, pauvret\u00e9 n'est pas une fatalit\u00e9, in: Le Monde, 2014, https://www.lemonde.fr/idees/article/2014/12/19/a-saint-etienne-pauvrete-n-est-pas-une-fatalite_4543998_3232.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_383_2",
+              "unstructured": "van den Berg L., Drewett R., Klaassen L. H., Rossi A., Vijverberg C. H. T., A Study of Growth and Decline, Pergamon, 1982, 10.1016/B978-0-08-023156-3.50003-6",
+              "type": "book"
+            },
+            {
+              "key": "224267_373_10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Friedrichs J., A Theory of Urban Decline: Economy, Demography and Political Elites, in: Urban Studies, vol. 30, n\u00b0 6, p. 907-917, 1993",
+              "DOI": "10.1080/00420989320080851",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_380_13",
+              "unstructured": "Sheffield Development Corporation, A Vision for the Lower Don Valley\u2014Planning Development Framework (711.5 SQ), Sheffield Local Studies Library., 1990",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_6",
+              "unstructured": "Sheffield City Council, A Vision for the Millennium (711.5 SF), Sheffield Local Studies Library., 1995",
+              "type": "other"
+            },
+            {
+              "key": "224267_377_8",
+              "unstructured": "Morel-Doridat F., Am\u00e9nagement et d\u00e9croissance territoriale, vers une approche transfrontali\u00e8re, Universit\u00e9 de Lorraine, 2021, https://theses.fr/2021LORR0248",
+              "type": "dissertation"
+            },
+            {
+              "key": "224267_380_10",
+              "unstructured": "Sheffield City Council Central Policy Unit, An Employment and Environmental Plan for The Lower Don Valley, Sheffield (309.26 SQ), Sheffield City Archives., 1984",
+              "type": "other"
+            },
+            {
+              "key": "224267_378_17",
+              "unstructured": "Pumain D., An evolutionary theory of urban systems, in: International and transnational perspectives on urban systems, Rozenblat C. (Editeurs), Pumain D. (Editeurs), Velasquez E. (Editeurs), p. 17-38, Springer., 2018",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_381_21",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Tasan-Kok T., Analysing Path Dependence to Understand Divergence: Investigating Hybrid, 2015",
+              "DOI": "10.1080/09654313.2015.1018458",
+              "type": "other"
+            },
+            {
+              "key": "224267_375_5",
+              "unstructured": "INRA, IFSTTAR, Artificialised land and artificialisation processes: Determinants, impacts and potential responses, 2017, https://www.inrae.fr/sites/default/files/pdf/artificialisation-des-sols-resume-8-p-en-anglais-1.pd",
+              "type": "other"
+            },
+            {
+              "key": "224267_378_2",
+              "unstructured": "Oswalt P., Rieniets T., Atlas of shrinking cities, Hatje Cantz, 2006",
+              "type": "book"
+            },
+            {
+              "key": "224267_381_16",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Storper M., Manville M., Behaviour, Preferences and Cities: Urban Theory and Urban Resurgence, in: Urban Studies, vol. 43, n\u00b0 8, p. 1247-1274, 2006",
+              "DOI": "10.1080/00420980600775642",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_368_9",
+              "unstructured": "Blunkett D., Believing in Sheffield, Royal Town Planning Institute Annual Conference and Exhibition, Sheffield City Hall, 1990",
+              "type": "other"
+            },
+            {
+              "key": "224267_374_10",
+              "unstructured": "Hall S., Between state and market: A brief history of urban regeneration in England, 2015, https://uwe-repository.worktribe.com/OutputFile/833244",
+              "type": "other"
+            },
+            {
+              "key": "224267_371_15",
+              "unstructured": "Department of Employment and Economic Development, Business and Technology Development Programme\u2014Project Progress 1987/1988 (2006/126), Sheffield City Archives., 1988",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_12",
+              "unstructured": "Bonilla M., Tomas F., Vallat-Fabre D., Cartes & plans: Saint-\u00c9tienne du XVIIIe si\u00e8cle \u00e0 nos jours, 200 ans de repr\u00e9sentation d'une ville industrielle, Presses Universitaires de Saint-\u00c9tienne, 2005",
+              "type": "book"
+            },
+            {
+              "key": "224267_373_17",
+              "unstructured": "George A. L., Bennett A., Case studies and theory development in the Social Sciences, (MIT Press), 2005",
+              "type": "book"
+            },
+            {
+              "key": "224267_384_6",
+              "unstructured": "Yin R. K., Case Study Research and Applications: Design and Methods (Sage), 2018",
+              "type": "book"
+            },
+            {
+              "key": "224267_369_11",
+              "unstructured": "Casino annonce que 1 300 \u00e0 plus de 3 200 postes sont menac\u00e9s au sein du groupe., in: Le Monde, 2024, https://www.lemonde.fr/economie/article/2024/04/24/casino-annonce-que-1-300-a-plus-de-3-200-postes-sont-menaces-au-sein-du-groupe_6229583_3234.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_377_1",
+              "unstructured": "Mediapart, Chantage \u00e0 la sextape \u00e0 la mairie de Saint-Etienne, 2022, https://evenements.mediapart.fr/enquete-video-st-etienne",
+              "type": "other"
+            },
+            {
+              "key": "224267_377_13",
+              "unstructured": "Nahassia L., Gravier J., Michelet D., Verdier N., Olteanu M., Chapitre 3: Processus, in: Le temps long du peuplement: Concepts et mots cl\u00e9s, Sanders L. (Editeurs), Bretagnolle A. (Editeurs), Brun P. (Editeurs), Ozouf-Marignier M.-V. (Editeurs), Verdier N. (Editeurs), p. 89-105, Presses Universitaires Fran\u00e7ois Rabelais., 2020",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_371_1",
+              "unstructured": "Cretin C., Cinqui\u00e8me partie: Le 5e \u00e9l\u00e9ment, les hommes, in: Gen\u00e8se d'une ville\u2014Saint-\u00c9tienne histoire et perspectives du pays st\u00e9phanois, p. 160-215, TV and CO communication, 2001",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_379_15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sassen S., Cities in a World Economy, Pine Forge Press., 2000",
+              "DOI": "10.4135/9781446218310.n19",
+              "type": "book"
+            },
+            {
+              "key": "224267_375_10",
+              "unstructured": "Jones A., Matthews C., Cities of the North (307.7609 S), Five Leaves Publications; Sheffield Local Studies Library., 2016",
+              "type": "book"
+            },
+            {
+              "key": "224267_378_3",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Paddison R., City Marketing, Image Reconstruction and Urban Regeneration, in: Urban Studies, vol. 30, n\u00b0 2, p. 339-349, 1993, 10.1080/00420989320080331",
+              "DOI": "10.1080/00420989320080331",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_380_4",
+              "unstructured": "Sheffield City Council, City of Sheffield General Development Plan map (E6), Sheffield Local Studies Library., 1947",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_3",
+              "unstructured": "Sheffield Publicity Department, City Promotion Committee 29th Nov 1973 to 2nd May 1980; Industrial Development and City Promotion Committee 21st May 1980 to 8th May 1981 (CA-VAC/49), Sheffield City Archives",
+              "type": "other"
+            },
+            {
+              "key": "224267_367_1",
+              "unstructured": "Abercrombie P., Civic Survey and Suggestions for a Development Plan (914.274 SQ), The University Press of Liverpool Limited, Hodder and Stoughton Limited, London; Sheffield Local Studies Library., 1924",
+              "type": "book"
+            },
+            {
+              "key": "224267_371_9",
+              "unstructured": "David P. A., Clio and the Economics of QWERTY, in: American Economic Review, vol. 75, n\u00b0 2, p. 332-337, 1985",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_379_3",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Robinson J., Comparative Urbanism: New Geographies and Cultures of Theorizing the Urban: DEBATES & DEVELOPMENTS, in: International Journal of Urban and Regional Research, vol. 40, n\u00b0 1, p. 187-199, 2016, 10.1111/1468-2427.12273",
+              "DOI": "10.1111/1468-2427.12273",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_373_1",
+              "unstructured": "Compl\u00e9mentarit\u00e9 de l'a\u00e9roport de Saint-\u00c9tienne Bouth\u00e9on avec Lyon-St-Exup\u00e9ry, Grenoble St-Geoirs et Clermont-Auvergne. Contribution \u00e0 la Directive Territoriale d'Am\u00e9nagement de l'Aire M\u00e9tropolitaine Lyonnaise (EPU 01 012 b), EPURES, 2001",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_15",
+              "unstructured": "EPURES, Compte-rendu de la r\u00e9union du comit\u00e9 d'assistance technique du 7 mai 1975, Archives municipales de Saint-\u00c9tienne, 1975",
+              "type": "other"
+            },
+            {
+              "key": "224267_374_6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Haase A., Rink D., Grossmann K., Bernt M., Mykhnenko V., Conceptualizing Urban Shrinkage, in: Environment and Planning A: Economy and Space, vol. 46, n\u00b0 7, p. 1519-1534, 2014, 10.1068/a46269",
+              "DOI": "10.1068/a46269",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_370_12",
+              "unstructured": "Conf\u00e9rence R\u00e9gion St\u00e9phanoise EPURES, Saint-\u00c9tienne M\u00e9tropole Forez Sud, Pays du Gier, Conf\u00e9rence intercommunautaire pour un projet de territoire de la R\u00e9gion st\u00e9phanoise (EPU 00 027), Base documentaire EPURES, 2000",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_15",
+              "unstructured": "Stinchcombe A. L., Constructing social theories, Harcourt, Brace & World, 1968",
+              "type": "book"
+            },
+            {
+              "key": "224267_376_6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Maginn P. J., Hubbard P., Coronavirus could turn cities into doughnuts: Empty centres but vibrant suburbs, in: The Conversation, 2020, http://theconversation.com/coronavirus-could-turn-cities-into-doughnuts-empty-centres-but-vibrant-suburbs-151406",
+              "DOI": "10.64628/AB.fndwpnrrp",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_370_14",
+              "unstructured": "County Development Plan (Ist Review) Objections-South Yorkshire (SYCC/WRYCC/1/1/31/21), County Development Plan (Ist Review) Objections\u2014South Yorkshire (SYCC/WRYCC/1/1/31/21), Sheffield City Archives, 1960",
+              "type": "other"
+            },
+            {
+              "key": "224267_377_15",
+              "unstructured": "OECD, Creative Sheffield, in: Organising Local Economic Development: The Role of Development Agencies and Companies, p. 343-358, OCDE., 2010, 10.1787/9789264083530-19-en",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_380_9",
+              "unstructured": "Sheffield City Council, Cultural Industries Quarter\u2014Action Plan for consultation (711.552.SF), Sheffield Local Studies Library., 1999",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Booth P., Culture, planning and path dependence: Some reflections on the problems of comparison, in: Town Planning Review, 2011, https://doi.org/10.3828/tpr.2011.4",
+              "DOI": "10.3828/tpr.2011.4",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_378_16",
+              "unstructured": "Pullman P., Daemon Voices: Essays on Storytelling, David Fickling Books., 2017",
+              "type": "book"
+            },
+            {
+              "key": "224267_377_7",
+              "unstructured": "Morel Journel C., De la construction du bassin aux enjeux de la m\u00e9moire mini\u00e8re: Les territoires du charbon en r\u00e9gion st\u00e9phanoise (XIX\u00e8me-XX\u00e8me), Universit\u00e9 de Saint-\u00c9tienne, 1999, https://theses.fr/1999STET2062",
+              "type": "dissertation"
+            },
+            {
+              "key": "224267_367_8",
+              "unstructured": "Ashton L., Moss A., Debt linked to Sheffield's World Student Games to be cleared 33 years on, in: BBC, 2024, https://www.bbc.com/news/uk-england-south-yorkshire-68361306",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_368_10",
+              "unstructured": "Blunkett D., Jackson K., Democracy in Crisis: The Town Halls Respond, The Hogarth press, 1987",
+              "type": "book"
+            },
+            {
+              "key": "224267_371_16",
+              "unstructured": "Des actions r\u00e9gionales et urbaines concr\u00e8tes, in: Le Monde, 1965, https://www.lemonde.fr/archives/article/1965/08/03/des-actions-regionales-et-urbaines-concretes_2190136_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_371_10",
+              "unstructured": "Delberghe M., Charbonnier V., Dette toxique: Le maire de Saint-Etienne alerte Bercy, in: Le Monde, 2010, https://www.lemonde.fr/politique/article/2010/12/06/dette-toxique-le-maire-de-saint-etienne-alerte-bercy_1449550_823448.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_376_11",
+              "unstructured": "Martin A.-C., Deuxi\u00e8me partie: La Terre. In Collectif, Gen\u00e8se d'une ville\u2014Saint-\u00c9tienne: Histoire et perspectives du pays st\u00e9phanois, p. 45-73, TV and CO communication, 2001",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_381_5",
+              "unstructured": "Sheffield Town Planning Committee, Development Plan for the City and County Borough of Sheffield: Report of the Survey Written Analysis (914.74 SQ), Sheffield Local Studies Library, 1952",
+              "type": "other"
+            },
+            {
+              "key": "224267_376_16",
+              "unstructured": "Marula X., Dix-huit ans pour relier Firminy \u00e0 Givors, Le Monde, 1970, https://www.lemonde.fr/archives/article/1970/09/10/dix-huit-ans-pour-relier-firminy-a-givors_2673304_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_370_2",
+              "unstructured": "Chavassieux P., D\u00e9-construire la ville: Pour une fabrique urbaine alternative.: Lecture technique et socio-politique de projets de d\u00e9construction \u00e0 Saint-\u00c9tienne, Roubaix et Toulon (1970-2019), Universit\u00e9 de Saint-\u00c9tienne, 2022, https://theses.fr/2022STET0036",
+              "type": "dissertation"
+            },
+            {
+              "key": "224267_379_14",
+              "unstructured": "Sala Pala V., Kaddour R., D\u00e9construire la ville: Pour qui, pour quoi? Repolitiser la d\u00e9croissance et les politiques urbaines., in: (D\u00e9)construire la ville Les villes en d\u00e9croissance, laboratoires d'une production urbaine alternative, Chavassieux P. (Editeurs), Gay G. (Editeurs), Kaddour R. (Editeurs), Morel Journel C. (Editeurs), Sala Pala V. (Editeurs), p. 358-367, Presses Universitaires de Saint-Etienne., 2021",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_383_11",
+              "unstructured": "Ville de Saint-\u00c9tienne, D\u00e9molir...pour a\u00e9rer la ville. Saint-\u00c9tienne Ville Design Le Magazine, 67, 18, 2022",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_373_2",
+              "unstructured": "Cretin C., Micoud A., D\u00e9veloppement p\u00e9riph\u00e9rique et habitat p\u00e9riurbain: Cas de la r\u00e9gion st\u00e9phanoise (EPU 79 006), EPURES, 1979",
+              "type": "other"
+            },
+            {
+              "key": "224267_382_16",
+              "unstructured": "Transform South Yorkshire, East Sheffield Area Development Framework (CA2014/66), Sheffield City Archives",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_3",
+              "unstructured": "Sheffield City Council, Economic & Employment Strategy Steering Group (SYCC ADMIN 10 108 1-2), Sheffield City Archives",
+              "type": "other"
+            },
+            {
+              "key": "224267_375_17",
+              "unstructured": "Lawless P., Economic restructuring and policy response: The case of study of steel and heavy engineering in South Yorkshire (338.94274.SQ), Centre for Regional Economic and Social Research, Sheffield City Polytechnic; Sheffield Local Studies Library., 1991",
+              "type": "other"
+            },
+            {
+              "key": "224267_373_15",
+              "unstructured": "Garreau J., Edge city: Life on the new frontier, Anchor Books, 1992",
+              "type": "book"
+            },
+            {
+              "key": "224267_368_20",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Boschma R., Martin R., Editorial: Constructing an evolutionary economic geography, in: Journal of Economic Geography, vol. 7, n\u00b0 5, p. 537-548, 2007, https://doi.org/10.1093/jeg/lbm021",
+              "DOI": "10.1093/jeg/lbm021",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_383_6",
+              "unstructured": "Vie publique, En quoi consiste l'intercommunalit\u00e9?, 2024, https://www.vie-publique.fr/fiches/270602-en-quoi-consiste-lintercommunalite",
+              "type": "other"
+            },
+            {
+              "key": "224267_382_14",
+              "unstructured": "Tomas F., Entre art urbain et urbanisme, in: Naissance de la ville industrielle: Les Dalgabio en Forez 1760\u20141831, Hardouin-Fugier E., Bringuier H., Martourey A., Tomas F., p. 21-32, Publications de l'Universit\u00e9 de Saint-\u00c9tienne, 1988",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_373_14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Galjaard R., van Wissen L., van Dam K., European Regional Population Decline and Policy Responses: Three Case Studies, in: Built Environment (1978-), vol. 38, n\u00b0 2, p. 293-302, 2012, 10.2148/benv.38.2.293",
+              "DOI": "10.2148/benv.38.2.293",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_371_13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Demazi\u00e8re C., Exploring the creation of the metropolitan city-region government: The cases of England, France and Italy, in: European Planning Studies, vol. 29, n\u00b0 11, p. 2038-2055, 2021, 10.1080/09654313.2021.1923666",
+              "DOI": "10.1080/09654313.2021.1923666",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_377_5",
+              "unstructured": "Miot Y., Face \u00e0 la d\u00e9croissance urbaine, l'attractivit\u00e9 r\u00e9sidentielle? Le cas des villes de tradition industrielle de Mulhouse, Roubaix et Saint-Etienne, Universit\u00e9 de Lille, 2012, https://theses.fr/2012LIL10191",
+              "type": "dissertation"
+            },
+            {
+              "key": "224267_368_13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Bontje M., Facing the challenge of shrinking cities in East Germany: The case of Leipzig, in: GeoJournal, vol. 61, n\u00b0 1, p. 13-21, 2004, https://doi.org/10.1007/s10708-005-0843-2",
+              "DOI": "10.1007/s10708-005-0843-2",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_11",
+              "unstructured": "Halsall M., Fight for survival cools family feuds, in: The Guardian, Sheffield City Archives",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_370_1",
+              "unstructured": "Charbonnier V., Fran\u00e7ois Dubanchet, ancien maire de Saint-Etienne, est mort, in: Le Monde, 2019, https://www.lemonde.fr/disparitions/article/2019/03/27/francois-dubanchet-ancien-maire-de-saint-etienne-est-mort_5442198_3382.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_8",
+              "unstructured": "Thiolli\u00e8re M., Friches Industrielles\u2014Demande de subvention\u2014Quartier des Aci\u00e9ries (6341 W 44), Archives municipales de Saint-\u00c9tienne",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_1",
+              "unstructured": "B\u00e9al V., Morel Journel C., Sala Pala V., From 'Black City' to 'Slum City': The Importance of Image in Saint-\u00c9tienne, in: M\u00e9tropolitiques, vol. 9, 2017",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_379_0",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Rink D., Haase A., Grossmann K., Couch C., Cocks M., From Long-Term Shrinkage to Re-Growth? The Urban Development Trajectories of Liverpool and Leipzig, in: Built Environment, vol. 38, n\u00b0 2, p. 162-168, 2012, 10.2148/benv.38.2.162",
+              "DOI": "10.2148/benv.38.2.162",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_19",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Harvey D., From Managerialism to Entrepreneurialism: The Transformation in Urban, 1989",
+              "DOI": "10.1080/04353684.1989.11879583",
+              "type": "other"
+            },
+            {
+              "key": "224267_375_12",
+              "unstructured": "Kosellec R., Tribe K. (Trans.), Futures Past: On the Semantics of Historical Times, Columbia University Press., 2004",
+              "type": "book"
+            },
+            {
+              "key": "224267_369_10",
+              "unstructured": "Carrier-Reynaud B., F\u00e9lix Faure \u00e0 Saint-\u00c9tienne, in: Cr\u00e9ations et solidarit\u00e9s dans la grande ville ouvri\u00e8re, Collectif (direction), p. 9-37, Presses Universitaires de Saint-\u00c9tienne., 2003",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_377_0",
+              "unstructured": "Geographical Society, Geography Directions, https://blog.geographydirections.com/2021/06/02/left-behind-places-regional-inequalities-and-levelling-up/",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Swyngedouw E., Globalisation or 'glocalisation'? Networks, territories and rescaling, in: Cambridge Review of International Affairs, vol. 17, n\u00b0 1, p. 25-48, 2004, 10.1080/0955757042000203632",
+              "DOI": "10.1080/0955757042000203632",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_367_3",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Amin A., Thrift N., Globalisation, institutions and regional development in Europe, Oxford University Press., 1994",
+              "DOI": "10.1093/oso/9780198289166.001.0001",
+              "type": "book"
+            },
+            {
+              "key": "224267_379_16",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Schatz L., Going for growth and managing decline: The complex mix of planning strategies in Broken Hill, NSW, Australia, in: Town Planning Review, vol. 88, n\u00b0 1, p. 43-57, 2017, 10.3828/tpr.2017.5",
+              "DOI": "10.3828/tpr.2017.5",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_375_0",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Harvey D., Governance in Late Capitalism, in: Geografiska Annaler. Series B, Human Geography, vol. 71, n\u00b0 1, p. 3, 2003, 10.2307/490503",
+              "DOI": "10.1080/04353684.1989.11879583",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_383_10",
+              "unstructured": "Ville de Saint-\u00c9tienne, Grand Projet de Ville\u2014Synth\u00e8se avril 2002 (EPU 02 007b), Base documentaire EPURES, 2002",
+              "type": "other"
+            },
+            {
+              "key": "224267_384_5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Wray I., Great British Plans: Who Made Them and How They Worked, Routledge, 2016",
+              "DOI": "10.4324/9781315644837",
+              "type": "book"
+            },
+            {
+              "key": "224267_378_4",
+              "unstructured": "Pallagst K., Bontje M., Cunningham Sabot E., Fleschurz R., Pallagst K. (Editeurs), Bontje M. (Editeurs), Cunningham Sabot E. (Editeurs), Fleschurz R. (Editeurs), Handbook on Shrinking Cities, Edward Elgar Publishing., 2022",
+              "type": "book"
+            },
+            {
+              "key": "224267_379_11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Rudlin D., Payne V., Montague L., High Street: How our town centres can bounce back from the retail crisis, RIBA Publishing., 2023, https://www.routledge.com/High-Street-How-our-town-centres-can-bounce-back-from-the-retail-crisis/Rudlin-Payne-Montague/p/book/9781914124303",
+              "DOI": "10.4324/9781003410423",
+              "type": "book"
+            },
+            {
+              "key": "224267_377_2",
+              "unstructured": "Merley J., Histoire de Saint-Etienne, Privat, 1990",
+              "type": "book"
+            },
+            {
+              "key": "224267_382_5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Thelen K., Historical institutionalism in comparative politics, in: Annual Review of Political Science, vol. 2, p. 369-404, 1999",
+              "DOI": "10.1146/annurev.polisci.2.1.369",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_381_8",
+              "unstructured": "Skocpol T., Pierson P., Historical Institutionalism in Contemporary Political Science, in: Political Science: State of the Discipline, Katznelson I., Milner H. V. (Eds.), p. 693-721, W.W. Norton, 2002",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_377_3",
+              "unstructured": "Merlin P., Historique de la planification urbaine en france, in: Que sais-je?, p. 58-64, Presses Universitaires de France, 2013",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_377_6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Molotch H., Freudenburg W., Paulsen K. E., History Repeats Itself, But How? City Character, Urban Tradition, and the Accomplishment of Place, in: American Sociological Review, vol. 65, n\u00b0 6, p. 791-823, 2000, 10.2307/2657514",
+              "DOI": "10.1177/000312240006500601",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hartt M. D., How cities shrink: Complex pathways to population decline, in: Cities, vol. 75, p. 38-49, 2018, 10.1016/j.cities.2016.12.005",
+              "DOI": "10.1016/j.cities.2016.12.005",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_377_16",
+              "unstructured": "Office for National Statistics, How the population changed in Sheffield: Census 2021, 2022, https://www.ons.gov.uk/visualisations/censuspopulationchange/E08000019/",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_3",
+              "unstructured": "Vant A., Imagerie et urbanisation: Recherches sur l'exemple st\u00e9phanois, Centre d'Etudes For\u00e9ziennes, 1981",
+              "type": "other"
+            },
+            {
+              "key": "224267_378_18",
+              "unstructured": "Rautenberg M., Images, imaginaires sociaux et op\u00e9rateurs d'imaginaires, in: Saint-\u00c9tienne ville imagin\u00e9e: Mineurs, artistes et habitants, Rautenberg M. (Auteurs), V\u00e9drine C. (Auteurs), p. 9-25, Publications de l'Universit\u00e9 de Saint-\u00c9tienne., 2017",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_367_7",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Arthur W. B., Increasing Returns and Path Dependence in the Economy, University of Michigan Press., 1994",
+              "DOI": "10.3998/mpub.10029",
+              "type": "book"
+            },
+            {
+              "key": "224267_375_18",
+              "unstructured": "Lawless P., Infrastructural Investment, City Marketing and Image in Sheffield: The Context (338.94274.SQ; Paper No. 4; CRESR Unit for Property Research: Urban Transport Investment Studies), Sheffield Hallam University: School of Urban and Regional Studies; Sheffield Local Studies Library., 1993",
+              "type": "other"
+            },
+            {
+              "key": "224267_379_7",
+              "unstructured": "Rose R., Inheritance before choice in public policy, in: Vol. Number 180, Centre for the Study of Public Policy., 1989",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_4",
+              "unstructured": "Cities of Birmingham Leeds, Liverpool, Manchester, Newcastle and Sheffield, Inner Cities 'A Memorable Speech' Commitment to Action to the Prime Minister the Rt Hon James Callaghan MP, to the Secretary of State for the Environment the Rt Hon Peter Shore MP (914.274 SQ), Sheffield City Archives, 1977",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_19",
+              "unstructured": "Warren K., Innovation, Continuity and Adjustment\u2014Themes in Sheffield Economic Development, in: Pittsburgh-Sheffield Sister Cities, Tarr J. A. (Ed.), p. 71-81, Carnergie Mellon University., 1986",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_377_14",
+              "unstructured": "North D. C., Institutions, Institutional Change and Economic Performance, Cambridge University Press., 1990, 10.1017/CBO9780511808678",
+              "type": "book"
+            },
+            {
+              "key": "224267_375_9",
+              "unstructured": "Intermediate Areas: The Hunt Report, vol 303 Cc170-7, 1969, https://api.parliament.uk/historic-hansard/lords/1969/jun/25/intermediate-areas-the-hunt-report",
+              "type": "other"
+            },
+            {
+              "key": "224267_374_0",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Gordon I., Internationalisation and Urban Competition, in: Urban Studies, vol. 36, n\u00b0 5-6, p. 1001-1016, 1999, 10.1111/1468-2427.00126",
+              "DOI": "10.1080/0042098993321",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_368_6",
+              "unstructured": "Binfield C., Introduction, in: The History of the City of Sheffield, 1843-1993, Binfield C., Martin D., Childs R. T., Harper R., Hey D., Tweedale G., vol. 2, p. 1-6, Sheffield Academic Press; Sheffield Local Studies Library, 1993",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_369_9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Carrier M., Demazi\u00e8re C., Introduction: La socio-\u00e9conomie des villes petites et moyennes: Questions th\u00e9oriques et implications pour l'am\u00e9nagement du territoire, in: Revue d'\u00c9conomie R\u00e9gionale & Urbaine, vol. 2, p. 135-149, 2012, 10.3917/reru.122.0135",
+              "DOI": "10.3917/reru.122.0135",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_367_9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Audirac I., Introduction: Shrinking Cities from marginal to mainstream: Views from North America and Europe, in: Cities, vol. 75, p. 1-5, 2018, 10.1016/j.cities.2017.10.012",
+              "DOI": "10.1016/j.cities.2017.10.012",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_368_17",
+              "unstructured": "Bontje M., Musterd S., Pelzer P., Inventive City-Regions: Path Dependence and Creative Knowledge Strategies, Ashgate, 2011",
+              "type": "book"
+            },
+            {
+              "key": "224267_372_17",
+              "unstructured": "EPURES, L'agglom\u00e9ration st\u00e9phanoise et son devenir, sentiments et r\u00e9alit\u00e9s. L'approche des acteurs \u00e9conomiques locaux, coll. Base documentaire EPURES, 1989",
+              "type": "other"
+            },
+            {
+              "key": "224267_376_2",
+              "unstructured": "L'industrie est partie les usines restent, Le Monde, 1988, https://www.lemonde.fr/archives/article/1988/06/22/l-industrie-est-partie-les-usines-restent_4101130_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_376_3",
+              "unstructured": "L'INSEE saisit le procureur de Saint-Etienne \u00e0 propos des r\u00e9sultats du recensement, Le Monde, 1990, https://www.lemonde.fr/archives/article/1990/12/13/l-insee-saisit-le-procureur-de-saint-etienne-a-propos-des-resultats-du-recensement_3981581_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_375_19",
+              "unstructured": "Lazar G., EPURES, F\u00e9d\u00e9ration Nationale des Agences d'Urbanisme, L'intervention de la puissance publique dans le processus de production urbaine: Le cas de l'agglom\u00e9ration st\u00e9phanoise (EPU 1994 009), Base documentaire EPURES., 1994",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_22",
+              "unstructured": "EPURES, L'\u00e9talement urbain en r\u00e9gion st\u00e9phanoise: Note de synth\u00e8se, 1998",
+              "type": "other"
+            },
+            {
+              "key": "224267_367_15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "B\u00e9al V., L'\u00e9volution du gouvernement municipal dans une ville industrielle: Le cas de Saint-\u00c9tienne, in: P\u00f4le Sud, vol. 25, n\u00b0 2, p. 89-105, 2006, 10.3406/pole.2006.1356",
+              "DOI": "10.3406/pole.2006.1356",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_375_13",
+              "unstructured": "La conversion progresse trop lentement dans les bassins houillers du Centre et du Midi., in: Le Monde, https://www.lemonde.fr/archives/article/1969/10/21/la-conversion-progresse-trop-lentement-dans-les-bassins-houillers-du-centre-et-du-midi_2417516_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Cauchi-Duval N., B\u00e9al V., Rousseau M., La d\u00e9croissance urbaine en France: Des villes sans politique, in: Espace populations soci\u00e9t\u00e9s, vol. 2015/3-2016/1, 2016, 10.4000/cps.6112",
+              "DOI": "10.4000/eps.6112",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_15",
+              "unstructured": "Cauchi-Duval N., Cornuau F., Rudolph M., La d\u00e9croissance urbaine en France: Les effets cumulatifs du d\u00e9clin, in: M\u00e9tropolitiques, 2017, https://metropolitiques.eu/La-decroissance-urbaine-en-France,1093.html",
+              "type": "other"
+            },
+            {
+              "key": "224267_367_14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Baudet-Michel S., Paulus F., La d\u00e9croissance urbaine en France: Mise en perspective par les recherches sur les Shrinking Cities et les Syst\u00e8mes urbains, in: D\u00e9clin urbain. La France dans une perspective internationale, Cauchi-Duval N. (Eds.), B\u00e9al V. (Eds.), Rousseau M. (Eds.), p. 129-160, Editions du Croquant., 2021",
+              "DOI": "10.3917/asava.beal.2021.01.0129",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_367_13",
+              "unstructured": "Bauchard P., La France a-t-elle enfin une politique d'am\u00e9nagement de son territoire?, in: Le Monde, 1962, https://www.lemonde.fr/archives/article/1962/01/08/la-france-a-t-elle-enfin-une-politique-d-amenagement-de-son-territoire_2354394_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Taulelle F., La France des villes petites et moyennes, in: La France: Une g\u00e9ographie urbaine, Cailly L., Vanier M., p. 138-154, Armand Colin, 2010",
+              "DOI": "10.3917/arco.caill.2010.01.0149",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_375_14",
+              "unstructured": "La friche industrielle, journ\u00e9es d'\u00e9changes, Saint-\u00c9tienne, 5 et 6 novembre 1987\u2014Pr\u00e9sence du pass\u00e9 pour image de demain. Les actes du colloque (EPU 1987 006)., Base documentaire EPURES., 1987",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_10",
+              "unstructured": "Communaut\u00e9 locale de l'emploi Loire Sud EPURES, La mobilisation des sites industriels anciens: Un enjeu fondamental pour le bassin d'emploi st\u00e9phanois (EPU 83 003), Base documentaire EPURES, 1983",
+              "type": "other"
+            },
+            {
+              "key": "224267_374_9",
+              "unstructured": "Halbwachs M., La m\u00e9moire collective, Presses Universitaires de France, 1950",
+              "type": "book"
+            },
+            {
+              "key": "224267_377_12",
+              "unstructured": "Nadou F., La notion de \"villes interm\u00e9diaires\"-Une approche diff\u00e9renci\u00e9e du r\u00f4le des villes moyennes: Entre structuration territoriale et sp\u00e9cificit\u00e9s socio-\u00e9conomiques. Colloque \u00ab Villes petites et moyennes, un regard renouvel\u00e9 \u00bb, Tours, France., 2010",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_5",
+              "unstructured": "Besset J.-P., La population est en hausse dans les grandes m\u00e9tropoles r\u00e9gionales, in: Le Monde, 1999, https://www.lemonde.fr/archives/article/1999/07/07/la-population-est-en-hausse-dans-les-grandes-metropoles-regionales_3580114_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_12",
+              "unstructured": "Tibi J., La r\u00e9gion st\u00e9phanoise en qu\u00eate d'un SDAU, Archives municipales de Saint-\u00c9tienne",
+              "type": "other"
+            },
+            {
+              "key": "224267_371_8",
+              "unstructured": "Davezies L., La R\u00e9publique et ses territoires: La circulation invisible des richesses, Seuil, 2008",
+              "type": "book"
+            },
+            {
+              "key": "224267_370_16",
+              "unstructured": "CRESAL, Le bassin st\u00e9phanois: Structures \u00e9conomiques et perspectives de d\u00e9veloppement (EPU 1968 005), Base documentaire EPURES, 1968",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_14",
+              "unstructured": "EPURES, Le centre de Saint-\u00c9tienne, Archives municipales de Saint-\u00c9tienne, 1973",
+              "type": "other"
+            },
+            {
+              "key": "224267_371_0",
+              "unstructured": "Cretin C., Le cours Fauriel\u2014Un miroir pour la ville (1850-1998), Presses Universitaires de Saint-Etienne, 1998",
+              "type": "book"
+            },
+            {
+              "key": "224267_373_6",
+              "unstructured": "Florentin D., Paddeu F., Le d\u00e9clin au quotidien: Crise per\u00e7ue et espaces v\u00e9cus \u00e0 Leipzig et Detroit, in: Urbanit\u00e9s, n\u00b0 2, 2013, https://www.revue-urbanites.fr/wp-content/uploads/2013/11/Urbanit%C3%A9s-2-Florentin-Paddeu-2013.pdf",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_1",
+              "unstructured": "Br\u00e9erette G., Le Mus\u00e9e d'art moderne de Saint-Etienne, bilan d'une d\u00e9cennie, in: Le Monde, 1998, https://www.lemonde.fr/archives/article/1998/06/12/le-musee-d-art-moderne-de-saint-etienne-bilan-d-une-decennie_3676491_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_372_12",
+              "unstructured": "EPURES, Le renouvellement du patrimoine immobilier \u00e0 Saint-Etienne, coll. Base documentaire EPURES, 1972",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_4",
+              "unstructured": "Verney-Carron N., Le ruban et l'acier: Les \u00e9lites \u00e9conomiques de la r\u00e9gion st\u00e9phanoise au XIXe si\u00e8cle (1815-1914), Presses Universitaires de Saint-Etienne, 2020",
+              "type": "book"
+            },
+            {
+              "key": "224267_382_10",
+              "unstructured": "Tibi J., Le SDAU de la r\u00e9gion st\u00e9phanoise se pr\u00e9pare cahin-caha, mais l'urbanisme secret est plus vivace que jamais, Archives municipales de Saint-\u00c9tienne",
+              "type": "other"
+            },
+            {
+              "key": "224267_378_9",
+              "unstructured": "Perrot M., Le temps des f\u00e9minismes. Conf\u00e9rence: Le temps des f\u00e9minismes, Sciences Po Paris, 2023",
+              "type": "other"
+            },
+            {
+              "key": "224267_371_12",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Demazi\u00e8re C., Le traitement des petites et moyennes villes par les \u00e9tudes urbaines, in: Espaces et soci\u00e9t\u00e9s, vol. 168-169, n\u00b0 1, p. 17-32, 2017, 10.3917/esp.168.0017",
+              "DOI": "10.3917/esp.168.0017",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_18",
+              "unstructured": "Trigano S., Les 'artistes-habitants' acteurs alternatifs de l'imaginaire st\u00e9phanois, in: Saint-\u00c9tienne ville imagin\u00e9e: Mineurs, artistes et habitants, Rautenberg M., V\u00e9drine C., p. 73-90, Publications de l'Universit\u00e9 de Saint-\u00c9tienne, 2017",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_376_9",
+              "unstructured": "Mandon D., Les barbel\u00e9s de la culture\u2014Saint-Etienne ville ouvri\u00e8re, F\u00e9d\u00e9rop, Saint-\u00c9tienne, 1976",
+              "type": "book"
+            },
+            {
+              "key": "224267_381_14",
+              "unstructured": "Steiner J.-M., Thermeau G.-M., Les maires de la 'grande ville ouvri\u00e8re'. Une autre histoire de Saint-Etienne (1778-2015), coll. Publications de l'Universit\u00e9 de Saint-\u00c9tienne, 2015",
+              "type": "book"
+            },
+            {
+              "key": "224267_379_8",
+              "unstructured": "Rose R., Lesson-drawing in public policy: A guide to learning across time and space, Chatham House., 1993",
+              "type": "book"
+            },
+            {
+              "key": "224267_372_10",
+              "unstructured": "EPURES, Livre blanc de la r\u00e9gion st\u00e9phanoise, Rapport du groupe Z \u2014 D\u00e9veloppement et industrialisation, Saint-\u00c9tienne dans la m\u00e9tropole tric\u00e9phale, Archives municipales de Saint-\u00c9tienne, 1970",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_19",
+              "unstructured": "Borja J., Castells M., Local and Global: The Management of Cities in the Information Age, Routledge, 1997",
+              "type": "book"
+            },
+            {
+              "key": "224267_373_11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Friend J. K., Jessop W. N., Local Government and Strategic Choice: An Operational Research Approach to the Processes of Public Planning, Pergamon Press, 1977",
+              "DOI": "10.1016/B978-0-08-021176-3.50023-7",
+              "type": "book"
+            },
+            {
+              "key": "224267_378_15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Prada-Trigo J., Local strategies and networks as keys for reversing urban shrinkage: Challenges and responses in two medium-size Spanish cities, in: Norsk Geografisk Tidsskrift - Norwegian Journal of Geography, vol. 68, n\u00b0 4, p. 238-247, 2014, 10.1080/00291951.2014.923505",
+              "DOI": "10.1080/00291951.2014.923505",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_375_8",
+              "unstructured": "Insee, Maury S., Lavergne H., Loire: Un tissu industriel de PME en reconversion\u2014Insee Analyses Auvergne-Rh\u00f4ne-Alpes (Rapport 66), 2018, https://www.insee.fr/fr/statistiques/3632331",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_15",
+              "unstructured": "Ville de Saint-\u00c9tienne, Services Techniques, Lotissement du Puits Montmartre\u2014Implantation de la Soci\u00e9t\u00e9 Intravis. Note \u00e0 l'attention de Monsieur Fran\u00e7ois Dubanchet (6341 W 120), Archives municipales de Saint-\u00c9tienne, 1975",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_7",
+              "unstructured": "Ville de Saint-\u00c9tienne, Lotissement industriel rue des Aci\u00e9ries: Demande de subvention (6341 W 44), Archives municipales de Saint-\u00c9tienne, 1984",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_0",
+              "unstructured": "Sheffield Metropolitan City Council, Lower Don Valley District Plan (309.26 SQ), Sheffield Local Studies Library, 1981",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_17",
+              "unstructured": "Sheffield Economic Regeneration Committee, Coopers & Lybrand Associates, Crouch & Hogg, Driver Jonas, Sheffield Polytechnic, Lower Don Valley Final Report (309.26 SQ), Sheffield Local Studies Library., 1987",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_18",
+              "unstructured": "Sheffield Economic Regeneration Committee, Coopers & Lybrand Associates, Crouch & Hogg, Sheffield Polytechnic, Lower Don Valley Study Supplementary Report on Land and Property (309.26 SQ), Sheffield Local Studies Library., 1987",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_1",
+              "unstructured": "Urban Strategies Inc., Lower Don Valley: Vision and Masterplan Study (CA2014/66), Sheffield City Archives, 2004",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_7",
+              "unstructured": "Blackledge R., Memories of Sheffield's National Centre for Popular Music 20 years on \u2013 did you go?, in: The Star, 2020, https://www.thestar.co.uk/heritage-and-retro/heritage/memories-of-sheffields-national-centre-for-popular-music-20-years-on-did-you-go-2848253",
+              "type": "other"
+            },
+            {
+              "key": "224267_377_4",
+              "unstructured": "Merriam Webster, Merriam-Webster.com Dictionary, 2021, https://www.merriam-webster.com/ dictionary/dependence and https:// www.merriam-webster.com/dictionary/dependency",
+              "type": "other"
+            },
+            {
+              "key": "224267_371_2",
+              "unstructured": "Croker S., Dabinett G., Gore T., Haywood R., Hennebury J., Herrington A., Kirkpatrick A., Lawless P., Townroe P., Monitoring the economic and development impact of the Yorkshire supertram 1992-1996 (338.94274.SQ), DETR Environment Transport Regions; Sheffield Hallam University; South Yorkshire Passenger Transport Executive; Sheffield Local Studies Library., 2000",
+              "type": "other"
+            },
+            {
+              "key": "224267_382_0",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Neo-liberal Urban Transformation Processes in Turkey, in: European Planning Studies, vol. 23, n\u00b0 11, p. 2184-2209, 2015, 10.1080/09654313.2015.1018458",
+              "DOI": "10.1080/09654313.2015.1018458",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_379_4",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Ro\u010dak M., Hospers G.-J., Reverda N., New horizons for old industrial areas: Urban shrinkage and social capital in Blaenau Gwent, Wales, in: Urban Research & Practice, p. 1-27, 2019, 10.1080/17535069.2019.1568539",
+              "DOI": "10.1080/17535069.2019.1568539",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_3",
+              "unstructured": "Brenner N., New State Spaces. Urban Governance and the Rescaling of Statehood, Oxford University Press., 2004",
+              "type": "book"
+            },
+            {
+              "key": "224267_378_10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Pierson P., Not Just What, but When: Timing and Sequence in Political Processes, in: Studies in American Political Development, vol. 14, n\u00b0 1, p. 72-92, 2000, 10.1017/S0898588X00003011",
+              "DOI": "10.1017/S0898588X00003011",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_372_16",
+              "unstructured": "EPURES, Note sur l'Ouest st\u00e9phanois, Archives municipales de Saint-\u00c9tienne, 1982",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_16",
+              "unstructured": "Ville de Saint-\u00c9tienne, Services Techniques, Note \u00e0 l'attention du Groupe Travail D\u00e9veloppement \u00c9conomique et urbain (6322 W 1), Archives municipales de Saint-\u00c9tienne, 1994",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_8",
+              "unstructured": "EPASE, Notre p\u00e9rim\u00e8tre de comp\u00e9tence. Etablissement Public d'Am\u00e9nagement de Saint-Etienne, 2023, https://www.epase.fr/notre-perimetre-de-competence/",
+              "type": "other"
+            },
+            {
+              "key": "224267_374_14",
+              "unstructured": "Hampton W., Optimism & Growth 1951-1973., in: The History of the City of Sheffield 1843-1993: Vol. 1: Politics, Binfield C. (Eds.), Childs R. T. (Eds.), Harper R. (Eds.), Hey D. (Eds.), Martin D. (Eds.), Tweedale G. (Eds.), p. 119-149, Sheffield Academic Press., 1993",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_383_13",
+              "unstructured": "Ville de Saint-\u00c9tienne, Pr\u00e9fet de la Loire, ANAH, Op\u00e9rations programm\u00e9es d'am\u00e9lioration de l'habitat de Saint-\u00c9tienne: Pr\u00e9convention d'op\u00e9rations (6322 W 18), Archives municipales de Saint-\u00c9tienne, n.d.",
+              "type": "other"
+            },
+            {
+              "key": "224267_379_2",
+              "unstructured": "Robinson J., Ordinary cities: Between modernity and development, Routledge, 2002",
+              "type": "book"
+            },
+            {
+              "key": "224267_379_6",
+              "unstructured": "Rogers R., Our Towns and Cities: The Future\u2014Full Report, Department for Communities and Local Government., 2000, https://webarchive.nationalarchives.gov.uk/ukgwa/20100807021955/http://www.communities.gov.uk/documents/citiesandregions/pdf/154869.pdf",
+              "type": "other"
+            },
+            {
+              "key": "224267_376_13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Martin R., Sunley P., Path dependence and regional economic evolution, in: Journal of Economic Geography, vol. 6, n\u00b0 4, p. 395-437, 2006, 10.1093/jeg/lbl012",
+              "DOI": "10.1093/jeg/lbl012",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_376_7",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Mahoney J., Path dependence in historical sociology, in: Theory and Society, vol. 29, n\u00b0 4, p. 507-548, 2000, 10.1023/A:1007113830879",
+              "DOI": "10.1023/A:1007113830879",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_373_13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Fuchs G., Path Dependence in Regional Development: What Future for Baden-W\u00fcrttemberg, in: The Hidden Dynamics of Path Dependence: Institutions and Organizations, Schrey\u00f6gg G., Sydow J., p. 178-194, Palgrave Macmillan UK, 2010, 10.1057/9780230274075_11",
+              "DOI": "10.1057/9780230274075_11",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_378_12",
+              "unstructured": "Pinoncely V., Path dependence in shrinking cities: Learning from the past, in: Handbook on Shrinking Cities, Pallagst K. (Editeurs), Bontje M. (Editeurs), Cunningham Sabot E. (Editeurs), Fleschurz R. (Editeurs), p. 40-53, Edward Elgar Publishing., 2022",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_372_6",
+              "unstructured": "Eckert D., Murie A., Musterd S., Musterd S. (direction), Murie A. (direction), Pathways in Europe. In S. Musterd & A. Murie (Eds.), Making Competitive Cities, p. 35-42, Wiley-Blackwell, 2010",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_368_16",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Bontje M., Musterd S., Kov\u00e1cs Z., Murie A., Pathways Toward European Creative-Knowledge City-Regions, in: Urban Geography, vol. 32, n\u00b0 1, p. 80-104, 2011, https://doi.org/10.2747/0272-3638.32.1.80",
+              "DOI": "10.2747/0272-3638.32.1.80",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_0",
+              "unstructured": "Boutet A., Chouraqui J., Mauvoisin M., Petites centralit\u00e9s: Entre desserrement urbain et dynamiques macro-r\u00e9gionales, Commissariat G\u00e9n\u00e9ral \u00e0 l'\u00c9galit\u00e9 des Territoires, 2019, https://agence-cohesion-territoires.gouv.fr/petites-centralites-entre-desserrement-urbain-et-dynamiques-macro-regionales-224",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_12",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sousa S., Pinho P., Planning for Shrinkage: Paradox or Paradigm, in: European Planning Studies, vol. 23, n\u00b0 1, p. 12-32, 2015, https://doi.org/10.1080/09654313.2013.820082",
+              "DOI": "10.1080/09654313.2013.820082",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_381_17",
+              "unstructured": "Sutcliffe A., Planning the British Steel Metropolis: Sheffield since World War II, in: Pittsburgh-Sheffield Sister Cities, Tarr J. A. (Ed.), p. 183-199, Carnegie Mellon University, 1986",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_377_9",
+              "unstructured": "Morelli O., Plans to pedestrianise London's Oxford Street have been announced, in: CN Traveller, 2024, https://www.cntraveller.com/article/plans-to-pedestrianise-londons-oxford-street-have-been-announced",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_378_11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Pierson P., Politics in Time: History, Institutions, and Social Analysis, Princeton University Press., 2004",
+              "DOI": "10.1515/9781400841080",
+              "type": "book"
+            },
+            {
+              "key": "224267_370_6",
+              "unstructured": "Clark T., Postindustrial revolution: What Sheffield can teach us about true levelling up, in: Prospect, 2022, https://www.prospectmagazine.co.uk/ideas/economics/60231/postindustrial-revolution-what-sheffield-can-teach-us-about-true-levelling-up",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_371_3",
+              "unstructured": "Cunningham Sabot E., Pour une \u00e9tude compar\u00e9e des politiques de d\u00e9veloppement \u00e9conomique localis\u00e9, Universit\u00e9 de Saint-\u00c9tienne, 1996, https://theses.fr/1996STET2029",
+              "type": "dissertation"
+            },
+            {
+              "key": "224267_369_6",
+              "unstructured": "Bromley I., Presentation by Creative Sheffield Chief Executive, 2008, https://slideplayer.com/slide/4776463/",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_8",
+              "unstructured": "Blunkett D., Press Statement\u2014Enterprise Zone (2006/126), Sheffield City Archives, n.d.",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_3",
+              "unstructured": "Dubanchet F., Projet de SDAU de juillet 1974: Observations, Archives municipales de Saint-\u00c9tienne, 1974",
+              "type": "other"
+            },
+            {
+              "key": "224267_382_15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Tomas F., Projets urbains et projet de ville. La nouvelle culture urbaine a vingt ans, in: Les Annales de la recherche urbaine, vol. 68, n\u00b0 1, p. 135-143, 1995, 10.3406/aru.1995.1906",
+              "DOI": "10.3406/aru.1995.1906",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_380_19",
+              "unstructured": "Sheffield First Partnership, Putting Sheffield First\u2014Achieving Excellence: A Strategy for Sheffield (338.94274.SQ), Sheffield City Archives., 1999",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_4",
+              "unstructured": "Duke A., Quit: The Power of Knowing When to Walk Away, Penguin Random House, 2022",
+              "type": "book"
+            },
+            {
+              "key": "224267_380_0",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seyd P., Radical Sheffield: From Socialism to Entrepreneurialism, in: Political Studies, vol. 38, n\u00b0 2, p. 335-344, 1990, 10.1111/j.1467-9248.1990.tb01498.x",
+              "DOI": "10.1111/j.1467-9248.1990.tb01498.x",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_372_21",
+              "unstructured": "EPURES, Rapport annuel 1995, orientations 1996, Archives municipales de Saint-\u00c9tienne, 1996",
+              "type": "other"
+            },
+            {
+              "key": "224267_375_6",
+              "unstructured": "Insee, Recensements de la population\u2014S\u00e9ries historiques de population (1876 \u00e0 2019), 2021",
+              "type": "other"
+            },
+            {
+              "key": "224267_373_18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "G\u00f3mez M. V., Reflective images: The case of urban regeneration in Glasgow and Bilbao, in: International Journal of Urban and Regional Research, vol. 22, n\u00b0 1, p. 106-121, 1998",
+              "DOI": "10.1111/1468-2427.00126",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_376_5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "MacKinnon D., Kempton L., O'Brien P., Ormerod E., Pike A., Tomaney J., Reframing urban and regional 'development' for 'left behind' places, in: Cambridge Journal of Regions, Economy and Society, 2021, 10.1093/cjres/rsab034",
+              "DOI": "10.1093/cjres/rsab034",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_375_15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Lang T., G\u00f6rmar F., Lang T. (Eds.), G\u00f6rmar F. (Eds.), Regional and Local Development in Times of Polarisation: Re-thinking Spatial Policies in Europe, Springer Singapore., 2019, 10.1007/978-981-13-1190-1",
+              "DOI": "10.1007/978-981-13-1190-1",
+              "type": "book"
+            },
+            {
+              "key": "224267_383_5",
+              "unstructured": "Vie publique, Relance \u00e9conomique: La planification, une solution?, 2020, https://www.vie-publique.fr/en-bref/275207-relance-economique-la-planification-une-solution",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_0",
+              "doi-asserted-by": "crossref",
+              "unstructured": "B\u00e9al V., Dormois R., Pinson G., Relancer Saint-\u00c9tienne. Conditions institutionnelles et capacit\u00e9 d'action collective dans une ville en d\u00e9clin, in: M\u00e9tropoles, vol. 8, 2010, https://doi.org/10.4000/metropoles.4380",
+              "DOI": "10.4000/metropoles.4380",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_380_7",
+              "unstructured": "Sheffield City Council, Remaking the Heart of the City: Sheffield's bid to the Millennium Commission (711.5 SQ), Sheffield Local Studies Library.",
+              "type": "other"
+            },
+            {
+              "key": "224267_376_4",
+              "unstructured": "Lower Don Valley Officer Working Group, Report to budget sub-committee (2006/126), Sheffield City Archives, 1984",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_5",
+              "unstructured": "City Treasury Sheffield City Council, Report to the City Treasurer\u2014Lower Don Valley: Resource Review and Policy Implications (2006/126), Sheffield City Archives, 1985",
+              "type": "other"
+            },
+            {
+              "key": "224267_374_5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Haase A., Nelle A., Mallach A., Representing urban shrinkage\u2014The importance of discourse as a frame for understanding conditions and policy, in: Cities, vol. 69, p. 95-101, 2017, 10.1016/j.cities.2016.09.007",
+              "DOI": "10.1016/j.cities.2016.09.007",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_373_5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Farthing S. M., Research design in urban planning: A student's guide, SAGE Publications, 2016",
+              "DOI": "10.4135/9781473921375",
+              "type": "book"
+            },
+            {
+              "key": "224267_384_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Wiechmann T., Bontje M., Responding to Tough Times: Policy and Planning Strategies in Shrinking Cities, in: European Planning Studies, vol. 23, n\u00b0 1, p. 1-11, 2015, 10.1080/09654313.2013.820077",
+              "DOI": "10.1080/09654313.2013.820077",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_4",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Haase A., Herfert G., Kabisch S., Steinf\u00fchrer A., Reurbanizing Leipzig (Germany): Context Conditions and Residential Actors (2000-2007), in: European Planning Studies, vol. 20, n\u00b0 7, p. 1173-1196, 2012, 10.1080/09654313.2012.674349",
+              "DOI": "10.1080/09654313.2012.674349",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_379_1",
+              "unstructured": "Edward Lawrenson, Rising from the ashes, in: The Star, Sheffield City Archives, 2000",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_381_7",
+              "unstructured": "Sir William Halcrow and Partners, Rother Valley Park Feasibility Report (711.558 SQ), Sheffield Local Studies Library, 1973",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_19",
+              "unstructured": "EPURES, R\u00e9flexion pour un sch\u00e9ma directeur de la r\u00e9gion st\u00e9phanoise, coll. Base documentaire EPURES, 1992",
+              "type": "other"
+            },
+            {
+              "key": "224267_371_11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Demazi\u00e8re C., R\u00e9formes de la planification spatiale et gestion << durable >> des grandes agglom\u00e9rations: Les cas de l'Angleterre et de la France, in: Revue d'\u00c9conomie R\u00e9gionale & Urbaine, vol. 1, p. 81-100, 2016, 10.3917/reru.161.0081",
+              "DOI": "10.3917/reru.161.0081",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_372_0",
+              "unstructured": "Direction D\u00e9partementale de l'Equipement de la Loire, R\u00e9gion St\u00e9phanoise-Programmation 7\u00e8me plan, Transports urbains, Archives municipales de Saint-\u00c9tienne, 1975",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_8",
+              "unstructured": "Commission municipale d'urbanisme et des affaires \u00e9conomiques, R\u00e9union du 31 mai 1977 (6322 W 2), Archives municipales de Saint-\u00c9tienne, 1977",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_9",
+              "unstructured": "Commission municipale d'urbanisme et des affaires \u00e9conomiques, R\u00e9union du 6 novembre 1979 (6322 W 2), Archives municipales de Saint-\u00c9tienne, 1979",
+              "type": "other"
+            },
+            {
+              "key": "224267_368_11",
+              "unstructured": "Bonilla M., Tomas F., Vallat D., Saint-Etienne au XIXe si\u00e8cle: De Pierre-Antoine Dalgabio \u00e0 Pierre-L\u00e9on Lamaizi\u00e8re, Publications de l'Universit\u00e9 de Saint-\u00c9tienne, 1994",
+              "type": "book"
+            },
+            {
+              "key": "224267_375_7",
+              "unstructured": "Insee, Maury S., Bertrand P., Saint-Etienne M\u00e9tropole: De r\u00e9elles \u00e9volutions, mais toujours des difficult\u00e9s \u00e0 retenir ses habitants (Rapport 14), 2014, https://www.insee.fr/fr/statistiques/1285636",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_17",
+              "unstructured": "Cretin C., Saint-Etienne n'est plus dans Saint-Etienne: Plaidoyer pour un pays urbain, Publications de l'Universit\u00e9 de Saint-\u00c9tienne., 1995",
+              "type": "book"
+            },
+            {
+              "key": "224267_370_0",
+              "unstructured": "Charbonnier V., Saint-Etienne peine \u00e0 trouver les voies de la reconversion, in: Le Monde, 2005, https://www.lemonde.fr/international/article/2005/09/19/saint-etienne-peine-a-trouver-les-voies-de-la-reconversion_690476_3210.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_17",
+              "unstructured": "Charbonnier V., Saint-Etienne renouvelle son tissu \u00e9conomique sans renier son pass\u00e9, in: Le Monde, 1997, https://www.lemonde.fr/archives/article/1997/11/01/saint-etienne-renouvelle-son-tissu-economique-sans-renier-son-passe_3541091_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_18",
+              "unstructured": "Charbonnier V., Saint-Etienne sort laborieusement du cycle de la crise, in: Le Monde, 2001, https://www.lemonde.fr/archives/article/2001/03/01/saint-etienne-sort-laborieusement-du-cycle-de-la-crise_154700_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_379_12",
+              "unstructured": "Sabarly C., Saint-Etienne tente de redorer son image en multipliant les projets urbains, in: Le Monde, 2014, https://www.lemonde.fr/economie/article/2014/01/11/saint-etienne-tente-de-redorer-son-image-en-multipliant-les-projets-urbains_4346418_3234.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_383_14",
+              "unstructured": "Ville de Saint-\u00c9tienne, Saint-\u00c9tienne M\u00e9tropole, \u00c9tablissement Public d'Am\u00e9nagement de Saint-\u00c9tienne, EPURES, Saint-Etienne, construire le projet urbain Horizon 2020. Document de travail: Diagnostic et enjeux (EPU 12 068), Base documentaire EPURES., 2012",
+              "type": "other"
+            },
+            {
+              "key": "224267_373_16",
+              "unstructured": "Gay G., Healy A., Morel Journel C., Sala Pala V., Saint-Etienne, exhiber la pauvret\u00e9 ou r\u00e9clamer le \u00abdroit \u00e0 la ville\u00bb?, in: Le Monde.fr, 2014, https://www.lemonde.fr/le-monde/article/2014/12/19/saint-etienne-exhiber-la-pauvrete-ou-reclamer-le-droit-a-la-ville_5996243_4586753.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_373_9",
+              "unstructured": "Fournial E., Bellet R., Ceysson B., Gutton J.-P., Longeon C., Martourey A., Tomas F., Vant A., Saint-Etienne, Histoire de la ville et ses habitants, Horvath, 1976",
+              "type": "book"
+            },
+            {
+              "key": "224267_382_7",
+              "unstructured": "Thermeau G.-M., Saint-Etienne: Regards d'\u00e9crivains, EMCC, 2013",
+              "type": "book"
+            },
+            {
+              "key": "224267_372_9",
+              "unstructured": "EPURES, Saint-\u00c9tienne 2000: 7 questions, une volont\u00e9: Le Sch\u00e9ma Directeur d'Am\u00e9nagement et d'Urbanisme de la r\u00e9gion st\u00e9phanoise, Archives municipales de Saint-\u00c9tienne, n.d.",
+              "type": "other"
+            },
+            {
+              "key": "224267_376_15",
+              "unstructured": "Martourey A., Saint-\u00c9tienne au d\u00e9but du XIXe si\u00e8cle, in: Naissance de la ville industrielle: Les Dalgabio en Forez 1760-1831, Hardouin-Fugier E., Bringuier H., Martourey A., Tomas F., p. 7-20, Publications de l'Universit\u00e9 de Saint-\u00c9tienne, 1988, https://www.st-etienne.archi.fr/2020/07/02/naissance-de-la-ville-industrielle/",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_378_8",
+              "unstructured": "Perrin M., Saint-\u00c9tienne et sa r\u00e9gion \u00e9conomique: Un type de la vie industrielle en France, (Arrault et Cie), 1937",
+              "type": "book"
+            },
+            {
+              "key": "224267_383_9",
+              "unstructured": "Ville de Saint-\u00c9tienne, Saint-\u00c9tienne le renouveau urbain. Le Moniteur Architecture Amc, 91, Archives municipales de Saint-\u00c9tienne, 1998",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_18",
+              "unstructured": "EPURES, Saint-\u00c9tienne projet urbain, coll. Base documentaire EPURES, 1991",
+              "type": "other"
+            },
+            {
+              "key": "224267_382_13",
+              "unstructured": "Todesco, Saint-\u00c9tienne. L'ancien si\u00e8ge de Casino transform\u00e9 en r\u00e9sidence seniors de luxe, https://www.leprogres.fr/societe/2023/12/28/l-ancien-siege-de-casino-transforme-en-residence-seniors-de-luxe",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_378_19",
+              "unstructured": "R\u00e9gent C., Saint-\u00c9tienne: La fin des mythes?, in: Le Monde, 1982, https://www.lemonde.fr/archives/article/1982/11/27/saint-etienne-la-fin-des-mythes_2898103_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_16",
+              "unstructured": "Chappel P., Saint-\u00c9tienne: MM. Sanguedolce et Durafour pol\u00e9miquent, in: Le Monde, 1977, https://www.lemonde.fr/archives/article/1977/11/14/saint-etienne-mm-sanguedolce-et-durafour-polemiquent_2883417_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_373_4",
+              "unstructured": "Farke A., Salzgitter will und wird nicht schrumpfen \u2013 Wahrnehmungs- und Akzeptanzprobleme im Umgang mit Schrumpfung exemplarisch erlautert an einer Pilotstadt des Stadtumbau West, in: Kommunikative Steuerung des Stadtumbaus: Interessensgegens\u00e4tze, Koalitionen und Entscheidungsstrukturen in schrumpfenden St\u00e4dten, Weiske C., Kabisch S., Hannemann C., p. 185-205, VS Verlag fur Sozialwissenschaften, 2005",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_377_19",
+              "unstructured": "Organisation d'\u00e9tude d'am\u00e9nagement de l'aire m\u00e9tropolitaine Lyon-Saint-\u00c9tienne-Grenoble, Ministre d\u00e9l\u00e9gu\u00e9 aupr\u00e8s du Premier Ministre charg\u00e9 du Plan et de l'Am\u00e9nagement du Territoire, & Minist\u00e8re de l'\u00c9quipement et du Logement, Sch\u00e9ma d'am\u00e9nagement de la m\u00e9tropole Lyon-Saint-\u00c9tienne-Grenoble\u2014Sch\u00e9ma g\u00e9n\u00e9ral d'am\u00e9nagement de la France (5724 W 10), Archives municipales de Saint-\u00c9tienne., 1971",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_11",
+              "unstructured": "EPURES, Sch\u00e9ma directeur d'am\u00e9nagement et d'urbanisme de la r\u00e9gion st\u00e9phanoise: Livre blanc, Archives municipales de Saint-\u00c9tienne, 1970",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_13",
+              "unstructured": "EPURES, Sch\u00e9ma directeur d'am\u00e9nagement et d'urbanisme de la r\u00e9gion st\u00e9phanoise: Project notes, Archives municipales de Saint-\u00c9tienne, 1972",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Soja E. W., Seeking Spatial Justice, University of Minnesota Press., 2010, https://www.upress.umn.edu/book-division/books/seeking-spatial-justice",
+              "DOI": "10.5749/minnesota/9780816666676.001.0001",
+              "type": "book"
+            },
+            {
+              "key": "224267_375_4",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hollander J. B., Pallagst K., Schwarz T., Popper F. J., Shaken, shrinking, hot, impoverished and informal: Emerging research agendas in planning, in: Progress in Planning, vol. 72, n\u00b0 4, p. 195-250, 2009, 10.1016/j.progress.2009.09.001",
+              "DOI": "10.1016/j.progress.2009.09.001",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_380_16",
+              "unstructured": "Sheffield Economic Regeneration Committee, Sheffield 2000 Phase One (309.26 SQ), Sheffield Local Studies Library., 1991",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_15",
+              "unstructured": "Sheffield Development Corporation, Sheffield City Council, British Waterways, Sheffield Canal Basin (711.552.SQ), Sheffield Local Studies Library.",
+              "type": "other"
+            },
+            {
+              "key": "224267_384_7",
+              "unstructured": "York Consulting, Sheffield City Council Sheffield City Airport Economic and Viability Assessment (SYCC/CTTE/13/9), Sheffield City Archives., 2006",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_3",
+              "unstructured": "Chief Executive Sheffield City Council, Sheffield City Council Urban Programme 1990/93 Draft Submission (CA1007/4/7), Sheffield City Archives, 1989",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_12",
+              "unstructured": "Sheffield City region Local Economic Partnership, Oxford Economics, Sheffield City region Baseline report (338.94274.SQ), Sheffield Local Studies Library., 2013",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_15",
+              "unstructured": "Creative Sheffield Sheffield City Council, Yorkshire Forward, English Partnerships, EDAW-AECOM, & ekogen, Sheffield Economic Masterplan (338.94274.SF), Sheffield Local Studies Library., 2008",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_14",
+              "unstructured": "Sheffield Development Corporation, Sheffield Lower Don Valley - The Place to Be. Nine years of change 1988-1997 (338.94274 SF), Sheffield Local Studies Library., 1997",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_1",
+              "unstructured": "Sheffield One Sheffield City Council, English Partnerships, Yorkshire Forward, Sheffield One City Centre Masterplan Executive Summary (711.552.SF), Sheffield Local Studies Library, 2003",
+              "type": "other"
+            },
+            {
+              "key": "224267_373_3",
+              "unstructured": "Evans R., Hutchins M., Meegan R., Parkinson M., Sheffield One Evaluation: Final Report (338.75.SQ), European Institute for Urban Affairs; Sheffield Local Studies Library, 2007",
+              "type": "other"
+            },
+            {
+              "key": "224267_375_11",
+              "unstructured": "Koetter Kim, Associates Ltd., Sheffield One\u2014Sheffield City Centre Regeneration: Masterplan report (711.552.SF), Sheffield Local Studies Library., 2000",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_2",
+              "unstructured": "Sheffield Partnership Limited, KPMG Peat Marwick McLintock, Graham Poulter Partnership PLC, Sheffield Partnership in Action: Draft Report on Image and Marketing Study (338.94274 SQ), Sheffield Local Studies Library, 1988",
+              "type": "other"
+            },
+            {
+              "key": "224267_381_4",
+              "unstructured": "Sheffield Town Planning Committee, Sheffield Replanned (914.74 SQ), Sheffield Town Planning Committee; Sheffield Local Studies Library, 1945",
+              "type": "other"
+            },
+            {
+              "key": "224267_384_0",
+              "unstructured": "Watts H. D., Smithson P. A., White P. E., Watts H. D. (Editeurs), Smithson P. A. (Editeurs), White P. E. (Editeurs), Sheffield Today: An Introduction and Guide (914.274), Department of Geography, University of Sheffield; Sheffield Local Studies Library., 1989",
+              "type": "book"
+            },
+            {
+              "key": "224267_380_8",
+              "unstructured": "Sheffield City Council, Sheffield Unitary Development Plan (309.26.SQ), Sheffield Local Studies Library., 1998",
+              "type": "other"
+            },
+            {
+              "key": "224267_380_20",
+              "unstructured": "Sheffield Libraries Archives and Information, Sheffield's Population Statistics 1086-2001, 2015, https://www.sheffield.gov.uk/sites/default/files/docs/libraries-and-archives/archives-and-local-",
+              "type": "other"
+            },
+            {
+              "key": "224267_384_8",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Zakirova B., Shrinkage at the Urban Fringe: Crisis or Opportunity?, in: Berkeley Planning Journal, vol. 23, n\u00b0 1, 2010, 10.5070/BP323111431",
+              "DOI": "10.5070/BP323111431",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_367_10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Audirac I., Fol S., Martinez-Fernandez C., Shrinking Cities in a Time of Crisis, in: Berkeley Planning Journal, vol. 23, p. 51-57, 2010, 10.5070/BP323111430",
+              "DOI": "10.5070/BP323111430",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_377_17",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Olsen A. K., Shrinking Cities: Fuzzy Concept or Useful Framework?, in: Berkeley Planning Journal, vol. 26, n\u00b0 1, p. 107-131, 2013, 10.5070/BP326115821",
+              "DOI": "10.5070/BP326115821",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_378_5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Pallagst K., Fleschurz R., Nothof S., Uemura T., Shrinking cities: Implications for planning cultures?, in: Urban Studies, vol. 58, n\u00b0 1, p. 164-181, 2021, 10.1177/0042098019885549",
+              "DOI": "10.1177/0042098019885549",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Grossmann K., Bontje M., Haase A., Mykhnenko V., Shrinking cities: Notes for the further research agenda, in: Cities, vol. 35, p. 221-225, 2013",
+              "DOI": "10.1016/j.cities.2013.07.007",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_376_14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Martinez-Fernandez C., Audirac I., Fol S., Cunningham-Sabot E., Shrinking cities: Urban challenges of globalization, in: International Journal of Urban and Regional Research, vol. 36, n\u00b0 2, p. 213-225, 2012",
+              "DOI": "10.1111/j.1468-2427.2011.01092.x",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_367_16",
+              "doi-asserted-by": "crossref",
+              "unstructured": "B\u00e9al V., Cauchi-Duval N., Gay G., Morel Journel C., Sala Pala V., Sociologie de Saint-\u00c9tienne, La D\u00e9couverte., 2020",
+              "DOI": "10.3917/dec.cauchi.2020.01",
+              "type": "book"
+            },
+            {
+              "key": "224267_367_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Albrecht G., Sartore G.-M., Connor L., Higginbotham N., Freeman S., Kelly B., Stain H., Tonna A., Pollard G., Solastalgia: The Distress Caused by Environmental Change, in: Australasian Psychiatry, vol. 15, n\u00b0 1_suppl, p. S95-S98, 2007, 10.1080/10398560701701288",
+              "DOI": "10.1080/10398560701701288",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_381_13",
+              "unstructured": "South Yorkshire County Council, South Yorkshire: An economic and social survey\u2014Volume 3: Conclusions and recommendations (309.1.SQ), Sheffield Local Studies Library, 1976",
+              "type": "other"
+            },
+            {
+              "key": "224267_375_1",
+              "unstructured": "Harvey D., Spaces of Hope, University of California Press, 2000",
+              "type": "book"
+            },
+            {
+              "key": "224267_376_17",
+              "unstructured": "Massey D., Spatial Divisions of Labour: Social Structures and the Geography of Production, Macmillan Education Ltd., 1984",
+              "type": "book"
+            },
+            {
+              "key": "224267_383_17",
+              "unstructured": "von Streit A., Bontje M., dell'Agnese E., Stable Trajectories Towards the Creative Knowledge City? Amsterdam, Munich and Milan, in: Making Competitive Cities, Musterd S. (Eds.), Murie A. (Eds.), p. 43-66, Wiley-Blackwell, 2010",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_371_14",
+              "unstructured": "Department of Employment and Economic Development, Steel in Crisis: Alternatives to Government Policy and the Decline in South Yorkshire's Steel Industry (SYCRO 1761), Sheffield City Archives., 1984",
+              "type": "other"
+            },
+            {
+              "key": "224267_367_5",
+              "unstructured": "APSYS, Steel\u2014Lieu de vie, de shopping et de loisirs. Dossier de presse., 2019, https://www.apsysgroup.com/wp-content/uploads/2019/11/Dossier-de-presse-Steel_-27-Novembre-2019.pdf",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_8",
+              "unstructured": "Ville de Saint-\u00c9tienne, Subvention pour travaux (6341 W 44), Archives municipales de Saint-\u00c9tienne, 1985",
+              "type": "other"
+            },
+            {
+              "key": "224267_377_11",
+              "unstructured": "Musterd S., Murie A., Synthesis: Re-making the competitive city, in: Making Competitive Cities, Musterd S. (Editeurs), Murie A. (Editeurs), p. 329-350, Wiley-Blackwell, 2010",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_381_11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sorensen A., Taking path dependence seriously: An historical institutionalist research agenda in planning history, in: Planning Perspectives, vol. 30, n\u00b0 1, 2015, https://www.tandfonline.com/doi/abs/10.1080/02665433.2013.874299",
+              "DOI": "10.1080/02665433.2013.874299",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_379_13",
+              "unstructured": "Saint-\u00c9tienne M\u00e9tropole, Territoire en projet, Saint-\u00c9tienne M\u00e9tropole (EPU 03 038). Base documentaire EPURES., Chambre de Commerce et d'Industrie Saint-\u00c9tienne/Montbrison, Ville de Saint-\u00c9tienne, & Ville de Saint-Chamond., 2003",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Wacquant L., Slater T., Pereira V. B., Territorial Stigmatization in Action, in: Environment and Planning A: Economy and Space, vol. 46, n\u00b0 6, p. 1270-1280, 2014, 10.1068/a4606ge",
+              "DOI": "10.1068/a4606ge",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_16",
+              "unstructured": "Harman R., Harper R., The Architecture of Sheffield., in: The History of the City of Sheffield\u20141843-1993: Vol. 2: Society, Binfield C. (Eds.), Martin D. (Eds.), Childs R. T. (Eds.), p. 33-64, Sheffield Academic Press., 1993",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_376_10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Mankiw G. N., Weil D. N., The baby boom, the baby bust, and the housing market, in: Regional Science and Urban Economics, vol. 19, p. 235-258, 1989, 10.1016/0166-0462(89)90005-7",
+              "DOI": "10.1016/0166-0462(89)90005-7",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_375_3",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hollander J. B., N\u00e9meth J., The bounds of smart decline: A foundational theory for planning shrinking cities, in: Housing Policy Debate, vol. 21, n\u00b0 3, p. 349-367, 2011, 10.1080/10511482.2011.585164",
+              "DOI": "10.1080/10511482.2011.585164",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_9",
+              "unstructured": "Thorpe A., The Consolidation of a Labour Stronghold\u20141926-1951, in: The History of the City of Sheffield 1843-1993: Vol. 1: Politics, Binfield C. (Editeur), Childs R. T. (Editeur), Harper D. (Editeur), Hey D. (Editeur), Martin D. (Editeur), Tweedale G. (Editeur), vol. 1, p. 85-118, Sheffield Academic Press, 1993",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_380_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sharifi A., Khavarian-Garmsir A. R., The COVID-19 pandemic: Impacts on cities and major lessons for urban planning, design, and management, in: Science of The Total Environment, vol. 749, p. 1-14, 2020, 10.1016/j.scitotenv.2020.142391",
+              "DOI": "10.1016/j.scitotenv.2020.142391",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_17",
+              "unstructured": "Harris J., The death of the department store, in: The Guardian, https://www.theguardian.com/business/2022/feb/10/the-death-of-the-department-store-john-lewis-coles-sheffield",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_7",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hacker J., The Divided Welfare State: The Battle over Public and Private Social Benefits in the United States, Cambridge University Press, Cambridge, 2002",
+              "DOI": "10.1017/CBO9780511817298",
+              "type": "book"
+            },
+            {
+              "key": "224267_382_4",
+              "unstructured": "The JR James Archive, The JR James Archive, collection of historic images, University of Sheffield, https://www.flickr.com/photos/jrjamesarchive/21067911731/",
+              "type": "other"
+            },
+            {
+              "key": "224267_371_6",
+              "unstructured": "Cunningham Sabot E., Ro\u010dak M., The language of shrinking cities: Terminology and translation to describe a new urban regime, in: Handbook on Shrinking Cities, Pallagst K. (Editeur), Bontje M. (Editeur), Cunningham Sabot E. (Editeur), Fleschurz R. (Editeur), p. 9-25, Edward Elgar Publishing, 2022",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_368_4",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Bernt M., The Limits of Shrinkage: Conceptual Pitfalls and Alternatives in the Discussion of Urban Population Loss: Debates & Developments, in: International Journal of Urban and Regional Research, vol. 40, n\u00b0 2, p. 441-450, 2016, https://doi.org/10.1111/1468-2427.12289",
+              "DOI": "10.1111/1468-2427.12289",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_8",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hackworth J., The limits to market-based strategies for addressing land abandonment in shrinking American cities, in: Progress in Planning, vol. 90, p. 1-37, 2014, 10.1016/j.progress.2013.03.004",
+              "DOI": "10.1016/j.progress.2013.03.004",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_376_8",
+              "unstructured": "Mahoney J., The logic of social science, Princeton University Press, 2021",
+              "type": "book"
+            },
+            {
+              "key": "224267_378_0",
+              "unstructured": "Orr D., The Most Misread Poem in America, in: The Paris Review, 2015, https://www.theparisreview.org/blog/2015/09/11/the-most-misread-poem-in-america/",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_368_14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Bontje M., Musterd S., The multi-layered city: The value of old urban profiles, in: Tijdschrift Voor Economische En Sociale Geografie, vol. 99, n\u00b0 2, p. 248-255, 2008, https://doi.org/10.1111/j.1467-9663.2008.00457.x",
+              "DOI": "10.1111/j.1467-9663.2008.00457.x",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_377_10",
+              "unstructured": "Moretti E., The New Geography of Jobs, Houghton Mifflin Harcourt, 2012",
+              "type": "book"
+            },
+            {
+              "key": "224267_384_4",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Woodlief A., The Path-Dependent City, in: Urban Affairs Review, vol. 33, n\u00b0 3, 1998, 10.1177/107808749803300308",
+              "DOI": "10.1177/107808749803300308",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_380_1",
+              "unstructured": "Seyd P., The Political Management of Decline 1973-1993, in: The History of the City of Sheffield 1843-1993: Vol. 1: Politics, Binfield C., Childs R. T., Harper R., Hey D., Martin D., Tweedale G., p. 151-185, Sheffield Academic Press, 1993",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_374_15",
+              "unstructured": "Hampton W. A., The politics of Sheffield: A Study in Urban Government., in: Pittsburgh-Sheffield Sister Cities, Tarr J. A. (Ed.), p. 127-140, Carnergie Mellon University., 1986",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_379_5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Rodr\u00edguez-Pose A., The revenge of the places that don't matter (and what to do about it), in: Cambridge Journal of Regions, Economy and Society, vol. 11, n\u00b0 1, p. 189-209, 2018, 10.1093/cjres/rsx024",
+              "DOI": "10.1093/cjres/rsx024",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_367_4",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Amsden A., The Rise of \"The Rest\": Challenges to the West From Late-Industrializing Economies, Oxford University Press., 2001",
+              "DOI": "10.1093/0195139690.003.0001",
+              "type": "book"
+            },
+            {
+              "key": "224267_369_13",
+              "unstructured": "Castells M., The Rise of the Fourth World, in: The Global Transformations Reader: An Introduction to the Globalization Debate, Held D. (direction), McGrew A. (direction), p. 348-354, Polity Press., 2000",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_369_12",
+              "unstructured": "Castells M., The Rise of the Network Society, vol. 1, Blackwell Publishing., 1996",
+              "type": "book"
+            },
+            {
+              "key": "224267_373_12",
+              "unstructured": "Frost R., The Road Not Taken, The Poetry Foundation, 1915, https://www.poetryfoundation.org/poems/44272/the-road-not-taken",
+              "type": "other"
+            },
+            {
+              "key": "224267_378_1",
+              "unstructured": "Orwell G., The Road to Wigan Pier (2021st ed.), True Sign Publishing House, 1937",
+              "type": "book"
+            },
+            {
+              "key": "224267_376_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Lindblom C. E., The Science of 'Muddling Through', in: Public Administration Review, vol. 19, n\u00b0 2, p. 79, 1959, 10.2307/973677",
+              "DOI": "10.2307/973677",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_367_11",
+              "unstructured": "Baker W., Coulson A., The Sheffield City Council Employment Department (2006/126), Sheffield City Archives., 1985",
+              "type": "other"
+            },
+            {
+              "key": "224267_367_6",
+              "unstructured": "Armytage W. H. G., The Sheffield-Pittsburgh Utopian Axis, in: Pittsburgh-Sheffield Sister Cities, Tarr J. A. (Ed.), p. 13-28, Carnegie Mellon University., 1986",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_378_6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Pallagst K., Mulligan H., Cunningham-Sabot E., Fol S., The shrinking city awakens: Perceptions and strategies on the way to revitalisation?, in: Town Planning Review, vol. 88, n\u00b0 1, p. 9-13, 2017, 10.3828/tpr.2017.1",
+              "DOI": "10.3828/tpr.2017.1",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_20",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Turok I., Mykhnenko V., The trajectories of European cities, 1960-2005, in: Cities, vol. 24, n\u00b0 3, p. 165-182, 2007, 10.1016/j.cities.2007.01.007",
+              "DOI": "10.1016/j.cities.2007.01.007",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_1",
+              "unstructured": "Grabher G., The weakness of strong ties: The lock-in of regional development in the Ruhr area., in: The embedded firm: On the socioeconomics of industrial networks, Grabher G. (Ed.), p. 255-277, Routledge, 1993",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_371_5",
+              "unstructured": "Cunningham Sabot E., Audirac I., Fol S., Martinez-Fernandez C., Theoretical approaches of shrinking cities, in: Shrinking cities\u2014International perspectives and policy implications, p. 14-30, Routledge, 2013",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_370_13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Couch C., Sykes O., B\u00f6rstinghaus W., Thirty years of urban regeneration in Britain, Germany and France: The importance of context and path dependency, in: Progress in Planning, vol. 75, n\u00b0 1, p. 1-52, 2011, 10.1016/j.progress.2010.12.001",
+              "DOI": "10.1016/j.progress.2010.12.001",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_379_17",
+              "unstructured": "Sewell W. H., Three Temporalities: Toward a Sociology of the Event, 1990",
+              "type": "book"
+            },
+            {
+              "key": "224267_369_4",
+              "unstructured": "Bretagnolle A., Paulus F., Pumain D., Time and space scales for measuring urban growth, in: Cybergeo: European Journal of Geography, 2002, 10.4000/cybergeo.3790",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_375_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hoekveld J. J., Time-Space Relations and the Differences Between Shrinking Regions, in: Built Environment, vol. 38, n\u00b0 2, p. 179-195, 2012, 10.2148/benv.38.2.179",
+              "DOI": "10.2148/benv.38.2.179",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Thaler R., Toward a positive theory of consumer choice, in: Journal of Economic Behavior & Organization, vol. 1, n\u00b0 1, p. 39-60, 1980, 10.1016/0167-2681(80)90051-7",
+              "DOI": "10.1016/0167-2681(80)90051-7",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_377_18",
+              "unstructured": "Olsen D. J., Town Planning in London: The Eighteenth & Nineteenth Centuries, Yale University Press., 1964",
+              "type": "book"
+            },
+            {
+              "key": "224267_382_17",
+              "unstructured": "Transform South Yorkshire, Transform South Yorkshire Forward Strategy (CA2014/66), Sheffield City Archives",
+              "type": "other"
+            },
+            {
+              "key": "224267_378_14",
+              "unstructured": "Power A., Pl\u00f6ger J., Winkler A., Transforming cities across Europe (CASE report 49), London School of Economics, CASE., 2008, http://sticerd.lse.ac.uk/case/_new/publications/keyword.asp?keyword=cities",
+              "type": "other"
+            },
+            {
+              "key": "224267_382_19",
+              "unstructured": "Trois villes, trois maires, trois points de vue, in: Le Monde, https://www.lemonde.fr/archives/article/1970/05/20/trois-villes-trois-maires-trois-points-de-vue_2668044_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_381_19",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Syd\u00f6w J., Schrey\u00f6gg G., Understanding Institutional and Organizational Path Dependencies, in: The Hidden Dynamics of Path Dependence\u2014Institutions and Organizations, Syd\u00f6w J. (Eds.), Schrey\u00f6gg G. (Eds.), p. 3-12, Palgrave Macmillan, 2010",
+              "DOI": "10.1057/9780230274075_1",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_368_15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Bontje M., Musterd S., Understanding Shrinkage in European Regions, in: Built Environment, vol. 38, n\u00b0 2, p. 153-161, 2012",
+              "DOI": "10.2148/benv.38.2.153",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_378_7",
+              "unstructured": "Pallandre C., Une grande r\u00e9gion industrielle, in: Le Monde, 1956, https://www.lemonde.fr/archives/article/1956/03/09/une-grande-region-industrielle-par-claude-pallandre-president-de-chambre-de-commerce-de-saint-etienne_3144220_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_382_21",
+              "unstructured": "Une m\u00e9tropole \u00e0 trois t\u00eates: Lyon-Saint-\u00c9tienne-Grenoble., in: Le Monde, 1970, https://www.lemonde.fr/archives/article/1970/05/20/une-metropole-a-trois-tetes-lyon-saint-etienne-grenoble_2668343_1819218.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_381_20",
+              "unstructured": "Syndicat d'initiative de la r\u00e9gion st\u00e9phanoise, Une ville face \u00e0 son avenir: Saint Etienne (6 C 400/997), Archives municipales de Saint-\u00c9tienne",
+              "type": "other"
+            },
+            {
+              "key": "224267_369_2",
+              "unstructured": "Brenas I., Sanquer C., Bissonnier S., Charbonnier G., Depeyre M., Une ville fran\u00e7aise. Saint-\u00c9tienne de 1939 \u00e0 1945, Ville de Saint-\u00c9tienne, Ville d'Art et d'Histoire, 2014",
+              "type": "book"
+            },
+            {
+              "key": "224267_381_9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Smith N., Uneven Development: Nature, Capital and the Production of Space (Third Edition), The University of Georgia Press., 2008",
+              "DOI": "10.1353/book11443",
+              "type": "book"
+            },
+            {
+              "key": "224267_371_7",
+              "unstructured": "Dabinett G., Urban Economic Development Strategies in Sheffield during the 1980s, Sheffield Hallam University: School of Urban and Regional Studies; Sheffield Local Studies Library., 1990",
+              "type": "other"
+            },
+            {
+              "key": "224267_371_17",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Digaetano A., Lawless P., Urban Governance and Industrial Decline: Governing Structures and Policy Agendas in Birmingham and Sheffield, England, and Detroit, Michigan, 1980-1997, in: Urban Affairs Review, vol. 34, n\u00b0 4, p. 546-577, 1999, 10.1177/10780879922184077",
+              "DOI": "10.1177/10780879922184077",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_384_3",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Wolff M., Wiechmann T., Urban growth and decline: Europe's shrinking cities in a comparative perspective 1990-2010, in: European Urban and Regional Studies, vol. 25, n\u00b0 2, p. 122-139, 2018, 10.1177/0969776417694680",
+              "DOI": "10.1177/0969776417694680",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_368_3",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Beauregard R. A., Urban Population Loss in Historical Perspective: United States, 1820-2000, in: Environment and Planning A: Economy and Space, vol. 41, n\u00b0 3, p. 514-528, 2009, https://doi.org/10.1068/a40139a",
+              "DOI": "10.1068/a40139a",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_375_16",
+              "unstructured": "Lawless P., Urban regeneration in Sheffield: From radical intervention to partnership, 1979-1989 (338.94274.SQ; Working Paper No 8), Centre for Regional Economic and Social Research, Sheffield City Polytechnic; Sheffield Local Studies Library., 1990",
+              "type": "other"
+            },
+            {
+              "key": "224267_367_12",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Bartholomae F., Woon Nam C., Schoenberg A., Urban shrinkage and resurgence in Germany, in: Urban Studies, vol. 54, n\u00b0 12, p. 2701-2718, 2017, 10.1177/0042098016657780",
+              "DOI": "10.1177/0042098016657780",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_373_7",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Fol S., Urban Shrinkage and Socio-Spatial Disparities: Are the Remedies Worse than the Disease?, in: Built Environment, vol. 38, n\u00b0 2, p. 259-275, 2012",
+              "DOI": "10.2148/benv.38.2.259",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_384_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Wiechmann T., Pallagst K. M., Urban shrinkage in Germany and the USA: A Comparison of Transformation Patterns and Local Strategies: Urban shrinkage in Germany and the USA, in: International Journal of Urban and Regional Research, vol. 36, n\u00b0 2, p. 261-280, 2012, 10.1111/j.1468-2427.2011.01095.x",
+              "DOI": "10.1111/j.1468-2427.2011.01095.x",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_374_3",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Haase A., Bernt M., Gro\u00dfmann K., Mykhnenko V., Rink D., Varieties of shrinkage in European cities, in: European Urban and Regional Studies, vol. 23, n\u00b0 1, p. 86-102, 2016, 10.1177/0969776413481985",
+              "DOI": "10.1177/0969776413481985",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_371_4",
+              "unstructured": "Cunningham Sabot E., Villes en d\u00e9croissance, \u00ab Shrinking Cities \u00bb, Construction d'un objet international de recherche, Universit\u00e9 Panth\u00e9on-Sorbonne (Paris I), 2012, https://halshs.archives-ouvertes.fr/tel-03184829",
+              "type": "dissertation"
+            },
+            {
+              "key": "224267_379_10",
+              "unstructured": "Rousseau M., Villes post-industrielles: Pour une nouvelle approche, in: M\u00e9tropolitiques, 2013, https://metropolitiques.eu/Villes-post-industrielles-pour-une-nouvelle-approche.html",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_369_8",
+              "unstructured": "Calvert Holland G., Vital Statistics of Sheffield (314.274 S), Robert Tyas; Sheffield Local Studies Library., 1843",
+              "type": "book"
+            },
+            {
+              "key": "224267_368_2",
+              "unstructured": "Beauregard R. A., Voices of Decline: The Postwar Fate of US Cities, Wiley, 2003",
+              "type": "book"
+            },
+            {
+              "key": "224267_383_0",
+              "unstructured": "University of Sheffield, Why a reduction in international students would be bad for cities like Sheffield, 2023, https://www.sheffield.ac.uk/news/why-reduction-international-students-would-be-bad-cities-sheffield",
+              "type": "other"
+            },
+            {
+              "key": "224267_379_9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Rousseau M., \u00ab Bringing politics back in \u00bb: La gentrification comme politique de d\u00e9veloppement urbain ?Autour des \u00ab villes perdantes \u00bb, in: Espaces et soci\u00e9t\u00e9s, vol. 132-133, n\u00b0 1-2, p. 75-90, 2008, 10.3917/esp.132.0075",
+              "DOI": "10.3917/esp.132.0075",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_373_8",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Fol S., Cunningham Sabot E., \u00abD\u00e9clin urbain >> et Shrinking Cities: Une \u00e9valuation critique des approches de la d\u00e9croissance urbaine, in: Annales de g\u00e9ographie, vol. 674, n\u00b0 4, p. 359-383, 2010, 10.3917/ag.674.0359",
+              "DOI": "10.3917/ag.674.0359",
+              "type": "journal-article"
+            },
+            {
+              "key": "224267_372_5",
+              "unstructured": "\u00c9chos dans la presse: La friche industrielle, journ\u00e9es d'\u00e9changes Saint-\u00c9tienne 5 et 6 novembre 1987: pr\u00e9sence du pass\u00e9 pour image de demain, Archives municipales de Saint-\u00c9tienne, 1987",
+              "type": "other"
+            },
+            {
+              "key": "224267_383_12",
+              "unstructured": "Ville de Saint-\u00c9tienne, Dubanchet F., \u00c9ditorial: Saint-\u00c9tienne ne d\u00e9sarme pas. Aujourd'hui Saint-\u00c9tienne, 63, Archives municipales de Saint-\u00c9tienne, 1989",
+              "type": "other"
+            },
+            {
+              "key": "224267_372_20",
+              "unstructured": "EPURES, \u00c9l\u00e9ments de r\u00e9flexion pour un sch\u00e9ma directeur de la r\u00e9gion st\u00e9phanoise, coll. Base documentaire EPURES, 1994",
+              "type": "other"
+            },
+            {
+              "key": "224267_369_7",
+              "unstructured": "Brun P., Robert S., Sanders L., \u00c9mergence, transmission et r\u00e9silience, trois processus cl\u00e9s de l'\u00e9volution des syst\u00e8mes de peuplement, in: Le temps long du peuplement. Concepts et mots-cl\u00e9s, Sanders L. (direction), Bretagnolle A. (direction), Brun P. (direction), Ozouf-Marignier M.-V. (direction), Verdier N. (direction), p. 133, Presses Universitaires Fran\u00e7ois Rabelais., 2020",
+              "type": "book-chapter"
+            },
+            {
+              "key": "224267_373_0",
+              "unstructured": "\u00c9tablissement Public Foncier de l'Ouest Rh\u00f4ne-Alpes\u2014Mission de pr\u00e9figuration: \u00c9tat des lieux du territoire d'intervention EPORA (EPU 1998 002), EPURES, 1998",
+              "type": "other"
+            },
+            {
+              "key": "224267_370_11",
+              "unstructured": "Conf\u00e9rence R\u00e9gion St\u00e9phanoise EPURES, \u00c9tude pr\u00e9alable SCOT Sud Loire: Premiers \u00e9l\u00e9ments de synth\u00e8se. Fiche de questionnements strat\u00e9giques (EPU 01 022), Base documentaire EPURES, 2001",
+              "type": "other"
+            },
+            {
+              "key": "224267_378_13",
+              "unstructured": "Pinoncely V., Schemschat N., \u00catre repr\u00e9sent\u00e9e et se pr\u00e9senter: Comparaison de la couverture m\u00e9diatique et des discours institutionnels des villes, in: Revue de Marketing Territorial, vol. 6, 2021, http://publis-shs.univ-rouen.fr/rmt/index.php?id=580",
+              "type": "journal-article"
+            }
+          ],
+          "contributor": [
+            {
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                null
+              ]
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                30
+              ]
+            ],
+            "date-time": "2026-09-30T05:55:50Z",
+            "timestamp": 1790747750000
+          },
+          "score": 29.849064,
+          "degree": [
+            "Doctorat \u00e8s G\u00e9ographie et am\u00e9nagement",
+            "PhD"
+          ],
+          "resource": {
+            "primary": {
+              "URL": "https://theses.fr/2024UPSLE020"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                null
+              ]
+            ]
+          },
+          "references-count": 345,
+          "alternative-id": [
+            "2024UPSLE020"
+          ],
+          "URL": "https://doi.org/10.70675/52268345z2c88z4584z9ea6zac4299c5e7db"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T00:23:32Z",
+            "timestamp": 1793838212075,
+            "version": "4.6.1"
+          },
+          "publisher-location": "Ann Arbor, MI",
+          "reference-count": 0,
+          "publisher": "University of Michigan Press",
+          "isbn-type": [
+            {
+              "value": "9780472064960",
+              "type": "print"
+            },
+            {
+              "value": "9780472022403",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "DOI": "10.3998/mpub.10029",
+          "type": "monograph",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                22
+              ]
+            ],
+            "date-time": "2016-06-22T10:25:11Z",
+            "timestamp": 1466591111000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 2346,
+          "title": [
+            "Increasing Returns and Path Dependence in the Economy"
+          ],
+          "prefix": "10.3998",
+          "author": [
+            {
+              "given": "W.",
+              "family": "Arthur",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "2393",
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T16:21:32Z",
+            "timestamp": 1793809292000
+          },
+          "score": 28.339283,
+          "resource": {
+            "primary": {
+              "URL": "https://www.fulcrum.org/concern/monographs/tq57nv58m"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780472064960",
+            "9780472022403"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.3998/mpub.10029",
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                4
+              ]
+            ],
+            "date-time": "2026-07-04T07:18:00Z",
+            "timestamp": 1783149480746,
+            "version": "3.54.6"
+          },
+          "reference-count": 78,
+          "publisher": "Elsevier BV",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2026-05-01T00:00:00Z",
+                "timestamp": 1777593600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2026-05-01T00:00:00Z",
+                "timestamp": 1777593600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/legal/tdmrep-license"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2026-05-01T00:00:00Z",
+                "timestamp": 1777593600000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-017"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2026-05-01T00:00:00Z",
+                "timestamp": 1777593600000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-037"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2026-05-01T00:00:00Z",
+                "timestamp": 1777593600000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-012"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2026-05-01T00:00:00Z",
+                "timestamp": 1777593600000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-029"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2026-05-01T00:00:00Z",
+                "timestamp": 1777593600000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-004"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/501100008132",
+              "name": "Universidade Federal de Pernambuco",
+              "doi-asserted-by": "publisher",
+              "id": [
+                {
+                  "id": "10.13039/501100008132",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/501100018802",
+              "name": "Universidade Federal da Para\u00edba",
+              "doi-asserted-by": "publisher",
+              "id": [
+                {
+                  "id": "10.13039/501100018802",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/501100000770",
+              "name": "University of Manchester",
+              "doi-asserted-by": "publisher",
+              "id": [
+                {
+                  "id": "10.13039/501100000770",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/501100007775",
+              "name": "Universidade Cat\u00f3lica de Bras\u00edlia",
+              "doi-asserted-by": "publisher",
+              "id": [
+                {
+                  "id": "10.13039/501100007775",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/501100004586",
+              "name": "Funda\u00e7\u00e3o Carlos Chagas Filho de Amparo \u00e0 Pesquisa do Estado do Rio de Janeiro",
+              "doi-asserted-by": "publisher",
+              "id": [
+                {
+                  "id": "10.13039/501100004586",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "elsevier.com",
+              "sciencedirect.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Journal of Urban Economics"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.jue.2026.103863",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                30
+              ]
+            ],
+            "date-time": "2026-04-30T14:43:32Z",
+            "timestamp": 1777560212000
+          },
+          "page": "103863",
+          "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "special_numbering": "C",
+          "title": [
+            "Old but gold: Historical pathways and path dependence"
+          ],
+          "prefix": "10.1016",
+          "volume": "153",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-9647-6219",
+              "authenticated-orcid": false,
+              "given": "Diogo",
+              "family": "Baerlocher",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0009-0000-4210-5730",
+              "authenticated-orcid": false,
+              "given": "Guilherme",
+              "family": "Lambais",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Eust\u00e1quio",
+              "family": "Reis",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-8819-7546",
+              "authenticated-orcid": false,
+              "given": "Diego Firmino Costa da",
+              "family": "Silva",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-9597-9335",
+              "authenticated-orcid": false,
+              "given": "Henrique",
+              "family": "Veras",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/j.jue.2026.103863_b1",
+              "series-title": "Chapters of Brazil\u2019s Colonial History 1500\u20131800",
+              "author": "Abreu",
+              "year": "1998"
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1085",
+              "DOI": "10.1093/qje/qju016",
+              "article-title": "Trade and the Topography of the Spatial Economy",
+              "volume": "129",
+              "author": "Allen",
+              "year": "2014",
+              "journal-title": "Q. J. Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b3",
+              "series-title": "Persistence and path dependence in the spatial economy",
+              "author": "Allen",
+              "year": "2020"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b4",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.regsciurbeco.2021.103724",
+              "article-title": "Persistence and path dependence: A primer",
+              "volume": "94",
+              "author": "Allen",
+              "year": "2022",
+              "journal-title": "Reg. Sci. Urban Econ."
+            },
+            {
+              "issue": "4",
+              "key": "10.1016/j.jue.2026.103863_b5",
+              "doi-asserted-by": "crossref",
+              "first-page": "820",
+              "DOI": "10.1111/jors.12641",
+              "article-title": "The spatial scope of agglomeration economies in Brazil",
+              "volume": "63",
+              "author": "Almeida",
+              "year": "2023",
+              "journal-title": "J. Reg. Sci."
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b6",
+              "doi-asserted-by": "crossref",
+              "first-page": "727",
+              "DOI": "10.1146/annurev-economics-080218-025643",
+              "article-title": "Weak instruments in instrumental variables regression: Theory and practice",
+              "volume": "11",
+              "author": "Andrews",
+              "year": "2019",
+              "journal-title": "Annu. Rev. Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b7",
+              "series-title": "The Fruits of the Early Globalization: An Iberian Perspective",
+              "first-page": "95",
+              "article-title": "The fruits of El Dorado: The global impact of American precious metals",
+              "author": "Arroyo Abad",
+              "year": "2021"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b8",
+              "article-title": "Vilas e cidades do brasil colonial: ensaio de geografia urbana retrospectiva",
+              "author": "Azevedo",
+              "year": "1956",
+              "journal-title": "Bol. Da Fac. Filos. Let. E Ci\u00eancias Humanas Da Univ. de S\u00e3o Paulo"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b9",
+              "series-title": "Replication data for: \u201cOld But Gold: Historical Pathways and Path Dependence\u201d",
+              "author": "Baerlocher",
+              "year": "2026"
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1455",
+              "DOI": "10.1093/qje/qjz009",
+              "article-title": "Trade, merchants, and the lost cities of the bronze age",
+              "volume": "134",
+              "author": "Barjamovic",
+              "year": "2019",
+              "journal-title": "Q. J. Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b11",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.jue.2020.103317",
+              "article-title": "Cities on pre-columbian paths",
+              "volume": "122",
+              "author": "Barsanetti",
+              "year": "2021",
+              "journal-title": "J. Urban Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b12",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.regsciurbeco.2024.104041",
+              "article-title": "Capital as an anchor of agricultural employment: Evidence from the 1975 frost",
+              "volume": "108",
+              "author": "Barsanetti",
+              "year": "2024",
+              "journal-title": "Reg. Sci. Urban Econ."
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b13",
+              "doi-asserted-by": "crossref",
+              "first-page": "90",
+              "DOI": "10.1162/rest_a_01368",
+              "article-title": "Road end points and city sizes",
+              "volume": "108",
+              "author": "Barsanetti",
+              "year": "2026",
+              "journal-title": "Rev. Econ. Stat."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b14",
+              "doi-asserted-by": "crossref",
+              "first-page": "707",
+              "DOI": "10.1007/s00168-016-0768-3",
+              "article-title": "Industrial scope of agglomeration economies in Brazil",
+              "volume": "56",
+              "author": "Barufi",
+              "year": "2016",
+              "journal-title": "Ann. Reg. Sci."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b15",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.worlddev.2019.104739",
+              "article-title": "The brasilia experiment: the heterogeneous impact of road access on spatial development in Brazil",
+              "volume": "127",
+              "author": "Bird",
+              "year": "2020",
+              "journal-title": "World Dev."
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b16",
+              "doi-asserted-by": "crossref",
+              "first-page": "587",
+              "DOI": "10.1093/qje/qjs011",
+              "article-title": "Portage and path dependence",
+              "volume": "127",
+              "author": "Bleakley",
+              "year": "2012",
+              "journal-title": "Q. J. Econ."
+            },
+            {
+              "issue": "5",
+              "key": "10.1016/j.jue.2026.103863_b17",
+              "doi-asserted-by": "crossref",
+              "first-page": "558",
+              "DOI": "10.1257/aer.p20151069",
+              "article-title": "History and the sizes of cities",
+              "volume": "105",
+              "author": "Bleakley",
+              "year": "2015",
+              "journal-title": "Am. Econ. Rev."
+            },
+            {
+              "issue": "6",
+              "key": "10.1016/j.jue.2026.103863_b18",
+              "doi-asserted-by": "crossref",
+              "first-page": "2155",
+              "DOI": "10.3982/ECTA19367",
+              "article-title": "Nonrandom exposure to exogenous shocks",
+              "volume": "91",
+              "author": "Borusyak",
+              "year": "2023",
+              "journal-title": "Econometrica"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b19",
+              "doi-asserted-by": "crossref",
+              "first-page": "139",
+              "DOI": "10.1016/j.jue.2015.09.003",
+              "article-title": "City seeds: Geography and the origins of the European city system",
+              "volume": "98",
+              "author": "Bosker",
+              "year": "2017",
+              "journal-title": "J. Urban Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b20",
+              "series-title": "The Golden Age of Brazil 1695\u20131750",
+              "author": "Boxer",
+              "year": "2003"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b21",
+              "doi-asserted-by": "crossref",
+              "first-page": "50",
+              "DOI": "10.1016/j.jue.2019.06.001",
+              "article-title": "Can kings create towns that thrive? The long-term implications of new town foundations",
+              "volume": "112",
+              "author": "Cermeno",
+              "year": "2019",
+              "journal-title": "J. Urban Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b22",
+              "doi-asserted-by": "crossref",
+              "first-page": "17",
+              "DOI": "10.1016/j.jue.2016.05.003",
+              "article-title": "What is different about urbanization in rich and poor countries? Cities in Brazil, China, India and the United States",
+              "volume": "98",
+              "author": "Chauvin",
+              "year": "2017",
+              "journal-title": "J. Urban Econ."
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b23",
+              "first-page": "54",
+              "article-title": "Productivity and the density of economic activity",
+              "volume": "86",
+              "author": "Ciccone",
+              "year": "1996",
+              "journal-title": "Am. Econ. Rev."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b24",
+              "first-page": "247",
+              "article-title": "The empirics of agglomeration economies",
+              "volume": "vol. 5",
+              "author": "Combes",
+              "year": "2015"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b25",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1016/S0304-4076(98)00084-0",
+              "article-title": "GMM estimation with cross sectional dependence",
+              "volume": "92",
+              "author": "Conley",
+              "year": "1999",
+              "journal-title": "J. Econometrics"
+            },
+            {
+              "issue": "4",
+              "key": "10.1016/j.jue.2026.103863_b26",
+              "doi-asserted-by": "crossref",
+              "first-page": "896",
+              "DOI": "10.1016/j.jce.2022.05.003",
+              "article-title": "Roman roads to prosperity: Persistence and non-persistence of public infrastructure",
+              "volume": "50",
+              "author": "Dalgaard",
+              "year": "2022",
+              "journal-title": "J. Comp. Econ."
+            },
+            {
+              "issue": "5",
+              "key": "10.1016/j.jue.2026.103863_b27",
+              "doi-asserted-by": "crossref",
+              "first-page": "1269",
+              "DOI": "10.1257/000282802762024502",
+              "article-title": "Bones, bombs, and break points: The geography of economic activity",
+              "volume": "92",
+              "author": "Davis",
+              "year": "2002",
+              "journal-title": "Am. Econ. Rev."
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b28",
+              "doi-asserted-by": "crossref",
+              "first-page": "29",
+              "DOI": "10.1111/j.1467-9787.2008.00545.x",
+              "article-title": "A search for multiple equilibria in urban industrial structure",
+              "volume": "48",
+              "author": "Davis",
+              "year": "2008",
+              "journal-title": "J. Reg. Sci."
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b29",
+              "doi-asserted-by": "crossref",
+              "first-page": "394",
+              "DOI": "10.2307/210326",
+              "article-title": "Mountain settlement in the central Brazilian plateau",
+              "volume": "27",
+              "author": "Deffontaines",
+              "year": "1937",
+              "journal-title": "Geogr. Rev."
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b30",
+              "doi-asserted-by": "crossref",
+              "first-page": "379",
+              "DOI": "10.2307/209737",
+              "article-title": "The origin and growth of the Brazilian network of towns",
+              "volume": "28",
+              "author": "Deffontaines",
+              "year": "1938",
+              "journal-title": "Geogr. Rev."
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b31",
+              "doi-asserted-by": "crossref",
+              "first-page": "903",
+              "DOI": "10.1086/697084",
+              "article-title": "The geography of development",
+              "volume": "126",
+              "author": "Desmet",
+              "year": "2018",
+              "journal-title": "J. Political Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b32",
+              "series-title": "Mem\u00f3rias para a hist\u00f3ria da capitania de S\u00e3o Vicente, hoje chamada de S\u00e3o Paulo e Not\u00edcias dos annos em que se descobrio o Brazil",
+              "author": "Deus",
+              "year": "1920"
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b33",
+              "doi-asserted-by": "crossref",
+              "first-page": "461",
+              "DOI": "10.1017/S0022050700016533",
+              "article-title": "Bridging the archipelago: Cities and regional economies in Brazil, 1870\u20131920",
+              "volume": "56",
+              "author": "Deutsch",
+              "year": "1996",
+              "journal-title": "J. Econ. Hist."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b34",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.jue.2019.05.005",
+              "article-title": "Cities, lights, and skills in developing economies",
+              "volume": "125",
+              "author": "Dingel",
+              "year": "2021",
+              "journal-title": "J. Urban Econ."
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b35",
+              "doi-asserted-by": "crossref",
+              "first-page": "799",
+              "DOI": "10.1093/qje/qjw002",
+              "article-title": "Railroads and American economic growth: A \u201cmarket access\u201d approach",
+              "volume": "131",
+              "author": "Donaldson",
+              "year": "2016",
+              "journal-title": "Q. J. Econ."
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b36",
+              "doi-asserted-by": "crossref",
+              "first-page": "140",
+              "DOI": "10.1111/jors.12505",
+              "article-title": "Spatial skill concentration agglomeration economies",
+              "volume": "61",
+              "author": "Ehrl",
+              "year": "2021",
+              "journal-title": "J. Reg. Sci."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b37",
+              "series-title": "The Economic Growth of Brazil: Survey from Colonial to Modern Times",
+              "author": "Furtado",
+              "year": "1968"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b38",
+              "series-title": "Cities, Agglomeration and Spatial Equilibrium",
+              "author": "Glaeser",
+              "year": "2008"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b39",
+              "series-title": "Tropas e Tropeiros na Forma\u00e7\u00e3o do Brasil",
+              "first-page": "267",
+              "author": "Goulart",
+              "year": "1961"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b40",
+              "doi-asserted-by": "crossref",
+              "first-page": "67",
+              "DOI": "10.1162/REST_a_00621",
+              "article-title": "Temporary shocks and persistent effects in urban economies: Evidence from british cities after the U.S. civil war",
+              "volume": "99",
+              "author": "Hanlon",
+              "year": "2017",
+              "journal-title": "Rev. Econ. Stat."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b41",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.regsciurbeco.2021.103751",
+              "article-title": "History and urban economics",
+              "volume": "94",
+              "author": "Hanlon",
+              "year": "2022",
+              "journal-title": "Reg. Sci. Urban Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b42",
+              "series-title": "Enciclop\u00e9dia dos munic\u00edpios brasileiros",
+              "author": "IBGE",
+              "year": "1957"
+            },
+            {
+              "issue": "603",
+              "key": "10.1016/j.jue.2026.103863_b43",
+              "doi-asserted-by": "crossref",
+              "first-page": "1467",
+              "DOI": "10.1111/ecoj.12347",
+              "article-title": "History, path dependence and development: Evidence from colonial railways, settlers and cities in Kenya",
+              "volume": "127",
+              "author": "Jedwab",
+              "year": "2017",
+              "journal-title": "Econ. J."
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b44",
+              "doi-asserted-by": "crossref",
+              "first-page": "268",
+              "DOI": "10.1162/REST_a_00540",
+              "article-title": "The permanent effects of transportation revolutions in poor countries: Evidence from Africa",
+              "volume": "98",
+              "author": "Jedwab",
+              "year": "2016",
+              "journal-title": "Rev. Econ. Stat."
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b45",
+              "doi-asserted-by": "crossref",
+              "first-page": "59",
+              "DOI": "10.1086/720890",
+              "article-title": "The mechanics of the industrial revolution",
+              "volume": "131",
+              "author": "Kelly",
+              "year": "2023",
+              "journal-title": "J. Political Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b46",
+              "doi-asserted-by": "crossref",
+              "first-page": "91",
+              "DOI": "10.1590/S0101-47142009000200007",
+              "article-title": "Vest\u00edgios ind\u00edgenas na cartografia do sert\u00e3o da Am\u00e9rica portuguesa",
+              "volume": "17",
+              "author": "Kok",
+              "year": "2009",
+              "journal-title": "An. Do Mus. Paul.: Hist\u00f3ria E Cult. Mater."
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b47",
+              "doi-asserted-by": "crossref",
+              "first-page": "651",
+              "DOI": "10.2307/2937950",
+              "article-title": "History versus expectations",
+              "volume": "106",
+              "author": "Krugman",
+              "year": "1991",
+              "journal-title": "Q. J. Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b48",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1057/s41308-022-00183-7",
+              "article-title": "A manufacturing renaissance? Industrialization trends in the developing world",
+              "author": "Kruse",
+              "year": "2023",
+              "journal-title": "IMF Econ. Rev."
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b49",
+              "doi-asserted-by": "crossref",
+              "first-page": "663",
+              "DOI": "10.1093/restud/rdx018",
+              "article-title": "Natural amenities, neighbourhood dynamics, and persistence in the spatial distribution of income",
+              "volume": "85",
+              "author": "Lee",
+              "year": "2017",
+              "journal-title": "Rev. Econ. Stud."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b50",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.regsciurbeco.2020.103628",
+              "article-title": "What future for history dependence in spatial economics?",
+              "volume": "94",
+              "author": "Lin",
+              "year": "2022",
+              "journal-title": "Reg. Sci. Urban Econ."
+            },
+            {
+              "issue": "598",
+              "key": "10.1016/j.jue.2026.103863_b51",
+              "doi-asserted-by": "crossref",
+              "first-page": "2363",
+              "DOI": "10.1111/ecoj.12276",
+              "article-title": "The persistence of (subnational) fortune",
+              "volume": "126",
+              "author": "Maloney",
+              "year": "2016",
+              "journal-title": "Econ. J."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b52",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.jue.2022.103492",
+              "article-title": "Colonial roads and regional inequality",
+              "volume": "131",
+              "author": "Marein",
+              "year": "2022",
+              "journal-title": "J. Urban Econ."
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b53",
+              "doi-asserted-by": "crossref",
+              "first-page": "617",
+              "DOI": "10.2307/2937949",
+              "article-title": "Increasing returns, industrialization, and indeterminacy of equilibrium",
+              "volume": "106",
+              "author": "Matsuyama",
+              "year": "1991",
+              "journal-title": "Q. J. Econ."
+            },
+            {
+              "issue": "608",
+              "key": "10.1016/j.jue.2026.103863_b54",
+              "first-page": "378",
+              "article-title": "Resetting the urban network: 117\u20132012",
+              "volume": "128",
+              "author": "Michaels",
+              "year": "2017",
+              "journal-title": "Econ. J."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b55",
+              "first-page": "5",
+              "article-title": "Routes over the serra do mar: The evolution of transportation in the highlands of Rio De Janeiro and S\u00e3o Paulo",
+              "author": "Momsen, Jr.",
+              "year": "1963",
+              "journal-title": "Rev. Geogr\u00e1fica"
+            },
+            {
+              "issue": "12",
+              "key": "10.1016/j.jue.2026.103863_b56",
+              "doi-asserted-by": "crossref",
+              "first-page": "3855",
+              "DOI": "10.1257/aer.20151507",
+              "article-title": "Commuting, migration, and local employment elasticities",
+              "volume": "108",
+              "author": "Monte",
+              "year": "2018",
+              "journal-title": "Am. Econ. Rev."
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b57",
+              "doi-asserted-by": "crossref",
+              "first-page": "358",
+              "DOI": "10.1080/00401706.2013.806694",
+              "article-title": "A robust test for weak instruments",
+              "volume": "31",
+              "author": "Montiel-Olea",
+              "year": "2013",
+              "journal-title": "J. Bus. Econom. Statist."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b58",
+              "series-title": "Estradas Interprovinciais no Brasil central: Mato Grosso, Goi\u00e1s, Minas Gerais (1834-1870)",
+              "author": "Morais",
+              "year": "2010"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.jue.2026.103863_b59",
+              "doi-asserted-by": "crossref",
+              "first-page": "39",
+              "DOI": "10.1177/009614427400100103",
+              "article-title": "Brazil\u2019s urban development: Colony and empire",
+              "volume": "1",
+              "author": "Morse",
+              "year": "1974",
+              "journal-title": "J. Urban Hist."
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b60",
+              "first-page": "389",
+              "article-title": "The effects of roads on trade and migration: Evidence from a planned capital city",
+              "volume": "16",
+              "author": "Morten",
+              "year": "2024",
+              "journal-title": "Am. Econ. J.: Appl. Econ."
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b61",
+              "doi-asserted-by": "crossref",
+              "first-page": "291",
+              "DOI": "10.1590/S0102-30982005000200007",
+              "article-title": "O IBGE e as pesquisas populacionais",
+              "volume": "22",
+              "author": "Oliveira",
+              "year": "2005",
+              "journal-title": "Rev. Bras. Estud. Popula\u00e7\u00e3o"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b62",
+              "article-title": "Ancient nomadic corridors and long-run development in the highlands of Asia",
+              "author": "Paik",
+              "year": "2022",
+              "journal-title": "Explor. Econ. Hist."
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b63",
+              "doi-asserted-by": "crossref",
+              "first-page": "1593",
+              "DOI": "10.1093/restud/rdab042",
+              "article-title": "The real effects of monetary expansions: evidence from a large-scale historical experiment",
+              "volume": "89",
+              "author": "Palma",
+              "year": "2022",
+              "journal-title": "Rev. Econ. Stud."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b64",
+              "series-title": "Paths that led to gold: Historical roads, trade, and persistence",
+              "author": "Portugal",
+              "year": "2023"
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b65",
+              "doi-asserted-by": "crossref",
+              "first-page": "843",
+              "DOI": "10.2307/2118410",
+              "article-title": "Does history matter only when it matters little? The case of city-industry location",
+              "volume": "108",
+              "author": "Rauch",
+              "year": "1993",
+              "journal-title": "Q. J. Econ."
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b66",
+              "doi-asserted-by": "crossref",
+              "first-page": "814",
+              "DOI": "10.1162/REST_a_00096",
+              "article-title": "History and industry location: Evidence from german airports",
+              "volume": "93",
+              "author": "Redding",
+              "year": "2011",
+              "journal-title": "Rev. Econ. Stat."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b67",
+              "first-page": "1339",
+              "article-title": "Transportation costs and the spatial organization of economic activity",
+              "volume": "vol. 5",
+              "author": "Redding",
+              "year": "2015"
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b68",
+              "doi-asserted-by": "crossref",
+              "first-page": "119",
+              "DOI": "10.1016/j.econ.2014.06.006",
+              "article-title": "Spatial income inequality in Brazil, 1872\u20132000",
+              "volume": "15",
+              "author": "Reis",
+              "year": "2014",
+              "journal-title": "EconomiA"
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b69",
+              "doi-asserted-by": "crossref",
+              "first-page": "149",
+              "DOI": "10.1108/ECON-12-2022-0189",
+              "article-title": "Non-tradables in Brazilian economic history",
+              "volume": "24",
+              "author": "Reis",
+              "year": "2023",
+              "journal-title": "EconomiA"
+            },
+            {
+              "issue": "6",
+              "key": "10.1016/j.jue.2026.103863_b70",
+              "doi-asserted-by": "crossref",
+              "first-page": "1257",
+              "DOI": "10.1086/261120",
+              "article-title": "Wages, rents, and the quality of life",
+              "volume": "90",
+              "author": "Roback",
+              "year": "1982",
+              "journal-title": "J. Political Econ."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b71",
+              "series-title": "Cities and Geography",
+              "first-page": "2119",
+              "article-title": "Evidence on the nature and sources of agglomeration economies",
+              "volume": "vol. 4",
+              "author": "Rosenthal",
+              "year": "2004"
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b72",
+              "doi-asserted-by": "crossref",
+              "first-page": "141",
+              "DOI": "10.1590/S0101-47142006000200006",
+              "article-title": "Reconstitui\u00e7\u00e3o do tra\u00e7ado da \u201cestrada dos goiases\u201d no trecho da atual mancha urbana de campinas",
+              "volume": "14",
+              "author": "Rossetto",
+              "year": "2006",
+              "journal-title": "An. Do Mus. Paul.: Hist\u00f3ria E Cult. Mater."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b73",
+              "first-page": "547",
+              "article-title": "Colonial Brazil: The gold cycle, c. 1690\u20131750",
+              "volume": "vol. 2",
+              "author": "Russell-Wood",
+              "year": "1984"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b74",
+              "article-title": "Hist\u00f3ria do brasil (edi\u00e7\u00e3o revista por capistrano de abreu)",
+              "author": "Salvador",
+              "year": "2010",
+              "journal-title": "Bras\u00edLia: Edi\u00e7\u00d5es Do Senado Fed."
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.jue.2026.103863_b75",
+              "doi-asserted-by": "crossref",
+              "first-page": "103",
+              "DOI": "10.2307/165022",
+              "article-title": "Tropas e tropeiros",
+              "volume": "1",
+              "author": "Schmidt",
+              "year": "1959",
+              "journal-title": "J. Inter-American Stud."
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b76",
+              "series-title": "Hist\u00f3ria Econ\u00f4mica do Brasil: 1500\u20131820",
+              "author": "Simonsen",
+              "year": "1977"
+            },
+            {
+              "key": "10.1016/j.jue.2026.103863_b77",
+              "doi-asserted-by": "crossref",
+              "first-page": "290",
+              "DOI": "10.2307/270723",
+              "article-title": "Asymptotic confidence intervals for indirect effects in structural equation models",
+              "volume": "13",
+              "author": "Sobel",
+              "year": "1982",
+              "journal-title": "Sociol. Methodol."
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.jue.2026.103863_b78",
+              "doi-asserted-by": "crossref",
+              "first-page": "249",
+              "DOI": "10.1111/j.1536-7150.1980.tb01276.x",
+              "article-title": "Urbanization and migration in Brazil",
+              "volume": "39",
+              "author": "Wagner",
+              "year": "1980",
+              "journal-title": "Am. J. Econ. Sociol."
+            }
+          ],
+          "container-title": [
+            "Journal of Urban Economics"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0094119026000343?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0094119026000343?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                4
+              ]
+            ],
+            "date-time": "2026-07-04T06:44:07Z",
+            "timestamp": 1783147447000
+          },
+          "score": 25.79298,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0094119026000343"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2026,
+                5
+              ]
+            ]
+          },
+          "references-count": 78,
+          "alternative-id": [
+            "S0094119026000343"
+          ],
+          "URL": "https://doi.org/10.1016/j.jue.2026.103863",
+          "ISSN": [
+            "0094-1190"
+          ],
+          "issn-type": [
+            {
+              "value": "0094-1190",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                5
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "Elsevier",
+              "name": "publisher",
+              "label": "This article is maintained by"
+            },
+            {
+              "value": "Old but gold: Historical pathways and path dependence",
+              "name": "articletitle",
+              "label": "Article Title"
+            },
+            {
+              "value": "Journal of Urban Economics",
+              "name": "journaltitle",
+              "label": "Journal Title"
+            },
+            {
+              "value": "https://doi.org/10.1016/j.jue.2026.103863",
+              "name": "articlelink",
+              "label": "CrossRef DOI link to publisher maintained version"
+            },
+            {
+              "value": "article",
+              "name": "content_type",
+              "label": "Content Type"
+            },
+            {
+              "value": "\u00a9 2026 Elsevier Inc. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+              "name": "copyright",
+              "label": "Copyright"
+            }
+          ],
+          "article-number": "103863"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

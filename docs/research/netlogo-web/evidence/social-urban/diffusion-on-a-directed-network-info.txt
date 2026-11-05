@@ -1,0 +1,85 @@
+## WHAT IS IT?
+
+This model demonstrates diffusion of a quantity through a directed network. The quantity moves among nodes in the network only along established, directed links between two nodes.
+
+The simple rules that drive this diffusion lead to interesting patterns related to the topology, density, and stability of the network. Furthermore, the model may be useful in understanding the basic properties of dynamic processes on networks, and provides a useful starting point for designing more complex and realistic network-based models.
+
+## HOW IT WORKS
+
+In each tick, each node shares some percentage (defined by the DIFFUSION-RATE slider) of its "value" quantity with its neighbors in the network.  Specifically, the amount of shared value is divided equally and sent along each of the outgoing links from each node to each other node.  If a node has no outgoing links, then it doesn't share any of it's value; it just accumulates any that its neighbors have provided via incoming links.
+
+Note that because it is a directed network, node B may give value to node A even if node A doesn't give back.
+
+The size of each node shows how much "value" that node has, where the area of the node is proportional to its value.  The brightness of a link represents how much value just flowed through that edge.
+
+## HOW TO USE IT
+
+Choose the size of network that you want to model using the GRID-SIZE slider.
+Choose the expected density of links in the network using the LINK-CHANCE slider.
+
+To create the network with these properties, press SETUP.
+
+The DIFFUSION-RATE slider controls how much "value" each node shares with its neighbors during a given time step.
+
+Press the GO button to run the model.
+
+The REWIRE-A-LINK button causes one link to disappear, and a new one to appear elsewhere in the grid.
+
+The KEEP-REWIRING button causes a continual rewiring of links to occur.
+
+The histogram displays the number of nodes whose values fall into certain ranges.  For instance, you might see that there are many nodes with nearly zero value, while there are just a few nodes with very large value.
+
+## THINGS TO NOTICE
+
+As time passes, the network tends toward an equilibrium state.  (Is that always the case, or is it possible for a network to never settle down?)
+
+However, if you run both the GO and KEEP-REWIRING buttons at the same time, then the network will never completely settle down.  If you ran the model in this way for a long long time, would the distribution of value across the nodes in the network be uniform, if you averaged across time?  Or would nodes near the edges of the grid tend to have more or less value?
+
+## THINGS TO TRY
+
+Try running the model with a small 3x3 grid.  How many nodes end up with positive value (not approaching zero) after running the model for a while?   Sometimes just a single node ends up with all of the value, while other times every node in the network can sustain a positive value.  What properties of the network are necessary in order for every node to sustain a positive value?  Are these properties more or less likely to occur with large networks?
+
+## EXTENDING THE MODEL
+
+Imagine you are modeling a business economy, where each node is a business, and it has suppliers and customers (represented by directed links from that node).  Is it reasonable to assume that as a business accumulates more profit from sales, it will in turn purchase more from its suppliers?  In order to more accurately match this economic model, change the model into a supply chain model where each node also has an inventory level, and a price they are charging per unit.  Try to come up with reasonable rules for how many units each business decides to buy or sell.
+
+How would you change this model to more accurately represent water flowing (or being pumped) through pipes?  Should the links be directed or undirected?  What if water is continually flowing in or out of the system at certain locations?
+
+## NETLOGO FEATURES
+
+This model works in a manner analogous to NetLogo's `diffuse` command, which causes patches to all share with their neighbors portions of the value of some variable.
+However, whereas the neighbor relationship in patches is symmetric, this model uses directed links, which can be used to create asymmetric relationships between agents.  If you used undirected links, the behavior of this model would more closely resemble the `diffuse` command, where the value of all the nodes would eventually become the same.
+
+In this model, there are two link-breeds: one for active links (which are shown in the view) and another for inactive links (which are invisible).  This makes "rewiring" of links easier, because rather than killing a link and creating a new link, we can just change the breed of a link and hide or show it.
+
+Though it is not used in this model, there exists a network extension for NetLogo that you can download at: https://github.com/NetLogo/NW-Extension.
+
+## RELATED MODELS
+
+Virus on a Network
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Stonedahl, F. and Wilensky, U. (2008).  NetLogo Diffusion on a Directed Network model.  http://ccl.northwestern.edu/netlogo/models/DiffusiononaDirectedNetwork.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2008 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2008 Cite: Stonedahl, F. -->

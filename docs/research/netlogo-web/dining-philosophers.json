@@ -1,0 +1,111 @@
+{
+  "slug": "dining-philosophers",
+  "name": "Dining Philosophers",
+  "catalogPath": "Sample Models/Computer Science/Dining Philosophers",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Dining%20Philosophers.nlogox",
+  "deliveryBatch": "B18",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can independent processes share exclusive resources without becoming permanently blocked? NetLogo Dining Philosophers places agents and forks around a ring; agents alternate between thinking, hunger, and eating, requiring both adjacent forks to eat. Dijkstra [1] supplies the classic synchronization context, Coffman and colleagues [2] analyze deadlock, and Chandy and Misra [3] develop related distributed resource coordination. The NetLogo switch compares a naive acquisition rule with a cooperative marking protocol, starting from one distinguished fork. One randomly selected philosopher updates per tick, making scheduling part of the baseline. The experiment illustrates how local ownership rules can alter global progress and fairness. A run without deadlock is not a proof of starvation freedom, and symmetric initial conditions or a different scheduler may change behavior. The cooperative teaching rule should not be identified automatically with every published solution.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Dining%20Philosophers.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Dining%20Philosophers.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 94a061a1c0c2d8e69a8e6f3dfd4a154222d44d6676693cdc3430fb7e76d47e51",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/dining-philosophers.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2003).  NetLogo Dining Philosophers model.  http://ccl.northwestern.edu/netlogo/models/DiningPhilosophers.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/dining-philosophers.nlogox",
+    "evidenceFile": "evidence/computing/dining-philosophers.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1007/bf00289519",
+      "authors": [
+        "E. W. Dijkstra"
+      ],
+      "title": "Hierarchical ordering of sequential processes",
+      "year": 1971,
+      "venue": "Acta Informatica",
+      "doi": "10.1007/bf00289519",
+      "url": "https://doi.org/10.1007/bf00289519",
+      "relevance": "Foundational work on sequential-process ordering supplies the classic resource-sharing problem context.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF00289519",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_bf00289519.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_bf00289519.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "1",
+      "issue": "2",
+      "pages": "115-138",
+      "verified": true
+    },
+    {
+      "id": "10.1145/356586.356588",
+      "authors": [
+        "E. G. Coffman",
+        "M. Elphick",
+        "A. Shoshani"
+      ],
+      "title": "System Deadlocks",
+      "year": 1971,
+      "venue": "ACM Computing Surveys",
+      "doi": "10.1145/356586.356588",
+      "url": "https://doi.org/10.1145/356586.356588",
+      "relevance": "Conditions for deadlock explain the failure mode of locally reasonable fork acquisition.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1145%2F356586.356588",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1145_356586_356588.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1145_356586_356588.json"
+      },
+      "publisher": "Association for Computing Machinery (ACM)",
+      "volume": "3",
+      "issue": "2",
+      "pages": "67-78",
+      "verified": true
+    },
+    {
+      "id": "10.1145/1780.1804",
+      "authors": [
+        "K. M. Chandy",
+        "J. Misra"
+      ],
+      "title": "The drinking philosophers problem",
+      "year": 1984,
+      "venue": "ACM Transactions on Programming Languages and Systems",
+      "doi": "10.1145/1780.1804",
+      "url": "https://doi.org/10.1145/1780.1804",
+      "relevance": "Related distributed philosopher problem provides a scientific comparison for marked resources and fairness, not an assertion of identical algorithms.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1145%2F1780.1804",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1145_1780_1804.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1145_1780_1804.json"
+      },
+      "publisher": "Association for Computing Machinery (ACM)",
+      "volume": "6",
+      "issue": "4",
+      "pages": "632-646",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

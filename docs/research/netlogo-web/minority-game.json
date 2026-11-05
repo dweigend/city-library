@@ -1,0 +1,103 @@
+{
+  "slug": "minority-game",
+  "name": "Minority Game",
+  "catalogPath": "Sample Models/Social Science/Minority Game",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Minority%20Game.nlogox",
+  "deliveryBatch": "B02",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether adaptive prediction can coordinate competition for a scarce winning position. In NetLogo's Minority Game model, agents choose binary sides using their best-scoring strategy tables, rewarding the minority and updating hypothetical strategy scores. The selected literature connects this mechanism to adaptive crowding and coordination: the acknowledged minority-game mechanism rewards anti-crowding choices [1]; heterogeneous strategy interactions explain collective fluctuations [2]; evolving prediction strategies provide a critical El Farol comparison [3]. Public binary histories and a fixed strategy pool omit prices, budgets and real market institutions; success is defined solely by minority membership. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Minority%20Game.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Minority%20Game.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/minority-game.nlogox",
+    "sha256": "5da641101e48d2ca325cfffa3f1bdaf27708152b628ab5504a95a2798a53e1a1",
+    "citation": "For the model itself: * Wilensky, U. (2004). NetLogo Minority Game model. http://ccl.northwestern.edu/netlogo/models/MinorityGame. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Original implementation: Daniel B. Stouffer, for the Center for Connected Learning and Computer-Based Modeling. This model was based upon studies by Dr. Damien Challet, et al. Information can be found on the web at https://web.archive.org/web/20141010122506/http://www3.unifr.ch/econophysics/minority/papers.html Challet, D. and Zhang, Y.-C. Emergence of Cooperation and Organization in an Evolutionary Game. Physica A 246, 407 (1997). Zhang, Y.-C. Modeling Market Mechanism with Evolutionary Games. Europhys. News 29, 51 (1998).",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/minority-game.nlogox"
+  },
+  "publications": [
+    {
+      "id": "minority",
+      "creatorRole": "author",
+      "authors": [
+        "D. Challet",
+        "Y.-C. Zhang"
+      ],
+      "title": "Emergence of cooperation and organization in an evolutionary game",
+      "year": 1997,
+      "venue": "Physica A: Statistical Mechanics and its Applications",
+      "doi": "10.1016/s0378-4371(97)00419-6",
+      "url": "https://doi.org/10.1016/s0378-4371(97)00419-6",
+      "relevance": "the acknowledged minority-game mechanism rewards anti-crowding choices",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2FS0378-4371%2897%2900419-6",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/minority-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/minority-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "crowd",
+      "creatorRole": "author",
+      "authors": [
+        "Damien Challet",
+        "Matteo Marsili",
+        "Riccardo Zecchina"
+      ],
+      "title": "Statistical Mechanics of Systems with Heterogeneous Agents: Minority Games",
+      "year": 2000,
+      "venue": "Physical Review Letters",
+      "doi": "10.1103/physrevlett.84.1824",
+      "url": "https://doi.org/10.1103/physrevlett.84.1824",
+      "relevance": "heterogeneous strategy interactions explain collective fluctuations",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevLett.84.1824",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/crowd-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/crowd-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "fogel",
+      "creatorRole": "author",
+      "authors": [
+        "D.B. Fogel",
+        "K. Chellapilla",
+        "P.J. Angeline"
+      ],
+      "title": "Inductive reasoning and bounded rationality reconsidered",
+      "year": 1999,
+      "venue": "IEEE Transactions on Evolutionary Computation",
+      "doi": "10.1109/4235.771167",
+      "url": "https://doi.org/10.1109/4235.771167",
+      "relevance": "evolving prediction strategies provide a critical El Farol comparison",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1109%2F4235.771167",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/fogel-verified.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/fogel-verified.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

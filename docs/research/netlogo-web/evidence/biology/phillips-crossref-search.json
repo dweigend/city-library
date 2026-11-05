@@ -1,0 +1,2362 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+critical+analysis+of+the+role+of+resistance+exercise+training+in+the+control+of+muscle+mass+Phillips+2014&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 12225090,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                2
+              ]
+            ],
+            "date-time": "2026-10-02T08:24:57Z",
+            "timestamp": 1790929497962,
+            "version": "4.1.0"
+          },
+          "reference-count": 38,
+          "publisher": "Portland Press Ltd.",
+          "content-domain": {
+            "domain": [
+              "portlandpress.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                11,
+                27
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Muscle mass is determined by the difference between the rate of protein synthesis and degradation. If synthesis is greater than degradation, muscle mass will increase (hypertrophy) and when the reverse is true muscle mass will decrease (atrophy). Following resistance exercise/increased loading there is a transient increase in protein synthesis within muscle. This change in protein synthesis correlates with an increase in the activity of protein kinase B/Akt and mTOR (mammalian target of rapamycin). mTOR increases protein synthesis by increasing translation initiation and by inducing ribosomal biogenesis. By contrast, unloading or inactivity results in a decrease in protein synthesis and a significant increase in muscle protein breakdown. The decrease in synthesis is due in part to the inactivation of mTOR and therefore a decrease in translation initiation, but also to a decrease in the rate of translation elongation. The increase in degradation is the result of a co-ordinated response of the calpains, lysosomal proteases and the ATP-dependent ubiquitin-proteosome. Caspase 3 and the calpains act upstream of the ubiquitin\u2013proteosome system to assist in the complete breakdown of the myofibrillar proteins. Two muscle specific E3 ubiquitin ligases, MuRF1 and MAFbx/atrogen-1, have been identified as key regulators of muscle atrophy. In this chapter, these pathways and how the balance between anabolism and catabolism is affected by loading and unloading will be discussed.</jats:p>",
+          "DOI": "10.1042/bse0420061",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                5,
+                3
+              ]
+            ],
+            "date-time": "2007-05-03T17:02:18Z",
+            "timestamp": 1178211738000
+          },
+          "page": "61-74",
+          "update-policy": "https://doi.org/10.1042/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 80,
+          "title": [
+            "Resistance exercise, muscle loading/unloading and the control of muscle mass"
+          ],
+          "prefix": "10.1042",
+          "volume": "42",
+          "author": [
+            {
+              "given": "Keith",
+              "family": "Baar",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Division of Molecular Physiology, University of Dundee, Dundee U.K."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Gustavo",
+              "family": "Nader",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Research Center for Genetic Medicine, Children's National Medical Center, Washington D.C., U.S.A."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Sue",
+              "family": "Bodine",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "College of Biological Sciences, University of California, Davis, CA, U.S.A."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "288",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                11,
+                30
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "2021111610150323900_B1",
+              "doi-asserted-by": "crossref",
+              "first-page": "123",
+              "DOI": "10.1016/S0070-2153(05)68005-2",
+              "article-title": "Sarcopenia of aging and its metabolic impact",
+              "volume": "68",
+              "author": "Karakelides",
+              "year": "2005",
+              "journal-title": "Curr. Top. Dev. Biol."
+            },
+            {
+              "key": "2021111610150323900_B2",
+              "doi-asserted-by": "crossref",
+              "first-page": "285",
+              "DOI": "10.1016/j.cell.2004.09.027",
+              "article-title": "IKK\u03b2/NF-\u03baB activation causes severe muscle wasting in mice",
+              "volume": "119",
+              "author": "Cai",
+              "year": "2004",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "2021111610150323900_B3",
+              "doi-asserted-by": "crossref",
+              "first-page": "1140",
+              "DOI": "10.1126/science.1082889",
+              "article-title": "Mitochondrial dysfunction in the elderly: possible role in insulin resistance",
+              "volume": "300",
+              "author": "Petersen",
+              "year": "2003",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2021111610150323900_B4",
+              "doi-asserted-by": "crossref",
+              "first-page": "1985",
+              "DOI": "10.1016/j.biocel.2005.02.026",
+              "article-title": "Molecular determinants of skeletal muscle mass: getting the \u2018AKT\u2019 together",
+              "volume": "37",
+              "author": "Nader",
+              "year": "2005",
+              "journal-title": "Int. J. Biochem. Cell Biol."
+            },
+            {
+              "key": "2021111610150323900_B5",
+              "doi-asserted-by": "crossref",
+              "first-page": "155",
+              "DOI": "10.1002/mus.20442",
+              "article-title": "Intracellular signaling during skeletal muscle atrophy",
+              "volume": "33",
+              "author": "Kandarian",
+              "year": "2006",
+              "journal-title": "Muscle Nerve"
+            },
+            {
+              "key": "2021111610150323900_B6",
+              "doi-asserted-by": "crossref",
+              "first-page": "C834",
+              "DOI": "10.1152/ajpcell.00579.2003",
+              "article-title": "The molecular basis of skeletal muscle atrophy",
+              "volume": "287",
+              "author": "Jackman",
+              "year": "2004",
+              "journal-title": "Am. J. Physiol. Cell. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B7",
+              "doi-asserted-by": "crossref",
+              "first-page": "1383",
+              "DOI": "10.1152/jappl.1992.73.4.1383",
+              "article-title": "Changes in human muscle protein synthesis after resistance exercise",
+              "volume": "73",
+              "author": "Chesley",
+              "year": "1992",
+              "journal-title": "J. Appl. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B8",
+              "first-page": "E99",
+              "article-title": "Mixed muscle protein synthesis and breakdown after resistance exercise in humans",
+              "volume": "273",
+              "author": "Phillips",
+              "year": "1997",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B9",
+              "doi-asserted-by": "crossref",
+              "first-page": "1709",
+              "DOI": "10.1152/jappl.1990.69.5.1709",
+              "article-title": "Protein metabolism in rat gastrocnemius muscle after stimulated chronic concentric exercise",
+              "volume": "69",
+              "author": "Wong",
+              "year": "1990",
+              "journal-title": "J. Appl. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1718",
+              "DOI": "10.1152/jappl.1990.69.5.1718",
+              "article-title": "Protein metabolism in rat tibialis anterior muscle after stimulated chronic eccentric exercise",
+              "volume": "69",
+              "author": "Wong",
+              "year": "1990",
+              "journal-title": "J. Appl. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B11",
+              "doi-asserted-by": "crossref",
+              "first-page": "935",
+              "DOI": "10.1126/science.157.3791.935",
+              "article-title": "Enhanced protein synthesis in a cell free system from hypertrophied skeletal muscle",
+              "volume": "157",
+              "author": "Hamosch",
+              "year": "1967",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2021111610150323900_B12",
+              "doi-asserted-by": "crossref",
+              "first-page": "C120",
+              "DOI": "10.1152/ajpcell.1999.276.1.C120",
+              "article-title": "Phosphorylation of p70(S6k) correlates with increased skeletal muscle mass following resistance exercise",
+              "volume": "276",
+              "author": "Baar",
+              "year": "1999",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B13",
+              "doi-asserted-by": "crossref",
+              "first-page": "56",
+              "DOI": "10.1016/S0959-440X(03)00009-5",
+              "article-title": "Eukaryotic translation initiation factors and regulators",
+              "volume": "13",
+              "author": "Sonenberg",
+              "year": "2003",
+              "journal-title": "Curr. Opin. Struct. Biol."
+            },
+            {
+              "key": "2021111610150323900_B14",
+              "doi-asserted-by": "crossref",
+              "first-page": "3728",
+              "DOI": "10.1093/emboj/cdf387",
+              "article-title": "Essential role of PDK1 in regulating cell size and -development in mice",
+              "volume": "21",
+              "author": "Lawlor",
+              "year": "2002",
+              "journal-title": "EMBO J"
+            },
+            {
+              "key": "2021111610150323900_B15",
+              "doi-asserted-by": "crossref",
+              "first-page": "R1086",
+              "DOI": "10.1152/ajpregu.00324.2003",
+              "article-title": "Differential activation of mTOR signaling by contractile activity in skeletal muscle",
+              "volume": "285",
+              "author": "Parkington",
+              "year": "2003",
+              "journal-title": "Am. J. Physiol. Regul. Integr. Comp. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B16",
+              "doi-asserted-by": "crossref",
+              "first-page": "1936",
+              "DOI": "10.1152/jappl.2001.90.5.1936",
+              "article-title": "Intracellular signaling specificity in skeletal muscle in response to different modes of exercise",
+              "volume": "90",
+              "author": "Nader",
+              "year": "2001",
+              "journal-title": "J. Appl. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B17",
+              "doi-asserted-by": "crossref",
+              "first-page": "213",
+              "DOI": "10.1113/jphysiol.2003.047019",
+              "article-title": "Immediate response of mammalian target of rapamycin (mTOR) mediated signalling following acute resistance exercise in rat skeletal muscle",
+              "volume": "553",
+              "author": "Bolster",
+              "year": "2003",
+              "journal-title": "J. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B18",
+              "doi-asserted-by": "crossref",
+              "first-page": "7570",
+              "DOI": "10.1074/jbc.M413732200",
+              "article-title": "Resistance exercise increases muscle protein synthesis and translation of eukaryotic initiation factor 2B\u03f5 mRNA in a mammalian target of rapamycin dependent manner",
+              "volume": "280",
+              "author": "Kubica",
+              "year": "2005",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "2021111610150323900_B19",
+              "doi-asserted-by": "crossref",
+              "first-page": "1014",
+              "DOI": "10.1038/ncb1101-1014",
+              "article-title": "Akt/mTOR pathway is a crucial regulator of skeletal muscle hypertrophy and can prevent muscle atrophy in vivo",
+              "volume": "3",
+              "author": "Bodine",
+              "year": "2001",
+              "journal-title": "Nat. Cell Biol."
+            },
+            {
+              "key": "2021111610150323900_B20",
+              "doi-asserted-by": "crossref",
+              "first-page": "286",
+              "DOI": "10.1038/ncb1231",
+              "article-title": "Atrophy of S6K1(\u2013/\u2013) skeletal muscle cells reveals distinct mTOR effectors for cell cycle and size control",
+              "volume": "7",
+              "author": "Ohanna",
+              "year": "2005",
+              "journal-title": "Nat. Cell Biol."
+            },
+            {
+              "key": "2021111610150323900_B21",
+              "article-title": "UBF and the -regulation of ribosomal DNA transcription",
+              "author": "Hannan",
+              "year": "1998"
+            },
+            {
+              "key": "2021111610150323900_B22",
+              "doi-asserted-by": "crossref",
+              "first-page": "4367",
+              "DOI": "10.1016/S0021-9258(17)41789-3",
+              "article-title": "Elongation factor 1 \u03b1 mRNA is selectively translated following mitogenic stimulation",
+              "volume": "269",
+              "author": "Jefferies",
+              "year": "1994",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "2021111610150323900_B23",
+              "doi-asserted-by": "crossref",
+              "first-page": "293",
+              "DOI": "10.1016/0092-8674(91)90181-W",
+              "article-title": "The retinoblastoma gene product regulates progression through the G1 phase of the cell cycle",
+              "volume": "67",
+              "author": "Goodrich",
+              "year": "1991",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "2021111610150323900_B24",
+              "doi-asserted-by": "crossref",
+              "first-page": "C1457",
+              "DOI": "10.1152/ajpcell.00165.2005",
+              "article-title": "mTOR function in skeletal muscle hypertrophy: increased ribosomal RNA via cell cycle regulators",
+              "volume": "289",
+              "author": "Nader",
+              "year": "2005",
+              "journal-title": "Am. J. Physiol. Cell Physiol."
+            },
+            {
+              "key": "2021111610150323900_B25",
+              "doi-asserted-by": "crossref",
+              "first-page": "8862",
+              "DOI": "10.1128/MCB.23.23.8862-8877.2003",
+              "article-title": "mTOR dependent -regulation of ribosomal gene transcription requires S6K1 and is mediated by phosphorylation of the carboxy terminal activation domain of the nucleolar transcription factor UBF",
+              "volume": "23",
+              "author": "Hannan",
+              "year": "2003",
+              "journal-title": "Mol. Cell Biol."
+            },
+            {
+              "key": "2021111610150323900_B26",
+              "first-page": "E628",
+              "article-title": "Postexercise net protein synthesis in human muscle from orally administered amino acids",
+              "volume": "276",
+              "author": "Tipton",
+              "year": "1999",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B27",
+              "first-page": "E627",
+              "article-title": "Prolonged bed rest decreases skeletal muscle and whole body protein synthesis",
+              "volume": "270",
+              "author": "Ferrando",
+              "year": "1996",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B28",
+              "doi-asserted-by": "crossref",
+              "first-page": "215",
+              "DOI": "10.1016/S0168-9525(98)01478-4",
+              "article-title": "Wasted by an elongation factor",
+              "volume": "14",
+              "author": "Hafezparast",
+              "year": "1998",
+              "journal-title": "Trends Genet."
+            },
+            {
+              "key": "2021111610150323900_B29",
+              "doi-asserted-by": "crossref",
+              "first-page": "C1369",
+              "DOI": "10.1152/ajpcell.1995.268.6.C1369",
+              "article-title": "Decreased polysomal HSP 70 may slow polypeptide elongation during skeletal muscle atrophy",
+              "volume": "268",
+              "author": "Ku",
+              "year": "1995",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "2021111610150323900_B30",
+              "doi-asserted-by": "crossref",
+              "first-page": "C179",
+              "DOI": "10.1152/ajpcell.2001.281.1.C179",
+              "article-title": "Regulation of translation factors during hindlimb unloading and denervation of skeletal muscle in rats",
+              "volume": "281",
+              "author": "Hornberger",
+              "year": "2001",
+              "journal-title": "Am. J. Physiol. Cell Physiol."
+            },
+            {
+              "key": "2021111610150323900_B31",
+              "doi-asserted-by": "crossref",
+              "first-page": "12100",
+              "DOI": "10.1073/pnas.95.21.12100",
+              "article-title": "Role of calpain in skeletal muscle protein degradation",
+              "volume": "95",
+              "author": "Huang",
+              "year": "1998",
+              "journal-title": "Proc. Natl. Acad. Sci. U.S.A."
+            },
+            {
+              "key": "2021111610150323900_B32",
+              "doi-asserted-by": "crossref",
+              "first-page": "756",
+              "DOI": "10.1016/0026-0495(90)90113-Q",
+              "article-title": "Different mechanisms of increased proteolysis in atrophy induced by denervation or unweighting of rat soleus muscle",
+              "volume": "39",
+              "author": "Tischler",
+              "year": "1990",
+              "journal-title": "Metabolism"
+            },
+            {
+              "key": "2021111610150323900_B33",
+              "doi-asserted-by": "crossref",
+              "first-page": "115",
+              "DOI": "10.1172/JCI18330",
+              "article-title": "Activation of caspase-3 is an initial step triggering accelerated muscle proteolysis in catabolic -conditions",
+              "volume": "113",
+              "author": "Du",
+              "year": "2004",
+              "journal-title": "J. Clin. Invest."
+            },
+            {
+              "key": "2021111610150323900_B34",
+              "doi-asserted-by": "crossref",
+              "first-page": "1704",
+              "DOI": "10.1126/science.1065874",
+              "article-title": "Identification of ubiquitin ligases required for skeletal muscle atrophy",
+              "volume": "294",
+              "author": "Bodine",
+              "year": "2001",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2021111610150323900_B35",
+              "doi-asserted-by": "crossref",
+              "first-page": "399",
+              "DOI": "10.1016/S0092-8674(04)00400-3",
+              "article-title": "FOXO transcription factors induce the atrophy related ubiquitin ligase atrogin-1 and cause skeletal muscle atrophy",
+              "volume": "117",
+              "author": "Sandri",
+              "year": "2004",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "2021111610150323900_B36",
+              "doi-asserted-by": "crossref",
+              "first-page": "395",
+              "DOI": "10.1016/S1097-2765(04)00211-4",
+              "article-title": "The IGF 1/PI3K/Akt pathway prevents expression of muscle atrophy induced ubiquitin ligases by inhibiting FOXO transcription factors",
+              "volume": "14",
+              "author": "Stitt",
+              "year": "2004",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "2021111610150323900_B37",
+              "doi-asserted-by": "crossref",
+              "first-page": "125",
+              "DOI": "10.1083/jcb.200108089",
+              "article-title": "Muscle-specific RING finger-1 interacts with titin to regulate sarcomeric M-line and thick filament structure and may have nuclear functions via its interaction with glucocorticoid modulatory element binding protein-1",
+              "volume": "157",
+              "author": "McElhinny",
+              "year": "2002",
+              "journal-title": "J. Cell Biol."
+            },
+            {
+              "key": "2021111610150323900_B38",
+              "doi-asserted-by": "crossref",
+              "first-page": "1599",
+              "DOI": "10.1126/science.1110463",
+              "article-title": "The kinase domain of titin controls muscle gene expression and protein turnover",
+              "volume": "308",
+              "author": "Lange",
+              "year": "2005",
+              "journal-title": "Science"
+            }
+          ],
+          "container-title": [
+            "Essays in Biochemistry"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://portlandpress.com/essaysbiochem/article-pdf/doi/10.1042/bse0420061/853443/bse0420061.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://portlandpress.com/essaysbiochem/article-pdf/doi/10.1042/bse0420061/853443/bse0420061.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                11,
+                16
+              ]
+            ],
+            "date-time": "2021-11-16T10:20:11Z",
+            "timestamp": 1637058011000
+          },
+          "score": 30.80389,
+          "resource": {
+            "primary": {
+              "URL": "https://portlandpress.com/essaysbiochem/article/doi/10.1042/bse0420061/78268/Resistance-exercise-muscle-loading-unloading-and"
+            }
+          },
+          "editor": [
+            {
+              "given": "Anton J.M.",
+              "family": "Wagenmakers",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "editor"
+                }
+              ]
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2006,
+                11,
+                27
+              ]
+            ]
+          },
+          "references-count": 38,
+          "URL": "https://doi.org/10.1042/bse0420061",
+          "ISSN": [
+            "0071-1365",
+            "1744-1358"
+          ],
+          "issn-type": [
+            {
+              "value": "0071-1365",
+              "type": "print"
+            },
+            {
+              "value": "1744-1358",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2006,
+                11,
+                27
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                13
+              ]
+            ],
+            "date-time": "2026-10-13T07:21:42Z",
+            "timestamp": 1791876102137,
+            "version": "4.3.4"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 118,
+          "publisher": "Springer Nature Switzerland",
+          "isbn-type": [
+            {
+              "value": "9783031284199",
+              "type": "print"
+            },
+            {
+              "value": "9783031284205",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2022,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2022-01-01T00:00:00Z",
+                "timestamp": 1640995200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2022,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2022-01-01T00:00:00Z",
+                "timestamp": 1640995200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "DOI": "10.1007/5584_2022_743",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                10,
+                24
+              ]
+            ],
+            "date-time": "2022-10-24T16:04:50Z",
+            "timestamp": 1666627490000
+          },
+          "page": "21-34",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 7,
+          "title": [
+            "Regulatory Mechanisms of Muscle Mass: The Critical Role of Resistance Training in Children and Adolescent"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "F.",
+              "family": "Castelli",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "M.",
+              "family": "Valero-Breton",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "M.",
+              "family": "Hernandez",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "F.",
+              "family": "Guarda",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J.",
+              "family": "Cornejo",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "C.",
+              "family": "Cabello-Verrugio",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "D.",
+              "family": "Cabrera",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2022,
+                10,
+                25
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "issue": "2",
+              "key": "743_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "i3",
+              "DOI": "10.1113/jphysiol.1929.sp002557",
+              "volume": "67",
+              "author": "ED Adrian",
+              "year": "1929",
+              "unstructured": "Adrian ED, Bronk DW (1929) The discharge of impulses in motor nerve fibres: Part II. The frequency of discharge in reflex and voluntary contractions. J Physiol 67(2):i3\u2013i151",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "743_CR4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/med/9780198757672.001.0001",
+              "volume-title": "Oxford textbook of children\u2019s sport and exercise medicine",
+              "author": "N Armstrong",
+              "year": "2017",
+              "unstructured": "Armstrong N, Van Mechelen W (2017) Oxford textbook of children\u2019s sport and exercise medicine. Oxford University Press"
+            },
+            {
+              "key": "743_CR5",
+              "volume-title": "Participant development in sport: an academic literature review",
+              "author": "R Bailey",
+              "year": "2010",
+              "unstructured": "Bailey R, Collins D, Ford P, MacNamara A, Pearce G, Toms M (2010) Participant development in sport: an academic literature review. Commissioned report for Sports Coach UK"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR6",
+              "first-page": "4",
+              "volume": "16",
+              "author": "I Balyi",
+              "year": "2004",
+              "unstructured": "Balyi I, Hamilton A (2004) Long-term athlete development: trainability in childhood and adolescence windows of opportunity, optimal trainability. Olympic coach 16(1):4\u20139",
+              "journal-title": "Olympic coach"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "547",
+              "DOI": "10.1139/H08-020",
+              "volume": "33",
+              "author": "DG Behm",
+              "year": "2008",
+              "unstructured": "Behm DG, Faigenbaum AD, Falk B, Klentrou P (2008) Canadian Society for Exercise Physiology position paper: resistance training in children and adolescents. Appl Physiol Nutr Metab 33(3):547\u2013561. https://doi.org/10.1139/H08-020",
+              "journal-title": "Appl Physiol Nutr Metab"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1199",
+              "DOI": "10.1542/peds.2010-0445",
+              "volume": "126",
+              "author": "M Behringer",
+              "year": "2010",
+              "unstructured": "Behringer M, Vom Heede A, Yue Z, Mester J (2010) Effects of resistance training in children and adolescents: a meta-analysis. Pediatrics 126(5):e1199\u2013e1210. https://doi.org/10.1542/peds.2010-0445",
+              "journal-title": "Pediatrics"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "186",
+              "DOI": "10.1123/pes.23.2.186",
+              "volume": "23",
+              "author": "M Behringer",
+              "year": "2011",
+              "unstructured": "Behringer M, Vom Heede A, Matthews M, Mester J (2011) Effects of strength training on motor performance skills in children and adolescents: a meta-analysis. Pediatr Exerc Sci 23(2):186\u2013206. https://doi.org/10.1123/pes.23.2.186",
+              "journal-title": "Pediatr Exerc Sci"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "467",
+              "DOI": "10.1002/jbmr.2036",
+              "volume": "29",
+              "author": "M Behringer",
+              "year": "2014",
+              "unstructured": "Behringer M, Gruetzner S, McCourt M, Mester J (2014) Effects of weight-bearing activities on bone mineral content and density in children and adolescents: a meta-analysis. J Bone Miner Res 29(2):467\u2013478. https://doi.org/10.1002/jbmr.2036",
+              "journal-title": "J Bone Miner Res"
+            },
+            {
+              "issue": "12",
+              "key": "743_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "M1103",
+              "DOI": "10.1093/gerona/58.12.m1103",
+              "volume": "58",
+              "author": "S Bhasin",
+              "year": "2003",
+              "unstructured": "Bhasin S, Taylor WE, Singh R, Artaza J, Sinha-Hikim I, Jasuja R et al (2003) The mechanisms of androgen effects on body composition: mesenchymal pluripotent cell as the target of androgen action. J Gerontol A Biol Sci Med Sci 58(12):M1103\u2013M1110. https://doi.org/10.1093/gerona/58.12.m1103",
+              "journal-title": "J Gerontol A Biol Sci Med Sci"
+            },
+            {
+              "key": "743_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "187",
+              "DOI": "10.1007/978-3-540-79088-4_8",
+              "volume": "195",
+              "author": "M Bidlingmaier",
+              "year": "2010",
+              "unstructured": "Bidlingmaier M, Strasburger CJ (2010) Growth hormone. Handb Exp Pharmacol 195:187\u2013200. https://doi.org/10.1007/978-3-540-79088-4_8",
+              "journal-title": "Handb Exp Pharmacol"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "R57",
+              "DOI": "10.1530/JOE-16-0611",
+              "volume": "236",
+              "author": "FF Bloise",
+              "year": "2018",
+              "unstructured": "Bloise FF, Cordeiro A, Ortiga-Carvalho TM (2018) Role of thyroid hormone in skeletal muscle physiology. J Endocrinol 236(1):R57\u2013R68. https://doi.org/10.1530/JOE-16-0611",
+              "journal-title": "J Endocrinol"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "107",
+              "DOI": "10.1136/bjsm.32.2.107",
+              "volume": "32",
+              "author": "R Budgett",
+              "year": "1998",
+              "unstructured": "Budgett R (1998) Fatigue and underperformance in athletes: the overtraining syndrome. Br J Sports Med 32(2):107\u2013110. https://doi.org/10.1136/bjsm.32.2.107",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "issue": "24",
+              "key": "743_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1451",
+              "DOI": "10.1136/bjsports-2020-102955",
+              "volume": "54",
+              "author": "FC Bull",
+              "year": "2020",
+              "unstructured": "Bull FC, Al-Ansari SS, Biddle S, Borodulin K, Buman MP, Cardon G et al (2020a) World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med 54(24):1451\u20131462. https://doi.org/10.1136/bjsports-2020-102955",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "issue": "24",
+              "key": "743_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "1451",
+              "DOI": "10.1136/bjsports-2020-102955",
+              "volume": "54",
+              "author": "FC Bull",
+              "year": "2020",
+              "unstructured": "Bull FC, Al-Ansari SS, Biddle S, Borodulin K, Buman MP, Cardon G et al (2020b) World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med 54(24):1451\u20131462",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "162",
+              "DOI": "10.1046/j.1365-2265.2003.01786.x",
+              "volume": "59",
+              "author": "M Cakir",
+              "year": "2003",
+              "unstructured": "Cakir M, Samanci N, Balci N, Balci MK (2003) Musculoskeletal manifestations in patients with thyroid disease. Clin Endocrinol (Oxford) 59(2):162\u2013167. https://doi.org/10.1046/j.1365-2265.2003.01786.x",
+              "journal-title": "Clin Endocrinol (Oxford)"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "119",
+              "DOI": "10.1111/j.1748-1716.2011.02271.x",
+              "volume": "202",
+              "author": "TJ Carroll",
+              "year": "2011",
+              "unstructured": "Carroll TJ, Selvanayagam VS, Riek S, Semmler JG (2011) Neural adaptations to strength training: moving beyond transcranial magnetic stimulation and reflex studies. Acta Physiol (Oxford) 202(2):119\u2013140. https://doi.org/10.1111/j.1748-1716.2011.02271.x",
+              "journal-title": "Acta Physiol (Oxford)"
+            },
+            {
+              "issue": "4",
+              "key": "743_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "208",
+              "DOI": "10.1016/j.tem.2018.01.007",
+              "volume": "29",
+              "author": "L Casarini",
+              "year": "2018",
+              "unstructured": "Casarini L, Santi D, Simoni M, Pot\u00ec F (2018) \u2018Spare\u2019 Luteinizing Hormone receptors: facts and fiction. Trends Endocrinol Metab 29(4):208\u2013217. https://doi.org/10.1016/j.tem.2018.01.007",
+              "journal-title": "Trends Endocrinol Metab"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR24",
+              "first-page": "126",
+              "volume": "100",
+              "author": "CJ Caspersen",
+              "year": "1985",
+              "unstructured": "Caspersen CJ, Powell KE, Christenson GM (1985) Physical activity, exercise, and physical fitness: definitions and distinctions for health-related research. Public Health Rep 100(2):126\u2013131",
+              "journal-title": "Public Health Rep"
+            },
+            {
+              "key": "743_CR25",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Chang C-N, Kioussi C (2018) Location, location, location: signals in muscle specification. J Dev Biol 6(2). https://doi.org/10.3390/jdb6020011",
+              "DOI": "10.3390/jdb6020011"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "209",
+              "DOI": "10.1152/physrev.00019.2003",
+              "volume": "84",
+              "author": "SB Charg\u00e9",
+              "year": "2004",
+              "unstructured": "Charg\u00e9 SB, Rudnicki MA (2004) Cellular and molecular regulation of muscle regeneration. Physiol Rev 84(1):209\u2013238. https://doi.org/10.1152/physrev.00019.2003",
+              "journal-title": "Physiol Rev"
+            },
+            {
+              "issue": "6",
+              "key": "743_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "323",
+              "DOI": "10.1038/s41574-019-0184-8",
+              "volume": "15",
+              "author": "CE Citterio",
+              "year": "2019",
+              "unstructured": "Citterio CE, Targovnik HM, Arvan P (2019) The role of thyroglobulin in thyroid hormonogenesis. Nat Rev Endocrinol 15(6):323\u2013338. https://doi.org/10.1038/s41574-019-0184-8",
+              "journal-title": "Nat Rev Endocrinol"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "104",
+              "DOI": "10.3810/psm.2009.06.1716",
+              "volume": "37",
+              "author": "JC Colado",
+              "year": "2009",
+              "unstructured": "Colado JC, Garc\u00eda-Mass\u00f3 X (2009) Technique and safety aspects of resistance exercises: a systematic review of the literature. Phys Sportsmed 37(2):104\u2013111. https://doi.org/10.3810/psm.2009.06.1716",
+              "journal-title": "Phys Sportsmed"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "225",
+              "DOI": "10.1080/13573322.2011.607951",
+              "volume": "17",
+              "author": "D Collins",
+              "year": "2012",
+              "unstructured": "Collins D, Bailey R, Ford PA, MacNamara \u00c1, Toms M, Pearce G (2012) Three worlds: new directions in participant development in sport and physical activity. Sport Educ Soc 17(2):225\u2013243",
+              "journal-title": "Sport Educ Soc"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "41",
+              "DOI": "10.1186/s40798-018-0154-z",
+              "volume": "4",
+              "author": "H Collins",
+              "year": "2018",
+              "unstructured": "Collins H, Fawkner S, Booth JN, Duncan A (2018) The effect of resistance training interventions on weight status in youth: a meta-analysis. Sports Med Open 4(1):41. https://doi.org/10.1186/s40798-018-0154-z",
+              "journal-title": "Sports Med Open"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR34",
+              "first-page": "3",
+              "volume": "37",
+              "author": "RA Davey",
+              "year": "2016",
+              "unstructured": "Davey RA, Grossmann M (2016) Androgen receptor structure, function and biology: from bench to bedside. Clin Biochem Rev 37(1):3\u201315",
+              "journal-title": "Clin Biochem Rev"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR35",
+              "first-page": "292",
+              "volume": "6",
+              "author": "M De Ste Croix",
+              "year": "2007",
+              "unstructured": "De Ste Croix M (2007) Advances in paediatric strength assessment: changing our perspective on strength development. J Sports Sci Med 6(3):292\u2013304",
+              "journal-title": "J Sports Sci Med"
+            },
+            {
+              "issue": "11",
+              "key": "743_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "1297",
+              "DOI": "10.1249/00005768-199411000-00001",
+              "volume": "26",
+              "author": "P del Corral",
+              "year": "1994",
+              "unstructured": "del Corral P, Mahon AD, Duncan GE, Howe CA, Craig BW (1994) The effect of exercise on serum and salivary cortisol in male children. Med Sci Sports Exerc 26(11):1297\u20131301",
+              "journal-title": "Med Sci Sports Exerc"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "61",
+              "DOI": "10.1038/ijo.2012.55",
+              "volume": "37",
+              "author": "E D\u2019Hondt",
+              "year": "2013",
+              "unstructured": "D\u2019Hondt E, Deforche B, Gentier I, De Bourdeaudhuij I, Vaeyens R, Philippaerts R, Lenoir M (2013) A longitudinal analysis of gross motor coordination in overweight and obese children versus normal-weight peers. Int J Obes (London) 37(1):61\u201367. https://doi.org/10.1038/ijo.2012.55",
+              "journal-title": "Int J Obes (London)"
+            },
+            {
+              "issue": "12",
+              "key": "743_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "2636",
+              "DOI": "10.1249/mss.0000000000000705",
+              "volume": "47",
+              "author": "I Dias",
+              "year": "2015",
+              "unstructured": "Dias I, Farinatti P, De Souza MG, Manhanini DP, Balthazar E, Dantas DL et al (2015) Effects of resistance training on obese adolescents. Med Sci Sports Exerc 47(12):2636\u20132644. https://doi.org/10.1249/mss.0000000000000705",
+              "journal-title": "Med Sci Sports Exerc"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "2270",
+              "DOI": "10.1210/jcem.86.5.7465",
+              "volume": "86",
+              "author": "MG Dobson",
+              "year": "2001",
+              "unstructured": "Dobson MG, Redfern CP, Unwin N, Weaver JU (2001) The N363S polymorphism of the glucocorticoid receptor: potential contribution to central obesity in men and lack of association with other risk factors for coronary heart disease and diabetes mellitus. J Clin Endocrinol Metab 86(5):2270\u20132274. https://doi.org/10.1210/jcem.86.5.7465",
+              "journal-title": "J Clin Endocrinol Metab"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "2",
+              "DOI": "10.1123/pes.24.1.2",
+              "volume": "24",
+              "author": "R Dotan",
+              "year": "2012",
+              "unstructured": "Dotan R, Mitchell C, Cohen R, Klentrou P, Gabriel D, Falk B (2012) Child-adult differences in muscle activation \u2013 a review. Pediatr Exerc Sci 24(1):2\u201321. https://doi.org/10.1123/pes.24.1.2",
+              "journal-title": "Pediatr Exerc Sci"
+            },
+            {
+              "issue": "7",
+              "key": "743_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "740",
+              "DOI": "10.1139/apnm-2012-0330",
+              "volume": "38",
+              "author": "R Dotan",
+              "year": "2013",
+              "unstructured": "Dotan R, Mitchell CJ, Cohen R, Gabriel D, Klentrou P, Falk B (2013) Explosive sport training and torque kinetics in children. Appl Physiol Nutr Metab 38(7):740\u2013745. https://doi.org/10.1139/apnm-2012-0330",
+              "journal-title": "Appl Physiol Nutr Metab"
+            },
+            {
+              "key": "743_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "32",
+              "DOI": "10.7150/jbm.25035",
+              "volume": "3",
+              "author": "C Drenowatz",
+              "year": "2018",
+              "unstructured": "Drenowatz C, Greier K (2018) Resistance training in youth \u2013 benefits and characteristics. J Biomed 3:32\u201339. https://doi.org/10.7150/jbm.25035",
+              "journal-title": "J Biomed"
+            },
+            {
+              "issue": "7",
+              "key": "743_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "2979",
+              "DOI": "10.1096/fj.14-249748",
+              "volume": "28",
+              "author": "V Dubois",
+              "year": "2014",
+              "unstructured": "Dubois V, Laurent MR, Sinnesael M, Cielen N, Helsen C, Clinckemalie L et al (2014) A satellite cell-specific knockout of the androgen receptor reveals myostatin as a direct androgen target in skeletal muscle. FASEB J 28(7):2979\u20132994. https://doi.org/10.1096/fj.14-249748",
+              "journal-title": "FASEB J"
+            },
+            {
+              "issue": "6",
+              "key": "743_CR46",
+              "doi-asserted-by": "publisher",
+              "first-page": "1766",
+              "DOI": "10.1152/japplphysiol.00543.2006",
+              "volume": "101",
+              "author": "J Duchateau",
+              "year": "2006",
+              "unstructured": "Duchateau J, Semmler JG, Enoka RM (2006) Training adaptations in the behavior of human motor units. J Appl Physiol (1985) 101(6):1766\u20131775. https://doi.org/10.1152/japplphysiol.00543.2006",
+              "journal-title": "J Appl Physiol (1985)"
+            },
+            {
+              "issue": "6",
+              "key": "743_CR47",
+              "doi-asserted-by": "publisher",
+              "first-page": "750",
+              "DOI": "10.1136/jnnp.68.6.750",
+              "volume": "68",
+              "author": "RF Duyff",
+              "year": "2000",
+              "unstructured": "Duyff RF, Van den Bosch J, Laman DM, van Loon BJ, Linssen WH (2000) Neuromuscular findings in thyroid dysfunction: a prospective clinical and electrodiagnostic study. J Neurol Neurosurg Psychiatry 68(6):750\u2013755. https://doi.org/10.1136/jnnp.68.6.750",
+              "journal-title": "J Neurol Neurosurg Psychiatry"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR49",
+              "doi-asserted-by": "publisher",
+              "first-page": "16",
+              "DOI": "10.1249/FIT.0000000000000236",
+              "volume": "20",
+              "author": "AD Faigenbaum",
+              "year": "2016",
+              "unstructured": "Faigenbaum AD, McFarland JE (2016) Resistance training for kids: right from the start. ACSMs Health Fit J 20(5):16\u201322",
+              "journal-title": "ACSMs Health Fit J"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR50",
+              "doi-asserted-by": "publisher",
+              "first-page": "161",
+              "DOI": "10.1249/JSR.0b013e3181de1214",
+              "volume": "9",
+              "author": "AD Faigenbaum",
+              "year": "2010",
+              "unstructured": "Faigenbaum AD, Myer GD (2010a) Pediatric resistance training: benefits, concerns, and program design considerations. Curr Sports Med Rep 9(3):161\u2013168. https://doi.org/10.1249/JSR.0b013e3181de1214",
+              "journal-title": "Curr Sports Med Rep"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR51",
+              "doi-asserted-by": "publisher",
+              "first-page": "56",
+              "DOI": "10.1136/bjsm.2009.068098",
+              "volume": "44",
+              "author": "AD Faigenbaum",
+              "year": "2010",
+              "unstructured": "Faigenbaum AD, Myer GD (2010b) Resistance training among young athletes: safety, efficacy and injury prevention effects. Br J Sports Med 44(1):56\u201363. https://doi.org/10.1136/bjsm.2009.068098",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "56",
+              "DOI": "10.1136/bjsm.2009.068098",
+              "volume": "44",
+              "author": "AD Faigenbaum",
+              "year": "2010",
+              "unstructured": "Faigenbaum AD, Myer GD (2010c) Resistance training among young athletes: safety, efficacy and injury prevention effects. Br J Sports Med 44(1):56\u201363",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "key": "743_CR53",
+              "doi-asserted-by": "publisher",
+              "first-page": "S60",
+              "DOI": "10.1519/JSC.0b013e31819df407",
+              "volume": "23",
+              "author": "AD Faigenbaum",
+              "year": "2009",
+              "unstructured": "Faigenbaum AD, Kraemer WJ, Blimkie CJR, Jeffreys I, Micheli LJ, Nitka M, Rowland TW (2009a) Youth resistance training: updated position statement paper from the national strength and conditioning association. J Strength Cond Res 23:S60\u2013S79",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "issue": "5 Suppl",
+              "key": "743_CR54",
+              "doi-asserted-by": "publisher",
+              "first-page": "S60",
+              "DOI": "10.1519/JSC.0b013e31819df407",
+              "volume": "23",
+              "author": "AD Faigenbaum",
+              "year": "2009",
+              "unstructured": "Faigenbaum AD, Kraemer WJ, Blimkie CJ, Jeffreys I, Micheli LJ, Nitka M, Rowland TW (2009b) Youth resistance training: updated position statement paper from the national strength and conditioning association. J Strength Cond Res 23(5 Suppl):S60\u2013S79. https://doi.org/10.1519/JSC.0b013e31819df407",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "issue": "4",
+              "key": "743_CR55",
+              "doi-asserted-by": "publisher",
+              "first-page": "573",
+              "DOI": "10.1123/pes.23.4.573",
+              "volume": "23",
+              "author": "AD Faigenbaum",
+              "year": "2011",
+              "unstructured": "Faigenbaum AD, Farrell A, Fabiano M, Radler T, Naclerio F, Ratamess NA et al (2011) Effects of integrative neuromuscular training on fitness performance in children. Pediatr Exerc Sci 23(4):573\u2013584. https://doi.org/10.1123/pes.23.4.573",
+              "journal-title": "Pediatr Exerc Sci"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR56",
+              "doi-asserted-by": "publisher",
+              "first-page": "176",
+              "DOI": "10.2165/00007256-199622030-00004",
+              "volume": "22",
+              "author": "B Falk",
+              "year": "1996",
+              "unstructured": "Falk B, Tenenbaum G (1996) The effectiveness of resistance training in children. A meta-analysis. Sports Med 22(3):176\u2013186. https://doi.org/10.2165/00007256-199622030-00004",
+              "journal-title": "Sports Med"
+            },
+            {
+              "issue": "7",
+              "key": "743_CR58",
+              "doi-asserted-by": "publisher",
+              "first-page": "1122",
+              "DOI": "10.1016/j.psyneuen.2012.11.001",
+              "volume": "38",
+              "author": "E Filaire",
+              "year": "2013",
+              "unstructured": "Filaire E, Ferreira JP, Oliveira M, Massart A (2013) Diurnal patterns of salivary alpha-amylase and cortisol secretion in female adolescent tennis players after 16 weeks of training. Psychoneuroendocrinology 38(7):1122\u20131132. https://doi.org/10.1016/j.psyneuen.2012.11.001",
+              "journal-title": "Psychoneuroendocrinology"
+            },
+            {
+              "issue": "4",
+              "key": "743_CR62",
+              "doi-asserted-by": "publisher",
+              "first-page": "389",
+              "DOI": "10.1080/02640414.2010.536849",
+              "volume": "29",
+              "author": "P Ford",
+              "year": "2011",
+              "unstructured": "Ford P, De Ste Croix M, Lloyd R, Meyers R, Moosavi M, Oliver J et al (2011) The long-term athlete development model: physiological evidence and application. J Sports Sci 29(4):389\u2013402. https://doi.org/10.1080/02640414.2010.536849",
+              "journal-title": "J Sports Sci"
+            },
+            {
+              "issue": "6",
+              "key": "743_CR63",
+              "doi-asserted-by": "publisher",
+              "first-page": "515",
+              "DOI": "10.1080/17461391.2011.577241",
+              "volume": "12",
+              "author": "P Ford",
+              "year": "2012",
+              "unstructured": "Ford P, Collins D, Bailey R, MacNamara \u00c1, Pearce G, Toms M (2012) Participant development in sport and physical activity: the impact of biological maturation. Eur J Sport Sci 12(6):515\u2013526. https://doi.org/10.1080/17461391.2011.577241",
+              "journal-title": "Eur J Sport Sci"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR66",
+              "doi-asserted-by": "publisher",
+              "first-page": "357",
+              "DOI": "10.2114/ahs1983.11.357",
+              "volume": "11",
+              "author": "T Fukunaga",
+              "year": "1992",
+              "unstructured": "Fukunaga T, Funato K, Ikegawa S (1992) The effects of resistance training on muscle area and strength in prepubescent age. Ann Physiol Anthropol 11(3):357\u2013364. https://doi.org/10.2114/ahs1983.11.357",
+              "journal-title": "Ann Physiol Anthropol"
+            },
+            {
+              "key": "743_CR67",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3389/fphys.2020.621226",
+              "volume": "11",
+              "author": "N Gharahdaghi",
+              "year": "2020",
+              "unstructured": "Gharahdaghi N, Phillips BE, Szewczyk NJ, Smith K, Wilkinson DJ, Atherton PJ (2020) Links between testosterone, oestrogen, and the growth hormone/insulin-like growth factor axis and resistance exercise muscle adaptations. Front Physiol 11:621226. https://doi.org/10.3389/fphys.2020.621226",
+              "journal-title": "Front Physiol"
+            },
+            {
+              "issue": "6",
+              "key": "743_CR69",
+              "doi-asserted-by": "publisher",
+              "first-page": "717",
+              "DOI": "10.1210/edrv.19.6.0353",
+              "volume": "19",
+              "author": "A Giustina",
+              "year": "1998",
+              "unstructured": "Giustina A, Veldhuis JD (1998) Pathophysiology of the neuroregulation of growth hormone secretion in experimental animals and the human. Endocr Rev 19(6):717\u2013797. https://doi.org/10.1210/edrv.19.6.0353",
+              "journal-title": "Endocr Rev"
+            },
+            {
+              "key": "743_CR72",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Gouveia \u00c9, Gouveia BR, Marques A, Lopes H, Rodrigues A, Quintal T et al (2021) Estimation of engagement in moderate-to-vigorous physical activity from direct observation: a proposal for school physical education. Children (Basel) 8(2). https://doi.org/10.3390/children8020067",
+              "DOI": "10.3390/children8020067"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR73",
+              "doi-asserted-by": "publisher",
+              "first-page": "357",
+              "DOI": "10.1055/s-0031-1271677",
+              "volume": "32",
+              "author": "U Granacher",
+              "year": "2011",
+              "unstructured": "Granacher U, Goesele A, Roggo K, Wischer T, Fischer S, Zuerny C et al (2011) Effects and mechanisms of strength training in children. Int J Sports Med 32(5):357\u2013364. https://doi.org/10.1055/s-0031-1271677",
+              "journal-title": "Int J Sports Med"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR75",
+              "doi-asserted-by": "publisher",
+              "first-page": "23",
+              "DOI": "10.1016/S2352-4642(19)30323-2",
+              "volume": "4",
+              "author": "R Guthold",
+              "year": "2020",
+              "unstructured": "Guthold R, Stevens GA, Riley LM, Bull FC (2020) Global trends in insufficient physical activity among adolescents: a pooled analysis of 298 population-based surveys with 1.6 million participants. Lancet Child Adolesc Health 4(1):23\u201335. https://doi.org/10.1016/S2352-4642(19)30323-2",
+              "journal-title": "Lancet Child Adolesc Health"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR76",
+              "doi-asserted-by": "publisher",
+              "first-page": "30",
+              "DOI": "10.1152/physiol.00024.2014",
+              "volume": "30",
+              "author": "KM Haizlip",
+              "year": "2015",
+              "unstructured": "Haizlip KM, Harrison BC, Leinwand LA (2015) Sex-based differences in skeletal muscle kinetics and fiber-type composition. Physiology (Bethesda) 30(1):30\u201339. https://doi.org/10.1152/physiol.00024.2014",
+              "journal-title": "Physiology (Bethesda)"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR77",
+              "first-page": "53",
+              "volume": "8",
+              "author": "BP Hamill",
+              "year": "1994",
+              "unstructured": "Hamill BP (1994) Relative safety of weightlifting and weight training. J Strength Cond Res 8(1):53\u201357",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "issue": "1065",
+              "key": "743_CR78",
+              "doi-asserted-by": "publisher",
+              "first-page": "257",
+              "DOI": "10.1098/rstb.1981.0076",
+              "volume": "293",
+              "author": "AJ Harris",
+              "year": "1981",
+              "unstructured": "Harris AJ (1981) Embryonic growth and innervation of rat skeletal muscles. I. Neural regulation of muscle fibre numbers. Philos Trans R Soc Lond Ser B Biol Sci 293(1065):257\u2013277. https://doi.org/10.1098/rstb.1981.0076",
+              "journal-title": "Philos Trans R Soc Lond Ser B Biol Sci"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR80",
+              "doi-asserted-by": "publisher",
+              "first-page": "271",
+              "DOI": "10.1097/00075197-200405000-00006",
+              "volume": "7",
+              "author": "KL Herbst",
+              "year": "2004",
+              "unstructured": "Herbst KL, Bhasin S (2004) Testosterone action on skeletal muscle. Curr Opin Clin Nutr Metab Care 7(3):271\u2013277. https://doi.org/10.1097/00075197-200405000-00006",
+              "journal-title": "Curr Opin Clin Nutr Metab Care"
+            },
+            {
+              "key": "743_CR85",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Hughes DC, Ellefsen S, Baar K (2018) Adaptations to endurance and strength training. Cold Spring Harb Perspect Med 8(6). https://doi.org/10.1101/cshperspect.a029769",
+              "DOI": "10.1101/cshperspect.a029769"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR86",
+              "first-page": "95",
+              "volume": "1",
+              "author": "G Jahreis",
+              "year": "1991",
+              "unstructured": "Jahreis G, Kauf E, Frohner G, Schmidt HE (1991) Influence of intensive exercise on insulin-like growth factor I, thyroid and steroid hormones in female gymnasts. Growth Regul 1(3):95\u201399",
+              "journal-title": "Growth Regul"
+            },
+            {
+              "key": "743_CR87",
+              "doi-asserted-by": "publisher",
+              "first-page": "40",
+              "DOI": "10.1186/1479-5868-7-40",
+              "volume": "7",
+              "author": "I Janssen",
+              "year": "2010",
+              "unstructured": "Janssen I, Leblanc AG (2010) Systematic review of the health benefits of physical activity and fitness in school-aged children and youth. Int J Behav Nutr Phys Act 7:40. https://doi.org/10.1186/1479-5868-7-40",
+              "journal-title": "Int J Behav Nutr Phys Act"
+            },
+            {
+              "issue": "21",
+              "key": "743_CR88",
+              "doi-asserted-by": "publisher",
+              "first-page": "4259",
+              "DOI": "10.1242/dev.125.21.4259",
+              "volume": "125",
+              "author": "N Kahane",
+              "year": "1998",
+              "unstructured": "Kahane N, Cinnamon Y, Kalcheim C (1998) The cellular mechanism by which the dermomyotome contributes to the second wave of myotome development. Development 125(21):4259\u20134271",
+              "journal-title": "Development"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR89",
+              "doi-asserted-by": "publisher",
+              "first-page": "161",
+              "DOI": "10.1007/s004410051277",
+              "volume": "296",
+              "author": "C Kalcheim",
+              "year": "1999",
+              "unstructured": "Kalcheim C, Cinnamon Y, Kahane N (1999) Myotome formation: a multistage process. Cell Tissue Res 296(1):161\u2013173. https://doi.org/10.1007/s004410051277",
+              "journal-title": "Cell Tissue Res"
+            },
+            {
+              "key": "743_CR90",
+              "unstructured": "Kohl III HW, Cook HD (2013) Educating the student body: taking physical activity and physical education to school"
+            },
+            {
+              "key": "743_CR92",
+              "unstructured": "Kraemer WJ, Fleck SJ (2005) Strength training for young athletes. Human Kinetics"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR94",
+              "doi-asserted-by": "publisher",
+              "first-page": "549",
+              "DOI": "10.1152/japplphysiol.00599.2016",
+              "volume": "122",
+              "author": "WJ Kraemer",
+              "year": "2017",
+              "unstructured": "Kraemer WJ, Ratamess NA, Nindl BC (2017) Recovery responses of testosterone, growth hormone, and IGF-1 after resistance exercise. J Appl Physiol (1985) 122(3):549\u2013558. https://doi.org/10.1152/japplphysiol.00599.2016",
+              "journal-title": "J Appl Physiol (1985)"
+            },
+            {
+              "key": "743_CR95",
+              "doi-asserted-by": "publisher",
+              "first-page": "33",
+              "DOI": "10.3389/fendo.2020.00033",
+              "volume": "11",
+              "author": "WJ Kraemer",
+              "year": "2020",
+              "unstructured": "Kraemer WJ, Ratamess NA, Hymer WC, Nindl BC, Fragala MS (2020) Growth hormone(s), testosterone, insulin-like growth factors, and cortisol: roles and integration for cellular development and growth with exercise. Front Endocrinol (Lausanne) 11:33. https://doi.org/10.3389/fendo.2020.00033",
+              "journal-title": "Front Endocrinol (Lausanne)"
+            },
+            {
+              "issue": "1-2",
+              "key": "743_CR96",
+              "doi-asserted-by": "publisher",
+              "first-page": "79",
+              "DOI": "10.1016/j.mce.2013.03.003",
+              "volume": "380",
+              "author": "T Kuo",
+              "year": "2013",
+              "unstructured": "Kuo T, Harris CA, Wang JC (2013) Metabolic functions of glucocorticoid receptor in skeletal muscle. Mol Cell Endocrinol 380(1-2):79\u201388. https://doi.org/10.1016/j.mce.2013.03.003",
+              "journal-title": "Mol Cell Endocrinol"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR98",
+              "doi-asserted-by": "publisher",
+              "first-page": "311",
+              "DOI": "10.1136/mp.54.5.311",
+              "volume": "54",
+              "author": "Z Laron",
+              "year": "2001",
+              "unstructured": "Laron Z (2001) Insulin-like growth factor 1 (IGF-1): a growth hormone. Mol Pathol 54(5):311\u2013316. https://doi.org/10.1136/mp.54.5.311",
+              "journal-title": "Mol Pathol"
+            },
+            {
+              "issue": "4",
+              "key": "743_CR100",
+              "doi-asserted-by": "publisher",
+              "first-page": "209",
+              "DOI": "10.5483/bmbrep.2015.48.4.275",
+              "volume": "48",
+              "author": "DY Lee",
+              "year": "2015",
+              "unstructured": "Lee DY, Kim E, Choi MH (2015) Technical and clinical aspects of cortisol as a biochemical marker of chronic stress. BMB Rep 48(4):209\u2013216. https://doi.org/10.5483/bmbrep.2015.48.4.275",
+              "journal-title": "BMB Rep"
+            },
+            {
+              "issue": "4",
+              "key": "743_CR101",
+              "doi-asserted-by": "publisher",
+              "first-page": "382",
+              "DOI": "10.1177/1559827618759640",
+              "volume": "14",
+              "author": "K Legerlotz",
+              "year": "2020",
+              "unstructured": "Legerlotz K (2020) The effects of resistance training on health of children and adolescents with disabilities. Am J Lifestyle Med 14(4):382\u2013396. https://doi.org/10.1177/1559827618759640",
+              "journal-title": "Am J Lifestyle Med"
+            },
+            {
+              "issue": "6148",
+              "key": "743_CR103",
+              "doi-asserted-by": "publisher",
+              "first-page": "537",
+              "DOI": "10.1038/330537a0",
+              "volume": "330",
+              "author": "DW Leung",
+              "year": "1987",
+              "unstructured": "Leung DW, Spencer SA, Cachianes G, Hammonds RG, Collins C, Henzel WJ et al (1987) Growth hormone receptor and serum binding protein: purification, cloning and expression. Nature 330(6148):537\u2013543. https://doi.org/10.1038/330537a0",
+              "journal-title": "Nature"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR104",
+              "doi-asserted-by": "publisher",
+              "first-page": "147",
+              "DOI": "10.3109/17518429709167353",
+              "volume": "1",
+              "author": "WA Lillegard",
+              "year": "1997",
+              "unstructured": "Lillegard WA, Brown EW, Wilson DJ, Henderson R, Lewis E (1997) Efficacy of strength training in prepubescent to early postpubescent males and females: effects of gender and maturity. Pediatr Rehabil 1(3):147\u2013157. https://doi.org/10.3109/17518429709167353",
+              "journal-title": "Pediatr Rehabil"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR106",
+              "doi-asserted-by": "publisher",
+              "first-page": "61",
+              "DOI": "10.1519/SSC.0b013e31825760ea",
+              "volume": "34",
+              "author": "RS Lloyd",
+              "year": "2012",
+              "unstructured": "Lloyd RS, Oliver JL (2012) The youth physical development model. Strength Cond J 34(3):61\u201372. https://doi.org/10.1519/SSC.0b013e31825760ea",
+              "journal-title": "Strength Cond J"
+            },
+            {
+              "issue": "7",
+              "key": "743_CR107",
+              "doi-asserted-by": "publisher",
+              "first-page": "498",
+              "DOI": "10.1136/bjsports-2013-092952",
+              "volume": "48",
+              "author": "RS Lloyd",
+              "year": "2014",
+              "unstructured": "Lloyd RS, Faigenbaum AD, Stone MH, Oliver JL, Jeffreys I, Moody JA et al (2014a) Position statement on youth resistance training: the 2014 International Consensus. Br J Sports Med 48(7):498\u2013505. https://doi.org/10.1136/bjsports-2013-092952",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "issue": "7",
+              "key": "743_CR108",
+              "doi-asserted-by": "publisher",
+              "first-page": "498",
+              "DOI": "10.1136/bjsports-2013-092952",
+              "volume": "48",
+              "author": "RS Lloyd",
+              "year": "2014",
+              "unstructured": "Lloyd RS, Faigenbaum AD, Stone MH, Oliver JL, Jeffreys I, Moody JA et al (2014b) Position statement on youth resistance training: the 2014 International Consensus. Br J Sports Med 48(7):498\u2013505",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "issue": "5-8",
+              "key": "743_CR109",
+              "doi-asserted-by": "publisher",
+              "first-page": "835",
+              "DOI": "10.1023/B:NEUR.0000020627.18156.b1",
+              "volume": "32",
+              "author": "T L\u00f8mo",
+              "year": "2003",
+              "unstructured": "L\u00f8mo T (2003) What controls the position, number, size, and distribution of neuromuscular junctions on rat muscle fibers? J Neurocytol 32(5-8):835\u2013848. https://doi.org/10.1023/B:NEUR.0000020627.18156.b1",
+              "journal-title": "J Neurocytol"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR110",
+              "doi-asserted-by": "publisher",
+              "first-page": "663",
+              "DOI": "10.1111/j.1600-0838.2009.01027.x",
+              "volume": "21",
+              "author": "VP Lopes",
+              "year": "2011",
+              "unstructured": "Lopes VP, Rodrigues LP, Maia JA, Malina RM (2011) Motor coordination as predictor of physical activity in childhood. Scand J Med Sci Sports 21(5):663\u2013669. https://doi.org/10.1111/j.1600-0838.2009.01027.x",
+              "journal-title": "Scand J Med Sci Sports"
+            },
+            {
+              "issue": "8",
+              "key": "743_CR113",
+              "doi-asserted-by": "publisher",
+              "first-page": "2676",
+              "DOI": "10.1096/fj.08-105726",
+              "volume": "22",
+              "author": "HE MacLean",
+              "year": "2008",
+              "unstructured": "MacLean HE, Chiu WSM, Notini AJ, Axell A-M, Davey RA, McManus JF et al (2008) Impaired skeletal muscle development and function in male, but not female, genomic androgen receptor knockout mice. FASEB J 22(8):2676\u20132689. https://doi.org/10.1096/fj.08-105726",
+              "journal-title": "FASEB J"
+            },
+            {
+              "issue": "6",
+              "key": "743_CR114",
+              "doi-asserted-by": "publisher",
+              "first-page": "478",
+              "DOI": "10.1097/01.jsm.0000248843.31874.be",
+              "volume": "16",
+              "author": "RM Malina",
+              "year": "2006",
+              "unstructured": "Malina RM (2006) Weight training in youth-growth, maturation, and safety: an evidence-based review. Clin J Sport Med 16(6):478\u2013487. https://doi.org/10.1097/01.jsm.0000248843.31874.be",
+              "journal-title": "Clin J Sport Med"
+            },
+            {
+              "issue": "10",
+              "key": "743_CR116",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1136/bmjopen-2014-006012",
+              "volume": "4",
+              "author": "A Marques",
+              "year": "2014",
+              "unstructured": "Marques A, de Matos MG (2014) Adolescents\u2019 physical activity trends over the years: a three-cohort study based on the Health Behaviour in School-aged Children (HBSC) Portuguese survey. BMJ Open 4(10):e006012",
+              "journal-title": "BMJ Open"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR119",
+              "doi-asserted-by": "publisher",
+              "first-page": "493",
+              "DOI": "10.1083/jcb.9.2.493",
+              "volume": "9",
+              "author": "A Mauro",
+              "year": "1961",
+              "unstructured": "Mauro A (1961) Satellite cell of skeletal muscle fibers. J Biophys Biochem Cytol 9(2):493\u2013495. https://doi.org/10.1083/jcb.9.2.493",
+              "journal-title": "J Biophys Biochem Cytol"
+            },
+            {
+              "issue": "4",
+              "key": "743_CR123",
+              "doi-asserted-by": "publisher",
+              "first-page": "212",
+              "DOI": "10.1159/000487755",
+              "volume": "89",
+              "author": "WL Miller",
+              "year": "2018",
+              "unstructured": "Miller WL (2018) The hypothalamic-pituitary-adrenal axis: a brief history. Horm Res Paediatr 89(4):212\u2013223. https://doi.org/10.1159/000487755",
+              "journal-title": "Horm Res Paediatr"
+            },
+            {
+              "issue": "7",
+              "key": "743_CR124",
+              "doi-asserted-by": "publisher",
+              "first-page": "848",
+              "DOI": "10.1002/mus.1083",
+              "volume": "24",
+              "author": "RJ Monti",
+              "year": "2001",
+              "unstructured": "Monti RJ, Roy RR, Edgerton VR (2001) Role of motor unit structure in defining function. Muscle Nerve 24(7):848\u2013866. https://doi.org/10.1002/mus.1083",
+              "journal-title": "Muscle Nerve"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR128",
+              "doi-asserted-by": "publisher",
+              "first-page": "355",
+              "DOI": "10.1152/physrev.00030.2013",
+              "volume": "94",
+              "author": "R Mullur",
+              "year": "2014",
+              "unstructured": "Mullur R, Liu Y-Y, Brent GA (2014) Thyroid hormone regulation of metabolism. Physiol Rev 94(2):355\u2013382. https://doi.org/10.1152/physrev.00030.2013",
+              "journal-title": "Physiol Rev"
+            },
+            {
+              "key": "743_CR129",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/B978-0-12-385940-2.00001-2",
+              "volume": "96",
+              "author": "M Murphy",
+              "year": "2011",
+              "unstructured": "Murphy M, Kardon G (2011) Origin of vertebrate limb muscle: the role of progenitor and myoblast populations. Curr Top Dev Biol 96:1\u201332. https://doi.org/10.1016/B978-0-12-385940-2.00001-2",
+              "journal-title": "Curr Top Dev Biol"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR130",
+              "doi-asserted-by": "publisher",
+              "first-page": "155",
+              "DOI": "10.1249/JSR.0b013e31821b1442",
+              "volume": "10",
+              "author": "GD Myer",
+              "year": "2011",
+              "unstructured": "Myer GD, Faigenbaum AD, Ford KR, Best TM, Bergeron MF, Hewett TE (2011) When to initiate integrative neuromuscular training to reduce sports-related injuries and enhance health in youth? Curr Sports Med Rep 10(3):155\u2013166. https://doi.org/10.1249/JSR.0b013e31821b1442",
+              "journal-title": "Curr Sports Med Rep"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR131",
+              "doi-asserted-by": "publisher",
+              "first-page": "137",
+              "DOI": "10.1089/thy.1991.1.137",
+              "volume": "1",
+              "author": "BR Olson",
+              "year": "1991",
+              "unstructured": "Olson BR, Klein I, Benner R, Burdett R, Trzepacz P, Levey GS (1991) Hyperthyroid myopathy and the response to treatment. Thyroid 1(2):137\u2013141. https://doi.org/10.1089/thy.1991.1.137",
+              "journal-title": "Thyroid"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR132",
+              "doi-asserted-by": "publisher",
+              "first-page": "41",
+              "DOI": "10.1016/j.ramd.2015.01.022",
+              "volume": "9",
+              "author": "G Pe\u00f1a",
+              "year": "2016",
+              "unstructured": "Pe\u00f1a G, Heredia JR, Lloret C, Mart\u00edn M, Da Silva-Grigoletto ME (2016) Iniciaci\u00f3n al entrenamiento de fuerza en edades tempranas: revisi\u00f3n. Revista Andaluza de Medicina del Deporte 9(1):41\u201349. https://doi.org/10.1016/j.ramd.2015.01.022",
+              "journal-title": "Revista Andaluza de Medicina del Deporte"
+            },
+            {
+              "key": "743_CR133",
+              "doi-asserted-by": "publisher",
+              "first-page": "D750",
+              "DOI": "10.2741/perry",
+              "volume": "5",
+              "author": "RL Perry",
+              "year": "2000",
+              "unstructured": "Perry RL, Rudnick MA (2000) Molecular mechanisms regulating myogenic determination and differentiation. Front Biosci 5:D750\u2013D767. https://doi.org/10.2741/perry",
+              "journal-title": "Front Biosci"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR134",
+              "doi-asserted-by": "publisher",
+              "first-page": "605",
+              "DOI": "10.1249/00005768-199010000-00011",
+              "volume": "22",
+              "author": "JA Ramsay",
+              "year": "1990",
+              "unstructured": "Ramsay JA, Blimkie CJ, Smith K, Garner S, MacDougall JD, Sale DG (1990) Strength training effects in prepubescent boys. Med Sci Sports Exerc 22(5):605\u2013614. https://doi.org/10.1249/00005768-199010000-00011",
+              "journal-title": "Med Sci Sports Exerc"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR135",
+              "doi-asserted-by": "publisher",
+              "first-page": "483",
+              "DOI": "10.1177/036354658701500510",
+              "volume": "15",
+              "author": "CB Rians",
+              "year": "1987",
+              "unstructured": "Rians CB, Weltman A, Cahill BR, Janney CA, Tippett SR, Katch FI (1987) Strength training for prepubescent males: is it safe? Am J Sports Med 15(5):483\u2013489. https://doi.org/10.1177/036354658701500510",
+              "journal-title": "Am J Sports Med"
+            },
+            {
+              "issue": "5 Suppl",
+              "key": "743_CR139",
+              "doi-asserted-by": "publisher",
+              "first-page": "S135",
+              "DOI": "10.1249/00005768-198810001-00009",
+              "volume": "20",
+              "author": "DG Sale",
+              "year": "1988",
+              "unstructured": "Sale DG (1988) Neural adaptation to resistance training. Med Sci Sports Exerc 20(5 Suppl):S135\u2013S145. https://doi.org/10.1249/00005768-198810001-00009",
+              "journal-title": "Med Sci Sports Exerc"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR141",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1677/joe-07-0606",
+              "volume": "197",
+              "author": "O Schakman",
+              "year": "2008",
+              "unstructured": "Schakman O, Gilson H, Thissen JP (2008) Mechanisms of glucocorticoid-induced myopathy. J Endocrinol 197(1):1\u201310. https://doi.org/10.1677/joe-07-0606",
+              "journal-title": "J Endocrinol"
+            },
+            {
+              "issue": "10",
+              "key": "743_CR142",
+              "doi-asserted-by": "publisher",
+              "first-page": "2163",
+              "DOI": "10.1016/j.biocel.2013.05.036",
+              "volume": "45",
+              "author": "O Schakman",
+              "year": "2013",
+              "unstructured": "Schakman O, Kalista S, Barb\u00e9 C, Loumaye A, Thissen JP (2013) Glucocorticoid-induced skeletal muscle atrophy. Int J Biochem Cell Biol 45(10):2163\u20132172. https://doi.org/10.1016/j.biocel.2013.05.036",
+              "journal-title": "Int J Biochem Cell Biol"
+            },
+            {
+              "issue": "4",
+              "key": "743_CR143",
+              "doi-asserted-by": "publisher",
+              "first-page": "1447",
+              "DOI": "10.1152/physrev.00031.2010",
+              "volume": "91",
+              "author": "S Schiaffino",
+              "year": "2011",
+              "unstructured": "Schiaffino S, Reggiani C (2011) Fiber types in mammalian skeletal muscles. Physiol Rev 91(4):1447\u20131531. https://doi.org/10.1152/physrev.00031.2010",
+              "journal-title": "Physiol Rev"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR145",
+              "first-page": "159",
+              "volume": "23",
+              "author": "H Schmalbruch",
+              "year": "2006",
+              "unstructured": "Schmalbruch H (2006) The satellite cell of skeletal muscle fibres. Braz J Morphol Sci 23(2):159\u2013172",
+              "journal-title": "Braz J Morphol Sci"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR149",
+              "doi-asserted-by": "publisher",
+              "first-page": "205",
+              "DOI": "10.1089/thy.2007.0256",
+              "volume": "18",
+              "author": "WS Simonides",
+              "year": "2008",
+              "unstructured": "Simonides WS, van Hardeveld C (2008) Thyroid hormone as a determinant of metabolic and contractile phenotype of skeletal muscle. Thyroid 18(2):205\u2013216. https://doi.org/10.1089/thy.2007.0256",
+              "journal-title": "Thyroid"
+            },
+            {
+              "issue": "9",
+              "key": "743_CR151",
+              "doi-asserted-by": "publisher",
+              "first-page": "1209",
+              "DOI": "10.1007/s40279-014-0196-4",
+              "volume": "44",
+              "author": "JJ Smith",
+              "year": "2014",
+              "unstructured": "Smith JJ, Eather N, Morgan PJ, Plotnikoff RC, Faigenbaum AD, Lubans DR (2014) The health benefits of muscular fitness for children and adolescents: a systematic review and meta-analysis. Sports Med 44(9):1209\u20131223. https://doi.org/10.1007/s40279-014-0196-4",
+              "journal-title": "Sports Med"
+            },
+            {
+              "issue": "9",
+              "key": "743_CR152",
+              "doi-asserted-by": "publisher",
+              "first-page": "1220",
+              "DOI": "10.1089/thy.2018.0646",
+              "volume": "29",
+              "author": "D Spira",
+              "year": "2019",
+              "unstructured": "Spira D, Buchmann N, Demuth I, Steinhagen-Thiessen E, V\u00f6lzke H, Ittermann T (2019) Association of thyroid function with handgrip strength: data from the study of health in pomerania and the berlin aging study II. Thyroid 29(9):1220\u20131226. https://doi.org/10.1089/thy.2018.0646",
+              "journal-title": "Thyroid"
+            },
+            {
+              "issue": "7",
+              "key": "743_CR153",
+              "doi-asserted-by": "publisher",
+              "first-page": "1361",
+              "DOI": "10.1249/MSS.0b013e31819aaae5",
+              "volume": "41",
+              "author": "J Steene-Johannessen",
+              "year": "2009",
+              "unstructured": "Steene-Johannessen J, Anderssen SA, Kolle E, Andersen LB (2009) Low muscle fitness is associated with metabolic risk in youth. Med Sci Sports Exerc 41(7):1361\u20131367",
+              "journal-title": "Med Sci Sports Exerc"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR154",
+              "doi-asserted-by": "publisher",
+              "first-page": "33",
+              "DOI": "10.1007/s42000-018-0023-7",
+              "volume": "17",
+              "author": "C Stefanaki",
+              "year": "2018",
+              "unstructured": "Stefanaki C, Pervanidou P, Boschiero D, Chrousos GP (2018) Chronic stress and body composition disorders: implications for health and disease. Hormones (Athens) 17(1):33\u201343. https://doi.org/10.1007/s42000-018-0023-7",
+              "journal-title": "Hormones (Athens)"
+            },
+            {
+              "issue": "4",
+              "key": "743_CR155",
+              "doi-asserted-by": "publisher",
+              "first-page": "383",
+              "DOI": "10.1080/02640410310001641629",
+              "volume": "22",
+              "author": "G Stratton",
+              "year": "2004",
+              "unstructured": "Stratton G, Jones M, Fox K, Tolfrey K, Harris J, Maffulli N et al (2004) BASES position statement on guidelines for resistance exercise in young people. J Sports Sci 22(4):383\u2013390",
+              "journal-title": "J Sports Sci"
+            },
+            {
+              "key": "743_CR156",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Stricker PR, Faigenbaum AD, McCambridge TM (2020) Resistance training for children and adolescents. Pediatrics 145(6). https://doi.org/10.1542/peds.2020-1011",
+              "DOI": "10.1542/peds.2020-1011"
+            },
+            {
+              "issue": "1",
+              "key": "743_CR159",
+              "doi-asserted-by": "publisher",
+              "first-page": "994",
+              "DOI": "10.1186/s12889-015-2328-7",
+              "volume": "15",
+              "author": "GA ten Hoor",
+              "year": "2015",
+              "unstructured": "ten Hoor GA, Sleddens EFC, Kremers SPJ, Schols AMWJ, Kok G, Plasqui G (2015) Aerobic and strength exercises for youngsters aged 12 to 15: what do parents think? BMC Public Health 15(1):994. https://doi.org/10.1186/s12889-015-2328-7",
+              "journal-title": "BMC Public Health"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR161",
+              "doi-asserted-by": "publisher",
+              "first-page": "809",
+              "DOI": "10.1152/physrev.00033.2014",
+              "volume": "95",
+              "author": "LA Tintignac",
+              "year": "2015",
+              "unstructured": "Tintignac LA, Brenner H-R, R\u00fcegg MA (2015) Mechanisms regulating neuromuscular junction development and function and causes of muscle wasting. Physiol Rev 95(3):809\u2013852. https://doi.org/10.1152/physrev.00033.2014",
+              "journal-title": "Physiol Rev"
+            },
+            {
+              "key": "743_CR162",
+              "unstructured": "Townsend N, Wickramasinghe K, Williams J, Bhatnagar P, Rayner M (2015) Physical activity statistics 2015. British Heart Foundation. https://www.bhf.org.uk/informationsupport/publications/statistics/physical-activity-statistics-2015"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR163",
+              "doi-asserted-by": "publisher",
+              "first-page": "499",
+              "DOI": "10.1016/s0026-0495(97)90184-0",
+              "volume": "46",
+              "author": "A Tremblay",
+              "year": "1997",
+              "unstructured": "Tremblay A, Poehlman ET, Despres JP, Theriault G, Danforth E, Bouchard C (1997) Endurance training with constant energy intake in identical twins: changes over time in energy expenditure and related hormones. Metabolism 46(5):499\u2013503. https://doi.org/10.1016/s0026-0495(97)90184-0",
+              "journal-title": "Metabolism"
+            },
+            {
+              "key": "743_CR164",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Van Hooren B, De Ste Croix M (2020) Sensitive periods to train general motor abilities in children and adolescents: do they exist? A critical appraisal. Strength Cond J 42(6)",
+              "DOI": "10.1519/SSC.0000000000000545"
+            },
+            {
+              "issue": "8",
+              "key": "743_CR165",
+              "first-page": "653",
+              "volume": "42",
+              "author": "EM van Sluijs",
+              "year": "2008",
+              "unstructured": "van Sluijs EM, McMinn AM, Griffin SJ (2008) Effectiveness of interventions to promote physical activity in children and adolescents: systematic review of controlled trials. Br J Sports Med 42(8):653\u2013657",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "issue": "12",
+              "key": "743_CR166",
+              "doi-asserted-by": "publisher",
+              "first-page": "1037",
+              "DOI": "10.2165/11536910-000000000-00000",
+              "volume": "40",
+              "author": "JL Vingren",
+              "year": "2010",
+              "unstructured": "Vingren JL, Kraemer WJ, Ratamess NA, Anderson JM, Volek JS, Maresh CM (2010) Testosterone physiology in resistance exercise and training the up-stream regulatory elements. Sports Med 40(12):1037\u20131053. https://doi.org/10.2165/11536910-000000000-00000",
+              "journal-title": "Sports Med"
+            },
+            {
+              "issue": "5",
+              "key": "743_CR168",
+              "doi-asserted-by": "publisher",
+              "first-page": "401",
+              "DOI": "10.1007/s004210050351",
+              "volume": "77",
+              "author": "A Viru",
+              "year": "1998",
+              "unstructured": "Viru A, Laaneots L, Karelson K, Smirnova T, Viru M (1998) Exercise-induced hormone responses in girls at different stages of sexual maturation. Eur J Appl Physiol Occup Physiol 77(5):401\u2013408",
+              "journal-title": "Eur J Appl Physiol Occup Physiol"
+            },
+            {
+              "issue": "Pt 21",
+              "key": "743_CR170",
+              "doi-asserted-by": "publisher",
+              "first-page": "4543",
+              "DOI": "10.1242/jcs.151209",
+              "volume": "127",
+              "author": "YX Wang",
+              "year": "2014",
+              "unstructured": "Wang YX, Dumont NA, Rudnicki MA (2014) Muscle stem cells at a glance. J Cell Sci 127(Pt 21):4543\u20134548. https://doi.org/10.1242/jcs.151209",
+              "journal-title": "J Cell Sci"
+            },
+            {
+              "issue": "2",
+              "key": "743_CR171",
+              "doi-asserted-by": "publisher",
+              "first-page": "177",
+              "DOI": "10.1002/(SICI)1097-0177(199802)211:2<177::AID-AJA6>3.0.CO;2-E",
+              "volume": "211",
+              "author": "CH Washabaugh",
+              "year": "1998",
+              "unstructured": "Washabaugh CH, Ontell MP, Shan Z, Hoffman EP, Ontell M (1998) Role of the nerve in determining fetal skeletal muscle phenotype. Dev Dyn 211(2):177\u2013190",
+              "journal-title": "Dev Dyn"
+            },
+            {
+              "key": "743_CR172",
+              "doi-asserted-by": "publisher",
+              "first-page": "130",
+              "DOI": "10.1016/j.semcdb.2014.08.013",
+              "volume": "36",
+              "author": "K Watson",
+              "year": "2014",
+              "unstructured": "Watson K, Baar K (2014) mTOR and the health benefits of exercise. Semin Cell Dev Biol 36:130\u2013139. https://doi.org/10.1016/j.semcdb.2014.08.013",
+              "journal-title": "Semin Cell Dev Biol"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR173",
+              "doi-asserted-by": "publisher",
+              "first-page": "257",
+              "DOI": "10.1152/japplphysiol.00325.2014",
+              "volume": "117",
+              "author": "CM Waugh",
+              "year": "2014",
+              "unstructured": "Waugh CM, Korff T, Fath F, Blazevich AJ (2014a) Effects of resistance training on tendon mechanical properties and rapid force production in prepubertal children. J Appl Physiol 117(3):257\u2013266. https://doi.org/10.1152/japplphysiol.00325.2014",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "issue": "3",
+              "key": "743_CR174",
+              "doi-asserted-by": "publisher",
+              "first-page": "257",
+              "DOI": "10.1152/japplphysiol.00325.2014",
+              "volume": "117",
+              "author": "CM Waugh",
+              "year": "2014",
+              "unstructured": "Waugh CM, Korff T, Fath F, Blazevich AJ (2014b) Effects of resistance training on tendon mechanical properties and rapid force production in prepubertal children. J Appl Physiol (1985) 117(3):257\u2013266. https://doi.org/10.1152/japplphysiol.00325.2014",
+              "journal-title": "J Appl Physiol (1985)"
+            },
+            {
+              "issue": "6",
+              "key": "743_CR176",
+              "doi-asserted-by": "publisher",
+              "first-page": "457",
+              "DOI": "10.1123/ijsnem.20.6.457",
+              "volume": "20",
+              "author": "C Wilborn",
+              "year": "2010",
+              "unstructured": "Wilborn C, Taylor L, Poole C, Foster C, Willoughby D, Kreider R (2010) Effects of a purported aromatase and 5\u03b1-reductase inhibitor on hormone profiles in college-age men. Int J Sport Nutr Exerc Metab 20(6):457\u2013465. https://doi.org/10.1123/ijsnem.20.6.457",
+              "journal-title": "Int J Sport Nutr Exerc Metab"
+            },
+            {
+              "key": "743_CR179",
+              "volume-title": "Global recommendations on physical activity for health",
+              "author": "World Health Organization",
+              "year": "2010",
+              "unstructured": "World Health Organization (2010) Global recommendations on physical activity for health. World Health Organization"
+            }
+          ],
+          "container-title": [
+            "Advances in Experimental Medicine and Biology",
+            "Cell Biology and Translational Medicine, Volume 19"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/5584_2022_743",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                22
+              ]
+            ],
+            "date-time": "2023-03-22T13:08:13Z",
+            "timestamp": 1679490493000
+          },
+          "score": 29.536808,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/5584_2022_743"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783031284199",
+            "9783031284205"
+          ],
+          "references-count": 118,
+          "URL": "https://doi.org/10.1007/5584_2022_743",
+          "ISSN": [
+            "0065-2598",
+            "2214-8019"
+          ],
+          "issn-type": [
+            {
+              "value": "0065-2598",
+              "type": "print"
+            },
+            {
+              "value": "2214-8019",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "25 October 2022",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                5
+              ]
+            ],
+            "date-time": "2024-09-05T14:14:37Z",
+            "timestamp": 1725545677324
+          },
+          "reference-count": 0,
+          "publisher": "CRC Press",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9780415272100"
+            },
+            {
+              "type": "electronic",
+              "value": "9780203166420"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2002,
+                2,
+                28
+              ]
+            ]
+          },
+          "DOI": "10.1201/9780203166420.pt6",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                12,
+                15
+              ]
+            ],
+            "date-time": "2010-12-15T19:28:11Z",
+            "timestamp": 1292441291000
+          },
+          "page": "349-364",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Exercise Training and Muscle Insulin Resistance"
+          ],
+          "prefix": "10.1201",
+          "author": [
+            {
+              "given": "John",
+              "family": "Ivy",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "published-online": {
+            "date-parts": [
+              [
+                2010,
+                1,
+                14
+              ]
+            ]
+          },
+          "container-title": [
+            "Frontiers in Animal Diabetes Research",
+            "Muscle Metabolism"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2010,
+                12,
+                15
+              ]
+            ],
+            "date-time": "2010-12-15T19:28:19Z",
+            "timestamp": 1292441299000
+          },
+          "score": 29.330235,
+          "resource": {
+            "primary": {
+              "URL": "http://www.crcnetbase.com/doi/abs/10.1201/9780203166420.pt6"
+            }
+          },
+          "subtitle": [
+            "Cellular Adaptations"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2002,
+                2,
+                28
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780415272100",
+            "9780203166420"
+          ],
+          "references-count": 0,
+          "alternative-id": [
+            "10.1201/9780203166420.pt6",
+            "10.1201/CRCFRANDIRES",
+            "10.1201/9780203166420"
+          ],
+          "URL": "https://doi.org/10.1201/9780203166420.pt6",
+          "ISSN": [
+            "2154-5065"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "2154-5065"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2002,
+                2,
+                28
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,2440 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1137%2FS003614450342480",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T16:05:55Z",
+        "timestamp": 1793894755018,
+        "version": "4.8.0"
+      },
+      "reference-count": 429,
+      "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+      "issue": "2",
+      "funder": [
+        {
+          "DOI": "10.13039/100000001",
+          "name": "U.S. National Science Foundation",
+          "doi-asserted-by": "crossref",
+          "award": [
+            "DMS-0109086"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "DMS-0109086"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000001",
+              "id-type": "DOI",
+              "asserted-by": "crossref"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/100000001",
+          "name": "U.S. National Science Foundation",
+          "doi-asserted-by": "crossref",
+          "award": [
+            "DMS-0234188"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "DMS-0234188"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000001",
+              "id-type": "DOI",
+              "asserted-by": "crossref"
+            }
+          ]
+        },
+        {
+          "name": "James S. McDonnell Foundation and the Santa Fe Institute",
+          "id": [
+            {
+              "id": "https://ror.org/01arysc35",
+              "id-type": "ROR",
+              "asserted-by": "crossref"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "SIAM Rev."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2003,
+            1,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:p>Abstract.</jats:p>\n                  <jats:p>Inspired by empirical studies of networked systems such as the Internet, social networks, and biological networks, researchers have in recent years developed a variety of techniques and models to help us understand or predict the behavior of these systems. Here we review developments in this field, including such concepts as the small-world effect, degree distributions, clustering, network correlations, random graph models, models of network growth and preferential attachment, and dynamical processes taking place on networks.</jats:p>",
+      "DOI": "10.1137/s003614450342480",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2005,
+            9,
+            7
+          ]
+        ],
+        "date-time": "2005-09-07T21:00:16Z",
+        "timestamp": 1126126816000
+      },
+      "page": "167-256",
+      "source": "Crossref",
+      "is-referenced-by-count": 14374,
+      "title": [
+        "The Structure and Function of Complex Networks"
+      ],
+      "prefix": "10.1137",
+      "volume": "45",
+      "author": [
+        {
+          "given": "M. E. J.",
+          "family": "Newman",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Physics and Center for the Study of Complex Systems, University of Michigan, Ann Arbor, MI 48109."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "351",
+      "published-online": {
+        "date-parts": [
+          [
+            2003,
+            5,
+            2
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "ref1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.63.030901"
+        },
+        {
+          "key": "ref2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/3-540-48155-9_27"
+        },
+        {
+          "key": "ref3",
+          "author": "Adamic L. A.",
+          "journal-title": "Social Networks"
+        },
+        {
+          "key": "ref4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.287.5461.2115a"
+        },
+        {
+          "key": "ref5",
+          "volume-title": "Handbook of Graphs and Networks",
+          "author": "Adamic L. A.",
+          "year": "2003"
+        },
+        {
+          "key": "ref6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.046135"
+        },
+        {
+          "key": "ref7",
+          "volume-title": "Network Flows: Theory, Algorithms, and Applications",
+          "author": "Ahuja R. K.",
+          "year": "1993"
+        },
+        {
+          "key": "ref8",
+          "doi-asserted-by": "crossref",
+          "unstructured": "W. Aiello, F. Chung, and L. Lu, A random graph model for massive graphs, in Proceedings of the 32nd Annual ACM Symposium on Theory of Computing, Association of Computing Machinery, New York, 2000, pp. 171\u2013180.",
+          "DOI": "10.1145/335305.335326"
+        },
+        {
+          "key": "ref9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-1-4615-0005-6_4"
+        },
+        {
+          "key": "ref10",
+          "unstructured": "R. Alberich, J. Miro-Julia, and F. Rossello, Marvel Universe Looks Almost Like a Real Social Network, Preprint 0202174 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.84.5660"
+        },
+        {
+          "key": "ref12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.85.5234"
+        },
+        {
+          "key": "ref13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/RevModPhys.74.47"
+        },
+        {
+          "key": "ref14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/43601"
+        },
+        {
+          "key": "ref15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/35019019"
+        },
+        {
+          "key": "ref16",
+          "unstructured": "M. Aldana, Dynamics of Boolean Networks with Scale-Free Topology, Preprint 0209571 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/1098-2418(200009)17:2<79::AID-RSA1>3.0.CO;2-W"
+        },
+        {
+          "key": "ref18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)00740-9"
+        },
+        {
+          "key": "ref19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.88.098101"
+        },
+        {
+          "key": "ref20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.200327197"
+        },
+        {
+          "key": "ref21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3201/eid0902.020188"
+        },
+        {
+          "key": "ref22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-8733(98)00012-4"
+        },
+        {
+          "key": "ref23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/oso/9780198545996.001.0001"
+        },
+        {
+          "key": "ref24",
+          "first-page": "128",
+          "volume": "24",
+          "author": "Andersson H.",
+          "year": "1999",
+          "journal-title": "Math. Sci."
+        },
+        {
+          "key": "ref25",
+          "doi-asserted-by": "crossref",
+          "unstructured": "A. Arenas, A. Cabrales, A. D\u00edaz-Guilera, R. Guimer\u00e0, and F. Vega-Redondo, Search and congestion in complex networks, in Proceedings of the 18th Sitges Conference on Statistical Mechanics, R. Pastor-Satorras and J. Rubi, eds. Lecture Notes in Phys., Springer-Verlag, Berlin, 2003.",
+          "DOI": "10.1007/978-3-540-44943-0_11"
+        },
+        {
+          "key": "ref26",
+          "volume-title": "The Mathematical Theory of Infectious Diseases and Its Applications",
+          "author": "Bailey N. T. J.",
+          "year": "1975"
+        },
+        {
+          "key": "ref27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1943071"
+        },
+        {
+          "key": "ref28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1214/aoap/1034625252"
+        },
+        {
+          "key": "ref29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/20144"
+        },
+        {
+          "key": "ref30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/0022250X.1996.9990179"
+        },
+        {
+          "key": "ref31",
+          "volume-title": "Linked: The New Science of Networks",
+          "author": "Barab\u00e1si A.-L.",
+          "year": "2002"
+        },
+        {
+          "key": "ref32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.286.5439.509"
+        },
+        {
+          "key": "ref33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(99)00291-5"
+        },
+        {
+          "key": "ref34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(00)00018-2"
+        },
+        {
+          "key": "ref35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.287.5461.2115a"
+        },
+        {
+          "key": "ref36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)00736-7"
+        },
+        {
+          "key": "ref37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.89.054101"
+        },
+        {
+          "key": "ref38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/rsa.1018"
+        },
+        {
+          "key": "ref39",
+          "unstructured": "A. Barrat, Comment on \u201cSmall-World Networks: Evidence for Crossover Picture\u201d, Preprint 9903323 (1999); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s100510050067"
+        },
+        {
+          "key": "ref41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.82.3180"
+        },
+        {
+          "key": "ref42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.82.3180"
+        },
+        {
+          "key": "ref43",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-8733(00)00023-X"
+        },
+        {
+          "key": "ref44",
+          "unstructured": "M. Bauer and D. Bernard, A Simple Asymmetric Evolving Random Network, Preprint 0203232 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref45",
+          "unstructured": "P. S. Bearman, J. Moody, and K. Stovel, Chains of Affection: The Structure of Adolescent Romantic and Sexual Networks, preprint, Department of Sociology, Columbia University, New York, 2002."
+        },
+        {
+          "key": "ref46",
+          "first-page": "343",
+          "volume": "7",
+          "author": "Bekessy A.",
+          "year": "1972",
+          "journal-title": "Stud. Sci. Math. Hungar."
+        },
+        {
+          "key": "ref47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0097-3165(78)90059-6"
+        },
+        {
+          "key": "ref48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.89.228701"
+        },
+        {
+          "key": "ref49",
+          "unstructured": "J. Berg, M. L\u00e4ssig, and A. Wagner, Evolution Dynamics of Protein Networks, Preprint 0207711 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref50",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3773626"
+        },
+        {
+          "key": "ref51",
+          "unstructured": "G. Bianconi, Mean Field Solution of the Ising Model on a Barab\u00e1si\u2013Albert Network, Preprint 0204455 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref52",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.86.5632"
+        },
+        {
+          "key": "ref53",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2001-00260-6"
+        },
+        {
+          "key": "ref54",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.90.078701"
+        },
+        {
+          "key": "ref55",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.036106"
+        },
+        {
+          "key": "ref56",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P. Blanchard, C.H. Chang, and T. Kr\u00fcger, Epidemic Thresholds on Scale-Free Graphs: The Interplay between Exponent and Preferential Choice, Preprint 0207319 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1007/978-3-0348-7907-1_75"
+        },
+        {
+          "key": "ref57",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.047104"
+        },
+        {
+          "key": "ref58",
+          "doi-asserted-by": "crossref",
+          "unstructured": "M. Bogu\u00f1\u00e1, R. Pastor-Satorras, and A. Vespignani, Absence of Epidemic Threshold in Scale-Free Networks with Connectivity Correlations, Preprint 0208163 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevLett.90.028701"
+        },
+        {
+          "key": "ref59",
+          "doi-asserted-by": "crossref",
+          "unstructured": "M. Bogu\u00f1\u00e1, R. Pastor-Satorras, and A. Vespignani, Epidemic spreading in complex networks with degree correlations, in Proceedings of the 18th Sitges Conference on Statistical Mechanics, R. Pastor-Satorras and J. Rubi, eds. Lecture Notes in Phys., Springer-Verlag, Berlin, 2003.",
+          "DOI": "10.1007/978-3-540-44943-0_8"
+        },
+        {
+          "key": "ref60",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0195-6698(80)80030-8"
+        },
+        {
+          "key": "ref61",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1090/S0002-9947-1981-0621971-7"
+        },
+        {
+          "key": "ref62",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-1-4612-0619-4"
+        },
+        {
+          "key": "ref63",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/CBO9780511814068"
+        },
+        {
+          "key": "ref64",
+          "doi-asserted-by": "crossref",
+          "unstructured": "B. Bollob\u00e1s and O. Riordan, The Diameter of a Scale-Free Random Graph, preprint, Department of Mathematical Sciences, University of Memphis, 2002.",
+          "DOI": "10.1002/3527602755.ch1"
+        },
+        {
+          "key": "ref65",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/rsa.1009"
+        },
+        {
+          "key": "ref66",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/270732"
+        },
+        {
+          "key": "ref67",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/228631"
+        },
+        {
+          "key": "ref68",
+          "volume-title": "The Web of Knowledge: A Festschrift in Honor of Eugene Garfield",
+          "author": "Bordens M.",
+          "year": "2000"
+        },
+        {
+          "key": "ref69",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.035104"
+        },
+        {
+          "key": "ref70",
+          "volume-title": "Handbook of Graphs and Networks",
+          "author": "Bornholdt S.",
+          "year": "2003"
+        },
+        {
+          "key": "ref71",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0022-2496(75)90028-0"
+        },
+        {
+          "key": "ref72",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0169-7552(98)00110-X"
+        },
+        {
+          "key": "ref73",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0305004100032680"
+        },
+        {
+          "key": "ref74",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1389-1286(00)00083-9"
+        },
+        {
+          "key": "ref75",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.434393"
+        },
+        {
+          "key": "ref76",
+          "unstructured": "M. Buchanan, Nexus: Small Worlds and the Groundbreaking Science of Networks, Norton, New York, 2002."
+        },
+        {
+          "key": "ref77",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.046118"
+        },
+        {
+          "key": "ref78",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.89.258702"
+        },
+        {
+          "key": "ref79",
+          "unstructured": "G. Caldarelli, R. Pastor-Satorras, and A. Vespignani, Cycles Structure and Local Ordering in Complex Networks, Preprint 0212026 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref80",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.041902"
+        },
+        {
+          "key": "ref81",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.85.5468"
+        },
+        {
+          "key": "ref82",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.88.228102"
+        },
+        {
+          "key": "ref83",
+          "doi-asserted-by": "crossref",
+          "unstructured": "A. Capocci, G. Caldarelli, and P. De Los Rios, Quantitative Description and Modeling of Real Networks, Preprint 0206336 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevE.68.047101"
+        },
+        {
+          "key": "ref84",
+          "unstructured": "C. Castellano, D. Vilone, and A. Vespignani, Incomplete Ordering of the Voter Model on Small-World Networks, Preprint 0210465 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref85",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2105/AJPH.82.2.284"
+        },
+        {
+          "key": "ref86",
+          "unstructured": "Q. Chen, H. Chang, R. Govindan, S. Jamin, S. J. Shenker, and W. Willinger, The origin of power laws in Internet topologies revisited, in Proceedings of the 21st Annual Joint Conference of the IEEE Computer and Communications Societies, IEEE Computer Society, Los Alamitos, CA, 2002."
+        },
+        {
+          "key": "ref87",
+          "unstructured": "G. Chowell, J. M. Hyman, and S. Eubank, Analysis of a Real World Network: The City of Portland, Technical Report BU-1604-M, Department of Biological Statistics and Computational Biology, Cornell University, Ithaca, NY, 2002."
+        },
+        {
+          "key": "ref88",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.252631999"
+        },
+        {
+          "key": "ref89",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/PL00012580"
+        },
+        {
+          "key": "ref90",
+          "author": "Chung F.",
+          "journal-title": "J. Comput. Biology"
+        },
+        {
+          "key": "ref91",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-83784-5"
+        },
+        {
+          "key": "ref92",
+          "unstructured": "R. Cohen, D. ben-Avraham, and S. Havlin, Efficient Immunization of Populations and Computers, Preprint 0207387 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref93",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.85.4626"
+        },
+        {
+          "key": "ref94",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.86.3682"
+        },
+        {
+          "key": "ref95",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.90.058701"
+        },
+        {
+          "key": "ref96",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/17501"
+        },
+        {
+          "key": "ref97",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0167-2789(00)00198-6"
+        },
+        {
+          "key": "ref98",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0167-2789(01)00286-X"
+        },
+        {
+          "key": "ref99",
+          "first-page": "157",
+          "volume": "28",
+          "author": "Corman S. R.",
+          "year": "2002",
+          "journal-title": "Human Communication Res."
+        },
+        {
+          "key": "ref100",
+          "unstructured": "S. Coulumb and M. Bauer, Asymmetric Evolving Random Networks, Preprint 0212371 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref101",
+          "volume-title": "Invisible Colleges: Diffusion of Knowledge in Scientific Communities",
+          "author": "Crane D.",
+          "year": "1972"
+        },
+        {
+          "key": "ref102",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.88.128701"
+        },
+        {
+          "key": "ref103",
+          "volume-title": "Deep South",
+          "author": "Davis A.",
+          "year": "1941"
+        },
+        {
+          "key": "ref104",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/231170"
+        },
+        {
+          "key": "ref105",
+          "unstructured": "G. F. Davis, M. Yoo, and W. E. Baker, The Small World of the Corporate Elite, preprint, University of Michigan Business School, Ann Arbor, MI, 2001."
+        },
+        {
+          "key": "ref106",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)00549-6"
+        },
+        {
+          "key": "ref107",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF03025416"
+        },
+        {
+          "key": "ref108",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/01621459.1974.10480137"
+        },
+        {
+          "key": "ref109",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2000-00308-1"
+        },
+        {
+          "key": "ref110",
+          "unstructured": "P. S. Dodds, R. Muhamad, and D. J. Watts, An Experiment Study of Social Search and the Small World Problem, preprint, Department of Sociology, Columbia University, New York, 2002."
+        },
+        {
+          "key": "ref111",
+          "volume": "63",
+          "author": "Dodds P. S.",
+          "year": "2001",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "ref112",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.016104"
+        },
+        {
+          "key": "ref113",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.066122"
+        },
+        {
+          "key": "ref114",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.62.1842"
+        },
+        {
+          "key": "ref115",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2000-00227-1"
+        },
+        {
+          "key": "ref116",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2000-00400-0"
+        },
+        {
+          "key": "ref117",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.87.219801"
+        },
+        {
+          "key": "ref118",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.63.025101"
+        },
+        {
+          "key": "ref119",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rspb.2001.1824"
+        },
+        {
+          "key": "ref120",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/00018730110112519"
+        },
+        {
+          "key": "ref121",
+          "first-page": "318",
+          "volume-title": "Handbook of Graphs and Networks",
+          "author": "Dorogovtsev S. N.",
+          "year": "2003"
+        },
+        {
+          "key": "ref122",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/acprof:oso/9780198515906.001.0001"
+        },
+        {
+          "key": "ref123",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.85.4633"
+        },
+        {
+          "key": "ref124",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.066110"
+        },
+        {
+          "key": "ref125",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.025101"
+        },
+        {
+          "key": "ref126",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.63.062101"
+        },
+        {
+          "key": "ref127",
+          "unstructured": "S. N. Dorogovtsev, J. F. F. Mendes, and A. N. Samukhin, Metric Structure of Random Networks, Preprint 0210085 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref128",
+          "unstructured": "S. N. Dorogovtsev, J. F. F. Mendes, and A. N. Samukhin, Principles of Statistical Mechanics of Random Networks, Preprint 0204111 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref129",
+          "doi-asserted-by": "crossref",
+          "unstructured": "S. N. Dorogovtsev and A. N. Samukhin, Mesoscopics and Fluctuations in Networks, Preprint 0211518 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevE.67.037103"
+        },
+        {
+          "key": "ref130",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.88.238701"
+        },
+        {
+          "key": "ref131",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1090/dimacs/035"
+        },
+        {
+          "key": "ref132",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.192407699"
+        },
+        {
+          "key": "ref133",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1046/j.1461-0248.2002.00354.x"
+        },
+        {
+          "key": "ref134",
+          "volume-title": "Rigorous Results for the Callaway\u2013Hopcroft\u2013Kleinberg\u2013Newman\u2013Strogatz Model",
+          "author": "Durrett R. T.",
+          "year": "2003"
+        },
+        {
+          "key": "ref135",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.056118"
+        },
+        {
+          "key": "ref136",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.035103"
+        },
+        {
+          "key": "ref137",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.032093399"
+        },
+        {
+          "key": "ref138",
+          "volume-title": "Introduction to Informetrics",
+          "author": "Egghe L.",
+          "year": "1990"
+        },
+        {
+          "key": "ref139",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.89.108701"
+        },
+        {
+          "key": "ref140",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-67247-7"
+        },
+        {
+          "key": "ref141",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5486/PMD.1959.6.3-4.12"
+        },
+        {
+          "key": "ref142",
+          "first-page": "17",
+          "volume": "5",
+          "author": "Erd\u0151s P.",
+          "year": "1960",
+          "journal-title": "Magyar Tud. Akad. Mat. Kutat\u00f3 Int. K\u00f6zl."
+        },
+        {
+          "key": "ref143",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02066689"
+        },
+        {
+          "key": "ref144",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)00628-3"
+        },
+        {
+          "key": "ref145",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(01)00408-3"
+        },
+        {
+          "key": "ref146",
+          "doi-asserted-by": "crossref",
+          "unstructured": "K. A. Eriksen, I. Simonsen, S. Maslov, and K. Sneppen, Modularity and Extreme Edges of the Internet, Preprint 0212001 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevLett.90.148701"
+        },
+        {
+          "key": "ref147",
+          "volume-title": "Cluster Analysis",
+          "author": "Everitt B.",
+          "year": "1974"
+        },
+        {
+          "key": "ref148",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/316194.316229"
+        },
+        {
+          "key": "ref149",
+          "volume-title": "A Study of a Biased Friendship Network",
+          "author": "Fararo T. J.",
+          "year": "1964"
+        },
+        {
+          "key": "ref150",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.026704"
+        },
+        {
+          "key": "ref151",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)01181-0"
+        },
+        {
+          "key": "ref152",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)01731-4"
+        },
+        {
+          "key": "ref153",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/81025"
+        },
+        {
+          "key": "ref154",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1097/00007435-200011000-00008"
+        },
+        {
+          "key": "ref155",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.046119"
+        },
+        {
+          "key": "ref156",
+          "unstructured": "R. Ferrer i Cancho and R. V. Sol\u00e9, Optimization in Complex Networks, Preprint 0111222 (2001); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref157",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rspb.2001.1800"
+        },
+        {
+          "key": "ref158",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/2.989932"
+        },
+        {
+          "key": "ref159",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1063/1.1414882"
+        },
+        {
+          "key": "ref160",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/01621459.1986.10478342"
+        },
+        {
+          "key": "ref161",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3033543"
+        },
+        {
+          "key": "ref162",
+          "first-page": "39",
+          "volume": "19",
+          "author": "Freeman L. C.",
+          "year": "1996",
+          "journal-title": "Connections"
+        },
+        {
+          "key": "ref163",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1037/h0046123"
+        },
+        {
+          "key": "ref164",
+          "unstructured": "A. Fronczak, P. Fronczak, and J. A. Holyst, Exact Solution for Average Path Length in Random Graphs, Preprint 0212230 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref165",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)01336-5"
+        },
+        {
+          "key": "ref166",
+          "unstructured": "V. Gafiychuk, I. Lubashevsky, and A. Stosyk, Remarks on Scaling Properties Inherent to the Systems with Hierarchically Organized Supplying Network, Preprint 0004033 (2000); available from http://arxiv.org/abs/nlin/."
+        },
+        {
+          "key": "ref167",
+          "volume-title": "Social Organization of an Urban Grants Economy",
+          "author": "Galaskiewicz J.",
+          "year": "1985"
+        },
+        {
+          "key": "ref168",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0049-089X(78)90006-6"
+        },
+        {
+          "key": "ref169",
+          "first-page": "5",
+          "volume": "43",
+          "author": "Garfield E.",
+          "year": "1979",
+          "journal-title": "Current Contents"
+        },
+        {
+          "key": "ref170",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s001480100100"
+        },
+        {
+          "key": "ref171",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.122653799"
+        },
+        {
+          "key": "ref172",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1142/S0219525901000140"
+        },
+        {
+          "key": "ref173",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.051903"
+        },
+        {
+          "key": "ref174",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.202301299"
+        },
+        {
+          "key": "ref175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/138859.138867"
+        },
+        {
+          "key": "ref176",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1940492"
+        },
+        {
+          "key": "ref177",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.67.026123"
+        },
+        {
+          "key": "ref178",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0025-5564(82)90036-0"
+        },
+        {
+          "key": "ref179",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0010-4655(02)00205-9"
+        },
+        {
+          "key": "ref180",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/15326348608807041"
+        },
+        {
+          "key": "ref181",
+          "first-page": "129",
+          "volume": "108",
+          "author": "Grossman J. W.",
+          "year": "1995",
+          "journal-title": "Congr. Numer."
+        },
+        {
+          "key": "ref182",
+          "volume-title": "Six Degrees of Separation: A Play",
+          "author": "Guare J.",
+          "year": "1990"
+        },
+        {
+          "key": "ref183",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/ng873"
+        },
+        {
+          "key": "ref184",
+          "unstructured": "R. Guimer\u00e0, L. Danon, A. D\u00edaz-Guilera, F. Giralt, and A. Arenas, Self-Similar Community Structure in Organisations, Preprint 0211498 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref185",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1097/00002030-198912000-00005"
+        },
+        {
+          "key": "ref186",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0305004100032692"
+        },
+        {
+          "key": "ref187",
+          "unstructured": "F. Harary, Graph Theory, Perseus, Cambridge, MA, 1995."
+        },
+        {
+          "key": "ref188",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1511/2000.1.9"
+        },
+        {
+          "key": "ref189",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1511/2000.2.104"
+        },
+        {
+          "key": "ref190",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.066110"
+        },
+        {
+          "key": "ref191",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1137/S0036144500371907"
+        },
+        {
+          "key": "ref192",
+          "series-title": "Mathematics Research Report 8",
+          "volume-title": "Greedy Pathlengths and Small World Graphs",
+          "author": "Higham D. J.",
+          "year": "2002"
+        },
+        {
+          "key": "ref193",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/01621459.1981.10477598"
+        },
+        {
+          "key": "ref194",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.036119"
+        },
+        {
+          "key": "ref195",
+          "unstructured": "P. Holme, C. R. Edling, and F. Liljeros, Structure and Time-Evolution of the Internet Community pussokram.com, Preprint 0210514 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref196",
+          "unstructured": "P. Holme, M. Huss, and H. Jeong, Subnetwork Hierarchies of Biochemical Pathways, Preprint 0206292 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref197",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.026107"
+        },
+        {
+          "key": "ref198",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.066109"
+        },
+        {
+          "key": "ref199",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.056109"
+        },
+        {
+          "key": "ref200",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.026139"
+        },
+        {
+          "key": "ref201",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.018101"
+        },
+        {
+          "key": "ref202",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.7551/mitpress/4150.001.0001"
+        },
+        {
+          "key": "ref203",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3546201"
+        },
+        {
+          "key": "ref204",
+          "doi-asserted-by": "crossref",
+          "unstructured": "A. Iamnitchi, M. Ripeanu, and I. Foster, Locating data in (small-world?) peer-to-peer scientific collaborations, in Proceedings of the First International Workshop on Peer-to-Peer Systems, P. Druschel, F. Kaashoek, and A. Rowstron, eds. Lecture Notes in Comput. Sci. 2429, Springer-Verlag, Berlin, 2002, pp. 232\u2013241.",
+          "DOI": "10.1007/3-540-45748-8_22"
+        },
+        {
+          "key": "ref205",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.061034498"
+        },
+        {
+          "key": "ref206",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.7551/mitpress/5263.001.0001"
+        },
+        {
+          "key": "ref207",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/331499.331504"
+        },
+        {
+          "key": "ref208",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.81.5684"
+        },
+        {
+          "key": "ref209",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.98.2.543"
+        },
+        {
+          "key": "ref210",
+          "volume-title": "Random Graphs",
+          "author": "Janson S.",
+          "year": "1999"
+        },
+        {
+          "key": "ref211",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/35075138"
+        },
+        {
+          "key": "ref212",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2003-00166-9"
+        },
+        {
+          "key": "ref213",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/35036627"
+        },
+        {
+          "key": "ref214",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.62.6270"
+        },
+        {
+          "key": "ref215",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.62.4405"
+        },
+        {
+          "key": "ref216",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.046132"
+        },
+        {
+          "key": "ref217",
+          "doi-asserted-by": "crossref",
+          "unstructured": "J. H. Jones and M. S. Handcock, An Assessment of Preferential Attachment as a Mechanism for Human Sexual Network Formation, preprint, University of Washington, Seattle, 2003.",
+          "DOI": "10.1098/rspb.2003.2369"
+        },
+        {
+          "key": "ref218",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1046/j.1461-0248.2003.00403.x"
+        },
+        {
+          "key": "ref219",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.036126"
+        },
+        {
+          "key": "ref220",
+          "unstructured": "V. K. Kalapala, V. Sanwalani, and C. Moore, The Structure of the United States Road Network, preprint, University of New Mexico, Albuquerque, 2003."
+        },
+        {
+          "key": "ref221",
+          "volume-title": "Everything is Different",
+          "author": "Karinthy F.",
+          "year": "1929"
+        },
+        {
+          "key": "ref222",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/jgt.3190060402"
+        },
+        {
+          "key": "ref223",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0022-5193(69)90015-0"
+        },
+        {
+          "key": "ref224",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0070-2153(08)60640-7"
+        },
+        {
+          "key": "ref225",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/oso/9780195079517.001.0001"
+        },
+        {
+          "key": "ref226",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/245108.245123"
+        },
+        {
+          "key": "ref227",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rspb.1999.0716"
+        },
+        {
+          "key": "ref228",
+          "doi-asserted-by": "crossref",
+          "unstructured": "J. O. Kephart and S. R. White, Directed-graph epidemiological models of computer viruses, in Proceedings of the 1991 IEEE Computer Society Symposium on Research in Security and Privacy, IEEE Computer Society, Los Alamitos, CA, 1991, pp. 343\u2013359.",
+          "DOI": "10.1109/RISP.1991.130801"
+        },
+        {
+          "key": "ref229",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0378-8733(78)90018-7"
+        },
+        {
+          "key": "ref230",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.021907"
+        },
+        {
+          "key": "ref231",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.027103"
+        },
+        {
+          "key": "ref232",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.055101"
+        },
+        {
+          "key": "ref233",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)00972-X"
+        },
+        {
+          "key": "ref234",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(99)00393-3"
+        },
+        {
+          "key": "ref235",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1067014"
+        },
+        {
+          "key": "ref236",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/324133.324140"
+        },
+        {
+          "key": "ref237",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/35022643"
+        },
+        {
+          "key": "ref238",
+          "doi-asserted-by": "crossref",
+          "unstructured": "J. M. Kleinberg, The small-world phenomenon: An algorithmic perspective, in Proceedings of the 32nd Annual ACM Symposium on Theory of Computing, Association of Computing Machinery, New York, 2000, pp. 163\u2013170.",
+          "DOI": "10.1145/335305.335325"
+        },
+        {
+          "key": "ref239",
+          "unstructured": "J. M. Kleinberg, Small world phenomena and the dynamics of information, in Proceedings of the 2001 Neural Information Processing Systems Conference, T. G. Dietterich, S. Becker, and Z. Ghahramani, eds. MIT Press, Cambridge, MA, 2002."
+        },
+        {
+          "key": "ref240",
+          "doi-asserted-by": "crossref",
+          "unstructured": "J. M. Kleinberg, S. R. Kumar, P. Raghavan, S. Rajagopalan, and A. Tomkins, The Web as a graph: Measurements, models and methods, in Proceedings of the International Conference on Combinatorics and Computing, Lecture Notes in Comput. Sci. 1627, Springer-Verlag, Berlin, 1999, pp. 1\u201318.",
+          "DOI": "10.1007/3-540-48686-0_1"
+        },
+        {
+          "key": "ref241",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.036123"
+        },
+        {
+          "key": "ref242",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0277-9536(94)90302-6"
+        },
+        {
+          "key": "ref243",
+          "volume-title": "The Stanford GraphBase: A Platform for Combinatorial Computing",
+          "author": "Knuth D. E.",
+          "year": "1993"
+        },
+        {
+          "key": "ref244",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.63.066123"
+        },
+        {
+          "key": "ref245",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0305-4470/35/45/302"
+        },
+        {
+          "key": "ref246",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1389-1286(02)00212-8"
+        },
+        {
+          "key": "ref247",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P. L. Krapivsky and S. Redner, Rate equation approach for growing networks, in Proceedings of the 18th Sitges Conference on Statistical Mechanics, R. Pastor-Satorras and J. Rubi, eds. Lecture Notes in Phys., Springer-Verlag, Berlin, 2003.",
+          "DOI": "10.1007/978-3-540-44943-0_2"
+        },
+        {
+          "key": "ref248",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.85.4629"
+        },
+        {
+          "key": "ref249",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.86.5401"
+        },
+        {
+          "key": "ref250",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/oxfordjournals.aje.a008926"
+        },
+        {
+          "key": "ref251",
+          "unstructured": "R. V. Kulkarni, E. Almaas, and D. Stroud, Evolutionary Dynamics in the Bak-Sneppen Model on Small-World Networks, Preprint 9908216 (1999); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref252",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.61.4268"
+        },
+        {
+          "key": "ref253",
+          "doi-asserted-by": "crossref",
+          "unstructured": "R. Kumar, P. Raghavan, S. Rajagopalan, D. Sivakumar, A. S. Tomkins, and E. Upfal, Stochastic models for the Web graph, in Proceedings of the 42st Annual IEEE Symposium on the Foundations of Computer Science, Institute of Electrical and Electronics Engineers, New York, 2000, pp. 57\u201365.",
+          "DOI": "10.1109/SFCS.2000.892065"
+        },
+        {
+          "key": "ref254",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.86.2909"
+        },
+        {
+          "key": "ref255",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1140/epjb/e20020104"
+        },
+        {
+          "key": "ref256",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.84.2758"
+        },
+        {
+          "key": "ref257",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.057105"
+        },
+        {
+          "key": "ref258",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)00625-8"
+        },
+        {
+          "key": "ref259",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.87.198701"
+        },
+        {
+          "key": "ref260",
+          "unstructured": "V. Latora and M. Marchiori, Economic Small-World Behavior in Weighted Networks, Preprint 0204089 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref261",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)01089-0"
+        },
+        {
+          "key": "ref262",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/21987"
+        },
+        {
+          "key": "ref263",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1140/epjb/e2002-00220-0"
+        },
+        {
+          "key": "ref264",
+          "unstructured": "F. Liljeros, C. R. Edling, and L. A. N. Amaral, Sexual networks: Implication for the transmission of sexually transmitted infection, Microbes and Infections (to appear)."
+        },
+        {
+          "key": "ref265",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/35082140"
+        },
+        {
+          "key": "ref266",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1061076"
+        },
+        {
+          "key": "ref267",
+          "unstructured": "T. \u0141uczak, Sparse random graphs with a given degree sequence, in Proceedings of the Symposium on Random Graphs, Pozna\u0144 1989, A. M. Frieze and T. \u0141uczak, eds. John Wiley, New York, 1992, pp. 165\u2013182."
+        },
+        {
+          "key": "ref268",
+          "first-page": "425",
+          "volume": "56",
+          "author": "Mariolis P.",
+          "year": "1975",
+          "journal-title": "Social Sci. Quart."
+        },
+        {
+          "key": "ref269",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.53.1510"
+        },
+        {
+          "key": "ref270",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev.so.16.080190.002251"
+        },
+        {
+          "key": "ref271",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2937047"
+        },
+        {
+          "key": "ref272",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/285382"
+        },
+        {
+          "key": "ref273",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1065103"
+        },
+        {
+          "key": "ref274",
+          "unstructured": "S. Maslov, K. Sneppen, and A. Zaliznyak, Pattern Detection in Complex Networks: Correlation Profile of the Internet, Preprint 0205379 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref275",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rstb.1988.0108"
+        },
+        {
+          "key": "ref276",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.066112"
+        },
+        {
+          "key": "ref277",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/CBO9780511895357"
+        },
+        {
+          "key": "ref278",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02129600"
+        },
+        {
+          "key": "ref279",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1023/A:1007653114902"
+        },
+        {
+          "key": "ref280",
+          "doi-asserted-by": "crossref",
+          "unstructured": "F. Menczer, G. Pant, M. Ruiz, and P. Srinivasan, Evaluating topic-driven Web crawlers, in Proceedings of the 24th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval, D. H. Kraft, W. B. Croft, D. J. Harper, and J. Zobel, eds. Association of Computing Machinery, New York, 2001, pp. 241\u2013249.",
+          "DOI": "10.1145/383952.383995"
+        },
+        {
+          "key": "ref281",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.159.3810.56"
+        },
+        {
+          "key": "ref282",
+          "first-page": "60",
+          "volume": "2",
+          "author": "Milgram S.",
+          "year": "1967",
+          "journal-title": "Psych. Today"
+        },
+        {
+          "key": "ref283",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.298.5594.824"
+        },
+        {
+          "key": "ref284",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.7551/mitpress/3927.001.0001"
+        },
+        {
+          "key": "ref285",
+          "unstructured": "M. S. Mizruchi, The American Corporate Network, 1904\u20131974. Sage, Beverly Hills, CA, 1982."
+        },
+        {
+          "key": "ref286",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/rsa.3240060204"
+        },
+        {
+          "key": "ref287",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0963548398003526"
+        },
+        {
+          "key": "ref288",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s100510051038"
+        },
+        {
+          "key": "ref289",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1006/jtbi.2001.2460"
+        },
+        {
+          "key": "ref290",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/338954"
+        },
+        {
+          "key": "ref291",
+          "volume-title": "The structure of a social science collaboration network, preprint",
+          "author": "Moody J.",
+          "year": "2003"
+        },
+        {
+          "key": "ref292",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.61.5678"
+        },
+        {
+          "key": "ref293",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.62.7059"
+        },
+        {
+          "key": "ref294",
+          "doi-asserted-by": "crossref",
+          "unstructured": "A. A. Moreira, J. S. Andrade, Jr., and L. A. N. Amaral, Extremum Statistics in Scale-Free Network Models, Preprint 0205411 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevLett.89.268703"
+        },
+        {
+          "key": "ref295",
+          "unstructured": "J. L. Moreno, Who Shall Survive? Beacon House, Beacon, NY, 1934."
+        },
+        {
+          "key": "ref296",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2002-00442-2"
+        },
+        {
+          "key": "ref297",
+          "unstructured": "Y. Moreno, R. Pastor-Satorras, A. V\u00e1zquez, and A. Vespignani, Critical Load and Congestion Instabilities in Scale-Free Networks, Preprint 0209474 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref298",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1140/epjb/e20020122"
+        },
+        {
+          "key": "ref299",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2002-00529-8"
+        },
+        {
+          "key": "ref300",
+          "unstructured": "Y. Moreno and A. V\u00e1zquez, Disease Spreading in Structured Scale-Free Networks, Preprint 0210362 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref301",
+          "first-page": "302",
+          "volume-title": "Epidemic Models: Their Structure and Relation to Data",
+          "author": "Morris M.",
+          "year": "1995"
+        },
+        {
+          "key": "ref302",
+          "doi-asserted-by": "crossref",
+          "first-page": "209",
+          "DOI": "10.1097/00002030-199702000-00012",
+          "volume": "11",
+          "author": "Morris M.",
+          "year": "1997",
+          "journal-title": "AIDS 97: Year in Review"
+        },
+        {
+          "key": "ref303",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.065102"
+        },
+        {
+          "key": "ref304",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.065102"
+        },
+        {
+          "key": "ref305",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.60.R6263"
+        },
+        {
+          "key": "ref306",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.056709"
+        },
+        {
+          "key": "ref307",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s002850070003"
+        },
+        {
+          "key": "ref308",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1023/A:1026485807148"
+        },
+        {
+          "key": "ref309",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.025102"
+        },
+        {
+          "key": "ref310",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.016131"
+        },
+        {
+          "key": "ref311",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.016132"
+        },
+        {
+          "key": "ref312",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.98.2.404"
+        },
+        {
+          "key": "ref313",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.89.208701"
+        },
+        {
+          "key": "ref314",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.016128"
+        },
+        {
+          "key": "ref315",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0010-4655(02)00201-1"
+        },
+        {
+          "key": "ref316",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-8733(02)00039-4"
+        },
+        {
+          "key": "ref317",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.67.026126"
+        },
+        {
+          "key": "ref318",
+          "first-page": "35",
+          "volume-title": "Handbook of Graphs and Networks",
+          "author": "Newman M. E. J.",
+          "year": "2003"
+        },
+        {
+          "key": "ref319",
+          "volume-title": "The Structure and Dynamics of Networks",
+          "author": "Newman M. E. J.",
+          "year": "2003"
+        },
+        {
+          "key": "ref320",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.035101"
+        },
+        {
+          "key": "ref321",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.84.3201"
+        },
+        {
+          "key": "ref322",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.026118"
+        },
+        {
+          "key": "ref323",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0375-9601(99)00757-4"
+        },
+        {
+          "key": "ref324",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.60.7332"
+        },
+        {
+          "key": "ref325",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2001-00346-7"
+        },
+        {
+          "key": "ref326",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/230190"
+        },
+        {
+          "key": "ref327",
+          "unstructured": "L. Page, S. Brin, R. Motwani, and T. Winograd, The Pagerank Citation Ranking: Bringing Order to the web, technical report, Stanford University, Stanford, CA, 1998."
+        },
+        {
+          "key": "ref328",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.63.041104"
+        },
+        {
+          "key": "ref329",
+          "unstructured": "R. Pastor-Satorras and J. Rubi, eds. Proceedings of the 18th Sitges Conference on Statistical Mechanics, Lecture Notes in Phys., Springer-Verlag, Berlin, 2003."
+        },
+        {
+          "key": "ref330",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.87.258701"
+        },
+        {
+          "key": "ref331",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.63.066117"
+        },
+        {
+          "key": "ref332",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.86.3200"
+        },
+        {
+          "key": "ref333",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.035108"
+        },
+        {
+          "key": "ref334",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.036104"
+        },
+        {
+          "key": "ref335",
+          "volume-title": "Handbook of Graphs and Networks",
+          "author": "Pastor-Satorras R.",
+          "year": "2003"
+        },
+        {
+          "key": "ref336",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.057104"
+        },
+        {
+          "key": "ref337",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.032085699"
+        },
+        {
+          "key": "ref338",
+          "volume-title": "Food Webs",
+          "author": "Pimm S. L.",
+          "year": "2002",
+          "edition": "2"
+        },
+        {
+          "key": "ref339",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/ng708"
+        },
+        {
+          "key": "ref340",
+          "first-page": "1",
+          "volume": "1",
+          "author": "de S. Pool I.",
+          "year": "1978",
+          "journal-title": "Social Networks"
+        },
+        {
+          "key": "ref341",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1136/sti.78.suppl_1.i159"
+        },
+        {
+          "key": "ref342",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.149.3683.510"
+        },
+        {
+          "key": "ref343",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/asi.4630270505"
+        },
+        {
+          "key": "ref344",
+          "doi-asserted-by": "crossref",
+          "unstructured": "A. Ramezanpour, V. Karimipour, and A. Mashaghi, Generating Correlated Networks from Uncorrelated Ones, Preprint 0212469 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevE.67.046107"
+        },
+        {
+          "key": "ref345",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02478417"
+        },
+        {
+          "key": "ref346",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02477489"
+        },
+        {
+          "key": "ref347",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/bs.3830060402"
+        },
+        {
+          "key": "ref348",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.67.026112"
+        },
+        {
+          "key": "ref349",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1073374"
+        },
+        {
+          "key": "ref350",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s100510050359"
+        },
+        {
+          "key": "ref351",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/245108.245121"
+        },
+        {
+          "key": "ref352",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev.earth.26.1.289"
+        },
+        {
+          "key": "ref353",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/4236.978369"
+        },
+        {
+          "key": "ref354",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s100510170076"
+        },
+        {
+          "key": "ref355",
+          "volume-title": "Fractal River Basins: Chance and Self-Organization",
+          "author": "Rodr\u00edguez-Iturbe I.",
+          "year": "1997"
+        },
+        {
+          "key": "ref356",
+          "volume-title": "Management and the Worker",
+          "author": "Roethlisberger F. J.",
+          "year": "1939"
+        },
+        {
+          "key": "ref357",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/jurban/78.3.419"
+        },
+        {
+          "key": "ref358",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.89.218701"
+        },
+        {
+          "key": "ref359",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0025-5564(02)00117-7"
+        },
+        {
+          "key": "ref360",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2001-00457-7"
+        },
+        {
+          "key": "ref361",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.015104"
+        },
+        {
+          "key": "ref362",
+          "volume-title": "Social Network Analysis: A Handbook",
+          "author": "Scott J.",
+          "year": "2000",
+          "edition": "2"
+        },
+        {
+          "key": "ref363",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/(SICI)1097-4571(199210)43:9<628::AID-ASI5>3.0.CO;2-0"
+        },
+        {
+          "key": "ref364",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0305-4470/34/38/303"
+        },
+        {
+          "key": "ref365",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P. Sen, S. Dasgupta, A. Chatterjee, P. A. Sreeram, G. Mukherjee, and S. S. Manna, Small-World Properties of the Indian Railway Network, Preprint 0208535 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevE.67.036106"
+        },
+        {
+          "key": "ref366",
+          "doi-asserted-by": "crossref",
+          "unstructured": "U. Shardanand and P. Maes, Social information filtering: Algorithms for automating \u201cword of mouth\u201d, in Proceedings of ACM Conference on Human Factors and Computing Systems, Association of Computing Machinery, New York, 1995, pp. 210\u2013217.",
+          "DOI": "10.1145/223904.223931"
+        },
+        {
+          "key": "ref367",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/ng881"
+        },
+        {
+          "key": "ref368",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.022341799"
+        },
+        {
+          "key": "ref369",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/biomet/42.3-4.425"
+        },
+        {
+          "key": "ref370",
+          "unstructured": "R. D. Smith, Instant Messaging as a Scale-Free Network, Preprint 0206378 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref371",
+          "volume": "2",
+          "author": "Snijders T. A. B.",
+          "year": "2002",
+          "journal-title": "J. Social Structure"
+        },
+        {
+          "key": "ref372",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.90.068702"
+        },
+        {
+          "key": "ref373",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.066121"
+        },
+        {
+          "key": "ref374",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rspb.2001.1767"
+        },
+        {
+          "key": "ref375",
+          "first-page": "145",
+          "volume-title": "Handbook of Graphs and Networks",
+          "author": "Sol\u00e9 R. V.",
+          "year": "2003"
+        },
+        {
+          "key": "ref376",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1142/S021952590200047X"
+        },
+        {
+          "key": "ref377",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02478357"
+        },
+        {
+          "key": "ref378",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/cplx.10047"
+        },
+        {
+          "key": "ref379",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/cercor/10.2.127"
+        },
+        {
+          "issue": "1",
+          "key": "ref380",
+          "volume": "5",
+          "author": "Stauffer D.",
+          "year": "2002",
+          "journal-title": "J. Artificial Societies and Social Simulation"
+        },
+        {
+          "key": "ref381",
+          "unstructured": "D. Stauffer, A. Aharony, L. da Fontoura Costa, and J. Adler, Efficient Hopfield Pattern Recognition on a Scale-Free Neural Network, Preprint 0212601 (2002); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref382",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/nature01166"
+        },
+        {
+          "key": "ref383",
+          "unstructured": "M. Steyvers and J. B. Tenenbaum, The Large-Scale Structure of Semantic Networks: Statistical Analyses and a Model for Semantic Growth, Preprint 0110012 (2001); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref384",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1137/1028156"
+        },
+        {
+          "key": "ref385",
+          "volume-title": "Nonlinear Dynamics and Chaos",
+          "author": "Strogatz S. H.",
+          "year": "1994"
+        },
+        {
+          "key": "ref386",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/35065725"
+        },
+        {
+          "key": "ref387",
+          "unstructured": "P. Svenson, From N\u00e9el to NPC: Colouring Small Worlds, Preprint 0107015 (2001); available from http://arxiv.org/abs/cs/."
+        },
+        {
+          "key": "ref388",
+          "doi-asserted-by": "crossref",
+          "unstructured": "G. Szab\u00f3, M. Alava, and J. Kert\u00e9sz, Structural Transitions in Scale-Free Networks, Preprint 0208551 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevE.67.056102"
+        },
+        {
+          "key": "ref389",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1142/S0129183100000936"
+        },
+        {
+          "key": "ref390",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(01)00014-0"
+        },
+        {
+          "key": "ref391",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)01072-5"
+        },
+        {
+          "key": "ref392",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2786545"
+        },
+        {
+          "key": "ref393",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/35001009"
+        },
+        {
+          "key": "ref394",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2002-00248-2"
+        },
+        {
+          "key": "ref395",
+          "unstructured": "A. V\u00e1zquez, Statistics of Citation Networks, Preprint 0105031 (2001); available from http://arxiv.org/abs/cond-mat/."
+        },
+        {
+          "key": "ref396",
+          "doi-asserted-by": "crossref",
+          "unstructured": "A. V\u00e1zquez, Growing Networks with Local Rules: Preferential Attachment, Clustering Hierarchy and Degree Correlations, Preprint 0211528 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevE.67.056104"
+        },
+        {
+          "key": "ref397",
+          "doi-asserted-by": "crossref",
+          "unstructured": "A. V\u00e1zquez, M. Bogu\u00f1\u00e1, Y. Moreno, R. Pastor-Satorras, and A. Vespignani, Topology and Correlations in Structured Scale-Free Networks, Preprint 0209183 (2002); available from http://arxiv.org/abs/cond-mat/.",
+          "DOI": "10.1103/PhysRevE.67.046111"
+        },
+        {
+          "key": "ref398",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1159/000067642"
+        },
+        {
+          "key": "ref399",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.67.015101"
+        },
+        {
+          "key": "ref400",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.65.066130"
+        },
+        {
+          "key": "ref401",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.67.027101"
+        },
+        {
+          "key": "ref402",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0305-4470/36/3/103"
+        },
+        {
+          "key": "ref403",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/oxfordjournals.molbev.a003913"
+        },
+        {
+          "key": "ref404",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rspb.2001.1711"
+        },
+        {
+          "key": "ref405",
+          "unstructured": "T. Walsh, Search in a small world, in Proceedings of the 16th International Joint Conference on Artificial Intelligence, T. Dean, ed. Morgan-Kaufmann, San Francisco, CA, 1999."
+        },
+        {
+          "key": "ref406",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0012-365X(97)00197-0"
+        },
+        {
+          "key": "ref407",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.056105"
+        },
+        {
+          "key": "ref408",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/CBO9780511815478"
+        },
+        {
+          "key": "ref409",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02294547"
+        },
+        {
+          "key": "ref410",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/210318"
+        },
+        {
+          "key": "ref411",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1515/9780691188331"
+        },
+        {
+          "key": "ref412",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.082090499"
+        },
+        {
+          "key": "ref413",
+          "unstructured": "D. J. Watts, Six Degrees: The Science of a Connected Age, Norton, New York, 2003."
+        },
+        {
+          "key": "ref414",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1070120"
+        },
+        {
+          "key": "ref415",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/30918"
+        },
+        {
+          "key": "ref416",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.276.5309.122"
+        },
+        {
+          "key": "ref417",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/23251"
+        },
+        {
+          "key": "ref418",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/226141"
+        },
+        {
+          "key": "ref419",
+          "doi-asserted-by": "crossref",
+          "unstructured": "H. D. White, B. Wellman, and N. Nazer, Does citation reflect social structure? Longitudinal evidence from the \u201cGlobenet\u201d interdisciplinary research group, preprint, University of Toronto, Toronto, ON, Canada, 2003.",
+          "DOI": "10.1002/asi.10369"
+        },
+        {
+          "key": "ref420",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rstb.1986.0056"
+        },
+        {
+          "key": "ref421",
+          "volume-title": "A Method for Finding Communities of Related Genes",
+          "author": "Wilkinson D.",
+          "year": "2002"
+        },
+        {
+          "key": "ref422",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.192448799"
+        },
+        {
+          "key": "ref423",
+          "volume-title": "The Geometry of Biological Time",
+          "author": "Winfree A. T.",
+          "year": "2000",
+          "edition": "2"
+        },
+        {
+          "key": "ref424",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0095-8956(81)80021-4"
+        },
+        {
+          "key": "ref425",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.172501399"
+        },
+        {
+          "key": "ref426",
+          "volume-title": "The Economy as an Evolving Complex System",
+          "volume": "3",
+          "author": "Young H. P.",
+          "year": "2003"
+        },
+        {
+          "key": "ref427",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.050901"
+        },
+        {
+          "key": "ref428",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.64.056115"
+        },
+        {
+          "key": "ref429",
+          "unstructured": "J.Y. Zhu and H. Zhu, Introducing Small-World Network Effect to Critical Dynamics, Preprint 0212542 (2002); available from http://arxiv.org/abs/cond-mat/."
+        }
+      ],
+      "container-title": [
+        "SIAM Review"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://epubs.siam.org/doi/pdf/10.1137/S003614450342480",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            20
+          ]
+        ],
+        "date-time": "2026-08-20T14:56:34Z",
+        "timestamp": 1787237794000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://epubs.siam.org/doi/10.1137/S003614450342480"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2003,
+            1,
+            1
+          ]
+        ]
+      },
+      "references-count": 429,
+      "journal-issue": {
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2003,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1137/S003614450342480"
+      ],
+      "URL": "https://doi.org/10.1137/s003614450342480",
+      "relation": {},
+      "ISSN": [
+        "0036-1445",
+        "1095-7200"
+      ],
+      "issn-type": [
+        {
+          "value": "0036-1445",
+          "type": "print"
+        },
+        {
+          "value": "1095-7200",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2003,
+            1,
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

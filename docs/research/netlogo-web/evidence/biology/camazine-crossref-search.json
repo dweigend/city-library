@@ -1,0 +1,1047 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Self-organizing+pattern+formation+on+the+combs+of+honey+bee+colonies+Camazine+1991&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 76967,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                28
+              ]
+            ],
+            "date-time": "2026-09-28T18:17:50Z",
+            "timestamp": 1790619470773,
+            "version": "4.1.0"
+          },
+          "reference-count": 0,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1991,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "1991-01-01T00:00:00Z",
+                "timestamp": 662688000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Behav Ecol Sociobiol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1991,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf00172140",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                8,
+                15
+              ]
+            ],
+            "date-time": "2004-08-15T05:02:43Z",
+            "timestamp": 1092546163000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 182,
+          "title": [
+            "Self-organizing pattern formation on the combs of honey bee colonies"
+          ],
+          "prefix": "10.1007",
+          "volume": "28",
+          "author": [
+            {
+              "given": "Scott",
+              "family": "Camazine",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "container-title": [
+            "Behavioral Ecology and Sociobiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF00172140/fulltext.html",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF00172140.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF00172140/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF00172140",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2019-04-03T08:15:53Z",
+            "timestamp": 1554279353000
+          },
+          "score": 85.00967,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF00172140"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1991,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1991,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF00172140"
+          ],
+          "URL": "https://doi.org/10.1007/bf00172140",
+          "ISSN": [
+            "0340-5443",
+            "1432-0762"
+          ],
+          "issn-type": [
+            {
+              "value": "0340-5443",
+              "type": "print"
+            },
+            {
+              "value": "1432-0762",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1991,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                19
+              ]
+            ],
+            "date-time": "2026-06-19T00:25:28Z",
+            "timestamp": 1781828728263,
+            "version": "3.54.5"
+          },
+          "reference-count": 14,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1992,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "1992-01-01T00:00:00Z",
+                "timestamp": 694224000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "J. Math. Biol."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1992,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf00176152",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                8,
+                17
+              ]
+            ],
+            "date-time": "2006-08-17T11:23:40Z",
+            "timestamp": 1155813820000
+          },
+          "page": "281-306",
+          "source": "Crossref",
+          "is-referenced-by-count": 15,
+          "title": [
+            "On a simplified model for pattern formation in honey bee colonies"
+          ],
+          "prefix": "10.1007",
+          "volume": "30",
+          "author": [
+            {
+              "given": "Michael J.",
+              "family": "Jenkins",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "James",
+              "family": "Sneyd",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Scott",
+              "family": "Camazine",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J. D.",
+              "family": "Murray",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BF00176152_CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "437",
+              "DOI": "10.1007/BF01236891",
+              "volume": "24",
+              "author": "M. R. Belic",
+              "year": "1986",
+              "unstructured": "Belic, M. R., Skarka, V., Deneubourg, J. L., Lax, M.: Mathematical model of honeycomb construction. J. Math. Biol. 24, 437\u2013449 (1986)",
+              "journal-title": "J. Math. Biol."
+            },
+            {
+              "key": "BF00176152_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "61",
+              "DOI": "10.1007/BF00172140",
+              "volume": "28",
+              "author": "S. Camazine",
+              "year": "1991",
+              "unstructured": "Camazine, S.: Self-organizing pattern formation on the combs of honey bee colonies. Behav. Ecol. Sociobiol. 28, 61\u201376 (1991)",
+              "journal-title": "Behav. Ecol. Sociobiol."
+            },
+            {
+              "key": "BF00176152_CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "553",
+              "DOI": "10.1016/S0022-5193(05)80264-4",
+              "volume": "147",
+              "author": "S. Camazine",
+              "year": "1990",
+              "unstructured": "Camazine, S., Sneyd, J., Jenkins, M. J., Murray, J. D.: A mathematical model of self-organized pattern formation on the combs of honey bee colonies. J. Theor. Biol. 147, 553\u2013571 (1990)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BF00176152_CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "159",
+              "DOI": "10.1007/BF01417909",
+              "volume": "3",
+              "author": "J. L. Deneubourg",
+              "year": "1990",
+              "unstructured": "Deneubourg, J. L., Aron, G., Goss, S., Pasteels, J. M.: The self-organizing exploratory pattern of the Argentine ant. J. Insect Behav. 3, 159\u2013168 (1990)",
+              "journal-title": "J. Insect Behav."
+            },
+            {
+              "key": "BF00176152_CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "719",
+              "DOI": "10.1007/BF01065789",
+              "volume": "2",
+              "author": "J. L. Deneubourg",
+              "year": "1989",
+              "unstructured": "Deneubourg, J. L., Goss, S., Franks, N., Pasteels, J. M.: The blind leading the blind: modelling chemically mediated army ant raid patterns. J. Insect Behav. 2, 719\u2013725 (1989)",
+              "journal-title": "J. Insect Behav."
+            },
+            {
+              "key": "BF00176152_CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "137",
+              "DOI": "10.1007/BF02224885",
+              "volume": "36",
+              "author": "S. Goss",
+              "year": "1989",
+              "unstructured": "Goss, S., Deneubourg, J. L.: The self-organising clock pattern of Messor pergandei (Formicidae, Myrmicinae). Insectes Soc. 36, 137\u2013150 (1989)",
+              "journal-title": "Insectes Soc."
+            },
+            {
+              "key": "BF00176152_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "579",
+              "DOI": "10.1007/BF00462870",
+              "volume": "76",
+              "author": "S. Goss",
+              "year": "1989",
+              "unstructured": "Goss, S., Aron, S., Deneubourg, J. L., Pasteels, J. M.: Self-organized shortcuts in the Argentine ant. Naturwissenschaften 76, 579\u2013581 (1989)",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "BF00176152_CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "25",
+              "DOI": "10.1242/jeb.91.1.25",
+              "volume": "91",
+              "author": "B. Heinrich",
+              "year": "1981",
+              "unstructured": "Heinrich, B.: The mechanisms and energetics of honeybee swarm temperature regulation. J. Exp. Biol. 91, 25\u201355 (1981)",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "BF00176152_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "219",
+              "DOI": "10.1016/S0022-5193(87)80170-4",
+              "volume": "128",
+              "author": "S. W. Omholt",
+              "year": "1987",
+              "unstructured": "Omholt, S. W.: Thermoregulation in the winter cluster of the honeybee, Apis mellifera. J. Theor. Biol. 128, 219\u2013231 (1987)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BF00176152_CR10",
+              "first-page": "155",
+              "volume-title": "From individual to collective behavior in social insects",
+              "author": "J. M. Pasteels",
+              "year": "1987",
+              "unstructured": "Pasteels, J. M., Deneubourg, J. L., Goss, S.: Self-organization mechanisms in ant societies (I): trail recruitment to newly discovered food sources. In: Pasteels J. M., Deneoubourg J. L. (eds.) From individual to collective behavior in social insects, pp. 155\u2013176. Basel: Birkh\u00e4user 1987"
+            },
+            {
+              "key": "BF00176152_CR11",
+              "first-page": "264",
+              "volume": "71",
+              "author": "T. D. Seeley",
+              "year": "1983",
+              "unstructured": "Seeley, T. D.: The ecology of temperate and tropical honey bee societies. Am. Sci. 71, 264 (1983)",
+              "journal-title": "Am. Sci."
+            },
+            {
+              "key": "BF00176152_CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "495",
+              "DOI": "10.1007/BF02223477",
+              "volume": "23",
+              "author": "T. D. Seeley",
+              "year": "1976",
+              "unstructured": "Seeley, T. D., Morse R. A.: The nest of the honey bee (Apis mellifera L.). Insects Soc. 23, 495 (1976)",
+              "journal-title": "Insects Soc."
+            },
+            {
+              "key": "BF00176152_CR13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seeley, T. D., Camazine, S., Sneyd, J.: Collective decision-making in honey bees: how colonies choose among nectar sources. Behav. Ecol. Sociobiol. (in press)",
+              "DOI": "10.1007/BF00175101"
+            },
+            {
+              "key": "BF00176152_CR14",
+              "volume-title": "The biology of the honey bee",
+              "author": "M. Winston",
+              "year": "1987",
+              "unstructured": "Winston, M.: The biology of the honey bee. Cambridge: Harvard University Press 1987"
+            }
+          ],
+          "container-title": [
+            "Journal of Mathematical Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF00176152.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF00176152/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF00176152",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                31
+              ]
+            ],
+            "date-time": "2021-07-31T13:16:35Z",
+            "timestamp": 1627737395000
+          },
+          "score": 47.718227,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF00176152"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1992,
+                1
+              ]
+            ]
+          },
+          "references-count": 14,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1992,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF00176152"
+          ],
+          "URL": "https://doi.org/10.1007/bf00176152",
+          "ISSN": [
+            "0303-6812",
+            "1432-1416"
+          ],
+          "issn-type": [
+            {
+              "value": "0303-6812",
+              "type": "print"
+            },
+            {
+              "value": "1432-1416",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1992,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                18
+              ]
+            ],
+            "date-time": "2026-09-18T18:13:43Z",
+            "timestamp": 1789755223899,
+            "version": "4.0.1"
+          },
+          "reference-count": 24,
+          "publisher": "Elsevier BV",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1990,
+                    12,
+                    1
+                  ]
+                ],
+                "date-time": "1990-12-01T00:00:00Z",
+                "timestamp": 660009600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1990,
+                    12,
+                    1
+                  ]
+                ],
+                "date-time": "1990-12-01T00:00:00Z",
+                "timestamp": 660009600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/legal/tdmrep-license"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2007,
+                    7,
+                    14
+                  ]
+                ],
+                "date-time": "2007-07-14T00:00:00Z",
+                "timestamp": 1184371200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 6069,
+              "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "elsevier.com",
+              "sciencedirect.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1990,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.1016/s0022-5193(05)80264-4",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                9,
+                7
+              ]
+            ],
+            "date-time": "2006-09-07T09:12:45Z",
+            "timestamp": 1157620365000
+          },
+          "page": "553-571",
+          "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 74,
+          "title": [
+            "A mathematical model of self-organized pattern formation on the combs of honeybee colonies"
+          ],
+          "prefix": "10.1016",
+          "volume": "147",
+          "author": [
+            {
+              "given": "Scott",
+              "family": "Camazine",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "James",
+              "family": "Sneyd",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael J.",
+              "family": "Jenkins",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J.D.",
+              "family": "Murray",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib1",
+              "doi-asserted-by": "crossref",
+              "first-page": "437",
+              "DOI": "10.1007/BF01236891",
+              "article-title": "Mathematical model of honeycomb construction",
+              "volume": "24",
+              "author": "Beli\u0107",
+              "year": "1986",
+              "journal-title": "J. math Biol"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib2",
+              "doi-asserted-by": "crossref",
+              "first-page": "406",
+              "DOI": "10.1086/394540",
+              "article-title": "Studies in animal populations. II. Seasonal population-trends of the honey-bee",
+              "volume": "12",
+              "author": "Bodenheimer",
+              "year": "1937",
+              "journal-title": "Q Rev Biol"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "223",
+              "DOI": "10.1080/0005772X.1922.11095502",
+              "article-title": "A graphic representation of the oviposition of a queen-bee II",
+              "volume": "4",
+              "author": "Brunnich",
+              "year": "1923",
+              "journal-title": "Bee World"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib4",
+              "article-title": "Self-organizing pattern formation on the combs of honey bee colonies",
+              "author": "Camazine",
+              "year": "1990",
+              "journal-title": "Behav. Ecol. Sociobiol."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1007/BF02227166",
+              "article-title": "Application de l'ordre par fluctuations \u00e0 la description de certaines \u00e9tapes de la construction du nid chez les termites",
+              "volume": "24",
+              "author": "Deneubourg",
+              "year": "1977",
+              "journal-title": "Insectes Sociaux"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "159",
+              "DOI": "10.1007/BF01417909",
+              "article-title": "The self-organizing exploratory pattern of the Argentine ant",
+              "volume": "3",
+              "author": "Deneubourg",
+              "year": "1990",
+              "journal-title": "J. Insect Behav."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "719",
+              "DOI": "10.1007/BF01065789",
+              "article-title": "The blind leading the blind: modelling chemically mediated army ant raid patterns",
+              "volume": "2",
+              "author": "Deneubourg",
+              "year": "1989",
+              "journal-title": "J. Insect Behav."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib8",
+              "first-page": "369",
+              "article-title": "A model for shell patterns based on neural activity",
+              "volume": "28",
+              "author": "Ermentrout",
+              "year": "1986",
+              "journal-title": "Veliger"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "137",
+              "DOI": "10.1007/BF00336965",
+              "article-title": "Mathematical theory of visual hallucination patterns",
+              "volume": "34",
+              "author": "Ermentrout",
+              "year": "1979",
+              "journal-title": "Biol. Cybernet."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "579",
+              "DOI": "10.1007/BF00462870",
+              "article-title": "Self-organized shortcuts in the Argentine ant",
+              "volume": "76",
+              "author": "Goss",
+              "year": "1989",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "339",
+              "DOI": "10.1007/BF02224885",
+              "article-title": "The self-organising clock pattern of Messor pergandei (Formicidae, Myrmicinae)",
+              "volume": "36",
+              "author": "Goss",
+              "year": "1989",
+              "journal-title": "Insectes Sociaux"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "25",
+              "DOI": "10.1242/jeb.91.1.25",
+              "article-title": "The mechanisms and energetics of honeybee swarm temperature regulation",
+              "volume": "91",
+              "author": "Heinrich",
+              "year": "1981",
+              "journal-title": "J. expl. Biol."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib13",
+              "series-title": "The Illustrated Encyclopedia of Beekeeping",
+              "author": "Morse",
+              "year": "1985"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "161",
+              "DOI": "10.1016/0022-5193(81)90334-9",
+              "article-title": "A prepattern formation mechanism for animal cost markings",
+              "volume": "88",
+              "author": "Murray",
+              "year": "1981",
+              "journal-title": "J. theor. Biol."
+            },
+            {
+              "issue": "No. 1349",
+              "key": "10.1016/S0022-5193(05)80264-4_bib15",
+              "first-page": "1",
+              "article-title": "The brood rearing cycle of the honeybee",
+              "author": "Nolan",
+              "year": "1925",
+              "journal-title": "Bull. U.S. Dept. Agric."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib16",
+              "doi-asserted-by": "crossref",
+              "first-page": "219",
+              "DOI": "10.1016/S0022-5193(87)80170-4",
+              "article-title": "Thermoregulation in the winter cluster of the honeybee",
+              "volume": "128",
+              "author": "Omholt",
+              "year": "1987",
+              "journal-title": "Apis mellifera. J. theor. Biol."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib17",
+              "series-title": "From Individual to Collective Behavior in Social Insects",
+              "first-page": "155",
+              "article-title": "Self-organization mechanisms in ant societies (I): trail recruitment to newly discovered food sources",
+              "author": "Pasteels",
+              "year": "1987"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib18",
+              "first-page": "264",
+              "article-title": "The ecology of temperate and tropical honeybee societies",
+              "volume": "71",
+              "author": "Seeley",
+              "year": "1983",
+              "journal-title": "Am. Sci."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib19",
+              "series-title": "Honeybee Ecology",
+              "author": "Seeley",
+              "year": "1985"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "495",
+              "DOI": "10.1007/BF02223477",
+              "article-title": "The nest of the honey bee (Apis mellifera L.)",
+              "volume": "23",
+              "author": "Seeley",
+              "year": "1976",
+              "journal-title": "Insectes Sociaux"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib21",
+              "article-title": "Collective decision-making in honeybees: how colonies choose among nectar sources",
+              "author": "Seeley",
+              "year": "1990",
+              "journal-title": "Behav. Ecol. Sociobiol."
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib22",
+              "first-page": "243",
+              "article-title": "A model for the formation of ocular dominance stripes",
+              "volume": "208",
+              "author": "Swindale",
+              "year": "1980"
+            },
+            {
+              "issue": "6",
+              "key": "10.1016/S0022-5193(05)80264-4_bib23",
+              "doi-asserted-by": "crossref",
+              "first-page": "1790",
+              "DOI": "10.2307/1940121",
+              "article-title": "Foraging strategy of honeybee colonies in a temperate deciduous forest",
+              "volume": "63",
+              "author": "Visscher",
+              "year": "1982",
+              "journal-title": "Ecology"
+            },
+            {
+              "key": "10.1016/S0022-5193(05)80264-4_bib24",
+              "series-title": "The Biology of the Honey Bee",
+              "author": "Winston",
+              "year": "1987"
+            }
+          ],
+          "container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0022519305802644?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0022519305802644?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                20
+              ]
+            ],
+            "date-time": "2025-09-20T16:07:13Z",
+            "timestamp": 1758384433000
+          },
+          "score": 46.022522,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0022519305802644"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1990,
+                12
+              ]
+            ]
+          },
+          "references-count": 24,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  1990,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0022519305802644"
+          ],
+          "URL": "https://doi.org/10.1016/s0022-5193(05)80264-4",
+          "ISSN": [
+            "0022-5193"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-5193",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1990,
+                12
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "Elsevier",
+              "name": "publisher",
+              "label": "This article is maintained by"
+            },
+            {
+              "value": "A mathematical model of self-organized pattern formation on the combs of honeybee colonies",
+              "name": "articletitle",
+              "label": "Article Title"
+            },
+            {
+              "value": "Journal of Theoretical Biology",
+              "name": "journaltitle",
+              "label": "Journal Title"
+            },
+            {
+              "value": "https://doi.org/10.1016/S0022-5193(05)80264-4",
+              "name": "articlelink",
+              "label": "CrossRef DOI link to publisher maintained version"
+            },
+            {
+              "value": "article",
+              "name": "content_type",
+              "label": "Content Type"
+            },
+            {
+              "value": "Copyright \u00a9 1990 Published by Elsevier Ltd.",
+              "name": "copyright",
+              "label": "Copyright"
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

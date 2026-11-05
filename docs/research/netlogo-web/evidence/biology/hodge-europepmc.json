@@ -1,0 +1,101 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fj.1469-8137.2004.01015.x%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1111/j.1469-8137.2004.01015.x\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "IND43667654",
+          "source": "AGR",
+          "doi": "10.1111/j.1469-8137.2004.01015.x",
+          "title": "The plastic plant: root responses to heterogeneous supplies of nutrients.",
+          "authorString": "Hodge A.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Hodge A",
+                "lastName": "Hodge",
+                "initials": "A"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "162",
+            "journalIssueId": 1448698,
+            "dateOfPublication": "2004 Apr",
+            "monthOfPublication": 4,
+            "yearOfPublication": 2004,
+            "journal": {
+              "medlineAbbreviation": "New Phytol",
+              "title": "The New phytologist",
+              "essn": "1469-8137",
+              "issn": "1469-8137",
+              "isoabbreviation": "New Phytol",
+              "nlmid": "9882884"
+            },
+            "printPublicationDate": "2004-04-01"
+          },
+          "pubYear": "2004",
+          "pageInfo": "9-24",
+          "abstractText": "When roots encounter a nutrient-rich zone or patch they often proliferate within it. Roots experiencing nutrient-rich patches can also enhance their physiological ion-uptake capacities compared with roots of the same plant outside the patch zone. These plastic responses by the root system have been proposed as the major mechanism by which plants cope with the naturally occurring heterogeneous supplies of nutrients in soil. Various attempts to predict how contrasting species will respond to patches have been made based on specific root length (SRL), root demography and biomass allocation within the patch zone. No one criterion has proved definitive. Actually demonstrating that root proliferation is beneficial to the plant, especially in terms of nitrogen capture from patches, has also proved troublesome. Yet by growing plants under more realistic conditions, such as in interspecific plant competition, and with a complex organic patch, a direct benefit can be demonstrated. Thus, as highlighted in this review, the environmental context in which the root response is expressed is as important as the magnitude of the response itself.",
+          "language": "eng",
+          "pubModel": "Undetermined",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "WileyInterScience",
+                "url": "https://doi.org/10.1111/j.1469-8137.2004.01015.x"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 448,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2005-01-25",
+          "dateOfCreation": "2005-01-25",
+          "dateOfRevision": "2005-03-01",
+          "firstPublicationDate": "2004-04-01",
+          "firstIndexDate": "2008-09-15",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

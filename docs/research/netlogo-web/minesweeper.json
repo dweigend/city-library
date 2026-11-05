@@ -1,0 +1,109 @@
+{
+  "slug": "minesweeper",
+  "name": "Minesweeper",
+  "catalogPath": "Sample Models/Games/Minesweeper",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Minesweeper.nlogox",
+  "deliveryBatch": "B20",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "What can local numerical clues reveal about hidden global arrangements? NetLogo Minesweeper hides mines on a grid, reveals neighboring mine counts after safe clicks, and expands empty regions automatically. Winning requires uncovering every safe square; a mine click ends the game. Kaye [1] establishes the computational difficulty of a formal consistency problem, Golan [2] studies graph structure and tractable cases, and Jaynes [3] supplies probabilistic reasoning when clues do not determine a unique safe action. The interactive baseline illustrates constraints, partial information, and the distinction between deduction and risk. Its fixed board generation, finite size, and neighborhood definition matter. Worst-case complexity theorems concern generalized problem families, not the difficulty of each displayed board. The game is a computational illustration and provides no model of physical mine detection or humanitarian clearance performance.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Minesweeper.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Minesweeper.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 82dcfd1e9c4cfcacfdb2a71738ffe72293d81ab42b3658547075c397d8decfbf",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/minesweeper.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2005).  NetLogo Minesweeper model.  http://ccl.northwestern.edu/netlogo/models/Minesweeper.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/minesweeper.nlogox",
+    "evidenceFile": "evidence/computing/minesweeper.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1007/bf03025367",
+      "authors": [
+        "Richard Kaye"
+      ],
+      "title": "Minesweeper is NP-complete",
+      "year": 2000,
+      "venue": "The Mathematical Intelligencer",
+      "doi": "10.1007/bf03025367",
+      "url": "https://doi.org/10.1007/bf03025367",
+      "relevance": "Direct original proof establishes generalized Minesweeper consistency complexity, with appropriate worst-case limits.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF03025367",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_bf03025367.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_bf03025367.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "22",
+      "issue": "2",
+      "pages": "9-15",
+      "verified": true
+    },
+    {
+      "id": "10.1016/j.amc.2011.01.046",
+      "authors": [
+        "Shahar Golan"
+      ],
+      "title": "Minesweeper on graphs",
+      "year": 2011,
+      "venue": "Applied Mathematics and Computation",
+      "doi": "10.1016/j.amc.2011.01.046",
+      "url": "https://doi.org/10.1016/j.amc.2011.01.046",
+      "relevance": "Graph-based analysis links solvability and counting to structural restrictions such as bounded treewidth.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.amc.2011.01.046",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_j_amc_2011_01_046.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_j_amc_2011_01_046.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "217",
+      "issue": "14",
+      "pages": "6616-6623",
+      "verified": true
+    },
+    {
+      "id": "10.1017/cbo9780511790423",
+      "authors": [
+        "E. T. Jaynes"
+      ],
+      "title": "Probability Theory: The Logic of Science",
+      "year": 2003,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/cbo9780511790423",
+      "url": "https://doi.org/10.1017/cbo9780511790423",
+      "relevance": "Conditional probability supports risk assessment when multiple hidden boards satisfy the visible clues.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2FCBO9780511790423",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_cbo9780511790423.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_cbo9780511790423.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9780521592710",
+        "9780511790423"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "virus-on-a-network",
+  "name": "Virus on a Network",
+  "catalogPath": "Sample Models/Networks/Virus on a Network",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Virus%20on%20a%20Network.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether contact structure and periodic detection change infection persistence. In NetLogo's Virus on a Network model, susceptible nodes can become infected through neighbors, while checks may remove infection and sometimes produce permanent resistance. The selected literature connects this mechanism to network-mediated contagion and control: graph epidemiology supplies a computer-virus transmission framework [1]; degree heterogeneity can change epidemic spreading behavior [2]; classical epidemic compartments clarify recovery and immunity assumptions [3]. The susceptible-infected-resistant rules and scheduled checking differ from many continuous-time epidemic equations; computer-network interpretation is an analogy. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Virus%20on%20a%20Network.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Virus%20on%20a%20Network.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/virus-on-a-network.nlogox",
+    "sha256": "3ebb041175d22c6a1b32279dc25af14b4f76c06f2eb18e62539ca84f1f8dd5d1",
+    "citation": "For the model itself: * Stonedahl, F. and Wilensky, U. (2008). NetLogo Virus on a Network model. http://ccl.northwestern.edu/netlogo/models/VirusonaNetwork. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Info does not identify a scientific original; related publications below are contextual comparisons, not asserted source derivations.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/virus-on-a-network.nlogox"
+  },
+  "publications": [
+    {
+      "id": "kephart",
+      "creatorRole": "author",
+      "authors": [
+        "Jeffrey O. Kephart",
+        "Steve R. White"
+      ],
+      "title": "Directed-graph epidemiological models of computer viruses",
+      "year": 1991,
+      "venue": "Proceedings. 1991 IEEE Computer Society Symposium on Research in Security and Privacy",
+      "doi": "10.1109/risp.1991.130801",
+      "url": "https://doi.org/10.1109/risp.1991.130801",
+      "relevance": "graph epidemiology supplies a computer-virus transmission framework",
+      "verification": {
+        "consultedUrl": "https://jmvidal.cse.sc.edu/lib/kephart91a.html",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public university bibliography and abstract; DOI-registrant metadata separately checked",
+        "notes": "Full author names and 1991 year checked on University of South Carolina hosted scholarly record; Crossref event explicitly names 1991 conference but omits a publication date. Original DOI registry snapshot retained as kephart-verified.json. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/web-primary-qc.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/web-primary-qc.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "pastor",
+      "creatorRole": "author",
+      "authors": [
+        "Romualdo Pastor-Satorras",
+        "Alessandro Vespignani"
+      ],
+      "title": "Epidemic Spreading in Scale-Free Networks",
+      "year": 2001,
+      "venue": "Physical Review Letters",
+      "doi": "10.1103/physrevlett.86.3200",
+      "url": "https://doi.org/10.1103/physrevlett.86.3200",
+      "relevance": "degree heterogeneity can change epidemic spreading behavior",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevLett.86.3200",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/pastor-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/pastor-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "km",
+      "creatorRole": "author",
+      "authors": [
+        "William Ogilvy Kermack",
+        "A. G. McKendrick"
+      ],
+      "title": "A contribution to the mathematical theory of epidemics",
+      "year": 1927,
+      "venue": "Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character",
+      "doi": "10.1098/rspa.1927.0118",
+      "url": "https://doi.org/10.1098/rspa.1927.0118",
+      "relevance": "classical epidemic compartments clarify recovery and immunity assumptions",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1098%2Frspa.1927.0118",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/km-crossref.json",
+        "evidenceSummary": "Abstract (1) One of the most striking features in the study of epidemics is the difficulty of finding a causal factor which appears to be adequate to account for the magnitude of the frequent epidemics of disease which visit almost every population. It was with a view to obtaining more insight regarding the effects of the various factors which govern the spread of contagious epidemics that the present investigation was undertaken. Reference may here be made to the work of Ross and Hudson (1915-17) in which the same problem is attacked. The problem is here carried to a further stage, and it is considered from a point of view which is in one sense more general. The problem may be summarised as follows: One (or more) infected person is introduced into a community of individuals, more or less susceptible to the disease in question. The disease spreads from the affected to the unaffected by c",
+        "evidenceFile": "evidence/social-urban/km-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,987 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Developing+Multi-agent-based+Thought+Experiments+A+Case+Study+on+the+Evolution+of+Gamete+Dimorphism+Aslan+Dabholkar+Wilensky+2017&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 16352925,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                12
+              ]
+            ],
+            "date-time": "2025-05-12T17:02:34Z",
+            "timestamp": 1747069354301,
+            "version": "3.37.3"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 25,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9783319915869"
+            },
+            {
+              "type": "electronic",
+              "value": "9783319915876"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2018,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2018-01-01T00:00:00Z",
+                "timestamp": 1514764800000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2018
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-319-91587-6_4",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                5,
+                12
+              ]
+            ],
+            "date-time": "2018-05-12T14:43:02Z",
+            "timestamp": 1526136182000
+          },
+          "page": "47-61",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Developing Multi-agent-based Thought Experiments: A Case Study on the Evolution of Gamete Dimorphism"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Umit",
+              "family": "Aslan",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Sugat",
+              "family": "Dabholkar",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Uri",
+              "family": "Wilensky",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2018,
+                5,
+                13
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "4_CR1",
+              "unstructured": "Aslan, U., Dabholkar, S., Wilensky, U.: NetLogo Anisogamy model. http://ccl.northwestern.edu/netlogo/models/Anisogamy . Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL (2016)"
+            },
+            {
+              "key": "4_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "123",
+              "DOI": "10.1007/BF01299065",
+              "volume": "1",
+              "author": "R Axtell",
+              "year": "1996",
+              "unstructured": "Axtell, R., Axelrod, R., Epstein, J.M., Cohen, M.D.: Aligning simulation models: a case study and results. Comput. Math. Organ. Theo. 1, 123\u2013141 (1996)",
+              "journal-title": "Comput. Math. Organ. Theo."
+            },
+            {
+              "key": "4_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "247",
+              "DOI": "10.1016/0022-5193(78)90189-3",
+              "volume": "73",
+              "author": "G Bell",
+              "year": "1978",
+              "unstructured": "Bell, G.: The evolution of anisogamy. J. Theor. Biol. 73, 247\u2013270 (1978)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "4_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "3",
+              "DOI": "10.1007/s13752-012-0060-4",
+              "volume": "7",
+              "author": "M Blute",
+              "year": "2013",
+              "unstructured": "Blute, M.: The evolution of anisogamy: more questions than answers. Biol. Theo. 7, 3\u20139 (2013)",
+              "journal-title": "Biol. Theo."
+            },
+            {
+              "key": "4_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "2381",
+              "DOI": "10.1098/rspb.2002.2161",
+              "volume": "269",
+              "author": "MG Bulmer",
+              "year": "2002",
+              "unstructured": "Bulmer, M.G., Parker, G.A.: The evolution of anisogamy: a game-theoretic approach. Proc. R. Soc. London B: Biol. Sci. 269, 2381\u20132388 (2002)",
+              "journal-title": "Proc. R. Soc. London B: Biol. Sci."
+            },
+            {
+              "key": "4_CR6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Cox, P.A.: The evolutionary mystery of gamete dimorphism. In: The Evolution of Anisogamy: A Fundamental Phenomenon Underlying Sexual Selection, pp. 1\u201316 (2011)",
+              "DOI": "10.1017/CBO9780511975943.001"
+            },
+            {
+              "issue": "1",
+              "key": "4_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "74",
+              "DOI": "10.1086/284329",
+              "volume": "125",
+              "author": "PA Cox",
+              "year": "1985",
+              "unstructured": "Cox, P.A., Sethian, J.A.: Gamete motion, search, and the evolution of anisogamy, oogamy, and chemotaxis. Am. Nat. 125(1), 74\u2013101 (1985)",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "4_CR8",
+              "volume-title": "Darwin\u2019s Dangerous Idea: Evolution and the Meanings of Life",
+              "author": "DC Dennett",
+              "year": "1996",
+              "unstructured": "Dennett, D.C.: Darwin\u2019s Dangerous Idea: Evolution and the Meanings of Life. Simon and Schuster, New York City (1996)"
+            },
+            {
+              "key": "4_CR9",
+              "volume-title": "Population Biology: Concepts and Models",
+              "author": "A Hastings",
+              "year": "2013",
+              "unstructured": "Hastings, A.: Population Biology: Concepts and Models. Springer, New York (2013)"
+            },
+            {
+              "issue": "2",
+              "key": "4_CR10",
+              "doi-asserted-by": "crossref",
+              "first-page": "227",
+              "DOI": "10.1242/jcs.104.2.227",
+              "volume": "104",
+              "author": "U Kues",
+              "year": "1993",
+              "unstructured": "Kues, U., Casselton, L.A.: The origin of multiple mating types in mushrooms. J. Cell Sci. 104(2), 227\u2013230 (1993)",
+              "journal-title": "J. Cell Sci."
+            },
+            {
+              "key": "4_CR11",
+              "volume-title": "Elements of Physical Biology",
+              "author": "AJ Lotka",
+              "year": "1925",
+              "unstructured": "Lotka, A.J.: Elements of Physical Biology. Dover, New York (1925)"
+            },
+            {
+              "key": "4_CR12",
+              "volume-title": "The Evolution of Sex",
+              "author": "J Maynard-Smith",
+              "year": "1978",
+              "unstructured": "Maynard-Smith, J.: The Evolution of Sex. Cambridge University Press, London (1978)"
+            },
+            {
+              "key": "4_CR13",
+              "volume-title": "Mindstorms: Children, Computers, and Powerful Ideas",
+              "author": "S Papert",
+              "year": "1980",
+              "unstructured": "Papert, S.: Mindstorms: Children, Computers, and Powerful Ideas. Basic Books, New York (1980)"
+            },
+            {
+              "issue": "1",
+              "key": "4_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/0022-5193(78)90177-7",
+              "volume": "73",
+              "author": "GA Parker",
+              "year": "1978",
+              "unstructured": "Parker, G.A.: Selection on non-random fusion of gametes during the evolution of anisogamy. J. Theor. Biol. 73(1), 1\u201328 (1978)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "issue": "3",
+              "key": "4_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "529",
+              "DOI": "10.1016/0022-5193(72)90007-0",
+              "volume": "36",
+              "author": "GA Parker",
+              "year": "1972",
+              "unstructured": "Parker, G.A., Baker, R.R., Smith, V.G.F.: The origin and evolution of gamete dimorphism and the male-female phenomenon. J. Theor. Biol. 36(3), 529\u2013553 (1972)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "4_CR16",
+              "volume-title": "Life: The Science of Biology",
+              "author": "W Purves",
+              "year": "1992",
+              "unstructured": "Purves, W., Orians, G., Heller, H.: Life: The Science of Biology, 3rd edn. Sinauer Associates, Sunderland (1992)",
+              "edition": "3"
+            },
+            {
+              "issue": "10",
+              "key": "4_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "571",
+              "DOI": "10.1016/S0169-5347(01)02270-4",
+              "volume": "16",
+              "author": "JP Randerson",
+              "year": "2001",
+              "unstructured": "Randerson, J.P., Hurst, L.D.: The uncertain evolution of the sexes. Trends Ecol. Evol. 16(10), 571\u2013579 (2001)",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "4_CR18",
+              "unstructured": "Tisue, S., Wilensky, U.: NetLogo: a simple environment for modeling complexity. Paper presented at the International Conference on Complex Systems, Boston (2004)"
+            },
+            {
+              "key": "4_CR19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9780511975943",
+              "volume-title": "The Evolution of Anisogamy: A Fundamental Phenomenon Underlying Sexual Selection",
+              "author": "T Togashi",
+              "year": "2011",
+              "unstructured": "Togashi, T., Cox, P.A.: The Evolution of Anisogamy: A Fundamental Phenomenon Underlying Sexual Selection. Cambridge University Press, New York (2011)"
+            },
+            {
+              "key": "4_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "558",
+              "DOI": "10.1038/118558a0",
+              "volume": "118",
+              "author": "V Volterra",
+              "year": "1926",
+              "unstructured": "Volterra, V.: Fluctuations in the abundance of a species considered mathematically. Nature 118, 558\u2013560 (1926)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "4_CR21",
+              "unstructured": "Wilensky, U.: NetLogo (1999). http://ccl.northwestern.edu/netlogo/"
+            },
+            {
+              "key": "4_CR22",
+              "unstructured": "Wilensky, U.: Modeling nature\u2019s emergent patterns with multi-agent languages. In: Proceedings of Eurologo, Linz, Austria (2001)"
+            },
+            {
+              "issue": "2",
+              "key": "4_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "171",
+              "DOI": "10.1207/s1532690xci2402_1",
+              "volume": "24",
+              "author": "U Wilensky",
+              "year": "2006",
+              "unstructured": "Wilensky, U., Reisman, K.: Thinking like a wolf, a sheep, or a firefly: Learning biology through constructing and testing computational theories - an embodied modeling approach. Cogn. Instr. 24(2), 171\u2013209 (2006)",
+              "journal-title": "Cogn. Instr."
+            },
+            {
+              "issue": "4",
+              "key": "4_CR24",
+              "first-page": "2",
+              "volume": "10",
+              "author": "U Wilensky",
+              "year": "2007",
+              "unstructured": "Wilensky, U., Rand, W.: Making models match: replicating an agent-based model. J. Artif. Soc. Soc. Simul. 10(4), 2 (2007)",
+              "journal-title": "J. Artif. Soc. Soc. Simul."
+            },
+            {
+              "key": "4_CR25",
+              "unstructured": "Wilensky, U., Papert, S.: Restructurations: reformulations of knowledge disciplines through new representational forms. In: Proceedings of Constructionism, Paris, France (2010)"
+            }
+          ],
+          "container-title": [
+            "Lecture Notes in Computer Science",
+            "Multi-Agent Based Simulation XVIII"
+          ],
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-3-319-91587-6_4",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                8,
+                23
+              ]
+            ],
+            "date-time": "2022-08-23T15:41:11Z",
+            "timestamp": 1661269271000
+          },
+          "score": 61.56247,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-3-319-91587-6_4"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2018
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783319915869",
+            "9783319915876"
+          ],
+          "references-count": 25,
+          "URL": "https://doi.org/10.1007/978-3-319-91587-6_4",
+          "ISSN": [
+            "0302-9743",
+            "1611-3349"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0302-9743"
+            },
+            {
+              "type": "electronic",
+              "value": "1611-3349"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2018
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                2,
+                21
+              ]
+            ],
+            "date-time": "2025-02-21T00:49:20Z",
+            "timestamp": 1740098960530,
+            "version": "3.37.3"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 24,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9783319716817"
+            },
+            {
+              "type": "electronic",
+              "value": "9783319716824"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2017-01-01T00:00:00Z",
+                "timestamp": 1483228800000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-319-71682-4_4",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                11,
+                24
+              ]
+            ],
+            "date-time": "2017-11-24T16:24:12Z",
+            "timestamp": 1511540652000
+          },
+          "page": "51-65",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Developing Multi-agent-based Thought Experiments: A Case Study on the Evolution of Gamete Dimorphism"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Umit",
+              "family": "Aslan",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Sugat",
+              "family": "Dabholkar",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Uri",
+              "family": "Wilensky",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                11,
+                25
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "4_CR1",
+              "unstructured": "Aslan, U., Dabholkar, S., Wilensky, U.: NetLogo Anisogamy model. http://ccl.northwestern.edu/netlogo/models/Anisogamy . Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL (2016)"
+            },
+            {
+              "key": "4_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "123",
+              "DOI": "10.1007/BF01299065",
+              "volume": "1",
+              "author": "R Axtell",
+              "year": "1996",
+              "unstructured": "Axtell, R., Axelrod, R., Epstein, J.M., Cohen, M.D.: Aligning simulation models: a case study and results. Comput. Math. Organ. Theor. 1, 123\u2013141 (1996)",
+              "journal-title": "Comput. Math. Organ. Theor."
+            },
+            {
+              "key": "4_CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "247",
+              "DOI": "10.1016/0022-5193(78)90189-3",
+              "volume": "73",
+              "author": "G Bell",
+              "year": "1978",
+              "unstructured": "Bell, G.: The evolution of anisogamy. J. Theor. Biol. 73, 247\u2013270 (1978)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "4_CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "3",
+              "DOI": "10.1007/s13752-012-0060-4",
+              "volume": "7",
+              "author": "M Blute",
+              "year": "2013",
+              "unstructured": "Blute, M.: The evolution of anisogamy: more questions than answers. Biol. Theor. 7, 3\u20139 (2013)",
+              "journal-title": "Biol. Theor."
+            },
+            {
+              "key": "4_CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "2381",
+              "DOI": "10.1098/rspb.2002.2161",
+              "volume": "269",
+              "author": "MG Bulmer",
+              "year": "2002",
+              "unstructured": "Bulmer, M.G., Parker, G.A.: The evolution of anisogamy: a game-theoretic approach. Proc. R. Soc. Lond. B Biol. Sci. 269, 2381\u20132388 (2002)",
+              "journal-title": "Proc. R. Soc. Lond. B Biol. Sci."
+            },
+            {
+              "key": "4_CR6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Cox, P.A.: The evolutionary mystery of gamete dimorphism. In: The Evolution of Anisogamy: A Fundamental Phenomenon Underlying Sexual Selection, pp. 1\u201316 (2011)",
+              "DOI": "10.1017/CBO9780511975943.001"
+            },
+            {
+              "issue": "1",
+              "key": "4_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "74",
+              "DOI": "10.1086/284329",
+              "volume": "125",
+              "author": "PA Cox",
+              "year": "1985",
+              "unstructured": "Cox, P.A., Sethian, J.A.: Gamete motion, search, and the evolution of anisogamy, oogamy, and chemotaxis. Am. Nat. 125(1), 74\u2013101 (1985)",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "4_CR8",
+              "volume-title": "Darwin\u2019s Dangerous Idea: Evolution and the Meanings of Life",
+              "author": "DC Dennett",
+              "year": "1996",
+              "unstructured": "Dennett, D.C.: Darwin\u2019s Dangerous Idea: Evolution and the Meanings of Life. Simon and Schuster, New York (1996)"
+            },
+            {
+              "key": "4_CR9",
+              "volume-title": "Population Biology: Concepts and Models",
+              "author": "A Hastings",
+              "year": "2013",
+              "unstructured": "Hastings, A.: Population Biology: Concepts and Models. Springer Science & Business Media, New York (2013)"
+            },
+            {
+              "issue": "2",
+              "key": "4_CR10",
+              "doi-asserted-by": "crossref",
+              "first-page": "227",
+              "DOI": "10.1242/jcs.104.2.227",
+              "volume": "104",
+              "author": "U Kues",
+              "year": "1993",
+              "unstructured": "Kues, U., Casselton, L.A.: The origin of multiple mating types in mushrooms. J. Cell Sci. 104(2), 227\u2013230 (1993)",
+              "journal-title": "J. Cell Sci."
+            },
+            {
+              "key": "4_CR11",
+              "volume-title": "Elements of physical biology",
+              "author": "AJ Lotka",
+              "year": "1925",
+              "unstructured": "Lotka, A.J.: Elements of physical biology. Dover, New York (1925)"
+            },
+            {
+              "key": "4_CR12",
+              "volume-title": "The Evolution of Sex",
+              "author": "J Maynard-Smith",
+              "year": "1978",
+              "unstructured": "Maynard-Smith, J.: The Evolution of Sex. Cambridge University Press, London (1978)"
+            },
+            {
+              "issue": "1",
+              "key": "4_CR13",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1016/0022-5193(78)90177-7",
+              "volume": "73",
+              "author": "GA Parker",
+              "year": "1978",
+              "unstructured": "Parker, G.A.: Selection on non-random fusion of gametes during the evolution of anisogamy. J. Theor. Biol. 73(1), 1\u201328 (1978)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "issue": "3",
+              "key": "4_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "529",
+              "DOI": "10.1016/0022-5193(72)90007-0",
+              "volume": "36",
+              "author": "GA Parker",
+              "year": "1972",
+              "unstructured": "Parker, G.A., Baker, R.R., Smith, V.G.F.: The origin and evolution of gamete dimorphism and the male-female phenomenon. J. Theor. Biol. 36(3), 529\u2013553 (1972)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "4_CR15",
+              "volume-title": "Life: The Science of Biology",
+              "author": "W Purves",
+              "year": "1992",
+              "unstructured": "Purves, W., Orians, G., Heller, H.: Life: The Science of Biology, 3rd edn. Sinauer Associates, Sunderland (1992)",
+              "edition": "3"
+            },
+            {
+              "issue": "10",
+              "key": "4_CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "571",
+              "DOI": "10.1016/S0169-5347(01)02270-4",
+              "volume": "16",
+              "author": "JP Randerson",
+              "year": "2001",
+              "unstructured": "Randerson, J.P., Hurst, L.D.: The uncertain evolution of the sexes. Trends Ecol. Evol. 16(10), 571\u2013579 (2001)",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "4_CR17",
+              "unstructured": "Tisue, S., Wilensky, U.: NetLogo: A Simple Environment for Modeling Complexity. Paper presented at the International Conference on Complex Systems. Boston (2004)"
+            },
+            {
+              "key": "4_CR18",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1017/CBO9780511975943",
+              "volume-title": "The Evolution of Anisogamy: A Fundamental Phenomenon Underlying Sexual Selection",
+              "author": "T Togashi",
+              "year": "2011",
+              "unstructured": "Togashi, T., Cox, P.A.: The Evolution of Anisogamy: A Fundamental Phenomenon Underlying Sexual Selection. Cambridge University Press, New York (2011)"
+            },
+            {
+              "key": "4_CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "558",
+              "DOI": "10.1038/118558a0",
+              "volume": "118",
+              "author": "V Volterra",
+              "year": "1926",
+              "unstructured": "Volterra, V.: Fluctuations in the abundance of a species considered mathematically. Nature 118, 558\u2013560 (1926)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "4_CR20",
+              "unstructured": "Wilensky, U.: NetLogo (1999). http://ccl.northwestern.edu/netlogo/"
+            },
+            {
+              "key": "4_CR21",
+              "unstructured": "Wilensky, U.: Modeling nature\u2019s emergent patterns with multi-agent languages. In: Proceedings of Eurologo. Linz, Austria (2001)"
+            },
+            {
+              "issue": "2",
+              "key": "4_CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "171",
+              "DOI": "10.1207/s1532690xci2402_1",
+              "volume": "24",
+              "author": "U Wilensky",
+              "year": "2006",
+              "unstructured": "Wilensky, U., Reisman, K.: Thinking like a wolf, a sheep, or a firefly: learning biology through constructing and testing computational theories - an embodied modeling approach. Cogn. Instr. 24(2), 171\u2013209 (2006)",
+              "journal-title": "Cogn. Instr."
+            },
+            {
+              "key": "4_CR23",
+              "unstructured": "Wilensky, U., Rand W.: Making models match: replicating an agent-based model. J. Artif. Soc. Soc. Simul. 10(4) (2007). http://jasss.soc.surrey.ac.uk/10/4/2.html"
+            },
+            {
+              "key": "4_CR24",
+              "unstructured": "Wilensky, U., Papert, S.: Restructurations: reformulations of knowledge disciplines through new representational forms. In: Proceedings of Constructionism. Paris, France (2010)"
+            }
+          ],
+          "container-title": [
+            "Lecture Notes in Computer Science",
+            "Autonomous Agents and Multiagent Systems"
+          ],
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-3-319-71682-4_4",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                8,
+                8
+              ]
+            ],
+            "date-time": "2022-08-08T15:06:59Z",
+            "timestamp": 1659971219000
+          },
+          "score": 61.448467,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-3-319-71682-4_4"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783319716817",
+            "9783319716824"
+          ],
+          "references-count": 24,
+          "URL": "https://doi.org/10.1007/978-3-319-71682-4_4",
+          "ISSN": [
+            "0302-9743",
+            "1611-3349"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0302-9743"
+            },
+            {
+              "type": "electronic",
+              "value": "1611-3349"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                17
+              ]
+            ],
+            "date-time": "2026-10-17T15:46:13Z",
+            "timestamp": 1792251973466,
+            "version": "4.4.0"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 0,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "value": "9783319196497",
+              "type": "print"
+            },
+            {
+              "value": "9783319196503",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-319-19650-3_301979",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                5,
+                11
+              ]
+            ],
+            "date-time": "2021-05-11T20:25:38Z",
+            "timestamp": 1620764738000
+          },
+          "page": "3325-3325",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Gamete Dimorphism"
+          ],
+          "prefix": "10.1007",
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2021,
+                4,
+                22
+              ]
+            ]
+          },
+          "container-title": [
+            "Encyclopedia of Evolutionary Psychological Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-319-19650-3_301979",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                17
+              ]
+            ],
+            "date-time": "2026-10-17T15:04:24Z",
+            "timestamp": 1792249464000
+          },
+          "score": 31.24641,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/chapter/10.1007/978-3-319-19650-3_301979"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783319196497",
+            "9783319196503"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1007/978-3-319-19650-3_301979",
+          "published": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "22 April 2021",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,828 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=On+territorial+behaviour+and+other+factors+influencing+habitat+distribution+in+birds+Fretwell+Lucas+1969&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3048915,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                30
+              ]
+            ],
+            "date-time": "2026-10-30T14:37:32Z",
+            "timestamp": 1793371052499,
+            "version": "4.5.0"
+          },
+          "reference-count": 15,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1969,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "1969-03-01T00:00:00Z",
+                "timestamp": -26438400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Acta Biotheor"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf01601953",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2005,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2005-04-29T13:34:54Z",
+            "timestamp": 1114781694000
+          },
+          "page": "16-36",
+          "source": "Crossref",
+          "is-referenced-by-count": 3138,
+          "title": [
+            "On territorial behavior and other factors influencing habitat distribution in birds"
+          ],
+          "prefix": "10.1007",
+          "volume": "19",
+          "author": [
+            {
+              "given": "Stephen Dewitt",
+              "family": "Fretwell",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "suffix": "Jr.",
+              "given": "Henry L.",
+              "family": "Lucas",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BF01601953_CR1",
+              "first-page": "xii + 837",
+              "volume-title": "Principles of Animal Ecology",
+              "author": "W. C. Allee",
+              "year": "1949",
+              "unstructured": "Allee, W. C., A. E. Emerson, O. Park, T. Park &K. P. Schmidt (1949). Principles of Animal Ecology. W. B. Saunders, Philadelphia, xii + 837 pp."
+            },
+            {
+              "key": "BF01601953_CR2",
+              "first-page": "160",
+              "volume": "76",
+              "author": "J. L. Brown",
+              "year": "1964",
+              "unstructured": "Brown, J. L. (1964). The evolution of diversity in avian territorial systems. - Wilson Bull., 76, 160\u2013169.",
+              "journal-title": "Wilson Bull."
+            },
+            {
+              "key": "BF01601953_CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "413",
+              "DOI": "10.1016/B978-1-4832-3143-3.50019-8",
+              "volume-title": "Biology and Comparative Physiology of Birds. II",
+              "author": "J. Gibb",
+              "year": "1961",
+              "unstructured": "Gibb, J. (1961). Bird populations, pp. 413\u2013446. In:A. J. Marshall (ed.), Biology and Comparative Physiology of Birds. II. Academic Press, New York."
+            },
+            {
+              "key": "BF01601953_CR4",
+              "volume-title": "Territory in Bird Life",
+              "author": "F. Howard",
+              "year": "1920",
+              "unstructured": "Howard, F. (1920). Territory in Bird Life. Atheneum, London, 239 pp."
+            },
+            {
+              "key": "BF01601953_CR5",
+              "first-page": "270",
+              "volume": "27",
+              "author": "J. S. Huxley",
+              "year": "1934",
+              "unstructured": "Huxley, J. S. (1934). A natural experiment on the territorial instinct. - Brit. Birds, 27, 270\u2013277.",
+              "journal-title": "Brit. Birds"
+            },
+            {
+              "key": "BF01601953_CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "386",
+              "DOI": "10.2307/1365297",
+              "volume": "63",
+              "author": "R. F. Johnston",
+              "year": "1961",
+              "unstructured": "Johnston, R. F. (1961). Population movements of birds. - Condor, 63, 386\u2013388.",
+              "journal-title": "Condor"
+            },
+            {
+              "key": "BF01601953_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "265",
+              "DOI": "10.1163/036551653X00024",
+              "volume": "10",
+              "author": "H. N. Kluyver",
+              "year": "1953",
+              "unstructured": "Kluyver, H. N. &L. Tinbergen (1953). Territory and the regulation of density in titmice. - Arch. Neerl. Zool, 10, 265\u2013289.",
+              "journal-title": "Arch. Neerl. Zool"
+            },
+            {
+              "key": "BF01601953_CR8",
+              "first-page": "viii + 343",
+              "volume-title": "The natural regulation of animal numbers",
+              "author": "D. Lack",
+              "year": "1954",
+              "unstructured": "Lack, D. (1954). The natural regulation of animal numbers. Clarendon Press, Oxford, viii + 343 pp."
+            },
+            {
+              "issue": "Suppl.",
+              "key": "BF01601953_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "159",
+              "DOI": "10.2307/2437",
+              "volume": "33",
+              "author": "D. Lack",
+              "year": "1964",
+              "unstructured": "\u2014 (1964). A long term study of the great tit (Parus major). - J. Anim. Ecol., 33 (Suppl.), 159\u2013173.",
+              "journal-title": "J. Anim. Ecol."
+            },
+            {
+              "key": "BF01601953_CR10",
+              "volume-title": "Population Studies of Birds",
+              "author": "D. Lack",
+              "year": "1966",
+              "unstructured": "\u2014 (1966). Population Studies of Birds. Clarendon Press, Oxford. 341 pp."
+            },
+            {
+              "key": "BF01601953_CR11",
+              "unstructured": "Nice, Margaret M. (1937). Studies in the life history of the Song Sparrow I. - Trans. Linn. Soc., N. Y., viii + 246 pp."
+            },
+            {
+              "key": "BF01601953_CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "88",
+              "DOI": "10.2307/1364551",
+              "volume": "57",
+              "author": "Winifred Sabine",
+              "year": "1955",
+              "unstructured": "Sabine, Winifred (1955). The winter society of the Oregon Junco: the flock. - Condor, 57, 88\u2013110.",
+              "journal-title": "Condor"
+            },
+            {
+              "key": "BF01601953_CR13",
+              "doi-asserted-by": "crossref",
+              "first-page": "471",
+              "DOI": "10.2307/4080843",
+              "volume": "68",
+              "author": "R. E. Stewart",
+              "year": "1951",
+              "unstructured": "Stewart, R. E. &J. W. Aldrich (1951). Removal and repopulation of breeding birds in a spruce-fir forest community. - Auk, 68, 471\u2013482.",
+              "journal-title": "Auk"
+            },
+            {
+              "key": "BF01601953_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "14",
+              "DOI": "10.1080/00063655709475864",
+              "volume": "4",
+              "author": "N. Tinbergen",
+              "year": "1957",
+              "unstructured": "Tinbergen, N. (1957). The functions of territory. - Bird Study, 4, 14\u201327.",
+              "journal-title": "Bird Study"
+            },
+            {
+              "key": "BF01601953_CR15",
+              "first-page": "xi + 653",
+              "volume-title": "Animal Dispersion in Relation to Social Behavior",
+              "author": "V. C. Wynne Edwards",
+              "year": "1962",
+              "unstructured": "Wynne Edwards, V. C. (1962). Animal Dispersion in Relation to Social Behavior. Hafner Publishing Company, New York. xi + 653 pp."
+            }
+          ],
+          "container-title": [
+            "Acta Biotheoretica"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01601953.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF01601953/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01601953",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01601953.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                2,
+                17
+              ]
+            ],
+            "date-time": "2020-02-17T18:34:10Z",
+            "timestamp": 1581964450000
+          },
+          "score": 48.39934,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF01601953"
+            }
+          },
+          "subtitle": [
+            "I. Theoretical development"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          },
+          "references-count": 15,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1969,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF01601953"
+          ],
+          "URL": "https://doi.org/10.1007/bf01601953",
+          "ISSN": [
+            "0001-5342",
+            "1572-8358"
+          ],
+          "issn-type": [
+            {
+              "value": "0001-5342",
+              "type": "print"
+            },
+            {
+              "value": "1572-8358",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                27
+              ]
+            ],
+            "date-time": "2026-10-27T08:32:35Z",
+            "timestamp": 1793089955790,
+            "version": "4.5.0"
+          },
+          "reference-count": 9,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1969,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "1969-03-01T00:00:00Z",
+                "timestamp": -26438400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Acta Biotheor"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf01601955",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2005,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2005-04-29T17:34:54Z",
+            "timestamp": 1114796094000
+          },
+          "page": "45-52",
+          "source": "Crossref",
+          "is-referenced-by-count": 116,
+          "title": [
+            "On territorial behavior and other factors influencing habitat distribution in birds"
+          ],
+          "prefix": "10.1007",
+          "volume": "19",
+          "author": [
+            {
+              "given": "Stephen Dewitt",
+              "family": "Fretwell",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "CR1",
+              "first-page": "51",
+              "volume": "73",
+              "author": "D. J. Borror",
+              "year": "1961",
+              "unstructured": "Borror, D. J. (1961). Intraspecific variation in passerine bird songs. - Wilson Bull., 73, 51\u201378.",
+              "journal-title": "Wilson Bull."
+            },
+            {
+              "key": "CR2",
+              "unstructured": "Fretwell, S. D. Habitat variation in nest success and mortality in the Field Sparrow. - Bird Banding, in press."
+            },
+            {
+              "key": "CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "386",
+              "DOI": "10.2307/1365297",
+              "volume": "63",
+              "author": "R. F. Johnston",
+              "year": "1961",
+              "unstructured": "Johnston, R. F. (1961). Population movements of birds. - Condor, 63, 386\u2013388.",
+              "journal-title": "Condor"
+            },
+            {
+              "issue": "Suppl.",
+              "key": "CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "159",
+              "DOI": "10.2307/2437",
+              "volume": "33",
+              "author": "D. Lack",
+              "year": "1964",
+              "unstructured": "Lack, D. (1964). A long term study of the Great Tit (Parus major). - J. Anim. Ecol., 33 (Suppl.), 159\u2013173.",
+              "journal-title": "J. Anim. Ecol."
+            },
+            {
+              "key": "CR5",
+              "first-page": "255",
+              "volume": "73",
+              "author": "H. Mayfield",
+              "year": "1961",
+              "unstructured": "Mayfield, H. (1961). Nest success calculated from exposure. - Wilson Bull., 73, 255\u2013261.",
+              "journal-title": "Wilson Bull."
+            },
+            {
+              "key": "CR6",
+              "first-page": "viii + 246",
+              "volume": "4",
+              "author": "M Nice Margaeet",
+              "year": "1937",
+              "unstructured": "Nice, Margaeet M. (1937). Studies in the life history of the Song Sparrow I. - Trans. Linn. Soc., N.Y., 4, viii + 246 pp.",
+              "journal-title": "Trans. Linn. Soc., N.Y."
+            },
+            {
+              "key": "CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "88",
+              "DOI": "10.2307/1364551",
+              "volume": "57",
+              "author": "Winifred Sabine",
+              "year": "1955",
+              "unstructured": "Sabine, Winifred (1955). The winter society of the Oregon Junco: the flock. - Condor, 57, 88\u2013110.",
+              "journal-title": "Condor"
+            },
+            {
+              "key": "CR8",
+              "first-page": "xvi + 481",
+              "volume-title": "Principles and Procedures of Statistics",
+              "author": "R. G. Steel",
+              "year": "1960",
+              "unstructured": "Steel, R. G., &J. H. Torrie (1960). Principles and Procedures of Statistics. - McGraw-Hill Book Company, Inc., New York, xvi + 481 pp."
+            },
+            {
+              "key": "CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "382",
+              "DOI": "10.2307/4080381",
+              "volume": "64",
+              "author": "T. L. Quay",
+              "year": "1947",
+              "unstructured": "Quay, T. L. (1947). Winter birds of upland plant communities. - Auk, 64, 382\u2013388.",
+              "journal-title": "Auk"
+            }
+          ],
+          "container-title": [
+            "Acta Biotheoretica"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01601955.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF01601955/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01601955",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                5,
+                7
+              ]
+            ],
+            "date-time": "2019-05-07T11:09:05Z",
+            "timestamp": 1557227345000
+          },
+          "score": 48.358273,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF01601955"
+            }
+          },
+          "subtitle": [
+            "III. Breeding success in a local population of Field Sparrows (Spiza americana Gmel)"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          },
+          "references-count": 9,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1969,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF01601955"
+          ],
+          "URL": "https://doi.org/10.1007/bf01601955",
+          "ISSN": [
+            "0001-5342",
+            "1572-8358"
+          ],
+          "issn-type": [
+            {
+              "value": "0001-5342",
+              "type": "print"
+            },
+            {
+              "value": "1572-8358",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T16:32:32Z",
+            "timestamp": 1793809952340,
+            "version": "4.6.1"
+          },
+          "reference-count": 2,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1969,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "1969-03-01T00:00:00Z",
+                "timestamp": -26438400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Acta Biotheor"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf01601954",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2005,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2005-04-29T17:34:54Z",
+            "timestamp": 1114796094000
+          },
+          "page": "37-44",
+          "source": "Crossref",
+          "is-referenced-by-count": 105,
+          "title": [
+            "On territorial behavior and other factors influencing habitat distribution in birds"
+          ],
+          "prefix": "10.1007",
+          "volume": "19",
+          "author": [
+            {
+              "given": "Stephen Dewitt",
+              "family": "Fretwell",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "James Stevan",
+              "family": "Calver",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "302",
+              "DOI": "10.21900/j.inhs.v28.169",
+              "volume": "28",
+              "author": "R. R. Graber",
+              "year": "1963",
+              "unstructured": "Graber, R. R. &J. W. Graber (1963). A comparative study of bird populations in Illinois. 1906\u20131909 and 1956\u20131958. - Illinois Natural History Survey Bulletin, 28, Article 3, 302\u2013328.",
+              "journal-title": "Illinois Natural History Survey Bulletin"
+            },
+            {
+              "key": "CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "534",
+              "DOI": "10.2307/4083148",
+              "volume": "83",
+              "author": "J. L. Zimmerman",
+              "year": "1966",
+              "unstructured": "Zimmerman, J. L. (1966). Polygyny in the Dickcissel. - Auk, 83, 534\u2013546.",
+              "journal-title": "Auk"
+            }
+          ],
+          "container-title": [
+            "Acta Biotheoretica"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01601954.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF01601954/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01601954",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                10
+              ]
+            ],
+            "date-time": "2021-07-10T06:40:10Z",
+            "timestamp": 1625899210000
+          },
+          "score": 48.324184,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF01601954"
+            }
+          },
+          "subtitle": [
+            "II. Sex ratio variation in the Dickcissel (Spiza americana Gmel)"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          },
+          "references-count": 2,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1969,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF01601954"
+          ],
+          "URL": "https://doi.org/10.1007/bf01601954",
+          "ISSN": [
+            "0001-5342",
+            "1572-8358"
+          ],
+          "issn-type": [
+            {
+              "value": "0001-5342",
+              "type": "print"
+            },
+            {
+              "value": "1572-8358",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1969,
+                3
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

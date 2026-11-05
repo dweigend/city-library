@@ -1,0 +1,99 @@
+{
+  "slug": "party",
+  "name": "Party",
+  "catalogPath": "Sample Models/Social Science/Party",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Party.nlogox",
+  "deliveryBatch": "B02",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether individual comfort thresholds lead groups to sort even without a central organizer. In NetLogo's Party model, partygoers leave groups whose opposite-type share exceeds their tolerance and search for another group. The selected literature connects this mechanism to threshold-based group sorting: local composition preferences can produce aggregate separation [1]; segregation dynamics depend on relocation incentives and admissible alternatives [2]; real social context limits interpretation of stylized sorting patterns [3]. The source uses binary gender categories and uniform tolerance; these are historical modeling conventions rather than supported descriptions of actual parties. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Party.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Party.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/party.nlogox",
+    "sha256": "a86f4b7e1d631f69bf9db2a4ff54d77387a8de802487d536c3f0c1f984ebf272",
+    "citation": "For the model itself: * Wilensky, U. (1997). NetLogo Party model. http://ccl.northwestern.edu/netlogo/models/Party. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is based on the work of the pioneering economist Thomas Schelling: Schelling, T. (1978). Micro-motives and Macro-Behavior. New York: Norton. See also: Resnick, M. & Wilensky, U. (1998). Diving into Complexity: Developing Probabilistic Decentralized Thinking through Role-Playing Activities. Journal of Learning Sciences, Vol. 7, No. 2. http://ccl.northwestern.edu/papers/starpeople/",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/party.nlogox"
+  },
+  "publications": [
+    {
+      "id": "schelling",
+      "creatorRole": "author",
+      "authors": [
+        "Thomas C. Schelling"
+      ],
+      "title": "Dynamic models of segregation",
+      "year": 1971,
+      "venue": "The Journal of Mathematical Sociology",
+      "doi": "10.1080/0022250x.1971.9989794",
+      "url": "https://doi.org/10.1080/0022250x.1971.9989794",
+      "relevance": "local composition preferences can produce aggregate separation",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1080%2F0022250X.1971.9989794",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/schelling-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/schelling-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "zhang",
+      "creatorRole": "author",
+      "authors": [
+        "Junfu Zhang"
+      ],
+      "title": "A DYNAMIC MODEL OF RESIDENTIAL SEGREGATION",
+      "year": 2004,
+      "venue": "The Journal of Mathematical Sociology",
+      "doi": "10.1080/00222500490480202",
+      "url": "https://doi.org/10.1080/00222500490480202",
+      "relevance": "segregation dynamics depend on relocation incentives and admissible alternatives",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1080%2F00222500490480202",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/zhang-verified.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/zhang-verified.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "clark",
+      "creatorRole": "author",
+      "authors": [
+        "William A. V. Clark",
+        "Mark Fossett"
+      ],
+      "title": "Understanding the social context of the Schelling segregation model",
+      "year": 2008,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.0708155105",
+      "url": "https://doi.org/10.1073/pnas.0708155105",
+      "relevance": "real social context limits interpretation of stylized sorting patterns",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.0708155105",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/clark-verified.json",
+        "evidenceSummary": "A recent article [Vinkovic D, Kirman A (2006) Proc Natl Acad Sci USA 103:19261–19265] showing that the Schelling model has a physical analogue extends our understanding of the model. However, prior research has already outlined a mathematical basis for the Schelling model and simulations based on it have already enhanced our understanding of the social dynamics that underlie the model, something that the physical analogue does not address. Research in social science has provided a formal basis for the segregative outcomes resulting from the residential selection process and simulations have replicated relevant spatial outcomes under different specifications of the residential dynamics. New and increasingly detailed survey data on preferences demonstrates the embeddedness of the Schelling selection process in the social behaviors of choosing alternative residential compositions. It also d",
+        "evidenceFile": "evidence/social-urban/clark-verified.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

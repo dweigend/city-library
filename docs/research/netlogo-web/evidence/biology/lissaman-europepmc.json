@@ -1,0 +1,139 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.168.3934.1003%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1126/science.168.3934.1003\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "5441020",
+          "source": "MED",
+          "pmid": "5441020",
+          "doi": "10.1126/science.168.3934.1003",
+          "title": "Formation flight of birds.",
+          "authorString": "Lissaman PB, Shollenberger CA.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Lissaman PB",
+                "lastName": "Lissaman",
+                "firstName": "P B",
+                "initials": "PB"
+              },
+              {
+                "fullName": "Shollenberger CA",
+                "lastName": "Shollenberger",
+                "firstName": "C A",
+                "initials": "CA"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "3934",
+            "volume": "168",
+            "journalIssueId": 1466509,
+            "dateOfPublication": "1970 May",
+            "monthOfPublication": 5,
+            "yearOfPublication": 1970,
+            "journal": {
+              "medlineAbbreviation": "Science",
+              "title": "Science (New York, N.Y.)",
+              "essn": "1095-9203",
+              "issn": "0036-8075",
+              "isoabbreviation": "Science",
+              "nlmid": "0404511"
+            },
+            "printPublicationDate": "1970-05-01"
+          },
+          "pubYear": "1970",
+          "pageInfo": "1003-1005",
+          "abstractText": "Formation flight of birds improves aerodynamic efficiency. Theoretically, 25 birds could have a range increase of about 70 percent as compared with a lone bird, the advantage being more pronounced when there is a tail wind. A vee formation is required to equally distribute the drag saving, and, contrary to other statements, the lead bird does not necessarily have the most strenuous position. The angle of the predicted vee compares with that observed in nature; stability mechanisms are described which make it easy and natural for the bird to sense optimal formations.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Birds"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Orientation"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Behavior, Animal"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.168.3934.1003"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 67,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1970-06-08",
+          "dateOfCreation": "1970-05-22",
+          "dateOfRevision": "2019-06-18",
+          "firstPublicationDate": "1970-05-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

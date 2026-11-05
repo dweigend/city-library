@@ -1,0 +1,120 @@
+## WHAT IS IT?
+
+This is a model of a family of 2D cellular automata known as cyclic cellular automata (CCA). Despite being governed by a remarkably simple local update rule, CCA exhibit rich and often surprising self-organizing behavior.
+
+A cellular automaton is a computational machine that performs actions based on certain rules. It can be thought of as a board which is divided into cells (such as square cells of a checkerboard). In CCA, there are a finite number of possible states a single cell can take represented as distinct colors arranged in a cyclic "color wheel". In this model, we explore a rich variety of cyclic cellular automata rules and the different kinds of patterns that can emerge.
+
+CCA were first discovered and studied by mathematician David Griffeath and his group as part of a broader effort to understand self-organization and pattern formation in discrete spatial systems. Their work has shown that these automata, while deceptively simple in construction, can exhibit dynamics reminiscent of excitable media such as chemical reactions, neural activity, or ecological spreading processes.
+
+## HOW IT WORKS
+
+Each patch is assigned a color from a set of NUM-STATES possible colors. The colors are ordered cyclically, such that color 1 progresses to 2, 2 to 3, ..., and the final color (NUM-STATES) loops back to 1, forming a cycle.
+
+At each tick, each patch checks the colors of its neighbors where neighbors are defined using either the extended Moore or von Neumann neighborhood with a configurable RADIUS (Moore neighborhood is a square and von Neumann neighborhood is a diamond). A patch will advance to the next color in the cycle only if the number of neighboring patches currently in that next color meets or exceeds a user-defined THRESHOLD. If the condition is not met, the patch retains its current color.
+
+In a more specific pseudo-code format, at each clock tick, each patch does:
+
+1. Store my initial color in the patch-variable `init-pos`.
+2. Identify the next color (stored in the local variable `next-pos`).
+3. Count the patches in the neighborhood with the next color (stored in the `init-pos` variable of the neighbor patches).
+4. If the count meets or exceeds the `THRESHOLD`, update my current color to the next color.
+
+These simple local interactions generate complex global patterns. When initialized with random color assignments, the system’s long-term behavior depends on the interaction between the threshold and the neighborhood size and type.
+
+## HOW TO USE IT
+
+The SETUP button initializes the model.
+
+The GO button runs the model.
+
+Use the RADIUS slider to choose the size of the neighborhood that each cell considers.
+
+Use the THRESHOLD slider to choose the number of cells in the next state that are required to change a given cell's state.
+
+Use the NUM-STATES slider to choose the possible number of cell states.
+
+Use the NEIGHBORHOOD chooser to select the type of neighborhood.
+
+Use the PRESET-PARAMETER chooser to select a preset configuration of slider values that result in distinct patterns. Make sure that the PRESET-PARAMETER is set to "None" to be able to change the slider values yourself.
+
+## THINGS TO NOTICE
+
+Do you notice how changing certain slider values affect the patterns? Does increasing or decreasing a given slider result in predictable changes (e.g. how the shape of the spirals change)?
+
+For example, let's focus on the THRESHOLD slider. One can observe that:
+
+* High thresholds suppress activity, often leading to the disappearance of propagating waves.
+* Low thresholds produce disordered, noisy patterns with little spatial coherence.
+* Intermediate thresholds result in the spontaneous emergence of large-scale, structured patterns such as spiral waves and rotating domains. These eventually stabilize into locally periodic states, demonstrating a form of self-organization.
+
+## THINGS TO TRY
+
+The simple rules of CCA can produce a vast range of very different behaviors and patterns. Some of the well studied parameter values that lead to interesting patterns can be found in the PRESET-PARAMETERS chooser.
+
+For example, if we set RADIUS = 2, THRESHOLD = 11, NUM-STATES = 3, NEIGHBORHOOD = Moore, we get a complex system with local clusters which keep moving as long as they interact with noisy areas and other clusters, eventually settling into a stable rigid pattern of large clusters.
+
+If we set RADIUS = 1, THRESHOLD = 1, NUM-STATES = 14, NEIGHBORHOOD = von Neumann, little wavelets form and smooth out the noise, which is followed by the emergence diamond-shaped spirals at a few points. Soon after, the whole grid gets covered by the spirals interacting with one another.
+
+If we set RADIUS = 1, THRESHOLD = 2, NUM-STATES = 4, NEIGHBORHOOD = Moore, we get similar diamond-shape spirals but in this case, little patches of noise tend to grow out over time until the whole grid is covered with a noisy random pattern.
+
+If we set RADIUS = 2, THRESHOLD = 10, NUM-STATES = 3, NEIGHBORHOOD = Moore, we get moving clusters that interacts with each other either repelling or forming smaller clusters.
+
+Can you come up with other slider configurations that are not listed in the PRESET-PARAMETER chooser that consistently result in interesting patterns?
+
+## EXTENDING THE MODEL
+
+There are various ways this model can be extended.
+
+One of them would be to alter the setup procedure so that the initial conditions are not random and can follow user-specified configuration. For example, one can add a button that can allow the user to change the color of chosen cells and save those initial configurations.
+
+Another would be to introduce a different set of rules. Perhaps stochasticity can be introduced and the probability of transition to the next state could be a function of the number of neighboring patches in the next state. Can you think of other extensions to the rules? How do they change the emergent patterns?
+
+## NETLOGO FEATURES
+
+Note that in the setup procedure we assign a patch set to each patch that consists of the neighborhood of that patch. This is done for efficiency reasons. It can take a long time for each patch to compute their neighboring patches at each iteration. Saving the neighboring patch set as an attribute for each patch saves compute time with the cost of additional memory usage.
+
+## RELATED MODELS
+
+* Life
+* Rock Paper Scissors
+* CA 1D Totalistic
+
+## CREDITS AND REFERENCES
+
+Fisch, R., Gravner, J., & Griffeath, D. (1991). Cyclic cellular automata in two dimensions. In Spatial Stochastic Processes: A Festschrift in Honor of Ted Harris on his Seventieth Birthday (pp. 171-185). Boston, MA: Birkhäuser Boston.
+
+Fisch, R., Gravner, J., & Griffeath, D. (1991). Threshold-range scaling of excitable cellular automata. Statistics and Computing, 1(1), 23-39.
+
+Reiter, C. A. (2010). Medley of spirals from cyclic cellular automata. Computers & Graphics, 34(1), 72-76.
+
+Shalizi, Cosma R., and Kristina L. Shalizi. “Quantifying Self-Organization in Cyclic Cellular Automata.” Noise in Complex Systems and Stochastic Dynamics, edited by Lutz Schimansky-Geier et al., vol. 5114, SPIE, 2003, p. 108. Crossref, https://doi.org/10.1117/12.485805.
+
+The collection of PRESET-PARAMETER values were taken from:
+
+Wojtowicz, M. (n.d.). CA rules lexicon. MCell. https://mcell.ca/pages/rules.html
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Gurkan, C. and Wilensky, U. (2025).  NetLogo Cyclic CA model.  http://ccl.northwestern.edu/netlogo/models/CyclicCA.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2025 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2025 Cite: Gurkan, C. -->

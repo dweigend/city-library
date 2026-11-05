@@ -1,0 +1,105 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0065-2296%2802%2937040-x%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1016/s0065-2296(02)37040-x\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "IND23343232",
+          "source": "AGR",
+          "doi": "10.1016/s0065-2296(02)37040-x",
+          "title": "Anthocyanins in leaves and other vegetative organs: an introduction",
+          "authorString": "Lee DW, Gould KS.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Lee DW",
+                "lastName": "Lee",
+                "firstName": "D W",
+                "initials": "DW"
+              },
+              {
+                "fullName": "Gould KS",
+                "lastName": "Gould",
+                "firstName": "K S",
+                "initials": "KS"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "volume": "37",
+            "journalIssueId": 1439689,
+            "dateOfPublication": "2002 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2002,
+            "journal": {
+              "medlineAbbreviation": "Adv Bot Res",
+              "title": "Advances in Botanical Research.",
+              "issn": "0065-2296",
+              "isoabbreviation": "Adv Bot Res",
+              "nlmid": "0000266"
+            },
+            "printPublicationDate": "2002-01-01"
+          },
+          "pubYear": "2002",
+          "pageInfo": "1-16",
+          "language": "eng",
+          "pubModel": "Undetermined",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "ScienceDirect",
+                "url": "https://doi.org/10.1016/S0065-2296(02)37040-X"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 21,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2003-10-07",
+          "dateOfCreation": "2003-10-07",
+          "dateOfRevision": "2022-11-18",
+          "firstPublicationDate": "2002-01-01",
+          "firstIndexDate": "2007-07-07",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

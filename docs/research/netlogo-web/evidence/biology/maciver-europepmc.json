@@ -1,0 +1,352 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.1615563114%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1073/pnas.1615563114\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "28270619",
+          "source": "MED",
+          "pmid": "28270619",
+          "pmcid": "PMC5373340",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC5373340"
+            ]
+          },
+          "doi": "10.1073/pnas.1615563114",
+          "title": "Massive increase in visual range preceded the origin of terrestrial vertebrates.",
+          "authorString": "MacIver MA, Schmitz L, Mugan U, Murphey TD, Mobley CD.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "MacIver MA",
+                "lastName": "MacIver",
+                "firstName": "Malcolm A",
+                "initials": "MA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3711-8235"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "The Neuroscience and Robotics Laboratory, Northwestern University, Evanston, IL 60208; maciver@northwestern.edu lschmitz@kecksci.claremont.edu."
+                    },
+                    {
+                      "affiliation": "Department of Mechanical Engineering, Northwestern University, Evanston, IL 60208."
+                    },
+                    {
+                      "affiliation": "Department of Biomedical Engineering, Northwestern University, Evanston, IL 60208."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Schmitz L",
+                "lastName": "Schmitz",
+                "firstName": "Lars",
+                "initials": "L",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "W. M. Keck Science Department, Claremont McKenna, Pitzer, and Scripps Colleges, Claremont, CA 91711; maciver@northwestern.edu lschmitz@kecksci.claremont.edu."
+                    },
+                    {
+                      "affiliation": "Dinosaur Institute, Natural History Museum of Los Angeles County, Los Angeles, CA 90007."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Mugan U",
+                "lastName": "Mugan",
+                "firstName": "Ugurcan",
+                "initials": "U",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5824-7028"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biomedical Engineering, Northwestern University, Evanston, IL 60208."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Murphey TD",
+                "lastName": "Murphey",
+                "firstName": "Todd D",
+                "initials": "TD",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2262-8176"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Mechanical Engineering, Northwestern University, Evanston, IL 60208."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Mobley CD",
+                "lastName": "Mobley",
+                "firstName": "Curtis D",
+                "initials": "CD",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Section for Optical Oceanography, Sequoia Scientific, Inc., Bellevue, WA 98005."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3711-8235"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5824-7028"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2262-8176"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "12",
+            "volume": "114",
+            "journalIssueId": 2538706,
+            "dateOfPublication": "2017 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 2017,
+            "journal": {
+              "medlineAbbreviation": "Proc Natl Acad Sci U S A",
+              "title": "Proceedings of the National Academy of Sciences of the United States of America",
+              "essn": "1091-6490",
+              "issn": "0027-8424",
+              "nlmid": "7505876",
+              "isoabbreviation": "Proc Natl Acad Sci U S A"
+            },
+            "printPublicationDate": "2017-03-01"
+          },
+          "pubYear": "2017",
+          "pageInfo": "E2375-E2384",
+          "abstractText": "The evolution of terrestrial vertebrates, starting around 385 million years ago, is an iconic moment in evolution that brings to mind images of fish transforming into four-legged animals. Here, we show that this radical change in body shape was preceded by an equally dramatic change in sensory abilities akin to transitioning from seeing over short distances in a dense fog to seeing over long distances on a clear day. Measurements of eye sockets and simulations of their evolution show that eyes nearly tripled in size just before vertebrates began living on land. Computational simulations of these animal's visual ecology show that for viewing objects through water, the increase in eye size provided a negligible increase in performance. However, when viewing objects through air, the increase in eye size provided a large increase in performance. The jump in eye size was, therefore, unlikely to have arisen for seeing through water and instead points to an unexpected hybrid of seeing through air while still primarily inhabiting water. Our results and several anatomical innovations arising at the same time suggest lifestyle similarity to crocodiles. The consequent combination of the increase in eye size and vision through air would have conferred a 1 million-fold increase in the amount of space within which objects could be seen. The \"buena vista\" hypothesis that our data suggest is that seeing opportunities from afar played a role in the subsequent evolution of fully terrestrial limbs as well as the emergence of elaborated action sequences through planning circuits in the nervous system.",
+          "affiliation": "The Neuroscience and Robotics Laboratory, Northwestern University, Evanston, IL 60208; maciver@northwestern.edu lschmitz@kecksci.claremont.edu.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Eye",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GD",
+                      "qualifierName": "growth & development"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "CH",
+                      "qualifierName": "chemistry"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Vertebrates",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "CL",
+                      "qualifierName": "classification"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GD",
+                      "qualifierName": "growth & development"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Organ Size"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Ecosystem"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Phylogeny"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Ocular Physiological Phenomena"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Vision, Ocular"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Biological Evolution"
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Vision",
+              "Prospective Cognition",
+              "Visual Ecology",
+              "Terrestriality",
+              "Fish\u2013tetrapod Transition"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://www.pnas.org/content/pnas/114/12/E2375.full.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.1615563114"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5373340"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5373340?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.1615563114"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "28743021",
+                "reference": "Curr Biol. 2017 Jul 24;27(14):R715-R717. doi: 10.1016/j.cub.2017.05.082",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 70,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2018-05-22",
+          "dateOfCreation": "2017-03-09",
+          "dateOfRevision": "2019-01-11",
+          "electronicPublicationDate": "2017-03-07",
+          "firstPublicationDate": "2017-03-07",
+          "firstIndexDate": "2017-03-09",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

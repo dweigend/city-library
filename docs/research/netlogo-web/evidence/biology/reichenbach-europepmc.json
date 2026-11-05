@@ -1,0 +1,210 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature06095%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nature06095\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "17728757",
+          "source": "MED",
+          "pmid": "17728757",
+          "doi": "10.1038/nature06095",
+          "title": "Mobility promotes and jeopardizes biodiversity in rock-paper-scissors games.",
+          "authorString": "Reichenbach T, Mobilia M, Frey E.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Reichenbach T",
+                "lastName": "Reichenbach",
+                "firstName": "Tobias",
+                "initials": "T",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3367-3511"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Arnold Sommerfeld Center for Theoretical Physics (ASC) and Center for NanoScience (CeNS), Department of Physics, Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, Theresienstrasse 37, D-80333 M\u00fcnchen, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Mobilia M",
+                "lastName": "Mobilia",
+                "firstName": "Mauro",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-1424-567X"
+                }
+              },
+              {
+                "fullName": "Frey E",
+                "lastName": "Frey",
+                "firstName": "Erwin",
+                "initials": "E",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-8792-3358"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-8792-3358"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-1424-567X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3367-3511"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "recommended_reviews"
+            ]
+          },
+          "journalInfo": {
+            "issue": "7157",
+            "volume": "448",
+            "journalIssueId": 1459398,
+            "dateOfPublication": "2007 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 2007,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "isoabbreviation": "Nature",
+              "nlmid": "0410462"
+            },
+            "printPublicationDate": "2007-08-01"
+          },
+          "pubYear": "2007",
+          "pageInfo": "1046-1049",
+          "abstractText": "Biodiversity is essential to the viability of ecological systems. Species diversity in ecosystems is promoted by cyclic, non-hierarchical interactions among competing populations. Central features of such non-transitive relations are represented by the 'rock-paper-scissors' game, in which rock crushes scissors, scissors cut paper, and paper wraps rock. In combination with spatial dispersal of static populations, this type of competition results in the stable coexistence of all species and the long-term maintenance of biodiversity. However, population mobility is a central feature of real ecosystems: animals migrate, bacteria run and tumble. Here, we observe a critical influence of mobility on species diversity. When mobility exceeds a certain value, biodiversity is jeopardized and lost. In contrast, below this critical threshold all subpopulations coexist and an entanglement of travelling spiral waves forms in the course of time. We establish that this phenomenon is robust; it does not depend on the details of cyclic competition or spatial environment. These findings have important implications for maintenance and temporal development of ecological systems and are relevant for the formation and propagation of patterns in microbial populations or excitable media.",
+          "affiliation": "Arnold Sommerfeld Center for Theoretical Physics (ASC) and Center for NanoScience (CeNS), Department of Physics, Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, Theresienstrasse 37, D-80333 M\u00fcnchen, Germany.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Stochastic Processes"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animal Migration"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Competitive Behavior"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Biodiversity"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Locomotion",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Games, Experimental"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacterial Physiological Phenomena"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nature06095"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 343,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2007-09-28",
+          "dateOfCreation": "2007-08-31",
+          "dateOfRevision": "2008-11-21",
+          "firstPublicationDate": "2007-08-01",
+          "firstIndexDate": "2008-12-23",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevLett.84.1824",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            4
+          ]
+        ],
+        "date-time": "2026-11-04T13:18:51Z",
+        "timestamp": 1793798331870,
+        "version": "4.6.1"
+      },
+      "reference-count": 15,
+      "publisher": "American Physical Society (APS)",
+      "issue": "8",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2000,
+                2,
+                21
+              ]
+            ],
+            "date-time": "2000-02-21T00:00:00Z",
+            "timestamp": 951091200000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://link.aps.org/licenses/aps-default-license"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Phys. Rev. Lett."
+      ],
+      "DOI": "10.1103/physrevlett.84.1824",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            7,
+            27
+          ]
+        ],
+        "date-time": "2002-07-27T02:19:41Z",
+        "timestamp": 1027736381000
+      },
+      "page": "1824-1827",
+      "source": "Crossref",
+      "is-referenced-by-count": 209,
+      "title": [
+        "Statistical Mechanics of Systems with Heterogeneous Agents: Minority Games"
+      ],
+      "prefix": "10.1103",
+      "volume": "84",
+      "author": [
+        {
+          "given": "Damien",
+          "family": "Challet",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Matteo",
+          "family": "Marsili",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Riccardo",
+          "family": "Zecchina",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "16",
+      "published-online": {
+        "date-parts": [
+          [
+            2000,
+            2,
+            21
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "PhysRevLett.84.1824Cc1R1",
+          "volume-title": "Spin Glass Theory and Beyond",
+          "author": "M. Mezard",
+          "year": "1987"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc2R1",
+          "volume-title": "The Economy as an Evolving Complex System",
+          "author": "P. W. Anderson",
+          "year": "1988"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc3R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "407",
+          "DOI": "10.1016/S0378-4371(97)00419-6",
+          "volume": "246A",
+          "author": "D. Challet",
+          "year": "1997",
+          "journal-title": "Physica (Amsterdam)"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc3R2",
+          "doi-asserted-by": "crossref",
+          "first-page": "51",
+          "DOI": "10.1007/s00770-998-0051-y",
+          "volume": "29",
+          "author": "Y.-C. Zhang",
+          "year": "1998",
+          "journal-title": "Europhys. News"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc4R1",
+          "volume-title": "Microeconomic Theory",
+          "author": "A. Mas-Colell",
+          "year": "1995"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc6R1",
+          "first-page": "406",
+          "volume": "84",
+          "author": "W. B. Arthur",
+          "year": "1994",
+          "journal-title": "Am. Econ. Assoc. Papers Proc."
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc7R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "2203",
+          "DOI": "10.1103/PhysRevLett.82.2203",
+          "volume": "82",
+          "author": "R. Savit",
+          "year": "1999",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc8R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "R6271",
+          "DOI": "10.1103/PhysRevE.60.R6271",
+          "volume": "60",
+          "author": "D. Challet",
+          "year": "1999",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc9R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "R3783",
+          "DOI": "10.1103/PhysRevE.59.R3783",
+          "volume": "59",
+          "author": "A. Cavagna",
+          "year": "1999",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc10R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "R1823",
+          "DOI": "10.1103/PhysRevE.49.R1823",
+          "volume": "49",
+          "author": "N. Brunel",
+          "year": "1994",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc12R1",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1093/0198283814.001.0001",
+          "volume-title": "Game Theory and Economic Modelling",
+          "author": "D. M. Kreps",
+          "year": "1990"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc13R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "4429",
+          "DOI": "10.1103/PhysRevLett.83.4429",
+          "volume": "83",
+          "author": "A. Cavagna",
+          "year": "1999",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc14R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "9",
+          "DOI": "10.1016/S0378-4371(99)00074-6",
+          "volume": "269A",
+          "author": "M. Marsili",
+          "year": "1999",
+          "journal-title": "Physica (Amsterdam)"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc17R1",
+          "volume-title": "Evolutionary Game Theory",
+          "author": "J. W. Weibull",
+          "year": "1995"
+        },
+        {
+          "key": "PhysRevLett.84.1824Cc18R2",
+          "volume-title": "The Theory of Learning in Games",
+          "author": "D. Fudenberg",
+          "year": "1998"
+        }
+      ],
+      "container-title": [
+        "Physical Review Letters"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://link.aps.org/article/10.1103/PhysRevLett.84.1824",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevLett.84.1824/fulltext",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            1,
+            2
+          ]
+        ],
+        "date-time": "2025-01-02T23:09:19Z",
+        "timestamp": 1735859359000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://link.aps.org/doi/10.1103/PhysRevLett.84.1824"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2000,
+            2,
+            21
+          ]
+        ]
+      },
+      "references-count": 15,
+      "journal-issue": {
+        "issue": "8",
+        "published-print": {
+          "date-parts": [
+            [
+              2000,
+              2
+            ]
+          ]
+        }
+      },
+      "URL": "https://doi.org/10.1103/physrevlett.84.1824",
+      "relation": {},
+      "ISSN": [
+        "0031-9007",
+        "1079-7114"
+      ],
+      "issn-type": [
+        {
+          "value": "0031-9007",
+          "type": "print"
+        },
+        {
+          "value": "1079-7114",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2000,
+            2,
+            21
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1452 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+multispecies+overkill+simulation+of+the+end+Pleistocene+megafaunal+mass+extinction+Alroy+2001&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1872561,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2026-10-07T22:03:13Z",
+            "timestamp": 1791410593459,
+            "version": "4.3.3"
+          },
+          "reference-count": 37,
+          "publisher": "American Association for the Advancement of Science (AAAS)",
+          "issue": "5523",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2001,
+                6,
+                8
+              ]
+            ]
+          },
+          "abstract": "<jats:p>A computer simulation of North American end-Pleistocene human and large herbivore population dynamics correctly predicts the extinction or survival of 32 out of 41 prey species. Slow human population growth rates, random hunting, and low maximum hunting effort are assumed; additional parameters are based on published values. Predictions are close to observed values for overall extinction rates, human population densities, game consumption rates, and the temporal overlap of humans and extinct species. Results are robust to variation in unconstrained parameters. This fully mechanistic model accounts for megafaunal extinction without invoking climate change and secondary ecological effects.</jats:p>",
+          "DOI": "10.1126/science.1059342",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                27
+              ]
+            ],
+            "date-time": "2002-07-27T05:52:41Z",
+            "timestamp": 1027749161000
+          },
+          "page": "1893-1896",
+          "source": "Crossref",
+          "is-referenced-by-count": 412,
+          "title": [
+            "A Multispecies Overkill Simulation of the End-Pleistocene Megafaunal Mass Extinction"
+          ],
+          "prefix": "10.1126",
+          "volume": "292",
+          "author": [
+            {
+              "given": "John",
+              "family": "Alroy",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "National Center for Ecological Analysis and Synthesis, University of California, 735 State Street, Suite 300, Santa Barbara, CA 93101, USA."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "221",
+          "reference": [
+            {
+              "key": "e_1_3_1_2_2",
+              "unstructured": "P. S. Martin in Prehistoric Extinctions: The Search for a Cause P. S. Martin H. E. Wright Jr. Eds. (Yale Univ. Press New Haven CT 1967)."
+            },
+            {
+              "key": "e_1_3_1_3_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "P. S. Martin D. W. Steadman in Extinctions in Near Time: Causes Contexts and Consequences R. D. E. MacPhee Ed. (Kluwer Academic/Plenum New York 1999) pp. 17\u201355.",
+              "DOI": "10.1007/978-1-4757-5202-1_2"
+            },
+            {
+              "key": "e_1_3_1_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2694348"
+            },
+            {
+              "key": "e_1_3_1_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00438243.1998.9980411"
+            },
+            {
+              "key": "e_1_3_1_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00385417.1967.10770945"
+            },
+            {
+              "key": "e_1_3_1_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.179.4077.969"
+            },
+            {
+              "key": "e_1_3_1_8_2",
+              "first-page": "304",
+              "volume": "63",
+              "author": "Mosimann J. E.",
+              "year": "1975",
+              "unstructured": "Mosimann J. E., Martin P. S., Am. Sci. 63, 304 (1975).",
+              "journal-title": "Am. Sci."
+            },
+            {
+              "key": "e_1_3_1_9_2",
+              "unstructured": "S. L. Whittington B. Dyke in Quaternary Extinctions: A Prehistoric Revolution P. S. Martin R. G. Klein Eds. (Univ. of Arizona Press Tucson AZ 1984) pp. 451\u2013465."
+            },
+            {
+              "key": "e_1_3_1_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0278-4165(88)90002-5"
+            },
+            {
+              "key": "e_1_3_1_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2997372"
+            },
+            {
+              "key": "e_1_3_1_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0278-4165(88)90001-3"
+            },
+            {
+              "key": "e_1_3_1_13_2",
+              "unstructured": "J. Alroy in (2) pp. 105\u2013143."
+            },
+            {
+              "key": "e_1_3_1_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.272.5268.1601"
+            },
+            {
+              "key": "e_1_3_1_15_2",
+              "first-page": "349",
+              "volume": "54",
+              "author": "Alberdi M. T.",
+              "year": "1995",
+              "unstructured": "Alberdi M. T., Prado J. L., Ortiz-Jaureguizar E., Biol. J. Linn. Soc. 54, 349 (1995).",
+              "journal-title": "Biol. J. Linn. Soc."
+            },
+            {
+              "key": "e_1_3_1_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285297"
+            },
+            {
+              "key": "e_1_3_1_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s100219900012"
+            },
+            {
+              "key": "e_1_3_1_18_2",
+              "unstructured": "J. Damuth B. J. MacFadden Eds. Body Size in Mammalian Paleobiology: Estimation and Biological Implications (Cambridge Univ. Press Cambridge 1990)."
+            },
+            {
+              "key": "e_1_3_1_19_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/5979"
+            },
+            {
+              "key": "e_1_3_1_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00378224"
+            },
+            {
+              "key": "e_1_3_1_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[1322:CVPPAN]2.0.CO;2"
+            },
+            {
+              "key": "e_1_3_1_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0278-4165(87)90016-X"
+            },
+            {
+              "key": "e_1_3_1_23_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "D. Webster in Omnivorous Primates: Gathering and Hunting in Human Evolution R. S. O. Harding G. Teleki Eds. (Columbia Univ. Press New York 1981) pp. 556\u2013594.",
+              "DOI": "10.7312/hard92188-015"
+            },
+            {
+              "key": "e_1_3_1_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4039/Ent91293-5"
+            },
+            {
+              "key": "e_1_3_1_25_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "F. A. Hassan Demographic Archaeology (Academic Press New York 1981).",
+              "DOI": "10.1016/B978-0-12-624180-8.50010-X"
+            },
+            {
+              "key": "e_1_3_1_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/282199"
+            },
+            {
+              "key": "e_1_3_1_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/S0094837300016043"
+            },
+            {
+              "key": "e_1_3_1_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285183"
+            },
+            {
+              "key": "e_1_3_1_29_2",
+              "unstructured": "Geographic ranges were based on minimum convex polygons around occurrences of fossils in the FAUNMAP database (13). Body mass values were based on published estimates (14\u201316) and published skeletal measurements combined with standard allometric equations (17). Initial population densities of species were inferred as a joint function of the standard mammalian body mass/density scaling relationship (18) and observed frequencies of occurrence using a back-calculation that assumes sampling is a Poisson process. Prey population dynamics were modeled following the standard Ricker logistic growth equation with standard coefficients for mammals (19); logistic density dependence is known to be strong in northern temperate zone ungulates (20). Standard logistic equations were used to model secondary food resources (9 13 21). Human nutritional needs were set to 2200 kcal/person/day and the ratio of materials gathered to materials consumed was set conservatively to 1.4 (big game) and 4.2 (secondary resources). Human hunting and gathering ability was modulated by a type 2 functional response (26) capping both maximum intake and maximum success at 1.4 standard rates. Human population growth was modeled as an exponential function of the ratio of actual to standard caloric intake assuming a theoretical maximum of 3%/year (4 7 9 11 24 25). Simulations ran from 14 000 yr B.P. to 11 500 yr B.P. encompassing the earliest Clovis dates [13 400 yr B.P. (3)] and terminal faunal dates [>12 260 yr B.P. (26)]. Interspecific competition was treated using a standard Lotka-Volterra model that employs the Ricker logistic equation with population sizes weighted according to Kleiber's law of metabolic scaling (27). Details are available at www.sciencemag.org/cgi/content/full/292/5523/1893/DC1."
+            },
+            {
+              "key": "e_1_3_1_30_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1523-1739.1998.96156.x"
+            },
+            {
+              "key": "e_1_3_1_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420050601"
+            },
+            {
+              "key": "e_1_3_1_32_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/S0094837300008927"
+            },
+            {
+              "key": "e_1_3_1_33_2",
+              "unstructured": "G. Haynes S. B. Eiselt in (2) pp. 71\u201393."
+            },
+            {
+              "key": "e_1_3_1_34_2",
+              "unstructured": "R. D. E. MacPhee P. A. Marx in Natural Change and Human Impact in Madagascar S. Goodman B. Patterson Eds. (Smithsonian Institution Press Washington DC 1997) pp. 169\u2013217."
+            },
+            {
+              "key": "e_1_3_1_35_2",
+              "unstructured": "J. M. Diamond in (8) pp. 354\u2013403."
+            },
+            {
+              "key": "e_1_3_1_36_2",
+              "unstructured": "R. W. Graham E. L. Lundelius Jr. in (8) pp. 223\u2013249."
+            },
+            {
+              "key": "e_1_3_1_37_2",
+              "unstructured": "R. D. Guthrie in (8) pp. 259\u2013298."
+            },
+            {
+              "key": "e_1_3_1_38_2",
+              "unstructured": "I thank M. Foote H. Regan M. Uhen and J. Williams for helpful reviews and P. Martin for encouragement. This work was funded by the NSF Division of Environmental Biology (grant DEB-0083893) and hosted by the National Center for Ecological Analysis and Synthesis a Center funded by NSF (grant DEB-0072909) the University of California and the Santa Barbara campus. This is Paleobiology Database publication #2."
+            }
+          ],
+          "container-title": [
+            "Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.science.org/doi/pdf/10.1126/science.1059342",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                9
+              ]
+            ],
+            "date-time": "2024-01-09T17:26:32Z",
+            "timestamp": 1704821192000
+          },
+          "score": 71.81142,
+          "resource": {
+            "primary": {
+              "URL": "https://www.science.org/doi/10.1126/science.1059342"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2001,
+                6,
+                8
+              ]
+            ]
+          },
+          "references-count": 37,
+          "journal-issue": {
+            "issue": "5523",
+            "published-print": {
+              "date-parts": [
+                [
+                  2001,
+                  6,
+                  8
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1126/science.1059342"
+          ],
+          "URL": "https://doi.org/10.1126/science.1059342",
+          "ISSN": [
+            "0036-8075",
+            "1095-9203"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8075",
+              "type": "print"
+            },
+            {
+              "value": "1095-9203",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2001,
+                6,
+                8
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                8,
+                6
+              ]
+            ],
+            "date-time": "2024-08-06T08:38:42Z",
+            "timestamp": 1722933522821
+          },
+          "reference-count": 0,
+          "publisher": "Geological Society of America",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2019
+              ]
+            ]
+          },
+          "DOI": "10.1130/abs/2019am-339395",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2019,
+                11,
+                12
+              ]
+            ],
+            "date-time": "2019-11-12T23:52:47Z",
+            "timestamp": 1573602767000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "OVERKILL: A BOARD GAME FOR TEACHING PLEISTOCENE MEGAFAUNAL EXTINCTION AND THE OVERKILL HYPOTHESIS"
+          ],
+          "prefix": "10.1130",
+          "author": [
+            {
+              "name": "Oklahoma State University",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Trenity",
+              "family": "Ford",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Ashley",
+              "family": "Burkett",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Christina",
+              "family": "Hulett",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Erin",
+              "family": "Roark",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "257",
+          "event": {
+            "name": "GSA Annual Meeting in Phoenix, Arizona, USA - 2019"
+          },
+          "container-title": [
+            "Geological Society of America Abstracts with Programs"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                11,
+                13
+              ]
+            ],
+            "date-time": "2019-11-13T00:07:00Z",
+            "timestamp": 1573603620000
+          },
+          "score": 45.38542,
+          "resource": {
+            "primary": {
+              "URL": "https://gsa.confex.com/gsa/2019AM/webprogram/Paper339395.html"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2019
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1130/abs/2019am-339395",
+          "ISSN": [
+            "0016-7592"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0016-7592"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2019
+              ]
+            ]
+          },
+          "article-number": "339395"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                18
+              ]
+            ],
+            "date-time": "2026-02-18T23:47:19Z",
+            "timestamp": 1771458439763,
+            "version": "3.50.1"
+          },
+          "publisher-location": "Boston, MA",
+          "reference-count": 89,
+          "publisher": "Springer US",
+          "isbn-type": [
+            {
+              "value": "9781441933157",
+              "type": "print"
+            },
+            {
+              "value": "9781475752021",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1999,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "1999-01-01T00:00:00Z",
+                "timestamp": 915148800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1999
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-1-4757-5202-1_6",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                1,
+                30
+              ]
+            ],
+            "date-time": "2013-01-30T08:17:05Z",
+            "timestamp": 1359533825000
+          },
+          "page": "105-143",
+          "source": "Crossref",
+          "is-referenced-by-count": 63,
+          "title": [
+            "Putting North America\u2019s End-Pleistocene Megafaunal Extinction in Context"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "John",
+              "family": "Alroy",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "6_CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "326",
+              "DOI": "10.1017/S0094837300010873",
+              "volume": "18",
+              "author": "J Alroy",
+              "year": "1992",
+              "unstructured": "Alroy, J. 1992. Conjunction among taxonomic distributions and the Miocene mammalian biochronology of the Great Plains. Paleobiology 18: 326\u2013343.",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "6_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "191",
+              "DOI": "10.1017/S0094837300012677",
+              "volume": "20",
+              "author": "J Alroy",
+              "year": "1994",
+              "unstructured": "Alroy, J. 1994. Appearance event ordination: a new biochronologic method. Paleobiology 20: 191\u2013207.",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "6_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "285",
+              "DOI": "10.1016/S0031-0182(96)00100-9",
+              "volume": "127",
+              "author": "J Alroy",
+              "year": "1996",
+              "unstructured": "Alroy, J. 1996. Constant extinction, constrained diversification, and uncoordinated stasis in North American mammals. Palaeogeogr. Palaeoclimatol. Palaeoecol. 127: 285\u2013311.",
+              "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+            },
+            {
+              "key": "6_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "23",
+              "DOI": "10.1130/0091-7613(1998)026<0023:DOMAEI>2.3.CO;2",
+              "volume": "26",
+              "author": "J Alroy",
+              "year": "1998",
+              "unstructured": "Alroy, J. 1998a. Diachrony of mammalian appearance events: implications for biochronology. Geology 26: 23\u201326.",
+              "journal-title": "Geology"
+            },
+            {
+              "key": "6_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "731",
+              "DOI": "10.1126/science.280.5364.731",
+              "volume": "280",
+              "author": "J Alroy",
+              "year": "1998",
+              "unstructured": "Alroy, J. 1998b. Cope\u2019s rule and the dynamics of body mass evolution in North American mammals. Science 280: 731\u2013734.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "6_CR6",
+              "first-page": "232",
+              "volume-title": "Equilibrial diversity dynamics in North American mammals, M. L. McKinney and J. Drake (eds.), Biodiversity Dynamics: Turnover of Populations, Taxa and Communities",
+              "author": "J Alroy",
+              "year": "1998",
+              "unstructured": "Alroy, J. 1998c. Equilibrial diversity dynamics in North American mammals, M. L. McKinney and J. Drake (eds.), Biodiversity Dynamics: Turnover of Populations, Taxa and Communities. pp. 232\u2013287. Columbia University Press, New York."
+            },
+            {
+              "key": "6_CR7",
+              "unstructured": "Alroy, J. In press. Methods for removing sampling biases from diversity curves. Paleobiology."
+            },
+            {
+              "key": "6_CR8",
+              "volume-title": "Dinosaur Extinction and the End of an Era: What the Fossils Say",
+              "author": "JD Archibald",
+              "year": "1996",
+              "unstructured": "Archibald, J. D. 1996. Dinosaur Extinction and the End of an Era: What the Fossils Say. Columbia University Press, New York."
+            },
+            {
+              "key": "6_CR9",
+              "volume-title": "The 1996 IUCN Red List of Threatened Animals",
+              "year": "1996",
+              "unstructured": "Baillie, J., and Groombridge, B. (eds.). 1996. The 1996 IUCN Red List of Threatened Animals. Conservation International, Washington, D.C."
+            },
+            {
+              "key": "6_CR10",
+              "first-page": "235",
+              "volume-title": "Mass Extinctions",
+              "author": "AD Barnosky",
+              "year": "1989",
+              "unstructured": "Barnosky, A. D. 1989. The late Pleistocene event as a paradigm for widespread mammal extinction, in: S. K. Donovan (ed.), Mass Extinctions, pp. 235\u2013254. Columbia University Press, New York."
+            },
+            {
+              "key": "6_CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "91",
+              "DOI": "10.1017/S0094837300016043",
+              "volume": "22",
+              "author": "MW Beck",
+              "year": "1996",
+              "unstructured": "Beck, M. W. 1996. On discerning the cause of late Pleistocene megafaunal extinctions. Paleobiology 22: 91\u2013103.",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "6_CR12",
+              "volume-title": "Princeton, N.J",
+              "author": "WA Berggren",
+              "year": "1992",
+              "unstructured": "Berggren, W. A., and Prothero, D. R. 1992. Eocene-Oligocene climatic and biotic evolution: an overview, in:"
+            },
+            {
+              "key": "6_CR13",
+              "unstructured": "D. R. Prothero and W. A. Berggren (eds.), Eocene-Oligocene Climatic and Biotic Evolution,pp. 1\u201328. Princeton University Press, Princeton, N.J."
+            },
+            {
+              "key": "6_CR14",
+              "first-page": "963",
+              "volume": "25",
+              "author": "TJ Bralower",
+              "year": "1997",
+              "unstructured": "Bralower, T. J., Thomas, D. J., Zachos, J. C., Hirschmann, M. M., Rohl, U. Sigurdsson, H., Thomas, E., and Whitney, D. L. 1997. High-resolution records of the late Paleocene thermal maximum and circum-Caribbean volcanism: is there a causal link? Geology 25: 963\u2013966.",
+              "journal-title": "High-resolution records of the late Paleocene thermal maximum and circum-Caribbean volcanism: is there a causal link? Geology"
+            },
+            {
+              "key": "6_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "467",
+              "DOI": "10.1086/282738",
+              "volume": "105",
+              "author": "JH Brown",
+              "year": "1971",
+              "unstructured": "Brown, J. H. 1971. Mammals on mountaintops: nonequilibrium insular biogeography. Am. Nat. 105: 467\u2013478.",
+              "journal-title": "Nat"
+            },
+            {
+              "key": "6_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "1478",
+              "DOI": "10.1086/285297",
+              "volume": "138",
+              "author": "JH Brown",
+              "year": "1991",
+              "unstructured": "Brown, J. H., and Nicoletto, P. F 1991. Spatial scaling of species composition: body masses of North American land mammals. Am. Nat. 138: 1478\u20131512.",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "6_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "6093",
+              "DOI": "10.1029/94JB03098",
+              "volume": "100",
+              "author": "SC Cande",
+              "year": "1995",
+              "unstructured": "Cande, S. C., and Kent, D. V. 1995. Revised calibration of the geomagnetic polarity timescale for the Late Cretaceous and Cenozoic. J. Geophys. Res. 100: 6093\u20136095.",
+              "journal-title": "J. Geophys. Res."
+            },
+            {
+              "key": "6_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "153",
+              "DOI": "10.1038/38229",
+              "volume": "389",
+              "author": "TE Cerling",
+              "year": "1997",
+              "unstructured": "Cerling, T. E., Harris, J. M., MacFadden, B. J., Leakey, M. G., Quade, J., Eisenmann, V., and Ehleringer, J. R. 1997. Global vegetation change through the Miocene/Pliocene boundary. Nature 389: 153\u2013158.",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "6_CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "55",
+              "DOI": "10.1093/oso/9780198548294.003.0004",
+              "volume-title": "Extinction Rates",
+              "author": "GR Coope",
+              "year": "1995",
+              "unstructured": "Coope, G. R. 1995. Insect faunas in Ice Age environments: why so little extinction?, in: J. H. Lawton and R. M. May (eds.), Extinction Rates, pp. 55\u201374. Oxford University Press, London."
+            },
+            {
+              "key": "6_CR20",
+              "first-page": "229",
+              "volume-title": "Body Size in Mammalian Paleobiology: Estimation and Biological Implications",
+              "author": "J Damuth",
+              "year": "1990",
+              "unstructured": "Damuth, J. 1990. Problems in estimating body masses of archaic ungulates using dental measurements, in: J. Damuth and B. J. MacFadden (eds.), Body Size in Mammalian Paleobiology: Estimation and Biological Implications, pp. 229\u2013253. Cambridge University Press, London."
+            },
+            {
+              "key": "6_CR21",
+              "volume-title": "Body Size in Mammalian Paleobiology: Estimation and Biological Implications",
+              "year": "1990",
+              "unstructured": "Damuth, J., and MacFadden, B. J. (eds.). 1990. Body Size in Mammalian Paleobiology: Estimation and Biological Implications. Cambridge University Press, London."
+            },
+            {
+              "key": "6_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "218",
+              "DOI": "10.1038/364218a0",
+              "volume": "364",
+              "author": "W Dansgaard",
+              "year": "1993",
+              "unstructured": "Dansgaard, W., Johnsen, S., Clausen, H. B., Dahl-Jensen, D., Gundestrup, N. S., Hammer, C. U., Hvidberg, C. S., Steffensen, J. P., Sveinbj\u00f6rnsdottir, A. E., Jouzel, J., and Bond, G. 1993. Evidence for general instability of past climate from a 250-kyr ice-core record. Nature 364: 218\u2013220.",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "6_CR23",
+              "first-page": "824",
+              "volume-title": "Quaternary Extinctions: A Prehistoric Revolution",
+              "author": "JM Diamond",
+              "year": "1984",
+              "unstructured": "Diamond, J. M. 1984. Historic extinction: a Rosetta stone for understanding prehistoric extinction equilibria, in: R. S. Martin and R. G. Klein (eds.), Quaternary Extinctions: A Prehistoric Revolution, pp. 824\u2013866. University of Arizona Press, Tucson."
+            },
+            {
+              "key": "6_CR24",
+              "volume-title": "Science 270:1347-1351",
+              "author": "GS Dwyer",
+              "year": "1995",
+              "unstructured": "Dwyer, G. S., Cronin, T. M., Baker, P. A., Raymo, M. E., Buzas, J. S., and Correge, T. 1995. North Atlantic deep-water temperature change during late Pliocene and late Quaternary climatic cycles. Science 270:1347\u20131351."
+            },
+            {
+              "key": "6_CR25",
+              "volume-title": "The Mammalian Radiations: An Analysis of Trends in Evolution, Adaptation, and Behavior",
+              "author": "JF Eisenberg",
+              "year": "1981",
+              "unstructured": "Eisenberg, J. F. 1981. The Mammalian Radiations: An Analysis of Trends in Evolution, Adaptation, and Behavior. University of Chicago Press, Chicago."
+            },
+            {
+              "key": "6_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "537",
+              "DOI": "10.1016/0031-0182(94)90251-8",
+              "volume": "108",
+              "author": "BP Flower",
+              "year": "1994",
+              "unstructured": "Flower, B. P., and Kennett, J. P. 1994. The middle Miocene climatic transition: East Antarctic ice sheet development, deep ocean circulation and global carbon cycling. Palaeogeogr. Palaeoclimatol. Palaeoecol. 108: 537\u2013555.",
+              "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+            },
+            {
+              "key": "6_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "371",
+              "DOI": "10.2307/2992357",
+              "volume": "39",
+              "author": "M Foote",
+              "year": "1990",
+              "unstructured": "Foote, M. 1990. Nearest-neighbor analysis of trilobite morphospace. Syst. Zool 39: 371\u2013382.",
+              "journal-title": "Syst. Zool"
+            },
+            {
+              "key": "6_CR28",
+              "doi-asserted-by": "crossref",
+              "first-page": "424",
+              "DOI": "10.1017/S0094837300012914",
+              "volume": "20",
+              "author": "M Foote",
+              "year": "1994",
+              "unstructured": "Foote, M. 1994. Temporal variation in extinction risk and temporal scaling of extinction metrics. Paleobiology 20: 424\u2013444.",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "6_CR29",
+              "first-page": "211",
+              "volume-title": "Quaternary Extinctions: A Prehistoric Revolution",
+              "author": "PD Gingerich",
+              "year": "1984",
+              "unstructured": "Gingerich, P. D. 1984. Pleistocene extinctions in the context of origination-extinction equilibria, in: P. S. Martin and R. G. Klein (eds.), Quaternary Extinctions: A Prehistoric Revolution, pp. 211\u2013222. University of Arizona Press, Tucson."
+            },
+            {
+              "key": "6_CR30",
+              "doi-asserted-by": "crossref",
+              "first-page": "343",
+              "DOI": "10.1017/S0094837300004978",
+              "volume": "2",
+              "author": "RW Graham",
+              "year": "1976",
+              "unstructured": "Graham, R. W. 1976. Late Wisconsin mammalian faunas and environmental gradients of the eastern United States. Paleobiology 2: 343\u2013350.",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "6_CR31",
+              "first-page": "300",
+              "volume-title": "Community Ecology",
+              "author": "RW Graham",
+              "year": "1986",
+              "unstructured": "Graham, R. W. 1986. Response of mammalian communities to environmental changes during the late Quaternary, in: J. Diamond and T. J. Case (eds.), Community Ecology, pp. 300\u2013313. Harper und Row, New York."
+            },
+            {
+              "key": "6_CR32",
+              "first-page": "223",
+              "volume-title": "Quaternary Extinctions: A Prehistoric Revolution",
+              "author": "RW Graham",
+              "year": "1984",
+              "unstructured": "Graham, R. W., and Lundelius, E. L., Jr. 1984. Coevolutionary disequilibrium and Pleistocene extinctions, in: P. S. Martin and R. G. Klein (eds.), Quaternary Extinctions: A Prehistoric Revolution, pp. 223\u2013249. University of Arizona Press, Tucson."
+            },
+            {
+              "key": "6_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "1601",
+              "DOI": "10.1126/science.272.5268.1601",
+              "volume": "272",
+              "author": "RW Graham",
+              "year": "1996",
+              "unstructured": "Graham, R. W., Lundelius, E. L., Jr., Graham, M. A., Schroeder, E. K., Toomey, R. S., 111, Anderson, E., Barnosky, A. D., Burns, J. A., Churcher, C. S., Grayson, D. K., Guthrie, R. D., Harington, C. R., Jefferson, G. T., Martin, L. D., McDonald, H. G., Morlan, R. E., Sunken, H. A., Jr., Webb, S. D., Werdelin, L., and Wilson, M. C. 1996. Spatial response of mammals to Late Quaternary environmental fluctuations. Science 272: 1601\u20131606.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "6_CR34",
+              "volume-title": "Ann. Carnegie Mus",
+              "author": "JE Guilday",
+              "year": "1962",
+              "unstructured": "Guilday, J. E. 1962. The Pleistocene local fauna of the Natural Chimneys, Augusta County, Virginia. Ann. Carnegie Mus. 36:87\u2013122."
+            },
+            {
+              "key": "6_CR35",
+              "first-page": "1",
+              "volume": "27",
+              "author": "GF Gunnell",
+              "year": "1989",
+              "unstructured": "Gunnell, G. F 1989. Evolutionary history of Microsyopoidea (Mammalia, ?Primates) and the relationship between Plesiadapiformes and Primates. Univ. Mich. Pap. Paleontol. 27: 1\u2013157.",
+              "journal-title": "Univ. Mich. Pap. Paleontol."
+            },
+            {
+              "key": "6_CR36",
+              "first-page": "413",
+              "volume": "29",
+              "author": "GF Gunnell",
+              "year": "1996",
+              "unstructured": "Gunnell, G. F., and Gingerich, P. D. 1996. New hapalodectid Hapalorestes lovei (Mammalia, Mesonychia) from the early middle Eocene of northwestern Wyoming. Contrib. Mus. Paleontol. Univ. Mich. 29: 413\u2013418.",
+              "journal-title": "Contrib. Mus. Paleontol. Univ. Mich."
+            },
+            {
+              "key": "6_CR37",
+              "first-page": "259",
+              "volume-title": "Quaternary Extinctions: A Prehistoric Revolution",
+              "author": "RD Guthrie",
+              "year": "1984",
+              "unstructured": "Guthrie, R. D. 1984. Mosaics, allelochemics and nutrients, an ecological theory of late Pleistocene megafaunal extinctions, in: P. S. Martin and R. G. Klein (eds.), Quaternary Extinctions: A Prehistoric Revolution, pp. 259\u2013298. University of Arizona Press, Tucson."
+            },
+            {
+              "key": "6_CR38",
+              "volume-title": "The Mammals of North America",
+              "author": "ER Hall",
+              "year": "1981",
+              "unstructured": "Hall, E. R. 1981. The Mammals of North America. Wiley, New York."
+            },
+            {
+              "key": "6_CR39",
+              "first-page": "1",
+              "volume": "2",
+              "author": "CW Hibbard",
+              "year": "1952",
+              "unstructured": "Hibbard, C. W. 1952. Vertebrate fossils from Late Cenozoic deposits of central Kansas. Univ. Kans. Paleontol. Contrib. Vertebr 2: 1\u201314.",
+              "journal-title": "Univ. Kans. Paleontol. Contrib. Vertebr"
+            },
+            {
+              "key": "6_CR40",
+              "volume-title": "Contrib. Mus. Paleontol. Univ. Mich",
+              "author": "CW Hibbard",
+              "year": "1955",
+              "unstructured": "Hibbard, C. W. 1955. The Jinglebob interglacial (Sangamon?) fauna from Kansas and its climatic significance. Contrib. Mus. Paleontol. Univ. Mich. 12:179\u2013228."
+            },
+            {
+              "key": "6_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "835",
+              "DOI": "10.1029/94PA01838",
+              "volume": "9",
+              "author": "DA Hodell",
+              "year": "1994",
+              "unstructured": "Hodell, D. A., Benson, R. H., Kent, D. V., Boersma, A., and Rakic-El Bied, K. 1994. Magnetostratigraphic, bios-tratigraphic, and stable isotope stratigraphy of an Upper Miocene drill core from the Sale Briqueterie (north-western Morocco): a high-resolution chronology for the Messinian stage. Paleoceanography 9: 835\u2013855.",
+              "journal-title": "Paleoceanography"
+            },
+            {
+              "key": "6_CR42",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Holman, J. A. 1995. Pleistocene Amphibians and Reptiles in North America. Oxford University Press, London.",
+              "DOI": "10.1093/oso/9780195086102.001.0001"
+            },
+            {
+              "key": "6_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "55",
+              "DOI": "10.1098/rstb.1994.0051",
+              "volume": "344",
+              "author": "JBC Jackson",
+              "year": "1994",
+              "unstructured": "Jackson, J. B. C. 1994. Constancy and change of life in the sea. Philos. Trans. R. Soc. London Ser. B 344: 55\u201360.",
+              "journal-title": "Philos. Trans. R. Soc. London Ser. B"
+            },
+            {
+              "key": "6_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "225",
+              "DOI": "10.1038/353225a0",
+              "volume": "353",
+              "author": "JP Kennett",
+              "year": "1991",
+              "unstructured": "Kennett, J. P., and Stott, L. D. 1991. Abrupt deep-sea warming, palaeoceanographic changes and benthic extinc-tions at the end of the Palaeocene. Nature 353: 225\u2013229.",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "6_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "319",
+              "DOI": "10.1038/358319a0",
+              "volume": "358",
+              "author": "PL Koch",
+              "year": "1992",
+              "unstructured": "Koch, P. L., Zachos, J. C., and Gingerich, P. D. 1992. Correlation between isotope records in marine and continental carbon reservoirs near the Palaeocene/Eocene boundary. Nature 358: 319\u2013322.",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "6_CR46",
+              "volume-title": "Pleistocene Mammals of North America",
+              "author": "B Kurten",
+              "year": "1980",
+              "unstructured": "Kurten, B., and Anderson, E. 1980. Pleistocene Mammals of North America. Columbia University Press, New York."
+            },
+            {
+              "key": "6_CR47",
+              "volume-title": "Montpellier 16:191-212",
+              "author": "S Legendre",
+              "year": "1986",
+              "unstructured": "Legendre, S. 1986. Analysis of mammalian communities from the late Eocene and Oligocene of southern France. Palaeovertebrata, Montpellier 16:191\u2013212."
+            },
+            {
+              "key": "6_CR48",
+              "doi-asserted-by": "crossref",
+              "first-page": "85",
+              "DOI": "10.1080/08912968809386468",
+              "volume": "1",
+              "author": "S Legendre",
+              "year": "1988",
+              "unstructured": "Legendre, S., and Roth, C. 1988. Correlation of camassial tooth size and body weight in Recent carnivores (Mammalia). Hist. Biol. 1: 85\u201398.",
+              "journal-title": "Hist. Biol."
+            },
+            {
+              "key": "6_CR49",
+              "unstructured": "Lundelius, E. L., Churcher, C. S., Downs, T., Harington, C. R., Lindsay, E. H. Schultz, G. E., Semken, H. A., Webb, S. D., and Zakrezewski, R. J. 1987. The North American Quaternary sequence, in: M. O. Woodburne (ed.), Cenozoic Mammals of North America: Geochronology and Biostratigraphy,pp. 211\u2013235. University of California Press, Berkeley."
+            },
+            {
+              "key": "6_CR50",
+              "volume-title": "J. Vertebr. Paleontol",
+              "author": "BJ Macfadden",
+              "year": "1996",
+              "unstructured": "MacFadden, B. J., and Cerling, T. E. 1996. Mammalian herbivore communities, ancient feeding ecology, and car- bon isotopes: a 10 million-year sequence for the Neogene of Florida. J. Vertebr. Paleontol. 16:103\u2013115."
+            },
+            {
+              "key": "6_CR51",
+              "first-page": "169",
+              "volume-title": "Natural Change and Human Impact in Madagascar",
+              "author": "RDE Macphee",
+              "year": "1997",
+              "unstructured": "MacPhee, R. D. E., and Marx, P. A. 1997. The 40,000-year plague: humans, hyperdiseases, and first-contact extinctions, in: S. M. Goodman and B. D. Patterson (eds.), Natural Change and Human Impact in Madagascar, pp. 169\u2013217. Smithsonian Institution Press, Washington, D.C."
+            },
+            {
+              "key": "6_CR52",
+              "first-page": "75",
+              "volume-title": "Pleistocene Extinctions: The Search fora Cause",
+              "author": "RS Martin",
+              "year": "1967",
+              "unstructured": "Martin, R. S. 1967. Prehistoric overkill, in: P. S. Martin and H. E. Wright (eds.), Pleistocene Extinctions: The Search fora Cause, pp. 75\u2013120. Yale University Press, New Haven."
+            },
+            {
+              "key": "6_CR53",
+              "first-page": "354",
+              "volume-title": "Quaternary Extinctions: A Prehistoric Revolution",
+              "author": "PS Martin",
+              "year": "1984",
+              "unstructured": "Martin, P. S. 1984. Prehistoric overkill: the global model, in: P. S. Martin and R. G. Klein (eds.), Quaternary Extinctions: A Prehistoric Revolution, pp. 354\u2013403. University of Arizona Press, Tucson."
+            },
+            {
+              "key": "6_CR54",
+              "first-page": "145",
+              "volume-title": "J. I. Mead and D. J. Meltzer (eds.), Environments and Extinctions: Man in Late Glacial North America",
+              "author": "DJ Meltzer",
+              "year": "1985",
+              "unstructured": "Meltzer, D. J., and Mead, J. I. 1985. Dating late Pleistocene extinctions: theoretical issues, analytical bias, and substantive results, in: J. I. Mead and D. J. Meltzer (eds.), Environments and Extinctions: Man in Late Glacial North America, pp. 145\u2013172. Center for the Study of Early Man, University of Maine, Orono."
+            },
+            {
+              "key": "6_CR55",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1029/PA002i001p00001",
+              "volume": "2",
+              "author": "KG Miller",
+              "year": "1987",
+              "unstructured": "Miller, K. G., Fairbanks, R. G., and Mountain, G. S. 1987. Tertiary oxygen isotope synthesis, sea level history, and continental margin erosion. Paleoceanography 2: 1\u201319.",
+              "journal-title": "Paleoceanography"
+            },
+            {
+              "key": "6_CR56",
+              "doi-asserted-by": "publisher",
+              "first-page": "679",
+              "DOI": "10.1029/PA002i006p00679",
+              "volume": "2",
+              "author": "DW Muller",
+              "year": "1987",
+              "unstructured": "Muller, D. W., and Hsu, K. J. 1987. Event stratigraphy and paleoceanography in the Fortuna Basin (southeast Spain): a scenario for the Messinian Salinity Crisis. Paleoceanography 2: 679\u2013696.",
+              "journal-title": "Paleoceanography"
+            },
+            {
+              "key": "6_CR57",
+              "volume-title": "Science 269:1106-1108",
+              "author": "RA Myers",
+              "year": "1995",
+              "unstructured": "Myers, R. A., Barrowman, N. J., Hutchings, J. A., and Rosenberg, A. A. 1995. Population dynamics of exploited fish stocks at low population levels. Science 269:1106\u20131108."
+            },
+            {
+              "key": "6_CR58",
+              "volume-title": "Geology 20:1071-1074",
+              "author": "JT Overpeck",
+              "year": "1992",
+              "unstructured": "Overpeck, J. T., Webb, R. S., and Webb, T., III. 1992. Mapping eastern North American vegetation change of the past 18 ka: no-analogs and the future. Geology 20:1071\u20131074."
+            },
+            {
+              "key": "6_CR59",
+              "first-page": "257",
+              "volume": "127",
+              "author": "N Owen-Smith",
+              "year": "1987",
+              "unstructured": "Owen-Smith, N. 1987. Pleistocene extinctions: the pivotal role of megaherbivores. Paleobiology 13:351\u2013362. Prothero, D. R., and Heaton, T. H. 1996. Faunal stability during the Early Oligocene climatic crash. Palaeogeogr. Palaeoclimatol. Palaeoecol. 127: 257\u2013284.",
+              "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+            },
+            {
+              "key": "6_CR60",
+              "doi-asserted-by": "crossref",
+              "first-page": "333",
+              "DOI": "10.1017/S0094837300002633",
+              "volume": "1",
+              "author": "DM Raup",
+              "year": "1975",
+              "unstructured": "Raup, D. M. 1975. Taxonomic diversity estimation using rarefaction. Paleobiology 1: 333\u2013342.",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "6_CR61",
+              "doi-asserted-by": "crossref",
+              "first-page": "289",
+              "DOI": "10.1017/S0094837300004929",
+              "volume": "2",
+              "author": "DM Raup",
+              "year": "1976",
+              "unstructured": "Raup, D. M. 1976. Species diversity in the Phanerozoic: an interpretation. Paleobiology 2: 289\u2013297.",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "6_CR62",
+              "first-page": "236",
+              "volume-title": "Cenozoic Mammals of North America: Geochronology and Biostratigraphy",
+              "author": "CA Repenning",
+              "year": "1987",
+              "unstructured": "Repenning, C. A. 1987. Biochronology of the microtine rodents of the United States, in: M. O. Woodburne (ed.), Cenozoic Mammals of North America: Geochronology and Biostratigraphy, pp. 236\u2013268. University of Cal-ifornia Press, Berkeley."
+            },
+            {
+              "key": "6_CR63",
+              "volume-title": "Ill. St. Mus. Rep. Invest",
+              "author": "RS Rhodes II",
+              "year": "1984",
+              "unstructured": "Rhodes, R. S., II. 1984. Paleoecology and regional paleoclimatic implications of the Farmdalian Craigmile and Woodfordian Waubonsie mammalian local faunas, southwestern Iowa. Ill. St. Mus. Rep. Invest. 40:1\u201351."
+            },
+            {
+              "key": "6_CR64",
+              "volume-title": "Ecology 58:1120-1127",
+              "author": "RD Routledge",
+              "year": "1977",
+              "unstructured": "Routledge, R. D. 1977. On Whittaker\u2019s components of diversity. Ecology 58:1120\u20131127."
+            },
+            {
+              "key": "6_CR65",
+              "volume-title": "Contrib. Mus. Paleontol. Univ. Mich",
+              "author": "HA Semken Jr",
+              "year": "1996",
+              "unstructured": "Semken, H. A., Jr. 1996. Stratigraphy and paleontology of the McPherson Equus beds (Sandahl local fauna), McPherson Co., Kansas. Contrib. Mus. Paleontol. Univ. Mich. 20:121\u2013178."
+            },
+            {
+              "key": "6_CR66",
+              "first-page": "25",
+              "volume": "3",
+              "author": "HA Semken Jr",
+              "year": "1974",
+              "unstructured": "Semken, H. A., Jr. 1974. Micromammal distribution and migration during the Holocene. Am. Mus. Quat. Assoc. Abstr. 3: 25.",
+              "journal-title": "Am. Mus. Quat. Assoc. Abstr."
+            },
+            {
+              "key": "6_CR67",
+              "volume-title": "Pittsburgh",
+              "author": "HA Semken Jr",
+              "year": "1984",
+              "unstructured": "Semken, H. A., Jr. 1984. Paleoecology of a late Wisconsinan/Holocene micromammal sequence in Peccary Cave, northwestern Arkansas, in: H. H. Genoways and M. R. Dawson (eds.), Contributions in Quaternary Vertebrate Paleontology: A Volume in Memorial to John E. Guilday, pp. 405\u2013431. Carnegie Museum of Natural History Special Publication No. 8, Pittsburgh."
+            },
+            {
+              "key": "6_CR68",
+              "doi-asserted-by": "crossref",
+              "first-page": "223",
+              "DOI": "10.1017/S0094837300005972",
+              "volume": "4",
+              "author": "JJ Sepkoski Jr",
+              "year": "1978",
+              "unstructured": "Sepkoski, J. J., Jr. 1978. A kinetic model of Phanerozoic taxonomic diversity. I. Analysis of marine orders. Paleobiology 4: 223\u2013251.",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "6_CR69",
+              "doi-asserted-by": "publisher",
+              "first-page": "435",
+              "DOI": "10.1038/293435a0",
+              "volume": "293",
+              "author": "JJ Sepkoski Jr.",
+              "year": "1981",
+              "unstructured": "Sepkoski, J. J., Jr., Bambach, R. K., Raup, D. M., and Valentine, J. W. 1981. Phanerozoic marine diversity and the fossil record. Nature 293: 435\u2013437.",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "6_CR70",
+              "first-page": "242",
+              "volume-title": "Paleoclimate and Evolution, with Emphasis on Human Origins",
+              "author": "NJ Shackleton",
+              "year": "1995",
+              "unstructured": "Shackleton, N. J. 1995. New data on the evolution of Pliocene climatic variability, in: E. S. Vrba, G. H. Denton, T. C. Partridge, and L. H. Burckle (eds.), Paleoclimate and Evolution, with Emphasis on Human Origins, pp. 242\u2013248. Yale University Press, New Haven."
+            },
+            {
+              "key": "6_CR71",
+              "doi-asserted-by": "publisher",
+              "first-page": "1834",
+              "DOI": "10.1126/science.276.5320.1834",
+              "volume": "276",
+              "author": "JC Stager",
+              "year": "1997",
+              "unstructured": "Stager, J. C., and Mayewski, R A. 1997. Abrupt early to mid-Holocene climatic transition registered at the equator and the poles. Science 276: 1834\u20131836.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "6_CR72",
+              "doi-asserted-by": "publisher",
+              "first-page": "177",
+              "DOI": "10.1016/0305-4403(89)90065-4",
+              "volume": "16",
+              "author": "DW Steadman",
+              "year": "1989",
+              "unstructured": "Steadman, D. W. 1989. Extinctions of birds in eastern Polynesia: a review of the records and comparisons with other Pacific Island Groups. J. Archaeol. Sci. 16: 177\u2013205.",
+              "journal-title": "J. Archaeol. Sci."
+            },
+            {
+              "key": "6_CR73",
+              "doi-asserted-by": "publisher",
+              "first-page": "1675",
+              "DOI": "10.1130/0016-7606(1960)71[1675:SAPOAL]2.0.CO;2",
+              "volume": "71",
+              "author": "JJ Stephens",
+              "year": "1960",
+              "unstructured": "Stephens, J. J. 1960. Stratigraphy and paleontology of a Late Pleistocene basin, Harper County, Oklahoma. Bull. Geol. Soc. Am. 71: 1675\u20131702.",
+              "journal-title": "Bull. Geol. Soc. Am."
+            },
+            {
+              "key": "6_CR74",
+              "first-page": "375",
+              "volume-title": "Current Mammalogy",
+              "author": "RK Stucky",
+              "year": "1990",
+              "unstructured": "Stucky, R. K. 1990. Evolution of land mammal diversity in North America during the Cenozoic, in: H. H. Genoways (ed.), Current Mammalogy, pp. 375\u2013432. Plenum Press, New York."
+            },
+            {
+              "key": "6_CR75",
+              "doi-asserted-by": "publisher",
+              "first-page": "825",
+              "DOI": "10.1126/science.278.5339.825",
+              "volume": "278",
+              "author": "KC Taylor",
+              "year": "1997",
+              "unstructured": "Taylor, K. C., Mayewski, P. A., Alley, R. B., Brook, E. J., Gow, A. J., Grootes, R. M., Meese, D. A., Saltzman, E. S., Severinghaus, J. P., Twickler, M. S., White, J. W. C., Whitlow, S., and Zielinski, G. A. 1997. The Holocene-Younger Dryas transition recorded at Summit, Greenland. Science 278: 825\u2013827.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "6_CR76",
+              "doi-asserted-by": "publisher",
+              "first-page": "6873",
+              "DOI": "10.1029/90JB00602",
+              "volume": "96",
+              "author": "JW Valentine",
+              "year": "1991",
+              "unstructured": "Valentine, J. W., and Jablonski, D. 1991. Biotic effects of sea level change: the Pleistocene test. J. Geophys. Res. 96: 6873\u20136878.",
+              "journal-title": "J. Geophys. Res."
+            },
+            {
+              "key": "6_CR77",
+              "first-page": "341",
+              "volume-title": "Species Diversity in Ecological Communities: Historical and Geographical Perspectives",
+              "author": "JW Valentine",
+              "year": "1993",
+              "unstructured": "Valentine, J. W., and Jablonski, D. 1993. Fossil communities: compositional variation at many time scales, in: R. E. Ricklefs and D. Schluter (eds.), Species Diversity in Ecological Communities: Historical and Geographical Perspectives pp. 341\u2013349. University of Chicago Press, Chicago."
+            },
+            {
+              "key": "6_CR78",
+              "first-page": "330",
+              "volume-title": "Species Diversity in Ecological Communities: Historical and Geographical Perspectives",
+              "author": "B Valkenburgh",
+              "year": "1993",
+              "unstructured": "Van Valkenburgh, B., and Janis, C. M. 1993. Historical diversity patterns in North American large herbivores and carnivores, in: R. E. Ricklefs and D. Schluter (eds.), Species Diversity in Ecological Communities: Historical and Geographical Perspectives, pp. 330\u2013340. University of Chicago Press, Chicago."
+            },
+            {
+              "key": "6_CR79",
+              "first-page": "373",
+              "volume-title": "Quaternary Extinctions: A Prehistoric Revolution, pp. 189-210. University of Arizona Press, Tucson. Wilf, P. 1997. When are leaves good thermometers? A new case for leaf margin analysis. Paleobiology",
+              "author": "SD Webb",
+              "year": "1984",
+              "unstructured": "Webb, S. D. 1984. Ten million years of mammal extinction in North America, in: R S. Martin and R. G. Klein (eds.), Quaternary Extinctions: A Prehistoric Revolution, pp. 189\u2013210. University of Arizona Press, Tucson. Wilf, P. 1997. When are leaves good thermometers? A new case for leaf margin analysis. Paleobiology 23: 373\u2013390."
+            },
+            {
+              "key": "6_CR80",
+              "doi-asserted-by": "publisher",
+              "first-page": "203",
+              "DOI": "10.1130/0091-7613(1998)026<0203:UFLAPI>2.3.CO;2",
+              "volume": "26",
+              "author": "R Wilf",
+              "year": "1998",
+              "unstructured": "Wilf, R, Wing, S. L., Greenwood, D. R., and Greenwood, C. L. 1998. Using fossil leaves as paleoprecipitation indicators: an Eocene example. Geology 26: 203\u2013206.",
+              "journal-title": "Geology"
+            },
+            {
+              "key": "6_CR81",
+              "volume-title": "Mammal Species of the World",
+              "author": "DE Wilson",
+              "year": "1993",
+              "unstructured": "Wilson, D. E., and Reeder, D. M. 1993. Mammal Species of the World. Smithsonian Institution Press, Washington, D.C."
+            },
+            {
+              "key": "6_CR82",
+              "doi-asserted-by": "publisher",
+              "first-page": "117",
+              "DOI": "10.1016/0031-0182(94)00109-L",
+              "volume": "115",
+              "author": "SL Wing",
+              "year": "1995",
+              "unstructured": "Wing, S. L., Alroy, J., and Hickey, L. J. 1995. Plant and mammal diversity in the Paleocene to early Eocene of the Bighorn Basin. Palaeogeogr. Palaeoclimatol. Palaeoecol. 115: 117\u2013155.",
+              "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+            },
+            {
+              "key": "6_CR83",
+              "first-page": "694",
+              "volume": "66",
+              "author": "JA Wolfe",
+              "year": "1978",
+              "unstructured": "Wolfe, J. A. 1978. A paleobotanical interpretation of Tertiary climates in the Northern Hemisphere. Am. Sci. 66: 694\u2013703.",
+              "journal-title": "Am. Sci."
+            },
+            {
+              "key": "6_CR84",
+              "doi-asserted-by": "crossref",
+              "first-page": "421",
+              "DOI": "10.1515/9781400862924.421",
+              "volume-title": "Eocene-Oligocene Climatic and Biotic Evolution",
+              "author": "JA Wolfe",
+              "year": "1992",
+              "unstructured": "Wolfe, J. A. 1992. Climatic, floristic, and vegetational changes near the Eocene/Oligocene boundary in North America, in: D. R. Prothero and W. A. Berggren (eds.), Eocene-Oligocene Climatic and Biotic Evolution, pp. 421\u2013436. Princeton University Press, Princeton N.J."
+            },
+            {
+              "key": "6_CR85",
+              "doi-asserted-by": "crossref",
+              "first-page": "1672",
+              "DOI": "10.1126/science.276.5319.1672",
+              "volume": "276",
+              "author": "J. A. Wolfe",
+              "year": "1997",
+              "unstructured": "Wolfe, J. A., Schorr\u201c, H. E., Forest, C. E., and Molnar, P. 1997. Paleobotanical evidence for high altitudes in Nevada during the Miocene. Science 276: 1672\u20131675.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "6_CR86",
+              "first-page": "1",
+              "volume": "52",
+              "author": "HE Wood 2nd",
+              "year": "1941",
+              "unstructured": "Wood, H. E., 2nd, Chaney, R. W., Clark, J., Colbert, E. H., Jepsen, G. L., Reeside, J. B., Jr., and Stock, C. 1941. Nomenclature and correlation of the North American continental Tertiary. Bull. Geol. Soc. Am. 52: 1\u201348.",
+              "journal-title": "Am"
+            },
+            {
+              "key": "6_CR87",
+              "volume-title": "Cenozoic Mammals of North America: Geochronology and Biostratigraphy",
+              "author": "MO Woodburne",
+              "year": "1987",
+              "unstructured": "Woodburne, M. O. 1987. Cenozoic Mammals of North America: Geochronology and Biostratigraphy. University of California Press, Berkeley."
+            },
+            {
+              "key": "6_CR88",
+              "unstructured": "Woodburne, M. 0., and Swisher, C. C., III. 1995. Land mammal high resolution geochronology, intercontinental overland dispersals, sea-level, climate, and vicariance, in: W. A. Berggren, D. V. Kent, and J. Hardenbol (eds.), Geochronology, lime Scales and Global Stratigraphie Correlations: A Unified Temporal Framework for an Historical Geology, pp. 335\u2013365. SEPM ( Society for Sedimentary Geology ), Special Publication 54."
+            },
+            {
+              "key": "6_CR89",
+              "doi-asserted-by": "publisher",
+              "first-page": "353",
+              "DOI": "10.1029/93PA03266",
+              "volume": "9",
+              "author": "JC Zachos",
+              "year": "1994",
+              "unstructured": "Zachos, J. C., Stott, L. D., and Lohmann, K. C. 1994. Evolution of early Cenozoic marine temperatures. Paleoceanography 9: 353\u2013387.",
+              "journal-title": "Paleoceanography"
+            }
+          ],
+          "container-title": [
+            "Extinctions in Near Time"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4757-5202-1_6",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                5
+              ]
+            ],
+            "date-time": "2024-05-05T08:38:28Z",
+            "timestamp": 1714898308000
+          },
+          "score": 39.253582,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-1-4757-5202-1_6"
+            }
+          },
+          "subtitle": [
+            "Large-Scale Analyses of Spatial Patterns, Extinction Rates, and Size Distributions"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                1999
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781441933157",
+            "9781475752021"
+          ],
+          "references-count": 89,
+          "URL": "https://doi.org/10.1007/978-1-4757-5202-1_6",
+          "published": {
+            "date-parts": [
+              [
+                1999
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

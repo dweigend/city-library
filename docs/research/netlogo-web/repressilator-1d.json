@@ -1,0 +1,112 @@
+{
+  "slug": "repressilator-1d",
+  "name": "Repressilator 1D",
+  "catalogPath": "Sample Models/Biology/Repressilator 1D",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Repressilator%201D.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can a ring of inhibitory interactions generate repeated changes in gene expression? NetLogo Repressilator 1D represents DNA, mRNA, and regulatory proteins in a simplified three-component repression cycle. The original synthetic oscillator [1] supplies the direct scientific inspiration. Stochastic reaction methods [2] and later robust oscillator experiments [3] clarify the role of molecular noise and circuit design. The animation uses one-dimensional movement and selected production, binding, and degradation rules; it should not automatically be treated as an exact chemical master-equation implementation. Oscillations illustrate feedback with delay under these assumptions. They do not prove quantitative agreement with the original biological construct, establish parameter robustness, or reproduce every measured cellular time scale.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Repressilator%201D.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Repressilator%201D.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 e222752e0f629c0ae1f6df4f6858fcecb5629868ffd6a52ed602e172084f1315",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/repressilator-1d.nlogox",
+    "infoFile": "evidence/biology/repressilator-1d-info.txt",
+    "originalModelCitation": "* Brandes, A. and Wilensky, U. (2020).  NetLogo Repressilator 1D model.  http://ccl.northwestern.edu/netlogo/models/Repressilator1D.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "elowitz",
+      "authors": [
+        "Michael B. Elowitz",
+        "Stanislas Leibler"
+      ],
+      "title": "A synthetic oscillatory network of transcriptional regulators",
+      "year": 2000,
+      "venue": "Nature",
+      "doi": "10.1038/35002125",
+      "url": "https://doi.org/10.1038/35002125",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=A+synthetic+oscillatory+network+of+transcriptional+regulators+Elowitz+Leibler+2000&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/elowitz-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F35002125%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/elowitz-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "403",
+      "issue": "6767",
+      "pages": "335-338",
+      "relevance": "The original synthetic repressilator is the explicit scientific reference in the model Info."
+    },
+    {
+      "id": "gillespie",
+      "authors": [
+        "Daniel T. Gillespie"
+      ],
+      "title": "Exact stochastic simulation of coupled chemical reactions",
+      "year": 1977,
+      "venue": "The Journal of Physical Chemistry",
+      "doi": "10.1021/j100540a008",
+      "url": "https://doi.org/10.1021/j100540a008",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Exact+stochastic+simulation+of+coupled+chemical+reactions+Gillespie+1977&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/gillespie-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "81",
+      "issue": "25",
+      "pages": "2340-2361",
+      "relevance": "Provides the stochastic reaction-simulation framework for comparing random molecular events with formal chemical kinetics."
+    },
+    {
+      "id": "potvin",
+      "authors": [
+        "Laurent Potvin-Trottier",
+        "Nathan D. Lord",
+        "Glenn Vinnicombe",
+        "Johan Paulsson"
+      ],
+      "title": "Synchronous long-term oscillations in a synthetic gene circuit",
+      "year": 2016,
+      "venue": "Nature",
+      "doi": "10.1038/nature19841",
+      "url": "https://doi.org/10.1038/nature19841",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Synchronous+long-term+oscillations+in+a+synthetic+gene+circuit+Potvin-Trottier+2016&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/potvin-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature19841%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/potvin-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "538",
+      "issue": "7626",
+      "pages": "514-517",
+      "relevance": "Later synthetic-circuit research tests and improves oscillator reliability beyond the original demonstration."
+    }
+  ],
+  "gaps": []
+}

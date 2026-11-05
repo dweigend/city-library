@@ -1,0 +1,1473 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Stem+cells+cancer+and+cancer+stem+cells+Reya+2001&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 4339492,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T12:58:26Z",
+            "timestamp": 1793797106347,
+            "version": "4.6.1"
+          },
+          "reference-count": 85,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "6859",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2001,
+                    11,
+                    1
+                  ]
+                ],
+                "date-time": "2001-11-01T00:00:00Z",
+                "timestamp": 1004572800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2001,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1038/35102167",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                26
+              ]
+            ],
+            "date-time": "2002-07-26T04:31:14Z",
+            "timestamp": 1027657874000
+          },
+          "page": "105-111",
+          "source": "Crossref",
+          "is-referenced-by-count": 7875,
+          "title": [
+            "Stem cells, cancer, and cancer stem cells"
+          ],
+          "prefix": "10.1038",
+          "volume": "414",
+          "author": [
+            {
+              "given": "Tannishtha",
+              "family": "Reya",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Sean J.",
+              "family": "Morrison",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael F.",
+              "family": "Clarke",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Irving L.",
+              "family": "Weissman",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BF35102167_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "58",
+              "DOI": "10.1126/science.2898810",
+              "volume": "241",
+              "author": "GJ Spangrude",
+              "year": "1988",
+              "unstructured": "Spangrude, G. J., Heimfeld, S. & Weissman, I. L. Purification and characterization of mouse hematopoietic stem cells. Science 241, 58\u201362 (1988).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "661",
+              "DOI": "10.1016/1074-7613(94)90037-X",
+              "volume": "1",
+              "author": "SJ Morrison",
+              "year": "1994",
+              "unstructured": "Morrison, S. J. & Weissman, I. L. The long-term repopulating subset of hematopoietic stem cells is deterministic and isolatable by phenotype. Immunity 1, 661\u2013673 (1994).",
+              "journal-title": "Immunity"
+            },
+            {
+              "key": "BF35102167_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "2804",
+              "DOI": "10.1073/pnas.89.7.2804",
+              "volume": "89",
+              "author": "CM Baum",
+              "year": "1992",
+              "unstructured": "Baum, C. M., Weissman, I. L., Tsukamoto, A. S., Buckle, A. M. & Peault, B. Isolation of a candidate human hematopoietic stem-cell population. Proc. Natl Acad. Sci. USA 89, 2804\u20132808 (1992).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BF35102167_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "242",
+              "DOI": "10.1126/science.273.5272.242",
+              "volume": "273",
+              "author": "M Osawa",
+              "year": "1996",
+              "unstructured": "Osawa, M., Hanada, K., Hamada, H. & Nakauchi, H. Long-term lymphohematopoietic reconstitution by a single CD34-low/negative hematopoietic stem cell. Science 273, 242\u2013245 (1996).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "15",
+              "DOI": "10.1093/oso/9780195124507.003.0002",
+              "volume-title": "Developmental Biology of Hematopoiesis",
+              "author": "K Akashi",
+              "year": "2001",
+              "unstructured": "Akashi, K. & Weissman, I. L. in Developmental Biology of Hematopoiesis (ed. Zon, L. I.) 15\u201334 (Oxford Univ. Press, New York, 2001)."
+            },
+            {
+              "key": "BF35102167_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "1168",
+              "DOI": "10.1126/science.284.5417.1168",
+              "volume": "284",
+              "author": "BE Petersen",
+              "year": "1999",
+              "unstructured": "Petersen, B. E. et al. Bone marrow as a potential source of hepatic oval cells. Science 284, 1168\u20131170 (1999).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "1775",
+              "DOI": "10.1126/science.290.5497.1775",
+              "volume": "290",
+              "author": "TR Brazelton",
+              "year": "2000",
+              "unstructured": "Brazelton, T. R., Rossi, F. M. V., Keshet, G. I. & Blau, H. M. From marrow to brain: expression of neuronal phenotypes in adult mice. Science 290, 1775\u20131779 (2000).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "1779",
+              "DOI": "10.1126/science.290.5497.1779",
+              "volume": "290",
+              "author": "E Mezey",
+              "year": "2000",
+              "unstructured": "Mezey, E., Chandross, K. J., Harta, G., Maki, R. A. & McKercher, S. R. Turning blood into brain: cells bearing neuronal antigens generated in vivo from bone marrow. Science 290, 1779\u20131782 (2000).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "1229",
+              "DOI": "10.1038/81326",
+              "volume": "6",
+              "author": "E Lagasse",
+              "year": "2000",
+              "unstructured": "Lagasse, E. et al. Purified hematopoietic stem cells can differentiate to hepatocytes in vivo. Nature Med. 6, 1229\u20131234 (2000).",
+              "journal-title": "Nature Med."
+            },
+            {
+              "key": "BF35102167_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "369",
+              "DOI": "10.1016/S0092-8674(01)00328-2",
+              "volume": "105",
+              "author": "DS Krause",
+              "year": "2001",
+              "unstructured": "Krause, D. S. et al. Multi-organ, multi-lineage engraftment by a single bone marrow derived stem cell. Cell 105, 369\u2013377 (2001).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "1929",
+              "DOI": "10.1242/dev.124.10.1929",
+              "volume": "124",
+              "author": "SJ Morrison",
+              "year": "1997",
+              "unstructured": "Morrison, S. J., Wandycz, A. M., Hemmati, H. D., Wright, D. E. & Weissman, I. L. Identification of a lineage of multipotent hematopoietic progenitors. Development 124, 1929\u20131939 (1997).",
+              "journal-title": "Development"
+            },
+            {
+              "key": "BF35102167_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "1442",
+              "DOI": "10.1126/science.287.5457.1442",
+              "volume": "287",
+              "author": "IL Weissman",
+              "year": "2000",
+              "unstructured": "Weissman, I. L. Translating stem and progenitor cell biology to the clinic: barriers and opportunities. Science 287, 1442\u20131446 (2000).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "13648",
+              "DOI": "10.1073/pnas.94.25.13648",
+              "volume": "94",
+              "author": "CL Miller",
+              "year": "1997",
+              "unstructured": "Miller, C. L. & Eaves, C. J. Expansion in vitro of adult murine hematopoietic stem cells with transplantable lympho-myeloid reconstituting ability. Proc. Natl Acad. Sci. USA 94, 13648\u201313653 (1997).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BF35102167_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "2272",
+              "DOI": "10.1182/blood.V91.7.2272",
+              "volume": "91",
+              "author": "J Domen",
+              "year": "1998",
+              "unstructured": "Domen, J., Gandy, K. L. & Weissman, I. L. Systemic overexpression of BCL-2 in the hematopoietic system protects transgenic mice from the consequences of lethal irradiation. Blood 91, 2272\u20132282 (1998).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BF35102167_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "1707",
+              "DOI": "10.1084/jem.192.12.1707",
+              "volume": "192",
+              "author": "J Domen",
+              "year": "2000",
+              "unstructured": "Domen, J. & Weissman, I. L. Hematopoietic stem cells need two signals to prevent apoptosis; BCL-2 can provide one of these, Kitl/c-Kit signaling the other. J. Exp. Med. 192, 1707\u20131718 (2000).",
+              "journal-title": "J. Exp. Med."
+            },
+            {
+              "key": "BF35102167_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "349",
+              "DOI": "10.1038/35077219",
+              "volume": "411",
+              "author": "J Taipale",
+              "year": "2001",
+              "unstructured": "Taipale, J. & Beachy, P. A. The Hedgehog and Wnt signaling pathways in cancer. Nature 411, 349\u2013354 (2001).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF35102167_CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "1278",
+              "DOI": "10.1038/81390",
+              "volume": "6",
+              "author": "B Varnum-Finney",
+              "year": "2000",
+              "unstructured": "Varnum-Finney, B. et al. Pluripotent, cytokine-dependent, hematopoietic stem cells are immortalized by constitutive Notch1 signaling. Nature Med. 6, 1278\u20131281 (2000).",
+              "journal-title": "Nature Med."
+            },
+            {
+              "key": "BF35102167_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1365",
+              "DOI": "10.1084/jem.192.9.1365",
+              "volume": "192",
+              "author": "FN Karanu",
+              "year": "2000",
+              "unstructured": "Karanu, F. N. et al. The Notch ligand Jagged-1 represents a novel growth factor of human hematopoietic stem cells. J. Exp. Med. 192, 1365\u20131372 (2000).",
+              "journal-title": "J. Exp. Med."
+            },
+            {
+              "key": "BF35102167_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "172",
+              "DOI": "10.1038/84282",
+              "volume": "2",
+              "author": "G Bhardwaj",
+              "year": "2001",
+              "unstructured": "Bhardwaj, G. et al. Sonic hedgehog induces the proliferation of primitive human hematopoietic cells via BMP regulation. Nature Immunol. 2, 172\u2013180 (2001).",
+              "journal-title": "Nature Immunol."
+            },
+            {
+              "key": "BF35102167_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "99",
+              "DOI": "10.1016/0092-8674(82)90409-3",
+              "volume": "31",
+              "author": "R Nusse",
+              "year": "1982",
+              "unstructured": "Nusse, R. & Varmus, H. E. Many tumors induced by the mouse mammary tumor virus contain a provirus integrated in the same region of the host genome. Cell 31, 99\u2013109 (1982).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "3286",
+              "DOI": "10.1101/gad.11.24.3286",
+              "volume": "11",
+              "author": "KM Cadigan",
+              "year": "1997",
+              "unstructured": "Cadigan, K. M. & Nusse, R. Wnt signaling: a common theme in animal development. Genes Dev. 11, 3286\u20133305 (1997).",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "BF35102167_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "15",
+              "DOI": "10.1016/S1074-7613(00)00004-2",
+              "volume": "13",
+              "author": "T Reya",
+              "year": "2000",
+              "unstructured": "Reya, T. et al. Wnt signaling regulates B lymphocyte proliferation through a LEF-1 dependent mechanism. Immunity 13, 15\u201324 (2000).",
+              "journal-title": "Immunity"
+            },
+            {
+              "key": "BF35102167_CR23",
+              "doi-asserted-by": "crossref",
+              "first-page": "3624",
+              "DOI": "10.1182/blood.V89.10.3624",
+              "volume": "89",
+              "author": "TW Austin",
+              "year": "1997",
+              "unstructured": "Austin, T. W., Solar, G. P., Ziegler, F. C., Liem, L. & Matthews, W. A role for the Wnt gene family in hematopoiesis: expansion of multilineage progenitor cells. Blood 89, 3624\u20133635 (1997).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BF35102167_CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "3189",
+              "DOI": "10.1182/blood.V92.9.3189",
+              "volume": "92",
+              "author": "DJ Van Den Berg",
+              "year": "1998",
+              "unstructured": "Van Den Berg, D. J., Sharma, A. K., Bruno, E. & Hoffman, R. Role of members of the Wnt gene family in human hematopoiesis. Blood 92, 3189\u20133202 (1998).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BF35102167_CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "2285",
+              "DOI": "10.1242/dev.126.10.2285",
+              "volume": "126",
+              "author": "AJ Zhu",
+              "year": "1999",
+              "unstructured": "Zhu, A. J. & Watt, F. M. \u03b2-catenin signalling modulates proliferative potential of human epidermal keratinocytes independently of intercellular adhesion. Development 126, 2285\u20132298 (1999).",
+              "journal-title": "Development"
+            },
+            {
+              "key": "BF35102167_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "605",
+              "DOI": "10.1016/S0092-8674(00)81631-1",
+              "volume": "95",
+              "author": "U Gat",
+              "year": "1998",
+              "unstructured": "Gat, U., DasGupta, R., Degenstein, L. & Fuchs, E. De novo hair follicle morphogenesis and hair tumors in mice expressing a truncated \u03b2-catenin in skin. Cell 95, 605\u2013614 (1998).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1038/1270",
+              "volume": "19",
+              "author": "V Korinek",
+              "year": "1998",
+              "unstructured": "Korinek, V. et al. Depletion of epithelia stem-cell compartments in the small intestine of mice lacking Tcf-4. Nature Genet. 19, 1\u20135 (1998).",
+              "journal-title": "Nature Genet."
+            },
+            {
+              "key": "BF35102167_CR28",
+              "first-page": "6",
+              "volume": "70",
+              "author": "S Sell",
+              "year": "1994",
+              "unstructured": "Sell, S. & Pierce, G. B. Maturation arrest of stem cell differentiation is a common pathway for the cellular origin of teratocarcinomas and epithelial cancers. Lab. Invest. 70, 6\u201322 (1994).",
+              "journal-title": "Lab. Invest."
+            },
+            {
+              "key": "BF35102167_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "337",
+              "DOI": "10.1016/0092-8674(91)90643-D",
+              "volume": "64",
+              "author": "C Sawyers",
+              "year": "1991",
+              "unstructured": "Sawyers, C., Denny, C. & Witte, O. Leukemia and the disruption of normal hematopoiesis. Cell 64, 337\u2013350 (1991).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "661",
+              "DOI": "10.1016/S0092-8674(00)80453-5",
+              "volume": "91",
+              "author": "M Kondo",
+              "year": "1997",
+              "unstructured": "Kondo, M., Weissman, I. L. & Akashi, K. Identification of clonogenic common lymphoid progenitors in mouse bone marrow. Cell 91, 661\u2013672 (1997).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "730",
+              "DOI": "10.1038/nm0797-730",
+              "volume": "3",
+              "author": "D Bonnet",
+              "year": "1997",
+              "unstructured": "Bonnet, D. & Dick, J. E. Human acute myeloid leukemia is organized as a hierarchy that originates from a primitive hematopoietic cell. Nature Med. 3, 730\u2013737 (1997).",
+              "journal-title": "Nature Med."
+            },
+            {
+              "key": "BF35102167_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "7521",
+              "DOI": "10.1073/pnas.97.13.7521",
+              "volume": "97",
+              "author": "T Miyamoto",
+              "year": "2000",
+              "unstructured": "Miyamoto, T., Weissman, I. L. & Akashi, K. AML1/ETO-expressing nonleukemic stem cells in acute myelogenous leukemia with 8;21 chromosomal translocation. Proc. Natl Acad. Sci. USA 97, 7521\u20137526 (2000).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BF35102167_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "3925",
+              "DOI": "10.1182/blood.V97.12.3925",
+              "volume": "97",
+              "author": "AA George",
+              "year": "2001",
+              "unstructured": "George, A. A. et al. Detection of leukemic cells in the CD34+CD38\u2212 bone marrow progenitor population in children with acute lymphoblastic leukemia. Blood 97, 3925\u20133930 (2001).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BF35102167_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "3",
+              "DOI": "10.1097/00001622-200101000-00002",
+              "volume": "13",
+              "author": "MJ Mauro",
+              "year": "2001",
+              "unstructured": "Mauro, M. J. & Druker, B. J. Chronic myelogenous leukemia. Curr. Opin. Oncol. 13, 3\u20137 (2001).",
+              "journal-title": "Curr. Opin. Oncol."
+            },
+            {
+              "key": "BF35102167_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "1047",
+              "DOI": "10.1084/jem.179.3.1047",
+              "volume": "179",
+              "author": "E Lagasse",
+              "year": "1994",
+              "unstructured": "Lagasse, E. & Weissman, I. L. bcl-2 inhibits apoptosis of neutrophils but not their engulfment by macrophages. J. Exp. Med. 179, 1047\u20131052 (1994).",
+              "journal-title": "J. Exp. Med."
+            },
+            {
+              "key": "BF35102167_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "47",
+              "DOI": "10.1016/S1074-7613(00)80587-7",
+              "volume": "9",
+              "author": "D Traver",
+              "year": "1998",
+              "unstructured": "Traver, D., Akashi, K., Weissman, I. L. & Lagasse, E. Mice defective in two apoptosis pathways in the myeloid lineage develop acute myeloblastic leukemia. Immunity 9, 47\u201357 (1998).",
+              "journal-title": "Immunity"
+            },
+            {
+              "key": "BF35102167_CR37",
+              "doi-asserted-by": "crossref",
+              "first-page": "1837",
+              "DOI": "10.1101/gad.14.15.1837",
+              "volume": "14",
+              "author": "P Polakis",
+              "year": "2000",
+              "unstructured": "Polakis, P. Wnt signaling and cancer. Genes Dev. 14, 1837\u20131851 (2000).",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "BF35102167_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "619",
+              "DOI": "10.1016/0092-8674(88)90220-6",
+              "volume": "55",
+              "author": "A Tsukamoto",
+              "year": "1988",
+              "unstructured": "Tsukamoto, A., Grosschedl, R., Guzman, R., Parslow, T. & Varmus, H. E. Expression of the int-1 gene in transgenic mice is associated with mammary gland hyperplasia and adenocarcinomas in male and female mice. Cell 55, 619\u2013625 (1988).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR39",
+              "first-page": "135",
+              "volume-title": "Neoplastic Transformation: Mechanisms and Consequences",
+              "author": "IL Weissman",
+              "year": "1977",
+              "unstructured": "Weissman, I. L. & Baird, S. in Neoplastic Transformation: Mechanisms and Consequences (ed. Korprowski, H.) 135\u2013152 (Dahlem Conferenzen, Berlin, 1977)."
+            },
+            {
+              "key": "BF35102167_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "65",
+              "DOI": "10.1016/0092-8674(79)90295-2",
+              "volume": "17",
+              "author": "MS McGrath",
+              "year": "1979",
+              "unstructured": "McGrath, M. S. & Weissman, I. L. AKR leukemogenesis: identification and biological significance of thymic lymphoma receptors for AKR retroviruses. Cell 17, 65\u201375 (1979).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "259",
+              "DOI": "10.1038/285259a0",
+              "volume": "285",
+              "author": "MS McGrath",
+              "year": "1980",
+              "unstructured": "McGrath, M. S., Pillemer, E. & Weissman, I. L. Murine leukaemogenesis: monoclonal antibodies to T-cell determinants arrest T-lymphoma cell proliferation. Nature 285, 259\u2013261 (1980).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF35102167_CR42",
+              "unstructured": "Quinn, E. R. et al. The B cell receptor of a hepatitis C virus associated non-Hodgkin's lymphoma binds the viral E-2 envelope protein, implicating immunoglobulin activation in lymphomagenesis. Blood (in the press)."
+            },
+            {
+              "key": "BF35102167_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "143",
+              "DOI": "10.1016/0092-8674(87)90764-1",
+              "volume": "49",
+              "author": "HC O'Neill",
+              "year": "1987",
+              "unstructured": "O'Neill, H. C., McGrath, M. S., Allison, J. P. & Weissman, I. L. A subset of T cell receptors associated with L3T4 molecules mediates C6VL leukemia cell binding of its cognate retrovirus. Cell 49, 143\u2013151 (1987).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "287",
+              "DOI": "10.1016/S0092-8674(00)81867-X",
+              "volume": "88",
+              "author": "SJ Morrison",
+              "year": "1997",
+              "unstructured": "Morrison, S. J., Shah, N. M. & Anderson, D. J. Regulatory mechanisms in stem cell biology. Cell 88, 287\u2013298 (1997).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "363",
+              "DOI": "10.1016/B978-012563455-7/50013-1",
+              "volume-title": "Stem Cells",
+              "author": "J Kummermehr",
+              "year": "1997",
+              "unstructured": "Kummermehr, J. & Trott, K.-R. in Stem Cells (ed. Potten, C. S.) 363\u2013399 (Academic, New York, 1997)."
+            },
+            {
+              "key": "BF35102167_CR46",
+              "doi-asserted-by": "publisher",
+              "first-page": "893",
+              "DOI": "10.1126/science.887927",
+              "volume": "197",
+              "author": "IJ Fidler",
+              "year": "1977",
+              "unstructured": "Fidler, I. J. & Kripke, M. L. Metastasis results from preexisting variant cells within a malignant tumor. Science 197, 893\u2013895 (1977).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR47",
+              "doi-asserted-by": "publisher",
+              "first-page": "998",
+              "DOI": "10.1126/science.7112116",
+              "volume": "217",
+              "author": "IJ Fidler",
+              "year": "1982",
+              "unstructured": "Fidler, I. J. & Hart, I. R. Biological diversity in metastatic neoplasms: origins and implications. Science 217, 998\u20131003 (1982).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR48",
+              "first-page": "2259",
+              "volume": "44",
+              "author": "GH Heppner",
+              "year": "1984",
+              "unstructured": "Heppner, G. H. Tumor heterogeneity. Cancer Res. 44, 2259\u20132265 (1984).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "BF35102167_CR49",
+              "first-page": "2203",
+              "volume": "46",
+              "author": "PC Nowell",
+              "year": "1986",
+              "unstructured": "Nowell, P. C. Mechanisms of tumor progression. Cancer Res. 46, 2203\u20132207 (1986).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "BF35102167_CR50",
+              "first-page": "1497",
+              "volume": "132",
+              "author": "PC Nowell",
+              "year": "1960",
+              "unstructured": "Nowell, P. C. A minute chromosome in human granulocytic leukemia. Science 132, 1497 (1960).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR51",
+              "first-page": "283",
+              "volume": "458",
+              "author": "PJ Fialkow",
+              "year": "1976",
+              "unstructured": "Fialkow, P. J. Clonal origin of human tumors. Biochim. Biophys. Acta 458, 283\u2013321 (1976).",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "BF35102167_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "193",
+              "DOI": "10.1126/science.2889267",
+              "volume": "238",
+              "author": "ER Fearon",
+              "year": "1987",
+              "unstructured": "Fearon, E. R., Hamilton, S. R. & Vogelstein, B. Clonal analysis of human colorectal tumors. Science 238, 193\u2013197 (1987).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR53",
+              "first-page": "411",
+              "volume": "46",
+              "author": "CH Park",
+              "year": "1971",
+              "unstructured": "Park, C. H., Bergsagel, D. E. & McCulloch, E. A. Mouse myeloma tumor stem cells: a primary cell culture assay. J. Natl Cancer Inst. 46, 411\u2013422 (1971).",
+              "journal-title": "J. Natl Cancer Inst."
+            },
+            {
+              "key": "BF35102167_CR54",
+              "doi-asserted-by": "publisher",
+              "first-page": "79",
+              "DOI": "10.1038/199079a0",
+              "volume": "199",
+              "author": "WR Bruce",
+              "year": "1963",
+              "unstructured": "Bruce, W. R. & Gaag, H. v. d. A quantitative assay for the number of murine lymphoma cells capable of proliferation in vivo. Nature 199, 79\u201380 (1963).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF35102167_CR55",
+              "first-page": "415",
+              "volume": "51",
+              "author": "I Wodinsky",
+              "year": "1967",
+              "unstructured": "Wodinsky, I., Swiniarski, J. & Kensler, C. J. Spleen colony studies of leukemia L1210. I. Growth kinetics of lymphocytic L1210 cells in vivo as determined by spleen colony assay. Cancer Chemother. Rep. 51, 415\u2013421 (1967).",
+              "journal-title": "Cancer Chemother. Rep."
+            },
+            {
+              "key": "BF35102167_CR56",
+              "first-page": "2187",
+              "volume": "28",
+              "author": "DE Bergsagel",
+              "year": "1968",
+              "unstructured": "Bergsagel, D. E. & Valeriote, F. A. Growth characteristics of a mouse plasma cell tumor. Cancer Res. 28, 2187\u20132196 (1968).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "BF35102167_CR57",
+              "doi-asserted-by": "publisher",
+              "first-page": "730",
+              "DOI": "10.1038/nm0797-730",
+              "volume": "3",
+              "author": "D Bonnet",
+              "year": "1997",
+              "unstructured": "Bonnet, D. & Dick, J. E. Human acute myeloid leukemia is organized as a hierarchy that originates from a primitive hematopoietic cell. Nature Med. 3, 730\u2013737 (1997).",
+              "journal-title": "Nature Med."
+            },
+            {
+              "key": "BF35102167_CR58",
+              "doi-asserted-by": "publisher",
+              "first-page": "971",
+              "DOI": "10.1002/1097-0142(196109/10)14:5<971::AID-CNCR2820140510>3.0.CO;2-O",
+              "volume": "14",
+              "author": "CM Southam",
+              "year": "1961",
+              "unstructured": "Southam, C. M. & Brunschwig, A. Quantitative studies of autotransplantation of human cancer. Cancer 14, 971\u2013978 (1961).",
+              "journal-title": "Cancer"
+            },
+            {
+              "key": "BF35102167_CR59",
+              "doi-asserted-by": "publisher",
+              "first-page": "461",
+              "DOI": "10.1126/science.560061",
+              "volume": "197",
+              "author": "AW Hamburger",
+              "year": "1977",
+              "unstructured": "Hamburger, A. W. & Salmon, S. E. Primary bioassay of human tumor stem cells. Science 197, 461\u2013463 (1977).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35102167_CR60",
+              "doi-asserted-by": "publisher",
+              "first-page": "55",
+              "DOI": "10.1016/S0305-7372(75)80015-6",
+              "volume": "2",
+              "author": "AJ Salsbury",
+              "year": "1975",
+              "unstructured": "Salsbury, A. J. The significance of the circulating cancer cell. Cancer Treatment Rev. 2, 55\u201372 (1975).",
+              "journal-title": "Cancer Treatment Rev."
+            },
+            {
+              "key": "BF35102167_CR61",
+              "doi-asserted-by": "publisher",
+              "first-page": "1435",
+              "DOI": "10.1056/NEJM198706043162302",
+              "volume": "316",
+              "author": "SD Williams",
+              "year": "1987",
+              "unstructured": "Williams, S. D. Treatment of disseminated germ cell tumors with cisplatin, bleomycin, and either vinblastine or etoposide. N. Engl. J. Med. 316, 1435\u20131439 (1987).",
+              "journal-title": "N. Engl. J. Med."
+            },
+            {
+              "key": "BF35102167_CR62",
+              "doi-asserted-by": "publisher",
+              "first-page": "151",
+              "DOI": "10.1053/ctrv.1999.0161",
+              "volume": "26",
+              "author": "M Stockler",
+              "year": "2000",
+              "unstructured": "Stockler, M., Wilcken, N. R. C., Ghersi, D. & Simes, R. J. Systematic reviews of chemotherapy and endocrine therapy in metastatic breast cancer. Cancer Treatment Rev. 26, 151\u2013168 (2000).",
+              "journal-title": "Cancer Treatment Rev."
+            },
+            {
+              "key": "BF35102167_CR63",
+              "doi-asserted-by": "publisher",
+              "first-page": "1119",
+              "DOI": "10.1056/NEJM200004133421508",
+              "volume": "342",
+              "author": "ME Lippman",
+              "year": "2000",
+              "unstructured": "Lippman, M. E. High-dose chemotherapy plus autologous bone marrow transplantation for metastatic breast cancer. N. Engl. J. Med. 342, 1119\u20131120 (2000).",
+              "journal-title": "N. Engl. J. Med."
+            },
+            {
+              "key": "BF35102167_CR64",
+              "doi-asserted-by": "crossref",
+              "first-page": "1237",
+              "DOI": "10.1182/blood.V78.5.1237.1237",
+              "volume": "78",
+              "author": "DE Harrison",
+              "year": "1991",
+              "unstructured": "Harrison, D. E. & Lerner, C. P. Most primitive hematopoietic stem cells are stimulated to cycle rapidly after treatment with 5-fluorouracil. Blood 78, 1237\u20131240 (1991).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BF35102167_CR65",
+              "doi-asserted-by": "publisher",
+              "first-page": "947",
+              "DOI": "10.1177/44.9.8773559",
+              "volume": "44",
+              "author": "L Bouwens",
+              "year": "1996",
+              "unstructured": "Bouwens, L. & DeBlay, E. Islet morphogenesis and stem cell markers in rat pancreas. J. Histochem. Cytochem. 44, 947\u2013951 (1996).",
+              "journal-title": "J. Histochem. Cytochem."
+            },
+            {
+              "key": "BF35102167_CR66",
+              "doi-asserted-by": "crossref",
+              "first-page": "2041",
+              "DOI": "10.1182/blood.V92.6.2041",
+              "volume": "92",
+              "author": "R Peters",
+              "year": "1998",
+              "unstructured": "Peters, R., Leyvraz, S. & Perey, L. Apoptotic regulation in primitive hematopoietic precursors. Blood 92, 2041\u20132052 (1998).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BF35102167_CR67",
+              "doi-asserted-by": "crossref",
+              "first-page": "2272",
+              "DOI": "10.1182/blood.V91.7.2272",
+              "volume": "91",
+              "author": "J Domen",
+              "year": "1998",
+              "unstructured": "Domen, J., Gandy, K. L. & Weissman, I. L. Systemic overexpression of BCL-2 in the hematopoietic system protects transgenic mice from the consequences of lethal irradiation. Blood 91, 2272\u20132282 (1998).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BF35102167_CR68",
+              "doi-asserted-by": "publisher",
+              "first-page": "47",
+              "DOI": "10.1007/s004410050005",
+              "volume": "299",
+              "author": "F Feuerhake",
+              "year": "2000",
+              "unstructured": "Feuerhake, F., Sigg, W., Hofter, E. A., Dimpfl, T. & Welsch, U. Immunohistochemical analysis of Bcl-2 and Bax expression in relation to cell turnover and epithelial differentiation markers in the non-lactating human mammary gland epithelium. Cell Tissue Res. 299, 47\u201358 (2000).",
+              "journal-title": "Cell Tissue Res."
+            },
+            {
+              "key": "BF35102167_CR69",
+              "doi-asserted-by": "publisher",
+              "first-page": "1028",
+              "DOI": "10.1038/nm0901-1028",
+              "volume": "7",
+              "author": "S Zhou",
+              "year": "2001",
+              "unstructured": "Zhou, S. et al. The ABC transporter Bcrp1/ABCG2 is expressed in a wide variety of stem cells and is a molecular determinant of the side-population phenotype. Nature Med. 7, 1028\u20131034 (2001).",
+              "journal-title": "Nature Med."
+            },
+            {
+              "key": "BF35102167_CR70",
+              "doi-asserted-by": "publisher",
+              "first-page": "7934",
+              "DOI": "10.1073/pnas.131200898",
+              "volume": "98",
+              "author": "AV Terskikh",
+              "year": "2001",
+              "unstructured": "Terskikh, A. V. et al. From hematopoiesis to neuropoiesis: evidence of overlapping genetic programs. Proc. Natl Acad. Sci. USA 98, 7934\u20137939. (2001).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BF35102167_CR71",
+              "doi-asserted-by": "publisher",
+              "first-page": "536",
+              "DOI": "10.1038/35020115",
+              "volume": "406",
+              "author": "M Bittner",
+              "year": "2000",
+              "unstructured": "Bittner, M. et al. Molecular classification of cutaneous malignant melanoma by gene expression profiling. Nature 406, 536\u2013540 (2000).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF35102167_CR72",
+              "doi-asserted-by": "publisher",
+              "first-page": "747",
+              "DOI": "10.1038/35021093",
+              "volume": "406",
+              "author": "CM Perou",
+              "year": "2000",
+              "unstructured": "Perou, C. M. et al. Molecular portraits of human breast tumours. Nature 406, 747\u2013752 (2000).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF35102167_CR73",
+              "doi-asserted-by": "publisher",
+              "first-page": "503",
+              "DOI": "10.1038/35000501",
+              "volume": "403",
+              "author": "AA Alizadeh",
+              "year": "2000",
+              "unstructured": "Alizadeh, A. A. et al. Distinct types of diffuse large B-cell lymphoma identified by gene expression profiling. Nature 403, 503\u2013511 (2000).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF35102167_CR74",
+              "doi-asserted-by": "publisher",
+              "first-page": "601",
+              "DOI": "10.1056/NEJM200102223440809",
+              "volume": "344",
+              "author": "TR Golub",
+              "year": "2001",
+              "unstructured": "Golub, T. R. Genome-wide views of cancer. N. Engl. J. Med. 344, 601\u2013602 (2001).",
+              "journal-title": "N. Engl. J. Med."
+            },
+            {
+              "key": "BF35102167_CR75",
+              "first-page": "5656",
+              "volume": "59",
+              "author": "DC Sgroi",
+              "year": "1999",
+              "unstructured": "Sgroi, D. C. et al. In vivo gene expression profile analysis of human breast cancer progression. Cancer Res. 59, 5656\u20135661 (1999).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "BF35102167_CR76",
+              "doi-asserted-by": "publisher",
+              "first-page": "3220",
+              "DOI": "10.1038/sj.onc.1203703",
+              "volume": "19",
+              "author": "C Leethanakul",
+              "year": "2000",
+              "unstructured": "Leethanakul, C. et al. Distinct pattern of expression of differentiation and growth-related genes in squamous cell carcinomas of the head and neck revealed by the use of laser capture microdissection and cDNA arrays. Oncogene 19, 3220\u20133224 (2000).",
+              "journal-title": "Oncogene"
+            },
+            {
+              "key": "BF35102167_CR77",
+              "doi-asserted-by": "publisher",
+              "first-page": "531",
+              "DOI": "10.1084/jem.193.4.531",
+              "volume": "193",
+              "author": "SC Kogan",
+              "year": "2001",
+              "unstructured": "Kogan, S. C. et al. BCL-2 cooperates with promyelocytic leukemia retinoic acid receptor \u03b1 chimeric protein (PMLRAR\u03b1) to block neutrophil differentiation and initiate acute leukemia. J. Exp. Med. 193, 531\u2013543 (2001).",
+              "journal-title": "J. Exp. Med."
+            },
+            {
+              "key": "BF35102167_CR78",
+              "doi-asserted-by": "publisher",
+              "first-page": "103",
+              "DOI": "10.1016/S0896-6273(00)80682-0",
+              "volume": "22",
+              "author": "RJ Wechsler-Reya",
+              "year": "1999",
+              "unstructured": "Wechsler-Reya, R. J. & Scott, M. P. Control of neuronal precursor proliferation in the cerebellum by Sonic Hedgehog. Neuron 22, 103\u2013114 (1999).",
+              "journal-title": "Neuron"
+            },
+            {
+              "key": "BF35102167_CR79",
+              "doi-asserted-by": "publisher",
+              "first-page": "599",
+              "DOI": "10.1038/35069099",
+              "volume": "410",
+              "author": "Y Zhang",
+              "year": "2001",
+              "unstructured": "Zhang, Y. & Kalderon, D. Hedgehog acts as a somatic stem cell factor in the Drosophila ovary. Nature 410, 599\u2013604 (2001).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF35102167_CR80",
+              "doi-asserted-by": "publisher",
+              "first-page": "661",
+              "DOI": "10.1016/S0960-9822(06)00293-4",
+              "volume": "7",
+              "author": "D Henrique",
+              "year": "1997",
+              "unstructured": "Henrique, D. et al. Maintenance of neuroepithelial progenitor cells by Delta-Notch signalling in the embryonic chick retina. Curr. Biol. 7, 661\u2013670 (1997).",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "BF35102167_CR81",
+              "doi-asserted-by": "publisher",
+              "first-page": "589",
+              "DOI": "10.1016/0092-8674(87)90128-0",
+              "volume": "51",
+              "author": "J Austin",
+              "year": "1987",
+              "unstructured": "Austin, J. & Kimble, J. glp-1 is required in the germ line for regulation of the decision between mitosis and meiosis in C. elegans. Cell 51, 589\u2013599 (1987).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35102167_CR82",
+              "doi-asserted-by": "publisher",
+              "first-page": "410",
+              "DOI": "10.1038/7747",
+              "volume": "21",
+              "author": "EF Chan",
+              "year": "1999",
+              "unstructured": "Chan, E. F., Gat, U., McNiff, J. M. & Fuchs, E. A common human skin tumour is caused by activating mutations in \u03b2-catenin. Nature Genet. 21, 410\u2013413 (1999).",
+              "journal-title": "Nature Genet."
+            },
+            {
+              "key": "BF35102167_CR83",
+              "doi-asserted-by": "publisher",
+              "first-page": "385",
+              "DOI": "10.1146/annurev.neuro.24.1.385",
+              "volume": "24",
+              "author": "R Wechsler-Reya",
+              "year": "2001",
+              "unstructured": "Wechsler-Reya, R. & Scott, M. P. The developmental biology of brain tumors. Annu. Rev. Neurosci. 24, 385\u2013428 (2001).",
+              "journal-title": "Annu. Rev. Neurosci."
+            },
+            {
+              "key": "BF35102167_CR84",
+              "first-page": "261",
+              "volume": "14",
+              "author": "MR Gailani",
+              "year": "1999",
+              "unstructured": "Gailani, M. R. & Bale, A. E. Acquired and inherited basal cell carcinomas and the patched gene. Adv. Dermatol. 14, 261\u2013283 (1999).",
+              "journal-title": "Adv. Dermatol."
+            },
+            {
+              "key": "BF35102167_CR85",
+              "doi-asserted-by": "publisher",
+              "first-page": "649",
+              "DOI": "10.1016/0092-8674(91)90111-B",
+              "volume": "66",
+              "author": "LW Ellisen",
+              "year": "1991",
+              "unstructured": "Ellisen, L. W. et al. TAN-1, the human homolog of the Drosophila notch gene, is broken by chromosomal translocations in T lymphoblastic neoplasms. Cell 66, 649\u2013661 (1991).",
+              "journal-title": "Cell"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/35102167.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/35102167",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/35102167.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                3
+              ]
+            ],
+            "date-time": "2024-01-03T06:18:23Z",
+            "timestamp": 1704262703000
+          },
+          "score": 45.512943,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/35102167"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2001,
+                11
+              ]
+            ]
+          },
+          "references-count": 85,
+          "journal-issue": {
+            "issue": "6859",
+            "published-print": {
+              "date-parts": [
+                [
+                  2001,
+                  11
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF35102167"
+          ],
+          "URL": "https://doi.org/10.1038/35102167",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2001,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                14
+              ]
+            ],
+            "date-time": "2025-10-14T06:57:06Z",
+            "timestamp": 1760425026170
+          },
+          "reference-count": 0,
+          "publisher": "Elsevier",
+          "isbn-type": [
+            {
+              "value": "9780123815354",
+              "type": "print"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2011,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2011-01-01T00:00:00Z",
+                "timestamp": 1293840000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2011
+              ]
+            ]
+          },
+          "DOI": "10.1016/b978-0-12-381535-4.10010-3",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                11,
+                19
+              ]
+            ],
+            "date-time": "2010-11-19T04:14:27Z",
+            "timestamp": 1290140067000
+          },
+          "page": "237-256",
+          "source": "Crossref",
+          "is-referenced-by-count": 3,
+          "title": [
+            "Stem Cells in Cancer and Cancer Stem Cells"
+          ],
+          "prefix": "10.1016",
+          "author": [
+            {
+              "given": "Christine",
+              "family": "Mummery",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Sir Ian",
+              "family": "Wilmut",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Anja",
+              "family": "van de Stolpe",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Bernard A.J.",
+              "family": "Roelen",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "container-title": [
+            "Stem Cells"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780123815354100103?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780123815354100103?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                10,
+                5
+              ]
+            ],
+            "date-time": "2018-10-05T10:23:43Z",
+            "timestamp": 1538735023000
+          },
+          "score": 44.290993,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/B9780123815354100103"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2011
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780123815354"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1016/b978-0-12-381535-4.10010-3",
+          "published": {
+            "date-parts": [
+              [
+                2011
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                18
+              ]
+            ],
+            "date-time": "2026-09-18T11:30:36Z",
+            "timestamp": 1789731036253,
+            "version": "4.0.1"
+          },
+          "reference-count": 0,
+          "publisher": "Georg Thieme Verlag KG",
+          "issue": "01",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Semin Reprod Med"
+          ],
+          "DOI": "10.1055/s-0032-1331792",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                1,
+                17
+              ]
+            ],
+            "date-time": "2013-01-17T18:32:52Z",
+            "timestamp": 1358447572000
+          },
+          "page": "005-013",
+          "source": "Crossref",
+          "is-referenced-by-count": 38,
+          "title": [
+            "Cells, Stem Cells, and Cancer Stem Cells"
+          ],
+          "prefix": "10.1055",
+          "volume": "31",
+          "author": [
+            {
+              "given": "Crist\u00f3bal",
+              "family": "Aguilar-Gallardo",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Valencia Node of the Spanish Stem Cell Bank, Prince Felipe Research Centre (CIPF)"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Carlos",
+              "family": "Sim\u00f3n",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Valencia Node of the Spanish Stem Cell Bank, Prince Felipe Research Centre (CIPF)"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "194",
+          "published-online": {
+            "date-parts": [
+              [
+                2013,
+                1,
+                17
+              ]
+            ]
+          },
+          "container-title": [
+            "Seminars in Reproductive Medicine"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0032-1331792.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                23
+              ]
+            ],
+            "date-time": "2017-05-23T02:24:47Z",
+            "timestamp": 1495506287000
+          },
+          "score": 43.885326,
+          "resource": {
+            "primary": {
+              "URL": "http://www.thieme-connect.de/DOI/DOI?10.1055/s-0032-1331792"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2013,
+                1,
+                17
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "01",
+            "published-online": {
+              "date-parts": [
+                [
+                  2013,
+                  1,
+                  17
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1055/s-0032-1331792",
+          "ISSN": [
+            "1526-8004",
+            "1526-4564"
+          ],
+          "issn-type": [
+            {
+              "value": "1526-8004",
+              "type": "print"
+            },
+            {
+              "value": "1526-4564",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2013,
+                1,
+                17
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

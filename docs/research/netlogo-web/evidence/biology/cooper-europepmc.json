@@ -1,0 +1,341 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.aac4315%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1126/science.aac4315\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "26250679",
+          "source": "MED",
+          "pmid": "26250679",
+          "doi": "10.1126/science.aac4315",
+          "title": "PALEOECOLOGY. Abrupt warming events drove Late Pleistocene Holarctic megafaunal turnover.",
+          "authorString": "Cooper A, Turney C, Hughen KA, Brook BW, McDonald HG, Bradshaw CJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Cooper A",
+                "lastName": "Cooper",
+                "firstName": "Alan",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7738-7851"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Australian Centre for Ancient DNA, School of Earth and Environmental Sciences, and Environment Institute, University of Adelaide, Adelaide, Australia. alan.cooper@adelaide.edu.au c.turney@unsw.edu.au."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Turney C",
+                "lastName": "Turney",
+                "firstName": "Chris",
+                "initials": "C",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6733-0993"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Climate Change Research Centre and School of Biological, Earth, and Environmental Sciences, University of New South Wales, Sydney, Australia. alan.cooper@adelaide.edu.au c.turney@unsw.edu.au."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hughen KA",
+                "lastName": "Hughen",
+                "firstName": "Konrad A",
+                "initials": "KA",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Woods Hole Oceanographic Institution, Woods Hole, MA 02543, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Brook BW",
+                "lastName": "Brook",
+                "firstName": "Barry W",
+                "initials": "BW",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2491-1517"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Environment Institute and School of Biological Sciences, University of Adelaide, Adelaide, Australia. School of Biological Sciences, University of Tasmania, Hobart, Australia."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "McDonald HG",
+                "lastName": "McDonald",
+                "firstName": "H Gregory",
+                "initials": "HG",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Museum Management Program, National Parks Service, Fort Collins, CO 80525, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Bradshaw CJ",
+                "lastName": "Bradshaw",
+                "firstName": "Corey J A",
+                "initials": "CJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5328-7741"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Environment Institute and School of Biological Sciences, University of Adelaide, Adelaide, Australia."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6733-0993"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2491-1517"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5328-7741"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7738-7851"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6248",
+            "volume": "349",
+            "journalIssueId": 2311945,
+            "dateOfPublication": "2015 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 2015,
+            "journal": {
+              "medlineAbbreviation": "Science",
+              "title": "Science (New York, N.Y.)",
+              "essn": "1095-9203",
+              "issn": "0036-8075",
+              "nlmid": "0404511",
+              "isoabbreviation": "Science"
+            },
+            "printPublicationDate": "2015-08-01"
+          },
+          "pubYear": "2015",
+          "pageInfo": "602-606",
+          "abstractText": "The mechanisms of Late Pleistocene megafauna extinctions remain fiercely contested, with human impact or climate change cited as principal drivers. We compared ancient DNA and radiocarbon data from 31 detailed time series of regional megafaunal extinctions and replacements over the past 56,000 years with standard and new combined records of Northern Hemisphere climate in the Late Pleistocene. Unexpectedly, rapid climate changes associated with interstadial warming events are strongly associated with the regional replacement or extinction of major genetic clades or species of megafauna. The presence of many cryptic biotic transitions before the Pleistocene/Holocene boundary revealed by ancient DNA confirms the importance of climate change in megafaunal population extinctions and suggests that metapopulation structures necessary to survive such repeated and rapid climatic shifts were susceptible to human impacts.",
+          "affiliation": "Australian Centre for Ancient DNA, School of Earth and Environmental Sciences, and Environment Institute, University of Adelaide, Adelaide, Australia. alan.cooper@adelaide.edu.au c.turney@unsw.edu.au.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Historical Article",
+              "Research Support, Non-U.S. Gov't",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NSF NESCENT",
+                "orderIn": 0
+              },
+              {
+                "agency": "Australian Research Council Federation",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "DNA",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "HI",
+                      "qualifierName": "history"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "IP",
+                      "qualifierName": "isolation & purification"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Paleontology"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Fossils",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "HI",
+                      "qualifierName": "history"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "History, Ancient"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Population"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Extinction, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Global Warming",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "HI",
+                      "qualifierName": "history"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "DNA",
+                "registryNumber": "9007-49-2"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.aac4315"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "26917761",
+                "reference": "Science. 2016 Feb 26;351(6276):927. doi: 10.1126/science.aad3573",
+                "type": "Comment in",
+                "orderIn": 1
+              },
+              {
+                "source": "MED",
+                "id": "26917762",
+                "reference": "Science. 2016 Feb 26;351(6276):927. doi: 10.1126/science.aad8016",
+                "type": "Comment in",
+                "orderIn": 2
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 123,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2015-09-03",
+          "dateOfCreation": "2015-08-08",
+          "dateOfRevision": "2022-04-08",
+          "electronicPublicationDate": "2015-07-23",
+          "firstPublicationDate": "2015-07-23",
+          "firstIndexDate": "2015-08-09",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

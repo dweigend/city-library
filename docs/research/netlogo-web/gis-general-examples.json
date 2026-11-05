@@ -1,0 +1,114 @@
+{
+  "slug": "gis-general-examples",
+  "name": "GIS General Examples",
+  "catalogPath": "Code Examples/Extensions Examples/gis/GIS General Examples",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox",
+  "deliveryBatch": "B20",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can geographic datasets become queryable agent and grid information without losing their spatial meaning? NetLogo GIS General Examples loads city points, river lines, country polygons, and an elevation raster, then demonstrates drawing, queries, projection choices, and conversion to turtles or patches. Westervelt [1] connects GIS with agent modeling, Parker and colleagues [2] review spatial land-change simulation, and Crooks and colleagues [3] discuss geospatial modeling challenges. These sources motivate the integration problem rather than treating a successful map import as a scientific model. Coordinate reference systems, projection, resolution, geometry type, and data coverage are essential assumptions. Drawing layers are representations, while converted agent or patch attributes can become inputs to later rules. The baseline illustrates geospatial interoperability; it does not itself explain urban growth, establish dataset accuracy, or validate a subsequent agent-based application.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 eb7880d4eff9dca3f1d82fb3122877fb439262e115720663de72f3f74528c1ea",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/gis-general-examples.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "sourceSnapshot": "evidence/computing/gis-general-examples.nlogox",
+    "evidenceFile": "evidence/computing/gis-general-examples.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1093/oso/9780195143362.003.0010",
+      "authors": [
+        "James D. Westervelt"
+      ],
+      "title": "Geographic Information Systems and Agent-Based Modeling",
+      "year": 2002,
+      "venue": "Integrating Geographic Information Systems and Agent-Based Modeling Techniques for Understanding Social and Ecological Processes",
+      "doi": "10.1093/oso/9780195143362.003.0010",
+      "url": "https://doi.org/10.1093/oso/9780195143362.003.0010",
+      "relevance": "Scientific treatment of GIS and agent integration directly grounds the demonstrated adapter functions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1093%2Foso%2F9780195143362.003.0010",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1093_oso_9780195143362_003_0010.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1093_oso_9780195143362_003_0010.json"
+      },
+      "publisher": "Oxford University Press",
+      "isbn": [
+        "9780195143362",
+        "9780197561812"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1111/1467-8306.9302004",
+      "authors": [
+        "Dawn C. Parker",
+        "Steven M. Manson",
+        "Marco A. Janssen",
+        "Matthew J. Hoffmann",
+        "Peter Deadman"
+      ],
+      "title": "Multi-Agent Systems for the Simulation of Land-Use and Land-Cover Change: A Review",
+      "year": 2003,
+      "venue": "Annals of the Association of American Geographers",
+      "doi": "10.1111/1467-8306.9302004",
+      "url": "https://doi.org/10.1111/1467-8306.9302004",
+      "relevance": "Review of spatial land-change models establishes why geographic inputs and spatial assumptions matter.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1111%2F1467-8306.9302004",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1111_1467_8306_9302004.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1111_1467_8306_9302004.json"
+      },
+      "publisher": "Informa UK Limited",
+      "volume": "93",
+      "issue": "2",
+      "pages": "314-337",
+      "verified": true
+    },
+    {
+      "id": "10.1016/j.compenvurbsys.2008.09.004",
+      "authors": [
+        "Andrew Crooks",
+        "Christian Castle",
+        "Michael Batty"
+      ],
+      "title": "Key challenges in agent-based modelling for geo-spatial simulation",
+      "year": 2008,
+      "venue": "Computers, Environment and Urban Systems",
+      "doi": "10.1016/j.compenvurbsys.2008.09.004",
+      "url": "https://doi.org/10.1016/j.compenvurbsys.2008.09.004",
+      "relevance": "Geospatial simulation challenges qualify claims about projections, data scale and converting mapped data into model state.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.compenvurbsys.2008.09.004",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_j_compenvurbsys_2008_09_004.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_j_compenvurbsys_2008_09_004.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "32",
+      "issue": "6",
+      "pages": "417-430",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

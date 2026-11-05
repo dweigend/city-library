@@ -1,0 +1,84 @@
+## WHAT IS IT?
+
+You and your partner have been arrested for robbing a bank and find yourselves in the classic prisoner's dilemma.  The police place each of you into separate rooms and come to you with the following proposal...
+
+"We know you two did this, but don't have proof for anything but a minor charge of firearm possession that will give you a year of jail time.  Confess to the robbery and we will make sure the judge goes easy on you, 3 years.  If your partner confesses and you don't, we're going to throw the book at you and give you 5 years of prison time.  If your partner doesn't and you do, we will let you go free."
+
+Should you remain silent or should you confess? How much jail time you will receive depends on your answer and also on your partner's answer to the same question. The following table summarizes the results of the four different situations:
+
+```text
+ Your Action | Partner's Action | Your Jail Time | Partner's Jail Time
+----------------------------------------------------------------------
+   Silent          Silent               1                  1
+   Silent          Confess              5                  0
+   Confess         Silent               0                  5
+   Confess         Confess              3                  3
+```
+
+## HOW TO USE IT
+
+SETUP: Place yourself in the prisoner's dilemma
+
+ANSWER: Answer the police and receive your sentence.
+
+YOU-SILENT?: If you are silent, you will not confess.  If you are not silent, you will confess.
+
+PARTNER-SILENCE-KNOWN?: When on, this switch allows you to control the actions of your partner with the PARTNER-SILENT? switch.
+
+PARTNER-SILENT?: If your partner is silent, he will not confess.  If he is not silent, he will confess.
+
+## THINGS TO TRY
+
+Turn off PARTNER-SILENCE-KNOWN?.  Attempt to minimize your prison sentence.  Can you do better than your partner?  Why or why not?
+
+What strategy is best for the group as a whole?
+
+Describe a real life scenario that is similar to the prisoner's dilemma, preferably one from your own life.  What was the best decision?  Why?
+
+## EXTENDING THE MODEL
+
+Examine the PD TWO PERSON ITERATED model.
+
+## NETLOGO FEATURES
+
+The use of the USER-MESSAGE primitive to give the prison sentence.
+
+The use the SIZE turtle variable and TURTLE SIZES option on the view to make large faces.
+
+The use of the SHAPE turtle variable to change the faces.
+
+## RELATED MODELS
+
+PD Two Person Iterated
+
+PD N-Person Iterated
+
+PD Basic Evolutionary
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (2002).  NetLogo Prisoner's Dilemma Basic model.  http://ccl.northwestern.edu/netlogo/models/Prisoner'sDilemmaBasic.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2002 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+This model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.
+
+<!-- 2002 -->

@@ -1,0 +1,723 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+brief+history+of+stigmergy+Theraulaz+Bonabeau+1999&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 962253,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                22
+              ]
+            ],
+            "date-time": "2026-10-22T06:10:01Z",
+            "timestamp": 1792649401346,
+            "version": "4.5.0"
+          },
+          "reference-count": 28,
+          "publisher": "MIT Press",
+          "issue": "2",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Artificial Life"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1999,
+                4
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Stigmergy is a class of mechanisms that mediate animal-animal interactions. Its introduction in 1959 by Pierre-Paul Grass\u00e9 made it possible to explain what had been until then considered paradoxical observations: In an insect society individuals work as if they were alone while their collective activities appear to be coordinated. In this article we describe the history of stigmergy in the context of social insects and discuss the general properties of two distinct stigmergic mechanisms: quantitative stigmergy and qualitative stigmergy.</jats:p>",
+          "DOI": "10.1162/106454699568700",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                27
+              ]
+            ],
+            "date-time": "2002-07-27T07:55:01Z",
+            "timestamp": 1027756501000
+          },
+          "page": "97-116",
+          "source": "Crossref",
+          "is-referenced-by-count": 538,
+          "title": [
+            "A Brief History of Stigmergy"
+          ],
+          "prefix": "10.1162",
+          "volume": "5",
+          "author": [
+            {
+              "given": "Guy",
+              "family": "Theraulaz",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "CNRS \u2013 UMR 5550 Laboratoire d'\u00e9thologie et psychologie animale Universit\u00e9 Paul Sabatier 118 route de Narbonne 31062 Toulouse France"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Eric",
+              "family": "Bonabeau",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Santa Fe Institute 1399 Hyde Park Road Santa Fe, NM 87501"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "281",
+          "reference": [
+            {
+              "key": "p_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0169-5347(97)01048-3"
+            },
+            {
+              "key": "p_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1998.0310"
+            },
+            {
+              "key": "p_3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0065-3454(08)60094-7"
+            },
+            {
+              "key": "p_6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00172140"
+            },
+            {
+              "key": "p_8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02227166"
+            },
+            {
+              "key": "p_9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/08927014.1989.9525500"
+            },
+            {
+              "key": "p_10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01065789"
+            },
+            {
+              "key": "p_12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0003-3472(05)80731-6"
+            },
+            {
+              "key": "p_14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2420380"
+            },
+            {
+              "key": "p_15",
+              "first-page": "146",
+              "volume": "36",
+              "author": "Emerson A. E.",
+              "year": "1950",
+              "journal-title": "Journal of the Scientific Laboratories, Denison University"
+            },
+            {
+              "key": "p_17",
+              "first-page": "67",
+              "volume": "78",
+              "author": "Emerson A. E.",
+              "year": "1954",
+              "journal-title": "Scientific Monthly"
+            },
+            {
+              "key": "p_18",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1933137"
+            },
+            {
+              "key": "p_22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1439-0310.1982.tb00492.x"
+            },
+            {
+              "key": "p_24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02172562"
+            },
+            {
+              "key": "p_25",
+              "first-page": "129",
+              "volume": "55",
+              "author": "Grass\u00e9 P.-P.",
+              "year": "1958",
+              "journal-title": "Journal de psychologie normale et pathologique"
+            },
+            {
+              "key": "p_26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02223791"
+            },
+            {
+              "key": "p_27",
+              "first-page": "7",
+              "volume": "139",
+              "author": "Grass\u00e9 P.-P.",
+              "year": "1963",
+              "journal-title": "Suppl."
+            },
+            {
+              "key": "p_30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1163/156853981X00112"
+            },
+            {
+              "key": "p_31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/40353"
+            },
+            {
+              "key": "p_32",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.56.2527"
+            },
+            {
+              "key": "p_33",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1993.1070"
+            },
+            {
+              "key": "p_34",
+              "first-page": "83",
+              "volume": "26",
+              "author": "Karsai I.",
+              "year": "1995",
+              "journal-title": "Sociobiology"
+            },
+            {
+              "key": "p_36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0003-3472(70)90043-6"
+            },
+            {
+              "key": "p_37",
+              "first-page": "337",
+              "volume": "31",
+              "author": "Rabaud E.",
+              "year": "1934",
+              "journal-title": "Journal de psychologie normale et pathologique"
+            },
+            {
+              "key": "p_41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0003-3472(78)90023-4"
+            },
+            {
+              "key": "p_43",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1995.0255"
+            },
+            {
+              "key": "p_44",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.269.5224.686"
+            },
+            {
+              "key": "p_46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jmor.1050220206"
+            }
+          ],
+          "container-title": [
+            "Artificial Life"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.mitpressjournals.org/doi/pdf/10.1162/106454699568700",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                3,
+                12
+              ]
+            ],
+            "date-time": "2021-03-12T16:32:21Z",
+            "timestamp": 1615566741000
+          },
+          "score": 33.44972,
+          "resource": {
+            "primary": {
+              "URL": "https://direct.mit.edu/artl/article/5/2/97-116/2318"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1999,
+                4
+              ]
+            ]
+          },
+          "references-count": 28,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  1999,
+                  4
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1162/106454699568700"
+          ],
+          "URL": "https://doi.org/10.1162/106454699568700",
+          "ISSN": [
+            "1064-5462",
+            "1530-9185"
+          ],
+          "issn-type": [
+            {
+              "value": "1064-5462",
+              "type": "print"
+            },
+            {
+              "value": "1530-9185",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1999,
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                17
+              ]
+            ],
+            "date-time": "2025-11-17T02:45:34Z",
+            "timestamp": 1763347534477
+          },
+          "reference-count": 0,
+          "publisher": "University of Chicago Press",
+          "issue": "2",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "The Quarterly Review of Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2001,
+                6
+              ]
+            ]
+          },
+          "DOI": "10.1086/393972",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                3,
+                2
+              ]
+            ],
+            "date-time": "2004-03-02T17:03:49Z",
+            "timestamp": 1078247029000
+          },
+          "page": "268-269",
+          "source": "Crossref",
+          "is-referenced-by-count": 6,
+          "title": [
+            "<i>Swarm Intelligence: From Natural to Artificial Systems</i>. Eric Bonabeau , Marco Dorigo , Guy Theraulaz"
+          ],
+          "prefix": "10.1086",
+          "volume": "76",
+          "author": [
+            {
+              "given": "Carl",
+              "family": "Anderson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "200",
+          "container-title": [
+            "The Quarterly Review of Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.journals.uchicago.edu/doi/pdf/10.1086/393972",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                7
+              ]
+            ],
+            "date-time": "2018-04-07T02:53:52Z",
+            "timestamp": 1523069632000
+          },
+          "score": 27.350906,
+          "resource": {
+            "primary": {
+              "URL": "https://www.journals.uchicago.edu/doi/10.1086/393972"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2001,
+                6
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  2001,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1086/393972"
+          ],
+          "URL": "https://doi.org/10.1086/393972",
+          "ISSN": [
+            "0033-5770",
+            "1539-7718"
+          ],
+          "issn-type": [
+            {
+              "value": "0033-5770",
+              "type": "print"
+            },
+            {
+              "value": "1539-7718",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2001,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                3
+              ]
+            ],
+            "date-time": "2025-06-03T12:27:44Z",
+            "timestamp": 1748953664466
+          },
+          "reference-count": 8,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "7",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Pediatric Psychology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2000,
+                10,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1093/jpepsy/25.7.463",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                4,
+                19
+              ]
+            ],
+            "date-time": "2012-04-19T01:03:28Z",
+            "timestamp": 1334797408000
+          },
+          "page": "463-470",
+          "source": "Crossref",
+          "is-referenced-by-count": 14,
+          "title": [
+            "Journal of Pediatric Psychology: A Brief History (1969-1999)"
+          ],
+          "prefix": "10.1093",
+          "volume": "25",
+          "author": [
+            {
+              "given": "A. E.",
+              "family": "Kazak",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "reference": [
+            {
+              "key": "1_24740673",
+              "first-page": "877",
+              "volume": "51",
+              "year": "1996",
+              "journal-title": "AM PSYCHOL"
+            },
+            {
+              "key": "2_24740682",
+              "first-page": "984",
+              "volume": "53",
+              "year": "1998",
+              "journal-title": "AM PSYCHOL"
+            },
+            {
+              "issue": "4",
+              "key": "3_5122851",
+              "doi-asserted-by": "publisher",
+              "first-page": "575",
+              "DOI": "10.1093/jpepsy/13.4.575",
+              "volume": "13",
+              "author": "Elkins",
+              "year": "1988",
+              "journal-title": "Journal of Pediatric Psychology",
+              "ISSN": "http://id.crossref.org/issn/0146-8693",
+              "issn-type": "print"
+            },
+            {
+              "issue": "6",
+              "key": "4_5913481",
+              "doi-asserted-by": "publisher",
+              "first-page": "759",
+              "DOI": "10.1093/jpepsy/22.6.759",
+              "volume": "22",
+              "author": "La Greca",
+              "year": "1997",
+              "journal-title": "Journal of Pediatric Psychology",
+              "ISSN": "http://id.crossref.org/issn/0146-8693",
+              "issn-type": "print"
+            },
+            {
+              "issue": "6",
+              "key": "5_10106463",
+              "doi-asserted-by": "publisher",
+              "first-page": "785",
+              "DOI": "10.1093/jpepsy/17.6.785",
+              "volume": "17",
+              "author": "Roberts",
+              "year": "1992",
+              "journal-title": "Journal of Pediatric Psychology",
+              "ISSN": "http://id.crossref.org/issn/0146-8693",
+              "issn-type": "print"
+            },
+            {
+              "issue": "1",
+              "key": "6_16411882",
+              "doi-asserted-by": "publisher",
+              "first-page": "107",
+              "DOI": "10.1093/jpepsy/21.1.107",
+              "volume": "21",
+              "author": "Roberts",
+              "year": "1996",
+              "journal-title": "Journal of Pediatric Psychology",
+              "ISSN": "http://id.crossref.org/issn/0146-8693",
+              "issn-type": "print"
+            },
+            {
+              "issue": "1",
+              "key": "8_21607588",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1093/jpepsy/4.1.1",
+              "volume": "4",
+              "author": "Routh",
+              "year": "1979",
+              "journal-title": "Journal of Pediatric Psychology",
+              "ISSN": "http://id.crossref.org/issn/0146-8693",
+              "issn-type": "print"
+            },
+            {
+              "issue": "1",
+              "key": "10_21607508",
+              "doi-asserted-by": "publisher",
+              "first-page": "2",
+              "DOI": "10.1093/jpepsy/2.1.2",
+              "volume": "2",
+              "author": "Willis",
+              "year": "1977",
+              "journal-title": "Journal of Pediatric Psychology",
+              "ISSN": "http://id.crossref.org/issn/0146-8693",
+              "issn-type": "print"
+            }
+          ],
+          "container-title": [
+            "Journal of Pediatric Psychology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://academic.oup.com/jpepsy/article-pdf/25/7/463/9837100/463.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                23
+              ]
+            ],
+            "date-time": "2017-08-23T06:58:49Z",
+            "timestamp": 1503471529000
+          },
+          "score": 22.576511,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/jpepsy/article-lookup/doi/10.1093/jpepsy/25.7.463"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2000,
+                10,
+                1
+              ]
+            ]
+          },
+          "references-count": 8,
+          "journal-issue": {
+            "issue": "7",
+            "published-print": {
+              "date-parts": [
+                [
+                  2000,
+                  10,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1093/jpepsy/25.7.463",
+          "ISSN": [
+            "0146-8693",
+            "1465-735X"
+          ],
+          "issn-type": [
+            {
+              "value": "0146-8693",
+              "type": "print"
+            },
+            {
+              "value": "1465-735X",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2000,
+                10,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

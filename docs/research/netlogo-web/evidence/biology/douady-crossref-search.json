@@ -1,0 +1,923 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Phyllotaxis+as+a+physical+self-organized+growth+process+Douady+Couder+1992&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 7719317,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                27
+              ]
+            ],
+            "date-time": "2026-10-27T21:53:08Z",
+            "timestamp": 1793137988446,
+            "version": "4.5.0"
+          },
+          "reference-count": 13,
+          "publisher": "American Physical Society (APS)",
+          "issue": "13",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1992,
+                    3,
+                    30
+                  ]
+                ],
+                "date-time": "1992-03-30T00:00:00Z",
+                "timestamp": 701913600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://link.aps.org/licenses/aps-default-license"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Phys. Rev. Lett."
+          ],
+          "DOI": "10.1103/physrevlett.68.2098",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                27
+              ]
+            ],
+            "date-time": "2002-07-27T01:25:44Z",
+            "timestamp": 1027733144000
+          },
+          "page": "2098-2101",
+          "source": "Crossref",
+          "is-referenced-by-count": 213,
+          "title": [
+            "Phyllotaxis as a physical self-organized growth process"
+          ],
+          "prefix": "10.1103",
+          "volume": "68",
+          "author": [
+            {
+              "given": "S.",
+              "family": "Douady",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Y.",
+              "family": "Couder",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "16",
+          "published-online": {
+            "date-parts": [
+              [
+                1992,
+                3,
+                30
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "PhysRevLett.68.2098Cc1R1",
+              "first-page": "1",
+              "volume": "29",
+              "author": "K. F. Schimper",
+              "year": "1830",
+              "journal-title": "Geiger's Mag. f\u00fcr Pharm."
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc2R1",
+              "first-page": "197",
+              "volume": "15",
+              "author": "A. Braun",
+              "year": "1831",
+              "journal-title": "Nova Acta Acad. Caesar Leop. Carol."
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc3R1",
+              "first-page": "42",
+              "volume": "7",
+              "author": "L. Bravais",
+              "year": "1837",
+              "journal-title": "Ann. Sci. Nat. Second Series"
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc4R1",
+              "volume-title": "Mathematical Approach to Patterns and Form in Plant Growth",
+              "author": "R. V. Jean",
+              "year": "1984"
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc5R1",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1017/CBO9780511626227",
+              "volume-title": "Patterns in Plant Development",
+              "author": "T. A. Steeves",
+              "year": "1989"
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc9R1",
+              "doi-asserted-by": "crossref",
+              "first-page": "1247",
+              "DOI": "10.1109/TMAG.1981.1061188",
+              "volume": "17",
+              "author": "R. Massart",
+              "year": "1981",
+              "journal-title": "IEEE Trans. Magn."
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc13R1",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1016/0022-5193(74)90043-5",
+              "volume": "45",
+              "author": "I. Adler",
+              "year": "1974",
+              "journal-title": "J. Theory Biol."
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc14R1",
+              "doi-asserted-by": "crossref",
+              "first-page": "633",
+              "DOI": "10.1051/jphys:01989005006063300",
+              "volume": "50",
+              "author": "F. Rothen",
+              "year": "1989",
+              "journal-title": "J. Phys. (Paris)"
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc16R1",
+              "doi-asserted-by": "crossref",
+              "first-page": "270",
+              "DOI": "10.1126/science.196.4287.270",
+              "volume": "196",
+              "author": "G. H. Mitchison",
+              "year": "1977",
+              "journal-title": "Science"
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc18R1",
+              "doi-asserted-by": "crossref",
+              "first-page": "533",
+              "DOI": "10.1209/0295-5075/14/6/006",
+              "volume": "14",
+              "author": "L. S. Levitov",
+              "year": "1991",
+              "journal-title": "Europhys. Lett."
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc19R1",
+              "doi-asserted-by": "crossref",
+              "first-page": "483",
+              "DOI": "10.1098/rstb.1962.0003",
+              "volume": "244",
+              "year": "1962",
+              "journal-title": "M. Snow and R. Snow, Philos. Trans. R. Soc. London B"
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc20R1",
+              "doi-asserted-by": "crossref",
+              "first-page": "509",
+              "DOI": "10.1098/rstb.1951.0007",
+              "volume": "225",
+              "author": "F. J. Richards",
+              "year": "1951",
+              "journal-title": "Philos. Trans. R. Soc. B"
+            },
+            {
+              "key": "PhysRevLett.68.2098Cc21R1",
+              "doi-asserted-by": "crossref",
+              "first-page": "557",
+              "DOI": "10.2307/2442505",
+              "volume": "66",
+              "author": "R. D. Meicenheimer",
+              "year": "1979",
+              "journal-title": "Am. J. Botany"
+            }
+          ],
+          "container-title": [
+            "Physical Review Letters"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.aps.org/article/10.1103/PhysRevLett.68.2098",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevLett.68.2098/fulltext",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                1,
+                3
+              ]
+            ],
+            "date-time": "2025-01-03T01:24:09Z",
+            "timestamp": 1735867449000
+          },
+          "score": 78.262375,
+          "resource": {
+            "primary": {
+              "URL": "https://link.aps.org/doi/10.1103/PhysRevLett.68.2098"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1992,
+                3,
+                30
+              ]
+            ]
+          },
+          "references-count": 13,
+          "journal-issue": {
+            "issue": "13",
+            "published-print": {
+              "date-parts": [
+                [
+                  1992,
+                  3
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1103/physrevlett.68.2098",
+          "ISSN": [
+            "0031-9007"
+          ],
+          "issn-type": [
+            {
+              "value": "0031-9007",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1992,
+                3,
+                30
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                20
+              ]
+            ],
+            "date-time": "2025-10-20T18:15:07Z",
+            "timestamp": 1760984107491
+          },
+          "publisher-location": "Boston, MA",
+          "reference-count": 36,
+          "publisher": "Springer US",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9781461362357"
+            },
+            {
+              "type": "electronic",
+              "value": "9781461528524"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1993
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-1-4615-2852-4_36",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                10,
+                11
+              ]
+            ],
+            "date-time": "2011-10-11T02:38:44Z",
+            "timestamp": 1318300724000
+          },
+          "page": "341-352",
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "Phyllotaxis as a Self-Organized Growth Process"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "St\u00e9phane",
+              "family": "Douady",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Yves",
+              "family": "Couder",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "36_CR1",
+              "first-page": "1",
+              "volume": "29",
+              "author": "KF Schimper",
+              "year": "1830",
+              "unstructured": "Schimper, K.F. (1830) Geiger\u2019s Mag. f\u00fcr Pharm. 29, 1.",
+              "journal-title": "Geiger\u2019s Mag. f\u00fcr Pharm"
+            },
+            {
+              "key": "36_CR2",
+              "first-page": "197",
+              "volume": "15",
+              "author": "A Braun",
+              "year": "1831",
+              "unstructured": "Braun, A. (1831) Nova Acta Acad. Caesar Leop. Carol. 15, 197. and (1835), Flora, Iena, 18, 145.",
+              "journal-title": "Nova Acta Acad. Caesar Leop. Carol."
+            },
+            {
+              "key": "36_CR3",
+              "first-page": "42",
+              "volume": "7",
+              "author": "L Bravais",
+              "year": "1837",
+              "unstructured": "Bravais, L. and Bravais, A. (1837), Ann. Sci. Nat. second series 7,42\u2013110, 193-221, and 291-348; (1837) Ann. Sci. Nat. second series 8, 11-42; (1839) Ann. Sci. Nat. second series 12, 5-14, and 65-77.",
+              "journal-title": "Ann. Sci. Nat. second series"
+            },
+            {
+              "key": "36_CR4",
+              "unstructured": "Hofmeister, W. (1868). Allgemeine Morphologie der Gewachse, Handbuch der Physiologishen Botanik, 1 Engelman, Leipzig, 405-664."
+            },
+            {
+              "key": "36_CR5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9780511626227",
+              "volume-title": "Patterns in Plant Development",
+              "author": "TA Steeves",
+              "year": "1989",
+              "unstructured": "Steeves, T.A. and Sussex, I. M. (1989) Patterns in Plant Development, Cambridge University Press, Cambridge."
+            },
+            {
+              "key": "36_CR6",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-94-011-6844-1",
+              "volume-title": "Plant Development: the Cellular Basis",
+              "author": "RF Lyndon",
+              "year": "1990",
+              "unstructured": "Lyndon, R.F. (1990) Plant Development: the Cellular Basis, Unwin Hyman, London."
+            },
+            {
+              "key": "36_CR7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9780511574535",
+              "volume-title": "Pattern Formation in Plant Tissues",
+              "author": "T Sachs",
+              "year": "1991",
+              "unstructured": "Sachs, T. (1991) Pattern Formation in Plant Tissues, Cambridge University Press, Cambridge."
+            },
+            {
+              "key": "36_CR8",
+              "unstructured": "This growth is somewhat similar to that of crystalline dendrites. However, in this case, there is not only anisotropy in the growth\u2019s direction but also across it, and this fixes the direction of the side branches. So that in this case the phyllotactic modes cannot show up."
+            },
+            {
+              "key": "36_CR9",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.5962/bhl.title.57125",
+              "volume-title": "On the Relation of Phyllotaxis to Mechanical Laws",
+              "author": "AH Church",
+              "year": "1904",
+              "unstructured": "Church, A.H. (1904) On the Relation of Phyllotaxis to Mechanical Laws. London: Williams and Norgate."
+            },
+            {
+              "key": "36_CR10",
+              "first-page": "217",
+              "volume": "2",
+              "author": "FJ Richards",
+              "year": "1948",
+              "unstructured": "Richards, F.J. (1948) Symp. Soc. Exp. Biol. 2, 217.",
+              "journal-title": "Symp. Soc. Exp. Biol."
+            },
+            {
+              "key": "36_CR11",
+              "unstructured": "Jean, R.V. (1984) Mathematical Approach to Patterns and Form in Plant Growth. Wiley & Sons."
+            },
+            {
+              "key": "36_CR12",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.5962/bhl.title.8287",
+              "volume-title": "Mathematische und Microscopisch-Anatomische Studien \u00fcber Blattstellungen, nebst Betrschungen \u00fbber den Schalenbau der Miliolinen",
+              "author": "G Iterson Van",
+              "year": "1907",
+              "unstructured": "Van Iterson, G. (1907) Mathematische und Microscopisch-Anatomische Studien \u00fcber Blattstellungen, nebst Betrschungen \u00fbber den Schalenbau der Miliolinen, Gustav Fisher-Verlag, Iena."
+            },
+            {
+              "key": "36_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/0022-5193(74)90043-5",
+              "volume": "45",
+              "author": "I Adler",
+              "year": "1974",
+              "unstructured": "Adler, I. (1974) J. Theor. Biol. 45, 1\u201379.",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "36_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "633",
+              "DOI": "10.1051/jphys:01989005006063300",
+              "volume": "50",
+              "author": "F Rothen",
+              "year": "1989",
+              "unstructured": "Rothen, F., Koch, A.J., (1989) J. Physique 50, 633\u2013657 and 1603-1621.",
+              "journal-title": "J. Physique"
+            },
+            {
+              "key": "36_CR15",
+              "first-page": "153",
+              "volume": "10",
+              "author": "JC Schoute",
+              "year": "1913",
+              "unstructured": "Schoute, J.C. (1913) Recl. Trav. Bot N\u00e9erl. 10, 153.",
+              "journal-title": "Recl. Trav. Bot N\u00e9erl."
+            },
+            {
+              "key": "36_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "37",
+              "DOI": "10.1098/rstb.1952.0012",
+              "volume": "237B",
+              "author": "AM Turing",
+              "year": "1952",
+              "unstructured": "Turing, A.M. (1952) Phil. Trans. R. Soc. of London, 237B, 37\u201372.",
+              "journal-title": "Phil. Trans. R. Soc. of London"
+            },
+            {
+              "key": "36_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "127",
+              "DOI": "10.1104/pp.60.1.127",
+              "volume": "60",
+              "author": "AH Veen",
+              "year": "1977",
+              "unstructured": "Veen, A.H. and Lindenmayer, A. (1977) Plant Physiol. 60, 127\u2013139.",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "36_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "270",
+              "DOI": "10.1126/science.196.4287.270",
+              "volume": "196",
+              "author": "GH Mitchison",
+              "year": "1977",
+              "unstructured": "Mitchison, G.H. (1977) Science, 196, 270\u2013275.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "36_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "483",
+              "DOI": "10.1098/rstb.1962.0003",
+              "volume": "244",
+              "author": "M Snow",
+              "year": "1962",
+              "unstructured": "Snow, M. and Snow, R. (1962) Phil. Trans. Roy. Soc. London Ser. B 244, 483.",
+              "journal-title": "Phil. Trans. Roy. Soc. London Ser. B"
+            },
+            {
+              "key": "36_CR20",
+              "unstructured": "The exact geometry should not be an important parameter, provided it has axisymmetry. In botany, similar phyllotactic modes are obtained with various apical meristem profiles."
+            },
+            {
+              "key": "36_CR21",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Massart R.(1981) I.E.E.E. Trans. Magn. 17,1247.",
+              "DOI": "10.1109/TMAG.1981.1061188"
+            },
+            {
+              "key": "36_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "509",
+              "DOI": "10.1098/rstb.1951.0007",
+              "volume": "225",
+              "author": "FJ Richards",
+              "year": "1951",
+              "unstructured": "Richards, FJ. (1951) Phil. Trans. Roy. Soc. B 225, 509\u2013564.",
+              "journal-title": "Phil. Trans. Roy. Soc. B"
+            },
+            {
+              "key": "36_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "557",
+              "DOI": "10.2307/2442505",
+              "volume": "66",
+              "author": "RD Meicenheimer",
+              "year": "1979",
+              "unstructured": "Meicenheimer, R.D. (1979) Am. J. Botany 66, 557\u2013569.",
+              "journal-title": "Am. J. Botany"
+            },
+            {
+              "key": "36_CR24",
+              "unstructured": "In the geometrical model the positions of the particles are a priori fixed on an artificial generative spiral: \u03b8(n)=n\u03d5, R(n)=Roexp(nH)."
+            },
+            {
+              "key": "36_CR25",
+              "unstructured": "It is equivalent to say (Ref. 3) that the appearance order of the two neighbours of the new particle n are n-i and n-j, and that the parastichies numbers are (i, j)."
+            },
+            {
+              "key": "36_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "533",
+              "DOI": "10.1209/0295-5075/14/6/006",
+              "volume": "14",
+              "author": "LS Levitov",
+              "year": "1991",
+              "unstructured": "Levitov, L.S. (1991) Europhys. Lett. 14, 533\u2013539.",
+              "journal-title": "Europhys. Lett."
+            },
+            {
+              "key": "36_CR27",
+              "unstructured": "Note that the same dynamical selection of the bifurcations is obtained. The condition on the new place is now not to be the largest one but the first available one."
+            },
+            {
+              "key": "36_CR28",
+              "unstructured": "The resulting G can be compared with the geometrical prediction for the value of G around which this mode would be observed: Gd = 1/4 ln[3] \u2248 0.275."
+            },
+            {
+              "key": "36_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "63",
+              "DOI": "10.1098/rstb.1935.0007",
+              "volume": "225",
+              "author": "M Snow",
+              "year": "1935",
+              "unstructured": "Snow, M. and Snow, R. (1935) Phil. Trans. Roy. Soc. London Ser. B 225, 63\u201394.",
+              "journal-title": "Phil. Trans. Roy. Soc. London Ser. B"
+            },
+            {
+              "key": "36_CR30",
+              "unstructured": "The diference between the plastochrone ratio measured by Richards, and the value of exp(G) for which we observe the decussate mode comes from the fact that, for a quantitative comparition between theory and botany, the exact form of the primordia must be taken into account (see ref 12 and 32)."
+            },
+            {
+              "key": "36_CR31",
+              "first-page": "301",
+              "volume": "25",
+              "author": "WW Schwabe",
+              "year": "1971",
+              "unstructured": "Schwabe, W. W. (1971) Soc. Exp. Biol. Symp. 25, 301, 322.",
+              "journal-title": "Soc. Exp. Biol. Symp."
+            },
+            {
+              "key": "36_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "33",
+              "DOI": "10.2307/2441873",
+              "volume": "64",
+              "author": "R Maksymowych",
+              "year": "1977",
+              "unstructured": "Maksymowych, R. and Erickson, R.O. (1977) Amer. J. Bot. 64, 33\u201344.",
+              "journal-title": "Amer. J. Bot."
+            },
+            {
+              "key": "36_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "981",
+              "DOI": "10.2307/2442253",
+              "volume": "64",
+              "author": "RO Erickson",
+              "year": "1977",
+              "unstructured": "Erickson, R.O. and Meicenheimer, R.D.(1977) Amer. J. Bot. 64, 981\u2013988.",
+              "journal-title": "Amer. J. Bot."
+            },
+            {
+              "key": "36_CR34",
+              "doi-asserted-by": "crossref",
+              "first-page": "557",
+              "DOI": "10.1093/oxfordjournals.aob.a085767",
+              "volume": "44",
+              "author": "DA Charles-Edwards",
+              "year": "1979",
+              "unstructured": "Charles-Edwards, D.A. Cookshull, K.E. Horridge, J.S. and Thornley (1979) Ann. Bot. 44, 557\u2013566.",
+              "journal-title": "Ann. Bot."
+            },
+            {
+              "key": "36_CR35",
+              "unstructured": "Which in reality would have been advected on the approximately cylindrical stem."
+            },
+            {
+              "key": "36_CR36",
+              "unstructured": "They also share the possibility of an abnormal apical meristem evolution, called the fasciation process: the apex becomes a long macroscopic line, instead of a staying a microscopic point. See for instance celosia cristata (the cockscomb) or some cacti. In this case of course the usual arrengements are not observed, and the growth forms a flattened shoot undergoing successive buckling instabilities."
+            }
+          ],
+          "container-title": [
+            "NATO ASI Series",
+            "Growth Patterns in Physical Sciences and Biology"
+          ],
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4615-2852-4_36.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                10
+              ]
+            ],
+            "date-time": "2023-06-10T10:14:16Z",
+            "timestamp": 1686392056000
+          },
+          "score": 70.29127,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-1-4615-2852-4_36"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1993
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781461362357",
+            "9781461528524"
+          ],
+          "references-count": 36,
+          "URL": "https://doi.org/10.1007/978-1-4615-2852-4_36",
+          "ISSN": [
+            "0258-1221"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0258-1221"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1993
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                3
+              ]
+            ],
+            "date-time": "2026-10-03T09:41:02Z",
+            "timestamp": 1791020462946,
+            "version": "4.1.0"
+          },
+          "reference-count": 0,
+          "publisher": "Elsevier BV",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1996,
+                    2,
+                    1
+                  ]
+                ],
+                "date-time": "1996-02-01T00:00:00Z",
+                "timestamp": 823132800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1996,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.1006/jtbi.1996.0026",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2002-10-07T10:34:07Z",
+            "timestamp": 1033986847000
+          },
+          "page": "295-312",
+          "source": "Crossref",
+          "is-referenced-by-count": 71,
+          "title": [
+            "Phyllotaxis as a Dynamical Self Organizing Process Part III: The Simulation of the Transient Regimes of Ontogeny"
+          ],
+          "prefix": "10.1006",
+          "volume": "178",
+          "author": [
+            {
+              "given": "S.",
+              "family": "Douady",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Y.",
+              "family": "Couder",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0022519396900260?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0022519396900260?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                5,
+                7
+              ]
+            ],
+            "date-time": "2019-05-07T02:57:45Z",
+            "timestamp": 1557197865000
+          },
+          "score": 45.21163,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0022519396900260"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1996,
+                2
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1996,
+                  2
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0022519396900260"
+          ],
+          "URL": "https://doi.org/10.1006/jtbi.1996.0026",
+          "ISSN": [
+            "0022-5193"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-5193",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1996,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

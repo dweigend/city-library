@@ -1,0 +1,109 @@
+{
+  "slug": "hex-cell-aggregation",
+  "name": "Hex Cell Aggregation",
+  "catalogPath": "Sample Models/Computer Science/Hex Cell Aggregation",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Hex%20Cell%20Aggregation.nlogox",
+  "deliveryBatch": "B19",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do neighborhood eligibility rules influence the shape of a growing cluster? NetLogo Hex Cell Aggregation starts with one occupied central cell on a nonwrapping hexagonal lattice. At each tick, one eligible empty cell becomes occupied, with eligibility determined by the chosen occupied-neighbor counts. Wolfram [1] supplies the local-rule growth context, Reiter [2] studies a different hexagonal cellular growth model, and Witten and Sander [3] provide a contrasting stochastic aggregation mechanism. These comparisons separate geometry and growth order from the physics that might motivate an application. The baseline has no diffusion field, nutrient transport, or crystallographic energy. Finite boundaries, random choice among eligible cells, and the selected neighbor counts shape the outcome. The experiment illustrates geometric growth constraints; resemblance to a crystal or colony does not make it a validated model of either.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Hex%20Cell%20Aggregation.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Hex%20Cell%20Aggregation.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 6cc59b8e960edbcbbf8a812c36e0200064a58e867f32cf78855b68ab588e7777",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/hex-cell-aggregation.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2007).  NetLogo Hex Cell Aggregation model.  http://ccl.northwestern.edu/netlogo/models/HexCellAggregation.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/hex-cell-aggregation.nlogox",
+    "evidenceFile": "evidence/computing/hex-cell-aggregation.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1103/revmodphys.55.601",
+      "authors": [
+        "Stephen Wolfram"
+      ],
+      "title": "Statistical mechanics of cellular automata",
+      "year": 1983,
+      "venue": "Reviews of Modern Physics",
+      "doi": "10.1103/revmodphys.55.601",
+      "url": "https://doi.org/10.1103/revmodphys.55.601",
+      "relevance": "Local cellular rules provide the theoretical framework for growing configurations.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FRevModPhys.55.601",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1103_revmodphys_55_601.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1103_revmodphys_55_601.json"
+      },
+      "publisher": "American Physical Society (APS)",
+      "volume": "55",
+      "issue": "3",
+      "pages": "601-644",
+      "verified": true
+    },
+    {
+      "id": "10.1016/s0960-0779(04)00374-1",
+      "authors": [
+        "C REITER"
+      ],
+      "title": "A local cellular model for snow crystal growth",
+      "year": 2005,
+      "venue": "Chaos, Solitons &amp; Fractals",
+      "doi": "10.1016/s0960-0779(04)00374-1",
+      "url": "https://doi.org/10.1016/s0960-0779(04)00374-1",
+      "relevance": "Hexagonal crystal-growth modeling offers a direct topology comparison while using different physical assumptions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2FS0960-0779%2804%2900374-1",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_s0960_0779_04_00374_1.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_s0960_0779_04_00374_1.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "23",
+      "issue": "4",
+      "pages": "1111-1119",
+      "verified": true
+    },
+    {
+      "id": "10.1103/physrevlett.47.1400",
+      "authors": [
+        "T. A. Witten",
+        "L. M. Sander"
+      ],
+      "title": "Diffusion-Limited Aggregation, a Kinetic Critical Phenomenon",
+      "year": 1981,
+      "venue": "Physical Review Letters",
+      "doi": "10.1103/physrevlett.47.1400",
+      "url": "https://doi.org/10.1103/physrevlett.47.1400",
+      "relevance": "Diffusion-limited aggregation is a scientifically important contrasting mechanism; NetLogo’s eligible-cell growth should not be mislabeled DLA.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevLett.47.1400",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1103_physrevlett_47_1400.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1103_physrevlett_47_1400.json"
+      },
+      "publisher": "American Physical Society (APS)",
+      "volume": "47",
+      "issue": "19",
+      "pages": "1400-1403",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

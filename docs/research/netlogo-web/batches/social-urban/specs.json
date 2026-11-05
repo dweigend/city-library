@@ -1,0 +1,1052 @@
+[
+  {
+    "slug": "preferential-attachment",
+    "question": "growth with degree-biased attachment can produce a network dominated by hubs",
+    "mechanism": "one new node attaches to one existing node with probability proportional to its degree, beginning with a connected pair",
+    "limits": "Finite networks, one-edge arrivals and the absence of deletion restrict the comparison; a straight line on a logarithmic plot is insufficient evidence for a power law",
+    "outcome": "cumulative advantage and its statistical assessment",
+    "refs": [
+      [
+        "ba",
+        "growth and preferential attachment generate heterogeneous degrees"
+      ],
+      [
+        "price",
+        "cumulative advantage provides an earlier reinforcement mechanism"
+      ],
+      [
+        "clauset",
+        "likelihood-based testing challenges visual power-law identification"
+      ]
+    ]
+  },
+  {
+    "slug": "voting",
+    "question": "local majority decisions create persistent spatial agreement or oscillation",
+    "mechanism": "binary patches synchronously consult eight neighbors, with optional switches that reverse ties or narrow majorities",
+    "limits": "These deterministic neighborhood rules omit strategic voting, institutions and measured human preferences; the title does not make this a calibrated election model",
+    "outcome": "local interaction and opinion dynamics",
+    "refs": [
+      [
+        "liggett",
+        "interacting particle systems contextualize local state dependence"
+      ],
+      [
+        "galam",
+        "majority-based opinion aggregation exposes sensitivity to decision rules"
+      ],
+      [
+        "castellano",
+        "opinion-model comparisons clarify why different update mechanisms matter"
+      ]
+    ]
+  },
+  {
+    "slug": "wolf-sheep-predation",
+    "question": "local consumption, reproduction and resource renewal permit predator-prey coexistence",
+    "mechanism": "mobile wolves eat sheep and expend energy; the optional grass variant gives sheep a renewable food supply and explicit energy costs",
+    "limits": "Random movement, fixed reproduction probabilities and simplified energy budgets omit species-specific behavior; aggregate differential equations are theoretical comparators rather than identical implementations",
+    "outcome": "population feedback and ecological model construction",
+    "refs": [
+      [
+        "volterra",
+        "coupled population changes provide the classical predator-prey comparison"
+      ],
+      [
+        "wolfpaper",
+        "embodied predator-prey modeling connects individual rules to aggregate dynamics"
+      ],
+      [
+        "gause",
+        "experimental population competition highlights the need for biological evidence"
+      ]
+    ]
+  },
+  {
+    "slug": "wealth-distribution",
+    "question": "heterogeneous resource gathering can generate unequal wealth without explicit inheritance",
+    "mechanism": "agents seek grain, consume it at individual metabolic rates and are replaced after starvation or age-related death",
+    "limits": "Grain wealth, replacement endowments and spatial access abstract away wages, financial institutions and inherited capital; apparent distributional similarity does not identify the real cause of inequality",
+    "outcome": "resource-mediated inequality and distributional inference",
+    "refs": [
+      [
+        "sugarscape",
+        "Sugarscape supplies the explicitly acknowledged resource-gathering ancestry"
+      ],
+      [
+        "yakovenko",
+        "wealth-distribution mechanisms offer a contrasting statistical-physics account"
+      ],
+      [
+        "clauset",
+        "tail-fitting methods constrain claims about emergent Pareto behavior"
+      ]
+    ]
+  },
+  {
+    "slug": "segregation",
+    "question": "mild local similarity preferences can produce strong residential separation",
+    "mechanism": "two agent types relocate when their neighboring same-type share falls below a specified satisfaction threshold",
+    "limits": "Binary types and unrestricted relocation omit discrimination, housing costs and institutional constraints; local satisfaction is a stipulated rule rather than a measured universal preference",
+    "outcome": "micro-to-macro residential sorting",
+    "refs": [
+      [
+        "schelling",
+        "local preferences generate aggregate segregation without central coordination"
+      ],
+      [
+        "zhang",
+        "economic extensions test how additional incentives change segregation dynamics"
+      ],
+      [
+        "clark",
+        "social context limits interpretation of physically similar spatial patterns"
+      ]
+    ]
+  },
+  {
+    "slug": "giant-component",
+    "question": "random edge addition creates a sharp change in large-scale reachability",
+    "mechanism": "initially isolated nodes receive uniformly selected new edges, and connected components merge as the graph becomes denser",
+    "limits": "Finite-size fluctuations, undirected edges and uniform mixing restrict extrapolation to structured human contacts",
+    "outcome": "random-network connectivity",
+    "refs": [
+      [
+        "giant",
+        "finite random graphs exhibit the birth of a giant component"
+      ],
+      [
+        "newman",
+        "network structure determines component and reachability properties"
+      ],
+      [
+        "ws",
+        "rewired local networks offer a contrasting connectivity mechanism"
+      ]
+    ]
+  },
+  {
+    "slug": "small-worlds",
+    "question": "a few nonlocal connections shorten routes while retaining clustered neighborhoods",
+    "mechanism": "a regular network is rewired and its path lengths and clustering are compared across rewiring probabilities",
+    "limits": "Graph construction, disconnection handling and finite size matter; a topological demonstration does not establish how particular social ties are formed",
+    "outcome": "short paths and local clustering",
+    "refs": [
+      [
+        "ws",
+        "the acknowledged Watts-Strogatz mechanism combines local order and shortcuts"
+      ],
+      [
+        "kleinberg",
+        "short routes do not automatically imply decentralized navigability"
+      ],
+      [
+        "smallworld",
+        "experimental chain tracing supplies a distinct empirical small-world comparison"
+      ]
+    ]
+  },
+  {
+    "slug": "diffusion-on-a-directed-network",
+    "question": "directed links concentrate or distribute an initially uneven conserved quantity",
+    "mechanism": "each node sends a fixed fraction of its value equally through outgoing links, with topology constraining subsequent transfers",
+    "limits": "Outgoing-degree normalization, sinks and update timing must be specified; quantity transfer is different from independent disease transmission",
+    "outcome": "directed transport and mixing",
+    "refs": [
+      [
+        "masuda",
+        "network random walks and diffusion contextualize directional transport"
+      ],
+      [
+        "consensus",
+        "agreement depends on interaction structure and communication assumptions"
+      ],
+      [
+        "pagerank",
+        "directed normalized transfers connect to ranking methods with additional teleportation assumptions"
+      ]
+    ]
+  },
+  {
+    "slug": "virus-on-a-network",
+    "question": "contact structure and periodic detection change infection persistence",
+    "mechanism": "susceptible nodes can become infected through neighbors, while checks may remove infection and sometimes produce permanent resistance",
+    "limits": "The susceptible-infected-resistant rules and scheduled checking differ from many continuous-time epidemic equations; computer-network interpretation is an analogy",
+    "outcome": "network-mediated contagion and control",
+    "refs": [
+      [
+        "kephart",
+        "graph epidemiology supplies a computer-virus transmission framework"
+      ],
+      [
+        "pastor",
+        "degree heterogeneity can change epidemic spreading behavior"
+      ],
+      [
+        "km",
+        "classical epidemic compartments clarify recovery and immunity assumptions"
+      ]
+    ]
+  },
+  {
+    "slug": "team-assembly",
+    "question": "newcomer recruitment and repeated collaboration generate different network structures",
+    "mechanism": "new project teams combine newcomers and incumbents, with a tunable preference for past collaborators and removal of inactive participants",
+    "limits": "Team-size and turnover rules simplify institutions; structural resemblance alone cannot establish that a particular team will be creative",
+    "outcome": "collaboration-network assembly",
+    "refs": [
+      [
+        "team",
+        "the explicitly acknowledged team-assembly model supplies the core mechanism"
+      ],
+      [
+        "uzzipiro",
+        "Broadway collaboration relates network structure to creative performance"
+      ],
+      [
+        "newmancollab",
+        "scientific coauthorship provides an empirical collaboration-network comparison"
+      ]
+    ]
+  },
+  {
+    "slug": "consumer-choice",
+    "question": "social information and conformity can compete with product quality and habit",
+    "mechanism": "networked consumers evaluate two products using quality experience, friends information, normative utility and repeated choice",
+    "limits": "Fixed behavioral rules and a two-product market omit income constraints and strategic pricing; a simulated market share is not a demand estimate",
+    "outcome": "socially embedded consumption",
+    "refs": [
+      [
+        "jager",
+        "habit and changing preferences offer a consumer-learning comparison"
+      ],
+      [
+        "cialdini",
+        "informative and normative influence distinguish reasons for conformity"
+      ],
+      [
+        "nyborg",
+        "norm-dependent behavior can create collective tipping and policy sensitivity"
+      ]
+    ]
+  },
+  {
+    "slug": "rebellion",
+    "question": "local risk perceptions and grievances generate bursts of overt protest",
+    "mechanism": "citizens compare hardship-based grievance with perceived arrest risk while moving police arrest active rebels",
+    "limits": "Legitimacy, risk aversion and visibility are stylized inputs; the model cannot forecast protest from a grievance slider alone",
+    "outcome": "threshold participation and repression",
+    "refs": [
+      [
+        "epstein",
+        "the explicitly acknowledged civil-violence model supplies citizen-police dynamics"
+      ],
+      [
+        "granovetter",
+        "participation thresholds connect individual incentives to collective mobilization"
+      ],
+      [
+        "lohmann",
+        "informational cascades provide a historically grounded alternative protest mechanism"
+      ]
+    ]
+  },
+  {
+    "slug": "language-change",
+    "question": "speaker learning and social-network structure jointly change linguistic variants",
+    "mechanism": "connected speakers produce utterances from competing grammars and alter their grammar use after hearing neighboring speakers",
+    "limits": "Binary variants and simplified learning omit linguistic content and institutional prestige; language death is a related aggregate comparator, not this exact mechanism",
+    "outcome": "network-mediated linguistic competition",
+    "refs": [
+      [
+        "baxter",
+        "utterance selection formalizes stochastic language-change mechanisms"
+      ],
+      [
+        "abrams",
+        "language competition offers a contrasting aggregate dynamics model"
+      ],
+      [
+        "ba",
+        "degree-biased network growth contextualizes the models heterogeneous social connections"
+      ]
+    ]
+  },
+  {
+    "slug": "party",
+    "question": "individual comfort thresholds lead groups to sort even without a central organizer",
+    "mechanism": "partygoers leave groups whose opposite-type share exceeds their tolerance and search for another group",
+    "limits": "The source uses binary gender categories and uniform tolerance; these are historical modeling conventions rather than supported descriptions of actual parties",
+    "outcome": "threshold-based group sorting",
+    "refs": [
+      [
+        "schelling",
+        "local composition preferences can produce aggregate separation"
+      ],
+      [
+        "zhang",
+        "segregation dynamics depend on relocation incentives and admissible alternatives"
+      ],
+      [
+        "clark",
+        "real social context limits interpretation of stylized sorting patterns"
+      ]
+    ]
+  },
+  {
+    "slug": "ethnocentrism",
+    "question": "in-group favoritism can evolve through local competition and inheritance",
+    "mechanism": "agents inherit group tags and separate cooperation decisions for same-tag and other-tag neighbors, with payoffs affecting reproduction",
+    "limits": "Tags, mutation and local occupancy are stipulated; evolving favoritism in this environment does not explain every real ethnic conflict",
+    "outcome": "conditional cooperation and evolutionary selection",
+    "refs": [
+      [
+        "hammond",
+        "the acknowledged ethnocentrism model directly specifies tag-conditioned cooperation"
+      ],
+      [
+        "axelrodcoop",
+        "reciprocity offers a contrasting route to cooperative behavior"
+      ],
+      [
+        "nowak",
+        "multiple evolutionary mechanisms delimit claims of one universal cooperation explanation"
+      ]
+    ]
+  },
+  {
+    "slug": "minority-game",
+    "question": "adaptive prediction can coordinate competition for a scarce winning position",
+    "mechanism": "agents choose binary sides using their best-scoring strategy tables, rewarding the minority and updating hypothetical strategy scores",
+    "limits": "Public binary histories and a fixed strategy pool omit prices, budgets and real market institutions; success is defined solely by minority membership",
+    "outcome": "adaptive crowding and coordination",
+    "refs": [
+      [
+        "minority",
+        "the acknowledged minority-game mechanism rewards anti-crowding choices"
+      ],
+      [
+        "crowd",
+        "heterogeneous strategy interactions explain collective fluctuations"
+      ],
+      [
+        "fogel",
+        "evolving prediction strategies provide a critical El Farol comparison"
+      ]
+    ]
+  },
+  {
+    "slug": "rumor-mill",
+    "question": "spatial proximity changes the speed and redundancy of information spread",
+    "mechanism": "informed patches repeatedly tell a random neighbor, using either four-neighbor or eight-neighbor contact and selectable initial seeding",
+    "limits": "Information is retained and repeatedly transmitted without credibility assessment; rumor models with stifling therefore have different stopping rules",
+    "outcome": "local information transmission",
+    "refs": [
+      [
+        "daley",
+        "stochastic rumor theory provides a comparator with explicit transmission states"
+      ],
+      [
+        "rumor",
+        "network structure influences rumor spreading beyond homogeneous mixing"
+      ],
+      [
+        "centola",
+        "behavioral-spread experiments show why repeated exposure need not act like simple information transfer"
+      ]
+    ]
+  },
+  {
+    "slug": "signaling-game",
+    "question": "successful reinforcement can establish shared meanings without preassigned signal semantics",
+    "mechanism": "senders select signals for world states, receivers choose responses, and rewarded pairings become more likely in subsequent interactions",
+    "limits": "Aligned payoffs, finite vocabularies and simple learning restrict claims about natural language, deception and unequal interests",
+    "outcome": "coordination through learned signaling conventions",
+    "refs": [
+      [
+        "lewis",
+        "conventions solve recurrent coordination problems without explicit agreement"
+      ],
+      [
+        "skyrms",
+        "evolution and learning explain emergence and failure of signaling systems"
+      ],
+      [
+        "nash",
+        "equilibrium provides a benchmark distinct from the simulated learning process"
+      ]
+    ]
+  },
+  {
+    "slug": "piaget-vygotsky-game",
+    "question": "individual feedback and social learning can complement one another",
+    "mechanism": "marble-rolling agents adjust their launch choices using personal performance, neighboring performance or both, approaching a common target",
+    "limits": "Motor adjustment is a deliberately narrow learning proxy; mapping it onto developmental theories is contestable and does not validate an educational intervention",
+    "outcome": "explicit comparison of learning hypotheses",
+    "refs": [
+      [
+        "abrahamson",
+        "the original thought experiment operationalizes competing learning accounts"
+      ],
+      [
+        "bridge",
+        "collaborative critique changes the modeled social-learning relationship"
+      ],
+      [
+        "piaget",
+        "developmental constructivism supplies a theoretical background for individual adaptation"
+      ]
+    ]
+  },
+  {
+    "slug": "heroes-and-cowards",
+    "question": "simple friend-enemy positioning rules produce organized collective motion",
+    "mechanism": "each agent chooses a friend and enemy and moves either between them or behind its friend relative to the enemy",
+    "limits": "Fixed relationships and geometric movement rules omit motives, perception errors and human social interpretation; bravery is an assigned rule label",
+    "outcome": "collective spatial organization",
+    "refs": [
+      [
+        "abm",
+        "the source textbook presents this specific friend-enemy thought experiment"
+      ],
+      [
+        "reynolds",
+        "distributed movement rules demonstrate formation without centralized control"
+      ],
+      [
+        "couzin",
+        "collective-motion models relate local interactions to spatial organization"
+      ]
+    ]
+  },
+  {
+    "slug": "fruit-wars",
+    "question": "larger benefits from joint foraging can favor less violent inherited strategies",
+    "mechanism": "foragers gather fruit, reproduce and pass on traits controlling cooperation, threats, fighting and flight, subject to energetic tradeoffs",
+    "limits": "The genetic encoding and collaboration bonus define a particular artificial ecology; they do not measure human aggression or prove that cooperation always dominates",
+    "outcome": "evolutionary conflict and mutual benefit",
+    "refs": [
+      [
+        "maynard",
+        "evolutionary stability formalizes competition between conflict strategies"
+      ],
+      [
+        "axelrodcoop",
+        "cooperative interactions can resist exploitation under specified conditions"
+      ],
+      [
+        "nowak",
+        "distinct cooperation mechanisms delimit generalizations from a single payoff environment"
+      ]
+    ]
+  },
+  {
+    "slug": "limited-order-book",
+    "question": "simple trading strategies and order matching generate market-level price behavior",
+    "mechanism": "traders with cash, token inventories and fixed value beliefs submit orders that are matched through a limit-order-book mechanism",
+    "limits": "Fixed beliefs, discrete scheduling and particular matching rules simplify real exchanges; comparison with empirical prices requires separately measured order-flow data",
+    "outcome": "market microstructure and institutional effects",
+    "refs": [
+      [
+        "orderbook",
+        "limit-order-book research connects matching rules to liquidity and prices"
+      ],
+      [
+        "zi",
+        "zero-intelligence trading isolates the influence of market institutions"
+      ],
+      [
+        "smithauction",
+        "experimental markets provide an empirical benchmark for competitive price formation"
+      ]
+    ]
+  },
+  {
+    "slug": "bidding-market",
+    "question": "local price adjustment can coordinate buyers and sellers without an auctioneer",
+    "mechanism": "buyers rotate between sellers, transact when prices meet their thresholds and adapt expectations while sellers adjust asking prices",
+    "limits": "Finite inventories, one-unit purchases and heuristic adjustments differ from a continuous double auction and do not guarantee a competitive equilibrium",
+    "outcome": "decentralized exchange and price adaptation",
+    "refs": [
+      [
+        "smithauction",
+        "experimental exchange provides a benchmark for price convergence"
+      ],
+      [
+        "zi",
+        "market efficiency need not require sophisticated individual calculation"
+      ],
+      [
+        "hotelling",
+        "competitive settings depend on spatial and institutional assumptions"
+      ]
+    ]
+  },
+  {
+    "slug": "hotellings-law",
+    "question": "location and price competition produce clustering or differentiation",
+    "mechanism": "stores consider moves and price changes while consumers choose the minimum combined travel and purchase cost on a line or plane",
+    "limits": "Discrete local search, planar extension and competitor ignorance differ from analytical equilibrium assumptions; transport costs can alter the original clustering result",
+    "outcome": "spatial competition and equilibrium qualifications",
+    "refs": [
+      [
+        "hotelling",
+        "the explicitly acknowledged original model links location to competition"
+      ],
+      [
+        "daspremont",
+        "the classical correction identifies limits to Hotellings equilibrium claims"
+      ],
+      [
+        "nash",
+        "equilibrium is a strategic benchmark rather than guaranteed heuristic convergence"
+      ]
+    ]
+  },
+  {
+    "slug": "braess-paradox",
+    "question": "adding a fast route can worsen travel times under selfish route choice",
+    "mechanism": "commuters choose between network routes whose costs depend on congestion, allowing comparison before and after a shortcut is opened",
+    "limits": "The paradox depends on the cost functions and demand; additional capacity does not universally worsen networks and adaptive runs need not instantly reach equilibrium",
+    "outcome": "selfish routing and collective inefficiency",
+    "refs": [
+      [
+        "braess",
+        "the source-cited paradox demonstrates harmful added capacity"
+      ],
+      [
+        "wardrop",
+        "user-equilibrium conditions distinguish individual route optimality from system optimality"
+      ],
+      [
+        "roughgarden",
+        "inefficiency bounds formalize the consequences of selfish routing"
+      ]
+    ]
+  },
+  {
+    "slug": "cash-flow",
+    "question": "reserve constraints and local payments jointly alter money holdings and inequality",
+    "mechanism": "mobile agents exchange money, settle wallet balances through savings and loans, and interact with a single aggregate bank",
+    "limits": "A reserve-driven money multiplier is a pedagogical assumption; modern credit creation, interest and lending constraints require a richer institutional account",
+    "outcome": "distributional accounting and banking assumptions",
+    "refs": [
+      [
+        "banks",
+        "empirical bank-accounting analysis challenges simple intermediation interpretations"
+      ],
+      [
+        "banktest",
+        "comparison of banking theories tests alternative credit-creation accounts"
+      ],
+      [
+        "boe",
+        "central-bank research directly qualifies mechanical deposit-multiplier reasoning"
+      ]
+    ]
+  },
+  {
+    "slug": "bank-reserves",
+    "question": "a stipulated reserve ratio controls lending and recorded money creation",
+    "mechanism": "random payments change wallets, after which agents deposit savings or request loans from one aggregate bank subject to available reserves",
+    "limits": "The model imposes a fractional-reserve mechanism rather than demonstrating that modern banks mechanically multiply deposits; capital, credit demand and monetary policy are abstracted",
+    "outcome": "lending constraints and money-accounting rules",
+    "refs": [
+      [
+        "banks",
+        "bank-accounting evidence tests how lending creates deposits"
+      ],
+      [
+        "banktest",
+        "contrasting banking theories expose dependence on institutional assumptions"
+      ],
+      [
+        "boe",
+        "modern monetary analysis rejects a literal mechanical money-multiplier interpretation"
+      ]
+    ]
+  },
+  {
+    "slug": "prisoners-dilemma-basic",
+    "question": "individually attractive choices can produce mutually inferior outcomes",
+    "mechanism": "two players choose confession or silence and receive prison sentences from a fixed payoff matrix",
+    "limits": "One-shot play, common payoffs and no binding communication define the dilemma; results cannot directly predict behavior under trust, repetition or social preferences",
+    "outcome": "dominance and strategic interdependence",
+    "refs": [
+      [
+        "nash",
+        "equilibrium supplies the formal benchmark for mutual best responses"
+      ],
+      [
+        "axelrodeff",
+        "repeated-game strategies demonstrate why one-shot reasoning has limits"
+      ],
+      [
+        "axelrodcoop",
+        "reciprocity changes the conditions under which cooperation persists"
+      ]
+    ]
+  },
+  {
+    "slug": "prisoners-dilemma-two-person-iterated",
+    "question": "repeated encounters allow contingent strategies to sustain cooperation",
+    "mechanism": "two players repeatedly choose cooperation or defection, score outcomes and respond using rules based on previous interaction",
+    "limits": "Strategy choices, noise and horizon assumptions strongly affect outcomes; a winning simulated strategy is not a universal prescription for social cooperation",
+    "outcome": "reciprocity and repeated strategic interaction",
+    "refs": [
+      [
+        "axelrodeff",
+        "computer tournaments compare contingent prisoner-dilemma strategies"
+      ],
+      [
+        "axelrodcoop",
+        "reciprocity supplies a mechanism for the persistence of cooperation"
+      ],
+      [
+        "nowak",
+        "other evolutionary mechanisms qualify explanations based solely on direct reciprocity"
+      ]
+    ]
+  },
+  {
+    "slug": "el-farol",
+    "question": "independent boundedly rational forecasts can coordinate attendance near a capacity threshold",
+    "mechanism": "agents score attendance predictors against recent history and attend when their selected forecast predicts an uncrowded bar",
+    "limits": "Predictor design, memory and threshold choices shape results; convergence of mean attendance does not imply accurate shared beliefs or full rationality",
+    "outcome": "inductive reasoning and adaptive crowding",
+    "refs": [
+      [
+        "arthurbar",
+        "the original bar problem formalizes inductive expectation formation"
+      ],
+      [
+        "fogel",
+        "evolutionary forecasting critically extends the original bounded-rationality model"
+      ],
+      [
+        "minority",
+        "minority rewards isolate a related anti-crowding coordination mechanism"
+      ]
+    ]
+  },
+  {
+    "slug": "paths",
+    "question": "reinforcement by repeated walkers can create a shared path network",
+    "mechanism": "travelers head toward random destinations while favoring established routes and increasing the popularity of patches they traverse",
+    "limits": "Popularity thresholds and movement heuristics omit construction costs, legal access and measured pedestrian preferences; routes need not be globally optimal",
+    "outcome": "environment-mediated trail formation",
+    "refs": [
+      [
+        "trail",
+        "active-walker feedback connects pedestrian motion with emerging trails"
+      ],
+      [
+        "activewalker",
+        "trail models distinguish destination-seeking walkers from other moving agents"
+      ],
+      [
+        "arthur",
+        "increasing returns explain why early route use can influence later choices"
+      ]
+    ]
+  },
+  {
+    "slug": "traffic-2-lanes",
+    "question": "lane switching changes the emergence and persistence of traffic jams",
+    "mechanism": "cars accelerate into free space, brake behind slower cars and may change lanes after repeated delays exhaust their patience",
+    "limits": "Patience, lane-change safety and vehicle motion are stylized rules; adding a lane-choice action does not by itself establish better throughput",
+    "outcome": "microscopic traffic and lateral interaction",
+    "refs": [
+      [
+        "lane",
+        "two-lane research isolates the importance of lane-changing logic"
+      ],
+      [
+        "nagel",
+        "a minimal freeway model connects local driving rules to congestion"
+      ],
+      [
+        "treiber",
+        "empirical traffic states provide a comparator for microscopic model behavior"
+      ]
+    ]
+  },
+  {
+    "slug": "traffic-grid",
+    "question": "signal timing and vehicle density jointly determine urban-grid congestion",
+    "mechanism": "cars accelerate and follow other vehicles while stopping at red lights, whose phases can be controlled locally or automatically",
+    "limits": "Regular roads, simplified car following and limited route choice omit heterogeneous trips and intersections; waiting counts and throughput measure different objectives",
+    "outcome": "network congestion and signal coordination",
+    "refs": [
+      [
+        "bml",
+        "grid interactions can generate a transition to collective blockage"
+      ],
+      [
+        "gershenson",
+        "self-organizing traffic lights provide a contrasting control strategy"
+      ],
+      [
+        "treiber",
+        "microscopic traffic-state comparisons caution against uncalibrated travel predictions"
+      ]
+    ]
+  },
+  {
+    "slug": "taxi-cabs",
+    "question": "fleet size, spatial demand and fares change taxi utilization and profitability",
+    "mechanism": "taxis cruise a zoned road grid, pick up waiting passengers and travel to requested destinations using Manhattan-distance routing",
+    "limits": "Stylized districts, pickup encounters and routing omit dispatch platforms and many driver decisions; simulated earnings require local cost and demand calibration",
+    "outcome": "spatial taxi-market supply and demand",
+    "refs": [
+      [
+        "taxi",
+        "network taxi modeling connects cruising and passenger service"
+      ],
+      [
+        "yangtaxi",
+        "fare and fleet regulation interact with spatial demand equilibrium"
+      ],
+      [
+        "taxiabm",
+        "agent-based taxi simulation provides a directly comparable modeling approach"
+      ]
+    ]
+  },
+  {
+    "slug": "traffic-basic",
+    "question": "stop-and-go waves can emerge without an external road obstruction",
+    "mechanism": "cars circulate on a single road loop, accelerating into free space and braking when a car is close ahead",
+    "limits": "A closed homogeneous road and simplified following rule omit merging and driver diversity; the simulation is distinct from a fitted empirical traffic model",
+    "outcome": "endogenous congestion waves",
+    "refs": [
+      [
+        "nagel",
+        "minimal local vehicle rules generate congestion in freeway models"
+      ],
+      [
+        "sugiyama",
+        "a circular-road experiment observes jam formation without bottlenecks"
+      ],
+      [
+        "treiber",
+        "empirical traffic-state analysis gives a richer microscopic comparison"
+      ]
+    ]
+  },
+  {
+    "slug": "traffic-intersection",
+    "question": "signal schedules can reduce waiting while avoiding conflicts between crossing flows",
+    "mechanism": "cars enter from two directions, accelerate and brake subject to limits, stop for signals and disappear after a modeled collision",
+    "limits": "Arrival rules, braking limits and one intersection exclude route diversion and wider-network spillback; minimizing a waiting counter alone is not a safety evaluation",
+    "outcome": "intersection control and constrained vehicle response",
+    "refs": [
+      [
+        "wardrop",
+        "traffic performance depends on the distinction between individual and system objectives"
+      ],
+      [
+        "gershenson",
+        "adaptive signals offer an alternative to fixed timing"
+      ],
+      [
+        "treiber",
+        "microscopic acceleration and braking require comparison with real driving behavior"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-structure-from-randomness-1",
+    "question": "local averaging can produce spatial structure from unstructured initial variation",
+    "mechanism": "binary random activity values are repeatedly averaged across each cell and its four neighbors, optionally with continuing random input",
+    "limits": "Activity is an abstract scalar without a calibrated urban interpretation; smoothing-generated patterns do not by themselves demonstrate a city-growth mechanism",
+    "outcome": "local spatial dependence and emergent pattern",
+    "refs": [
+      [
+        "batty",
+        "the acknowledged source develops this specific structure-from-randomness example"
+      ],
+      [
+        "tobler",
+        "spatial simulation provides an early urban-growth comparison"
+      ],
+      [
+        "white",
+        "urban cellular models connect local interactions to aggregate land-use form"
+      ]
+    ]
+  },
+  {
+    "slug": "traffic-grid-goal",
+    "question": "explicit home-work destinations change congestion relative to undirected circulating traffic",
+    "mechanism": "cars alternate between assigned home and work patches, selecting movement toward their destination while obeying car-following and traffic-light rules",
+    "limits": "A regular grid and repeated fixed destinations omit heterogeneous schedules and adaptive routing; destination completion is different from simply counting moving cars",
+    "outcome": "goal-directed commuting and signal control",
+    "refs": [
+      [
+        "abm",
+        "the source textbook supplies this concrete destination-based traffic variant"
+      ],
+      [
+        "gershenson",
+        "adaptive signal coordination provides a related control mechanism"
+      ],
+      [
+        "treiber",
+        "empirical microscopic traffic states constrain interpretation of congestion patterns"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-positive-feedback",
+    "question": "increasing returns amplify small differences in initial spatial activity",
+    "mechanism": "patch activity is raised to a tunable exponent, optionally after neighborhood averaging, and normalized relative to the current maximum",
+    "limits": "Normalization changes relative scale, and abstract activity has no fixed population unit; numerical dominance is not evidence for a specific urban economic process",
+    "outcome": "reinforcement and unequal growth",
+    "refs": [
+      [
+        "batty",
+        "the acknowledged source presents this particular nonlinear activity example"
+      ],
+      [
+        "simon",
+        "reinforced growth supplies a classical skew-distribution mechanism"
+      ],
+      [
+        "price",
+        "cumulative advantage formalizes success-dependent expansion"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-path-dependence",
+    "question": "early settlement events shape the eventual clustering of firms",
+    "mechanism": "mobile firms probabilistically settle according to local quality and the number of firms already present, with alternative decision mechanisms",
+    "limits": "Location probabilities encode assumptions about agglomeration rather than estimating them; alternative random histories need ensembles before conclusions about lock-in",
+    "outcome": "historical contingency and spatial concentration",
+    "refs": [
+      [
+        "arthur",
+        "increasing returns explain persistent outcomes selected by historical events"
+      ],
+      [
+        "batty",
+        "urban complexity models situate firm-location feedback in spatial systems"
+      ],
+      [
+        "simon",
+        "reinforcement offers a comparator for uneven cumulative growth"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-cells",
+    "question": "neighborhood and aging rules create different urban-like growth forms",
+    "mechanism": "cells activate probabilistically when neighboring active-cell counts satisfy selected rules and may deactivate after an age limit",
+    "limits": "The lattice has no households, transport costs or land market; visually urban patterns do not establish realistic land-use dynamics or planning effectiveness",
+    "outcome": "cellular growth and spatial rule sensitivity",
+    "refs": [
+      [
+        "batty",
+        "the acknowledged source develops cellular approaches to urban form"
+      ],
+      [
+        "white",
+        "land-use cellular automata link local transition rules to spatial structure"
+      ],
+      [
+        "clarke",
+        "historical urbanization modeling illustrates the extra calibration required for applications"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-structure-from-randomness-2",
+    "question": "persistent threshold activation turns fluctuating local potentials into lasting spatial patterns",
+    "mechanism": "each patch averages its previous potential with four neighbors, adds random signed noise and remains activated after crossing a threshold",
+    "limits": "An irreversible display state differs from the underlying reversible potential; the model omits resource budgets, actual buildings and observed urban development data",
+    "outcome": "noise, local coupling and threshold memory",
+    "refs": [
+      [
+        "batty",
+        "the acknowledged source gives this specific potential-threshold example"
+      ],
+      [
+        "white",
+        "urban cellular models provide a comparison for local spatial interaction"
+      ],
+      [
+        "clarke",
+        "historically grounded urban simulation highlights what empirical application additionally requires"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-tijuana-bordertowns",
+    "question": "migration, income and infrastructure access can jointly shape informal settlement",
+    "mechanism": "migrants enter near compatriots, earn and spend money, seek affordable serviced locations and form settlements whose density can trigger infrastructure development",
+    "limits": "The source is a pedagogical design experiment with stylized economic and migration rules; no contemporary Tijuana forecast or calibration is established here",
+    "outcome": "migration-linked settlement and urban-service inequalities",
+    "refs": [
+      [
+        "tijuana",
+        "scholarly border-city studies supply context for Tijuanas distinctive urban conditions"
+      ],
+      [
+        "exurbia",
+        "empirical requirements constrain bottom-up residential development modeling"
+      ],
+      [
+        "seto",
+        "observed urban-expansion research illustrates the need for explicit spatial evidence"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-pollution",
+    "question": "pollution diffusion and local mitigation alter population persistence",
+    "mechanism": "power plants maintain pollutant sources, trees reduce nearby pollution and moving people lose health or reproduce depending on their condition",
+    "limits": "Pollution is an abstract field, and health decline is a stipulated exposure rule; tree effects are not calibrated removal rates or epidemiological risk estimates",
+    "outcome": "coupled environmental stress and demographic feedback",
+    "refs": [
+      [
+        "hallam",
+        "toxicant-population models formalize exposure-dependent persistence and extinction"
+      ],
+      [
+        "volterra",
+        "coupled population dynamics supply a classical ecological comparison"
+      ],
+      [
+        "wolfpaper",
+        "embodied ecological models clarify links between individual rules and population outcomes"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-economic-disparity",
+    "question": "income-dependent location preferences reinforce residential and service inequality",
+    "mechanism": "rich and poor entrants sample sites with different utility priorities, influence local price and quality, and attract jobs toward higher-value areas",
+    "limits": "The source itself questions the assumption that jobs seek expensive land; binary income groups and directional neighborhood effects are propositions rather than established causal laws",
+    "outcome": "economic sorting and reinforcing land-use change",
+    "refs": [
+      [
+        "exurbia",
+        "the acknowledged SOME ancestry confronts empirical requirements for residential development"
+      ],
+      [
+        "zhang",
+        "economic segregation models connect relocation choices with spatial inequality"
+      ],
+      [
+        "clark",
+        "social context cautions against explaining observed separation from abstract preferences alone"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-awareness",
+    "question": "information encounters and interpersonal influence can sustain or extinguish awareness",
+    "mechanism": "moving people gain points from information centers or informed neighbors, lose points otherwise and create new centers after reaching an activist threshold",
+    "limits": "Awareness points, fixed gains and threshold activism are invented operational measures; the simulation does not estimate actual recycling attitudes or advertising effects",
+    "outcome": "reinforcement, decay and social influence",
+    "refs": [
+      [
+        "centola",
+        "experiments distinguish behavioral diffusion from simple information transmission"
+      ],
+      [
+        "granovetter",
+        "threshold participation contextualizes the transition to modeled activism"
+      ],
+      [
+        "cialdini",
+        "social-influence mechanisms delimit interpretation of interpersonal persuasion"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-recycling",
+    "question": "resource-restoring behavior can persist against faster but destructive exploitation",
+    "mechanism": "recyclers take partial resources or restore wasted cells, while wasteful agents exhaust cells and all agents maintain energy budgets",
+    "limits": "Arbitrary gains, restoration costs and regeneration multipliers stand in for complex material cycles; neither label measures a real households environmental impact",
+    "outcome": "resource feedback and collective sustainability",
+    "refs": [
+      [
+        "commons",
+        "shared-resource dilemmas contextualize individually profitable depletion"
+      ],
+      [
+        "ostrom",
+        "institutional evidence challenges assumptions that depletion is inevitable"
+      ],
+      [
+        "sustain",
+        "resource-use research connects management choices with longer-term sustainability"
+      ]
+    ]
+  },
+  {
+    "slug": "urban-suite-sprawl-effect",
+    "question": "local attraction and declining site quality can generate dispersed development",
+    "mechanism": "seekers move toward attractive patches, settle probabilistically and reinforce activity, while overused sites undergo an abrupt attractiveness reset",
+    "limits": "The source acknowledges the reset as unrealistic; no zoning, market-clearing prices or infrastructure constraints are represented, so leapfrogging is a mechanism illustration",
+    "outcome": "feedback-driven residential dispersion",
+    "refs": [
+      [
+        "exurbia",
+        "the acknowledged SOME ancestry supplies an empirical modeling challenge"
+      ],
+      [
+        "clarke",
+        "historical urban-growth simulation offers a calibrated spatial comparator"
+      ],
+      [
+        "seto",
+        "urban-expansion forecasts connect development patterns to environmental consequences"
+      ]
+    ]
+  },
+  {
+    "slug": "climate-change",
+    "question": "radiative absorption, reflection and escape change the Earths modeled energy balance",
+    "mechanism": "sunlight becomes stored heat or reflected energy, and emitted infrared packets interact with greenhouse-gas and cloud representations",
+    "limits": "Packet collisions and one surface temperature are teaching abstractions; the display does not resolve molecular spectroscopy, ocean circulation or regional climate change",
+    "outcome": "greenhouse forcing and energy balance",
+    "refs": [
+      [
+        "arrhenius",
+        "the original carbon-dioxide calculation connects atmospheric composition to temperature"
+      ],
+      [
+        "manabe",
+        "radiative-convective equilibrium provides a physically richer atmospheric comparison"
+      ],
+      [
+        "hansen",
+        "forcing efficacy qualifies simple equivalence between different climate perturbations"
+      ]
+    ]
+  },
+  {
+    "slug": "erosion",
+    "question": "downhill water transport can reorganize terrain into drainage patterns",
+    "mechanism": "rain adds water to patches, flow moves toward lower neighboring water levels and proportional erosion lowers source-cell elevation while boundaries drain material",
+    "limits": "The source calls its flow scheme naive; simplified routing, erosion and sediment treatment omit many hydraulic processes and prevent direct prediction of real catchments",
+    "outcome": "coupled runoff and landscape change",
+    "refs": [
+      [
+        "howard",
+        "detachment-limited drainage modeling connects flow with evolving topography"
+      ],
+      [
+        "tuckerreview",
+        "landscape-evolution research exposes process and scale assumptions"
+      ],
+      [
+        "soil",
+        "spatial soil-evolution modeling adds depth and hillslope responses absent here"
+      ]
+    ]
+  }
+]

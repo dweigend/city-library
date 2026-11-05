@@ -1,0 +1,4404 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.physrep.2017.07.007",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T15:50:58Z",
+        "timestamp": 1793893858129,
+        "version": "4.8.0"
+      },
+      "reference-count": 425,
+      "publisher": "Elsevier BV",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2017,
+                11,
+                1
+              ]
+            ],
+            "date-time": "2017-11-01T00:00:00Z",
+            "timestamp": 1509494400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2017,
+                11,
+                1
+              ]
+            ],
+            "date-time": "2017-11-01T00:00:00Z",
+            "timestamp": 1509494400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/legal/tdmrep-license"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                18
+              ]
+            ],
+            "date-time": "2017-08-18T00:00:00Z",
+            "timestamp": 1503014400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ],
+      "funder": [
+        {
+          "name": "JST"
+        },
+        {
+          "name": "CREST"
+        },
+        {
+          "name": "Actions de Recherche Concert\u00e9e"
+        },
+        {
+          "name": "Interuniversity Attraction Poles Programme"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "elsevier.com",
+          "sciencedirect.com"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "Physics Reports"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2017,
+            11
+          ]
+        ]
+      },
+      "DOI": "10.1016/j.physrep.2017.07.007",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2017,
+            8,
+            31
+          ]
+        ],
+        "date-time": "2017-08-31T17:48:05Z",
+        "timestamp": 1504201685000
+      },
+      "page": "1-58",
+      "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 658,
+      "special_numbering": "C",
+      "title": [
+        "Random walks and diffusion on networks"
+      ],
+      "prefix": "10.1016",
+      "volume": "716-717",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-1567-801X",
+          "authenticated-orcid": false,
+          "given": "Naoki",
+          "family": "Masuda",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mason A.",
+          "family": "Porter",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0583-4595",
+          "authenticated-orcid": false,
+          "given": "Renaud",
+          "family": "Lambiotte",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "78",
+      "reference": [
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b1",
+          "unstructured": "D. Aldous, J.A. Fill, Reversible Markov chains and random walks on graphs, unfinished monograph, recompiled 2014, 2002, available at http://www.stat.berkeley.edu/~aldous/RWG/book.html."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b2",
+          "series-title": "An Introduction to Probability Theory and its Applications, Volume I",
+          "author": "Feller",
+          "year": "1968"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b3",
+          "series-title": "An Introduction to Probability Theory and its Applications, Volume II",
+          "author": "Feller",
+          "year": "1971"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b4",
+          "series-title": "Random Walks and Randon Environments, Volume 1: Random Walks",
+          "author": "Hughes",
+          "year": "1995"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b5",
+          "doi-asserted-by": "crossref",
+          "first-page": "50",
+          "DOI": "10.1140/epjb/e2016-70578-3",
+          "article-title": "The continuous time random walk, still trendy: Fifty-year history, state of art, and outlook",
+          "volume": "90",
+          "author": "Kutner",
+          "year": "2017",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b6",
+          "doi-asserted-by": "crossref",
+          "first-page": "294",
+          "DOI": "10.1038/072294b0",
+          "article-title": "The problem of the random walk",
+          "volume": "72",
+          "author": "Pearson",
+          "year": "1905",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b7",
+          "doi-asserted-by": "crossref",
+          "first-page": "409",
+          "DOI": "10.1080/00029890.1960.11989521",
+          "article-title": "Pascal and the invention of probability theory",
+          "volume": "67",
+          "author": "Ore",
+          "year": "1960",
+          "journal-title": "Amer. Math. Monthly"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b8",
+          "doi-asserted-by": "crossref",
+          "first-page": "549",
+          "DOI": "10.1002/andp.19053220806",
+          "article-title": "\u00dcber die von der molekularkinetischen Theorie der W\u00e4rme geforderte Bewegung von in ruhenden Fl\u00fcssigkeiten suspendierten Teilchen",
+          "volume": "322",
+          "author": "Einstein",
+          "year": "1905",
+          "journal-title": "Ann. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b9",
+          "doi-asserted-by": "crossref",
+          "first-page": "911",
+          "DOI": "10.1038/44831",
+          "article-title": "Optimizing the success of random searches",
+          "volume": "401",
+          "author": "Viswanathan",
+          "year": "1999",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b10",
+          "doi-asserted-by": "crossref",
+          "first-page": "813",
+          "DOI": "10.1098/rsif.2008.0014",
+          "article-title": "Random walk models in biology",
+          "volume": "5",
+          "author": "Codling",
+          "year": "2008",
+          "journal-title": "J. R. Soc. Interface"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b11",
+          "doi-asserted-by": "crossref",
+          "first-page": "1066",
+          "DOI": "10.1038/nature09116",
+          "article-title": "Environmental context explains L\u00e9vy and Brownian movement patterns of marine predators",
+          "volume": "465",
+          "author": "Humphries et al.",
+          "year": "2010",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b12",
+          "series-title": "Diffusion and Ecological Problems: Modern Perspectives",
+          "author": "Okubo",
+          "year": "2001"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b13",
+          "series-title": "Introduction to Theoretical Neurobiology: Volume 2, Nonlinear and Stochastic Theories",
+          "author": "Tuckwell",
+          "year": "1988"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b14",
+          "series-title": "Mathematics for Neuroscientists",
+          "author": "Gabbiani",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b15",
+          "doi-asserted-by": "crossref",
+          "first-page": "550",
+          "DOI": "10.1037/0033-295X.108.3.550",
+          "article-title": "The time course of perceptual choice: The leaky, competing accumulator model",
+          "volume": "108",
+          "author": "Usher",
+          "year": "2001",
+          "journal-title": "Psychol. Rev."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b16",
+          "doi-asserted-by": "crossref",
+          "first-page": "535",
+          "DOI": "10.1146/annurev.neuro.29.051605.113038",
+          "article-title": "The neural basis of decision making",
+          "volume": "30",
+          "author": "Gold",
+          "year": "2007",
+          "journal-title": "Annu. Rev. Neurosci."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b17",
+          "series-title": "Mathematical Population Genetics I. Theoretical Introduction",
+          "author": "Ewens",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b18",
+          "doi-asserted-by": "crossref",
+          "first-page": "616",
+          "DOI": "10.1063/1.1726734",
+          "article-title": "Shape of a self-avoiding walk or polymer chain",
+          "volume": "44",
+          "author": "Fisher",
+          "year": "1966",
+          "journal-title": "J. Chem. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b19",
+          "doi-asserted-by": "crossref",
+          "first-page": "961",
+          "DOI": "10.1103/RevModPhys.64.961",
+          "article-title": "Percolation, statistical topography, and transport in random media",
+          "volume": "64",
+          "author": "Isichenko",
+          "year": "1992",
+          "journal-title": "Rev. Modern Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b20",
+          "series-title": "The Econometrics of Financial Markets",
+          "author": "Campbell",
+          "year": "1996"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b21",
+          "series-title": "An Introduction to Econophysics",
+          "author": "Mantegna",
+          "year": "1999"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b22",
+          "doi-asserted-by": "crossref",
+          "first-page": "0078",
+          "DOI": "10.1038/s41562-017-0078",
+          "article-title": "Quantifying patterns of research-interest evolution",
+          "volume": "1",
+          "author": "Jia",
+          "year": "2017",
+          "journal-title": "Nat. Human Behav."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b23",
+          "doi-asserted-by": "crossref",
+          "first-page": "321",
+          "DOI": "10.1137/140976649",
+          "article-title": "PageRank beyond the Web",
+          "volume": "57",
+          "author": "Gleich",
+          "year": "2015",
+          "journal-title": "SIAM Rev."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b24",
+          "doi-asserted-by": "crossref",
+          "first-page": "7426",
+          "DOI": "10.1073/pnas.0500334102",
+          "article-title": "Geometric diffusions as a tool for harmonic analysis and structure definition of data: Diffusion maps",
+          "volume": "102",
+          "author": "Coifman",
+          "year": "2005",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b25",
+          "doi-asserted-by": "crossref",
+          "first-page": "5",
+          "DOI": "10.1016/j.acha.2006.04.006",
+          "article-title": "Diffusion maps",
+          "volume": "21",
+          "author": "Coifman",
+          "year": "2006",
+          "journal-title": "Appl. Comput. Harmon. Anal."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b26",
+          "doi-asserted-by": "crossref",
+          "first-page": "062815",
+          "DOI": "10.1103/PhysRevE.91.062815",
+          "article-title": "Safe leads and lead changes in competitive team sports",
+          "volume": "91",
+          "author": "Clauset",
+          "year": "2015",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b27",
+          "doi-asserted-by": "crossref",
+          "first-page": "333001",
+          "DOI": "10.1088/1751-8121/aa71c1",
+          "article-title": "Record statistics of a strongly correlated time series: Random walks and L\u00e9vy flights",
+          "volume": "50",
+          "author": "Godr\u00e8che",
+          "year": "2017",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b28",
+          "doi-asserted-by": "crossref",
+          "first-page": "012313",
+          "DOI": "10.1103/PhysRevE.95.012313",
+          "article-title": "Effective distances for epidemics spreading on complex networks",
+          "volume": "95",
+          "author": "Iannelli",
+          "year": "2017",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b29",
+          "series-title": "Principles of Random Walk",
+          "author": "Spitzer",
+          "year": "1976"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b30",
+          "series-title": "Aspects and Applications of the Random Walk",
+          "author": "Weiss",
+          "year": "1994"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b31",
+          "series-title": "A Guide to First-Passage Processes",
+          "author": "Redner",
+          "year": "2001"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b32",
+          "doi-asserted-by": "crossref",
+          "first-page": "R45",
+          "DOI": "10.1088/0305-4470/38/8/R01",
+          "article-title": "Random walks on graphs: Ideas, techniques and results",
+          "volume": "38",
+          "author": "Burioni",
+          "year": "2005",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b33",
+          "series-title": "A Kinetic View of Statistical Physics",
+          "author": "Krapivsky",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b34",
+          "series-title": "First Steps in Random Walks",
+          "author": "Klafter",
+          "year": "2011"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b35",
+          "series-title": "Elements of Random Walk and Diffusion Processes",
+          "author": "Ibe",
+          "year": "2013"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b36",
+          "doi-asserted-by": "crossref",
+          "first-page": "547",
+          "DOI": "10.1007/BF01012921",
+          "article-title": "Random-walk statistics on fractal structures",
+          "volume": "36",
+          "author": "Rammal",
+          "year": "1984",
+          "journal-title": "J. Stat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b37",
+          "doi-asserted-by": "crossref",
+          "first-page": "695",
+          "DOI": "10.1080/00018738700101072",
+          "article-title": "Diffusion in disordered media",
+          "volume": "36",
+          "author": "Havlin",
+          "year": "1987",
+          "journal-title": "Adv. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b38",
+          "doi-asserted-by": "crossref",
+          "first-page": "127",
+          "DOI": "10.1016/0370-1573(90)90099-N",
+          "article-title": "Anomalous diffusion in disordered media: Statistical mechanisms, models and physical applications",
+          "volume": "195",
+          "author": "Bouchaud",
+          "year": "1990",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b39",
+          "series-title": "Diffusion and Reactions in Fractals and Disordered Systems",
+          "author": "ben-Avraham",
+          "year": "2000"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b40",
+          "doi-asserted-by": "crossref",
+          "first-page": "225",
+          "DOI": "10.1016/j.physrep.2014.02.003",
+          "article-title": "From first-passage times of random walks in confinement to geometry-controlled kinetics",
+          "volume": "539",
+          "author": "B\u00e9nichou",
+          "year": "2014",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b41",
+          "series-title": "Random Walks and Electric Networks",
+          "author": "Doyle",
+          "year": "1984"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b42",
+          "series-title": "Combinatorics, Paul Erd\u0151s Is Eighty, Volume 1",
+          "first-page": "353",
+          "article-title": "Random walks on graphs: A survey",
+          "author": "Lov\u00e1sz",
+          "year": "1993"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b43",
+          "doi-asserted-by": "crossref",
+          "first-page": "807",
+          "DOI": "10.1017/S0956792516000334",
+          "article-title": "Editorial: Network analysis and modelling: Special issue of European Journal of Applied Mathematics",
+          "volume": "27",
+          "author": "Porter",
+          "year": "2016",
+          "journal-title": "Eur. J. Appl. Math."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b44",
+          "series-title": "Networks: An Introduction",
+          "author": "Newman",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b45",
+          "series-title": "Network Science",
+          "author": "Barab\u00e1si",
+          "year": "2016"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b46",
+          "doi-asserted-by": "crossref",
+          "first-page": "175",
+          "DOI": "10.1016/j.physrep.2005.10.009",
+          "article-title": "Complex networks: structure and dynamics",
+          "volume": "424",
+          "author": "Boccaletti",
+          "year": "2006",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b47",
+          "doi-asserted-by": "crossref",
+          "first-page": "268",
+          "DOI": "10.1038/35065725",
+          "article-title": "Exploring complex networks",
+          "volume": "410",
+          "author": "Strogatz",
+          "year": "2001",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b48",
+          "series-title": "Dynamical Processes on Complex Networks",
+          "author": "Barrat",
+          "year": "2008"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b49",
+          "series-title": "Dynamical Systems on Networks: A Tutorial",
+          "author": "Porter",
+          "year": "2016"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b50",
+          "series-title": "Evolution of Networks: From Biological Nets to the Internet and WWW",
+          "author": "Dorogovtsev",
+          "year": "2003"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b51",
+          "series-title": "Complex Networks: Structure, Robustness and Function",
+          "author": "Cohen",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b52",
+          "series-title": "The Structure of Complex Networks: Theory and Applications",
+          "author": "Estrada",
+          "year": "2012"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b53",
+          "doi-asserted-by": "crossref",
+          "first-page": "167",
+          "DOI": "10.1137/S003614450342480",
+          "article-title": "The structure and function of complex networks",
+          "volume": "45",
+          "author": "Newman",
+          "year": "2003",
+          "journal-title": "SIAM Rev."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b54",
+          "doi-asserted-by": "crossref",
+          "first-page": "93",
+          "DOI": "10.1016/j.physrep.2008.09.002",
+          "article-title": "Synchronization in complex networks",
+          "volume": "469",
+          "author": "Arenas",
+          "year": "2008",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b55",
+          "doi-asserted-by": "crossref",
+          "first-page": "47",
+          "DOI": "10.1103/RevModPhys.74.47",
+          "article-title": "Statistical mechanics of complex networks",
+          "volume": "74",
+          "author": "Albert",
+          "year": "2002",
+          "journal-title": "Rev. Modern Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b56",
+          "doi-asserted-by": "crossref",
+          "first-page": "1275",
+          "DOI": "10.1103/RevModPhys.80.1275",
+          "article-title": "Critical phenomena in complex networks",
+          "volume": "80",
+          "author": "Dorogovtsev",
+          "year": "2008",
+          "journal-title": "Rev. Modern Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b57",
+          "doi-asserted-by": "crossref",
+          "first-page": "97",
+          "DOI": "10.1016/j.physrep.2012.03.001",
+          "article-title": "Temporal networks",
+          "volume": "519",
+          "author": "Holme",
+          "year": "2012",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b58",
+          "doi-asserted-by": "crossref",
+          "first-page": "234",
+          "DOI": "10.1140/epjb/e2015-60657-4",
+          "article-title": "Modern temporal network theory: A colloquium",
+          "volume": "88",
+          "author": "Holme",
+          "year": "2015",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b59",
+          "series-title": "A Guide to Temporal Networks",
+          "author": "Masuda",
+          "year": "2016"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b60",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1016/j.physrep.2014.07.001",
+          "article-title": "The structure and dynamics of multilayer networks",
+          "volume": "544",
+          "author": "Boccaletti",
+          "year": "2014",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b61",
+          "first-page": "203",
+          "article-title": "Multilayer Networks",
+          "volume": "2",
+          "author": "Kivel\u00e4",
+          "year": "2014",
+          "journal-title": "J. Comput. Netw."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b62",
+          "doi-asserted-by": "crossref",
+          "first-page": "901",
+          "DOI": "10.1038/nphys3865",
+          "article-title": "The physics of spreading processes in multilayer networks",
+          "volume": "12",
+          "author": "De Domenico",
+          "year": "2016",
+          "journal-title": "Nat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b63",
+          "unstructured": "M.A. Porter, J.P. Onnela, P.J. Mucha, Communities in networks, Notices Amer. Math. Soc. 56 (2009) 1082\u20131097, 1164\u20131166."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b64",
+          "doi-asserted-by": "crossref",
+          "first-page": "75",
+          "DOI": "10.1016/j.physrep.2009.11.002",
+          "article-title": "Community detection in graphs",
+          "volume": "486",
+          "author": "Fortunato",
+          "year": "2010",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b65",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1016/j.physrep.2016.09.002",
+          "article-title": "Community detection in networks: A user guide",
+          "volume": "659",
+          "author": "Fortunato",
+          "year": "2016",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b66",
+          "doi-asserted-by": "crossref",
+          "unstructured": "S. Brin, L. Page, Anatomy of a large-scale hypertextual web search engine, in: Proceedings of the Seventh International World Wide Web Conference, 1998, pp. 107\u2013117.",
+          "DOI": "10.1016/S0169-7552(98)00110-X"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b67",
+          "doi-asserted-by": "crossref",
+          "first-page": "113",
+          "DOI": "10.1080/0022250X.1972.9989806",
+          "article-title": "Factoring and weighting approaches to status scores and clique identification",
+          "volume": "2",
+          "author": "Bonacich",
+          "year": "1972",
+          "journal-title": "J. Math. Sociol."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b68",
+          "doi-asserted-by": "crossref",
+          "first-page": "012821",
+          "DOI": "10.1103/PhysRevE.91.012821",
+          "article-title": "Think locally, act locally: Detection of small, medium-sized, and large communities in large networks",
+          "volume": "91",
+          "author": "Jeub",
+          "year": "2015",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b69",
+          "doi-asserted-by": "crossref",
+          "first-page": "639",
+          "DOI": "10.1017/S0305004100030711",
+          "article-title": "Correlated random walk",
+          "volume": "51",
+          "author": "Gillis",
+          "year": "1955",
+          "journal-title": "Math. Proc. Cambridge Philos. Soc."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b70",
+          "doi-asserted-by": "crossref",
+          "first-page": "425",
+          "DOI": "10.1007/BF01012316",
+          "article-title": "From random to self-avoiding walks",
+          "volume": "30",
+          "author": "Domb",
+          "year": "1983",
+          "journal-title": "J. Stat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b71",
+          "series-title": "The Self-Avoiding Walk",
+          "author": "Madras",
+          "year": "1993"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b72",
+          "doi-asserted-by": "crossref",
+          "first-page": "R195",
+          "DOI": "10.1088/0305-4470/38/19/R01",
+          "article-title": "Nonequilibrium statistical mechanics of the zero-range process and related models",
+          "volume": "38",
+          "author": "Evans",
+          "year": "2005",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b73",
+          "doi-asserted-by": "crossref",
+          "first-page": "1628",
+          "DOI": "10.1103/PhysRevA.20.1628",
+          "article-title": "Multiplicative stochastic processes in statistical physics",
+          "volume": "20",
+          "author": "Schenzle",
+          "year": "1979",
+          "journal-title": "Phys. Rev. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b74",
+          "doi-asserted-by": "crossref",
+          "first-page": "1438",
+          "DOI": "10.1103/PhysRevLett.61.1438",
+          "article-title": "Random multiplicative processes and transport in structures with correlated spatial disorder",
+          "volume": "61",
+          "author": "Havlin",
+          "year": "1988",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b75",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1214/07-PS094",
+          "article-title": "A survey of random processes with reinforcement",
+          "volume": "4",
+          "author": "Pemantle",
+          "year": "2007",
+          "journal-title": "Probab. Surv."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b76",
+          "series-title": "Classical and Spatial Stochastic Processes",
+          "author": "Schinazi",
+          "year": "1999"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b77",
+          "doi-asserted-by": "crossref",
+          "first-page": "045101(R)",
+          "DOI": "10.1103/PhysRevE.70.045101",
+          "article-title": "Elephants can always remember: Exact long-range memory effects in a non-Markovian random walk",
+          "volume": "70",
+          "author": "Sch\u00fctz",
+          "year": "2004",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b78",
+          "doi-asserted-by": "crossref",
+          "first-page": "307",
+          "DOI": "10.1080/00107151031000110776",
+          "article-title": "Quantum random walks: An introductory overview",
+          "volume": "44",
+          "author": "Kempe",
+          "year": "2003",
+          "journal-title": "Contemp. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b79",
+          "doi-asserted-by": "crossref",
+          "first-page": "37",
+          "DOI": "10.1016/j.physrep.2011.01.002",
+          "article-title": "Continuous-time quantum walks: Models for coherent transport on complex networks",
+          "volume": "502",
+          "author": "M\u00fclken",
+          "year": "2011",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b80",
+          "doi-asserted-by": "crossref",
+          "first-page": "81",
+          "DOI": "10.1103/RevModPhys.83.81",
+          "article-title": "Intermittent search strategies",
+          "volume": "83",
+          "author": "B\u00e9nichou",
+          "year": "2011",
+          "journal-title": "Rev. Modern Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b81",
+          "doi-asserted-by": "crossref",
+          "first-page": "088103",
+          "DOI": "10.1103/PhysRevLett.108.088103",
+          "article-title": "Optimizing persistent random searches",
+          "volume": "108",
+          "author": "Tejedor",
+          "year": "2012",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b82",
+          "doi-asserted-by": "crossref",
+          "first-page": "238101",
+          "DOI": "10.1103/PhysRevLett.113.238101",
+          "article-title": "Depletion-controlled starvation of a diffusing forager",
+          "volume": "113",
+          "author": "B\u00e9nichou",
+          "year": "2014",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b83",
+          "doi-asserted-by": "crossref",
+          "first-page": "394003",
+          "DOI": "10.1088/1751-8113/49/39/394003",
+          "article-title": "Role of depletion on the dynamics of a diffusing forager",
+          "volume": "49",
+          "author": "B\u00e9nichou",
+          "year": "2016",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b84",
+          "doi-asserted-by": "crossref",
+          "first-page": "073213",
+          "DOI": "10.1088/1742-5468/aa7dfc",
+          "article-title": "Starvation dynamics of a greedy forager",
+          "author": "Bhat",
+          "year": "2017",
+          "journal-title": "J. Stat. Mech."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b85",
+          "doi-asserted-by": "crossref",
+          "first-page": "084106",
+          "DOI": "10.1063/1.4976522",
+          "article-title": "The escape problem for mortal walkers",
+          "volume": "146",
+          "author": "Grebenkov",
+          "year": "2017",
+          "journal-title": "J. Chem. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b86",
+          "unstructured": "T. Schilling, T. Voigtmann, Clearing out a maze: The hungry random walker and its anomalous diffusion, 2016, https://arxiv.org/abs/1607.01123."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b87",
+          "first-page": "1355",
+          "article-title": "Rethinking centrality: The role of dynamical processes in social network analysis",
+          "volume": "19",
+          "author": "Ghosh",
+          "year": "2014",
+          "journal-title": "Discrete Contin. Dyn. Syst. Ser. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b88",
+          "doi-asserted-by": "crossref",
+          "first-page": "e57",
+          "DOI": "10.7717/peerj-cs.57",
+          "article-title": "Capturing the interplay of dynamics and networks through parameterizations of Laplacian operators",
+          "volume": "2",
+          "author": "Yan",
+          "year": "2016",
+          "journal-title": "PeerJ Comput. Sci."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b89",
+          "series-title": "Infectious Diseases of Humans",
+          "author": "Anderson",
+          "year": "1991"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b90",
+          "doi-asserted-by": "crossref",
+          "first-page": "925",
+          "DOI": "10.1103/RevModPhys.87.925",
+          "article-title": "Epidemic processes in complex networks",
+          "volume": "87",
+          "author": "Pastor-Satorras",
+          "year": "2015",
+          "journal-title": "Rev. Modern Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b91",
+          "unstructured": "Y. Wang, D. Chakrabarti, C. Wang, C. Faloutsos, Epidemic spreading in real networks: an eigenvalue viewpoint, in: Proc. 22nd International Symposium on Reliable Distributed Systems, SRDS\u201903, 2003, pp. 25\u201334."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b92",
+          "doi-asserted-by": "crossref",
+          "first-page": "292",
+          "DOI": "10.1038/srep00292",
+          "article-title": "A measure of individual role in collective dynamics",
+          "volume": "2",
+          "author": "Klemm",
+          "year": "2012",
+          "journal-title": "Sci. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b93",
+          "series-title": "Algebraic Graph Theory",
+          "author": "Godsil",
+          "year": "2001"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b94",
+          "series-title": "Network Models of the Diffusion of Innovations",
+          "author": "Valente",
+          "year": "1995"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b95",
+          "doi-asserted-by": "crossref",
+          "first-page": "4517",
+          "DOI": "10.1038/ncomms5517",
+          "article-title": "The theory of pattern formation on directed networks",
+          "volume": "5",
+          "author": "Asllani",
+          "year": "2014",
+          "journal-title": "Nat. Commun."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b96",
+          "doi-asserted-by": "crossref",
+          "first-page": "167",
+          "DOI": "10.1063/1.1704269",
+          "article-title": "Random walks on lattices. II",
+          "volume": "6",
+          "author": "Montroll",
+          "year": "1965",
+          "journal-title": "J. Math. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b97",
+          "series-title": "Renewal Theory",
+          "author": "Cox",
+          "year": "1962"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b98",
+          "doi-asserted-by": "crossref",
+          "first-page": "439",
+          "DOI": "10.1142/S0218348X01000865",
+          "article-title": "Asymmetric anomalous diffusion: An efficient way to detect memory in time series",
+          "volume": "9",
+          "author": "Grigolini",
+          "year": "2001",
+          "journal-title": "Fractals"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b99",
+          "doi-asserted-by": "crossref",
+          "first-page": "439",
+          "DOI": "10.1090/S0273-0979-06-01126-8",
+          "article-title": "Expander graphs and their applications",
+          "volume": "43",
+          "author": "Hoory",
+          "year": "2006",
+          "journal-title": "Bull. Amer. Math. Soc."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b100",
+          "doi-asserted-by": "crossref",
+          "first-page": "661",
+          "DOI": "10.1137/070710111",
+          "article-title": "Power-law distributions in empirical data",
+          "volume": "51",
+          "author": "Clauset",
+          "year": "2009",
+          "journal-title": "SIAM Rev."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b101",
+          "doi-asserted-by": "crossref",
+          "first-page": "057104",
+          "DOI": "10.1103/PhysRevE.71.057104",
+          "article-title": "Random walks on complex networks with inhomogeneous impact",
+          "volume": "71",
+          "author": "Eisler",
+          "year": "2005",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b102",
+          "doi-asserted-by": "crossref",
+          "first-page": "026111",
+          "DOI": "10.1103/PhysRevE.73.026111",
+          "article-title": "Traffic dynamics based on local routing protocol on a scale-free network",
+          "volume": "73",
+          "author": "Wang",
+          "year": "2006",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b103",
+          "doi-asserted-by": "crossref",
+          "first-page": "016107",
+          "DOI": "10.1103/PhysRevE.80.016107",
+          "article-title": "Biased random walks in complex networks: The role of local navigation rules",
+          "volume": "80",
+          "author": "Fronczak",
+          "year": "2009",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b104",
+          "doi-asserted-by": "crossref",
+          "first-page": "277",
+          "DOI": "10.1140/epjb/e2009-00095-5",
+          "article-title": "Centrality measure of complex networks using biased random walks",
+          "volume": "68",
+          "author": "Lee",
+          "year": "2009",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b105",
+          "doi-asserted-by": "crossref",
+          "first-page": "011111",
+          "DOI": "10.1103/PhysRevE.82.011111",
+          "article-title": "Mean-field diffusive dynamics on weighted networks",
+          "volume": "82",
+          "author": "Baronchelli",
+          "year": "2010",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b106",
+          "doi-asserted-by": "crossref",
+          "first-page": "012803",
+          "DOI": "10.1103/PhysRevE.89.012803",
+          "article-title": "Characteristic times of biased random walks on complex networks",
+          "volume": "89",
+          "author": "Bonaventura",
+          "year": "2014",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b107",
+          "doi-asserted-by": "crossref",
+          "first-page": "682",
+          "DOI": "10.1016/j.physa.2004.07.011",
+          "article-title": "Robustness and network evolution\u2014an entropic principle",
+          "volume": "346",
+          "author": "Demetrius",
+          "year": "2005",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b108",
+          "doi-asserted-by": "crossref",
+          "first-page": "065102(R)",
+          "DOI": "10.1103/PhysRevE.78.065102",
+          "article-title": "Entropy rate of diffusion processes on complex networks",
+          "volume": "78",
+          "author": "G\u00f3mez-Garde\u00f1es",
+          "year": "2008",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b109",
+          "doi-asserted-by": "crossref",
+          "first-page": "160602",
+          "DOI": "10.1103/PhysRevLett.102.160602",
+          "article-title": "Localization of the maximal entropy random walk",
+          "volume": "102",
+          "author": "Burda",
+          "year": "2009",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b110",
+          "doi-asserted-by": "crossref",
+          "first-page": "046117",
+          "DOI": "10.1103/PhysRevE.83.046117",
+          "article-title": "Centrality measures and thermodynamic formalism for complex networks",
+          "volume": "83",
+          "author": "Delvenne",
+          "year": "2011",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b111",
+          "doi-asserted-by": "crossref",
+          "first-page": "030103(R)",
+          "DOI": "10.1103/PhysRevE.83.030103",
+          "article-title": "Maximal-entropy random walks in complex networks with limited information",
+          "volume": "83",
+          "author": "Sinatra",
+          "year": "2011",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b112",
+          "series-title": "Finite Markov Chains (Second Printing)",
+          "author": "Kemeny",
+          "year": "1976"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b113",
+          "series-title": "Probability, Random Variables, and Stochastic Processes",
+          "author": "Papoulis",
+          "year": "2002"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b114",
+          "series-title": "Finite Markov Processes and Their Applications",
+          "author": "Iosifescu",
+          "year": "1980"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b115",
+          "series-title": "Introduction to the Numerical Solution of Markov Chains",
+          "author": "Stewart",
+          "year": "1994"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b116",
+          "series-title": "Markov Chains",
+          "author": "Norris",
+          "year": "1997"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b117",
+          "series-title": "An Introduction to Stochastic Modeling",
+          "author": "Taylor",
+          "year": "1998"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b118",
+          "series-title": "Markov Chains and Mixing Times",
+          "author": "Levin",
+          "year": "2009"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b119",
+          "series-title": "Random Walks and Diffusions on Graphs and Databases: An Introduction",
+          "author": "Blanchard",
+          "year": "2011"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b120",
+          "series-title": "Understanding Markov Chains: Examples and Applications",
+          "author": "Privault",
+          "year": "2013"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b121",
+          "series-title": "Statistical Mechanics: Entropy, Order Parameters and Complexity",
+          "author": "Sethna",
+          "year": "2006"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b122",
+          "unstructured": "B.K. Fosdick, D.B. Larremore, J. Nishimura, J. Ugander, Configuring random graph models with fixed degree sequences, SIAM Rev. (2017), (in press) https://arxiv.org/abs/1608.00607."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b123",
+          "doi-asserted-by": "crossref",
+          "first-page": "450",
+          "DOI": "10.1016/j.jtbi.2007.11.028",
+          "article-title": "Epidemic modeling in metapopulation systems with heterogeneous coupling pattern: Theory and simulations",
+          "volume": "251",
+          "author": "Colizza",
+          "year": "2008",
+          "journal-title": "J. Theoret. Biol."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b124",
+          "doi-asserted-by": "crossref",
+          "first-page": "062140",
+          "DOI": "10.1103/PhysRevE.87.062140",
+          "article-title": "Random walks in weighted networks with a perfect trap: An application of Laplacian spectra",
+          "volume": "87",
+          "author": "Lin",
+          "year": "2013",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b125",
+          "doi-asserted-by": "crossref",
+          "first-page": "012112",
+          "DOI": "10.1103/PhysRevE.87.012112",
+          "article-title": "Random walks on weighted networks",
+          "volume": "87",
+          "author": "Zhang",
+          "year": "2013",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b126",
+          "doi-asserted-by": "crossref",
+          "first-page": "239",
+          "DOI": "10.1140/epjb/e2004-00056-6",
+          "article-title": "Large scale properties of the Webgraph",
+          "volume": "38",
+          "author": "Donato",
+          "year": "2004",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b127",
+          "doi-asserted-by": "crossref",
+          "first-page": "12684",
+          "DOI": "10.1073/pnas.0605525103",
+          "article-title": "Topical interests and the mitigation of search engine bias",
+          "volume": "103",
+          "author": "Fortunato",
+          "year": "2006",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b128",
+          "doi-asserted-by": "crossref",
+          "first-page": "094102",
+          "DOI": "10.1103/PhysRevLett.97.094102",
+          "article-title": "Characterizing the dynamical importance of network nodes and links",
+          "volume": "97",
+          "author": "Restrepo",
+          "year": "2006",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b129",
+          "doi-asserted-by": "crossref",
+          "first-page": "2186",
+          "DOI": "10.1002/asi.20943",
+          "article-title": "Eigenfactor: Does the principle of repeated improvement result in better estimates than raw citation counts?",
+          "volume": "59",
+          "author": "Davis",
+          "year": "2008",
+          "journal-title": "J. Amer. Soc. Info. Sci. Technol."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b130",
+          "doi-asserted-by": "crossref",
+          "first-page": "59",
+          "DOI": "10.1007/978-3-540-78808-9_6",
+          "article-title": "Approximating pageRank from in-degree",
+          "volume": "4936",
+          "author": "Fortunato",
+          "year": "2008",
+          "journal-title": "Lecture Notes in Comput. Sci."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b131",
+          "doi-asserted-by": "crossref",
+          "first-page": "6883",
+          "DOI": "10.1073/pnas.0903307106",
+          "article-title": "The most influential journals: Impact factor and Eigenfactor",
+          "volume": "106",
+          "author": "Fersht",
+          "year": "2009",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b132",
+          "doi-asserted-by": "crossref",
+          "first-page": "033012",
+          "DOI": "10.1088/1367-2630/11/3/033012",
+          "article-title": "Evolutionary dynamics and fixation probabilities in directed networks",
+          "volume": "11",
+          "author": "Masuda",
+          "year": "2009",
+          "journal-title": "New J. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b133",
+          "doi-asserted-by": "crossref",
+          "first-page": "394",
+          "DOI": "10.1038/ncomms1396",
+          "article-title": "Ranking stability and super-stable nodes in complex networks",
+          "volume": "2",
+          "author": "Ghoshal",
+          "year": "2011",
+          "journal-title": "Nature Commun."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b134",
+          "doi-asserted-by": "crossref",
+          "first-page": "1644",
+          "DOI": "10.1109/TSP.2013.2238935",
+          "article-title": "Discrete signal processing on graphs",
+          "volume": "61",
+          "author": "Sandryhaila",
+          "year": "2013",
+          "journal-title": "IEEE Trans. Signal Process."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b135",
+          "doi-asserted-by": "crossref",
+          "first-page": "5227",
+          "DOI": "10.1109/TSP.2014.2345355",
+          "article-title": "Graph wavelets for multiscale community mining",
+          "volume": "62",
+          "author": "Tremblay",
+          "year": "2014",
+          "journal-title": "IEEE Trans. Signal Process."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b136",
+          "doi-asserted-by": "crossref",
+          "first-page": "036115",
+          "DOI": "10.1103/PhysRevE.77.036115",
+          "article-title": "Laplacian spectra of, and random walks on, complex networks: Are scale-free architectures really important?",
+          "volume": "77",
+          "author": "Samukhin",
+          "year": "2008",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b137",
+          "series-title": "Spectral Graph Theory",
+          "author": "Chung",
+          "year": "1997"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b138",
+          "doi-asserted-by": "crossref",
+          "first-page": "P08007",
+          "DOI": "10.1088/1742-5468/2006/08/P08007",
+          "article-title": "Optimal network topologies: expanders, cages, Ramanujan graphs, entangled networks and all that",
+          "volume": "2006",
+          "author": "Donetti",
+          "year": "2006",
+          "journal-title": "J. Stat. Mech."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b139",
+          "series-title": "An Introduction to the Theory of Graph Spectra",
+          "author": "Cvetkovi\u0107",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b140",
+          "series-title": "Graph Spectra for Complex Networks",
+          "author": "Van Mieghem",
+          "year": "2011"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b141",
+          "series-title": "Matrix Computations",
+          "author": "Golub",
+          "year": "1996"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b142",
+          "doi-asserted-by": "crossref",
+          "first-page": "89",
+          "DOI": "10.1016/j.physrep.2012.01.006",
+          "article-title": "The physics of communicability in complex networks",
+          "volume": "514",
+          "author": "Estrada",
+          "year": "2012",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b143",
+          "doi-asserted-by": "crossref",
+          "first-page": "485",
+          "DOI": "10.1007/BF01990530",
+          "article-title": "Graph properties for splitting with grounded Laplacian matrices",
+          "volume": "33",
+          "author": "Miekkala",
+          "year": "1993",
+          "journal-title": "BIT"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b144",
+          "doi-asserted-by": "crossref",
+          "first-page": "118701",
+          "DOI": "10.1103/PhysRevLett.92.118701",
+          "article-title": "Random walks on complex networks",
+          "volume": "92",
+          "author": "Noh",
+          "year": "2004",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b145",
+          "series-title": "generatingfunctionology",
+          "author": "Wilf",
+          "year": "2005"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b146",
+          "doi-asserted-by": "crossref",
+          "first-page": "40008",
+          "DOI": "10.1209/0295-5075/84/40008",
+          "article-title": "Trapping in complex networks",
+          "volume": "84",
+          "author": "Kittas",
+          "year": "2008",
+          "journal-title": "Europhys. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b147",
+          "doi-asserted-by": "crossref",
+          "first-page": "238701",
+          "DOI": "10.1103/PhysRevLett.109.238701",
+          "article-title": "Random walks and search in time-varying networks",
+          "volume": "109",
+          "author": "Perra",
+          "year": "2012",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b148",
+          "doi-asserted-by": "crossref",
+          "first-page": "056115",
+          "DOI": "10.1103/PhysRevE.85.056115",
+          "article-title": "Random walks on temporal networks",
+          "volume": "85",
+          "author": "Starnini",
+          "year": "2012",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b149",
+          "doi-asserted-by": "crossref",
+          "first-page": "056105",
+          "DOI": "10.1103/PhysRevE.68.056105",
+          "article-title": "Scaling properties of random walks on small-world networks",
+          "volume": "68",
+          "author": "Almaas",
+          "year": "2003",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b150",
+          "doi-asserted-by": "crossref",
+          "first-page": "066113",
+          "DOI": "10.1103/PhysRevE.69.066113",
+          "article-title": "Return times of random walk on generalized random graphs",
+          "volume": "69",
+          "author": "Masuda",
+          "year": "2004",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b151",
+          "doi-asserted-by": "crossref",
+          "first-page": "046110",
+          "DOI": "10.1103/PhysRevE.85.046110",
+          "article-title": "Effective trapping of random walkers in complex networks",
+          "volume": "85",
+          "author": "Hwang",
+          "year": "2012",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b152",
+          "doi-asserted-by": "crossref",
+          "first-page": "022816",
+          "DOI": "10.1103/PhysRevE.87.022816",
+          "article-title": "Origin of the hub spectral dimension in scale-free networks",
+          "volume": "87",
+          "author": "Hwang",
+          "year": "2013",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b153",
+          "doi-asserted-by": "crossref",
+          "first-page": "073118",
+          "DOI": "10.1063/1.4927085",
+          "article-title": "Exact calculations of first-passage properties on the pseudofractal scale-free web",
+          "volume": "25",
+          "author": "Peng",
+          "year": "2015",
+          "journal-title": "Chaos"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b154",
+          "doi-asserted-by": "crossref",
+          "first-page": "753",
+          "DOI": "10.1063/1.1664902",
+          "article-title": "Random walks on lattices. III. Calculation of first-passage times with application to exciton trapping on photosynthetic units",
+          "volume": "10",
+          "author": "Montroll",
+          "year": "1969",
+          "journal-title": "J. Math. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b155",
+          "doi-asserted-by": "crossref",
+          "first-page": "26",
+          "DOI": "10.1088/1367-2630/7/1/026",
+          "article-title": "What is special about diffusion on scale-free nets?",
+          "volume": "7",
+          "author": "Bollt",
+          "year": "2005",
+          "journal-title": "New J. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b156",
+          "doi-asserted-by": "crossref",
+          "first-page": "109",
+          "DOI": "10.1088/0305-4470/38/1/007",
+          "article-title": "First-passage properties of the Erd\u0151s-Renyi random graph",
+          "volume": "38",
+          "author": "Sood",
+          "year": "2005",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b157",
+          "doi-asserted-by": "crossref",
+          "first-page": "81",
+          "DOI": "10.1016/j.spl.2014.02.017",
+          "article-title": "On hitting times for a simple random walk on dense Erd\u00f6s\u2013R\u00e9nyi random graphs",
+          "volume": "89",
+          "author": "L\u00f6we",
+          "year": "2014",
+          "journal-title": "Statist. Probab. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b158",
+          "doi-asserted-by": "crossref",
+          "first-page": "043402",
+          "DOI": "10.1088/1742-5468/aa657e",
+          "article-title": "The distribution of first hitting times of random walks on directed Erd\u0151s-R\u00e9nyi networks",
+          "author": "Tishby",
+          "year": "2017",
+          "journal-title": "J. Stat. Mech."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b159",
+          "doi-asserted-by": "crossref",
+          "first-page": "4405",
+          "DOI": "10.1103/PhysRevE.62.4405",
+          "article-title": "Relaxation properties of small-world networks",
+          "volume": "62",
+          "author": "Jespersen",
+          "year": "2000",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b160",
+          "doi-asserted-by": "crossref",
+          "first-page": "041104",
+          "DOI": "10.1103/PhysRevE.63.041104",
+          "article-title": "Random spread on the family of small-world networks",
+          "volume": "63",
+          "author": "Pandit",
+          "year": "2001",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b161",
+          "doi-asserted-by": "crossref",
+          "first-page": "057105",
+          "DOI": "10.1103/PhysRevE.64.057105",
+          "article-title": "Scaling of random spreading in small world networks",
+          "volume": "64",
+          "author": "Lahtinen",
+          "year": "2001",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b162",
+          "doi-asserted-by": "crossref",
+          "first-page": "066104",
+          "DOI": "10.1103/PhysRevE.64.066104",
+          "article-title": "Trapping of random walks on small-world networks",
+          "volume": "64",
+          "author": "Jasch",
+          "year": "2001",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b163",
+          "doi-asserted-by": "crossref",
+          "first-page": "056119",
+          "DOI": "10.1103/PhysRevE.72.056119",
+          "article-title": "Traversal times for random walks on small-world networks",
+          "volume": "72",
+          "author": "Parris",
+          "year": "2005",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b164",
+          "doi-asserted-by": "crossref",
+          "first-page": "016107",
+          "DOI": "10.1103/PhysRevE.71.016107",
+          "article-title": "Exploring complex networks by walking on them",
+          "volume": "71",
+          "author": "Yang",
+          "year": "2005",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "issue": "2",
+          "key": "10.1016/j.physrep.2017.07.007_b165",
+          "doi-asserted-by": "crossref",
+          "first-page": "1739",
+          "DOI": "10.4249/scholarpedia.1739",
+          "article-title": "Small-world network",
+          "volume": "7",
+          "author": "Porter",
+          "year": "2012",
+          "journal-title": "Scholarpedia"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b166",
+          "doi-asserted-by": "crossref",
+          "first-page": "088701",
+          "DOI": "10.1103/PhysRevLett.109.088701",
+          "article-title": "First passage time for random walks in heterogeneous networks",
+          "volume": "109",
+          "author": "Hwang",
+          "year": "2012",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b167",
+          "doi-asserted-by": "crossref",
+          "first-page": "77",
+          "DOI": "10.1038/nature06201",
+          "article-title": "First-passage times in complex scale-invariant media",
+          "volume": "450",
+          "author": "Condamin",
+          "year": "2007",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b168",
+          "doi-asserted-by": "crossref",
+          "first-page": "066122",
+          "DOI": "10.1103/PhysRevE.65.066122",
+          "article-title": "Pseudofractal scale-free web",
+          "volume": "65",
+          "author": "Dorogovtsev",
+          "year": "2002",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b169",
+          "doi-asserted-by": "crossref",
+          "first-page": "1551",
+          "DOI": "10.1126/science.1073374",
+          "article-title": "Hierarchical organization of modularity in metabolic networks",
+          "volume": "297",
+          "author": "Ravasz",
+          "year": "2002",
+          "journal-title": "Science"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b170",
+          "doi-asserted-by": "crossref",
+          "first-page": "026112",
+          "DOI": "10.1103/PhysRevE.67.026112",
+          "article-title": "Hierarchical organization in complex networks",
+          "volume": "67",
+          "author": "Ravasz",
+          "year": "2003",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b171",
+          "doi-asserted-by": "crossref",
+          "first-page": "175",
+          "DOI": "10.1088/1367-2630/9/6/175",
+          "article-title": "Fractal and transfractal recursive scale-free nets",
+          "volume": "9",
+          "author": "Rozenfeld",
+          "year": "2007",
+          "journal-title": "New J. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b172",
+          "doi-asserted-by": "crossref",
+          "first-page": "392",
+          "DOI": "10.1038/nature03248",
+          "article-title": "Self-similarity of complex networks",
+          "volume": "433",
+          "author": "Song",
+          "year": "2005",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b173",
+          "doi-asserted-by": "crossref",
+          "first-page": "275",
+          "DOI": "10.1038/nphys266",
+          "article-title": "Origins of fractality in the growth of complex networks",
+          "volume": "2",
+          "author": "Song",
+          "year": "2006",
+          "journal-title": "Nat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b174",
+          "first-page": "467",
+          "article-title": "The architecture of complexity",
+          "volume": "106",
+          "author": "Simon",
+          "year": "1962",
+          "journal-title": "Proc. Am. Phil. Soc."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b175",
+          "doi-asserted-by": "crossref",
+          "unstructured": "J. Leskovec, D. Huttenlocher, J. Kleinberg, Signed networks in social media, in: Proc. 28th International Conference on Human Factors in Computing Systems - CHI \u201910, 2010, pp. 1361\u20131370.",
+          "DOI": "10.1145/1753326.1753532"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b176",
+          "doi-asserted-by": "crossref",
+          "first-page": "046110",
+          "DOI": "10.1103/PhysRevE.80.046110",
+          "article-title": "Random graph models for directed acyclic networks",
+          "volume": "80",
+          "author": "Karrer",
+          "year": "2009",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b177",
+          "series-title": "Fractals: A Very Short Introduction",
+          "author": "Falconer",
+          "year": "2013"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b178",
+          "doi-asserted-by": "crossref",
+          "first-page": "021105",
+          "DOI": "10.1103/PhysRevE.65.021105",
+          "article-title": "Analytic expression for the mean time to absorption for a random walker on the Sierpinski gasket",
+          "volume": "65",
+          "author": "Kozak",
+          "year": "2002",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b179",
+          "doi-asserted-by": "crossref",
+          "first-page": "L1021",
+          "DOI": "10.1088/0305-4470/19/16/013",
+          "article-title": "Mapping between hopping on hierarchical structures and diffusion on a family of fractals",
+          "volume": "19",
+          "author": "Havlin",
+          "year": "1986",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b180",
+          "doi-asserted-by": "crossref",
+          "first-page": "887",
+          "DOI": "10.1088/0305-4470/22/7/019",
+          "article-title": "Scaling of the first-passage time and the survival probability on exact and quasi-exact self-similar structures",
+          "volume": "22",
+          "author": "Kahng",
+          "year": "1989",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b181",
+          "doi-asserted-by": "crossref",
+          "first-page": "011128",
+          "DOI": "10.1103/PhysRevE.77.011128",
+          "article-title": "Exact mean first-passage time on the T-graph",
+          "volume": "77",
+          "author": "Agliari",
+          "year": "2008",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b182",
+          "doi-asserted-by": "crossref",
+          "first-page": "L647",
+          "DOI": "10.1088/0305-4470/16/17/003",
+          "article-title": "Fractal models for diffusion controlled aggregation",
+          "volume": "16",
+          "author": "Vicsek",
+          "year": "1983",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b183",
+          "doi-asserted-by": "crossref",
+          "first-page": "061103",
+          "DOI": "10.1103/PhysRevE.67.061103",
+          "article-title": "Dynamics of Vicsek fractals, models for hyperbranched polymers",
+          "volume": "67",
+          "author": "Blumen",
+          "year": "2003",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b184",
+          "doi-asserted-by": "crossref",
+          "first-page": "031118",
+          "DOI": "10.1103/PhysRevE.81.031118",
+          "article-title": "Determining global mean-first-passage time of random walks on Vicsek fractals using eigenvalues of Laplacian matrices",
+          "volume": "81",
+          "author": "Zhang",
+          "year": "2010",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b185",
+          "doi-asserted-by": "crossref",
+          "first-page": "6573",
+          "DOI": "10.1103/PhysRevA.40.6573",
+          "article-title": "Mean first-passage time on loopless aggregates",
+          "volume": "40",
+          "author": "Matan",
+          "year": "1989",
+          "journal-title": "Phys. Rev. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b186",
+          "doi-asserted-by": "crossref",
+          "first-page": "4961",
+          "DOI": "10.1088/0022-3719/12/22/035",
+          "article-title": "Renormalization-group calculations of finite systems: Order parameter and specific heat for epitaxial ordering",
+          "volume": "12",
+          "author": "Berker",
+          "year": "1979",
+          "journal-title": "J. Phys. C"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b187",
+          "doi-asserted-by": "crossref",
+          "first-page": "065104(R)",
+          "DOI": "10.1103/PhysRevE.80.065104",
+          "article-title": "Global mean first-passage times of random walks on complex networks",
+          "volume": "80",
+          "author": "Tejedor",
+          "year": "2009",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b188",
+          "doi-asserted-by": "crossref",
+          "first-page": "075102",
+          "DOI": "10.1088/1751-8113/44/7/075102",
+          "article-title": "Effect of trap position on the efficiency of trapping in treelike scale-free networks",
+          "volume": "44",
+          "author": "Zhang",
+          "year": "2011",
+          "journal-title": "J. Phys. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b189",
+          "doi-asserted-by": "crossref",
+          "first-page": "063025",
+          "DOI": "10.1088/1367-2630/11/6/063025",
+          "article-title": "Annihilation of two-species reaction\u2013diffusion processes on fractal scale-free networks",
+          "volume": "11",
+          "author": "Yun",
+          "year": "2009",
+          "journal-title": "New J. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b190",
+          "doi-asserted-by": "crossref",
+          "first-page": "559",
+          "DOI": "10.1016/S0378-4371(01)00369-7",
+          "article-title": "Deterministic scale-free networks",
+          "volume": "299",
+          "author": "Barab\u00e1si",
+          "year": "2001",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b191",
+          "doi-asserted-by": "crossref",
+          "first-page": "056101",
+          "DOI": "10.1103/PhysRevE.65.056101",
+          "article-title": "Geometric fractal growth model for scale-free networks",
+          "volume": "65",
+          "author": "Jung",
+          "year": "2002",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b192",
+          "doi-asserted-by": "crossref",
+          "first-page": "018702",
+          "DOI": "10.1103/PhysRevLett.94.018702",
+          "article-title": "Apollonian networks: Simultaneously scale-free, small world, Euclidean, space filling, and with matching graphs",
+          "volume": "94",
+          "author": "Andrade",
+          "year": "2005",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b193",
+          "doi-asserted-by": "crossref",
+          "first-page": "016128",
+          "DOI": "10.1103/PhysRevE.71.016128",
+          "article-title": "Self-similar disk packings as model spatial scale-free networks",
+          "volume": "71",
+          "author": "Doye",
+          "year": "2005",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b194",
+          "doi-asserted-by": "crossref",
+          "first-page": "021127",
+          "DOI": "10.1103/PhysRevE.79.021127",
+          "article-title": "Exact solution for mean first-passage time on a pseudofractal scale-free web",
+          "volume": "79",
+          "author": "Zhang",
+          "year": "2009",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b195",
+          "doi-asserted-by": "crossref",
+          "first-page": "016114",
+          "DOI": "10.1103/PhysRevE.81.016114",
+          "article-title": "Explicit determination of mean first-passage time for random walks on deterministic uniform recursive trees",
+          "volume": "81",
+          "author": "Zhang",
+          "year": "2010",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b196",
+          "doi-asserted-by": "crossref",
+          "first-page": "022816",
+          "DOI": "10.1103/PhysRevE.90.022816",
+          "article-title": "Full eigenvalues of the Markov matrix for scale-free polymer networks",
+          "volume": "90",
+          "author": "Zhang",
+          "year": "2014",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b197",
+          "doi-asserted-by": "crossref",
+          "first-page": "031125",
+          "DOI": "10.1103/PhysRevE.80.031125",
+          "article-title": "Random walks on deterministic scale-free networks: Exact results",
+          "volume": "80",
+          "author": "Agliari",
+          "year": "2009",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b198",
+          "doi-asserted-by": "crossref",
+          "first-page": "051120",
+          "DOI": "10.1103/PhysRevE.80.051120",
+          "article-title": "Trapping in scale-free networks with hierarchical organization of modularity",
+          "volume": "80",
+          "author": "Zhang",
+          "year": "2009",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b199",
+          "doi-asserted-by": "crossref",
+          "first-page": "10006",
+          "DOI": "10.1209/0295-5075/86/10006",
+          "article-title": "Random walks on the Apollonian network with a single trap",
+          "volume": "86",
+          "author": "Zhang",
+          "year": "2009",
+          "journal-title": "Europhys. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b200",
+          "doi-asserted-by": "crossref",
+          "first-page": "040103(R)",
+          "DOI": "10.1103/PhysRevE.81.040103",
+          "article-title": "Vibrational shortcut to the mean-first-passage-time problem",
+          "volume": "81",
+          "author": "Reuveni",
+          "year": "2010",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b201",
+          "doi-asserted-by": "crossref",
+          "first-page": "7746",
+          "DOI": "10.1073/pnas.0700250104",
+          "article-title": "Scaling theory of transport in complex biological networks",
+          "volume": "104",
+          "author": "Gallos",
+          "year": "2007",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b202",
+          "doi-asserted-by": "crossref",
+          "first-page": "026103",
+          "DOI": "10.1103/PhysRevE.73.026103",
+          "article-title": "Ring structures and mean first passage time in networks",
+          "volume": "73",
+          "author": "Baronchelli",
+          "year": "2006",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b203",
+          "doi-asserted-by": "crossref",
+          "first-page": "40005",
+          "DOI": "10.1209/0295-5075/90/40005",
+          "article-title": "Asymptotic analysis of first passage time in complex networks",
+          "volume": "90",
+          "author": "Lau",
+          "year": "2010",
+          "journal-title": "Europhys. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b204",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1002/rsa.20151",
+          "article-title": "The cover time of sparse random graphs",
+          "volume": "30",
+          "author": "Cooper",
+          "year": "2007",
+          "journal-title": "Random Struct. Algorithms"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b205",
+          "doi-asserted-by": "crossref",
+          "first-page": "269",
+          "DOI": "10.1016/j.jctb.2006.05.007",
+          "article-title": "The cover time of the preferential attachment graph",
+          "volume": "97",
+          "author": "Cooper",
+          "year": "2007",
+          "journal-title": "J. Combin. Theory Ser. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b206",
+          "doi-asserted-by": "crossref",
+          "first-page": "844",
+          "DOI": "10.1038/nphys3413",
+          "article-title": "Cover times of random searches",
+          "volume": "11",
+          "author": "Chupeau",
+          "year": "2015",
+          "journal-title": "Nat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b207",
+          "doi-asserted-by": "crossref",
+          "unstructured": "B.F. Maier, D. Brockmann, Cover time for random walks on arbitrary complex networks, 2017, https://arxiv.org/abs/1706.02356.",
+          "DOI": "10.1103/PhysRevE.96.042307"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b208",
+          "doi-asserted-by": "crossref",
+          "unstructured": "G. Barnes, U. Feige, Short random walks on graphs, in: Proc. Twenty-Fifth Annual ACM Symposium on Theory of Computing, STOC \u201993, 1993, pp. 728\u2013737.",
+          "DOI": "10.1145/167088.167275"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b209",
+          "doi-asserted-by": "crossref",
+          "first-page": "046116",
+          "DOI": "10.1103/PhysRevE.70.046116",
+          "article-title": "Random walk and trapping processes on scale-free networks",
+          "volume": "70",
+          "author": "Gallos",
+          "year": "2004",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b210",
+          "doi-asserted-by": "crossref",
+          "first-page": "046128",
+          "DOI": "10.1103/PhysRevE.72.046128",
+          "article-title": "Diffusion in scale-free networks with annealed disorder",
+          "volume": "72",
+          "author": "Stauffer",
+          "year": "2005",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b211",
+          "doi-asserted-by": "crossref",
+          "first-page": "016102",
+          "DOI": "10.1103/PhysRevE.75.016102",
+          "article-title": "Exploring complex networks through random walks",
+          "volume": "75",
+          "author": "da Fontoura Costa",
+          "year": "2007",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b212",
+          "doi-asserted-by": "crossref",
+          "first-page": "011114",
+          "DOI": "10.1103/PhysRevE.78.011114",
+          "article-title": "Random walks on complex trees",
+          "volume": "78",
+          "author": "Baronchelli",
+          "year": "2008",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b213",
+          "doi-asserted-by": "crossref",
+          "first-page": "50008",
+          "DOI": "10.1209/0295-5075/92/50008",
+          "article-title": "Network discovery by generalized random walks",
+          "volume": "92",
+          "author": "Asztalos",
+          "year": "2010",
+          "journal-title": "Europhys. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b214",
+          "doi-asserted-by": "crossref",
+          "first-page": "046102",
+          "DOI": "10.1103/PhysRevE.86.046102",
+          "article-title": "Generalized master equations for non-Poisson dynamics on networks",
+          "volume": "86",
+          "author": "Hoffmann",
+          "year": "2012",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b215",
+          "doi-asserted-by": "crossref",
+          "first-page": "012806",
+          "DOI": "10.1103/PhysRevE.91.012806",
+          "article-title": "Steady state and mean recurrence time for random walks on stochastic temporal networks",
+          "volume": "91",
+          "author": "Speidel",
+          "year": "2015",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b216",
+          "doi-asserted-by": "crossref",
+          "first-page": "276",
+          "DOI": "10.1038/nphys560",
+          "article-title": "Reaction-diffusion processes and metapopulation models in heterogeneous networks",
+          "volume": "3",
+          "author": "Colizza",
+          "year": "2007",
+          "journal-title": "Nat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b217",
+          "doi-asserted-by": "crossref",
+          "first-page": "32",
+          "DOI": "10.1038/nphys2160",
+          "article-title": "Modelling dynamical processes in complex socio-technical systems",
+          "volume": "8",
+          "author": "Vespignani",
+          "year": "2011",
+          "journal-title": "Nat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b218",
+          "doi-asserted-by": "crossref",
+          "first-page": "042314",
+          "DOI": "10.1103/PhysRevE.93.042314",
+          "article-title": "Collective frequency variation in network synchronization and reverse PageRank",
+          "volume": "93",
+          "author": "Scardal",
+          "year": "2016",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b219",
+          "doi-asserted-by": "crossref",
+          "first-page": "641",
+          "DOI": "10.1112/S0024609397003305",
+          "article-title": "Algebraic potential theory on graphs",
+          "volume": "29",
+          "author": "Biggs",
+          "year": "1997",
+          "journal-title": "Bull. Lond. Math. Soc."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b220",
+          "unstructured": "R.P. Agaev, P.Y. Chebotarev, The matrix of maximum out forests of a digraph and its applications, Autom. Rem. Cont. 61 (2000) 1424\u20131450."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b221",
+          "doi-asserted-by": "crossref",
+          "first-page": "046114",
+          "DOI": "10.1103/PhysRevE.80.046114",
+          "article-title": "Analysis of relative influence of nodes in directed networks",
+          "volume": "80",
+          "author": "Masuda",
+          "year": "2009",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b222",
+          "doi-asserted-by": "crossref",
+          "first-page": "113002",
+          "DOI": "10.1088/1367-2630/11/11/113002",
+          "article-title": "Impact of hierarchical modular structure on ranking of individual nodes in directed networks",
+          "volume": "11",
+          "author": "Masuda",
+          "year": "2009",
+          "journal-title": "New J. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b223",
+          "doi-asserted-by": "crossref",
+          "first-page": "1665",
+          "DOI": "10.1137/0152096",
+          "article-title": "Stable periodic solutions to discrete and continuum arrays of weakly coupled nonlinear oscillators",
+          "volume": "52",
+          "author": "Ermentrout",
+          "year": "1992",
+          "journal-title": "SIAM J. Appl. Math."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b224",
+          "doi-asserted-by": "crossref",
+          "first-page": "143",
+          "DOI": "10.1016/0024-3795(94)90486-3",
+          "article-title": "Laplacian matrices of graphs: A survey",
+          "volume": "197\u2013198",
+          "author": "Merris",
+          "year": "1994",
+          "journal-title": "Linear Algebra Appl."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b225",
+          "series-title": "Graph Symmetry: Algebraic Methods and Applications",
+          "first-page": "225",
+          "article-title": "Some applications of Laplace eigenvalues of graphs",
+          "author": "Mohar",
+          "year": "1997"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b226",
+          "doi-asserted-by": "crossref",
+          "first-page": "097611",
+          "DOI": "10.1063/1.4917383",
+          "article-title": "Synchronization of chaotic systems",
+          "volume": "25",
+          "author": "Pecora",
+          "year": "2015",
+          "journal-title": "Chaos"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b227",
+          "doi-asserted-by": "crossref",
+          "first-page": "182",
+          "DOI": "10.1088/1367-2630/9/6/182",
+          "article-title": "Bounding network spectra for network design",
+          "volume": "9",
+          "author": "Motter",
+          "year": "2007",
+          "journal-title": "New J. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b228",
+          "doi-asserted-by": "crossref",
+          "first-page": "036127",
+          "DOI": "10.1103/PhysRevE.73.036127",
+          "article-title": "Modeling bursts and heavy tails in human dynamics",
+          "volume": "73",
+          "author": "V\u00e1zquez",
+          "year": "2006",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b229",
+          "doi-asserted-by": "crossref",
+          "first-page": "052813",
+          "DOI": "10.1103/PhysRevE.92.052813",
+          "article-title": "Estimating interevent time distributions from finite observation periods in communication networks",
+          "volume": "92",
+          "author": "Kivel\u00e4",
+          "year": "2015",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b230",
+          "doi-asserted-by": "crossref",
+          "first-page": "7366",
+          "DOI": "10.1038/ncomms8366",
+          "article-title": "Diffusion on networked systems is a question of time or structure",
+          "volume": "6",
+          "author": "Delvenne",
+          "year": "2015",
+          "journal-title": "Nat. Commun."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b231",
+          "doi-asserted-by": "crossref",
+          "first-page": "114",
+          "DOI": "10.1140/epjb/e2016-60947-3",
+          "article-title": "Burstiness and fractional diffusion on complex networks",
+          "volume": "89",
+          "author": "De Nigris",
+          "year": "2016",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b232",
+          "series-title": "Probability, Statistics, and Queueing Theory: With Computer Science Applications",
+          "author": "Allen",
+          "year": "1990"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b233",
+          "article-title": "A new framework for dynamical models on multiplex networks",
+          "author": "DeFord",
+          "year": "2017",
+          "journal-title": "J. Compl. Netw."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b234",
+          "doi-asserted-by": "crossref",
+          "first-page": "876",
+          "DOI": "10.1126/science.1184819",
+          "article-title": "Community structure in time-dependent, multiscale, and multiplex networks",
+          "volume": "328",
+          "author": "Mucha",
+          "year": "2010",
+          "journal-title": "Science"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b235",
+          "first-page": "011027",
+          "article-title": "Identifying modular flows on multilayer networks reveals highly overlapping organization in interconnected systems",
+          "volume": "5",
+          "author": "De Domenico",
+          "year": "2015",
+          "journal-title": "Phys. Rev. X"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b236",
+          "doi-asserted-by": "crossref",
+          "first-page": "144",
+          "DOI": "10.1017/nws.2016.22",
+          "article-title": "A local perspective on community structure in multilayer networks",
+          "volume": "5",
+          "author": "Jeub",
+          "year": "2017",
+          "journal-title": "Netw. Sci."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b237",
+          "doi-asserted-by": "crossref",
+          "first-page": "028701",
+          "DOI": "10.1103/PhysRevLett.110.028701",
+          "article-title": "Diffusion dynamics on multiplex networks",
+          "volume": "110",
+          "author": "G\u00f3mez",
+          "year": "2013",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b238",
+          "doi-asserted-by": "crossref",
+          "first-page": "032807",
+          "DOI": "10.1103/PhysRevE.88.032807",
+          "article-title": "Spectral properties of the Laplacian of multiplex networks",
+          "volume": "88",
+          "author": "Sol\u00e9-Ribalta",
+          "year": "2013",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b239",
+          "doi-asserted-by": "crossref",
+          "first-page": "717",
+          "DOI": "10.1038/nphys2761",
+          "article-title": "Abrupt transition in the structural formation of interconnected networks",
+          "volume": "9",
+          "author": "Radicchi",
+          "year": "2013",
+          "journal-title": "Nat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b240",
+          "doi-asserted-by": "crossref",
+          "first-page": "8351",
+          "DOI": "10.1073/pnas.1318469111",
+          "article-title": "Navigability of interconnected networks under random failures",
+          "volume": "111",
+          "author": "De Domenico",
+          "year": "2014",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b241",
+          "unstructured": "L. Lacasa, I.P. Mari\u00f1o, J. Miguez, V. Nicosia, J. G\u00f3mez-Garde\u00f1es, Identifying the hidden multiplex architecture of complex systems, 2017, https://arxiv.org/abs/1705.04661."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b242",
+          "doi-asserted-by": "crossref",
+          "first-page": "469",
+          "DOI": "10.1038/srep00469",
+          "article-title": "Activity driven modeling of time varying networks",
+          "volume": "2",
+          "author": "Perra",
+          "year": "2012",
+          "journal-title": "Sci. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b243",
+          "series-title": "Random Graphs",
+          "author": "Bollob\u00e1s",
+          "year": "2001"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b244",
+          "doi-asserted-by": "crossref",
+          "first-page": "3006",
+          "DOI": "10.1038/srep03006",
+          "article-title": "Quantifying the effect of temporal resolution on time-varying networks",
+          "volume": "3",
+          "author": "Ribeiro",
+          "year": "2013",
+          "journal-title": "Sci. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b245",
+          "doi-asserted-by": "crossref",
+          "first-page": "052318",
+          "DOI": "10.1103/PhysRevE.95.052318",
+          "article-title": "Random walks on activity-driven networks with attractiveness",
+          "volume": "95",
+          "author": "Alessandretti",
+          "year": "2017",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b246",
+          "doi-asserted-by": "crossref",
+          "first-page": "188701",
+          "DOI": "10.1103/PhysRevLett.111.188701",
+          "article-title": "Temporal networks: Slowing down diffusion by long lasting interactions",
+          "volume": "111",
+          "author": "Masuda",
+          "year": "2013",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b247",
+          "first-page": "177",
+          "article-title": "Effect of memory on the dynamics of random walks on networks",
+          "volume": "3",
+          "author": "Lambiotte",
+          "year": "2015",
+          "journal-title": "J. Comput. Netw."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b248",
+          "doi-asserted-by": "crossref",
+          "first-page": "5024",
+          "DOI": "10.1038/ncomms6024",
+          "article-title": "Causality-driven slow-down and speed-up of diffusion in non-Markovian temporal networks",
+          "volume": "5",
+          "author": "Scholtes",
+          "year": "2014",
+          "journal-title": "Nat. Comm."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b249",
+          "doi-asserted-by": "crossref",
+          "first-page": "38",
+          "DOI": "10.1140/epjb/e2014-50801-1",
+          "article-title": "Slow relaxation dynamics and aging in random walks on activity driven temporal networks",
+          "volume": "88",
+          "author": "Sousa da Mata",
+          "year": "2015",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b250",
+          "doi-asserted-by": "crossref",
+          "first-page": "4630",
+          "DOI": "10.1038/ncomms5630",
+          "article-title": "Memory in network flows and its effects on spreading dynamics and community detection",
+          "volume": "5",
+          "author": "Rosvall",
+          "year": "2014",
+          "journal-title": "Nat. Comm."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b251",
+          "doi-asserted-by": "crossref",
+          "first-page": "063023",
+          "DOI": "10.1088/1367-2630/16/6/063023",
+          "article-title": "Random walk centrality for temporal networks",
+          "volume": "16",
+          "author": "Rocha",
+          "year": "2014",
+          "journal-title": "New J. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b252",
+          "doi-asserted-by": "crossref",
+          "first-page": "334",
+          "DOI": "10.1140/epjb/e2015-60660-9",
+          "article-title": "Exploring temporal networks with greedy walks",
+          "volume": "88",
+          "author": "Saram\u00e4ki",
+          "year": "2015",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b253",
+          "doi-asserted-by": "crossref",
+          "first-page": "161",
+          "DOI": "10.1007/BF02854581",
+          "article-title": "Some properties of line digraphs",
+          "volume": "9",
+          "author": "Harary",
+          "year": "1960",
+          "journal-title": "Rend. Circ. Mat. Palermo"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b254",
+          "doi-asserted-by": "crossref",
+          "first-page": "016105",
+          "DOI": "10.1103/PhysRevE.80.016105",
+          "article-title": "Line graphs, link partitions, and overlapping communities",
+          "volume": "80",
+          "author": "Evans",
+          "year": "2009",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b255",
+          "doi-asserted-by": "crossref",
+          "first-page": "23194",
+          "DOI": "10.1038/srep23194",
+          "article-title": "Using higher-order Markov models to reveal flow-based communities in networks",
+          "volume": "6",
+          "author": "Salnikov",
+          "year": "2016",
+          "journal-title": "Sci. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b256",
+          "doi-asserted-by": "crossref",
+          "first-page": "e1600028",
+          "DOI": "10.1126/sciadv.1600028",
+          "article-title": "Representing higher-order dependencies in networks",
+          "volume": "2",
+          "author": "Xu",
+          "year": "2016",
+          "journal-title": "Sci. Adv."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b257",
+          "doi-asserted-by": "crossref",
+          "first-page": "585",
+          "DOI": "10.1142/S0219199707002551",
+          "article-title": "Non-backtracking random walks mix faster",
+          "volume": "9",
+          "author": "Alon",
+          "year": "2007",
+          "journal-title": "Commun. Contemp. Math."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b258",
+          "doi-asserted-by": "crossref",
+          "first-page": "264",
+          "DOI": "10.1007/s10955-012-0684-6",
+          "article-title": "Non-backtracking random walk",
+          "volume": "150",
+          "author": "Fitzner",
+          "year": "2013",
+          "journal-title": "J. Stat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b259",
+          "doi-asserted-by": "crossref",
+          "first-page": "208702",
+          "DOI": "10.1103/PhysRevLett.113.208702",
+          "article-title": "Percolation on sparse networks",
+          "volume": "113",
+          "author": "Karrer",
+          "year": "2014",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b260",
+          "doi-asserted-by": "crossref",
+          "first-page": "208701",
+          "DOI": "10.1103/PhysRevLett.113.208701",
+          "article-title": "Tight lower bound for percolation threshold on an infinite graph",
+          "volume": "113",
+          "author": "Hamilton",
+          "year": "2014",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b261",
+          "doi-asserted-by": "crossref",
+          "first-page": "052808",
+          "DOI": "10.1103/PhysRevE.90.052808",
+          "article-title": "Localization and centrality in networks",
+          "volume": "90",
+          "author": "Martin",
+          "year": "2014",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b262",
+          "doi-asserted-by": "crossref",
+          "first-page": "20935",
+          "DOI": "10.1073/pnas.1312486110",
+          "article-title": "Spectral redemption in clustering sparse networks",
+          "volume": "110",
+          "author": "Krzakala",
+          "year": "2013",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b263",
+          "unstructured": "M.E.J. Newman, Spectral community detection in sparse networks, 2013, https://arxiv.org/abs/1308.6494."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b264",
+          "doi-asserted-by": "crossref",
+          "unstructured": "C. Bordenave, M. Lelarge, L. Massouli\u00e9, Non-backtracking spectrum of random graphs: community detection and non-regular ramanujan graphs, in: Proc. IEEE 56th Annual Symp. Found. Comput. Sci., FOCS \u201915, 2015, pp. 1347\u20131357.",
+          "DOI": "10.1109/FOCS.2015.86"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b265",
+          "doi-asserted-by": "crossref",
+          "first-page": "65",
+          "DOI": "10.1038/nature14604",
+          "article-title": "Influence maximization in complex networks through optimal percolation",
+          "volume": "524",
+          "author": "Morone",
+          "year": "2015",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b266",
+          "first-page": "011008",
+          "article-title": "Predictability of conversation partners",
+          "volume": "1",
+          "author": "Takaguchi",
+          "year": "2011",
+          "journal-title": "Phys. Rev. X"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b267",
+          "doi-asserted-by": "crossref",
+          "first-page": "198701",
+          "DOI": "10.1103/PhysRevLett.110.198701",
+          "article-title": "Betweenness preference: Quantifying correlations in the topological dynamics of temporal networks",
+          "volume": "110",
+          "author": "Pfitzner",
+          "year": "2013",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b268",
+          "doi-asserted-by": "crossref",
+          "first-page": "362",
+          "DOI": "10.1080/03081087.2013.777436",
+          "article-title": "On the limiting probability distribution of a transition probability tensor",
+          "volume": "62",
+          "author": "Li",
+          "year": "2014",
+          "journal-title": "Linear Multilinear Algebra"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b269",
+          "doi-asserted-by": "crossref",
+          "first-page": "321",
+          "DOI": "10.1137/16M1074023",
+          "article-title": "The spacey random walk: A stochastic process for higher-order data",
+          "volume": "59",
+          "author": "Benson",
+          "year": "2017",
+          "journal-title": "SIAM Rev."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b270",
+          "doi-asserted-by": "crossref",
+          "first-page": "234",
+          "DOI": "10.1007/BF00379695",
+          "article-title": "Analyzing insect movement as a correlated random walk",
+          "volume": "56",
+          "author": "Kareiva",
+          "year": "1983",
+          "journal-title": "Oecologia"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b271",
+          "doi-asserted-by": "crossref",
+          "unstructured": "F. Chierichetti, R. Kumar, P. Raghavan, T. Sarl\u00f3s, Are web users really Markovian?, in: Proc. 21st Intl. Conf. World Wide Web, WWW \u201912, 2012, pp. 609\u2013618.",
+          "DOI": "10.1145/2187836.2187919"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b272",
+          "doi-asserted-by": "crossref",
+          "unstructured": "J. Kleinberg, Complex networks and decentralized search algorithms, in: Proc. Internat. Congress Math., 2006, pp. 1019\u20131044.",
+          "DOI": "10.4171/022-3/50"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b273",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Q. Lv, P. Cao, E. Cohen, K. Li, S. Shenker, Search and replication in unstructured peer-to-peer networks, in: Proc. 16th Internat. Conf. Supercomputing, ICS \u201902, 2002, pp. 84\u201395.",
+          "DOI": "10.1145/514191.514206"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b274",
+          "doi-asserted-by": "crossref",
+          "unstructured": "N. Bisnik, A. Abouzeid, Modeling and analysis of random walk search algorithms in P2P networks, in: Proc. Second International Workshop on Hot Topics in Peer-To-Peer Systems, 2005, pp. 95\u2013103.",
+          "DOI": "10.1109/HOT-P2P.2005.13"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b275",
+          "series-title": "Computer Networks",
+          "author": "Tanenbaum",
+          "year": "2011"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b276",
+          "doi-asserted-by": "crossref",
+          "first-page": "046135",
+          "DOI": "10.1103/PhysRevE.64.046135",
+          "article-title": "Search in power-law networks",
+          "volume": "64",
+          "author": "Adamic",
+          "year": "2001",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b277",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1016/j.physrep.2016.06.007",
+          "article-title": "Vital nodes identification in complex networks",
+          "volume": "650",
+          "author": "L\u00fc",
+          "year": "2016",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b278",
+          "doi-asserted-by": "crossref",
+          "first-page": "39",
+          "DOI": "10.1007/BF02289026",
+          "article-title": "A new status index derived from sociometric analysis",
+          "volume": "18",
+          "author": "Katz",
+          "year": "1953",
+          "journal-title": "Psychometrika"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b279",
+          "doi-asserted-by": "crossref",
+          "first-page": "604",
+          "DOI": "10.1145/324133.324140",
+          "article-title": "Authoritative sources in a hyperlinked environment",
+          "volume": "46",
+          "author": "Kleinberg",
+          "year": "1999",
+          "journal-title": "J. ACM"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b280",
+          "doi-asserted-by": "crossref",
+          "first-page": "046120",
+          "DOI": "10.1103/PhysRevE.83.046120",
+          "article-title": "Communicability across evolving networks",
+          "volume": "83",
+          "author": "Grindrod",
+          "year": "2011",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b281",
+          "doi-asserted-by": "crossref",
+          "first-page": "e78293",
+          "DOI": "10.1371/journal.pone.0078293",
+          "article-title": "Multiplex PageRank",
+          "volume": "8",
+          "author": "Halu",
+          "year": "2013",
+          "journal-title": "PLoS One"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b282",
+          "doi-asserted-by": "crossref",
+          "first-page": "6868",
+          "DOI": "10.1038/ncomms7868",
+          "article-title": "Ranking in interconnected multilayer networks reveals versatile nodes",
+          "volume": "6",
+          "author": "De Domenico",
+          "year": "2015",
+          "journal-title": "Nat. Comm."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b283",
+          "doi-asserted-by": "crossref",
+          "first-page": "73",
+          "DOI": "10.1016/j.physd.2016.01.002",
+          "article-title": "Random walk centrality in interconnected multilayer networks",
+          "volume": "323\u2013324",
+          "author": "Sol\u00e9-Ribalta",
+          "year": "2016",
+          "journal-title": "Physica D"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b284",
+          "doi-asserted-by": "crossref",
+          "first-page": "537",
+          "DOI": "10.1137/16M1066142",
+          "article-title": "Eigenvector-based centrality measures for temporal networks",
+          "volume": "15",
+          "author": "Taylor",
+          "year": "2017",
+          "journal-title": "Multiscale Model. Simul."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b285",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1016/j.physrep.2017.05.001",
+          "article-title": "Ranking in evolving complex networks",
+          "volume": "689",
+          "author": "Liao",
+          "year": "2017",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b286",
+          "series-title": "The PageRank citation ranking: Bringing order to the web, Technical Report 1999-66",
+          "author": "Page",
+          "year": "1999"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b287",
+          "doi-asserted-by": "crossref",
+          "first-page": "297",
+          "DOI": "10.1016/0306-4573(76)90048-0",
+          "article-title": "Citation influence for journal aggregates of scientific publications: Theory, with application to literature of physics",
+          "volume": "12",
+          "author": "Pinski",
+          "year": "1976",
+          "journal-title": "Info. Proc. Manag."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b288",
+          "doi-asserted-by": "crossref",
+          "first-page": "335",
+          "DOI": "10.1080/15427951.2004.10129091",
+          "article-title": "Deeper inside PageRank",
+          "volume": "1",
+          "author": "Langville",
+          "year": "2004",
+          "journal-title": "Internet Math."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b289",
+          "doi-asserted-by": "crossref",
+          "first-page": "73",
+          "DOI": "10.1080/15427951.2005.10129098",
+          "article-title": "A survey on PageRank computing",
+          "volume": "2",
+          "author": "Berkhin",
+          "year": "2005",
+          "journal-title": "Internet Math."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b290",
+          "series-title": "Google\u2019s PageRank and Beyond: The Science of Search Engine Rankings",
+          "author": "Langville",
+          "year": "2006"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b291",
+          "series-title": "Numerical Algorithms for Personalized Search in Self-organizing Information Networks",
+          "author": "Kamvar",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b292",
+          "doi-asserted-by": "crossref",
+          "first-page": "039905",
+          "DOI": "10.1103/RevModPhys.88.039905",
+          "article-title": "Google matrix analysis of directed networks",
+          "volume": "88",
+          "author": "Ermann",
+          "year": "2016",
+          "journal-title": "Rev. Modern Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b293",
+          "doi-asserted-by": "crossref",
+          "first-page": "e1002511",
+          "DOI": "10.1371/journal.pcbi.1002511",
+          "article-title": "Google goes cancer: Improving outcome prediction for cancer patients by network-based ranking of marker genes",
+          "volume": "8",
+          "author": "Winter",
+          "year": "2012",
+          "journal-title": "PLOS Comput. Biol."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b294",
+          "doi-asserted-by": "crossref",
+          "first-page": "e17249",
+          "DOI": "10.1371/journal.pone.0017249",
+          "article-title": "Who is the best player ever? A complex network analysis of the history of professional tennis",
+          "volume": "6",
+          "author": "Radicchi",
+          "year": "2011",
+          "journal-title": "PLoS One"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b295",
+          "doi-asserted-by": "crossref",
+          "first-page": "761",
+          "DOI": "10.1080/00029890.2007.11920469",
+          "article-title": "Random walker ranking for NCAA division I-A football",
+          "volume": "114",
+          "author": "Callaghan",
+          "year": "2007",
+          "journal-title": "Amer. Math. Monthly"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b296",
+          "doi-asserted-by": "crossref",
+          "first-page": "P10014",
+          "DOI": "10.1088/1742-5468/2005/10/P10014",
+          "article-title": "A network-based ranking system for US college football",
+          "author": "Park",
+          "year": "2005",
+          "journal-title": "J. Stat. Mech."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b297",
+          "doi-asserted-by": "crossref",
+          "first-page": "1131",
+          "DOI": "10.1016/j.physa.2009.10.038",
+          "article-title": "Mutually-antagonistic interactions in baseball networks",
+          "volume": "389",
+          "author": "Saavedra",
+          "year": "2010",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b298",
+          "doi-asserted-by": "crossref",
+          "first-page": "69",
+          "DOI": "10.1140/epjb/e2016-60922-0",
+          "article-title": "Wikipedia ranking of world universities",
+          "volume": "89",
+          "author": "Lages",
+          "year": "2016",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b299",
+          "doi-asserted-by": "crossref",
+          "first-page": "041104",
+          "DOI": "10.1063/1.3668043",
+          "article-title": "Mathematical genealogy and department prestige",
+          "volume": "21",
+          "author": "Myers",
+          "year": "2011",
+          "journal-title": "Chaos"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b300",
+          "unstructured": "Folke Mitzlaff, Gerd Stumme, Recommending given names, 2013, https://arxiv.org/abs/1302.4412."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b301",
+          "first-page": "37",
+          "article-title": "What can you do with a Web in your Pocket?",
+          "volume": "21",
+          "author": "Brin",
+          "year": "1998",
+          "journal-title": "Bull. IEEE Comput. Soc. Tech. Comm. Data Eng."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b302",
+          "doi-asserted-by": "crossref",
+          "unstructured": "T.H. Haveliwala, Topic-sensitive PageRank, in: Proc. Eleventh Intl. Conf. World Wide Web, WWW \u201902, 2002, pp. 517\u2013526.",
+          "DOI": "10.1145/511446.511513"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b303",
+          "doi-asserted-by": "crossref",
+          "unstructured": "G. Jeh, J. Widom, Scaling personalized web search, in: Proc. Twelfth Intl. Conf. World Wide Web, WWW \u201903, 2003, pp. 271\u2013279.",
+          "DOI": "10.1145/775152.775191"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b304",
+          "doi-asserted-by": "crossref",
+          "unstructured": "W. Xie, D. Bindel, A. Demers, J. Gehrke, Edge-weighted personalized PageRank: Breaking a decade-old performance barrier, in: Proc. 21st ACM SIGKDD Intl. Conf. Knowledge Disc. Data Mining, KDD \u201915, 2015, pp. 1325\u20131334.",
+          "DOI": "10.1145/2783258.2783278"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b305",
+          "doi-asserted-by": "crossref",
+          "first-page": "056107",
+          "DOI": "10.1103/PhysRevE.85.056107",
+          "article-title": "Ranking and clustering of nodes in networks with smart teleportation",
+          "volume": "85",
+          "author": "Lambiotte",
+          "year": "2012",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b306",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P. Boldi, M. Santini, S. Vigna, PageRank as a function of the damping factor, in: Proc. 14th Internat. Conf. on World Wide Web, 2005, pp. 557\u2013566.",
+          "DOI": "10.1145/1060745.1060827"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b307",
+          "doi-asserted-by": "crossref",
+          "first-page": "282",
+          "DOI": "10.1145/1151087.1151090",
+          "article-title": "PageRank revisited",
+          "volume": "6",
+          "author": "Brinkmeier",
+          "year": "2006",
+          "journal-title": "ACM Trans. Internet Tech."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b308",
+          "doi-asserted-by": "crossref",
+          "first-page": "19735",
+          "DOI": "10.1073/pnas.0708838104",
+          "article-title": "The heat kernel as the pagerank of a graph",
+          "volume": "104",
+          "author": "Chung",
+          "year": "2007",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b309",
+          "doi-asserted-by": "crossref",
+          "first-page": "315",
+          "DOI": "10.1080/15427951.2009.10390643",
+          "article-title": "A local graph partitioning algorithm using heat kernel pagerank",
+          "volume": "6",
+          "author": "Chung",
+          "year": "2009",
+          "journal-title": "Internet Math."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b310",
+          "doi-asserted-by": "crossref",
+          "unstructured": "D. Zhou, S.A. Orshanskiy, H. Zha, C.L. Giles, Co-ranking authors and documents in a heterogeneous network, in: Seventh IEEE Int. Conf. Data Mining (ICDM 2007), 2007, pp. 739\u2013744.",
+          "DOI": "10.1109/ICDM.2007.57"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b311",
+          "doi-asserted-by": "crossref",
+          "unstructured": "M.K. Ng, X. Li, Y. Ye, MultiRank: Co-ranking for objects and relations in multi-relational data, in: Proc. 17th ACM SIGKDD Int. Conf. Knowledge Disc. Data Mining, KDD \u201911, 2011, pp. 1217\u20131225.",
+          "DOI": "10.1145/2020408.2020594"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b312",
+          "doi-asserted-by": "crossref",
+          "first-page": "065301",
+          "DOI": "10.1063/1.4952955",
+          "article-title": "A biplex approach to PageRank centrality: From classic to multiplex networks",
+          "volume": "26",
+          "author": "Pedroche",
+          "year": "2016",
+          "journal-title": "Chaos"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b313",
+          "doi-asserted-by": "crossref",
+          "first-page": "295",
+          "DOI": "10.1093/biomet/56.2.295",
+          "article-title": "Round-robin tournament scores",
+          "volume": "56",
+          "author": "Daniels",
+          "year": "1969",
+          "journal-title": "Biometrika"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b314",
+          "doi-asserted-by": "crossref",
+          "first-page": "384",
+          "DOI": "10.1137/1012081",
+          "article-title": "On generalized tournament matrices",
+          "volume": "12",
+          "author": "Moon",
+          "year": "1970",
+          "journal-title": "SIAM Rev."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b315",
+          "doi-asserted-by": "crossref",
+          "first-page": "359",
+          "DOI": "10.1137/0601041",
+          "article-title": "A graph theoretical approach to handicap ranking of tournaments and paired comparisons",
+          "volume": "1",
+          "author": "Berman",
+          "year": "1980",
+          "journal-title": "SIAM Alg. Discrete Methods"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b316",
+          "doi-asserted-by": "crossref",
+          "first-page": "61",
+          "DOI": "10.1023/A:1016339832755",
+          "article-title": "An iterative procedure for evaluating digraph competitions",
+          "volume": "109",
+          "author": "Borm",
+          "year": "2002",
+          "journal-title": "Ann. Oper. Res."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b317",
+          "doi-asserted-by": "crossref",
+          "first-page": "95",
+          "DOI": "10.1086/285034",
+          "article-title": "Allele-frequency change in a class-structured population",
+          "volume": "135",
+          "author": "Taylor",
+          "year": "1990",
+          "journal-title": "Am. Nat."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b318",
+          "doi-asserted-by": "crossref",
+          "first-page": "654",
+          "DOI": "10.1007/BF02409753",
+          "article-title": "Inclusive fitness arguments in genetic models of behaviour",
+          "volume": "34",
+          "author": "Taylor",
+          "year": "1996",
+          "journal-title": "J. Math. Biol."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b319",
+          "doi-asserted-by": "crossref",
+          "first-page": "118",
+          "DOI": "10.1137/110855715",
+          "article-title": "A matrix iteration for dynamic network summaries",
+          "volume": "55",
+          "author": "Grindrod",
+          "year": "2013",
+          "journal-title": "SIAM Rev."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b320",
+          "doi-asserted-by": "crossref",
+          "first-page": "35",
+          "DOI": "10.2307/3033543",
+          "article-title": "A set of measures of centrality based on betweenness",
+          "volume": "40",
+          "author": "Freeman",
+          "year": "1977",
+          "journal-title": "Sociometry"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b321",
+          "doi-asserted-by": "crossref",
+          "first-page": "39",
+          "DOI": "10.1016/j.socnet.2004.11.009",
+          "article-title": "A measure of betweenness centrality based on random walks",
+          "volume": "27",
+          "author": "Newman",
+          "year": "2005",
+          "journal-title": "Soc. Netw."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b322",
+          "series-title": "Discrete Choice Analysis: Theory and Application to Travel Demand",
+          "author": "Ben-Akiva",
+          "year": "1985"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b323",
+          "series-title": "Discrete Choice Methods with Simulation",
+          "author": "Train",
+          "year": "2009"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b324",
+          "doi-asserted-by": "crossref",
+          "unstructured": "C. Dwork, R. Kumar, M. Naor, D. Sivakumar, Rank aggregation methods for the Web, in: Proc. Tenth Intl. Conf. World Wide Web, WWW \u201901, 2001, pp. 613\u2013622.",
+          "DOI": "10.1145/371920.372165"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b325",
+          "first-page": "324",
+          "article-title": "Rank analysis of incomplete block designs: I. The method of paired comparisons",
+          "volume": "39",
+          "author": "Bradley",
+          "year": "1952",
+          "journal-title": "Biometrika"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b326",
+          "series-title": "Individual Choice Behavior: A Theoretical Analysis",
+          "author": "Luce",
+          "year": "1959"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b327",
+          "series-title": "Advances in Neural Information Processing Systems, vol. 29",
+          "first-page": "3198",
+          "article-title": "Pairwise choice Markov chains",
+          "author": "Ragain",
+          "year": "2016"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b328",
+          "series-title": "Contributions To Probability and Statistics: Essays in Honor of Harold Hotelling",
+          "first-page": "97",
+          "article-title": "Random orderings and stochastic theories of responses",
+          "author": "Block",
+          "year": "1960"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b329",
+          "first-page": "193",
+          "article-title": "The Analysis of permutations",
+          "volume": "24",
+          "author": "Plackett",
+          "year": "1975",
+          "journal-title": "J. R. Stat. Soc. Ser. C. Appl. Stat."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b330",
+          "series-title": "Advances in Neural Information Processing Systems 28",
+          "first-page": "172",
+          "article-title": "Fast and accurate inference of Plackett\u2013Luce models",
+          "author": "Maystre",
+          "year": "2015"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b331",
+          "series-title": "Advances in Neural Information Processing Systems, vol. 25",
+          "first-page": "2474",
+          "article-title": "Iterative ranking from pair-wise comparisons",
+          "author": "Negahban",
+          "year": "2012"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b332",
+          "doi-asserted-by": "crossref",
+          "first-page": "266",
+          "DOI": "10.1287/opre.2016.1534",
+          "article-title": "Rank centrality: Ranking from pairwise comparisons",
+          "volume": "65",
+          "author": "Negahban",
+          "year": "2017",
+          "journal-title": "Oper. Res."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b333",
+          "doi-asserted-by": "crossref",
+          "first-page": "888",
+          "DOI": "10.1109/34.868688",
+          "article-title": "Normalized cuts and image segmentation",
+          "volume": "22",
+          "author": "Shi",
+          "year": "2000",
+          "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b334",
+          "series-title": "Graph Clustering by Flow Simulation",
+          "author": "van Dongen",
+          "year": "2001"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b335",
+          "doi-asserted-by": "crossref",
+          "first-page": "148701",
+          "DOI": "10.1103/PhysRevLett.90.148701",
+          "article-title": "Modularity and extreme edges of the Internet",
+          "volume": "90",
+          "author": "Eriksen",
+          "year": "2003",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b336",
+          "doi-asserted-by": "crossref",
+          "first-page": "041908",
+          "DOI": "10.1103/PhysRevE.67.041908",
+          "article-title": "Network landscape from a Brownian particle\u2019s perspective",
+          "volume": "67",
+          "author": "Zhou",
+          "year": "2003",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b337",
+          "doi-asserted-by": "crossref",
+          "first-page": "114102",
+          "DOI": "10.1103/PhysRevLett.96.114102",
+          "article-title": "Synchronization reveals topological scales in complex networks",
+          "volume": "96",
+          "author": "Arenas",
+          "year": "2006",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b338",
+          "doi-asserted-by": "crossref",
+          "first-page": "036104",
+          "DOI": "10.1103/PhysRevE.74.036104",
+          "article-title": "Finding community structure in networks using the eigenvectors of matrices",
+          "volume": "74",
+          "author": "Newman",
+          "year": "2006",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b339",
+          "doi-asserted-by": "crossref",
+          "first-page": "036103",
+          "DOI": "10.1103/PhysRevE.77.036103",
+          "article-title": "Impact of community structure on information transfer",
+          "volume": "77",
+          "author": "Danon",
+          "year": "2008",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b340",
+          "doi-asserted-by": "crossref",
+          "first-page": "P04024",
+          "DOI": "10.1088/1742-5468/2010/04/P04024",
+          "article-title": "Uncovering the community structure associated with the diffusion dynamics on networks",
+          "volume": "2010",
+          "author": "Cheng",
+          "year": "2010",
+          "journal-title": "J. Stat. Mech."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b341",
+          "doi-asserted-by": "crossref",
+          "first-page": "017102",
+          "DOI": "10.1103/PhysRevE.84.017102",
+          "article-title": "Flow graphs: Interweaving dynamics and structure",
+          "volume": "84",
+          "author": "Lambiotte",
+          "year": "2011",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b342",
+          "doi-asserted-by": "crossref",
+          "first-page": "e27028",
+          "DOI": "10.1371/journal.pone.0027028",
+          "article-title": "Finding and testing network communities by lumped Markov chains",
+          "volume": "6",
+          "author": "Piccardi",
+          "year": "2011",
+          "journal-title": "PLoS One"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b343",
+          "first-page": "363",
+          "article-title": "Null models for community detection in spatially embedded, temporal networks",
+          "volume": "4",
+          "author": "Sarzynska",
+          "year": "2016",
+          "journal-title": "J. Comput. Netw."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b344",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1137/15M1009615",
+          "article-title": "Community detection in temporal multilayer networks, with an application to correlation networks",
+          "volume": "14",
+          "author": "Bazzi",
+          "year": "2016",
+          "journal-title": "Multiscale Model. Simul."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b345",
+          "doi-asserted-by": "crossref",
+          "first-page": "36",
+          "DOI": "10.1073/pnas.0605965104",
+          "article-title": "Resolution limit in community detection",
+          "volume": "104",
+          "author": "Fortunato",
+          "year": "2007",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b346",
+          "doi-asserted-by": "crossref",
+          "first-page": "046106",
+          "DOI": "10.1103/PhysRevE.81.046106",
+          "article-title": "Performance of modularity maximization in practical contexts",
+          "volume": "81",
+          "author": "Good",
+          "year": "2010",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b347",
+          "unstructured": "M. Lambiotte, J.C. Delvenne, M. Barahona, Laplacian dynamics and multiscale modular structure in networks, 2008, arXiv:0812.1770v2."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b348",
+          "doi-asserted-by": "crossref",
+          "first-page": "e32210",
+          "DOI": "10.1371/journal.pone.0032210",
+          "article-title": "Markov dynamics as a zooming lens for multiscale community detection: Non clique-like communities and the field-of-view limit",
+          "volume": "7",
+          "author": "Schaub",
+          "year": "2012",
+          "journal-title": "PLoS One"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b349",
+          "doi-asserted-by": "crossref",
+          "first-page": "20140940",
+          "DOI": "10.1098/rsif.2014.0940",
+          "article-title": "Interest communities and flow roles in directed networks: The Twitter network of the UK riots",
+          "volume": "11",
+          "author": "Beguerisse-D\u00edaz",
+          "year": "2014",
+          "journal-title": "J. R. Soc. Interface"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b350",
+          "doi-asserted-by": "crossref",
+          "first-page": "76",
+          "DOI": "10.1109/TNSE.2015.2391998",
+          "article-title": "Random walks, Markov processes and the multiscale modular organization of complex networks",
+          "volume": "1",
+          "author": "Lambiotte",
+          "year": "2014",
+          "journal-title": "IEEE Trans. Netw. Sci. Eng."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b351",
+          "doi-asserted-by": "crossref",
+          "first-page": "12755",
+          "DOI": "10.1073/pnas.0903215107",
+          "article-title": "Stability of graph communities across time scales",
+          "volume": "107",
+          "author": "Delvenne",
+          "year": "2010",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b352",
+          "series-title": "Dynamics on and of Complex Networks, Volume 2: Applications To Time-Varying Dynamical Systems",
+          "first-page": "221",
+          "article-title": "The stability of a graph partition: A dynamics-based framework for community detection",
+          "author": "Delvenne",
+          "year": "2013"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b353",
+          "doi-asserted-by": "crossref",
+          "first-page": "016110",
+          "DOI": "10.1103/PhysRevE.74.016110",
+          "article-title": "Statistical mechanics of community detection",
+          "volume": "74",
+          "author": "Reichardt",
+          "year": "2006",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b354",
+          "doi-asserted-by": "crossref",
+          "first-page": "052315",
+          "DOI": "10.1103/PhysRevE.94.052315",
+          "article-title": "Equivalence between modularity optimization and maximum likelihood methods for community detection",
+          "volume": "94",
+          "author": "Newman",
+          "year": "2016",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b355",
+          "doi-asserted-by": "crossref",
+          "first-page": "013142",
+          "DOI": "10.1063/1.4790830",
+          "article-title": "Robust detection of dynamic community structure in networks",
+          "volume": "23",
+          "author": "Bassett",
+          "year": "2013",
+          "journal-title": "Chaos"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b356",
+          "doi-asserted-by": "crossref",
+          "first-page": "191",
+          "DOI": "10.7155/jgaa.00124",
+          "article-title": "Computing communities in large networks using random walks",
+          "volume": "10",
+          "author": "Pons",
+          "year": "2006",
+          "journal-title": "J. Graph Algorithms Appl."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b357",
+          "doi-asserted-by": "crossref",
+          "first-page": "1062",
+          "DOI": "10.1007/978-3-540-24688-6_137",
+          "article-title": "Network Brownian motion: A new method to measure vertex-vertex proximity and to identify communities and subcommunities",
+          "volume": "3038",
+          "author": "Zhou",
+          "year": "2004",
+          "journal-title": "Lecture Notes in Comput. Sci."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b358",
+          "doi-asserted-by": "crossref",
+          "first-page": "066133",
+          "DOI": "10.1103/PhysRevE.69.066133",
+          "article-title": "Fast algorithm for detecting community structure in networks",
+          "volume": "69",
+          "author": "Newman",
+          "year": "2004",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b359",
+          "doi-asserted-by": "crossref",
+          "first-page": "355",
+          "DOI": "10.1109/TKDE.2007.46",
+          "article-title": "Random-walk computation of similarities between nodes of a graph with application to collaborative recommendation",
+          "volume": "19",
+          "author": "Fouss",
+          "year": "2007",
+          "journal-title": "IEEE Trans. Knowl. Data Eng."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b360",
+          "series-title": "Matrices: Methods and Applications",
+          "author": "Barnett",
+          "year": "1990"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b361",
+          "doi-asserted-by": "crossref",
+          "first-page": "1118",
+          "DOI": "10.1073/pnas.0706851105",
+          "article-title": "Maps of random walks on complex networks reveal community structure",
+          "volume": "105",
+          "author": "Rosvall",
+          "year": "2008",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b362",
+          "doi-asserted-by": "crossref",
+          "first-page": "e18209",
+          "DOI": "10.1371/journal.pone.0018209",
+          "article-title": "Multilevel compression of random walks on networks reveals hierarchical organization in large integrated systems",
+          "volume": "6",
+          "author": "Rosvall",
+          "year": "2011",
+          "journal-title": "PLoS One"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b363",
+          "doi-asserted-by": "crossref",
+          "first-page": "1098",
+          "DOI": "10.1109/JRPROC.1952.273898",
+          "article-title": "A method for the construction of minimum-redundancy codes",
+          "volume": "40",
+          "author": "Huffman",
+          "year": "1952",
+          "journal-title": "Proc. IRE"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b364",
+          "unstructured": "M. Rosvall, MapDemo (demonstration of map equation), 2016, http://www.mapequation.org/apps/MapDemo.html (3 September 2016)."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b365",
+          "doi-asserted-by": "crossref",
+          "unstructured": "D.A. Spielman, S.H. Teng, Nearly-linear time algorithms for graph partitioning, graph sparsification, and solving linear systems, in: Proc. Thirty-Sixth Annual ACM Symp. Theory of Comput., STOC \u201904, 2004, pp. 81\u201390.",
+          "DOI": "10.1145/1007352.1007372"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b366",
+          "doi-asserted-by": "crossref",
+          "unstructured": "R. Andersen, F. Chung, K. Lang, Local graph partitioning using PageRank vectors, in: Proc. IEEE 47th Annual Symp. Found. Comput. Sci., FOCS \u201906, 2006, pp. 475\u2013486.",
+          "DOI": "10.1109/FOCS.2006.44"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b367",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1137/080744888",
+          "article-title": "A local clustering algorithm for massive graphs and its application to nearly linear time graph partitioning",
+          "volume": "42",
+          "author": "Spielman",
+          "year": "2013",
+          "journal-title": "SIAM J. Comput."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b368",
+          "doi-asserted-by": "crossref",
+          "unstructured": "K. Kloster, D.F. Gleich, Heat kernel based community detection, in: Proc. 20th ACM SIGKDD Intl. Conf. Knowledge Disc. Data Mining, KDD \u201914, 2014, pp. 1386\u20131395.",
+          "DOI": "10.1145/2623330.2623706"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b369",
+          "doi-asserted-by": "crossref",
+          "unstructured": "I.M. Kloumann, J.M. Kleinberg, Community membership identification from small seed sets, in: Proc. 20th ACM SIGKDD Intl. Conf. Knowledge Disc. Data Mining, KDD \u201914, 2014, pp. 1366\u20131375.",
+          "DOI": "10.1145/2623330.2623621"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b370",
+          "doi-asserted-by": "crossref",
+          "first-page": "33",
+          "DOI": "10.1073/pnas.1611275114",
+          "article-title": "Block models and personalized PageRank",
+          "volume": "114",
+          "author": "Kloumann",
+          "year": "2017",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b371",
+          "doi-asserted-by": "crossref",
+          "first-page": "041108",
+          "DOI": "10.1063/1.3518696",
+          "article-title": "Communities in multislice voting networks",
+          "volume": "20",
+          "author": "Mucha",
+          "year": "2010",
+          "journal-title": "Chaos"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b372",
+          "doi-asserted-by": "crossref",
+          "first-page": "93",
+          "DOI": "10.1093/comnet/cnt016",
+          "article-title": "Structure and dynamics of core/periphery networks",
+          "volume": "1",
+          "author": "Csermely",
+          "year": "2013",
+          "journal-title": "J. Compl. Netw."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b373",
+          "doi-asserted-by": "crossref",
+          "first-page": "167",
+          "DOI": "10.1137/120881683",
+          "article-title": "Core-periphery structure in networks",
+          "volume": "74",
+          "author": "Rombach",
+          "year": "2014",
+          "journal-title": "SIAM J. Appl. Math."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b374",
+          "doi-asserted-by": "crossref",
+          "first-page": "1467",
+          "DOI": "10.1038/srep01467",
+          "article-title": "Profiling core-periphery network structure by random walkers",
+          "volume": "3",
+          "author": "Della Rossa",
+          "year": "2013",
+          "journal-title": "Sci. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b375",
+          "series-title": "Nonlinear Dimensionality Reduction",
+          "author": "Lee",
+          "year": "2007"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b376",
+          "doi-asserted-by": "crossref",
+          "first-page": "168301",
+          "DOI": "10.1103/PhysRevLett.118.168301",
+          "article-title": "Diffusion geometry unravels the emergence of functional clusters in collective phenomena",
+          "volume": "118",
+          "author": "De Domenico",
+          "year": "2017",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b377",
+          "doi-asserted-by": "crossref",
+          "first-page": "174",
+          "DOI": "10.2307/3096941",
+          "article-title": "Respondent-driven sampling: A new approach to the study of hidden populations",
+          "volume": "44",
+          "author": "Heckathorn",
+          "year": "1997",
+          "journal-title": "Soc. Prob."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b378",
+          "doi-asserted-by": "crossref",
+          "first-page": "193",
+          "DOI": "10.1111/j.0081-1750.2004.00152.x",
+          "article-title": "Sampling and estimation in hidden populations using respondent-driven sampling",
+          "volume": "34",
+          "author": "Salganik",
+          "year": "2004",
+          "journal-title": "Sociol. Methodol."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b379",
+          "first-page": "79",
+          "article-title": "Probability based estimation theory for respondent driven sampling",
+          "volume": "24",
+          "author": "Volz",
+          "year": "2008",
+          "journal-title": "J. Official Stat."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b380",
+          "doi-asserted-by": "crossref",
+          "first-page": "28",
+          "DOI": "10.17730/humo.60.1.efx5t9gjtgmga73y",
+          "article-title": "Comparing two methods for estimating network size",
+          "volume": "60",
+          "author": "McCarty",
+          "year": "2001",
+          "journal-title": "Human Organ."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b381",
+          "series-title": "Models and Methods in Social Network Analysis",
+          "first-page": "8",
+          "article-title": "Recent developments in network measurement",
+          "author": "Marsden",
+          "year": "2005"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b382",
+          "doi-asserted-by": "crossref",
+          "first-page": "99",
+          "DOI": "10.1111/rssa.12180",
+          "article-title": "Respondent-driven sampling bias induced by community structure and response rates in social networks",
+          "volume": "180",
+          "author": "Rocha",
+          "year": "2017",
+          "journal-title": "J. Roy. Statist. Soc. Ser. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b383",
+          "unstructured": "J. Malmros, L.E.C. Rocha, Multiple seed structure and disconnected networks in respondent-driven sampling, 2016, arXiv.org arXiv:1603.04222."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b384",
+          "doi-asserted-by": "crossref",
+          "first-page": "191",
+          "DOI": "10.1111/j.1467-985X.2011.00711.x",
+          "article-title": "The sensitivity of respondent-driven sampling",
+          "volume": "175",
+          "author": "Lu",
+          "year": "2012",
+          "journal-title": "J. Roy. Statist. Soc. A"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b385",
+          "doi-asserted-by": "crossref",
+          "first-page": "433",
+          "DOI": "10.1515/jos-2016-0023",
+          "article-title": "Random walks on directed networks: Inference and respondent-driven sampling",
+          "volume": "32",
+          "author": "Malmros",
+          "year": "2016",
+          "journal-title": "J. Off. Stat."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b386",
+          "doi-asserted-by": "crossref",
+          "first-page": "135",
+          "DOI": "10.1198/jasa.2011.ap09475",
+          "article-title": "Improved inference for respondent-driven sampling data with application to HIV prevalence estimation",
+          "volume": "106",
+          "author": "Gile",
+          "year": "2011",
+          "journal-title": "J. Amer. Statist. Assoc."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b387",
+          "article-title": "Markov Chain Monte Carlo in Practice",
+          "year": "1996"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b388",
+          "doi-asserted-by": "crossref",
+          "first-page": "377",
+          "DOI": "10.1109/TNET.2008.2001730",
+          "article-title": "On unbiased sampling for unstructured peer-to-peer networks",
+          "volume": "17",
+          "author": "Stutzbach",
+          "year": "2009",
+          "journal-title": "IEEE/ACM Trans. Netw."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b389",
+          "doi-asserted-by": "crossref",
+          "unstructured": "M. Gjoka, M. Kurant, C.T. Butts, A. Markopoulou, Walking in facebook: A case study of unbiased sampling of OSNs, in: roc. 29th Conf. Info. Comm., 2010, INFOCOM \u201910, pp. 2498\u20132506.",
+          "DOI": "10.1109/INFCOM.2010.5462078"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b390",
+          "series-title": "Interacting Particle Systems",
+          "author": "Liggett",
+          "year": "1985"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b391",
+          "series-title": "Lecture Notes on Particle Systems and Percolation",
+          "author": "Durrett",
+          "year": "1988"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b392",
+          "doi-asserted-by": "crossref",
+          "first-page": "591",
+          "DOI": "10.1103/RevModPhys.81.591",
+          "article-title": "Statistical physics of social dynamics",
+          "volume": "81",
+          "author": "Castellano",
+          "year": "2009",
+          "journal-title": "Rev. Modern Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b393",
+          "doi-asserted-by": "crossref",
+          "first-page": "188104",
+          "DOI": "10.1103/PhysRevLett.96.188104",
+          "article-title": "Evolutionary dynamics on degree-heterogeneous graphs",
+          "volume": "96",
+          "author": "Antal",
+          "year": "2006",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b394",
+          "doi-asserted-by": "crossref",
+          "first-page": "041121",
+          "DOI": "10.1103/PhysRevE.77.041121",
+          "article-title": "Voter models on heterogeneous networks",
+          "volume": "77",
+          "author": "Sood",
+          "year": "2008",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b395",
+          "doi-asserted-by": "crossref",
+          "first-page": "167",
+          "DOI": "10.1017/S0305004100060989",
+          "article-title": "Finite particle systems and infection models",
+          "volume": "94",
+          "author": "Donnelly",
+          "year": "1983",
+          "journal-title": "Math. Proc. Cambridge Philos. Soc."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b396",
+          "doi-asserted-by": "crossref",
+          "first-page": "55",
+          "DOI": "10.1007/BF00535688",
+          "article-title": "Annihilating and coalescing random walks on Zd",
+          "volume": "46",
+          "author": "Griffeath",
+          "year": "1978",
+          "journal-title": "Z. Wahrscheinlichkeitstheor. Verwandte Geb."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b397",
+          "doi-asserted-by": "crossref",
+          "first-page": "1748",
+          "DOI": "10.1137/120900368",
+          "article-title": "Coalescing random walks and voting on connected graphs",
+          "volume": "27",
+          "author": "Cooper",
+          "year": "2013",
+          "journal-title": "SIAM J. Discrete Math."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b398",
+          "doi-asserted-by": "crossref",
+          "first-page": "012802",
+          "DOI": "10.1103/PhysRevE.90.012802",
+          "article-title": "Voter model on the two-clique graph",
+          "volume": "90",
+          "author": "Masuda",
+          "year": "2014",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b399",
+          "doi-asserted-by": "crossref",
+          "first-page": "012816",
+          "DOI": "10.1103/PhysRevE.90.012816",
+          "article-title": "Networks maximizing the consensus time of voter models",
+          "volume": "90",
+          "author": "Iwamasa",
+          "year": "2014",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b400",
+          "series-title": "Contributions To Mathematical Psychology",
+          "first-page": "141",
+          "article-title": "Mathematical models of the distribution of attitudes under controversy",
+          "author": "Abelson",
+          "year": "1964"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b401",
+          "doi-asserted-by": "crossref",
+          "first-page": "118",
+          "DOI": "10.1080/01621459.1974.10480137",
+          "article-title": "Reaching a consensus",
+          "volume": "69",
+          "author": "DeGroot",
+          "year": "1974",
+          "journal-title": "J. Amer. Statist. Assoc."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b402",
+          "series-title": "Social and Economic Networks",
+          "author": "Jackson",
+          "year": "2008"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b403",
+          "doi-asserted-by": "crossref",
+          "first-page": "215",
+          "DOI": "10.1109/JPROC.2006.887293",
+          "article-title": "Consensus and cooperation in networked multi-agent systems",
+          "volume": "95",
+          "author": "Olfati-Saber",
+          "year": "2007",
+          "journal-title": "Proc. IEEE"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b404",
+          "series-title": "Social Influence Network Theory: A Sociological Examination of Small Group Dynamics",
+          "author": "Friedkin",
+          "year": "2011"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b405",
+          "doi-asserted-by": "crossref",
+          "first-page": "367",
+          "DOI": "10.1137/130913250",
+          "article-title": "Opinion dynamics and the evolution of social power in influence networks",
+          "volume": "57",
+          "author": "Jia",
+          "year": "2015",
+          "journal-title": "SIAM Rev."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b406",
+          "doi-asserted-by": "crossref",
+          "first-page": "1157",
+          "DOI": "10.1142/S0129183100000936",
+          "article-title": "Opinion evolution in closed community",
+          "volume": "11",
+          "author": "Sznajd-Weron",
+          "year": "2000",
+          "journal-title": "Internat. J. Modern Phys. C"
+        },
+        {
+          "issue": "23",
+          "key": "10.1016/j.physrep.2017.07.007_b407",
+          "doi-asserted-by": "crossref",
+          "first-page": "238701",
+          "DOI": "10.1103/PhysRevLett.90.238701",
+          "article-title": "Dynamics of majority rule in two-state interacting spin systems",
+          "volume": "90",
+          "author": "Krapivsky",
+          "year": "2003",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b408",
+          "doi-asserted-by": "crossref",
+          "first-page": "301",
+          "DOI": "10.1140/epjb/e2009-00001-3",
+          "article-title": "Nonlinear voter models: The transition from invasion to coexistence",
+          "volume": "67",
+          "author": "Schweitzer",
+          "year": "2009",
+          "journal-title": "Eur. Phys. J. B"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b409",
+          "doi-asserted-by": "crossref",
+          "first-page": "018701",
+          "DOI": "10.1103/PhysRevLett.103.018701",
+          "article-title": "Dynamic opinion model and invasion percolation",
+          "volume": "103",
+          "author": "Shao",
+          "year": "2009",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b410",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1016/j.physrep.2015.10.008",
+          "article-title": "The Kuramoto model in complex networks",
+          "volume": "610",
+          "author": "Rodrigues",
+          "year": "2016",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b411",
+          "doi-asserted-by": "crossref",
+          "first-page": "038701",
+          "DOI": "10.1103/PhysRevLett.99.038701",
+          "article-title": "Spectral coarse graining of complex networks",
+          "volume": "99",
+          "author": "Gfeller",
+          "year": "2007",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b412",
+          "doi-asserted-by": "crossref",
+          "first-page": "174104",
+          "DOI": "10.1103/PhysRevLett.100.174104",
+          "article-title": "Spectral coarse graining and synchronization in oscillator networks",
+          "volume": "100",
+          "author": "Gfeller",
+          "year": "2008",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b413",
+          "doi-asserted-by": "crossref",
+          "first-page": "042805",
+          "DOI": "10.1103/PhysRevE.88.042805",
+          "article-title": "Observability and coarse graining of consensus dynamics through the external equitable partition",
+          "volume": "88",
+          "author": "O\u2019Clery",
+          "year": "2013",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b414",
+          "doi-asserted-by": "crossref",
+          "first-page": "4079",
+          "DOI": "10.1038/ncomms5079",
+          "article-title": "Cluster synchronization and isolated desynchronization in complex networks with symmetries",
+          "volume": "5",
+          "author": "Pecora",
+          "year": "2014",
+          "journal-title": "Nat. Comm."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b415",
+          "unstructured": "L. Li, W.M. Campbell, R.S. Caceres, Graph model selection via random walks, 2017, https://arxiv.org/abs/1704.05516."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b416",
+          "doi-asserted-by": "crossref",
+          "unstructured": "K. Henderson, B. Gallagher, T. Eliassi-Rad, H. Tong, S. Basu, L. Akoglu, D. Koutra, C. Faloutsos, L. Li, RolX: Structural role extraction & mining in large graphs, in: Proc. 18th ACM SIGKDD Intl. Conf. Knowledge Disc. Data Mining, KDD \u201912, 2012, pp. 1231\u20131239.",
+          "DOI": "10.1145/2339530.2339723"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b417",
+          "doi-asserted-by": "crossref",
+          "first-page": "180",
+          "DOI": "10.1109/LCOMM.2004.823426",
+          "article-title": "The rich-club phenomenon in the Internet topology",
+          "volume": "8",
+          "author": "Zhou",
+          "year": "2004",
+          "journal-title": "IEEE Commun. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b418",
+          "doi-asserted-by": "crossref",
+          "first-page": "110",
+          "DOI": "10.1038/nphys209",
+          "article-title": "Detecting rich-club ordering in complex networks",
+          "volume": "2",
+          "author": "Colizza",
+          "year": "2006",
+          "journal-title": "Nat. Phys."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b419",
+          "doi-asserted-by": "crossref",
+          "first-page": "9564",
+          "DOI": "10.1073/pnas.0610537104",
+          "article-title": "Mixture models and exploratory analysis in networks",
+          "volume": "104",
+          "author": "Newman",
+          "year": "2007",
+          "journal-title": "Proc. Natl. Acad. Sci. USA"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b420",
+          "series-title": "Advances in Neural Information Processing Systems, vol. 29",
+          "first-page": "2559",
+          "article-title": "General tensor spectral co-clustering for higher-order data",
+          "author": "Wu",
+          "year": "2016"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b421",
+          "doi-asserted-by": "crossref",
+          "first-page": "14",
+          "DOI": "10.1007/978-3-642-21286-4_2",
+          "article-title": "High-ordered random walks and generalized laplacians on hypergraphs",
+          "volume": "6732",
+          "author": "Lu",
+          "year": "2011",
+          "journal-title": "Lecture Notes in Comput. Sci."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b422",
+          "doi-asserted-by": "crossref",
+          "first-page": "379",
+          "DOI": "10.1002/rsa.20645",
+          "article-title": "Random walks on simplicial complexes and harmonics",
+          "volume": "49",
+          "author": "Mukherjee",
+          "year": "2016",
+          "journal-title": "Random Structures Algorithms"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b423",
+          "doi-asserted-by": "crossref",
+          "first-page": "138302",
+          "DOI": "10.1103/PhysRevLett.118.138302",
+          "article-title": "Collective phenomena emerging from the interactions between dynamical processes in multiplex networks",
+          "volume": "118",
+          "author": "Nicosia",
+          "year": "2017",
+          "journal-title": "Phys. Rev. Lett."
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b424",
+          "doi-asserted-by": "crossref",
+          "unstructured": "G. Han, H. Sethu, Waddling random walk: Fast and accurate mining of motif statistics in large graphs, in: Sixteenth IEEE Intl. Conf. Data Mining, ICDM 2016, 2016, pp. 181\u2013190.",
+          "DOI": "10.1109/ICDM.2016.0029"
+        },
+        {
+          "key": "10.1016/j.physrep.2017.07.007_b425",
+          "doi-asserted-by": "crossref",
+          "first-page": "5890",
+          "DOI": "10.1038/srep05890",
+          "article-title": "The dynamics of correlated novelties",
+          "volume": "4",
+          "author": "Tria",
+          "year": "2014",
+          "journal-title": "Sci. Rep."
+        }
+      ],
+      "updated-by": [
+        {
+          "DOI": "10.1016/j.physrep.2018.06.002",
+          "type": "erratum",
+          "label": "Erratum",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2018,
+                6,
+                6
+              ]
+            ],
+            "date-time": "2018-06-06T00:00:00Z",
+            "timestamp": 1528243200000
+          }
+        },
+        {
+          "DOI": "10.1016/j.physrep.2020.02.005",
+          "type": "erratum",
+          "label": "Erratum",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2020-04-03T00:00:00Z",
+            "timestamp": 1585872000000
+          }
+        }
+      ],
+      "container-title": [
+        "Physics Reports"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:S0370157317302946?httpAccept=text/xml",
+          "content-type": "text/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:S0370157317302946?httpAccept=text/plain",
+          "content-type": "text/plain",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            10,
+            7
+          ]
+        ],
+        "date-time": "2025-10-07T00:58:20Z",
+        "timestamp": 1759798700000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0370157317302946"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2017,
+            11
+          ]
+        ]
+      },
+      "references-count": 425,
+      "alternative-id": [
+        "S0370157317302946"
+      ],
+      "URL": "https://doi.org/10.1016/j.physrep.2017.07.007",
+      "relation": {},
+      "ISSN": [
+        "0370-1573"
+      ],
+      "issn-type": [
+        {
+          "value": "0370-1573",
+          "type": "print"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            11
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "Elsevier",
+          "name": "publisher",
+          "label": "This article is maintained by"
+        },
+        {
+          "value": "Random walks and diffusion on networks",
+          "name": "articletitle",
+          "label": "Article Title"
+        },
+        {
+          "value": "Physics Reports",
+          "name": "journaltitle",
+          "label": "Journal Title"
+        },
+        {
+          "value": "https://doi.org/10.1016/j.physrep.2017.07.007",
+          "name": "articlelink",
+          "label": "CrossRef DOI link to publisher maintained version"
+        },
+        {
+          "value": "article",
+          "name": "content_type",
+          "label": "Content Type"
+        },
+        {
+          "value": "\u00a9 2017 The Author(s). Published by Elsevier B.V.",
+          "name": "copyright",
+          "label": "Copyright"
+        }
+      ]
+    }
+  }
+}

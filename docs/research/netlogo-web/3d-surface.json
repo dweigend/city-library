@@ -1,0 +1,115 @@
+{
+  "slug": "3d-surface",
+  "name": "3D Surface",
+  "catalogPath": "Sample Models/Mathematics/3D Surface",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/3D%20Surface.nlogox",
+  "deliveryBatch": "B16",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can a moving point cloud suggest a smooth surface? NetLogo 3D Surface randomly samples horizontal coordinates and computes height from a time-dependent cosine expression. It displays the resulting three-dimensional points through an oblique two-dimensional projection and varies color with height. Computer graphics [1] grounds projection and visual depth cues; differential geometry [2] explains a surface defined as a height function; computational geometry [3] frames the difference between discrete samples and an underlying continuous object. Changing sample count or the height formula reveals how representation affects perceived continuity. The displayed wave is prescribed mathematically: no elastic forces or material equations generate it. Finite sampling and projection can hide structure or introduce apparent overlaps. The simulation illustrates coordinate mapping and animated parameterization, without validating membrane mechanics or a physical wave equation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/3D%20Surface.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/3D%20Surface.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 529920490e0581e1caacd9879f9a0edac891733b315eb387361ac2a347ad4f47",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/3d-surface.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (1998).  NetLogo 3D Surface model.  http://ccl.northwestern.edu/netlogo/models/3DSurface.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/3d-surface.nlogox",
+    "evidenceFile": "evidence/computing/3d-surface.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1201/9781439865521",
+      "authors": [
+        "Peter Shirley",
+        "Michael Ashikhmin",
+        "Steve Marschner"
+      ],
+      "title": "Fundamentals of Computer Graphics",
+      "year": 2009,
+      "venue": "A K Peters/CRC Press",
+      "doi": "10.1201/9781439865521",
+      "url": "https://doi.org/10.1201/9781439865521",
+      "relevance": "Projection and visual encoding explain the apparent depth of the sampled surface.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1201%2F9781439865521",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1201_9781439865521.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1201_9781439865521.json"
+      },
+      "publisher": "A K Peters/CRC Press",
+      "isbn": [
+        "9781439865521"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-1-84882-891-9",
+      "authors": [
+        "Andrew Pressley"
+      ],
+      "title": "Elementary Differential Geometry",
+      "year": 2010,
+      "venue": "Springer Undergraduate Mathematics Series",
+      "doi": "10.1007/978-1-84882-891-9",
+      "url": "https://doi.org/10.1007/978-1-84882-891-9",
+      "relevance": "A height function is a surface parameterization; this is the relevant mathematical structure.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-84882-891-9",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_84882_891_9.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_84882_891_9.json"
+      },
+      "publisher": "Springer London",
+      "isbn": [
+        "9781848828902",
+        "9781848828919"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-3-540-77974-2",
+      "authors": [
+        "Mark de Berg",
+        "Otfried Cheong",
+        "Marc van Kreveld",
+        "Mark Overmars"
+      ],
+      "title": "Computational Geometry: Algorithms and Applications",
+      "year": 2008,
+      "venue": "Springer Berlin Heidelberg",
+      "doi": "10.1007/978-3-540-77974-2",
+      "url": "https://doi.org/10.1007/978-3-540-77974-2",
+      "relevance": "Discrete geometric representations clarify that the point cloud is an approximation to a continuous surface.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-3-540-77974-2",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_3_540_77974_2.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_3_540_77974_2.json"
+      },
+      "publisher": "Springer Berlin Heidelberg",
+      "isbn": [
+        "9783540779735",
+        "9783540779742"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,159 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1515%2F9780691209654",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            2
+          ]
+        ],
+        "date-time": "2026-11-02T23:20:12Z",
+        "timestamp": 1793661612757,
+        "version": "4.5.1"
+      },
+      "reference-count": 0,
+      "publisher": "Princeton University Press",
+      "isbn-type": [
+        {
+          "value": "9780691209654",
+          "type": "electronic"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            1982,
+            12,
+            31
+          ]
+        ]
+      },
+      "DOI": "10.1515/9780691209654",
+      "type": "edited-book",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            5,
+            26
+          ]
+        ],
+        "date-time": "2020-05-26T20:33:14Z",
+        "timestamp": 1590525194000
+      },
+      "source": "Crossref",
+      "is-referenced-by-count": 954,
+      "title": [
+        "Resource Competition and Community Structure. (MPB-17), Volume 17"
+      ],
+      "prefix": "10.1515",
+      "author": [
+        {
+          "given": "David",
+          "family": "Tilman",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "374",
+      "published-online": {
+        "date-parts": [
+          [
+            2020,
+            4,
+            28
+          ]
+        ]
+      },
+      "container-title": [],
+      "original-title": [],
+      "link": [
+        {
+          "URL": "https://princetonup.degruyter.com/view/title/578792",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.degruyter.com/document/doi/10.1515/9780691209654/pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            7,
+            2
+          ]
+        ],
+        "date-time": "2025-07-02T12:41:36Z",
+        "timestamp": 1751460096000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.degruyterbrill.com/document/doi/10.1515/9780691209654/html"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1982,
+            12,
+            31
+          ]
+        ]
+      },
+      "ISBN": [
+        "9780691209654"
+      ],
+      "references-count": 0,
+      "alternative-id": [
+        "10.1515/9780691209654"
+      ],
+      "URL": "https://doi.org/10.1515/9780691209654",
+      "relation": {
+        "is-identical-to": [
+          {
+            "id-type": "doi",
+            "id": "10.2307/j.ctvx5wb72",
+            "asserted-by": "subject"
+          }
+        ]
+      },
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1982,
+            12,
+            31
+          ]
+        ]
+      }
+    }
+  }
+}

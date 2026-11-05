@@ -1,0 +1,688 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevE.56.2527",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            26
+          ]
+        ],
+        "date-time": "2026-10-26T08:50:46Z",
+        "timestamp": 1793004646339,
+        "version": "4.5.0"
+      },
+      "reference-count": 58,
+      "publisher": "American Physical Society (APS)",
+      "issue": "3",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1997,
+                9,
+                1
+              ]
+            ],
+            "date-time": "1997-09-01T00:00:00Z",
+            "timestamp": 873072000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://link.aps.org/licenses/aps-default-license"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Phys. Rev. E"
+      ],
+      "DOI": "10.1103/physreve.56.2527",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            7,
+            27
+          ]
+        ],
+        "date-time": "2002-07-27T01:11:20Z",
+        "timestamp": 1027732280000
+      },
+      "page": "2527-2539",
+      "source": "Crossref",
+      "is-referenced-by-count": 223,
+      "title": [
+        "Active walker model for the formation of human and animal trail systems"
+      ],
+      "prefix": "10.1103",
+      "volume": "56",
+      "author": [
+        {
+          "given": "Dirk",
+          "family": "Helbing",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Frank",
+          "family": "Schweitzer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Joachim",
+          "family": "Keltsch",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "P\u00e9ter",
+          "family": "Moln\u00e1r",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "16",
+      "published-online": {
+        "date-parts": [
+          [
+            1997,
+            9,
+            1
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "PhysRevE.56.2527Cc1R1",
+          "volume-title": "Synergetics. An Introduction, 3rd ed.",
+          "author": "H. Haken",
+          "year": "1987"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc2R1",
+          "volume-title": "Advanced Synergetics, 2nd ed.",
+          "author": "H. Haken",
+          "year": "1987"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc3R1",
+          "volume-title": "Self-Organization in Nonequilibrium Systems. From Dissipative Structures to Order Through Fluctuations",
+          "author": "G. Nicolis",
+          "year": "1977"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc4R1",
+          "volume-title": "Evolution of Complex Systems. Self-Organization, Entropy and Development",
+          "author": "R. Feistel",
+          "year": "1989"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc5R1",
+          "volume-title": "Pattern Formation in Complex Dissipative Systems",
+          "year": "1992"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc6R1",
+          "volume-title": "Spatio-Temporal Patterns in Nonequilibrium Complex Systems",
+          "year": "1995"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc7R1",
+          "volume-title": "From Individual to Collective Behavior in Social Insects",
+          "year": "1987"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc8R1",
+          "volume-title": "Individual-Based Models and Approaches in Ecology: Populations, Communities, and Ecosystems",
+          "year": "1992"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc9R1",
+          "volume-title": "Dynamic Systems in Social Psychology",
+          "year": "1994"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc10R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1016/0370-1573(91)90024-G",
+          "volume": "204",
+          "author": "W. Weidlich",
+          "year": "1991",
+          "journal-title": "Phys. Rep."
+        },
+        {
+          "key": "PhysRevE.56.2527Cc11R1",
+          "volume-title": "Quantitative Sociodynamics. Stochastic Methods and Social Interaction Processes",
+          "author": "D. Helbing",
+          "year": "1995"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc12R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "1385",
+          "DOI": "10.1126/science.242.4884.1385",
+          "volume": "242",
+          "author": "R. Axelrod",
+          "year": "1988",
+          "journal-title": "Science"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc13R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "1181",
+          "DOI": "10.1126/science.254.5035.1181",
+          "volume": "254",
+          "author": "S. H. Clearwater",
+          "year": "1991",
+          "journal-title": "Science"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc14R1",
+          "volume-title": "Introduction to Quantitative Aspects of Social Phenomena",
+          "author": "E. W. Montroll",
+          "year": "1974"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc15R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "2909",
+          "DOI": "10.1103/PhysRevE.51.2909",
+          "volume": "51",
+          "author": "K. Nagel",
+          "year": "1995",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc16R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "2939",
+          "DOI": "10.1103/PhysRevE.51.2939",
+          "volume": "51",
+          "author": "M. Schreckenberg",
+          "year": "1995",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc17R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "254",
+          "DOI": "10.1016/0378-4371(93)90006-P",
+          "volume": "199",
+          "author": "K. Nagel",
+          "year": "1993",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc18R1",
+          "volume-title": "Proceedings of the Alife 4 Meeting",
+          "author": "K. Nagel",
+          "year": "1994"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc19R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "1035",
+          "DOI": "10.1103/PhysRevE.51.1035",
+          "volume": "51",
+          "author": "M. Bando",
+          "year": "1995",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc20R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "5574",
+          "DOI": "10.1103/PhysRevE.52.5574",
+          "volume": "52",
+          "author": "T. S. Komatsu",
+          "year": "1995",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc21R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "R6124",
+          "DOI": "10.1103/PhysRevA.46.R6124",
+          "volume": "46",
+          "author": "O. Biham",
+          "year": "1992",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc22R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "R4175",
+          "DOI": "10.1103/PhysRevE.48.R4175",
+          "volume": "48",
+          "author": "J. A. Cuesta",
+          "year": "1993",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc23R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "175",
+          "DOI": "10.1103/PhysRevE.51.175",
+          "volume": "51",
+          "author": "J. M. Molera",
+          "year": "1995",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc24R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "3290",
+          "DOI": "10.1103/PhysRevE.48.3290",
+          "volume": "48",
+          "author": "T. Nagatani",
+          "year": "1993",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc25R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "922",
+          "DOI": "10.1103/PhysRevE.51.922",
+          "volume": "51",
+          "author": "T. Nagatani",
+          "year": "1995",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc26R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "822",
+          "DOI": "10.1103/PhysRevE.50.822",
+          "volume": "50",
+          "author": "E. Ben-Naim",
+          "year": "1994",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc27R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "5946",
+          "DOI": "10.1103/PhysRevE.52.5946",
+          "volume": "52",
+          "author": "I. Campos",
+          "year": "1995",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc28R1",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1007/978-3-642-59063-4",
+          "volume-title": "Verkehrsdynamik. Neue Physikalische Modellierungskonzepte",
+          "author": "D. Helbing",
+          "year": "1997"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc29R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "298",
+          "DOI": "10.1002/bs.3830360405",
+          "volume": "36",
+          "author": "D. Helbing",
+          "year": "1991",
+          "journal-title": "Behav. Sci."
+        },
+        {
+          "key": "PhysRevE.56.2527Cc30R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "4282",
+          "DOI": "10.1103/PhysRevE.51.4282",
+          "volume": "51",
+          "author": "D. Helbing",
+          "year": "1995",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc31R1",
+          "volume-title": "Traffic and Granular Flow",
+          "author": "D. Helbing",
+          "year": "1996"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc32R1",
+          "volume-title": "Self-Organization of Complex Structures: From Individual to Collective Dynamics",
+          "author": "D. Helbing",
+          "year": "1997"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc33R1",
+          "volume-title": "Evolution of Natural Structures",
+          "author": "D. Helbing",
+          "year": "1994"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc34R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "47",
+          "DOI": "10.1038/40353",
+          "volume": "388",
+          "author": "D. Helbing",
+          "year": "1997",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc36R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "203",
+          "DOI": "10.1007/BF01197845",
+          "volume": "84",
+          "author": "B. Davis",
+          "year": "1990",
+          "journal-title": "Probab. Theor. Relat. Fields"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc37R1",
+          "volume-title": "Modeling Complex Phenomena",
+          "author": "R. D. Freimuth",
+          "year": "1992"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc38R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "17",
+          "DOI": "10.1016/0378-4371(92)90499-G",
+          "volume": "191",
+          "author": "D. R. Kayser",
+          "year": "1992",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc39R1",
+          "first-page": "166",
+          "volume": "66",
+          "author": "R. D. Pochy",
+          "year": "1993",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc40R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "534",
+          "DOI": "10.1063/1.4823214",
+          "volume": "7",
+          "author": "L. Lam",
+          "year": "1993",
+          "journal-title": "Comput. Phys."
+        },
+        {
+          "key": "PhysRevE.56.2527Cc41R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "267",
+          "DOI": "10.1016/0960-0779(95)80033-D",
+          "volume": "6",
+          "author": "L. Lam",
+          "year": "1995",
+          "journal-title": "Chaos Solitons Fractals"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc42R1",
+          "volume-title": "Lectures on Stochastic Dynamics",
+          "author": "F. Schweitzer",
+          "year": "1997"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc43R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "359",
+          "DOI": "10.1016/0378-4371(94)90312-3",
+          "volume": "206",
+          "author": "F. Schweitzer",
+          "year": "1994",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc44R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "140",
+          "DOI": "10.1016/0375-9601(95)00700-D",
+          "volume": "207",
+          "author": "L. Schimansky-Geier",
+          "year": "1995",
+          "journal-title": "Phys. Lett. A"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc45R1",
+          "volume-title": "Self-Organization of Complex Structures: From Individual to Collective Dynamics",
+          "author": "L. Schimansky-Geier"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc46R1",
+          "volume-title": "Fluctuations and Order: The New Synthesis",
+          "author": "F. Schweitzer",
+          "year": "1996"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc48R1",
+          "volume-title": "Dynamics of Cell and Tissue Motion",
+          "author": "A. Stevens",
+          "year": "1997"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc49R1",
+          "volume-title": "Self-Organization of Complex Structures: From Individual to Collective Dynamics",
+          "author": "F. Schweitzer"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc51R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "153",
+          "DOI": "10.1016/S0303-2647(96)01670-X",
+          "volume": "41",
+          "author": "F. Schweitzer",
+          "year": "1997",
+          "journal-title": "BioSystems"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc52R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "237",
+          "DOI": "10.1007/BF02223667",
+          "volume": "27",
+          "author": "B. H\u00f6lldobler",
+          "year": "1980",
+          "journal-title": "Insectes Sociaux"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc53R1",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1007/978-3-662-10306-7",
+          "volume-title": "The Ants",
+          "author": "B. H\u00f6lldobler",
+          "year": "1990"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc54R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "719",
+          "DOI": "10.1007/BF01065789",
+          "volume": "2",
+          "author": "J. L. Deneubourg",
+          "year": "1989",
+          "journal-title": "J. Insect Behavior"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc55R1",
+          "volume-title": "Animal Homing",
+          "author": "R. Wehner",
+          "year": "1992"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc56R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "299",
+          "DOI": "10.1006/jtbi.1994.1027",
+          "volume": "166",
+          "author": "J. W. Haefner",
+          "year": "1994",
+          "journal-title": "J. Theor. Biol."
+        },
+        {
+          "key": "PhysRevE.56.2527Cc58R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "147",
+          "DOI": "10.1007/BF00275919",
+          "volume": "9",
+          "author": "W. Alt",
+          "year": "1980",
+          "journal-title": "J. Math. Biol."
+        },
+        {
+          "key": "PhysRevE.56.2527Cc61R1",
+          "doi-asserted-by": "crossref",
+          "first-page": "5498",
+          "DOI": "10.1103/PhysRevE.55.5498",
+          "volume": "55",
+          "author": "D. Helbing",
+          "year": "1997",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc62R1",
+          "first-page": "391",
+          "volume": "6",
+          "author": "D. Helbing",
+          "year": "1992",
+          "journal-title": "Complex Syst."
+        },
+        {
+          "key": "PhysRevE.56.2527Cc64R1",
+          "volume-title": "Non-Planned Settlements",
+          "author": "E. Schaur",
+          "year": "1991"
+        },
+        {
+          "key": "PhysRevE.56.2527Cc65R1",
+          "volume-title": "Die Nat\u00fcrliche Konstruktion Gewachsener Siedlungen",
+          "author": "F. Otto",
+          "year": "1991"
+        }
+      ],
+      "container-title": [
+        "Physical Review E"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://link.aps.org/article/10.1103/PhysRevE.56.2527",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevE.56.2527/fulltext",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2017,
+            12,
+            10
+          ]
+        ],
+        "date-time": "2017-12-10T00:50:27Z",
+        "timestamp": 1512867027000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://link.aps.org/doi/10.1103/PhysRevE.56.2527"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1997,
+            9,
+            1
+          ]
+        ]
+      },
+      "references-count": 58,
+      "journal-issue": {
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              1997,
+              9
+            ]
+          ]
+        }
+      },
+      "URL": "https://doi.org/10.1103/physreve.56.2527",
+      "relation": {},
+      "ISSN": [
+        "1063-651X",
+        "1095-3787"
+      ],
+      "issn-type": [
+        {
+          "value": "1063-651X",
+          "type": "print"
+        },
+        {
+          "value": "1095-3787",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1997,
+            9,
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

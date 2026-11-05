@@ -1,0 +1,313 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2Fmbio.00262-15%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1128/mbio.00262-15\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "25900652",
+          "source": "MED",
+          "pmid": "25900652",
+          "pmcid": "PMC4453577",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC4453577"
+            ]
+          },
+          "doi": "10.1128/mbio.00262-15",
+          "title": "CRISPR immunity drives rapid phage genome evolution in Streptococcus thermophilus.",
+          "authorString": "Paez-Espino D, Sharon I, Morovic W, Stahl B, Thomas BC, Barrangou R, Banfield JF.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Paez-Espino D",
+                "lastName": "Paez-Espino",
+                "firstName": "David",
+                "initials": "D",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "University of California, Berkeley, California, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Sharon I",
+                "lastName": "Sharon",
+                "firstName": "Itai",
+                "initials": "I",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0705-2316"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "University of California, Berkeley, California, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Morovic W",
+                "lastName": "Morovic",
+                "firstName": "Wesley",
+                "initials": "W",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-8869-3670"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "DuPont Nutrition and Health, Madison, Wisconsin, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Stahl B",
+                "lastName": "Stahl",
+                "firstName": "Buffy",
+                "initials": "B",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "DuPont Nutrition and Health, Madison, Wisconsin, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Thomas BC",
+                "lastName": "Thomas",
+                "firstName": "Brian C",
+                "initials": "BC",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "University of California, Berkeley, California, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Barrangou R",
+                "lastName": "Barrangou",
+                "firstName": "Rodolphe",
+                "initials": "R",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0648-3504"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Food, Bioprocessing and Nutrition Sciences, North Carolina State University, Raleigh, North Carolina, USA rbarran@ncsu.edu jbanfield@berkeley.edu."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Banfield JF",
+                "lastName": "Banfield",
+                "firstName": "Jillian F",
+                "initials": "JF",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "University of California, Berkeley, California, USA rbarran@ncsu.edu jbanfield@berkeley.edu."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-8869-3670"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0648-3504"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0705-2316"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data",
+              "recommended_reviews"
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "6",
+            "journalIssueId": 2475668,
+            "dateOfPublication": "2015 Apr",
+            "monthOfPublication": 4,
+            "yearOfPublication": 2015,
+            "journal": {
+              "medlineAbbreviation": "mBio",
+              "title": "mBio",
+              "essn": "2150-7511",
+              "issn": "2150-7511",
+              "nlmid": "101519231",
+              "isoabbreviation": "mBio"
+            },
+            "printPublicationDate": "2015-04-01"
+          },
+          "pubYear": "2015",
+          "pageInfo": "e00262-15",
+          "abstractText": "<h4>Unlabelled</h4>Many bacteria rely on CRISPR-Cas systems to provide adaptive immunity against phages, predation by which can shape the ecology and functioning of microbial communities. To characterize the impact of CRISPR immunization on phage genome evolution, we performed long-term bacterium-phage (Streptococcus thermophilus-phage 2972) coevolution experiments. We found that in this species, CRISPR immunity drives fixation of single nucleotide polymorphisms that accumulate exclusively in phage genome regions targeted by CRISPR. Mutation rates in phage genomes highly exceed those of the host. The presence of multiple phages increased phage persistence by enabling recombination-based formation of chimeric phage genomes in which sequences heavily targeted by CRISPR were replaced. Collectively, our results establish CRISPR-Cas adaptive immunity as a key driver of phage genome evolution under the conditions studied and highlight the importance of multiple coexisting phages for persistence in natural systems.<h4>Importance</h4>Phages remain an enigmatic part of the biosphere. As predators, they challenge the survival of host bacteria and archaea and set off an \"arms race\" involving host immunization countered by phage mutation. The CRISPR-Cas system is adaptive: by capturing fragments of a phage genome upon exposure, the host is positioned to counteract future infections. To investigate this process, we initiated massive deep-sequencing experiments with a host and infective phage and tracked the coevolution of both populations over hundreds of days. In the present study, we found that CRISPR immunity drives the accumulation of phage genome rearrangements (which enable longer phage survival) and escape mutations, establishing CRISPR as one of the fundamental drivers of phage evolution.",
+          "affiliation": "University of California, Berkeley, California, USA.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Streptococcus thermophilus",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "VI",
+                      "qualifierName": "virology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Adaptation, Biological"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Evolution, Molecular"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Recombination, Genetic"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Polymorphism, Single Nucleotide"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genome, Viral"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Host-Parasite Interactions"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mutation Rate"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "CRISPR-Cas Systems"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1128/mBio.00262-15"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC4453577"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC4453577?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 154,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by-nc-sa",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "bioproject",
+              "gen"
+            ]
+          },
+          "dateOfCompletion": "2015-12-14",
+          "dateOfCreation": "2015-04-23",
+          "dateOfRevision": "2022-09-20",
+          "electronicPublicationDate": "2015-04-21",
+          "firstPublicationDate": "2015-04-21",
+          "firstIndexDate": "2015-04-22",
+          "fullTextReceivedDate": "2020-07-11",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

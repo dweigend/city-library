@@ -1,0 +1,99 @@
+{
+  "slug": "wolf-sheep-predation",
+  "name": "Wolf Sheep Predation",
+  "catalogPath": "Sample Models/Biology/Wolf Sheep Predation",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Wolf%20Sheep%20Predation.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether local consumption, reproduction and resource renewal permit predator-prey coexistence. In NetLogo's Wolf Sheep Predation model, mobile wolves eat sheep and expend energy; the optional grass variant gives sheep a renewable food supply and explicit energy costs. The selected literature connects this mechanism to population feedback and ecological model construction: coupled population changes provide the classical predator-prey comparison [1]; embodied predator-prey modeling connects individual rules to aggregate dynamics [2]; experimental population competition highlights the need for biological evidence [3]. Random movement, fixed reproduction probabilities and simplified energy budgets omit species-specific behavior; aggregate differential equations are theoretical comparators rather than identical implementations. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Wolf%20Sheep%20Predation.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Wolf%20Sheep%20Predation.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/wolf-sheep-predation.nlogox",
+    "sha256": "83bccf3161787b775b4dda7bdadbedde84c73c318926786b796d519cc4dbe15c",
+    "citation": "For the model itself: * Wilensky, U. (1997). NetLogo Wolf Sheep Predation model. http://ccl.northwestern.edu/netlogo/models/WolfSheepPredation. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Wilensky, U. & Reisman, K. (1998). Connected Science: Learning Biology through Constructing and Testing Computational Theories -- an Embodied Modeling Approach. International Journal of Complex Systems, M. 234, pp. 1 - 12. (The Wolf-Sheep-Predation model is a slightly extended version of the model described in the paper.) Wilensky, U. & Reisman, K. (2006). Thinking like a Wolf, a Sheep or a Firefly: Learning Biology through Constructing and Testing Computational Theories -- an Embodied Modeling Approach. Cognition & Instruction, 24(2), pp. 171-209. http://ccl.northwestern.edu/papers/wolfsheep.pdf . Wilensky, U., & Rand, W. (2015). An introduction to agent-based modeling: Modeling natural, social and engineered complex systems with NetLogo. Cambridge, MA: MIT Press. Lotka, A. J. (1925). Elements of physical biology. New York: Dover. Volterra, V. (1926, October 16). Fluctuations in the abundance of a species considered mathematically. Nature, 118, 558–560. Gause, G. F. (1934). The struggle for existence. Baltimore: Williams & Wilkins.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/wolf-sheep-predation.nlogox"
+  },
+  "publications": [
+    {
+      "id": "volterra",
+      "creatorRole": "author",
+      "authors": [
+        "VITO VOLTERRA"
+      ],
+      "title": "Fluctuations in the Abundance of a Species considered Mathematically",
+      "year": 1926,
+      "venue": "Nature",
+      "doi": "10.1038/118558a0",
+      "url": "https://doi.org/10.1038/118558a0",
+      "relevance": "coupled population changes provide the classical predator-prey comparison",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2F118558a0",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/volterra-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/volterra-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "wolfpaper",
+      "creatorRole": "author",
+      "authors": [
+        "Uri Wilensky",
+        "Kenneth Reisman"
+      ],
+      "title": "Thinking Like a Wolf, a Sheep, or a Firefly: Learning Biology Through Constructing and Testing Computational Theories—An Embodied Modeling Approach",
+      "year": 2006,
+      "venue": "Cognition and Instruction",
+      "doi": "10.1207/s1532690xci2402_1",
+      "url": "https://doi.org/10.1207/s1532690xci2402_1",
+      "relevance": "embodied predator-prey modeling connects individual rules to aggregate dynamics",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1207%2Fs1532690xci2402_1",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/wolfpaper-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/wolfpaper-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "gause",
+      "creatorRole": "author",
+      "authors": [
+        "G. F. Gause"
+      ],
+      "title": "Experimental Analysis of Vito Volterra's Mathematical Theory of the Struggle for Existence",
+      "year": 1934,
+      "venue": "Science",
+      "doi": "10.1126/science.79.2036.16.b",
+      "url": "https://doi.org/10.1126/science.79.2036.16.b",
+      "relevance": "experimental population competition highlights the need for biological evidence",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Gause+The+Struggle+for+Existence+1934&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/gause-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/gause-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

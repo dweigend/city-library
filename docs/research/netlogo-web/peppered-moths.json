@@ -1,0 +1,119 @@
+{
+  "slug": "peppered-moths",
+  "name": "Peppered Moths",
+  "catalogPath": "Sample Models/Biology/Evolution/Peppered Moths",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Peppered%20Moths.nlogox",
+  "deliveryBatch": "B08",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can environmental change reverse selection on a visible trait? NetLogo Peppered Moths gives moth colors different predation risks against changing backgrounds and follows their frequencies across reproduction. Kettlewell's experiments [1] establish the historical case; later predation work [2] and molecular research [3] strengthen and refine its interpretation. The served model represents predation invisibly and simplifies inheritance, pollution, and habitat differences. It illustrates how differential survival can change population composition when camouflage conditions change. Its outputs do not reproduce a historical time series without calibration, and a background-color rule cannot substitute for field evidence about resting behavior, predator choice, or the genetic mechanism that produces the actual moth phenotypes.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Peppered%20Moths.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Peppered%20Moths.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 f904e2dfd900a5e5527ed50a4c4a313ab015142ae9a3027c3810633911bf21ae",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/peppered-moths.nlogox",
+    "infoFile": "evidence/biology/peppered-moths-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1997).  NetLogo Peppered Moths model.  http://ccl.northwestern.edu/netlogo/models/PepperedMoths.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "kettlewell",
+      "authors": [
+        "H B D Kettlewell"
+      ],
+      "title": "Selection experiments on industrial melanism in the Lepidoptera",
+      "year": 1955,
+      "venue": "Heredity",
+      "doi": "10.1038/hdy.1955.36",
+      "url": "https://doi.org/10.1038/hdy.1955.36",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Selection+experiments+on+industrial+melanism+in+the+Lepidoptera+Kettlewell+1955&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/kettlewell-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "9",
+      "issue": "3",
+      "pages": "323-342",
+      "relevance": "Original selection experiments ground the industrial-melanism example."
+    },
+    {
+      "id": "cook",
+      "authors": [
+        "L. M. Cook",
+        "B. S. Grant",
+        "I. J. Saccheri",
+        "J. Mallet"
+      ],
+      "title": "Selective bird predation on the peppered moth: the last experiment of Michael Majerus",
+      "year": 2012,
+      "venue": "Biology Letters",
+      "doi": "10.1098/rsbl.2011.1136",
+      "url": "https://doi.org/10.1098/rsbl.2011.1136",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Selective+bird+predation+on+the+peppered+moth+the+last+experiment+of+Michael+Majerus+Cook+2012&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/cook-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frsbl.2011.1136%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/cook-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "8",
+      "issue": "4",
+      "pages": "609-612",
+      "relevance": "Later field predation evidence tests the selective mechanism under improved conditions."
+    },
+    {
+      "id": "mothgene",
+      "authors": [
+        "Arjen E. van’t Hof",
+        "Pascal Campagne",
+        "Daniel J. Rigden",
+        "Carl J. Yung",
+        "Jessica Lingley",
+        "Michael A. Quail",
+        "Neil Hall",
+        "Alistair C. Darby",
+        "Ilik J. Saccheri"
+      ],
+      "title": "The industrial melanism mutation in British peppered moths is a transposable element",
+      "year": 2016,
+      "venue": "Nature",
+      "doi": "10.1038/nature17951",
+      "url": "https://doi.org/10.1038/nature17951",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+industrial+melanism+mutation+in+British+peppered+moths+is+a+transposable+element+van%27t+Hof+2016&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/mothgene-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature17951%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/mothgene-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "534",
+      "issue": "7605",
+      "pages": "102-105",
+      "relevance": "Identifies a molecular basis of British peppered-moth melanism beyond the model’s simplified color inheritance."
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,2074 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Antibiotic+resistance+and+its+cost+is+it+possible+to+reverse+resistance+Andersson+Hughes+2010&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3378022,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T01:21:58Z",
+            "timestamp": 1793841718872,
+            "version": "4.6.1"
+          },
+          "reference-count": 141,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2010,
+                    3,
+                    8
+                  ]
+                ],
+                "date-time": "2010-03-08T00:00:00Z",
+                "timestamp": 1268006400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nat Rev Microbiol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2010,
+                4
+              ]
+            ]
+          },
+          "DOI": "10.1038/nrmicro2319",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                3,
+                8
+              ]
+            ],
+            "date-time": "2010-03-08T04:09:25Z",
+            "timestamp": 1268021365000
+          },
+          "page": "260-271",
+          "source": "Crossref",
+          "is-referenced-by-count": 2151,
+          "title": [
+            "Antibiotic resistance and its cost: is it possible to reverse resistance?"
+          ],
+          "prefix": "10.1038",
+          "volume": "8",
+          "author": [
+            {
+              "given": "Dan I.",
+              "family": "Andersson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Diarmaid",
+              "family": "Hughes",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2010,
+                3,
+                8
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFnrmicro2319_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "585",
+              "DOI": "10.1093/jac/49.4.585",
+              "volume": "49",
+              "author": "R Wise",
+              "year": "2002",
+              "unstructured": "Wise, R. Antimicrobial resistance: priorities for action. J. Antimicrob. Chemother. 49, 585\u2013586 (2002).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "issue": "Suppl. 1",
+              "key": "BFnrmicro2319_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "S4",
+              "DOI": "10.1016/S0163-4453(09)60003-7",
+              "volume": "59",
+              "author": "N Woodford",
+              "year": "2009",
+              "unstructured": "Woodford, N. & Livermore, D. M. Infections caused by Gram-positive bacteria: a review of the global challenge. J. Infect. 59 (Suppl. 1), S4\u2013S16 (2009).",
+              "journal-title": "J. Infect."
+            },
+            {
+              "key": "BFnrmicro2319_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "123",
+              "DOI": "10.7326/0003-4819-149-2-200807150-00008",
+              "volume": "149",
+              "author": "W Lew",
+              "year": "2008",
+              "unstructured": "Lew, W., Pai, M., Oxlade, O., Martin, D. & Menzies, D. Initial drug resistance and tuberculosis treatment outcomes: systematic review and meta-analysis. Ann. Intern. Med. 149, 123\u2013134 (2008).",
+              "journal-title": "Ann. Intern. Med."
+            },
+            {
+              "key": "BFnrmicro2319_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "1169",
+              "DOI": "10.2165/00003495-200868090-00002",
+              "volume": "68",
+              "author": "DR Guay",
+              "year": "2008",
+              "unstructured": "Guay, D. R. Contemporary management of uncomplicated urinary tract infections. Drugs 68, 1169\u20131205 (2008).",
+              "journal-title": "Drugs"
+            },
+            {
+              "issue": "Suppl. 1",
+              "key": "BFnrmicro2319_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "S9",
+              "DOI": "10.1093/clinids/24.Supplement_1.S9",
+              "volume": "24",
+              "author": "BR Levin",
+              "year": "1997",
+              "unstructured": "Levin, B. R. et al. The population genetics of antibiotic resistance. Clin. Infect. Dis. 24 (Suppl. 1), S9\u2013S16 (1997).",
+              "journal-title": "Clin. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "489",
+              "DOI": "10.1016/S1369-5274(99)00005-3",
+              "volume": "2",
+              "author": "DI Andersson",
+              "year": "1999",
+              "unstructured": "Andersson, D. I. & Levin, B. R. The biological cost of antibiotic resistance. Curr. Opin. Microbiol. 2, 489\u2013493 (1999).",
+              "journal-title": "Curr. Opin. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR7",
+              "first-page": "58",
+              "volume": "60",
+              "author": "BR Levin",
+              "year": "2002",
+              "unstructured": "Levin, B. R. Models for the spread of resistant pathogens. Neth. J. Med. 60, 58\u201366 (2002).",
+              "journal-title": "Neth. J. Med."
+            },
+            {
+              "key": "BFnrmicro2319_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "119",
+              "DOI": "10.1146/annurev.biochem.78.082907.145923",
+              "volume": "78",
+              "author": "H Nikaido",
+              "year": "2009",
+              "unstructured": "Nikaido, H. Multidrug resistance in bacteria. Annu. Rev. Biochem. 78, 119\u2013146 (2009).",
+              "journal-title": "Annu. Rev. Biochem."
+            },
+            {
+              "key": "BFnrmicro2319_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "167",
+              "DOI": "10.1146/annurev-genet-102108-134805",
+              "volume": "43",
+              "author": "DI Andersson",
+              "year": "2009",
+              "unstructured": "Andersson, D. I. & Hughes, D. Gene amplification and adaptive evolution in bacteria. Annu. Rev. Genet. 43, 167\u2013195 (2009).",
+              "journal-title": "Annu. Rev. Genet."
+            },
+            {
+              "key": "BFnrmicro2319_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "578",
+              "DOI": "10.1038/nrmicro2174",
+              "volume": "7",
+              "author": "L Sandegren",
+              "year": "2009",
+              "unstructured": "Sandegren, L. & Andersson, D. I. Bacterial gene amplification: implications for the evolution of antibiotic resistance. Nature Rev. Microbiol. 7, 578\u2013588 (2009).",
+              "journal-title": "Nature Rev. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "6883",
+              "DOI": "10.1128/JB.185.23.6883-6892.2003",
+              "volume": "185",
+              "author": "D Ince",
+              "year": "2003",
+              "unstructured": "Ince, D. & Hooper, D. C. Quinolone resistance due to reduced target enzyme expression. J. Bacteriol. 185, 6883\u20136892 (2003).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro2319_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "83",
+              "DOI": "10.1038/nm1347",
+              "volume": "12",
+              "author": "A Robicsek",
+              "year": "2006",
+              "unstructured": "Robicsek, A. et al. Fluoroquinolone-modifying enzyme: a new adaptation of a common aminoglycoside acetyltransferase. Nature Med. 12, 83\u201388 (2006).",
+              "journal-title": "Nature Med."
+            },
+            {
+              "key": "BFnrmicro2319_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "1555",
+              "DOI": "10.2165/11317030-000000000-00000",
+              "volume": "69",
+              "author": "XZ Li",
+              "year": "2009",
+              "unstructured": "Li, X. Z. & Nikaido, H. Efflux-mediated drug resistance in bacteria: an update. Drugs 69, 1555\u20131623 (2009).",
+              "journal-title": "Drugs"
+            },
+            {
+              "issue": "Suppl. 1",
+              "key": "BFnrmicro2319_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "20",
+              "DOI": "10.1111/j.1469-0691.2008.02679.x",
+              "volume": "15",
+              "author": "R Canton",
+              "year": "2009",
+              "unstructured": "Canton, R. Antibiotic resistance genes from the environment: a perspective through newly identified antibiotic resistance mechanisms in the clinical setting. Clin. Microbiol. Infect. 15 (Suppl. 1), 20\u201325 (2009).",
+              "journal-title": "Clin. Microbiol. Infect."
+            },
+            {
+              "key": "BFnrmicro2319_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "958",
+              "DOI": "10.1038/nrmicro1796",
+              "volume": "5",
+              "author": "JL Martinez",
+              "year": "2007",
+              "unstructured": "Martinez, J. L., Baquero, F. & Andersson, D. I. Predicting antibiotic resistance. Nature Rev. Microbiol. 5, 958\u2013965 (2007).",
+              "journal-title": "Nature Rev. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "1251",
+              "DOI": "10.1086/383309",
+              "volume": "38",
+              "author": "M Bergman",
+              "year": "2004",
+              "unstructured": "Bergman, M. et al. Effect of macrolide consumption on erythromycin resistance in Streptococcus pyogenes in Finland in 1997\u20132001 Clin. Infect. Dis. 38, 1251\u20131256 (2004).",
+              "journal-title": "Clin. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "912",
+              "DOI": "10.1128/AAC.00856-08",
+              "volume": "53",
+              "author": "M Bergman",
+              "year": "2009",
+              "unstructured": "Bergman, M., Nyberg, S. T., Huovinen, P., Paakkari, P. & Hakanen, A. J. Association between antimicrobial consumption and resistance in Escherichia coli. Antimicrob. Agents Chemother. 53, 912\u2013917 (2009).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1128",
+              "DOI": "10.1126/science.1176950",
+              "volume": "325",
+              "author": "MO Sommer",
+              "year": "2009",
+              "unstructured": "Sommer, M. O., Dantas, G. & Church, G. M. Functional characterization of the antibiotic resistance reservoir in the human microflora. Science 325, 1128\u20131131 (2009).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro2319_CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "1641",
+              "DOI": "10.1093/genetics/165.4.1641",
+              "volume": "165",
+              "author": "C Dahlberg",
+              "year": "2003",
+              "unstructured": "Dahlberg, C. & Chao, L. Amelioration of the cost of conjugative plasmid carriage in Eschericha coli K12. Genetics 165, 1641\u20131649 (2003). This article shows that plasmids carrying antibiotic resistance genes impose fitness costs on their bacterial hosts but that these costs can quickly be ameliorated by mutations on either the plasmid or the chromosome.",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "BFnrmicro2319_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "351",
+              "DOI": "10.1038/335351a0",
+              "volume": "335",
+              "author": "JE Bouma",
+              "year": "1988",
+              "unstructured": "Bouma, J. E. & Lenski, R. E. Evolution of a bacteria/plasmid association. Nature 335, 351\u2013352 (1988).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro2319_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "958",
+              "DOI": "10.1093/jac/dkh217",
+              "volume": "53",
+              "author": "VI Enne",
+              "year": "2004",
+              "unstructured": "Enne, V. I., Bennett, P. M., Livermore, D. M. & Hall, L. M. Enhancement of host fitness by the sul2-coding plasmid p9123 in the absence of selective pressure. J. Antimicrob. Chemother. 53, 958\u2013963 (2004).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "1219",
+              "DOI": "10.1016/S0960-9822(96)00700-2",
+              "volume": "6",
+              "author": "BG Spratt",
+              "year": "1996",
+              "unstructured": "Spratt, B. G. Antibiotic resistance: counting the cost. Curr. Biol. 6, 1219\u20131221 (1996).",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "BFnrmicro2319_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "S161",
+              "DOI": "10.1086/321843",
+              "volume": "33",
+              "author": "BR Levin",
+              "year": "2001",
+              "unstructured": "Levin, B. R. Minimizing potential resistance: a population dynamics view. Clin. Infect. Dis. 33, S161\u2013S169 (2001).",
+              "journal-title": "Clin. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "1131",
+              "DOI": "10.1534/genetics.104.033431",
+              "volume": "168",
+              "author": "L De Gelder",
+              "year": "2004",
+              "unstructured": "De Gelder, L. et al. Combining mathematical models and statistical methods to understand and predict the dynamics of antibiotic-sensitive mutants in a population of resistant bacteria during experimental evolution. Genetics 168, 1131\u20131144 (2004).",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "BFnrmicro2319_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "14607",
+              "DOI": "10.1073/pnas.241517298",
+              "volume": "98",
+              "author": "B Bjorkholm",
+              "year": "2001",
+              "unstructured": "Bjorkholm, B. et al. Mutation frequency and biological cost of antibiotic resistance in Helicobacter pylori. Proc. Natl Acad. Sci. USA 98, 14607\u201314612 (2001).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro2319_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "184",
+              "DOI": "10.1053/jinf.2000.0711",
+              "volume": "41",
+              "author": "AP Davies",
+              "year": "2000",
+              "unstructured": "Davies, A. P. et al. Comparison of fitness of two isolates of Mycobacterium tuberculosis, one of which had developed multi-drug resistance during the course of treatment. J. Infect. 41, 184\u2013187 (2000).",
+              "journal-title": "J. Infect."
+            },
+            {
+              "key": "BFnrmicro2319_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "977",
+              "DOI": "10.1111/j.1348-0421.2004.tb03628.x",
+              "volume": "48",
+              "author": "K Kanai",
+              "year": "2004",
+              "unstructured": "Kanai, K., Shibayama, K., Suzuki, S., Wachino, J. & Arakawa, Y. Growth competition of macrolide-resistant and -susceptible Helicobacter pylori strains. Microbiol. Immunol. 48, 977\u2013980 (2004).",
+              "journal-title": "Microbiol. Immunol."
+            },
+            {
+              "key": "BFnrmicro2319_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "1479",
+              "DOI": "10.1126/science.287.5457.1479",
+              "volume": "287",
+              "author": "J Bjorkman",
+              "year": "2000",
+              "unstructured": "Bjorkman, J., Nagaev, I., Berg, O. G., Hughes, D. & Andersson, D. I. Effects of environment on compensatory mutations to ameliorate costs of antibiotic resistance. Science 287, 1479\u20131482 (2000). This work finds that different fitness-compensating mutations are selected depending on whether the bacteria evolve in animal models or in laboratory medium.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro2319_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "3949",
+              "DOI": "10.1073/pnas.95.7.3949",
+              "volume": "95",
+              "author": "J Bjorkman",
+              "year": "1998",
+              "unstructured": "Bjorkman, J., Hughes, D. & Andersson, D. I. Virulence of antibiotic-resistant Salmonella typhimurium. Proc. Natl Acad. Sci. USA 95, 3949\u20133953 (1998). This study shows that resistance mutations to different classes of antibiotic strongly reduce bacterial virulence but that second-site compensatory mutations can be selected that restore virulence without the loss of antibiotic resistance.",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "issue": "5",
+              "key": "BFnrmicro2319_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "1204",
+              "DOI": "10.1128/AAC.46.5.1204-1211.2002",
+              "volume": "46",
+              "author": "P. Sander",
+              "year": "2002",
+              "unstructured": "Sander, P. et al. Fitness cost of chromosomal drug resistance-conferring mutations. Antimicrob. Agents Chemother. 46, 1204\u20131211 (2002). A demonstration that chromosomal drug resistance mutations with little or no cost in vitro are preferentially found in clinical isolates of mycobacteria, arguing that decreased levels of antibiotic consumption will not result in a decline in the frequency of resistant mutants.",
+              "journal-title": "Antimicrobial Agents and Chemotherapy"
+            },
+            {
+              "key": "BFnrmicro2319_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "539",
+              "DOI": "10.1534/genetics.109.106104",
+              "volume": "183",
+              "author": "W Paulander",
+              "year": "2009",
+              "unstructured": "Paulander, W., Maisnier-Patin, S. & Andersson, D. I. The fitness cost of Streptomycin resistance depends on rpsL mutation, carbon source and RpoS (\u03c3S). Genetics 183, 539\u2013546 (2009).",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "BFnrmicro2319_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "2295",
+              "DOI": "10.1128/AAC.48.6.2295-2297.2004",
+              "volume": "48",
+              "author": "M Ender",
+              "year": "2004",
+              "unstructured": "Ender, M., McCallum, N., Adhikari, R. & Berger-Bachi, B. Fitness cost of SCCmec and methicillin resistance levels in Staphylococcus aureus. Antimicrob. Agents Chemother. 48, 2295\u20132297 (2004).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "4366",
+              "DOI": "10.1128/AAC.48.11.4366-4376.2004",
+              "volume": "48",
+              "author": "JG Hurdle",
+              "year": "2004",
+              "unstructured": "Hurdle, J. G., O'Neill, A. J., Ingham, E., Fishwick, C. & Chopra, I. Analysis of mupirocin resistance and fitness in Staphylococcus aureus by molecular genetic and structural modeling techniques. Antimicrob. Agents Chemother. 48, 4366\u20134376 (2004).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "541",
+              "DOI": "10.1073/pnas.0408966102",
+              "volume": "102",
+              "author": "N Luo",
+              "year": "2005",
+              "unstructured": "Luo, N. et al. Enhanced in vivo fitness of fluoroquinolone-resistant Campylobacter jejuni in the absence of antibiotic selection pressure. Proc. Natl Acad. Sci. USA 102, 541\u2013546 (2005). In this article, the authors make the surprising observation that fluoroquinolone-resistant C. jejuni isolates with a mutation in gyrA outcompete clonally related fluoroquinolone-sensitive C. jejuni in the absence of antibiotic selection pressure in vivo (in the chicken). This indicates that the single point mutation not only confers a high-level resistance to fluoroquinolones but also modulates the in vivo fitness of C. jejuni.",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro2319_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "161",
+              "DOI": "10.1089/107662902760326869",
+              "volume": "8",
+              "author": "PJ Johnsen",
+              "year": "2002",
+              "unstructured": "Johnsen, P. J., Simonsen, G. S., Olsvik, O., Midtvedt, T. & Sundsfjord, A. Stability, persistence, and evolution of plasmid-encoded VanA glycopeptide resistance in enterococci in the absence of antibiotic selection in vitro and in gnotobiotic mice. Microb. Drug Resist. 8, 161\u2013170 (2002).",
+              "journal-title": "Microb. Drug Resist."
+            },
+            {
+              "key": "BFnrmicro2319_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "5314",
+              "DOI": "10.1128/jb.169.11.5314-5316.1987",
+              "volume": "169",
+              "author": "RE Lenski",
+              "year": "1987",
+              "unstructured": "Lenski, R. E. & Bouma, J. E. Effects of segregation and selection on instability of plasmid pACYC184 in Escherichia coli B. J. Bacteriol. 169, 5314\u20135316 (1987).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro2319_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "351",
+              "DOI": "10.1139/w98-020",
+              "volume": "44",
+              "author": "MA Smith",
+              "year": "1998",
+              "unstructured": "Smith, M. A. & Bidochka, M. J. Bacterial fitness and plasmid loss: the importance of culture conditions and plasmid size. Can. J. Microbiol. 44, 351\u2013355 (1998).",
+              "journal-title": "Can. J. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "3137",
+              "DOI": "10.1128/AAC.44.11.3137-3143.2000",
+              "volume": "44",
+              "author": "MI Morosini",
+              "year": "2000",
+              "unstructured": "Morosini, M. I., Ayala, J. A., Baquero, F., Martinez, J. L. & Blazquez, J. Biological cost of AmpC production for Salmonella enterica serotype Typhimurium. Antimicrob. Agents Chemother. 44, 3137\u20133143 (2000).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "433",
+              "DOI": "10.1046/j.1365-2958.2001.02389.x",
+              "volume": "40",
+              "author": "I Nagaev",
+              "year": "2001",
+              "unstructured": "Nagaev, I., Bjorkman, J., Andersson, D. I. & Hughes, D. Biological cost and compensatory evolution in fusidic acid-resistant Staphylococcus aureus. Mol. Microbiol. 40, 433\u2013439 (2001). Here, the authors provide evidence that secondary mutations that compensate the biological fitness costs of antibiotic resistance arise in nature and may contribute to the stabilization of resistance in a bacterial population.",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "98",
+              "DOI": "10.1046/j.1365-2958.2000.01967.x",
+              "volume": "37",
+              "author": "M Macvanin",
+              "year": "2000",
+              "unstructured": "Macvanin, M., Johanson, U., Ehrenberg, M. & Hughes, D. Fusidic acid-resistant EF-G perturbs the accumulation of ppGpp. Mol. Microbiol. 37, 98\u2013107 (2000).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "3743",
+              "DOI": "10.1128/AAC.47.12.3743-3749.2003",
+              "volume": "47",
+              "author": "M Macvanin",
+              "year": "2003",
+              "unstructured": "Macvanin, M. et al. Fusidic acid-resistant mutants of Salmonella enterica serovar Typhimurium with low fitness in vivo are defective in RpoS induction. Antimicrob. Agents Chemother. 47, 3743\u20133749 (2003).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "3877",
+              "DOI": "10.1128/AAC.48.10.3877-3883.2004",
+              "volume": "48",
+              "author": "M Macvanin",
+              "year": "2004",
+              "unstructured": "Macvanin, M., Ballagi, A. & Hughes, D. Fusidic acid-resistant mutants of Salmonella enterica serovar Typhimurium have low levels of heme and a reduced rate of respiration and are sensitive to oxidative stress. Antimicrob. Agents Chemother. 48, 3877\u20133883 (2004).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "215",
+              "DOI": "10.1016/j.femsle.2005.05.007",
+              "volume": "247",
+              "author": "M Macvanin",
+              "year": "2005",
+              "unstructured": "Macvanin, M. & Hughes, D. Hyper-susceptibility of a fusidic acid-resistant mutant of Salmonella to different classes of antibiotics. FEMS Microbiol. Lett. 247, 215\u2013220 (2005).",
+              "journal-title": "FEMS Microbiol. Lett."
+            },
+            {
+              "key": "BFnrmicro2319_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "203",
+              "DOI": "10.1093/jac/dkh044",
+              "volume": "53",
+              "author": "VI Enne",
+              "year": "2004",
+              "unstructured": "Enne, V. I., Delsol, A. A., Roe, J. M. & Bennett, P. M. Rifampicin resistance and its fitness cost in Enterococcus faecium. J. Antimicrob. Chemother. 53, 203\u2013207 (2004).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "298",
+              "DOI": "10.1128/AAC.50.1.298-309.2006",
+              "volume": "50",
+              "author": "AJ O'Neill",
+              "year": "2006",
+              "unstructured": "O'Neill, A. J., Huovinen, T., Fishwick, C. W. & Chopra, I. Molecular genetic and structural modeling studies of Staphylococcus aureus RNA polymerase and the fitness of rifampin resistance genotypes in relation to clinical prevalence. Antimicrob. Agents Chemother. 50, 298\u2013309 (2006).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR46",
+              "doi-asserted-by": "crossref",
+              "first-page": "1471",
+              "DOI": "10.1093/genetics/156.4.1471",
+              "volume": "156",
+              "author": "MG Reynolds",
+              "year": "2000",
+              "unstructured": "Reynolds, M. G. Compensatory evolution in rifampin-resistant Escherichia coli. Genetics 156, 1471\u20131481 (2000).",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "BFnrmicro2319_CR47",
+              "doi-asserted-by": "publisher",
+              "first-page": "528",
+              "DOI": "10.1093/jac/dki053",
+              "volume": "55",
+              "author": "J Yu",
+              "year": "2005",
+              "unstructured": "Yu, J., Wu, J., Francis, K. P., Purchio, T. F. & Kadurugamuwa, J. L. Monitoring in vivo fitness of rifampicin-resistant Staphylococcus aureus mutants in a mouse biofilm infection model. J. Antimicrob. Chemother. 55, 528\u2013534 (2005).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR48",
+              "doi-asserted-by": "publisher",
+              "first-page": "1404",
+              "DOI": "10.1126/science.1082240",
+              "volume": "300",
+              "author": "I Bjedov",
+              "year": "2003",
+              "unstructured": "Bjedov, I. et al. Stress-induced mutagenesis in bacteria. Science 300, 1404\u20131409 (2003).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro2319_CR49",
+              "doi-asserted-by": "publisher",
+              "first-page": "11863",
+              "DOI": "10.1073/pnas.0804739105",
+              "volume": "105",
+              "author": "M Wrande",
+              "year": "2008",
+              "unstructured": "Wrande, M., Roth, J. R. & Hughes, D. Accumulation of mutants in \u201caging\u201d bacterial colonies is due to growth under selection, not stress-induced mutagenesis. Proc. Natl Acad. Sci. USA 105, 11863\u201311868 (2008). This work finds that most rifampicin resistance mutations increase bacterial fitness in the environment of an ageing colony, showing that environment is a critically important determinant of relative fitness.",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro2319_CR50",
+              "first-page": "979",
+              "volume-title": "in Escherichia coli and Salmonella: Cellular and Molecular Biology",
+              "author": "CG Kurland",
+              "year": "1996",
+              "unstructured": "Kurland, C. G., Hughes, D. & Ehrenberg, M. in Escherichia coli and Salmonella: Cellular and Molecular Biology (eds Neidhardt, F. C. et al.) 979\u20131004 (American Society for Microbiology, Washington DC, 1996)."
+            },
+            {
+              "key": "BFnrmicro2319_CR51",
+              "doi-asserted-by": "publisher",
+              "first-page": "275",
+              "DOI": "10.1111/j.1365-2958.1993.tb01118.x",
+              "volume": "7",
+              "author": "I Tubulekas",
+              "year": "1993",
+              "unstructured": "Tubulekas, I. & Hughes, D. Suppression of rpsL phenotypes by tuf mutations reveals a unique relationship between translation elongation and growth rate. Mol. Microbiol. 7, 275\u2013284 (1993).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "544",
+              "DOI": "10.1093/jac/dki255",
+              "volume": "56",
+              "author": "VI Enne",
+              "year": "2005",
+              "unstructured": "Enne, V. I. et al. Assessment of the fitness impacts on Escherichia coli of acquisition of antibiotic resistance genes encoded by different types of genetic element. J. Antimicrob. Chemother. 56, 544\u2013551 (2005).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR53",
+              "doi-asserted-by": "publisher",
+              "first-page": "1343",
+              "DOI": "10.1038/3906",
+              "volume": "4",
+              "author": "EC Bottger",
+              "year": "1998",
+              "unstructured": "Bottger, E. C., Springer, B., Pletschette, M. & Sander, P. Fitness of antibiotic-resistant microorganisms and compensatory mutations. Nature Med. 4, 1343\u20131344 (1998).",
+              "journal-title": "Nature Med."
+            },
+            {
+              "key": "BFnrmicro2319_CR54",
+              "doi-asserted-by": "publisher",
+              "first-page": "401",
+              "DOI": "10.1016/0966-842X(96)10063-9",
+              "volume": "4",
+              "author": "M Arthur",
+              "year": "1996",
+              "unstructured": "Arthur, M., Reynolds, P. & Courvalin, P. Glycopeptide resistance in enterococci. Trends Microbiol. 4, 401\u2013407 (1996).",
+              "journal-title": "Trends Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR55",
+              "doi-asserted-by": "publisher",
+              "first-page": "10408",
+              "DOI": "10.1021/bi00107a007",
+              "volume": "30",
+              "author": "TD Bugg",
+              "year": "1991",
+              "unstructured": "Bugg, T. D. et al. Molecular basis for vancomycin resistance in Enterococcus faecium BM4147: biosynthesis of a depsipeptide peptidoglycan precursor by vancomycin resistance proteins VanH and VanA. Biochemistry 30, 10408\u201310415 (1991).",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "BFnrmicro2319_CR56",
+              "doi-asserted-by": "publisher",
+              "first-page": "2582",
+              "DOI": "10.1128/jb.174.8.2582-2591.1992",
+              "volume": "174",
+              "author": "M Arthur",
+              "year": "1992",
+              "unstructured": "Arthur, M., Molinas, C. & Courvalin, P. The VanS-VanR two-component regulatory system controls synthesis of depsipeptide peptidoglycan precursors in Enterococcus faecium BM4147. J. Bacteriol. 174, 2582\u20132591 (1992).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro2319_CR57",
+              "doi-asserted-by": "publisher",
+              "first-page": "2354",
+              "DOI": "10.1128/AAC.01702-08",
+              "volume": "53",
+              "author": "ML Foucault",
+              "year": "2009",
+              "unstructured": "Foucault, M. L., Courvalin, P. & Grillot-Courvalin, C. Fitness cost of VanA-type vancomycin resistance in methicillin-resistant Staphylococcus aureus. Antimicrob. Agents Chemother. 53, 2354\u20132359 (2009). In this important paper, the authors demonstrate that the fitness cost of the VanA-type glycopeptide resistance cassettes that are carried by clinical methicillin-resistant S. aureus isolates is very high when induced by the presence of the antibiotic but very low in the absence of induction.",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR58",
+              "doi-asserted-by": "publisher",
+              "first-page": "2343",
+              "DOI": "10.1128/AAC.49.6.2343-2351.2005",
+              "volume": "49",
+              "author": "P Komp Lindgren",
+              "year": "2005",
+              "unstructured": "Komp Lindgren, P., Marcusson, L. L., Sandvang, D., Frimodt-Moller, N. & Hughes, D. Biological cost of single and multiple norfloxacin resistance mutations in Escherichia coli implicated in urinary tract infections. Antimicrob. Agents Chemother. 49, 2343\u20132351 (2005).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR59",
+              "doi-asserted-by": "publisher",
+              "first-page": "3222",
+              "DOI": "10.1128/AAC.47.10.3222-3232.2003",
+              "volume": "47",
+              "author": "P Komp Lindgren",
+              "year": "2003",
+              "unstructured": "Komp Lindgren, P., Karlsson, \u00c5. & Hughes, D. Mutation rate and evolution of fluoroquinolone resistance in Escherichia coli isolates from patients with urinary tract infections. Antimicrob. Agents Chemother. 47, 3222\u20133232 (2003).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR60",
+              "doi-asserted-by": "publisher",
+              "first-page": "797",
+              "DOI": "10.1016/S0140-6736(97)07322-4",
+              "volume": "351",
+              "author": "L Martinez-Martinez",
+              "year": "1998",
+              "unstructured": "Martinez-Martinez, L., Pascual, A. & Jacoby, G. A. Quinolone resistance from a transferable plasmid. Lancet 351, 797\u2013799 (1998).",
+              "journal-title": "Lancet"
+            },
+            {
+              "key": "BFnrmicro2319_CR61",
+              "doi-asserted-by": "publisher",
+              "first-page": "629",
+              "DOI": "10.1016/S1473-3099(06)70599-0",
+              "volume": "6",
+              "author": "A Robicsek",
+              "year": "2006",
+              "unstructured": "Robicsek, A., Jacoby, G. A. & Hooper, D. C. The worldwide emergence of plasmid-mediated quinolone resistance. Lancet Infect. Dis. 6, 629\u2013640 (2006).",
+              "journal-title": "Lancet Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR62",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1000541",
+              "DOI": "10.1371/journal.ppat.1000541",
+              "volume": "5",
+              "author": "LL Marcusson",
+              "year": "2009",
+              "unstructured": "Marcusson, L. L., Frimodt-Moller, N. & Hughes, D. Interplay in the selection of fluoroquinolone resistance and bacterial fitness. PLoS Pathog. 5, e1000541 (2009). These results reveal that the acquisition of an additional fluoroquinolone resistance mutation can not only increase drug resistance (as expected) but also significantly increase bacterial fitness. Thus, Darwinian selection for improved fitness can select for increased drug resistance even in the absence of the drug.",
+              "journal-title": "PLoS Pathog."
+            },
+            {
+              "key": "BFnrmicro2319_CR63",
+              "doi-asserted-by": "publisher",
+              "first-page": "674",
+              "DOI": "10.1093/jac/dki069",
+              "volume": "55",
+              "author": "DM O'Sullivan",
+              "year": "2005",
+              "unstructured": "O'Sullivan, D. M., McHugh, T. D. & Gillespie, S. H. Analysis of rpoB and pncA mutations in the published literature: an insight into the role of oxidative stress in Mycobacterium tuberculosis evolution? J. Antimicrob. Chemother. 55, 674\u2013679 (2005).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR64",
+              "doi-asserted-by": "publisher",
+              "first-page": "4438",
+              "DOI": "10.1128/AAC.00328-07",
+              "volume": "51",
+              "author": "T Norstr\u00f6m",
+              "year": "2007",
+              "unstructured": "Norstr\u00f6m, T., Lannerg\u00e5rd, J. & Hughes, D. Genetic and phenotypic identification of fusidic acid-resistant mutants with the small colony-variant phenotype in Staphylococcus aureus. Antimicrob. Agents Chemother. 51, 4438\u20134446 (2007).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR65",
+              "doi-asserted-by": "publisher",
+              "first-page": "664",
+              "DOI": "10.1111/j.1365-2958.2005.04971.x",
+              "volume": "59",
+              "author": "AJ O'Neill",
+              "year": "2006",
+              "unstructured": "O'Neill, A. J. & Chopra, I. Molecular basis of fusB-mediated resistance to fusidic acid in Staphylococcus aureus. Mol. Microbiol. 59, 664\u2013676 (2006).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR66",
+              "doi-asserted-by": "publisher",
+              "first-page": "1505",
+              "DOI": "10.1128/JCM.01984-06",
+              "volume": "45",
+              "author": "AJ O'Neill",
+              "year": "2007",
+              "unstructured": "O'Neill, A. J., Larsen, A. R., Skov, R., Henriksen, A. S. & Chopra, I. Characterization of the epidemic European fusidic acid-resistant impetigo clone of Staphylococcus aureus. J. Clin. Microbiol. 45, 1505\u20131510 (2007).",
+              "journal-title": "J. Clin. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR67",
+              "doi-asserted-by": "publisher",
+              "first-page": "1737",
+              "DOI": "10.1128/AAC.01542-06",
+              "volume": "51",
+              "author": "AJ O'Neill",
+              "year": "2007",
+              "unstructured": "O'Neill, A. J., McLaws, F., Kahlmeter, G., Henriksen, A. S. & Chopra, I. Genetic basis of resistance to fusidic acid in staphylococci. Antimicrob. Agents Chemother. 51, 1737\u20131740 (2007).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR68",
+              "doi-asserted-by": "publisher",
+              "first-page": "2059",
+              "DOI": "10.1128/AAC.00871-08",
+              "volume": "53",
+              "author": "J Lannergard",
+              "year": "2009",
+              "unstructured": "Lannergard, J., Norstrom, T. & Hughes, D. Genetic determinants of resistance to fusidic acid among clinical bacteremia isolates of Staphylococcus aureus. Antimicrob. Agents Chemother. 53, 2059\u20132065 (2009).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR69",
+              "doi-asserted-by": "publisher",
+              "first-page": "4017",
+              "DOI": "10.1128/AAC.00668-08",
+              "volume": "52",
+              "author": "J Lannergard",
+              "year": "2008",
+              "unstructured": "Lannergard, J. et al. Identification of the genetic basis for clinical menadione-auxotrophic small-colony variant isolates of Staphylococcus aureus. Antimicrob. Agents Chemother. 52, 4017\u20134022 (2008).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR70",
+              "doi-asserted-by": "publisher",
+              "first-page": "295",
+              "DOI": "10.1038/nrmicro1384",
+              "volume": "4",
+              "author": "RA Proctor",
+              "year": "2006",
+              "unstructured": "Proctor, R. A. et al. Small colony variants: a pathogenic form of bacteria that facilitates persistent and recurrent infections. Nature Rev. Microbiol. 4, 295\u2013305 (2006).",
+              "journal-title": "Nature Rev. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR71",
+              "doi-asserted-by": "publisher",
+              "first-page": "13",
+              "DOI": "10.1016/S1473-3099(03)00483-3",
+              "volume": "3",
+              "author": "T Cohen",
+              "year": "2003",
+              "unstructured": "Cohen, T., Sommers, B. & Murray, M. The effect of drug resistance on the fitness of Mycobacterium tuberculosis. Lancet Infect. Dis. 3, 13\u201321 (2003).",
+              "journal-title": "Lancet Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR72",
+              "doi-asserted-by": "publisher",
+              "first-page": "1009",
+              "DOI": "10.1111/j.1365-2958.1995.tb02276.x",
+              "volume": "15",
+              "author": "TM Wilson",
+              "year": "1995",
+              "unstructured": "Wilson, T. M., de Lisle, G. W. & Collins, D. M. Effect of inhA and katG on isoniazid resistance and virulence of Mycobacterium bovis. Mol. Microbiol. 15, 1009\u20131015 (1995).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR73",
+              "doi-asserted-by": "publisher",
+              "first-page": "1030",
+              "DOI": "10.1086/515254",
+              "volume": "177",
+              "author": "Z Li",
+              "year": "1998",
+              "unstructured": "Li, Z., Kelley, C., Collins, F., Rouse, D. & Morris, S. Expression of katG in Mycobacterium tuberculosis is associated with its growth and persistence in mice and guinea pigs. J. Infect. Dis. 177, 1030\u20131035 (1998).",
+              "journal-title": "J. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR74",
+              "doi-asserted-by": "publisher",
+              "first-page": "4955",
+              "DOI": "10.1128/IAI.70.9.4955-4960.2002",
+              "volume": "70",
+              "author": "AS Pym",
+              "year": "2002",
+              "unstructured": "Pym, A. S., Saint-Joanis, B. & Cole, S. T. Effect of katG mutations on the virulence of Mycobacterium tuberculosis and the implication for transmission in humans. Infect. Immun. 70, 4955\u20134960 (2002).",
+              "journal-title": "Infect. Immun."
+            },
+            {
+              "key": "BFnrmicro2319_CR75",
+              "doi-asserted-by": "publisher",
+              "first-page": "280",
+              "DOI": "10.1089/mdr.2004.10.280",
+              "volume": "10",
+              "author": "T Cohen",
+              "year": "2004",
+              "unstructured": "Cohen, T., Becerra, M. C. & Murray, M. B. Isoniazid resistance and the future of drug-resistant tuberculosis. Microb. Drug Resist. 10, 280\u2013285 (2004).",
+              "journal-title": "Microb. Drug Resist."
+            },
+            {
+              "key": "BFnrmicro2319_CR76",
+              "doi-asserted-by": "publisher",
+              "first-page": "111",
+              "DOI": "10.1089/mdr.1995.1.111",
+              "volume": "1",
+              "author": "S Normark",
+              "year": "1995",
+              "unstructured": "Normark, S. \u03b2-Lactamase induction in Gram-negative bacteria is intimately linked to peptidoglycan recycling. Microb. Drug Resist. 1, 111\u2013114 (1995).",
+              "journal-title": "Microb. Drug Resist."
+            },
+            {
+              "key": "BFnrmicro2319_CR77",
+              "doi-asserted-by": "publisher",
+              "first-page": "4684",
+              "DOI": "10.1002/j.1460-2075.1994.tb06792.x",
+              "volume": "13",
+              "author": "C Jacobs",
+              "year": "1994",
+              "unstructured": "Jacobs, C., Huang, L. J., Bartowsky, E., Normark, S. & Park, J. T. Bacterial cell wall recycling provides cytosolic muropeptides as effectors for \u03b2-lactamase induction. EMBO J. 13, 4684\u20134694 (1994).",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "BFnrmicro2319_CR78",
+              "doi-asserted-by": "publisher",
+              "first-page": "823",
+              "DOI": "10.1016/S0092-8674(00)81928-5",
+              "volume": "88",
+              "author": "C Jacobs",
+              "year": "1997",
+              "unstructured": "Jacobs, C., Frere, J. M. & Normark, S. Cytosolic intermediates for cell wall biosynthesis and degradation control inducible \u03b2-lactam resistance in gram-negative bacteria. Cell 88, 823\u2013832 (1997).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BFnrmicro2319_CR79",
+              "doi-asserted-by": "publisher",
+              "first-page": "201",
+              "DOI": "10.1126/science.1987637",
+              "volume": "251",
+              "author": "E Tuomanen",
+              "year": "1991",
+              "unstructured": "Tuomanen, E. et al. Coordinate regulation of beta-lactamase induction and peptidoglycan composition by the amp operon. Science 251, 201\u2013204 (1991).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro2319_CR80",
+              "doi-asserted-by": "publisher",
+              "first-page": "147",
+              "DOI": "10.1111/j.1462-5822.2004.00443.x",
+              "volume": "7",
+              "author": "A Folkesson",
+              "year": "2005",
+              "unstructured": "Folkesson, A., Eriksson, S., Andersson, M., Park, J. T. & Normark, S. Components of the peptidoglycan-recycling pathway modulate invasion and intracellular survival of Salmonella enterica serovar Typhimurium. Cell. Microbiol. 7, 147\u2013155 (2005).",
+              "journal-title": "Cell. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR81",
+              "doi-asserted-by": "publisher",
+              "first-page": "29",
+              "DOI": "10.1016/S1369-5274(99)00047-8",
+              "volume": "3",
+              "author": "MW Tan",
+              "year": "2000",
+              "unstructured": "Tan, M. W. & Ausubel, F. M. Caenorhabditis elegans: a model genetic host to study Pseudomonas aeruginosa pathogenesis. Curr. Opin. Microbiol. 3, 29\u201334 (2000).",
+              "journal-title": "Curr. Opin. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR82",
+              "doi-asserted-by": "publisher",
+              "first-page": "657",
+              "DOI": "10.1093/jac/dkf185",
+              "volume": "50",
+              "author": "P Sanchez",
+              "year": "2002",
+              "unstructured": "Sanchez, P. et al. Fitness of in vitro selected Pseudomonas aeruginosa nalB and nfxB multidrug resistant mutants. J. Antimicrob. Chemother. 50, 657\u2013664 (2002).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR83",
+              "doi-asserted-by": "publisher",
+              "first-page": "901",
+              "DOI": "10.1098/rstb.2001.0866",
+              "volume": "356",
+              "author": "RM May",
+              "year": "2001",
+              "unstructured": "May, R. M., Gupta, S. & McLean, A. R. Infectious disease dynamics: what characterizes a successful invader? Philos. Trans. R. Soc. Lond. B Biol. Sci. 356, 901\u2013910 (2001).",
+              "journal-title": "Philos. Trans. R. Soc. Lond. B Biol. Sci."
+            },
+            {
+              "key": "BFnrmicro2319_CR84",
+              "doi-asserted-by": "publisher",
+              "first-page": "1878",
+              "DOI": "10.1086/379895",
+              "volume": "188",
+              "author": "M Burgos",
+              "year": "2003",
+              "unstructured": "Burgos, M., DeRiemer, K., Small, P. M., Hopewell, P. C. & Daley, C. L. Effect of drug resistance on the generation of secondary cases of tuberculosis. J. Infect. Dis. 188, 1878\u20131884 (2003).",
+              "journal-title": "J. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR85",
+              "doi-asserted-by": "publisher",
+              "first-page": "823",
+              "DOI": "10.1086/427517",
+              "volume": "191",
+              "author": "EC Bottger",
+              "year": "2005",
+              "unstructured": "Bottger, E. C., Pletschette, M. & Andersson, D. Drug resistance and fitness in Mycobacterium tuberculosis infection. J. Infect. Dis. 191, 823\u2013824 (2005).",
+              "journal-title": "J. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR86",
+              "doi-asserted-by": "publisher",
+              "first-page": "355",
+              "DOI": "10.1038/nature04153",
+              "volume": "438",
+              "author": "JO Lloyd-Smith",
+              "year": "2005",
+              "unstructured": "Lloyd-Smith, J. O., Schreiber, S. J., Kopp, P. E. & Getz, W. M. Superspreading and the effect of individual variation on disease emergence. Nature 438, 355\u2013359 (2005).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro2319_CR87",
+              "doi-asserted-by": "publisher",
+              "first-page": "14711",
+              "DOI": "10.1073/pnas.0902437106",
+              "volume": "106",
+              "author": "F Luciani",
+              "year": "2009",
+              "unstructured": "Luciani, F., Sisson, S. A., Jiang, H., Francis, A. R. & Tanaka, M. M. The epidemiological fitness cost of drug resistance in Mycobacterium tuberculosis. Proc. Natl Acad. Sci. USA 106, 14711\u201314715 (2009).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro2319_CR88",
+              "doi-asserted-by": "publisher",
+              "first-page": "355",
+              "DOI": "10.1046/j.1365-2958.2002.03173.x",
+              "volume": "46",
+              "author": "S Maisnier-Patin",
+              "year": "2002",
+              "unstructured": "Maisnier-Patin, S., Berg, O. G., Liljas, L. & Andersson, D. I. Compensatory adaptation to the deleterious effect of antibiotic resistance in Salmonella typhimurium. Mol. Microbiol. 46, 355\u2013366 (2002).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR89",
+              "doi-asserted-by": "crossref",
+              "first-page": "985",
+              "DOI": "10.1093/genetics/154.3.985",
+              "volume": "154",
+              "author": "BR Levin",
+              "year": "2000",
+              "unstructured": "Levin, B. R., Perrot, V. & Walker, N. Compensatory mutations, antibiotic resistance and the population genetics of adaptive evolution in bacteria. Genetics 154, 985\u2013997 (2000). Here, the authors use modelling to show that the trajectory of the adaptive evolution of low-fitness antibiotic-resistant bacteria will be strongly influenced by the relative rates of different mutations (reversion and compensatory mutations) and the population bottlenecks that these bacteria experience.",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "BFnrmicro2319_CR90",
+              "doi-asserted-by": "publisher",
+              "first-page": "e137",
+              "DOI": "10.1371/journal.pcbi.0020137",
+              "volume": "2",
+              "author": "A Handel",
+              "year": "2006",
+              "unstructured": "Handel, A., Regoes, R. R. & Antia, R. The role of compensatory mutations in the emergence of drug resistance. PLoS Comput. Biol. 2, e137 (2006).",
+              "journal-title": "PLoS Comput. Biol."
+            },
+            {
+              "key": "BFnrmicro2319_CR91",
+              "doi-asserted-by": "publisher",
+              "first-page": "53",
+              "DOI": "10.1046/j.1365-2958.1999.01142.x",
+              "volume": "31",
+              "author": "J Bjorkman",
+              "year": "1999",
+              "unstructured": "Bjorkman, J., Samuelsson, P., Andersson, D. I. & Hughes, D. Novel ribosomal mutations affecting translational accuracy, antibiotic resistance and virulence of Salmonella typhimurium. Mol. Microbiol. 31, 53\u201358 (1999).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR92",
+              "doi-asserted-by": "publisher",
+              "first-page": "420",
+              "DOI": "10.1006/jmbi.1996.0259",
+              "volume": "258",
+              "author": "U Johanson",
+              "year": "1996",
+              "unstructured": "Johanson, U., Aevarsson, A., Liljas, A. & Hughes, D. The dynamic structure of EF-G studied by fusidic acid resistance and internal revertants. J. Mol. Biol. 258, 420\u2013432 (1996).",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "BFnrmicro2319_CR93",
+              "doi-asserted-by": "publisher",
+              "first-page": "818",
+              "DOI": "10.1093/jac/dkh423",
+              "volume": "54",
+              "author": "VG Meka",
+              "year": "2004",
+              "unstructured": "Meka, V. G. et al. Reversion to susceptibility in a linezolid-resistant clinical isolate of Staphylococcus aureus. J. Antimicrob. Chemother. 54, 818\u2013820 (2004).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR94",
+              "doi-asserted-by": "publisher",
+              "first-page": "311",
+              "DOI": "10.1086/421471",
+              "volume": "190",
+              "author": "VG Meka",
+              "year": "2004",
+              "unstructured": "Meka, V. G. et al. Linezolid resistance in sequential Staphylococcus aureus isolates associated with a T2500A mutation in the 23S rRNA gene and loss of a single copy of rRNA. J. Infect. Dis. 190, 311\u2013317 (2004).",
+              "journal-title": "J. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR95",
+              "doi-asserted-by": "publisher",
+              "first-page": "359",
+              "DOI": "10.1128/AAC.50.1.359-361.2006",
+              "volume": "50",
+              "author": "N Wolter",
+              "year": "2006",
+              "unstructured": "Wolter, N., Smith, A. M., Farrell, D. J. & Klugman, K. P. Heterogeneous macrolide resistance and gene conversion in the pneumococcus. Antimicrob. Agents Chemother. 50, 359\u2013361 (2006).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR96",
+              "doi-asserted-by": "publisher",
+              "first-page": "6976",
+              "DOI": "10.1073/pnas.0602171103",
+              "volume": "103",
+              "author": "AI Nilsson",
+              "year": "2006",
+              "unstructured": "Nilsson, A. I. et al. Reducing the fitness cost of antibiotic resistance by amplification of initiator tRNA genes. Proc. Natl Acad. Sci. USA 103, 6976\u20136981 (2006). An important paper showing that amplification of an unrelated wild-type gene can restore growth fitness to an antibiotic-resistant mutant.",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro2319_CR97",
+              "doi-asserted-by": "publisher",
+              "first-page": "412",
+              "DOI": "10.1128/AAC.01161-06",
+              "volume": "51",
+              "author": "DE Rozen",
+              "year": "2007",
+              "unstructured": "Rozen, D. E., McGee, L., Levin, B. R. & Klugman, K. P. Fitness costs of fluoroquinolone resistance in Streptococcus pneumoniae. Antimicrob. Agents Chemother. 51, 412\u2013416 (2007).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR98",
+              "doi-asserted-by": "publisher",
+              "first-page": "273",
+              "DOI": "10.1089/10766290260469534",
+              "volume": "8",
+              "author": "SH Gillespie",
+              "year": "2002",
+              "unstructured": "Gillespie, S. H., Billington, O. J., Breathnach, A. & McHugh, T. D. Multiple drug-resistant Mycobacterium tuberculosis: evidence for changing fitness following passage through human hosts. Microb. Drug Resist. 8, 273\u2013279 (2002).",
+              "journal-title": "Microb. Drug Resist."
+            },
+            {
+              "key": "BFnrmicro2319_CR99",
+              "doi-asserted-by": "crossref",
+              "first-page": "1395",
+              "DOI": "10.1128/IAI.65.4.1395-1401.1997",
+              "volume": "65",
+              "author": "B Heym",
+              "year": "1997",
+              "unstructured": "Heym, B. et al. Effects of overexpression of the alkyl hydroperoxide reductase AhpC on the virulence and isoniazid resistance of Mycobacterium tuberculosis. Infect. Immun. 65, 1395\u20131401 (1997).",
+              "journal-title": "Infect. Immun."
+            },
+            {
+              "key": "BFnrmicro2319_CR100",
+              "doi-asserted-by": "publisher",
+              "first-page": "1944",
+              "DOI": "10.1126/science.1124410",
+              "volume": "312",
+              "author": "S Gagneux",
+              "year": "2006",
+              "unstructured": "Gagneux, S. et al. The competitive cost of antibiotic resistance in Mycobacterium tuberculosis. Science 312, 1944\u20131946 (2006).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro2319_CR101",
+              "doi-asserted-by": "publisher",
+              "first-page": "1641",
+              "DOI": "10.1126/science.272.5268.1641",
+              "volume": "272",
+              "author": "DR Sherman",
+              "year": "1996",
+              "unstructured": "Sherman, D. R. et al. Compensatory ahpC gene expression in isoniazid-resistant Mycobacterium tuberculosis. Science 272, 1641\u20131643 (1996).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro2319_CR102",
+              "doi-asserted-by": "publisher",
+              "first-page": "1938",
+              "DOI": "10.1073/pnas.97.4.1938",
+              "volume": "97",
+              "author": "M Lipsitch",
+              "year": "2000",
+              "unstructured": "Lipsitch, M., Bergstrom, C. T. & Levin, B. R. The epidemiology of antibiotic resistance in hospitals: paradoxes and prescriptions. Proc. Natl Acad. Sci. USA 97, 1938\u20131943 (2000). This article describes the mathematical modelling that is used to propose practical measures to control or reduce the prevalence of antibiotic-resistant bacteria in hospital settings. It also discusses why it will be easier to control resistance in hospitals that in the community.",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro2319_CR103",
+              "doi-asserted-by": "publisher",
+              "first-page": "1739",
+              "DOI": "10.1086/323761",
+              "volume": "33",
+              "author": "MJ Bonten",
+              "year": "2001",
+              "unstructured": "Bonten, M. J., Austin, D. J. & Lipsitch, M. Understanding the spread of antibiotic resistant pathogens in hospitals: mathematical models as tools for control. Clin. Infect. Dis. 33, 1739\u20131746 (2001).",
+              "journal-title": "Clin. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR104",
+              "doi-asserted-by": "publisher",
+              "first-page": "721",
+              "DOI": "10.1098/rstb.1999.0425",
+              "volume": "354",
+              "author": "DJ Austin",
+              "year": "1999",
+              "unstructured": "Austin, D. J. & Anderson, R. M. Studies of antibiotic resistance within the patient, hospitals and the community using simple mathematical models. Philos. Trans. R. Soc. Lond. B Biol. Sci. 354, 721\u2013738 (1999).",
+              "journal-title": "Philos. Trans. R. Soc. Lond. B Biol. Sci."
+            },
+            {
+              "key": "BFnrmicro2319_CR105",
+              "doi-asserted-by": "publisher",
+              "first-page": "593",
+              "DOI": "10.1093/jac/dkn198",
+              "volume": "62",
+              "author": "MA Aldeyab",
+              "year": "2008",
+              "unstructured": "Aldeyab, M. A. et al. Modelling the impact of antibiotic use and infection control practices on the incidence of hospital-acquired methicillin-resistant Staphylococcus aureus: a time-series analysis. J. Antimicrob. Chemother. 62, 593\u2013600 (2008).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR106",
+              "doi-asserted-by": "publisher",
+              "first-page": "169",
+              "DOI": "10.1016/j.ijantimicag.2007.04.005",
+              "volume": "30",
+              "author": "A Mahamat",
+              "year": "2007",
+              "unstructured": "Mahamat, A. et al. Impact of infection control interventions and antibiotic use on hospital MRSA: a multivariate interrupted time-series analysis. Int. J. Antimicrob. Agents 30, 169\u2013176 (2007).",
+              "journal-title": "Int. J. Antimicrob. Agents"
+            },
+            {
+              "key": "BFnrmicro2319_CR107",
+              "doi-asserted-by": "publisher",
+              "first-page": "573",
+              "DOI": "10.1017/S0195941700065401",
+              "volume": "7",
+              "author": "JE McGowan Jr.",
+              "year": "1986",
+              "unstructured": "McGowan, J. E. Jr. Minimizing antimicrobial resistance in hospital bacteria: can switching or cycling drugs help? Infect. Control 7, 573\u2013576 (1986).",
+              "journal-title": "Infect. Control"
+            },
+            {
+              "key": "BFnrmicro2319_CR108",
+              "doi-asserted-by": "publisher",
+              "first-page": "1389",
+              "DOI": "10.3201/eid1109.050124",
+              "volume": "11",
+              "author": "M Sj\u00f6lund",
+              "year": "2005",
+              "unstructured": "Sj\u00f6lund, M., Tano, E., Blaser, M. J., Andersson, D. I. & Engstrand, L. Persistence of resistant Staphylococcus epidermidis after single course of clarithromycin. Emerg. Infect. Dis. 11, 1389\u20131393 (2005).",
+              "journal-title": "Emerg. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR109",
+              "doi-asserted-by": "publisher",
+              "first-page": "483",
+              "DOI": "10.7326/0003-4819-139-6-200309160-00011",
+              "volume": "139",
+              "author": "M Sj\u00f6lund",
+              "year": "2003",
+              "unstructured": "Sj\u00f6lund, M., Wreiber, K., Andersson, D. I., Blaser, M. J. & Engstrand, L. Long-term persistence of resistant Enterococcus species after antibiotics to eradicate Helicobacter pylori. Ann. Intern. Med. 139, 483\u2013487 (2003). This article shows that an antibiotic treatment that successfully eradicates H. pylori in patients also selects for resistant entercocci that persist in the patients for up to 3 years without any further selection.",
+              "journal-title": "Ann. Intern. Med."
+            },
+            {
+              "key": "BFnrmicro2319_CR110",
+              "doi-asserted-by": "publisher",
+              "first-page": "101",
+              "DOI": "10.1016/S1473-3099(01)00066-4",
+              "volume": "1",
+              "author": "A Sullivan",
+              "year": "2001",
+              "unstructured": "Sullivan, A., Edlund, C. & Nord, C. E. Effect of antimicrobial agents on the ecological balance of human microflora. Lancet Infect. Dis. 1, 101\u2013114 (2001).",
+              "journal-title": "Lancet Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR111",
+              "doi-asserted-by": "publisher",
+              "first-page": "441",
+              "DOI": "10.1056/NEJM199708143370701",
+              "volume": "337",
+              "author": "H Sepp\u00e4l\u00e4",
+              "year": "1997",
+              "unstructured": "Sepp\u00e4l\u00e4, H. et al. The effect of changes in the consumption of macrolide antibiotics on erythromycin resistance in group A streptococci in Finland. N. Engl. J. Med. 337, 441\u2013446 (1997).",
+              "journal-title": "N. Engl. J. Med."
+            },
+            {
+              "key": "BFnrmicro2319_CR112",
+              "doi-asserted-by": "publisher",
+              "first-page": "117",
+              "DOI": "10.1089/mdr.1997.3.117",
+              "volume": "3",
+              "author": "KG Kristinsson",
+              "year": "1997",
+              "unstructured": "Kristinsson, K. G. Effect of antimicrobial use and other risk factors on antimicrobial resistance in pneumococci. Microb. Drug Resist. 3, 117\u2013123 (1997).",
+              "journal-title": "Microb. Drug Resist."
+            },
+            {
+              "key": "BFnrmicro2319_CR113",
+              "doi-asserted-by": "publisher",
+              "first-page": "48",
+              "DOI": "10.1128/AAC.43.1.48",
+              "volume": "43",
+              "author": "J Kataja",
+              "year": "1999",
+              "unstructured": "Kataja, J. et al. Erythromycin resistance genes in group A streptococci in Finland. Antimicrob. Agents Chemother. 43, 48\u201352 (1999).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR114",
+              "doi-asserted-by": "publisher",
+              "first-page": "187",
+              "DOI": "10.1089/107662902760326896",
+              "volume": "8",
+              "author": "VA Arason",
+              "year": "2002",
+              "unstructured": "Arason, V. A. et al. Clonal spread of resistant pneumococci despite diminished antimicrobial use. Microb. Drug Resist. 8, 187\u2013192 (2002).",
+              "journal-title": "Microb. Drug Resist."
+            },
+            {
+              "key": "BFnrmicro2319_CR115",
+              "doi-asserted-by": "publisher",
+              "first-page": "6908",
+              "DOI": "10.1073/pnas.96.12.6908",
+              "volume": "96",
+              "author": "DJ Austin",
+              "year": "1999",
+              "unstructured": "Austin, D. J., Bonten, M. J., Weinstein, R. A., Slaughter, S. & Anderson, R. M. Vancomycin-resistant enterococci in intensive-care hospital settings: transmission dynamics, persistence, and the impact of infection control programs. Proc. Natl Acad. Sci. USA 96, 6908\u20136913 (1999).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro2319_CR116",
+              "doi-asserted-by": "publisher",
+              "first-page": "1325",
+              "DOI": "10.1016/S0140-6736(00)04519-0",
+              "volume": "357",
+              "author": "VI Enne",
+              "year": "2001",
+              "unstructured": "Enne, V. I., Livermore, D. M., Stephens, P. & Hall, L. M. Persistence of sulphonamide resistance in Escherichia coli in the UK despite national prescribing restriction. Lancet 357, 1325\u20131328 (2001). In this article, the authors show that reduced prescription of sulphonamides in the United Kingdom did not reduce resistance within a period of years, probably because of genetic linkage to other resistance determinants that continued to be under selection.",
+              "journal-title": "Lancet"
+            },
+            {
+              "key": "BFnrmicro2319_CR117",
+              "doi-asserted-by": "publisher",
+              "first-page": "962",
+              "DOI": "10.1093/jac/dki332",
+              "volume": "56",
+              "author": "DC Bean",
+              "year": "2005",
+              "unstructured": "Bean, D. C., Livermore, D. M., Papa, I. & Hall, L. M. Resistance among Escherichia coli to sulphonamides and other antimicrobials now little used in man. J. Antimicrob. Chemother. 56, 962\u2013964 (2005).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR118",
+              "doi-asserted-by": "publisher",
+              "first-page": "350",
+              "DOI": "10.1093/jac/dkp387",
+              "volume": "65",
+              "author": "M Sundqvist",
+              "year": "2010",
+              "unstructured": "Sundqvist, M. et al. Little evidence for reversibility of trimethoprim resistance after a drastic reduction in trimethoprim use. J. Antimicrob. Chemother. 65, 350\u2013360 (2010). A key prospective intervention study in which trimethoprim consumption in a Swedish county was reduced by 85% for a period of 2 years. The authors conclude that reduced antibiotic consumption is unlikely to significantly reduce resistance levels in the community.",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR119",
+              "first-page": "173",
+              "volume": "15",
+              "author": "RE Lenski",
+              "year": "1991",
+              "unstructured": "Lenski, R. E. Quantifying fitness and gene stability in microorganisms. Biotechnology 15, 173\u2013192 (1991).",
+              "journal-title": "Biotechnology"
+            },
+            {
+              "key": "BFnrmicro2319_CR120",
+              "doi-asserted-by": "publisher",
+              "first-page": "726",
+              "DOI": "10.1111/j.1462-2920.2004.00605.x",
+              "volume": "6",
+              "author": "L Lambertsen",
+              "year": "2004",
+              "unstructured": "Lambertsen, L., Sternberg, C. & Molin, S. Mini-Tn7 transposons for site-specific tagging of bacteria with fluorescent proteins. Environ. Microbiol. 6, 726\u2013732 (2004).",
+              "journal-title": "Environ. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR121",
+              "doi-asserted-by": "publisher",
+              "first-page": "137",
+              "DOI": "10.1162/15353500200505106",
+              "volume": "4",
+              "author": "JL Kadurugamuwa",
+              "year": "2005",
+              "unstructured": "Kadurugamuwa, J. L. et al. Noninvasive monitoring of pneumococcal meningitis and evaluation of treatment efficacy in an experimental mouse model. Mol. Imaging 4, 137\u2013142 (2005).",
+              "journal-title": "Mol. Imaging"
+            },
+            {
+              "key": "BFnrmicro2319_CR122",
+              "doi-asserted-by": "publisher",
+              "first-page": "3878",
+              "DOI": "10.1128/IAI.73.7.3878-3887.2005",
+              "volume": "73",
+              "author": "JL Kadurugamuwa",
+              "year": "2005",
+              "unstructured": "Kadurugamuwa, J. L. et al. Noninvasive biophotonic imaging for monitoring of catheter-associated urinary tract infections and therapy in mice. Infect. Immun. 73, 3878\u20133887 (2005).",
+              "journal-title": "Infect. Immun."
+            },
+            {
+              "key": "BFnrmicro2319_CR123",
+              "doi-asserted-by": "publisher",
+              "first-page": "380",
+              "DOI": "10.1128/AAC.49.1.380-387.2005",
+              "volume": "49",
+              "author": "YQ Xiong",
+              "year": "2005",
+              "unstructured": "Xiong, Y. Q. et al. Real-time in vivo bioluminescent imaging for evaluating the efficacy of antibiotics in a rat Staphylococcus aureus endocarditis model. Antimicrob. Agents Chemother. 49, 380\u2013387 (2005).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR124",
+              "doi-asserted-by": "publisher",
+              "first-page": "697",
+              "DOI": "10.1099/jmm.0.05178-0",
+              "volume": "52",
+              "author": "E Giraud",
+              "year": "2003",
+              "unstructured": "Giraud, E., Cloeckaert, A., Baucheron, S., Mouline, C. & Chaslus-Dancla, E. Fitness cost of fluoroquinolone resistance in Salmonella enterica serovar Typhimurium. J. Med. Microbiol. 52, 697\u2013703 (2003).",
+              "journal-title": "J. Med. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR125",
+              "doi-asserted-by": "publisher",
+              "first-page": "1038",
+              "DOI": "10.1111/j.1365-2958.2007.05713.x",
+              "volume": "64",
+              "author": "W Paulander",
+              "year": "2007",
+              "unstructured": "Paulander, W., Maisnier-Patin, S. & Andersson, D. I. Multiple mechanisms to ameliorate the fitness burden of mupirocin resistance in Salmonella typhimurium. Mol. Microbiol. 64, 1038\u20131048 (2007).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR126",
+              "doi-asserted-by": "publisher",
+              "first-page": "1287",
+              "DOI": "10.1098/rspb.1997.0178",
+              "volume": "264",
+              "author": "SJ Schrag",
+              "year": "1997",
+              "unstructured": "Schrag, S. J., Perrot, V. & Levin, B. R. Adaptation to the fitness costs of antibiotic resistance in Escherichia coli. Proc. Biol. Sci. 264, 1287\u20131291 (1997).",
+              "journal-title": "Proc. Biol. Sci."
+            },
+            {
+              "key": "BFnrmicro2319_CR127",
+              "doi-asserted-by": "publisher",
+              "first-page": "120",
+              "DOI": "10.1038/381120b0",
+              "volume": "381",
+              "author": "SJ Schrag",
+              "year": "1996",
+              "unstructured": "Schrag, S. J. & Perrot, V. Reducing antibiotic resistance. Nature 381, 120\u2013121 (1996). This is pioneering work demonstrating that the initially high cost of chromosomal streptomycin resistance mutations is rapidly compensated for in the absence of drug selection without a clinically significant reduction in the level of streptomycin resistance. The results argue that prudent antibiotic use alone may not be sufficient to reduce the prevalence of antibiotic resistance.",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro2319_CR128",
+              "doi-asserted-by": "publisher",
+              "first-page": "2850",
+              "DOI": "10.1128/AAC.47.9.2850-2858.2003",
+              "volume": "47",
+              "author": "AI Nilsson",
+              "year": "2003",
+              "unstructured": "Nilsson, A. I., Berg, O. G., Aspevall, O., Kahlmeter, G. & Andersson, D. I. Biological costs and mechanisms of fosfomycin resistance in Escherichia coli. Antimicrob. Agents Chemother. 47, 2850\u20132858 (2003).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR129",
+              "doi-asserted-by": "publisher",
+              "first-page": "1289",
+              "DOI": "10.1128/AAC.48.4.1289-1294.2004",
+              "volume": "48",
+              "author": "DH Mariam",
+              "year": "2004",
+              "unstructured": "Mariam, D. H., Mengistu, Y., Hoffner, S. E. & Andersson, D. I. Effect of rpoB mutations conferring rifampin resistance on fitness of Mycobacterium tuberculosis. Antimicrob. Agents Chemother. 48, 1289\u20131294 (2004).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR130",
+              "doi-asserted-by": "publisher",
+              "first-page": "1866",
+              "DOI": "10.1128/AAC.43.8.1866",
+              "volume": "43",
+              "author": "OJ Billington",
+              "year": "1999",
+              "unstructured": "Billington, O. J., McHugh, T. D. & Gillespie, S. H. Physiological cost of rifampin resistance induced in vitro in Mycobacterium tuberculosis. Antimicrob. Agents Chemother. 43, 1866\u20131869 (1999).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR131",
+              "doi-asserted-by": "publisher",
+              "first-page": "463",
+              "DOI": "10.1046/j.1365-2958.2003.03307.x",
+              "volume": "47",
+              "author": "S Besier",
+              "year": "2003",
+              "unstructured": "Besier, S., Ludwig, A., Brade, V. & Wichelhaus, T. A. Molecular analysis of fusidic acid resistance in Staphylococcus aureus. Mol. Microbiol. 47, 463\u2013469 (2003).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR132",
+              "doi-asserted-by": "publisher",
+              "first-page": "1426",
+              "DOI": "10.1128/AAC.49.4.1426-1431.2005",
+              "volume": "49",
+              "author": "S Besier",
+              "year": "2005",
+              "unstructured": "Besier, S., Ludwig, A., Brade, V. & Wichelhaus, T. A. Compensatory adaptation to the loss of biological fitness associated with acquisition of fusidic acid resistance in Staphylococcus aureus. Antimicrob. Agents Chemother. 49, 1426\u20131431 (2005).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR133",
+              "doi-asserted-by": "publisher",
+              "first-page": "3381",
+              "DOI": "10.1128/AAC.46.11.3381-3385.2002",
+              "volume": "46",
+              "author": "TA Wichelhaus",
+              "year": "2002",
+              "unstructured": "Wichelhaus, T. A. et al. Biological cost of rifampin resistance from the perspective of Staphylococcus aureus. Antimicrob. Agents Chemother. 46, 3381\u20133385 (2002).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR134",
+              "doi-asserted-by": "publisher",
+              "first-page": "102",
+              "DOI": "10.1093/jac/dkh020",
+              "volume": "53",
+              "author": "JG Hurdle",
+              "year": "2004",
+              "unstructured": "Hurdle, J. G., O'Neill, A. J. & Chopra, I. The isoleucyl-tRNA synthetase mutation V588F conferring mupirocin resistance in glycopeptide-intermediate Staphylococcus aureus is not associated with a significant fitness burden. J. Antimicrob. Chemother. 53, 102\u2013104 (2004).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR135",
+              "doi-asserted-by": "publisher",
+              "first-page": "258",
+              "DOI": "10.1093/jac/dkg331",
+              "volume": "52",
+              "author": "I Gustafsson",
+              "year": "2003",
+              "unstructured": "Gustafsson, I., Cars, O. & Andersson, D. I. Fitness of antibiotic resistant Staphylococcus epidermidis assessed by competition on the skin of human volunteers. J. Antimicrob. Chemother. 52, 258\u2013263 (2003).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR136",
+              "doi-asserted-by": "publisher",
+              "first-page": "814",
+              "DOI": "10.3201/eid1106.040840",
+              "volume": "11",
+              "author": "CN Johnson",
+              "year": "2005",
+              "unstructured": "Johnson, C. N., Briles, D. E., Benjamin, W. H. Jr, Hollingshead, S. K. & Waites, K. B. Relative fitness of fluoroquinolone-resistant Streptococcus pneumoniae. Emerg. Infect. Dis. 11, 814\u2013820 (2005).",
+              "journal-title": "Emerg. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro2319_CR137",
+              "doi-asserted-by": "publisher",
+              "first-page": "4455",
+              "DOI": "10.1128/AAC.49.11.4455-4464.2005",
+              "volume": "49",
+              "author": "R Binet",
+              "year": "2005",
+              "unstructured": "Binet, R. & Maurelli, A. T. Fitness cost due to mutations in the 16S rRNA associated with spectinomycin resistance in Chlamydia psittaci 6BC. Antimicrob. Agents Chemother. 49, 4455\u20134464 (2005).",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR138",
+              "doi-asserted-by": "publisher",
+              "first-page": "22",
+              "DOI": "10.1093/jac/dkh505",
+              "volume": "55",
+              "author": "E Kugelberg",
+              "year": "2005",
+              "unstructured": "Kugelberg, E., Lofmark, S., Wretlind, B. & Andersson, D. I. Reduction of the fitness burden of quinolone resistance in Pseudomonas aeruginosa. J. Antimicrob. Chemother. 55, 22\u201330 (2005).",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnrmicro2319_CR139",
+              "doi-asserted-by": "crossref",
+              "first-page": "2432",
+              "DOI": "10.1128/AEM.54.10.2432-2438.1988",
+              "volume": "54",
+              "author": "G Compeau",
+              "year": "1988",
+              "unstructured": "Compeau, G., Al-Achi, B. J., Platsouka, E. & Levy, S. B. Survival of rifampin-resistant mutants of Pseudomonas fluorescens and Pseudomonas putida in soil systems. Appl. Environ. Microbiol. 54, 2432\u20132438 (1988).",
+              "journal-title": "Appl. Environ. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR140",
+              "doi-asserted-by": "publisher",
+              "first-page": "5",
+              "DOI": "10.1046/j.1472-765X.1998.00255.x",
+              "volume": "26",
+              "author": "GA Dykes",
+              "year": "1998",
+              "unstructured": "Dykes, G. A. & Hastings, J. W. Fitness costs associated with class IIa bacteriocin resistance in Listeria monocytogenes B73. Lett. Appl. Microbiol. 26, 5\u20138 (1998).",
+              "journal-title": "Lett. Appl. Microbiol."
+            },
+            {
+              "key": "BFnrmicro2319_CR141",
+              "doi-asserted-by": "publisher",
+              "first-page": "831",
+              "DOI": "10.1128/jb.179.3.831-837.1997",
+              "volume": "179",
+              "author": "C Fermer",
+              "year": "1997",
+              "unstructured": "Fermer, C. & Swedberg, G. Adaptation to sulfonamide resistance in Neisseria meningitidis may have required compensatory changes to retain enzyme function: kinetic analysis of dihydropteroate synthases from N. meningitidis expressed in a knockout mutant of Escherichia coli. J. Bacteriol. 179, 831\u2013837 (1997).",
+              "journal-title": "J. Bacteriol."
+            }
+          ],
+          "container-title": [
+            "Nature Reviews Microbiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nrmicro2319.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nrmicro2319",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nrmicro2319.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                19
+              ]
+            ],
+            "date-time": "2023-05-19T00:29:17Z",
+            "timestamp": 1684456157000
+          },
+          "score": 47.555557,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nrmicro2319"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2010,
+                3,
+                8
+              ]
+            ]
+          },
+          "references-count": 141,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2010,
+                  4
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnrmicro2319"
+          ],
+          "URL": "https://doi.org/10.1038/nrmicro2319",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.8577956.9068054",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "1740-1526",
+            "1740-1534"
+          ],
+          "issn-type": [
+            {
+              "value": "1740-1526",
+              "type": "print"
+            },
+            {
+              "value": "1740-1534",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2010,
+                3,
+                8
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                4
+              ]
+            ],
+            "date-time": "2024-03-04T07:38:24Z",
+            "timestamp": 1709537904597
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2011,
+                3,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.8577956.9068054",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                8,
+                20
+              ]
+            ],
+            "date-time": "2012-08-20T20:36:43Z",
+            "timestamp": 1345495003000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of Antibiotic resistance and its cost: is it possible to reverse resistance?"
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "given": "Laura",
+              "family": "Piddock",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Division of Immunity and Infection, Antimicrobial Agents Research Group, University of Birmingham, UK"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2011,
+                2,
+                18
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                20
+              ]
+            ],
+            "date-time": "2020-04-20T04:55:38Z",
+            "timestamp": 1587358538000
+          },
+          "score": 42.154335,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/8577956#eval9068054"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2011,
+                2,
+                18
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.8577956.9068054",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/nrmicro2319",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2011,
+                2,
+                18
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                5
+              ]
+            ],
+            "date-time": "2025-12-05T17:13:20Z",
+            "timestamp": 1764954800003,
+            "version": "3.46.0"
+          },
+          "reference-count": 0,
+          "publisher": "BMJ",
+          "issue": "5659",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1969,
+                    6,
+                    21
+                  ]
+                ],
+                "date-time": "1969-06-21T00:00:00Z",
+                "timestamp": -16761600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.bmj.com/company/legal-information/terms-conditions/legal-information/tdm-licencepolicy"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Br Med J"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1969,
+                6,
+                21
+              ]
+            ]
+          },
+          "DOI": "10.1136/bmj.2.5659.711",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2009-04-02T07:02:10Z",
+            "timestamp": 1238655730000
+          },
+          "page": "711-712",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Antibiotic Resistance in Reverse"
+          ],
+          "prefix": "10.1136",
+          "volume": "2",
+          "member": "239",
+          "published-online": {
+            "date-parts": [
+              [
+                1969,
+                6,
+                21
+              ]
+            ]
+          },
+          "container-title": [
+            "BMJ"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://data.bmj.org/tdm/10.1136/bmj.2.5659.711",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://syndication.highwire.org/content/doi/10.1136/bmj.2.5659.711",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                5
+              ]
+            ],
+            "date-time": "2025-12-05T17:09:48Z",
+            "timestamp": 1764954588000
+          },
+          "score": 34.501907,
+          "resource": {
+            "primary": {
+              "URL": "https://www.bmj.com/lookup/doi/10.1136/bmj.2.5659.711"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1969,
+                6,
+                21
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "5659",
+            "published-online": {
+              "date-parts": [
+                [
+                  1969,
+                  6,
+                  21
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  1969,
+                  6,
+                  21
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1136/bmj.2.5659.711"
+          ],
+          "URL": "https://doi.org/10.1136/bmj.2.5659.711",
+          "ISSN": [
+            "0007-1447",
+            "1468-5833"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0007-1447"
+            },
+            {
+              "type": "electronic",
+              "value": "1468-5833"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1969,
+                6,
+                21
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

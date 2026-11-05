@@ -1,0 +1,235 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frstb.2016.0063%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1098/rstb.2016.0063\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "28193808",
+          "source": "MED",
+          "pmid": "28193808",
+          "pmcid": "PMC5312013",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC5312013"
+            ]
+          },
+          "doi": "10.1098/rstb.2016.0063",
+          "title": "The remarkable visual capacities of nocturnal insects: vision at the limits with small eyes and tiny brains.",
+          "authorString": "Warrant EJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Warrant EJ",
+                "lastName": "Warrant",
+                "firstName": "Eric J",
+                "initials": "EJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7480-7016"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Lund Vision Group, Department of Biology, University of Lund, S\u00f6lvegatan 35, 22362 Lund, Sweden eric.warrant@biol.lu.se."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7480-7016"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1717",
+            "volume": "372",
+            "journalIssueId": 2524668,
+            "dateOfPublication": "2017 Apr",
+            "monthOfPublication": 4,
+            "yearOfPublication": 2017,
+            "journal": {
+              "medlineAbbreviation": "Philos Trans R Soc Lond B Biol Sci",
+              "title": "Philosophical transactions of the Royal Society of London. Series B, Biological sciences",
+              "essn": "1471-2970",
+              "issn": "0962-8436",
+              "isoabbreviation": "Philos Trans R Soc Lond B Biol Sci",
+              "nlmid": "7503623"
+            },
+            "printPublicationDate": "2017-04-01"
+          },
+          "pubYear": "2017",
+          "pageInfo": "20160063",
+          "abstractText": "Nocturnal insects have evolved remarkable visual capacities, despite small eyes and tiny brains. They can see colour, control flight and land, react to faint movements in their environment, navigate using dim celestial cues and find their way home after a long and tortuous foraging trip using learned visual landmarks. These impressive visual abilities occur at light levels when only a trickle of photons are being absorbed by each photoreceptor, begging the question of how the visual system nonetheless generates the reliable signals needed to steer behaviour. In this review, I attempt to provide an answer to this question. Part of the answer lies in their compound eyes, which maximize light capture. Part lies in the slow responses and high gains of their photoreceptors, which improve the reliability of visual signals. And a very large part lies in the spatial and temporal summation of these signals in the optic lobe, a strategy that substantially enhances contrast sensitivity in dim light and allows nocturnal insects to see a brighter world, albeit a slower and coarser one. What is abundantly clear, however, is that during their evolution insects have overcome several serious potential visual limitations, endowing them with truly extraordinary night vision.This article is part of the themed issue 'Vision in dim light'.",
+          "affiliation": "Lund Vision Group, Department of Biology, University of Lund, S\u00f6lvegatan 35, 22362 Lund, Sweden eric.warrant@biol.lu.se.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Knut och Alice Wallenbergs Stiftelse",
+                "orderIn": 0
+              },
+              {
+                "agency": "Kungliga Fysiografiska S\u00e4llskapet i Lund",
+                "orderIn": 0
+              },
+              {
+                "agency": "Air Force Office of Scientific Research",
+                "orderIn": 0
+              },
+              {
+                "agency": "Vetenskapsr\u00e5det",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Darkness"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Compound Eye, Arthropod",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Vision, Ocular"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Insecta",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Insect",
+              "Compound eye",
+              "Spatial summation",
+              "Navigation",
+              "Temporal Summation",
+              "Nocturnal Vision"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1098/rstb.2016.0063"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5312013"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5312013?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1098/rstb.2016.0063"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 58,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2017-11-30",
+          "dateOfCreation": "2017-02-15",
+          "dateOfRevision": "2019-01-29",
+          "firstPublicationDate": "2017-04-01",
+          "firstIndexDate": "2017-02-15",
+          "fullTextReceivedDate": "2025-02-05",
+          "embargoDate": "2018-04-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

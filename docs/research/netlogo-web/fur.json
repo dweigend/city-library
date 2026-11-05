@@ -1,0 +1,110 @@
+{
+  "slug": "fur",
+  "name": "Fur",
+  "catalogPath": "Sample Models/Biology/Fur",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Fur.nlogox",
+  "deliveryBatch": "B07",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can short-range activation and longer-range inhibition generate different skin-like patterns? NetLogo Fur uses a lattice of differentiated and undifferentiated pigment cells. Weighted contributions from inner and outer neighborhoods determine whether cells change state. Turing supplies the general pattern-forming idea [1], and Young supplies the local-rule variant identified by the Info [2]. Experimental mammalian patterning research [3] illustrates how related mechanisms can be tested biologically. The simulation assumes fixed neighborhood geometry and reduced cell states, without explicit molecular concentrations, tissue growth, or species-specific genetics. Spots and stripes demonstrate the repertoire of this rule system. Their resemblance to real fur is not empirical validation of the implementation or proof of a universal pigmentation mechanism.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Fur.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Fur.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 8f7b57b7df931ec45906251a9421017d438286b5607c20c409f722e6db311bc5",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/fur.nlogox",
+    "infoFile": "evidence/biology/fur-info.txt",
+    "originalModelCitation": "* Wilensky, U. (2003).  NetLogo Fur model.  http://ccl.northwestern.edu/netlogo/models/Fur.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "turing",
+      "authors": [
+        "Alan Mathison Turing"
+      ],
+      "title": "The chemical basis of morphogenesis",
+      "year": 1952,
+      "venue": "Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences",
+      "doi": "10.1098/rstb.1952.0012",
+      "url": "https://doi.org/10.1098/rstb.1952.0012",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1098%2Frstb.1952.0012",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/turing-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": "237",
+      "issue": "641",
+      "pages": "37-72",
+      "relevance": "Foundational diffusion-driven instability theory supplies the broad pattern-formation context."
+    },
+    {
+      "id": "young",
+      "authors": [
+        "David A. Young"
+      ],
+      "title": "A local activator-inhibitor model of vertebrate skin patterns",
+      "year": 1984,
+      "venue": "Mathematical Biosciences",
+      "doi": "10.1016/0025-5564(84)90060-9",
+      "url": "https://doi.org/10.1016/0025-5564(84)90060-9",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=A+local+activator+inhibitor+model+of+vertebrate+skin+patterns+Young+1984&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/young-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "72",
+      "issue": "1",
+      "pages": "51-58",
+      "relevance": "The local activator–inhibitor rule is the specific scientific variant named in the Info."
+    },
+    {
+      "id": "economou",
+      "authors": [
+        "Andrew D Economou",
+        "Atsushi Ohazama",
+        "Thantrira Porntaveetus",
+        "Paul T Sharpe",
+        "Shigeru Kondo",
+        "M Albert Basson",
+        "Amel Gritli-Linde",
+        "Martyn T Cobourne",
+        "Jeremy B A Green"
+      ],
+      "title": "Periodic stripe formation by a Turing mechanism operating at growth zones in the mammalian palate",
+      "year": 2012,
+      "venue": "Nature Genetics",
+      "doi": "10.1038/ng.1090",
+      "url": "https://doi.org/10.1038/ng.1090",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Periodic+stripe+formation+by+a+Turing+mechanism+operating+at+growth+zones+in+the+mammalian+palate+Economou+2012&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/economou-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fng.1090%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/economou-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "44",
+      "issue": "3",
+      "pages": "348-351",
+      "relevance": "An experimental mammalian patterning study gives a relevant test of a Turing mechanism without validating this fur implementation."
+    }
+  ],
+  "gaps": []
+}

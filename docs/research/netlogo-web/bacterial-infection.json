@@ -1,0 +1,122 @@
+{
+  "slug": "bacterial-infection",
+  "name": "Bacterial Infection",
+  "catalogPath": "Sample Models/Biology/Evolution/Bacterial Infection",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Bacterial%20Infection.nlogox",
+  "deliveryBatch": "B08",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does antibiotic exposure change the composition of a bacterial population? NetLogo Bacterial Infection represents bacteria with different membrane porosities, reproduction when space is available, and antibiotics entering through membrane openings. Permeability research [1], resistance population genetics [2], and evidence on resistance costs [3] provide the scientific context. The served curricular model compares stylized treatment environments and makes differential survival visible. Its pores are an explicit teaching abstraction, not a complete representation of resistance mechanisms, pharmacokinetics, or mutation pathways. A population becoming harder to eliminate illustrates selection under those rules. It does not validate a clinical treatment schedule, establish that all resistance works through porosity, or quantify outcomes for an individual patient.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Bacterial%20Infection.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Bacterial%20Infection.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 22ef0f02410d2dad4d36cf1c21ca1ad647ad4d336fac6770e673bf3b1dd807ed",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/bacterial-infection.nlogox",
+    "infoFile": "evidence/biology/bacterial-infection-info.txt",
+    "originalModelCitation": "* Novak, M. and Quigley, D and Wilensky, U. (2016).  NetLogo Bacterial Infection model.  http://ccl.northwestern.edu/netlogo/models/BacterialInfection.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "nash",
+      "authors": [
+        "Anne H. Delcour"
+      ],
+      "title": "Outer membrane permeability and antibiotic resistance",
+      "year": 2009,
+      "venue": "Biochimica et Biophysica Acta (BBA) - Proteins and Proteomics",
+      "doi": "10.1016/j.bbapap.2008.11.005",
+      "url": "https://doi.org/10.1016/j.bbapap.2008.11.005",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Outer+membrane+permeability+and+antibiotic+resistance+Nikaido+2003&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/nash-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bbapap.2008.11.005%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/nash-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "1794",
+      "issue": "5",
+      "pages": "808-816",
+      "relevance": "Outer-membrane permeability research relates directly to the model’s antibiotic-entry abstraction."
+    },
+    {
+      "id": "levin",
+      "authors": [
+        "B. R. Levin",
+        "M. Lipsitch",
+        "V. Perrot",
+        "S. Schrag",
+        "R. Antia",
+        "L. Simonsen",
+        "N. Moore Walker",
+        "F. M. Stewart"
+      ],
+      "title": "The Population Genetics of Antibiotic Resistance",
+      "year": 1997,
+      "venue": "Clinical Infectious Diseases",
+      "doi": "10.1093/clinids/24.supplement_1.s9",
+      "url": "https://doi.org/10.1093/clinids/24.supplement_1.s9",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+population+genetics+of+antibiotic+resistance+Levin+1997&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/levin-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fclinids%2F24.supplement_1.s9%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/levin-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "24",
+      "issue": "Supplement_1",
+      "pages": "S9-S16",
+      "relevance": "Population-genetic analysis explains how antibiotic exposure changes resistant-type frequencies."
+    },
+    {
+      "id": "andersson",
+      "authors": [
+        "Dan I. Andersson",
+        "Diarmaid Hughes"
+      ],
+      "title": "Antibiotic resistance and its cost: is it possible to reverse resistance?",
+      "year": 2010,
+      "venue": "Nature Reviews Microbiology",
+      "doi": "10.1038/nrmicro2319",
+      "url": "https://doi.org/10.1038/nrmicro2319",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Antibiotic+resistance+and+its+cost+is+it+possible+to+reverse+resistance+Andersson+Hughes+2010&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/andersson-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnrmicro2319%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/andersson-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "8",
+      "issue": "4",
+      "pages": "260-271",
+      "relevance": "Reviews resistance costs and reversibility, highlighting mechanisms omitted by a simple porosity trait."
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,109 @@
+{
+  "slug": "slime",
+  "name": "Slime",
+  "catalogPath": "Sample Models/Biology/Slime",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Slime.nlogox",
+  "deliveryBatch": "B07",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can chemical attraction produce aggregation without a pacemaker cell? NetLogo Slime lets mobile cells respond to a chemical field that they also help create. Local reinforcement can turn an initially dispersed population into clusters. Keller and Segel's instability framework [1] is explicitly named in the Info; experimental chemotaxis [2] and Dictyostelium biology [3] contextualize the mechanism. The model reduces development to movement, signaling, diffusion, and signal loss, without reconstructing complete multicellular differentiation or a measured biochemical network. Its clusters illustrate a possible decentralized aggregation mechanism. They do not demonstrate that all slime molds share this life cycle, or that a successful run quantitatively matches an organism under laboratory conditions.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Slime.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Slime.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 ede03dc05cc186a9607cb2ef1b11dfde4a1c05eb57edd19e2a577768c04644da",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/slime.nlogox",
+    "infoFile": "evidence/biology/slime-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1997).  NetLogo Slime model.  http://ccl.northwestern.edu/netlogo/models/Slime.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "keller",
+      "authors": [
+        "Evelyn F. Keller",
+        "Lee A. Segel"
+      ],
+      "title": "Initiation of slime mold aggregation viewed as an instability",
+      "year": 1970,
+      "venue": "Journal of Theoretical Biology",
+      "doi": "10.1016/0022-5193(70)90092-5",
+      "url": "https://doi.org/10.1016/0022-5193(70)90092-5",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Initiation+of+slime+mold+aggregation+viewed+as+an+instability+Keller+Segel+1970&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/keller-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2F0022-5193%2870%2990092-5%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/keller-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "26",
+      "issue": "3",
+      "pages": "399-415",
+      "relevance": "The Info explicitly identifies the Keller–Segel aggregation instability as scientific origin."
+    },
+    {
+      "id": "bonner",
+      "authors": [
+        "John Tyler Bonner"
+      ],
+      "title": "Evidence for the formation of cell aggregates by chemotaxis in the development of the slime mold Dictyostelium discoideum",
+      "year": 1947,
+      "venue": "Journal of Experimental Zoology",
+      "doi": "10.1002/jez.1401060102",
+      "url": "https://doi.org/10.1002/jez.1401060102",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Evidence+for+the+formation+of+cell+aggregates+by+chemotaxis+in+the+development+of+the+slime+mold+Dictyostelium+discoideum+Bonner+1947&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading. Author list corrected against the Europe PMC/PubMed record, which credits only John Tyler Bonner; the additional Crossref name is not accepted.",
+        "evidenceFile": "evidence/biology/bonner-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fjez.1401060102%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/bonner-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "106",
+      "issue": "1",
+      "pages": "1-26",
+      "relevance": "Original chemotaxis work supplies empirical context for collective aggregation."
+    },
+    {
+      "id": "kessin",
+      "authors": [
+        "Richard H. Kessin"
+      ],
+      "title": "Dictyostelium: Evolution, Cell Biology, and the Development of Multicellularity",
+      "year": 2001,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/cbo9780511525315",
+      "url": "https://doi.org/10.1017/cbo9780511525315",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2FCBO9780511525315",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/kessin-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "relevance": "A specialist scientific monograph explains biological development beyond the simplified chemical-attraction model."
+    }
+  ],
+  "gaps": []
+}

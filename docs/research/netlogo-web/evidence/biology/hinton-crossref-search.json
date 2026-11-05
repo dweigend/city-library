@@ -1,0 +1,1560 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=How+learning+can+guide+evolution+Hinton+Nowlan+1987&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 4430406,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                19
+              ]
+            ],
+            "date-time": "2026-08-19T20:14:04Z",
+            "timestamp": 1787170444863,
+            "version": "build-2736575974"
+          },
+          "publisher-location": "Berlin, Heidelberg",
+          "reference-count": 14,
+          "publisher": "Springer Berlin Heidelberg",
+          "isbn-type": [
+            {
+              "value": "9783540664529",
+              "type": "print"
+            },
+            {
+              "value": "9783540483045",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1999
+              ]
+            ]
+          },
+          "DOI": "10.1007/3-540-48304-7_7",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                10,
+                19
+              ]
+            ],
+            "date-time": "2007-10-19T12:05:48Z",
+            "timestamp": 1192795548000
+          },
+          "page": "29-38",
+          "source": "Crossref",
+          "is-referenced-by-count": 14,
+          "title": [
+            "How Symbiosis Can Guide Evolution"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Richard A.",
+              "family": "Watson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jordan B.",
+              "family": "Pollack",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "7_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "441",
+              "DOI": "10.1086/276408",
+              "volume": "30",
+              "author": "J.M. Baldwin",
+              "year": "1896",
+              "unstructured": "Baldwin JM, 1896, \u201cA New Factor in Evolution,\u201d American Naturalist, 30, 441\u2013451.",
+              "journal-title": "American Naturalist"
+            },
+            {
+              "key": "7_CR2",
+              "volume-title": "ICGA3",
+              "author": "R.K. Belew",
+              "year": "1989",
+              "unstructured": "Belew RK, 1989, \u201cWhen Both Individuals and Populations Search,\u201d in Schaffer JD, ed., ICGA3, San Mateo California: Morgan Kaufmann."
+            },
+            {
+              "key": "7_CR3",
+              "volume-title": "ICGA3",
+              "author": "K. Deb",
+              "year": "1989",
+              "unstructured": "Deb K & Goldberg DE, 1989, \u201cAn Investigation of Niche and Species Formation in Genetic Function Optimization,\u201d ICGA3, San Mateo, CA: Morgan Kaufmann."
+            },
+            {
+              "key": "7_CR4",
+              "first-page": "493",
+              "volume": "3",
+              "author": "D.E. Goldberg",
+              "year": "1989",
+              "unstructured": "Goldberg, DE, Korb, B, & Deb K, 1989 \u201cMessy Genetic Algorithms: Motivation, Analysis and First Results,\u201d Complex Systems 1989, 3, 493\u2013530.",
+              "journal-title": "Complex Systems"
+            },
+            {
+              "key": "7_CR5",
+              "first-page": "15",
+              "volume-title": "Genetic Algorithms: Proc. of the Fifth Intl. Conference",
+              "author": "I. Harvey",
+              "year": "1993",
+              "unstructured": "Harvey I, 1993, \u201cThe Puzzle of the Persistent Question Marks: a Case Study of Genetic Drift,\u201d in S. Forrest (ed.), Genetic Algorithms: Proc. of the Fifth Intl. Conference, pp. 15\u201322, San Mateo CA, Morgan Kaufmann."
+            },
+            {
+              "key": "7_CR6",
+              "first-page": "495",
+              "volume": "1",
+              "author": "G.E. Hinton",
+              "year": "1987",
+              "unstructured": "Hinton GE, & Nowlan SJ, 1987, \u201cHow Learning Can Guide Evolution,\u201d Complex Systems, 1, 495\u2013502.",
+              "journal-title": "Complex Systems"
+            },
+            {
+              "key": "7_CR7",
+              "volume-title": "Adaptation in Natural and Artificial Systems",
+              "author": "J.H. Holland",
+              "year": "1975",
+              "unstructured": "Holland JH, 1975 Adaptation in Natural and Artificial Systems, Ann Arbor, MI: The University of Michigan Press."
+            },
+            {
+              "key": "7_CR8",
+              "unstructured": "Khakhina LN, 1992 Concepts of Symbiogenesis: Historical and Critical Study of the Research of Russian botanists, eds. Margulis L, McMenamin M, (translated by Merkel S, Coalston R), Yale University Press."
+            },
+            {
+              "key": "7_CR9",
+              "unstructured": "Kozo-Polyansky BM, 1921, \u201cThe Theory of Symbiogenesis and Pangenesis, Provisional Hypothesis\u201d in Journal of the first All-Russian Congress of Russian Botanists in Petrograd in 1921. Peterograd (in Russian, see Khakhina 1992)."
+            },
+            {
+              "key": "7_CR10",
+              "volume-title": "Symbiosis in Cell Evolution: Microbial Communities in the Archean and Ptroterozoic Eons",
+              "author": "L. Margulis",
+              "year": "1992",
+              "unstructured": "Margulis L, 1992 Symbiosis in Cell Evolution: Microbial Communities in the Archean and Ptroterozoic Eons. 2d ed., W.H. Freeman, New York.",
+              "edition": "2d ed."
+            },
+            {
+              "key": "7_CR11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Mayley G, 1996, \u201cLandscapes, Learning Costs and Genetic Assimilation,\u201d in Evolution, Learning, and Instinct: 100 Years of the Baldwin Effect, special issue of Evolutionary Computation, Vol 4, No. 3; P. Turney, D. Whitley and R. Anderson (eds).",
+              "DOI": "10.1162/evco.1996.4.3.iv"
+            },
+            {
+              "key": "7_CR12",
+              "unstructured": "Merezhkovsky KS, 1909 \u201cThe Theory of Two Plasms as the Basis of Symbiogenesis, a New Study or the Origins of Organisms,\u201d Proceedings of the Studies of the Imperial Kazan University, Publishing Office of the Imperial University. (In Russian, see Khakhina 1992)."
+            },
+            {
+              "key": "7_CR13",
+              "volume-title": "PPSN V",
+              "author": "R.A. Watson",
+              "year": "1998",
+              "unstructured": "Watson RA, Hornby GS, & Pollack JB, 1998, \u201cModeling Building-Block Interdependency,\u201d PPSN V, Eds. Eiben, Back, Schoenauer, Schweffel: Springer."
+            },
+            {
+              "key": "7_CR14",
+              "volume-title": "GECCO-99",
+              "author": "R.A. Watson",
+              "year": "1999",
+              "unstructured": "Watson, RA, & Pollack, JB, 1999, \u201cIncremental Commitment in Genetic Algorithms,\u201d In Banzhaf, W, Daida, J, Eiben, AE, Garzon, MH, Honavar, V, Jakiela, M, & Smith, RE eds. GECCO-99. San Francisco, CA: Morgan Kaufmann."
+            }
+          ],
+          "container-title": [
+            "Lecture Notes in Computer Science",
+            "Advances in Artificial Life"
+          ],
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/3-540-48304-7_7",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                5,
+                3
+              ]
+            ],
+            "date-time": "2019-05-03T17:45:09Z",
+            "timestamp": 1556905509000
+          },
+          "score": 30.43588,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/3-540-48304-7_7"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1999
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783540664529",
+            "9783540483045"
+          ],
+          "references-count": 14,
+          "URL": "https://doi.org/10.1007/3-540-48304-7_7",
+          "ISSN": [
+            "0302-9743"
+          ],
+          "issn-type": [
+            {
+              "value": "0302-9743",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1999
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                13
+              ]
+            ],
+            "date-time": "2026-05-13T06:15:18Z",
+            "timestamp": 1778652918442,
+            "version": "3.51.4"
+          },
+          "reference-count": 40,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2018,
+                    9,
+                    17
+                  ]
+                ],
+                "date-time": "2018-09-17T00:00:00Z",
+                "timestamp": 1537142400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2018,
+                    9,
+                    17
+                  ]
+                ],
+                "date-time": "2018-09-17T00:00:00Z",
+                "timestamp": 1537142400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/100000183",
+              "name": "DOD | Army Research Office",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "W911NF-16-1-0304"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "W911NF-16-1-0304"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000183",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100000185",
+              "name": "DOD | Defense Advanced Research Projects Agency",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "HR0011-18-2-0022"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "HR0011-18-2-0022"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000185",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Sci Rep"
+          ],
+          "abstract": "<jats:title>Abstract</jats:title><jats:p>Organisms result from adaptive processes interacting across different time scales. One such interaction is that between development and evolution. Models have shown that development sweeps over several traits in a single agent, sometimes exposing promising static traits. Subsequent evolution can then canalize these rare traits. Thus, development can, under the right conditions, increase evolvability. Here, we report on a previously unknown phenomenon when embodied agents are allowed to develop and evolve: Evolution discovers body plans robust to control changes, these body plans become genetically assimilated, yet controllers for these agents are not assimilated. This allows evolution to continue climbing fitness gradients by tinkering with the developmental programs for controllers within these permissive body plans. This exposes a previously unknown detail about the Baldwin effect: instead of all useful traits becoming genetically assimilated, only traits that render the agent robust to changes in other traits become assimilated. We refer to this as<jats:italic>differential canalization</jats:italic>. This finding also has implications for the evolutionary design of artificial and embodied agents such as robots: robots robust to internal changes in their controllers may also be robust to external changes in their environment, such as transferal from simulation to reality or deployment in novel environments.</jats:p>",
+          "DOI": "10.1038/s41598-018-31868-7",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                9,
+                11
+              ]
+            ],
+            "date-time": "2018-09-11T16:27:07Z",
+            "timestamp": 1536683227000
+          },
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 53,
+          "title": [
+            "How morphological development can guide evolution"
+          ],
+          "prefix": "10.1038",
+          "volume": "8",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-9207-1775",
+              "authenticated-orcid": false,
+              "given": "Sam",
+              "family": "Kriegman",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Nick",
+              "family": "Cheney",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Josh",
+              "family": "Bongard",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2018,
+                9,
+                17
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "31868_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "441",
+              "DOI": "10.1086/276408",
+              "volume": "30",
+              "author": "JM Baldwin",
+              "year": "1896",
+              "unstructured": "Baldwin, J. M. A new factor in evolution. The american naturalist 30, 441\u2013451 (1896).",
+              "journal-title": "The american naturalist"
+            },
+            {
+              "key": "31868_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "733",
+              "DOI": "10.1126/science.4.99.733",
+              "volume": "4",
+              "author": "CL Morgan",
+              "year": "1896",
+              "unstructured": "Morgan, C. L. On modification and variation. Sci. 4, 733\u2013740 (1896).",
+              "journal-title": "Sci."
+            },
+            {
+              "key": "31868_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "563",
+              "DOI": "10.1038/150563a0",
+              "volume": "150",
+              "author": "CH Waddington",
+              "year": "1942",
+              "unstructured": "Waddington, C. H. Canalization of development and the inheritance of acquired characters. Nat. 150, 563\u2013565 (1942).",
+              "journal-title": "Nat."
+            },
+            {
+              "key": "31868_CR4",
+              "first-page": "495",
+              "volume": "1",
+              "author": "GE Hinton",
+              "year": "1987",
+              "unstructured": "Hinton, G. E. & Nowlan, S. J. How learning can guide evolution. Complex systems 1, 495\u2013502 (1987).",
+              "journal-title": "Complex systems"
+            },
+            {
+              "key": "31868_CR5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Floreano, D. & Mondada, F. Evolution of plastic neurocontrollers for situated agents. In From Animals to Animats 4, Proceedings of the 4th International Conference on Simulation of Adaptive Behavior (SAB 1996), LIS-CONF-1996-001, 402\u2013410 (MIT Press, 1996).",
+              "DOI": "10.7551/mitpress/3118.003.0049"
+            },
+            {
+              "key": "31868_CR6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Dellaert, F. & Beer, R. D. A developmental model for the evolution of complete autonomous agents. In Proceedings of the fourth international conference on simulation of adaptive behavior (1996).",
+              "DOI": "10.7551/mitpress/3118.003.0048"
+            },
+            {
+              "key": "31868_CR7",
+              "unstructured": "Eggenberger, P. Evolving morphologies of simulated 3D organisms based on differential gene expression. Procs. Fourth Eur. Conf. on Artif. Life 205\u2013213 (1997)."
+            },
+            {
+              "key": "31868_CR8",
+              "unstructured": "Bongard, J. C. & Pfeifer, R. Repeated structure and dissociation of genotypic and phenotypic complexity in Artificial Ontogeny. Proc. The Genet. Evol. Comput. Conf. (GECCO 2001) 829\u2013836 (2001)."
+            },
+            {
+              "key": "31868_CR9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Miller, J. F. Evolving a self-repairing, self-regulating, french flag organism. In Genetic and Evolutionary Computation Conference, 129\u2013139 (Springer, 2004).",
+              "DOI": "10.1007/978-3-540-24854-5_12"
+            },
+            {
+              "key": "31868_CR10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Doursat, R. Organically grown architectures: Creating decentralized, autonomous systems by embryomorphic engineering. In Organic computing, 167\u2013199 (Springer, 2009).",
+              "DOI": "10.1007/978-3-540-77657-4_8"
+            },
+            {
+              "key": "31868_CR11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Ventrella, J. Designing emergence in animated artificial life worlds. In Virtual Worlds, 143\u2013155 (Springer, 1998).",
+              "DOI": "10.1007/3-540-68686-X_14"
+            },
+            {
+              "key": "31868_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "156",
+              "DOI": "10.1108/03684920310452382",
+              "volume": "32",
+              "author": "M Komosinski",
+              "year": "2003",
+              "unstructured": "Komosinski, M. The framsticks system: versatile simulator of 3d agents and their evolution. Kybernetes 32, 156\u2013173 (2003).",
+              "journal-title": "Kybernetes"
+            },
+            {
+              "key": "31868_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "1234",
+              "DOI": "10.1073/pnas.1015390108",
+              "volume": "108",
+              "author": "JC Bongard",
+              "year": "2011",
+              "unstructured": "Bongard, J. C. Morphological change in machines accelerates the evolution of robust behavior. Proc. Natl. Acad. Sci. 108, 1234\u20131239, https://doi.org/10.1073/pnas.1015390108 (2011).",
+              "journal-title": "Proc. Natl. Acad. Sci."
+            },
+            {
+              "key": "31868_CR14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Kriegman, S., Cheney, N., Corucci, F. & Bongard, J. C. A minimal developmental model can increase evolvability in soft robots. In Proceedings of the Genetic and Evolutionary Computation Conference, 131\u2013138 (ACM, 2017).",
+              "DOI": "10.1145/3071178.3071296"
+            },
+            {
+              "key": "31868_CR15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Cheney, N., Bongard, J. C. & Lipson, H. Evolving soft robots in tight spaces. In Proceedings of the 2015 annual conference on Genetic and Evolutionary Computation, 935\u2013942 (ACM, 2015).",
+              "DOI": "10.1145/2739480.2754662"
+            },
+            {
+              "key": "31868_CR16",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Miriyev, A., Stack, K. & Lipson, H. Soft material for soft actuators. Nat. Commun. 8 (2017).",
+              "DOI": "10.1038/s41467-017-00685-3"
+            },
+            {
+              "key": "31868_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "451",
+              "DOI": "10.1038/nature19100",
+              "volume": "536",
+              "author": "M Wehner",
+              "year": "2016",
+              "unstructured": "Wehner, M. et al. An integrated design and fabrication strategy for entirely soft, autonomous robots. Nat. 536, 451\u2013455 (2016).",
+              "journal-title": "Nat."
+            },
+            {
+              "key": "31868_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "21",
+              "DOI": "10.1089/soro.2013.0007",
+              "volume": "1",
+              "author": "H Lipson",
+              "year": "2014",
+              "unstructured": "Lipson, H. Challenges and opportunities for design, simulation, and fabrication of soft robots. Soft Robotics 1, 21\u201327, https://doi.org/10.1089/soro.2013.0007 (2014).",
+              "journal-title": "Soft Robotics"
+            },
+            {
+              "key": "31868_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "88",
+              "DOI": "10.1089/soro.2013.0010",
+              "volume": "1",
+              "author": "J Hiller",
+              "year": "2014",
+              "unstructured": "Hiller, J. & Lipson, H. Dynamic simulation of soft multimaterial 3d-printed objects. Soft Robotics 1, 88\u2013101 (2014).",
+              "journal-title": "Soft Robotics"
+            },
+            {
+              "key": "31868_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "1130",
+              "DOI": "10.1111/j.1558-5646.1994.tb05300.x",
+              "volume": "48",
+              "author": "GL Grabowsky",
+              "year": "1994",
+              "unstructured": "Grabowsky, G. L. Symmetry, locomotion, and the evolution of an anterior end: a lesson from sea urchins. Evol. 48, 1130\u20131146 (1994).",
+              "journal-title": "Evol."
+            },
+            {
+              "key": "31868_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "967",
+              "DOI": "10.1111/j.1558-5646.1996.tb02339.x",
+              "volume": "50",
+              "author": "GP Wagner",
+              "year": "1996",
+              "unstructured": "Wagner, G. P. & Altenberg, L. Perspective: complex adaptations and the evolution of evolvability. Evol. 50, 967\u2013976 (1996).",
+              "journal-title": "Evol."
+            },
+            {
+              "key": "31868_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "125",
+              "DOI": "10.4024/40701.jbpc.07.04",
+              "volume": "7",
+              "author": "H Lipson",
+              "year": "2007",
+              "unstructured": "Lipson, H. Principles of modularity, regularity, and hierarchy for scalable systems. The J. Biol. Phys. Chem. 7, 125\u2013128 (2007).",
+              "journal-title": "The J. Biol. Phys. Chem."
+            },
+            {
+              "key": "31868_CR23",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Cheney, N., Bongard, J., SunSpiral, V. & Lipson, H. Scalable co-optimization of morphology and control in embodied machines. arXiv preprint arXiv:1706.06133 (2017).",
+              "DOI": "10.1098/rsif.2017.0937"
+            },
+            {
+              "key": "31868_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "345",
+              "DOI": "10.1016/j.tig.2010.05.003",
+              "volume": "26",
+              "author": "M Lynch",
+              "year": "2010",
+              "unstructured": "Lynch, M. Evolution of the mutation rate. Trends genetics 26, 345\u2013352 (2010).",
+              "journal-title": "Trends genetics"
+            },
+            {
+              "key": "31868_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "128",
+              "DOI": "10.1016/S1364-6613(99)01294-2",
+              "volume": "3",
+              "author": "RM French",
+              "year": "1999",
+              "unstructured": "French, R. M. Catastrophic forgetting in connectionist networks. Trends cognitive sciences 3, 128\u2013135 (1999).",
+              "journal-title": "Trends cognitive sciences"
+            },
+            {
+              "key": "31868_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "423",
+              "DOI": "10.1109/TRO.2004.838027",
+              "volume": "21",
+              "author": "J Carlson",
+              "year": "2005",
+              "unstructured": "Carlson, J. & Murphy, R. R. How ugvs physically fail in the field. IEEE Transactions on robotics 21, 423\u2013437 (2005).",
+              "journal-title": "IEEE Transactions on robotics"
+            },
+            {
+              "key": "31868_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "1118",
+              "DOI": "10.1126/science.1133687",
+              "volume": "314",
+              "author": "J Bongard",
+              "year": "2006",
+              "unstructured": "Bongard, J., Zykov, V. & Lipson, H. Resilient machines through continuous self-modeling. Sci. 314, 1118\u20131121 (2006).",
+              "journal-title": "Sci."
+            },
+            {
+              "key": "31868_CR28",
+              "first-page": "122",
+              "volume-title": "IEEE Transactions on Evol. Comput.",
+              "author": "S Koos",
+              "year": "2013",
+              "unstructured": "Koos, S., Mouret, J.-B. & Doncieux, S. The transferability approach: Crossing the reality gap in evolutionary robotics. IEEE Transactions on Evol. Comput. 17, (122\u2013145 (2013)."
+            },
+            {
+              "key": "31868_CR29",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Nguyen, A., Yosinski, J. & Clune, J. Deep neural networks are easily fooled: High confidence predictions for unrecognizable images. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 427\u2013436 (2015).",
+              "DOI": "10.1109/CVPR.2015.7298640"
+            },
+            {
+              "key": "31868_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "76",
+              "DOI": "10.1145/2366316.2366335",
+              "volume": "55",
+              "author": "R Pfeifer",
+              "year": "2012",
+              "unstructured": "Pfeifer, R., Lungarella, M. & Iida, F. The challenges ahead for bio-inspired \u2018soft\u2019 robotics. Commun. ACM 55, 76\u201387 (2012).",
+              "journal-title": "Commun. ACM"
+            },
+            {
+              "key": "31868_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "20400",
+              "DOI": "10.1073/pnas.1116564108",
+              "volume": "108",
+              "author": "RF Shepherd",
+              "year": "2011",
+              "unstructured": "Shepherd, R. F. et al. Multigait soft robot. Proc. Natl. Acad. Sci. 108, 20400\u201320403 (2011).",
+              "journal-title": "Proc. Natl. Acad. Sci."
+            },
+            {
+              "key": "31868_CR32",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Fisher, R. A. The genetical theory of natural selection (Oxford University Press, 1930).",
+              "DOI": "10.5962/bhl.title.27468"
+            },
+            {
+              "key": "31868_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "1435",
+              "DOI": "10.1111/j.1420-9101.2009.01754.x",
+              "volume": "22",
+              "author": "R Lande",
+              "year": "2009",
+              "unstructured": "Lande, R. Adaptation to an extraordinary environment by evolution of phenotypic plasticity and genetic assimilation. J. evolutionary biology 22, 1435\u20131446 (2009).",
+              "journal-title": "J. evolutionary biology"
+            },
+            {
+              "key": "31868_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "470",
+              "DOI": "10.1016/0003-3472(79)90184-2",
+              "volume": "27",
+              "author": "P Bateson",
+              "year": "1979",
+              "unstructured": "Bateson, P. How do sensitive periods arise and what are they for? Animal Behav. 27, 470\u2013486 (1979).",
+              "journal-title": "Animal Behav."
+            },
+            {
+              "key": "31868_CR35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1742-9994-12-S1-S3",
+              "volume": "12",
+              "author": "TW Fawcett",
+              "year": "2015",
+              "unstructured": "Fawcett, T. W. & Frankenhuis, W. E. Adaptive explanations for sensitive windows in development. Front. Zool. 12, S3, https://doi.org/10.1186/1742-9994-12-S1-S3 (2015).",
+              "journal-title": "Front. Zool."
+            },
+            {
+              "key": "31868_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "2705",
+              "DOI": "10.1098/rspb.2011.0971",
+              "volume": "278",
+              "author": "AP Moczek",
+              "year": "2011",
+              "unstructured": "Moczek, A. P. et al. The role of developmental plasticity in evolutionary innovation. Proc. Royal Soc. Lond. B: Biol. Sci. 278, 2705\u20132713 (2011).",
+              "journal-title": "Proc. Royal Soc. Lond. B: Biol. Sci."
+            },
+            {
+              "key": "31868_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "1004",
+              "DOI": "10.1016/j.anbehav.2012.12.031",
+              "volume": "85",
+              "author": "EC Snell-Rood",
+              "year": "2013",
+              "unstructured": "Snell-Rood, E. C. An overview of the evolutionary causes and consequences of behavioural plasticity. Animal Behav. 85, 1004\u20131011 (2013).",
+              "journal-title": "Animal Behav."
+            },
+            {
+              "issue": "1",
+              "key": "31868_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "31",
+              "DOI": "10.1093/icb/ics067",
+              "volume": "52",
+              "author": "E. C. Snell-Rood",
+              "year": "2012",
+              "unstructured": "Snell-Rood, E. C. Selective processes in development: Implications for the costs and benefits of phenotypic plasticity. Integr. & Comp. Biol. 52 (2012).",
+              "journal-title": "Integrative and Comparative Biology"
+            },
+            {
+              "key": "31868_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "293",
+              "DOI": "10.1038/hdy.2015.8",
+              "volume": "115",
+              "author": "CJ Murren",
+              "year": "2015",
+              "unstructured": "Murren, C. J. et al. Constraints on the evolution of phenotypic plasticity: limits and costs of phenotype and plasticity. Hered. 115, 293\u2013301 (2015).",
+              "journal-title": "Hered."
+            },
+            {
+              "key": "31868_CR40",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Schmidt, M. & Lipson, H. Age-fitness pareto optimization. In Genetic Programming Theory and Practice VIII, 129\u2013146 (Springer, 2011).",
+              "DOI": "10.1007/978-1-4419-7747-2_8"
+            }
+          ],
+          "updated-by": [
+            {
+              "DOI": "10.1038/s41598-018-33706-2",
+              "type": "correction",
+              "label": "Correction",
+              "source": "publisher",
+              "updated": {
+                "date-parts": [
+                  [
+                    2018,
+                    10,
+                    25
+                  ]
+                ],
+                "date-time": "2018-10-25T00:00:00Z",
+                "timestamp": 1540425600000
+              }
+            }
+          ],
+          "container-title": [
+            "Scientific Reports"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.nature.com/articles/s41598-018-31868-7",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/s41598-018-31868-7.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/s41598-018-31868-7.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                10
+              ]
+            ],
+            "date-time": "2024-07-10T05:36:52Z",
+            "timestamp": 1720589812000
+          },
+          "score": 29.131557,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/s41598-018-31868-7"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2018,
+                9,
+                17
+              ]
+            ]
+          },
+          "references-count": 40,
+          "journal-issue": {
+            "issue": "1",
+            "published-online": {
+              "date-parts": [
+                [
+                  2018,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "31868"
+          ],
+          "URL": "https://doi.org/10.1038/s41598-018-31868-7",
+          "relation": {
+            "correction": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/s41598-018-33706-2",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "2045-2322"
+          ],
+          "issn-type": [
+            {
+              "value": "2045-2322",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2018,
+                9,
+                17
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "29 December 2017",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "29 August 2018",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "17 September 2018",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "25 October 2018",
+              "order": 4,
+              "name": "change_date",
+              "label": "Change Date",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "Correction",
+              "order": 5,
+              "name": "change_type",
+              "label": "Change Type",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "A correction to this article has been published and is linked from the HTML and PDF versions of this paper. The error has been fixed in the paper.",
+              "order": 6,
+              "name": "change_details",
+              "label": "Change Details",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing Interests"
+              }
+            }
+          ],
+          "article-number": "13934"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                26
+              ]
+            ],
+            "date-time": "2026-03-26T13:17:08Z",
+            "timestamp": 1774531028018,
+            "version": "3.50.1"
+          },
+          "reference-count": 51,
+          "publisher": "The Royal Society",
+          "issue": "11",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2016,
+                    11,
+                    1
+                  ]
+                ],
+                "date-time": "2016-11-01T00:00:00Z",
+                "timestamp": 1477958400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://royalsociety.org/journals/ethics-policies/data-sharing-mining/"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/501100000266",
+              "name": "Engineering and Physical Sciences Research Council",
+              "doi-asserted-by": "crossref",
+              "award": [
+                "EP/K503149/1"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "EP/K503149/1"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100000266",
+                  "id-type": "DOI",
+                  "asserted-by": "crossref"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "royalsocietypublishing.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "R. Soc. open sci."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                11
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Self-organization and natural selection are fundamental forces that shape the natural world. Substantial progress in understanding how these forces interact has been made through the study of abstract models. Further progress may be made by identifying a model system in which the interaction between self-organization and selection can be investigated empirically. To this end, we investigate how the self-organizing thermoregulatory huddling behaviours displayed by many species of mammals might influence natural selection of the genetic components of metabolism. By applying a simple evolutionary algorithm to a well-established model of the interactions between environmental, morphological, physiological and behavioural components of thermoregulation, we arrive at a clear, but counterintuitive, prediction: rodents that are able to huddle together in cold environments should evolve a lower thermal conductance at a faster rate than animals reared in isolation. The model therefore explains how evolution can be accelerated as a consequence of<jats:italic>relaxed selection</jats:italic>, and it predicts how the effect may be exaggerated by an increase in the litter size, i.e. by an increase in the capacity to use huddling behaviours for thermoregulation. Confirmation of these predictions in future experiments with rodents would constitute strong evidence of a mechanism by which self-organization can guide natural selection.</jats:p>",
+          "DOI": "10.1098/rsos.160553",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                11,
+                16
+              ]
+            ],
+            "date-time": "2016-11-16T22:56:33Z",
+            "timestamp": 1479336993000
+          },
+          "page": "160553",
+          "update-policy": "https://doi.org/10.1098/crossmark-policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 14,
+          "title": [
+            "How self-organization can guide evolution"
+          ],
+          "prefix": "10.1098",
+          "volume": "3",
+          "author": [
+            {
+              "given": "Jonathan",
+              "family": "Glancy",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Psychology, The University of Sheffield, Sheffield, UK"
+                },
+                {
+                  "name": "Sheffield Robotics, The University of Sheffield, Sheffield, UK"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "James V.",
+              "family": "Stone",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Psychology, The University of Sheffield, Sheffield, UK"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-8125-5133",
+              "authenticated-orcid": false,
+              "given": "Stuart P.",
+              "family": "Wilson",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Psychology, The University of Sheffield, Sheffield, UK"
+                },
+                {
+                  "name": "Sheffield Robotics, The University of Sheffield, Sheffield, UK"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "175",
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                11
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_6_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1515/9780691212920"
+            },
+            {
+              "key": "e_1_3_6_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/cplx.20370"
+            },
+            {
+              "key": "e_1_3_6_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1997.0488"
+            },
+            {
+              "key": "e_1_3_6_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00265-015-1894-0"
+            },
+            {
+              "key": "e_1_3_6_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0050277"
+            },
+            {
+              "key": "e_1_3_6_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsif.2013.1033"
+            },
+            {
+              "key": "e_1_3_6_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pcbi.1004283"
+            },
+            {
+              "key": "e_1_3_6_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cub.2007.12.040"
+            },
+            {
+              "key": "e_1_3_6_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2000.1284"
+            },
+            {
+              "key": "e_1_3_6_11_2",
+              "volume-title": "The fire of life",
+              "author": "Kleiber M",
+              "year": "1961"
+            },
+            {
+              "key": "e_1_3_6_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/03-9000"
+            },
+            {
+              "key": "e_1_3_6_13_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/283249"
+            },
+            {
+              "key": "e_1_3_6_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1538742"
+            },
+            {
+              "key": "e_1_3_6_15_2",
+              "first-page": "370",
+              "article-title": "The energetics of endotherms",
+              "volume": "74",
+              "author": "McNab BK",
+              "year": "1974",
+              "journal-title": "Ohio J. Sci."
+            },
+            {
+              "key": "e_1_3_6_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/physzool.53.2.30152577"
+            },
+            {
+              "key": "e_1_3_6_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00583688"
+            },
+            {
+              "key": "e_1_3_6_18_2",
+              "volume-title": "The physiological ecology of vertebrates: a view from energetics",
+              "author": "McNab BK",
+              "year": "2002"
+            },
+            {
+              "key": "e_1_3_6_19_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtherbio.2012.08.004"
+            },
+            {
+              "key": "e_1_3_6_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1931252"
+            },
+            {
+              "key": "e_1_3_6_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1037/h0077459"
+            },
+            {
+              "key": "e_1_3_6_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0022-5193(89)80016-5"
+            },
+            {
+              "key": "e_1_3_6_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dev.20190"
+            },
+            {
+              "key": "e_1_3_6_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0300-9629(80)90072-9"
+            },
+            {
+              "key": "e_1_3_6_25_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4098/AT.arch.97-32"
+            },
+            {
+              "key": "e_1_3_6_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4098/AT.arch.98-45"
+            },
+            {
+              "key": "e_1_3_6_27_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "545",
+              "DOI": "10.1111/j.1469-185X.2009.00115.x",
+              "article-title": "One for all and all for one: the energetic benefits of huddling in endotherms",
+              "volume": "85",
+              "author": "Gilbert C",
+              "year": "2010",
+              "journal-title": "Biol. Rev. Cambridge Philos. Soc."
+            },
+            {
+              "key": "e_1_3_6_28_2",
+              "first-page": "495",
+              "article-title": "How learning can guide evolution",
+              "volume": "1",
+              "author": "Hinton G",
+              "year": "1987",
+              "journal-title": "Complex Syst."
+            },
+            {
+              "key": "e_1_3_6_29_2",
+              "volume-title": "Evolution of the brain and intelligence",
+              "author": "Jerison H",
+              "year": "1973"
+            },
+            {
+              "key": "e_1_3_6_30_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.493968"
+            },
+            {
+              "key": "e_1_3_6_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1420-9101.2010.02053.x"
+            },
+            {
+              "key": "e_1_3_6_32_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.0014-3820.2003.tb00373.x"
+            },
+            {
+              "key": "e_1_3_6_33_2",
+              "first-page": "1829",
+              "article-title": "Quantitative genetics of bioenergetics and growth-related traits in the wild mammal, Phyllotis darwini",
+              "volume": "59",
+              "author": "Nespolo RF",
+              "year": "2005",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "e_1_3_6_34_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1037/0735-7044.121.6.1333"
+            },
+            {
+              "key": "e_1_3_6_35_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dev.1030"
+            },
+            {
+              "key": "e_1_3_6_36_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s003600050108"
+            },
+            {
+              "key": "e_1_3_6_37_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1037/0735-7036.116.3.240"
+            },
+            {
+              "key": "e_1_3_6_38_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtherbio.2015.03.003"
+            },
+            {
+              "key": "e_1_3_6_39_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "35",
+              "DOI": "10.1002/dev.20409",
+              "article-title": "Development of behavior in the litter huddle in rat pups: within- and between-litter differences",
+              "volume": "52",
+              "author": "Bautista A",
+              "year": "2010",
+              "journal-title": "Dev. Psychobiol."
+            },
+            {
+              "key": "e_1_3_6_40_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.physbeh.2013.05.035"
+            },
+            {
+              "key": "e_1_3_6_41_2",
+              "first-page": "R229",
+              "article-title": "Simultaneous measurement of preferred ambient temperature and metabolism in rats",
+              "volume": "254",
+              "author": "Gordon CJ",
+              "year": "1988",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "e_1_3_6_42_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dev.20339"
+            },
+            {
+              "key": "e_1_3_6_43_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.physbeh.2008.07.011"
+            },
+            {
+              "key": "e_1_3_6_44_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dev.20485"
+            },
+            {
+              "key": "e_1_3_6_45_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.physbeh.2007.05.066"
+            },
+            {
+              "key": "e_1_3_6_46_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dev.20360"
+            },
+            {
+              "key": "e_1_3_6_47_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.physbeh.2011.07.019"
+            },
+            {
+              "key": "e_1_3_6_48_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dev.20535"
+            },
+            {
+              "key": "e_1_3_6_49_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dev.20522"
+            },
+            {
+              "key": "e_1_3_6_50_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0087405"
+            },
+            {
+              "key": "e_1_3_6_51_2",
+              "first-page": "1",
+              "article-title": "Effects of room temperature on reproduction, body and organ weights, food and water intakes, and hematology in mice",
+              "volume": "32",
+              "author": "Yamauchi C",
+              "year": "1983",
+              "journal-title": "Jikken Dobutsu"
+            },
+            {
+              "key": "e_1_3_6_52_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0914624107"
+            }
+          ],
+          "container-title": [
+            "Royal Society Open Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsos.160553",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://royalsocietypublishing.org/doi/full-xml/10.1098/rsos.160553",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsos.160553",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                20
+              ]
+            ],
+            "date-time": "2024-06-20T16:54:02Z",
+            "timestamp": 1718902442000
+          },
+          "score": 29.092857,
+          "resource": {
+            "primary": {
+              "URL": "https://royalsocietypublishing.org/doi/10.1098/rsos.160553"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                11
+              ]
+            ]
+          },
+          "references-count": 51,
+          "journal-issue": {
+            "issue": "11",
+            "published-print": {
+              "date-parts": [
+                [
+                  2016,
+                  11
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1098/rsos.160553"
+          ],
+          "URL": "https://doi.org/10.1098/rsos.160553",
+          "ISSN": [
+            "2054-5703"
+          ],
+          "issn-type": [
+            {
+              "value": "2054-5703",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                11
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2016-07-27",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2016-10-18",
+              "order": 1,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2016-11-01",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

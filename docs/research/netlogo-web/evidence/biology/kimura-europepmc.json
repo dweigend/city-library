@@ -1,0 +1,179 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F217624a0%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/217624a0\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "5637732",
+          "source": "MED",
+          "pmid": "5637732",
+          "doi": "10.1038/217624a0",
+          "title": "Evolutionary rate at the molecular level.",
+          "authorString": "Kimura M.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Kimura M",
+                "lastName": "Kimura",
+                "firstName": "M",
+                "initials": "M"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "5129",
+            "volume": "217",
+            "journalIssueId": 1357073,
+            "dateOfPublication": "1968 Feb",
+            "monthOfPublication": 2,
+            "yearOfPublication": 1968,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "isoabbreviation": "Nature",
+              "nlmid": "0410462"
+            },
+            "printPublicationDate": "1968-02-01"
+          },
+          "pubYear": "1968",
+          "pageInfo": "624-626",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Cytochromes"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Nucleotides"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "DNA"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genetics, Population"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Amino Acid Sequence"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Frequency"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Haploidy"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Mutation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mathematics"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Biological Evolution"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "DNA",
+                "registryNumber": "9007-49-2"
+              },
+              {
+                "name": "Nucleotides",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Cytochromes",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/217624a0"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 1848,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1968-04-10",
+          "dateOfCreation": "1968-02-17",
+          "dateOfRevision": "2022-03-09",
+          "firstPublicationDate": "1968-02-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "slug": "blood-sugar-regulation",
+  "name": "Blood Sugar Regulation",
+  "catalogPath": "Sample Models/Biology/Blood Sugar Regulation",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Blood%20Sugar%20Regulation.nlogox",
+  "deliveryBatch": "B07",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can interacting organs stabilize blood glucose after disturbances? NetLogo Blood Sugar Regulation represents liver and pancreatic tissue as patches and glucose, insulin, and glucagon as moving molecules. Local interactions implement opposing hormonal responses rather than explicit blood vessels. Quantitative glucose regulation [1], glucagon physiology [2], and beta-cell secretion research [3] support the model's scientific framing. Its particle diffusion and simplified cell rules compress circulation, receptor signaling, and metabolic pathways into visible events. The simulation illustrates negative feedback and the distinction between increasing and decreasing glucose availability. It is not a calibrated physiological model, cannot determine a person's insulin sensitivity, and should not be interpreted as evidence for a clinical intervention or dosing decision.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Blood%20Sugar%20Regulation.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Blood%20Sugar%20Regulation.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 75efe0d13e248bbdd0850171f35e54271bb16ad78bdd3ecbe7e0afb8f3f5313f",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/blood-sugar-regulation.nlogox",
+    "infoFile": "evidence/biology/blood-sugar-regulation-info.txt",
+    "originalModelCitation": "* Woods, P. and Wilensky, U. (2017).  NetLogo Blood Sugar Regulation model.  http://ccl.northwestern.edu/netlogo/models/BloodSugarRegulation.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "bergman",
+      "authors": [
+        "R N Bergman",
+        "Y Z Ider",
+        "C R Bowden",
+        "C Cobelli"
+      ],
+      "title": "Quantitative estimation of insulin sensitivity.",
+      "year": 1979,
+      "venue": "American Journal of Physiology-Endocrinology and Metabolism",
+      "doi": "10.1152/ajpendo.1979.236.6.e667",
+      "url": "https://doi.org/10.1152/ajpendo.1979.236.6.e667",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Quantitative+estimation+of+insulin+sensitivity+Bergman+Ider+Bowden+Cobelli+1979&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/bergman-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1152%2Fajpendo.1979.236.6.e667%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/bergman-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "236",
+      "issue": "6",
+      "pages": "E667",
+      "relevance": "Provides quantitative glucose–insulin regulation context and a contrast to qualitative particle encounters."
+    },
+    {
+      "id": "unger",
+      "authors": [
+        "Roger H. Unger",
+        "Lelio Orci"
+      ],
+      "title": "Glucagon and the a Cell: Physiology and Pathophysiology",
+      "year": 1981,
+      "venue": "New England Journal of Medicine",
+      "doi": "10.1056/nejm198106253042604",
+      "url": "https://doi.org/10.1056/nejm198106253042604",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Glucagon+and+the+A+cell+physiology+and+pathophysiology+Unger+Orci+1981&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/unger-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1056%2Fnejm198106253042604%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/unger-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "304",
+      "issue": "26",
+      "pages": "1575-1580",
+      "relevance": "Establishes glucagon’s counter-regulatory role relevant to liver–pancreas feedback."
+    },
+    {
+      "id": "rorsman",
+      "authors": [
+        "Patrik Rorsman",
+        "Frances M. Ashcroft"
+      ],
+      "title": "Pancreatic β-Cell Electrical Activity and Insulin Secretion: Of Mice and Men",
+      "year": 2018,
+      "venue": "Physiological Reviews",
+      "doi": "10.1152/physrev.00008.2017",
+      "url": "https://doi.org/10.1152/physrev.00008.2017",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Pancreatic+beta-cell+electrical+activity+and+insulin+secretion+of+mice+and+men+Rorsman+Ashcroft+2018&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/rorsman-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1152%2Fphysrev.00008.2017%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/rorsman-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "98",
+      "issue": "1",
+      "pages": "117-214",
+      "relevance": "Explains beta-cell insulin secretion mechanisms that the model deliberately compresses."
+    }
+  ],
+  "gaps": []
+}

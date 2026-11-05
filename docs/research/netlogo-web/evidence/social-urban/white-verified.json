@@ -1,0 +1,512 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1068%2Fa251175",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            26
+          ]
+        ],
+        "date-time": "2026-10-26T17:33:50Z",
+        "timestamp": 1793036030777,
+        "version": "4.5.0"
+      },
+      "reference-count": 54,
+      "publisher": "SAGE Publications",
+      "issue": "8",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1993,
+                8,
+                1
+              ]
+            ],
+            "date-time": "1993-08-01T00:00:00Z",
+            "timestamp": 744163200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Environ Plan A"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1993,
+            8
+          ]
+        ]
+      },
+      "abstract": "<jats:p>Cellular automata belong to a family of discrete, connectionist techniques being used to investigate fundamental principles of dynamics, evolution, and self-organization. In this paper, a cellular automaton is developed to model the spatial structure of urban land use over time. For realistic parameter values, the model produces fractal or bifractal land-use structures for the urbanized area and for each individual land-use type. Data for a set of US cities show that they have very similar fractal dimensions. The cellular approach makes it possible to achieve a high level of spatial detail and realism and to link the results directly to general theories of structural evolution.</jats:p>",
+      "DOI": "10.1068/a251175",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2006,
+            10,
+            12
+          ]
+        ],
+        "date-time": "2006-10-12T12:23:19Z",
+        "timestamp": 1160655799000
+      },
+      "page": "1175-1199",
+      "source": "Crossref",
+      "is-referenced-by-count": 878,
+      "title": [
+        "Cellular Automata and Fractal Urban Form: A Cellular Modelling Approach to the Evolution of Urban Land-Use Patterns"
+      ],
+      "prefix": "10.1177",
+      "volume": "25",
+      "author": [
+        {
+          "given": "R",
+          "family": "White",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Geography, Memorial University, St John's, Newfoundland, Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "G",
+          "family": "Engelen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Research Institute for Knowledge Systems, PO Box 463, 6200 AL Maastricht, The Netherlands"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "179",
+      "published-online": {
+        "date-parts": [
+          [
+            1993,
+            8,
+            1
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "bibr1-a251175",
+          "first-page": "29",
+          "volume-title": "Cities and Regions as Nonlinear Decision Systems",
+          "author": "Allen P",
+          "year": "1983"
+        },
+        {
+          "key": "bibr2-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1538-4632.1979.tb00693.x"
+        },
+        {
+          "key": "bibr3-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-69540-7_16"
+        },
+        {
+          "key": "bibr4-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-2789(89)90166-8"
+        },
+        {
+          "key": "bibr5-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/342780a0"
+        },
+        {
+          "key": "bibr6-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-2789(90)90173-M"
+        },
+        {
+          "key": "bibr7-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-1-4612-3034-2_4"
+        },
+        {
+          "key": "bibr8-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/a230511"
+        },
+        {
+          "key": "bibr9-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/b140123"
+        },
+        {
+          "key": "bibr10-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/a211447"
+        },
+        {
+          "issue": "4",
+          "key": "bibr11-a251175",
+          "volume": "36",
+          "author": "Cecchini A",
+          "year": "1990",
+          "journal-title": "Wissenschaftliche Zeitschrift der Hochschule f\u00fcr Architektur und Bauwesen"
+        },
+        {
+          "key": "bibr12-a251175",
+          "unstructured": "Cecchini A, Viola F, 1992, \u201cFicties (fictitious cities): A simulation for the creation of cities\u201d, paper presented at the International Seminar on Cellular Automata for Regional Analysis, DAEST, Universitario di Architettura, Venice; copy available from Laboratorio didattico sulla simulazione, Ca' Tron, S. Croce 1957, 30135 Venezia"
+        },
+        {
+          "key": "bibr13-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1467-9787.1983.tb00780.x"
+        },
+        {
+          "key": "bibr14-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/a170585"
+        },
+        {
+          "key": "bibr15-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/a200099"
+        },
+        {
+          "key": "bibr16-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/b160141"
+        },
+        {
+          "key": "bibr17-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-1-4612-0991-1"
+        },
+        {
+          "key": "bibr18-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0377-2217(88)90279-2"
+        },
+        {
+          "key": "bibr19-a251175",
+          "first-page": "306",
+          "volume-title": "Climate Change in the Intra-Americas Sea",
+          "author": "Engelen G",
+          "year": "1993"
+        },
+        {
+          "key": "bibr20-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF01934667"
+        },
+        {
+          "key": "bibr21-a251175",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Frankhauser P, 1991a, \u201cAspects fractals des structures urbaines\u201d l'Espace G\u00e9ographique 1990\u201331, number 1, 45\u201369",
+          "DOI": "10.3406/spgeo.1990.2943"
+        },
+        {
+          "key": "bibr22-a251175",
+          "unstructured": "Frankhauser P, 1991b, \u201cFractal analysis of urban structures\u201d, paper presented at the 7th European Colloquium on Theoretical and Quantitative Geography, Stockholm, 5\u20138 September; copy available from P Frankhauser, Institut de Recherche et d'Analyse des Dynamiques \u00e9conomiques et Spatiales, Universit\u00e9 de Franche-Comt\u00e9, 25030 Besan\u00e7on cedex"
+        },
+        {
+          "key": "bibr23-a251175",
+          "first-page": "57",
+          "volume-title": "Proceedings of the Second International Colloquium of the Sonderforschungsbereich 230: Natural Structures",
+          "author": "Frankhauser P",
+          "year": "1991"
+        },
+        {
+          "key": "bibr24-a251175",
+          "first-page": "640",
+          "volume": "22",
+          "author": "Grassberger P",
+          "year": "1991",
+          "journal-title": "La Recherche"
+        },
+        {
+          "key": "bibr25-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-94-009-0939-7"
+        },
+        {
+          "key": "bibr26-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/CBO9780511597237"
+        },
+        {
+          "key": "bibr27-a251175",
+          "volume-title": "The Death and Life of Great American Cities",
+          "author": "Jacobs J",
+          "year": "1961"
+        },
+        {
+          "key": "bibr28-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-2789(90)90071-V"
+        },
+        {
+          "key": "bibr29-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-2789(86)90237-X"
+        },
+        {
+          "key": "bibr30-a251175",
+          "first-page": "1",
+          "volume-title": "Artificial Life: The Proceedings of an Interdisciplinary Workshop on the Synthesis and Simulation of Living Systems. Santa Fe Institute Studies in the Science of Complexity",
+          "volume": "6",
+          "author": "Langton C",
+          "year": "1989"
+        },
+        {
+          "key": "bibr31-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-2789(90)90064-V"
+        },
+        {
+          "key": "bibr32-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1119/1.13295"
+        },
+        {
+          "key": "bibr33-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/347056a0"
+        },
+        {
+          "key": "bibr34-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF01019781"
+        },
+        {
+          "key": "bibr35-a251175",
+          "volume-title": "Urban Atlas: 20 American Cities",
+          "author": "Passonneau J",
+          "year": "1966"
+        },
+        {
+          "key": "bibr36-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1538-4632.1989.tb00889.x"
+        },
+        {
+          "key": "bibr37-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1538-4632.1987.tb00121.x"
+        },
+        {
+          "key": "bibr38-a251175",
+          "volume-title": "Spatial Interaction Models: New Directions",
+          "author": "Reggiani A",
+          "year": "1990"
+        },
+        {
+          "key": "bibr39-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-94-009-9394-5_18"
+        },
+        {
+          "key": "bibr40-a251175",
+          "first-page": "264",
+          "volume-title": "Proceedings of the International Congress on Mathematics, 1950",
+          "volume": "2",
+          "author": "Ulam S",
+          "year": "1952"
+        },
+        {
+          "key": "bibr41-a251175",
+          "volume-title": "Theory of Self-reproducing Automata",
+          "author": "von Neumann J",
+          "year": "1966"
+        },
+        {
+          "key": "bibr42-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1467-9787.1987.tb01181.x"
+        },
+        {
+          "key": "bibr43-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1538-4632.1977.tb00576.x"
+        },
+        {
+          "key": "bibr44-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1538-4632.1978.tb00011.x"
+        },
+        {
+          "key": "bibr45-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-94-017-3048-8_21"
+        },
+        {
+          "key": "bibr46-a251175",
+          "volume-title": "\u201cCellular dynamics and GIS: Modelling spatial complexity\u201d",
+          "author": "White R",
+          "year": "1992"
+        },
+        {
+          "key": "bibr47-a251175",
+          "first-page": "137",
+          "volume-title": "Spatial Interaction, Theory, and Planning Models",
+          "author": "Wilson A",
+          "year": "1978"
+        },
+        {
+          "key": "bibr48-a251175",
+          "first-page": "201",
+          "volume-title": "European Progress in Spatial Analysis",
+          "author": "Wilson A",
+          "year": "1981"
+        },
+        {
+          "key": "bibr49-a251175",
+          "first-page": "5",
+          "volume-title": "London Papers in Regional Science 10. Developments in Urban and Regional Analysts",
+          "author": "Wilson A",
+          "year": "1979"
+        },
+        {
+          "key": "bibr50-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/RevModPhys.55.601"
+        },
+        {
+          "key": "bibr51-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-2789(84)90245-8"
+        },
+        {
+          "key": "bibr52-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-2789(86)90309-X"
+        },
+        {
+          "key": "bibr53-a251175",
+          "volume-title": "Theory and Applications of Cellular Automata",
+          "author": "Wolfram S",
+          "year": "1986"
+        },
+        {
+          "key": "bibr54-a251175",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/490553"
+        }
+      ],
+      "container-title": [
+        "Environment and Planning A: Economy and Space"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1068/a251175",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1068/a251175",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            28
+          ]
+        ],
+        "date-time": "2026-04-28T21:40:29Z",
+        "timestamp": 1777412429000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://journals.sagepub.com/doi/10.1068/a251175"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1993,
+            8
+          ]
+        ]
+      },
+      "references-count": 54,
+      "journal-issue": {
+        "issue": "8",
+        "published-print": {
+          "date-parts": [
+            [
+              1993,
+              8
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1068/a251175"
+      ],
+      "URL": "https://doi.org/10.1068/a251175",
+      "relation": {},
+      "ISSN": [
+        "0308-518X",
+        "1472-3409"
+      ],
+      "issn-type": [
+        {
+          "value": "0308-518X",
+          "type": "print"
+        },
+        {
+          "value": "1472-3409",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1993,
+            8
+          ]
+        ]
+      }
+    }
+  }
+}

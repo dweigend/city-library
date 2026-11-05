@@ -1,0 +1,240 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frspb.2002.2161%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1098/rspb.2002.2161\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "12495507",
+          "source": "MED",
+          "pmid": "12495507",
+          "pmcid": "PMC1691164",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC1691164"
+            ]
+          },
+          "doi": "10.1098/rspb.2002.2161",
+          "title": "The evolution of anisogamy: a game-theoretic approach.",
+          "authorString": "Bulmer MG, Parker GA.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Bulmer MG",
+                "lastName": "Bulmer",
+                "firstName": "M G",
+                "initials": "MG",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "The Old Vicarage, Chittlehampton, Umberleigh, Devon EX37 9RQ, UK. mg.bulmer@virgin.net"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Parker GA",
+                "lastName": "Parker",
+                "firstName": "G A",
+                "initials": "GA"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "1507",
+            "volume": "269",
+            "journalIssueId": 1226172,
+            "dateOfPublication": "2002 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2002,
+            "journal": {
+              "medlineAbbreviation": "Proc Biol Sci",
+              "title": "Proceedings. Biological sciences",
+              "essn": "1471-2954",
+              "issn": "0962-8452",
+              "isoabbreviation": "Proc Biol Sci",
+              "nlmid": "101245157"
+            },
+            "printPublicationDate": "2002-11-01"
+          },
+          "pubYear": "2002",
+          "pageInfo": "2381-2388",
+          "abstractText": "A popular theory has proposed that anisogamy originated through disruptive selection acting on an ancestral isogamous population, though recent work has emphasized the importance of other factors in its evolution. We re-examine the disruptive selection theory, starting from an isogamous population with two mating types and taking into account the functional relationship, g(m), between the fitness of a gamete and its size, m, as well as the relationship, f(S), between the fitness of a zygote and its size, S. Evolutionary game theory is used to determine the existence and continuous stability of isogamous and anisogamous strategies for the two mating types under various models for the two functions g(m) and f(S). In the ancestral unicellular state, these two functions are likely to have been similar; this leads to isogamy whether they are sigmoidal or concave, though in the latter case allowance must be made for a minimal gamete size. The development of multicellularity may leave g(m) relatively unchanged while f(S) moves to the right, leading to the evolution of anisogamy. Thus, the disruptive selection theory provides a powerful explanation of the origin of anisogamy, though other selective forces may have been involved in the subsequent specialization of micro- and macrogametes.",
+          "affiliation": "The Old Vicarage, Chittlehampton, Umberleigh, Devon EX37 9RQ, UK. mg.bulmer@virgin.net",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Germ Cells",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "CY",
+                      "qualifierName": "cytology"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Ovum",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Spermatozoa",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Reproduction"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Game Theory"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Female"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Selection, Genetic"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Biological Evolution"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1098/rspb.2002.2161"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC1691164"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC1691164?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1098/rspb.2002.2161"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "reference": "Proc R Soc Lond B Biol Sci. 2002 Dec 22;269(1509):2603",
+                "type": "Erratum in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 72,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2003-04-10",
+          "dateOfCreation": "2002-12-24",
+          "dateOfRevision": "2018-11-13",
+          "firstPublicationDate": "2002-11-01",
+          "firstIndexDate": "2010-09-15",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

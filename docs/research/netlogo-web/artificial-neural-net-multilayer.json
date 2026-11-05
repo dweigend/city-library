@@ -1,0 +1,110 @@
+{
+  "slug": "artificial-neural-net-multilayer",
+  "name": "Artificial Neural Net - Multilayer",
+  "catalogPath": "Sample Models/Computer Science/Artificial Neural Net - Multilayer",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Artificial%20Neural%20Net%20-%20Multilayer.nlogox",
+  "deliveryBatch": "B18",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does adding nonlinear hidden units change what a small network can learn? NetLogo Artificial Neural Net Multilayer propagates weighted inputs through a hidden layer and sigmoid activations, then adjusts weights using supervised errors. Rosenblatt [1] supplies the single-perceptron reference point, Rumelhart and colleagues [2] establish backpropagation learning, and Cybenko [3] provides a theoretical account of approximation by sigmoidal networks. The teaching example makes the architectural contrast with exclusive OR visible: hidden representations can separate cases that one linear threshold cannot. Random initial weights, learning rate, hidden structure, and the finite training sequence affect progress. Expressive capacity is distinct from successful optimization, and decreasing training error alone does not establish generalization. The baseline illustrates a deliberately small learning mechanism rather than modern large-scale neural training or a physiological model of a brain.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Artificial%20Neural%20Net%20-%20Multilayer.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Artificial%20Neural%20Net%20-%20Multilayer.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 dec9e3394cde9d0fae15d15a0e75763f854dd908e00804924667e92e8211d4e9",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/artificial-neural-net-multilayer.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Rand, W. and Wilensky, U. (2006).  NetLogo Artificial Neural Net - Multilayer model.  http://ccl.northwestern.edu/netlogo/models/ArtificialNeuralNet-Multilayer.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/artificial-neural-net-multilayer.nlogox",
+    "evidenceFile": "evidence/computing/artificial-neural-net-multilayer.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1037/h0042519",
+      "authors": [
+        "F. Rosenblatt"
+      ],
+      "title": "The perceptron: A probabilistic model for information storage and organization in the brain.",
+      "year": 1958,
+      "venue": "Psychological Review",
+      "doi": "10.1037/h0042519",
+      "url": "https://doi.org/10.1037/h0042519",
+      "relevance": "The original threshold model supplies the baseline whose linear limitation motivates a hidden layer.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1037%2Fh0042519",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1037_h0042519.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1037_h0042519.json"
+      },
+      "publisher": "American Psychological Association (APA)",
+      "volume": "65",
+      "issue": "6",
+      "pages": "386-408",
+      "verified": true
+    },
+    {
+      "id": "10.1038/323533a0",
+      "authors": [
+        "David E. Rumelhart",
+        "Geoffrey E. Hinton",
+        "Ronald J. Williams"
+      ],
+      "title": "Learning representations by back-propagating errors",
+      "year": 1986,
+      "venue": "Nature",
+      "doi": "10.1038/323533a0",
+      "url": "https://doi.org/10.1038/323533a0",
+      "relevance": "Direct foundational method for error-based weight updates through multilayer representations.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2F323533a0",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1038_323533a0.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1038_323533a0.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "323",
+      "issue": "6088",
+      "pages": "533-536",
+      "verified": true
+    },
+    {
+      "id": "10.1007/bf02551274",
+      "authors": [
+        "G. Cybenko"
+      ],
+      "title": "Approximation by superpositions of a sigmoidal function",
+      "year": 1989,
+      "venue": "Mathematics of Control, Signals, and Systems",
+      "doi": "10.1007/bf02551274",
+      "url": "https://doi.org/10.1007/bf02551274",
+      "relevance": "Sigmoidal approximation theory connects nonlinear hidden units with increased expressive capacity, without guaranteeing convergence.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF02551274",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_bf02551274.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_bf02551274.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "2",
+      "issue": "4",
+      "pages": "303-314",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,98 @@
+{
+  "slug": "cash-flow",
+  "name": "Cash Flow",
+  "catalogPath": "Sample Models/Social Science/Economics/Unverified/Cash Flow",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Unverified/Cash%20Flow.nlogox",
+  "deliveryBatch": "B03",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether reserve constraints and local payments jointly alter money holdings and inequality. In NetLogo's Cash Flow model, mobile agents exchange money, settle wallet balances through savings and loans, and interact with a single aggregate bank. The selected literature connects this mechanism to distributional accounting and banking assumptions: empirical bank-accounting analysis challenges simple intermediation interpretations [1]; comparison of banking theories tests alternative credit-creation accounts [2]; central-bank research directly qualifies mechanical deposit-multiplier reasoning [3]. A reserve-driven money multiplier is a pedagogical assumption; modern credit creation, interest and lending constraints require a richer institutional account. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Unverified/Cash%20Flow.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Unverified/Cash%20Flow.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/cash-flow.nlogox",
+    "sha256": "ab4aea96508e1d141a7c2571868fa1532b8db35b234824e0d7df5e1b66f9126c",
+    "citation": "For the model itself: * Wilensky, U. (1998). NetLogo Cash Flow model. http://ccl.northwestern.edu/netlogo/models/CashFlow. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Info does not identify a scientific original; related publications below are contextual comparisons, not asserted source derivations.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/cash-flow.nlogox"
+  },
+  "publications": [
+    {
+      "id": "banks",
+      "creatorRole": "author",
+      "authors": [
+        "Richard A. Werner"
+      ],
+      "title": "Can banks individually create money out of nothing? — The theories and the empirical evidence",
+      "year": 2014,
+      "venue": "International Review of Financial Analysis",
+      "doi": "10.1016/j.irfa.2014.07.015",
+      "url": "https://doi.org/10.1016/j.irfa.2014.07.015",
+      "relevance": "empirical bank-accounting analysis challenges simple intermediation interpretations",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.irfa.2014.07.015",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/banks-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/banks-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "banktest",
+      "creatorRole": "author",
+      "authors": [
+        "Richard A. Werner"
+      ],
+      "title": "A lost century in economics: Three theories of banking and the conclusive evidence",
+      "year": 2016,
+      "venue": "International Review of Financial Analysis",
+      "doi": "10.1016/j.irfa.2015.08.014",
+      "url": "https://doi.org/10.1016/j.irfa.2015.08.014",
+      "relevance": "comparison of banking theories tests alternative credit-creation accounts",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.irfa.2015.08.014",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/banktest-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/banktest-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "authors": [
+        "Michael McLeay",
+        "Amar Radia",
+        "Ryland Thomas"
+      ],
+      "title": "Money creation in the modern economy",
+      "year": 2014,
+      "venue": "Bank of England Quarterly Bulletin, 2014 Q1",
+      "doi": null,
+      "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy",
+      "verification": {
+        "consultedUrl": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public institutional publication and summary",
+        "notes": "Institutional research article. Author names, publication date and summary consulted on the Bank of England page. Its explicit criticism of deposit-multiplication misconceptions qualifies the NetLogo reserve-ratio mechanism. Full PDF not claimed; no DOI displayed.",
+        "evidencePath": "evidence/social-urban/web-primary-banking-signaling.json",
+        "evidenceFile": "evidence/social-urban/web-primary-banking-signaling.json"
+      },
+      "id": "boe",
+      "relevance": "central-bank research directly qualifies mechanical deposit-multiplier reasoning",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

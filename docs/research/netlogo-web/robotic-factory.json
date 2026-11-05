@@ -1,0 +1,115 @@
+{
+  "slug": "robotic-factory",
+  "name": "Robotic Factory",
+  "catalogPath": "Sample Models/Computer Science/Robotic Factory",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robotic%20Factory.nlogox",
+  "deliveryBatch": "B18",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can decentralized transport sustain production when robots face energy constraints and processing bottlenecks? NetLogo Robotic Factory moves materials through cutters, stitchers, finishers, storage, and loading facilities using locally controlled robots. Different garment types and processing times create unequal demands; robots carrying products spend energy and must return to recharge. Chi and colleagues [1] analyze misconceptions about emergent causation, Wilensky and Resnick [2] distinguish agent-level actions from system-level patterns, and Hölldobler and Wilson [3] provide the social-insect analogy cited by the original model. The simulation illustrates how transport, charging, and queues jointly affect throughput. Its fixed factory layout, simplified jobs, and specified energy rules are assumptions rather than measured industrial parameters. Productive-looking self-organization does not demonstrate optimal scheduling, real factory resilience, or superiority over a well-designed centralized controller.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robotic%20Factory.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robotic%20Factory.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 d7e79d6b2647227ce73799b2b94c0f9dbdbfeb3d42e825ed96e270549194c9fd",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/robotic-factory.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Martin, K. and Wilensky, U. (2021).  NetLogo Robotic Factory model.  http://ccl.northwestern.edu/netlogo/models/RoboticFactory.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/robotic-factory.nlogox",
+    "evidenceFile": "evidence/computing/robotic-factory.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1111/j.1551-6709.2011.01207.x",
+      "authors": [
+        "Michelene T. H. Chi",
+        "Rod D. Roscoe",
+        "James D. Slotta",
+        "Marguerite Roy",
+        "Catherine C. Chase"
+      ],
+      "title": "Misconceived Causal Explanations for Emergent Processes",
+      "year": 2012,
+      "venue": "Cognitive Science",
+      "doi": "10.1111/j.1551-6709.2011.01207.x",
+      "url": "https://doi.org/10.1111/j.1551-6709.2011.01207.x",
+      "relevance": "Directly cited by the original Info to explain emergent versus sequential causal accounts.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1111%2Fj.1551-6709.2011.01207.x",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1111_j_1551_6709_2011_01207_x.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1111_j_1551_6709_2011_01207_x.json"
+      },
+      "publisher": "Wiley",
+      "volume": "36",
+      "issue": "1",
+      "pages": "1-61",
+      "verified": true
+    },
+    {
+      "id": "10.1023/a:1009421303064",
+      "authors": [
+        "Uri Wilensky",
+        "Mitchel Resnick"
+      ],
+      "title": "Thinking in Levels: A Dynamic Systems Approach to Making Sense of the World",
+      "year": 1999,
+      "venue": "Journal of Science Education and Technology",
+      "doi": "10.1023/a:1009421303064",
+      "url": "https://doi.org/10.1023/a:1009421303064",
+      "relevance": "Directly cited conceptual foundation for separating robot actions from aggregate factory performance.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1023%2FA%3A1009421303064",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1023_a_1009421303064.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1023_a_1009421303064.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "8",
+      "issue": "1",
+      "pages": "3-19",
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-3-662-10306-7",
+      "authors": [
+        "Bert Hölldobler",
+        "Edward O. Wilson"
+      ],
+      "title": "The Ants",
+      "year": 1990,
+      "venue": "Springer Berlin Heidelberg",
+      "doi": "10.1007/978-3-662-10306-7",
+      "url": "https://doi.org/10.1007/978-3-662-10306-7",
+      "relevance": "The original model’s biological inspiration supports decentralized coordination as an analogy; it does not validate the factory’s numerical rules.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-3-662-10306-7",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_3_662_10306_7.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_3_662_10306_7.json"
+      },
+      "publisher": "Springer Berlin Heidelberg",
+      "isbn": [
+        "9783662103081",
+        "9783662103067"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

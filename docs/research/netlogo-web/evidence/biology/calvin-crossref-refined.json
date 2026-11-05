@@ -1,0 +1,3625 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+path+of+carbon+in+photosynthesis&rows=4",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1283247,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                13
+              ]
+            ],
+            "date-time": "2026-02-13T08:43:23Z",
+            "timestamp": 1770972203683,
+            "version": "3.50.1"
+          },
+          "reference-count": 173,
+          "publisher": "Elsevier",
+          "isbn-type": [
+            {
+              "value": "9780121148607",
+              "type": "print"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1976,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "1976-01-01T00:00:00Z",
+                "timestamp": 189302400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1976
+              ]
+            ]
+          },
+          "DOI": "10.1016/b978-0-12-114860-7.50029-6",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2014,
+                8,
+                14
+              ]
+            ],
+            "date-time": "2014-08-14T21:40:20Z",
+            "timestamp": 1408052420000
+          },
+          "page": "797-844",
+          "source": "Crossref",
+          "is-referenced-by-count": 34,
+          "title": [
+            "Photosynthesis: The Path of Carbon"
+          ],
+          "prefix": "10.1016",
+          "author": [
+            {
+              "given": "M.D.",
+              "family": "HATCH",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib1",
+              "first-page": "107",
+              "volume": "2",
+              "author": "Akazawa",
+              "year": "1970",
+              "journal-title": "Progr. Phytochem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib2",
+              "doi-asserted-by": "crossref",
+              "first-page": "484",
+              "DOI": "10.1016/0005-2744(73)90190-3",
+              "volume": "321",
+              "author": "Anderson",
+              "year": "1973",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1042/bj1140117",
+              "volume": "114",
+              "author": "Andrews",
+              "year": "1969",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib4",
+              "doi-asserted-by": "crossref",
+              "first-page": "2005",
+              "DOI": "10.1016/S0031-9422(00)97186-3",
+              "volume": "10",
+              "author": "Andrews",
+              "year": "1971",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "11",
+              "DOI": "10.1021/bi00725a003",
+              "volume": "12",
+              "author": "Andrews",
+              "year": "1973",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib6",
+              "series-title": "Proc. Int. Congr. Photosyn., 3rd 1974",
+              "first-page": "1421",
+              "author": "Badger",
+              "year": "1974"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "39",
+              "DOI": "10.1104/pp.53.1.39",
+              "volume": "53",
+              "author": "Bahr",
+              "year": "1974",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "1180",
+              "DOI": "10.1016/0006-291X(74)90821-3",
+              "volume": "57",
+              "author": "Bahr",
+              "year": "1974",
+              "journal-title": "Biochem. Biophys. Res. Comun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "408",
+              "DOI": "10.1016/0003-9861(74)90049-6",
+              "volume": "164",
+              "author": "Bahr",
+              "year": "1974",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "101",
+              "DOI": "10.1146/annurev.pp.15.060164.000533",
+              "volume": "15",
+              "author": "Bassham",
+              "year": "1964",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib11",
+              "series-title": "Plant Biochemistry",
+              "first-page": "875",
+              "author": "Bassham",
+              "year": "1965"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "526",
+              "DOI": "10.1126/science.172.3983.526",
+              "volume": "172",
+              "author": "Bassham",
+              "year": "1971",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib13",
+              "series-title": "Harvesting the Sun",
+              "first-page": "79",
+              "author": "Bassham",
+              "year": "1967"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib14",
+              "series-title": "Comparative Biochemistry and Biophysics of Photosynthesis",
+              "first-page": "365",
+              "author": "Bassham",
+              "year": "1968"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib15",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "483",
+              "author": "Beevers",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib16",
+              "first-page": "119",
+              "volume": "4B",
+              "author": "Beevers",
+              "year": "1966"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib17",
+              "doi-asserted-by": "crossref",
+              "first-page": "1239",
+              "DOI": "10.1016/S0031-9422(00)84324-1",
+              "volume": "10",
+              "author": "Bender",
+              "year": "1971",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib18",
+              "doi-asserted-by": "crossref",
+              "first-page": "427",
+              "DOI": "10.1104/pp.52.5.427",
+              "volume": "52",
+              "author": "Bender",
+              "year": "1973",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib19",
+              "doi-asserted-by": "crossref",
+              "first-page": "777",
+              "DOI": "10.1139/b70-106",
+              "volume": "48",
+              "author": "Berry",
+              "year": "1970",
+              "journal-title": "Can. J. Bot."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "70",
+              "DOI": "10.1104/pp.45.1.70",
+              "volume": "45",
+              "author": "Bidwell",
+              "year": "1970",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "366",
+              "DOI": "10.1016/0304-4165(65)90005-X",
+              "volume": "100",
+              "author": "Bird",
+              "year": "1965",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib22",
+              "series-title": "Prediction and Measurement of Photosynthetic Productivity",
+              "first-page": "267",
+              "author": "Bj\u00f6rkman",
+              "year": "1970"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib23",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "18",
+              "author": "Bj\u00f6rkman",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib24",
+              "doi-asserted-by": "crossref",
+              "first-page": "197",
+              "DOI": "10.1007/BF00385062",
+              "volume": "88",
+              "author": "Bj\u00f6rkman",
+              "year": "1969",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib25",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "105",
+              "author": "Bj\u00f6rkman",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib26",
+              "doi-asserted-by": "crossref",
+              "first-page": "253",
+              "DOI": "10.1146/annurev.pp.24.060173.001345",
+              "volume": "24",
+              "author": "Black",
+              "year": "1973",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib27",
+              "doi-asserted-by": "crossref",
+              "first-page": "338",
+              "DOI": "10.1017/S0043174500054187",
+              "volume": "17",
+              "author": "Black",
+              "year": "1969",
+              "journal-title": "Weed Sci."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib28",
+              "doi-asserted-by": "crossref",
+              "first-page": "2171",
+              "DOI": "10.1016/S0021-9258(19)45507-5",
+              "volume": "247",
+              "author": "Bowes",
+              "year": "1972",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib29",
+              "doi-asserted-by": "crossref",
+              "first-page": "716",
+              "DOI": "10.1016/0006-291X(71)90475-X",
+              "volume": "45",
+              "author": "Bowes",
+              "year": "1971",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib30",
+              "doi-asserted-by": "crossref",
+              "first-page": "66",
+              "DOI": "10.1104/pp.33.1.66",
+              "volume": "3",
+              "author": "Bradbeer",
+              "year": "1958",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "157",
+              "DOI": "10.1016/0014-5793(72)80329-6",
+              "volume": "23",
+              "author": "Buchanan",
+              "year": "1972",
+              "journal-title": "FEBS (Fed. Eur. Biochem. Soc.) Lett."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib32",
+              "doi-asserted-by": "crossref",
+              "first-page": "74",
+              "DOI": "10.1016/0006-291X(67)90543-8",
+              "volume": "29",
+              "author": "Buchanan",
+              "year": "1967",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib33",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "68",
+              "author": "Bull",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib34",
+              "doi-asserted-by": "crossref",
+              "first-page": "1277",
+              "DOI": "10.1139/b71-181",
+              "volume": "49",
+              "author": "Bulley",
+              "year": "1971",
+              "journal-title": "Can. J. Bot."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib35",
+              "doi-asserted-by": "crossref",
+              "first-page": "365",
+              "DOI": "10.1016/0020-708X(62)90008-X",
+              "volume": "13",
+              "author": "Burr",
+              "year": "1962",
+              "journal-title": "Int. J. Appl. Radiat. Isotop."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib36",
+              "series-title": "The Photosynthesis of Carbon Compounds.",
+              "author": "Calvin",
+              "year": "1962"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib37",
+              "doi-asserted-by": "crossref",
+              "first-page": "199",
+              "DOI": "10.1104/pp.47.2.199",
+              "volume": "47",
+              "author": "Chen",
+              "year": "1971",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib38",
+              "doi-asserted-by": "crossref",
+              "first-page": "461",
+              "DOI": "10.1016/0006-291X(73)91279-5",
+              "volume": "51",
+              "author": "Chen",
+              "year": "1973",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib39",
+              "doi-asserted-by": "crossref",
+              "first-page": "224",
+              "DOI": "10.1104/pp.50.2.224",
+              "volume": "50",
+              "author": "Chu",
+              "year": "1972",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib40",
+              "doi-asserted-by": "crossref",
+              "first-page": "35",
+              "DOI": "10.1080/01614947408075369",
+              "volume": "9",
+              "author": "Clark",
+              "year": "1974",
+              "journal-title": "Catal. Rev."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib41",
+              "doi-asserted-by": "crossref",
+              "first-page": "95",
+              "DOI": "10.1007/BF00384832",
+              "volume": "110",
+              "author": "Coombs",
+              "year": "1973",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib42",
+              "first-page": "1",
+              "volume": "40",
+              "author": "Cooper",
+              "year": "1970",
+              "journal-title": "Herb. Abstr."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib43",
+              "doi-asserted-by": "crossref",
+              "first-page": "1081",
+              "DOI": "10.1016/S0021-9258(18)91899-5",
+              "volume": "244",
+              "author": "Cooper",
+              "year": "1969",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib44",
+              "doi-asserted-by": "crossref",
+              "first-page": "357",
+              "DOI": "10.1104/pp.52.4.357",
+              "volume": "52",
+              "author": "Dittrich",
+              "year": "1973",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib45",
+              "doi-asserted-by": "crossref",
+              "first-page": "216",
+              "DOI": "10.1007/BF00385069",
+              "volume": "88",
+              "author": "Downes",
+              "year": "1969",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib46",
+              "doi-asserted-by": "crossref",
+              "first-page": "775",
+              "DOI": "10.1071/BI9700775",
+              "volume": "23",
+              "author": "Downes",
+              "year": "1970",
+              "journal-title": "Aust. J. Biol. Sci."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib47",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "3",
+              "author": "Downton",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib48",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "153",
+              "author": "Edwards",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib49",
+              "doi-asserted-by": "crossref",
+              "first-page": "149",
+              "DOI": "10.1104/pp.47.1.149",
+              "volume": "47",
+              "author": "Edwards",
+              "year": "1971",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib50",
+              "doi-asserted-by": "crossref",
+              "first-page": "389",
+              "DOI": "10.1016/0006-291X(70)90589-9",
+              "volume": "39",
+              "author": "Edwards",
+              "year": "1970",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib51",
+              "doi-asserted-by": "crossref",
+              "first-page": "278",
+              "DOI": "10.1016/0006-291X(71)90814-X",
+              "volume": "45",
+              "author": "Edwards",
+              "year": "1971",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib52",
+              "doi-asserted-by": "crossref",
+              "first-page": "44",
+              "DOI": "10.1126/science.155.3758.44",
+              "volume": "155",
+              "author": "Enns",
+              "year": "1967",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib53",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "130",
+              "author": "Evans",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib54",
+              "doi-asserted-by": "crossref",
+              "first-page": "25",
+              "DOI": "10.1016/S0031-9422(00)86610-8",
+              "volume": "9",
+              "author": "Everson",
+              "year": "1970",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib55",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "275",
+              "author": "Everson",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib56",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "281",
+              "author": "Everson",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib57",
+              "doi-asserted-by": "crossref",
+              "first-page": "581",
+              "DOI": "10.1016/S0031-9422(00)88230-8",
+              "volume": "7",
+              "author": "Everson",
+              "year": "1968",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib58",
+              "doi-asserted-by": "crossref",
+              "first-page": "840",
+              "DOI": "10.1104/pp.42.6.840",
+              "volume": "42",
+              "author": "Everson",
+              "year": "1967",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib59",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "202",
+              "author": "Fairneau",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib60",
+              "first-page": "215",
+              "volume": "3",
+              "author": "Garnier-Dardart",
+              "year": "1965",
+              "journal-title": "Physiol. Veg."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib61",
+              "doi-asserted-by": "crossref",
+              "first-page": "757",
+              "DOI": "10.1146/annurev.bi.36.070167.003545",
+              "volume": "36",
+              "author": "Gibbs",
+              "year": "1967",
+              "journal-title": "Annu. Rev. Biochem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib62",
+              "series-title": "Structure and Function of Chloroplasts.",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib63",
+              "doi-asserted-by": "crossref",
+              "first-page": "107",
+              "DOI": "10.1071/PP9740107",
+              "volume": "1",
+              "author": "Gifford",
+              "year": "1974",
+              "journal-title": "Aust. J. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib64",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "267",
+              "author": "Graham",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib65",
+              "series-title": "Prediction and Measurement of Photosynthetic Productivity",
+              "first-page": "215",
+              "author": "Hatch",
+              "year": "1970"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib66",
+              "doi-asserted-by": "crossref",
+              "first-page": "425",
+              "DOI": "10.1042/bj1250425",
+              "volume": "125",
+              "author": "Hatch",
+              "year": "1971",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib67",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "139",
+              "author": "Hatch",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib68",
+              "doi-asserted-by": "crossref",
+              "first-page": "207",
+              "DOI": "10.1016/0003-9861(73)90358-5",
+              "volume": "156",
+              "author": "Hatch",
+              "year": "1973",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib69",
+              "first-page": "25",
+              "volume": "2",
+              "author": "Hatch",
+              "year": "1973"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib70",
+              "doi-asserted-by": "crossref",
+              "first-page": "842",
+              "DOI": "10.1016/0003-9861(73)90526-2",
+              "volume": "159",
+              "author": "Hatch",
+              "year": "1973",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib71",
+              "doi-asserted-by": "crossref",
+              "first-page": "346",
+              "DOI": "10.1016/S0003-9861(74)80043-3",
+              "volume": "160",
+              "author": "Hatch",
+              "year": "1974",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib72",
+              "doi-asserted-by": "crossref",
+              "first-page": "357",
+              "DOI": "10.1071/PP9740357",
+              "volume": "1",
+              "author": "Hatch",
+              "year": "1974",
+              "journal-title": "Aust. J. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib73",
+              "doi-asserted-by": "crossref",
+              "first-page": "195",
+              "DOI": "10.1016/0003-9861(73)90357-3",
+              "volume": "156",
+              "author": "Hatch",
+              "year": "1973",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib74",
+              "doi-asserted-by": "crossref",
+              "first-page": "103",
+              "DOI": "10.1042/bj1010103",
+              "volume": "101",
+              "author": "Hatch",
+              "year": "1966",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib75",
+              "doi-asserted-by": "crossref",
+              "first-page": "141",
+              "DOI": "10.1042/bj1060141",
+              "volume": "106",
+              "author": "Hatch",
+              "year": "1968",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib76",
+              "doi-asserted-by": "crossref",
+              "first-page": "549",
+              "DOI": "10.1042/bj1120549",
+              "volume": "112",
+              "author": "Hatch",
+              "year": "1969",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib77",
+              "doi-asserted-by": "crossref",
+              "first-page": "589",
+              "DOI": "10.1016/0006-291X(69)90778-5",
+              "volume": "34",
+              "author": "Hatch",
+              "year": "1969",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib78",
+              "doi-asserted-by": "crossref",
+              "first-page": "141",
+              "DOI": "10.1146/annurev.pp.21.060170.001041",
+              "volume": "21",
+              "author": "Hatch",
+              "year": "1970",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib79",
+              "first-page": "35",
+              "volume": "2",
+              "author": "Hatch",
+              "year": "1970",
+              "journal-title": "Progr. Phytochem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib80",
+              "doi-asserted-by": "crossref",
+              "first-page": "417",
+              "DOI": "10.1042/bj1020417",
+              "volume": "102",
+              "author": "Hatch",
+              "year": "1967",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib81",
+              "doi-asserted-by": "crossref",
+              "first-page": "697",
+              "DOI": "10.1016/S0031-9422(00)85841-0",
+              "volume": "8",
+              "author": "Hatch",
+              "year": "1969",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib82",
+              "series-title": "Photosynthesis and Photorespiration.",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib83",
+              "series-title": "Transport and Distribution of Matter in Cells of Higher Plants",
+              "first-page": "151",
+              "author": "Heber",
+              "year": "1970"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib84",
+              "doi-asserted-by": "crossref",
+              "first-page": "393",
+              "DOI": "10.1146/annurev.pp.25.060174.002141",
+              "volume": "25",
+              "author": "Heber",
+              "year": "1974",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib85",
+              "doi-asserted-by": "crossref",
+              "first-page": "718",
+              "DOI": "10.1515/znb-1970-0714",
+              "volume": "25",
+              "author": "Heber",
+              "year": "1970",
+              "journal-title": "Z. Naturforsch. B"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib86",
+              "first-page": "393",
+              "volume": "82",
+              "author": "Heber",
+              "year": "1964",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib87",
+              "doi-asserted-by": "crossref",
+              "first-page": "242",
+              "DOI": "10.1104/pp.50.2.242",
+              "volume": "50",
+              "author": "Huang",
+              "year": "1972",
+              "journal-title": "Plant. Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib88",
+              "doi-asserted-by": "crossref",
+              "first-page": "385",
+              "DOI": "10.1146/annurev.pp.21.060170.002125",
+              "volume": "21",
+              "author": "Jackson",
+              "year": "1970",
+              "journal-title": "Annu. Rev. Plant. Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib89",
+              "doi-asserted-by": "crossref",
+              "first-page": "1095",
+              "DOI": "10.1073/pnas.56.4.1095",
+              "volume": "56",
+              "author": "Jensen",
+              "year": "1966",
+              "journal-title": "Proc. Nat. Acad. Sci. U.S."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib90",
+              "doi-asserted-by": "crossref",
+              "first-page": "375",
+              "DOI": "10.1016/S0031-9422(00)90875-6",
+              "volume": "7",
+              "author": "Johnson",
+              "year": "1968",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib91",
+              "doi-asserted-by": "crossref",
+              "first-page": "127",
+              "DOI": "10.1042/bj1140127",
+              "volume": "114",
+              "author": "Johnson",
+              "year": "1969",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib92",
+              "doi-asserted-by": "crossref",
+              "first-page": "273",
+              "DOI": "10.1042/bj1190273",
+              "volume": "119",
+              "author": "Johnson",
+              "year": "1970",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib93",
+              "doi-asserted-by": "crossref",
+              "first-page": "51",
+              "DOI": "10.1071/PP9740051",
+              "volume": "1",
+              "author": "Kagawa",
+              "year": "1974",
+              "journal-title": "Aust. J. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib94",
+              "doi-asserted-by": "crossref",
+              "first-page": "1326",
+              "DOI": "10.1016/0006-291X(74)90459-8",
+              "volume": "59",
+              "author": "Kagawa",
+              "year": "1974",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib95",
+              "doi-asserted-by": "crossref",
+              "first-page": "157",
+              "DOI": "10.1007/BF00594793",
+              "volume": "60",
+              "author": "Kanai",
+              "year": "1973",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib96",
+              "doi-asserted-by": "crossref",
+              "first-page": "1133",
+              "DOI": "10.1104/pp.51.6.1133",
+              "volume": "51",
+              "author": "Kanai",
+              "year": "1973",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib97",
+              "first-page": "1",
+              "volume": "41",
+              "author": "Karpilov",
+              "year": "1960",
+              "journal-title": "Tr. Kazan. Agricult. Inst."
+            },
+            {
+              "issue": "Pt. 3",
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib98",
+              "first-page": "1",
+              "volume": "11",
+              "author": "Karpilov",
+              "year": "1970",
+              "journal-title": "Proc. Moldavian Inst. Irrigation Veg. Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib99",
+              "doi-asserted-by": "crossref",
+              "first-page": "1463",
+              "DOI": "10.1016/0006-291X(70)90551-6",
+              "volume": "41",
+              "author": "Kawashima",
+              "year": "1970",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib100",
+              "doi-asserted-by": "crossref",
+              "first-page": "11",
+              "DOI": "10.1146/annurev.pp.21.060170.000303",
+              "volume": "21",
+              "author": "Kirk",
+              "year": "1970",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib101",
+              "series-title": "The Plastids.",
+              "author": "Kirk",
+              "year": "1967"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib102",
+              "doi-asserted-by": "crossref",
+              "first-page": "414",
+              "DOI": "10.1007/BF00591524",
+              "volume": "58",
+              "author": "Kluge",
+              "year": "1971",
+              "journal-title": "Naturwissenshaften"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib103",
+              "doi-asserted-by": "crossref",
+              "first-page": "209",
+              "DOI": "10.1104/pp.40.2.209",
+              "volume": "40",
+              "author": "Kortschak",
+              "year": "1965",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib104",
+              "first-page": "13",
+              "volume": "65",
+              "author": "Krause",
+              "year": "1971",
+              "journal-title": "Z. Pflanzenphysiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib105",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "309",
+              "author": "Laetsch",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib106",
+              "first-page": "184",
+              "volume": "59",
+              "author": "Latzko",
+              "year": "1968",
+              "journal-title": "Z. Pflanzenphysiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib107",
+              "doi-asserted-by": "crossref",
+              "first-page": "1140",
+              "DOI": "10.1016/0006-291X(70)90678-9",
+              "volume": "38",
+              "author": "Latzko",
+              "year": "1970",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib108",
+              "doi-asserted-by": "crossref",
+              "first-page": "359",
+              "DOI": "10.1038/243359a0",
+              "volume": "243",
+              "author": "Lorimer",
+              "year": "1973",
+              "journal-title": "Nature (London)"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib109",
+              "doi-asserted-by": "crossref",
+              "first-page": "18",
+              "DOI": "10.1021/bi00725a004",
+              "volume": "12",
+              "author": "Lorimer",
+              "year": "1973",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib110",
+              "doi-asserted-by": "crossref",
+              "first-page": "207",
+              "DOI": "10.1016/0005-2744(71)90048-9",
+              "volume": "235",
+              "author": "Lowe",
+              "year": "1971",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib111",
+              "doi-asserted-by": "crossref",
+              "first-page": "903",
+              "DOI": "10.1016/S0031-9422(00)82174-3",
+              "volume": "7",
+              "author": "Mukerji",
+              "year": "1968",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib112",
+              "doi-asserted-by": "crossref",
+              "first-page": "1341",
+              "DOI": "10.1016/S0021-9258(18)97581-2",
+              "volume": "240",
+              "author": "M\u00fcllhofer",
+              "year": "1965",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib113",
+              "first-page": "159",
+              "volume": "230",
+              "author": "Ogren",
+              "year": "1971",
+              "journal-title": "Nature (London)"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib114",
+              "doi-asserted-by": "crossref",
+              "first-page": "607",
+              "DOI": "10.1104/pp.49.4.607",
+              "volume": "49",
+              "author": "O'Neal",
+              "year": "1972",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib115",
+              "doi-asserted-by": "crossref",
+              "first-page": "159",
+              "DOI": "10.1071/BI9710159",
+              "volume": "24",
+              "author": "Osmond",
+              "year": "1971",
+              "journal-title": "Aust. J. Biol. Sci."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib116",
+              "doi-asserted-by": "crossref",
+              "first-page": "228",
+              "DOI": "10.1104/pp.45.2.228",
+              "volume": "45",
+              "author": "Osmond",
+              "year": "1970",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib117",
+              "doi-asserted-by": "crossref",
+              "first-page": "270",
+              "DOI": "10.1016/0005-2728(71)90082-X",
+              "volume": "234",
+              "author": "Osmond",
+              "year": "1971",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib118",
+              "doi-asserted-by": "crossref",
+              "first-page": "41",
+              "DOI": "10.1038/246041a0",
+              "volume": "246",
+              "author": "Osmond",
+              "year": "1973",
+              "journal-title": "Nature (London)"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib119",
+              "first-page": "133",
+              "volume": "21",
+              "author": "Preiss",
+              "year": "1970",
+              "journal-title": "Annu. Rev. Plant. Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib120",
+              "doi-asserted-by": "crossref",
+              "first-page": "81",
+              "DOI": "10.1146/annurev.pp.11.060160.000501",
+              "volume": "11",
+              "author": "Ranson",
+              "year": "1960",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib121",
+              "doi-asserted-by": "crossref",
+              "first-page": "1219",
+              "DOI": "10.1139/b70-182",
+              "volume": "48",
+              "author": "Rehfeld",
+              "year": "1970",
+              "journal-title": "Can. J. Bot."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib122",
+              "doi-asserted-by": "crossref",
+              "first-page": "3730",
+              "DOI": "10.1073/pnas.70.12.3730",
+              "volume": "70",
+              "author": "Salin",
+              "year": "1973",
+              "journal-title": "Proc. Nat. Acad. Sci. U.S."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib123",
+              "doi-asserted-by": "crossref",
+              "first-page": "5486",
+              "DOI": "10.1016/S0021-9258(19)43629-6",
+              "volume": "248",
+              "author": "Seigel",
+              "year": "1973",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib124",
+              "doi-asserted-by": "crossref",
+              "first-page": "395",
+              "DOI": "10.1042/bj1140395",
+              "volume": "114",
+              "author": "Shah",
+              "year": "1969",
+              "journal-title": "Biochem, J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib125",
+              "doi-asserted-by": "crossref",
+              "first-page": "233",
+              "DOI": "10.1016/S0021-9258(18)55672-6",
+              "volume": "197",
+              "author": "Singer",
+              "year": "1952",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib126",
+              "doi-asserted-by": "crossref",
+              "first-page": "489",
+              "DOI": "10.1042/bj1140489",
+              "volume": "114",
+              "author": "Slack",
+              "year": "1969",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib127",
+              "doi-asserted-by": "crossref",
+              "first-page": "175",
+              "DOI": "10.1007/BF00387639",
+              "volume": "93",
+              "author": "Slatyer",
+              "year": "1970",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib128",
+              "doi-asserted-by": "crossref",
+              "first-page": "123",
+              "DOI": "10.1139/b63-011",
+              "volume": "41",
+              "author": "Smillie",
+              "year": "1963",
+              "journal-title": "Can. J. Bot."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib129",
+              "series-title": "Progress in Molecular and Subcellular Biology",
+              "doi-asserted-by": "crossref",
+              "first-page": "136",
+              "DOI": "10.1007/978-3-642-46200-9_5",
+              "author": "Smillie",
+              "year": "1969"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib130",
+              "doi-asserted-by": "crossref",
+              "first-page": "380",
+              "DOI": "10.1104/pp.47.3.380",
+              "volume": "47",
+              "author": "Smith",
+              "year": "1971",
+              "journal-title": "Plant. Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib131",
+              "doi-asserted-by": "crossref",
+              "first-page": "109",
+              "DOI": "10.1007/BF00386361",
+              "volume": "96",
+              "author": "Steiger",
+              "year": "1971",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib132",
+              "first-page": "85",
+              "volume": "26",
+              "author": "Stewart",
+              "year": "1970",
+              "journal-title": "J. Aust. Inst. Agr. Sci."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib133",
+              "doi-asserted-by": "crossref",
+              "first-page": "416",
+              "DOI": "10.1016/0006-291X(63)90548-5",
+              "volume": "10",
+              "author": "Stocking",
+              "year": "1963",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib134",
+              "doi-asserted-by": "crossref",
+              "first-page": "360",
+              "DOI": "10.1104/pp.50.3.360",
+              "volume": "50",
+              "author": "Sutton",
+              "year": "1972",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib135",
+              "first-page": "229",
+              "volume": "10",
+              "author": "Tarchevskii",
+              "year": "1963",
+              "journal-title": "Fiziol. Rast."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib136",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "169",
+              "author": "Ting",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib137",
+              "doi-asserted-by": "crossref",
+              "first-page": "439",
+              "DOI": "10.1104/pp.51.3.439",
+              "volume": "51",
+              "author": "Ting",
+              "year": "1973",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib138",
+              "doi-asserted-by": "crossref",
+              "first-page": "448",
+              "DOI": "10.1104/pp.51.3.448",
+              "volume": "51",
+              "author": "Ting",
+              "year": "1973",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib139",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "534",
+              "author": "Ting",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib140",
+              "first-page": "648",
+              "volume": "1145",
+              "author": "Tolbert",
+              "year": "1963",
+              "journal-title": "Nat. Acad. Sci.\u2014Nat. Res. Comic., Publ."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib141",
+              "doi-asserted-by": "crossref",
+              "first-page": "45",
+              "DOI": "10.1146/annurev.pp.22.060171.000401",
+              "volume": "22",
+              "author": "Tolbert",
+              "year": "1971",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib142",
+              "series-title": "Photosynthesis and Photorespiration",
+              "first-page": "458",
+              "author": "Tolbert",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib143",
+              "doi-asserted-by": "crossref",
+              "first-page": "209",
+              "DOI": "10.1111/j.1469-8137.1973.tb02027.x",
+              "volume": "72",
+              "author": "Walker",
+              "year": "1973",
+              "journal-title": "New Phytol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib144",
+              "doi-asserted-by": "crossref",
+              "first-page": "389",
+              "DOI": "10.1146/annurev.bi.39.070170.002133",
+              "volume": "39",
+              "author": "Walker",
+              "year": "1970",
+              "journal-title": "Annu. Rev. Biochem."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib145",
+              "doi-asserted-by": "crossref",
+              "first-page": "1051",
+              "DOI": "10.1104/pp.51.6.1051",
+              "volume": "51",
+              "author": "Whelan",
+              "year": "1973",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib146",
+              "doi-asserted-by": "crossref",
+              "first-page": "1367",
+              "DOI": "10.1139/b72-165",
+              "volume": "50",
+              "author": "Winkenback",
+              "year": "1972",
+              "journal-title": "Can. J. Bot."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib147",
+              "first-page": "161",
+              "volume": "26",
+              "author": "Wolfe",
+              "year": "1970",
+              "journal-title": "Advan. Front. Plant Sci."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib148",
+              "doi-asserted-by": "crossref",
+              "first-page": "121",
+              "DOI": "10.1146/annurev.pp.15.060164.001005",
+              "volume": "15",
+              "author": "Zelitch",
+              "year": "1964",
+              "journal-title": "Ann. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib149",
+              "series-title": "Photosynthesis, Photorespiration and Plant Productivity.",
+              "author": "Zelitch",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib150",
+              "first-page": "1636",
+              "volume": "3",
+              "author": "Ziegler",
+              "year": "1969",
+              "journal-title": "Prog. Photosynthesis Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib151",
+              "doi-asserted-by": "crossref",
+              "first-page": "204",
+              "DOI": "10.1016/0006-291X(74)90192-2",
+              "volume": "60",
+              "author": "Badger",
+              "year": "1974",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib152",
+              "doi-asserted-by": "crossref",
+              "first-page": "687",
+              "DOI": "10.1104/pp.54.5.678",
+              "volume": "54",
+              "author": "Laing",
+              "year": "1974",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib153",
+              "doi-asserted-by": "crossref",
+              "first-page": "2269",
+              "DOI": "10.1021/bi00681a035",
+              "volume": "14",
+              "author": "Laing",
+              "year": "1975",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib154",
+              "doi-asserted-by": "crossref",
+              "first-page": "103",
+              "DOI": "10.1016/0003-9861(75)90011-9",
+              "volume": "171",
+              "author": "Andrews",
+              "year": "1975",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib155",
+              "doi-asserted-by": "crossref",
+              "first-page": "59",
+              "DOI": "10.1016/S0031-9422(00)91267-6",
+              "volume": "13",
+              "author": "Bird",
+              "year": "1974",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib156",
+              "doi-asserted-by": "crossref",
+              "first-page": "393",
+              "DOI": "10.1146/annurev.pp.25.060174.002141",
+              "volume": "25",
+              "author": "Heber",
+              "year": "1974",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib157",
+              "doi-asserted-by": "crossref",
+              "first-page": "27",
+              "DOI": "10.1146/annurev.pp.25.060174.000331",
+              "volume": "25",
+              "author": "Laetsch",
+              "year": "1974",
+              "journal-title": "Annu. Rev. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib158",
+              "series-title": "Encyclopedia of Plant Physiology, (New Series)",
+              "author": "Hatch",
+              "year": "1976"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib159",
+              "series-title": "CO2 Metabolism and Productivity",
+              "author": "Hatch",
+              "year": "1976"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib160",
+              "doi-asserted-by": "crossref",
+              "first-page": "267",
+              "DOI": "10.1007/BF00388330",
+              "volume": "119",
+              "author": "Ku",
+              "year": "1974",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib161",
+              "doi-asserted-by": "crossref",
+              "first-page": "246",
+              "DOI": "10.1016/0003-9861(74)90475-5",
+              "volume": "163",
+              "author": "Chen",
+              "year": "1974",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib162",
+              "doi-asserted-by": "crossref",
+              "first-page": "305",
+              "DOI": "10.1016/S0044-328X(74)80072-3",
+              "volume": "72",
+              "author": "Gutierrez",
+              "year": "1974",
+              "journal-title": "Z. Pflanzenphysiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib163",
+              "series-title": "Proceedings Third International Congress on Photosynthesis",
+              "first-page": "1219",
+              "author": "Gutierrez",
+              "year": "1975"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib164",
+              "doi-asserted-by": "crossref",
+              "first-page": "687",
+              "DOI": "10.1016/0003-9861(75)90513-5",
+              "volume": "167",
+              "author": "Kagawa",
+              "year": "1975",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib165",
+              "doi-asserted-by": "crossref",
+              "first-page": "835",
+              "DOI": "10.1104/pp.55.5.835",
+              "volume": "55",
+              "author": "Huber",
+              "year": "1975",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib166",
+              "doi-asserted-by": "crossref",
+              "first-page": "279",
+              "DOI": "10.1007/BF00388331",
+              "volume": "119",
+              "author": "Gutierrez",
+              "year": "1974",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib167",
+              "doi-asserted-by": "crossref",
+              "first-page": "111",
+              "DOI": "10.1071/PP9750111",
+              "volume": "2",
+              "author": "Hatch",
+              "year": "1975",
+              "journal-title": "Aust. J. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib168",
+              "doi-asserted-by": "crossref",
+              "first-page": "460",
+              "DOI": "10.1016/S0044-328X(74)80067-X",
+              "volume": "72",
+              "author": "Kluge",
+              "year": "1974",
+              "journal-title": "Z. Pflanzenphysiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib169",
+              "first-page": "377",
+              "volume": "2",
+              "author": "Sutton",
+              "year": "1975",
+              "journal-title": "Aust. J. Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib170",
+              "doi-asserted-by": "crossref",
+              "first-page": "137",
+              "DOI": "10.1007/BF02860828",
+              "volume": "41",
+              "author": "Chollet",
+              "year": "1975",
+              "journal-title": "Bot. Rev."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib171",
+              "doi-asserted-by": "crossref",
+              "first-page": "125",
+              "DOI": "10.1007/BF00384922",
+              "volume": "120",
+              "author": "Mahon",
+              "year": "1974",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib172",
+              "doi-asserted-by": "crossref",
+              "first-page": "87",
+              "DOI": "10.1104/pp.55.1.87",
+              "volume": "55",
+              "author": "Cockburn",
+              "year": "1975",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-114860-7.50029-6_bib173",
+              "first-page": "96",
+              "volume": "9",
+              "author": "Downton",
+              "year": "1975",
+              "journal-title": "Photosynthetica"
+            }
+          ],
+          "container-title": [
+            "Plant Biochemistry"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780121148607500296?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780121148607500296?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                14
+              ]
+            ],
+            "date-time": "2022-04-14T15:46:02Z",
+            "timestamp": 1649951162000
+          },
+          "score": 26.331188,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/B9780121148607500296"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1976
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780121148607"
+          ],
+          "references-count": 173,
+          "URL": "https://doi.org/10.1016/b978-0-12-114860-7.50029-6",
+          "published": {
+            "date-parts": [
+              [
+                1976
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                6
+              ]
+            ],
+            "date-time": "2025-11-06T06:02:41Z",
+            "timestamp": 1762408961573
+          },
+          "reference-count": 46,
+          "publisher": "Elsevier",
+          "isbn-type": [
+            {
+              "value": "9781483232430",
+              "type": "print"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1965
+              ]
+            ]
+          },
+          "DOI": "10.1016/b978-1-4832-3243-0.50038-1",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                11,
+                19
+              ]
+            ],
+            "date-time": "2013-11-19T15:50:40Z",
+            "timestamp": 1384876240000
+          },
+          "page": "875-902",
+          "source": "Crossref",
+          "is-referenced-by-count": 5,
+          "title": [
+            "PHOTOSYNTHESIS: THE PATH OF CARBON"
+          ],
+          "prefix": "10.1016",
+          "author": [
+            {
+              "given": "J.A.",
+              "family": "BASSHAM",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib1",
+              "doi-asserted-by": "crossref",
+              "first-page": "101",
+              "DOI": "10.1146/annurev.pp.15.060164.000533",
+              "volume": "15",
+              "author": "Bassham",
+              "year": "1964",
+              "journal-title": "Ann. Rev. Plant Physiol"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib2",
+              "series-title": "\u201cThe Path of Carbon in Photosynthesis.\u201d",
+              "author": "Bassham",
+              "year": "1957"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib3",
+              "series-title": "\u201cThe Photosynthesis of Carbon Compounds.\u201d",
+              "author": "Calvin",
+              "year": "1962"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib4",
+              "first-page": "261",
+              "volume": "1",
+              "author": "Van Niel",
+              "year": "1941",
+              "journal-title": "Advan. Enzymol."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1484",
+              "DOI": "10.1021/jo01041a011",
+              "volume": "28",
+              "author": "Akoyunoglou",
+              "year": "1963",
+              "journal-title": "J. Org. Chem."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "847",
+              "DOI": "10.1016/S0021-9258(18)65513-9",
+              "volume": "209",
+              "author": "Axelrod",
+              "year": "1954",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "447",
+              "DOI": "10.1016/0006-3002(60)90468-6",
+              "volume": "43",
+              "author": "Bassham",
+              "year": "1960",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "376",
+              "DOI": "10.1016/0006-291X(62)90019-0",
+              "volume": "9",
+              "author": "Bassham",
+              "year": "1962",
+              "journal-title": "Biochem. Biophys. Res. Comm."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "781",
+              "DOI": "10.1016/S0021-9258(18)56368-7",
+              "volume": "185",
+              "author": "Bassham",
+              "year": "1950",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1760",
+              "DOI": "10.1021/ja01636a012",
+              "volume": "76",
+              "author": "Bassham",
+              "year": "1954",
+              "journal-title": "J. Am. Chem. Soc."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "2971",
+              "DOI": "10.1021/ja01150a545",
+              "volume": "73",
+              "author": "Benson",
+              "year": "1951",
+              "journal-title": "J. Am. Chem. Soc."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "1710",
+              "DOI": "10.1021/ja01160a080",
+              "volume": "72",
+              "author": "Benson",
+              "year": "1950",
+              "journal-title": "J. Am. Chem. Soc."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib13",
+              "doi-asserted-by": "crossref",
+              "first-page": "703",
+              "DOI": "10.1016/S0021-9258(19)52402-4",
+              "volume": "196",
+              "author": "Benson",
+              "year": "1952",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "4740",
+              "DOI": "10.1021/ja01550a079",
+              "volume": "80",
+              "author": "Benson",
+              "year": "1958",
+              "journal-title": "J. Am. Chem. Soc."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib15",
+              "doi-asserted-by": "crossref",
+              "first-page": "140",
+              "DOI": "10.1016/0003-9861(53)90017-4",
+              "volume": "44",
+              "author": "Buchanan",
+              "year": "1953",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib16",
+              "first-page": "440",
+              "volume": "II",
+              "author": "Buchanan",
+              "year": "1952"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib17",
+              "doi-asserted-by": "crossref",
+              "first-page": "476",
+              "DOI": "10.1126/science.107.2784.476",
+              "volume": "107",
+              "author": "Calvin",
+              "year": "1948",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib18",
+              "doi-asserted-by": "crossref",
+              "first-page": "140",
+              "DOI": "10.1126/science.109.2824.140",
+              "volume": "109",
+              "author": "Calvin",
+              "year": "1949",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib19",
+              "doi-asserted-by": "crossref",
+              "first-page": "445",
+              "DOI": "10.1007/BF02139287",
+              "volume": "8",
+              "author": "Calvin",
+              "year": "1952",
+              "journal-title": "Experientia"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib20",
+              "first-page": "284",
+              "volume": "5",
+              "author": "Calvin",
+              "year": "1951",
+              "journal-title": "Symp. Soc. Exptl. Biol"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "402",
+              "DOI": "10.1104/pp.37.3.402",
+              "volume": "37",
+              "author": "Fewson",
+              "year": "1962",
+              "journal-title": "Plant Physiol"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib22",
+              "doi-asserted-by": "crossref",
+              "first-page": "355",
+              "DOI": "10.1128/JB.47.4.355-372.1944",
+              "volume": "47",
+              "author": "Foster",
+              "year": "1944",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib23",
+              "doi-asserted-by": "crossref",
+              "first-page": "195",
+              "DOI": "10.1085/jgp.26.2.195",
+              "volume": "26",
+              "author": "Gaffron",
+              "year": "1942",
+              "journal-title": "J. Gen. Physiol"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib24",
+              "doi-asserted-by": "crossref",
+              "first-page": "1009",
+              "DOI": "10.1016/S0021-9258(18)70463-8",
+              "volume": "231",
+              "author": "Heath",
+              "year": "1958",
+              "journal-title": "J. Biol Chem."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib25",
+              "doi-asserted-by": "crossref",
+              "first-page": "569",
+              "DOI": "10.1016/S0031-9422(00)82929-5",
+              "volume": "3",
+              "author": "Hiller",
+              "year": "1964",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib26",
+              "doi-asserted-by": "crossref",
+              "first-page": "661",
+              "DOI": "10.1016/S0021-9258(18)49210-1",
+              "volume": "205",
+              "author": "Horecker",
+              "year": "1953",
+              "journal-title": "J. Biol Chem."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib27",
+              "doi-asserted-by": "crossref",
+              "first-page": "769",
+              "DOI": "10.1016/S0021-9258(18)65841-7",
+              "volume": "218",
+              "author": "Hurwitz",
+              "year": "1956",
+              "journal-title": "J. Biol Chem."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib28",
+              "doi-asserted-by": "crossref",
+              "first-page": "411",
+              "DOI": "10.1104/pp.31.5.411",
+              "volume": "31",
+              "author": "Kandler",
+              "year": "1956",
+              "journal-title": "Plant Physiol"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib29",
+              "doi-asserted-by": "crossref",
+              "first-page": "858",
+              "DOI": "10.1515/znb-1962-1222",
+              "volume": "17",
+              "author": "Kauss",
+              "year": "1962",
+              "journal-title": "Z. Naturforsch."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib30",
+              "doi-asserted-by": "crossref",
+              "first-page": "342",
+              "DOI": "10.1016/0006-3002(57)90337-2",
+              "volume": "23",
+              "author": "Mayaudon",
+              "year": "1957",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "503",
+              "DOI": "10.1016/0006-291X(64)90259-1",
+              "volume": "14",
+              "author": "Neufeld",
+              "year": "1964",
+              "journal-title": "Biochem. Biophys. Res. Comm."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib32",
+              "doi-asserted-by": "crossref",
+              "first-page": "409",
+              "DOI": "10.1104/pp.36.4.409",
+              "volume": "36",
+              "author": "Peterkofsky",
+              "year": "1961",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib33",
+              "doi-asserted-by": "crossref",
+              "first-page": "553",
+              "DOI": "10.1038/190553a0",
+              "volume": "190",
+              "author": "Pritchard",
+              "year": "1961",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib34",
+              "doi-asserted-by": "crossref",
+              "first-page": "3610",
+              "DOI": "10.1021/ja01642a089",
+              "volume": "76",
+              "author": "Quayle",
+              "year": "1954",
+              "journal-title": "J. Am. Chem. Soc."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib35",
+              "doi-asserted-by": "crossref",
+              "first-page": "1010",
+              "DOI": "10.1021/ja01100a526",
+              "volume": "75",
+              "author": "Racker",
+              "year": "1953",
+              "journal-title": "J. Am. Chem. Soc."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib36",
+              "doi-asserted-by": "crossref",
+              "first-page": "604",
+              "DOI": "10.1007/BF00684225",
+              "volume": "41",
+              "author": "Richter",
+              "year": "1959",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib37",
+              "doi-asserted-by": "crossref",
+              "first-page": "3443",
+              "DOI": "10.1021/ja01869a042",
+              "volume": "62",
+              "author": "Ruben",
+              "year": "1940",
+              "journal-title": "J. Am. Chem. Soc."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib38",
+              "doi-asserted-by": "crossref",
+              "first-page": "877",
+              "DOI": "10.1021/ja01848a512",
+              "volume": "63",
+              "author": "Ruben",
+              "year": "1941",
+              "journal-title": "J. Am. Chem. Soc."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib39",
+              "doi-asserted-by": "crossref",
+              "first-page": "299",
+              "DOI": "10.1016/0006-3002(61)90478-4",
+              "volume": "48",
+              "author": "Smith",
+              "year": "1961",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib40",
+              "doi-asserted-by": "crossref",
+              "first-page": "394",
+              "DOI": "10.1104/pp.19.3.394",
+              "volume": "19",
+              "author": "Smith",
+              "year": "1944",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib41",
+              "doi-asserted-by": "crossref",
+              "first-page": "535",
+              "DOI": "10.1016/0003-9861(55)90523-3",
+              "volume": "59",
+              "author": "Srere",
+              "year": "1955",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib42",
+              "doi-asserted-by": "crossref",
+              "first-page": "304",
+              "DOI": "10.1126/science.108.2803.304",
+              "volume": "108",
+              "author": "Stepka",
+              "year": "1948",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib43",
+              "doi-asserted-by": "crossref",
+              "first-page": "537",
+              "DOI": "10.1038/195537a0",
+              "volume": "195",
+              "author": "Tagawa",
+              "year": "1962",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib44",
+              "first-page": "271",
+              "volume": "11",
+              "author": "Tolbert",
+              "year": "1958",
+              "journal-title": "Brookhaven Symp. Biol."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib45",
+              "doi-asserted-by": "crossref",
+              "first-page": "795",
+              "DOI": "10.1016/S0021-9258(18)65843-0",
+              "volume": "218",
+              "author": "Weissbach",
+              "year": "1956",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-1-4832-3243-0.50038-1_bib46",
+              "doi-asserted-by": "crossref",
+              "first-page": "5948",
+              "DOI": "10.1021/ja01627a050",
+              "volume": "77",
+              "author": "Wilson",
+              "year": "1955",
+              "journal-title": "J. Am. Chem. Soc."
+            }
+          ],
+          "container-title": [
+            "Plant Biochemistry"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                13
+              ]
+            ],
+            "date-time": "2022-03-13T03:29:54Z",
+            "timestamp": 1647142194000
+          },
+          "score": 26.323477,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/B9781483232430500381"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1965
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781483232430"
+          ],
+          "references-count": 46,
+          "URL": "https://doi.org/10.1016/b978-1-4832-3243-0.50038-1",
+          "published": {
+            "date-parts": [
+              [
+                1965
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                3
+              ]
+            ],
+            "date-time": "2026-10-03T20:27:32Z",
+            "timestamp": 1791059252230,
+            "version": "4.1.0"
+          },
+          "reference-count": 31,
+          "publisher": "Wiley",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2003,
+                    12,
+                    17
+                  ]
+                ],
+                "date-time": "2003-12-17T00:00:00Z",
+                "timestamp": 1071619200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 15294,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Angew. Chem. Int. Ed. Engl."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1962,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.1002/anie.196200651",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                12,
+                31
+              ]
+            ],
+            "date-time": "2003-12-31T18:05:42Z",
+            "timestamp": 1072893942000
+          },
+          "page": "65-75",
+          "source": "Crossref",
+          "is-referenced-by-count": 41,
+          "title": [
+            "The Path of Carbon in Photosynthesis"
+          ],
+          "prefix": "10.1002",
+          "volume": "1",
+          "author": [
+            {
+              "given": "Melvin",
+              "family": "Calvin",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2003,
+                12,
+                17
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_1_1_2",
+              "unstructured": "E.Fischer:Les Prix Nobel.Stockholm 1902."
+            },
+            {
+              "key": "e_1_2_1_2_2",
+              "unstructured": "O.Meyerhof:Les Prix Nobel. Stockholm 1923."
+            },
+            {
+              "key": "e_1_2_1_3_2",
+              "unstructured": "H. A.Kerbs:Les Prix Nobel. Stockholm 1953."
+            },
+            {
+              "key": "e_1_2_1_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/139881a0"
+            },
+            {
+              "key": "e_1_2_1_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRev.57.549"
+            },
+            {
+              "key": "e_1_2_1_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.107.2784.476"
+            },
+            {
+              "key": "e_1_2_1_7_2",
+              "unstructured": "A. J. P.Martin:Les Prix Nobel. Stockholm 1952;"
+            },
+            {
+              "key": "e_1_2_1_7_3",
+              "unstructured": "R. L. M.Synge:Les Prix Nobel. Stockholm 1952."
+            },
+            {
+              "key": "e_1_2_1_8_2",
+              "unstructured": "(a) The details of the mapping of the path of carbon in photosynthesis may be found in the following references:M.Calvin J. chem. Soc. (London) 1895(1956);"
+            },
+            {
+              "key": "e_1_2_1_8_3",
+              "volume-title": "The Path of Carbon in Photosynthesis",
+              "author": "Bassham J. A.",
+              "year": "1957"
+            },
+            {
+              "key": "e_1_2_1_8_4",
+              "volume-title": "Radiation Biology and Medicine",
+              "author": "Calvin M.",
+              "year": "1958"
+            },
+            {
+              "key": "e_1_2_1_8_5",
+              "first-page": "24",
+              "volume-title": "Proceedings 2nd Geneva Conference, on Peaceful Uses of Atomic Energy",
+              "author": "Calvin M.",
+              "year": "1958"
+            },
+            {
+              "key": "e_1_2_1_8_6",
+              "first-page": "884",
+              "volume-title": "Handbuch der Pflanzen\u2010physiologie",
+              "author": "Calvin M.",
+              "year": "1960"
+            },
+            {
+              "key": "e_1_2_1_8_7",
+              "volume-title": "The Photosynthesis of Carbon Compounds",
+              "author": "Bassham J. A.",
+              "year": "1962"
+            },
+            {
+              "key": "e_1_2_1_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02139287"
+            },
+            {
+              "key": "e_1_2_1_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/ja01636a012"
+            },
+            {
+              "key": "e_1_2_1_10_3",
+              "unstructured": "M.CalvinandJ. A.Bassham 1st International Conference on the Peaceful Uses of Atomic Energy Geneva Switzerland 1955. Paper No. A/Conf. 8/p/259."
+            },
+            {
+              "key": "e_1_2_1_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0006-3002(60)90468-6"
+            },
+            {
+              "key": "e_1_2_1_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/ja01627a050"
+            },
+            {
+              "key": "e_1_2_1_13_2",
+              "unstructured": "N. G.Pon Thesis Univ. of California Berkeley 1960."
+            },
+            {
+              "key": "e_1_2_1_14_2",
+              "unstructured": "J. A.BasshamandM.Calvin Vth International Congress for Biochemistry Moscow1961. Symposium VI Preprint 48."
+            },
+            {
+              "key": "e_1_2_1_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/175249a0"
+            },
+            {
+              "key": "e_1_2_1_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/ja01104a052"
+            },
+            {
+              "key": "e_1_2_1_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/ja01650a097"
+            },
+            {
+              "key": "e_1_2_1_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0006-3002(55)90294-8"
+            },
+            {
+              "key": "e_1_2_1_19_2",
+              "first-page": "467",
+              "volume-title": "Phosphorus Metabolism",
+              "author": "Vishniac W.",
+              "year": "1952"
+            },
+            {
+              "key": "e_1_2_1_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(61)90049-2"
+            },
+            {
+              "key": "e_1_2_1_21_2",
+              "unstructured": "M.Calvin Prespectives Biol. and Med. in the press. (1962)."
+            },
+            {
+              "key": "e_1_2_1_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0022-2836(61)80002-8"
+            },
+            {
+              "key": "e_1_2_1_23_2",
+              "unstructured": "K.SauerandM.Calvin J. molecul. Biol. in the press."
+            },
+            {
+              "key": "e_1_2_1_24_2",
+              "unstructured": "D. E.Green Vth International Congress for Biochemistry Moscow1961. Preprint 176."
+            }
+          ],
+          "container-title": [
+            "Angewandte Chemie International Edition in English"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fanie.196200651",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/anie.196200651",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                11,
+                3
+              ]
+            ],
+            "date-time": "2023-11-03T21:01:02Z",
+            "timestamp": 1699045262000
+          },
+          "score": 25.292551,
+          "resource": {
+            "primary": {
+              "URL": "https://onlinelibrary.wiley.com/doi/10.1002/anie.196200651"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1962,
+                2
+              ]
+            ]
+          },
+          "references-count": 31,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  1962,
+                  2
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1002/anie.196200651"
+          ],
+          "URL": "https://doi.org/10.1002/anie.196200651",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0570-0833"
+          ],
+          "issn-type": [
+            {
+              "value": "0570-0833",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1962,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T09:26:44Z",
+            "timestamp": 1793179604865,
+            "version": "4.5.0"
+          },
+          "publisher-location": "Berlin, Heidelberg",
+          "reference-count": 91,
+          "publisher": "Springer Berlin Heidelberg",
+          "isbn-type": [
+            {
+              "value": "9783642947995",
+              "type": "print"
+            },
+            {
+              "value": "9783642947988",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1960
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-642-94798-8_30",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                7,
+                18
+              ]
+            ],
+            "date-time": "2013-07-18T22:55:20Z",
+            "timestamp": 1374188120000
+          },
+          "page": "884-922",
+          "source": "Crossref",
+          "is-referenced-by-count": 25,
+          "title": [
+            "The path of carbon in photosynthesis"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "J. A.",
+              "family": "Bassham",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "M.",
+              "family": "Calvin",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "30_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "237",
+              "DOI": "10.1016/0003-9861(51)90269-X",
+              "volume": "32",
+              "author": "S Aronoff",
+              "year": "1951",
+              "unstructured": "Aronoff, S.: Metabolism of soy bean leaves. III. The organic acids produced in short-time photosynthesis. Arch. Biochem. 32, 237\u2013248 (1951).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "30_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "459",
+              "DOI": "10.1016/S0021-9258(17)35050-0",
+              "volume": "169",
+              "author": "S Aronoff",
+              "year": "1947",
+              "unstructured": "Aronoff, S., H. A. Barker and M. Calvin: Distribution of labeled carbon in sugar from Barley. J. biol. Chem. 169, 459\u2013460 (1947).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR3",
+              "first-page": "424",
+              "volume": "28",
+              "author": "S Aronoff",
+              "year": "1950",
+              "unstructured": "Aronoff, S., and L. Vernon: Metabolism of soybean leaves. I. The sequence of formation of the soluble carbohydrates during photosynthesis. Arch. Biochem. 28, 424\u2013439 (1950).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "30_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "5266",
+              "DOI": "10.1021/ja01167a134",
+              "volume": "72",
+              "author": "EJ Badin",
+              "year": "1950",
+              "unstructured": "Badin, E. J., and M. Calvin: The path of carbon in photosynthesis. IX. Photosynthesis, photoreduction and the hydrogen-oxygen-carbon dioxide dark reaction. J. Amer. chem. Soc. 72, 5266\u20135270 (1950).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "63",
+              "DOI": "10.1002/cber.18700030123",
+              "volume": "3",
+              "author": "A Baeyer",
+              "year": "1870",
+              "unstructured": "Baeyer, A.: \u00dcber die Wasserentziehung und ihre Bedeutung f\u00fcr das Pflanzenleben und die G\u00e4rung. Ber. dtsch. chem. Ges. 3, 63\u201375 (1870). Reviewed in: Photosynthesis and related processes, I (E. I. Rabinowttch), p. 246. New York: Interscience Publishers 1945.",
+              "journal-title": "Ber. dtsch. chem. Ges."
+            },
+            {
+              "key": "30_CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "781",
+              "DOI": "10.1016/S0021-9258(18)56368-7",
+              "volume": "185",
+              "author": "JA Bassham",
+              "year": "1950",
+              "unstructured": "Bassham, J. A., A. A. Benson and M. Calvin: Path of carbon in photosynthesis. VIII. The role of malic acid. J. biol. Chem. 185, 781\u2013787 (1950).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "1760",
+              "DOI": "10.1021/ja01636a012",
+              "volume": "76",
+              "author": "JA Bassham",
+              "year": "1954",
+              "unstructured": "Bassham, J. A., A. A. Benson, L. D. Kay, A. Z. Harris, A. T. Wilson and M. Calvin: The path of carbon in photosynthesis. XXI. The cyclic regeneration of carbon dioxide acceptor. J. Amer. chem. Soc. 76, 1760\u20131770 (1954).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR8",
+              "first-page": "42",
+              "volume-title": "The path of carbon in photosynthesis",
+              "author": "JA Bassham",
+              "year": "1957",
+              "unstructured": "Bassham, J. A., and M. Calvin: The path of carbon in photosynthesis, p. 42\u201343. Englewood Cliffs, New Jersey: Prentice-Hall, Inc. 1957."
+            },
+            {
+              "key": "30_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "491",
+              "DOI": "10.1073/pnas.44.6.491",
+              "volume": "44",
+              "author": "JA Bassham",
+              "year": "1958",
+              "unstructured": "Bassham, J. A., M. R. Kirk and M. Calvin: The effects of hydroxylamine on the C14O2 fixation patterns during photosynthesis. Proc. nat. Acad. Sci. (Wash.) 44, 491\u2013493 (1958).",
+              "journal-title": "Proc. nat. Acad. Sci. (Wash.)"
+            },
+            {
+              "key": "30_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "4120",
+              "DOI": "10.1021/ja01597a071",
+              "volume": "78",
+              "author": "JA Bassham",
+              "year": "1956",
+              "unstructured": "Bassham, J. A., K. Shibata, K. Steenberg, J. Bourdon and M. Calvin: Photosynthetic cycle ansd respiration: Light and dark transients. J. Amer. chem. Soc. 78, 4120\u20134124 (1956).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR11",
+              "unstructured": "Benson, A. A.: Diglycerophospholipides. Their distribution and metabolism. Abstracts of Amer. Chem. Soc. Meeting, San Francisco, California, April 1958, Abstract No. 5C."
+            },
+            {
+              "key": "30_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "3939",
+              "DOI": "10.1021/ja01191a504",
+              "volume": "70",
+              "author": "AA Benson",
+              "year": "1948",
+              "unstructured": "Benson, A. A., and J. A. Bassham: Chemical degradation of isotopic succinic and malic acids. J. Amer. chem. Soc. 70, 3939\u20133940 (1948).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "1710",
+              "DOI": "10.1021/ja01160a080",
+              "volume": "72",
+              "author": "AA Benson",
+              "year": "1950",
+              "unstructured": "Benson, A. A., J. A. Bassham, M. Calvin, T. C. Goodale, V. A. Haas and W. Stepka: The path of carbon in photosynthesis. V. Paper chromatography and radioautography of the products. J. Amer. chem. Soc. 72, 1710\u20131718 (1950).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "703",
+              "DOI": "10.1016/S0021-9258(19)52402-4",
+              "volume": "196",
+              "author": "AA Benson",
+              "year": "1952",
+              "unstructured": "Benson, A. A., J. A. Bassham, M. Calvin, A. G. Hall, H. E. Hirsch, S. Kawaguchi, V. Lynch and N. E. Tolbert: The path of carbon in photosynthesis. XV. Ribulose and sedoheptulose. J. biol. Chem. 196, 703\u2013716 (1952).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "648",
+              "DOI": "10.1126/science.105.2738.648",
+              "volume": "105",
+              "author": "AA Benson",
+              "year": "1947",
+              "unstructured": "Benson, A. A., and M.Calvin: The dark reduction of photosynthesis. Science 105, 648\u2013649 (1947).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "30_CR16",
+              "unstructured": "Intermediates of photosynthesis: Isolation and degradation methods. University of California, Radiation Laboratory Report No. 2682, Berkeley, California 1954."
+            },
+            {
+              "key": "30_CR17",
+              "first-page": "381",
+              "volume-title": "Photosynthesis in plants",
+              "author": "AA Benson",
+              "year": "1949",
+              "unstructured": "Benson, A. A., M. Calvin, V. A. Haas, S. Aronoff, A. G. Hall, J. A. Bassham and J. W. Weigl: C14 in photosynthesis. In: Photosynthesis in plants, ed. by J. Franck and W. Looms, pp. 381\u2013401. Iowa: Iowa State College Press 1949."
+            },
+            {
+              "key": "30_CR18",
+              "unstructured": "Benson, A. A., and B. Maruo: Radiochemical identification of diglycerophosphate and its probable role in lipid synthesis by plants. Internat. Conference on Radioisotopes in Scientific Research, Paris, France, September, 1957. Paper No. UNESCO/NS/RIC/185."
+            },
+            {
+              "key": "30_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "35",
+              "DOI": "10.1016/0006-3002(58)90424-4",
+              "volume": "28",
+              "author": "NL Bishop",
+              "year": "1958",
+              "unstructured": "Bishop, N. L, and H. Gaffron: The inhibition of photosynthesis by sodium fluoride. I. The sodiumfluoride-induced CO2 burst from Chlorella. Biochim. biophys. Acta 28, 35\u201344 (1958).",
+              "journal-title": "Biochim. biophys. Acta"
+            },
+            {
+              "key": "30_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "402",
+              "DOI": "10.1098/rspb.1905.0037",
+              "volume": "76",
+              "author": "FF Blackman",
+              "year": "1905",
+              "unstructured": "Blackman, F. F., and G. L. G. Matthaei: Experimental researches in vegetable assimilation and respiration. IV. A quantitative study of carbon-dioxide assimilation and leaf-temparature in natural illumination. Proc. roy. Soc. B 76, 402\u2013445 (1905). Reviewed in: Photosynthesis and related processes, I (E. I. Rabinowitch), p. 172. New York: Interscience Publishers 1945.",
+              "journal-title": "Proc. roy. Soc. B"
+            },
+            {
+              "key": "30_CR21",
+              "volume-title": "A manual of paper chromatography and paper electrophoresis",
+              "author": "RJ Block",
+              "year": "1955",
+              "unstructured": "Block, R. J., E. L. Durrum and G. Zweig: A manual of paper chromatography and paper electrophoresis. New York: Academic Press Inc. 1955."
+            },
+            {
+              "key": "30_CR22",
+              "first-page": "284",
+              "volume": "5",
+              "author": "M Calvin",
+              "year": "1951",
+              "unstructured": "Calvin, M., J. A. Bassham, A. A. Benson, V. H. Lynch, C. Ouellet, L. Schou, W. Stepka and N. E. Tolbert: Carbon dioxide assimilation in plants. Symp. Soc. exp. Biol. 5, 284\u2013305 (1951).",
+              "journal-title": "Symp. Soc. exp. Biol."
+            },
+            {
+              "key": "30_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "476",
+              "DOI": "10.1126/science.107.2784.476",
+              "volume": "107",
+              "author": "M Calvin",
+              "year": "1948",
+              "unstructured": "Calvin, M., and A. A. Benson: The path of carbon in photosynthesis. I. Science 107, 476\u2013480 (1948).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "30_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "445",
+              "DOI": "10.1007/BF02139287",
+              "volume": "8",
+              "author": "M Calvin",
+              "year": "1952",
+              "unstructured": "Calvin, M., and P. Massini: The path of carbon in photosynthesis. XX. The steady state. Experientia (Basel) 8, 445\u2013457 (1952).",
+              "journal-title": "Experientia (Basel)"
+            },
+            {
+              "key": "30_CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "224",
+              "DOI": "10.1042/bj0380224",
+              "volume": "38",
+              "author": "R Consden",
+              "year": "1944",
+              "unstructured": "Consden, R., A. H. Gordon and A. J. P. Martin: Qualitative analysis of proteins: A partition Chromatographic method using paper. Biochem. J. 38, 224\u2013232 (1944).",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "30_CR26",
+              "unstructured": "Doman, N. G.: Investigating the nature of early products in photosynthesis. Paper presented at IX International Botanical Congress, Montreal, Canada, 1959."
+            },
+            {
+              "issue": "Suppl.",
+              "key": "30_CR27",
+              "first-page": "xvi",
+              "volume": "32",
+              "author": "RC Fuller",
+              "year": "1957",
+              "unstructured": "Fuller, R. C., and I. C. Anderson: CO2 assimilation in the photosynthetic purple sulfur bacteria. Plant Physiol. 32, Suppl., August xvi, (1957).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "30_CR28",
+              "volume-title": "The C14-labeled products of the aerobic and anaerobic light and dark reactions of photosynthesis as fractionated with benzene alcohol; in a panel discussion \u201cPlant Metabolism and Photosynthesis\u201d at symposium on the uses of isotopes in biology and medicine",
+              "author": "H Gaffron",
+              "year": "1947",
+              "unstructured": "Gaffron, H., E. W. Fager and A. Brown: The C14-labeled products of the aerobic and anaerobic light and dark reactions of photosynthesis as fractionated with benzene alcohol; in a panel discussion \u201cPlant Metabolism and Photosynthesis\u201d at symposium on the uses of isotopes in biology and medicine, University of Wisconsin, Madison, Wisconsin 1947."
+            },
+            {
+              "key": "30_CR29",
+              "first-page": "228",
+              "volume": "17",
+              "author": "M Gibbs",
+              "year": "1958",
+              "unstructured": "Gibbs, M.: Conversion of formate carbon to starch during photosynthesis. Fed. Proc. 17, 228 (1958).",
+              "journal-title": "Fed. Proc."
+            },
+            {
+              "key": "30_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "411",
+              "DOI": "10.1104/pp.31.5.411",
+              "volume": "31",
+              "author": "M Gibbs",
+              "year": "1956",
+              "unstructured": "Gibbs, M., and O. Kandler: Asymmetric distribution of C14 in glucose phosphates formed during photosynthesis. Plant Physiol. 31, 411\u2013412 (1956).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "30_CR31",
+              "doi-asserted-by": "crossref",
+              "first-page": "446",
+              "DOI": "10.1073/pnas.43.6.446",
+              "volume": "43",
+              "author": "Asymmetric distribution of C14 in glucose phosphates formed during photosynthesis",
+              "year": "1957",
+              "unstructured": "Asymmetric distribution of C14 in glucose phosphates formed during photosynthesis. Proc. nat. Acad. Sci. (Wash.) 43, 446\u2013451 (1957).",
+              "journal-title": "Proc. nat. Acad. Sci. (Wash.)"
+            },
+            {
+              "key": "30_CR32",
+              "doi-asserted-by": "crossref",
+              "first-page": "871",
+              "DOI": "10.1016/S0021-9258(18)55842-7",
+              "volume": "194",
+              "author": "IC Gunsalus",
+              "year": "1952",
+              "unstructured": "Gunsalus, I. C. and M. Gibbs: The heterolactic fermentation. II. Position of C14 in the products of the glucose dissimilation by Leuconostoc mesenteroides. J. biol. Chem. 194, 871\u2013875 (1952).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "881",
+              "DOI": "10.1038/139881a0",
+              "volume": "139",
+              "author": "R Hill",
+              "year": "1937",
+              "unstructured": "Hill, R.: Oxygen evolved by isolated chloroplasts. Nature (Lond.) 139, 881\u2013882 (1937).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "30_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "238",
+              "DOI": "10.1098/rspb.1940.0038",
+              "volume": "129",
+              "author": "R Hill",
+              "year": "1940",
+              "unstructured": "Hill, R., and R. Scarisbrick: The reduction of ferric oxalate by isolated chloroplasts. Proc. roy. Soc. B 129, 238\u2013255 (1940).",
+              "journal-title": "Proc. roy. Soc. B"
+            },
+            {
+              "key": "30_CR35",
+              "doi-asserted-by": "crossref",
+              "first-page": "61",
+              "DOI": "10.1038/146061a0",
+              "volume": "146",
+              "author": "Production of oxygen by illuminated chloroplasts",
+              "year": "1940",
+              "unstructured": "Production of oxygen by illuminated chloroplasts. Nature (Lond.) 146, 61\u201362 (1940).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "30_CR36",
+              "doi-asserted-by": "crossref",
+              "first-page": "393",
+              "DOI": "10.1016/S0021-9258(18)71280-5",
+              "volume": "207",
+              "author": "BL Horecker",
+              "year": "1954",
+              "unstructured": "Horecker, B. L., M. Gibbs, H. Klenow and P. Z. Smyrniotis: The mechanism of pentose phosphate conversion to hexose monophosphate. I. With a liver enzyme preparation. J. biol. Chem. 207, 393\u2013403 (1954).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR37",
+              "doi-asserted-by": "crossref",
+              "first-page": "827",
+              "DOI": "10.1016/S0021-9258(18)71021-1",
+              "volume": "212",
+              "author": "BL Horecker",
+              "year": "1955",
+              "unstructured": "Horecker, B. L., P. Z. Smyrniotis, H. H. Hiatt and P. A. Marks: Tetrose phosphate and the formation of sedoheptulose phosphate. J. biol. Chem. 212, 827\u2013836 (1955).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR38",
+              "volume-title": "Experiences sur v\u00e9g\u00e9tables etc",
+              "author": "J Ingen-Housz",
+              "year": "1780",
+              "unstructured": "Ingen-Housz, J.: Experiences sur v\u00e9g\u00e9tables etc. (French translation by the author with additions.) F. Didot le jeune, Paris 1780. Reviewed in: Photosynthesis and related processes, I (E. I. Rabinowitch), p. 17. New York: Interscience Publishers 1945."
+            },
+            {
+              "key": "30_CR39",
+              "unstructured": "An essay on the food of plants and the renovation of soils. (Appendix to 15th chapter of the General Report from the Board of Agriculture.) London 1796. Book in German: Ern\u00e4hrung der Pflanzen und Fruchtbarkeit des Bodens. Leipzig 1798. Reviewed in: Photosynthesis and related processes, I (E. L Rabinowitch), p. 17. New York: Interscience Publishers 1945."
+            },
+            {
+              "key": "30_CR40",
+              "doi-asserted-by": "crossref",
+              "first-page": "271",
+              "DOI": "10.1515/znb-1957-0501",
+              "volume": "12b",
+              "author": "O Kandler",
+              "year": "1957",
+              "unstructured": "Kandler, O.: \u00dcber die Beziehungen zwischen Phosphathaushalt und Photosynthese. IV. Z. Naturforsch. 12b, 271\u2013280 (1957).",
+              "journal-title": "Z. Naturforsch."
+            },
+            {
+              "key": "30_CR41",
+              "unstructured": "Alcohol and KCN poisoning in short-time photosynthesis studies. University of California Radiation Laboratory Report 3710, 9\u201320, March 1957."
+            },
+            {
+              "key": "30_CR42",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Identifizierung von radiaoktiver Hamamelons\u00e4ure aus Chlorella nach kurzfristiger Photosynthese in C14O2 und hohen KCN-Konzentrationen. Naturwissenschaften 21, 562\u2013563 (1957).",
+              "DOI": "10.1007/BF00641080"
+            },
+            {
+              "key": "30_CR43",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Occurrence of unknown radioactive substances after short-time photosynthesis in C14O2. Arch. Biochem. 73, 38 (1958).",
+              "DOI": "10.1016/0003-9861(58)90238-8"
+            },
+            {
+              "key": "30_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "411",
+              "DOI": "10.1104/pp.31.5.411",
+              "volume": "31",
+              "author": "O Kandler",
+              "year": "1956",
+              "unstructured": "Kandler, O., and M. Gibbs: Asymmetric distribution of C14 in the glucose phosphates formed during photosynthesis. Plant Physiol. 31, 411\u2013412 (1956).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "30_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "952",
+              "DOI": "10.1073/pnas.45.7.952",
+              "volume": "45",
+              "author": "Z Kasprzyk",
+              "year": "1959",
+              "unstructured": "Kasprzyk, Z., and M. Calvin: Search for unstable CO2 fixation products in algae using low temperature liquid scintillators. Proc. nat. Acad. Sci. (Wash.) 45, 952\u2013959 (1959).",
+              "journal-title": "Proc. nat. Acad. Sci. (Wash.)"
+            },
+            {
+              "key": "30_CR46",
+              "first-page": "134",
+              "volume": "13",
+              "author": "AJ Kluyver",
+              "year": "1926",
+              "unstructured": "Kluyver, A. J., u. H. J. L. Donker: Die Einheit in der Biochemie. Chem. Zelle Gewebe 13, 134\u2013190 (1926).",
+              "journal-title": "Chem. Zelle Gewebe"
+            },
+            {
+              "key": "30_CR47",
+              "first-page": "148",
+              "volume": "4",
+              "author": "HA Krebs",
+              "year": "1937",
+              "unstructured": "Krebs, H. A., and W. A. Johnson: The role of citric acid in intermediate metabolism in animal tissues. Enzymologia 4, 148\u2013156 (1937).",
+              "journal-title": "Enzymologia"
+            },
+            {
+              "key": "30_CR48",
+              "doi-asserted-by": "publisher",
+              "first-page": "58",
+              "DOI": "10.1002/jlac.18430460104",
+              "volume": "46",
+              "author": "J Liebig",
+              "year": "1843",
+              "unstructured": "Liebig, J.: Die Wechselwirthschaft. Justus Liebigs Ann. Chem. 46, 58\u201397 (1843). Reviewed in: Photosynthesis and related processes, I (E. I. Rabinowitch), p. 246. New York: Interscience Publishers 1945.",
+              "journal-title": "Justus Liebigs Ann. Chem."
+            },
+            {
+              "key": "30_CR49",
+              "doi-asserted-by": "publisher",
+              "first-page": "147",
+              "DOI": "10.1093/jxb/8.1.147",
+              "volume": "8",
+              "author": "P Linko",
+              "year": "1957",
+              "unstructured": "Linko, P., O. Holm-Hansen, J. A. Bassham and M. Calvin: Formation of radioactive citrulline during photosynthesis C14O2 fixation by blue-green algae. J. exp. Bot. 8, 147\u2013156 (1957).",
+              "journal-title": "J. exp. Bot."
+            },
+            {
+              "key": "30_CR50",
+              "doi-asserted-by": "crossref",
+              "first-page": "91",
+              "DOI": "10.1042/bj0350091",
+              "volume": "35",
+              "author": "AJP Martin",
+              "year": "1941",
+              "unstructured": "Martin, A. J. P., and R. L. M. Synge: Separation of the higher monoamino-acids by counter-current liquid-liquid extraction: The amino-acid composition of wool. Biochem. J. 35, 91\u2013121 (1941).",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "30_CR51",
+              "doi-asserted-by": "crossref",
+              "unstructured": "A new form of chromatogram employing two liquid phases. 1: A theory of chromatography. 2: Application to the micro-determination of the higher monoamino-acids in proteins. Biochem. J. 35, 1358\u20131368 (1941).",
+              "DOI": "10.1042/bj0351358"
+            },
+            {
+              "key": "30_CR52",
+              "unstructured": "Mayer, J. R.: Die organische Bewegung in ihrem Zusammenhang mit dem Stoffwechsel. Heilbronn 1845. Reprinted in: Die Mechanik der W\u00e4rme; gesammelte Schriften; Stuttgart 1893, and in Ostwald\u2019s Klassiker der exacten Naturwissenschaften, No. 180; Leipzig: Akademische Verlagsgesellschaft 1911. Reviewed in: Photosynthesis and related processes, I (E. I. Rabinowitch), p. 26. New York: Interscience Publishers 1947."
+            },
+            {
+              "key": "30_CR53",
+              "doi-asserted-by": "publisher",
+              "first-page": "205",
+              "DOI": "10.1073/pnas.44.2.205",
+              "volume": "44",
+              "author": "H Metzner",
+              "year": "1958",
+              "unstructured": "Metzner, H., B. Metzner and M. Calvin: Early unstable CO2 fixation products in photosynthesis. Proc. nat. Acad. Sci. (Wash.) 44, 205 to 211 (1958).",
+              "journal-title": "Proc. nat. Acad. Sci. (Wash.)"
+            },
+            {
+              "key": "30_CR54",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1016/0003-9861(58)90193-0",
+              "volume": "74",
+              "author": "Labile products of early CO2 fixation in photosynthesis",
+              "year": "1958",
+              "unstructured": "Labile products of early CO2 fixation in photosynthesis. Arch. Biochem. 74, 1\u20136 (1958).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "30_CR55",
+              "doi-asserted-by": "publisher",
+              "first-page": "892",
+              "DOI": "10.1073/pnas.43.10.892",
+              "volume": "43",
+              "author": "H Metzner",
+              "year": "1957",
+              "unstructured": "Metzner, H., H. Simon, B. Metzner and M. Calvin: Evidence for an unstable CO2 fixation product in algal cells. Proc. nat. Acad. Sci. (Wash.) 43, 892\u2013895 (1957).",
+              "journal-title": "Proc. nat. Acad. Sci. (Wash.)"
+            },
+            {
+              "key": "30_CR56",
+              "doi-asserted-by": "publisher",
+              "first-page": "116",
+              "DOI": "10.1007/BF00654699",
+              "volume": "45",
+              "author": "DC Mortimer",
+              "year": "1958",
+              "unstructured": "Mortimer, D. C.: Evidence for an alternate pathway in photosynthetic assimilation Naturwissenschaften 45, 116\u2013117 (1958).",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "30_CR57",
+              "doi-asserted-by": "publisher",
+              "first-page": "260",
+              "DOI": "10.1073/pnas.44.3.260",
+              "volume": "44",
+              "author": "V Moses",
+              "year": "1958",
+              "unstructured": "Moses, V., and M. Calvin: The path of carbon in photosynthesis. XXII. The identification of carboxy-ketopentitol diphosphates as products of photosynthesis. Proc. nat. Acad. Sci. (Wash.) 44, 260\u2013277 (1958).",
+              "journal-title": "Proc. nat. Acad. Sci. (Wash.)"
+            },
+            {
+              "key": "30_CR58",
+              "doi-asserted-by": "crossref",
+              "first-page": "598",
+              "DOI": "10.1016/0003-9861(58)90384-9",
+              "volume": "78",
+              "author": "The path of carbon in photosynthesis. XXIII",
+              "year": "1958",
+              "unstructured": "The path of carbon in photosynthesis. XXIII. The tentative identification of erythrose phosphate. Arch. Biochem. Biophys. 78, 598\u2013600 (1958).",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "30_CR59",
+              "first-page": "725",
+              "volume": "39",
+              "author": "A Moyse",
+              "year": "1957",
+              "unstructured": "Moyse, A., et G. Golchine: L\u2019action de la lumiere sur la \u03b2-carboxylation et les oxydations dans les feuilles de Bryophyllum. Bull. Soc. Chim. Biol. (Paris) 39, 725\u2013745 (1957).",
+              "journal-title": "Bull. Soc. Chim. Biol. (Paris)"
+            },
+            {
+              "key": "30_CR60",
+              "doi-asserted-by": "publisher",
+              "first-page": "590",
+              "DOI": "10.1104/pp.22.4.590",
+              "volume": "22",
+              "author": "J Myers",
+              "year": "1947",
+              "unstructured": "Myers, J.: Culture conditions and the development of the photosynthetic mechanism. V. Influence of the composition of the nutrient medium. Plant Physiol. 22, 590\u2013597 (1947).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "30_CR61",
+              "unstructured": "The pattern of photosynthesis in Chlorella. In: Photosynthesis in plants, pp. 349\u2013364. Iowa: Iowa State College Press 1949."
+            },
+            {
+              "key": "30_CR62",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1007/BF00454965",
+              "volume": "3",
+              "author": "CB Niel van",
+              "year": "1931",
+              "unstructured": "Niel, C. B. van: On the morphology and physiology of the purple and green sulfur bacteria. Arch. Mikrobiol. 3, 1\u2013112 (1931).",
+              "journal-title": "Arch. Mikrobiol."
+            },
+            {
+              "key": "30_CR63",
+              "first-page": "263",
+              "volume": "1",
+              "author": "The bacterial photosynthesis and their importance for the general problem of photosynthesis",
+              "year": "1941",
+              "unstructured": "The bacterial photosynthesis and their importance for the general problem of photosynthesis. Advanc. Enzymol. 1, 263\u2013328 (1941).",
+              "journal-title": "Advanc. Enzymol."
+            },
+            {
+              "key": "30_CR64",
+              "doi-asserted-by": "publisher",
+              "first-page": "64",
+              "DOI": "10.1093/jxb/6.1.64",
+              "volume": "6",
+              "author": "L Norris",
+              "year": "1955",
+              "unstructured": "Norris, L., R. E. Norris and M. Calvin: A survey of the rates and products of short-term photosynthesis in plants of nine phyla. J. exp. Bot. 6, 64\u201374 (1955).",
+              "journal-title": "J. exp. Bot."
+            },
+            {
+              "key": "30_CR65",
+              "first-page": "161",
+              "volume": "32",
+              "author": "G Paechnatz",
+              "year": "1938",
+              "unstructured": "Paechnatz, G.: Zur Frage der Assimilation von Formaldehyd durch die gr\u00fcne Pflanze. Z. Bot. 32, 161\u2013211 (1938).",
+              "journal-title": "Z. Bot."
+            },
+            {
+              "key": "30_CR66",
+              "unstructured": "Park, R. B., N. Pon, J. A. Bassham and M. Calvin: CO2 fixation by chloroplast and steady state in vivo systems. Paper presented at the IX International Botanical Congress, Montreal, Canada, 1959. (Abstract, Volume II, p. 293)."
+            },
+            {
+              "key": "30_CR67",
+              "volume-title": "Ph. D. Thesis: Studies on the carboxydismutase system and related materials",
+              "author": "NG Pon",
+              "year": "1960",
+              "unstructured": "Pon, N. G.: Ph. D. Thesis: Studies on the carboxydismutase system and related materials. University of California, Berkeley, California. (1960)."
+            },
+            {
+              "key": "30_CR68",
+              "doi-asserted-by": "publisher",
+              "first-page": "147",
+              "DOI": "10.1098/rstl.1772.0021",
+              "volume": "62",
+              "author": "J Priestley",
+              "year": "1772",
+              "unstructured": "Priestley, J.: Observations on different kinds of air. Phil. Trans. B 62, 147\u2013264 (1772). Reviewed in: Photosynthesis and related processes, I (E. I. Rabinowitch), p. 14. New York: Interscience Publishers 1945.",
+              "journal-title": "Phil. Trans. B"
+            },
+            {
+              "key": "30_CR69",
+              "doi-asserted-by": "publisher",
+              "first-page": "2528",
+              "DOI": "10.1021/ja01543a042",
+              "volume": "80",
+              "author": "BR Rabin",
+              "year": "1958",
+              "unstructured": "Rabin, B. R., N. G. Pon, D. F. Shaw, J. M. Anderson and M. Calvin: Cyanide effect on CO2 fixation in Chlorella. J. Amer. chem. Soc. 80, 2528\u20132532 (1958).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR70",
+              "doi-asserted-by": "publisher",
+              "first-page": "238",
+              "DOI": "10.1016/0003-9861(54)90331-8",
+              "volume": "48",
+              "author": "E Racker",
+              "year": "1954",
+              "unstructured": "Racker, E., G. de la Haba and I. G. Leder: Transketolase catalyzed utilization of fructose-6-phosphate and its significance in a glucose-6-phosphate oxidation cycle. Arch. Biochem. 48, 238\u2013240 (1954).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "30_CR71",
+              "doi-asserted-by": "publisher",
+              "first-page": "661",
+              "DOI": "10.1021/ja01872a034",
+              "volume": "61",
+              "author": "S Ruben",
+              "year": "1939",
+              "unstructured": "Ruben, S., W. Z. Hassid and M. D. Kamen: Radioactive carbon in the study of photosynthesis. J. Amer. chem. Soc. 61, 661\u2013663 (1939).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR72",
+              "doi-asserted-by": "publisher",
+              "first-page": "3451",
+              "DOI": "10.1021/ja01869a044",
+              "volume": "62",
+              "author": "S Ruben",
+              "year": "1940",
+              "unstructured": "Ruben, S., and M. D. Kamen: Photosynthesis with radioactive carbon. IV. Molecular weight of the intermediate products and a tentative theory of photosynthesis. J. Amer. chem. Soc. 62, 3451\u20133455 (1940).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR73",
+              "doi-asserted-by": "crossref",
+              "first-page": "418",
+              "DOI": "10.1073/pnas.26.6.418",
+              "volume": "26",
+              "author": "Radioactive carbon in the study of respiration in heterotrophic systems",
+              "year": "1940",
+              "unstructured": "Radioactive carbon in the study of respiration in heterotrophic systems. Proc. nat. Acad. Sci. (Wash.) 26, 418\u2013426 (1940).",
+              "journal-title": "Proc. nat. Acad. Sci. (Wash.)"
+            },
+            {
+              "key": "30_CR74",
+              "unstructured": "Nonphotochemical reduction of carbon dioxide by biological systems. J. appl. Phys. 12, 321\u2013322 (1941)."
+            },
+            {
+              "key": "30_CR75",
+              "doi-asserted-by": "publisher",
+              "first-page": "877",
+              "DOI": "10.1021/ja01848a512",
+              "volume": "63",
+              "author": "S Ruben",
+              "year": "1941",
+              "unstructured": "Ruben, S., M. Randall, M. Kamen and J. L. Hyde: Heavy oxygen (O18) as a tracer in the study of photosynthesis. J. Amer. chem. Soc. 63, 877\u2013879 (1941).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR76",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.5962/bhl.title.16533",
+              "volume-title": "Recherches chimiques sur la v\u00e9g\u00e9tation",
+              "author": "N Saussure de",
+              "year": "1804",
+              "unstructured": "Saussure, N. Th. de: Recherches chimiques sur la v\u00e9g\u00e9tation. Nyon: Paris 1804. Reviewed in: Photosynthesis and related processes, I (E. I. Rabinowitch), p. 23. New York: Interscience Publishers 1945."
+            },
+            {
+              "key": "30_CR77",
+              "doi-asserted-by": "publisher",
+              "first-page": "487",
+              "DOI": "10.1111/j.1399-3054.1950.tb07676.x",
+              "volume": "3",
+              "author": "L Schou",
+              "year": "1950",
+              "unstructured": "Schou, L., A. A. Benson, J. A. Bassham and M. Calvin: The path of carbon in photosynthesis. XI. The role of glycolic acid. Physiol. Plantarum (Cph.) 3, 487\u2013495 (1950).",
+              "journal-title": "Physiol. Plantarum (Cph.)"
+            },
+            {
+              "key": "30_CR78",
+              "volume-title": "M\u00e9moires physico-chimiques sur l\u2019influence de la lumi\u00e8re solaire pour modifier les \u00eatres de trois r\u00e8gnes, soutour ceux du r\u00e8gne v\u00e9g\u00e9tal",
+              "author": "J Senebier",
+              "year": "1782",
+              "unstructured": "Senebier, J.: M\u00e9moires physico-chimiques sur l\u2019influence de la lumi\u00e8re solaire pour modifier les \u00eatres de trois r\u00e8gnes, soutour ceux du r\u00e8gne v\u00e9g\u00e9tal. 3 vols. Chirol, Geneve 1782. Reviewed in: Photosynthesis and related processes, I (E. I. Rabinowitch). New York: Interscience Publishers 1945."
+            },
+            {
+              "key": "30_CR79",
+              "volume-title": "Cerate oxidimetry",
+              "author": "GF Smith",
+              "year": "1942",
+              "unstructured": "Smith, G. F.: Cerate oxidimetry. Columbus, Ohio: G. Frederick Smith Chemical Company 1942."
+            },
+            {
+              "key": "30_CR80",
+              "doi-asserted-by": "publisher",
+              "first-page": "304",
+              "DOI": "10.1126/science.108.2803.304",
+              "volume": "108",
+              "author": "W Stepka",
+              "year": "1948",
+              "unstructured": "Stepka, W., A. A. Benson and M. Calvin: The path of carbon in photosynthesis. II. Amino acids. Science 108, 304 (1948).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "30_CR81",
+              "doi-asserted-by": "crossref",
+              "first-page": "491",
+              "DOI": "10.1128/JB.69.5.491-501.1955",
+              "volume": "69",
+              "author": "AOM Stoppani",
+              "year": "1955",
+              "unstructured": "Stoppani, A. O. M., R. C. Fuller and M. Calvin: Carbon dioxide fixation by Rhodopseudomonas capsulatus. J. Bact. 69, 491\u2013501 (1955).",
+              "journal-title": "J. Bact."
+            },
+            {
+              "key": "30_CR82",
+              "doi-asserted-by": "crossref",
+              "first-page": "305",
+              "DOI": "10.1515/zpch-1923-10621",
+              "volume": "106",
+              "author": "T Thunberg",
+              "year": "1923",
+              "unstructured": "Thunberg, T.: \u00dcber einen neuen Weg von der Kohlens\u00e4ure zum Formaldehyd. Ein Beitrag zur Theorie der Kohlens\u00e4ureassimilation. Z. phys. Chem. 106, 305\u2013312 (1923).",
+              "journal-title": "Z. phys. Chem."
+            },
+            {
+              "key": "30_CR83",
+              "doi-asserted-by": "crossref",
+              "first-page": "1255",
+              "DOI": "10.1016/S0021-9258(18)56792-2",
+              "volume": "179",
+              "author": "YJ Topper",
+              "year": "1949",
+              "unstructured": "Topper, Y. J., and A. B. Hastings: A study of the chemical origins of glycogen by use of C14-labeled carbon dioxide, acetate, and pyruvate. J. biol. Chem. 179, 1255 (1949).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR84",
+              "first-page": "328",
+              "volume": "17",
+              "author": "W Vishniac",
+              "year": "1958",
+              "unstructured": "Vishniac, W., and R. C. Fuller: Identity of fluoride-labile CO2 fixation product in algae. Fed. Proc. 17, 328 (1958).",
+              "journal-title": "Fed. Proc."
+            },
+            {
+              "key": "30_CR85",
+              "first-page": "622",
+              "volume": "12b",
+              "author": "O Warburg",
+              "year": "1958",
+              "unstructured": "Warburg, O., H. Klotzsch u. G. Krippahl: Glutamins\u00e4ure in Chlorella. Z. Naturforsch. 12b, 622\u2013628 (1958).",
+              "journal-title": "Z. Naturforsch."
+            },
+            {
+              "key": "30_CR86",
+              "doi-asserted-by": "crossref",
+              "first-page": "691",
+              "DOI": "10.1016/S0021-9258(17)35208-0",
+              "volume": "166",
+              "author": "S Weinhouse",
+              "year": "1946",
+              "unstructured": "Weinhouse, S., G. Medes and N. F. Floyd: Fatty acid metabolism. V. The conversion of fatty acid intermediates to citrate, studied with the aid of isotopic carbon. J. biol. Chem. 166, 691\u2013703 (1946).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR87",
+              "doi-asserted-by": "crossref",
+              "first-page": "795",
+              "DOI": "10.1016/S0021-9258(18)65843-0",
+              "volume": "218",
+              "author": "A Weissbach",
+              "year": "1956",
+              "unstructured": "Weissbach, A., B. L. Horecker, and J. Hurwitz: The enzymatic formation of phosphoglyceric acid from ribulose diphosphate and carbon dioxide. J. biol. Chem. 218, 795 (1956).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "30_CR88",
+              "doi-asserted-by": "publisher",
+              "first-page": "2085",
+              "DOI": "10.1002/cber.191404702106",
+              "volume": "47",
+              "author": "H Wieland",
+              "year": "1914",
+              "unstructured": "Wieland, H.: \u00dcber den Mechanismus der Oxydationsvorg\u00e4nge. III. Ber. dtsch. chem. Ges. 47, 2085\u20132111 (1914).",
+              "journal-title": "Ber. dtsch. chem. Ges."
+            },
+            {
+              "key": "30_CR89",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-642-98947-6",
+              "volume-title": "Untersuchungen \u00fcber die Assimilation der Kohlens\u00e4ure",
+              "author": "R Willst\u00e4tter",
+              "year": "1918",
+              "unstructured": "Willst\u00e4tter, R., u. A. Stoll: Untersuchungen \u00fcber die Assimilation der Kohlens\u00e4ure. Berlin: Springer 1918. Reviewed in: Photosynthesis and related processes (E. I. Rabinowitch). New York: Interscience Publishers 1945."
+            },
+            {
+              "key": "30_CR90",
+              "doi-asserted-by": "publisher",
+              "first-page": "5948",
+              "DOI": "10.1021/ja01627a050",
+              "volume": "77",
+              "author": "AT Wilson",
+              "year": "1955",
+              "unstructured": "Wilson, A. T., and M. Calvin: The photosynthetic cycle. CO2 dependent transients. J. Amer. chem. Soc. 77, 5948\u20135957 (1955).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "30_CR91",
+              "doi-asserted-by": "crossref",
+              "first-page": "475",
+              "DOI": "10.1016/S0021-9258(19)52809-5",
+              "volume": "159",
+              "author": "HG Wood",
+              "year": "1945",
+              "unstructured": "Wood, H. G., N. Lifson and V. L. Lorber: The position of fixed carbon in glucose from rat liver glycogen. J. biol. Chem. 159, 475\u2013489 (1945).",
+              "journal-title": "J. biol. Chem."
+            }
+          ],
+          "container-title": [
+            "Die CO2-Assimilation / The Assimilation of Carbon Dioxide"
+          ],
+          "language": "de",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-3-642-94798-8_30",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                7,
+                3
+              ]
+            ],
+            "date-time": "2023-07-03T09:12:37Z",
+            "timestamp": 1688375557000
+          },
+          "score": 25.26309,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-3-642-94798-8_30"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1960
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783642947995",
+            "9783642947988"
+          ],
+          "references-count": 91,
+          "URL": "https://doi.org/10.1007/978-3-642-94798-8_30",
+          "published": {
+            "date-parts": [
+              [
+                1960
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 4,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

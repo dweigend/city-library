@@ -1,0 +1,767 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Some+characteristics+of+simple+types+of+predation+and+parasitism+Holling+1959&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2460234,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T09:38:57Z",
+            "timestamp": 1793785137996,
+            "version": "4.6.1"
+          },
+          "reference-count": 12,
+          "publisher": "Cambridge University Press (CUP)",
+          "issue": "7",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2012,
+                    5,
+                    31
+                  ]
+                ],
+                "date-time": "2012-05-31T00:00:00Z",
+                "timestamp": 1338422400000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 19328,
+              "URL": "https://www.cambridge.org/core/terms"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Can Entomol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1959,
+                7
+              ]
+            ]
+          },
+          "abstract": "<jats:p>In an earlier study (Holling, 1959) the basic and subsidiary components of predation were demonstrated in a predator-prey situation involving the predation of sawfly cocoons by small mammals. One of the basic components, termed the functional response, was a response of the consumption of prey by individual predators to changes of prey density, and it appeared to be at least theoretically important in population regulation: Because of this importance the functional response has been further examined in an attempt to explain its characteristics.</jats:p>",
+          "DOI": "10.4039/ent91385-7",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                1,
+                15
+              ]
+            ],
+            "date-time": "2010-01-15T15:06:50Z",
+            "timestamp": 1263568010000
+          },
+          "page": "385-398",
+          "source": "Crossref",
+          "is-referenced-by-count": 3597,
+          "title": [
+            "Some Characteristics of Simple Types of Predation and Parasitism"
+          ],
+          "prefix": "10.4039",
+          "volume": "91",
+          "author": [
+            {
+              "given": "C. S.",
+              "family": "Holling",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "56",
+          "published-online": {
+            "date-parts": [
+              [
+                2012,
+                5,
+                31
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "S0008347X00072692_ref008",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1096-3642.1935.tb01680.x"
+            },
+            {
+              "key": "S0008347X00072692_ref003",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4039/Ent90279-5"
+            },
+            {
+              "key": "S0008347X00072692_ref007",
+              "first-page": "152",
+              "article-title": "Contribution to quantitative parasitology",
+              "volume": "13",
+              "author": "Lotka",
+              "year": "1923",
+              "journal-title": "J. Wash. Acad. Sci."
+            },
+            {
+              "key": "S0008347X00072692_ref006",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4039/Ent91293-5"
+            },
+            {
+              "key": "S0008347X00072692_ref009",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4039/Ent8125-2"
+            },
+            {
+              "key": "S0008347X00072692_ref011",
+              "first-page": "31",
+              "article-title": "Variazioni e fluttuazioni del numero d'individui in specie animali conviventi",
+              "volume": "2",
+              "author": "Volterra",
+              "year": "1926",
+              "journal-title": "Mem. Acad. Lincei"
+            },
+            {
+              "key": "S0008347X00072692_ref004",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jee/34.6.741"
+            },
+            {
+              "key": "S0008347X00072692_ref001",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/281687"
+            },
+            {
+              "key": "S0008347X00072692_ref012",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4039/Ent91129-3"
+            },
+            {
+              "key": "S0008347X00072692_ref002",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/physzool.27.3.30152165"
+            },
+            {
+              "key": "S0008347X00072692_ref005",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5962/bhl.title.4489"
+            },
+            {
+              "key": "S0008347X00072692_ref010",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4039/Ent81285-12"
+            }
+          ],
+          "container-title": [
+            "The Canadian Entomologist"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0008347X00072692",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                22
+              ]
+            ],
+            "date-time": "2020-04-22T04:58:17Z",
+            "timestamp": 1587531497000
+          },
+          "score": 46.614693,
+          "resource": {
+            "primary": {
+              "URL": "https://www.cambridge.org/core/product/identifier/S0008347X00072692/type/journal_article"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1959,
+                7
+              ]
+            ]
+          },
+          "references-count": 12,
+          "journal-issue": {
+            "issue": "7",
+            "published-print": {
+              "date-parts": [
+                [
+                  1959,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0008347X00072692"
+          ],
+          "URL": "https://doi.org/10.4039/ent91385-7",
+          "ISSN": [
+            "0008-347X",
+            "1918-3240"
+          ],
+          "issn-type": [
+            {
+              "value": "0008-347X",
+              "type": "print"
+            },
+            {
+              "value": "1918-3240",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1959,
+                7
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2022-04-02T23:12:29Z",
+            "timestamp": 1648941149754
+          },
+          "reference-count": 0,
+          "publisher": "American Association for the Advancement of Science (AAAS)",
+          "issue": "6177",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2014,
+                3,
+                21
+              ]
+            ]
+          },
+          "DOI": "10.1126/science.343.6177.1288-f",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2014,
+                3,
+                20
+              ]
+            ],
+            "date-time": "2014-03-20T14:18:23Z",
+            "timestamp": 1395325103000
+          },
+          "page": "1288-1288",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Predation Favors Parasitism"
+          ],
+          "prefix": "10.1126",
+          "volume": "343",
+          "member": "221",
+          "published-online": {
+            "date-parts": [
+              [
+                2014,
+                3,
+                20
+              ]
+            ]
+          },
+          "container-title": [
+            "Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://syndication.highwire.org/content/doi/10.1126/science.343.6177.1288-f",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                2,
+                5
+              ]
+            ],
+            "date-time": "2020-02-05T19:23:10Z",
+            "timestamp": 1580930590000
+          },
+          "score": 26.76867,
+          "resource": {
+            "primary": {
+              "URL": "https://www.sciencemag.org/lookup/doi/10.1126/science.343.6177.1288-f"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2014,
+                3,
+                20
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "6177",
+            "published-online": {
+              "date-parts": [
+                [
+                  2014,
+                  3,
+                  20
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2014,
+                  3,
+                  21
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1126/science.343.6177.1288-f",
+          "ISSN": [
+            "0036-8075",
+            "1095-9203"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8075",
+              "type": "print"
+            },
+            {
+              "value": "1095-9203",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                3,
+                20
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                9
+              ]
+            ],
+            "date-time": "2024-09-09T04:04:48Z",
+            "timestamp": 1725854688092
+          },
+          "reference-count": 21,
+          "publisher": "Elsevier",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9780128004265"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2016,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2016-01-01T00:00:00Z",
+                "timestamp": 1451606400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          },
+          "DOI": "10.1016/b978-0-12-800049-6.00188-8",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2016-04-29T18:05:43Z",
+            "timestamp": 1461953143000
+          },
+          "page": "332-338",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Predation and Parasitism"
+          ],
+          "prefix": "10.1016",
+          "author": [
+            {
+              "given": "T.H.Q.",
+              "family": "Powell",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "K.M.",
+              "family": "Prior",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib1",
+              "doi-asserted-by": "crossref",
+              "first-page": "1229",
+              "DOI": "10.1111/j.1558-5646.1986.tb05747.x",
+              "article-title": "Adaptive responses of predators to prey and prey to predators: The failure of the arms race analogy",
+              "volume": "4",
+              "author": "Abrams",
+              "year": "1986",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib2",
+              "doi-asserted-by": "crossref",
+              "first-page": "79",
+              "DOI": "10.1146/annurev.ecolsys.31.1.79",
+              "article-title": "The evolution of predator\u2013prey interactions: Theory and evidence",
+              "volume": "31",
+              "author": "Abrams",
+              "year": "2001",
+              "journal-title": "Annual Review of Ecology and Systematics"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1023/A:1018445517101",
+              "article-title": "Fitness minimization and dynamic instability as a consequence of predator\u2013prey coevolution",
+              "volume": "11",
+              "author": "Abrams",
+              "year": "1997",
+              "journal-title": "Evolutionary Ecology"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib4",
+              "series-title": "Coevolution",
+              "article-title": "The deer flees, the wolf pursues: Incongruencies in predator\u2013prey coevolution",
+              "author": "Bakker",
+              "year": "1983"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib16",
+              "series-title": "In the Light of Evolution: Essays from the Laboratory and Field",
+              "first-page": "93",
+              "article-title": "Patterns, process, and the parable of the coffeepot incident: Arms races between newts and snakes from landscapes to molecules",
+              "author": "Brodie",
+              "year": "2011"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "626",
+              "DOI": "10.2307/2640799",
+              "article-title": "The cost of exploiting poisonous prey: Tradeoffs in a predator\u2013prey arms race",
+              "volume": "53",
+              "author": "Brodie",
+              "year": "1999",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "2067",
+              "DOI": "10.1111/j.0014-3820.2002.tb00132.x",
+              "article-title": "The evolutionary response of predators to dangerous prey: Hotspots and coldspots in the geographic mosaic of coevolution between garter snakes and newts",
+              "volume": "56",
+              "author": "Brodie",
+              "year": "2002",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "237",
+              "DOI": "10.2307/2406788",
+              "article-title": "Sympatric host race formation and speciation in frugivorous flies of the genus Rhagoletis (Diptera: Tephritidae)",
+              "volume": "23",
+              "author": "Bush",
+              "year": "1969",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "801",
+              "DOI": "10.2307/1939346",
+              "article-title": "The effects of parasitoids on sympatric host races of Rhagoletis pomonella (Diptera: Tephritidae)",
+              "volume": "76",
+              "author": "Feder",
+              "year": "1995",
+              "journal-title": "Ecology"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "259",
+              "DOI": "10.1098/rspb.1983.0039",
+              "article-title": "The Florey lecture 1983: Biological control, as exemplified by smallpox eradication and myxomatosis",
+              "volume": "218",
+              "author": "Fenner",
+              "year": "1983",
+              "journal-title": "Proceedings of the Royal Society of London Series B: Biological Sciences"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "776",
+              "DOI": "10.1126/science.1166981",
+              "article-title": "Sequential sympatric speciation across trophic levels",
+              "volume": "323",
+              "author": "Forbes",
+              "year": "2009",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "527",
+              "DOI": "10.1006/jtbi.1997.0426",
+              "article-title": "Coevolutionary chase in exploiter\u2013victim systems with polygenic characters",
+              "volume": "186",
+              "author": "Gavrilets",
+              "year": "1997",
+              "journal-title": "Journal of Theoretical Biology"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "1336",
+              "DOI": "10.1126/science.1074310",
+              "article-title": "Mechanisms of adaptation in a predator\u2013prety arms race: TTX-resistant sodium channels",
+              "volume": "297",
+              "author": "Geffeney",
+              "year": "2002",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib13",
+              "doi-asserted-by": "crossref",
+              "first-page": "0471",
+              "DOI": "10.1371/journal.pbio.0060060",
+              "article-title": "Phenotypic mismatches reveal escape from arms-race coevolution",
+              "volume": "6",
+              "author": "Hanifin",
+              "year": "2008",
+              "journal-title": "PLoS Biology"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "1122",
+              "DOI": "10.1126/science.176.4039.1122",
+              "article-title": "Development of cellular dependence on infective organisms: Micurgical studies in amoebas",
+              "volume": "176",
+              "author": "Jeon",
+              "year": "1972",
+              "journal-title": "Science"
+            },
+            {
+              "year": "2005",
+              "series-title": "The Geographic Mosaic of Evolution",
+              "author": "Thompson",
+              "key": "10.1016/B978-0-12-800049-6.00188-8_bib15"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_fur1",
+              "doi-asserted-by": "crossref",
+              "first-page": "1229",
+              "DOI": "10.2307/2408950",
+              "article-title": "Adaptive responses of predators to prey and prey to predators: The failure of the arms race analogy",
+              "volume": "4",
+              "author": "Abrams",
+              "year": "1986",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_fur2",
+              "series-title": "In the Light of Evolution: Essays from the Laboratory and Field",
+              "first-page": "93",
+              "article-title": "Patterns, process, and the parable of the coffeepot incident: Arms races between newts and snakes from landscapes to molecules",
+              "author": "Brodie",
+              "year": "2011"
+            },
+            {
+              "year": "1983",
+              "series-title": "Coevolution",
+              "author": "Futuyma",
+              "key": "10.1016/B978-0-12-800049-6.00188-8_fur3"
+            },
+            {
+              "key": "10.1016/B978-0-12-800049-6.00188-8_fur4",
+              "doi-asserted-by": "crossref",
+              "first-page": "1122",
+              "DOI": "10.1126/science.176.4039.1122",
+              "article-title": "Development of cellular dependence on infective organisms: Micrurgical studies in amoebas",
+              "volume": "176",
+              "author": "Jeon",
+              "year": "1972",
+              "journal-title": "Science"
+            },
+            {
+              "year": "2005",
+              "series-title": "The Geographic Mosaic of Evolution",
+              "author": "Thompson",
+              "key": "10.1016/B978-0-12-800049-6.00188-8_fur5"
+            }
+          ],
+          "container-title": [
+            "Encyclopedia of Evolutionary Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780128000496001888?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780128000496001888?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                9,
+                7
+              ]
+            ],
+            "date-time": "2019-09-07T04:45:27Z",
+            "timestamp": 1567831527000
+          },
+          "score": 26.635252,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/B9780128000496001888"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780128004265"
+          ],
+          "references-count": 21,
+          "URL": "https://doi.org/10.1016/b978-0-12-800049-6.00188-8",
+          "published": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-024-44785-3%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/s41467-024-44785-3\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "38291028",
+          "source": "MED",
+          "pmid": "38291028",
+          "pmcid": "PMC10827719",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC10827719"
+            ]
+          },
+          "doi": "10.1038/s41467-024-44785-3",
+          "title": "Why flying insects gather at artificial light.",
+          "authorString": "Fabian ST, Sondhi Y, Allen PE, Theobald JC, Lin HT.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Fabian ST",
+                "lastName": "Fabian",
+                "firstName": "Samuel T",
+                "initials": "ST",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0366-7236"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Bioengineering, Imperial College London, London, SW7 2AZ, UK. s.fabian@imperial.ac.uk."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Sondhi Y",
+                "lastName": "Sondhi",
+                "firstName": "Yash",
+                "initials": "Y",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7704-3944"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute for Environment, Department of Biology, Florida International University, Miami, FL, 33174, USA. yashsondhi@gmail.com."
+                    },
+                    {
+                      "affiliation": "McGuire Center for Lepidoptera and Biodiversity, Florida Museum of Natural History, University of Florida, Gainesville, FL, 32611, USA. yashsondhi@gmail.com."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Allen PE",
+                "lastName": "Allen",
+                "firstName": "Pablo E",
+                "initials": "PE",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Council on International Educational Exchange, Monteverde Apto, 43-5655, Costa Rica."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Theobald JC",
+                "lastName": "Theobald",
+                "firstName": "Jamie C",
+                "initials": "JC",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7648-3772"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute for Environment, Department of Biology, Florida International University, Miami, FL, 33174, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lin HT",
+                "lastName": "Lin",
+                "firstName": "Huai-Ti",
+                "initials": "HT",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3370-244X"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Bioengineering, Imperial College London, London, SW7 2AZ, UK."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7648-3772"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0366-7236"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7704-3944"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3370-244X"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "15",
+            "journalIssueId": 3689398,
+            "dateOfPublication": "2024 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2024,
+            "journal": {
+              "medlineAbbreviation": "Nat Commun",
+              "title": "Nature communications",
+              "essn": "2041-1723",
+              "issn": "2041-1723",
+              "isoabbreviation": "Nat Commun",
+              "nlmid": "101528555"
+            },
+            "printPublicationDate": "2024-01-01"
+          },
+          "pubYear": "2024",
+          "pageInfo": "689",
+          "abstractText": "Explanations of why nocturnal insects fly erratically around fires and lamps have included theories of \"lunar navigation\" and \"escape to the light\". However, without three-dimensional flight data to test them rigorously, the cause for this odd behaviour has remained\u00a0unsolved. We employed high-resolution motion capture in the laboratory and stereo-videography in the field to reconstruct the 3D kinematics of insect flights around artificial lights. Contrary to the expectation of attraction, insects do not steer directly toward the light. Instead, insects turn their dorsum toward the light, generating flight bouts perpendicular to the source. Under natural sky light, tilting the dorsum towards the brightest visual hemisphere helps maintain proper flight attitude and control. Near artificial sources, however, this highly conserved dorsal-light-response can produce continuous steering around the light and trap an insect. Our guidance model demonstrates that this dorsal tilting is sufficient to create the seemingly erratic flight paths of insects near lights and is the most plausible model for why flying insects gather at artificial lights.",
+          "affiliation": "Department of Bioengineering, Imperial College London, London, SW7 2AZ, UK. s.fabian@imperial.ac.uk.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "National Geographic Society",
+                "grantId": "EC-82941R-21",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Science Foundation (NSF)",
+                "grantId": "NSF IOS-1750833",
+                "orderIn": 0
+              },
+              {
+                "agency": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research (AF Office of Scientific Research)",
+                "grantId": "AFOSR MURI award FA9550-22-1-0315",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Science Foundation",
+                "grantId": "NSF IOS-1750833",
+                "orderIn": 0
+              },
+              {
+                "agency": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research",
+                "grantId": "AFOSR MURI award FA9550-22-1-0315",
+                "orderIn": 0
+              },
+              {
+                "agency": "European Research Council",
+                "acronym": "ERC_",
+                "grantId": "804315",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Flight, Animal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Light"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Insecta",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://www.nature.com/articles/s41467-024-44785-3.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/s41467-024-44785-3"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC10827719"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC10827719?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "PPR",
+                "id": "PPR644028",
+                "type": "Preprint in",
+                "note": "CrossRef Pre-print loader",
+                "orderIn": 10002
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 34,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2024-02-01",
+          "dateOfCreation": "2024-01-30",
+          "dateOfRevision": "2026-05-14",
+          "electronicPublicationDate": "2024-01-30",
+          "firstPublicationDate": "2024-01-30",
+          "firstIndexDate": "2024-01-31",
+          "fullTextReceivedDate": "2024-02-03",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

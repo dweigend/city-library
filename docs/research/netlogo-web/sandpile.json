@@ -1,0 +1,114 @@
+{
+  "slug": "sandpile",
+  "name": "Sandpile",
+  "catalogPath": "Sample Models/Chemistry & Physics/Sandpile",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Sandpile.nlogox",
+  "deliveryBatch": "B11",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "NetLogo Sandpile investigates how slow loading can produce avalanches over many scales. Grains are added to a square lattice; overloaded sites redistribute their entire load to four neighbors, and grains can escape at the boundary. Introduces self-organized criticality through driven threshold dynamics [1]. Provides the analytical sandpile-automaton framework and its restrictions [2]. Explains scaling tests and finite-size caveats needed before interpreting avalanche distributions [3]. The original Info warns that these rules are not realistic granular mechanics; the all-load redistribution rule also deserves attention when comparing with strictly Abelian toppling. The simulation illustrates how local thresholds, boundary dissipation and driving interact. Reproducing these patterns establishes rule fidelity, not empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Sandpile.nlogox",
+    "checkedAt": "2026-11-05",
+    "revision": "NetLogo 7.0.4; SHA-256 652510bc00315490d7f7af08898296b4af80f84e1f73b9cf297cba70ffbee252",
+    "evidence": "Full served model XML, Procedures and Info downloaded and consulted; retained at evidence/physics/sandpile.nlogox",
+    "notes": "This dossier describes the original NetLogo baseline; it does not establish reimplementation behavior or empirical validation.",
+    "citation": "* Weintrop, D., Tisue, S., Tinker, R., Head, B. and Wilensky, U. (2011).  NetLogo Sandpile model.  http://ccl.northwestern.edu/netlogo/models/Sandpile.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "infoEvidenceFile": "evidence/physics/sandpile-source.json",
+    "evidenceFile": "evidence/physics/sandpile.nlogox"
+  },
+  "publications": [
+    {
+      "id": "1",
+      "authors": [
+        "Per Bak",
+        "Chao Tang",
+        "Kurt Wiesenfeld"
+      ],
+      "title": "Self-organized criticality: An explanation of the 1/ f noise",
+      "year": 1987,
+      "venue": "Physical Review Letters",
+      "doi": "10.1103/physrevlett.59.381",
+      "url": "https://doi.org/10.1103/physrevlett.59.381",
+      "relevance": "Introduces self-organized criticality through driven threshold dynamics; relevant here to how local thresholds, boundary dissipation and driving interact.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103/PhysRevLett.59.381",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and abstract",
+        "access": "Open publisher abstract; full article requires authorization",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-bak.json",
+        "verified": true,
+        "additionalConsultedUrls": [
+          "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.381"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/physics/abstracts-01.json"
+        ],
+        "primaryReadingNotes": "Publisher abstract relates spatially extended driven dynamics to criticality, flicker noise and fractal objects."
+      },
+      "verified": true,
+      "volume": "59",
+      "issue": "4",
+      "pages": "381-384",
+      "publisher": "American Physical Society (APS)"
+    },
+    {
+      "id": "2",
+      "authors": [
+        "Deepak Dhar"
+      ],
+      "title": "Self-organized critical state of sandpile automaton models",
+      "year": 1990,
+      "venue": "Physical Review Letters",
+      "doi": "10.1103/physrevlett.64.1613",
+      "url": "https://doi.org/10.1103/physrevlett.64.1613",
+      "relevance": "Provides the analytical sandpile-automaton framework and its restrictions; relevant here to how local thresholds, boundary dissipation and driving interact.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevLett.64.1613",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and abstract",
+        "access": "Open publisher abstract; full article requires authorization",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-dhar.json",
+        "verified": true,
+        "additionalConsultedUrls": [
+          "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.64.1613"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/physics/abstracts-01.json"
+        ],
+        "primaryReadingNotes": "Abstract states the local-height toppling assumptions and exact finite-lattice analysis; these are comparison conditions, not proof that all NetLogo toppling variants are Abelian."
+      },
+      "verified": true,
+      "volume": "64",
+      "issue": "14",
+      "pages": "1613-1616",
+      "publisher": "American Physical Society (APS)"
+    },
+    {
+      "id": "3",
+      "authors": [
+        "Gunnar Pruessner"
+      ],
+      "title": "Self-Organised Criticality",
+      "year": 2012,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/cbo9780511977671",
+      "url": "https://doi.org/10.1017/cbo9780511977671",
+      "relevance": "Explains scaling tests and finite-size caveats needed before interpreting avalanche distributions; relevant here to how local thresholds, boundary dissipation and driving interact.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query=Self-Organised%20Criticality%20Theory%20Models%20and%20Characterisation%20Gunnar%20Pruessner&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and abstract",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. Registrant abstract consulted: Giving a detailed overview of the subject, this book takes in the results and methods that have arisen since the term 'self-organised criticality' was coined twenty years ago. Providing an overview of numerical and analytical methods, from their theoretical foundation to the actual application and implementation, the book is an easy access point to important results and sophisticated methods. Starting with the famous Bak-Tang-Wiesenfeld sandpile, ten key models are carefully defined, together with their results and applications. Comprehensive tables of numerical results are collected in one volume for the first time, making the information readily accessible to readers. Written for graduate students and practising researchers in a range of disciplines, from physics and mathematics to biology, sociology, finance, medicine and engineering, the book gives a practical, hands-on approach throughout. Methods and results are applied in ways that will relate to the reader's own research.",
+        "evidenceFile": "evidence/physics/publication-pruessner.json",
+        "verified": true
+      },
+      "verified": true,
+      "publisher": "Cambridge University Press"
+    }
+  ],
+  "gaps": []
+}

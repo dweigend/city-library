@@ -1,0 +1,959 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1038%2Fnature01014",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            4
+          ]
+        ],
+        "date-time": "2026-11-04T15:16:37Z",
+        "timestamp": 1793805397295,
+        "version": "4.6.1"
+      },
+      "reference-count": 79,
+      "publisher": "Springer Science and Business Media LLC",
+      "issue": "6898",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2002,
+                8,
+                1
+              ]
+            ],
+            "date-time": "2002-08-01T00:00:00Z",
+            "timestamp": 1028160000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Nature"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2002,
+            8
+          ]
+        ]
+      },
+      "DOI": "10.1038/nature01014",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            9,
+            17
+          ]
+        ],
+        "date-time": "2002-09-17T20:15:48Z",
+        "timestamp": 1032293748000
+      },
+      "page": "671-677",
+      "source": "Crossref",
+      "is-referenced-by-count": 6677,
+      "title": [
+        "Agricultural sustainability and intensive production practices"
+      ],
+      "prefix": "10.1038",
+      "volume": "418",
+      "author": [
+        {
+          "given": "David",
+          "family": "Tilman",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kenneth G.",
+          "family": "Cassman",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Pamela A.",
+          "family": "Matson",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rosamond",
+          "family": "Naylor",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Stephen",
+          "family": "Polasky",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "reference": [
+        {
+          "key": "BFnature01014_CR1",
+          "volume-title": "How Many People Can the Earth Support?",
+          "author": "JE Cohen",
+          "year": "1995",
+          "unstructured": "Cohen, J. E. How Many People Can the Earth Support? (Norton, New York, 1995)."
+        },
+        {
+          "key": "BFnature01014_CR2",
+          "unstructured": "Food and Agriculture Organization of the United Nations (FAO). FAO Statistical Databases \u3008\n                    http://apps.fao.org/\n                    \n                  \u3009 (2001)."
+        },
+        {
+          "key": "BFnature01014_CR3",
+          "unstructured": "World Health Organization (WHO). Public Health Impacts of Pesticides Used in Agriculture (WHO in collaboration with the United Nations Environment Programme, Geneva, 1990)."
+        },
+        {
+          "key": "BFnature01014_CR4",
+          "doi-asserted-by": "publisher",
+          "first-page": "281",
+          "DOI": "10.1126/science.1057544",
+          "volume": "292",
+          "author": "D Tilman",
+          "year": "2001",
+          "unstructured": "Tilman, D. et al. Forecasting agriculturally driven global environmental change. Science 292, 281\u2013284 (2001).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR5",
+          "doi-asserted-by": "publisher",
+          "first-page": "17",
+          "DOI": "10.1016/0160-791X(94)00024-8",
+          "volume": "17",
+          "author": "PE Waggoner",
+          "year": "1995",
+          "unstructured": "Waggoner, P. E. How much land can ten billion people spare for nature? Does technology make a difference? Technol. Soc. 17, 17\u201334 (1995).",
+          "journal-title": "Technol. Soc."
+        },
+        {
+          "key": "BFnature01014_CR6",
+          "doi-asserted-by": "publisher",
+          "first-page": "5952",
+          "DOI": "10.1073/pnas.96.11.5952",
+          "volume": "96",
+          "author": "KG Cassman",
+          "year": "1999",
+          "unstructured": "Cassman, K. G. Ecological intensification of cereal production systems: yield potential, soil quality, and precision agriculture. Proc. Natl Acad. Sci. USA 96, 5952\u20135959 (1999).",
+          "journal-title": "Proc. Natl Acad. Sci. USA"
+        },
+        {
+          "key": "BFnature01014_CR7",
+          "volume-title": "Colloquium on Plants and Population: Is There Time?",
+          "author": "JE Cohen",
+          "year": "1999",
+          "unstructured": "Cohen, J. E. & Federoff, N. V. Colloquium on Plants and Population: Is There Time? (National Academy of Sciences, Washington DC, 1999)."
+        },
+        {
+          "key": "BFnature01014_CR8",
+          "doi-asserted-by": "publisher",
+          "first-page": "5908",
+          "DOI": "10.1073/pnas.96.11.5908",
+          "volume": "96",
+          "author": "N Alexandratos",
+          "year": "1999",
+          "unstructured": "Alexandratos, N. World food and agriculture: outlook for the medium and longer term. Proc. Natl Acad. Sci. USA 96, 5908\u20135914 (1999).",
+          "journal-title": "Proc. Natl Acad. Sci. USA"
+        },
+        {
+          "key": "BFnature01014_CR9",
+          "doi-asserted-by": "publisher",
+          "first-page": "5960",
+          "DOI": "10.1073/pnas.96.11.5960",
+          "volume": "96",
+          "author": "VW Ruttan",
+          "year": "1999",
+          "unstructured": "Ruttan, V. W. The transition to agricultural sustainability. Proc. Natl Acad. Sci. USA 96, 5960\u20135967 (1999).",
+          "journal-title": "Proc. Natl Acad. Sci. USA"
+        },
+        {
+          "key": "BFnature01014_CR10",
+          "unstructured": "Ruttan, V. R. Productivity growth in world agriculture: sources and constraints. J. Econ. Perspect. (in the press)."
+        },
+        {
+          "key": "BFnature01014_CR11",
+          "volume-title": "Pillar of Sand: Can the Irrigation Miracle Last?",
+          "author": "S Postel",
+          "year": "1999",
+          "unstructured": "Postel, S. Pillar of Sand: Can the Irrigation Miracle Last? (Norton, New York, 1999)."
+        },
+        {
+          "key": "BFnature01014_CR12",
+          "doi-asserted-by": "publisher",
+          "first-page": "494",
+          "DOI": "10.1126/science.277.5325.494",
+          "volume": "277",
+          "author": "PM Vitousek",
+          "year": "1997",
+          "unstructured": "Vitousek, P. M., Mooney, H. A., Lubchenco, J. & Melillo, J. M. Human domination of earth's ecosystems. Science 277, 494\u2013499 (1997).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR13",
+          "doi-asserted-by": "publisher",
+          "first-page": "559",
+          "DOI": "10.1890/1051-0761(1998)008[0559:NPOSWW]2.0.CO;2",
+          "volume": "8",
+          "author": "SR Carpenter",
+          "year": "1998",
+          "unstructured": "Carpenter, S. R. et al. Nonpoint pollution of surface waters with phosphorus and nitrogen. Ecol. Applic. 8, 559\u2013568 (1998).",
+          "journal-title": "Ecol. Applic."
+        },
+        {
+          "key": "BFnature01014_CR14",
+          "doi-asserted-by": "publisher",
+          "first-page": "1525",
+          "DOI": "10.1056/NEJM199905203402001",
+          "volume": "340",
+          "author": "KE Smith",
+          "year": "1999",
+          "unstructured": "Smith, K. E. et al. Quinolone-resistant Campylobacter jejuni infections in Minnesota, 1992-1998. New Engl. J. Med. 340, 1525\u20131532 (1999).",
+          "journal-title": "New Engl. J. Med."
+        },
+        {
+          "key": "BFnature01014_CR15",
+          "doi-asserted-by": "publisher",
+          "first-page": "1202",
+          "DOI": "10.1056/NEJM200110183451610",
+          "volume": "345",
+          "author": "SL Gorback",
+          "year": "2001",
+          "unstructured": "Gorback, S. L. Antimicrobial use in animal feed\u2014time to stop. New Engl. J. Med. 345, 1202\u20131203 (2001).",
+          "journal-title": "New Engl. J. Med."
+        },
+        {
+          "key": "BFnature01014_CR16",
+          "doi-asserted-by": "publisher",
+          "first-page": "299",
+          "DOI": "10.1007/BF00989137",
+          "volume": "35",
+          "author": "KG Cassman",
+          "year": "1995",
+          "unstructured": "Cassman, K. G. & Pingali, P. L. Intensification of irrigated rice systems: learning from the past to meet future challenges. GeoJournal 35, 299\u2013305 (1995).",
+          "journal-title": "GeoJournal"
+        },
+        {
+          "key": "BFnature01014_CR17",
+          "volume-title": "Nature's Services: Societal Dependence on Natural Ecosystems",
+          "author": "GC Daily",
+          "year": "1997",
+          "unstructured": "Daily, G. C. Nature's Services: Societal Dependence on Natural Ecosystems (Island, Washington DC, 1997)."
+        },
+        {
+          "key": "BFnature01014_CR18",
+          "unstructured": "National Research Council. Nature's Numbers: Expanding the National Economic Accounts to Include the Environment (National Academy Press, Washington DC, 1999)."
+        },
+        {
+          "key": "BFnature01014_CR19",
+          "doi-asserted-by": "publisher",
+          "first-page": "395",
+          "DOI": "10.1126/science.289.5478.395",
+          "volume": "289",
+          "author": "GC Daily",
+          "year": "2000",
+          "unstructured": "Daily, G. C. et al. The value of nature and the nature of value. Science 289, 395\u2013396 (2000).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR20",
+          "volume-title": "The Soil Under Shifting Cultivation",
+          "author": "PH Nye",
+          "year": "1960",
+          "unstructured": "Nye, P. H. & Greenland, D. J. The Soil Under Shifting Cultivation Tech. Commun. No. 51 (Commonwealth Agricultural Bureau of Soils, Harpenden, 1960)."
+        },
+        {
+          "key": "BFnature01014_CR21",
+          "doi-asserted-by": "publisher",
+          "first-page": "1123",
+          "DOI": "10.1126/science.286.5442.1123",
+          "volume": "286",
+          "author": "AB Hector",
+          "year": "1999",
+          "unstructured": "Hector, A. B. et al. Plant diversity and productivity experiments in European grasslands. Science 286, 1123\u20131127 (1999).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR22",
+          "doi-asserted-by": "publisher",
+          "first-page": "843",
+          "DOI": "10.1126/science.1060391",
+          "volume": "294",
+          "author": "D Tilman",
+          "year": "2001",
+          "unstructured": "Tilman, D. et al. Diversity and productivity in a long-term grassland experiment. Science 294, 843\u2013845 (2001).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR23",
+          "doi-asserted-by": "publisher",
+          "first-page": "804",
+          "DOI": "10.1126/science.1064088",
+          "volume": "294",
+          "author": "MS Loreau",
+          "year": "2001",
+          "unstructured": "Loreau, M. S. et al. Biodiversity and ecosystem functioning: current knowledge and future challenges. Science 294, 804\u2013808 (2001).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR24",
+          "doi-asserted-by": "publisher",
+          "first-page": "185",
+          "DOI": "10.1023/A:1010074805303",
+          "volume": "1",
+          "author": "AG Power",
+          "year": "1999",
+          "unstructured": "Power, A. G. Linking ecological sustainability and world food needs. Dev. Sustainability 1, 185\u2013196 (1999).",
+          "journal-title": "Dev. Sustainability"
+        },
+        {
+          "key": "BFnature01014_CR25",
+          "volume-title": "Food's Frontier: The Next Green Revolution",
+          "author": "R Manning",
+          "year": "2000",
+          "unstructured": "Manning, R. Food's Frontier: The Next Green Revolution (North Point, New York, 2000)."
+        },
+        {
+          "key": "BFnature01014_CR26",
+          "first-page": "3",
+          "volume": "2",
+          "author": "RW Kates",
+          "year": "1996",
+          "unstructured": "Kates, R. W. Ending hunger: current status and future prospects. Consequences 2, 3\u201312 (1996).",
+          "journal-title": "Consequences"
+        },
+        {
+          "key": "BFnature01014_CR27",
+          "volume-title": "Poverty and Famines: An Essay on Entitlement and Deprivation",
+          "author": "A Sen",
+          "year": "1981",
+          "unstructured": "Sen, A. Poverty and Famines: An Essay on Entitlement and Deprivation (Clarendon, Oxford, 1981)."
+        },
+        {
+          "key": "BFnature01014_CR28",
+          "doi-asserted-by": "publisher",
+          "first-page": "432",
+          "DOI": "10.2307/1311902",
+          "volume": "43",
+          "author": "DL Plucknett",
+          "year": "1993",
+          "unstructured": "Plucknett, D. L. International agricultural-research for the next century. Bioscience 43, 432\u2013440 (1993).",
+          "journal-title": "Bioscience"
+        },
+        {
+          "key": "BFnature01014_CR29",
+          "volume-title": "The Doubly Green Revolution: Food for All in the Twenty-First Century",
+          "author": "G Conway",
+          "year": "1997",
+          "unstructured": "Conway, G. The Doubly Green Revolution: Food for All in the Twenty-First Century (Penguin, London, 1997)."
+        },
+        {
+          "key": "BFnature01014_CR30",
+          "volume-title": "Agricultural Sustainability: Economic, Environmental and Statistical Considerations",
+          "author": "V Barnett",
+          "year": "1995",
+          "unstructured": "Barnett, V., Payne, R. & Steiner, R. Agricultural Sustainability: Economic, Environmental and Statistical Considerations (Wiley, Chichester, 1995)."
+        },
+        {
+          "key": "BFnature01014_CR31",
+          "doi-asserted-by": "publisher",
+          "first-page": "3",
+          "DOI": "10.1023/A:1010055012699",
+          "volume": "1",
+          "author": "A Young",
+          "year": "1999",
+          "unstructured": "Young, A. Is there really spare land? A critique of estimates of available cultivable land in developing countries. Environ. Dev. Sustainability 1, 3\u201318 (1999).",
+          "journal-title": "Environ. Dev. Sustainability"
+        },
+        {
+          "key": "BFnature01014_CR32",
+          "first-page": "33",
+          "volume-title": "Crop Science\u2014Prospects and Progress",
+          "author": "KG Cassman",
+          "year": "2001",
+          "unstructured": "Cassman, K. G. in Crop Science\u2014Prospects and Progress (eds Nosberger, J., Geiger, H. H. & Struik, P.C.) 33\u201351 (CAB International, Wallingford, 2001)."
+        },
+        {
+          "key": "BFnature01014_CR33",
+          "first-page": "79",
+          "volume-title": "Rice Research and Production in the 21st Century: Symposium Honoring Robert F. Chandler, Jr.",
+          "author": "KG Cassman",
+          "year": "2001",
+          "unstructured": "Cassman, K. G. & Dobermann, A. in Rice Research and Production in the 21st Century: Symposium Honoring Robert F. Chandler, Jr. (ed. Rockwood, W. G.) 79\u2013100 (International Rice Research Institute, Los Banos, Philippines, 2001)."
+        },
+        {
+          "key": "BFnature01014_CR34",
+          "doi-asserted-by": "publisher",
+          "first-page": "1611",
+          "DOI": "10.2135/cropsci1999.3961611x",
+          "volume": "39",
+          "author": "MP Reynolds",
+          "year": "1999",
+          "unstructured": "Reynolds, M. P., Rajaram, S. & Sayre, K. D. Physiological and genetic changes of irrigated wheat in the post-green revolution period and approaches for meeting projected global demand. Crop Sci. 39, 1611\u20131621 (1999).",
+          "journal-title": "Crop Sci."
+        },
+        {
+          "key": "BFnature01014_CR35",
+          "doi-asserted-by": "publisher",
+          "first-page": "1552",
+          "DOI": "10.2135/cropsci1999.3961552x",
+          "volume": "39",
+          "author": "S Peng",
+          "year": "1999",
+          "unstructured": "Peng, S., Cassman, K. G., Virmani, S. S., Sheehy, J. & Khush, G. S. Yield potential trends of tropical rice since the release of IR8 and the challenge of increasing rice yield potential. Crop Sci. 39, 1552\u20131559 (1999).",
+          "journal-title": "Crop Sci."
+        },
+        {
+          "key": "BFnature01014_CR36",
+          "doi-asserted-by": "publisher",
+          "first-page": "1622",
+          "DOI": "10.2135/cropsci1999.3961622x",
+          "volume": "39",
+          "author": "DN Duvick",
+          "year": "1999",
+          "unstructured": "Duvick, D. N. & Cassman, K. G. Post-green-revolution trends in yield potential of temperate maize in the north-central United States. Crop Sci. 39, 1622\u20131630 (1999).",
+          "journal-title": "Crop Sci."
+        },
+        {
+          "key": "BFnature01014_CR37",
+          "doi-asserted-by": "publisher",
+          "first-page": "226",
+          "DOI": "10.1017/S0376892900038844",
+          "volume": "23",
+          "author": "P Pinstrup-Andersen",
+          "year": "1996",
+          "unstructured": "Pinstrup-Andersen, P. & Pandya-Lorch, R. Food for all in 2020\u2014can the world be fed without damaging the environment. Environ. Conserv. 23, 226\u2013234 (1996).",
+          "journal-title": "Environ. Conserv."
+        },
+        {
+          "key": "BFnature01014_CR38",
+          "doi-asserted-by": "publisher",
+          "first-page": "193",
+          "DOI": "10.1007/978-1-4615-2812-8_10",
+          "volume-title": "The Biogeochemistry of Global Change: Radiative Trace Gases",
+          "author": "PM Vitousek",
+          "year": "1993",
+          "unstructured": "Vitousek, P. M. & Matson, P. A. in The Biogeochemistry of Global Change: Radiative Trace Gases (ed. Oremland, R. S.) 193\u2013208 (Chapman and Hall, New York, 1993)."
+        },
+        {
+          "key": "BFnature01014_CR39",
+          "first-page": "120",
+          "volume": "23",
+          "author": "JN Galloway",
+          "year": "1994",
+          "unstructured": "Galloway, J. N., Levy, H. II & Kashibhatla, P. S. Year 2020: consequences of population growth and development on deposition of oxidized nitrogen. AMBIO 23, 120\u2013123 (1994).",
+          "journal-title": "AMBIO"
+        },
+        {
+          "key": "BFnature01014_CR40",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Cassman, K. G., Dobermann, A. & Walters, D. Agroecosystems, nitrogen-use efficiency, and nitrogen management. AMBIO (in the press).",
+          "DOI": "10.1579/0044-7447-31.2.132"
+        },
+        {
+          "key": "BFnature01014_CR41",
+          "doi-asserted-by": "publisher",
+          "first-page": "647",
+          "DOI": "10.1029/1999GB900015",
+          "volume": "13",
+          "author": "V Smil",
+          "year": "1999",
+          "unstructured": "Smil, V. Nitrogen in crop production: an account of global flows. Global Biogeochem. Cycl. 13, 647\u2013662 (1999).",
+          "journal-title": "Global Biogeochem. Cycl."
+        },
+        {
+          "key": "BFnature01014_CR42",
+          "doi-asserted-by": "publisher",
+          "first-page": "53",
+          "DOI": "10.1146/annurev.energy.25.1.53",
+          "volume": "25",
+          "author": "V Smil",
+          "year": "2000",
+          "unstructured": "Smil, V. Phosphorus in the environment: natural flows and human interferences. Annu. Rev. Energy Environ. 25, 53\u201388 (2000).",
+          "journal-title": "Annu. Rev. Energy Environ."
+        },
+        {
+          "key": "BFnature01014_CR43",
+          "doi-asserted-by": "publisher",
+          "first-page": "75",
+          "DOI": "10.1007/BF02179825",
+          "volume": "35",
+          "author": "RW Howarth",
+          "year": "1996",
+          "unstructured": "Howarth, R. W. et al. Regional nitrogen budgets and riverine N & P fluxes for the drainages to the North Atlantic Ocean: natural and human influences. Biogeochemistry 35, 75\u2013139 (1996).",
+          "journal-title": "Biogeochemistry"
+        },
+        {
+          "key": "BFnature01014_CR44",
+          "doi-asserted-by": "publisher",
+          "first-page": "112",
+          "DOI": "10.1126/science.280.5360.112",
+          "volume": "280",
+          "author": "PA Matson",
+          "year": "1998",
+          "unstructured": "Matson, P. A., Naylor, R. & Ortiz-Monasterio, I. Integration of environmental, agronomic, and economic aspects of fertilizer management. Science 280, 112\u2013115 (1998).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR45",
+          "volume-title": "Gulf of Mexico Hypoxia: Land and Sea Interactions",
+          "author": "JA Downing",
+          "year": "1999",
+          "unstructured": "Downing, J. A. et al. Gulf of Mexico Hypoxia: Land and Sea Interactions Task Force Report No. 134 (Council for Agricultural Science and Technology, Ames, IA, 1999)."
+        },
+        {
+          "key": "BFnature01014_CR46",
+          "doi-asserted-by": "publisher",
+          "first-page": "299",
+          "DOI": "10.1029/GB002i004p00299",
+          "volume": "2",
+          "author": "RJ Cicerone",
+          "year": "1988",
+          "unstructured": "Cicerone, R. J. & Oremland, R. S. Biogeochemical aspects of atmospheric methane. Global Biogeochem. Cycl. 2, 299\u2013327 (1988).",
+          "journal-title": "Global Biogeochem. Cycl."
+        },
+        {
+          "key": "BFnature01014_CR47",
+          "doi-asserted-by": "publisher",
+          "first-page": "311",
+          "DOI": "10.1146/annurev.energy.21.1.311",
+          "volume": "21",
+          "author": "SJ Hall",
+          "year": "1996",
+          "unstructured": "Hall, S. J., Matson, P. A. & Roth, P. NOx emission from soil: implications for air quality modeling in agricultural regions. Annu. Rev. Energy Environ. 21, 311\u2013346 (1996).",
+          "journal-title": "Annu. Rev. Energy Environ."
+        },
+        {
+          "key": "BFnature01014_CR48",
+          "doi-asserted-by": "publisher",
+          "first-page": "51",
+          "DOI": "10.1023/A:1009793806086",
+          "volume": "48",
+          "author": "R Delmas",
+          "year": "1997",
+          "unstructured": "Delmas, R., Serca, D. & Jambert, C. Global inventory of NOx sources. Nutr. Cycl. Agroecosyst. 48, 51\u201360 (1997).",
+          "journal-title": "Nutr. Cycl. Agroecosyst."
+        },
+        {
+          "key": "BFnature01014_CR49",
+          "doi-asserted-by": "publisher",
+          "first-page": "74",
+          "DOI": "10.1126/science.264.5155.74",
+          "volume": "264",
+          "author": "WL Chameides",
+          "year": "1994",
+          "unstructured": "Chameides, W. L., Kasibhatla, P. S., Yienger, J. & Levy, H. Growth of continental-scale metro-agro-plexes, regional ozone pollution, and world food production. Science 264, 74\u201377 (1994).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR50",
+          "first-page": "737",
+          "volume": "7",
+          "author": "PM Vitousek",
+          "year": "1997",
+          "unstructured": "Vitousek, P. M. et al. Human alteration of the global nitrogen cycle: sources and consequences. Ecol. Applic. 7, 737\u2013750 (1997).",
+          "journal-title": "Ecol. Applic."
+        },
+        {
+          "key": "BFnature01014_CR51",
+          "first-page": "239",
+          "volume-title": "Climate Change 2001: The Scientific Basis",
+          "author": "MD Prather",
+          "year": "2001",
+          "unstructured": "Prather, M. D. et al. in Climate Change 2001: The Scientific Basis (Contribution of Working Group I to the Third Assessment Report of the Intergovernmental Panel on Climate Change) (eds Houghton, J. T. et al.) 239\u2013287 (Cambridge University Press, Cambridge, 2001)."
+        },
+        {
+          "key": "BFnature01014_CR52",
+          "doi-asserted-by": "publisher",
+          "first-page": "1175",
+          "DOI": "10.1073/pnas.96.4.1175",
+          "volume": "96",
+          "author": "CR Frink",
+          "year": "1999",
+          "unstructured": "Frink, C. R., Waggoner, P. E. & Ausubel, J. H. Nitrogen fertilizer: retrospect and prospect. Proc. Natl Acad. Sci. USA 96, 1175\u20131180 (1999).",
+          "journal-title": "Proc. Natl Acad. Sci. USA"
+        },
+        {
+          "key": "BFnature01014_CR53",
+          "doi-asserted-by": "publisher",
+          "first-page": "262",
+          "DOI": "10.1038/24376",
+          "volume": "396",
+          "author": "LE Drinkwater",
+          "year": "1998",
+          "unstructured": "Drinkwater, L. E., Wagoner, P. & Sarrantonio, M. Legume-based cropping systems have reduced carbon and nitrogen losses. Nature 396, 262\u2013265 (1998).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BFnature01014_CR54",
+          "doi-asserted-by": "publisher",
+          "first-page": "18533",
+          "DOI": "10.1029/96JD01536",
+          "volume": "101",
+          "author": "PA Matson",
+          "year": "1996",
+          "unstructured": "Matson, P. A., Billow, C. & Hall, S. Fertilization practices and soil variations control nitrogen oxide emissions from tropical sugar cane. J. Geophys. Res. 101, 18533\u201318545 (1996).",
+          "journal-title": "J. Geophys. Res."
+        },
+        {
+          "key": "BFnature01014_CR55",
+          "doi-asserted-by": "publisher",
+          "first-page": "359",
+          "DOI": "10.1007/BF00025057",
+          "volume": "155/156",
+          "author": "KG Cassman",
+          "year": "1993",
+          "unstructured": "Cassman, K. G., Kropff, M. J., Gaunt, J. & Peng, S. Nitrogen use efficiency of irrigated rice: What are the key constraints? Plant Soil 155/156, 359\u2013362 (1993).",
+          "journal-title": "Plant Soil"
+        },
+        {
+          "key": "BFnature01014_CR56",
+          "doi-asserted-by": "publisher",
+          "first-page": "243",
+          "DOI": "10.1016/0378-4290(96)00018-4",
+          "volume": "47",
+          "author": "S Peng",
+          "year": "1996",
+          "unstructured": "Peng, S. et al. Increased N-use efficiency using a chlorophyll meter on high-yielding irrigated rice. Field Crops Res. 47, 243\u2013252 (1996).",
+          "journal-title": "Field Crops Res."
+        },
+        {
+          "key": "BFnature01014_CR57",
+          "volume-title": "The Biological Management of Tropical Soil Fertility",
+          "author": "PL Woomer",
+          "year": "1994",
+          "unstructured": "Woomer, P. L. & Swift, M. J. The Biological Management of Tropical Soil Fertility (Wiley, Chichester, 1994)."
+        },
+        {
+          "key": "BFnature01014_CR58",
+          "first-page": "347",
+          "volume-title": "Ecology in Agriculture",
+          "author": "GP Roberston",
+          "year": "1997",
+          "unstructured": "Roberston, G. P. in Ecology in Agriculture (ed. Jackson, L. E.) 347\u2013365 (Academic, San Diego, 1997)."
+        },
+        {
+          "key": "BFnature01014_CR59",
+          "doi-asserted-by": "publisher",
+          "first-page": "79",
+          "DOI": "10.2307/2539033",
+          "volume": "18",
+          "author": "P Gleick",
+          "year": "1993",
+          "unstructured": "Gleick, P. Water and conflict: fresh water resources and international security. Int. Security 18, 79\u2013112 (1993).",
+          "journal-title": "Int. Security"
+        },
+        {
+          "key": "BFnature01014_CR60",
+          "doi-asserted-by": "publisher",
+          "first-page": "785",
+          "DOI": "10.1126/science.271.5250.785",
+          "volume": "271",
+          "author": "SL Postel",
+          "year": "1996",
+          "unstructured": "Postel, S. L., Daily, G. C. & Ehrlich, P. R. Human appropriation of renewable fresh water. Science 271, 785\u2013788 (1996).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR61",
+          "doi-asserted-by": "publisher",
+          "first-page": "753",
+          "DOI": "10.1126/science.266.5186.753",
+          "volume": "266",
+          "author": "M Dynesius",
+          "year": "1994",
+          "unstructured": "Dynesius, M. & Nilsson, C. Fragmentation and flow regulation of river systems in the northern third of the world. Science 266, 753\u2013762 (1994).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR62",
+          "doi-asserted-by": "publisher",
+          "first-page": "29",
+          "DOI": "10.1080/07900629948916",
+          "volume": "15",
+          "author": "D Seckler",
+          "year": "1999",
+          "unstructured": "Seckler, D., Barker, R. & Amarasinghe, U. Water scarcity in the twenty-first century. Int. J. Water Resources Dev. 15, 29\u201342 (1999).",
+          "journal-title": "Int. J. Water Resources Dev."
+        },
+        {
+          "key": "BFnature01014_CR63",
+          "volume-title": "Last Oasis: Facing Water Scarcity",
+          "author": "SL Postel",
+          "year": "1992",
+          "unstructured": "Postel, S. L. Last Oasis: Facing Water Scarcity (Norton, New York, 1992)."
+        },
+        {
+          "key": "BFnature01014_CR64",
+          "doi-asserted-by": "publisher",
+          "first-page": "99",
+          "DOI": "10.1146/annurev.energy.21.1.99",
+          "volume": "21",
+          "author": "R Naylor",
+          "year": "1996",
+          "unstructured": "Naylor, R. Energy and resource constraints on intensive agricultural production. Annu. Rev. Energy Environ. 21, 99\u2013123 (1996).",
+          "journal-title": "Annu. Rev. Energy Environ."
+        },
+        {
+          "key": "BFnature01014_CR65",
+          "doi-asserted-by": "publisher",
+          "first-page": "772",
+          "DOI": "10.1126/science.294.5543.772",
+          "volume": "294",
+          "author": "D Charles",
+          "year": "2001",
+          "unstructured": "Charles, D. Seeds of discontent. Science 294, 772\u2013775 (2001).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR66",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1079/9780851995649.0000",
+          "volume-title": "Securing the Harvest: Biotechnology, Breeding, and Seed Systems for African Crops",
+          "author": "J DeVries",
+          "year": "2001",
+          "unstructured": "DeVries, J. & Toenniessen, G. Securing the Harvest: Biotechnology, Breeding, and Seed Systems for African Crops (CAB International, Wallingford, 2001)."
+        },
+        {
+          "key": "BFnature01014_CR67",
+          "first-page": "99",
+          "volume-title": "Soil Resilience and Sustainable Land Use",
+          "author": "LR Oldeman",
+          "year": "1994",
+          "unstructured": "Oldeman, L. R. in Soil Resilience and Sustainable Land Use (eds Greenland, D. J. & Szabolcs, J.) 99\u2013118 (CAB International, Wallingford, 1994)."
+        },
+        {
+          "key": "BFnature01014_CR68",
+          "first-page": "1",
+          "volume": "1",
+          "author": "R Ortiz",
+          "year": "1998",
+          "unstructured": "Ortiz, R. Critical role of plant biotechnology for the genetic improvement of food crops: perspectives for the next millennium. J. Biotechnol. 1, 1\u20138 (1998).",
+          "journal-title": "J. Biotechnol."
+        },
+        {
+          "key": "BFnature01014_CR69",
+          "doi-asserted-by": "publisher",
+          "first-page": "1786",
+          "DOI": "10.1126/science.293.5536.1786",
+          "volume": "293",
+          "author": "SR Palumbi",
+          "year": "2001",
+          "unstructured": "Palumbi, S. R. Humans as the world's greatest evolutionary force. Science 293, 1786\u20131790 (2001).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BFnature01014_CR70",
+          "doi-asserted-by": "publisher",
+          "first-page": "718",
+          "DOI": "10.1038/35021046",
+          "volume": "406",
+          "author": "Y Zhu",
+          "year": "2000",
+          "unstructured": "Zhu, Y. et al. Genetic diversity and disease control in rice. Nature 406, 718\u2013722 (2000).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BFnature01014_CR71",
+          "unstructured": "United States General Accounting Office (GAO). Animal Agriculture: Information on Waste Management and Water Quality Issues GAO/RCED-95-200BR (GAO, Washington DC, 1995)."
+        },
+        {
+          "key": "BFnature01014_CR72",
+          "unstructured": "Statistics Canada. Number of farms reporting pigs and average number of pigs per farm. Livestock Statistics Cat. No. 23-603-UPE \u3008\n                    http://www.statcan.ca\n                    \n                  \u3009 (2002)."
+        },
+        {
+          "key": "BFnature01014_CR73",
+          "unstructured": "Martin, L. Costs of production of market hogs. Western Hog J. (Banff Pork Semin. 2000 Spec. Edn) 24 (2000)."
+        },
+        {
+          "key": "BFnature01014_CR74",
+          "doi-asserted-by": "publisher",
+          "first-page": "37",
+          "DOI": "10.1016/S0378-4290(01)00197-6",
+          "volume": "74",
+          "author": "A Dobermann",
+          "year": "2002",
+          "unstructured": "Dobermann, A. et al. Site-specific nutrient management for intensive rice cropping systems in Asia. Field Crops Res. 74, 37\u201366 (2002).",
+          "journal-title": "Field Crops Res."
+        },
+        {
+          "key": "BFnature01014_CR75",
+          "unstructured": "Organisation for Economic Co-operation and Development (OECD). Agricultural Policies in OECD Countries: Monitoring and Evaluation 2000 (OECD, Paris, 2000)."
+        },
+        {
+          "key": "BFnature01014_CR76",
+          "unstructured": "Organisation for Economic Co-operation and Development (OECD). Agricultural Policies in OECD Countries: Monitoring and Evaluation (OECD, Paris, 2001)."
+        },
+        {
+          "key": "BFnature01014_CR77",
+          "doi-asserted-by": "publisher",
+          "first-page": "697",
+          "DOI": "10.1016/0305-750X(95)00162-6",
+          "volume": "24",
+          "author": "D Byerlee",
+          "year": "1996",
+          "unstructured": "Byerlee, D. Modern varieties, productivity, and sustainability\u2014recent experience and emerging challenges. World Dev. 24, 697\u2013718 (1996).",
+          "journal-title": "World Dev."
+        },
+        {
+          "key": "BFnature01014_CR78",
+          "volume-title": "Slow Magic: Agricultural R&D a Century after Mendel",
+          "author": "PG Pardey",
+          "year": "2001",
+          "unstructured": "Pardey, P. G. & Beintema, N. M. Slow Magic: Agricultural R&D a Century after Mendel (International Food Policy Research Institute, Washington DC, 2001)."
+        },
+        {
+          "key": "BFnature01014_CR79",
+          "unstructured": "Falcon, W. & Fowler, C. Carving up the commons. Food Policy (in the press)."
+        }
+      ],
+      "container-title": [
+        "Nature"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://www.nature.com/articles/nature01014.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://www.nature.com/articles/nature01014",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://www.nature.com/doifinder/10.1038/nature01014",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        },
+        {
+          "URL": "http://www.nature.com/articles/nature01014.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            18
+          ]
+        ],
+        "date-time": "2023-05-18T14:09:32Z",
+        "timestamp": 1684418972000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.nature.com/articles/nature01014"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2002,
+            8
+          ]
+        ]
+      },
+      "references-count": 79,
+      "journal-issue": {
+        "issue": "6898",
+        "published-print": {
+          "date-parts": [
+            [
+              2002,
+              8
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "BFnature01014"
+      ],
+      "URL": "https://doi.org/10.1038/nature01014",
+      "relation": {},
+      "ISSN": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issn-type": [
+        {
+          "value": "0028-0836",
+          "type": "print"
+        },
+        {
+          "value": "1476-4687",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2002,
+            8
+          ]
+        ]
+      }
+    }
+  }
+}

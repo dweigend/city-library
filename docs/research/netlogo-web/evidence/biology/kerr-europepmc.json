@@ -1,0 +1,246 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature00823%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nature00823\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "12110887",
+          "source": "MED",
+          "pmid": "12110887",
+          "doi": "10.1038/nature00823",
+          "title": "Local dispersal promotes biodiversity in a real-life game of rock-paper-scissors.",
+          "authorString": "Kerr B, Riley MA, Feldman MW, Bohannan BJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Kerr B",
+                "lastName": "Kerr",
+                "firstName": "Benjamin",
+                "initials": "B",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biological Sciences, Stanford University, Stanford, California 94305, USA. bkerr@stanford.edu"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Riley MA",
+                "lastName": "Riley",
+                "firstName": "Margaret A",
+                "initials": "MA"
+              },
+              {
+                "fullName": "Feldman MW",
+                "lastName": "Feldman",
+                "firstName": "Marcus W",
+                "initials": "MW"
+              },
+              {
+                "fullName": "Bohannan BJ",
+                "lastName": "Bohannan",
+                "firstName": "Brendan J M",
+                "initials": "BJ"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6894",
+            "volume": "418",
+            "journalIssueId": 1099940,
+            "dateOfPublication": "2002 Jul",
+            "monthOfPublication": 7,
+            "yearOfPublication": 2002,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "nlmid": "0410462",
+              "isoabbreviation": "Nature"
+            },
+            "printPublicationDate": "2002-07-01"
+          },
+          "pubYear": "2002",
+          "pageInfo": "171-174",
+          "abstractText": "One of the central aims of ecology is to identify mechanisms that maintain biodiversity. Numerous theoretical models have shown that competing species can coexist if ecological processes such as dispersal, movement, and interaction occur over small spatial scales. In particular, this may be the case for non-transitive communities, that is, those without strict competitive hierarchies. The classic non-transitive system involves a community of three competing species satisfying a relationship similar to the children's game rock-paper-scissors, where rock crushes scissors, scissors cuts paper, and paper covers rock. Such relationships have been demonstrated in several natural systems. Some models predict that local interaction and dispersal are sufficient to ensure coexistence of all three species in such a community, whereas diversity is lost when ecological processes occur over larger scales. Here, we test these predictions empirically using a non-transitive model community containing three populations of Escherichia coli. We find that diversity is rapidly lost in our experimental community when dispersal and interaction occur over relatively large spatial scales, whereas all populations coexist when ecological processes are localized.",
+          "affiliation": "Department of Biological Sciences, Stanford University, Stanford, California 94305, USA. bkerr@stanford.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Escherichia coli",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "CL",
+                      "qualifierName": "classification"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "CY",
+                      "qualifierName": "cytology"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Colicins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Antidotes",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Environment"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Ecosystem"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Drug Resistance, Bacterial"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cell Division"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Selection, Genetic"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Colicins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Antidotes",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nature00823"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "12110873",
+                "reference": "Nature. 2002 Jul 11;418(6894):138-9. doi: 10.1038/418138a",
+                "type": "Comment in",
+                "orderIn": 1
+              },
+              {
+                "source": "MED",
+                "id": "12110874",
+                "reference": "Nature. 2002 Jul 11;418(6894):138. doi: 10.1038/418138b",
+                "type": "Comment in",
+                "orderIn": 2
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 922,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2002-07-31",
+          "dateOfCreation": "2002-07-12",
+          "dateOfRevision": "2024-01-09",
+          "firstPublicationDate": "2002-07-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fjez.1401060102%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1002/jez.1401060102\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "20268085",
+          "source": "MED",
+          "pmid": "20268085",
+          "doi": "10.1002/jez.1401060102",
+          "title": "Evidence for the formation of cell aggregates by chemotaxis in the development of the slime mold Dictyostelium discoideum.",
+          "authorString": "BONNER JT.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "BONNER JT",
+                "lastName": "BONNER",
+                "firstName": "J T",
+                "initials": "JT"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "106",
+            "journalIssueId": 1711650,
+            "dateOfPublication": "1947 Oct",
+            "monthOfPublication": 10,
+            "yearOfPublication": 1947,
+            "journal": {
+              "medlineAbbreviation": "J Exp Zool",
+              "title": "The Journal of experimental zoology",
+              "essn": "1097-010X",
+              "issn": "0022-104X",
+              "nlmid": "0375365",
+              "isoabbreviation": "J Exp Zool"
+            },
+            "printPublicationDate": "1947-10-01"
+          },
+          "pubYear": "1947",
+          "pageInfo": "1-26",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Physarum polycephalum"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Dictyostelium"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Fungi"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Chemotaxis"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Growth"
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Chemotaxis/development Of Dictyostelium",
+              "Development/chemotaxia"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "OM",
+                "name": "pre-1966 citations"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1002/jez.1401060102"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 419,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2010-03-18",
+          "dateOfCreation": "2010-03-19",
+          "dateOfRevision": "2019-09-23",
+          "firstPublicationDate": "1947-10-01",
+          "firstIndexDate": "2010-03-19",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}
