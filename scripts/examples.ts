@@ -9,6 +9,7 @@ const phases = {
   segregation: ["01-setup", "02-neighbor-metrics", "03-terminal-intervention", "04-movement", "05-validation-purity"],
   occupancy: ["01-live-movement-order", "02-canonical-lifecycle", "03-grid-reattachment", "04-source-and-boundaries", "05-observation-purity"],
   connectivity: ["01-weak-merge-lifecycle", "02-directed-strong-parts", "03-biconnected-overlap", "04-empty-and-invalid", "05-canonical-pure-observation"],
+  "selected-network": ["01-directed-staging", "02-rewire-and-no-links", "03-virus-phase-and-stop", "04-atomic-fixtures", "05-defaults-and-isolation"],
 };
 for (const [phase, examples] of Object.entries(phases)) {
   for (const example of examples) {
