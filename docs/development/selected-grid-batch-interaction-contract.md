@@ -8,4 +8,4 @@ Frozen before shared UI runtime edits, 2026-11-05. This implements the coordinat
 - Keep essential labels, native accessible controls, visible focus and current responsive/theme styles. No new icons, decorative chrome or explanatory product text.
 - Four compile-only public author tasks in `ui/authoring.types.ts` freeze opt-in drawing, typed model actions, color widget and backwards compatibility before renderer/compose implementation. Runtime browser acceptance must exercise pointer latch, erase, release, keyboard, touch, recolor timing, reset and play/pause.
 
-The source defaults foreground=123 and background=79 are approximated by CSS hex colors; exact NetLogo interpolation is not claimed. State equations, density and history do not depend on palette. No source trajectory seed identity is claimed.
+Browser inspection established the source defaults foreground=123 / background=79 as CSS #660f40 / #d2ece4; these are now the target defaults. Arbitrary numeric NetLogo palette interpolation is replaced by native CSS color selection. State equations, density and history do not depend on palette. No source trajectory seed identity is claimed.

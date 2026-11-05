@@ -1,8 +1,14 @@
-import type { Cell, GridData, SpatialData } from "../definition.ts";
+import type {
+  Cell,
+  GridData,
+  SpatialData,
+  DrawingIntent,
+} from "../definition.ts";
 
 export function mountCanvas(
   container: HTMLElement,
   select: (id: string) => void,
+  intent?: (intent: DrawingIntent) => void,
 ) {
   const canvas = document.createElement("canvas");
   canvas.className = "world";
@@ -15,6 +21,8 @@ export function mountCanvas(
   let pixelWidth = 400;
   let selected: string | null = null;
   let showLabels = false;
+  let drawingEnabled = false;
+  let pointer: number | null = null;
   const labelControl = document.createElement("label");
   labelControl.className = "view-labels";
   const labels = document.createElement("input");
@@ -116,10 +124,69 @@ export function mountCanvas(
     );
     if (cell) select(cell.id);
   }
+  function cellAt(event: PointerEvent) {
+    if (!latest) return undefined;
+    const rect = canvas.getBoundingClientRect();
+    const x =
+      ((event.clientX - rect.left) / rect.width) * latest.width -
+      latest.width / 2;
+    const y =
+      latest.height / 2 -
+      ((event.clientY - rect.top) / rect.height) * latest.height;
+    return latest.cells?.find(
+      (cell) => Math.abs(cell.x - x) <= 0.5 && Math.abs(cell.y - y) <= 0.5,
+    );
+  }
+  function pointerDown(event: PointerEvent) {
+    if (!drawingEnabled || !intent || pointer !== null || event.button !== 0)
+      return;
+    const cell = cellAt(event);
+    if (!cell) return;
+    event.preventDefault();
+    canvas.focus({ preventScroll: true });
+    pointer = event.pointerId;
+    canvas.setPointerCapture(pointer);
+    select(cell.id);
+    intent({ phase: "begin", position: { x: cell.x, y: cell.y } });
+  }
+  function pointerMove(event: PointerEvent) {
+    if (pointer !== event.pointerId || !drawingEnabled || !intent) return;
+    const cell = cellAt(event);
+    if (cell) intent({ phase: "move", position: { x: cell.x, y: cell.y } });
+  }
+  function pointerEnd(event: PointerEvent) {
+    if (pointer !== event.pointerId) return;
+    pointer = null;
+    intent?.({ phase: "end" });
+    if (canvas.hasPointerCapture(event.pointerId))
+      canvas.releasePointerCapture(event.pointerId);
+  }
+  canvas.addEventListener("pointerdown", pointerDown);
+  canvas.addEventListener("pointermove", pointerMove);
+  canvas.addEventListener("pointerup", pointerEnd);
+  canvas.addEventListener("pointercancel", pointerEnd);
+  canvas.addEventListener("lostpointercapture", pointerEnd);
   canvas.addEventListener("click", pick);
   canvas.setAttribute("role", "group");
   canvas.setAttribute("aria-label", "Model view. Arrow keys select an item.");
   function key(event: KeyboardEvent) {
+    if (
+      drawingEnabled &&
+      intent &&
+      latest &&
+      [" ", "Enter"].includes(event.key)
+    ) {
+      event.preventDefault();
+      if (event.repeat) return;
+      const cell =
+        latest.cells?.find((cell) => cell.id === selected) ?? latest.cells?.[0];
+      if (cell) {
+        select(cell.id);
+        intent({ phase: "begin", position: { x: cell.x, y: cell.y } });
+        intent({ phase: "end" });
+      }
+      return;
+    }
     if (
       ![
         "ArrowLeft",
@@ -150,7 +217,9 @@ export function mountCanvas(
   }
   canvas.addEventListener("keydown", key);
   return {
-    update(data: GridData | SpatialData, id: string | null) {
+    update(data: GridData | SpatialData, id: string | null, drawing = false) {
+      drawingEnabled = Boolean(intent) && drawing;
+      canvas.style.touchAction = drawingEnabled ? "none" : "auto";
       latest = data;
       canvas.style.aspectRatio = `${data.width} / ${data.height}`;
       resizeBuffer();
@@ -160,12 +229,17 @@ export function mountCanvas(
         !data.agents.some((agent) => Boolean(agent.label));
       canvas.setAttribute(
         "aria-label",
-        `Model view. ${"agents" in data ? data.agents.length + " agents" : data.cells.length + " cells"}. Arrow keys select an item.${id ? " Selected " + id : ""}`,
+        `Model view. ${"agents" in data ? data.agents.length + " agents" : data.cells.length + " cells"}. Arrow keys select an item.${drawingEnabled ? " Space or Enter draws a cell." : ""}${id ? " Selected " + id : ""}`,
       );
       draw();
     },
     dispose() {
       resize.disconnect();
+      canvas.removeEventListener("pointerdown", pointerDown);
+      canvas.removeEventListener("pointermove", pointerMove);
+      canvas.removeEventListener("pointerup", pointerEnd);
+      canvas.removeEventListener("pointercancel", pointerEnd);
+      canvas.removeEventListener("lostpointercapture", pointerEnd);
       canvas.removeEventListener("click", pick);
       canvas.removeEventListener("keydown", key);
       canvas.remove();

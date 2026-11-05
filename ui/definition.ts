@@ -85,7 +85,18 @@ export interface Inspector<S> {
     selected: string | null,
   ) => Readonly<Record<string, string | number | boolean>> | undefined;
 }
+export type DrawingIntent =
+  | {
+      readonly phase: "begin" | "move";
+      readonly position: { readonly x: number; readonly y: number };
+    }
+  | { readonly phase: "end"; readonly position?: never };
+
 export interface UISpec<P extends object, M extends ModelInstance> {
+  readonly drawing?: {
+    readonly enabled: (state: Snapshot<M>) => boolean;
+    readonly intent: (model: M, intent: DrawingIntent) => void;
+  };
   readonly setup?: readonly {
     readonly field: Extract<keyof P, string>;
     readonly label?: string;
@@ -98,6 +109,7 @@ export interface UISpec<P extends object, M extends ModelInstance> {
     readonly pressed?: (state: Snapshot<M>) => boolean;
   }[];
   readonly live?: readonly {
+    readonly widget?: "color";
     readonly field: Extract<keyof P, string>;
     readonly label?: string;
     readonly value: (state: Snapshot<M>) => string | number | boolean;
