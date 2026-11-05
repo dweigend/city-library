@@ -4,6 +4,20 @@ A modular, TypeScript-first toolkit for procedural cities and agent-based models
 
 > **Work in progress.** The repository currently contains a Bun/TypeScript scaffold, prepared source directories and an API specification. No city or agent APIs are implemented, and no package is published.
 
+## Purpose
+
+City Library aims to become a city engine for exploring sustainable cities of the future. The motivation is that many city builders reproduce familiar urban patterns rather than help explore how cities could be planned more sustainably. This project puts those future possibilities at the center: how urban layouts, transport, resource cycles and energy systems could work together under different planning choices.
+
+The engine should make those concepts explicit and testable through simulation. Sustainability is a design question to investigate through stated assumptions and observable outcomes.
+
+## Development approach
+
+1. **Agent Loom first.** Build the agent modeling core as pure logic, without a UI. Establish independently usable and testable simulation behavior before adding presentation.
+2. **Extend through focused libraries.** Add capabilities for city grids, traffic, resource cycles and energy systems. Develop each capability independently, then compose them into broader city simulations.
+3. **Compose a headless city engine.** Keep simulation logic and UI clearly separated. The complete engine must work without a browser or renderer, so scripts, experiments and different interfaces can use the same models.
+
+This is the intended development sequence; the capabilities below remain planned.
+
 ## Documentation
 
 - [Agent Loom specification](docs/agent-loom/README.md): the general modeling core and current development focus.
@@ -62,18 +76,3 @@ Phase one implements the complete Agent Loom core incrementally, beginning with 
 - Add replaceable variants through focused contracts while preserving existing behavior.
 
 Generator results describe geometry and declared properties. Connecting them to residents, capacities or a live simulation is explicit. Saving measurements does not imply that a complete model can be resumed.
-
-## Local development
-
-Install [Bun](https://bun.sh), then run:
-
-```sh
-git clone https://github.com/dweigend/city-library.git
-cd city-library
-bun install
-bun run typecheck
-```
-
-`typecheck` checks the current scaffold. There is no runtime test suite, browser application or published distribution yet. The package is private to prevent accidental publication.
-
-The project grows from [city_game](https://github.com/dweigend/city_game). Selected algorithms must meet City Library's contracts and public behavior checks before adoption.
