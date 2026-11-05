@@ -40,6 +40,12 @@ The UI is an interchangeable presentation and interaction layer. The library mus
 | Independent testing | Test all domain logic without UI; UI tests verify presentation and interaction. |
 | Replaceable UI | CLI, web applications and 3D visualizations reuse the same domain logic unchanged. |
 
+### Shared UI and discoverable model entries
+
+The authorized [Agent Lab refactor](development/agent-lab-refactor.md) replaces the historical `Agend_Lab/` runtime with `ui/agent-lab/`. Reusable controls and neutral visualization adapters belong under top-level `ui/`; application catalog/playback/session behavior belongs in its application subfolder. Keep the library headless and its accepted domain layout unchanged. A small ordinary TypeScript entry contract is sufficient; no additional modeling runtime or mandatory wrapper API.
+
+Catalog entries expose only `experiments/<slug>/model.ts` and `ui.ts`; private helpers are normal dependencies. Model exports remain headless; UI uses public actions and detached observations. Host discovery/bundling belongs in scripts, not browser code. Definitions are inert at import. New entries must not require model-specific edits to shared shell/session code. Future views arrive with working slices, not empty scaffolding. Historical Agend_Lab evidence remains historical during migration.
+
 ### Layers and implementation boundaries
 
 | Layer | Responsibilities and dependencies |
