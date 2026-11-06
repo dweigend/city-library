@@ -71,6 +71,16 @@ preciseGraph.edges.add({from:preciseNodes[2],to:preciseNodes[1],directed:true,st
 let preciseCycleRejected=false;
 try{preciseGraph.distances({from:preciseNodes[0],cost:edge=>edge.weight,algorithm:'bellman-ford'});}catch(error){if(error instanceof RangeError)preciseCycleRejected=true;else throw error;}
 if(!preciseCycleRejected)throw Error('packed hidden negative cycle not rejected');
+const analysisGraph=Graph.add();
+const analysisA=analysisGraph.nodes.add({}),analysisB=analysisGraph.nodes.add({});
+analysisGraph.edges.add({from:analysisA,to:analysisB});
+if(analysisGraph.analyze({measure:'degree'}).get(analysisA)!==1)throw Error('packed degree mismatch');
+if(analysisGraph.analyze({measure:'closeness'}).get(analysisA)!==1)throw Error('packed closeness mismatch');
+if(analysisGraph.analyze({measure:'betweenness'}).get(analysisA)!==0)throw Error('packed betweenness mismatch');
+const packedEigen=analysisGraph.analyze({measure:'eigenvector'}).get(analysisA);
+if(packedEigen===undefined||Math.abs(packedEigen-1/Math.sqrt(2))>1e-10)throw Error('packed eigenvector mismatch');
+const packedRank=analysisGraph.analyze({measure:'pageRank'}).get(analysisA);
+if(packedRank===undefined||Math.abs(packedRank-0.5)>1e-10)throw Error('packed PageRank mismatch');
 `, { flag: "a" });
   await writeFile(join(directory, "summary-types.ts"), `import {stats,type Summary} from 'city-library';
 function summaryTypeContract(){const summary:Summary=stats.describe([1,2,3],{sample:true});const median:number|undefined=summary.median;

@@ -5,6 +5,7 @@ import { cloneEdgeState, createEdge, type Edge } from "./edge.ts";
 import { connects, direction, opposite, type Direction } from "./queries.ts";
 import { components, type ComponentMode } from "./algorithms/connectivity.ts";
 import { distances, allDistances, distanceSummary, type DistanceOptions, type DistanceSummary, type SummaryOptions } from "./algorithms/distances.ts";
+import { analyze, type AnalysisOptions } from "./algorithms/analysis.ts";
 
 interface EdgeOptions<N extends object, E extends object> {
   from: N; to: N; directed?: boolean; key?: string; state?: E;
@@ -27,6 +28,7 @@ export interface Graph<N extends object = object, E extends object = {}> {
   distances(options: DistanceOptions<N, E> & { from: N }): ReadonlyMap<N, number>;
   allDistances(options?: DistanceOptions<N, E>): ReadonlyMap<N, ReadonlyMap<N, number>>;
   distanceSummary(options?: SummaryOptions<N, E>): DistanceSummary<N>;
+  analyze(options: AnalysisOptions<N, E>): ReadonlyMap<N, number>;
   delete(options?: { edgesOnly?: boolean }): void;
 }
 interface GraphOptions<E extends object> { edgeState?: E; parallel?: boolean; selfLoops?: boolean }
@@ -161,6 +163,7 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
     distances(options) { return distances([...members], graph.edges, options); },
     allDistances(options = {}) { return allDistances([...members], graph.edges, options); },
     distanceSummary(options = {}) { return distanceSummary([...members], graph.edges, options); },
+    analyze(options) { return analyze([...members], graph.edges, options); },
     delete(options = {}) {
       const edgesOnly = flag(validateOptions(options, ["edgesOnly"]).edgesOnly);
       if (edges.size === 0 && (edgesOnly || members.size === 0)) return;

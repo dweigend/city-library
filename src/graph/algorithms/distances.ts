@@ -18,8 +18,8 @@ export interface DistanceSummary<N extends object> {
   readonly eccentricity: ReadonlyMap<N, number>;
   readonly reachablePairs: number;
 }
-interface Arc<N> { to: N; cost: bigint }
-interface Prepared<N> { nodes: readonly N[]; adjacency: Map<N, Arc<N>[]> }
+export interface Arc<N> { to: N; cost: bigint }
+export interface Prepared<N> { nodes: readonly N[]; adjacency: Map<N, Arc<N>[]> }
 type Cost<N extends object, E extends object> = (edge: Edge<N, E>) => number;
 
 function costOption<N extends object, E extends object>(value: unknown): Cost<N, E> | undefined {
@@ -64,7 +64,7 @@ function breadth<N>(graph: Prepared<N>, from: N): Map<N, number> {
   return result;
 }
 /** Lazy binary min heap: stale improvements are discarded when popped. */
-function dijkstra<N>(graph: Prepared<N>, from: N): Map<N, bigint> {
+export function dijkstra<N>(graph: Prepared<N>, from: N): Map<N, bigint> {
   const result = new Map([[from, 0n]]);
   const heap: { node: N; value: bigint }[] = [];
   function push(node: N, value: bigint) {

@@ -1,4 +1,5 @@
 const phases = {
+  "network-analysis-proposal": ["01-degree-incidence-and-options", "02-closeness-directed-costs", "03-betweenness-parallel-paths", "04-eigenvector-incoming-l2", "05-pagerank-stationary-and-errors"],
   "selected-social": ["01-choice-and-rebellion", "02-language-and-party", "03-cooperation-and-minority", "04-rumors-and-signals", "05-development-and-personalities"],
   "graph-distance-precision": ["01-large-prefixes", "02-hidden-negative-cycles", "03-cancellation-and-overflow", "04-summary-and-callbacks", "05-independent-integer-oracle"],
   "selected-ecology": ["01-birth-and-temperature", "02-transport-and-herding", "03-resources-and-invasion", "04-foraging-and-heat", "05-flocking-and-flashes"],
