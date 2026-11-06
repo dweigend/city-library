@@ -30,7 +30,10 @@ export const ui = defineUI(model, {
   complete: (s) => s.done,
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Most populous (%)", value: (s) => s.maxPercent },
+    {
+      label: "Most populous (%)",
+      value: (s) => Number(s.maxPercent.toFixed(2)),
+    },
   ],
   views: [
     {

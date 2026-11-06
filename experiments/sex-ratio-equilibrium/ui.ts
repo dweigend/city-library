@@ -29,8 +29,14 @@ export const ui = defineUI(model, {
   complete: (s) => s.done,
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Adult sex ratio (%)", value: (s) => s.adultSexRatio },
-    { label: "Male-child chance", value: (s) => s.averageMaleChildChance },
+    {
+      label: "Adult sex ratio (%)",
+      value: (s) => Number(s.adultSexRatio.toFixed(2)),
+    },
+    {
+      label: "Male-child chance",
+      value: (s) => Number(s.averageMaleChildChance.toFixed(3)),
+    },
     { label: "Running average", value: (s) => s.runningAverageAdultSexRatio },
     { label: "Running SD", value: (s) => s.runningSdAdultSexRatio },
     { label: "Male mating success", value: (s) => s.maleMatingSuccess },
