@@ -60,19 +60,19 @@ describe("Selected biology B07 source procedures", () => {
     const solution = membrane({ seed: 4, numWater: 0, numLipids: 8 });
     const setup = solution.read();
     expect(setup.agents.length).toBe(16);
-    expect(setup.links.length).toBe(8);
-    expect(new Set(setup.links.map((link) => link.waterId)).size).toBe(8);
-    for (const link of setup.links) {
-      const oil = setup.agents.find((agent) => agent.id === link.oilId)!;
-      const water = setup.agents.find((agent) => agent.id === link.waterId)!;
+    expect(setup.edges.length).toBe(8);
+    expect(new Set(setup.edges.map((edge) => edge.waterId)).size).toBe(8);
+    for (const edge of setup.edges) {
+      const oil = setup.agents.find((agent) => agent.id === edge.oilId)!;
+      const water = setup.agents.find((agent) => agent.id === edge.waterId)!;
       expect(oil.breed).toBe("oil");
       expect(water.breed).toBe("water");
       expect(water.hydrophilic).toBe(true);
     }
     solution.advance(4);
     expect(solution.read().agents.length).toBe(16);
-    expect(solution.read().links.map((link) => link.waterId)).toEqual(
-      setup.links.map((link) => link.waterId),
+    expect(solution.read().edges.map((edge) => edge.waterId)).toEqual(
+      setup.edges.map((edge) => edge.waterId),
     );
   });
 

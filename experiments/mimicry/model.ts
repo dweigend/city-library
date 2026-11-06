@@ -139,8 +139,8 @@ export function create(options: Partial<Parameters> = {}) {
       count: butterflies.length,
       compatibility: "legacy-shuffle",
     })) {
-      const patch = grid.fieldAt(butterfly)!;
-      const birds = grid.agentsAt(patch, { source: population("bird") });
+      const field = grid.fieldAt(butterfly)!;
+      const birds = grid.agentsAt(field, { source: population("bird") });
       const bird = random.sample(birds)[0];
       if (bird && !colorInMemory(bird.memory, butterfly.color)) {
         if (butterfly.breed === "monarch")

@@ -19,7 +19,7 @@ export const inputs: Inputs<Parameters> = {
   number: { kind: "number", default: 300, min: 1, max: 1000, integer: true },
   colors: { kind: "number", default: 5, min: 2, max: 10, integer: true },
 };
-type Turtle = Agent<{ colorNumber: number }>;
+type ModelAgent = Agent<{ colorNumber: number }>;
 const sourceColors = [5, 15, 25, 35, 45, 55, 65, 85, 95, 125];
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
@@ -28,40 +28,40 @@ export function create(options: Partial<Parameters> = {}) {
   const world = World.add(space, { random });
   const grid = Grid.add(space, { state: { wall: false } });
   world.add(grid);
-  const turtles = () => world.agents as readonly Turtle[];
+  const agents = () => world.agents as readonly ModelAgent[];
   let maxPercent = 0;
   let wallMode: "place" | "remove" = "place";
   const history: { tick: number; counts: number[] }[] = [];
-  function moveOffWall(turtle: Turtle) {
+  function moveOffWall(agent: ModelAgent) {
     // Source walks random neighboring patches until a black patch is reached.
     if (!grid.fields.some((f) => !f.wall))
       throw new RangeError(
         "No open patch: source move-off-wall would not terminate.",
       );
-    while (grid.fieldAt(turtle)!.wall) {
+    while (grid.fieldAt(agent)!.wall) {
       const field = random.sample(
-        grid.neighbors(grid.fieldAt(turtle)!, { neighborhood: "moore" }),
+        grid.neighbors(grid.fieldAt(agent)!, { neighborhood: "moore" }),
       )[0]!;
-      turtle.move({ to: field });
+      agent.move({ to: field });
     }
   }
-  function makeTurtle(colorNumber: number, x: number, y: number, heading = 0) {
+  function makeAgent(colorNumber: number, x: number, y: number, heading = 0) {
     if (!sourceColors.includes(colorNumber))
       throw new RangeError("Unknown source turtle color.");
-    const turtle = Agent.add(
+    const agent = Agent.add(
       { colorNumber },
       { position: { x, y }, orientation: { heading } },
     );
-    world.add(turtle);
-    moveOffWall(turtle);
-    return turtle;
+    world.add(agent);
+    moveOffWall(agent);
+    return agent;
   }
   function setup() {
-    world.delete(turtles());
+    world.delete(agents());
     world.tick.reset();
     history.length = 0;
     for (let n = 0; n < settings.number; n++) {
-      const turtle = Agent.add(
+      const agent = Agent.add(
         {
           colorNumber:
             sourceColors[
@@ -78,8 +78,8 @@ export function create(options: Partial<Parameters> = {}) {
           },
         },
       );
-      world.add(turtle);
-      moveOffWall(turtle);
+      world.add(agent);
+      moveOffWall(agent);
     }
     record();
   }
@@ -87,22 +87,22 @@ export function create(options: Partial<Parameters> = {}) {
     history.push({
       tick: world.tick.value,
       counts: [5, 15, 25, 35, 45, 55, 65, 75, 85, 95].map(
-        (c) => turtles().filter((t) => t.colorNumber === c).length,
+        (c) => agents().filter((t) => t.colorNumber === c).length,
       ),
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function meet(turtle: Turtle) {
+  function meet(agent: ModelAgent) {
     const target = grid.fieldAt(
       geometry.normalize(
-        { x: turtle.x + 1, y: turtle.y },
+        { x: agent.x + 1, y: agent.y },
         { space, endpoints: "half-open" },
       )!,
     )!;
     const other = random.sample(
-      grid.agentsAt(target, { source: turtles() }),
+      grid.agentsAt(target, { source: agents() }),
     )[0];
-    if (other) turtle.colorNumber = other.colorNumber;
+    if (other) agent.colorNumber = other.colorNumber;
   }
   function placeWall(row: number) {
     if (!Number.isFinite(row) || Math.round(row) < -17 || Math.round(row) > 17)
@@ -110,8 +110,8 @@ export function create(options: Partial<Parameters> = {}) {
     for (const field of grid.fields) {
       if (Math.abs(field.y) === 17 || field.y === Math.round(row)) {
         field.wall = true;
-        for (const turtle of grid.agentsAt(field, { source: turtles() }))
-          moveOffWall(turtle);
+        for (const agent of grid.agentsAt(field, { source: agents() }))
+          moveOffWall(agent);
       }
     }
   }
@@ -133,33 +133,33 @@ export function create(options: Partial<Parameters> = {}) {
   function advance(steps = 1) {
     stepCount(steps);
     for (let n = 0; n < steps; n++) {
-      if (stats.describe(turtles().map((a) => a.colorNumber)).variance === 0)
+      if (stats.describe(agents().map((a) => a.colorNumber)).variance === 0)
         break;
-      for (const turtle of random.sample(turtles(), {
-        count: turtles().length,
+      for (const agent of random.sample(agents(), {
+        count: agents().length,
         compatibility: "legacy-shuffle",
       })) {
-        turtle.rotate(
+        agent.rotate(
           random.number({ min: 0, max: 50, integer: true }) -
             random.number({ min: 0, max: 50, integer: true }),
         );
-        meet(turtle);
-        const direction = geometry.direction({ heading: turtle.heading });
+        meet(agent);
+        const direction = geometry.direction({ heading: agent.heading });
         const ahead = geometry.normalize(
-          { x: turtle.x + direction.x * 0.5, y: turtle.y + direction.y * 0.5 },
+          { x: agent.x + direction.x * 0.5, y: agent.y + direction.y * 0.5 },
           { space, endpoints: "half-open" },
         );
-        if (!grid.fieldAt(ahead!)!.wall) turtle.move(0.5);
-        else turtle.rotate(random.number({ min: 0, max: 360, integer: true }));
+        if (!grid.fieldAt(ahead!)!.wall) agent.move(0.5);
+        else agent.rotate(random.number({ min: 0, max: 360, integer: true }));
       }
       maxPercent =
         (100 *
           Math.max(
             ...sourceColors.map(
-              (c) => turtles().filter((a) => a.colorNumber === c).length,
+              (c) => agents().filter((a) => a.colorNumber === c).length,
             ),
           )) /
-        turtles().length;
+        agents().length;
       world.tick.advance();
       record();
     }
@@ -174,14 +174,14 @@ export function create(options: Partial<Parameters> = {}) {
       tick: world.tick.value,
       maxPercent,
       wallMode,
-      done: stats.describe(turtles().map((a) => a.colorNumber)).variance === 0,
+      done: stats.describe(agents().map((a) => a.colorNumber)).variance === 0,
       cells: grid.fields.map((f) => ({
         id: f.id,
         x: f.x,
         y: f.y,
         wall: f.wall,
       })),
-      turtles: turtles().map((a) => ({
+      agents: agents().map((a) => ({
         id: a.id,
         x: a.x,
         y: a.y,
@@ -205,7 +205,7 @@ export function create(options: Partial<Parameters> = {}) {
     removeAllWalls,
     setWallMode,
     drawWall,
-    makeTurtle,
+    makeAgent,
     meet,
     moveOffWall,
   };

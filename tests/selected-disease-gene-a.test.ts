@@ -143,7 +143,7 @@ describe("B09 native contact and molecular compositions", () => {
         .length,
     ).toBeGreaterThan(0);
     const healthy = model.read().agents.filter((agent) => !agent.sick).length;
-    model.setParameters({ turtleShape: "circle" });
+    model.setParameters({ agentShape: "circle" });
     expect(model.read().agents.every((agent) => agent.shape === "circle")).toBe(
       true,
     );
@@ -207,10 +207,10 @@ describe("B09 native contact and molecular compositions", () => {
     const model = bacterium({ seed: 1 });
     model.advance();
     const state = model.read();
-    expect(state.links.length).toBeGreaterThan(0);
-    for (const link of state.links) {
-      const from = state.agents.find((agent) => agent.id === link.from)!;
-      const to = state.agents.find((agent) => agent.id === link.to)!;
+    expect(state.edges.length).toBeGreaterThan(0);
+    for (const edge of state.edges) {
+      const from = state.agents.find((agent) => agent.id === edge.from)!;
+      const to = state.agents.find((agent) => agent.id === edge.to)!;
       expect(from.bound).toBe(true);
       expect(to.bound).toBe(true);
       expect(from.x).toBeCloseTo(to.x, 12);

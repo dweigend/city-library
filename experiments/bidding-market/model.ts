@@ -106,7 +106,7 @@ export function create(options: Partial<Parameters> = {}) {
   let totalSales = 0,
     salesPerTick = 0,
     remainingSupply = 0;
-  const links: { seller: string; buyer: string; sale: boolean }[] = [];
+  const edges: { seller: string; buyer: string; sale: boolean }[] = [];
   for (let index = 0; index < 50; index++) {
     const a = (index * 2 * Math.PI) / 50,
       items = amount(settings.supplyDistribution, settings.supplyAmount);
@@ -208,7 +208,7 @@ export function create(options: Partial<Parameters> = {}) {
       b.wantToBuy > 0 &&
       s.askingPrice <= b.money &&
       s.askingPrice <= b.willingToPay;
-    links.push({ seller: s.id, buyer: b.id, sale });
+    edges.push({ seller: s.id, buyer: b.id, sale });
     if (sale) {
       salesPerTick++;
       b.wantToBuy--;
@@ -240,7 +240,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function go() {
     salesPerTick = 0;
-    links.length = 0;
+    edges.length = 0;
     const positions = buyers().map((b) => ({ x: b.x, y: b.y }));
     for (const b of shuffle(buyers()))
       b.move({ to: positions[(b.index + 49) % 50]! });
@@ -251,7 +251,7 @@ export function create(options: Partial<Parameters> = {}) {
     totalSales += salesPerTick;
     if (buyers().some((b) => b.wantToBuy > 0 && b.willingToPay > b.money))
       throw new Error(
-        "Cannot have turtles that want to pay more than their cash!",
+        "Cannot have agents that want to pay more than their cash!",
       );
   }
   record();
@@ -324,7 +324,7 @@ export function create(options: Partial<Parameters> = {}) {
             }),
           ),
         ),
-        links: Object.freeze(links.map((l) => Object.freeze({ ...l }))),
+        edges: Object.freeze(edges.map((l) => Object.freeze({ ...l }))),
         history: Object.freeze(history.map((h) => Object.freeze({ ...h }))),
         randomState: random.state,
       });

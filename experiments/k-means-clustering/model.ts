@@ -244,14 +244,14 @@ export function create(options: Partial<ClusteringParameters> = {}) {
     resetCentroids,
     setScenario,
     squareDeviations,
-    setParameters(patch: Partial<ClusteringParameters>) {
+    setParameters(changes: Partial<ClusteringParameters>) {
       if (
-        Reflect.ownKeys(patch).some(
+        Reflect.ownKeys(changes).some(
           (k) => !["numClusters", "numCentroids"].includes(String(k)),
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     read() {
       return {

@@ -62,7 +62,7 @@ export const ui = defineUI(model, {
     },
     {
       type: "inspector",
-      label: "Patch",
+      label: "ModelField",
       value: (s, id) => s.cells.find((c) => c.id === id),
     },
   ],

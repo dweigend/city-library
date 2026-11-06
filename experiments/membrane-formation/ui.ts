@@ -36,7 +36,7 @@ const binding = defineUI(model, {
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "Molecules", value: (state) => state.agents.length },
-    { label: "Lipids", value: (state) => state.links.length },
+    { label: "Lipids", value: (state) => state.edges.length },
     {
       label: "Hydrophobic isolation",
       value: (state) => state.hydrophobicIsolation.toFixed(3),
@@ -50,9 +50,9 @@ const binding = defineUI(model, {
         width: state.width,
         height: state.height,
         agents: state.agents.map((agent) => ({ ...agent, size: 6 })),
-        segments: state.links.map((link) => ({
-          from: link.from,
-          to: link.to,
+        segments: state.edges.map((edge) => ({
+          from: edge.from,
+          to: edge.to,
           color: "#888888",
           width: 1,
         })),

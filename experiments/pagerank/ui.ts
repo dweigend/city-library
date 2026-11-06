@@ -50,7 +50,7 @@ export const ui = defineUI(model, {
   views: [
     {
       type: "network",
-      label: "Pages and links",
+      label: "Pages and edges",
       nodes: (s) =>
         s.pages.map((p) => ({
           id: String(p.id),

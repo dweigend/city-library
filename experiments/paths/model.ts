@@ -28,9 +28,9 @@ export const inputs: Inputs<PathsParameters> = {
   popularityPerStep: { kind: "number", default: 20, min: 0, max: 100 },
   showPopularity: { kind: "boolean", default: false },
 };
-type PatchState = { popularity: number; route: boolean };
-type Patch = Field<PatchState>;
-type Walker = Agent<{ kind: "walker"; goal: Patch }>;
+type FieldState = { popularity: number; route: boolean };
+type ModelField = Field<FieldState>;
+type Walker = Agent<{ kind: "walker"; goal: ModelField }>;
 type Building = Agent<{ kind: "building" }>;
 
 export function create(options: Partial<PathsParameters> = {}) {
@@ -57,7 +57,7 @@ export function create(options: Partial<PathsParameters> = {}) {
   for (let index = 0; index < settings.walkerCount; index++) {
     const goal = choose(grid.fields);
     const walker = Agent.add(
-      { kind: "walker" as const, goal: null as unknown as Patch },
+      { kind: "walker" as const, goal: null as unknown as ModelField },
       {
         position: {
           x: -50.5 + random.number() * 101,
@@ -71,28 +71,28 @@ export function create(options: Partial<PathsParameters> = {}) {
     world.add(walker);
   }
   function toggleBuilding(position: Position) {
-    const patch = grid.fieldAt(position);
-    if (!patch) throw new RangeError("Building position is outside the world.");
+    const field = grid.fieldAt(position);
+    if (!field) throw new RangeError("Building position is outside the world.");
     const nearby = buildings().filter(
-      (building) => building.distanceTo(patch) <= 4,
+      (building) => building.distanceTo(field) <= 4,
     );
     if (nearby.length) {
       for (const building of nearby) building.delete();
     } else {
-      world.add(Agent.add({ kind: "building" as const }, { position: patch }));
+      world.add(Agent.add({ kind: "building" as const }, { position: field }));
     }
   }
-  function becomeMorePopular(patch: Patch) {
-    patch.popularity += settings.popularityPerStep;
-    if (patch.popularity >= settings.minimumRoutePopularity) patch.route = true;
+  function becomeMorePopular(field: ModelField) {
+    field.popularity += settings.popularityPerStep;
+    if (field.popularity >= settings.minimumRoutePopularity) field.route = true;
   }
-  function bestWayTo(walker: Walker, destination: Patch) {
+  function bestWayTo(walker: Walker, destination: ModelField) {
     const distanceToGoal = walker.distanceTo(destination);
     const candidates = grid.fields.filter(
-      (patch) =>
-        patch.route &&
-        walker.distanceTo(patch) <= settings.walkerVisionDist &&
-        geometry.distance(patch, destination, { space }) < distanceToGoal - 1,
+      (field) =>
+        field.route &&
+        walker.distanceTo(field) <= settings.walkerVisionDist &&
+        geometry.distance(field, destination, { space }) < distanceToGoal - 1,
     );
     if (candidates.length === 0) return destination;
     // In the original patch task, [distance self] is zero for every candidate.
@@ -100,8 +100,8 @@ export function create(options: Partial<PathsParameters> = {}) {
     return choose(candidates);
   }
   function walkTowardsGoal(walker: Walker) {
-    const patch = grid.fieldAt(walker)!;
-    if (!patch.route) becomeMorePopular(patch);
+    const field = grid.fieldAt(walker)!;
+    if (!field.route) becomeMorePopular(field);
     walker.rotate({ towards: bestWayTo(walker, walker.goal) });
     walker.move(1);
   }
@@ -123,10 +123,10 @@ export function create(options: Partial<PathsParameters> = {}) {
   function decayPopularity() {
     // A temporary query result over canonical agents, not a second occupancy owner.
     const occupied = new Set(walkers().map((walker) => grid.fieldAt(walker)));
-    for (const patch of grid.fields) {
-      if (!occupied.has(patch)) {
-        patch.popularity *= (100 - settings.popularityDecayRate) / 100;
-        if (patch.popularity < 1) patch.route = false;
+    for (const field of grid.fields) {
+      if (!occupied.has(field)) {
+        field.popularity *= (100 - settings.popularityDecayRate) / 100;
+        if (field.popularity < 1) field.route = false;
       }
     }
   }
@@ -154,16 +154,16 @@ export function create(options: Partial<PathsParameters> = {}) {
       width: 101,
       height: 101,
       parameters: { ...settings },
-      cells: grid.fields.map((patch) => ({
-        id: patch.id,
-        x: patch.x,
-        y: patch.y,
-        popularity: patch.popularity,
-        route: patch.route,
-        color: patch.route
+      cells: grid.fields.map((field) => ({
+        id: field.id,
+        x: field.x,
+        y: field.y,
+        popularity: field.popularity,
+        route: field.route,
+        color: field.route
           ? "#8d8d8d"
           : settings.showPopularity
-            ? `hsl(120 75% ${Math.min(90, 5 + (85 * (patch.popularity + settings.minimumRoutePopularity * 3)) / Math.max(1, settings.minimumRoutePopularity * 6))}%)`
+            ? `hsl(120 75% ${Math.min(90, 5 + (85 * (field.popularity + settings.minimumRoutePopularity * 3)) / Math.max(1, settings.minimumRoutePopularity * 6))}%)`
             : "#4caa22",
       })),
       walkers: walkers().map((walker) => ({

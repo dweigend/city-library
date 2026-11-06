@@ -197,21 +197,21 @@ test("drift setup keeps all walls, removes turtles from them and does not recomp
   expect(m.read().tick).toBe(0);
   expect(m.read().cells.filter((c) => c.wall).length).toBe(walls);
   expect(
-    m.read().turtles.every((a) => ![0, -17, 17].includes(Math.round(a.y))),
+    m.read().agents.every((a) => ![0, -17, 17].includes(Math.round(a.y))),
   ).toBe(true);
 });
 
 test("drift meet copies the right-hand patch color and single-color population stops before movement", () => {
   const m = drift({ number: 1, colors: 2 });
-  const source = m.makeTurtle(15, 10, 10);
-  const target = m.makeTurtle(25, 11, 10);
+  const source = m.makeAgent(15, 10, 10);
+  const target = m.makeAgent(25, 11, 10);
   m.meet(source);
   expect(source.colorNumber).toBe(target.colorNumber);
   const single = drift({ number: 1 });
   const s = single.read();
   single.advance(10);
   expect(single.read().tick).toBe(0);
-  expect(single.read().turtles).toEqual(s.turtles);
+  expect(single.read().agents).toEqual(s.agents);
 });
 
 test("Mendelian source crosses, persistent counters, genotype readback and prebatch cap", () => {

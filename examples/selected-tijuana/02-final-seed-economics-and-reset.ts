@@ -11,7 +11,7 @@ model.setScenario(scene(model, {
   tick: 25,
   globals: globals({ setupDone: false, thirdPhase: 0 }),
   agents: [service(), job(), migrant("seed", 2, 6, 8, { size: 0.65, income: 0, savings: 0, livingExpenses: 0 })],
-  patch: (x, y) => field({ occupied: "maquiladora",
+  field: (x, y) => field({ occupied: "maquiladora",
     ...(x === 6 && y === 8 ? { landValue: 2, water: 2, electricity: 3, transport: 1 } : {}),
     ...(x === 20 && y === 20 ? { landValue: -0.013 } : {}) }),
 }));

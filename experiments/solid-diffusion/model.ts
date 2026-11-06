@@ -71,7 +71,7 @@ export function create(options: Partial<SolidParameters> = {}) {
       Math.abs(x) > (settings.width - 1) / 2 ||
       Math.abs(y) > (settings.height - 1) / 2
     )
-      throw new RangeError("Expected an in-world patch.");
+      throw new RangeError("Expected an in-world field.");
     const target = grid.fieldAt({ x, y })!;
     if (grid.agentsAt(target).length)
       throw new RangeError("Target must be vacant.");

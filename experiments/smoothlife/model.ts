@@ -196,16 +196,16 @@ export function create(options: Partial<SmoothLifeParameters> = {}) {
       });
     },
     setRules(
-      patch: Partial<
+      field: Partial<
         TransitionParameters &
           Pick<SmoothLifeParameters, "paintValue" | "paintRadius">
       >,
     ) {
       if (
-        !patch ||
-        typeof patch !== "object" ||
-        ![Object.prototype, null].includes(Object.getPrototypeOf(patch)) ||
-        Reflect.ownKeys(patch).some(
+        !field ||
+        typeof field !== "object" ||
+        ![Object.prototype, null].includes(Object.getPrototypeOf(field)) ||
+        Reflect.ownKeys(field).some(
           (key) =>
             typeof key !== "string" ||
             ![
@@ -218,11 +218,11 @@ export function create(options: Partial<SmoothLifeParameters> = {}) {
               "paintValue",
               "paintRadius",
             ].includes(key) ||
-            !("value" in Object.getOwnPropertyDescriptor(patch, key)!),
+            !("value" in Object.getOwnPropertyDescriptor(field, key)!),
         )
       )
         throw new TypeError("Supply only live transition/paint values.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...field });
     },
     eraseAll() {
       for (const field of fields) field.value = 0;

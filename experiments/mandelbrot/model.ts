@@ -4,13 +4,13 @@ import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  numTurtles: number;
+  numAgents: number;
   throw: number;
   scaleFactor: number;
 }
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numTurtles: {
+  numAgents: {
     kind: "number",
     default: 1500,
     min: 0,
@@ -26,7 +26,7 @@ export const inputs: Inputs<Parameters> = {
     integer: true,
   },
 };
-type Turtle = Agent<{
+type ModelAgent = Agent<{
   sourceIndex: number;
   previousCount: number;
   color: string;
@@ -48,14 +48,14 @@ export function create(options: Partial<Parameters> = {}) {
     field.cReal = field.x / setupScale;
     field.cImaginary = field.y / setupScale;
   }
-  function turtles() {
-    return world.agents as readonly Turtle[];
+  function agents() {
+    return world.agents as readonly ModelAgent[];
   }
   function randomCoordinate() {
     return random.number() * 301 - 150.5;
   }
-  function setupTurtles() {
-    for (let i = 0; i < settings.numTurtles; i++) {
+  function setupAgents() {
+    for (let i = 0; i < settings.numAgents; i++) {
       const heading = Math.floor(random.number() * 360),
         x = randomCoordinate(),
         y = randomCoordinate();
@@ -69,11 +69,11 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function mandelbrotCalcAndColor() {
     // This temporary set deduplicates occupied canonical Fields, not domain state.
-    const occupied = new Set(turtles().map((t) => grid.fieldAt(t)!));
-    const eligible: Turtle[] = [];
+    const occupied = new Set(agents().map((t) => grid.fieldAt(t)!));
+    const eligible: ModelAgent[] = [];
     for (const field of occupied)
       if (Math.hypot(field.zReal, field.zImaginary) <= 2 && field.counter < 115)
-        eligible.push(...(grid.agentsAt(field) as readonly Turtle[]));
+        eligible.push(...(grid.agentsAt(field) as readonly ModelAgent[]));
     for (const t of random.sample(eligible, {
       count: eligible.length,
       compatibility: "legacy-shuffle",
@@ -86,54 +86,54 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function step() {
-    const population = turtles();
-    for (const turtle of random.sample(population, {
+    const population = agents();
+    for (const agent of random.sample(population, {
       count: population.length,
       compatibility: "legacy-shuffle",
     })) {
-      const direction = geometry.direction({ heading: turtle.heading });
+      const direction = geometry.direction({ heading: agent.heading });
       const position = geometry.normalize(
-        { x: turtle.x + direction.x, y: turtle.y + direction.y },
+        { x: agent.x + direction.x, y: agent.y + direction.y },
         { space: world.space!, endpoints: "half-open" },
       );
-      if (position) turtle.move({ to: position });
+      if (position) agent.move({ to: position });
       else
-        turtle.move({ to: { x: randomCoordinate(), y: randomCoordinate() } });
+        agent.move({ to: { x: randomCoordinate(), y: randomCoordinate() } });
     }
   }
   function wiggle() {
-    const population = turtles();
-    for (const turtle of random.sample(population, {
+    const population = agents();
+    for (const agent of random.sample(population, {
       count: population.length,
       compatibility: "legacy-shuffle",
     })) {
-      turtle.rotate(Math.floor(random.number() * 10));
-      turtle.rotate(-Math.floor(random.number() * 10));
+      agent.rotate(Math.floor(random.number() * 10));
+      agent.rotate(-Math.floor(random.number() * 10));
     }
   }
   function climb() {
-    const population = turtles();
-    for (const turtle of random.sample(population, {
+    const population = agents();
+    for (const agent of random.sample(population, {
       count: population.length,
       compatibility: "legacy-shuffle",
     })) {
-      const field = grid.fieldAt(turtle)!;
-      if (field.counter >= turtle.previousCount) {
-        turtle.previousCount = field.counter;
-        turtle.color = "#eab308";
-        const direction = geometry.direction({ heading: turtle.heading });
+      const field = grid.fieldAt(agent)!;
+      if (field.counter >= agent.previousCount) {
+        agent.previousCount = field.counter;
+        agent.color = "#eab308";
+        const direction = geometry.direction({ heading: agent.heading });
         const position = geometry.normalize(
           {
-            x: turtle.x + direction.x * settings.throw,
-            y: turtle.y + direction.y * settings.throw,
+            x: agent.x + direction.x * settings.throw,
+            y: agent.y + direction.y * settings.throw,
           },
           { space: world.space!, endpoints: "half-open" },
         );
-        if (position) turtle.move({ to: position });
+        if (position) agent.move({ to: position });
       } else {
-        turtle.previousCount = field.counter;
-        turtle.color = "#2563eb";
-        turtle.rotate(180);
+        agent.previousCount = field.counter;
+        agent.color = "#2563eb";
+        agent.rotate(180);
       }
     }
   }
@@ -144,7 +144,7 @@ export function create(options: Partial<Parameters> = {}) {
     climb();
     world.tick.advance();
   }
-  setupTurtles();
+  setupAgents();
   return {
     get world() {
       return world;
@@ -156,11 +156,11 @@ export function create(options: Partial<Parameters> = {}) {
       stepCount(count);
       for (let i = 0; i < count; i++) go();
     },
-    hideTurtles() {
-      for (const t of turtles()) t.hidden = true;
+    hideAgents() {
+      for (const t of agents()) t.hidden = true;
     },
     setRules(
-      change: Partial<Pick<Parameters, "throw" | "scaleFactor" | "numTurtles">>,
+      change: Partial<Pick<Parameters, "throw" | "scaleFactor" | "numAgents">>,
     ) {
       settings = parameters(inputs, { ...settings, ...change });
     },
@@ -173,7 +173,7 @@ export function create(options: Partial<Parameters> = {}) {
         setupScale,
         maxIterations: 115,
         // Sparse display records are derived from the full canonical Grid.
-        patches: Object.freeze(
+        fields: Object.freeze(
           fields
             .filter((p) => p.counter > 0)
             .map((p) =>
@@ -189,8 +189,8 @@ export function create(options: Partial<Parameters> = {}) {
               }),
             ),
         ),
-        turtles: Object.freeze(
-          turtles().map((t) =>
+        agents: Object.freeze(
+          agents().map((t) =>
             Object.freeze({
               id: String(t.sourceIndex),
               x: t.x,
@@ -202,7 +202,7 @@ export function create(options: Partial<Parameters> = {}) {
             }),
           ),
         ),
-        computedPatches: fields.filter((p) => p.counter > 0).length,
+        computedFields: fields.filter((p) => p.counter > 0).length,
         iterations: fields.reduce((n, p) => n + p.counter, 0),
         randomState: random.state,
       });
@@ -212,7 +212,7 @@ export function create(options: Partial<Parameters> = {}) {
 export const model = {
   title: "Mandelbrot",
   description:
-    "Moving turtles allocate complex-iteration work to patches. Wilensky (1997), CC BY-NC-SA 3.0.",
+    "Moving agents allocate complex-iteration work to fields. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

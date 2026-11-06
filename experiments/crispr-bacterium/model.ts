@@ -91,10 +91,10 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   const integer = (upper: number) =>
     random.number({ min: 0, max: upper, integer: true });
   const cellWall = grid.fields.filter((field) => field.region === "wall");
-  const crisprPatches = grid.fields.filter(
+  const crisprFields = grid.fields.filter(
     (field) => field.region === "crispr" || field.region === "promoter",
   );
-  function dnaPatches() {
+  function dnaFields() {
     return grid.fields.filter((field) => field.region === "dna");
   }
   function addMolecule(
@@ -136,7 +136,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     // These two molecular complexes are co-located; no general rigid-body/tie engine is introduced.
     if (partner) partner.move({ to: { x: molecule.x, y: molecule.y } });
   }
-  function patchAhead(molecule: Molecule, distance: number) {
+  function fieldAhead(molecule: Molecule, distance: number) {
     const direction = geometry.direction({ heading: molecule.heading });
     return grid.fieldAt({
       x: molecule.x + direction.x * distance,
@@ -145,8 +145,8 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   }
   function wallAhead(molecule: Molecule) {
     return (
-      patchAhead(molecule, 1)?.region === "wall" ||
-      patchAhead(molecule, 2)?.region === "wall"
+      fieldAhead(molecule, 1)?.region === "wall" ||
+      fieldAhead(molecule, 2)?.region === "wall"
     );
   }
   function move(molecule: Molecule, speed = 1) {
@@ -234,9 +234,9 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   }
   function goCasDimers(dimer: Molecule) {
     if (dimer.bound) {
-      dimer.rotate({ towards: random.sample(crisprPatches)[0]! });
+      dimer.rotate({ towards: random.sample(crisprFields)[0]! });
       forward(dimer, 1);
-      if (crisprPatches.includes(grid.fieldAt(dimer)!)) {
+      if (crisprFields.includes(grid.fieldAt(dimer)!)) {
         const virus = bonds.neighbors(dimer)[0];
         if (!virus)
           throw new Error("Source bound Cas1/2 has no virus partner.");
@@ -264,7 +264,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   }
   function goViruses(virus: Molecule) {
     if (!virus.bound) {
-      virus.rotate({ towards: random.sample(dnaPatches())[0]! });
+      virus.rotate({ towards: random.sample(dnaFields())[0]! });
       forward(virus, 0.05);
       if (grid.fieldAt(virus)!.region === "dna") {
         const field = grid.fieldAt(virus)!;
@@ -437,7 +437,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
                   ? "#39d8eb"
                   : "#7ac7ed",
         })),
-      links: [...bonds.edges].map((edge) => ({
+      edges: [...bonds.edges].map((edge) => ({
         id: edge.id,
         from: edge.from.id,
         to: edge.to.id,
@@ -486,7 +486,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     wallAhead,
     degrade,
     infected,
-    dnaPatches,
+    dnaFields,
     updateLabels,
   };
 }

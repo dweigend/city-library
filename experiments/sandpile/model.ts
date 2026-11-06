@@ -7,7 +7,7 @@ export interface SandpileParameters {
   height: number;
   seed: number;
   initial: "random" | "uniform";
-  grainsPerPatch: number;
+  grainsPerField: number;
   dropLocation: "center" | "random" | "mouse-click";
   animateAvalanches: boolean;
 }
@@ -20,7 +20,7 @@ export const inputs: Inputs<SandpileParameters> = {
     default: "random",
     options: ["random", "uniform"],
   },
-  grainsPerPatch: { kind: "number", default: 1, min: 0, max: 3, integer: true },
+  grainsPerField: { kind: "number", default: 1, min: 0, max: 3, integer: true },
   dropLocation: {
     kind: "choice",
     default: "random",
@@ -78,9 +78,9 @@ export function create(options: Partial<SandpileParameters> = {}) {
   }
   function at(x: number, y: number) {
     if (!Number.isInteger(x) || !Number.isInteger(y))
-      throw new RangeError("Expected patch coordinates.");
+      throw new RangeError("Expected field coordinates.");
     const f = grid.fieldAt({ x, y });
-    if (!f) throw new RangeError("Patch outside lattice.");
+    if (!f) throw new RangeError("Field outside lattice.");
     return f;
   }
   function updateN(field: Cell, amount: number) {
@@ -114,9 +114,9 @@ export function create(options: Partial<SandpileParameters> = {}) {
     history.push({ tick: world.tick.value, average: total() / fields.length });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function setup(mode: "random" | "uniform", n = settings.grainsPerPatch) {
+  function setup(mode: "random" | "uniform", n = settings.grainsPerField) {
     if (!Number.isInteger(n) || n < 0 || n > 3)
-      throw new RangeError("Grains per patch must be 0..3.");
+      throw new RangeError("Grains per field must be 0..3.");
     for (const f of random.sample(fields, {
       count: fields.length,
       compatibility: "legacy-shuffle",
@@ -187,7 +187,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
       sizes.length = lifetimes.length = 0;
       sizePlot = lifetimePlot = Object.freeze([]);
     },
-    setupUniform(n = settings.grainsPerPatch) {
+    setupUniform(n = settings.grainsPerField) {
       setup("uniform", n);
     },
     setupRandom() {
@@ -197,7 +197,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
       value: Partial<
         Pick<
           SandpileParameters,
-          "grainsPerPatch" | "dropLocation" | "animateAvalanches"
+          "grainsPerField" | "dropLocation" | "animateAvalanches"
         >
       >,
     ) {

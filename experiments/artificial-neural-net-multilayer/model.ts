@@ -195,11 +195,11 @@ export function create(options: Partial<Parameters> = {}) {
         if (history.length > 1001) history.shift();
       }
     },
-    setParameters(patch: Partial<Omit<Parameters, "seed">>) {
-      parameters(inputs, patch);
-      if (Object.hasOwn(patch, "seed"))
+    setParameters(changes: Partial<Omit<Parameters, "seed">>) {
+      parameters(inputs, changes);
+      if (Object.hasOwn(changes, "seed"))
         throw new TypeError("Seed is setup-only.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     setScenario(s: { weights: readonly number[]; inputs: readonly number[] }) {
       if (

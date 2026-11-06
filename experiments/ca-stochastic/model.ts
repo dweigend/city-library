@@ -94,7 +94,7 @@ export function create(options: Partial<StochasticParameters> = {}) {
     absorbing = false;
   const history: { tick: number; topological: number; metric: number }[] = [];
   const rowFields = (y: number) => grid.fields.filter((f) => f.y === y);
-  function colorPatch(f: (typeof grid.fields)[number]) {
+  function colorField(f: (typeof grid.fields)[number]) {
     f.colorNumber = f.on ? settings.onColor : settings.offColor;
   }
   function setupGeneral() {
@@ -127,7 +127,7 @@ export function create(options: Partial<StochasticParameters> = {}) {
     setupGeneral();
     for (const f of rowFields(top)) {
       f.on = random.number() * 100 < settings.density;
-      colorPatch(f);
+      colorField(f);
     }
   }
   function setupContinue() {
@@ -137,7 +137,7 @@ export function create(options: Partial<StochasticParameters> = {}) {
     setupGeneral();
     rowFields(top).forEach((f, i) => {
       f.on = values[i]!;
-      colorPatch(f);
+      colorField(f);
     });
   }
   function doRule() {
@@ -152,7 +152,7 @@ export function create(options: Partial<StochasticParameters> = {}) {
     row--;
     rowFields(row).forEach((f, i) => {
       f.on = next[i]!;
-      colorPatch(f);
+      colorField(f);
     });
   }
   initialize();
@@ -195,9 +195,9 @@ export function create(options: Partial<StochasticParameters> = {}) {
       setupContinue();
     },
     setRules(
-      patch: Partial<Omit<StochasticParameters, "width" | "height" | "seed">>,
+      field: Partial<Omit<StochasticParameters, "width" | "height" | "seed">>,
     ) {
-      parameters(inputs, patch);
+      parameters(inputs, field);
       const allowed = [
         ...patterns,
         "autoContinue",
@@ -209,12 +209,12 @@ export function create(options: Partial<StochasticParameters> = {}) {
         "example",
       ];
       if (
-        Reflect.ownKeys(patch).some(
+        Reflect.ownKeys(field).some(
           (k) => typeof k !== "string" || !allowed.includes(k),
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...field });
     },
     setupExample() {
       const table = [

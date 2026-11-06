@@ -8,7 +8,7 @@ export interface VirusParameters {
   infectiousness: number;
   chanceRecover: number;
   duration: number;
-  turtleShape: "person" | "circle";
+  agentShape: "person" | "circle";
 }
 export const inputs: Inputs<VirusParameters> = {
   seed: { kind: "number", default: 1, integer: true },
@@ -22,7 +22,7 @@ export const inputs: Inputs<VirusParameters> = {
   infectiousness: { kind: "number", default: 65, min: 0, max: 99 },
   chanceRecover: { kind: "number", default: 75, min: 0, max: 99 },
   duration: { kind: "number", default: 20, min: 0, max: 99 },
-  turtleShape: {
+  agentShape: {
     kind: "choice",
     default: "person",
     options: ["person", "circle"],
@@ -78,7 +78,7 @@ export function create(options: Partial<VirusParameters> = {}) {
   function immune(person: Person) {
     return person.remainingImmunity > 0;
   }
-  function setupTurtles() {
+  function setupAgents() {
     for (let index = 0; index < settings.numberPeople; index++) {
       world.add(
         Agent.add(
@@ -225,14 +225,14 @@ export function create(options: Partial<VirusParameters> = {}) {
         remainingImmunity: person.remainingImmunity,
         sickTime: person.sickTime,
         age: person.age,
-        shape: settings.turtleShape,
+        shape: settings.agentShape,
         size: 1.5,
         color: person.sick ? "#e43838" : immune(person) ? "#888888" : "#3ca34d",
       })),
       history: history.map((point) => ({ ...point })),
     };
   }
-  setupTurtles();
+  setupAgents();
   updateGlobalVariables();
   record();
   return {
@@ -240,7 +240,7 @@ export function create(options: Partial<VirusParameters> = {}) {
     advance,
     go,
     setParameters,
-    setupTurtles,
+    setupAgents,
     updateGlobalVariables,
     getOlder,
     move,

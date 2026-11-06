@@ -79,7 +79,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
     else history.push(point);
     if (history.length > 1001) history.splice(1, 1);
   }
-  function processRecyclerPatch(person: Person) {
+  function processRecyclerField(person: Person) {
     const field = grid.fieldAt(person)!;
     if (field.resource === "new") {
       if (person.energy <= settings.maxStoredEnergy - 2) person.energy += 2;
@@ -90,7 +90,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
       field.resource = "recycled";
     }
   }
-  function processWastefulPatch(person: Person) {
+  function processWastefulField(person: Person) {
     const field = grid.fieldAt(person)!;
     if (field.resource === "new" && person.energy <= settings.maxStoredEnergy - 4) {
       person.energy += 4; field.resource = "waste";
@@ -125,8 +125,8 @@ export function create(options: Partial<RecyclingParameters> = {}) {
       if (integer(5) === 0 && integer(100) < threshold) field.resource = "new";
   }
   function go() {
-    for (const person of activation(people().filter(person => person.kind === "recycler"))) processRecyclerPatch(person);
-    for (const person of activation(people().filter(person => person.kind === "wasteful"))) processWastefulPatch(person);
+    for (const person of activation(people().filter(person => person.kind === "recycler"))) processRecyclerField(person);
+    for (const person of activation(people().filter(person => person.kind === "wasteful"))) processWastefulField(person);
     movePeople(); regenerateResources();
   }
 

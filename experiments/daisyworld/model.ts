@@ -253,7 +253,7 @@ export function create(options: Partial<Parameters> = {}) {
         x,
         y,
       });
-      if (!f) throw new RangeError("No patch.");
+      if (!f) throw new RangeError("No field.");
       const existing = at(f);
       if (mode === "remove") for (const a of existing) a.delete();
       else if (existing.length === 0)

@@ -52,7 +52,7 @@ export interface TijuanaGlobals {
   thirdPhase: 0 | "go" | "stop";
   setupDone: boolean;
 }
-export interface TurtleInput {
+export interface AgentInput {
   key: string;
   birthOrdinal: number;
   x: number;
@@ -71,11 +71,11 @@ export type BuilderOriginInput =
   | { kind: "services"; keys: readonly string[] }
   | { kind: "field"; x: number; y: number };
 export type TijuanaAgentInput =
-  | (TurtleInput & { kind: "service-center" })
-  | (TurtleInput & { kind: "employment-center" })
-  | (TurtleInput & { kind: "ring" })
-  | (TurtleInput & { kind: "node" })
-  | (TurtleInput & {
+  | (AgentInput & { kind: "service-center" })
+  | (AgentInput & { kind: "employment-center" })
+  | (AgentInput & { kind: "ring" })
+  | (AgentInput & { kind: "node" })
+  | (AgentInput & {
       kind: "first-builder";
       energy: number;
       weight: number;
@@ -83,19 +83,19 @@ export type TijuanaAgentInput =
       tooClose: 0 | readonly string[];
       origin: BuilderOriginInput;
     })
-  | (TurtleInput & {
+  | (AgentInput & {
       kind: "second-builder";
       energy: number;
       weight: number;
       origin: BuilderOriginInput;
     })
-  | (TurtleInput & {
+  | (AgentInput & {
       kind: "third-builder";
       energy: number;
       weight: number;
       origin: BuilderOriginInput;
     })
-  | (TurtleInput & {
+  | (AgentInput & {
       kind: "migrant";
       income: number;
       savings: number;
@@ -155,17 +155,17 @@ export type AgentReference = Readonly<{
 export type FieldRead = Readonly<
   TijuanaFieldInput & { id: string; x: number; y: number }
 >;
-export type TurtleRead = Readonly<Omit<TurtleInput, "key"> & { id: string }>;
+export type AgentRead = Readonly<Omit<AgentInput, "key"> & { id: string }>;
 export type BuilderOriginRead =
   | 0
   | Readonly<{ kind: "services"; agents: readonly AgentReference[] }>
   | Readonly<{ kind: "field"; id: string; x: number; y: number }>;
 export type TijuanaAgentRead =
-  | (TurtleRead & Readonly<{ kind: "service-center" }>)
-  | (TurtleRead & Readonly<{ kind: "employment-center" }>)
-  | (TurtleRead & Readonly<{ kind: "ring" }>)
-  | (TurtleRead & Readonly<{ kind: "node" }>)
-  | (TurtleRead &
+  | (AgentRead & Readonly<{ kind: "service-center" }>)
+  | (AgentRead & Readonly<{ kind: "employment-center" }>)
+  | (AgentRead & Readonly<{ kind: "ring" }>)
+  | (AgentRead & Readonly<{ kind: "node" }>)
+  | (AgentRead &
       Readonly<{
         kind: "first-builder";
         energy: number;
@@ -174,21 +174,21 @@ export type TijuanaAgentRead =
         tooClose: 0 | readonly AgentReference[];
         origin: BuilderOriginRead;
       }>)
-  | (TurtleRead &
+  | (AgentRead &
       Readonly<{
         kind: "second-builder";
         energy: number;
         weight: number;
         origin: BuilderOriginRead;
       }>)
-  | (TurtleRead &
+  | (AgentRead &
       Readonly<{
         kind: "third-builder";
         energy: number;
         weight: number;
         origin: BuilderOriginRead;
       }>)
-  | (TurtleRead &
+  | (AgentRead &
       Readonly<{
         kind: "migrant";
         income: number;
@@ -212,7 +212,7 @@ export type ReporterReason = "empty-subset" | "zero-denominator" | null;
 export type TijuanaReports = Readonly<{
   savings: number | undefined;
   savingsNode: number | undefined;
-  equippedPatchCount: number;
+  equippedFieldCount: number;
   noWaterPercent: number | undefined;
   noPowerPercent: number | undefined;
   unavailable: Readonly<{
@@ -325,10 +325,10 @@ export const inputs: Inputs<TijuanaParameters> = freeze({
   cityGrowth: { kind: "boolean", default: false },
 });
 type Kind = TijuanaAgentInput["kind"];
-type Patch = Field<TijuanaFieldInput>;
+type ModelField = Field<TijuanaFieldInput>;
 type LiveOrigin =
-  0 | { kind: "services"; agents: Turtle[] } | { kind: "field"; field: Patch };
-interface TurtleState {
+  0 | { kind: "services"; agents: ModelAgent[] } | { kind: "field"; field: ModelField };
+interface AgentState {
   kind: Kind;
   birthOrdinal: number;
   size: number;
@@ -341,16 +341,16 @@ interface TurtleState {
   energy: number;
   weight: number;
   blockSize: number;
-  tooClose: 0 | Turtle[];
+  tooClose: 0 | ModelAgent[];
   origin: LiveOrigin | Origin;
   income: number;
   savings: number;
   livingExpenses: number;
   residentSince: number;
-  works: 0 | Turtle[];
+  works: 0 | ModelAgent[];
 }
-type Turtle = Agent<TurtleState>;
-const patchDefaults = (): TijuanaFieldInput => ({
+type ModelAgent = Agent<AgentState>;
+const fieldDefaults = (): TijuanaFieldInput => ({
   landValue: 0,
   water: 0,
   electricity: 0,
@@ -431,7 +431,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   const space = { x: 171, y: 115, boundary: "hard" as const };
   const random = Random.add({ seed: settings.seed });
   const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: patchDefaults() });
+  const grid = Grid.add(space, { state: fieldDefaults() });
   world.add(grid);
   const fields = grid.fields;
   const neighbors = new Map(
@@ -444,7 +444,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     traces: PenTrace[] = [],
     warnings: string[] = [];
   let lastFailure: FailedCall | null = null;
-  const all = () => world.agents as readonly Turtle[];
+  const all = () => world.agents as readonly ModelAgent[];
   const breed = (kind: Kind) => all().filter((a) => a.kind === kind);
   const ask = <T>(items: readonly T[], action: (item: T) => void) => {
     for (const item of random.sample(items, {
@@ -478,12 +478,12 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   const distance = (a: Position, b: Position) =>
     geometry.distance(a, b, { space });
   const here = (a: Position) => grid.fieldAt(a)!;
-  function radius(a: Position, r: number): Patch[] {
+  function radius(a: Position, r: number): ModelField[] {
     if (r < 0) {
       const f = here(a);
       return [f, ...neighbors.get(f)!].filter((p) => distance(a, p) <= -r);
     }
-    const result: Patch[] = [];
+    const result: ModelField[] = [];
     for (
       let y = Math.max(-57, Math.ceil(a.y - r));
       y <= Math.min(57, Math.floor(a.y + r));
@@ -501,8 +501,8 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   }
   const nearAgents = (a: Position, r: number, kind: Kind) =>
     breed(kind).filter((b) => distance(a, b) <= r);
-  const at = (f: Patch, kind: Kind) =>
-    grid.agentsAt(f).filter((a) => (a as Turtle).kind === kind) as Turtle[];
+  const at = (f: ModelField, kind: Kind) =>
+    grid.agentsAt(f).filter((a) => (a as ModelAgent).kind === kind) as ModelAgent[];
   function sample<T>(items: readonly T[], count: number): T[] {
     if (count < 0)
       throw new TijuanaRuntimeError(
@@ -531,21 +531,21 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       throw new TijuanaRuntimeError("zero-divisor", "mod: division by zero");
     return ((a % b) + b) % b;
   }
-  function heading(a: Turtle, h: number) {
+  function heading(a: ModelAgent, h: number) {
     a.rotate(h - a.heading);
   }
-  function pointAhead(a: Turtle, length: number) {
+  function pointAhead(a: ModelAgent, length: number) {
     const d = geometry.direction({ heading: a.heading });
     return geometry.normalize(
       { x: a.x + d.x * length, y: a.y + d.y * length },
       { space, endpoints: "half-open" },
     );
   }
-  function jump(a: Turtle, length: number) {
+  function jump(a: ModelAgent, length: number) {
     const p = pointAhead(a, length);
     if (p) moveTo(a, p);
   }
-  function forward(a: Turtle, length: number) {
+  function forward(a: ModelAgent, length: number) {
     const sign = Math.sign(length);
     let rest = Math.abs(length);
     while (rest >= 1) {
@@ -554,7 +554,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     }
     if (rest) jump(a, sign * rest);
   }
-  function moveTo(a: Turtle, p: Position) {
+  function moveTo(a: ModelAgent, p: Position) {
     const from = { x: a.x, y: a.y };
     a.move({ to: p });
     if (a.penDown)
@@ -567,12 +567,12 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         width: a.penSize,
       });
   }
-  const ahead = (a: Turtle, n: number) => {
+  const ahead = (a: ModelAgent, n: number) => {
     const p = pointAhead(a, n);
     return p ? grid.fieldAt(p) : undefined;
   };
-  function birth(kind: Kind, p: Position, parent?: Turtle): Turtle {
-    const scalar: TurtleState = {
+  function birth(kind: Kind, p: Position, parent?: ModelAgent): ModelAgent {
+    const scalar: AgentState = {
       kind,
       birthOrdinal: nextBirthOrdinal++,
       size: 1,
@@ -594,7 +594,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       works: 0,
     };
     if (parent) {
-      for (const key of Object.keys(scalar) as (keyof TurtleState)[])
+      for (const key of Object.keys(scalar) as (keyof AgentState)[])
         if (
           !["kind", "birthOrdinal", "origin", "works", "tooClose"].includes(key)
         )
@@ -616,13 +616,13 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     kind: Kind,
     n: number,
     p: Position,
-    init: (a: Turtle) => void,
+    init: (a: ModelAgent) => void,
   ) {
-    const born: Turtle[] = [];
+    const born: ModelAgent[] = [];
     for (let i = 0; i < n; i++) born.push(birth(kind, p));
     ask(born, init);
   }
-  function nearest(items: Turtle[], p: Position) {
+  function nearest(items: ModelAgent[], p: Position) {
     if (!items.length) return undefined;
     const d = Math.min(...items.map((a) => distance(a, p)));
     return one(items.filter((a) => distance(a, p) === d));
@@ -635,7 +635,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       );
     return value;
   }
-  function getCosts(a: Turtle) {
+  function getCosts(a: ModelAgent) {
     const f = here(a);
     const works = a.works === 0 ? [] : a.works;
     const workplace = one(
@@ -797,14 +797,14 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         b.rotate({ towards: other });
       });
   }
-  function generateSecondOrder(a: Turtle) {
+  function generateSecondOrder(a: ModelAgent) {
     for (const angle of [90, -90]) {
       const b = birth("second-builder", a, a);
       b.rotate(angle);
       b.energy = integer(b.energy);
     }
   }
-  function hatchThird(a: Turtle) {
+  function hatchThird(a: ModelAgent) {
     for (const angle of [90, -90]) {
       const b = birth("third-builder", a, a);
       b.rotate(angle);
@@ -812,7 +812,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     }
   }
   function roadBuilder(
-    a: Turtle,
+    a: ModelAgent,
     kind: "second-builder" | "third-builder",
     firstPhaseLimit: number,
   ) {
@@ -915,7 +915,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     );
     if (candidates.length < settings.maquiladoras)
       warnings.push(
-        "Warning: unable to create all employment centers, insufficient candidate patches.",
+        "Warning: unable to create all employment centers, insufficient candidate fields.",
       );
     batch("employment-center", settings.maquiladoras, { x: 0, y: 0 }, (a) => {
       Object.assign(a, {
@@ -1035,7 +1035,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     )
       adjust();
   }
-  function initializeMigrant(a: Turtle, size: number) {
+  function initializeMigrant(a: ModelAgent, size: number) {
     a.size = size;
     a.shape = "circle";
     a.origin = required(
@@ -1429,7 +1429,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   }
   function clear() {
     for (const a of all()) a.delete();
-    for (const f of fields) Object.assign(f, patchDefaults());
+    for (const f of fields) Object.assign(f, fieldDefaults());
     globals = globalDefaults();
     world.tick.reset();
     nextBirthOrdinal = 0;
@@ -1543,7 +1543,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     if (scenario.cells.length !== fields.length)
       throw new RangeError("Expected every canonical field");
     for (const f of scenario.cells) {
-      record(f, Object.keys(patchDefaults()));
+      record(f, Object.keys(fieldDefaults()));
       for (const k of [
         "landValue",
         "elevation",
@@ -1570,7 +1570,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     array(scenario.agents);
     const keys = new Map<string, TijuanaAgentInput>(),
       ordinals = new Set<number>();
-    const turtleKeys = [
+    const agentKeys = [
       "key",
       "kind",
       "birthOrdinal",
@@ -1587,7 +1587,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     ];
     for (const a of scenario.agents) {
       if (!a || typeof a !== "object")
-        throw new TypeError("Expected turtle input");
+        throw new TypeError("Expected agent input");
       const descriptor = Object.getOwnPropertyDescriptor(a, "kind");
       if (!descriptor || !("value" in descriptor))
         throw new TypeError("Expected breed data");
@@ -1614,7 +1614,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
                 ? []
                 : null;
       if (!extras) throw new TypeError("Invalid breed");
-      record(a, [...turtleKeys, ...extras]);
+      record(a, [...agentKeys, ...extras]);
       if (typeof a.key !== "string" || !a.key || keys.has(a.key))
         throw new TypeError("Unique nonempty fixture key required");
       natural(a.birthOrdinal);
@@ -1641,14 +1641,14 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         ) ||
         a.penSize < 0
       )
-        throw new RangeError("Invalid turtle position or pen size");
+        throw new RangeError("Invalid agent position or pen size");
       if (
         typeof a.shape !== "string" ||
         typeof a.hidden !== "boolean" ||
         typeof a.penDown !== "boolean" ||
         (typeof a.label !== "string" && typeof a.label !== "number")
       )
-        throw new TypeError("Invalid turtle data");
+        throw new TypeError("Invalid agent data");
       if (typeof a.label === "number") finite(a.label);
       if (a.kind === "migrant") {
         for (const k of [
@@ -1755,7 +1755,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     world.tick.reset();
     world.tick.advance(scenario.tick);
     random.state = continuation.state;
-    const live = new Map<string, Turtle>();
+    const live = new Map<string, ModelAgent>();
     for (const input of scenario.agents) {
       const a = birth(input.kind, input);
       heading(a, input.heading);
@@ -1817,7 +1817,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     epoch++;
     resetObservations();
   }
-  function reference(a: Turtle): AgentReference {
+  function reference(a: ModelAgent): AgentReference {
     return { id: a.id, birthOrdinal: a.birthOrdinal, alive: a.alive };
   }
   function originRead(origin: LiveOrigin | Origin): BuilderOriginRead {
@@ -1833,7 +1833,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
           y: origin.field.y,
         };
   }
-  function turtleRead(a: Turtle): TijuanaAgentRead {
+  function agentRead(a: ModelAgent): TijuanaAgentRead {
     const base = {
       id: a.id,
       birthOrdinal: a.birthOrdinal,
@@ -1892,10 +1892,10 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     const migrants = breed("migrant"),
       ordinary = migrants.filter((a) => a.size === 0.6),
       relocated = migrants.filter((a) => a.size === 0.8);
-    const equippedPatchCount = fields.filter(
+    const equippedFieldCount = fields.filter(
       (f) => f.water === 2 && f.electricity === 3,
     ).length;
-    const denominator = equippedPatchCount * settings.initDensity;
+    const denominator = equippedFieldCount * settings.initDensity;
     const reports: TijuanaReports = {
       savings: ordinary.length
         ? stats.describe(ordinary.map((a) => a.savings)).mean
@@ -1903,7 +1903,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       savingsNode: relocated.length
         ? stats.describe(relocated.map((a) => a.savings)).mean
         : undefined,
-      equippedPatchCount,
+      equippedFieldCount,
       noWaterPercent: denominator
         ? (fields.filter((f) => f.water === 10 && at(f, "migrant").length)
             .length *
@@ -1958,7 +1958,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         colonia: f.colonia,
         colorNumber: f.colorNumber,
       })),
-      agents: all().map(turtleRead),
+      agents: all().map(agentRead),
       counts: counts(),
       seedMigrants: seedMigrants(),
       reports,

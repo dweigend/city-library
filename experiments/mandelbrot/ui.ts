@@ -3,7 +3,7 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     { field: "seed" },
-    { field: "numTurtles", label: "Number of turtles" },
+    { field: "numAgents", label: "Number of agents" },
     { field: "scaleFactor", label: "Scale factor" },
   ],
   source: {
@@ -18,10 +18,10 @@ export const ui = defineUI(model, {
       set: (m, v) => m.setRules({ throw: Number(v) }),
     },
   ],
-  actions: [{ label: "Hide turtles", run: (m) => m.hideTurtles() }],
+  actions: [{ label: "Hide agents", run: (m) => m.hideAgents() }],
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Computed patches", value: (s) => s.computedPatches },
+    { label: "Computed fields", value: (s) => s.computedFields },
     { label: "Total iterations", value: (s) => s.iterations },
   ],
   views: [
@@ -32,7 +32,7 @@ export const ui = defineUI(model, {
         width: 301,
         height: 301,
         showLabels: false,
-        cells: s.patches
+        cells: s.fields
           .filter((p) => p.counter > 0)
           .map((p) => ({
             id: p.id,
@@ -40,7 +40,7 @@ export const ui = defineUI(model, {
             y: p.y,
             color: `hsl(${(p.counter / 115) * 320} 80% ${25 + (p.counter / 115) * 45}%)`,
           })),
-        agents: s.turtles
+        agents: s.agents
           .filter((t) => !t.hidden)
           .map((t) => ({
             id: t.id,

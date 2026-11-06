@@ -38,7 +38,7 @@ export const inputs: Inputs<Parameters> = {
     step: 0.1,
   },
 };
-type Turtle = Agent<{
+type ModelAgent = Agent<{
   color: "red" | "blue";
 }>;
 export function create(options: Partial<Parameters> = {}) {
@@ -56,7 +56,7 @@ export function create(options: Partial<Parameters> = {}) {
       random,
     },
   );
-  const population = () => world.agents as readonly Turtle[];
+  const population = () => world.agents as readonly ModelAgent[];
   const history: {
     tick: number;
     red: number;
@@ -182,7 +182,7 @@ export function create(options: Partial<Parameters> = {}) {
         height: 101,
         parameters: settings,
         ...counts(),
-        turtles: Object.freeze(
+        agents: Object.freeze(
           population().map((a) =>
             Object.freeze({
               id: a.id,

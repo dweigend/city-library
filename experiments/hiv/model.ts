@@ -146,8 +146,8 @@ export function create(options: Partial<HIVParameters> = {}) {
       person.coupled = true;
       candidate.coupled = true;
       person.move({ to: { x: here.x, y: here.y } });
-      const candidatePatch = grid.fieldAt(candidate)!;
-      candidate.move({ to: { x: candidatePatch.x, y: candidatePatch.y } });
+      const candidateField = grid.fieldAt(candidate)!;
+      candidate.move({ to: { x: candidateField.x, y: candidateField.y } });
       here.coupled = true;
       left.coupled = true;
     }

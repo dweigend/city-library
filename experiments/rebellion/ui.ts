@@ -5,7 +5,7 @@ const binding = defineUI(model, {
     { field: "seed" },
     { field: "initialCopDensity", label: "Initial police (%)" },
     { field: "initialAgentDensity", label: "Initial citizens (%)" },
-    { field: "vision", label: "Vision (patches)" },
+    { field: "vision", label: "Vision (fields)" },
   ],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Rebellion.nlogox",

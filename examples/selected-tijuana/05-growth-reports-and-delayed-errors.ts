@@ -10,7 +10,7 @@ regularization.setScenario(scene(regularization, {
   rules: { cityGrowth: false, migrationTicks: 20, crossingTicks: 20 },
   globals: globals({ values: 1, marginalWeight: 0.4 }),
   agents: [service(), job(), migrant("resident", 2, -81, 0)],
-  patch: (x, y) => field({ landValue: x === -81 && y === 0 ? 0.2 : 2,
+  field: (x, y) => field({ landValue: x === -81 && y === 0 ? 0.2 : 2,
     colonia: x === -82 && y === 0 ? -17 : x === -81 && y === 0 ? -15 : 0 }),
 }));
 regularization.advance();
@@ -35,7 +35,7 @@ const adjusted = create({ seed: 1 });
 adjusted.setScenario(scene(adjusted, {
   tick: 25, globals: globals({ setupDone: false, thirdPhase: 0 }),
   agents: [service(), thirdBuilder("parked", 1, 0, 0, { energy: 0, weight: -0.1 })],
-  patch: (x, y) => field({ landValue: x === 0 && y === 0 ? -1 : 0 }),
+  field: (x, y) => field({ landValue: x === 0 && y === 0 ? -1 : 0 }),
 }));
 adjusted.advanceCityscape();
 assert.equal(adjusted.read().tick, 26); assert.equal(adjusted.read().setupDone, false);
@@ -52,7 +52,7 @@ growth.setScenario(scene(growth, {
   rules: { cityGrowth: true, buildingTicks: 0.5, migrationTicks: 20, crossingTicks: 20 },
   globals: globals({ marginalWeight: 0.4 }),
   agents: [service(), job(), migrant("resident", 2, 0, 1), thirdBuilder(), ring("ring", 4, 0, 2)],
-  patch: () => field({ landValue: 2, colonia: -4 }),
+  field: () => field({ landValue: 2, colonia: -4 }),
 }));
 const original = growth.read().agents.find(item => item.kind === "third-builder")!.id;
 growth.advance();
@@ -74,14 +74,14 @@ reports.setScenario(scene(reports, {
   rules: { initDensity: 0.5 },
   agents: [service(), job(), migrant("ordinary", 2, 0, 0, { size: 0.6, savings: 10 }),
     migrant("relocated", 3, 0, 0, { size: 0.8, savings: 30 }), migrant("seed", 4, 0, 0, { size: 0.65, savings: 999 })],
-  patch: (x, y) => field({
+  field: (x, y) => field({
     ...(x === 0 && y === 0 ? { occupied: "oaxaca", electricity: 3 } : {}),
     ...(x === 1 && y === 0 ? { occupied: "jalisco" } : {}),
     ...(y === 0 && (x === 2 || x === 3) ? { water: 2, electricity: 3 } : {}),
   }),
 }));
 assert.equal(reports.read().reports.savings, 10); assert.equal(reports.read().reports.savingsNode, 30);
-assert.equal(reports.read().reports.equippedPatchCount, 2);
+assert.equal(reports.read().reports.equippedFieldCount, 2);
 assert.equal(reports.read().reports.noWaterPercent, 100); assert.equal(reports.read().reports.noPowerPercent, 100);
 assert.equal(reports.read().counts.migrants, 3); // denominators are equipped patches*density, not people
 
@@ -89,7 +89,7 @@ const sparse = create();
 sparse.setScenario(scene(sparse, {
   rules: { migrationTicks: 20, crossingTicks: 20, cityGrowth: false, visualUpdate: "colonias" },
   agents: [service(), job(), migrant("far", 2, 40, 0), ring()],
-  patch: (x, y) => field({ landValue: x === 2 && y === 0 ? -2 : 0 }),
+  field: (x, y) => field({ landValue: x === 2 && y === 0 ? -2 : 0 }),
 }));
 const historyBefore = sparse.read().history.length;
 assert.throws(() => sparse.advance(), /empty|mean/i);
@@ -102,7 +102,7 @@ const industrial = create();
 industrial.setScenario(scene(industrial, {
   rules: { migrationTicks: 1, crossingTicks: 20 },
   agents: [service(), job(), migrant()],
-  patch: (x, y) => field({ occupied: x === 7 && y === 8 ? "no" : "maquiladora",
+  field: (x, y) => field({ occupied: x === 7 && y === 8 ? "no" : "maquiladora",
     ...(x === 6 && y === 8 ? { water: "0.0", electricity: "0.0", transport: "0.0" } : {}) }),
 }));
 const parentId = industrial.read().agents.find(item => item.kind === "migrant")!.id;

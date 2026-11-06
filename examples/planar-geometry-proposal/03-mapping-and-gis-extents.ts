@@ -46,13 +46,13 @@ const world: PlanarDataset = {
 const envelope: Bounds | undefined = geometry.bounds(world);
 assert.deepEqual(envelope, [-180, 180, -90, 90]);
 assert.ok(envelope);
-const patchOuter: Bounds = [-72.5, 72.5, -36.5, 36.5];
-assert.deepEqual(geometry.map({ x: 0, y: 0 }, { from: envelope, to: patchOuter }), { x: 0, y: 0 });
+const fieldOuter: Bounds = [-72.5, 72.5, -36.5, 36.5];
+assert.deepEqual(geometry.map({ x: 0, y: 0 }, { from: envelope, to: fieldOuter }), { x: 0, y: 0 });
 const city: PlanarFeature = { type: "Feature", properties: { NAME: "Murmansk" }, geometry: {
   type: "Point", coordinates: [33.08604049682617, 68.96354675292969],
 } };
 assert.deepEqual(geometry.bounds([city]), [33.08604049682617, 33.08604049682617, 68.96354675292969, 68.96354675292969]);
-const mapped = geometry.map({ x: 33.08604049682617, y: 68.96354675292969 }, { from: envelope, to: patchOuter, mode: "independent-axes" });
+const mapped = geometry.map({ x: 33.08604049682617, y: 68.96354675292969 }, { from: envelope, to: fieldOuter, mode: "independent-axes" });
 assert.ok(Math.abs(mapped.x - 13.326321866777208) < 1e-12);
 assert.ok(Math.abs(mapped.y - 27.968549516465927) < 1e-12);
 assert.deepEqual(world.coordinateSystem, { crs: "source:WGS_84_Geographic", units: "degree" });

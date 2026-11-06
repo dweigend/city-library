@@ -11,27 +11,27 @@ export function field(overrides: Partial<TijuanaFieldInput> = {}): TijuanaFieldI
   return { landValue: 0, water: 10, electricity: 1, transport: 1.5,
     occupied: "no", ctr: 0, elevation: 9.9, colonia: 0, colorNumber: 9.9, ...overrides };
 }
-function turtle(key: string, birthOrdinal: number, x: number, y: number) {
+function agent(key: string, birthOrdinal: number, x: number, y: number) {
   return { key, birthOrdinal, x, y, heading: 0, size: 1, colorNumber: 0,
     shape: "default", label: "", hidden: false, penDown: false, penSize: 1 };
 }
 export function service(key = "service", birthOrdinal = 0, x = 0, y = 0): TijuanaAgentInput {
-  return { ...turtle(key, birthOrdinal, x, y), kind: "service-center", shape: "eyeball", size: 5, colorNumber: 4 };
+  return { ...agent(key, birthOrdinal, x, y), kind: "service-center", shape: "eyeball", size: 5, colorNumber: 4 };
 }
 export function job(key = "job", birthOrdinal = 1, x = 3, y = 4): TijuanaAgentInput {
-  return { ...turtle(key, birthOrdinal, x, y), kind: "employment-center", shape: "factory", size: 7, colorNumber: 95 };
+  return { ...agent(key, birthOrdinal, x, y), kind: "employment-center", shape: "factory", size: 7, colorNumber: 95 };
 }
 export function migrant(key = "migrant", birthOrdinal = 2, x = 6, y = 8, overrides: Partial<Omit<MigrantInput, "kind" | "key" | "birthOrdinal" | "x" | "y">> = {}): MigrantInput {
-  return { ...turtle(key, birthOrdinal, x, y), kind: "migrant", shape: "circle", size: 0.6, colorNumber: 135,
+  return { ...agent(key, birthOrdinal, x, y), kind: "migrant", shape: "circle", size: 0.6, colorNumber: 135,
     income: 55, savings: 20, livingExpenses: 40, residentSince: 8,
     origin: "oaxaca", works: ["job"], ...overrides };
 }
 export function thirdBuilder(key = "builder", birthOrdinal = 3, x = 0, y = 0, overrides: Partial<Omit<BuilderInput, "kind" | "key" | "birthOrdinal" | "x" | "y">> = {}): BuilderInput {
-  return { ...turtle(key, birthOrdinal, x, y), kind: "third-builder", weight: 0.6, energy: 0,
+  return { ...agent(key, birthOrdinal, x, y), kind: "third-builder", weight: 0.6, energy: 0,
     origin: { kind: "services", keys: ["service"] }, ...overrides };
 }
 export function ring(key = "ring", birthOrdinal = 4, x = 0, y = 0): TijuanaAgentInput {
-  return { ...turtle(key, birthOrdinal, x, y), kind: "ring", shape: "loop", colorNumber: 27 };
+  return { ...agent(key, birthOrdinal, x, y), kind: "ring", shape: "loop", colorNumber: 27 };
 }
 export function globals(overrides: Partial<TijuanaGlobals> = {}): TijuanaGlobals {
   return { values: 0, weights: 0, marginalValue: 0, marginalWeight: 0,
@@ -40,7 +40,7 @@ export function globals(overrides: Partial<TijuanaGlobals> = {}): TijuanaGlobals
 export function scene(model: Model, options: {
   readonly tick?: number; readonly agents?: readonly TijuanaAgentInput[];
   readonly globals?: TijuanaGlobals; readonly rules?: Partial<TijuanaRules>;
-  readonly patch?: (x: number, y: number, index: number) => TijuanaFieldInput;
+  readonly field?: (x: number, y: number, index: number) => TijuanaFieldInput;
   readonly mode?: "ordinary" | "diagnostic";
 } = {}): TijuanaScenario {
   const current = model.read();
@@ -50,7 +50,7 @@ export function scene(model: Model, options: {
     mode: options.mode ?? "diagnostic", tick: options.tick ?? 0,
     parameters: { ...rules, ...options.rules }, globals: options.globals ?? globals(),
     nextBirthOrdinal: agents.reduce((largest, agent) => Math.max(largest, agent.birthOrdinal + 1), 0),
-    cells: current.cells.map((cell, index) => options.patch?.(cell.x, cell.y, index) ?? field()),
+    cells: current.cells.map((cell, index) => options.field?.(cell.x, cell.y, index) ?? field()),
     agents: [...agents], randomState: current.randomState,
   };
 }

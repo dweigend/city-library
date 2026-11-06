@@ -13,10 +13,10 @@ export const ui = defineUI(model, {
   },
   live: [
     {
-      field: "grainsPerPatch",
-      label: "Grains per patch",
-      value: (s) => s.parameters.grainsPerPatch,
-      set: (m, v) => m.setLive({ grainsPerPatch: Number(v) }),
+      field: "grainsPerField",
+      label: "Grains per field",
+      value: (s) => s.parameters.grainsPerField,
+      set: (m, v) => m.setLive({ grainsPerField: Number(v) }),
     },
     {
       field: "dropLocation",

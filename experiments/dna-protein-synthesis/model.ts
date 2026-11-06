@@ -258,7 +258,7 @@ export function create(options: Partial<DNAParameters> = {}) {
     backbones.nodes.add(p);
     return p;
   }
-  function link(parent: Molecule, child: Molecule) {
+  function edge(parent: Molecule, child: Molecule) {
     backbones.edges.add({ from: parent, to: child, directed: true });
   }
   function randomBaseLetterDNA() {
@@ -330,7 +330,7 @@ export function create(options: Partial<DNAParameters> = {}) {
       parent.y - 0.5 + 0.6,
       { value, hidden: parent.hidden, color: parent.color },
     );
-    link(parent, tag);
+    edge(parent, tag);
     return tag;
   }
   function buildMRNAForEachGene(strand: Strand) {
@@ -353,8 +353,8 @@ export function create(options: Partial<DNAParameters> = {}) {
         yDNA(strand),
         { color: "#ef7777" },
       );
-      link(gene, promoter);
-      link(gene, terminator);
+      edge(gene, promoter);
+      edge(gene, terminator);
       attachTag(promoter, `start:${gene.geneNumber}`);
       attachTag(terminator, `end:${gene.geneNumber}`);
       const code = mrnaStringFromDNAString(gene.code);
@@ -374,8 +374,8 @@ export function create(options: Partial<DNAParameters> = {}) {
         yDNA(strand),
         { code, capType: "stop", color: "#efb85c" },
       );
-      link(gene, start);
-      link(start, end);
+      edge(gene, start);
+      edge(start, end);
       for (let i = 0; i < code.length; i++) {
         const nucleotide = addMolecule(
           "mrna-nucleotide",
@@ -385,7 +385,7 @@ export function create(options: Partial<DNAParameters> = {}) {
           yDNA(strand),
           { value: code[i]!, place: i, color: "#efb85c" },
         );
-        link(start, nucleotide);
+        edge(start, nucleotide);
         attachTag(nucleotide, code[i]!);
       }
     }
@@ -412,7 +412,7 @@ export function create(options: Partial<DNAParameters> = {}) {
       yRibosome(mrna.strand) + 2,
       { place, value: whichProteinForThisCodon(triplet), color: "#e4cc7c" },
     );
-    link(trna, amino);
+    edge(trna, amino);
     attachTag(amino, amino.value);
     for (let i = 0; i < 3; i++) {
       const nucleotide = addMolecule(
@@ -423,7 +423,7 @@ export function create(options: Partial<DNAParameters> = {}) {
         yRibosome(mrna.strand),
         { place: i, value: triplet[i]!, color: "#bda0e8" },
       );
-      link(trna, nucleotide);
+      edge(trna, nucleotide);
     }
   }
   function buildProteinFromMRNA(strand: Strand) {

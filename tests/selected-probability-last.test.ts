@@ -189,16 +189,16 @@ test("Combination single-success preserves source clearing of sample statistics"
   expect(s.attempts).toBeGreaterThan(0);
 });
 test("Mandelbrot only visits occupied patches and preserves c set at setup", () => {
-  const empty = mandelbrot({ numTurtles: 0 });
+  const empty = mandelbrot({ numAgents: 0 });
   empty.advance(4);
   expect(empty.read().tick).toBe(4);
-  expect(empty.read().computedPatches).toBe(0);
-  const m = mandelbrot({ numTurtles: 1, seed: 17, throw: 0 });
+  expect(empty.read().computedFields).toBe(0);
+  const m = mandelbrot({ numAgents: 1, seed: 17, throw: 0 });
   m.advance();
   let s = m.read();
   expect(s.iterations).toBe(1);
-  expect(s.computedPatches).toBe(1);
-  const p = s.patches.find((p) => p.counter > 0)!;
+  expect(s.computedFields).toBe(1);
+  const p = s.fields.find((p) => p.counter > 0)!;
   expect(p.zReal).toBe(p.cReal);
   expect(p.zImaginary).toBe(p.cImaginary);
   m.setRules({ scaleFactor: 10 });
@@ -206,15 +206,15 @@ test("Mandelbrot only visits occupied patches and preserves c set at setup", () 
   s = m.read();
   expect(s.setupScale).toBe(100);
   expect(
-    s.patches.every((p) => p.cReal === p.x / 100 && p.cImaginary === p.y / 100),
+    s.fields.every((p) => p.cReal === p.x / 100 && p.cImaginary === p.y / 100),
   ).toBe(true);
   expect(
-    s.turtles.every(
+    s.agents.every(
       (t) => t.x >= -150.5 && t.x < 150.5 && t.y >= -150.5 && t.y < 150.5,
     ),
   ).toBe(true);
-  m.hideTurtles();
-  expect(m.read().turtles.every((t) => t.hidden)).toBe(true);
+  m.hideAgents();
+  expect(m.read().agents.every((t) => t.hidden)).toBe(true);
 });
 test("All five expose independent deterministic detached snapshots and reject invalid step counts", () => {
   for (const create of [
@@ -290,7 +290,7 @@ test("Canonical CLT reset deletes actual Agents and retains the canonical Grid",
 });
 
 test("Canonical Mandelbrot eagerly initializes every Field and shares moving occupancy", () => {
-  const m = mandelbrot({ numTurtles: 2, throw: 0 });
+  const m = mandelbrot({ numAgents: 2, throw: 0 });
   expect(m.grid.fields).toHaveLength(90601);
   expect(m.world.grids).toHaveLength(1);
   expect(Object.is(m.world.grids[0], m.grid)).toBe(true);
@@ -321,26 +321,26 @@ test("Canonical Mandelbrot eagerly initializes every Field and shares moving occ
 });
 
 test("Mandelbrot snapshots eligible occupants before shared-patch counter updates", () => {
-  const m = mandelbrot({ numTurtles: 3, throw: 0 });
-  for (const turtle of m.world.agents) turtle.move({ to: { x: 0, y: 0 } });
+  const m = mandelbrot({ numAgents: 3, throw: 0 });
+  for (const agent of m.world.agents) agent.move({ to: { x: 0, y: 0 } });
   const field = m.grid.fieldAt({ x: 0, y: 0 })!;
   field.counter = 114;
   m.advance();
   expect(field.counter).toBe(117);
-  expect(m.read().patches.find((p) => p.x === 0 && p.y === 0)!.counter).toBe(
+  expect(m.read().fields.find((p) => p.x === 0 && p.y === 0)!.counter).toBe(
     117,
   );
 });
 
 test("Mandelbrot hard-boundary jump rejects its destination before Agent mutation", () => {
-  const m = mandelbrot({ numTurtles: 1, throw: 10 });
-  const turtle = m.world.agents[0]!;
-  turtle.move({ to: { x: 149, y: 0 } });
-  turtle.rotate({ towards: { x: 150, y: 0 } });
+  const m = mandelbrot({ numAgents: 1, throw: 10 });
+  const agent = m.world.agents[0]!;
+  agent.move({ to: { x: 149, y: 0 } });
+  agent.rotate({ towards: { x: 150, y: 0 } });
   m.advance();
-  expect(turtle.x).toBeCloseTo(150, 10);
-  expect(turtle.y).toBeCloseTo(0, 10);
-  expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
+  expect(agent.x).toBeCloseTo(150, 10);
+  expect(agent.y).toBeCloseTo(0, 10);
+  expect(m.grid.agentsAt(m.grid.fieldAt(agent)!)).toEqual([agent]);
 });
 
 test("Partition and symbolic combination own only a public World clock", () => {
@@ -364,46 +364,46 @@ test("Partition and symbolic combination own only a public World clock", () => {
 
 test("Mandelbrot preflight relocates at clipped and exact-positive-edge source endpoints", () => {
   for (const x of [150.4, 149.5]) {
-    const m = mandelbrot({ numTurtles: 1, throw: 0, seed: 17 });
-    const turtle = m.world.agents[0]!;
-    turtle.move({ to: { x, y: 0 } });
-    turtle.rotate({ towards: { x: x + 1, y: 0 } });
+    const m = mandelbrot({ numAgents: 1, throw: 0, seed: 17 });
+    const agent = m.world.agents[0]!;
+    agent.move({ to: { x, y: 0 } });
+    agent.rotate({ towards: { x: x + 1, y: 0 } });
     const expected = Random.add({ seed: 17 });
     expected.state = m.read().randomState;
     const nextX = expected.number() * 301 - 150.5,
       nextY = expected.number() * 301 - 150.5;
     m.advance();
-    expect(turtle.x).toBe(nextX);
-    expect(turtle.y).toBe(nextY);
-    expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
+    expect(agent.x).toBe(nextX);
+    expect(agent.y).toBe(nextY);
+    expect(m.grid.agentsAt(m.grid.fieldAt(agent)!)).toEqual([agent]);
   }
 });
 
 test("Mandelbrot preflight rejects a negative epsilon escape without the former distance tolerance", () => {
-  const m = mandelbrot({ numTurtles: 1, throw: 0, seed: 17 });
-  const turtle = m.world.agents[0]!;
-  turtle.move({ to: { x: -149.50000000005, y: 0 } });
-  turtle.rotate({ towards: { x: -150.50000000005, y: 0 } });
+  const m = mandelbrot({ numAgents: 1, throw: 0, seed: 17 });
+  const agent = m.world.agents[0]!;
+  agent.move({ to: { x: -149.50000000005, y: 0 } });
+  agent.rotate({ towards: { x: -150.50000000005, y: 0 } });
   const expected = Random.add({ seed: 17 });
   expected.state = m.read().randomState;
   const nextX = expected.number() * 301 - 150.5;
   const nextY = expected.number() * 301 - 150.5;
   m.advance();
-  expect(turtle.x).toBe(nextX);
-  expect(turtle.y).toBe(nextY);
-  expect(turtle.x).not.toBe(-150.5);
-  expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
+  expect(agent.x).toBe(nextX);
+  expect(agent.y).toBe(nextY);
+  expect(agent.x).not.toBe(-150.5);
+  expect(m.grid.agentsAt(m.grid.fieldAt(agent)!)).toEqual([agent]);
   expect(m.world.tick.value).toBe(1);
 });
 
 test("Mandelbrot preflight accepts each exact negative endpoint without relocation draws", () => {
   for (const axis of ["x", "y"] as const) {
-    const m = mandelbrot({ numTurtles: 1, throw: 0, seed: 17 });
-    const turtle = m.world.agents[0]!;
-    turtle.move({
+    const m = mandelbrot({ numAgents: 1, throw: 0, seed: 17 });
+    const agent = m.world.agents[0]!;
+    agent.move({
       to: axis === "x" ? { x: -149.5, y: 0 } : { x: 0, y: -149.5 },
     });
-    turtle.rotate({
+    agent.rotate({
       towards: axis === "x" ? { x: -150.5, y: 0 } : { x: 0, y: -150.5 },
     });
     const expected = Random.add({ seed: 17 });
@@ -412,9 +412,9 @@ test("Mandelbrot preflight accepts each exact negative endpoint without relocati
     expected.number();
     expected.number();
     m.advance();
-    expect(turtle[axis]).toBe(-150.5);
+    expect(agent[axis]).toBe(-150.5);
     expect(m.read().randomState).toEqual(expected.state);
-    expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
+    expect(m.grid.agentsAt(m.grid.fieldAt(agent)!)).toEqual([agent]);
     expect(m.world.tick.value).toBe(1);
   }
 });

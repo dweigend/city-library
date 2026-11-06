@@ -180,16 +180,16 @@ export function create(options: Partial<Parameters> = {}) {
         activate(random.sample(philosophers)[0]!.who);
     },
     setParameters(
-      patch: Partial<Omit<Parameters, "seed" | "numPhilosophers">>,
+      changes: Partial<Omit<Parameters, "seed" | "numPhilosophers">>,
     ) {
-      parameters(inputs, patch);
+      parameters(inputs, changes);
       if (
-        Reflect.ownKeys(patch).some(
+        Reflect.ownKeys(changes).some(
           (k) => k === "seed" || k === "numPhilosophers",
         )
       )
         throw new TypeError("Population and seed are setup-only.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     setScenario(s: {
       states: readonly PhilosopherState[];

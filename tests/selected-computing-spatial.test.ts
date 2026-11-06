@@ -1,7 +1,7 @@
 import { describe, test, expect } from "bun:test";
 import {
   create as annealing,
-  patchEnergy,
+  fieldEnergy,
 } from "../experiments/simulated-annealing/model.ts";
 import { create as clustering } from "../experiments/k-means-clustering/model.ts";
 import { create as swarm } from "../experiments/particle-swarm-optimization/model.ts";
@@ -18,9 +18,9 @@ describe("B18 Simulated Annealing native rules", () => {
     const a = annealing();
     expect(a.read().brightness.filter((x) => x === 1)).toHaveLength(450);
     expect(a.read().tick).toBe(0);
-    expect(patchEnergy(0, 0, 0, 0, 0)).toBe(2);
-    expect(patchEnergy(0, 1, 1, 0, 0)).toBe(4);
-    expect(patchEnergy(0, 0, 0, 1, 1)).toBe(0);
+    expect(fieldEnergy(0, 0, 0, 0, 0)).toBe(2);
+    expect(fieldEnergy(0, 1, 1, 0, 0)).toBe(4);
+    expect(fieldEnergy(0, 0, 0, 1, 1)).toBe(0);
     a.advance(3);
     expect(a.read().attempts).toBe(3000);
     expect(a.read().temperature).toBeCloseTo(0.99 ** 3, 14);

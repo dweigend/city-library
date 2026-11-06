@@ -93,7 +93,7 @@ export function create(options: Partial<ElementaryParameters> = {}) {
     rulesShown = false,
     done = false;
   const rowFields = (y: number) => grid.fields.filter((f) => f.y === y);
-  function colorPatch(f: (typeof grid.fields)[number]) {
+  function colorField(f: (typeof grid.fields)[number]) {
     f.colorNumber = f.on ? settings.foreground : settings.background;
   }
   function setupGeneral() {
@@ -113,7 +113,7 @@ export function create(options: Partial<ElementaryParameters> = {}) {
         settings.initialization === "single"
           ? f.x === 0
           : random.number() * 100 < settings.density;
-      colorPatch(f);
+      colorField(f);
     }
   }
   function setupContinue() {
@@ -122,7 +122,7 @@ export function create(options: Partial<ElementaryParameters> = {}) {
     setupGeneral();
     rowFields(top).forEach((f, i) => {
       f.on = values[i]!;
-      colorPatch(f);
+      colorField(f);
     });
   }
   function doRule() {
@@ -138,7 +138,7 @@ export function create(options: Partial<ElementaryParameters> = {}) {
     row--;
     rowFields(row).forEach((f, i) => {
       f.on = next[i]!;
-      colorPatch(f);
+      colorField(f);
     });
   }
   initialize();
@@ -180,14 +180,14 @@ export function create(options: Partial<ElementaryParameters> = {}) {
       setupContinue();
     },
     setRules(
-      patch: Partial<
+      field: Partial<
         Pick<
           ElementaryParameters,
           "rule" | "autoContinue" | "foreground" | "background" | "density"
         >
       >,
     ) {
-      parameters(inputs, patch);
+      parameters(inputs, field);
       const allowed = [
         "rule",
         "autoContinue",
@@ -196,12 +196,12 @@ export function create(options: Partial<ElementaryParameters> = {}) {
         "density",
       ];
       if (
-        Reflect.ownKeys(patch).some(
+        Reflect.ownKeys(field).some(
           (k) => typeof k !== "string" || !allowed.includes(k),
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...field });
     },
     setRuleBit(pattern: Pattern, on: boolean) {
       const bit = patterns.indexOf(pattern);
@@ -232,7 +232,7 @@ export function create(options: Partial<ElementaryParameters> = {}) {
           for (const f of grid.fields)
             if (Math.hypot(f.x - (x + dx), f.y - (top - 4 + dy)) <= 1.5) {
               f.on = on;
-              colorPatch(f);
+              colorField(f);
             }
         }
       });

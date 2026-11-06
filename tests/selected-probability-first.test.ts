@@ -268,7 +268,7 @@ describe("B17 canonical public Agent/Grid/World composition", () => {
       expect(dto.id).not.toBe(agent.id);
     }
     const bottom = model.grid.fieldAt({ x: 5, y: -22 })!;
-    expect(bottom.turtleQuant).toBe(2);
+    expect(bottom.agentQuant).toBe(2);
     expect(model.grid.agentsAt(bottom)).toHaveLength(2);
     expect(model.read().distribution).toEqual([{ x: 5, count: 2 }]);
     const before = model.read();

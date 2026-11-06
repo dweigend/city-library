@@ -92,7 +92,7 @@ export function create(options: Partial<IsingParameters> = {}) {
         Math.abs(x) > (settings.width - 1) / 2 ||
         Math.abs(y) > (settings.height - 1) / 2
       )
-        throw new RangeError("Expected an in-world patch.");
+        throw new RangeError("Expected an in-world field.");
       return update(grid.fieldAt({ x, y })!);
     },
     setup,
@@ -106,7 +106,7 @@ export function create(options: Partial<IsingParameters> = {}) {
           (n) => n !== 1 && n !== -1,
         )
       )
-        throw new RangeError("Supply one ±1 spin per patch.");
+        throw new RangeError("Supply one ±1 spin per field.");
       fields.forEach((f, i) => (f.spin = spins[i]!));
       sumOfSpins = fields.reduce((s, f) => s + f.spin, 0);
       world.tick.reset();

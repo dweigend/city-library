@@ -19,18 +19,18 @@ describe("selected materials source mechanisms", () => {
       plate.read().cells.map((c) => (c.x === 0 && c.y === 0 ? 100 : 44)),
     );
     const d = plate.read().heatDiffusivity;
-    plate.updatePatch(0, 0);
+    plate.updateFieldAt(0, 0);
     const center = d * 176 + (1 - 4 * d) * 100;
     expect(
       plate.read().cells.find((c) => c.x === 0 && c.y === 0)!.temperature,
     ).toBeCloseTo(center, 12);
-    plate.updatePatch(1, 0);
+    plate.updateFieldAt(1, 0);
     const neighbor = d * (center + 3 * 44) + (1 - 4 * d) * 44;
     expect(
       plate.read().cells.find((c) => c.x === 1 && c.y === 0)!.temperature,
     ).toBeCloseTo(neighbor, 12);
     plate.setRules({ leftTemp: 10 });
-    plate.updatePatch(-3, 0);
+    plate.updateFieldAt(-3, 0);
     expect(
       plate.read().cells.find((c) => c.x === -3 && c.y === 0)!.temperature,
     ).toBe(10);
@@ -61,11 +61,11 @@ describe("selected materials source mechanisms", () => {
     const cells = metal.read().atoms;
     const left = cells.find((a) => a.x === -1)!,
       center = cells.find((a) => a.x === 0)!;
-    metal.coolTurtles(left.id);
+    metal.coolAgents(left.id);
     // left neighborhood includes itself and center, own is counted twice.
     const first = (3 * 1550 + 7 * 100) / 10;
     expect(metal.read().atoms.find((a) => a.id === left.id)!.temp).toBe(first);
-    metal.coolTurtles(center.id);
+    metal.coolAgents(center.id);
     const second = (first + 3 * 1550 + 6 * 100) / 10;
     expect(metal.read().atoms.find((a) => a.id === center.id)!.temp).toBe(
       second,
@@ -138,7 +138,7 @@ describe("selected materials source mechanisms", () => {
     });
     cluster.advance();
     expect(cluster.read().agents.length).toBe(0);
-    const id = cluster.makeNewTurtle();
+    const id = cluster.makeNewAgent();
     expect(
       Math.hypot(cluster.read().agents[0]!.x, cluster.read().agents[0]!.y),
     ).toBeCloseTo(1.5, 12);

@@ -205,11 +205,11 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function fuseIfTouchingAnotherGamete(gamete: Organism) {
     const here = grid.fieldAt(gamete)!;
-    const patches = [here, ...grid.neighbors(here, { neighborhood: "moore" })];
+    const fields = [here, ...grid.neighbors(here, { neighborhood: "moore" })];
     const candidates = population("gamete").filter(
       (other) =>
         other !== gamete &&
-        patches.includes(grid.fieldAt(other)!) &&
+        fields.includes(grid.fieldAt(other)!) &&
         gamete.distanceTo(other) < (gamete.size + other.size) / 2 &&
         (settings.allowAssortativeFusion ||
           other.matingTypeTrait !== gamete.matingTypeTrait),

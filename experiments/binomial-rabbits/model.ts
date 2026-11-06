@@ -41,7 +41,7 @@ export function create(options: Partial<Parameters> = {}) {
   );
   const grid = Grid.add(
     { x: 45, y: 45, boundary: { x: "wrap", y: "hard" } },
-    { state: { turtleQuant: 0 } },
+    { state: { agentQuant: 0 } },
   );
   world.add(grid);
   // Stable references to canonical Fields, never a copied spatial state.
@@ -92,8 +92,8 @@ export function create(options: Partial<Parameters> = {}) {
       rabbits().reduce((a, rabbit) => a + rabbit.total, 0) / settings.number;
   }
   function plotYellow() {
-    for (const field of fields) field.turtleQuant = grid.agentsAt(field).length;
-    const most = Math.max(...fields.map((field) => field.turtleQuant));
+    for (const field of fields) field.agentQuant = grid.agentsAt(field).length;
+    const most = Math.max(...fields.map((field) => field.agentQuant));
     const kyDistr = most / ky / Math.trunc(0.8 * 45);
     yScale = 100 * kyDistr * ky;
   }
@@ -144,9 +144,9 @@ export function create(options: Partial<Parameters> = {}) {
         yScale,
         distribution: Object.freeze(
           fields
-            .filter((field) => field.turtleQuant > 0)
+            .filter((field) => field.agentQuant > 0)
             .map((field) =>
-              Object.freeze({ x: field.x, count: field.turtleQuant }),
+              Object.freeze({ x: field.x, count: field.agentQuant }),
             )
             .sort((a, b) => a.x - b.x),
         ),

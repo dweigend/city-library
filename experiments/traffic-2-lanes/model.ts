@@ -55,32 +55,32 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
     return random.sample(values, { count: Math.min(1, values.length) })[0];
   }
   function drawRoad() {
-    for (const patch of grid.fields) {
+    for (const field of grid.fields) {
       const shade = random.number();
-      patch.color =
-        Math.abs(patch.y) <= 2
+      field.color =
+        Math.abs(field.y) <= 2
           ? `hsl(0 0% ${25 + shade * 2}%)`
           : `hsl(100 60% ${34 + shade * 3}%)`;
     }
   }
   function createOrRemoveCars() {
-    const roadPatches = grid.fields.filter((patch) =>
-      lanes.includes(patch.y as 1 | -1),
+    const roadFields = grid.fields.filter((field) =>
+      lanes.includes(field.y as 1 | -1),
     );
     while (cars().length < settings.numberOfCars) {
-      const free = roadPatches.filter(
-        (patch) => grid.agentsAt(patch).length === 0,
+      const free = roadFields.filter(
+        (field) => grid.agentsAt(field).length === 0,
       );
-      const patch = choose(free)!;
+      const field = choose(free)!;
       const car = Agent.add(
         {
           speed: 0.5,
           topSpeed: 0.5 + random.number() * 0.5,
-          targetLane: patch.y,
+          targetLane: field.y,
           patience: Math.floor(random.number() * settings.maxPatience),
           baseColor: choose(["#3466d7", "#28bcd9", "#5fa2db"])!,
         },
-        { position: patch, orientation: { heading: 90 } },
+        { position: field, orientation: { heading: 90 } },
       );
       world.add(car);
     }
@@ -177,9 +177,9 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
     selectedCar = car;
   }
   function selectCarAt(position: Position) {
-    const patch = grid.fieldAt(position);
-    if (!patch) return;
-    const car = choose(grid.agentsAt(patch, { source: cars() }));
+    const field = grid.fieldAt(position);
+    if (!field) return;
+    const car = choose(grid.agentsAt(field, { source: cars() }));
     if (car) selectedCar = car;
   }
   function setPerspective(value: "normal" | "watch" | "follow") {
@@ -229,11 +229,11 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
       parameters: { ...settings },
       selectedCarId: selectedCar!.id,
       perspective,
-      cells: grid.fields.map((patch) => ({
-        id: patch.id,
-        x: patch.x,
-        y: patch.y,
-        color: patch.color,
+      cells: grid.fields.map((field) => ({
+        id: field.id,
+        x: field.x,
+        y: field.y,
+        color: field.color,
       })),
       cars: cars().map((car) => ({
         id: car.id,

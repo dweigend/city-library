@@ -76,7 +76,7 @@ describe("selected biology A source mechanisms", () => {
     expect(
       state.agents.filter((agent) => agent.breed === "water").length,
     ).toBeGreaterThan(0);
-    expect(state.flowLinks.length).toBe(
+    expect(state.flowEdges.length).toBe(
       state.agents.filter((agent) => agent.breed === "water").length,
     );
     expect(state.oxygen).toBe(0);

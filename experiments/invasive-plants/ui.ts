@@ -62,7 +62,7 @@ export const ui = defineUI(model, {
     },
   ],
   actions: [
-    { label: "Clear patches", run: (m) => m.clearPatches() },
+    { label: "Clear fields", run: (m) => m.clearFields() },
     { label: "Clear plots", run: (m) => m.clearPlots() },
     {
       label: "Drawing tick",
@@ -118,7 +118,7 @@ export const ui = defineUI(model, {
     },
     {
       type: "inspector",
-      label: "Selected patch",
+      label: "Selected field",
       value: (s, id) =>
         s.cells.find((c) => c.id === id) ??
         s.seeds.find((seed) => seed.id === id),
@@ -138,7 +138,7 @@ export const ui = defineUI(model, {
       label: "Infestation levels",
       series: (s) => [
         {
-          label: "Patches",
+          label: "Fields",
           points: s.histogram.counts.map((y, i) => ({
             x: s.histogram.edges[i]!,
             y,

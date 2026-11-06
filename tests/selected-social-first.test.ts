@@ -16,7 +16,7 @@ test("consumer utilities combine retained experience and current neighbors only 
     informationExchange: 0,
     exploration: 0,
   });
-  expect(m.read().links.length).toBe(10);
+  expect(m.read().edges.length).toBe(10);
   m.advance();
   expect(
     m
@@ -93,13 +93,13 @@ test("language redistribution truncates n-of fractions and retains topology; res
     thresholdVal: 0,
     sinkState1: false,
   });
-  const links = m.read().links;
+  const edges = m.read().edges;
   expect(m.read().grammar1).toBe(1);
   m.advance();
   expect(m.read().grammar1).toBe(3);
   m.resetNodes();
   expect(m.read().grammar1).toBe(1);
-  expect(m.read().links).toEqual(links);
+  expect(m.read().edges).toEqual(edges);
   const spoken = m.read().nodes.map((a) => a.spokenState);
   m.advance();
   m.resetNodes();

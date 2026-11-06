@@ -69,7 +69,7 @@ const binding = defineUI(model, {
           color: `rgb(${Math.round(70 + 155 * a.state)}, ${Math.round(135 - 45 * a.state)}, ${Math.round(220 - 130 * a.state)})`,
           size: 14,
         })),
-      edges: (s) => s.links.map((e) => ({ ...e, color: "#929292" })),
+      edges: (s) => s.edges.map((e) => ({ ...e, color: "#929292" })),
     },
     {
       type: "inspector",

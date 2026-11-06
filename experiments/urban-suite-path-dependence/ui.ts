@@ -22,13 +22,13 @@ export const ui = defineUI(model, {
   ],
   views: [
     { type: "inspector", label: "Selected", value: (state, id) => state.firms.find(firm => firm.id === id) ?? state.cells.find(cell => cell.id === id) },
-    { type: "spatial", label: "Firms and patch quality", data: state => ({ width: state.width, height: state.height,
+    { type: "spatial", label: "Firms and field quality", data: state => ({ width: state.width, height: state.height,
       cells: state.cells.map(cell => ({ id: cell.id, x: cell.x, y: cell.y, color: netLogoColor(cell.quality * 10 + 50) })),
       // Fixed symbols and numeric inspection replace the source's relative-size glyphs.
       agents: state.firms.map(firm => ({ ...firm, color: "#d73229", size: 8, shape: "circle" as const })),
     }) },
-    { type: "bar", label: "Residents · occupied patches by occupant count", series: state => [
-      { label: "Occupied patches", points: state.histogram.counts.map((count, index) => ({ x: (state.histogram.edges[index]! + state.histogram.edges[index + 1]!) / 2, y: count })) },
+    { type: "bar", label: "Residents · occupied fields by occupant count", series: state => [
+      { label: "Occupied fields", points: state.histogram.counts.map((count, index) => ({ x: (state.histogram.edges[index]! + state.histogram.edges[index + 1]!) / 2, y: count })) },
     ] },
   ],
 });

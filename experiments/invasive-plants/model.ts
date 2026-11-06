@@ -240,7 +240,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
       run(world, () => {});
       record();
     },
-    clearPatches() {
+    clearFields() {
       for (const f of grid.fields) {
         f.infestation = 0;
         f.resistance = 0;

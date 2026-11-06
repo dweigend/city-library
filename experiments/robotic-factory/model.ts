@@ -37,7 +37,7 @@ interface EntityState {
   kind: FactoryKind;
   product: number;
   supply: number;
-  turtlesPresent: number;
+  agentsPresent: number;
   energy: number;
   laden: boolean;
   destination: Entity | null;
@@ -60,7 +60,7 @@ export interface EntitySnapshot {
   heading: number;
   product: number;
   supply: number;
-  turtlesPresent: number;
+  agentsPresent: number;
   energy: number;
   laden: boolean;
   destination: number | null;
@@ -120,7 +120,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
           kind,
           product: 0,
           supply: 0,
-          turtlesPresent: 0,
+          agentsPresent: 0,
           energy: 0,
           laden: false,
           destination: null,
@@ -299,7 +299,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
     return Math.min(
       ...entities
         .filter((a) => a.kind !== "robot")
-        .map((a) => a.turtlesPresent),
+        .map((a) => a.agentsPresent),
     );
   }
   function recharge() {
@@ -317,7 +317,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
           if (random.number() < 0.5) {
             const need = robotSupplyNeed();
             r.destination = one(
-              entities.filter((a) => a.turtlesPresent === need),
+              entities.filter((a) => a.agentsPresent === need),
             );
           } else r.destination = one(of("loading-dock"));
         }
@@ -349,7 +349,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
           make("order", d.x, d.y, {
             product: d.product,
             supply: d.supply,
-            turtlesPresent: d.turtlesPresent,
+            agentsPresent: d.agentsPresent,
             typeOfOrder: Math.floor(random.number() * 2),
             penDown: d.penDown,
           });
@@ -398,7 +398,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
       heading: a.heading,
       product: a.product,
       supply: a.supply,
-      turtlesPresent: a.turtlesPresent,
+      agentsPresent: a.agentsPresent,
       energy: a.energy,
       laden: a.laden,
       destination: a.destination?.alive ? a.destination.sourceId : null,
@@ -424,13 +424,13 @@ export function create(options: Partial<FactoryParameters> = {}) {
       Object.keys(s).some((k) => !["robots", "machines", "orders"].includes(k))
     )
       throw new TypeError("Invalid scenario.");
-    const patches = [
+    const fields = [
       ...(s.robots ?? []),
       ...(s.machines ?? []),
       ...(s.orders ?? []),
     ];
     const ids = new Set<number>();
-    for (const p of patches) {
+    for (const p of fields) {
       const current = entities.find((a) => a.sourceId === p.id);
       if (!current || current.kind !== p.kind || ids.has(p.id))
         throw new RangeError(
@@ -444,7 +444,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
           p.heading,
           p.product,
           p.supply,
-          p.turtlesPresent,
+          p.agentsPresent,
           p.energy,
           p.idleness,
           p.deluxeLevel,
@@ -459,7 +459,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
         [
           p.product,
           p.supply,
-          p.turtlesPresent,
+          p.agentsPresent,
           p.idleness,
           p.buildCounter,
           p.queuedSupply,
@@ -477,13 +477,13 @@ export function create(options: Partial<FactoryParameters> = {}) {
       )
         throw new RangeError("Invalid source state.");
     }
-    for (const p of patches) {
+    for (const p of fields) {
       const a = entities.find((a) => a.sourceId === p.id)!;
       a.move({ to: { x: p.x, y: p.y } });
       a.rotate(p.heading - a.heading);
       a.product = p.product;
       a.supply = p.supply;
-      a.turtlesPresent = p.turtlesPresent;
+      a.agentsPresent = p.agentsPresent;
       a.energy = p.energy;
       a.laden = p.laden;
       a.destination =
@@ -531,7 +531,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
             shiftChange();
             labelAgents();
             for (const a of shuffle(entities)) {
-              a.turtlesPresent = here(a).length;
+              a.agentsPresent = here(a).length;
               a.penDown = settings.makeTrails;
             }
             if (trails.length > 20000) trails.splice(0, trails.length - 20000);
@@ -557,9 +557,9 @@ export function create(options: Partial<FactoryParameters> = {}) {
     shiftChange,
     labelAgents,
     robotSupplyNeed,
-    setParameters(patch: Partial<FactoryParameters>) {
+    setParameters(changes: Partial<FactoryParameters>) {
       if (
-        Reflect.ownKeys(patch).some(
+        Reflect.ownKeys(changes).some(
           (k) =>
             ![
               "fullCharge",
@@ -570,7 +570,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     read() {
       const robots = of("robot").map(snapshot),

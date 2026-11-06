@@ -147,21 +147,21 @@ export function create(options: Partial<HexParameters> = {}) {
     },
     readSwitches,
     setSwitches(
-      patch: Partial<Pick<HexParameters, (typeof switchKeys)[number]>>,
+      field: Partial<Pick<HexParameters, (typeof switchKeys)[number]>>,
     ) {
       if (
-        !patch ||
-        typeof patch !== "object" ||
-        ![Object.prototype, null].includes(Object.getPrototypeOf(patch)) ||
-        Reflect.ownKeys(patch).some(
+        !field ||
+        typeof field !== "object" ||
+        ![Object.prototype, null].includes(Object.getPrototypeOf(field)) ||
+        Reflect.ownKeys(field).some(
           (key) =>
             typeof key !== "string" ||
             !(switchKeys as readonly string[]).includes(key) ||
-            !("value" in Object.getOwnPropertyDescriptor(patch, key)!),
+            !("value" in Object.getOwnPropertyDescriptor(field, key)!),
         )
       )
         throw new TypeError("Supply only pending neighbor switches.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...field });
       // Source edits do not apply until read-switches or setup.
     },
     read() {

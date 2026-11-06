@@ -102,7 +102,7 @@ export function create(options: Partial<PathParameters> = {}) {
     if (settings.initialFirms > fields.length) {
       // The first source repeat fills all patches; subsequent empty repeats do nothing.
       for (const field of activation(fields)) immigrate(field);
-    } else warnings.push("Can't distribute, fewer patches than people.");
+    } else warnings.push("Can't distribute, fewer fields than people.");
   } else {
     for (let i = 0; i < settings.initialFirms; i++) {
       const heading = integer(4) * 90;
@@ -141,7 +141,7 @@ export function create(options: Partial<PathParameters> = {}) {
           throw new TypeError("Supply x/y/heading/movedIn firm data.");
         const firm = value as FirmInput;
         if (!Number.isInteger(firm.x) || firm.x < -5 || firm.x > 5 || !Number.isInteger(firm.y) || firm.y < -5 || firm.y > 5 || ![0, 90, 180, 270].includes(firm.heading) || typeof firm.movedIn !== "boolean")
-          throw new RangeError("Firms require integer patch centers and cardinal headings.");
+          throw new RangeError("Firms require integer field centers and cardinal headings.");
         copied.push({ x: firm.x, y: firm.y, heading: firm.heading, movedIn: firm.movedIn });
       }
       for (const firm of firms()) firm.delete();

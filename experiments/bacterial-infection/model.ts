@@ -70,7 +70,7 @@ export const inputs: Inputs<Parameters> = {
   init6PoresB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
 };
 export type Region = "A" | "B";
-interface PatchState {
+interface FieldState {
   region: Region | null;
   portType: "input" | "output" | "none";
   myBacteria: Bacteria | null;
@@ -79,7 +79,7 @@ export type Bacteria = Agent<{
   breed: "bacteria";
   variation: number;
   age: number;
-  target: Field<PatchState> | null;
+  target: Field<FieldState> | null;
 }>;
 export type Antibiotic = Agent<{ breed: "antibiotic" }>;
 export function giveDose(
@@ -106,7 +106,7 @@ export function create(options: Partial<Parameters> = {}) {
   const grid = Grid.add(space, {
     state: {
       region: null as Region | null,
-      portType: "none" as PatchState["portType"],
+      portType: "none" as FieldState["portType"],
       myBacteria: null as Bacteria | null,
     },
   });
@@ -166,7 +166,7 @@ export function create(options: Partial<Parameters> = {}) {
           breed: "bacteria" as const,
           variation,
           age: settings.reproduceEvery * 60,
-          target: target as Field<PatchState> | null,
+          target: target as Field<FieldState> | null,
         },
         {
           position: target,
@@ -200,8 +200,8 @@ export function create(options: Partial<Parameters> = {}) {
     record();
   }
   function checkBounceOffWalls(agent: Bacteria | Antibiotic) {
-    const patch = grid.fieldAt(agent)!;
-    if (![-23, -2, 2, 23].includes(patch.x)) return;
+    const field = grid.fieldAt(agent)!;
+    if (![-23, -2, 2, 23].includes(field.x)) return;
     const direction = geometry.direction({ heading: agent.heading });
     const ahead = geometry.normalize(
       { x: agent.x + 0.5 * direction.x, y: agent.y + 0.5 * direction.y },
@@ -298,11 +298,11 @@ export function create(options: Partial<Parameters> = {}) {
     );
   }
   function checkAntibioticInteraction(agent: Antibiotic) {
-    const samePatch = grid.agentsAt(grid.fieldAt(agent)!, {
+    const sameField = grid.agentsAt(grid.fieldAt(agent)!, {
       source: bacteria(),
     });
-    if (samePatch.length) {
-      const target = random.sample(samePatch)[0]!;
+    if (sameField.length) {
+      const target = random.sample(sameField)[0]!;
       if (killThisBacteria(target)) bacteriaDeath(target);
       agent.delete();
       return;

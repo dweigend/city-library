@@ -32,7 +32,7 @@ export const inputs: Inputs<TrafficParameters> = {
   currentAuto: { kind: "boolean", default: true },
   power: { kind: "boolean", default: true },
 };
-interface PatchState {
+interface FieldState {
   road: boolean;
   intersection: boolean;
   greenLightUp: boolean;
@@ -43,7 +43,7 @@ interface PatchState {
   color: string;
   label: string;
 }
-type Patch = Field<PatchState>;
+type ModelField = Field<FieldState>;
 type Car = Agent<{
   who: number;
   speed: number;
@@ -76,7 +76,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   );
   world.add(grid);
   const cars = () => world.agents as readonly Car[];
-  const patchId = (patch: Patch) => `${patch.x},${patch.y}`;
+  const fieldId = (field: ModelField) => `${field.x},${field.y}`;
   const carId = (car: Car) => `car-${car.who}`;
   const shuffled = <T>(items: readonly T[]) =>
     random.sample(items, { count: items.length });
@@ -93,9 +93,9 @@ export function create(options: Partial<TrafficParameters> = {}) {
     Math.floor(modulo(x + 18 - Math.floor(xIncrement - 1), xIncrement)) === 0;
   const horizontal = (y: number) =>
     Math.floor(modulo(y + 18, yIncrement)) === 0;
-  const roads: Patch[] = [];
-  const intersections: Patch[] = [];
-  let current: Patch;
+  const roads: ModelField[] = [];
+  const intersections: ModelField[] = [];
+  let current: ModelField;
   let phase = 0;
   let numCarsStopped = 0;
   const history: {
@@ -105,38 +105,38 @@ export function create(options: Partial<TrafficParameters> = {}) {
     meanWait: number;
   }[] = [];
 
-  function setSignalColors(patch: Patch) {
-    grid.fieldAt({ x: patch.x - 1, y: patch.y })!.color = !settings.power
+  function setSignalColors(field: ModelField) {
+    grid.fieldAt({ x: field.x - 1, y: field.y })!.color = !settings.power
       ? "#ffffff"
-      : patch.greenLightUp
+      : field.greenLightUp
         ? "#e33131"
         : "#30b949";
-    grid.fieldAt({ x: patch.x, y: patch.y + 1 })!.color = !settings.power
+    grid.fieldAt({ x: field.x, y: field.y + 1 })!.color = !settings.power
       ? "#ffffff"
-      : patch.greenLightUp
+      : field.greenLightUp
         ? "#30b949"
         : "#e33131";
   }
-  function setupPatches() {
-    for (const patch of grid.fields) {
-      patch.road = vertical(patch.x) || horizontal(patch.y);
-      patch.intersection = vertical(patch.x) && horizontal(patch.y);
-      if (patch.road) {
-        patch.color = "#ffffff";
-        roads.push(patch);
+  function setupFields() {
+    for (const field of grid.fields) {
+      field.road = vertical(field.x) || horizontal(field.y);
+      field.intersection = vertical(field.x) && horizontal(field.y);
+      if (field.road) {
+        field.color = "#ffffff";
+        roads.push(field);
       }
-      if (patch.intersection) {
-        patch.phase = 0;
-        patch.auto = true;
-        patch.row = Math.floor((patch.y + 18) / yIncrement);
-        patch.column = Math.floor((patch.x + 18) / xIncrement);
-        intersections.push(patch);
+      if (field.intersection) {
+        field.phase = 0;
+        field.auto = true;
+        field.row = Math.floor((field.y + 18) / yIncrement);
+        field.column = Math.floor((field.x + 18) / xIncrement);
+        intersections.push(field);
       }
     }
   }
 
   function setupSignals() {
-    for (const patch of shuffled(intersections)) setSignalColors(patch);
+    for (const field of shuffled(intersections)) setSignalColors(field);
     grid.fieldAt({ x: current.x - 1, y: current.y + 1 })!.label = "current";
     settings = parameters(inputs, {
       ...settings,
@@ -181,7 +181,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   function setupCars() {
     for (let who = 0; who < settings.numCars; who++) {
       const location = choose(
-        roads.filter((patch) => grid.agentsAt(patch).length === 0),
+        roads.filter((field) => grid.agentsAt(field).length === 0),
       );
       const upCar = location.intersection
         ? random.number() < 0.5
@@ -205,7 +205,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   }
 
   function setup() {
-    setupPatches();
+    setupFields();
     current = choose(intersections);
     setupSignals();
     if (settings.numCars > roads.length) {
@@ -223,15 +223,15 @@ export function create(options: Partial<TrafficParameters> = {}) {
     current.auto = settings.currentAuto;
   }
   function setSignals() {
-    for (const patch of shuffled(
+    for (const field of shuffled(
       intersections.filter(
-        (patch) =>
-          patch.auto &&
-          phase === Math.floor((patch.phase * settings.ticksPerCycle) / 100),
+        (field) =>
+          field.auto &&
+          phase === Math.floor((field.phase * settings.ticksPerCycle) / 100),
       ),
     )) {
-      patch.greenLightUp = !patch.greenLightUp;
-      setSignalColors(patch);
+      field.greenLightUp = !field.greenLightUp;
+      setSignalColors(field);
     }
   }
 
@@ -311,7 +311,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
       parameters: { ...settings },
       phase,
       numCarsStopped,
-      currentIntersectionId: patchId(current),
+      currentIntersectionId: fieldId(current),
       watchedCarId: null,
       cars: cars().map((car) => ({
         id: carId(car),
@@ -328,24 +328,24 @@ export function create(options: Partial<TrafficParameters> = {}) {
         workId: null,
         goalId: null,
       })),
-      intersections: intersections.map((patch) => ({
-        id: patchId(patch),
-        x: patch.x,
-        y: patch.y,
-        greenLightUp: patch.greenLightUp,
-        auto: patch.auto,
-        phase: patch.phase,
-        row: patch.row,
-        column: patch.column,
+      intersections: intersections.map((field) => ({
+        id: fieldId(field),
+        x: field.x,
+        y: field.y,
+        greenLightUp: field.greenLightUp,
+        auto: field.auto,
+        phase: field.phase,
+        row: field.row,
+        column: field.column,
       })),
-      cells: grid.fields.map((patch) => ({
-        id: patchId(patch),
-        x: patch.x,
-        y: patch.y,
-        color: patch.color,
-        road: patch.road,
-        intersection: patch.intersection,
-        label: patch.label,
+      cells: grid.fields.map((field) => ({
+        id: fieldId(field),
+        x: field.x,
+        y: field.y,
+        color: field.color,
+        road: field.road,
+        intersection: field.intersection,
+        label: field.label,
       })),
       history: history.map((sample) => ({ ...sample })),
     };

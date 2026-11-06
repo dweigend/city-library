@@ -4,7 +4,7 @@ A2a extends the existing A1 core with standard Mulberry uniform draws, sampling 
 
 ## Try the model
 
-The existing Agend Lab now defaults to Exchange: 24 agents, 10 resource units each, seed 1. Press 100 steps to see the distribution change while Total energy remains 240. Choose the same setup and seed again to replay the same trajectory; choose another seed to compare a different trajectory. Select markers to inspect them without affecting random choices. Lifecycle remains available as the earlier single-agent test scenario.
+The existing Agent Lab now defaults to Exchange: 24 agents, 10 resource units each, seed 1. Press 100 steps to see the distribution change while Total energy remains 240. Choose the same setup and seed again to replay the same trajectory; choose another seed to compare a different trajectory. Select markers to inspect them without affecting random choices. Lifecycle remains available as the earlier single-agent test scenario.
 
 The browser imports the exact same [headless composition](../../examples/models/exchange.ts) that the fifth public example executes. It has no independent exchange rule. Marker arrangement remains a non-spatial display layout: A3 movement is still future work. Every tick samples two distinct current World members; the donor transfers one unit when it has a positive balance. No transfer occurs from an empty donor. Fewer than two members is a successful no-op interval with no random draws. Model steps run only through explicit run calls; there is no animation clock.
 
@@ -41,4 +41,4 @@ The Mulberry continuation revision remains agent-loom-random/1. Cache metadata i
 
 ## Verification and local host
 
-`bun run check` runs strict library/dev/UI typechecks, tests, all ten A1/A2a scripts, build/declarations and an isolated packed public consumer under Bun, Node ESM and ambient-free TypeScript. Start the test host with `bun run dev:ui` after building. The configured tailnet service remains at http://davidserver.tail3ec2fe.ts.net:3100/. See [Agend Lab](../../Agend_Lab/README.md) for host details.
+`bun run check` runs strict library/dev/UI typechecks, tests, all ten A1/A2a scripts, build/declarations and an isolated packed public consumer under Bun, Node ESM and ambient-free TypeScript. Start the test host with `bun run dev:ui` after building. The configured tailnet service remains at http://davidserver.tail3ec2fe.ts.net:3100/. See [Agent Lab](../../Agend_Lab/README.md) for host details.

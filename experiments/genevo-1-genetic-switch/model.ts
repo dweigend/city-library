@@ -91,7 +91,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     (y === 0 && x > -15 && x < -9) || (y === 1 && [-10, -12, -14].includes(x));
   const terminator = (x: number, y: number) =>
     y >= 0 && y <= 1 && x > 16 && x < 19;
-  function patchAhead(p: Molecule, distance: number) {
+  function fieldAhead(p: Molecule, distance: number) {
     const d = geometry.direction({ heading: p.heading });
     const position = geometry.normalize(
       { x: p.x + d.x * distance, y: p.y + d.y * distance },
@@ -236,7 +236,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     p.rotate(random.number() * 360);
     while (
       [1, 2].some((distance) => {
-        const f = patchAhead(p, distance);
+        const f = fieldAhead(p, distance);
         return cellWall(f.x, f.y);
       })
     )
@@ -264,7 +264,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     }
     for (const p of shuffled(breed("lacI").filter((p) => p.partner === null))) {
       const here = grid.fieldAt(p)!;
-      const ahead = patchAhead(p, 1);
+      const ahead = fieldAhead(p, 1);
       if (
         !inhibited &&
         (operator(here.x, here.y) || operator(ahead.x, ahead.y))
@@ -293,7 +293,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
   }
   function goLacYs() {
     for (const p of shuffled(breed("lacY"))) {
-      const f = patchAhead(p, 2);
+      const f = fieldAhead(p, 2);
       if (cellWall(f.x, f.y)) {
         f.pump = true;
         f.color = "#e96767";
@@ -333,9 +333,9 @@ export function create(options: Partial<SwitchParameters> = {}) {
   }
   function goLactoses() {
     for (const p of shuffled(
-      breed("lactose").filter((p) => !p.inside && patchAhead(p, 2).pump),
+      breed("lactose").filter((p) => !p.inside && fieldAhead(p, 2).pump),
     )) {
-      p.move({ to: patchAhead(p, 2) });
+      p.move({ to: fieldAhead(p, 2) });
       const heading = (Math.atan2(-p.x, -p.y) * 180) / Math.PI;
       p.rotate(heading - p.heading);
       p.move(3);
@@ -354,7 +354,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
         breed("rnap").filter((p) =>
           [0, 1, 2].some((distance) => {
             const f =
-              distance === 0 ? grid.fieldAt(p)! : patchAhead(p, distance);
+              distance === 0 ? grid.fieldAt(p)! : fieldAhead(p, distance);
             return promoter(f.x, f.y);
           }),
         ),

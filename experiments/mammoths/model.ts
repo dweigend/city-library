@@ -130,11 +130,11 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function landAhead(resident: Resident, distance: number): boolean {
     const forward = geometry.direction({ heading: resident.heading });
-    const patch = grid.fieldAt({
+    const field = grid.fieldAt({
       x: resident.x + distance * forward.x,
       y: resident.y + distance * forward.y,
     });
-    return patch !== undefined && patch.terrain !== "ocean";
+    return field !== undefined && field.terrain !== "ocean";
   }
   function move(resident: Resident, distance: number) {
     resident.rotate(random.number({ max: 30, integer: true }));
@@ -164,10 +164,10 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function density(resident: Resident): number {
     const here = grid.fieldAt(resident)!;
-    const patches = [here, ...grid.neighbors(here, { neighborhood: "moore" })];
+    const fields = [here, ...grid.neighbors(here, { neighborhood: "moore" })];
     return (
       population(resident.breed).filter((a) =>
-        patches.includes(grid.fieldAt(a)!),
+        fields.includes(grid.fieldAt(a)!),
       ).length / 9
     );
   }

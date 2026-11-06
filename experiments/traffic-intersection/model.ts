@@ -68,7 +68,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
     ),
   );
 
-  function patchAhead(car: Car, distance: number) {
+  function fieldAhead(car: Car, distance: number) {
     const direction = geometry.direction({ heading: car.heading });
     const position = geometry.normalize(
       { x: car.x + direction.x * distance, y: car.y + direction.y * distance },
@@ -76,8 +76,8 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
     );
     return position ? grid.fieldAt(position) : undefined;
   }
-  function isBlocked(car: Car, patch: Field) {
-    const occupants = grid.agentsAt(patch);
+  function isBlocked(car: Car, field: Field) {
+    const occupants = grid.agentsAt(field);
     return occupants.some((agent) => {
       if (agent === car) return false;
       const kind = (agent as Car | Light | Accident).kind;
@@ -85,15 +85,15 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
       const light = agent as Light;
       return (
         light.color === "red" ||
-        (light.color === "yellow" && patch !== grid.fieldAt(car))
+        (light.color === "yellow" && field !== grid.fieldAt(car))
       );
     });
   }
-  function nextBlockedPatch(car: Car) {
-    let patch: Field | undefined = grid.fieldAt(car);
-    while (patch && !isBlocked(car, patch))
-      patch = patchAhead(car, car.distanceTo(patch) + 1);
-    return patch;
+  function nextBlockedField(car: Car) {
+    let field: Field | undefined = grid.fieldAt(car);
+    while (field && !isBlocked(car, field))
+      field = fieldAhead(car, car.distanceTo(field) + 1);
+    return field;
   }
   function brakingDistanceAt(speed: number) {
     return speed + Math.max(speed - settings.maxBrake, 0);
@@ -101,7 +101,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
   function adjustSpeed(car: Car) {
     const minimum = Math.max(car.speed - settings.maxBrake, 0);
     let target = Math.min(car.speed + settings.maxAccel, settings.speedLimit);
-    const blocked = nextBlockedPatch(car);
+    const blocked = nextBlockedField(car);
     if (blocked) {
       const spaceAhead = car.distanceTo(blocked) - 1;
       while (brakingDistanceAt(target) > spaceAhead && target > minimum)
@@ -113,7 +113,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
     adjustSpeed(car);
     for (let count = 0; count < car.speed; count++) {
       car.move(1);
-      if (!patchAhead(car, 1)) {
+      if (!fieldAhead(car, 1)) {
         car.delete();
         return;
       }
@@ -136,13 +136,13 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
       accident.clearIn--;
       if (accident.clearIn === 0) accident.delete();
     }
-    for (const patch of grid.fields) {
-      const crashed = grid.agentsAt(patch, { source: cars() });
+    for (const field of grid.fields) {
+      const crashed = grid.agentsAt(field, { source: cars() });
       if (crashed.length > 1) {
         world.add(
           Agent.add(
             { kind: "accident" as const, clearIn: 5 },
-            { position: patch },
+            { position: field },
           ),
         );
         for (const car of crashed) car.delete();
@@ -238,12 +238,12 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
       height: 35,
       parameters: { ...settings },
       ticksAtLastChange,
-      cells: grid.fields.map((patch) => ({
-        id: patch.id,
-        x: patch.x,
-        y: patch.y,
+      cells: grid.fields.map((field) => ({
+        id: field.id,
+        x: field.x,
+        y: field.y,
         color:
-          Math.abs(patch.x) <= 1 || Math.abs(patch.y) <= 1
+          Math.abs(field.x) <= 1 || Math.abs(field.y) <= 1
             ? "#000000"
             : "#389c24",
       })),
@@ -282,7 +282,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
     changeToRed,
     elapsed,
     brakingDistanceAt,
-    nextBlockedPatch,
+    nextBlockedField,
     isBlocked,
     adjustSpeed,
     move,

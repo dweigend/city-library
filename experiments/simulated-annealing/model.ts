@@ -19,7 +19,7 @@ export const inputs: Inputs<AnnealingParameters> = {
   acceptEqualChanges: { kind: "boolean", default: false },
 };
 /** Native anisotropic directed-neighbor energy, including toroidal aliases on tiny grids. */
-export function patchEnergy(
+export function fieldEnergy(
   here: number,
   north: number,
   south: number,
@@ -42,7 +42,7 @@ export function create(options: Partial<AnnealingParameters> = {}) {
   const { width, height } = settings;
   if ((width * height) % 2)
     throw new RangeError(
-      "An even number of patches is required for exact half initialization.",
+      "An even number of fields is required for exact half initialization.",
     );
   const random = Random.add({ seed: settings.seed }),
     world = World.add({ random });
@@ -63,12 +63,12 @@ export function create(options: Partial<AnnealingParameters> = {}) {
   }[] = [];
   const at = (x: number, y: number) => {
     if (!Number.isSafeInteger(x) || !Number.isSafeInteger(y))
-      throw new RangeError("Expected integer patch coordinates.");
+      throw new RangeError("Expected integer field coordinates.");
     return grid.fieldAt({ x: x - (width - 1) / 2, y: y - (height - 1) / 2 })!;
   };
   function energyAt(x: number, y: number) {
     const f = at(x, y);
-    return patchEnergy(
+    return fieldEnergy(
       f.brightness,
       at(x, y + 1).brightness,
       at(x, y - 1).brightness,
@@ -134,7 +134,7 @@ export function create(options: Partial<AnnealingParameters> = {}) {
       s.brightness.length !== fields.length ||
       s.brightness.some((b) => b !== 0 && b !== 1)
     )
-      throw new RangeError("Scenario must contain one binary value per patch.");
+      throw new RangeError("Scenario must contain one binary value per field.");
     const t = s.temperature ?? 1;
     if (!Number.isFinite(t) || t < 0 || t > 1)
       throw new RangeError("Temperature must be in [0,1].");
@@ -194,9 +194,9 @@ export function create(options: Partial<AnnealingParameters> = {}) {
     attemptSwap,
     setScenario,
     totalEnergy,
-    setParameters(patch: Partial<AnnealingParameters>) {
+    setParameters(changes: Partial<AnnealingParameters>) {
       if (
-        Reflect.ownKeys(patch).some(
+        Reflect.ownKeys(changes).some(
           (k) =>
             !["coolingRate", "swapRadius", "acceptEqualChanges"].includes(
               String(k),
@@ -204,7 +204,7 @@ export function create(options: Partial<AnnealingParameters> = {}) {
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     read() {
       return {

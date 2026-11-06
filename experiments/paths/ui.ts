@@ -71,7 +71,7 @@ const binding = defineUI(model, {
     },
     {
       type: "inspector",
-      label: "Patch",
+      label: "ModelField",
       value: (state, id) => state.cells.find((cell) => cell.id === id),
     },
   ],

@@ -45,7 +45,7 @@ export function create(options: Partial<Parameters> = {}) {
     },
   });
   world.add(grid);
-  type Patch = (typeof grid.fields)[number];
+  type ModelField = (typeof grid.fields)[number];
   const fields = grid.fields;
   const commuters = () => world.agents as readonly Commuter[];
   const integer = (n: number) => Math.floor(random.number() * n);
@@ -77,16 +77,16 @@ export function create(options: Partial<Parameters> = {}) {
     bottomCount: number;
     middleCount: number;
   }[] = [];
-  function offset(patch: Patch, heading: number, distance = 1) {
+  function offset(field: ModelField, heading: number, distance = 1) {
     const vector = geometry.direction({ heading });
     const target = grid.fieldAt({
-      x: patch.x + vector.x * distance,
-      y: patch.y + vector.y * distance,
+      x: field.x + vector.x * distance,
+      y: field.y + vector.y * distance,
     });
     if (!target) throw new Error("Source road operation left the patch world.");
     return target;
   }
-  function drawRoad(type: number, originalStart: Patch, originalFinish: Patch) {
+  function drawRoad(type: number, originalStart: ModelField, originalFinish: ModelField) {
     const heading =
       (Math.atan2(
         originalFinish.x - originalStart.x,
@@ -144,17 +144,17 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function setupRoads() {
-    for (const patch of shuffle(fields))
-      patch.color = `rgb(0 ${96 + integer(16)} 0)`;
-    for (const [patch, color] of [
+    for (const field of shuffle(fields))
+      field.color = `rgb(0 ${96 + integer(16)} 0)`;
+    for (const [field, color] of [
       [topLeft, "#00aa00"],
       [bottomRight, "#dd0000"],
       [bottomLeft, "#0000dd"],
       [topRight, "#0000dd"],
     ] as const) {
-      patch.color = color;
-      patch.delay = 10;
-      for (const neighbor of grid.neighbors(patch)) neighbor.color = "#808080";
+      field.color = color;
+      field.delay = 10;
+      for (const neighbor of grid.neighbors(field)) neighbor.color = "#808080";
     }
     drawRoad(1, topLeft, topRight);
     drawRoad(1, bottomLeft, bottomRight);
@@ -267,10 +267,10 @@ export function create(options: Partial<Parameters> = {}) {
     agent.delete();
   }
   function commuterMove(agent: Commuter) {
-    const patch = grid.fieldAt(agent)!;
-    if (agent.ticksHere > patch.delay) {
-      patch.lastHere = world.tick.value;
-      agent.move({ to: offset(patch, agent.heading) });
+    const field = grid.fieldAt(agent)!;
+    if (agent.ticksHere > field.delay) {
+      field.lastHere = world.tick.value;
+      agent.move({ to: offset(field, agent.heading) });
       agent.ticksHere = 1;
     } else agent.ticksHere++;
     const current = grid.fieldAt(agent)!;
@@ -281,31 +281,31 @@ export function create(options: Partial<Parameters> = {}) {
     if (current === bottomLeft) agent.rotate({ towards: bottomRight });
     if (current === bottomRight) endCommute(agent);
   }
-  function determineCongestion(patch: Patch) {
-    patch.delay =
-      patch.lastHere === 0
-        ? Math.trunc(patch.baseDelay / 2)
+  function determineCongestion(field: ModelField) {
+    field.delay =
+      field.lastHere === 0
+        ? Math.trunc(field.baseDelay / 2)
         : Math.floor(
             (250 /
               settings.spawnRate /
-              (world.tick.value - patch.lastHere + 1)) *
-              patch.baseDelay,
+              (world.tick.value - field.lastHere + 1)) *
+              field.baseDelay,
           );
     const green = Math.max(
       127,
       Math.min(
         255,
-        255 + Math.floor(255 * (0.5 - patch.delay / patch.baseDelay)),
+        255 + Math.floor(255 * (0.5 - field.delay / field.baseDelay)),
       ),
     );
-    patch.color = `rgb(255 ${green} 0)`;
+    field.color = `rgb(255 ${green} 0)`;
   }
   function go() {
     checkMiddle();
     spawnCommuters();
     for (const agent of shuffle(commuters())) commuterMove(agent);
-    for (const patch of shuffle(fields.filter((p) => p.roadType === 1)))
-      determineCongestion(patch);
+    for (const field of shuffle(fields.filter((p) => p.roadType === 1)))
+      determineCongestion(field);
   }
   function record() {
     history.push({
@@ -394,7 +394,7 @@ export function create(options: Partial<Parameters> = {}) {
 export const model = {
   title: "Braess' Paradox",
   description:
-    "Adaptive routes and patch congestion · Wilensky · CC BY-NC-SA 3.0",
+    "Adaptive routes and field congestion · Wilensky · CC BY-NC-SA 3.0",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

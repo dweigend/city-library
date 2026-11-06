@@ -49,7 +49,7 @@ export function create(options: Partial<Parameters> = {}) {
   );
   let successes = 0;
   const history: { tick: number; successRate: number }[] = [];
-  function makeTurtles() {
+  function makeAgents() {
     for (const person of people()) person.delete();
     for (let i = 0; i < 23; i++) {
       const birthday = Math.floor(random.number() * days.length);
@@ -66,7 +66,7 @@ export function create(options: Partial<Parameters> = {}) {
       );
     }
   }
-  function sortTurtles() {
+  function sortAgents() {
     const sorted = people().toSorted((a, b) => a.birthday - b.birthday);
     sorted.forEach((person, i) =>
       person.move({ to: { x: person.x, y: 11 - i } }),
@@ -80,8 +80,8 @@ export function create(options: Partial<Parameters> = {}) {
       person.matched = counts.get(person.birthday)! > 1;
   }
   function go() {
-    makeTurtles();
-    sortTurtles();
+    makeAgents();
+    sortAgents();
     showMatches();
     if (people().some((person) => person.matched)) successes++;
   }

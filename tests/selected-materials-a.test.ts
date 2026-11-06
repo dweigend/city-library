@@ -9,7 +9,7 @@ test("sandpile deterministic open avalanche oracle and pure exploration", () => 
     width: 3,
     height: 3,
     initial: "uniform",
-    grainsPerPatch: 3,
+    grainsPerField: 3,
     dropLocation: "center",
   });
   const state = model.read();

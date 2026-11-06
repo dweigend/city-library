@@ -13,7 +13,7 @@ import type {
 export { inputs };
 export type { TaxiParameters, DemandKey, DemandPhase, Zone };
 
-interface PatchState {
+interface FieldState {
   road: boolean;
   intersection: boolean;
   trafficLight: boolean;
@@ -26,7 +26,7 @@ interface PatchState {
   zone: Zone;
   color: string;
 }
-type Patch = Field<PatchState>;
+type ModelField = Field<FieldState>;
 type Cab = Agent<{
   breed: "cab";
   who: number;
@@ -60,7 +60,7 @@ type Passenger = Agent<{
   who: number;
   patienceToWait: number;
   beenWaiting: number;
-  destination: Patch | null;
+  destination: ModelField | null;
   destinationX: number;
   destinationY: number;
   numPassengersWaiting: number;
@@ -97,7 +97,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     world.agents.filter(
       (agent) => (agent as Cab | Passenger).breed === "passenger",
     ) as Passenger[];
-  const patchId = (patch: Patch) => `${patch.x},${patch.y}`;
+  const fieldId = (field: ModelField) => `${field.x},${field.y}`;
   const cabId = (cab: Cab) => `cab-${cab.who}`;
   const shuffled = <T>(items: readonly T[]) =>
     random.sample(items, { count: items.length });
@@ -120,59 +120,59 @@ export function create(options: Partial<TaxiParameters> = {}) {
     ...[4, 11, 18, 25, 32].map((value) => -(value - 1)),
   ];
   const lightIndices = full([2, 5, 9, 12, 16, 19, 23, 26, 30]);
-  for (const patch of grid.fields) {
-    if (Math.abs(patch.x) < 12 && Math.abs(patch.y) < 12) {
-      patch.zone = "cbd";
-      patch.color = "#ffbc79";
-    } else if (Math.abs(patch.x) < 26 && Math.abs(patch.y) < 26) {
-      patch.zone = "com";
-      patch.color = "#a2c8ec";
+  for (const field of grid.fields) {
+    if (Math.abs(field.x) < 12 && Math.abs(field.y) < 12) {
+      field.zone = "cbd";
+      field.color = "#ffbc79";
+    } else if (Math.abs(field.x) < 26 && Math.abs(field.y) < 26) {
+      field.zone = "com";
+      field.color = "#a2c8ec";
     }
-    patch.road = roadIndices.includes(patch.x) || roadIndices.includes(patch.y);
-    patch.intersection =
-      roadIndices.includes(patch.x) && roadIndices.includes(patch.y);
-    if (!patch.road) continue;
-    patch.color = "#000000";
-    patch.trafficLight =
-      lightIndices.includes(patch.x) || lightIndices.includes(patch.y);
-    patch.right = rightIndices.includes(patch.y);
-    patch.left = leftIndices.includes(patch.y);
-    patch.up = leftIndices.includes(patch.x);
-    patch.down = rightIndices.includes(patch.x);
-    if (patch.y === 32) patch.up = false;
-    if (patch.y === -32) patch.down = false;
-    if (patch.x === 32) patch.right = false;
-    if (patch.x === -32) patch.left = false;
-    if (patch.x === -31 && patch.y === 32) {
-      patch.up = false;
-      patch.left = true;
+    field.road = roadIndices.includes(field.x) || roadIndices.includes(field.y);
+    field.intersection =
+      roadIndices.includes(field.x) && roadIndices.includes(field.y);
+    if (!field.road) continue;
+    field.color = "#000000";
+    field.trafficLight =
+      lightIndices.includes(field.x) || lightIndices.includes(field.y);
+    field.right = rightIndices.includes(field.y);
+    field.left = leftIndices.includes(field.y);
+    field.up = leftIndices.includes(field.x);
+    field.down = rightIndices.includes(field.x);
+    if (field.y === 32) field.up = false;
+    if (field.y === -32) field.down = false;
+    if (field.x === 32) field.right = false;
+    if (field.x === -32) field.left = false;
+    if (field.x === -31 && field.y === 32) {
+      field.up = false;
+      field.left = true;
     }
-    if (patch.x === -32 && patch.y === -31) {
-      patch.left = false;
-      patch.down = true;
+    if (field.x === -32 && field.y === -31) {
+      field.left = false;
+      field.down = true;
     }
-    if (patch.x === 32 && patch.y === 31) {
-      patch.right = false;
-      patch.up = true;
+    if (field.x === 32 && field.y === 31) {
+      field.right = false;
+      field.up = true;
     }
-    if (patch.x === 31 && patch.y === -32) {
-      patch.down = false;
-      patch.right = true;
+    if (field.x === 31 && field.y === -32) {
+      field.down = false;
+      field.right = true;
     }
-    patch.numDirections =
-      Number(patch.up) +
-      Number(patch.down) +
-      Number(patch.left) +
-      Number(patch.right);
+    field.numDirections =
+      Number(field.up) +
+      Number(field.down) +
+      Number(field.left) +
+      Number(field.right);
   }
-  const roads = grid.fields.filter((patch) => patch.road);
-  const lights = roads.filter((patch) => patch.trafficLight);
+  const roads = grid.fields.filter((field) => field.road);
+  const lights = roads.filter((field) => field.trafficLight);
   // The source reassigns these sets after an earlier, reversed assignment.
-  const rowLights = lights.filter((patch) => lightIndices.includes(patch.x));
-  const columnLights = lights.filter((patch) => lightIndices.includes(patch.y));
-  for (const patch of rowLights) patch.color = "#30b949";
-  for (const patch of columnLights) patch.color = "#e33131";
-  for (const patch of lights) patch.greenLightUp = patch.color === "#30b949";
+  const rowLights = lights.filter((field) => lightIndices.includes(field.x));
+  const columnLights = lights.filter((field) => lightIndices.includes(field.y));
+  for (const field of rowLights) field.color = "#30b949";
+  for (const field of columnLights) field.color = "#e33131";
+  for (const field of lights) field.greenLightUp = field.color === "#30b949";
   let rowGreen = true;
   let columnGreen = false;
   let phaseCounter = 1;
@@ -208,9 +208,9 @@ export function create(options: Partial<TaxiParameters> = {}) {
   }
   function setupCabs() {
     for (let who = 0; who < settings.numTaxicab; who++) {
-      const patch = choose(
+      const field = choose(
         roads.filter(
-          (patch) => grid.agentsAt(patch, { source: cabs() }).length === 0,
+          (field) => grid.agentsAt(field, { source: cabs() }).length === 0,
         ),
       );
       const cab = Agent.add(
@@ -242,41 +242,41 @@ export function create(options: Partial<TaxiParameters> = {}) {
           pickupY: 0,
           color: "#f5db33",
         },
-        { position: patch },
+        { position: field },
       );
       world.add(cab);
-      if (patch.up && patch.right)
+      if (field.up && field.right)
         setHeading(cab, Math.floor(random.number() * 100) > 50 ? 0 : 90);
-      else if (patch.up && patch.left)
+      else if (field.up && field.left)
         setHeading(cab, Math.floor(random.number() * 100) > 50 ? 0 : 270);
-      else if (patch.down && patch.right)
+      else if (field.down && field.right)
         setHeading(cab, Math.floor(random.number() * 100) > 50 ? 180 : 90);
-      else if (patch.down && patch.left)
+      else if (field.down && field.left)
         setHeading(cab, Math.floor(random.number() * 100) > 50 ? 180 : 270);
-      else if (patch.up) setHeading(cab, 0);
-      else if (patch.down) setHeading(cab, 180);
-      else if (patch.left) setHeading(cab, 270);
-      else if (patch.right) setHeading(cab, 90);
+      else if (field.up) setHeading(cab, 0);
+      else if (field.down) setHeading(cab, 180);
+      else if (field.left) setHeading(cab, 270);
+      else if (field.right) setHeading(cab, 90);
     }
   }
   setupCabs();
 
   function changeTrafficLightColors() {
     if (rowGreen) {
-      for (const patch of rowLights) patch.color = "#30b949";
-      for (const patch of columnLights) patch.color = "#e33131";
+      for (const field of rowLights) field.color = "#30b949";
+      for (const field of columnLights) field.color = "#e33131";
     }
     if (columnGreen) {
-      for (const patch of rowLights) patch.color = "#e33131";
-      for (const patch of columnLights) patch.color = "#30b949";
+      for (const field of rowLights) field.color = "#e33131";
+      for (const field of columnLights) field.color = "#30b949";
     }
   }
   function startTrafficLight() {
     // Source asks each set and repeatedly writes the globals; all ordinary members agree.
-    for (const patch of shuffled(rowLights))
-      rowGreen = patch.color === "#30b949";
-    for (const patch of shuffled(columnLights))
-      columnGreen = patch.color === "#30b949";
+    for (const field of shuffled(rowLights))
+      rowGreen = field.color === "#30b949";
+    for (const field of shuffled(columnLights))
+      columnGreen = field.color === "#30b949";
     changeTrafficLightColors();
     if (settings.lengthOfGreenLight === 0)
       throw new RangeError(
@@ -287,7 +287,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
       columnGreen = !rowGreen;
       changeTrafficLightColors();
     }
-    for (const patch of lights) patch.greenLightUp = patch.color === "#30b949";
+    for (const field of lights) field.greenLightUp = field.color === "#30b949";
   }
   function reportCurrentPhase() {
     if (phaseCounter > 4) phaseCounter = 0;
@@ -301,11 +301,11 @@ export function create(options: Partial<TaxiParameters> = {}) {
     }
   }
   const pickupRoads = (zone: Zone) =>
-    roads.filter((patch) => patch.zone === zone && !patch.intersection);
+    roads.filter((field) => field.zone === zone && !field.intersection);
   const dropoffRoads = (zone: Zone) =>
     roads.filter(
-      (patch) =>
-        patch.zone === zone && !patch.intersection && !patch.trafficLight,
+      (field) =>
+        field.zone === zone && !field.intersection && !field.trafficLight,
     );
   const pickupByZone = {
     cbd: pickupRoads("cbd"),
@@ -320,8 +320,8 @@ export function create(options: Partial<TaxiParameters> = {}) {
   function generateDemand(origin: Zone, destination: Zone) {
     const key: DemandKey = `prob-${origin}-${destination}-${currentPhaseAbbreviation}`;
     if (random.number() >= settings[key]) return;
-    const patch = choose(pickupByZone[origin]);
-    const destinationPatch = choose(dropoffByZone[destination]);
+    const field = choose(pickupByZone[origin]);
+    const destinationField = choose(dropoffByZone[destination]);
     const passenger = Agent.add(
       {
         breed: "passenger" as const,
@@ -332,17 +332,17 @@ export function create(options: Partial<TaxiParameters> = {}) {
           deviation: settings.waitTimeSd,
         }),
         beenWaiting: 0,
-        destination: null as Patch | null,
-        destinationX: destinationPatch.x,
-        destinationY: destinationPatch.y,
+        destination: null as ModelField | null,
+        destinationX: destinationField.x,
+        destinationY: destinationField.y,
         numPassengersWaiting: 1 + Math.floor(random.number() * 4),
       },
-      { position: patch },
+      { position: field },
     );
-    passenger.destination = destinationPatch;
+    passenger.destination = destinationField;
     world.add(passenger);
   }
-  function taxiDemandAtPatch() {
+  function taxiDemandAtField() {
     // Executed source key→zone pairs, including misleading source comments, are preserved.
     generateDemand("cbd", "cbd");
     generateDemand("cbd", "com");
@@ -446,7 +446,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
       cab.destinationX2 = cab.destinationX;
     }
   }
-  function highlightDestinationPatches(cab: Cab, color: string) {
+  function highlightDestinationFields(cab: Cab, color: string) {
     if (cab.destinationY2 !== 0) {
       grid.fieldAt({ x: cab.destinationX, y: cab.destinationY })!.color = color;
       grid.fieldAt({ x: cab.destinationX, y: cab.destinationY2 })!.color =
@@ -514,33 +514,33 @@ export function create(options: Partial<TaxiParameters> = {}) {
     cab.pickupOnHorizontal = here.left || here.right;
     cab.pickupOnVertical = here.up || here.down;
     updateDestinationCoordinates(cab);
-    highlightDestinationPatches(cab, "#b749d4");
+    highlightDestinationFields(cab, "#b749d4");
     changeDirectionForDelivery(cab);
   }
   function taxicabMoveRandom(cab: Cab) {
-    const patch = grid.fieldAt(cab)!;
-    if (patch.numDirections === 1) {
+    const field = grid.fieldAt(cab)!;
+    if (field.numDirections === 1) {
       cab.prevIntersection = 0;
-      if (patch.right) moveRight(cab);
-      else if (patch.left) moveLeft(cab);
-      else if (patch.up) moveUp(cab);
-      else if (patch.down) moveDown(cab);
+      if (field.right) moveRight(cab);
+      else if (field.left) moveLeft(cab);
+      else if (field.up) moveUp(cab);
+      else if (field.down) moveDown(cab);
       return;
     }
     cab.prevIntersection++;
-    if (patch.up && patch.right) {
+    if (field.up && field.right) {
       if (cab.prevIntersection === 2) moveRight(cab);
       else if (random.number() < 0.5) moveUp(cab);
       else moveRight(cab);
-    } else if (patch.up && patch.left) {
+    } else if (field.up && field.left) {
       if (cab.prevIntersection === 2) moveUp(cab);
       else if (random.number() < 0.5) moveUp(cab);
       else moveLeft(cab);
-    } else if (patch.down && patch.right) {
+    } else if (field.down && field.right) {
       if (cab.prevIntersection === 2) moveDown(cab);
       else if (random.number() < 0.5) moveDown(cab);
       else moveRight(cab);
-    } else if (patch.down && patch.left) {
+    } else if (field.down && field.left) {
       if (cab.prevIntersection === 2) moveLeft(cab);
       else if (random.number() < 0.5) moveDown(cab);
       else moveLeft(cab);
@@ -553,7 +553,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     cab.numGridsTraveledCurrentTrip = 0;
     cab.currentTripIncome = 0;
     cab.currentTripDuration = 0;
-    highlightDestinationPatches(cab, "#000000");
+    highlightDestinationFields(cab, "#000000");
     cab.destinationX = 0;
     cab.destinationX2 = 0;
     cab.destinationY = 0;
@@ -576,75 +576,75 @@ export function create(options: Partial<TaxiParameters> = {}) {
   }
   function taxicabMoveDeliver(cab: Cab) {
     const relation = deliveryRelation(cab);
-    const patch = grid.fieldAt(cab)!;
+    const field = grid.fieldAt(cab)!;
     const dropoffVertical = cab.destinationY === cab.destinationY2;
     const dropoffHorizontal = cab.destinationX === cab.destinationX2;
     if (cab.pickupOnVertical && dropoffVertical) {
       if (relation.left) {
-        if (patch.right) moveRight(cab);
-        else if (patch.intersection && relation.down) moveDown(cab);
+        if (field.right) moveRight(cab);
+        else if (field.intersection && relation.down) moveDown(cab);
         else moveStraight(cab);
       } else if (relation.right) {
-        if (patch.left) moveLeft(cab);
-        else if (patch.intersection && relation.up) moveUp(cab);
+        if (field.left) moveLeft(cab);
+        else if (field.intersection && relation.up) moveUp(cab);
         else moveStraight(cab);
       } else if (relation.sameX) {
         if (relation.top) {
-          if (patch.down) moveDown(cab);
+          if (field.down) moveDown(cab);
           else if (relation.west) moveLeft(cab);
         } else if (relation.bottom) {
-          if (patch.up) moveUp(cab);
+          if (field.up) moveUp(cab);
           else if (relation.east) moveRight(cab);
         }
       }
     }
     if (cab.pickupOnHorizontal && dropoffHorizontal) {
       if (relation.top) {
-        if (patch.down) moveDown(cab);
+        if (field.down) moveDown(cab);
         else moveStraight(cab);
       } else if (relation.bottom) {
-        if (patch.up) moveUp(cab);
+        if (field.up) moveUp(cab);
         else moveStraight(cab);
       } else if (relation.sameY) {
         if (relation.right) {
-          if (patch.left) moveLeft(cab);
+          if (field.left) moveLeft(cab);
           else if (relation.up) moveUp(cab);
         } else if (relation.left) {
-          if (patch.right) moveRight(cab);
+          if (field.right) moveRight(cab);
           else if (relation.down) moveDown(cab);
         }
       }
     }
     if (cab.pickupOnVertical && dropoffHorizontal) {
       if (relation.top) {
-        if (patch.down) moveDown(cab);
+        if (field.down) moveDown(cab);
         else moveStraight(cab);
       } else if (relation.bottom) {
-        if (patch.up) moveUp(cab);
+        if (field.up) moveUp(cab);
         else moveStraight(cab);
       } else if (relation.sameY) {
         if (relation.right) {
-          if (patch.left) moveLeft(cab);
+          if (field.left) moveLeft(cab);
           else if (relation.up) moveUp(cab);
         } else if (relation.left) {
-          if (patch.right) moveRight(cab);
+          if (field.right) moveRight(cab);
           else if (relation.down) moveDown(cab);
         }
       }
     }
     if (cab.pickupOnHorizontal && dropoffVertical) {
       if (relation.right) {
-        if (patch.left) moveLeft(cab);
+        if (field.left) moveLeft(cab);
         else moveStraight(cab);
       } else if (relation.left) {
-        if (patch.right) moveRight(cab);
+        if (field.right) moveRight(cab);
         else moveStraight(cab);
       } else if (relation.sameX) {
         if (relation.top) {
-          if (patch.down) moveDown(cab);
+          if (field.down) moveDown(cab);
           else if (relation.west) moveLeft(cab);
         } else if (relation.bottom) {
-          if (patch.up) moveUp(cab);
+          if (field.up) moveUp(cab);
           else if (relation.east) moveRight(cab);
         }
       }
@@ -654,7 +654,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
   function go() {
     startTrafficLight();
     reportCurrentPhase();
-    taxiDemandAtPatch();
+    taxiDemandAtField();
     passengersWaitForRide();
     for (const cab of shuffled(cabs())) {
       pickupPassengers(cab);
@@ -703,20 +703,20 @@ export function create(options: Partial<TaxiParameters> = {}) {
       phaseCounter,
       rowGreen,
       columnGreen,
-      cells: grid.fields.map((patch) => ({
-        id: patchId(patch),
-        x: patch.x,
-        y: patch.y,
-        color: patch.color,
-        road: patch.road,
-        intersection: patch.intersection,
-        trafficLight: patch.trafficLight,
-        zone: patch.zone,
-        left: patch.left,
-        right: patch.right,
-        up: patch.up,
-        down: patch.down,
-        greenLightUp: patch.greenLightUp,
+      cells: grid.fields.map((field) => ({
+        id: fieldId(field),
+        x: field.x,
+        y: field.y,
+        color: field.color,
+        road: field.road,
+        intersection: field.intersection,
+        trafficLight: field.trafficLight,
+        zone: field.zone,
+        left: field.left,
+        right: field.right,
+        up: field.up,
+        down: field.down,
+        greenLightUp: field.greenLightUp,
       })),
       cabs: cabs().map((cab) => ({
         id: cabId(cab),
@@ -775,7 +775,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     changeTrafficLightColors,
     reportCurrentPhase,
     generateDemand,
-    taxiDemandAtPatch,
+    taxiDemandAtField,
     passengersWaitForRide,
     updateDeliveryAndIncome,
     stopForRedElseGo,
@@ -786,7 +786,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     moveStraight,
     makeUTurn,
     updateDestinationCoordinates,
-    highlightDestinationPatches,
+    highlightDestinationFields,
     deliveryRelation,
     changeDirectionForDelivery,
     pickupPassengers,

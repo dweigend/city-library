@@ -67,7 +67,7 @@ export function create(options: Partial<Parameters> = {}) {
   const sum = ratios.reduce((a, b) => a + b, 0);
   if (sum === 0)
     throw new RangeError("Cannot set all ratio-units sliders to 0.");
-  function setupPatchesPolish() {
+  function setupFieldsPolish() {
     const raw = ratios.map((n) => (n / sum) * 225),
       nums = raw.map(Math.round);
     while (nums.reduce((a, b) => a + b, 0) < 225) {
@@ -84,8 +84,8 @@ export function create(options: Partial<Parameters> = {}) {
     }
     return nums;
   }
-  const populationCounts = setupPatchesPolish();
-  function setupPatches() {
+  const populationCounts = setupFieldsPolish();
+  function setupFields() {
     populationCounts.forEach((n, value) => {
       for (const t of random.sample(
         tiles.filter((t) => t.value < 0),
@@ -127,7 +127,7 @@ export function create(options: Partial<Parameters> = {}) {
     setupLittleGuy();
     values.length = 0;
   }
-  function selectPatch() {
+  function selectField() {
     const tile = grid.fieldAt(walker)!;
     tile.selected++;
     return tile.value;
@@ -136,14 +136,14 @@ export function create(options: Partial<Parameters> = {}) {
     clearSelection();
     getReadyForNextSample();
     for (let i = 0; i < settings.sampleSize; i++) {
-      values.push(selectPatch());
+      values.push(selectField());
       walker.move(1);
       walker.rotate([-90, 0, 90][Math.floor(random.number() * 3)]!);
     }
     totals.push(values.reduce((a, b) => a + b, 0));
     world.tick.advance();
   }
-  setupPatches();
+  setupFields();
   setupLittleGuy();
   return {
     get world() {

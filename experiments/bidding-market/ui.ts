@@ -68,7 +68,7 @@ export const ui = defineUI(model, {
             size: 5 + Math.sqrt(t.bought),
           })),
         ],
-        segments: s.links.map((l) => ({
+        segments: s.edges.map((l) => ({
           from: s.sellers.find((t) => t.id === l.seller)!,
           to: s.buyers.find((t) => t.id === l.buyer)!,
           color: l.sale ? "#d9b52f" : "#426795",

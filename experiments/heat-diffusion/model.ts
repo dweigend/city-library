@@ -139,7 +139,7 @@ export function create(options: Partial<HeatParameters> = {}) {
     // patches see it: replacing this with Grid.diffuse would change the model.
     field.oldTemperature = field.temperature;
   }
-  function updatePatch(x: number, y: number) {
+  function updateFieldAt(x: number, y: number) {
     const field = fields.find((f) => f.x === x && f.y === y);
     if (!field) throw new RangeError("Expected a native patch center.");
     updateField(field);
@@ -200,7 +200,7 @@ export function create(options: Partial<HeatParameters> = {}) {
         (v) => typeof v !== "number" || !Number.isFinite(v),
       )
     )
-      throw new RangeError("Supply a finite temperature per patch.");
+      throw new RangeError("Supply a finite temperature per field.");
     fields.forEach((f, i) => {
       f.temperature = values[i]!;
       f.oldTemperature = values[i]!;
@@ -213,7 +213,7 @@ export function create(options: Partial<HeatParameters> = {}) {
   setup();
   return {
     setup,
-    updatePatch,
+    updateFieldAt,
     updateAlpha,
     heatDiffusivity,
     setRules,
@@ -257,7 +257,7 @@ export function create(options: Partial<HeatParameters> = {}) {
 export const model = {
   title: "Heat Diffusion",
   description:
-    "Random sequential patch heat transfer with clamped boundary strips. Wilensky (1998), CC BY-NC-SA 3.0.",
+    "Random sequential field heat transfer with clamped boundary strips. Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<HeatParameters, ReturnType<typeof create>>;

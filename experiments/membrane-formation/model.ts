@@ -26,7 +26,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed });
   const world = World.add({ x: 51, y: 51, boundary: "wrap" }, { random });
-  const links = Graph.add<Molecule>();
+  const graph = Graph.add<Molecule>();
   const molecules = () => world.agents as readonly Molecule[];
   const history: { tick: number; hydrophobicIsolation: number }[] = [];
 
@@ -49,14 +49,14 @@ export function create(options: Partial<MembraneParameters> = {}) {
         },
       );
       world.add(water);
-      links.nodes.add(water);
+      graph.nodes.add(water);
     }
     for (let index = 0; index < settings.numLipids; index++) {
       const partner = random.sample(
         molecules().filter(
           (molecule) =>
             molecule.breed === "water" &&
-            links.neighbors(molecule).length === 0,
+            graph.neighbors(molecule).length === 0,
         ),
       )[0]!;
       const oil = Agent.add(
@@ -69,9 +69,9 @@ export function create(options: Partial<MembraneParameters> = {}) {
         },
       );
       world.add(oil);
-      links.nodes.add(oil);
+      graph.nodes.add(oil);
       oil.move(2);
-      links.edges.add({ from: oil, to: partner });
+      graph.edges.add({ from: oil, to: partner });
       partner.hydrophilic = true;
     }
   }
@@ -79,7 +79,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
     const near = random.sample(
       molecule
         .neighbors({ radius: 4, source: molecules() })
-        .filter((candidate) => !links.hasEdge(molecule, candidate)),
+        .filter((candidate) => !graph.hasEdge(molecule, candidate)),
     )[0];
     if (!near) return;
     molecule.rotate({ towards: near });
@@ -98,7 +98,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
     molecule.move(settings.tooCloseForce);
   }
   function interactWithPartner(molecule: Molecule) {
-    const partner = random.sample(links.neighbors(molecule))[0];
+    const partner = random.sample(graph.neighbors(molecule))[0];
     if (partner) {
       molecule.rotate({ towards: partner });
       molecule.move(molecule.distanceTo(partner) - 2);
@@ -119,7 +119,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
           (molecule) => molecule.breed === "oil",
         ).length;
         const denominator = neighbors.filter(
-          (molecule) => !links.hasEdge(oil, molecule),
+          (molecule) => !graph.hasEdge(oil, molecule),
         ).length;
         return numerator / denominator;
       }),
@@ -190,7 +190,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
               : "#357be5",
         size: 1,
       })),
-      links: [...links.edges].map((edge) => ({
+      edges: [...graph.edges].map((edge) => ({
         id: edge.id,
         oilId: edge.from.id,
         waterId: edge.to.id,

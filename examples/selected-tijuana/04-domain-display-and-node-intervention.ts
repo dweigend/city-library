@@ -5,7 +5,7 @@ import { cell, field, globals, job, migrant, near, scene, semantic, service } fr
 
 const model = create();
 model.setScenario(scene(model, {
-  patch: (x, y) => field({ colorNumber: 42, colonia: x === 0 && y === 0 ? -5 : x === 1 && y === 0 ? -9.95 : 0 }),
+  field: (x, y) => field({ colorNumber: 42, colonia: x === 0 && y === 0 ? -5 : x === 1 && y === 0 ? -9.95 : 0 }),
 }));
 const stream = model.read().randomState;
 model.setRules({ visualUpdate: "colonias" });
@@ -20,7 +20,7 @@ const afterDisplay = semantic(model); model.read(); model.read(); assert.deepEqu
 model.setScenario(scene(model, {
   rules: { visualUpdate: "units with no water" },
   agents: [service(), job(), migrant("migrant", 2, 0, 0)],
-  patch: (x, y) => field({ colorNumber: 42, water: x === 2 && y === 0 ? 2 : 10 }),
+  field: (x, y) => field({ colorNumber: 42, water: x === 2 && y === 0 ? 2 : 10 }),
 }));
 model.updateDisplay();
 assert.equal(cell(model, 0, 0).colorNumber, 67); assert.equal(cell(model, 2, 0).colorNumber, 42);
@@ -31,7 +31,7 @@ const intervention = create();
 intervention.setScenario(scene(intervention, {
   agents: [], rules: { carryingCapacity: 2 },
   globals: globals({ weights: 0.6, marginalValue: 1 }),
-  patch: (x, y) => field({ occupied: y === 0 && (x === 0 || x === 1) ? "maquiladora" : "no", landValue: x === 0 && y === 1 ? 2 : 0 }),
+  field: (x, y) => field({ occupied: y === 0 && (x === 0 || x === 1) ? "maquiladora" : "no", landValue: x === 0 && y === 1 ? 2 : 0 }),
 }));
 const ids = intervention.read().cells.map(item => item.id);
 intervention.addNode({ x: 0, y: 0 });
@@ -54,7 +54,7 @@ const off = create(), colonias = create();
 for (const target of [off, colonias]) target.setScenario(scene(target, {
   rules: { migrationTicks: 1, crossingTicks: 20, visualUpdate: "off" },
   agents: [service(), job(), migrant()],
-  patch: (x, y) => field({ landValue: 2, water: 2, electricity: 3, transport: 1, occupied: x === 7 && y === 8 ? "no" : "maquiladora" }),
+  field: (x, y) => field({ landValue: 2, water: 2, electricity: 3, transport: 1, occupied: x === 7 && y === 8 ? "no" : "maquiladora" }),
 }));
 colonias.setRules({ visualUpdate: "colonias" }); colonias.updateDisplay();
 off.advance(); colonias.advance();

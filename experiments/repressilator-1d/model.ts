@@ -93,13 +93,13 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
   function getTFDNAIsInhibitedBy(geneId: number) {
     return (geneId + 2) % 3;
   }
-  function countOtherMRNAsSamePatch(molecule: Molecule) {
+  function countOtherMRNAsSameField(molecule: Molecule) {
     return mrnas().filter(
       (other) =>
         other !== molecule && grid.fieldAt(other) === grid.fieldAt(molecule),
     ).length;
   }
-  function countOtherTFsSameColorSamePatch(molecule: Molecule) {
+  function countOtherTFsSameColorSameField(molecule: Molecule) {
     return tfs().filter(
       (other) =>
         other !== molecule &&
@@ -115,7 +115,7 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
       (field.geneId - 1) / 3 +
       random.number() * columnWidth -
       0.5 * columnWidth;
-    const y = 0.305 - ((countOtherTFsSameColorSamePatch(tf) * 0.075) % 0.63);
+    const y = 0.305 - ((countOtherTFsSameColorSameField(tf) * 0.075) % 0.63);
     tf.move({ to: { x, y } });
   }
   function initializeTF(geneId: number, x: number, y: number) {
@@ -153,7 +153,7 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
       ),
     );
     const x =
-      geneId - 1.425 + ((countOtherMRNAsSamePatch(molecule) * 0.24) % 0.85);
+      geneId - 1.425 + ((countOtherMRNAsSameField(molecule) * 0.24) % 0.85);
     molecule.move({ to: { x, y: 0.38 + random.number() * 0.045 } });
     return molecule;
   }
@@ -203,7 +203,7 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
     for (const tf of shuffled(tfs().filter(tfCanBindGeneHere))) {
       const denominator = Math.max(
         settings.maxTFSynergy,
-        countOtherTFsSameColorSamePatch(tf),
+        countOtherTFsSameColorSameField(tf),
       );
       if (denominator === 0)
         throw new RangeError("Source division by zero in TF binding synergy.");
@@ -470,8 +470,8 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
     tfCanInhibitGeneHere,
     getDNATFInhibits,
     getTFDNAIsInhibitedBy,
-    countOtherMRNAsSamePatch,
-    countOtherTFsSameColorSamePatch,
+    countOtherMRNAsSameField,
+    countOtherTFsSameColorSameField,
     nMRNAsProduced,
     nTFsProduced,
     meanOnDuration,

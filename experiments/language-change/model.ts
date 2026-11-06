@@ -204,7 +204,7 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
             }),
           ),
         ),
-        links: Object.freeze(
+        edges: Object.freeze(
           [...graph.edges].map((e) =>
             Object.freeze({ id: e.id, from: e.from.id, to: e.to.id }),
           ),

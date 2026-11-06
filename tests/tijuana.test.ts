@@ -57,7 +57,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
         tick: 25,
         agents: [service(), firstBuilder(84, 90)],
         globals: globals({ setupDone: false, thirdPhase: 0 }),
-        patch: () => field(),
+        field: () => field(),
       }),
     );
     model.advanceCityscape();
@@ -124,7 +124,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
         tick: 4,
         agents: [service(), second],
         globals: globals({ setupDone: false, thirdPhase: 0 }),
-        patch: () => field({ ctr: "+" }),
+        field: () => field({ ctr: "+" }),
       }),
     );
     model.advanceCityscape();
@@ -167,7 +167,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
         tick: 25,
         agents: [service(), job()],
         globals: globals({ setupDone: false, thirdPhase: 0 }),
-        patch: (x, y) =>
+        field: (x, y) =>
           field({
             occupied: "maquiladora",
             ...(y === 0 && x >= 0 && x < 5 ? { water: 2, electricity: 3 } : {}),
@@ -234,7 +234,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
       tick: 4,
       agents: [service(), second],
       globals: globals({ setupDone: false, thirdPhase: 0 }),
-      patch: () => field({ ctr: "+" }),
+      field: () => field({ ctr: "+" }),
     });
     input.randomState = random.state;
     model.setScenario(input);
@@ -382,7 +382,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
           migrant("parent", 2, 0, 0, { residentSince: 0 }),
         ],
         rules: { migrationTicks: 2, crossingTicks: 20 },
-        patch: (x, y) =>
+        field: (x, y) =>
           field({ occupied: x === 1 && y === 0 ? "no" : "maquiladora" }),
       }),
     );

@@ -3,7 +3,7 @@ import { create } from "../../experiments/diffusion-on-a-directed-network/model.
 
 const model = create({ gridSize: 3, diffusionRate: 50 });
 model.setValues([8, 0, 0, 0, 0, 0, 0, 0, 0]);
-model.setActiveLinks([{ from: 0, to: 1 }, { from: 1, to: 2 }]);
+model.setActiveEdges([{ from: 0, to: 1 }, { from: 1, to: 2 }]);
 const rng = model.read().randomState;
 model.advance();
 assert.deepEqual(model.read().nodes.map(node => node.value), [4, 4, 0, 0, 0, 0, 0, 0, 0]);

@@ -120,7 +120,7 @@ export function create(options: Partial<Parameters> = {}) {
     const field = grid.fieldAt({ x: column, y: top })!;
     if (grid.agentsAt(field).length === 0) sproutPerson(column, top);
   }
-  function resetTurtles() {
+  function resetAgents() {
     for (const p of people()) p.chosen = false;
   }
 
@@ -132,7 +132,7 @@ export function create(options: Partial<Parameters> = {}) {
     means.push(sum / settings.sampleSize);
   }
   function go() {
-    resetTurtles();
+    resetAgents();
     if (settings.sampleSize > people().length) {
       message = "There are not enough people to take a sample of this size.";
       return;

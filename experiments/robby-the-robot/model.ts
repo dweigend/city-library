@@ -410,9 +410,9 @@ export function create(options: Partial<RobbyParameters> = {}) {
     crossover,
     calculatePopulationFitnesses,
     createNextGeneration,
-    setParameters(patch: Partial<RobbyParameters>) {
+    setParameters(changes: Partial<RobbyParameters>) {
       if (
-        Reflect.ownKeys(patch).some(
+        Reflect.ownKeys(changes).some(
           (k) =>
             !["populationSize", "mutationRate", "numberOfGenerations"].includes(
               String(k),
@@ -420,7 +420,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     read() {
       const best = displayBest?.alive ? displayBest : population[0]!;

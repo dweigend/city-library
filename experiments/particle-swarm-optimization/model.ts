@@ -293,9 +293,9 @@ export function create(options: Partial<SwarmParameters> = {}) {
     setScenario,
     updateBests,
     moveParticles,
-    setParameters(patch: Partial<SwarmParameters>) {
+    setParameters(changes: Partial<SwarmParameters>) {
       if (
-        Reflect.ownKeys(patch).some((k) =>
+        Reflect.ownKeys(changes).some((k) =>
           [
             "seed",
             "width",
@@ -306,7 +306,7 @@ export function create(options: Partial<SwarmParameters> = {}) {
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     read() {
       return {

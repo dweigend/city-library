@@ -192,7 +192,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     }))
       moveToEmptyOneOf(p.id, p.attend ? "bar" : "home");
     attendance = bar.reduce(
-      (sum, patch) => sum + grid.agentsAt(patch).length,
+      (sum, field) => sum + grid.agentsAt(field).length,
       0,
     );
     crowded = attendance > settings.overcrowdingThreshold;

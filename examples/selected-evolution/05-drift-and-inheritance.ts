@@ -5,7 +5,7 @@ import { create as mendel } from '../../experiments/mendelian-inheritance/model.
 const d = drift({ seed: 51, number: 30, colors: 2 });
 d.placeWall(0);
 assert.ok(d.read().cells.filter(c => c.y === 0 || Math.abs(c.y) === 17).every(c => c.wall));
-assert.ok(d.read().turtles.every(t => Math.round(t.y) !== 0 && Math.abs(Math.round(t.y)) !== 17));
+assert.ok(d.read().agents.every(t => Math.round(t.y) !== 0 && Math.abs(Math.round(t.y)) !== 17));
 const walls = d.read().cells.filter(c => c.wall).length;
 d.setup(); // source setup preserves drawn walls
 assert.equal(d.read().cells.filter(c => c.wall).length, walls);

@@ -19,7 +19,7 @@ describe("B09 source mechanisms and exact public boundaries", () => {
       averageRecoveryTime: 1,
       recoveryChance: 100,
     });
-    const [source, samePatch, adjacent] = model.world.agents as unknown as {
+    const [source, sameField, adjacent] = model.world.agents as unknown as {
       infected: boolean;
       cured: boolean;
       susceptible: boolean;
@@ -37,12 +37,12 @@ describe("B09 source mechanisms and exact public boundaries", () => {
     source!.infected = true;
     source!.cured = false;
     source!.move({ to: { x: 0, y: 0 } });
-    samePatch!.cured = false;
-    samePatch!.move({ to: { x: 0, y: 0 } });
+    sameField!.cured = false;
+    sameField!.move({ to: { x: 0, y: 0 } });
     adjacent!.cured = false;
     adjacent!.move({ to: { x: 1, y: 0 } });
     model.infect(model.world.agents[0] as Parameters<typeof model.infect>[0]);
-    expect(samePatch!.infected).toBe(false);
+    expect(sameField!.infected).toBe(false);
     expect(adjacent!.infected).toBe(true);
     source!.infectionLength = 1;
     source!.recoveryTime = 1;
@@ -95,7 +95,7 @@ describe("B09 source mechanisms and exact public boundaries", () => {
   test("travel static contacts use canonical people and ambulances join afterward", () => {
     const model = travel({
       seed: 5,
-      links: true,
+      edges: true,
       initialPeople: 100,
       initialAmbulance: 4,
     });

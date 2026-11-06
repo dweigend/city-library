@@ -8,14 +8,14 @@ import type { Edge } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 
-export interface DiffusionParameters { seed: number; gridSize: number; linkChance: number; diffusionRate: number }
+export interface DiffusionParameters { seed: number; gridSize: number; edgeChance: number; diffusionRate: number }
 export const inputs: Inputs<DiffusionParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
   gridSize: { kind: "number", default: 9, min: 3, max: 19, step: 2, integer: true },
-  linkChance: { kind: "number", default: 50, min: 0, max: 100, integer: true },
+  edgeChance: { kind: "number", default: 50, min: 0, max: 100, integer: true },
   diffusionRate: { kind: "number", default: 10, min: 0, max: 100, integer: true },
 };
-export interface ActiveLinkInput { readonly from: number; readonly to: number }
+export interface ActiveEdgeInput { readonly from: number; readonly to: number }
 type DiffusionNode = Agent<{ index: number; value: number }>;
 interface FlowState { active: boolean; currentFlow: number }
 type DiffusionEdge = Edge<DiffusionNode, FlowState>;
@@ -40,7 +40,7 @@ export function create(options: Partial<DiffusionParameters> = {}) {
     const source = nodeAt.get(field)!;
     const targets = grid.neighbors(field, { neighborhood: "faces" }).map(neighbor => nodeAt.get(neighbor)!).sort((a, b) => a.index - b.index);
     for (const target of targets)
-      graph.edges.add({ from: source, to: target, directed: true, state: { active: random.number() * 100 <= settings.linkChance, currentFlow: 0 } });
+      graph.edges.add({ from: source, to: target, directed: true, state: { active: random.number() * 100 <= settings.edgeChance, currentFlow: 0 } });
   }
   // Immutable endpoint lookup retains canonical Edge references; Graph owns them.
   const candidateAt = new Map([...graph.edges].map(edge => [`${edge.from.index},${edge.to.index}`, edge]));
@@ -125,7 +125,7 @@ export function create(options: Partial<DiffusionParameters> = {}) {
       copied.forEach((value, index) => { nodes[index]!.value = value; });
       updateFlowReporters(); record();
     },
-    setActiveLinks(values: readonly ActiveLinkInput[]) {
+    setActiveEdges(values: readonly ActiveEdgeInput[]) {
       if (!Array.isArray(values) || Object.getPrototypeOf(values) !== Array.prototype) throw new TypeError("Supply an active connection array.");
       const selected = new Set<DiffusionEdge>();
       for (let index = 0; index < values.length; index++) {
@@ -135,7 +135,7 @@ export function create(options: Partial<DiffusionParameters> = {}) {
         if (typeof value !== "object" || value === null || ![Object.prototype, null].includes(Object.getPrototypeOf(value)) ||
           Reflect.ownKeys(value).length !== 2 || Reflect.ownKeys(value).some(key => !["from", "to"].includes(String(key)) || typeof key !== "string" || !("value" in Object.getOwnPropertyDescriptor(value, key)!)))
           throw new TypeError("Supply from/to active-link data properties.");
-        const pair = value as ActiveLinkInput;
+        const pair = value as ActiveEdgeInput;
         if (!Number.isSafeInteger(pair.from) || !Number.isSafeInteger(pair.to)) throw new RangeError("Active links require candidate node indices.");
         const edge = candidateAt.get(`${pair.from},${pair.to}`);
         if (!edge || selected.has(edge)) throw new RangeError("Active links must be distinct existing candidate arcs.");
@@ -153,7 +153,7 @@ export function create(options: Partial<DiffusionParameters> = {}) {
         tick: world.tick.value, parameters: settings,
         nodes: Object.freeze(nodes.map(node => Object.freeze({ id: node.id, index: node.index, x: node.x, y: node.y, value: node.value }))),
         edges: Object.freeze([...graph.edges].map(edge => Object.freeze({ id: edge.id, from: edge.from.id, to: edge.to.id, fromIndex: edge.from.index, toIndex: edge.to.index, active: edge.active, currentFlow: edge.currentFlow }))),
-        counts: Object.freeze({ nodes: nodes.length, candidateLinks: graph.edges.size, activeLinks: [...graph.edges].filter(edge => edge.active).length }),
+        counts: Object.freeze({ nodes: nodes.length, candidateEdges: graph.edges.size, activeEdges: [...graph.edges].filter(edge => edge.active).length }),
         ...measurement, maxFlow, meanFlow, histogram,
         history: Object.freeze([...history]), randomState: random.state, done: false as const,
       });

@@ -5,7 +5,7 @@ import { create as createDiffusion } from "../experiments/diffusion-on-a-directe
 test("directed transport splits old value once, retains sinks and conserves quantity", () => {
   const model = createDiffusion({ gridSize: 3, diffusionRate: 50 });
   model.setValues([8, 0, 0, 0, 0, 0, 0, 0, 0]);
-  model.setActiveLinks([{ from: 0, to: 1 }, { from: 0, to: 3 }]);
+  model.setActiveEdges([{ from: 0, to: 1 }, { from: 0, to: 3 }]);
   const random = model.read().randomState;
   model.advance();
   expect(model.read().nodes.map(node => node.value)).toEqual([4, 2, 0, 2, 0, 0, 0, 0, 0]);
@@ -23,7 +23,7 @@ test("directed transport splits old value once, retains sinks and conserves quan
 test("rewire retains edge identity, inactive flow and stale reporters until the next go", () => {
   const model = createDiffusion({ gridSize: 3, diffusionRate: 50, seed: 1 });
   model.setValues([8, 0, 0, 0, 0, 0, 0, 0, 0]);
-  model.setActiveLinks([{ from: 0, to: 1 }]);
+  model.setActiveEdges([{ from: 0, to: 1 }]);
   model.advance();
   const before = model.read();
   expect(before.maxFlow).toBe(4);
@@ -42,7 +42,7 @@ test("rewire retains edge identity, inactive flow and stale reporters until the 
   expect(model.read().meanFlow).toBe(0);
   // Fixed Mulberry fixture confirms that the just-deactivated edge is eligible.
   const noOp = createDiffusion({ gridSize: 3, seed: 71 });
-  noOp.setActiveLinks([{ from: 0, to: 1 }]);
+  noOp.setActiveEdges([{ from: 0, to: 1 }]);
   const state = noOp.read();
   noOp.rewire();
   expect(noOp.read().edges).toEqual(state.edges);
@@ -51,7 +51,7 @@ test("rewire retains edge identity, inactive flow and stale reporters until the 
 
 test("no-active and zero-total diffusion keep finite observations and successful clocks", () => {
   const model = createDiffusion({ gridSize: 3, diffusionRate: 0 });
-  model.setActiveLinks([]);
+  model.setActiveEdges([]);
   model.setValues(Array<number>(9).fill(0));
   const before = model.read();
   model.rewire();
@@ -128,7 +128,7 @@ test("network fixtures reject sparse/accessor/malformed data before any mutation
   const before = diffusion.read();
   expect(() => diffusion.setValues(Array(9))).toThrow();
   expect(() => diffusion.setValues([Number.MAX_VALUE, Number.MAX_VALUE, 0, 0, 0, 0, 0, 0, 0])).toThrow();
-  expect(() => diffusion.setActiveLinks([{ from: 0, to: 1 }, { from: 0, to: 4 }])).toThrow();
+  expect(() => diffusion.setActiveEdges([{ from: 0, to: 1 }, { from: 0, to: 4 }])).toThrow();
   expect(() => diffusion.setRules({ diffusionRate: NaN })).toThrow();
   expect(diffusion.read()).toEqual(before);
   expect(Object.isFrozen(before.nodes)).toBe(true);

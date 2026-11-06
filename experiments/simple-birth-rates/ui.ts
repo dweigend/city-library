@@ -51,7 +51,7 @@ export const ui = defineUI(model, {
       data: (s) => ({
         width: s.width,
         height: s.height,
-        agents: s.turtles.map((a) => ({
+        agents: s.agents.map((a) => ({
           ...a,
           color: a.color === "red" ? "#d73027" : "#2878cb",
           size: 5,

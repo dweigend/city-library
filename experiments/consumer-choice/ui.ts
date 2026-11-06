@@ -71,7 +71,7 @@ const binding = defineUI(model, {
                   : s.parameters.qualityBlue)),
         })),
       edges: (s) =>
-        s.links.map((e) => ({
+        s.edges.map((e) => ({
           ...e,
           color:
             s.parameters.normInfluence === 0 &&

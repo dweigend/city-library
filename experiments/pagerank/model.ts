@@ -112,7 +112,7 @@ export function create(options: Partial<Parameters> = {}) {
     p.currentPage = currentPage;
     return p;
   }
-  function link(a: Page, b: Page) {
+  function edge(a: Page, b: Page) {
     graph.edges.add({ from: a, to: b, directed: true });
   }
   function createNetwork() {
@@ -128,7 +128,7 @@ export function create(options: Partial<Parameters> = {}) {
         [5, [4]],
       ];
       for (const [to, froms] of incoming)
-        for (const from of froms) link(ps[from]!, ps[to]!);
+        for (const from of froms) edge(ps[from]!, ps[to]!);
     } else if (settings.networkChoice === "Example 2") {
       for (let i = 1; i <= 7; i++) ps[i] = addPage(i);
       const incoming: [[number, number[]], ...[number, number[]][]] = [
@@ -141,13 +141,13 @@ export function create(options: Partial<Parameters> = {}) {
         [7, [1]],
       ];
       for (const [to, froms] of incoming)
-        for (const from of froms) link(ps[from]!, ps[to]!);
+        for (const from of froms) edge(ps[from]!, ps[to]!);
     } else {
       for (let i = 0; i < 100; i++) ps[i] = addPage(i);
       let pool = [ps[0]!, ps[1]!];
       for (const neighbor of pool) {
-        if (random.number() < 0.5) link(ps[2]!, neighbor);
-        else link(neighbor, ps[2]!);
+        if (random.number() < 0.5) edge(ps[2]!, neighbor);
+        else edge(neighbor, ps[2]!);
       }
       pool = [ps[2]!, ps[2]!, ...pool];
       for (let i = 3; i < 100; i++) {
@@ -156,8 +156,8 @@ export function create(options: Partial<Parameters> = {}) {
           const neighbor = random.sample(available)[0]!;
           available = available.filter((n) => n !== neighbor);
           pool.unshift(neighbor);
-          if (random.number() < 0.5) link(ps[i]!, neighbor);
-          else link(neighbor, ps[i]!);
+          if (random.number() < 0.5) edge(ps[i]!, neighbor);
+          else edge(neighbor, ps[i]!);
         }
         pool = [ps[i]!, ps[i]!, ...pool];
       }
@@ -251,11 +251,11 @@ export function create(options: Partial<Parameters> = {}) {
         record();
       }
     },
-    setParameters(patch: Partial<Omit<Parameters, "seed" | "networkChoice">>) {
-      parameters(inputs, patch);
-      if (Object.hasOwn(patch, "seed") || Object.hasOwn(patch, "networkChoice"))
+    setParameters(changes: Partial<Omit<Parameters, "seed" | "networkChoice">>) {
+      parameters(inputs, changes);
+      if (Object.hasOwn(changes, "seed") || Object.hasOwn(changes, "networkChoice"))
         throw new TypeError("Network and seed are setup-only.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     setScenario(s: {
       pages: readonly { id: number; rank: number; visits?: number }[];
@@ -301,7 +301,7 @@ export function create(options: Partial<Parameters> = {}) {
         p.visits = value.visits ?? 0;
         byId.set(value.id, p);
       }
-      for (const e of s.edges) link(byId.get(e.from)!, byId.get(e.to)!);
+      for (const e of s.edges) edge(byId.get(e.from)!, byId.get(e.to)!);
       for (const value of s.surfers ?? [])
         addSurfer(byId.get(value.currentPage)!);
     },

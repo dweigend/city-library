@@ -161,11 +161,11 @@ export function create(options: Partial<Parameters> = {}) {
         record();
       }
     },
-    setParameters(patch: Partial<Omit<Parameters, "seed" | "width">>) {
-      parameters(inputs, patch);
-      if (Object.hasOwn(patch, "seed") || Object.hasOwn(patch, "width"))
+    setParameters(changes: Partial<Omit<Parameters, "seed" | "width">>) {
+      parameters(inputs, changes);
+      if (Object.hasOwn(changes, "seed") || Object.hasOwn(changes, "width"))
         throw new TypeError("Seed and genome width are setup-only.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...changes });
     },
     setScenario(s: { genomes: readonly (readonly number[])[] }) {
       if (

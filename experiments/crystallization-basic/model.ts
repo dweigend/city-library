@@ -37,7 +37,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
   const world = World.add(space, { random });
   const grid = Grid.add(space);
   world.add(grid);
-  const neighboringTurtles = new Map<Atom, readonly Atom[]>();
+  const neighboringAgents = new Map<Atom, readonly Atom[]>();
   let averageMetalTemp = settings.initMetalTemp,
     numFrozen = 0,
     tempRange = 0;
@@ -65,7 +65,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
   }
   function setup() {
     world.delete(world.agents);
-    neighboringTurtles.clear();
+    neighboringAgents.clear();
     numFrozen = 0;
     tempRange =
       (settings.initMetalTemp - settings.meltingTemp) / (colors.length - 1);
@@ -97,7 +97,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
         field,
         ...grid.neighbors(field, { neighborhood: "moore" }),
       ].flatMap((f) => grid.agentsAt(f)) as Atom[];
-      neighboringTurtles.set(atom, Object.freeze(nearby));
+      neighboringAgents.set(atom, Object.freeze(nearby));
       atom.sidesExposed = 9 - nearby.length;
     }
     averageMetalTemp = settings.initMetalTemp;
@@ -111,7 +111,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
     return atom;
   }
   function coolAtom(atom: Atom) {
-    const neighbors = neighboringTurtles.get(atom)!;
+    const neighbors = neighboringAgents.get(atom)!;
     atom.temp =
       (neighbors.reduce((sum, other) => sum + other.temp, 0) +
         settings.roomTemp * atom.sidesExposed +
@@ -120,7 +120,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
   }
   function rotateAtom(atom: Atom) {
     if (atom.temp >= settings.meltingTemp) {
-      const frozen = neighboringTurtles
+      const frozen = neighboringAgents
         .get(atom)!
         .filter((other) => other.temp <= settings.meltingTemp);
       const neighbor = random.sample(frozen)[0];
@@ -128,7 +128,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
       else atom.rotate(random.number() * 360);
     }
   }
-  function coolTurtles(id: string) {
+  function coolAgents(id: string) {
     coolAtom(requireAtom(id));
   }
   function rotate(id: string) {
@@ -179,7 +179,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
   setup();
   return {
     setup,
-    coolTurtles,
+    coolAgents,
     rotate,
     recolor,
     setColor: recolor,

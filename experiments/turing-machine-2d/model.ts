@@ -270,21 +270,21 @@ export function create(options: Partial<TuringParameters> = {}) {
     },
     setRules,
     setConfiguration(
-      patch: Partial<Pick<TuringParameters, (typeof liveKeys)[number]>>,
+      field: Partial<Pick<TuringParameters, (typeof liveKeys)[number]>>,
     ) {
       if (
-        !patch ||
-        typeof patch !== "object" ||
-        ![Object.prototype, null].includes(Object.getPrototypeOf(patch)) ||
-        Reflect.ownKeys(patch).some(
+        !field ||
+        typeof field !== "object" ||
+        ![Object.prototype, null].includes(Object.getPrototypeOf(field)) ||
+        Reflect.ownKeys(field).some(
           (key) =>
             typeof key !== "string" ||
             !(liveKeys as readonly string[]).includes(key) ||
-            !("value" in Object.getOwnPropertyDescriptor(patch, key)!),
+            !("value" in Object.getOwnPropertyDescriptor(field, key)!),
         )
       )
         throw new TypeError("Supply only example or live transition values.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...field });
     },
     setupExample(index = settings.example) {
       if (!Number.isSafeInteger(index) || index < 1 || index > 5)

@@ -25,11 +25,11 @@ const binding = defineUI(model, {
         instance.setParameters({ duration: Number(value) }),
     },
     {
-      field: "turtleShape",
-      value: (state) => state.parameters.turtleShape,
+      field: "agentShape",
+      value: (state) => state.parameters.agentShape,
       set: (instance, value) =>
         instance.setParameters({
-          turtleShape: value === "circle" ? "circle" : "person",
+          agentShape: value === "circle" ? "circle" : "person",
         }),
     },
   ],

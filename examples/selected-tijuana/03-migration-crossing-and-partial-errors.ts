@@ -8,7 +8,7 @@ model.setScenario(scene(model, {
   rules: { migrationTicks: 1, crossingTicks: 20, cityGrowth: false, visualUpdate: "off" },
   agents: [service(), job(), migrant("parent", 2, 6, 8, { income: 70, savings: 100, livingExpenses: 40, residentSince: 8 })],
   // One vacant qualified patch only; source migration changes the parent, not child.
-  patch: (x, y) => field({ landValue: 2, water: 2, electricity: 3, transport: 1,
+  field: (x, y) => field({ landValue: 2, water: 2, electricity: 3, transport: 1,
     occupied: x === 7 && y === 8 ? "no" : "maquiladora" }),
 }));
 const parentId = model.read().agents.find(item => item.kind === "migrant")!.id;

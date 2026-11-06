@@ -16,12 +16,12 @@ assert.ok(tree.read().leaves.every(leaf => leaf.chlorophyll >= 0 && leaf.chlorop
 const solution = membrane({ seed: 2, numWater: 10, numLipids: 4 });
 assert.equal(solution.read().agents.filter(agent => agent.breed === "water").length, 14);
 assert.equal(solution.read().agents.filter(agent => agent.breed === "oil").length, 4);
-assert.equal(solution.read().links.length, 4);
-const waterPartners = solution.read().links.map(link => link.waterId);
+assert.equal(solution.read().edges.length, 4);
+const waterPartners = solution.read().edges.map(edge => edge.waterId);
 assert.equal(new Set(waterPartners).size, 4);
 solution.setParameters({ randomForce: 0, waterWaterForce: 0, waterOilForce: 0, tooCloseForce: 0 });
 solution.advance(3);
 assert.equal(solution.read().tick, 3);
 assert.equal(solution.read().agents.length, 18);
-assert.equal(solution.read().links.length, 4);
+assert.equal(solution.read().edges.length, 4);
 assert.ok(Number.isFinite(solution.read().hydrophobicIsolation));

@@ -59,10 +59,10 @@ const binding = defineUI(model, {
         instance.setParameters({ travelTendency: Number(value) }),
     },
     {
-      field: "links",
-      value: (state) => state.parameters.links,
+      field: "edges",
+      value: (state) => state.parameters.edges,
       set: (instance, value) =>
-        instance.setParameters({ links: Boolean(value) }),
+        instance.setParameters({ edges: Boolean(value) }),
     },
     {
       field: "travel",

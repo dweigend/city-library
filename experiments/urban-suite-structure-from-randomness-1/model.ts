@@ -35,7 +35,7 @@ export function create(options: Partial<StructureParameters> = {}) {
     }
     return { totalActivity, maxAbsoluteActivity };
   }
-  function recolorPatches() {
+  function recolorFields() {
     const scale = measureActivity().maxAbsoluteActivity;
     // Native recolor fails after activity commit. Retain old colors and tick.
     if (scale === 0) throw new RangeError("Division by zero while recoloring an all-zero activity field.");
@@ -53,11 +53,11 @@ export function create(options: Partial<StructureParameters> = {}) {
     if (settings.keepAddingRandomness)
       for (const field of fields) field.newActivity += random.sample([1, -1])[0]!;
     for (const field of fields) field.activity = field.newActivity;
-    recolorPatches();
+    recolorFields();
   }
 
   for (const field of fields) field.activity = random.sample([-1, 1])[0]!;
-  recolorPatches();
+  recolorFields();
   recordCompletedState();
   return {
     advance(count = 1) {
@@ -84,7 +84,7 @@ export function create(options: Partial<StructureParameters> = {}) {
       // An explicit fixture restriction, rather than a repair of source step errors.
       if (!copied.some(value => value !== 0)) throw new RangeError("An activity fixture must contain a nonzero value.");
       for (const [index, field] of fields.entries()) field.activity = copied[index]!;
-      recolorPatches();
+      recolorFields();
       recordCompletedState();
     },
     read() {

@@ -102,7 +102,7 @@ test("Path histogram counts occupied patches rather than firms and exposes all p
   expect(model.read()).toEqual(observed);
   const warnings = path({ initialFirms: 121, distribute: true });
   expect(warnings.read().counts.firms).toBe(0);
-  expect(warnings.read().warnings).toEqual(["Can't distribute, fewer patches than people."]);
+  expect(warnings.read().warnings).toEqual(["Can't distribute, fewer fields than people."]);
 });
 
 test("Cells composes all five original neighborhoods and closed count rules", () => {

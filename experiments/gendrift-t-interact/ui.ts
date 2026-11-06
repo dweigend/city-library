@@ -46,7 +46,7 @@ export const ui = defineUI(model, {
           ...c,
           color: c.wall ? "#ffffff" : "#000000",
         })),
-        agents: s.turtles.map((a) => ({
+        agents: s.agents.map((a) => ({
           ...a,
           color: netLogoColor(a.colorNumber),
           size: 6,
@@ -56,7 +56,7 @@ export const ui = defineUI(model, {
     },
     {
       type: "line",
-      label: "Turtle populations",
+      label: "Agent populations",
       series: (s) =>
         [5, 15, 25, 35, 45, 55, 65, 125, 85, 95].map((c, i) => ({
           label: `Color ${c}`,
@@ -66,8 +66,8 @@ export const ui = defineUI(model, {
     },
     {
       type: "inspector",
-      label: "Selected turtle",
-      value: (s, id) => s.turtles.find((a) => a.id === id),
+      label: "Selected agent",
+      value: (s, id) => s.agents.find((a) => a.id === id),
     },
   ],
 });

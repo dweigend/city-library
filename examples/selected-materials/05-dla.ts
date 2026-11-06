@@ -7,7 +7,7 @@ assert.equal(cluster.read().cells.filter(c => c.occupied).length, 1);
 cluster.advance();
 assert.equal(cluster.read().tick, 1);
 assert.equal(cluster.read().agents.length, 0); // count < ticks throttles initial birth
-cluster.makeNewTurtle();
+cluster.makeNewAgent();
 let walker = cluster.read().agents[0]!;
 assert.ok(Math.abs(Math.hypot(walker.x, walker.y) - 1.5) < 1e-10);
 cluster.wander(walker.id);

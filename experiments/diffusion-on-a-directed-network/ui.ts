@@ -2,14 +2,14 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "gridSize", label: "Grid size" }, { field: "linkChance", label: "Link chance (%)" }],
+  setup: [{ field: "seed" }, { field: "gridSize", label: "Grid size" }, { field: "edgeChance", label: "Edge chance (%)" }],
   source: { url: "https://ccl.northwestern.edu/netlogo/models/DiffusiononaDirectedNetwork", label: "Original NetLogo model · Stonedahl and Wilensky · CC BY-NC-SA 3.0" },
-  actions: [{ label: "Rewire a link", repeat: { label: "Keep rewiring", intervalMs: 200 }, run: instance => instance.rewire(), enabled: state => state.counts.activeLinks > 0 }],
+  actions: [{ label: "Rewire a link", repeat: { label: "Keep rewiring", intervalMs: 200 }, run: instance => instance.rewire(), enabled: state => state.counts.activeEdges > 0 }],
   live: [{ field: "diffusionRate", label: "Diffusion rate (%)", value: state => state.parameters.diffusionRate, set: (instance, value) => instance.setRules({ diffusionRate: Number(value) }) }],
   monitors: [
     { label: "Tick", value: state => state.tick },
     { label: "Nodes", value: state => state.counts.nodes },
-    { label: "Active links", value: state => state.counts.activeLinks },
+    { label: "Active edges", value: state => state.counts.activeEdges },
     { label: "Total value", value: state => state.totalValue.toPrecision(6) },
     { label: "Max flow", value: state => state.maxFlow.toPrecision(4) },
     { label: "Mean flow", value: state => state.meanFlow.toPrecision(4) },

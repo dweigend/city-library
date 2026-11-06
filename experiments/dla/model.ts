@@ -75,8 +75,8 @@ export function create(options: Partial<DLAParameters> = {}) {
     history.length = 0;
     record();
   }
-  function makeNewTurtle() {
-    const turtle = world.add(
+  function makeNewAgent() {
+    const agent = world.add(
       Agent.add(
         {},
         {
@@ -85,55 +85,55 @@ export function create(options: Partial<DLAParameters> = {}) {
         },
       ),
     );
-    turtle.move(settings.useWholeWorld ? maxPxcor : radius + 1.5);
-    turtle.rotate(180);
-    return turtle.id;
+    agent.move(settings.useWholeWorld ? maxPxcor : radius + 1.5);
+    agent.rotate(180);
+    return agent.id;
   }
   function wander(id: string) {
-    const turtle = world.agents.find((a) => a.id === id);
-    if (!turtle) throw new RangeError("Expected a live DLA walker id.");
-    turtle.rotate(
+    const agent = world.agents.find((a) => a.id === id);
+    if (!agent) throw new RangeError("Expected a live DLA walker id.");
+    agent.rotate(
       random.number() * settings.wiggleAngle -
         random.number() * settings.wiggleAngle,
     );
-    const forward = geometry.direction({ heading: turtle.heading });
+    const forward = geometry.direction({ heading: agent.heading });
     const next = geometry.normalize(
-      { x: turtle.x + forward.x, y: turtle.y + forward.y },
+      { x: agent.x + forward.x, y: agent.y + forward.y },
       { space, endpoints: "half-open" },
     );
     if (!next) {
-      turtle.delete();
+      agent.delete();
       return;
     }
-    turtle.move(1);
+    agent.move(1);
   }
   function go() {
     while (
       world.agents.length < settings.maxParticles &&
       world.agents.length < world.tick.value
     )
-      makeNewTurtle();
+      makeNewAgent();
     const walkers = world.agents;
-    for (const turtle of random.sample(walkers, {
+    for (const agent of random.sample(walkers, {
       count: walkers.length,
       compatibility: "legacy-shuffle",
     })) {
-      wander(turtle.id);
-      if (!turtle.alive) continue;
-      const field = grid.fieldAt(turtle)!;
+      wander(agent.id);
+      if (!agent.alive) continue;
+      const field = grid.fieldAt(agent)!;
       if (
         grid.neighbors(field, { neighborhood: "moore" }).some((f) => f.occupied)
       ) {
         field.occupied = true;
-        radius = Math.max(radius, turtle.distanceTo({ x: 0, y: 0 }));
-        turtle.delete();
+        radius = Math.max(radius, agent.distanceTo({ x: 0, y: 0 }));
+        agent.delete();
         continue;
       }
       if (
         !settings.useWholeWorld &&
-        turtle.distanceTo({ x: 0, y: 0 }) > radius + 3
+        agent.distanceTo({ x: 0, y: 0 }) > radius + 3
       )
-        turtle.delete();
+        agent.delete();
     }
   }
   function done() {
@@ -152,7 +152,7 @@ export function create(options: Partial<DLAParameters> = {}) {
   setup();
   return {
     setup,
-    makeNewTurtle,
+    makeNewAgent,
     wander,
     setRules,
     advance(count = 1) {

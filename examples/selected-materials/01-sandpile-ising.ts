@@ -3,7 +3,7 @@ import { create as sandpile } from "../../experiments/sandpile/model.ts";
 import { create as ising } from "../../experiments/ising/model.ts";
 
 // Full avalanche is a phase barrier: one drop completes before one tick.
-const pile = sandpile({ width: 3, height: 3, initial: "uniform", grainsPerPatch: 3, dropLocation: "center", seed: 1 });
+const pile = sandpile({ width: 3, height: 3, initial: "uniform", grainsPerField: 3, dropLocation: "center", seed: 1 });
 assert.equal(pile.read().total, 27);
 assert.equal(pile.read().tick, 0);
 const before = pile.read();

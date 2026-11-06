@@ -14,7 +14,7 @@ export interface TravelParameters {
   inoculationChance: number;
   intraMobility: number;
   travelTendency: number;
-  links: boolean;
+  edges: boolean;
   travel: boolean;
 }
 export const inputs: Inputs<TravelParameters> = {
@@ -41,7 +41,7 @@ export const inputs: Inputs<TravelParameters> = {
   inoculationChance: { kind: "number", default: 10, min: 0, max: 100 },
   intraMobility: { kind: "number", default: 0.4, min: 0, max: 1 },
   travelTendency: { kind: "number", default: 1, min: 0, max: 1 },
-  links: { kind: "boolean", default: false },
+  edges: { kind: "boolean", default: false },
   travel: { kind: "boolean", default: false },
 };
 type Person = Agent<{
@@ -165,7 +165,7 @@ export function create(options: Partial<TravelParameters> = {}) {
   function setupPeople() {
     for (let who = 0; who < settings.initialPeople; who++)
       addPerson(who, false);
-    if (settings.links) makeNetwork();
+    if (settings.edges) makeNetwork();
   }
   function setupAmbulance() {
     for (let i = 0; i < settings.initialAmbulance; i++)
@@ -240,11 +240,11 @@ export function create(options: Partial<TravelParameters> = {}) {
       const angle = random.number() * 180;
       const sign = person.continent === 1 ? -1 : 1;
       const d = geometry.direction({ heading: angle });
-      const patch = grid.fieldAt({
+      const field = grid.fieldAt({
         x: person.x + sign * d.x,
         y: person.y + sign * d.y,
       });
-      if (patch) person.move({ to: patch });
+      if (field) person.move({ to: field });
     } else {
       const nearEdge =
         person.continent === 1 ? person.x < -11.5 : person.x > 11;
@@ -402,7 +402,7 @@ export function create(options: Partial<TravelParameters> = {}) {
         y: f.y,
         color: f.color,
       })),
-      links: [...graph.edges].map((e) => ({
+      edges: [...graph.edges].map((e) => ({
         id: e.id,
         from: e.from.id,
         to: e.to.id,

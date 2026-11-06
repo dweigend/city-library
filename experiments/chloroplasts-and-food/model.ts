@@ -58,7 +58,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   const world = World.add(space, { random });
   const grid = Grid.add(space, { state: { region: 0 } });
   world.add(grid);
-  const flowLinks = Graph.add<Molecule>();
+  const flowEdges = Graph.add<Molecule>();
   let nextWho = 0;
   let glucoseProduced = 0;
   let carbonDioxide = 0;
@@ -149,7 +149,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
 
   function setup() {
     world.delete(all());
-    flowLinks.delete();
+    flowEdges.delete();
     nextWho = 0;
     glucoseProduced = 0;
     makeSystemBoundary();
@@ -163,7 +163,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     if (settings.initialChloroplasts > 0) makeInitialChloroplasts();
     const flow = createMolecule("flow", 0, 0, 90);
     flow.hidden = true;
-    flowLinks.nodes.add(flow);
+    flowEdges.nodes.add(flow);
     world.tick.reset();
     updateCounts();
     history.length = 0;
@@ -206,8 +206,8 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       )[0]!;
       const water = createMolecule("water", field.x + 4.5, field.y);
       water.hidden = true;
-      flowLinks.nodes.add(water);
-      flowLinks.edges.add({
+      flowEdges.nodes.add(water);
+      flowEdges.edges.add({
         from: ofBreed("flow")[0]!,
         to: water,
         directed: true,
@@ -325,8 +325,8 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       if (complexes.length !== 6) continue;
       for (const carbon of complexes) carbon.delete();
       const sugar = createMolecule("sugar", chloroplast.x + 4.5, chloroplast.y);
-      flowLinks.nodes.add(sugar);
-      flowLinks.edges.add({
+      flowEdges.nodes.add(sugar);
+      flowEdges.edges.add({
         from: ofBreed("flow")[0]!,
         to: sugar,
         directed: true,
@@ -355,7 +355,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     doGasFlow();
     for (const flow of ofBreed("flow")) {
       flow.move(0.05);
-      for (const molecule of flowLinks.neighbors(flow, { direction: "out" }))
+      for (const molecule of flowEdges.neighbors(flow, { direction: "out" }))
         molecule.move({ by: { x: 0.05, y: 0 } });
     }
     updateADPATPs();
@@ -436,7 +436,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       oxygen,
       glucoseProduced,
       agents,
-      flowLinks: [...flowLinks.edges].map((edge) => ({
+      flowEdges: [...flowEdges.edges].map((edge) => ({
         id: edge.id,
         from: edge.from.id,
         to: edge.to.id,

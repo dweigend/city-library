@@ -32,7 +32,7 @@ export const inputs: Inputs<TrafficParameters> = {
   currentAuto: { kind: "boolean", default: true },
   power: { kind: "boolean", default: true },
 };
-interface PatchState {
+interface FieldState {
   road: boolean;
   intersection: boolean;
   greenLightUp: boolean;
@@ -43,7 +43,7 @@ interface PatchState {
   color: string;
   label: string;
 }
-type Patch = Field<PatchState>;
+type ModelField = Field<FieldState>;
 type Car = Agent<{
   who: number;
   speed: number;
@@ -52,9 +52,9 @@ type Car = Agent<{
   color: string;
   size: number;
   label: string;
-  house: Patch | null;
-  work: Patch | null;
-  goal: Patch | null;
+  house: ModelField | null;
+  work: ModelField | null;
+  goal: ModelField | null;
 }>;
 
 export function create(options: Partial<TrafficParameters> = {}) {
@@ -79,7 +79,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   );
   world.add(grid);
   const cars = () => world.agents as readonly Car[];
-  const patchId = (patch: Patch) => `${patch.x},${patch.y}`;
+  const fieldId = (field: ModelField) => `${field.x},${field.y}`;
   const carId = (car: Car) => `car-${car.who}`;
   const shuffled = <T>(items: readonly T[]) =>
     random.sample(items, { count: items.length });
@@ -96,9 +96,9 @@ export function create(options: Partial<TrafficParameters> = {}) {
     Math.floor(modulo(x + 18 - Math.floor(xIncrement - 1), xIncrement)) === 0;
   const horizontal = (y: number) =>
     Math.floor(modulo(y + 18, yIncrement)) === 0;
-  const roads: Patch[] = [];
-  const intersections: Patch[] = [];
-  let current: Patch;
+  const roads: ModelField[] = [];
+  const intersections: ModelField[] = [];
+  let current: ModelField;
   let phase = 0;
   let numCarsStopped = 0;
   let watched: Car | null = null;
@@ -109,38 +109,38 @@ export function create(options: Partial<TrafficParameters> = {}) {
     meanWait: number;
   }[] = [];
 
-  function setSignalColors(patch: Patch) {
-    grid.fieldAt({ x: patch.x - 1, y: patch.y })!.color = !settings.power
+  function setSignalColors(field: ModelField) {
+    grid.fieldAt({ x: field.x - 1, y: field.y })!.color = !settings.power
       ? "#ffffff"
-      : patch.greenLightUp
+      : field.greenLightUp
         ? "#e33131"
         : "#30b949";
-    grid.fieldAt({ x: patch.x, y: patch.y + 1 })!.color = !settings.power
+    grid.fieldAt({ x: field.x, y: field.y + 1 })!.color = !settings.power
       ? "#ffffff"
-      : patch.greenLightUp
+      : field.greenLightUp
         ? "#30b949"
         : "#e33131";
   }
-  function setupPatches() {
-    for (const patch of grid.fields) {
-      patch.road = vertical(patch.x) || horizontal(patch.y);
-      patch.intersection = vertical(patch.x) && horizontal(patch.y);
-      if (patch.road) {
-        patch.color = "#ffffff";
-        roads.push(patch);
+  function setupFields() {
+    for (const field of grid.fields) {
+      field.road = vertical(field.x) || horizontal(field.y);
+      field.intersection = vertical(field.x) && horizontal(field.y);
+      if (field.road) {
+        field.color = "#ffffff";
+        roads.push(field);
       }
-      if (patch.intersection) {
-        patch.phase = 0;
-        patch.auto = true;
-        patch.row = Math.floor((patch.y + 18) / yIncrement);
-        patch.column = Math.floor((patch.x + 18) / xIncrement);
-        intersections.push(patch);
+      if (field.intersection) {
+        field.phase = 0;
+        field.auto = true;
+        field.row = Math.floor((field.y + 18) / yIncrement);
+        field.column = Math.floor((field.x + 18) / xIncrement);
+        intersections.push(field);
       }
     }
   }
 
   function setupSignals() {
-    for (const patch of shuffled(intersections)) setSignalColors(patch);
+    for (const field of shuffled(intersections)) setSignalColors(field);
     grid.fieldAt({ x: current.x - 1, y: current.y + 1 })!.label = "current";
     settings = parameters(inputs, {
       ...settings,
@@ -184,15 +184,15 @@ export function create(options: Partial<TrafficParameters> = {}) {
   }
   function setupCars() {
     const goalCandidates = grid.fields.filter(
-      (patch) =>
-        patch.color === "#9b7653" &&
+      (field) =>
+        field.color === "#9b7653" &&
         grid
-          .neighbors(patch, { neighborhood: "moore" })
+          .neighbors(field, { neighborhood: "moore" })
           .some((other) => other.color === "#ffffff"),
     );
     for (let who = 0; who < settings.numCars; who++) {
       const location = choose(
-        roads.filter((patch) => grid.agentsAt(patch).length === 0),
+        roads.filter((field) => grid.agentsAt(field).length === 0),
       );
       const upCar = location.intersection
         ? random.number() < 0.5
@@ -206,9 +206,9 @@ export function create(options: Partial<TrafficParameters> = {}) {
           color: "#355bd5",
           size: 1,
           label: "",
-          house: null as Patch | null,
-          work: null as Patch | null,
-          goal: null as Patch | null,
+          house: null as ModelField | null,
+          work: null as ModelField | null,
+          goal: null as ModelField | null,
         },
         { position: location, orientation: { heading: upCar ? 180 : 90 } },
       );
@@ -216,13 +216,13 @@ export function create(options: Partial<TrafficParameters> = {}) {
       setCarColor(car);
       recordData(car);
       car.house = choose(goalCandidates);
-      car.work = choose(goalCandidates.filter((patch) => patch !== car.house));
+      car.work = choose(goalCandidates.filter((field) => field !== car.house));
       car.goal = car.work;
     }
   }
 
   function setup() {
-    setupPatches();
+    setupFields();
     current = choose(intersections);
     setupSignals();
     if (settings.numCars > roads.length) {
@@ -235,7 +235,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
     for (const car of shuffled(cars())) setCarSpeed(car);
   }
 
-  function nextPatch(car: Car) {
+  function nextField(car: Car) {
     const here = grid.fieldAt(car)!;
     if (
       car.goal === car.house &&
@@ -249,11 +249,11 @@ export function create(options: Partial<TrafficParameters> = {}) {
       car.goal = car.house;
     const choices = grid
       .neighbors(here, { neighborhood: "moore" })
-      .filter((patch) =>
-        ["#ffffff", "#e33131", "#30b949"].includes(patch.color),
+      .filter((field) =>
+        ["#ffffff", "#e33131", "#30b949"].includes(field.color),
       );
-    const distances = choices.map((patch) =>
-      geometry.distance(patch, car.goal!, { space: world.space! }),
+    const distances = choices.map((field) =>
+      geometry.distance(field, car.goal!, { space: world.space! }),
     );
     const minimum = Math.min(...distances);
     return choose(choices.filter((_, index) => distances[index] === minimum));
@@ -263,15 +263,15 @@ export function create(options: Partial<TrafficParameters> = {}) {
     current.auto = settings.currentAuto;
   }
   function setSignals() {
-    for (const patch of shuffled(
+    for (const field of shuffled(
       intersections.filter(
-        (patch) =>
-          patch.auto &&
-          phase === Math.floor((patch.phase * settings.ticksPerCycle) / 100),
+        (field) =>
+          field.auto &&
+          phase === Math.floor((field.phase * settings.ticksPerCycle) / 100),
       ),
     )) {
-      patch.greenLightUp = !patch.greenLightUp;
-      setSignalColors(patch);
+      field.greenLightUp = !field.greenLightUp;
+      setSignalColors(field);
     }
   }
 
@@ -285,7 +285,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
     setSignals();
     numCarsStopped = 0;
     for (const car of shuffled(cars())) {
-      car.rotate({ towards: nextPatch(car) });
+      car.rotate({ towards: nextField(car) });
       setCarSpeed(car);
       car.move(car.speed);
       recordData(car);
@@ -316,8 +316,8 @@ export function create(options: Partial<TrafficParameters> = {}) {
   }
   function selectIntersection(position: Position) {
     const point = { x: position.x, y: position.y };
-    const distances = intersections.map((patch) =>
-      geometry.distance(patch, point, { space: world.space! }),
+    const distances = intersections.map((field) =>
+      geometry.distance(field, point, { space: world.space! }),
     );
     const minimum = Math.min(...distances);
     const selected = choose(
@@ -340,10 +340,10 @@ export function create(options: Partial<TrafficParameters> = {}) {
     setSignalColors(current);
   }
   function stopWatching() {
-    for (const patch of grid.fields) {
-      if (patch.color === "#f5db33" || patch.color === "#ee8b24") {
-        patch.color = "#9b7653";
-        patch.label = "";
+    for (const field of grid.fields) {
+      if (field.color === "#f5db33" || field.color === "#ee8b24") {
+        field.color = "#9b7653";
+        field.label = "";
       }
     }
     for (const car of cars()) car.label = "";
@@ -384,7 +384,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
       parameters: { ...settings },
       phase,
       numCarsStopped,
-      currentIntersectionId: patchId(current),
+      currentIntersectionId: fieldId(current),
       watchedCarId: watched ? carId(watched) : null,
       cars: cars().map((car) => ({
         id: carId(car),
@@ -397,28 +397,28 @@ export function create(options: Partial<TrafficParameters> = {}) {
         color: car.color,
         size: car.size,
         label: car.label,
-        houseId: car.house ? patchId(car.house) : null,
-        workId: car.work ? patchId(car.work) : null,
-        goalId: car.goal ? patchId(car.goal) : null,
+        houseId: car.house ? fieldId(car.house) : null,
+        workId: car.work ? fieldId(car.work) : null,
+        goalId: car.goal ? fieldId(car.goal) : null,
       })),
-      intersections: intersections.map((patch) => ({
-        id: patchId(patch),
-        x: patch.x,
-        y: patch.y,
-        greenLightUp: patch.greenLightUp,
-        auto: patch.auto,
-        phase: patch.phase,
-        row: patch.row,
-        column: patch.column,
+      intersections: intersections.map((field) => ({
+        id: fieldId(field),
+        x: field.x,
+        y: field.y,
+        greenLightUp: field.greenLightUp,
+        auto: field.auto,
+        phase: field.phase,
+        row: field.row,
+        column: field.column,
       })),
-      cells: grid.fields.map((patch) => ({
-        id: patchId(patch),
-        x: patch.x,
-        y: patch.y,
-        color: patch.color,
-        road: patch.road,
-        intersection: patch.intersection,
-        label: patch.label,
+      cells: grid.fields.map((field) => ({
+        id: fieldId(field),
+        x: field.x,
+        y: field.y,
+        color: field.color,
+        road: field.road,
+        intersection: field.intersection,
+        label: field.label,
       })),
       history: history.map((sample) => ({ ...sample })),
     };
@@ -444,7 +444,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
     recordData,
     setCarColor,
     setCarSpeed,
-    nextPatch,
+    nextField,
     updateCurrent,
     setSignals,
     nextPhase,

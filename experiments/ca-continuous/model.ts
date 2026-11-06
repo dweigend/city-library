@@ -77,7 +77,7 @@ export function create(options: Partial<ContinuousParameters> = {}) {
   let row = top,
     done = false;
   const rowFields = (y: number) => grid.fields.filter((f) => f.y === y);
-  function colorPatch(f: (typeof grid.fields)[number]) {
+  function colorField(f: (typeof grid.fields)[number]) {
     f.colorNumber = Math.min(59.9999, 50 + 5 * f.value);
   }
   function setupGeneral() {
@@ -95,7 +95,7 @@ export function create(options: Partial<ContinuousParameters> = {}) {
         kind === "single"
           ? Number(f.x === 0)
           : random.number() * settings.maxValue;
-      colorPatch(f);
+      colorField(f);
     }
   }
   function setupContinue() {
@@ -104,7 +104,7 @@ export function create(options: Partial<ContinuousParameters> = {}) {
     setupGeneral();
     rowFields(top).forEach((f, i) => {
       f.value = values[i]!;
-      colorPatch(f);
+      colorField(f);
     });
   }
   function calculateValue(f: (typeof grid.fields)[number]) {
@@ -135,7 +135,7 @@ export function create(options: Partial<ContinuousParameters> = {}) {
           row--;
           for (const f of rowFields(row)) {
             f.value = calculateValue(f);
-            colorPatch(f);
+            colorField(f);
           }
         });
       }
@@ -155,14 +155,14 @@ export function create(options: Partial<ContinuousParameters> = {}) {
       setupContinue();
     },
     setRules(
-      patch: Partial<
+      field: Partial<
         Pick<
           ContinuousParameters,
           "maxValue" | "addConstant" | "precisionLevel" | "autoContinue"
         >
       >,
     ) {
-      parameters(inputs, patch);
+      parameters(inputs, field);
       const allowed = [
         "maxValue",
         "addConstant",
@@ -170,12 +170,12 @@ export function create(options: Partial<ContinuousParameters> = {}) {
         "autoContinue",
       ];
       if (
-        Reflect.ownKeys(patch).some(
+        Reflect.ownKeys(field).some(
           (k) => typeof k !== "string" || !allowed.includes(k),
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, { ...settings, ...patch });
+      settings = parameters(inputs, { ...settings, ...field });
     },
     read() {
       return Object.freeze({

@@ -10,7 +10,7 @@ plate.updateAlpha("wood");
 assert.equal(plate.read().parameters.alpha, 0.00128);
 // A single source patch update sees old-temperature; later updates may see its write.
 plate.setTemperatures(plate.read().cells.map(c => c.x === 0 && c.y === 0 ? 100 : 44));
-plate.updatePatch(0, 0);
+plate.updateFieldAt(0, 0);
 const d = 0.25 * Math.exp(-1 / (0.00128 + 0.3));
 assert.ok(Math.abs(plate.read().cells.find(c => c.x === 0 && c.y === 0)!.temperature - (d * 176 + (1 - 4 * d) * 100)) < 1e-10);
 

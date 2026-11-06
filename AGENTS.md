@@ -8,6 +8,8 @@
 - Follow [domain layout](docs/ARCHITECTURE.md#binding-domain-layout-and-extension-rules): separate kernels, algorithms and explicit variants; preserve phase-one APIs. Prepared directories are scaffolding, not delivered modules; add source/exports only with working slices.
 - Follow [UI rules](docs/DESIGN.md#binding-ui-system-rules) without exceptions: minimal Svelte/shadcn-svelte, Bits UI for necessary custom interactions, encapsulated modules/components, external CSS, fixed system tokens, `app.css` ≤100 physical lines, simple public `ui.ts` scripts, KISS/YAGNI. Test every UI change in a real browser, capture screenshots and have an independent subagent inspect them; resolve findings before acceptance.
 
+- Use the binding [Agent Loom terminology](docs/agent-loom/terminology.md) across APIs, code, examples, tests, UI and current documentation. Preserve source quotations and distinct tick/step semantics.
+
 ## Implementation coordination
 
 - Follow PLAN's [example-first gate](PLAN.md#example-first-delivery-gate): freeze four or five asserted public scripts per expansion phase before runtime work. Preserve accepted syntax/expectations; fix implementations, never weaken examples. Clean public API design takes priority over implementation convenience.

@@ -33,7 +33,7 @@ describe("selected transport source rules", () => {
       model.bestWayTo(walker, destination),
     );
     const distances = new Set(
-      choices.map((patch) => Math.hypot(patch.x, patch.y)),
+      choices.map((field) => Math.hypot(field.x, field.y)),
     );
     expect(distances.size).toBeGreaterThan(1);
   });

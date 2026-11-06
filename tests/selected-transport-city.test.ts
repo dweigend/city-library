@@ -205,9 +205,9 @@ test("public Grid speed procedures retain overshoot and negative following-speed
   const model = grid({ numCars: 2 });
   const [first, second] = model.cars();
   const location = model.roads.find(
-    (patch) =>
-      patch.color === "#ffffff" &&
-      model.grid.fieldAt({ x: patch.x + 1, y: patch.y })!.road,
+    (field) =>
+      field.color === "#ffffff" &&
+      model.grid.fieldAt({ x: field.x + 1, y: field.y })!.road,
   )!;
   first!.move({ to: location });
   first!.upCar = false;
@@ -275,7 +275,7 @@ test("Goal faces its local choice before speed lookup while retaining the setup 
   const model = goal({ numCars: 2 });
   const [commuter, blocker] = model.cars();
   const junction = model.intersections.find(
-    (patch) => patch.x > -10 && patch.x < 10 && patch.y > -10 && patch.y < 10,
+    (field) => field.x > -10 && field.x < 10 && field.y > -10 && field.y < 10,
   )!;
   commuter!.move({ to: junction });
   commuter!.upCar = true;
@@ -285,11 +285,11 @@ test("Goal faces its local choice before speed lookup while retaining the setup 
   commuter!.work = model.grid.fieldAt({ x: junction.x + 3, y: junction.y })!;
   commuter!.goal = commuter!.work;
 
-  const downPatch = model.grid.fieldAt({ x: junction.x, y: junction.y - 1 })!;
-  blocker!.move({ to: downPatch });
+  const downField = model.grid.fieldAt({ x: junction.x, y: junction.y - 1 })!;
+  blocker!.move({ to: downField });
   blocker!.upCar = false;
   blocker!.speed = 0;
-  downPatch.color = "#e33131";
+  downField.color = "#e33131";
   const waitBefore = commuter!.waitTime;
 
   model.step();
@@ -308,14 +308,14 @@ test("Goal applies both source adjacency checks instead of an else-if destinatio
   const model = goal({ numCars: 1 });
   const commuter = model.cars()[0]!;
   const junction = model.intersections.find(
-    (patch) => patch.x > -10 && patch.x < 10 && patch.y > -10 && patch.y < 10,
+    (field) => field.x > -10 && field.x < 10 && field.y > -10 && field.y < 10,
   )!;
   commuter.move({ to: junction });
   commuter.house = model.grid.fieldAt({ x: junction.x - 1, y: junction.y })!;
   commuter.work = model.grid.fieldAt({ x: junction.x + 1, y: junction.y })!;
   commuter.goal = commuter.house;
 
-  const destination = model.nextPatch(commuter);
+  const destination = model.nextField(commuter);
 
   expect(commuter.goal).toBe(commuter.house);
   expect(model.grid.neighbors(junction, { neighborhood: "moore" })).toContain(

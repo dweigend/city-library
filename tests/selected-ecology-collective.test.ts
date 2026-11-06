@@ -200,7 +200,7 @@ describe("selected ecology collective source mechanisms", () => {
     expect(
       model.read().cells.find((c) => c.x === 0 && c.y === 0)!.resistance,
     ).toBe(100);
-    model.clearPatches();
+    model.clearFields();
     expect(
       model
         .read()
