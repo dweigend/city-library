@@ -7,7 +7,7 @@ import fixtures from "./post-advisory-source-fixtures.json";
 const before = JSON.stringify(fixtures);
 for (const source of [fixtures.russiaLargest, fixtures.westBank]) {
   // The retained extraction checks these exact original binary64 XY pairs.
-  const polygon: PlanarPolygon = { type: "Polygon", coordinates: source.coordinates as readonly (readonly PlanarXY[])[] };
+  const polygon: PlanarPolygon = { type: "Polygon", coordinates: source.coordinates as unknown as readonly (readonly PlanarXY[])[] };
   const feature: PlanarFeature = { type: "Feature", id: source.record, geometry: polygon, properties: { name: source.historicalName } };
   assert.equal(polygon.coordinates.reduce((sum: number, ring: readonly PlanarXY[]) => sum + ring.length, 0), source.positionsIncludingClosures);
   assert.deepEqual(geometry.bounds([feature]), source.bounds);
@@ -27,7 +27,7 @@ assert.equal(fixtures.westBank.positionsIncludingClosures, 11); // shell7 + hole
 const canada: PlanarDataset = {
   coordinateSystem: { crs: "source:WGS_84_Geographic", units: "degree" },
   features: [{ type: "Feature", properties: { name: "Canada" }, geometry: {
-    type: "MultiPolygon", coordinates: fixtures.canada.coordinates as readonly (readonly (readonly PlanarXY[])[])[],
+    type: "MultiPolygon", coordinates: fixtures.canada.coordinates as unknown as readonly (readonly (readonly PlanarXY[])[])[],
   } }],
 };
 assert.equal(fixtures.canada.coordinates.length, 126);

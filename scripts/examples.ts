@@ -1,4 +1,5 @@
 const phases = {
+  "planar-geometry-proposal": ["01-shell-hole-and-topology", "02-feature-collection-bounds", "03-mapping-and-gis-extents", "04-shape-data-and-purity", "05-proposed-resource-boundaries"],
   "graph-copy-proposal": ["01-membership-selection-and-order", "02-direction-loops-and-parallel-identity", "03-deep-state-defaults-and-framework-references", "04-agent-lifecycle-and-owner-atomicity", "05-strict-options-and-independent-current-graph"],
   "random-exponential-poisson-proposal": ["01-exponential-transform-and-consumption", "02-poisson-product-branch", "03-poisson-high-mean-and-continuation", "04-validation-cache-and-local-stream", "05-blood-sugar-parameter-scenario"],
   "selected-economics": ["01-foraging-and-attendance", "02-exchange-markets", "03-location-and-traffic", "04-banking-phases", "05-prisoner-games"],

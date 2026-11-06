@@ -96,6 +96,10 @@ const hormoneLife=distributionConsumer.number({distribution:'exponential',mean:2
 if(!Number.isFinite(hormoneLife)||hormoneLife<0)throw Error('packed exponential mismatch');
 const distributionTwin=distributionConsumer.copy();
 if(distributionConsumer.number({distribution:'poisson',mean:150})!==distributionTwin.number({distribution:'poisson',mean:150}))throw Error('packed PTRS continuation mismatch');
+if(!geometry.contains({type:'Polygon',coordinates:[[[0,0],[4,0],[4,4],[0,4],[0,0]]]},{x:2,y:2}))throw Error('packed exact containment mismatch');
+const packedPlanarBounds=geometry.bounds([{type:'Feature',geometry:{type:'Point',coordinates:[1,2]},properties:null}]);
+if(JSON.stringify(packedPlanarBounds)!=='[1,1,2,2]'||!Object.isFrozen(packedPlanarBounds))throw Error('packed pure bounds mismatch');
+
 
 `, { flag: "a" });
   await writeFile(join(directory, "summary-types.ts"), `import {stats,type Summary} from 'city-library';
