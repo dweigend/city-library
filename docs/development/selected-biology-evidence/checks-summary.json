@@ -76,5 +76,14 @@
     "parentSyncRegression": "31 pass, 0 fail, 73 assertions; parent-sync-regression.log",
     "frozen": "All original hashes match; scripts01/02/04/05 pass;03 fails precise unapproved source-rounding expectation.",
     "fullIntegration": "Parent-owned; no global full-suite claim for this branch."
+  },
+  "approvedRoundingFollowup": {
+    "authorization": "Explicit user approval: Quellgetreue Korrektur genehmigen",
+    "changes": "Only script03 total+411->412 and total+722->724",
+    "commands": "approved-rounding-checks.json",
+    "result": "All four types, frozen types, 16 tests/126 assertions, five current hashes and all five scripts pass",
+    "originalFreeze": "Preserved as superseded provenance; checked against freeze commit bytes in original-freeze-provenance.json",
+    "runtimeUI": "Unchanged; no new browser/build claim",
+    "review": "Argon/high8194e842 still pending"
   }
 }
