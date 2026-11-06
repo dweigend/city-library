@@ -1,0 +1,126 @@
+{
+  "name": "preferential-attachment-target-setup",
+  "read": {
+    "toolIcon": {
+      "_tag": "website",
+      "pageUrl": "http://localhost:3120/?experiment=preferential-attachment"
+    },
+    "value": {
+      "url": "http://localhost:3120/?experiment=preferential-attachment",
+      "text": "Skip to experiment\nAgent Lab\nExperiment\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDiffusion on a Directed Network\nExpected Value\nFire\nGalton Box\nHex Cell Aggregation\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRandom Combinations and Permutations\nSegregation\nSmoothLife\nStochastic Patchwork\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\nNodes\n2\nEdges\n1\n\nModel initialized.\n\nModel info\nNetwork\nFit\nLayout\nInspect node\nNode 1\nNode 2\nDegree distribution\n2\n0\n1\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count",
+      "inputs": [
+        {
+          "id": "experiment",
+          "type": "select-one",
+          "value": "preferential-attachment",
+          "disabled": false
+        },
+        {
+          "id": "setup-seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "select-one",
+          "value": "",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "",
+          "text": "Setup",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "Run",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "1 step",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "10 steps",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "100 steps",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "Fit",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "Layout",
+          "disabled": false,
+          "pressed": null
+        }
+      ],
+      "canvases": [
+        {
+          "width": 1884,
+          "height": 1020,
+          "pixel": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "width": 1884,
+          "height": 1020,
+          "pixel": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "width": 1884,
+          "height": 1020,
+          "pixel": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "overflow": {
+        "client": 1280,
+        "scroll": 1280
+      },
+      "source": null
+    }
+  },
+  "snapshot": {
+    "url": "http://localhost:3120/?experiment=preferential-attachment",
+    "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw4pllin-07cdbd8c.png"
+  }
+}
