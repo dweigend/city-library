@@ -179,16 +179,12 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
           x: seed.x + direction.x * distance,
           y: seed.y + direction.y * distance,
         };
-        // NetLogo's upper patch edge is exclusive; canonical hard Space
-        // includes that endpoint, so the source procedure checks it explicitly.
-        if (
-          target.x < -width / 2 ||
-          target.x >= width / 2 ||
-          target.y < -height / 2 ||
-          target.y >= height / 2
-        )
-          break;
-        seed.move({ to: target });
+        const position = geometry.normalize(target, {
+          space: world.space!,
+          endpoints: "half-open",
+        });
+        if (!position) break;
+        seed.move({ to: position });
         remaining -= distance;
       }
     }
@@ -206,9 +202,15 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
       !["infestation", "resistance"].includes(mode)
     )
       throw new RangeError("Invalid drawing data.");
-    const field = grid.fieldAt({ x, y });
-    if (!field || x >= width / 2 || y >= height / 2)
-      throw new RangeError("Drawing outside the world.");
+    const position = geometry.normalize(
+      { x, y },
+      {
+        space: world.space!,
+        endpoints: "half-open",
+      },
+    );
+    const field = position ? grid.fieldAt(position) : undefined;
+    if (!field) throw new RangeError("Drawing outside the world.");
     if (mode === "infestation") field.infestation = value;
     else {
       field.infestation = 0;

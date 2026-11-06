@@ -104,14 +104,11 @@ export function create(options: Partial<AntsParameters> = {}) {
   function scent(ant: Ant, angle: number, key: "chemical" | "nestScent") {
     const d = geometry.direction({ heading: ant.heading + angle });
     const target = { x: ant.x + d.x, y: ant.y + d.y };
-    if (
-      target.x < -width / 2 ||
-      target.x >= width / 2 ||
-      target.y < -height / 2 ||
-      target.y >= height / 2
-    )
-      return 0;
-    return grid.fieldAt(target)?.[key] ?? 0;
+    const position = geometry.normalize(target, {
+      space: world.space!,
+      endpoints: "half-open",
+    });
+    return position ? (grid.fieldAt(position)?.[key] ?? 0) : 0;
   }
   function uphill(ant: Ant, key: "chemical" | "nestScent") {
     const ahead = scent(ant, 0, key),
@@ -144,13 +141,12 @@ export function create(options: Partial<AntsParameters> = {}) {
       ant.rotate(-Math.floor(random.number() * 40));
       let d = geometry.direction({ heading: ant.heading });
       const ahead = { x: ant.x + d.x, y: ant.y + d.y };
-      // Source can-move? uses an upper-exclusive patch edge, while canonical
-      // hard Space accepts its outer endpoint. Preserve the source preflight.
+      // Preserve the source patch-edge contract through the public endpoint policy.
       if (
-        ahead.x < -width / 2 ||
-        ahead.x >= width / 2 ||
-        ahead.y < -height / 2 ||
-        ahead.y >= height / 2
+        !geometry.normalize(ahead, {
+          space: world.space!,
+          endpoints: "half-open",
+        })
       ) {
         ant.rotate(180);
         d = geometry.direction({ heading: ant.heading });
