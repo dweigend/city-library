@@ -25,14 +25,14 @@ export const ui = defineUI(model, {
       label: "Answer",
       rows: (s) => [
         {
-          outcome: s.message,
-          partner:
+          Outcome: s.message,
+          Partner:
             s.years === null
               ? "Not answered"
               : s.partnerIsSilent
                 ? "Silent"
                 : "Confessed",
-          expression: s.face,
+          Expression: s.face,
         },
       ],
     },
@@ -40,8 +40,16 @@ export const ui = defineUI(model, {
       type: "table",
       label: "Your jail time (years)",
       rows: () => [
-        { yourChoice: "Silent", partnerSilent: 1, partnerConfesses: 5 },
-        { yourChoice: "Confess", partnerSilent: 0, partnerConfesses: 3 },
+        {
+          "Your choice": "Silent",
+          "Partner silent": 1,
+          "Partner confesses": 5,
+        },
+        {
+          "Your choice": "Confess",
+          "Partner silent": 0,
+          "Partner confesses": 3,
+        },
       ],
     },
   ],
