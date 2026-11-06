@@ -1,4 +1,6 @@
 const phases = {
+  "graph-copy-proposal": ["01-membership-selection-and-order", "02-direction-loops-and-parallel-identity", "03-deep-state-defaults-and-framework-references", "04-agent-lifecycle-and-owner-atomicity", "05-strict-options-and-independent-current-graph"],
+  "random-exponential-poisson-proposal": ["01-exponential-transform-and-consumption", "02-poisson-product-branch", "03-poisson-high-mean-and-continuation", "04-validation-cache-and-local-stream", "05-blood-sugar-parameter-scenario"],
   "selected-economics": ["01-foraging-and-attendance", "02-exchange-markets", "03-location-and-traffic", "04-banking-phases", "05-prisoner-games"],
   "selected-transport": ["01-paths", "02-basic-and-lanes", "03-grid-signals", "04-intersection-and-goals", "05-taxi-service"],
   "graph-generators-proposal": ["01-ordered-native-families", "02-tree-and-lattice-topology", "03-random-pair-order-and-stream", "04-small-world-and-preferential", "05-geometric-atomicity-and-lifecycle"],

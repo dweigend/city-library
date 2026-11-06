@@ -85,6 +85,18 @@ const generatedGraph=Graph.add();
 const generatedNodes=Array.from({length:3},()=>generatedGraph.nodes.add({}));
 const generatedPath=generatedGraph.generate({kind:'path',nodes:generatedNodes,directed:true});
 if(generatedPath.length!==2||generatedPath[0].from!==generatedNodes[0]||generatedPath[1].to!==generatedNodes[2]||!Object.isFrozen(generatedPath))throw Error('packed generator mismatch');
+const copiedGenerated=generatedGraph.copy({direction:'reverse'});
+const copiedEdges=[...copiedGenerated.edges];
+if([...copiedGenerated.nodes][0]!==generatedNodes[0]||copiedEdges.length!==2||copiedEdges[0]===generatedPath[0]||copiedEdges[0].from!==generatedNodes[1]||copiedEdges[0].to!==generatedNodes[0])throw Error('packed independent copy mismatch');
+copiedEdges[0].delete();
+if(!generatedPath[0].alive||generatedGraph.edges.size!==2)throw Error('packed copy owner isolation mismatch');
+const distributionConsumer=Random.add({seed:7});
+if(distributionConsumer.number({distribution:'poisson',mean:5})!==1)throw Error('packed product Poisson mismatch');
+const hormoneLife=distributionConsumer.number({distribution:'exponential',mean:2/Math.LN2});
+if(!Number.isFinite(hormoneLife)||hormoneLife<0)throw Error('packed exponential mismatch');
+const distributionTwin=distributionConsumer.copy();
+if(distributionConsumer.number({distribution:'poisson',mean:150})!==distributionTwin.number({distribution:'poisson',mean:150}))throw Error('packed PTRS continuation mismatch');
+
 `, { flag: "a" });
   await writeFile(join(directory, "summary-types.ts"), `import {stats,type Summary} from 'city-library';
 function summaryTypeContract(){const summary:Summary=stats.describe([1,2,3],{sample:true});const median:number|undefined=summary.median;
