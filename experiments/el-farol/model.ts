@@ -224,6 +224,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     },
     read() {
       return Object.freeze({
+        sourceMarker: "el-farol:source-v1",
         tick: world.tick.value,
         width: 35,
         height: 35,
