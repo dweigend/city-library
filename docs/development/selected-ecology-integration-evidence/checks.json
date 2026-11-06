@@ -1,0 +1,16 @@
+{
+  "command": "bun run check",
+  "exitCode": 0,
+  "tests": 369,
+  "assertions": 34328,
+  "publicExamples": 140,
+  "typeProjects": 4,
+  "build": "passed",
+  "packedConsumer": [
+    "Bun",
+    "Node ESM",
+    "ambient-free TypeScript"
+  ],
+  "phaseRegistration": "includes ecology5, computing5, graph-distances5 and affine-map5",
+  "allChecksCompletedAfterIntegratedRuntimeAndFinalFixes": true
+}
