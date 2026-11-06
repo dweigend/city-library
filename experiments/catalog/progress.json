@@ -2616,8 +2616,13 @@
           "basis": "Complete Procedures/Widgets/Info audited; unchanged source hashes matched served inventory and research archive; target runtime not inferred."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-tijuana-contract.md",
+            "examples/selected-tijuana/SHA256SUMS",
+            "docs/development/tijuana-reference-browser.md"
+          ],
+          "basis": "Five full lifecycle/diagnostic scripts and helper frozen62d9816 before runtime; source birth, coincident-face, raw fractional shortage and partial-error boundaries actually checked."
         },
         "implemented": {
           "done": false,
@@ -2652,7 +2657,8 @@
         }
       },
       "blockers": [
-        "Full Tijuana CITYSCAPE/GO examples await original lifecycle/primitive probes; no Clear-only substitute. Independent Argon approval quota-blocked."
+        "Complete natural CITYSCAPE/GO runtime delegated after freeze; implementation and target browser comparison pending.",
+        "Required independent Argon/high technical approval quota-blocked."
       ]
     },
     {
