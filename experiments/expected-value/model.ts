@@ -182,7 +182,7 @@ export function create(options: Partial<Parameters> = {}) {
         totalHistogram: plotHistogram(totals),
         cumulativeMeans: Object.freeze(cumulativeMeans),
         sampleTotal: totals.at(-1)!,
-        mean: totals.reduce((a, b) => a + b, 0) / totals.length,
+        mean: stats.describe(totals).mean ?? 0,
         runs: totals.length,
         totals: Object.freeze([...totals]),
         values: Object.freeze([...values]),
