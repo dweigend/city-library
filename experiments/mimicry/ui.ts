@@ -20,8 +20,10 @@ export const ui = defineUI(model, {
     ...(["monarchColor", "viceroyColor"] as const).flatMap((group) =>
       (["min", "mean", "max"] as const).map((metric) => ({
         label: `${group === "monarchColor" ? "Monarch color" : "Viceroy color"} ${metric}`,
-        value: (s: ReturnType<ReturnType<typeof model.create>["read"]>) =>
-          s[group][metric] ?? "N/A",
+        value: (s: ReturnType<ReturnType<typeof model.create>["read"]>) => {
+          const value = s[group][metric];
+          return value === undefined ? "N/A" : Number(value.toFixed(3));
+        },
       })),
     ),
   ],

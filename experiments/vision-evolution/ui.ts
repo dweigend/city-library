@@ -76,7 +76,7 @@ export const ui = defineUI(model, {
         },
         {
           label: "Food",
-          color: "#333333",
+          color: "#888888",
           points: s.history.map((p) => ({ x: p.tick, y: p.food })),
         },
       ],
