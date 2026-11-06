@@ -2166,25 +2166,42 @@
           "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/urban-suite-structure-from-randomness-1/model.ts",
+            "experiments/urban-suite-structure-from-randomness-1/ui.ts",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Full canonical public source proceduresd8bd72d and thin shared UI8b3dab7."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/urban-structure.test.ts",
+            "tests/urban-economy-sprawl.test.ts",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Root21focusedtests183assertions,allfivefrozenexamplesandhashes;full250tests11498assertions105examples/type/build/packedconsumerpassed."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/urban-landscape-target-browser.md",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Each target actually executed Setup/Step/RunPause/Reset/live controls and appropriate desktop/mobile/themes; normal and anomalous screenshot evidence distinguished."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/urban-remaining-four-reference-browser.md",
+            "docs/development/urban-landscape-target-browser.md"
+          ],
+          "basis": "Pinned original actualloadedSHA/nativefixtures plus paired target setup/progress, concrete settings/results/deviations; no crossRNGtrajectory equality."
         },
         "research-verified": {
           "done": true,
@@ -2198,7 +2215,8 @@
         }
       },
       "blockers": [
-        "Target implementation/UI and paired browser verification pending; independent Argon approval quota-blocked."
+        "Independent Argon/high technical approval quota-blocked.",
+        "Immediate theme/resize screenshot capture anomaly remains unresolved; controlled pixel readback and final screenshots are complete; no renderer fix claimed."
       ]
     },
     {
@@ -2524,25 +2542,42 @@
           "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/urban-suite-structure-from-randomness-2/model.ts",
+            "experiments/urban-suite-structure-from-randomness-2/ui.ts",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Full canonical public source proceduresd8bd72d and thin shared UI8b3dab7."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/urban-structure.test.ts",
+            "tests/urban-economy-sprawl.test.ts",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Root21focusedtests183assertions,allfivefrozenexamplesandhashes;full250tests11498assertions105examples/type/build/packedconsumerpassed."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/urban-landscape-target-browser.md",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Each target actually executed Setup/Step/RunPause/Reset/live controls and appropriate desktop/mobile/themes; normal and anomalous screenshot evidence distinguished."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/urban-remaining-four-reference-browser.md",
+            "docs/development/urban-landscape-target-browser.md"
+          ],
+          "basis": "Pinned original actualloadedSHA/nativefixtures plus paired target setup/progress, concrete settings/results/deviations; no crossRNGtrajectory equality."
         },
         "research-verified": {
           "done": true,
@@ -2556,7 +2591,8 @@
         }
       },
       "blockers": [
-        "Target implementation/UI and paired browser verification pending; independent Argon approval quota-blocked."
+        "Independent Argon/high technical approval quota-blocked.",
+        "Immediate theme/resize screenshot capture anomaly remains unresolved; controlled pixel readback and final screenshots are complete; no renderer fix claimed."
       ]
     },
     {
@@ -2729,25 +2765,42 @@
           "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/urban-suite-economic-disparity/model.ts",
+            "experiments/urban-suite-economic-disparity/ui.ts",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Full canonical public source proceduresd8bd72d and thin shared UI8b3dab7."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/urban-structure.test.ts",
+            "tests/urban-economy-sprawl.test.ts",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Root21focusedtests183assertions,allfivefrozenexamplesandhashes;full250tests11498assertions105examples/type/build/packedconsumerpassed."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/urban-landscape-target-browser.md",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Each target actually executed Setup/Step/RunPause/Reset/live controls and appropriate desktop/mobile/themes; normal and anomalous screenshot evidence distinguished."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/urban-remaining-four-reference-browser.md",
+            "docs/development/urban-landscape-target-browser.md"
+          ],
+          "basis": "Pinned original actualloadedSHA/nativefixtures plus paired target setup/progress, concrete settings/results/deviations; no crossRNGtrajectory equality."
         },
         "research-verified": {
           "done": true,
@@ -2761,7 +2814,8 @@
         }
       },
       "blockers": [
-        "Target implementation/UI and paired browser verification pending; independent Argon approval quota-blocked."
+        "Independent Argon/high technical approval quota-blocked.",
+        "Immediate theme/resize screenshot capture anomaly remains unresolved; controlled pixel readback and final screenshots are complete; no renderer fix claimed."
       ]
     },
     {
@@ -2962,25 +3016,42 @@
           "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/urban-suite-sprawl-effect/model.ts",
+            "experiments/urban-suite-sprawl-effect/ui.ts",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Full canonical public source proceduresd8bd72d and thin shared UI8b3dab7."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/urban-structure.test.ts",
+            "tests/urban-economy-sprawl.test.ts",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Root21focusedtests183assertions,allfivefrozenexamplesandhashes;full250tests11498assertions105examples/type/build/packedconsumerpassed."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/urban-landscape-target-browser.md",
+            "docs/development/urban-landscape-integration.md"
+          ],
+          "basis": "Each target actually executed Setup/Step/RunPause/Reset/live controls and appropriate desktop/mobile/themes; normal and anomalous screenshot evidence distinguished."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/urban-remaining-four-reference-browser.md",
+            "docs/development/urban-landscape-target-browser.md"
+          ],
+          "basis": "Pinned original actualloadedSHA/nativefixtures plus paired target setup/progress, concrete settings/results/deviations; no crossRNGtrajectory equality."
         },
         "research-verified": {
           "done": true,
@@ -2994,7 +3065,8 @@
         }
       },
       "blockers": [
-        "Target implementation/UI and paired browser verification pending; independent Argon approval quota-blocked."
+        "Independent Argon/high technical approval quota-blocked.",
+        "Immediate theme/resize screenshot capture anomaly remains unresolved; controlled pixel readback and final screenshots are complete; no renderer fix claimed."
       ]
     },
     {
