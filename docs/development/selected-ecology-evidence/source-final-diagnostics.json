@@ -1,0 +1,499 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Termites.nlogox",
+  "title": "NetLogo Web: Termites",
+  "loading": false,
+  "visibleText": " powered by NetLogo\nTermites\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\n\u00a0\n?\nfor shortcuts\nT\ngo\nsetup\nnumber\ndensity\n %\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection",
+  "interactiveElements": [],
+  "consoleEntries": [
+    {
+      "level": "error",
+      "text": "a",
+      "timestamp": "2026-11-06T09:02:30.104Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:05:37.153Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:06:12.032Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:06:28.932Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:11:49.138Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:11:50.219Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:11:52.675Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:11:53.457Z"
+    },
+    {
+      "level": "warning",
+      "text": "The `display` primitive has not yet been implemented.",
+      "timestamp": "2026-11-06T09:11:54.020Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:12:13.279Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:12:14.054Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:12:16.323Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:12:17.066Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:12:51.961Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:12:52.688Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:12:55.133Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:12:55.880Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:12:58.443Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:12:59.223Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:13:17.702Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:13:18.580Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:13:21.009Z"
+    },
+    {
+      "level": "warning",
+      "text": "The `display` primitive has not yet been implemented.",
+      "timestamp": "2026-11-06T09:13:21.627Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:13:21.716Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:13:24.333Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:13:25.130Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:17:14.269Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:17:28.345Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:17:31.317Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:17:32.023Z"
+    },
+    {
+      "level": "error",
+      "text": "a",
+      "timestamp": "2026-11-06T09:17:32.374Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:18:56.314Z"
+    },
+    {
+      "level": "warning",
+      "text": "The `display` primitive has not yet been implemented.",
+      "timestamp": "2026-11-06T09:18:57.070Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:18:57.135Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:29:46.776Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:30:00.884Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:35:14.589Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:35:17.186Z"
+    },
+    {
+      "level": "warning",
+      "text": "Unsupported locale 'de', reverting to 'en_us'.",
+      "timestamp": "2026-11-06T09:37:10.836Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T09:37:13.083Z"
+    }
+  ],
+  "networkEntries": [
+    {
+      "url": "https://www.netlogoweb.org/assets/file-saver/dist/349c8aca9d3d0518362d1982d08f1a0f-FileSaver.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.215Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/stylesheets/58478e9fd6374f7bf6f692c349115d51-js-error.css",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.215Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/mousetrap/ca067c14a1159f519241b602e95bf45c-mousetrap.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.253Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/highcharts/modules/02d3012e0a5d2c755ea319ef113e51bf-boost.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.323Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/highcharts/modules/023f524fff9e1f0040e684cbfad688d3-export-data.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.343Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/highcharts/70854d5c319b8e8839f65cd9119937d4-highcharts.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.348Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/highcharts/modules/6bd97c420fb18072f00940b7b1fae281-exporting.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.385Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/codemirror/lib/b8bb3924acd902247cd69eb183512284-codemirror.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.398Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/ractive/a5a0d36d759f07c111d33eb49cf7f300-ractive.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.460Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/codemirror/addon/dialog/e311abdbb9081f68bfe5f0a6945e46b8-dialog.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.466Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/codemirror/addon/mode/d125f50aeecd7a8530cbe018d35ae0e7-simple.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.468Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/codemirror/addon/search/dffa50814fdc6751455abad2c097e97f-search.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.521Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/codemirror/addon/comment/8710c60d69c51d766d0313416fa6efef-comment.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.559Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/codemirror/addon/display/0ab1054e75e0e8cc01d265846967ad14-placeholder.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.591Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/tortoise-compiler.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.619Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/codemirror/addon/search/20812b3230a707115254381f10250696-searchcursor.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.632Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/tortoise-engine.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.639Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/codemirror/addon/hint/edca42b2c832e308f311bd7a9d6caa0c-show-hint.min.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.699Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/pages/57897dea8b656f5e2c6a0098de230da0-simulation.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.808Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/3ae4c48a.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.937Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/ff16522a.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.942Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/afe062be.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:09.949Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/5b19a177.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.060Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/baf96d34.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.061Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/79325896.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.063Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/4c936086.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.067Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/9e84f2a3.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.080Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/4cf393e8.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.185Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/5aa2cdcc.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.189Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/eaca5144.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.194Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/7bd09611.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.201Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/228dfa72.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.207Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/28b3ec8f.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.314Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/791736af.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.438Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/4e98a12c.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.438Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/javascripts/6455124d.chunk.js",
+      "method": "GET",
+      "status": 304,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.438Z"
+    },
+    {
+      "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Termites.nlogox",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T09:37:10.605Z"
+    }
+  ],
+  "actionTimeline": [
+    {
+      "id": "ef491e9f-73f0-4393-92f3-7b6f8bda5e4e",
+      "action": "click",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T09:37:11.931Z",
+      "completedAt": "2026-11-06T09:37:13.043Z"
+    },
+    {
+      "id": "051e0ba8-63c3-44ac-b74c-5bdf557f6388",
+      "action": "click",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T09:37:13.333Z",
+      "completedAt": "2026-11-06T09:37:13.463Z"
+    }
+  ],
+  "screenshot": {
+    "mimeType": "image/png",
+    "width": 1280,
+    "height": 978
+  },
+  "accessibilityTree": "- generic [ref=t3-8ebdcace-q4-e3] [box=8,8,804,815]:\n  - generic \"NetLogo Model Application\" [ref=t3-8ebdcace-q4-e4] [box=28,28,764,552]:\n    - generic [ref=t3-8ebdcace-q4-e5] [box=28,28,764,56]:\n      - link \"powered by NetLogo\" [ref=t3-8ebdcace-q4-e8] [cursor=pointer] [box=28,47,182,17]:\n        - /url: https://netlogo.org\n        - img [ref=t3-8ebdcace-q4-e9] [box=28,45,24,24]\n        - text: powered by NetLogo\n      - heading \"Model Title\" [level=2] [ref=t3-8ebdcace-q4-e21] [box=210,44,388,25]: Termites\n      - generic [ref=t3-8ebdcace-q4-e22] [box=608,28,184,56]:\n        - group \"File Options\" [ref=t3-8ebdcace-q4-e23] [box=608,28,184,26]:\n          - generic [ref=t3-8ebdcace-q4-e24] [box=608,33,22,17]: \"File:\"\n          - button \"New\" [ref=t3-8ebdcace-q4-e25] [cursor=pointer] [box=638,28,39,26]\n          - button \"Revert to Original\" [disabled] [box=681,28,112,26]\n        - group \"Export Options\" [ref=t3-8ebdcace-q4-e26] [box=632,58,160,26]:\n          - generic [ref=t3-8ebdcace-q4-e27] [box=632,63,40,17]: \"Export:\"\n          - button \"NetLogo\" [ref=t3-8ebdcace-q4-e28] [cursor=pointer] [box=680,58,61,26]\n          - button \"HTML\" [ref=t3-8ebdcace-q4-e29] [cursor=pointer] [box=745,58,47,26]\n    - generic [ref=t3-8ebdcace-q4-e30] [box=28,84,764,75]:\n      - 'button \"Mode: Interactive\" [ref=t3-8ebdcace-q4-e31] [box=38,84,139,75]':\n        - generic [ref=t3-8ebdcace-q4-e33] [box=63,113,114,19]: \"Mode: Interactive\"\n      - button \"Toggle Tabs Position\" [pressed] [ref=t3-8ebdcace-q4-e34] [box=197,84,202,75]:\n        - generic [ref=t3-8ebdcace-q4-e35] [box=202,113,197,19]: \"Commands and Code: Bottom\"\n      - slider \"Model Speed Slider\" [ref=t3-8ebdcace-q4-e36] [box=409,84,277,75]:\n        - generic [ref=t3-8ebdcace-q4-e37] [box=415,90,264,62]:\n          - generic [ref=t3-8ebdcace-q4-e38] [box=511,90,73,17]: Model Speed\n          - generic [ref=t3-8ebdcace-q4-e39] [box=416,108,261,26]:\n            - button \"Decrease Model Speed\" [ref=t3-8ebdcace-q4-e40] [cursor=pointer] [box=416,108,24,26]: \"-\"\n            - slider \"Custom Slider\" [ref=t3-8ebdcace-q4-e41] [box=448,120,197,2]\n            - button \"Increase Model Speed\" [ref=t3-8ebdcace-q4-e44] [cursor=pointer] [box=654,108,24,26]: +\n      - button \"? for shortcuts\" [ref=t3-8ebdcace-q4-e46] [cursor=pointer] [box=686,108,106,27]:\n        - generic [ref=t3-8ebdcace-q4-e47] [box=688,108,22,27]: \"?\"\n        - generic [ref=t3-8ebdcace-q4-e48] [box=720,113,72,17]: for shortcuts\n    - application \"NetLogo Model Display Area\" [ref=t3-8ebdcace-q4-e49] [box=28,159,610,421]:\n      - img \"NetLogo view widget showing the world and agents\" [ref=t3-8ebdcace-q4-e50] [box=228,169,410,411]\n      - button \"Widget 1 (button)\" [ref=t3-8ebdcace-q4-e52] [box=128,308,65,35]:\n        - generic [ref=t3-8ebdcace-q4-e53] [box=136,313,6,15]: T\n        - generic [ref=t3-8ebdcace-q4-e54] [box=154,317,14,17]: go\n      - button \"Widget 2 (button)\" [active] [ref=t3-8ebdcace-q4-e56] [cursor=pointer] [box=53,308,65,35]:\n        - generic [ref=t3-8ebdcace-q4-e57] [box=70,317,32,17]: setup\n      - slider \"number slider\" [ref=t3-8ebdcace-q4-e58] [box=38,191,175,50]:\n        - generic [ref=t3-8ebdcace-q4-e59] [box=46,197,159,25]:\n          - generic \"Slider Variable Name\" [ref=t3-8ebdcace-q4-e60] [box=46,201,105,17]: number\n          - spinbutton \"Slider Value Input Field\" [ref=t3-8ebdcace-q4-e62] [box=151,197,54,25]: \"400\"\n        - slider \"Custom Slider\" [ref=t3-8ebdcace-q4-e63] [box=46,229,159,6]\n      - slider \"density slider\" [ref=t3-8ebdcace-q4-e66] [box=38,248,175,50]:\n        - generic [ref=t3-8ebdcace-q4-e67] [box=46,254,159,25]:\n          - generic \"Slider Variable Name\" [ref=t3-8ebdcace-q4-e68] [box=46,258,100,17]: density\n          - generic [ref=t3-8ebdcace-q4-e69] [box=146,254,59,25]:\n            - spinbutton \"Slider Value Input Field\" [ref=t3-8ebdcace-q4-e70] [box=146,254,46,25]: \"20\"\n            - text: \"%\"\n        - slider \"Custom Slider\" [ref=t3-8ebdcace-q4-e71] [box=46,286,159,6]\n  - generic [ref=t3-8ebdcace-q4-e74] [box=28,605,764,173]:\n    - tab \"Command Center\" [ref=t3-8ebdcace-q4-e75] [cursor=pointer] [box=30,607,760,43]:\n      - text: Command Center\n      - img [ref=t3-8ebdcace-q4-e76] [box=754,618,20,20]\n    - tab \"NetLogo Code\" [ref=t3-8ebdcace-q4-e77] [cursor=pointer] [box=30,649,760,43]:\n      - text: NetLogo Code\n      - img [ref=t3-8ebdcace-q4-e78] [box=754,660,20,20]\n    - tab \"Model Info\" [ref=t3-8ebdcace-q4-e79] [cursor=pointer] [box=30,692,760,43]:\n      - text: Model Info\n      - img [ref=t3-8ebdcace-q4-e80] [box=754,703,20,20]\n    - tab \"Agent Inspection\" [ref=t3-8ebdcace-q4-e81] [cursor=pointer] [box=30,734,760,42]:\n      - text: Agent Inspection\n      - img [ref=t3-8ebdcace-q4-e82] [box=754,745,20,20]",
+  "omitted": [
+    "28 older console entries",
+    "160 older network entries",
+    "10 older action timeline entries",
+    "38 of 40 actionTimeline"
+  ],
+  "privacyNote": "3 third-party network entries omitted; no analytics query identifiers retained. Snapshot provider also bounds older entries."
+}

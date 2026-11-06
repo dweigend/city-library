@@ -4,7 +4,7 @@ Canonical selected path: `Sample Models/Biology/Flocking`.
 
 Exact served source: https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Flocking.nlogox
 
-SHA-256: `0ce9a6b0ee385898dfcacc7ed06699286cd51e5302a80c90b32687e13cefa143`. NetLogo NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
+SHA-256: `0ce9a6b0ee385898dfcacc7ed06699286cd51e5302a80c90b32687e13cefa143`. NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
 
 ## Citation
 
@@ -39,3 +39,5 @@ This model was converted to NetLogo as part of the projects: PARTICIPATORY SIMUL
 ## Adaptation
 
 Readable headless TypeScript composition, independent Mulberry RNG, detached observations and shared City Library UI. Detailed procedure/order and browser evidence are tracked in selected-ecology reports. No cross-engine seeded trajectory identity is claimed.
+
+Executed procedure, adaptation and original/target browser evidence: [B06 comparison report](../../docs/development/selected-ecology-report.md).

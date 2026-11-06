@@ -1,0 +1,139 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Ants.nlogox",
+  "title": "NetLogo Web: Ants",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "dpr": 2
+  },
+  "sha256": "a7c54ba49c1a492efff67522e894cce469284783a3f3d87e91acc8692cc78ce6",
+  "version": "NetLogo 7.0.4",
+  "tick": 0,
+  "count": 125,
+  "globals": {
+    "evaporation-rate": 10,
+    "population": 125,
+    "diffusion-rate": 50
+  },
+  "widgets": [
+    {
+      "type": "view",
+      "dimensions": {
+        "minPxcor": -35,
+        "maxPxcor": 35,
+        "minPycor": -35,
+        "maxPycor": 35,
+        "patchSize": 7,
+        "wrappingAllowedInX": false,
+        "wrappingAllowedInY": false
+      }
+    },
+    {
+      "type": "plot",
+      "display": "Food in each pile"
+    },
+    {
+      "type": "slider",
+      "variable": "evaporation-rate",
+      "display": "evaporation-rate",
+      "currentValue": 10
+    },
+    {
+      "type": "slider",
+      "variable": "population",
+      "display": "population",
+      "currentValue": 125
+    },
+    {
+      "type": "slider",
+      "variable": "diffusion-rate",
+      "display": "diffusion-rate",
+      "currentValue": 50
+    },
+    {
+      "type": "button",
+      "source": "setup"
+    },
+    {
+      "type": "button",
+      "source": "go",
+      "running": false
+    }
+  ],
+  "turtles": [
+    {
+      "id": 0,
+      "x": 0,
+      "y": 0,
+      "color": 15,
+      "heading": 319,
+      "hidden?": false
+    },
+    {
+      "id": 1,
+      "x": 0,
+      "y": 0,
+      "color": 15,
+      "heading": 120,
+      "hidden?": false
+    },
+    {
+      "id": 2,
+      "x": 0,
+      "y": 0,
+      "color": 15,
+      "heading": 349,
+      "hidden?": false
+    },
+    {
+      "id": 3,
+      "x": 0,
+      "y": 0,
+      "color": 15,
+      "heading": 171,
+      "hidden?": false
+    },
+    {
+      "id": 4,
+      "x": 0,
+      "y": 0,
+      "color": 15,
+      "heading": 121,
+      "hidden?": false
+    },
+    {
+      "id": 5,
+      "x": 0,
+      "y": 0,
+      "color": 15,
+      "heading": 73,
+      "hidden?": false
+    }
+  ],
+  "patchTotals": {
+    "chemical": 0,
+    "food": 304,
+    "nest?": 0,
+    "nest-scent": 871274.6765400213,
+    "food-source-number": 414
+  },
+  "patchColors": {
+    "50": 4765,
+    "85": 69,
+    "95": 69,
+    "105": 69,
+    "115": 69
+  },
+  "colors": {
+    "15": 125
+  },
+  "readback": [
+    {
+      "width": 994,
+      "height": 994,
+      "nonblack": 988036
+    }
+  ],
+  "text": " powered by NetLogo\nAnts\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 0\n?\nfor shortcuts\ntime\nfood\nFood in each pile\n0\n25\n50\n0\n50\n100\n120\nevaporation-rate\npopulation\ndiffusion-rate\nsetup\ngo\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+}
