@@ -63,7 +63,7 @@
         try {
           theme = readRendererTheme(target);
           if (observation !== undefined) mounted?.update(observation, selected, drawing);
-        } catch (error) { onerror(error); }
+        } catch (error) { untrack(() => onerror(error)); }
       };
       const appearance = window.matchMedia("(prefers-color-scheme: dark)");
       appearance.addEventListener("change", refresh);
@@ -75,7 +75,7 @@
     } catch (error) {
       mounted?.dispose();
       target.replaceChildren();
-      onerror(error);
+      untrack(() => onerror(error));
     }
   });
 
@@ -95,7 +95,7 @@
       if (current.type === "table") rows = current.rows(value).slice(0, 200);
       if (current.type === "inspector") inspected = current.value(value, id);
       untrack(() => mounted?.update(value, id, enabled));
-    } catch (error) { onerror(error); }
+    } catch (error) { untrack(() => onerror(error)); }
   });
 
   $effect(() => { renderer?.setLabels?.(labels); });

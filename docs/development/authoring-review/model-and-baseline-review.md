@@ -63,3 +63,31 @@ Every PNG below was actually opened. Artifacts are session-local; retain them th
 | urban-suite-tijuana-bordertowns | dark | 1366×768 | 1280×720 | [PNG](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw5igovj-10b76310.png) |
 | urban-suite-tijuana-bordertowns | light | 390×844 | 780×1688 | [PNG](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw5igp6n-0c9ecb58.png) |
 | urban-suite-tijuana-bordertowns | dark | 390×844 | 780×1688 | [PNG](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw5igpfe-7875f7a1.png) |
+
+
+## Independent review of correctly sized baseline supplement
+
+The browser operator subsequently supplied a separate real Playwright-Chromium run in `localPlaywrightSupplement` of the same manifest. This reviewer opened all 16 additional original PNGs with the image tool: eight at actual 1366×768 and eight at actual 390×844, in both themes. No resize/postprocessing was used. This resolves the earlier file-size limitation for these baseline artifacts; it does not retroactively change the historical T3 capture sizes above.
+
+Traffic Grid/Goal and Taxi controls, reporters and visible renderers remain readable without horizontal clipping in these captures. Narrow Tijuana includes its complete map and wrapped monitors. The two Tijuana desktop captures are scrolled lower-control states: header/top-map content is outside the captured region. They are valid lower-control evidence, not complete desktop overview evidence; two top-of-page captures have been requested from the operator. The supplement's error arrays are empty, so the earlier T3 ResizeObserver diagnostic was not reproduced in that independent browser run; this alone does not identify its cause.
+
+This supplement remains pre-runtime baseline evidence captured by C. It is not independent approval of the chart changes later implemented by this reviewer or acceptance of the new authoring syntax. That runtime requires a different independent reviewer after actual browser checks.
+
+| Model | Theme | Actual baseline PNG | Artifact |
+| --- | --- | --- | --- |
+| traffic-grid | light | 1366×768 | [PNG](/tmp/city-library-baseline-traffic-grid-1366-light.png) |
+| traffic-grid | dark | 1366×768 | [PNG](/tmp/city-library-baseline-traffic-grid-1366-dark.png) |
+| traffic-grid | light | 390×844 | [PNG](/tmp/city-library-baseline-traffic-grid-390-light.png) |
+| traffic-grid | dark | 390×844 | [PNG](/tmp/city-library-baseline-traffic-grid-390-dark.png) |
+| traffic-grid-goal | light | 1366×768 | [PNG](/tmp/city-library-baseline-traffic-grid-goal-1366-light.png) |
+| traffic-grid-goal | dark | 1366×768 | [PNG](/tmp/city-library-baseline-traffic-grid-goal-1366-dark.png) |
+| traffic-grid-goal | light | 390×844 | [PNG](/tmp/city-library-baseline-traffic-grid-goal-390-light.png) |
+| traffic-grid-goal | dark | 390×844 | [PNG](/tmp/city-library-baseline-traffic-grid-goal-390-dark.png) |
+| taxi-cabs | light | 1366×768 | [PNG](/tmp/city-library-baseline-taxi-cabs-1366-light.png) |
+| taxi-cabs | dark | 1366×768 | [PNG](/tmp/city-library-baseline-taxi-cabs-1366-dark.png) |
+| taxi-cabs | light | 390×844 | [PNG](/tmp/city-library-baseline-taxi-cabs-390-light.png) |
+| taxi-cabs | dark | 390×844 | [PNG](/tmp/city-library-baseline-taxi-cabs-390-dark.png) |
+| urban-suite-tijuana-bordertowns | light | 1366×768 | [PNG](/tmp/city-library-baseline-urban-suite-tijuana-bordertowns-1366-light.png) |
+| urban-suite-tijuana-bordertowns | dark | 1366×768 | [PNG](/tmp/city-library-baseline-urban-suite-tijuana-bordertowns-1366-dark.png) |
+| urban-suite-tijuana-bordertowns | light | 390×844 | [PNG](/tmp/city-library-baseline-urban-suite-tijuana-bordertowns-390-light.png) |
+| urban-suite-tijuana-bordertowns | dark | 390×844 | [PNG](/tmp/city-library-baseline-urban-suite-tijuana-bordertowns-390-dark.png) |
