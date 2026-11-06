@@ -1,5 +1,5 @@
 /** NetLogo Three Doors, Uri Wilensky (1998), CC BY-NC-SA 3.0. Full notices: NOTICE.md. */
-import { Random, World, run } from "city-library";
+import { Agent, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
@@ -19,53 +19,79 @@ export const inputs: Inputs<Parameters> = {
   gradation: { kind: "boolean", default: false },
 };
 export function create(options: Partial<Parameters> = {}) {
-  const settings = parameters(inputs, options),
-    random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
+  const settings = parameters(inputs, options);
+  const random = Random.add({ seed: settings.seed });
+  const world = World.add(
+    { x: 71, y: 71, boundary: { x: "wrap", y: "hard" } },
+    { random },
+  );
+  type Racer = Agent<{
+    displayId: string;
+    hunch: number;
+    prize: number;
+    guess: number;
+    otherDoor: number;
+    wins: number;
+    games: number;
+  }>;
+  const racers = () => world.agents as readonly Racer[];
   let done = false;
-  const racers = Array.from({ length: settings.number }, (_, i) => ({
-    id: `racer-${i}`,
-    hunch: settings.gradation
+  for (let i = 0; i < settings.number; i++) {
+    const hunch = settings.gradation
       ? 100 * random.number()
-      : 100 * Math.floor(2 * random.number()),
-    x: 71 * random.number() - 35.5,
-    y: -35,
-    prize: 0,
-    guess: 0,
-    otherDoor: 0,
-    wins: 0,
-    games: 0,
-  }));
-  function makeChoices(r: (typeof racers)[number]) {
-    r.prize = Math.floor(3 * random.number());
-    r.guess = Math.floor(3 * random.number());
-    r.otherDoor =
-      r.guess === r.prize
-        ? random.sample([0, 1, 2].filter((d) => d !== r.guess))[0]!
-        : r.prize;
+      : 100 * Math.floor(2 * random.number());
+    world.add(
+      Agent.add(
+        {
+          displayId: `racer-${i}`,
+          hunch,
+          prize: 0,
+          guess: 0,
+          otherDoor: 0,
+          wins: 0,
+          games: 0,
+        },
+        {
+          position: { x: 71 * random.number() - 35.5, y: -35 },
+          orientation: { heading: 0 },
+        },
+      ),
+    );
   }
-  function doSwitch(r: (typeof racers)[number]) {
-    if (100 * random.number() < r.hunch) r.guess = r.otherDoor;
+  function makeChoices(racer: Racer) {
+    racer.prize = Math.floor(3 * random.number());
+    racer.guess = Math.floor(3 * random.number());
+    racer.otherDoor =
+      racer.guess === racer.prize
+        ? random.sample([0, 1, 2].filter((door) => door !== racer.guess))[0]!
+        : racer.prize;
   }
-  function awardPrizes(r: (typeof racers)[number]) {
-    r.games++;
-    if (r.guess === r.prize) {
-      r.wins++;
-      if (!done) r.y++;
+  function doSwitch(racer: Racer) {
+    if (100 * random.number() < racer.hunch) racer.guess = racer.otherDoor;
+  }
+  function awardPrizes(racer: Racer) {
+    racer.games++;
+    if (racer.guess === racer.prize) {
+      racer.wins++;
+      if (!done) racer.move(1);
     }
-    if (r.y === 35) done = true;
+    if (racer.y === 35) done = true;
   }
   function go() {
-    for (const r of random.sample(racers, {
-      count: racers.length,
+    const population = racers();
+    for (const racer of random.sample(population, {
+      count: population.length,
       compatibility: "legacy-shuffle",
     })) {
-      makeChoices(r);
-      doSwitch(r);
-      awardPrizes(r);
+      makeChoices(racer);
+      doSwitch(racer);
+      awardPrizes(racer);
     }
   }
   return {
+    get world() {
+      return world;
+    },
     advance(count = 1) {
       stepCount(count);
       for (let i = 0; i < count && !done; i++) run(world, go);
@@ -77,7 +103,21 @@ export function create(options: Partial<Parameters> = {}) {
         height: 71,
         parameters: settings,
         done,
-        racers: Object.freeze(racers.map((r) => Object.freeze({ ...r }))),
+        racers: Object.freeze(
+          racers().map((racer) =>
+            Object.freeze({
+              id: racer.displayId,
+              hunch: racer.hunch,
+              x: racer.x,
+              y: racer.y,
+              prize: racer.prize,
+              guess: racer.guess,
+              otherDoor: racer.otherDoor,
+              wins: racer.wins,
+              games: racer.games,
+            }),
+          ),
+        ),
         randomState: random.state,
       });
     },

@@ -1,5 +1,5 @@
 /** NetLogo Stochastic Patchwork, Abrahamson and Wilensky (2004), CC BY-NC-SA 3.0. */
-import { Random, World, run } from "city-library";
+import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
@@ -33,37 +33,43 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
+  const random = Random.add({ seed: settings.seed });
+  const world = World.add({ x: 21, y: 21, boundary: "wrap" }, { random });
+  const grid = Grid.add(
+    { x: 21, y: 21, boundary: "wrap" },
+    { state: { displayId: "", inBlock: false, target: false, drawn: false } },
+  );
+  world.add(grid);
+  // Stable references to canonical Fields, never a copied spatial state.
+  const fields = grid.fields;
   const half = (settings.blockSide - 1) / 2;
-  const cells = Array.from({ length: 441 }, (_, i) => {
-    const x = (i % 21) - 10,
-      y = Math.floor(i / 21) - 10;
-    return {
-      id: `patch-${i}`,
-      x,
-      y,
-      inBlock: Math.abs(x) <= half && Math.abs(y) <= half,
-      target: false,
-      drawn: false,
-    };
+  fields.forEach((field, i) => {
+    field.displayId = `patch-${i}`;
+    field.inBlock = Math.abs(field.x) <= half && Math.abs(field.y) <= half;
   });
-  const block = cells.filter((c) => c.inBlock),
-    samples: number[] = [],
+  const block = fields.filter((field) => field.inBlock);
+  const samples: number[] = [],
     histogram = new Map<number, number>();
   function go() {
-    for (const p of random.sample(block, {
+    for (const field of random.sample(block, {
       count: block.length,
       compatibility: "legacy-shuffle",
     })) {
-      p.target = random.number() * 100 < settings.targetPercent;
-      p.drawn = true;
+      field.target = random.number() * 100 < settings.targetPercent;
+      field.drawn = true;
     }
-    const percent = (100 * block.filter((p) => p.target).length) / block.length;
+    const percent =
+      (100 * block.filter((field) => field.target).length) / block.length;
     samples.unshift(percent);
     histogram.set(percent, (histogram.get(percent) ?? 0) + 1);
   }
   return {
+    get world() {
+      return world;
+    },
+    get grid() {
+      return grid;
+    },
     advance(count = 1) {
       stepCount(count);
       for (let i = 0; i < count; i++) run(world, go);
@@ -77,8 +83,19 @@ export function create(options: Partial<Parameters> = {}) {
         width: 21,
         height: 21,
         parameters: settings,
-        targetCount: block.filter((p) => p.target).length,
-        cells: Object.freeze(cells.map((p) => Object.freeze({ ...p }))),
+        targetCount: block.filter((field) => field.target).length,
+        cells: Object.freeze(
+          fields.map((field) =>
+            Object.freeze({
+              id: field.displayId,
+              x: field.x,
+              y: field.y,
+              inBlock: field.inBlock,
+              target: field.target,
+              drawn: field.drawn,
+            }),
+          ),
+        ),
         samples: Object.freeze([...samples]),
         histogram: Object.freeze(
           [...histogram]

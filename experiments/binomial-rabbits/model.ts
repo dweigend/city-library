@@ -1,5 +1,5 @@
 /** NetLogo Binomial Rabbits, Uri Wilensky (1997), CC BY-NC-SA 3.0. Full notices: NOTICE.md. */
-import { Random, World, run } from "city-library";
+import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
@@ -34,56 +34,66 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
-  // Source captures hop/ratio sliders in setup, but reads hops/x-scaling live.
+  const random = Random.add({ seed: settings.seed });
+  const world = World.add(
+    { x: 45, y: 45, boundary: { x: "wrap", y: "hard" } },
+    { random },
+  );
+  const grid = Grid.add(
+    { x: 45, y: 45, boundary: { x: "wrap", y: "hard" } },
+    { state: { turtleQuant: 0 } },
+  );
+  world.add(grid);
+  // Stable references to canonical Fields, never a copied spatial state.
+  const fields = grid.fields;
+  type Rabbit = Agent<{ displayId: string; total: number; step: number }>;
+  const rabbits = () => world.agents as readonly Rabbit[];
+  // NetLogo's y=0..44 is translated to the library's centered y=-22..22.
+  // Unwrapped displacement is a scientific scalar; Agent.move owns its wrapped position.
+  for (let i = 0; i < settings.number; i++)
+    world.add(
+      Agent.add(
+        { displayId: `rabbit-${i}`, total: 0, step: 0 },
+        { position: { x: 0, y: -22 } },
+      ),
+    );
   const steps = [settings.hop1, settings.hop2, settings.hop3, 0, 0],
     ratios = [settings.ratio1, settings.ratio2, settings.ratio3, 0, 0];
-  const rabbits = Array.from({ length: settings.number }, (_, i) => ({
-    id: `rabbit-${i}`,
-    total: 0,
-    x: 0,
-    y: 0,
-    step: 0,
-  }));
   const ky = settings.number / 44 / 0.9;
   let mean = 0,
     yScale = 0;
-  const distribution = new Map<number, number>();
-  function setStep(r: (typeof rabbits)[number]) {
+  function setStep(rabbit: Rabbit) {
     const n = random.number() * ratios.reduce((a, b) => a + b, 0);
     let sum = ratios[0]!;
-    r.step = steps[0]!;
+    rabbit.step = steps[0]!;
     if (n <= sum) return;
     for (let i = 1; i < 5; i++) {
       sum += ratios[i]!;
       if (n <= sum) {
-        r.step = steps[i]!;
+        rabbit.step = steps[i]!;
         return;
       }
     }
-    r.step = steps[4]!;
+    rabbit.step = steps[4]!;
   }
   function hopping() {
-    for (const r of random.sample(rabbits, {
-      count: rabbits.length,
+    const population = rabbits();
+    for (const rabbit of random.sample(population, {
+      count: population.length,
       compatibility: "legacy-shuffle",
     })) {
-      setStep(r);
-      r.total += r.step;
-      r.x = ((((r.total / settings.xScaling + 22.5) % 45) + 45) % 45) - 22.5;
+      setStep(rabbit);
+      rabbit.total += rabbit.step;
+      rabbit.move({ to: { x: rabbit.total / settings.xScaling, y: rabbit.y } });
     }
   }
   function plotViolet() {
-    mean = rabbits.reduce((a, r) => a + r.total, 0) / settings.number;
+    mean =
+      rabbits().reduce((a, rabbit) => a + rabbit.total, 0) / settings.number;
   }
   function plotYellow() {
-    distribution.clear();
-    for (const r of rabbits) {
-      const x = Math.floor(r.x + 0.5);
-      distribution.set(x, (distribution.get(x) ?? 0) + 1);
-    }
-    const most = Math.max(...distribution.values());
+    for (const field of fields) field.turtleQuant = grid.agentsAt(field).length;
+    const most = Math.max(...fields.map((field) => field.turtleQuant));
     const kyDistr = most / ky / Math.trunc(0.8 * 45);
     yScale = 100 * kyDistr * ky;
   }
@@ -95,6 +105,12 @@ export function create(options: Partial<Parameters> = {}) {
     });
   }
   return {
+    get world() {
+      return world;
+    },
+    get grid() {
+      return grid;
+    },
     advance(count = 1) {
       stepCount(count);
       for (let i = 0; i < count; i++) {
@@ -112,14 +128,27 @@ export function create(options: Partial<Parameters> = {}) {
         width: 45,
         height: 45,
         parameters: settings,
-        rabbits: Object.freeze(rabbits.map((r) => Object.freeze({ ...r }))),
+        rabbits: Object.freeze(
+          rabbits().map((rabbit) =>
+            Object.freeze({
+              id: rabbit.displayId,
+              total: rabbit.total,
+              x: rabbit.x,
+              y: rabbit.y + 22,
+              step: rabbit.step,
+            }),
+          ),
+        ),
         mean,
         xScale: 44 * settings.xScaling,
         yScale,
         distribution: Object.freeze(
-          [...distribution]
-            .sort((a, b) => a[0] - b[0])
-            .map(([x, count]) => Object.freeze({ x, count })),
+          fields
+            .filter((field) => field.turtleQuant > 0)
+            .map((field) =>
+              Object.freeze({ x: field.x, count: field.turtleQuant }),
+            )
+            .sort((a, b) => a.x - b.x),
         ),
         done: settings.hops === world.tick.value,
         randomState: random.state,
