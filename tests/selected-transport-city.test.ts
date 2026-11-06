@@ -270,3 +270,93 @@ test("Taxi generated passengers age before pickup and zero patience removes them
   expect(model.passengers().length).toBe(0);
   expect(model.snapshot().tick).toBe(0);
 });
+
+test("Goal faces its local choice before speed lookup while retaining the setup upCar flag", () => {
+  const model = goal({ numCars: 2 });
+  const [commuter, blocker] = model.cars();
+  const junction = model.intersections.find(
+    (patch) => patch.x > -10 && patch.x < 10 && patch.y > -10 && patch.y < 10,
+  )!;
+  commuter!.move({ to: junction });
+  commuter!.upCar = true;
+  commuter!.rotate(180 - commuter!.heading);
+  commuter!.speed = 0.4;
+  commuter!.house = model.grid.fieldAt({ x: junction.x - 3, y: junction.y })!;
+  commuter!.work = model.grid.fieldAt({ x: junction.x + 3, y: junction.y })!;
+  commuter!.goal = commuter!.work;
+
+  const downPatch = model.grid.fieldAt({ x: junction.x, y: junction.y - 1 })!;
+  blocker!.move({ to: downPatch });
+  blocker!.upCar = false;
+  blocker!.speed = 0;
+  downPatch.color = "#e33131";
+  const waitBefore = commuter!.waitTime;
+
+  model.step();
+
+  expect(commuter!.heading).toBe(90);
+  expect(commuter!.upCar).toBe(true);
+  expect(commuter!.speed).toBe(0);
+  expect(commuter!.x).toBe(junction.x);
+  expect(commuter!.y).toBe(junction.y);
+  expect(commuter!.waitTime).toBe(waitBefore + 1);
+  expect(model.snapshot().phase).toBe(1);
+  expect(model.snapshot().tick).toBe(1);
+});
+
+test("Goal applies both source adjacency checks instead of an else-if destination toggle", () => {
+  const model = goal({ numCars: 1 });
+  const commuter = model.cars()[0]!;
+  const junction = model.intersections.find(
+    (patch) => patch.x > -10 && patch.x < 10 && patch.y > -10 && patch.y < 10,
+  )!;
+  commuter.move({ to: junction });
+  commuter.house = model.grid.fieldAt({ x: junction.x - 1, y: junction.y })!;
+  commuter.work = model.grid.fieldAt({ x: junction.x + 1, y: junction.y })!;
+  commuter.goal = commuter.house;
+
+  const destination = model.nextPatch(commuter);
+
+  expect(commuter.goal).toBe(commuter.house);
+  expect(model.grid.neighbors(junction, { neighborhood: "moore" })).toContain(
+    destination,
+  );
+  expect(["#ffffff", "#e33131", "#30b949"]).toContain(destination.color);
+  expect(model.snapshot().tick).toBe(0);
+});
+
+test("explicit Grid and Goal compositions retain separate canonical state and caller-owned clocks", () => {
+  const plain = grid({ seed: 4, numCars: 4 });
+  const commuters = goal({ seed: 4, numCars: 4 });
+  const goalBefore = commuters.snapshot();
+  const canonicalRoad = plain.roads[0]!;
+  expect(plain.grid.fields).toContain(canonicalRoad);
+  expect(commuters.grid.fields).not.toContain(canonicalRoad);
+  expect(plain.world.agents[0]).toBe(plain.cars()[0]);
+  expect(commuters.world.agents[0]).toBe(commuters.cars()[0]);
+
+  plain.setParameters({ power: false });
+  plain.changeLight();
+  plain.step(3);
+
+  expect(commuters.snapshot()).toEqual(goalBefore);
+  expect(plain.snapshot().tick).toBe(3);
+  expect(commuters.snapshot().tick).toBe(0);
+  expect(
+    plain
+      .snapshot()
+      .cars.every(
+        (car) =>
+          car.houseId === null && car.workId === null && car.goalId === null,
+      ),
+  ).toBe(true);
+  expect(
+    commuters
+      .cars()
+      .every(
+        (car) =>
+          commuters.grid.fields.includes(car.house!) &&
+          commuters.grid.fields.includes(car.work!),
+      ),
+  ).toBe(true);
+});
