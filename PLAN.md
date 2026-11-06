@@ -40,7 +40,9 @@ The [assignment](docs/development/pre-main-authoring-assignment.md) covers publi
 
 ### Remaining independent merge audit
 
-- [ ] **Fresh implementation feedback.** Gemini 3.8 Flash high and Astra high are reviewing the implemented snapshot independently. Resolve concrete findings, preserve their exact review scope and rerun affected checks. Design feedback is not implementation approval.
+- [ ] **P1 · callback-error ownership consistency.** Astra high reproduced owner/observation/epoch divergence when live `enabled` throws during restart. Validate the candidate and keep publication/disposal consistent even when later callbacks fail. Check first setup, restart and post-preflight failure with real models and actual browser interactions.
+- [ ] **P2 · presentation edits after formatter failure.** Setup/speed edits must not leak callback exceptions or publish a draft different from the value used on restart. Preserve the original error, current draft and explicit recovery.
+- [ ] **Fresh implementation feedback.** Gemini high gave conditional scoped approval; its contrast and local-check conditions have separate later evidence. Astra high reported the two errors above; fixes and fresh targeted independent review remain required. Earlier green checks do not close these reproduced edge cases.
 - [ ] **Final integrated verification.** Local full check and Svelte build passed. Await the latest remote CI and complete the independent review disposition; preserve actual totals, source attribution and warning limits.
 - [ ] **Documentation consistency.** Reconcile current UI availability and older assignment status with this implemented slice; keep historical evidence intact. Review remaining prose for a clear human explanation of the project's motivation rather than internal audit vocabulary.
 - [ ] **Public domain-function interpretation.** The [Tijuana procedure matrix](docs/development/model-function-encapsulation.md) distinguishes public action paths from private procedures. The normative breadth of direct procedure access remains an explicit decision; no arbitrary helper exports or silent weakening of the rule.
