@@ -18,7 +18,7 @@ test("uniform options are closed data and invalid domains leave continuation unc
     { min: 2, max: 2 }, { min: 3, max: 2 }, { integer: "true" },
     { min: 0.5, max: 3, integer: true },
     { min: -Number.MAX_SAFE_INTEGER, max: Number.MAX_SAFE_INTEGER, integer: true },
-    { distribution: "exponential" }, { distribution: "gamma", shape: 1, rate: 1 },
+    { distribution: "exponential", mean: -1 }, { distribution: "gamma", shape: 1, rate: 1 },
     { distribution: "uniform", mean: 1 }, { bound: 2 },
   ]) unchanged(random, () => random.number(options as never));
   let reads = 0;
