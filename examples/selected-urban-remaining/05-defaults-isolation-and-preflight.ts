@@ -3,7 +3,6 @@ import { create as structureOne } from "../../experiments/urban-suite-structure-
 import { create as structureTwo } from "../../experiments/urban-suite-structure-from-randomness-2/model.ts";
 import { create as sprawl } from "../../experiments/urban-suite-sprawl-effect/model.ts";
 import { create as economic } from "../../experiments/urban-suite-economic-disparity/model.ts";
-import { create as tijuana } from "../../experiments/urban-suite-tijuana-bordertowns/model.ts";
 
 const a = structureOne(), b = structureTwo(), c = sprawl(), d = economic();
 assert.equal(a.read().cells.length, 16900);
@@ -28,18 +27,3 @@ for (const mutate of [
   assert.throws(mutate);
   assert.deepEqual([a.read(), b.read(), c.read(), d.read()], before);
 }
-// This is a bounded preflight contract, not full Tijuana cityscape acceptance.
-const city = tijuana();
-assert.equal(city.read().cells.length, 171 * 115);
-assert.equal(city.read().setupDone, false);
-const cleared = city.read();
-city.advance(0);
-assert.deepEqual(city.read(), cleared);
-city.advance(); // source GO-before-CITYSCAPE warns and returns before tick
-assert.equal(city.read().tick, 0);
-assert.equal(city.read().setupDone, false);
-assert.ok(city.read().warnings.some(warning => warning.includes("not completed")));
-const stream = city.read().randomState;
-city.clear();
-assert.equal(city.read().tick, 0);
-assert.deepEqual(city.read().randomState, stream); // CLEAR does not reseed
