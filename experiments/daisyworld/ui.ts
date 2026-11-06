@@ -1,20 +1,11 @@
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: (
-    [
-      "seed",
-      "startBlacks",
-      "startWhites",
-      "scenario",
-      "solarLuminosity",
-      "albedoSurface",
-      "albedoBlacks",
-      "albedoWhites",
-    ] as const
-  ).map((field) => ({
-    field,
-  })),
+  setup: [
+    { field: "seed" },
+    { field: "startBlacks" },
+    { field: "startWhites" },
+  ],
   live: (
     [
       "scenario",
