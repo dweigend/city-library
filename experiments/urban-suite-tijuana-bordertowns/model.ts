@@ -494,7 +494,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         x <= Math.min(85, Math.floor(a.x + r));
         x++
       ) {
-        const f = fields[(y + 57) * 171 + x + 85]!;
+        const f = grid.fieldAt({ x, y })!;
         if (distance(a, f) <= r) result.push(f);
       }
     return result;
