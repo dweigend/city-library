@@ -14,7 +14,7 @@ export const ui = defineUI(model, {
       { label: "Initial", color: "#d491ce", points: s.initialProfile.map(p => ({ x: p.x, y: p.concentration })) },
       ...(s.profileAt15 ? [{ label: "After 15 ticks", color: "#909090", points: s.profileAt15.map(p => ({ x: p.x, y: p.concentration })) }] : []),
     ] },
-    { type: "spatial", label: "Lattice and diffusing atoms", data: s => ({ width: s.width, height: s.height, agents: [
+    { type: "spatial", label: "Lattice and diffusing atoms", data: s => ({ width: s.width, height: s.height, cells: s.cells.map(c => ({ ...c, color: "#000000" })), segments: s.parameters.goMode === "draw-profile" ? s.profile.slice(1).map((p, i) => ({ from: { x: s.profile[i]!.x, y: (s.height - 1) / 2 - 25 + 25 * s.profile[i]!.concentration }, to: { x: p.x, y: (s.height - 1) / 2 - 25 + 25 * p.concentration }, color: "#eedb00", width: 2 })) : [], agents: [
       ...(s.latticeVisible ? s.lattice.map(a => ({ ...a, color: "#355fa5", size: 7, shape: "circle" as const })) : []),
       ...s.atoms.map(a => ({ ...a, color: "#eedb00", size: 3, shape: "circle" as const })),
     ] }) },
