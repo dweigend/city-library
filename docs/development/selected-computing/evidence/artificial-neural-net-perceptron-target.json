@@ -1,0 +1,717 @@
+{
+  "setup-desktop-light": {
+    "at": "2026-11-06T09:06:18.407Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-perceptron",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-5286x9xw.js",
+        "bytes": 10227,
+        "sha256": "fa911e36ffaff7c0ae3efa33deb154106bf26977504f6555c1c0fb610ad58e53",
+        "modelMarkers": [
+          "artificial-neural-net-perceptron"
+        ]
+      }
+    ],
+    "monitors": {
+      "Epoch": "0",
+      "Epoch error": "0.00000",
+      "Output": "-1",
+      "Test": "—",
+      "Decision boundary": "line"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Squared signed error × 0.5: no samples"
+      },
+      {
+        "label": "Positive: x -1, y 1; x 1, y -1; Negative: x -1, y -1; x 1, y 1; Boundary: x -2, y -2.081827873525851; x -1, y 0.057895258391988995; x 0, y 2.1976183903098288; x 1, y 4.3373415222276686; x 2, y 6.477064654145508"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Perceptron",
+      "Error vs. epochs",
+      "Rule learned",
+      "Weights"
+    ]
+  },
+  "step": {
+    "at": "2026-11-06T09:06:50.106Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-perceptron",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-5286x9xw.js",
+        "bytes": 10227,
+        "sha256": "fa911e36ffaff7c0ae3efa33deb154106bf26977504f6555c1c0fb610ad58e53",
+        "modelMarkers": [
+          "artificial-neural-net-perceptron"
+        ]
+      }
+    ],
+    "monitors": {
+      "Epoch": "1",
+      "Epoch error": "1.03600",
+      "Output": "1",
+      "Test": "—",
+      "Decision boundary": "line"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Squared signed error × 0.5: 1.036"
+      },
+      {
+        "label": "Positive: x -1, y 1; x 1, y -1; Negative: x -1, y -1; x 1, y 1; Boundary: x -2, y -0.9757892008969673; x -1, y -0.0012956686588025059; x 0, y 0.9731978635793623; x 1, y 1.9476913958175273; x 2, y 2.922184928055692"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Perceptron",
+      "Error vs. epochs",
+      "Rule learned",
+      "Weights"
+    ]
+  },
+  "progress-desktop-light": {
+    "at": "2026-11-06T09:06:58.939Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-perceptron",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-5286x9xw.js",
+        "bytes": 10227,
+        "sha256": "fa911e36ffaff7c0ae3efa33deb154106bf26977504f6555c1c0fb610ad58e53",
+        "modelMarkers": [
+          "artificial-neural-net-perceptron"
+        ]
+      }
+    ],
+    "monitors": {
+      "Epoch": "87",
+      "Epoch error": "0.89600",
+      "Output": "-1",
+      "Test": "—",
+      "Decision boundary": "line"
+    },
+    "status": "Paused.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Squared signed error × 0.5: 0.896"
+      },
+      {
+        "label": "Positive: x -1, y 1; x 1, y -1; Negative: x -1, y -1; x 1, y 1; Boundary: x -2, y 2.8911434008161088; x -1, y 1.9583986465713017; x 0, y 1.0256538923264948; x 1, y 0.09290913808168783; x 2, y -0.8398356161631192"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Perceptron",
+      "Error vs. epochs",
+      "Rule learned",
+      "Weights"
+    ]
+  },
+  "actions": [
+    "Setup",
+    "1 step",
+    "Run",
+    "Pause",
+    "Show weights on",
+    "Test",
+    "Setup resets model"
+  ],
+  "desktop-dark": {
+    "at": "2026-11-06T09:07:30.576Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-perceptron",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-5286x9xw.js",
+        "bytes": 10227,
+        "sha256": "fa911e36ffaff7c0ae3efa33deb154106bf26977504f6555c1c0fb610ad58e53",
+        "modelMarkers": [
+          "artificial-neural-net-perceptron"
+        ]
+      }
+    ],
+    "monitors": {
+      "Epoch": "87",
+      "Epoch error": "0.89600",
+      "Output": "-1",
+      "Test": "-1 / expected -1 · correct",
+      "Decision boundary": "line"
+    },
+    "status": "Action completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Squared signed error × 0.5: 0.896"
+      },
+      {
+        "label": "Positive: x -1, y 1; x 1, y -1; Negative: x -1, y -1; x 1, y 1; Boundary: x -2, y 2.8911434008161088; x -1, y 1.9583986465713017; x 0, y 1.0256538923264948; x 1, y 0.09290913808168783; x 2, y -0.8398356161631192"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Perceptron",
+      "Error vs. epochs",
+      "Rule learned",
+      "Weights"
+    ]
+  },
+  "mobile-light": {
+    "at": "2026-11-06T09:07:30.968Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-perceptron",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-5286x9xw.js",
+        "bytes": 10227,
+        "sha256": "fa911e36ffaff7c0ae3efa33deb154106bf26977504f6555c1c0fb610ad58e53",
+        "modelMarkers": [
+          "artificial-neural-net-perceptron"
+        ]
+      }
+    ],
+    "monitors": {
+      "Epoch": "87",
+      "Epoch error": "0.89600",
+      "Output": "-1",
+      "Test": "-1 / expected -1 · correct",
+      "Decision boundary": "line"
+    },
+    "status": "Action completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Squared signed error × 0.5: 0.896"
+      },
+      {
+        "label": "Positive: x -1, y 1; x 1, y -1; Negative: x -1, y -1; x 1, y 1; Boundary: x -2, y 2.8911434008161088; x -1, y 1.9583986465713017; x 0, y 1.0256538923264948; x 1, y 0.09290913808168783; x 2, y -0.8398356161631192"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Perceptron",
+      "Error vs. epochs",
+      "Rule learned",
+      "Weights"
+    ]
+  },
+  "mobile-dark": {
+    "at": "2026-11-06T09:07:50.777Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-perceptron",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-5286x9xw.js",
+        "bytes": 10227,
+        "sha256": "fa911e36ffaff7c0ae3efa33deb154106bf26977504f6555c1c0fb610ad58e53",
+        "modelMarkers": [
+          "artificial-neural-net-perceptron"
+        ]
+      }
+    ],
+    "monitors": {
+      "Epoch": "87",
+      "Epoch error": "0.89600",
+      "Output": "-1",
+      "Test": "-1 / expected -1 · correct",
+      "Decision boundary": "line"
+    },
+    "status": "Action completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Squared signed error × 0.5: 0.896"
+      },
+      {
+        "label": "Positive: x -1, y 1; x 1, y -1; Negative: x -1, y -1; x 1, y 1; Boundary: x -2, y 2.8911434008161088; x -1, y 1.9583986465713017; x 0, y 1.0256538923264948; x 1, y 0.09290913808168783; x 2, y -0.8398356161631192"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Perceptron",
+      "Error vs. epochs",
+      "Rule learned",
+      "Weights"
+    ]
+  },
+  "reset": {
+    "at": "2026-11-06T09:07:51.020Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-perceptron",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-5286x9xw.js",
+        "bytes": 10227,
+        "sha256": "fa911e36ffaff7c0ae3efa33deb154106bf26977504f6555c1c0fb610ad58e53",
+        "modelMarkers": [
+          "artificial-neural-net-perceptron"
+        ]
+      }
+    ],
+    "monitors": {
+      "Epoch": "0",
+      "Epoch error": "0.00000",
+      "Output": "-1",
+      "Test": "—",
+      "Decision boundary": "line"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Squared signed error × 0.5: no samples"
+      },
+      {
+        "label": "Positive: x -1, y 1; x 1, y -1; Negative: x -1, y -1; x 1, y 1; Boundary: x -2, y -2.081827873525851; x -1, y 0.057895258391988995; x 0, y 2.1976183903098288; x 1, y 4.3373415222276686; x 2, y 6.477064654145508"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Perceptron",
+      "Error vs. epochs",
+      "Rule learned",
+      "Weights"
+    ]
+  },
+  "diagnostics": {
+    "console": [
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.090Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.095Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.101Z"
+      }
+    ],
+    "failedRequests": []
+  }
+}

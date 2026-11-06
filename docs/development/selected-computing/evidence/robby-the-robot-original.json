@@ -1,0 +1,207 @@
+{
+  "setup": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+    "title": "NetLogo Web: Robby the Robot",
+    "at": "2026-11-06T09:02:46.426Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "ecaa2ce7c1d195fe6383354fc790025aa5c9d239f25f99f0fed71e04eaaf8d19",
+    "tick": 0,
+    "metrics": {
+      "count individuals": {
+        "success": true,
+        "value": 100
+      },
+      "best-fitness": {
+        "success": true,
+        "value": -1.8
+      },
+      "step-counter": {
+        "success": true,
+        "value": 0
+      },
+      "count cans": {
+        "success": true,
+        "value": 55
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "population-size",
+        "value": 100
+      },
+      {
+        "type": "slider",
+        "variable": "mutation-rate",
+        "value": 0.01
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-generations",
+        "value": 100
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "actions": [
+    "setup",
+    "go-forever start",
+    "go-forever pause",
+    "view Robby's Environment",
+    "step thru best strategy",
+    "view strategies",
+    "setup reset"
+  ],
+  "progress": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+    "title": "NetLogo Web: Robby the Robot",
+    "at": "2026-11-06T09:03:13.668Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "ecaa2ce7c1d195fe6383354fc790025aa5c9d239f25f99f0fed71e04eaaf8d19",
+    "tick": 19,
+    "metrics": {
+      "count individuals": {
+        "success": true,
+        "value": 100
+      },
+      "best-fitness": {
+        "success": true,
+        "value": 15
+      },
+      "step-counter": {
+        "success": true,
+        "value": 0
+      },
+      "count cans": {
+        "success": true,
+        "value": 54
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "population-size",
+        "value": 100
+      },
+      {
+        "type": "slider",
+        "variable": "mutation-rate",
+        "value": 0.01
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-generations",
+        "value": 100
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "trial": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+    "title": "NetLogo Web: Robby the Robot",
+    "at": "2026-11-06T09:03:14.246Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "ecaa2ce7c1d195fe6383354fc790025aa5c9d239f25f99f0fed71e04eaaf8d19",
+    "tick": 19,
+    "metrics": {
+      "count individuals": {
+        "success": true,
+        "value": 100
+      },
+      "best-fitness": {
+        "success": true,
+        "value": 15
+      },
+      "step-counter": {
+        "success": true,
+        "value": 2
+      },
+      "count cans": {
+        "success": true,
+        "value": 49
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "population-size",
+        "value": 100
+      },
+      {
+        "type": "slider",
+        "variable": "mutation-rate",
+        "value": 0.01
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-generations",
+        "value": 100
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "reset": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+    "title": "NetLogo Web: Robby the Robot",
+    "at": "2026-11-06T09:03:36.979Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "ecaa2ce7c1d195fe6383354fc790025aa5c9d239f25f99f0fed71e04eaaf8d19",
+    "tick": 0,
+    "metrics": {
+      "count individuals": {
+        "success": true,
+        "value": 100
+      },
+      "best-fitness": {
+        "success": true,
+        "value": -53.65
+      },
+      "step-counter": {
+        "success": true,
+        "value": 0
+      },
+      "count cans": {
+        "success": true,
+        "value": 47
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "population-size",
+        "value": 100
+      },
+      {
+        "type": "slider",
+        "variable": "mutation-rate",
+        "value": 0.01
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-generations",
+        "value": 100
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  }
+}
