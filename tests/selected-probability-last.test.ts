@@ -332,7 +332,7 @@ test("Mandelbrot snapshots eligible occupants before shared-patch counter update
   );
 });
 
-test("Mandelbrot hard-boundary jump restores the canonical Agent instead of clipping", () => {
+test("Mandelbrot hard-boundary jump rejects its destination before Agent mutation", () => {
   const m = mandelbrot({ numTurtles: 1, throw: 10 });
   const turtle = m.world.agents[0]!;
   turtle.move({ to: { x: 149, y: 0 } });
@@ -376,5 +376,45 @@ test("Mandelbrot preflight relocates at clipped and exact-positive-edge source e
     expect(turtle.x).toBe(nextX);
     expect(turtle.y).toBe(nextY);
     expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
+  }
+});
+
+test("Mandelbrot preflight rejects a negative epsilon escape without the former distance tolerance", () => {
+  const m = mandelbrot({ numTurtles: 1, throw: 0, seed: 17 });
+  const turtle = m.world.agents[0]!;
+  turtle.move({ to: { x: -149.50000000005, y: 0 } });
+  turtle.rotate({ towards: { x: -150.50000000005, y: 0 } });
+  const expected = Random.add({ seed: 17 });
+  expected.state = m.read().randomState;
+  const nextX = expected.number() * 301 - 150.5;
+  const nextY = expected.number() * 301 - 150.5;
+  m.advance();
+  expect(turtle.x).toBe(nextX);
+  expect(turtle.y).toBe(nextY);
+  expect(turtle.x).not.toBe(-150.5);
+  expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
+  expect(m.world.tick.value).toBe(1);
+});
+
+test("Mandelbrot preflight accepts each exact negative endpoint without relocation draws", () => {
+  for (const axis of ["x", "y"] as const) {
+    const m = mandelbrot({ numTurtles: 1, throw: 0, seed: 17 });
+    const turtle = m.world.agents[0]!;
+    turtle.move({
+      to: axis === "x" ? { x: -149.5, y: 0 } : { x: 0, y: -149.5 },
+    });
+    turtle.rotate({
+      towards: axis === "x" ? { x: -150.5, y: 0 } : { x: 0, y: -150.5 },
+    });
+    const expected = Random.add({ seed: 17 });
+    expected.state = m.read().randomState;
+    // With one turtle, only wiggle draws: no shuffle draw or random relocation.
+    expected.number();
+    expected.number();
+    m.advance();
+    expect(turtle[axis]).toBe(-150.5);
+    expect(m.read().randomState).toEqual(expected.state);
+    expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
+    expect(m.world.tick.value).toBe(1);
   }
 });

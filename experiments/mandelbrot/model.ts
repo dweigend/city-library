@@ -1,5 +1,5 @@
 /** Mandelbrot, Wilensky (1997), CC BY-NC-SA 3.0. Full source and notices: source.nlogox / NOTICE.md. */
-import { Agent, Grid, Random, World } from "city-library";
+import { Agent, Grid, Random, World, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
@@ -91,18 +91,14 @@ export function create(options: Partial<Parameters> = {}) {
       count: population.length,
       compatibility: "legacy-shuffle",
     })) {
-      const from = { x: turtle.x, y: turtle.y };
-      turtle.move(1);
-      // Delivered movement clips hard boundaries. NetLogo's preflight instead
-      // relocates. Attempt/measure/restore uses only canonical public movement.
-      if (
-        turtle.distanceTo(from) < 1 - 1e-10 ||
-        turtle.x >= 150.5 ||
-        turtle.y >= 150.5
-      ) {
-        turtle.move({ to: from });
+      const direction = geometry.direction({ heading: turtle.heading });
+      const position = geometry.normalize(
+        { x: turtle.x + direction.x, y: turtle.y + direction.y },
+        { space: world.space!, endpoints: "half-open" },
+      );
+      if (position) turtle.move({ to: position });
+      else
         turtle.move({ to: { x: randomCoordinate(), y: randomCoordinate() } });
-      }
     }
   }
   function wiggle() {
@@ -125,16 +121,15 @@ export function create(options: Partial<Parameters> = {}) {
       if (field.counter >= turtle.previousCount) {
         turtle.previousCount = field.counter;
         turtle.color = "#eab308";
-        const from = { x: turtle.x, y: turtle.y };
-        turtle.move(settings.throw);
-        // Source jump is all-or-nothing, unlike the public move's clipping.
-        if (
-          turtle.distanceTo(from) <
-            settings.throw - 1e-10 * Math.max(1, settings.throw) ||
-          turtle.x >= 150.5 ||
-          turtle.y >= 150.5
-        )
-          turtle.move({ to: from });
+        const direction = geometry.direction({ heading: turtle.heading });
+        const position = geometry.normalize(
+          {
+            x: turtle.x + direction.x * settings.throw,
+            y: turtle.y + direction.y * settings.throw,
+          },
+          { space: world.space!, endpoints: "half-open" },
+        );
+        if (position) turtle.move({ to: position });
       } else {
         turtle.previousCount = field.counter;
         turtle.color = "#2563eb";
