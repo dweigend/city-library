@@ -1,5 +1,7 @@
 # Selected social B02 integration handoff
 
+> **Historical first-delivery handoff: pre-format evidence through eaa698a.** The parent integrated those16 commits. Current readability-only completion and freshly built Setup/step hashes/20 PNGs are in [post-format verification](selected-social-format-report.md). Earlier native/interactions/themes remain tied to their original hashes; they are not relabelled. Only the new formatting/evidence commits should be integrated now.
+
 Branch `experiment/selected-social-b02`, base `115e6403065a3f937f3333fcb39ff1525f0bc0ac`. Draft PR[22](https://github.com/dweigend/city-library/pull/22), stacked against `experiment/netlogo-web-catalog` / rootPR[4](https://github.com/dweigend/city-library/pull/4). Own issue[21](https://github.com/dweigend/city-library/issues/21), child of Epic1 by reference. No merge/rebase/force-push or global evidence/ledger/README/core/shared-UI changes.
 
 All ten fixed paths retain identity: consumer-choice, rebellion, language-change, party, ethnocentrism, minority-game, rumor-mill, signaling-game, piaget-vygotsky-game, heroes-and-cowards. Full source manifests/notices, five immutable asserted examples, complete runtime/UI, tests, original+target Chromium and research-context links are delivered. Both scoped native workers returned; no extra top-level thread or reviewer substitution was used.

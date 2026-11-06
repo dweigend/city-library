@@ -1,0 +1,92 @@
+{
+  "slug": "signaling-game",
+  "codeCommit": "c8700ec",
+  "marker": "selected-social-b02:signaling-game:399be72f527afb3d0e9ba27969d1a25e8a94364358aca2e707f0b01f24009bf5",
+  "sourceSHA256": "399be72f527afb3d0e9ba27969d1a25e8a94364358aca2e707f0b01f24009bf5",
+  "sourceHashBasis": "Unchanged pinned source.nlogox; fresh target chunk marker checked. Native session was not re-run for a formatting-only change.",
+  "buildVersion": "1793962848757",
+  "loadedModelChunk": "http://localhost:3112/chunks/ui-s2q2nnwa.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/ui-s2q2nnwa.js",
+      "sha256": "a337df7445a4291391106ca5ff269117e6fc4129fd6607c129b33a3f22ec3982"
+    },
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    }
+  ],
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "setup": {
+    "tick": 0,
+    "parameters": {
+      "seed": 1,
+      "numberOfStates": 2,
+      "numberOfSignals": 2,
+      "printProbabilities": true
+    },
+    "monitors": {
+      "Tick": "0",
+      "Probability of success": "50.00%",
+      "Correct": "0",
+      "Wrong": "0",
+      "Success rate": "—"
+    },
+    "status": "Model initialized.",
+    "raster": [
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 1
+      },
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 1
+      },
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 28
+      }
+    ]
+  },
+  "errors": [],
+  "step": {
+    "tick": 1,
+    "monitors": {
+      "Tick": "1",
+      "Probability of success": "51.39%",
+      "Correct": "1",
+      "Wrong": "0",
+      "Success rate": "100.00%"
+    },
+    "status": "Steps completed.",
+    "raster": [
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 1
+      },
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 1
+      },
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 45
+      }
+    ],
+    "errors": []
+  },
+  "images": {
+    "setup": "signaling-game-setup.png",
+    "step": "signaling-game-step.png"
+  }
+}

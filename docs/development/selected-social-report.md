@@ -1,5 +1,7 @@
 # Selected social B02 original/target comparison
 
+> **Historical complete functional comparison: pre-format evidence through eaa698a.** The parent integrated those16 commits. Current readability-only completion and freshly built Setup/step hashes/20 PNGs are in [post-format verification](selected-social-format-report.md). Earlier native/interactions/themes remain tied to their original hashes; they are not relabelled. Only the new formatting/evidence commits should be integrated now.
+
 Ten complete headless compositions and thin shared-UI definitions are delivered for the ten immutable selected B02 paths. This is author/coordinator evidence; required independent Argon/high approval remains quota-blocked by8194e842 and was neither retried nor substituted. Parent owns all global ledger/count/acceptance decisions and final integration. Issue[21](https://github.com/dweigend/city-library/issues/21), draftPR[22](https://github.com/dweigend/city-library/pull/22), stacked on rootPR[4](https://github.com/dweigend/city-library/pull/4).
 
 ## Identity, contracts and execution basis

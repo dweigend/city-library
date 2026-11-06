@@ -61,4 +61,7 @@ parts.append('''## Corrections, limits and handoff
 The ten real model deliveries, source audits, five-script freeze, executed headless/UI/baseline evidence are ready for parent integration. Required independent Argon/high review remains quota-blocked; author fixes are not review approval. No retry, reviewer substitution or Astra routine review was performed. Parent retains global phase registration, final integrated regression, ledger/Epic updates and all counts. No source or target browser-start blocker remains in this batch. No merge/rebase/force-push/root checkout mutation occurs here.
 ''')
 parts.append('\n`selected-social-evidence/full-check.log` is the earlier391-test checkpoint before the decisive Heroes blocked-forward correction. It is retained as historical execution evidence; `final-check.log` and the final focused/public browser probes supersede its missing boundary regression. Final wording-only UI change `db07770` has repeated type/browser evidence. Browser readback/capture never constitutes scientific validation or resolution of an unrelated shared-renderer issue.\n')
-(D/'selected-social-report.md').write_text(''.join(parts))
+report = ''.join(parts)
+if (D/'selected-social-format-report.md').exists():
+ report = report.replace('\n\n', '\n\n> **Historical complete functional comparison: pre-format evidence through eaa698a.** Current readability-only completion and freshly built Setup/step hashes/20 PNGs are in [post-format verification](selected-social-format-report.md). Earlier native/interactions/themes remain tied to their original hashes; they are not relabelled.\n\n', 1)
+(D/'selected-social-report.md').write_text(report)
