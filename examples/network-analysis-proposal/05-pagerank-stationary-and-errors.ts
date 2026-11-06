@@ -1,4 +1,4 @@
-// PROPOSAL ONLY; U1 callback capture, U2 option presence and U3 numeric closures remain reviewable.
+// REVISED PROPOSAL ONLY: root provisional stable transition and two-loop-arc closures; no freeze.
 import assert from "node:assert/strict";
 import { Graph, type Edge } from "city-library";
 const close = (actual: number | undefined, expected: number, tolerance = 1e-10) => { assert.notEqual(actual, undefined); assert.ok(Math.abs(actual! - expected) <= tolerance, `${actual} != ${expected}`); };
@@ -36,7 +36,10 @@ for (const node of [first, second]) close(edgeless.analyze({ measure: "pageRank"
 const singleton = Graph.add<Node>(); const one = singleton.nodes.add({ name: "one" });
 close(singleton.analyze({ measure: "pageRank" }).get(one), 1);
 assert.equal(Graph.add().analyze({ measure: "pageRank" }).size, 0);
-for (const field of ["direction", "normalized", "disconnected", "cost"]) assert.throws(() => graph.analyze({ measure: "pageRank", [field]: field === "cost" ? () => 1 : 1 } as never), TypeError);
+for (const field of ["direction", "normalized", "disconnected", "cost"]) {
+  assert.throws(() => graph.analyze({ measure: "pageRank", [field]: field === "cost" ? () => 1 : 1 } as never), TypeError);
+  assert.throws(() => graph.analyze({ measure: "pageRank", [field]: undefined } as never), TypeError);
+}
 for (const damping of [0, 1, -0.1, 1.1, NaN, Infinity]) assert.throws(() => graph.analyze({ measure: "pageRank", damping }));
 for (const tolerance of [0, -1, NaN, Infinity]) assert.throws(() => graph.analyze({ measure: "pageRank", tolerance }));
 for (const maxIterations of [0, -1, 0.5, NaN, Infinity]) assert.throws(() => graph.analyze({ measure: "pageRank", maxIterations }));
@@ -46,4 +49,20 @@ const sentinel = new Error("weight failure");
 assert.throws(() => graph.analyze({ measure: "pageRank", weight: () => { throw sentinel; } }), error => error === sentinel);
 assert.throws(() => graph.analyze({ measure: "pageRank", weight: () => { graph.delete(); return 1; } }));
 assert.equal(graph.nodes.size, 3); assert.equal(graph.edges.size, 5);
+// Undirected loop carries two outgoing arcs relative to the other incident edge.
+// A transitions2/3 toA and1/3 toB; B returns toA. With damping1/2,
+// exact stationary mass is(9/14,5/14), NOT the one-loop-arc result(3/5,2/5).
+const loops = Graph.add<Node>({ selfLoops: true });
+const la = loops.nodes.add({ name: "la" }), lb = loops.nodes.add({ name: "lb" });
+loops.edges.add({ from: la, to: la }); loops.edges.add({ from: la, to: lb });
+const loopScores = loops.analyze({ measure: "pageRank", damping: 0.5, tolerance: 1e-12 });
+close(loopScores.get(la), 9 / 14); close(loopScores.get(lb), 5 / 14);
+// Max-row-weight scaling must normalizeMAX+MAX without falsely overflowing.
+const huge = Graph.add<Node, { weight: number }>({ edgeState: { weight: Number.MAX_VALUE } });
+const ha = huge.nodes.add({ name: "ha" }), hb = huge.nodes.add({ name: "hb" }), hc = huge.nodes.add({ name: "hc" });
+huge.edges.add({ from: ha, to: hb, directed: true }); huge.edges.add({ from: ha, to: hc, directed: true });
+huge.edges.add({ from: hb, to: ha, directed: true }); huge.edges.add({ from: hc, to: ha, directed: true });
+const hugeScores = huge.analyze({ measure: "pageRank", damping: 0.5, tolerance: 1e-12, weight: (edge: Edge<Node, { weight: number }>) => edge.weight });
+close(hugeScores.get(ha), 4 / 9); close(hugeScores.get(hb), 5 / 18); close(hugeScores.get(hc), 5 / 18);
+close([...hugeScores.values()].reduce((sum, value) => sum + value, 0), 1);
 console.log("analysis proposal05: weighted PageRank balance, dangling mass, convergence and closed domains");

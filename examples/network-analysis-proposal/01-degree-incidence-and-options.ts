@@ -1,4 +1,4 @@
-// PROPOSAL ONLY; U1/U2 callback/undefined-field decisions require coordinator acceptance.
+// REVISED PROPOSAL ONLY: root provisional numerical/domain closures, not frozen.
 import assert from "node:assert/strict";
 import { Graph, Random, World, type Edge } from "city-library";
 
@@ -23,7 +23,7 @@ assert.deepEqual([...graph.analyze({ measure: "degree", normalized: true }).valu
 for (const [direction, expected] of [["out", [21, 16, 0]], ["in", [7, 30, 0]], ["all", [26, 30, 0]]] as const) {
   const seen: Edge<Node, { weight: number }>[] = [];
   const result = graph.analyze({ measure: "degree", direction, weight: (edge: Edge<Node, { weight: number }>) => { seen.push(edge); return edge.weight; } });
-  assert.deepEqual(seen, edges); // Proposed U1: once per original edge, including loops.
+  assert.deepEqual(seen, edges); // Root provisional closure: once per original edge, including loops.
   assert.deepEqual([...result.values()], expected);
   assert.equal([...result.keys()][0], a);
 }
@@ -33,7 +33,7 @@ assert.deepEqual([...graph.analyze({ measure: "degree", weight: (edge: Edge<Node
 assert.deepEqual([...graph.analyze({ measure: "degree", direction: undefined, normalized: undefined, weight: undefined }).values()], [4, 3, 0]);
 for (const field of ["cost", "disconnected", "damping", "tolerance", "maxIterations"]) {
   assert.throws(() => graph.analyze({ measure: "degree", [field]: field === "cost" ? () => 1 : 1 } as never), TypeError);
-  assert.throws(() => graph.analyze({ measure: "degree", [field]: undefined } as never), TypeError); // Proposed U2: disallowed own key still rejects.
+  assert.throws(() => graph.analyze({ measure: "degree", [field]: undefined } as never), TypeError); // Root provisional closure: disallowed own key rejects even undefined.
 }
 assert.throws(() => graph.analyze({ measure: "bogus" } as never), TypeError);
 assert.throws(() => graph.analyze({ measure: "degree", unknown: undefined } as never), TypeError);
@@ -52,4 +52,44 @@ const singleton = Graph.add<Node>({ selfLoops: true }); const one = singleton.no
 singleton.edges.add({ from: one, to: one });
 assert.equal(singleton.analyze({ measure: "degree", normalized: true }).get(one), 2);
 assert.equal(Graph.add().analyze({ measure: "degree" }).size, 0);
+// Exact captured-weight aggregation with one nearest/ties-even publication.
+const precise = Graph.add<Node, { weight: number }>({ parallel: true, edgeState: { weight: 1 } });
+const pa = precise.nodes.add({ name: "pa" }), pb = precise.nodes.add({ name: "pb" });
+precise.nodes.add({ name: "normalization divisor2" });
+for (const [index, weight] of [2 ** 53, 1, 1].entries()) {
+  precise.edges.add({ from: pa, to: pb, directed: true, state: { weight } });
+  if (index === 1) assert.equal(precise.analyze({ measure: "degree", weight: (edge: Edge<Node, { weight: number }>) => edge.weight }).get(pa), 2 ** 53); // nearest/ties-even
+}
+assert.equal(precise.analyze({ measure: "degree", weight: (edge: Edge<Node, { weight: number }>) => edge.weight }).get(pa), 2 ** 53 + 2);
+assert.equal(precise.analyze({ measure: "degree", normalized: true, weight: (edge: Edge<Node, { weight: number }>) => edge.weight }).get(pa), 2 ** 52 + 1);
+const divided = Graph.add<Node, { weight: number }>({ parallel: true, edgeState: { weight: 1 } });
+const da = divided.nodes.add({ name: "da" }), db = divided.nodes.add({ name: "db" });
+divided.nodes.add({ name: "divisor3-a" }); divided.nodes.add({ name: "divisor3-b" });
+for (const weight of [2 ** 53, 1]) divided.edges.add({ from: da, to: db, directed: true, state: { weight } });
+// Normalize the published finite raw score, not the unrounded exact quotient.
+assert.equal(divided.analyze({ measure: "degree", normalized: true, weight: (edge: Edge<Node, { weight: number }>) => edge.weight }).get(da), (2 ** 53) / 3);
+assert.notEqual((2 ** 53) / 3, 3002399751580331); // exact(2^53+1)/3 is this integer.
+const finiteBoundary = [Number.MAX_VALUE, 1];
+const threshold = Graph.add<Node, { weight: number }>({ parallel: true, edgeState: { weight: 1 } });
+const ta = threshold.nodes.add({ name: "ta" }), tb = threshold.nodes.add({ name: "tb" }); threshold.nodes.add({ name: "divide2" });
+const boundaryEdges = finiteBoundary.map(weight => threshold.edges.add({ from: ta, to: tb, directed: true, state: { weight } }));
+const readWeight = (edge: Edge<Node, { weight: number }>) => edge.weight;
+assert.equal(threshold.analyze({ measure: "degree", weight: readWeight }).get(ta), Number.MAX_VALUE); // exactMAX+1 rounds finite
+boundaryEdges[1]!.weight = 2 ** 970;
+assert.throws(() => threshold.analyze({ measure: "degree", weight: readWeight }), RangeError);
+assert.throws(() => threshold.analyze({ measure: "degree", normalized: true, weight: readWeight }), RangeError); // reject BEFORE divide2
+// Every measure preflights keys/shapes/values before empty-shortcuts or callbacks.
+const empty = Graph.add<Node>(); let emptyCalls = 0;
+for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "pageRank"] as const) {
+  const callbackField = measure === "closeness" || measure === "betweenness" ? "cost" : "weight";
+  const prohibited = callbackField === "cost" ? "weight" : "cost";
+  const callback = () => { emptyCalls++; return 1; };
+  assert.equal(empty.analyze({ measure, [callbackField]: callback } as never).size, 0);
+  assert.throws(() => empty.analyze({ measure, [callbackField]: 3 } as never), TypeError);
+  assert.throws(() => empty.analyze({ measure, [callbackField]: callback, [prohibited]: undefined } as never), TypeError);
+  assert.throws(() => empty.analyze({ measure, unknown: undefined } as never), TypeError);
+}
+assert.throws(() => empty.analyze({ measure: "pageRank", damping: 1 }));
+assert.throws(() => empty.analyze({ measure: "eigenvector", maxIterations: 0 }));
+assert.equal(emptyCalls, 0);
 console.log("analysis proposal01: degree incidence, canonical keys, weights and closed options");

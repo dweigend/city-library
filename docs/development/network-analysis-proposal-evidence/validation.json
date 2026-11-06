@@ -1,35 +1,45 @@
 {
   "checkedAt": "2026-11-06",
-  "scope": "Unfrozen source/contract/example proposal; no analyze runtime executed",
+  "revision": "Revised root provisional numerical closures; five scripts remain unfrozen",
   "results": {
     "exactScriptCount": 5,
-    "configuredProjectTypecheck": "passed; does not include unregistered proposal directory",
+    "configuredProjectTypecheck": "passed in this revision; does not include unregistered proposal directory",
     "proposalPublicTypecheck": {
       "exitCode": 1,
       "diagnostics": {
-        "2339": 74
+        "2339": 105
       },
-      "interpretation": "Only current missing graph.analyze diagnostics; expected preparation failure, not successful target typecheck"
+      "missingPropertyCounts": {
+        "analyze": 105
+      },
+      "interpretation": "Only current missing graph.analyze; expected preparation failure, not passing target typecheck"
     },
-    "syntaxTranspile": "all five parsed/transpiled with Bun.Transpiler",
-    "independentExactRationalOracles": "passed",
-    "localLinksAndAPIAnchors": 22,
+    "syntaxTranspile": "all five revised files parsed/transpiled with Bun.Transpiler; no script execution",
+    "independentMathematicalOracles": [
+      "tiny rational diamonds",
+      "16 tiny weighted rare-branch enumerations",
+      "1080-stage/127-tail exact subnormal rounding inequalities",
+      "PageRank exact stationary loop/MAX-row balances",
+      "degree nearest-even and MAX publication thresholds",
+      "closeness exact sum of published distances",
+      "90-digit loop eigenpair and exact whole-operator contraction inequalities"
+    ],
+    "localLinksAndAPIAnchors": 28,
     "allEvidenceJSONParsed": true,
-    "archiveAndInitialFinalLoadedSourceSHAEqual": "9c80d9fa4d5d4da96224e65cd707639267da3f6494309d9d45b758164d2703db",
-    "ownedBrowserTabClosed": true,
-    "screenshotsInspected": 3
+    "historicalArchiveAndInitialFinalLoadedSourceSHAEqual": "9c80d9fa4d5d4da96224e65cd707639267da3f6494309d9d45b758164d2703db"
   },
   "commands": [
     "python3 docs/development/network-analysis-proposal-evidence/verify-oracles.py",
     "bun run typecheck",
     "bunx tsc --noEmit --ignoreConfig --strict --target esnext --module preserve --moduleResolution bundler --types bun --skipLibCheck --allowImportingTsExtensions examples/network-analysis-proposal/*.ts",
-    "Bun.Transpiler syntax-only transform of all five files",
+    "Bun.Transpiler syntax-only transform of exactly five revised scripts",
     "Python JSON/link/sourceSHA/script-count validation"
   ],
+  "browserScope": "No browser opened during this revision. Original proposal browser evidence and closed owned tab remain historical unchanged evidence.",
   "notClaimed": [
-    "No runtime implementation or target-analyze assertion pass",
-    "No baseline acceptance",
-    "No model-count/ledger change",
-    "No independent review or approval"
+    "No analyze implementation or target assertion pass",
+    "No freeze/checksum acceptance",
+    "No new browser/research/independent review",
+    "No model-count/ledger/config/source-runtime changes"
   ]
 }

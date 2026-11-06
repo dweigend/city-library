@@ -1,4 +1,4 @@
-// PROPOSAL ONLY: caller-pure callback capture and numeric errors are proposed U1/U3 closures.
+// REVISED PROPOSAL ONLY: exact dyadic cost order; published-distance aggregation; no freeze.
 import assert from "node:assert/strict";
 import { Graph, type Edge } from "city-library";
 const close = (actual: number | undefined, expected: number) => { assert.notEqual(actual, undefined); assert.ok(Math.abs(actual! - expected) < 1e-12); };
@@ -35,16 +35,44 @@ const scores = star.analyze({ measure: "closeness" }); close(scores.get(center),
 for (const leaf of leaves) close(scores.get(leaf), 4 / 7);
 assert.throws(() => graph.analyze({ measure: "closeness", direction: "all" }), TypeError);
 assert.throws(() => graph.analyze({ measure: "closeness", disconnected: "reject" } as never), TypeError);
-for (const field of ["normalized", "weight", "damping", "tolerance", "maxIterations"]) assert.throws(() => graph.analyze({ measure: "closeness", [field]: field === "weight" ? () => 1 : 1 } as never), TypeError);
+for (const field of ["normalized", "weight", "damping", "tolerance", "maxIterations"]) {
+  assert.throws(() => graph.analyze({ measure: "closeness", [field]: field === "weight" ? () => 1 : 1 } as never), TypeError);
+  assert.throws(() => graph.analyze({ measure: "closeness", [field]: undefined } as never), TypeError);
+}
 for (const invalid of [0, -1]) assert.throws(() => graph.analyze({ measure: "closeness", cost: () => invalid }), RangeError);
 for (const invalid of [NaN, Infinity, "1", Promise.resolve(1)]) assert.throws(() => graph.analyze({ measure: "closeness", cost: () => invalid as number }), TypeError);
 const sentinel = new Error("cost failure");
 assert.throws(() => graph.analyze({ measure: "closeness", cost: () => { throw sentinel; } }), error => error === sentinel);
 assert.throws(() => graph.analyze({ measure: "closeness", cost: () => { graph.nodes.add({ name: "intruder" }); return 1; } }));
 assert.equal(graph.nodes.size, 4);
-// U3 proposed explicit failure for nonfinite accumulated distances/sums, no Infinity/clamping.
+// Root provisional numerical closure: explicit failure for nonfinite accumulated distances/sums, no Infinity/clamping.
 const huge = Graph.add<Node>(); const x = huge.nodes.add({ name: "x" }), y = huge.nodes.add({ name: "y" }), z = huge.nodes.add({ name: "z" });
 huge.edges.add({ from: x, to: y, directed: true }); huge.edges.add({ from: y, to: z, directed: true });
 assert.throws(() => huge.analyze({ measure: "closeness", cost: () => 1e308 }), RangeError);
 assert.equal(Graph.add().analyze({ measure: "closeness" }).size, 0);
+// Published distances follow delivered exact-dyadic routing, then closeness sums
+// those published values exactly and rounds the permitted total once.
+const precision = Graph.add<Node, { cost: number }>({ edgeState: { cost: 1 } });
+const pp = ["s", "a", "b", "c"].map(name => precision.nodes.add({ name }));
+for (const [index, amount] of [1e16, 1, 1].entries()) precision.edges.add({ from: pp[index]!, to: pp[index + 1]!, directed: true, state: { cost: amount } });
+const exactCost = (edge: Edge<Node, { cost: number }>) => edge.cost;
+assert.equal(precision.distances({ from: pp[0]!, cost: exactCost }).get(pp[3]!), 1e16 + 2);
+assert.equal(precision.analyze({ measure: "closeness", cost: exactCost }).get(pp[0]!), 1e-16); // rounded published total3e16
+// All captured costs must be positive, including disconnected components.
+const unreachableA = precision.nodes.add({ name: "unreachableA" }), unreachableB = precision.nodes.add({ name: "unreachableB" });
+precision.edges.add({ from: unreachableA, to: unreachableB, directed: true, state: { cost: 0 } });
+assert.throws(() => precision.analyze({ measure: "closeness", cost: exactCost }), RangeError);
+const totalOverflow = Graph.add<Node>(); const root = totalOverflow.nodes.add({ name: "root" });
+for (const name of ["left", "right"]) totalOverflow.edges.add({ from: root, to: totalOverflow.nodes.add({ name }), directed: true });
+assert.throws(() => totalOverflow.analyze({ measure: "closeness", cost: () => Number.MAX_VALUE }), RangeError); // individual distances finite; sum not
+const ratioOverflow = Graph.add<Node>(); const ra = ratioOverflow.nodes.add({ name: "ra" }), rb = ratioOverflow.nodes.add({ name: "rb" });
+ratioOverflow.edges.add({ from: ra, to: rb, directed: true });
+assert.throws(() => ratioOverflow.analyze({ measure: "closeness", cost: () => Number.MIN_VALUE }), RangeError);
+// Even an overflowing non-improving relaxation candidate must reject.
+const discarded = Graph.add<Node, { cost: number }>({ edgeState: { cost: 1 } });
+const ds = discarded.nodes.add({ name: "s" }), du = discarded.nodes.add({ name: "u" }), dt = discarded.nodes.add({ name: "t" });
+discarded.edges.add({ from: ds, to: dt, directed: true });
+discarded.edges.add({ from: ds, to: du, directed: true, state: { cost: Number.MAX_VALUE } });
+discarded.edges.add({ from: du, to: dt, directed: true, state: { cost: Number.MAX_VALUE } });
+assert.throws(() => discarded.analyze({ measure: "closeness", cost: exactCost }), RangeError);
 console.log("analysis proposal02: directed weighted reachable/discount closeness and source Star5");
