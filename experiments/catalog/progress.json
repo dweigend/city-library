@@ -10003,12 +10003,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/robby-the-robot-source.md",
+            "experiments/robby-the-robot/source.nlogox",
+            "experiments/robby-the-robot/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10042,7 +10055,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/Artificial Neural Net - Perceptron",
@@ -10056,12 +10072,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/artificial-neural-net-perceptron-source.md",
+            "experiments/artificial-neural-net-perceptron/source.nlogox",
+            "experiments/artificial-neural-net-perceptron/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10095,7 +10124,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/Dining Philosophers",
@@ -10109,12 +10141,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/dining-philosophers-source.md",
+            "experiments/dining-philosophers/source.nlogox",
+            "experiments/dining-philosophers/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10148,7 +10193,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/Simple Genetic Algorithm",
@@ -10162,12 +10210,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/simple-genetic-algorithm-source.md",
+            "experiments/simple-genetic-algorithm/source.nlogox",
+            "experiments/simple-genetic-algorithm/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10201,7 +10262,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/Robotic Factory",
@@ -10215,12 +10279,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/robotic-factory-source.md",
+            "experiments/robotic-factory/source.nlogox",
+            "experiments/robotic-factory/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10254,7 +10331,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/Particle Swarm Optimization",
@@ -10268,12 +10348,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/particle-swarm-optimization-source.md",
+            "experiments/particle-swarm-optimization/source.nlogox",
+            "experiments/particle-swarm-optimization/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10307,7 +10400,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/Artificial Neural Net - Multilayer",
@@ -10321,12 +10417,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/artificial-neural-net-multilayer-source.md",
+            "experiments/artificial-neural-net-multilayer/source.nlogox",
+            "experiments/artificial-neural-net-multilayer/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10360,7 +10469,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/PageRank",
@@ -10374,12 +10486,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/pagerank-source.md",
+            "experiments/pagerank/source.nlogox",
+            "experiments/pagerank/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10413,7 +10538,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/K-Means Clustering",
@@ -10427,12 +10555,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/k-means-clustering-source.md",
+            "experiments/k-means-clustering/source.nlogox",
+            "experiments/k-means-clustering/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10466,7 +10607,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/Unverified/Simulated Annealing",
@@ -10480,12 +10624,25 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing/sources.json",
+            "docs/development/selected-computing/simulated-annealing-source.md",
+            "experiments/simulated-annealing/source.nlogox",
+            "experiments/simulated-annealing/NOTICE.md"
+          ],
+          "basis": "Complete source/widget/procedure contracts39dcf60 integrated224663c; root XML/size/SHA/selected identity/inventory/research/pinnedGalapagos validation passed."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-computing-contract.md",
+            "docs/development/selected-computing-freeze.md",
+            "examples/selected-computing/SHA256SUMS",
+            "docs/development/selected-computing-source-integration.md"
+          ],
+          "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
         },
         "implemented": {
           "done": false,
@@ -10519,7 +10676,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Scoped B18 runtime and actual original/target browser evidence not yet integrated.",
+        "Required independent Argon/high technical approval remains quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/SmoothLife",
