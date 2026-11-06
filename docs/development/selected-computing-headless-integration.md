@@ -1,6 +1,6 @@
 # Ten computing models: headless integration checkpoint
 
-Root integrated owned runtime c363fe9 ase0169981 and e4c71e4 as8af33b0, after the source/freeze commits already reconciled in selected-computing-source-integration.md. The20 model/UI files byte-match the author's e4c71e4 tree; [exact runtime hashes](selected-computing-headless-evidence/runtime-manifest.json). No shared child UI copy or root ledger/research changes were cherry-picked. The shared renderer uses root5bc6b16; public graph distances were independently delivered8f261e0 without changing earlier APIs.
+Root integrated owned runtime c363fe9 as0169981 and e4c71e4 as8af33b0, after the source/freeze commits already reconciled in selected-computing-source-integration.md. The20 model/UI files byte-match the author's e4c71e4 tree; [exact runtime hashes](selected-computing-headless-evidence/runtime-manifest.json). No shared child UI copy or root ledger/research changes were cherry-picked. The shared renderer uses root5bc6b16; public graph distances were independently delivered8f261e0 without changing earlier APIs.
 
 Coordinator inspection checked canonical Graph-owned neural edge weights and update barriers; PageRank's canonical World agents/Graph edges and surfer references; canonical Agent/Grid state for the spatial models; public geometry/statistics/normal composition and source-specific scientific procedures. The binary genotype equation decision remains model-specific, not a private reusable sequence library. This is author/coordinator inspection, not independent Argon approval.
 
