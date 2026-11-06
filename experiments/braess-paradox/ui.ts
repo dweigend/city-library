@@ -23,7 +23,7 @@ export const ui = defineUI(model, {
     set: (m, value) => m.setRules({ [field]: value } as Partial<Parameters>),
   })),
   source: {
-    url: "https://ccl.northwestern.edu/netlogo/models/BraessParadox",
+    url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Braess%20Paradox.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [

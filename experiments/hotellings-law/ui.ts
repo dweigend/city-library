@@ -16,7 +16,7 @@ export const ui = defineUI(model, {
     },
   ],
   source: {
-    url: "https://ccl.northwestern.edu/netlogo/models/HotellingsLaw",
+    url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Hotelling's%20Law.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [

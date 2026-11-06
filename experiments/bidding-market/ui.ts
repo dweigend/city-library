@@ -27,7 +27,7 @@ export const ui = defineUI(model, {
   ],
   complete: (s) => s.done,
   source: {
-    url: "https://ccl.northwestern.edu/netlogo/models/BiddingMarket",
+    url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Bidding%20Market.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
@@ -81,7 +81,10 @@ export const ui = defineUI(model, {
       label: "Seller asking prices",
       series: (s) =>
         (["askingMin", "askingMean", "askingMax"] as const).map((key) => ({
-          label: key,
+          label: key
+            .replace(/^(asking|willing)/, "")
+            .replace(/([a-z])([A-Z])/g, "$1 $2")
+            .replace(/^./, (value) => value.toUpperCase()),
           points: s.history.map((h) => ({ x: h.tick, y: h[key] })),
         })),
     },
@@ -90,7 +93,10 @@ export const ui = defineUI(model, {
       label: "Buyer willing to pay",
       series: (s) =>
         (["willingMin", "willingMean", "willingMax"] as const).map((key) => ({
-          label: key,
+          label: key
+            .replace(/^(asking|willing)/, "")
+            .replace(/([a-z])([A-Z])/g, "$1 $2")
+            .replace(/^./, (value) => value.toUpperCase()),
           points: s.history.map((h) => ({ x: h.tick, y: h[key] })),
         })),
     },
@@ -99,7 +105,10 @@ export const ui = defineUI(model, {
       label: "Items",
       series: (s) =>
         (["itemsForSale", "wantToBuy", "totalSales"] as const).map((key) => ({
-          label: key,
+          label: key
+            .replace(/^(asking|willing)/, "")
+            .replace(/([a-z])([A-Z])/g, "$1 $2")
+            .replace(/^./, (value) => value.toUpperCase()),
           points: s.history.map((h) => ({ x: h.tick, y: h[key] })),
         })),
     },
