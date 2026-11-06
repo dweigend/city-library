@@ -2221,33 +2221,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "experiments/paths/original.nlogox",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "docs/development/selected-transport/frozen-SHA256SUMS",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/paths/model.ts",
+            "experiments/paths/ui.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-transport-roads.test.ts",
+            "tests/selected-transport-city.test.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/target-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/original-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "research-verified": {
           "done": true,
@@ -2260,7 +2289,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Traffic 2 Lanes",
@@ -2274,33 +2305,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "experiments/traffic-2-lanes/original.nlogox",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "docs/development/selected-transport/frozen-SHA256SUMS",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/traffic-2-lanes/model.ts",
+            "experiments/traffic-2-lanes/ui.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-transport-roads.test.ts",
+            "tests/selected-transport-city.test.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/target-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/original-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "research-verified": {
           "done": true,
@@ -2313,7 +2373,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Traffic Grid",
@@ -2327,33 +2389,66 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "experiments/traffic-grid/original.nlogox",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "docs/development/selected-transport/frozen-SHA256SUMS",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/traffic-grid/model.ts",
+            "experiments/traffic-grid/ui.ts",
+            "docs/development/selected-transport-grid-goal-remediation.md",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-transport-roads.test.ts",
+            "tests/selected-transport-city.test.ts",
+            "docs/development/selected-transport-grid-goal-remediation.md",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/target-observations.json",
+            "docs/development/selected-transport-grid-goal-remediation.md",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/original-observations.json",
+            "docs/development/selected-transport-grid-goal-remediation.md",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "research-verified": {
           "done": true,
@@ -2366,7 +2461,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Taxi Cabs",
@@ -2380,33 +2477,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "experiments/taxi-cabs/original.nlogox",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "docs/development/selected-transport/frozen-SHA256SUMS",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/taxi-cabs/model.ts",
+            "experiments/taxi-cabs/ui.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-transport-roads.test.ts",
+            "tests/selected-transport-city.test.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/target-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/original-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "research-verified": {
           "done": true,
@@ -2419,7 +2545,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Traffic Basic",
@@ -2433,33 +2561,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "experiments/traffic-basic/original.nlogox",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "docs/development/selected-transport/frozen-SHA256SUMS",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/traffic-basic/model.ts",
+            "experiments/traffic-basic/ui.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-transport-roads.test.ts",
+            "tests/selected-transport-city.test.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/target-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/original-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "research-verified": {
           "done": true,
@@ -2472,7 +2629,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Unverified/Traffic Intersection",
@@ -2486,33 +2645,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "experiments/traffic-intersection/original.nlogox",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "docs/development/selected-transport/frozen-SHA256SUMS",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/traffic-intersection/model.ts",
+            "experiments/traffic-intersection/ui.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-transport-roads.test.ts",
+            "tests/selected-transport-city.test.ts",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/target-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/original-observations.json",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "research-verified": {
           "done": true,
@@ -2525,7 +2713,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Structure from Randomness 1",
@@ -2623,33 +2813,66 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "experiments/traffic-grid-goal/original.nlogox",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-source-audit.md",
+            "docs/development/selected-transport/frozen-SHA256SUMS",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/traffic-grid-goal/model.ts",
+            "experiments/traffic-grid-goal/ui.ts",
+            "docs/development/selected-transport-grid-goal-remediation.md",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-transport-roads.test.ts",
+            "tests/selected-transport-city.test.ts",
+            "docs/development/selected-transport-grid-goal-remediation.md",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/target-observations.json",
+            "docs/development/selected-transport-grid-goal-remediation.md",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-transport-browser-report.md",
+            "docs/development/selected-transport/original-observations.json",
+            "docs/development/selected-transport-grid-goal-remediation.md",
+            "docs/development/selected-transport-integration.md"
+          ],
+          "basis": "Exact owned payload6c8899e plus explicit Grid/Goal remediation64ef20d/11ca9fc; actual original/target Chromium with hashes and root22tests234assertions/frozen5 checks. Earlier changed-code captures remain historical."
         },
         "research-verified": {
           "done": true,
@@ -2662,7 +2885,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Positive Feedback",
