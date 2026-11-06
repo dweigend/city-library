@@ -131,9 +131,10 @@ export function defineUI<P extends object, M extends ModelInstance>(
         if (!instance || disposed) return false;
         try {
           action(instance);
-          status.textContent = message;
+          const state = read(instance);
+          status.textContent = completed(state) ? "Completed." : message;
           status.dataset.state = "success";
-          render();
+          render(state);
           return true;
         } catch (error) {
           fail(error);
