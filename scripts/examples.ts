@@ -1,4 +1,6 @@
 const phases = {
+  probes: ["01-forward-vectors", "02-wrap-and-hard-endpoints", "03-three-dimensional-context", "04-nonmutating-agent-sensor", "05-validation-and-detachment"],
+  distances: ["01-unbounded-measurement", "02-mixed-wrapping", "03-xyz-and-dimension-errors", "04-canonical-field-proximity", "05-finite-validation-and-purity"],
   summary: ["01-population-and-median", "02-sample-and-empty", "03-single-pass-and-detachment", "04-invalid-and-overflow", "05-domain-report-composition"],
   "ui-color": ["01-source-anchors", "02-floor-quantization", "03-source-cycle-wrap", "04-detached-field-projection", "05-invalid-and-large-inputs"],
   "selected-urban-feedback": ["01-positive-powers-and-normalization", "02-positive-moore-wrap", "03-path-source-setup-and-disturb", "04-cells-snapshot-and-strict-age", "05-defaults-isolation-and-atomic-fixtures"],
