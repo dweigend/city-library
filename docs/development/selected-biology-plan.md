@@ -9,3 +9,5 @@ Base: `154a085803c820ef902edcf54262a63fc670f54f`. Ownership is limited to the te
 5. Commit only owned artifacts, create an issue under Epic 1 and a draft PR against `experiment/netlogo-web-catalog`, push and immediately link own PR and root PR 4. Do not merge, rebase, force-push, publish or change global counts.
 
 Independent Argon/high approval remains pending under task `8194e842` due to quota. No retry or substitute is authorized. Author findings are not independent approval. Scientific dossiers are linked, not duplicated. RNG adaptation does not imply cross-seed trajectory, distribution or scientific validation.
+
+Delivery checkpoint: all ten owned source-specific models, UI adapters and original/target browser reports are implemented. Final types/focused/build/packed-consumer checks passed. Four immutable public scripts pass; script03 and the five-script acceptance phase remain pending explicit rounding approval. Argon review remains pending. See [owned handoff](selected-biology-handoff.md) for exact ownership, parent sync exclusions and artifact manifests.

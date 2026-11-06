@@ -1,7 +1,7 @@
 {
-  "basis": "154a085; parent full418-test checkpoint not rerun or relabeled",
-  "dependency": "Public exponential/Poisson pending; frozen03 rounding correction awaiting explicit approval",
-  "checks": [
+  "basis": "154a085 plus explicitly authorized parent-only sync19f98ba/6dfc324; parent full integration is separate",
+  "dependency": "Resolved by public standard Mulberry Poisson/exponential; no MT parity. Frozen03 correction still pending explicit user approval.",
+  "historicalPreSyncChecks": [
     {
       "command": "bun run typecheck",
       "result": "fails at dev project; exactly2 missing Blood distribution overloads",
@@ -61,5 +61,20 @@
       "result": "pass30files",
       "log": "runtime-source-verification.log"
     }
-  ]
+  ],
+  "finalChecks": "final-checks.json",
+  "additionalRegression": {
+    "command": "bun test tests/a2a-boundaries.test.ts tests/a2a-runtime.test.ts tests/random-normal.test.ts",
+    "exitCode": 0,
+    "result": "31pass/0fail/73assertions",
+    "log": "parent-sync-regression.log"
+  },
+  "finalAfterStatusSync": {
+    "commands": "final-checks.json",
+    "focused": "26 pass, 0 fail, 286 assertions",
+    "playback": "1 pass, 0 fail, 9 assertions; status-fix-playback.log",
+    "parentSyncRegression": "31 pass, 0 fail, 73 assertions; parent-sync-regression.log",
+    "frozen": "All original hashes match; scripts01/02/04/05 pass;03 fails precise unapproved source-rounding expectation.",
+    "fullIntegration": "Parent-owned; no global full-suite claim for this branch."
+  }
 }

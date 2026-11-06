@@ -1,0 +1,504 @@
+{
+  "beforeFix": {
+    "original": {
+      "before": {
+        "success": true,
+        "value": [
+          651,
+          0,
+          0,
+          0
+        ]
+      },
+      "stable": {
+        "success": true,
+        "value": [
+          651,
+          0
+        ]
+      },
+      "errors": []
+    },
+    "target": {
+      "before": {
+        "monitors": "Tick648Blood glucose0Insulin0Glucagon2091Stored glucose0Meal time0",
+        "status": "Running.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": true
+          },
+          {
+            "label": "1 step",
+            "disabled": true
+          },
+          {
+            "label": "10 steps",
+            "disabled": true
+          },
+          {
+            "label": "100 steps",
+            "disabled": true
+          },
+          {
+            "label": "Eat",
+            "disabled": false
+          },
+          {
+            "label": "Follow glucose",
+            "disabled": false
+          },
+          {
+            "label": "Follow insulin",
+            "disabled": false
+          },
+          {
+            "label": "Follow glucagon",
+            "disabled": false
+          }
+        ]
+      },
+      "stable": {
+        "monitors": "Tick648Blood glucose0Insulin0Glucagon2091Stored glucose0Meal time0",
+        "status": "Running.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": true
+          },
+          {
+            "label": "1 step",
+            "disabled": true
+          },
+          {
+            "label": "10 steps",
+            "disabled": true
+          },
+          {
+            "label": "100 steps",
+            "disabled": true
+          },
+          {
+            "label": "Eat",
+            "disabled": false
+          },
+          {
+            "label": "Follow glucose",
+            "disabled": false
+          },
+          {
+            "label": "Follow insulin",
+            "disabled": false
+          },
+          {
+            "label": "Follow glucagon",
+            "disabled": false
+          }
+        ]
+      }
+    }
+  },
+  "modules": {
+    "buildVersion": "1793970184720",
+    "modules": [
+      {
+        "slug": "blood-sugar-regulation",
+        "path": "./chunks/ui-je69djt5.js",
+        "sha256": "6db05865ea1f1bb53265c9ba0255b9bcf8801ffbfd050f57af72f8ddc6fe8fcc",
+        "sourceMarker": "selected-biology-b07:blood-sugar-regulation:75efe0d13e248bbdd0850171f35e54271bb16ad78bdd3ecbe7e0afb8f3f5313f",
+        "title": "Blood Sugar Regulation"
+      },
+      {
+        "slug": "chloroplasts-and-food",
+        "path": "./chunks/ui-9f6hykg1.js",
+        "sha256": "3744aa205569f25b5a6efcf195aa542bb05eb4317af61581431f1a04cb12e849",
+        "sourceMarker": "selected-biology-b07:chloroplasts-and-food:7c1ca18d90bd70a969ec8722fb056cafeea758c898a39efbaada099aa5e28f66",
+        "title": "Chloroplasts and Food"
+      },
+      {
+        "slug": "slime",
+        "path": "./chunks/ui-kjpgx62g.js",
+        "sha256": "b9463cda4963831c5d100a9329b3cbe2ddbd5077109b614d89a9cafdd12f10ba",
+        "sourceMarker": "selected-biology-b07:slime:ede03dc05cc186a9607cb2ef1b11dfde4a1c05eb57edd19e2a577768c04644da",
+        "title": "Slime"
+      },
+      {
+        "slug": "fur",
+        "path": "./chunks/ui-yfnrvdmj.js",
+        "sha256": "9aff08a6e910c7af6834942f11e7b7e8c5e6f32bfec787c0fdf1899d1e055ed2",
+        "sourceMarker": "selected-biology-b07:fur:8f7b57b7df931ec45906251a9421017d438286b5607c20c409f722e6db311bc5",
+        "title": "Fur"
+      },
+      {
+        "slug": "honeycomb",
+        "path": "./chunks/ui-kw4nq9yp.js",
+        "sha256": "4559051daa2c27c20edcd6c8f456fb2e38de18bac59462b8fbba1d59add8ab1b",
+        "sourceMarker": "selected-biology-b07:honeycomb:812353ef075700900bccf35cc7587137a46fb6c9d3c8a17464790669a72124db",
+        "title": "Honeycomb"
+      },
+      {
+        "slug": "autumn",
+        "path": "./chunks/ui-phq66cbs.js",
+        "sha256": "74e7b5f78cee3289b4c540df10e29ab84ec7a91d1ed487c9b957d4f3e3a7e538",
+        "sourceMarker": "selected-biology-b07:autumn:54c2fa97ac3e235b27d603dbaf7a66234ea4ab507c5643a8df95ee5ef89b5087",
+        "title": "Autumn"
+      },
+      {
+        "slug": "membrane-formation",
+        "path": "./chunks/ui-nd12m8qc.js",
+        "sha256": "288ed49c8ed5c82a2ed3f10e2353e21dbce7b43139e689e40969024d704b97f2",
+        "sourceMarker": "selected-biology-b07:membrane-formation:4f3a41013090830c53ee055eac6625b1d3fcba981df7ab8d67822af037f7733d",
+        "title": "Membrane Formation"
+      },
+      {
+        "slug": "sunflower-emergent",
+        "path": "./chunks/ui-7561es9z.js",
+        "sha256": "d6a1d70d80a2d1f1d716930f2057e718e0ae6bbb086362c49d62ce73ae970a17",
+        "sourceMarker": "selected-biology-b07:sunflower-emergent:0e0e3d39384a9b2cde33f248f46c0711cf2f7742f39405dc0907485ab1a67cd8",
+        "title": "Sunflower Emergent"
+      },
+      {
+        "slug": "tumor",
+        "path": "./chunks/ui-qbk5bq29.js",
+        "sha256": "c261a80217dba2b2e111855a11f540670e445829eeb59100ef948d7e5dd9ae87",
+        "sourceMarker": "selected-biology-b07:tumor:f47f5edc51141c107582ae5b30d23f613cbef305f6b2cb6bbea13c46298f0630",
+        "title": "Tumor"
+      },
+      {
+        "slug": "muscle-development",
+        "path": "./chunks/ui-9ceqydsm.js",
+        "sha256": "60a3c216426f2c54d19cb6c5a2105b3074480d8f52b93e724b78f96f069a30c0",
+        "sourceMarker": "selected-biology-b07:muscle-development:29c39af0fbaff47c0ecab4d901260f05a5195f807046dd895ddd66eef1163e26",
+        "title": "Muscle Development"
+      }
+    ],
+    "shared": {
+      "url": "http://localhost:3147/chunks/app-zzhbgc37.js",
+      "sha256": "dcae3663ed432bd41d8b869e5e0454970cb791528feb8036591613dc6f745450",
+      "includesCompleted": true
+    },
+    "appSha256": "6df5cda07d9b65e882f47fe802cfff94f8656ec9d3c7a3f2a9bdde0cca7d49dc"
+  },
+  "manual": {
+    "status": "Running.",
+    "buttons": [
+      {
+        "text": "Setup",
+        "disabled": false
+      },
+      {
+        "text": "Pause",
+        "disabled": false
+      },
+      {
+        "text": "1 step",
+        "disabled": false
+      },
+      {
+        "text": "10 steps",
+        "disabled": false
+      },
+      {
+        "text": "100 steps",
+        "disabled": false
+      },
+      {
+        "text": "Eat",
+        "disabled": false
+      },
+      {
+        "text": "Follow glucose",
+        "disabled": false
+      },
+      {
+        "text": "Follow insulin",
+        "disabled": false
+      },
+      {
+        "text": "Follow glucagon",
+        "disabled": false
+      }
+    ],
+    "monitors": "Tick58Blood glucose3707Insulin298Glucagon645Stored glucose107740Meal time0"
+  },
+  "parentStatusSync": {
+    "original": "e1c4ae8c2940ebb66be299f81dedbd70d8c75706",
+    "local": "d76f454a8eb896d134f7766a705d14b96fca291c",
+    "ownership": "Parent-owned; omit from owned cherry-pick handoff."
+  },
+  "terminal": {
+    "before": {
+      "status": "Completed.",
+      "state": "success",
+      "monitors": "Tick648Blood glucose0Insulin0Glucagon2091Stored glucose0Meal time0",
+      "buttons": [
+        {
+          "text": "Setup",
+          "disabled": false
+        },
+        {
+          "text": "Run",
+          "disabled": true
+        },
+        {
+          "text": "1 step",
+          "disabled": true
+        },
+        {
+          "text": "10 steps",
+          "disabled": true
+        },
+        {
+          "text": "100 steps",
+          "disabled": true
+        },
+        {
+          "text": "Eat",
+          "disabled": false
+        },
+        {
+          "text": "Follow glucose",
+          "disabled": false
+        },
+        {
+          "text": "Follow insulin",
+          "disabled": false
+        },
+        {
+          "text": "Follow glucagon",
+          "disabled": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        1280,
+        1000
+      ],
+      "width": 1280,
+      "rects": [
+        {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 672
+        }
+      ]
+    },
+    "stable": {
+      "status": "Completed.",
+      "state": "success",
+      "monitors": "Tick648Blood glucose0Insulin0Glucagon2091Stored glucose0Meal time0",
+      "buttons": [
+        {
+          "text": "Setup",
+          "disabled": false
+        },
+        {
+          "text": "Run",
+          "disabled": true
+        },
+        {
+          "text": "1 step",
+          "disabled": true
+        },
+        {
+          "text": "10 steps",
+          "disabled": true
+        },
+        {
+          "text": "100 steps",
+          "disabled": true
+        },
+        {
+          "text": "Eat",
+          "disabled": false
+        },
+        {
+          "text": "Follow glucose",
+          "disabled": false
+        },
+        {
+          "text": "Follow insulin",
+          "disabled": false
+        },
+        {
+          "text": "Follow glucagon",
+          "disabled": false
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        1280,
+        1000
+      ],
+      "width": 1280,
+      "rects": [
+        {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 672
+        }
+      ]
+    }
+  },
+  "frames": [
+    {
+      "name": "desktop",
+      "scheme": "light",
+      "scroll": [
+        0,
+        153
+      ],
+      "viewport": [
+        1280,
+        1000
+      ],
+      "width": 1280,
+      "status": "Completed.",
+      "rect": {
+        "x": 24,
+        "y": 901.9140625,
+        "width": 256,
+        "height": 21,
+        "top": 901.9140625,
+        "right": 280,
+        "bottom": 922.9140625,
+        "left": 24
+      },
+      "console": []
+    },
+    {
+      "name": "desktop",
+      "scheme": "dark",
+      "scroll": [
+        0,
+        153
+      ],
+      "viewport": [
+        1280,
+        1000
+      ],
+      "width": 1280,
+      "status": "Completed.",
+      "rect": {
+        "x": 24,
+        "y": 901.9140625,
+        "width": 256,
+        "height": 21,
+        "top": 901.9140625,
+        "right": 280,
+        "bottom": 922.9140625,
+        "left": 24
+      },
+      "console": []
+    },
+    {
+      "name": "mobile",
+      "scheme": "light",
+      "scroll": [
+        0,
+        121.5
+      ],
+      "viewport": [
+        390,
+        844
+      ],
+      "width": 390,
+      "status": "Completed.",
+      "rect": {
+        "x": 16,
+        "y": 411.6875,
+        "width": 75.84375,
+        "height": 21,
+        "top": 411.6875,
+        "right": 91.84375,
+        "bottom": 432.6875,
+        "left": 16
+      },
+      "console": []
+    },
+    {
+      "name": "mobile",
+      "scheme": "dark",
+      "scroll": [
+        0,
+        121.5
+      ],
+      "viewport": [
+        390,
+        844
+      ],
+      "width": 390,
+      "status": "Completed.",
+      "rect": {
+        "x": 16,
+        "y": 411.6875,
+        "width": 75.84375,
+        "height": 21,
+        "top": 411.6875,
+        "right": 91.84375,
+        "bottom": 432.6875,
+        "left": 16
+      },
+      "console": []
+    }
+  ],
+  "reset": {
+    "status": "Model initialized.",
+    "tick": 0,
+    "bloodGlucose": 4356,
+    "storedGlucose": 118691,
+    "runDisabled": false
+  },
+  "sourceError": {
+    "errors": [
+      {
+        "message": "Division by zero.\nerror while running /\ncalled by procedure GO",
+        "start": 1544,
+        "end": 1545
+      }
+    ],
+    "tick": {
+      "success": true,
+      "value": 1
+    }
+  },
+  "targetError": {
+    "before": {
+      "status": "NetLogo exponential energy divides by beta = 0.",
+      "state": "error",
+      "monitors": "Tick1Particles1Temporary candidates12"
+    },
+    "stable": {
+      "status": "NetLogo exponential energy divides by beta = 0.",
+      "state": "error",
+      "monitors": "Tick1Particles1Temporary candidates12"
+    }
+  },
+  "manualChecks": {
+    "running": "Running.",
+    "paused": "Paused.",
+    "pauseStableTick": 3,
+    "resumed": "Running."
+  },
+  "harnessNotes": [
+    "An extra attempt to click Run while already running found no Run button and raised an automation TypeError; this did not mutate the model.",
+    "First original error probe omitted configured defaults/exponential mode and was not an error test. The corrected same-block settings produced the recorded native division-by-zero.",
+    "A separate original Blood reporter used wrong breed liver-cells and failed compile; previously recorded correct terminal tuple remains [651,0,0,0]."
+  ]
+}
