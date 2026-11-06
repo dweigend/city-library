@@ -1,0 +1,165 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Rabbits%20Grass%20Weeds.nlogox",
+  "title": "NetLogo Web: Rabbits Grass Weeds",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "dpr": 2
+  },
+  "sha256": "0522868c3d257988941166f4ddaa930b82744fe35329335d0d52522d7aff2bc7",
+  "version": "NetLogo 7.0.4",
+  "tick": 10,
+  "count": 97,
+  "globals": {
+    "birth-threshold": 15,
+    "weed-energy": 0,
+    "weeds-grow-rate": 0,
+    "grass-energy": 5,
+    "grass-grow-rate": 15,
+    "number": 150
+  },
+  "widgets": [
+    {
+      "type": "view",
+      "dimensions": {
+        "minPxcor": -20,
+        "maxPxcor": 20,
+        "minPycor": -20,
+        "maxPycor": 20,
+        "patchSize": 12,
+        "wrappingAllowedInX": true,
+        "wrappingAllowedInY": true
+      }
+    },
+    {
+      "type": "slider",
+      "variable": "birth-threshold",
+      "display": "birth-threshold",
+      "currentValue": 15
+    },
+    {
+      "type": "slider",
+      "variable": "weed-energy",
+      "display": "weed-energy",
+      "currentValue": 0
+    },
+    {
+      "type": "slider",
+      "variable": "weeds-grow-rate",
+      "display": "weeds-grow-rate",
+      "currentValue": 0
+    },
+    {
+      "type": "slider",
+      "variable": "grass-energy",
+      "display": "grass-energy",
+      "currentValue": 5
+    },
+    {
+      "type": "slider",
+      "variable": "grass-grow-rate",
+      "display": "grass-grow-rate",
+      "currentValue": 15
+    },
+    {
+      "type": "slider",
+      "variable": "number",
+      "display": "number",
+      "currentValue": 150
+    },
+    {
+      "type": "button",
+      "source": "setup",
+      "display": "setup"
+    },
+    {
+      "type": "button",
+      "source": "go",
+      "display": "go",
+      "running": false
+    },
+    {
+      "type": "plot",
+      "display": "Populations"
+    },
+    {
+      "type": "monitor",
+      "source": "count rabbits",
+      "display": "count rabbits",
+      "currentValue": 97
+    }
+  ],
+  "turtles": [
+    {
+      "id": 1,
+      "x": -15.414470760926141,
+      "y": 0.19516224055126297,
+      "color": 9.9,
+      "heading": 232,
+      "energy": 6,
+      "hidden?": false
+    },
+    {
+      "id": 2,
+      "x": 10.999560624041951,
+      "y": -18.660309877442565,
+      "color": 9.9,
+      "heading": 171,
+      "energy": 5,
+      "hidden?": false
+    },
+    {
+      "id": 3,
+      "x": 19.255883983445592,
+      "y": -4.147238895702564,
+      "color": 9.9,
+      "heading": 133,
+      "energy": 8,
+      "hidden?": false
+    },
+    {
+      "id": 4,
+      "x": -18.935358146758773,
+      "y": -17.962127139678866,
+      "color": 9.9,
+      "heading": 222,
+      "energy": 8,
+      "hidden?": false
+    },
+    {
+      "id": 5,
+      "x": -11.301111541105548,
+      "y": 9.633236996279814,
+      "color": 9.9,
+      "heading": 169,
+      "energy": 3,
+      "hidden?": false
+    },
+    {
+      "id": 6,
+      "x": -20.152746566962925,
+      "y": 12.337585438249276,
+      "color": 9.9,
+      "heading": 347,
+      "energy": 7,
+      "hidden?": false
+    }
+  ],
+  "patchTotals": {},
+  "patchColors": {
+    "0": 1491,
+    "55": 190
+  },
+  "colors": {
+    "9.9": 97
+  },
+  "readback": [
+    {
+      "width": 984,
+      "height": 984,
+      "nonblack": 968256
+    }
+  ],
+  "text": " powered by NetLogo\nRabbits Grass Weeds\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 10\n?\nfor shortcuts\nbirth-threshold\nweed-energy\nweeds-grow-rate\ngrass-energy\ngrass-grow-rate\nnumber\nsetup\ngo\nTime\nPop\nPopulations\ngrass\nrabbits\nweeds\n0\n50\n100\n0\n50\n100\n150\ncount rabbits\n97\nCommand Center\nobserver> repeat 10 [ go ]\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+}

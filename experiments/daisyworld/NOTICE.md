@@ -4,7 +4,7 @@ Canonical selected path: `Sample Models/Biology/Daisyworld`.
 
 Exact served source: https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Daisyworld.nlogox
 
-SHA-256: `338f52146740123181194ea1bc46fd221a7b7d2cb95a395e7a1e7db5aec5a0f4`. NetLogo NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
+SHA-256: `338f52146740123181194ea1bc46fd221a7b7d2cb95a395e7a1e7db5aec5a0f4`. NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
 
 ## Citation
 
@@ -35,3 +35,5 @@ To inquire about commercial licenses for either NetLogo or specific models from 
 ## Adaptation
 
 Readable headless TypeScript composition, independent Mulberry RNG, detached observations and shared City Library UI. Detailed procedure/order and browser evidence are tracked in selected-ecology reports. No cross-engine seeded trajectory identity is claimed.
+
+Executed procedure, adaptation and original/target browser evidence: [B06 comparison report](../../docs/development/selected-ecology-report.md).

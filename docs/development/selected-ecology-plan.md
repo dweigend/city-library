@@ -16,3 +16,7 @@ Write reservation: the ten experiment folders, `examples/selected-ecology/**`, `
 ## Evidence status
 
 Planning only at this commit. No runtime, source-audit, browser or independent-approval completion is claimed.
+
+## Executed delivery checkpoint
+
+All ten runtime/UI compositions were delegated to the two scoped workers, integrated at5842c91/70acefd, and reviewed by the coordinator. UI duplicate-reader remediation2263a5d and public half-open endpoint composition b4e7a51 preserve the five frozen contracts. The final full check passed317 tests/16090 assertions,120 registered prior examples,all four TypeScript projects,build and packed consumers; all five B06 scripts additionally ran and explicitly typechecked. Actual T3 Chromium source/target checks, all-ten mobile controls,95 targeted inspected images, native failure cases and deliberate adaptations are recorded in [executed comparison](selected-ecology-report.md). The [handoff](selected-ecology-handoff.md) separates the owned payload from the two authorized, uncommitted parent renderer copies. No global registration/ledger/count was changed. Required independent Argon/high approval remains quota-pending, not inferred from these author checks.

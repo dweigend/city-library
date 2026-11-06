@@ -4,7 +4,7 @@ Canonical selected path: `Sample Models/Biology/Invasive Plants`.
 
 Exact served source: https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Invasive%20Plants.nlogox
 
-SHA-256: `657443adb46050bced1887759c92f23321227607bc28aceebb2bdcd4b0a5dd9e`. NetLogo NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
+SHA-256: `657443adb46050bced1887759c92f23321227607bc28aceebb2bdcd4b0a5dd9e`. NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
 
 ## Citation
 
@@ -35,3 +35,5 @@ To inquire about commercial licenses for either NetLogo or specific models from 
 ## Adaptation
 
 Readable headless TypeScript composition, independent Mulberry RNG, detached observations and shared City Library UI. Detailed procedure/order and browser evidence are tracked in selected-ecology reports. No cross-engine seeded trajectory identity is claimed.
+
+Executed procedure, adaptation and original/target browser evidence: [B06 comparison report](../../docs/development/selected-ecology-report.md).

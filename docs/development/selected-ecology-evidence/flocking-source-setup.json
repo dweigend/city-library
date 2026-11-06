@@ -1,0 +1,152 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Flocking.nlogox",
+  "title": "NetLogo Web: Flocking",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "dpr": 2
+  },
+  "sha256": "0ce9a6b0ee385898dfcacc7ed06699286cd51e5302a80c90b32687e13cefa143",
+  "version": "NetLogo 7.0.4",
+  "tick": 0,
+  "count": 300,
+  "globals": {
+    "population": 300,
+    "max-align-turn": 5,
+    "max-cohere-turn": 3,
+    "max-separate-turn": 1.5,
+    "vision": 5,
+    "minimum-separation": 1
+  },
+  "widgets": [
+    {
+      "type": "view",
+      "dimensions": {
+        "minPxcor": -35,
+        "maxPxcor": 35,
+        "minPycor": -35,
+        "maxPycor": 35,
+        "patchSize": 7,
+        "wrappingAllowedInX": true,
+        "wrappingAllowedInY": true
+      }
+    },
+    {
+      "type": "slider",
+      "variable": "population",
+      "display": "population",
+      "currentValue": 300
+    },
+    {
+      "type": "slider",
+      "variable": "max-align-turn",
+      "display": "max-align-turn",
+      "currentValue": 5
+    },
+    {
+      "type": "slider",
+      "variable": "max-cohere-turn",
+      "display": "max-cohere-turn",
+      "currentValue": 3
+    },
+    {
+      "type": "slider",
+      "variable": "max-separate-turn",
+      "display": "max-separate-turn",
+      "currentValue": 1.5
+    },
+    {
+      "type": "slider",
+      "variable": "vision",
+      "display": "vision",
+      "currentValue": 5
+    },
+    {
+      "type": "slider",
+      "variable": "minimum-separation",
+      "display": "minimum-separation",
+      "currentValue": 1
+    },
+    {
+      "type": "button",
+      "source": "setup"
+    },
+    {
+      "type": "button",
+      "source": "go",
+      "running": false
+    }
+  ],
+  "turtles": [
+    {
+      "id": 0,
+      "x": 18.331753857358613,
+      "y": -2.848860539473307,
+      "color": 46,
+      "heading": 319,
+      "hidden?": false
+    },
+    {
+      "id": 1,
+      "x": -18.349450635076103,
+      "y": -23.4991961727997,
+      "color": 45,
+      "heading": 120,
+      "hidden?": false
+    },
+    {
+      "id": 2,
+      "x": -11.966913590693018,
+      "y": -20.869488940211156,
+      "color": 48,
+      "heading": 349,
+      "hidden?": false
+    },
+    {
+      "id": 3,
+      "x": 30.261117583611934,
+      "y": -12.402968305448749,
+      "color": 45,
+      "heading": 171,
+      "hidden?": false
+    },
+    {
+      "id": 4,
+      "x": 28.08141802362684,
+      "y": -20.683483415829993,
+      "color": 49,
+      "heading": 121,
+      "hidden?": false
+    },
+    {
+      "id": 5,
+      "x": 27.78331835675995,
+      "y": -35.41426265270864,
+      "color": 44,
+      "heading": 73,
+      "hidden?": false
+    }
+  ],
+  "patchTotals": {},
+  "patchColors": {
+    "0": 5041
+  },
+  "colors": {
+    "43": 38,
+    "44": 43,
+    "45": 37,
+    "46": 40,
+    "47": 53,
+    "48": 37,
+    "49": 52
+  },
+  "readback": [
+    {
+      "width": 994,
+      "height": 994,
+      "nonblack": 39688
+    }
+  ],
+  "text": " powered by NetLogo\nFlocking\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 0\n?\nfor shortcuts\npopulation\nmax-align-turn\n degrees\nmax-cohere-turn\n degrees\nmax-separate-turn\n degrees\nvision\n patches\nminimum-separation\n patches\nsetup\ngo\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+}

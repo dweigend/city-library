@@ -4,7 +4,7 @@ Canonical selected path: `Sample Models/Biology/Heatbugs`.
 
 Exact served source: https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Heatbugs.nlogox
 
-SHA-256: `9b439a81d1526f34fe9716a9d2d690d9948ecd119fa6f64502aee3b424c6fa59`. NetLogo NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
+SHA-256: `9b439a81d1526f34fe9716a9d2d690d9948ecd119fa6f64502aee3b424c6fa59`. NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
 
 ## Citation
 
@@ -37,3 +37,5 @@ This model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWO
 ## Adaptation
 
 Readable headless TypeScript composition, independent Mulberry RNG, detached observations and shared City Library UI. Detailed procedure/order and browser evidence are tracked in selected-ecology reports. No cross-engine seeded trajectory identity is claimed.
+
+Executed procedure, adaptation and original/target browser evidence: [B06 comparison report](../../docs/development/selected-ecology-report.md).

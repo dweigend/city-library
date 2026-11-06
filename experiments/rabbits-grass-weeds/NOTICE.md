@@ -4,7 +4,7 @@ Canonical selected path: `Sample Models/Biology/Rabbits Grass Weeds`.
 
 Exact served source: https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Rabbits%20Grass%20Weeds.nlogox
 
-SHA-256: `0522868c3d257988941166f4ddaa930b82744fe35329335d0d52522d7aff2bc7`. NetLogo NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
+SHA-256: `0522868c3d257988941166f4ddaa930b82744fe35329335d0d52522d7aff2bc7`. NetLogo 7.0.4. Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`; served bytes match inventory. Desktop source is not substituted.
 
 ## Citation
 
@@ -37,3 +37,5 @@ This model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWO
 ## Adaptation
 
 Readable headless TypeScript composition, independent Mulberry RNG, detached observations and shared City Library UI. Detailed procedure/order and browser evidence are tracked in selected-ecology reports. No cross-engine seeded trajectory identity is claimed.
+
+Executed procedure, adaptation and original/target browser evidence: [B06 comparison report](../../docs/development/selected-ecology-report.md).
