@@ -5,3 +5,5 @@ Gemini 3.8 Flash high reviewed `0747555..da667f3` and issued conditional scoped 
 The fresh independent visual reviewer closed V1/V2/V3 for the inspected authoring fixtures and six reference-model flows. This is not general accessibility certification, a leak audit or scientific acceptance of 125/200 models. An absent ShadowRoot verifies removal of the specific legacy-host fallback; it does not by itself prove memory-leak freedom.
 
 The reviewer’s broad statement that the branch is ready for integration is not adopted as main-merge approval. The fresh Astra implementation review, final full check/remote CI, normative public-procedure interpretation and catalog scientific/selection gates remain independently tracked in PLAN. Main still requires explicit user authorization.
+
+The final local full check has now passed: 580 tests / 150783 assertions, 224 public scripts, all typechecks, build and the actual packed Bun/Node/TypeScript consumer. The final Svelte production build passed with retained chunk-size warnings. This resolves the executed-local-check condition; remote CI and Astra feedback remain separate.
