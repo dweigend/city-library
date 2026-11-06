@@ -1691,33 +1691,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/fruit-wars/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/fruit-wars/model.ts",
+            "experiments/fruit-wars/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -1730,7 +1754,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Economics/Limited Order Book",
@@ -1744,33 +1770,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/limited-order-book/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/limited-order-book/model.ts",
+            "experiments/limited-order-book/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -1783,7 +1833,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Economics/Bidding Market",
@@ -1797,33 +1849,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/bidding-market/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/bidding-market/model.ts",
+            "experiments/bidding-market/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -1836,7 +1912,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Economics/Hotelling's Law",
@@ -1850,33 +1928,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/hotellings-law/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/hotellings-law/model.ts",
+            "experiments/hotellings-law/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -1889,7 +1991,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Economics/Braess Paradox",
@@ -1903,33 +2007,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/braess-paradox/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/braess-paradox/model.ts",
+            "experiments/braess-paradox/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -1942,7 +2070,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Economics/Unverified/Cash Flow",
@@ -1956,33 +2086,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/cash-flow/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/cash-flow/model.ts",
+            "experiments/cash-flow/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -1995,7 +2149,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Economics/Unverified/Bank Reserves",
@@ -2009,33 +2165,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/bank-reserves/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/bank-reserves/model.ts",
+            "experiments/bank-reserves/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -2048,7 +2228,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Prisoner's Dilemma/Prisoner's Dilemma Basic",
@@ -2062,33 +2244,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/prisoners-dilemma-basic/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/prisoners-dilemma-basic/model.ts",
+            "experiments/prisoners-dilemma-basic/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -2101,7 +2307,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Prisoner's Dilemma/Prisoner's Dilemma Two Person Iterated",
@@ -2115,33 +2323,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/prisoners-dilemma-two-person-iterated/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/prisoners-dilemma-two-person-iterated/model.ts",
+            "experiments/prisoners-dilemma-two-person-iterated/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -2154,7 +2386,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "IABM Textbook/chapter 3/El Farol Extensions/El Farol",
@@ -2168,33 +2402,57 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-source-audit.md",
+            "experiments/el-farol/source.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-contract.md",
+            "docs/development/selected-economics-examples.sha256"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/el-farol/model.ts",
+            "experiments/el-farol/ui.ts"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-validation.md",
+            "docs/development/selected-economics-evidence/focused-tests.log"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/screenshots.json",
+            "docs/development/selected-economics-evidence/final-bundle-confirmations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-economics-browser.md",
+            "docs/development/selected-economics-evidence/original-final-observations.json"
+          ],
+          "basis": "Actual ten-model author delivery inspected on integration; root reran18focused tests/125assertions and exact source,137PNG,20current code and10loaded-bundle evidence hashes. Current complete integrated check recorded separately; no independent approval."
         },
         "research-verified": {
           "done": true,
@@ -2207,7 +2465,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842; documented native-error scenarios remain explicit in model report."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Paths",

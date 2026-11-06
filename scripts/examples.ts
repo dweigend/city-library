@@ -1,4 +1,5 @@
 const phases = {
+  "selected-economics": ["01-foraging-and-attendance", "02-exchange-markets", "03-location-and-traffic", "04-banking-phases", "05-prisoner-games"],
   "selected-transport": ["01-paths", "02-basic-and-lanes", "03-grid-signals", "04-intersection-and-goals", "05-taxi-service"],
   "graph-generators-proposal": ["01-ordered-native-families", "02-tree-and-lattice-topology", "03-random-pair-order-and-stream", "04-small-world-and-preferential", "05-geometric-atomicity-and-lifecycle"],
   "network-analysis-proposal": ["01-degree-incidence-and-options", "02-closeness-directed-costs", "03-betweenness-parallel-paths", "04-eigenvector-incoming-l2", "05-pagerank-stationary-and-errors"],
