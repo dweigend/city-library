@@ -1,0 +1,85 @@
+{
+  "typecheck": {
+    "command": "bun run typecheck",
+    "exitCode": 0,
+    "log": "typecheck-final.log"
+  },
+  "focused": {
+    "command": "bun test tests/selected-disease-gene-a.test.ts tests/selected-disease-gene-b.test.ts",
+    "exitCode": 0,
+    "tests": 24,
+    "assertions": 538,
+    "log": "focused-tests.log"
+  },
+  "standaloneTypes": {
+    "command": "node_modules/.bin/tsc -p docs/development/selected-disease-gene-evidence/tsconfig.examples.json",
+    "exitCode": 0,
+    "log": "standalone-examples-types.log"
+  },
+  "frozenHashes": {
+    "command": "sha256sum -c docs/development/selected-disease-gene-examples.sha256",
+    "exitCode": 0,
+    "log": "frozen-hashes-final.log"
+  },
+  "frozenScripts": [
+    {
+      "command": [
+        "bun",
+        "examples/selected-disease-gene/01-contact-and-immunity.ts"
+      ],
+      "exitCode": 0,
+      "sha256": "b0c2130e829ba446ab36236ea88262a84a5b590b7ac443fb8d2ae639e9570046"
+    },
+    {
+      "command": [
+        "bun",
+        "examples/selected-disease-gene/02-coupling-and-recovery.ts"
+      ],
+      "exitCode": 0,
+      "sha256": "7e876aeae56403b0c896fb2c401a9a0db78af3c2f9f88fa09f3da46671740146"
+    },
+    {
+      "command": [
+        "bun",
+        "examples/selected-disease-gene/03-regulation-and-energy.ts"
+      ],
+      "exitCode": 0,
+      "sha256": "086b80d84e3f36fa04f37531450b926bf5736b0daad1a103e79850e271bbb88a"
+    },
+    {
+      "command": [
+        "bun",
+        "examples/selected-disease-gene/04-crispr-defense-and-ecology.ts"
+      ],
+      "exitCode": 0,
+      "sha256": "390cc5924d782a2b65452fc71c0ae58fc19b3ff3483b77e57499f23fd1a90cf3"
+    },
+    {
+      "command": [
+        "bun",
+        "examples/selected-disease-gene/05-control-and-protein-synthesis.ts"
+      ],
+      "exitCode": 1,
+      "sha256": "4933b5be866390a2ca4a62de35a494a5540066a1d384e09f65900846c85754d1"
+    }
+  ],
+  "build": {
+    "command": "bun run build",
+    "exitCode": 0,
+    "log": "build.log"
+  },
+  "consumer": {
+    "command": "bun run consumer",
+    "exitCode": 0,
+    "log": "packed-consumer.log",
+    "scope": "actual packed public library primitives, Bun, Node ESM, ambient-free TypeScript"
+  },
+  "artifactVerification": {
+    "command": "python3 docs/development/selected-disease-gene-check-artifacts.py",
+    "exitCode": 0,
+    "log": "artifact-check.log"
+  },
+  "globalFullCheck": "not run here; parent owns combined check and counts",
+  "independentReview": "pending Argon quota8194e842; no retry/substitute/new review",
+  "phaseGate": "open: frozen script05 source contradiction pending explicit agreement"
+}

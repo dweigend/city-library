@@ -1,0 +1,21 @@
+{
+  "model": "hiv",
+  "command": "setup ask turtles [set infected? true set known? true] go",
+  "title": "HIV",
+  "reports": {
+    "ticks": {
+      "success": true,
+      "value": 0
+    },
+    "count turtles with [known?]": {
+      "success": true,
+      "value": 300
+    },
+    "count turtles": {
+      "success": true,
+      "value": 300
+    }
+  },
+  "errors": [],
+  "text": " powered by NetLogo\nHIV\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nweeks:\n?\nfor shortcuts\nsetup\ngo\n% infected\n0\ninitial-people\naverage-commitment\n weeks\naverage-coupling-tendency\naverage-condom-use\naverage-test-frequency\n times/year\nweeks\npeople\nPopulations\nHIV-\nHIV+\n0\n25\n50\n0\n350\n250\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+}

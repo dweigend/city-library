@@ -1,0 +1,118 @@
+{
+  "model": "disease-solo",
+  "setup": {
+    "monitors": "Tick\n0\nSick\n0\nRun\n1",
+    "status": "Model initialized.",
+    "errors": [],
+    "console": []
+  },
+  "progress": {
+    "monitors": "Tick\n8\nSick\n1\nRun\n1",
+    "status": "Steps completed.",
+    "statusState": "success",
+    "errors": [],
+    "console": [],
+    "canvas": [
+      {
+        "width": 1344,
+        "height": 1600,
+        "rect": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 800,
+          "top": 115,
+          "right": 984,
+          "bottom": 915,
+          "left": 312
+        }
+      }
+    ],
+    "charts": [
+      {
+        "label": "Sick: 1",
+        "paths": 2
+      }
+    ],
+    "overflow": false
+  },
+  "interactions": {
+    "runPause": true,
+    "reset": {
+      "monitors": "Tick\n0\nSick\n0\nRun\n1",
+      "status": "Model initialized.",
+      "errors": [],
+      "console": []
+    }
+  },
+  "immutable": {
+    "buildVersion": "1793972277740",
+    "entryPath": "./chunks/ui-8krk2bjr.js",
+    "modelChunkSHA256": "47dcc0b4e2cd32c2ac334a5a957664bce837abc56b007002832c205650f8bb7b",
+    "modelChunkBytes": 8769,
+    "sharedChunks": [
+      {
+        "url": "http://localhost:3149/chunks/app-sb7h8whr.js",
+        "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+        "bytes": 1112387
+      }
+    ],
+    "sourceMarker": "selected-disease-gene-b09:disease-solo:f3d15df285ed35bcba2a6b3a718acf63de1589c8be099b44c2b6f1743b701a97",
+    "defaultBrowserHeadless": {
+      "tick": 3,
+      "agents": 61,
+      "stopped": false
+    },
+    "appSHA256": "b940b34e8ad4b411cdf542525fe25a49be126707acc89fb427d41d98a4d3bada"
+  },
+  "mobileLayout": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      620.5
+    ],
+    "documentWidth": 390,
+    "canvas": {
+      "x": 16,
+      "y": -0.015625,
+      "width": 358,
+      "height": 426.1875,
+      "top": -0.015625,
+      "right": 374,
+      "bottom": 426.171875,
+      "left": 16
+    },
+    "errors": [],
+    "console": []
+  },
+  "settings": {
+    "seed": 1,
+    "progressSteps": 8,
+    "sourceCase": {
+      "slug": "disease-solo",
+      "name": "Disease Solo",
+      "path": "Sample Models/Biology/Disease Solo",
+      "setup": "setup/clear",
+      "steps": 8,
+      "before": "set infection-chance 0",
+      "action": "infect",
+      "reports": [
+        "ticks",
+        "count turtles",
+        "num-sick",
+        "run-number"
+      ],
+      "terminal": "setup-keep"
+    }
+  },
+  "screenshots": [
+    "disease-solo-target-setup.png",
+    "disease-solo-target-progress.png",
+    "disease-solo-target-desktop-dark.png",
+    "disease-solo-target-mobile-light.png",
+    "disease-solo-target-mobile-dark.png"
+  ]
+}
