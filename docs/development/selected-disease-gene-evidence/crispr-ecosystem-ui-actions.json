@@ -1,0 +1,32 @@
+{
+  "slug": "crispr-ecosystem",
+  "actions": [
+    {
+      "action": "click",
+      "selector": "button:text-is(\"10 steps\")"
+    },
+    {
+      "action": "type",
+      "selector": "input[name=\"live-plottedVirus\"]",
+      "text": "1",
+      "clear": true
+    },
+    {
+      "action": "press",
+      "key": "Tab"
+    },
+    {
+      "action": "click",
+      "selector": "button:text-is(\"Plot new virus\")"
+    }
+  ],
+  "monitors": "Mean array length\n0.041\nArray standard deviation\n0.2\nFocal virus %\n4.237\nFocal array %\n0\nTick\n10\nBacteria\n49\nViruses\n236",
+  "charts": [
+    "Virus %: no samples; Array %: no samples",
+    "Viruses: x 0, y 5; x 1, y 10; x 2, y 6; x 3, y 5; x 4, y 5; x 5, y 2; x 6, y 5; x 7, y 4; x 8, y 7; x 9, y 1; x 10, y 2; x 11, y 7; x 12, y 3; x 13, y 4; x 14, y 4; x 15, y 4; x 16, y 3; x 17, y 5; x 18, y 5; x 19, y 4; x 20, y 5; x 21, y 2; x 22, y 7; x 23, y 4; x 24, y 5; x 25, y 7; x 26, y 2; x 27, y 6; x 28, y 4; x 29, y 2; x 30, y 7; x 31, y 8; x 32, y 6; x 33, y 3; x 34, y 4; x 35, y 4; x 36, y 2; x 37, y 8; x 38, y 3; x 39, y 3; x 40, y 3; x 41, y 23; x 42, y 5; x 43, y 5; x 44, y 5; x 45, y 3; x 46, y 3; x 47, y 1; x 48, y 1; x 49, y 4; Arrays: x 0, y 0; x 1, y 0; x 2, y 0; x 3, y 0; x 4, y 0; x 5, y 1; x 6, y 0; x 7, y 0; x 8, y 0; x 9, y 1; x 10, y 0; x 11, y 0; x 12, y 0; x 13, y 0; x 14, y 0; x 15, y 0; x 16, y 0; x 17, y 0; x 18, y 0; x 19, y 0; x 20, y 0; x 21, y 0; x 22, y 0; x 23, y 0; x 24, y 0; x 25, y 0; x 26, y 0; x 27, y 0; x 28, y 0; x 29, y 0; x 30, y 0; x 31, y 0; x 32, y 0; x 33, y 0; x 34, y 0; x 35, y 0; x 36, y 0; x 37, y 0; x 38, y 0; x 39, y 0; x 40, y 0; x 41, y 0; x 42, y 0; x 43, y 0; x 44, y 0; x 45, y 0; x 46, y 0; x 47, y 0; x 48, y 0; x 49, y 0",
+    "Arrays: x 0, y 47; x 1, y 2",
+    "Virus 32: 2.542372881355932; Virus 43: 2.1186440677966103; Virus 27: 2.542372881355932; Virus 4: 2.1186440677966103; Virus 25: 2.9661016949152543; Virus 24: 2.1186440677966103; Virus 36: 0.847457627118644; Virus 40: 1.271186440677966; Virus 42: 2.1186440677966103; Virus 21: 0.847457627118644; Virus 7: 1.694915254237288; Virus 0: 2.1186440677966103; Virus 31: 3.389830508474576; Virus 1: 4.237288135593221; Virus 20: 2.1186440677966103; Virus 12: 1.271186440677966; Virus 47: 0.423728813559322; Virus 5: 0.847457627118644; Virus 6: 2.1186440677966103; Virus 11: 2.9661016949152543; Virus 15: 1.694915254237288; Virus 45: 1.271186440677966; Virus 18: 2.1186440677966103; Virus 39: 1.271186440677966; Virus 28: 1.694915254237288; Virus 3: 2.1186440677966103; Virus 26: 0.847457627118644; Virus 19: 1.694915254237288; Virus 46: 1.271186440677966; Virus 16: 1.271186440677966; Virus 41: 9.745762711864407; Virus 44: 2.1186440677966103; Virus 14: 1.694915254237288; Virus 34: 1.694915254237288; Virus 33: 1.271186440677966; Virus 49: 1.694915254237288; Virus 2: 2.542372881355932; Virus 38: 1.271186440677966; Virus 30: 2.9661016949152543; Virus 9: 0.423728813559322; Virus 8: 2.9661016949152543; Virus 23: 1.694915254237288; Virus 35: 1.694915254237288; Virus 17: 2.1186440677966103; Virus 37: 3.389830508474576; Virus 10: 0.847457627118644; Virus 22: 2.9661016949152543; Virus 13: 1.694915254237288; Virus 29: 0.847457627118644; Virus 48: 0.423728813559322",
+    "Bacteria: 49; Viruses: 236"
+  ],
+  "status": "Action completed."
+}

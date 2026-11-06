@@ -1,0 +1,122 @@
+{
+  "case": {
+    "slug": "repressilator-1d",
+    "name": "Repressilator 1D",
+    "path": "Sample Models/Biology/Repressilator 1D",
+    "setup": "setup",
+    "steps": 20,
+    "reports": [
+      "ticks",
+      "count mRNAs",
+      "count TFs",
+      "is-signal-on?",
+      "mean-on-duration",
+      "mean-off-duration"
+    ]
+  },
+  "setup": {
+    "sourceSHA256": "e222752e0f629c0ae1f6df4f6858fcecb5629868ffd6a52ed602e172084f1315",
+    "title": "Repressilator 1D",
+    "bytes": 100594,
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 0
+      },
+      "count mRNAs": {
+        "success": true,
+        "value": 0
+      },
+      "count TFs": {
+        "success": true,
+        "value": 0
+      },
+      "is-signal-on?": {
+        "success": true,
+        "value": true
+      },
+      "mean-on-duration": {
+        "success": true,
+        "value": 0
+      },
+      "mean-off-duration": {
+        "success": true,
+        "value": 0
+      }
+    },
+    "errors": [],
+    "viewport": [
+      1280,
+      800
+    ],
+    "canvas": [
+      {
+        "width": 1500,
+        "height": 500,
+        "rect": {
+          "x": 622,
+          "y": 168.984375,
+          "width": 750,
+          "height": 250,
+          "top": 168.984375,
+          "right": 1372,
+          "bottom": 418.984375,
+          "left": 622
+        }
+      }
+    ]
+  },
+  "progress": {
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 20
+      },
+      "count mRNAs": {
+        "success": true,
+        "value": 12
+      },
+      "count TFs": {
+        "success": true,
+        "value": 185
+      },
+      "is-signal-on?": {
+        "success": true,
+        "value": true
+      },
+      "mean-on-duration": {
+        "success": true,
+        "value": 4.5
+      },
+      "mean-off-duration": {
+        "success": true,
+        "value": 4.5
+      }
+    },
+    "errors": [],
+    "console": [],
+    "text": " powered by NetLogo\nRepressilator 1D\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 20\n?\nfor shortcuts\nmRNA Counts\nNum mRNA 0\n5\nNum mRNA 1\n2\nNum mRNA 2\n5\ninitial-TF0s\ninitial-TF2s\ninitial-TF1s\ngo-once\ngo\nsetup\nTime Between On Signals\n0\n50\n100\n150\n200\n0\n5\n8\nTFs-per-mRNA\nmax-TF-synergy\nmRNA-decay-prob\nsignal-decay-prob\nsignal-TF-unbind-prob\nsignal-TF-bind-prob\nTF-bind-prob\nTF-unbind-prob\nTF-decay-prob\nDuration of On Signals\n0\n50\n100\n150\n200\n0\n5\n7\nTime\nOn = 1, 0 = Off\nRecent Signal Pattern\n0\n100\n200\n300\n400\n500\n0\n1\nTime\nTF Count\nRecent TF Counts\nTF Gene 0\nTF Gene 1\nTF Gene 2\n0\n20\n40\n60\n80\n100\n0\n50\n90\nCommand Center\nNetLogo Co"
+  },
+  "interactions": {
+    "stepPresent": true,
+    "afterStep": {
+      "success": true,
+      "value": 21
+    },
+    "playPressed": "true",
+    "pausePressed": "false",
+    "afterPlay": {
+      "success": true,
+      "value": 27
+    },
+    "afterReset": {
+      "success": true,
+      "value": 0
+    },
+    "errors": []
+  },
+  "screenshots": [
+    "repressilator-1d-original-setup.png",
+    "repressilator-1d-original-progress.png"
+  ]
+}

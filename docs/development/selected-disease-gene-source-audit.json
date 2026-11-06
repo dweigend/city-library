@@ -4,7 +4,7 @@
     "models": "bf0626a89358b48494066862843a91f36f2556cf"
   },
   "archiveInventoryGitBlobVerified": true,
-  "servedVerification": "pending actual browser fetch",
+  "servedVerification": "All ten fresh T3 Chromium HTTP200 fetch SHA-256 values match inventory; all ten actual loaded-session UTF-8 XML SHA-256 values also match.",
   "models": [
     {
       "slug": "disease-solo",
@@ -138,7 +138,9 @@
         "batch": "B09",
         "experimentSlug": "disease-solo"
       },
-      "inventorySlug": "sample-models-biology-disease-solo"
+      "inventorySlug": "sample-models-biology-disease-solo",
+      "actualSessionSHA256": "f3d15df285ed35bcba2a6b3a718acf63de1589c8be099b44c2b6f1743b701a97",
+      "browserEvidence": "disease-solo-original.json"
     },
     {
       "slug": "repressilator-1d",
@@ -511,7 +513,9 @@
         "batch": "B09",
         "experimentSlug": "repressilator-1d"
       },
-      "inventorySlug": "sample-models-biology-repressilator-1d"
+      "inventorySlug": "sample-models-biology-repressilator-1d",
+      "actualSessionSHA256": "e222752e0f629c0ae1f6df4f6858fcecb5629868ffd6a52ed602e172084f1315",
+      "browserEvidence": "repressilator-1d-original.json"
     },
     {
       "slug": "hiv",
@@ -652,7 +656,9 @@
         "batch": "B09",
         "experimentSlug": "hiv"
       },
-      "inventorySlug": "sample-models-biology-hiv"
+      "inventorySlug": "sample-models-biology-hiv",
+      "actualSessionSHA256": "ed3e832a9fadd101ff65eb20a313ee0941496db02d6d3cf15371568745f997d5",
+      "browserEvidence": "hiv-original.json"
     },
     {
       "slug": "virus",
@@ -789,7 +795,9 @@
         "batch": "B09",
         "experimentSlug": "virus"
       },
-      "inventorySlug": "sample-models-biology-virus"
+      "inventorySlug": "sample-models-biology-virus",
+      "actualSessionSHA256": "43e370765de7a5601d5b39e40904372016289974c24c94de32634132c3692683",
+      "browserEvidence": "virus-original.json"
     },
     {
       "slug": "crispr-bacterium",
@@ -934,7 +942,9 @@
         "batch": "B09",
         "experimentSlug": "crispr-bacterium"
       },
-      "inventorySlug": "sample-models-biology-crispr-crispr-bacterium"
+      "inventorySlug": "sample-models-biology-crispr-crispr-bacterium",
+      "actualSessionSHA256": "e87977797048bf809aa58a41d6dc746c59d6d5e0ba94957db2996815725f4813",
+      "browserEvidence": "crispr-bacterium-original.json"
     },
     {
       "slug": "crispr-ecosystem",
@@ -1086,7 +1096,9 @@
         "batch": "B09",
         "experimentSlug": "crispr-ecosystem"
       },
-      "inventorySlug": "sample-models-biology-crispr-crispr-ecosystem"
+      "inventorySlug": "sample-models-biology-crispr-crispr-ecosystem",
+      "actualSessionSHA256": "9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9",
+      "browserEvidence": "crispr-ecosystem-original.json"
     },
     {
       "slug": "epidem-basic",
@@ -1195,7 +1207,9 @@
         "batch": "B09",
         "experimentSlug": "epidem-basic"
       },
-      "inventorySlug": "curricular-models-epidem-epidem-basic"
+      "inventorySlug": "curricular-models-epidem-epidem-basic",
+      "actualSessionSHA256": "049c5556e76cf22b7ec76e801c09134d02cf29619ea46c8c9578e9862be2c07a",
+      "browserEvidence": "epidem-basic-original.json"
     },
     {
       "slug": "epidem-travel-and-control",
@@ -1334,7 +1348,9 @@
         "batch": "B09",
         "experimentSlug": "epidem-travel-and-control"
       },
-      "inventorySlug": "curricular-models-epidem-epidem-travel-and-control"
+      "inventorySlug": "curricular-models-epidem-epidem-travel-and-control",
+      "actualSessionSHA256": "7bde08421020920d17631b85cbef80c945a6a97857040a079c8aacbc3a35ac07",
+      "browserEvidence": "epidem-travel-and-control-original.json"
     },
     {
       "slug": "genevo-1-genetic-switch",
@@ -1503,7 +1519,9 @@
         "batch": "B09",
         "experimentSlug": "genevo-1-genetic-switch"
       },
-      "inventorySlug": "curricular-models-genevo-genevo-1-genetic-switch"
+      "inventorySlug": "curricular-models-genevo-genevo-1-genetic-switch",
+      "actualSessionSHA256": "6f46710d78daad311551c2ee934317d98ef52ad92779b8312ba66dcd4c7d330e",
+      "browserEvidence": "genevo-1-genetic-switch-original.json"
     },
     {
       "slug": "dna-protein-synthesis",
@@ -1748,7 +1766,9 @@
         "batch": "B09",
         "experimentSlug": "dna-protein-synthesis"
       },
-      "inventorySlug": "curricular-models-beagle-evolution-dna-protein-synthesis"
+      "inventorySlug": "curricular-models-beagle-evolution-dna-protein-synthesis",
+      "actualSessionSHA256": "189eda6e21a0408e290f1afb5781ddae936f819ed8917788a683dcaf7d661301",
+      "browserEvidence": "dna-protein-synthesis-original.json"
     }
   ]
 }

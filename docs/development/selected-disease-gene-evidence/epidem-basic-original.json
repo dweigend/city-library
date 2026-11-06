@@ -1,0 +1,127 @@
+{
+  "case": {
+    "slug": "epidem-basic",
+    "name": "epiDEM Basic",
+    "path": "Curricular Models/epiDEM/epiDEM Basic",
+    "setup": "setup",
+    "steps": 20,
+    "reports": [
+      "ticks",
+      "count turtles",
+      "count turtles with [infected?]",
+      "count turtles with [cured?]",
+      "r0",
+      "beta-n",
+      "gamma"
+    ]
+  },
+  "setup": {
+    "sourceSHA256": "049c5556e76cf22b7ec76e801c09134d02cf29619ea46c8c9578e9862be2c07a",
+    "title": "epiDEM Basic",
+    "bytes": 54959,
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 0
+      },
+      "count turtles": {
+        "success": true,
+        "value": 100
+      },
+      "count turtles with [infected?]": {
+        "success": true,
+        "value": 1
+      },
+      "count turtles with [cured?]": {
+        "success": true,
+        "value": 0
+      },
+      "r0": {
+        "success": true,
+        "value": 0
+      },
+      "beta-n": {
+        "success": true,
+        "value": 0
+      },
+      "gamma": {
+        "success": true,
+        "value": 0
+      }
+    },
+    "errors": [],
+    "viewport": [
+      1280,
+      800
+    ],
+    "canvas": [
+      {
+        "width": 900,
+        "height": 900,
+        "rect": {
+          "x": 697,
+          "y": 176.984375,
+          "width": 450,
+          "height": 450,
+          "top": 176.984375,
+          "right": 1147,
+          "bottom": 626.984375,
+          "left": 697
+        }
+      }
+    ]
+  },
+  "progress": {
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 20
+      },
+      "count turtles": {
+        "success": true,
+        "value": 100
+      },
+      "count turtles with [infected?]": {
+        "success": true,
+        "value": 21
+      },
+      "count turtles with [cured?]": {
+        "success": true,
+        "value": 4
+      },
+      "r0": {
+        "success": true,
+        "value": 1.0994216769291871
+      },
+      "beta-n": {
+        "success": true,
+        "value": 0.1
+      },
+      "gamma": {
+        "success": true,
+        "value": 0.05
+      }
+    },
+    "errors": [],
+    "console": [],
+    "text": " powered by NetLogo\nepiDEM Basic\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nhours: 20\n?\nfor shortcuts\nsetup\ngo\ninitial-people\nhours\n# of people\nPopulations\nInfected\nNot Infected\n0\n10\n20\n0\n100\nhours\nrate\nInfection and Recovery Rates\nInfection Rate\nRecovery Rate\n0\n10\n20\n0\n2\n3\ninfection-chance\nrecovery-chance\nhours\n% total pop\nCumulative Infected and Recovered\n% infected\n% recovered\n0\n10\n20\n0\n25\n26\nR0\n1.1\naverage-recovery-time\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+  },
+  "interactions": {
+    "stepPresent": false,
+    "playPressed": "true",
+    "pausePressed": "false",
+    "afterPlay": {
+      "success": true,
+      "value": 25
+    },
+    "afterReset": {
+      "success": true,
+      "value": 0
+    },
+    "errors": []
+  },
+  "screenshots": [
+    "epidem-basic-original-setup.png",
+    "epidem-basic-original-progress.png"
+  ]
+}

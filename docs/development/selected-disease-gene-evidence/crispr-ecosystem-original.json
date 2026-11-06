@@ -1,0 +1,109 @@
+{
+  "case": {
+    "slug": "crispr-ecosystem",
+    "name": "CRISPR Ecosystem",
+    "path": "Sample Models/Biology/CRISPR/CRISPR Ecosystem",
+    "setup": "setup",
+    "steps": 20,
+    "reports": [
+      "ticks",
+      "count bacteria",
+      "count viruses",
+      "sum [food-energy] of patches",
+      "length virus-history"
+    ]
+  },
+  "setup": {
+    "sourceSHA256": "9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9",
+    "title": "CRISPR Ecosystem",
+    "bytes": 78382,
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 0
+      },
+      "count bacteria": {
+        "success": true,
+        "value": 50
+      },
+      "count viruses": {
+        "success": true,
+        "value": 250
+      },
+      "sum [food-energy] of patches": {
+        "success": true,
+        "value": 54450
+      },
+      "length virus-history": {
+        "success": true,
+        "value": 50
+      }
+    },
+    "errors": [],
+    "viewport": [
+      1280,
+      800
+    ],
+    "canvas": [
+      {
+        "width": 924,
+        "height": 924,
+        "rect": {
+          "x": 847,
+          "y": 170.984375,
+          "width": 462,
+          "height": 462,
+          "top": 170.984375,
+          "right": 1309,
+          "bottom": 632.984375,
+          "left": 847
+        }
+      }
+    ]
+  },
+  "progress": {
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 20
+      },
+      "count bacteria": {
+        "success": true,
+        "value": 54
+      },
+      "count viruses": {
+        "success": true,
+        "value": 217
+      },
+      "sum [food-energy] of patches": {
+        "success": true,
+        "value": 88615
+      },
+      "length virus-history": {
+        "success": true,
+        "value": 50
+      }
+    },
+    "errors": [],
+    "console": [],
+    "text": " powered by NetLogo\nCRISPR Ecosystem\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 20\n?\nfor shortcuts\ninfection-chance\n %\ninitial-viruses\ngo\nmax-virus-types\ninitial-bacteria\nsetup\nspacer-loss-chance\n %\ncrispr?\n% Abundance\nCRISPR-Virus Coevolution\nViruses\nArrays\n0\n10\n20\n0\n5\n10\nArray Length\nFrequency\nArray Histogram\n0\n5\n10\n0\n50\n75\nStd. Dev.\n0.14\nAvg. Array Length\n0.02\nMicrobe Populations\nBacteria\nViruses\n0\n10\n20\n0\n200\n260\nTicks\n% Abundance\nVirus Relative Abundance\n0\n10\n5\n15\n20\n0\n10\n12\nSequence ID\nFrequency\nSequence Histogram\nViruses\nArrays\n0\n25\n50\n0\n25\n33\nplot-new-virus\nplotted-virus\nCommand Center\nNetLogo Code\nModel Info\nA"
+  },
+  "interactions": {
+    "stepPresent": false,
+    "playPressed": "true",
+    "pausePressed": "false",
+    "afterPlay": {
+      "success": true,
+      "value": 26
+    },
+    "afterReset": {
+      "success": true,
+      "value": 0
+    },
+    "errors": []
+  },
+  "screenshots": [
+    "crispr-ecosystem-original-setup.png",
+    "crispr-ecosystem-original-progress.png"
+  ]
+}
