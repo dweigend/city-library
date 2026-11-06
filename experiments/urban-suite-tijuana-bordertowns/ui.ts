@@ -100,7 +100,7 @@ export const ui = defineUI(model, {
     { label: "No water (%)", value: (s) => reported(s.reports.noWaterPercent, s.reports.unavailable.noWaterPercent, 0) },
     { label: "No power (%)", value: (s) => reported(s.reports.noPowerPercent, s.reports.unavailable.noPowerPercent, 0) },
     { label: "Pen segments", value: (s) => s.traces.length },
-    { label: "Completed calls", value: (s) => s.history.length },
+    { label: "Recorded calls", value: (s) => s.history.length },
     { label: "Last failure", value: (s) => s.lastFailure ? `${s.lastFailure.action}: ${s.lastFailure.code}: ${s.lastFailure.message}` : "None" },
     { label: "Warnings", value: (s) => s.warnings.join("; ") || "None" },
   ],
