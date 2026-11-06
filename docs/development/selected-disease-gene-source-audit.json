@@ -1,0 +1,1754 @@
+{
+  "upstream": {
+    "galapagos": "90be931773fcf499049247a8aaa1aecbe003654c",
+    "models": "bf0626a89358b48494066862843a91f36f2556cf"
+  },
+  "archiveInventoryGitBlobVerified": true,
+  "servedVerification": "pending actual browser fetch",
+  "models": [
+    {
+      "slug": "disease-solo",
+      "catalogPath": "Sample Models/Biology/Disease Solo",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox",
+      "index": 180,
+      "catalogKey": "public/modelslib/Sample Models/Biology/Disease Solo",
+      "id": "Sample Models/Biology/Disease Solo",
+      "name": "Disease Solo",
+      "category": "Sample Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "f3d15df285ed35bcba2a6b3a718acf63de1589c8be099b44c2b6f1743b701a97",
+      "bytes": 97857,
+      "gitBlobSha1": "4fd2fd500574e401da64ad047c30d38ff6b3ff94",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "4fd2fd500574e401da64ad047c30d38ff6b3ff94",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "700cf4406a33cf3be0709564f90cd53fb568dbc2",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup-clear",
+          "reporter": false
+        },
+        {
+          "name": "setup-keep",
+          "reporter": false
+        },
+        {
+          "name": "setup-world",
+          "reporter": false
+        },
+        {
+          "name": "infect",
+          "reporter": false
+        },
+        {
+          "name": "create-some-androids",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "androids-wander",
+          "reporter": false
+        },
+        {
+          "name": "avoid",
+          "reporter": false
+        },
+        {
+          "name": "chase",
+          "reporter": false
+        },
+        {
+          "name": "spread-disease",
+          "reporter": false
+        },
+        {
+          "name": "maybe-get-sick",
+          "reporter": false
+        },
+        {
+          "name": "get-sick",
+          "reporter": false
+        },
+        {
+          "name": "create-user",
+          "reporter": false
+        },
+        {
+          "name": "move",
+          "reporter": false
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "randomness",
+        "dynamicExecution"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "button": 8,
+        "note": 4,
+        "slider": 3,
+        "plot": 1,
+        "monitor": 1,
+        "switch": 2
+      },
+      "widgetsXml": "\n    <view x=\"281\" wrappingAllowedX=\"false\" y=\"10\" frameRate=\"10.0\" minPycor=\"-12\" height=\"479\" showTickCounter=\"true\" patchSize=\"19.0\" fontSize=\"10\" wrappingAllowedY=\"false\" width=\"403\" tickCounterLabel=\"ticks\" maxPycor=\"12\" updateMode=\"1\" maxPxcor=\"10\" minPxcor=\"-10\"></view>\n    <button x=\"24\" y=\"65\" height=\"35\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"102\" display=\"setup/clear\">setup-clear</button>\n    <button x=\"24\" y=\"145\" height=\"35\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"102\">go</button>\n    <button x=\"24\" y=\"105\" height=\"35\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"102\" display=\"setup/keep\">setup-keep</button>\n    <note x=\"138\" y=\"115\" backgroundDark=\"0\" fontSize=\"11\" width=\"97\" markdown=\"false\" height=\"24\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">keeps old plots</note>\n    <note x=\"138\" y=\"74\" backgroundDark=\"0\" fontSize=\"11\" width=\"97\" markdown=\"false\" height=\"24\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">clears old plots\n</note>\n    <slider x=\"21\" step=\"1\" y=\"10\" max=\"300\" width=\"250\" display=\"num-androids\" height=\"50\" min=\"1\" direction=\"Horizontal\" default=\"60.0\" variable=\"num-androids\"></slider>\n    <slider x=\"21\" step=\"1\" y=\"184\" max=\"100\" width=\"250\" display=\"infection-chance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"100.0\" variable=\"infection-chance\" units=\"%\"></slider>\n    <plot x=\"21\" autoPlotX=\"true\" yMax=\"6.0\" autoPlotY=\"true\" yAxis=\"sick\" y=\"304\" xMin=\"0.0\" height=\"177\" legend=\"false\" xMax=\"10.0\" yMin=\"0.0\" width=\"250\" xAxis=\"time\" display=\"Number Sick\">\n      <setup>create-temporary-plot-pen word \"run \" run-number\nset-plot-pen-color item (run-number mod 5)\n                        [blue red green orange violet]</setup>\n      <update>plot num-sick</update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update></update>\n      </pen>\n    </plot>\n    <monitor x=\"92\" precision=\"0\" y=\"240\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Number Sick\">num-sick</monitor>\n    <note x=\"695\" y=\"16\" backgroundDark=\"0\" fontSize=\"11\" width=\"150\" markdown=\"false\" height=\"24\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">person:</note>\n    <slider x=\"689\" step=\"1\" y=\"158\" max=\"5\" width=\"250\" display=\"step-size\" height=\"50\" min=\"1\" direction=\"Horizontal\" default=\"1.0\" variable=\"step-size\"></slider>\n    <button x=\"789\" actionKey=\"K\" y=\"119\" height=\"35\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"69\" display=\"down\">move 180</button>\n    <button x=\"745\" actionKey=\"J\" y=\"80\" height=\"35\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"62\" display=\"left\">move 270</button>\n    <button x=\"845\" actionKey=\"L\" y=\"80\" height=\"35\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"63\" display=\"right\">move 90</button>\n    <button x=\"790\" actionKey=\"I\" y=\"40\" height=\"35\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"69\" display=\"up\">move 0</button>\n    <button x=\"130\" y=\"145\" height=\"35\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"102\">infect</button>\n    <switch x=\"699\" y=\"445\" height=\"40\" on=\"false\" variable=\"chase?\" width=\"103\" display=\"chase?\"></switch>\n    <switch x=\"699\" y=\"405\" height=\"40\" on=\"false\" variable=\"avoid?\" width=\"103\" display=\"avoid?\"></switch>\n    <note x=\"695\" y=\"375\" backgroundDark=\"0\" fontSize=\"11\" width=\"150\" markdown=\"false\" height=\"24\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">androids:</note>\n  ",
+      "licenseNotice": "Copyright 2005 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2005 -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Wilensky, U. (2005).  NetLogo Disease Solo model.  http://ccl.northwestern.edu/netlogo/models/DiseaseSolo.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "f2cd372d689e5c739e64ee33c41d61134a29c44e429e80b6e09587171eb08a6c",
+      "codeSha256": "53cffa12b90cafc9cb395b50c454270efb4d1781e18cb960b226099ca85d96f8",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [
+        "host-or-special-runtime-signals-require-audit"
+      ],
+      "creditsNotice": "This model is a one player version of the HubNet activity Disease.  In the HubNet version, multiple users can participate at once.",
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 81,
+        "batch": "B09",
+        "experimentSlug": "disease-solo"
+      },
+      "inventorySlug": "sample-models-biology-disease-solo"
+    },
+    {
+      "slug": "repressilator-1d",
+      "catalogPath": "Sample Models/Biology/Repressilator 1D",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Repressilator%201D.nlogox",
+      "index": 181,
+      "catalogKey": "public/modelslib/Sample Models/Biology/Repressilator 1D",
+      "id": "Sample Models/Biology/Repressilator 1D",
+      "name": "Repressilator 1D",
+      "category": "Sample Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Repressilator%201D.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Repressilator%201D.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "e222752e0f629c0ae1f6df4f6858fcecb5629868ffd6a52ed602e172084f1315",
+      "bytes": 100594,
+      "gitBlobSha1": "e366454fce5841d315e546f0c0c55a103a492fd7",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "e366454fce5841d315e546f0c0c55a103a492fd7",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Biology/Repressilator%201D.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "967e278676e562734af02606e8d41f212f0a9367",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "initialize-layout",
+          "reporter": false
+        },
+        {
+          "name": "initialize-patches",
+          "reporter": false
+        },
+        {
+          "name": "initialize-composite-DNA",
+          "reporter": false
+        },
+        {
+          "name": "initialize-mRNA",
+          "reporter": false
+        },
+        {
+          "name": "initialize-TFs",
+          "reporter": false
+        },
+        {
+          "name": "create-initial-TFs",
+          "reporter": false
+        },
+        {
+          "name": "initialize-TF",
+          "reporter": false
+        },
+        {
+          "name": "set-TF-position",
+          "reporter": false
+        },
+        {
+          "name": "initialize-signal",
+          "reporter": false
+        },
+        {
+          "name": "initialize-gene-label",
+          "reporter": false
+        },
+        {
+          "name": "initialize-gene-off-label",
+          "reporter": false
+        },
+        {
+          "name": "initialize-signal-label",
+          "reporter": false
+        },
+        {
+          "name": "y-for-label-below-me",
+          "reporter": true
+        },
+        {
+          "name": "produce-mRNAs",
+          "reporter": false
+        },
+        {
+          "name": "degrade-mRNAs",
+          "reporter": false
+        },
+        {
+          "name": "produce-TFs",
+          "reporter": false
+        },
+        {
+          "name": "degrade-TFs",
+          "reporter": false
+        },
+        {
+          "name": "move-TFs",
+          "reporter": false
+        },
+        {
+          "name": "bind-TFs",
+          "reporter": false
+        },
+        {
+          "name": "bind-TF",
+          "reporter": false
+        },
+        {
+          "name": "bind-TF-to-signal",
+          "reporter": false
+        },
+        {
+          "name": "unbind-TFs",
+          "reporter": false
+        },
+        {
+          "name": "unbind-TF",
+          "reporter": false
+        },
+        {
+          "name": "unbind-TF-from-signal",
+          "reporter": false
+        },
+        {
+          "name": "attach-banner-optionally-below",
+          "reporter": false
+        },
+        {
+          "name": "attach-banner",
+          "reporter": false
+        },
+        {
+          "name": "attach-banner-below",
+          "reporter": false
+        },
+        {
+          "name": "show-turtle-and-banner",
+          "reporter": false
+        },
+        {
+          "name": "hide-turtle-and-banner",
+          "reporter": false
+        },
+        {
+          "name": "update-gene-off-labels",
+          "reporter": false
+        },
+        {
+          "name": "get-DNA-TF-inhibits",
+          "reporter": true
+        },
+        {
+          "name": "get-TF-DNA-is-inhibited-by",
+          "reporter": true
+        },
+        {
+          "name": "count-other-mRNAs-same-patch",
+          "reporter": true
+        },
+        {
+          "name": "count-other-TFs-same-color-same-patch",
+          "reporter": true
+        },
+        {
+          "name": "TF-can-bind-gene-here?",
+          "reporter": true
+        },
+        {
+          "name": "TF-can-bind-signal?",
+          "reporter": true
+        },
+        {
+          "name": "update-signal",
+          "reporter": false
+        },
+        {
+          "name": "update-TF-shape",
+          "reporter": false
+        },
+        {
+          "name": "TF-can-inhibit-gene-here?",
+          "reporter": true
+        },
+        {
+          "name": "n-mRNAs-produced",
+          "reporter": true
+        },
+        {
+          "name": "n-TFs-produced",
+          "reporter": true
+        },
+        {
+          "name": "the-signal",
+          "reporter": true
+        },
+        {
+          "name": "is-signal-bound?",
+          "reporter": true
+        },
+        {
+          "name": "is-signal-on?",
+          "reporter": true
+        },
+        {
+          "name": "get-signal-xcor",
+          "reporter": true
+        },
+        {
+          "name": "get-signal-ycor",
+          "reporter": true
+        },
+        {
+          "name": "should-signal-be-on?",
+          "reporter": true
+        },
+        {
+          "name": "get-patch-column-x",
+          "reporter": true
+        },
+        {
+          "name": "patch-color",
+          "reporter": true
+        },
+        {
+          "name": "darken-color",
+          "reporter": true
+        },
+        {
+          "name": "num-patches",
+          "reporter": true
+        },
+        {
+          "name": "DNA-segment-size",
+          "reporter": true
+        },
+        {
+          "name": "mRNA-size",
+          "reporter": true
+        },
+        {
+          "name": "TF-size",
+          "reporter": true
+        },
+        {
+          "name": "bound-TF-size",
+          "reporter": true
+        },
+        {
+          "name": "signal-size",
+          "reporter": true
+        },
+        {
+          "name": "gene-off-label-size",
+          "reporter": true
+        },
+        {
+          "name": "DNA-segment-shapes",
+          "reporter": true
+        },
+        {
+          "name": "bound-TF-shape",
+          "reporter": true
+        },
+        {
+          "name": "unbound-TF-shape",
+          "reporter": true
+        },
+        {
+          "name": "bound-to-signal-TF-shape",
+          "reporter": true
+        },
+        {
+          "name": "signal-on-color",
+          "reporter": true
+        },
+        {
+          "name": "patch-colors",
+          "reporter": true
+        },
+        {
+          "name": "signal-off-color",
+          "reporter": true
+        },
+        {
+          "name": "DNA-x-offset",
+          "reporter": true
+        },
+        {
+          "name": "signal-TF-gene-id",
+          "reporter": true
+        },
+        {
+          "name": "mean-on-duration",
+          "reporter": true
+        },
+        {
+          "name": "mean-off-duration",
+          "reporter": true
+        },
+        {
+          "name": "harmonic-mean",
+          "reporter": true
+        },
+        {
+          "name": "on-off-harmonic-mean",
+          "reporter": true
+        },
+        {
+          "name": "on-off-optim-fcn22",
+          "reporter": true
+        },
+        {
+          "name": "on-off-optim-fcn1",
+          "reporter": true
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "graph",
+        "fields",
+        "randomness",
+        "plots"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "note": 1,
+        "monitor": 3,
+        "slider": 12,
+        "button": 3,
+        "plot": 4
+      },
+      "widgetsXml": "\n    <view x=\"590\" wrappingAllowedX=\"true\" y=\"5\" frameRate=\"30.0\" minPycor=\"0\" height=\"254\" showTickCounter=\"true\" patchSize=\"250.0\" fontSize=\"10\" wrappingAllowedY=\"true\" width=\"754\" tickCounterLabel=\"ticks\" maxPycor=\"0\" updateMode=\"1\" maxPxcor=\"2\" minPxcor=\"0\"></view>\n    <note x=\"530\" y=\"280\" backgroundDark=\"0\" fontSize=\"12\" width=\"90\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">mRNA Counts</note>\n    <monitor x=\"525\" precision=\"17\" y=\"310\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Num mRNA 0\">count mRNAs with [ mRNA-gene-id = 0 ]</monitor>\n    <monitor x=\"525\" precision=\"17\" y=\"380\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Num mRNA 1\">count mRNAs with [ mRNA-gene-id = 1 ]</monitor>\n    <monitor x=\"525\" precision=\"17\" y=\"445\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Num mRNA 2\">count mRNAs with [ mRNA-gene-id = 2 ]</monitor>\n    <slider x=\"10\" step=\"10\" y=\"5\" max=\"200\" width=\"150\" display=\"initial-TF0s\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.0\" variable=\"initial-TF0s\"></slider>\n    <slider x=\"345\" step=\"10\" y=\"5\" max=\"200\" width=\"150\" display=\"initial-TF2s\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.0\" variable=\"initial-TF2s\"></slider>\n    <slider x=\"180\" step=\"10\" y=\"5\" max=\"200\" width=\"150\" display=\"initial-TF1s\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.0\" variable=\"initial-TF1s\"></slider>\n    <button x=\"205\" y=\"60\" height=\"35\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"105\" display=\"go-once\">go</button>\n    <button x=\"105\" y=\"60\" height=\"35\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"75\" display=\"go\">go</button>\n    <button x=\"10\" y=\"60\" height=\"35\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"72\">setup</button>\n    <plot x=\"10\" autoPlotX=\"true\" yMax=\"3.0\" autoPlotY=\"true\" y=\"325\" xMin=\"0.0\" height=\"172\" legend=\"false\" xMax=\"100.0\" yMin=\"0.0\" width=\"440\" display=\"Time Between On Signals\">\n      <setup>set interval-rolling-plot-width 200\nset-plot-x-range  0 interval-rolling-plot-width\nset-plot-pen-mode 2</setup>\n      <update><![CDATA[if FALSE and ticks > interval-rolling-plot-width [\n  ; scroll the range of the plot so only\n  ; the last interval-rolling-plot-width ticks are visible\\n\n  set-plot-x-range (ticks - interval-rolling-plot-width) ticks\n]]]></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update><![CDATA[if completed-signal-off-length > 0 [\n   plot completed-signal-off-length\n]]]></update>\n      </pen>\n    </plot>\n    <slider x=\"165\" step=\"1\" y=\"270\" max=\"10\" width=\"150\" display=\"TFs-per-mRNA\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"2.0\" variable=\"TFs-per-mRNA\"></slider>\n    <slider x=\"320\" step=\"1\" y=\"270\" max=\"4\" width=\"150\" display=\"max-TF-synergy\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"4.0\" variable=\"max-TF-synergy\"></slider>\n    <slider x=\"10\" step=\".005\" y=\"270\" max=\"1\" width=\"150\" display=\"mRNA-decay-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.25\" variable=\"mRNA-decay-prob\"></slider>\n    <slider x=\"210\" step=\".005\" y=\"214\" max=\"1\" width=\"200\" display=\"signal-decay-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.2\" variable=\"signal-decay-prob\"></slider>\n    <slider x=\"210\" step=\".005\" y=\"157\" max=\"1\" width=\"200\" display=\"signal-TF-unbind-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.1\" variable=\"signal-TF-unbind-prob\"></slider>\n    <slider x=\"210\" step=\".005\" y=\"100\" max=\"1\" width=\"200\" display=\"signal-TF-bind-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.75\" variable=\"signal-TF-bind-prob\"></slider>\n    <slider x=\"10\" step=\".005\" y=\"100\" max=\"1\" width=\"185\" display=\"TF-bind-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.975\" variable=\"TF-bind-prob\"></slider>\n    <slider x=\"10\" step=\".005\" y=\"157\" max=\"1\" width=\"185\" display=\"TF-unbind-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.355\" variable=\"TF-unbind-prob\"></slider>\n    <slider x=\"10\" step=\".005\" y=\"214\" max=\"1\" width=\"185\" display=\"TF-decay-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.1\" variable=\"TF-decay-prob\"></slider>\n    <plot x=\"10\" autoPlotX=\"true\" yMax=\"3.0\" autoPlotY=\"true\" y=\"500\" xMin=\"0.0\" height=\"172\" legend=\"false\" xMax=\"100.0\" yMin=\"0.0\" width=\"440\" display=\"Duration of On Signals\">\n      <setup>set interval-rolling-plot-width 200\nset-plot-x-range  0 interval-rolling-plot-width\nset-plot-pen-mode 2</setup>\n      <update><![CDATA[if FALSE and ticks > interval-rolling-plot-width [\n  ; scroll the range of the plot so only\n  ; the last interval-rolling-plot-width ticks are visible\\n\n  set-plot-x-range (ticks - interval-rolling-plot-width) ticks\n]]]></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update><![CDATA[if completed-signal-on-length > 0 [\n   plot completed-signal-on-length\n]]]></update>\n      </pen>\n    </plot>\n    <plot x=\"680\" autoPlotX=\"false\" yMax=\"1.0\" autoPlotY=\"false\" yAxis=\"On = 1, 0 = Off\" y=\"265\" xMin=\"0.0\" height=\"207\" legend=\"false\" xMax=\"500.0\" yMin=\"0.0\" width=\"620\" xAxis=\"Time\" display=\"Recent Signal Pattern\">\n      <setup>set signal-rolling-plot-width 500\nset-plot-x-range  0 signal-rolling-plot-width\n</setup>\n      <update><![CDATA[if ticks > signal-rolling-plot-width [\n  ; scroll the range of the plot so only\n  ; the last signal-rolling-plot-width ticks are visible\n  set-plot-x-range (ticks - signal-rolling-plot-width) ticks\n]]]></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update><![CDATA[if ticks > 0 [\nifelse is-signal-on? [ plotxy ticks 1 ] [ plotxy ticks 0 ]\n]\n]]></update>\n      </pen>\n    </plot>\n    <plot x=\"680\" autoPlotX=\"true\" yMax=\"20.0\" autoPlotY=\"true\" yAxis=\"TF Count\" y=\"480\" xMin=\"0.0\" height=\"212\" legend=\"true\" xMax=\"100.0\" yMin=\"0.0\" width=\"620\" xAxis=\"Time\" display=\"Recent TF Counts\">\n      <setup>set tf-rolling-plot-width 100\nset-plot-x-range  0 tf-rolling-plot-width</setup>\n      <update><![CDATA[\nif ticks > tf-rolling-plot-width [\n  ; scroll the range of the plot so only\n  ; the last tf-rolling-plot-width ticks are visible\\n\n  set-plot-x-range (ticks - tf-rolling-plot-width) ticks\n]]]></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"TF Gene 0\" color=\"-2269166\" legend=\"true\">\n        <setup></setup>\n        <update>plotxy ticks (count TFs with [ TF-gene-id = 0 ]) </update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"TF Gene 1\" color=\"-7773779\" legend=\"true\">\n        <setup></setup>\n        <update>plotxy ticks (count TFs with [ TF-gene-id = 1 ])</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"TF Gene 2\" color=\"-14835848\" legend=\"true\">\n        <setup></setup>\n        <update>plotxy ticks (count TFs with [ TF-gene-id = 2 ])</update>\n      </pen>\n    </plot>\n  ",
+      "licenseNotice": "Copyright 2020 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2020 Cite: Brandes, A. -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Brandes, A. and Wilensky, U. (2020).  NetLogo Repressilator 1D model.  http://ccl.northwestern.edu/netlogo/models/Repressilator1D.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "ca6bf60e481d9027e7bb3ad10d32331b132e15318c1f06118f32327106bece54",
+      "codeSha256": "03aa376cf159f65b57cf8c6ae4536a26cdf95f2107340f82bec0731e825db472",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [],
+      "creditsNotice": "Elowitz, M. B., & Leibler, S. (2000). A synthetic oscillatory network of transcriptional regulators. Nature, 403(6767), 335\u2013338. 10.1038/35002125.",
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 82,
+        "batch": "B09",
+        "experimentSlug": "repressilator-1d"
+      },
+      "inventorySlug": "sample-models-biology-repressilator-1d"
+    },
+    {
+      "slug": "hiv",
+      "catalogPath": "Sample Models/Biology/HIV",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/HIV.nlogox",
+      "index": 184,
+      "catalogKey": "public/modelslib/Sample Models/Biology/HIV",
+      "id": "Sample Models/Biology/HIV",
+      "name": "HIV",
+      "category": "Sample Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/HIV.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/HIV.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "ed3e832a9fadd101ff65eb20a313ee0941496db02d6d3cf15371568745f997d5",
+      "bytes": 66285,
+      "gitBlobSha1": "d1af78c6e98179f494c191a75f85663d102ec4b6",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "d1af78c6e98179f494c191a75f85663d102ec4b6",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Biology/HIV.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "14f0b2b2e24c386f0b6bd86328d99034a9948d48",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "setup-globals",
+          "reporter": false
+        },
+        {
+          "name": "setup-people",
+          "reporter": false
+        },
+        {
+          "name": "assign-color",
+          "reporter": false
+        },
+        {
+          "name": "assign-commitment",
+          "reporter": false
+        },
+        {
+          "name": "assign-coupling-tendency",
+          "reporter": false
+        },
+        {
+          "name": "assign-condom-use",
+          "reporter": false
+        },
+        {
+          "name": "assign-test-frequency",
+          "reporter": false
+        },
+        {
+          "name": "random-near",
+          "reporter": true
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "check-sliders",
+          "reporter": false
+        },
+        {
+          "name": "move",
+          "reporter": false
+        },
+        {
+          "name": "couple",
+          "reporter": false
+        },
+        {
+          "name": "uncouple",
+          "reporter": false
+        },
+        {
+          "name": "infect",
+          "reporter": false
+        },
+        {
+          "name": "test",
+          "reporter": false
+        },
+        {
+          "name": "%infected",
+          "reporter": true
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "randomness"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "button": 2,
+        "monitor": 1,
+        "slider": 5,
+        "plot": 1
+      },
+      "widgetsXml": "\n    <view x=\"305\" wrappingAllowedX=\"true\" y=\"10\" frameRate=\"30.0\" minPycor=\"-12\" height=\"429\" showTickCounter=\"true\" patchSize=\"17.0\" fontSize=\"10\" wrappingAllowedY=\"true\" width=\"429\" tickCounterLabel=\"weeks\" maxPycor=\"12\" updateMode=\"1\" maxPxcor=\"12\" minPxcor=\"-12\"></view>\n    <button x=\"12\" y=\"98\" height=\"35\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"83\" display=\"setup\">setup</button>\n    <button x=\"96\" y=\"98\" height=\"35\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"83\" display=\"go\">go</button>\n    <monitor x=\"184\" precision=\"2\" y=\"91\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"% infected\">%infected</monitor>\n    <slider x=\"7\" step=\"1\" y=\"37\" max=\"500\" width=\"277\" display=\"initial-people\" height=\"50\" min=\"50\" direction=\"Horizontal\" default=\"300.0\" variable=\"initial-people\"></slider>\n    <slider x=\"7\" step=\"1\" y=\"211\" max=\"200\" width=\"277\" display=\"average-commitment\" height=\"50\" min=\"1\" direction=\"Horizontal\" default=\"50.0\" variable=\"average-commitment\" units=\"weeks\"></slider>\n    <slider x=\"7\" step=\"1\" y=\"159\" max=\"10\" width=\"277\" display=\"average-coupling-tendency\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"5.0\" variable=\"average-coupling-tendency\"></slider>\n    <slider x=\"7\" step=\"1\" y=\"263\" max=\"10\" width=\"277\" display=\"average-condom-use\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.0\" variable=\"average-condom-use\"></slider>\n    <slider x=\"7\" step=\"0.01\" y=\"315\" max=\"2\" width=\"277\" display=\"average-test-frequency\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.0\" variable=\"average-test-frequency\" units=\"times/year\"></slider>\n    <plot x=\"7\" autoPlotX=\"true\" yMax=\"350.0\" autoPlotY=\"true\" yAxis=\"people\" y=\"368\" xMin=\"0.0\" height=\"206\" legend=\"true\" xMax=\"52.0\" yMin=\"0.0\" width=\"277\" xAxis=\"weeks\" display=\"Populations\">\n      <setup>set-plot-y-range 0 (initial-people + 50)</setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"HIV-\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [not infected?]</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"HIV+\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [known?]</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"HIV?\" color=\"-13345367\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [infected?] - count turtles with [known?]</update>\n      </pen>\n    </plot>\n  ",
+      "licenseNotice": "Copyright 1997 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the project: CONNECTED MATHEMATICS: MAKING SENSE OF COMPLEX PHENOMENA THROUGH BUILDING OBJECT-BASED PARALLEL MODELS (OBPML).  The project gratefully acknowledges the support of the National Science Foundation (Applications of Advanced Technologies Program) -- grant numbers RED #9552950 and REC #9632612.\n\nThis model was converted to NetLogo as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227. Converted from StarLogoT to NetLogo, 2001.\n\n<!-- 1997 2001 -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Wilensky, U. (1997).  NetLogo HIV model.  http://ccl.northwestern.edu/netlogo/models/HIV.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "08752ae0728a13e5e0b4593dd2bca5061deb738fb1965e1310383642b69f22aa",
+      "codeSha256": "7bdb0a4e4006eadf9988a56c8926a74e92087412c73179a5177ddf831dbd2666",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [],
+      "creditsNotice": "Special thanks to Steve Longenecker for model development.",
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 83,
+        "batch": "B09",
+        "experimentSlug": "hiv"
+      },
+      "inventorySlug": "sample-models-biology-hiv"
+    },
+    {
+      "slug": "virus",
+      "catalogPath": "Sample Models/Biology/Virus",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Virus.nlogox",
+      "index": 211,
+      "catalogKey": "public/modelslib/Sample Models/Biology/Virus",
+      "id": "Sample Models/Biology/Virus",
+      "name": "Virus",
+      "category": "Sample Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Virus.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Virus.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "43e370765de7a5601d5b39e40904372016289974c24c94de32634132c3692683",
+      "bytes": 50497,
+      "gitBlobSha1": "2c41c18a74014eb210a6bafbbfee13fce21da02b",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "2c41c18a74014eb210a6bafbbfee13fce21da02b",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Biology/Virus.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "fa2c29bb3f2263910f2f99fcd6fd0c3dba5e4239",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "setup-turtles",
+          "reporter": false
+        },
+        {
+          "name": "get-sick",
+          "reporter": false
+        },
+        {
+          "name": "get-healthy",
+          "reporter": false
+        },
+        {
+          "name": "become-immune",
+          "reporter": false
+        },
+        {
+          "name": "setup-constants",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "update-global-variables",
+          "reporter": false
+        },
+        {
+          "name": "update-display",
+          "reporter": false
+        },
+        {
+          "name": "get-older",
+          "reporter": false
+        },
+        {
+          "name": "move",
+          "reporter": false
+        },
+        {
+          "name": "infect",
+          "reporter": false
+        },
+        {
+          "name": "recover-or-die",
+          "reporter": false
+        },
+        {
+          "name": "reproduce",
+          "reporter": false
+        },
+        {
+          "name": "immune?",
+          "reporter": true
+        },
+        {
+          "name": "startup",
+          "reporter": false
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "movement",
+        "randomness"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "button": 2,
+        "slider": 4,
+        "chooser": 1,
+        "monitor": 3,
+        "plot": 1
+      },
+      "widgetsXml": "\n    <view x=\"265\" wrappingAllowedX=\"true\" y=\"10\" frameRate=\"30.0\" minPycor=\"-17\" height=\"494\" showTickCounter=\"true\" patchSize=\"14.0\" fontSize=\"10\" wrappingAllowedY=\"true\" width=\"494\" tickCounterLabel=\"ticks\" maxPycor=\"17\" updateMode=\"1\" maxPxcor=\"17\" minPxcor=\"-17\"></view>\n    <button x=\"52\" y=\"65\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"80\">setup</button>\n    <button x=\"138\" y=\"65\" height=\"40\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"80\">go</button>\n    <slider x=\"5\" step=\"1\" y=\"10\" max=\"carrying-capacity\" width=\"250\" display=\"number-people\" height=\"50\" min=\"10\" direction=\"Horizontal\" default=\"150.0\" variable=\"number-people\"></slider>\n    <chooser x=\"5\" y=\"277\" height=\"60\" variable=\"turtle-shape\" current=\"0\" width=\"250\" display=\"turtle-shape\">\n      <choice type=\"string\" value=\"person\"></choice>\n      <choice type=\"string\" value=\"circle\"></choice>\n    </chooser>\n    <slider x=\"5\" step=\"1.0\" y=\"169\" max=\"99.0\" width=\"250\" display=\"chance-recover\" height=\"50\" min=\"0.0\" direction=\"Horizontal\" default=\"75.0\" variable=\"chance-recover\" units=\"%\"></slider>\n    <slider x=\"5\" step=\"1.0\" y=\"223\" max=\"99.0\" width=\"250\" display=\"duration\" height=\"50\" min=\"0.0\" direction=\"Horizontal\" default=\"20.0\" variable=\"duration\" units=\"weeks\"></slider>\n    <slider x=\"5\" step=\"1.0\" y=\"115\" max=\"99.0\" width=\"250\" display=\"infectiousness\" height=\"50\" min=\"0.0\" direction=\"Horizontal\" default=\"65.0\" variable=\"infectiousness\" units=\"%\"></slider>\n    <monitor x=\"763\" precision=\"1\" y=\"13\" height=\"60\" fontSize=\"11\" width=\"100\">%infected</monitor>\n    <monitor x=\"865\" precision=\"1\" y=\"13\" height=\"60\" fontSize=\"11\" width=\"100\">%immune</monitor>\n    <monitor x=\"967\" precision=\"1\" y=\"14\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"years\">ticks / 52</monitor>\n    <plot x=\"765\" autoPlotX=\"true\" yMax=\"200.0\" autoPlotY=\"true\" yAxis=\"people\" y=\"80\" xMin=\"0.0\" height=\"245\" legend=\"true\" xMax=\"52.0\" yMin=\"0.0\" width=\"300\" xAxis=\"weeks\" display=\"Populations\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"sick\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [ sick? ]</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"immune\" color=\"-7500403\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [ immune? ]</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"healthy\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [ not sick? and not immune? ]</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"total\" color=\"-13345367\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles</update>\n      </pen>\n    </plot>\n  ",
+      "licenseNotice": "Copyright 1998 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the project: CONNECTED MATHEMATICS: MAKING SENSE OF COMPLEX PHENOMENA THROUGH BUILDING OBJECT-BASED PARALLEL MODELS (OBPML).  The project gratefully acknowledges the support of the National Science Foundation (Applications of Advanced Technologies Program) -- grant numbers RED #9552950 and REC #9632612.\n\nThis model was converted to NetLogo as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227. Converted from StarLogoT to NetLogo, 2001.\n\n<!-- 1998 2001 -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Wilensky, U. (1998).  NetLogo Virus model.  http://ccl.northwestern.edu/netlogo/models/Virus.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "896eb634ec8816327596499dcdad9fab1d15781109587a8d7a14cb6a9e62cd56",
+      "codeSha256": "ef3c218ad748843149e74c1511ea639de4b814a9235b73387bd23c4966df9ba1",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [],
+      "creditsNotice": "This model can show an alternate visualization of the Virus model using circles to represent the people. It uses visualization techniques as recommended in the paper:\n\nKornhauser, D., Wilensky, U., & Rand, W. (2009). Design guidelines for agent based model visualization. Journal of Artificial Societies and Social Simulation, JASSS, 12(2), 1.",
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 84,
+        "batch": "B09",
+        "experimentSlug": "virus"
+      },
+      "inventorySlug": "sample-models-biology-virus"
+    },
+    {
+      "slug": "crispr-bacterium",
+      "catalogPath": "Sample Models/Biology/CRISPR/CRISPR Bacterium",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Bacterium.nlogox",
+      "index": 214,
+      "catalogKey": "public/modelslib/Sample Models/Biology/CRISPR/CRISPR Bacterium",
+      "id": "Sample Models/Biology/CRISPR/CRISPR Bacterium",
+      "name": "CRISPR Bacterium",
+      "category": "Sample Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Bacterium.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Bacterium.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "e87977797048bf809aa58a41d6dc746c59d6d5e0ba94957db2996815725f4813",
+      "bytes": 80685,
+      "gitBlobSha1": "833411e9c466ef57a9f8e3dbaec1ef0db9f50939",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "833411e9c466ef57a9f8e3dbaec1ef0db9f50939",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Bacterium.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "08ff2f78052e69372360edfd9804832c7b0fa730",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "infect",
+          "reporter": false
+        },
+        {
+          "name": "common-infection",
+          "reporter": false
+        },
+        {
+          "name": "go-RNAPs",
+          "reporter": false
+        },
+        {
+          "name": "go-cas9s",
+          "reporter": false
+        },
+        {
+          "name": "go-guide-RNAs",
+          "reporter": false
+        },
+        {
+          "name": "go-cas-dimers",
+          "reporter": false
+        },
+        {
+          "name": "go-viruses",
+          "reporter": false
+        },
+        {
+          "name": "move",
+          "reporter": false
+        },
+        {
+          "name": "transcribe",
+          "reporter": false
+        },
+        {
+          "name": "degrade",
+          "reporter": false
+        },
+        {
+          "name": "update-labels",
+          "reporter": false
+        },
+        {
+          "name": "update-histogram-ranges",
+          "reporter": false
+        },
+        {
+          "name": "wall-ahead?",
+          "reporter": true
+        },
+        {
+          "name": "dna-patches",
+          "reporter": true
+        },
+        {
+          "name": "infected?",
+          "reporter": true
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "graph",
+        "randomness",
+        "plots"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "button": 4,
+        "slider": 5,
+        "switch": 1,
+        "note": 2,
+        "plot": 2,
+        "monitor": 8
+      },
+      "widgetsXml": "\n    <view x=\"205\" wrappingAllowedX=\"false\" y=\"7\" frameRate=\"30.0\" minPycor=\"-8\" height=\"327\" showTickCounter=\"true\" patchSize=\"19.0\" fontSize=\"10\" wrappingAllowedY=\"false\" width=\"631\" tickCounterLabel=\"ticks\" maxPycor=\"8\" updateMode=\"1\" maxPxcor=\"16\" minPxcor=\"-16\"></view>\n    <button x=\"5\" y=\"7\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"80\">setup</button>\n    <slider x=\"5\" step=\"1\" y=\"285\" max=\"30\" width=\"195\" display=\"initial-array-size\" height=\"50\" min=\"1\" direction=\"Horizontal\" default=\"15.0\" variable=\"initial-array-size\"></slider>\n    <slider x=\"5\" step=\"1\" y=\"340\" max=\"100\" width=\"195\" display=\"max-virus-types\" height=\"50\" min=\"1\" direction=\"Horizontal\" default=\"30.0\" variable=\"max-virus-types\"></slider>\n    <switch x=\"5\" y=\"155\" height=\"40\" on=\"false\" variable=\"labels?\" width=\"195\" display=\"labels?\"></switch>\n    <note x=\"5\" y=\"195\" backgroundDark=\"0\" fontSize=\"12\" width=\"195\" markdown=\"false\" height=\"86\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Even after a successful\ninfection, turn labels on\nand off by toggling\nthe switch and\npressing go.</note>\n    <button x=\"5\" y=\"105\" height=\"45\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"195\" display=\"random-infection\">infect random max-virus-types</button>\n    <button x=\"5\" y=\"55\" height=\"45\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"195\">common-infection</button>\n    <slider x=\"5\" step=\"1\" y=\"395\" max=\"10\" width=\"195\" display=\"guide-unbind-chance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"5.0\" variable=\"guide-unbind-chance\" units=\"%\"></slider>\n    <slider x=\"5\" step=\"1\" y=\"450\" max=\"100\" width=\"195\" display=\"processivity\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"80.0\" variable=\"processivity\" units=\"%\"></slider>\n    <slider x=\"5\" step=\"1\" y=\"505\" max=\"100\" width=\"195\" display=\"crispr-function\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"20.0\" variable=\"crispr-function\" units=\"%\"></slider>\n    <plot x=\"205\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" y=\"340\" xMin=\"0.0\" height=\"185\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"310\" display=\"CRISPR System Elements\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Guide RNAs\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot count guide-RNAs</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Total Cas9s\" color=\"-14835848\" legend=\"true\">\n        <setup></setup>\n        <update>plot count cas9s</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Bound Cas9s\" color=\"-5825686\" legend=\"true\">\n        <setup></setup>\n        <update>plot count cas9s with [ bound? ]</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Cas1/2s\" color=\"-955883\" legend=\"true\">\n        <setup></setup>\n        <update>plot count cas-dimers</update>\n      </pen>\n    </plot>\n    <monitor x=\"205\" precision=\"17\" y=\"530\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Guide RNAs\">count guide-rnas</monitor>\n    <monitor x=\"205\" precision=\"17\" y=\"595\" height=\"60\" fontSize=\"11\" width=\"140\" display=\"Virus event monitor\">virus-event</monitor>\n    <note x=\"60\" y=\"595\" backgroundDark=\"0\" fontSize=\"12\" width=\"170\" markdown=\"false\" height=\"60\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">The virus event monitor\nshows what interactions\nare taking place.</note>\n    <plot x=\"520\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" y=\"340\" xMin=\"0.0\" height=\"185\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"315\" display=\"Guide RNAs\">\n      <setup>set-plot-x-range 0 max-virus-types</setup>\n      <update>update-histogram-ranges sentence ([sequence] of guide-rnas) (array) 1</update>\n      <pen interval=\"1.0\" mode=\"1\" display=\"RNAs\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update>histogram [sequence] of guide-RNAs</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"1\" display=\"Array\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>histogram array</update>\n      </pen>\n    </plot>\n    <monitor x=\"415\" precision=\"17\" y=\"530\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Cas1/2s\">count cas-dimers</monitor>\n    <monitor x=\"310\" precision=\"17\" y=\"530\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Cas9s\">count cas9s</monitor>\n    <monitor x=\"365\" precision=\"17\" y=\"595\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Viruses\">count viruses</monitor>\n    <monitor x=\"735\" precision=\"17\" y=\"530\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Length\">length array</monitor>\n    <monitor x=\"520\" precision=\"17\" y=\"530\" height=\"60\" fontSize=\"11\" width=\"210\" display=\"Bacterial CRISPR Array\">array</monitor>\n    <monitor x=\"520\" precision=\"17\" y=\"595\" height=\"60\" fontSize=\"11\" width=\"315\" display=\"Viral sequences\">sort [sequence] of viruses</monitor>\n    <button x=\"90\" y=\"7\" height=\"40\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"110\">go</button>\n  ",
+      "licenseNotice": "Copyright 2019 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2019 Cite: Woods, P. -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Woods, P. and Wilensky, U. (2019).  NetLogo CRISPR Bacterium model.  http://ccl.northwestern.edu/netlogo/models/CRISPRBacterium.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "c30293b574aab75c8f418bc050b531ef29d721824a784c6b6474e4890206be5b",
+      "codeSha256": "b467ce916acf1f7317570b5f6b26691e056238cbcca240324e018997ada1da76",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [],
+      "creditsNotice": "The image of a CRISPR locus was adapted by Merry Youle of the Small Things Considered blog for their article [Six Questions About CRISPRs](https://schaechter.asmblog.org/schaechter/2011/04/six-questions-about-crisprs.html) from Sorek, R., Kunin, V. & Hugenholz, P. CRISPR - a widespread system that provides acquired resistance against phages in bacteria and archaea. _Nature Reviews Microbiology_ **6**, 181-186 (2008).\n\nFor general information about CRISPR, visit https://sites.tufts.edu/crispr/ or see the review below:\n\n  * Barrangou, R. & Marraffini, L. A. CRISPR-Cas Systems: Prokaryotes Upgrade to Adaptive Immunity. _Molecular Cell_ **54**, 234\u2013244 (2014).\n\nFor information relevant to possible extensions to the model, see the articles below:\n\n  * Edgar, R. & Qimron, U. The E_scherichia coli_ CRISPR System Protects from Lysogenization, Lysogens, and Prophage Induction. _Journal of Bacteriology_ **192**, 6291\u20136294 (2010).\n  * Labrie, S. J., Samson, J. E. & Moineau, S. Bacteriophage resistance mechanisms. _Nature Reviews Microbiology_ **8**, 317\u2013327 (2010).\n  * Modell, J. W., Jiang, W. & Marraffini, L. A. CRISPR\u2013Cas systems exploit viral DNA injection to establish and maintain adaptive immunity. _Nature_ **544**, 101\u2013104 (2017).\n  * Samson, J. E., Magad\u00e1n, A. H., Sabri, M. & Moineau, S. Revenge of the phages: defeating bacterial defences. _Nature Reviews Microbiology_ **11**, 675\u2013687 (2013).\n  * Strotskaya, A. et al. The action of _Escherichia coli_ CRISPR\u2013Cas system on lytic bacteriophages with different lifestyles and development strategies. _Nucleic Acids Research_ **gkx042** (2017). doi:10.1093/nar/gkx042",
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 85,
+        "batch": "B09",
+        "experimentSlug": "crispr-bacterium"
+      },
+      "inventorySlug": "sample-models-biology-crispr-crispr-bacterium"
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "catalogPath": "Sample Models/Biology/CRISPR/CRISPR Ecosystem",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Ecosystem.nlogox",
+      "index": 216,
+      "catalogKey": "public/modelslib/Sample Models/Biology/CRISPR/CRISPR Ecosystem",
+      "id": "Sample Models/Biology/CRISPR/CRISPR Ecosystem",
+      "name": "CRISPR Ecosystem",
+      "category": "Sample Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Ecosystem.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Ecosystem.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9",
+      "bytes": 78382,
+      "gitBlobSha1": "a4d59c3622c5afe97899a24039fc845544ce58cd",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "a4d59c3622c5afe97899a24039fc845544ce58cd",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Ecosystem.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "a16dda923410fd5006a5632ecb6a6b19eed5f303",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "setup-world",
+          "reporter": false
+        },
+        {
+          "name": "random-position",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "bacteria-live",
+          "reporter": false
+        },
+        {
+          "name": "move-bacteria",
+          "reporter": false
+        },
+        {
+          "name": "bacteria-eat-food",
+          "reporter": false
+        },
+        {
+          "name": "reproduce-bacteria",
+          "reporter": false
+        },
+        {
+          "name": "spacer-loss",
+          "reporter": false
+        },
+        {
+          "name": "viruses-live",
+          "reporter": false
+        },
+        {
+          "name": "move-virus",
+          "reporter": false
+        },
+        {
+          "name": "infect",
+          "reporter": false
+        },
+        {
+          "name": "replicate",
+          "reporter": false
+        },
+        {
+          "name": "maybe-degrade",
+          "reporter": false
+        },
+        {
+          "name": "replenish-food",
+          "reporter": false
+        },
+        {
+          "name": "grow-food",
+          "reporter": false
+        },
+        {
+          "name": "setup-virus-plot",
+          "reporter": false
+        },
+        {
+          "name": "update-virus-plot",
+          "reporter": false
+        },
+        {
+          "name": "update-histogram-ranges",
+          "reporter": false
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "fields",
+        "randomness",
+        "plots"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "slider": 6,
+        "button": 3,
+        "switch": 1,
+        "plot": 5,
+        "monitor": 2
+      },
+      "widgetsXml": "\n    <view x=\"815\" wrappingAllowedX=\"true\" y=\"7\" frameRate=\"30.0\" minPycor=\"-16\" height=\"466\" showTickCounter=\"true\" patchSize=\"14.0\" fontSize=\"10\" wrappingAllowedY=\"true\" width=\"466\" tickCounterLabel=\"ticks\" maxPycor=\"16\" updateMode=\"1\" maxPxcor=\"16\" minPxcor=\"-16\"></view>\n    <slider x=\"240\" step=\"0.1\" y=\"60\" max=\"10\" width=\"165\" display=\"infection-chance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"5.0\" variable=\"infection-chance\" units=\"%\"></slider>\n    <slider x=\"85\" step=\"10\" y=\"60\" max=\"1000\" width=\"150\" display=\"initial-viruses\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"250.0\" variable=\"initial-viruses\"></slider>\n    <button x=\"5\" y=\"60\" height=\"50\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"75\">go</button>\n    <slider x=\"240\" step=\"1\" y=\"7\" max=\"100\" width=\"165\" display=\"max-virus-types\" height=\"50\" min=\"1\" direction=\"Horizontal\" default=\"50.0\" variable=\"max-virus-types\"></slider>\n    <slider x=\"85\" step=\"1\" y=\"7\" max=\"100\" width=\"150\" display=\"initial-bacteria\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"50.0\" variable=\"initial-bacteria\"></slider>\n    <button x=\"5\" y=\"7\" height=\"50\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"75\">setup</button>\n    <slider x=\"5\" step=\"0.1\" y=\"115\" max=\"2\" width=\"230\" display=\"spacer-loss-chance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"1.0\" variable=\"spacer-loss-chance\" units=\"%\"></slider>\n    <switch x=\"275\" y=\"115\" height=\"50\" on=\"true\" variable=\"crispr?\" width=\"85\" display=\"crispr?\"></switch>\n    <plot x=\"575\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"% Abundance\" y=\"7\" xMin=\"0.0\" height=\"240\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"235\" display=\"CRISPR-Virus Coevolution\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Viruses\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update>plot 100 * (count viruses with [sequence = plot-virus]) / (max list 1 count viruses)</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Arrays\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update><![CDATA[let total-arrays reduce sentence [array] of bacteria\nlet virus-instances filter [ i -> i = plot-virus ] total-arrays\nplot 100 * length virus-instances / (max list 1 length total-arrays)]]></update>\n      </pen>\n    </plot>\n    <plot x=\"575\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"Frequency\" y=\"320\" xMin=\"0.0\" height=\"195\" legend=\"false\" xMax=\"10.0\" yMin=\"0.0\" width=\"235\" xAxis=\"Array Length\" display=\"Array Histogram\">\n      <setup></setup>\n      <update>update-histogram-ranges ([ length array ] of bacteria) 1</update>\n      <pen interval=\"1.0\" mode=\"1\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update>histogram [ length array ] of bacteria</update>\n      </pen>\n    </plot>\n    <monitor x=\"710\" precision=\"2\" y=\"255\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"Std. Dev.\">standard-deviation [length array] of bacteria</monitor>\n    <monitor x=\"575\" precision=\"2\" y=\"255\" height=\"60\" fontSize=\"11\" width=\"130\" display=\"Avg. Array Length\">mean [length array] of bacteria</monitor>\n    <plot x=\"5\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" y=\"175\" xMin=\"0.0\" height=\"220\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"280\" display=\"Microbe Populations\">\n      <setup></setup>\n      <update><![CDATA[; Don't scroll until the end of an autoscale window.\nif ticks > 715\n[\n  ; scroll the range of the plot so\n  ; only the last 715 ticks are visible\n  set-plot-x-range (ticks - 715) ticks\n]]]></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Bacteria\" color=\"-955883\" legend=\"true\">\n        <setup></setup>\n        <update>plot count bacteria</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Viruses\" color=\"-8630108\" legend=\"true\">\n        <setup></setup>\n        <update>plot count viruses</update>\n      </pen>\n    </plot>\n    <plot x=\"5\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"% Abundance\" y=\"400\" xMin=\"0.0\" height=\"195\" legend=\"false\" xMax=\"10.0\" yMin=\"0.0\" width=\"565\" xAxis=\"Ticks\" display=\"Virus Relative Abundance\">\n      <setup></setup>\n      <update><![CDATA[; Don't scroll until the end of an autoscale window.\nif ticks > 715\n[\n  ; scroll the range of the plot so\n  ; only the last 715 ticks are visible\n  set-plot-x-range (ticks - 715) ticks\n]]]></update>\n    </plot>\n    <plot x=\"290\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"Frequency\" y=\"175\" xMin=\"0.0\" height=\"220\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"280\" xAxis=\"Sequence ID\" display=\"Sequence Histogram\">\n      <setup></setup>\n      <update>update-histogram-ranges sentence ([sequence] of viruses) (ifelse-value empty? [array] of bacteria [ [] ] [ reduce sentence [array] of bacteria ]) 1</update>\n      <pen interval=\"1.0\" mode=\"1\" display=\"Viruses\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update>histogram [sequence] of viruses</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"1\" display=\"Arrays\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>histogram (ifelse-value empty? [array] of bacteria [ [] ] [ reduce sentence [array] of bacteria ])</update>\n      </pen>\n    </plot>\n    <button x=\"420\" y=\"47\" height=\"50\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"150\" display=\"plot-new-virus\">set-current-plot \"CRISPR-Virus Coevolution\"\nclear-plot\nset plot-virus plotted-virus</button>\n    <slider x=\"420\" step=\"1\" y=\"100\" max=\"max-virus-types - 1\" width=\"150\" display=\"plotted-virus\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"35.0\" variable=\"plotted-virus\"></slider>\n  ",
+      "licenseNotice": "Copyright 2019 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2019 Cite: Woods, P. -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Woods, P. and Wilensky, U. (2019).  NetLogo CRISPR Ecosystem model.  http://ccl.northwestern.edu/netlogo/models/CRISPREcosystem.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "4dd97a45507fa57dc0e8e599510a9aa37dbb2b2f20fa537fa8f0ae458c7e31a4",
+      "codeSha256": "428a2f096b839b44da017aa74c7cf9125255dff30891cedeedaf40bea8ad9044",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [],
+      "creditsNotice": "For general information about CRISPR, visit https://sites.tufts.edu/crispr/ or see the review below:\n\n  * Barrangou, R. & Marraffini, L. A. CRISPR-Cas Systems: Prokaryotes Upgrade to Adaptive Immunity. _Molecular Cell_ **54**, 234\u2013244 (2014).\n\nFor more information about CRISPR-driven coevolution in bacteria and viruses, see the articles below:\n\n  * Iranzo, J., Lobkovsky, A. E., Wolf, Y. I. & Koonin, E. V. Evolutionary Dynamics of the Prokaryotic Adaptive Immunity System CRISPR-Cas in an Explicit Ecological Context. _Journal of Bacteriology_ **195**, 3834\u20133844 (2013).\n  * Paez-Espino, D. et al. CRISPR Immunity Drives Rapid Phage Genome Evolution in _Streptococcus thermophilus_. _mBio_ **6**, e00262-15 (2015).\n  * Sun, C. L. et al. Phage mutations in response to CRISPR diversification in a bacterial population: Strong selection events as host-phage populations establish. _Environmental Microbiology_ **15**, 463\u2013470 (2013).\n\nFor more information about potential extensions to the model, see the articles below:\n\n  * Bondy-Denomy, J. & Davidson, A. R. To acquire or resist: the complex biological effects of CRISPR\u2013Cas systems. _Trends in Microbiology_ **22**, 218\u2013225 (2014).\n  * Edgar, R. & Qimron, U. The _Escherichia coli_ CRISPR System Protects from \u03bb Lysogenization, Lysogens, and Prophage Induction. _Journal of Bacteriology_ **192**, 6291\u20136294 (2010).\n  * Goldberg, G. W., Jiang, W., Bikard, D. & Marraffini, L. A. Conditional tolerance of temperate phages via transcription-dependent CRISPR-Cas targeting. _Nature_ **514**, 633\u2013637 (2014).\n  * Strotskaya, A. et al. The action of _Escherichia coli_ CRISPR\u2013Cas system on lytic bacteriophages with different lifestyles and development strategies. _Nucleic Acids Research_ **gkx042** (2017). doi:10.1093/nar/gkx042",
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 86,
+        "batch": "B09",
+        "experimentSlug": "crispr-ecosystem"
+      },
+      "inventorySlug": "sample-models-biology-crispr-crispr-ecosystem"
+    },
+    {
+      "slug": "epidem-basic",
+      "catalogPath": "Curricular Models/epiDEM/epiDEM Basic",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox",
+      "index": 490,
+      "catalogKey": "public/modelslib/Curricular Models/epiDEM/epiDEM Basic",
+      "id": "Curricular Models/epiDEM/epiDEM Basic",
+      "name": "epiDEM Basic",
+      "category": "Curricular Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "049c5556e76cf22b7ec76e801c09134d02cf29619ea46c8c9578e9862be2c07a",
+      "bytes": 54959,
+      "gitBlobSha1": "3573917f6f21e7badc4ed6c2cd08460146dd3095",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "3573917f6f21e7badc4ed6c2cd08460146dd3095",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "5d973d58bd36134284fa48e179ac782d4f954886",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "setup-people",
+          "reporter": false
+        },
+        {
+          "name": "assign-color",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "move",
+          "reporter": false
+        },
+        {
+          "name": "clear-count",
+          "reporter": false
+        },
+        {
+          "name": "infect",
+          "reporter": false
+        },
+        {
+          "name": "maybe-recover",
+          "reporter": false
+        },
+        {
+          "name": "calculate-r0",
+          "reporter": false
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "randomness"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "button": 2,
+        "slider": 4,
+        "plot": 3,
+        "monitor": 1
+      },
+      "widgetsXml": "\n    <view x=\"665\" wrappingAllowedX=\"true\" y=\"13\" frameRate=\"30.0\" minPycor=\"-12\" height=\"454\" showTickCounter=\"true\" patchSize=\"18.0\" fontSize=\"10\" wrappingAllowedY=\"true\" width=\"454\" tickCounterLabel=\"hours\" maxPycor=\"12\" updateMode=\"1\" maxPxcor=\"12\" minPxcor=\"-12\"></view>\n    <button x=\"233\" y=\"146\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"83\" display=\"setup\">setup</button>\n    <button x=\"333\" y=\"146\" height=\"40\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"83\" display=\"go\">go</button>\n    <slider x=\"46\" step=\"5\" y=\"14\" max=\"400\" width=\"269\" display=\"initial-people\" height=\"50\" min=\"50\" direction=\"Horizontal\" default=\"100.0\" variable=\"initial-people\"></slider>\n    <plot x=\"342\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"# of people\" y=\"206\" xMin=\"0.0\" height=\"191\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"294\" xAxis=\"hours\" display=\"Populations\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Infected\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [ infected? ]</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Not Infected\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [ not infected? ]</update>\n      </pen>\n    </plot>\n    <plot x=\"15\" autoPlotX=\"true\" yMax=\"0.2\" autoPlotY=\"true\" yAxis=\"rate\" y=\"411\" xMin=\"0.0\" height=\"191\" legend=\"true\" xMax=\"0.2\" yMin=\"0.0\" width=\"319\" xAxis=\"hours\" display=\"Infection and Recovery Rates\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Infection Rate\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>plot (beta-n * nb-infected-previous)</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Recovery Rate\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot (gamma * nb-infected-previous)</update>\n      </pen>\n    </plot>\n    <slider x=\"46\" step=\"5\" y=\"76\" max=\"100\" width=\"268\" display=\"infection-chance\" height=\"50\" min=\"10\" direction=\"Horizontal\" default=\"30.0\" variable=\"infection-chance\"></slider>\n    <slider x=\"332\" step=\"5\" y=\"15\" max=\"100\" width=\"267\" display=\"recovery-chance\" height=\"50\" min=\"10\" direction=\"Horizontal\" default=\"60.0\" variable=\"recovery-chance\"></slider>\n    <plot x=\"15\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"% total pop\" y=\"206\" xMin=\"0.0\" height=\"191\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"318\" xAxis=\"hours\" display=\"Cumulative Infected and Recovered\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"% infected\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>plot (((count turtles with [ cured? ] + count turtles with [ infected? ]) / initial-people) * 100)</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"% recovered\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot ((count turtles with [ cured? ] / initial-people) * 100)</update>\n      </pen>\n    </plot>\n    <monitor x=\"427\" precision=\"2\" y=\"454\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"R0\">r0</monitor>\n    <slider x=\"331\" step=\"10\" y=\"76\" max=\"300\" width=\"269\" display=\"average-recovery-time\" height=\"50\" min=\"50\" direction=\"Horizontal\" default=\"210.0\" variable=\"average-recovery-time\"></slider>\n  ",
+      "licenseNotice": "Copyright 2011 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2011 Cite: Yang, C. -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Yang, C. and Wilensky, U. (2011).  NetLogo epiDEM Basic model.  http://ccl.northwestern.edu/netlogo/models/epiDEMBasic.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "b6c41efdc062904e37a6c9282061c84b75d92cadd7f583e38fec2f7656c77a72",
+      "codeSha256": "4ae35e68bcbaf7d31b9e25ffe55bedd14aaa974201fde7352f9ebbf55a391b3d",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [],
+      "creditsNotice": null,
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 87,
+        "batch": "B09",
+        "experimentSlug": "epidem-basic"
+      },
+      "inventorySlug": "curricular-models-epidem-epidem-basic"
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "catalogPath": "Curricular Models/epiDEM/epiDEM Travel and Control",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Travel%20and%20Control.nlogox",
+      "index": 491,
+      "catalogKey": "public/modelslib/Curricular Models/epiDEM/epiDEM Travel and Control",
+      "id": "Curricular Models/epiDEM/epiDEM Travel and Control",
+      "name": "epiDEM Travel and Control",
+      "category": "Curricular Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Travel%20and%20Control.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Travel%20and%20Control.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "7bde08421020920d17631b85cbef80c945a6a97857040a079c8aacbc3a35ac07",
+      "bytes": 65047,
+      "gitBlobSha1": "80f2cfce52de464826df364ed259a3a8aa19a456",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "80f2cfce52de464826df364ed259a3a8aa19a456",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Curricular%20Models/epiDEM/epiDEM%20Travel%20and%20Control.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "7e3f53a05927df0088599829673987dd11a2be73",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "setup-globals",
+          "reporter": false
+        },
+        {
+          "name": "setup-people",
+          "reporter": false
+        },
+        {
+          "name": "setup-ambulance",
+          "reporter": false
+        },
+        {
+          "name": "assign-tendency",
+          "reporter": false
+        },
+        {
+          "name": "assign-color",
+          "reporter": false
+        },
+        {
+          "name": "make-network",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "move",
+          "reporter": false
+        },
+        {
+          "name": "clear-count",
+          "reporter": false
+        },
+        {
+          "name": "maybe-recover",
+          "reporter": false
+        },
+        {
+          "name": "isolate",
+          "reporter": false
+        },
+        {
+          "name": "unisolate",
+          "reporter": false
+        },
+        {
+          "name": "hospitalize",
+          "reporter": false
+        },
+        {
+          "name": "infect",
+          "reporter": false
+        },
+        {
+          "name": "calculate-r0",
+          "reporter": false
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "graph",
+        "randomness"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "button": 2,
+        "slider": 10,
+        "plot": 3,
+        "monitor": 1,
+        "switch": 2
+      },
+      "widgetsXml": "\n    <view x=\"650\" wrappingAllowedX=\"false\" y=\"25\" frameRate=\"30.0\" minPycor=\"-12\" height=\"479\" showTickCounter=\"true\" patchSize=\"19.0\" fontSize=\"10\" wrappingAllowedY=\"false\" width=\"479\" tickCounterLabel=\"hours\" maxPycor=\"12\" updateMode=\"1\" maxPxcor=\"12\" minPxcor=\"-12\"></view>\n    <button x=\"339\" y=\"290\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"83\" display=\"setup\">setup</button>\n    <button x=\"443\" y=\"290\" height=\"40\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"83\" display=\"go\">go</button>\n    <slider x=\"18\" step=\"10\" y=\"22\" max=\"400\" width=\"269\" display=\"initial-people\" height=\"50\" min=\"50\" direction=\"Horizontal\" default=\"250.0\" variable=\"initial-people\"></slider>\n    <slider x=\"315\" step=\"5\" y=\"22\" max=\"50\" width=\"269\" display=\"average-isolation-tendency\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"5.0\" variable=\"average-isolation-tendency\"></slider>\n    <slider x=\"315\" step=\"5\" y=\"132\" max=\"50\" width=\"269\" display=\"inoculation-chance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"10.0\" variable=\"inoculation-chance\"></slider>\n    <slider x=\"315\" step=\"5\" y=\"77\" max=\"50\" width=\"269\" display=\"average-hospital-going-tendency\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"5.0\" variable=\"average-hospital-going-tendency\"></slider>\n    <slider x=\"18\" step=\"5\" y=\"77\" max=\"100\" width=\"268\" display=\"infection-chance\" height=\"50\" min=\"10\" direction=\"Horizontal\" default=\"55.0\" variable=\"infection-chance\"></slider>\n    <slider x=\"18\" step=\"5\" y=\"132\" max=\"100\" width=\"267\" display=\"recovery-chance\" height=\"50\" min=\"10\" direction=\"Horizontal\" default=\"45.0\" variable=\"recovery-chance\"></slider>\n    <slider x=\"15\" step=\"0.1\" y=\"268\" max=\"1\" width=\"172\" display=\"intra-mobility\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.4\" variable=\"intra-mobility\"></slider>\n    <slider x=\"18\" step=\"10\" y=\"188\" max=\"300\" width=\"268\" display=\"average-recovery-time\" height=\"50\" min=\"50\" direction=\"Horizontal\" default=\"110.0\" variable=\"average-recovery-time\"></slider>\n    <plot x=\"11\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"% total pop.\" y=\"400\" xMin=\"0.0\" height=\"191\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"332\" xAxis=\"hours\" display=\"Cumulative Infected and Recovered\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"% infected\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>plot (((count turtles with [ cured? ] + count turtles with [ infected? ]) / initial-people) * 100)</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"% recovered\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot ((count turtles with [ cured? ] / initial-people) * 100)</update>\n      </pen>\n    </plot>\n    <plot x=\"355\" autoPlotX=\"true\" yMax=\"350.0\" autoPlotY=\"true\" yAxis=\"# people\" y=\"400\" xMin=\"0.0\" height=\"191\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"263\" xAxis=\"hours\" display=\"Populations\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Infected\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [ infected? ]</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Not Infected\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot count turtles with [ not infected? ]</update>\n      </pen>\n    </plot>\n    <plot x=\"10\" autoPlotX=\"true\" yMax=\"0.1\" autoPlotY=\"true\" yAxis=\"rate\" y=\"600\" xMin=\"0.0\" height=\"191\" legend=\"true\" xMax=\"10.0\" yMin=\"0.0\" width=\"333\" xAxis=\"hours\" display=\"Infection and Recovery Rates\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Infection Rate\" color=\"-2674135\" legend=\"true\">\n        <setup></setup>\n        <update>plot (beta-n * nb-infected-previous)</update>\n      </pen>\n      <pen interval=\"1.0\" mode=\"0\" display=\"Recovery Rate\" color=\"-10899396\" legend=\"true\">\n        <setup></setup>\n        <update>plot (gamma * nb-infected-previous)</update>\n      </pen>\n    </plot>\n    <monitor x=\"355\" precision=\"2\" y=\"600\" height=\"60\" fontSize=\"11\" width=\"100\" display=\"R0\">r0\n</monitor>\n    <slider x=\"315\" step=\"1\" y=\"188\" max=\"4\" width=\"270\" display=\"initial-ambulance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"2.0\" variable=\"initial-ambulance\"></slider>\n    <switch x=\"195\" y=\"268\" height=\"50\" on=\"false\" variable=\"links?\" width=\"103\" display=\"links?\"></switch>\n    <slider x=\"14\" step=\".1\" y=\"326\" max=\"1\" width=\"172\" display=\"travel-tendency\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"1.0\" variable=\"travel-tendency\"></slider>\n    <switch x=\"195\" y=\"325\" height=\"50\" on=\"false\" variable=\"travel?\" width=\"103\" display=\"travel?\"></switch>\n  ",
+      "licenseNotice": "Copyright 2011 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2011 Cite: Yang, C. -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Yang, C. and Wilensky, U. (2011).  NetLogo epiDEM Travel and Control model.  http://ccl.northwestern.edu/netlogo/models/epiDEMTravelandControl.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "d32afe26d33711e5d05f009baf674c091e27b26be76b38388ef1eb7934a5c871",
+      "codeSha256": "eed2c234f107029cb0c3a4b52ee0ba5b3dfc254d1f9d6c4b5875b3b30f492aa2",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [],
+      "creditsNotice": null,
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 88,
+        "batch": "B09",
+        "experimentSlug": "epidem-travel-and-control"
+      },
+      "inventorySlug": "curricular-models-epidem-epidem-travel-and-control"
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "catalogPath": "Curricular Models/GenEvo/GenEvo 1 Genetic Switch",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/GenEvo/GenEvo%201%20Genetic%20Switch.nlogox",
+      "index": 508,
+      "catalogKey": "public/modelslib/Curricular Models/GenEvo/GenEvo 1 Genetic Switch",
+      "id": "Curricular Models/GenEvo/GenEvo 1 Genetic Switch",
+      "name": "GenEvo 1 Genetic Switch",
+      "category": "Curricular Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/GenEvo/GenEvo%201%20Genetic%20Switch.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/GenEvo/GenEvo%201%20Genetic%20Switch.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "6f46710d78daad311551c2ee934317d98ef52ad92779b8312ba66dcd4c7d330e",
+      "bytes": 73160,
+      "gitBlobSha1": "53d4bb16df576b2cdc4bede3fc715a87ee4497a2",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "53d4bb16df576b2cdc4bede3fc715a87ee4497a2",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Curricular%20Models/GenEvo/GenEvo%201%20Genetic%20Switch.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "099782a65a2f8e77f7a08dae5f0da496a5a401fc",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "reset",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "move",
+          "reporter": false
+        },
+        {
+          "name": "go-LacIs",
+          "reporter": false
+        },
+        {
+          "name": "dissociate-from-operator",
+          "reporter": false
+        },
+        {
+          "name": "go-LacYs",
+          "reporter": false
+        },
+        {
+          "name": "go-LacZs",
+          "reporter": false
+        },
+        {
+          "name": "go-lactoses",
+          "reporter": false
+        },
+        {
+          "name": "go-RNAPs",
+          "reporter": false
+        },
+        {
+          "name": "synthesize-proteins",
+          "reporter": false
+        },
+        {
+          "name": "divide-cell",
+          "reporter": false
+        },
+        {
+          "name": "draw-cell",
+          "reporter": false
+        },
+        {
+          "name": "animate-cell-division",
+          "reporter": false
+        },
+        {
+          "name": "set-shape",
+          "reporter": false
+        },
+        {
+          "name": "update-lactose",
+          "reporter": false
+        },
+        {
+          "name": "gen-xy-inside-inside",
+          "reporter": false
+        },
+        {
+          "name": "gen-xy-inside-outside",
+          "reporter": false
+        },
+        {
+          "name": "set-cell-color",
+          "reporter": false
+        },
+        {
+          "name": "show-switch-color",
+          "reporter": false
+        },
+        {
+          "name": "replace-all",
+          "reporter": true
+        },
+        {
+          "name": "set-initial-variables",
+          "reporter": false
+        },
+        {
+          "name": "send-variables-list",
+          "reporter": true
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "randomness",
+        "userInteraction"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "button": 4,
+        "switch": 3,
+        "plot": 3,
+        "monitor": 1,
+        "slider": 7
+      },
+      "widgetsXml": "\n    <view x=\"330\" wrappingAllowedX=\"true\" y=\"10\" frameRate=\"30.0\" minPycor=\"-33\" height=\"339\" showTickCounter=\"true\" patchSize=\"5.0\" fontSize=\"12\" wrappingAllowedY=\"true\" width=\"609\" tickCounterLabel=\"ticks\" maxPycor=\"33\" updateMode=\"1\" maxPxcor=\"60\" minPxcor=\"-60\"></view>\n    <button x=\"10\" y=\"10\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"80\">setup</button>\n    <button x=\"95\" y=\"10\" height=\"40\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"80\">go</button>\n    <switch x=\"180\" y=\"10\" height=\"40\" on=\"false\" variable=\"lactose?\" width=\"145\" display=\"lactose?\"></switch>\n    <switch x=\"180\" y=\"55\" height=\"40\" on=\"true\" variable=\"glucose?\" width=\"145\" display=\"glucose?\"></switch>\n    <switch x=\"50\" y=\"197\" height=\"40\" on=\"false\" variable=\"LevelSpace?\" width=\"140\" display=\"LevelSpace?\"></switch>\n    <plot x=\"10\" autoPlotX=\"true\" yMax=\"1000.0\" autoPlotY=\"true\" y=\"102\" xMin=\"0.0\" height=\"230\" legend=\"false\" xMax=\"10.0\" yMin=\"0.0\" width=\"315\" display=\"Energy\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update>plot energy</update>\n      </pen>\n    </plot>\n    <button x=\"10\" y=\"55\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"165\" display=\"save screenshot\">export-interface (word \"GenEvo 1 Genetic Switch \" (replace-all \":\" \"-\" date-and-time) \".png\")</button>\n    <monitor x=\"755\" precision=\"17\" y=\"490\" height=\"60\" fontSize=\"11\" width=\"177\" display=\"average-cell-division-time\"><![CDATA[ifelse-value (division-number > 0) [\n  precision (ticks-at-end-of-cell-division / division-number) 0\n][\n \"n/a\"\n]]]></monitor>\n    <plot x=\"330\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"Frequency\" y=\"355\" xMin=\"0.0\" height=\"195\" legend=\"false\" xMax=\"10.0\" yMin=\"0.0\" width=\"305\" xAxis=\"Time\" display=\"LacZ Number\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update>plot count LacZs</update>\n      </pen>\n    </plot>\n    <plot x=\"640\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"Number of Ticks\" y=\"355\" xMin=\"0.0\" height=\"195\" legend=\"false\" xMax=\"10.0\" yMin=\"0.0\" width=\"305\" xAxis=\"Time\" display=\"Cell Division Time\">\n      <setup></setup>\n      <update></update>\n      <pen interval=\"1.0\" mode=\"0\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup></setup>\n        <update><![CDATA[if division-number > 0 [ plot cell-division-time ]]]></update>\n      </pen>\n    </plot>\n    <button x=\"10\" y=\"340\" height=\"50\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"155\" display=\"reset\">reset</button>\n    <slider x=\"10\" step=\"0.0001\" y=\"615\" max=\"0.01\" width=\"315\" display=\"LacZ-degradation-chance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"1.0E-4\" variable=\"LacZ-degradation-chance\"></slider>\n    <slider x=\"10\" step=\"0.0001\" y=\"560\" max=\"0.01\" width=\"315\" display=\"LacY-degradation-chance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"4.0E-4\" variable=\"LacY-degradation-chance\"></slider>\n    <slider x=\"10\" step=\"0.001\" y=\"505\" max=\"0.01\" width=\"315\" display=\"LacI-lactose-separation-chance\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.001\" variable=\"LacI-lactose-separation-chance\"></slider>\n    <slider x=\"10\" step=\"0.00001\" y=\"450\" max=\"1\" width=\"315\" display=\"LacI-lactose-binding-chance\" height=\"50\" min=\"0.99990\" direction=\"Horizontal\" default=\"0.99991\" variable=\"LacI-lactose-binding-chance\"></slider>\n    <slider x=\"10\" step=\"0.001\" y=\"395\" max=\"0.1\" width=\"155\" display=\"LacI-bond-leakage\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.02\" variable=\"LacI-bond-leakage\"></slider>\n    <slider x=\"170\" step=\"1\" y=\"395\" max=\"50\" width=\"155\" display=\"RNAP-number\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"25.0\" variable=\"RNAP-number\"></slider>\n    <slider x=\"170\" step=\"1\" y=\"340\" max=\"50\" width=\"155\" display=\"LacI-number\" height=\"50\" min=\"1\" direction=\"Horizontal\" default=\"25.0\" variable=\"LacI-number\"></slider>\n  ",
+      "licenseNotice": "Copyright 2016 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2016 GenEvo Cite: Dabholkar, S., Bain, C. -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Dabholkar, S., Bain, C. and Wilensky, U. (2016).  NetLogo GenEvo 1 Genetic Switch model.  http://ccl.northwestern.edu/netlogo/models/GenEvo1GeneticSwitch.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nTo cite the GenEvo Systems Biology curriculum as a whole, please use:\n\n* Dabholkar, S. & Wilensky, U. (2016). GenEvo Systems Biology curriculum. http://ccl.northwestern.edu/curriculum/genevo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "0e9348c27b01880e8e03e15fd235db5f937bd40d05a1f3c04d33eda641932575",
+      "codeSha256": "d2c24ed2ade680b0e982e07a1fba5e40f5915ae711901326e777621a9acef01f",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [
+        "host-or-special-runtime-signals-require-audit"
+      ],
+      "creditsNotice": null,
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 89,
+        "batch": "B09",
+        "experimentSlug": "genevo-1-genetic-switch"
+      },
+      "inventorySlug": "curricular-models-genevo-genevo-1-genetic-switch"
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "catalogPath": "Curricular Models/BEAGLE Evolution/DNA Protein Synthesis",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/BEAGLE%20Evolution/DNA%20Protein%20Synthesis.nlogox",
+      "index": 524,
+      "catalogKey": "public/modelslib/Curricular Models/BEAGLE Evolution/DNA Protein Synthesis",
+      "id": "Curricular Models/BEAGLE Evolution/DNA Protein Synthesis",
+      "name": "DNA Protein Synthesis",
+      "category": "Curricular Models",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/BEAGLE%20Evolution/DNA%20Protein%20Synthesis.nlogox",
+      "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/BEAGLE%20Evolution/DNA%20Protein%20Synthesis.nlogox",
+      "webStatus": "compiling",
+      "retrieval": "captured",
+      "sha256": "189eda6e21a0408e290f1afb5781ddae936f819ed8917788a683dcaf7d661301",
+      "bytes": 125766,
+      "gitBlobSha1": "e7bb6dfd41162597602899734a7f6522baf47c93",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "e7bb6dfd41162597602899734a7f6522baf47c93",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Curricular%20Models/BEAGLE%20Evolution/DNA%20Protein%20Synthesis.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "891865d6ec23672164493c37f3d6ba1afddc66b3",
+        "matchesServedBytes": false
+      },
+      "extraction": "static lexical/XML extraction; rules, defaults and host semantics require manual audit",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "procedures": [
+        {
+          "name": "setup",
+          "reporter": false
+        },
+        {
+          "name": "setup-starting-dna",
+          "reporter": false
+        },
+        {
+          "name": "setup-dna-string",
+          "reporter": false
+        },
+        {
+          "name": "place-dna",
+          "reporter": false
+        },
+        {
+          "name": "place-trnas",
+          "reporter": false
+        },
+        {
+          "name": "make-a-nucleotide-chain-for-dna-string",
+          "reporter": false
+        },
+        {
+          "name": "build-genes-from-dna",
+          "reporter": false
+        },
+        {
+          "name": "build-mRNA-for-each-gene",
+          "reporter": false
+        },
+        {
+          "name": "build-protein-from-mrna",
+          "reporter": false
+        },
+        {
+          "name": "build-tRNA-for-this-triplet",
+          "reporter": false
+        },
+        {
+          "name": "attach-tag",
+          "reporter": false
+        },
+        {
+          "name": "visualize-all-genes",
+          "reporter": false
+        },
+        {
+          "name": "hide-genes",
+          "reporter": false
+        },
+        {
+          "name": "hide-mrna",
+          "reporter": false
+        },
+        {
+          "name": "hide-trna",
+          "reporter": false
+        },
+        {
+          "name": "show-next-mrna",
+          "reporter": false
+        },
+        {
+          "name": "show-next-trna",
+          "reporter": false
+        },
+        {
+          "name": "display-user-message-no-genes",
+          "reporter": false
+        },
+        {
+          "name": "release-next-protein",
+          "reporter": false
+        },
+        {
+          "name": "make-protein",
+          "reporter": false
+        },
+        {
+          "name": "release-next-mRNA-from-nucleus",
+          "reporter": false
+        },
+        {
+          "name": "go",
+          "reporter": false
+        },
+        {
+          "name": "move-mRNA-molecules-out-of-nucleus",
+          "reporter": false
+        },
+        {
+          "name": "show-protein-production",
+          "reporter": false
+        },
+        {
+          "name": "make-duplicate-dna-string",
+          "reporter": false
+        },
+        {
+          "name": "replicate-dna",
+          "reporter": false
+        },
+        {
+          "name": "initialize-codon-to-amino-acid-key",
+          "reporter": false
+        },
+        {
+          "name": "which-protein-for-this-codon",
+          "reporter": true
+        },
+        {
+          "name": "random-base-letter-DNA",
+          "reporter": true
+        },
+        {
+          "name": "complementary-mRNA-base",
+          "reporter": true
+        },
+        {
+          "name": "next-gene-color",
+          "reporter": true
+        },
+        {
+          "name": "gene-number-for-this-strand",
+          "reporter": true
+        },
+        {
+          "name": "mrna-string-from-dna-string",
+          "reporter": true
+        },
+        {
+          "name": "dna-string-with-non-nucleotide-characters-replaced",
+          "reporter": true
+        },
+        {
+          "name": "replace-non-nucleotide-character",
+          "reporter": true
+        },
+        {
+          "name": "current-instruction-label",
+          "reporter": true
+        },
+        {
+          "name": "next-instruction",
+          "reporter": false
+        },
+        {
+          "name": "previous-instruction",
+          "reporter": false
+        },
+        {
+          "name": "show-instruction",
+          "reporter": false
+        },
+        {
+          "name": "instructions",
+          "reporter": true
+        },
+        {
+          "name": "reset-completed-events",
+          "reporter": false
+        }
+      ],
+      "extensions": [],
+      "includes": null,
+      "mechanismSignals": [
+        "agents",
+        "grid",
+        "movement",
+        "graph",
+        "randomness",
+        "userInteraction"
+      ],
+      "widgetCounts": {
+        "view": 1,
+        "button": 14,
+        "chooser": 2,
+        "input": 1,
+        "slider": 1,
+        "monitor": 5,
+        "output": 1,
+        "note": 12,
+        "switch": 1
+      },
+      "widgetsXml": "\n    <view x=\"528\" wrappingAllowedX=\"true\" y=\"10\" frameRate=\"30.0\" minPycor=\"-8\" height=\"388\" showTickCounter=\"true\" patchSize=\"24.0\" fontSize=\"9\" wrappingAllowedY=\"true\" width=\"748\" tickCounterLabel=\"ticks\" maxPycor=\"7\" updateMode=\"1\" maxPxcor=\"30\" minPxcor=\"0\"></view>\n    <button x=\"5\" y=\"20\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"70\">setup</button>\n    <button x=\"80\" y=\"20\" height=\"40\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"90\" display=\"go / stop\">go</button>\n    <chooser x=\"5\" y=\"365\" height=\"60\" variable=\"initial-dna-string\" current=\"4\" width=\"250\" display=\"initial-dna-string\">\n      <choice type=\"string\" value=\"from user-created-code\"></choice>\n      <choice type=\"string\" value=\"no genes (short strand)\"></choice>\n      <choice type=\"string\" value=\"no genes (long strand)\"></choice>\n      <choice type=\"string\" value=\"1 short gene\"></choice>\n      <choice type=\"string\" value=\"1 long gene\"></choice>\n      <choice type=\"string\" value=\"2 sequential genes\"></choice>\n      <choice type=\"string\" value=\"2 nested genes\"></choice>\n      <choice type=\"string\" value=\"3 sequential genes\"></choice>\n      <choice type=\"string\" value=\"random (short strand)\"></choice>\n      <choice type=\"string\" value=\"random (long strand)\"></choice>\n    </chooser>\n    <input x=\"5\" multiline=\"false\" y=\"430\" height=\"60\" variable=\"user-created-code\" type=\"string\" width=\"250\">AAAAA</input>\n    <slider x=\"5\" step=\"1\" y=\"245\" max=\"6\" width=\"250\" display=\"#-nucleotides-affected\" height=\"50\" min=\"1\" direction=\"Horizontal\" default=\"1.0\" variable=\"#-nucleotides-affected\"></slider>\n    <button x=\"310\" y=\"189\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"90\" display=\"3. translate\">if event-2-completed? [\n  set event-3-triggered? true\n  reset-completed-events\n]</button>\n    <button x=\"310\" y=\"121\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"90\" display=\"1. transcribe\">set event-1-triggered? true\nreset-completed-events</button>\n    <button x=\"405\" y=\"189\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"76\" display=\"4. release\">if event-3-completed? [\n  set event-4-triggered? true\n  reset-completed-events\n]</button>\n    <monitor x=\"315\" precision=\"17\" y=\"30\" height=\"60\" fontSize=\"10\" width=\"100\" display=\"genes\">original-strand-gene-counter</monitor>\n    <monitor x=\"396\" precision=\"17\" y=\"340\" height=\"60\" fontSize=\"10\" width=\"100\" display=\"proteins made\">count proteins with [strand = \"duplicate\"]</monitor>\n    <button x=\"405\" y=\"121\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"75\" display=\"2. release\">if event-1-completed? [\n  set event-2-triggered? true\n  reset-completed-events\n]</button>\n    <output x=\"5\" y=\"120\" height=\"120\" fontSize=\"12\" width=\"250\"></output>\n    <monitor x=\"291\" precision=\"17\" y=\"340\" height=\"60\" fontSize=\"10\" width=\"100\" display=\"genes\">duplicate-strand-gene-counter</monitor>\n    <button x=\"306\" y=\"428\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"90\" display=\"6. transcribe\">set event-6-triggered? true\nreset-completed-events</button>\n    <button x=\"401\" y=\"428\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"75\" display=\"7. release\">if event-6-completed? [\n  set event-7-triggered? true\n  reset-completed-events\n]</button>\n    <button x=\"306\" y=\"500\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"85\" display=\"8. translate\">if event-7-completed? [\n  set event-8-triggered? true\n  reset-completed-events\n]</button>\n    <button x=\"396\" y=\"500\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"80\" display=\"9. release\">if event-8-completed? [\n  set event-9-triggered? true\n  reset-completed-events\n]</button>\n    <note x=\"356\" y=\"98\" backgroundDark=\"0\" fontSize=\"9\" width=\"90\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-14730904\" backgroundLight=\"0\"><![CDATA[DNA-->mRNA]]></note>\n    <note x=\"355\" y=\"477\" backgroundDark=\"0\" fontSize=\"9\" width=\"90\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-12087248\" backgroundLight=\"0\"><![CDATA[mRNA-->protein]]></note>\n    <note x=\"351\" y=\"166\" backgroundDark=\"0\" fontSize=\"9\" width=\"93\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-14730904\" backgroundLight=\"0\"><![CDATA[mRNA-->protein]]></note>\n    <note x=\"360\" y=\"405\" backgroundDark=\"0\" fontSize=\"9\" width=\"87\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-12087248\" backgroundLight=\"0\"><![CDATA[DNA-->mRNA]]></note>\n    <note x=\"332\" y=\"12\" backgroundDark=\"0\" fontSize=\"11\" width=\"134\" markdown=\"false\" height=\"28\" textColorDark=\"-1\" textColorLight=\"-14730904\" backgroundLight=\"0\">Original DNA in old cell</note>\n    <note x=\"292\" y=\"8\" backgroundDark=\"0\" fontSize=\"16\" width=\"50\" markdown=\"false\" height=\"34\" textColorDark=\"-1\" textColorLight=\"-5298144\" backgroundLight=\"0\"><![CDATA[<--]]></note>\n    <button x=\"5\" y=\"495\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"250\" display=\"10.  show protein production summary\">show-protein-production</button>\n    <button x=\"150\" y=\"75\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"110\" display=\"next instruction\">next-instruction</button>\n    <switch x=\"130\" y=\"300\" height=\"60\" on=\"true\" variable=\"show-genes?\" width=\"130\" display=\"show-genes?\"></switch>\n    <chooser x=\"5\" y=\"300\" height=\"60\" variable=\"mutation-type\" current=\"2\" width=\"120\" display=\"mutation-type\">\n      <choice type=\"string\" value=\"deletion\"></choice>\n      <choice type=\"string\" value=\"insertion\"></choice>\n      <choice type=\"string\" value=\"substitution\"></choice>\n    </chooser>\n    <button x=\"310\" y=\"250\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"190\" display=\"5. replicate the original DNA\">replicate-dna\nvisualize-all-genes</button>\n    <note x=\"290\" y=\"18\" backgroundDark=\"0\" fontSize=\"14\" width=\"15\" markdown=\"false\" height=\"195\" textColorDark=\"-1\" textColorLight=\"-5298144\" backgroundLight=\"0\">|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|</note>\n    <note x=\"325\" y=\"300\" backgroundDark=\"0\" fontSize=\"11\" width=\"156\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-12087248\" backgroundLight=\"0\">Replicated DNA in new cell</note>\n    <note x=\"290\" y=\"300\" backgroundDark=\"0\" fontSize=\"16\" width=\"43\" markdown=\"false\" height=\"20\" textColorDark=\"-1\" textColorLight=\"-5298144\" backgroundLight=\"0\"><![CDATA[-->]]></note>\n    <note x=\"290\" y=\"275\" backgroundDark=\"0\" fontSize=\"14\" width=\"15\" markdown=\"false\" height=\"31\" textColorDark=\"-1\" textColorLight=\"-5298144\" backgroundLight=\"0\">|\n</note>\n    <note x=\"285\" y=\"295\" backgroundDark=\"0\" fontSize=\"16\" width=\"20\" markdown=\"false\" height=\"20\" textColorDark=\"-1\" textColorLight=\"-5298144\" backgroundLight=\"0\">V</note>\n    <note x=\"280\" y=\"215\" backgroundDark=\"0\" fontSize=\"16\" width=\"25\" markdown=\"false\" height=\"21\" textColorDark=\"-1\" textColorLight=\"-5298144\" backgroundLight=\"0\"> V</note>\n    <button x=\"5\" y=\"75\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"140\" display=\"previous instruction\">previous-instruction</button>\n    <monitor x=\"175\" precision=\"17\" y=\"10\" height=\"60\" fontSize=\"10\" width=\"100\" display=\"instruction #\">current-instruction-label</monitor>\n    <monitor x=\"420\" precision=\"17\" y=\"30\" height=\"60\" fontSize=\"10\" width=\"100\" display=\"proteins made\">count proteins with [strand = \"original\"]</monitor>\n  ",
+      "licenseNotice": "Copyright 2012 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2012 Cite: Novak, M. -->",
+      "citationNotice": "If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.\n\nFor the model itself:\n\n* Novak, M. and Wilensky, U. (2012).  NetLogo DNA Protein Synthesis model.  http://ccl.northwestern.edu/netlogo/models/DNAProteinSynthesis.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\n\nPlease cite the NetLogo software as:\n\n* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      ],
+      "infoSha256": "9fa251110e826e95f514b19db83649e195bdb5126b246e2000315a70f6a86c39",
+      "codeSha256": "05049c4d9a3d0e51b71b9ae0becea569077baffcdedb7a8f22baa7356eaf9bd1",
+      "delivery": {
+        "experiment": null,
+        "implementation": "open",
+        "sourceAudit": "pending",
+        "headlessVerification": "pending-catalog-acceptance",
+        "browserVerification": "pending-catalog-acceptance",
+        "independentApproval": "pending"
+      },
+      "blockers": [
+        "host-or-special-runtime-signals-require-audit"
+      ],
+      "creditsNotice": "This model is a part of the BEAGLE curriculum (http://ccl.northwestern.edu/rp/beagle/index.shtml)",
+      "scope": {
+        "selected": true,
+        "status": "selected",
+        "selectionOrder": 90,
+        "batch": "B09",
+        "experimentSlug": "dna-protein-synthesis"
+      },
+      "inventorySlug": "curricular-models-beagle-evolution-dna-protein-synthesis"
+    }
+  ]
+}
