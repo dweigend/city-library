@@ -1,4 +1,11 @@
 const phases = {
+  "selected-materials": ["01-sandpile-ising", "02-sand", "03-atomic-diffusion", "04-thermal-phases", "05-dla"],
+  "selected-biology": ["01-photosynthesis-and-signaling", "02-patterns-and-construction", "03-homeostasis-and-exercise", "04-season-and-self-assembly", "05-phyllotaxis-and-turnover"],
+  "selected-evolution": ["01-memory-and-pollution", "02-gametes-and-sex-ratio", "03-learning-and-mammoths", "04-infection-and-vision", "05-drift-and-inheritance"],
+  "selected-disease-gene": ["01-contact-and-immunity", "02-coupling-and-recovery", "03-regulation-and-energy", "04-crispr-defense-and-ecology", "05-control-and-protein-synthesis"],
+  "nw-generator-variants-proposal": ["01-kleinberg-law-and-attempts", "02-preferential-link-end-protocol", "03-watts-strogatz-old-target-and-domains", "04-orientation-hub-and-lattice-seams", "05-model-actions-and-rng-boundaries"],
+
+  "ui-migration": ["01-inert-entry", "02-setup-draft", "03-actions-and-live-rules", "04-observation-views", "05-invalid-rule-and-instance-isolation"],
   "planar-geometry-proposal": ["01-shell-hole-and-topology", "02-feature-collection-bounds", "03-mapping-and-gis-extents", "04-shape-data-and-purity", "05-proposed-resource-boundaries"],
   "graph-copy-proposal": ["01-membership-selection-and-order", "02-direction-loops-and-parallel-identity", "03-deep-state-defaults-and-framework-references", "04-agent-lifecycle-and-owner-atomicity", "05-strict-options-and-independent-current-graph"],
   "random-exponential-poisson-proposal": ["01-exponential-transform-and-consumption", "02-poisson-product-branch", "03-poisson-high-mean-and-continuation", "04-validation-cache-and-local-stream", "05-blood-sugar-parameter-scenario"],

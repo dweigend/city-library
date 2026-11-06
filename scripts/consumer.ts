@@ -99,6 +99,11 @@ if(distributionConsumer.number({distribution:'poisson',mean:150})!==distribution
 if(!geometry.contains({type:'Polygon',coordinates:[[[0,0],[4,0],[4,4],[0,4],[0,0]]]},{x:2,y:2}))throw Error('packed exact containment mismatch');
 const packedPlanarBounds=geometry.bounds([{type:'Feature',geometry:{type:'Point',coordinates:[1,2]},properties:null}]);
 if(JSON.stringify(packedPlanarBounds)!=='[1,1,2,2]'||!Object.isFrozen(packedPlanarBounds))throw Error('packed pure bounds mismatch');
+const packedNwGraph=Graph.add();
+const packedNwNodes=Array.from({length:4},()=>packedNwGraph.nodes.add({}));
+const packedNwEdges=packedNwGraph.generate({kind:'kleinberg',profile:'nw-web-topology/1',nodes:packedNwNodes,shape:[2,2],clusteringExponent:0,directed:true,random:Random.add({seed:1})});
+if(packedNwEdges.length!==7||packedNwEdges[4].from!==packedNwNodes[1]||packedNwEdges[4].to!==packedNwNodes[0])throw Error('packed pinned topology variant mismatch');
+
 
 
 `, { flag: "a" });
