@@ -94,3 +94,21 @@ c46904f2a9cad391cf51ceac0c08498665cd886ed8cc4135a6ac347d1e503f6a  examples/ui-au
 5392c802645b73cc32d14de4365049d9acc2f3e143a021870a554c6c77e1184e  examples/ui-authoring/refreeze-headless.log
 91404f66a38c693ea6be8256c0572771e80fafc28a9e400a51e6a5241ee31d7f  examples/ui-authoring/refreeze-initial-typecheck.log
 ```
+
+## Compiler diagnostic location correction during runtime
+
+Coordinator authorized a mechanical relocation of negative-test `@ts-expect-error` comments to TypeScript's actual call-site diagnostic line. Rejected calls, callback types and expected rejections are unchanged; no cast, disabled assertion or removed negative case is introduced. The pre-correction manifest (freeze `e03d731`) follows verbatim. This is a test-comment correction, not a changed public contract.
+
+```text
+3af4f39bc939e145c9a092c0ed4038f7aa2ffcf50995a33de7c3ed4dd368d75a  examples/ui-authoring/01-defaults-and-inert-entry.ts
+b2ad3adcb93bdfeba3bfa8589ca5d7e1793cee22591cebb4c8b66fd17f4294dd  examples/ui-authoring/02-ordered-setup-and-numeric-live.ts
+7ffbd63380f80ae49b7ea36e284316ca93969a6728dc0c06c312182864dbae97  examples/ui-authoring/03-alternate-observation.ts
+4f0530613aafb496c9de6b9e144a4fa007a6c0b4a3498dbc2bc91b948ed7e945  examples/ui-authoring/04-groups-format-and-categories.ts
+cf0411dcba1a86c50186831de2f63d374819680b6cd859286e09f1212564ce0a  examples/ui-authoring/05-independent-actions-and-legacy.ts
+0eff67ed97fd44529b50422bbc27db16eb61c6fb8d236898f59dbef3d3da34f1  examples/ui-authoring/assertions.ts
+159de1b9c13722d398825bf18b2e864a32a9b45abdfc4cd8b2f3451675bfdc37  examples/ui-authoring/authoring.types.ts
+3c7f154284e32ac9549571a3e043ea0b1796aa29d037afc615baac2f76630549  examples/ui-authoring/tsconfig.json
+2bbe10579c2e804c250a1fb003cd483611ad2c14f5cdb947206732cdd0ec3225  examples/ui-authoring/browser-harness.ts
+5392c802645b73cc32d14de4365049d9acc2f3e143a021870a554c6c77e1184e  examples/ui-authoring/refreeze-headless.log
+c0d2fe22c0f323b4a4d6769d13d015e6cc3bac7c7a29780fdbd6d2e072625b68  examples/ui-authoring/refreeze-initial-typecheck.log
+```

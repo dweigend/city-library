@@ -3,7 +3,6 @@ import { defineUI } from '../../ui/index.ts';
 import { model as voting } from '../../experiments/voting/model.ts';
 import { model as wealth } from '../../experiments/wealth-distribution/model.ts';
 import { alternate } from './03-alternate-observation.ts';
-
 function negativeContracts() {
   defineUI(voting, { setup: [
     // @ts-expect-error Unknown parameter key.
@@ -25,12 +24,12 @@ function negativeContracts() {
     const textValue: string = value;
     instance.setRules({ growthAmount: numberValue }); void textValue;
   } } }, views: [] });
+  // @ts-expect-error No compatible parameters observation: explicit value required.
   defineUI(alternate, { live: {
-    // @ts-expect-error No compatible parameters observation: explicit value required.
     changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
   }, views: [] });
+  // @ts-expect-error Getter must return the declared boolean field type.
   defineUI(voting, { live: { changeVote: {
-    // @ts-expect-error Getter must return the declared boolean field type.
     value: () => 3,
     set(instance, value) { instance.setRules({ changeVote: value }); },
   } }, views: [] });
@@ -40,7 +39,6 @@ function negativeContracts() {
   ] }] }] });
 }
 void negativeContracts;
-
 import type { Definition } from '../../experiments/definition.ts';
 import type { VotingParameters } from '../../experiments/voting/model.ts';
 import { model as wolves, type WolfSheepParameters } from '../../experiments/wolf-sheep-predation/model.ts';
@@ -54,7 +52,6 @@ type WrongField = Base & { read(): WithoutParameters & { parameters: Omit<Voting
 type MixedRead = Base & { read(): VotingRead | WithoutParameters };
 type MixedWrongRead = Base & { read(): VotingRead | ReturnType<WrongField['read']> };
 type CompatibleRead = Base & { read(): VotingRead | (VotingRead & { variant: 'second' }) };
-
 /** Contracts derived from the real Voting API; these are compile-only inputs, not mocks. */
 function observationCoverage(
   optionalParameters: Definition<VotingParameters, OptionalParameters>,
@@ -64,24 +61,24 @@ function observationCoverage(
   mixedWrongRead: Definition<VotingParameters, MixedWrongRead>,
   compatibleRead: Definition<VotingParameters, CompatibleRead>,
 ) {
+  // @ts-expect-error parameters itself must be present in every observation.
   defineUI(optionalParameters, { live: {
-    // @ts-expect-error parameters itself must be present in every observation.
     changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
   }, views: [] });
+  // @ts-expect-error The individual parameters key must be required.
   defineUI(optionalField, { live: {
-    // @ts-expect-error The individual parameters key must be required.
     changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
   }, views: [] });
+  // @ts-expect-error An incompatible observed type requires an explicit getter.
   defineUI(wrongField, { live: {
-    // @ts-expect-error An incompatible observed type requires an explicit getter.
     changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
   }, views: [] });
+  // @ts-expect-error One suitable union branch is insufficient for an implicit getter.
   defineUI(mixedRead, { live: {
-    // @ts-expect-error One suitable union branch is insufficient for an implicit getter.
     changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
   }, views: [] });
+  // @ts-expect-error All union branches must have a compatible field, not just one.
   defineUI(mixedWrongRead, { live: {
-    // @ts-expect-error All union branches must have a compatible field, not just one.
     changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
   }, views: [] });
   defineUI(compatibleRead, { live: { changeVote: { set(instance, value) {
@@ -93,7 +90,6 @@ function observationCoverage(
   } }, views: [] });
 }
 void observationCoverage;
-
 function directInference() {
   defineUI(wolves, { live: { mode: { set(instance, value) {
     const choice: WolfSheepParameters['mode'] = value;
@@ -101,12 +97,12 @@ function directInference() {
     const impossible: 'unrelated-mode' = value;
     instance.setRules({ mode: choice }); void impossible;
   } } }, views: [] });
+  // @ts-expect-error Wrong callback value cannot widen P's boolean field to string.
   defineUI(voting, { live: { changeVote: {
-    // @ts-expect-error Wrong callback value cannot widen P's boolean field to string.
     set: (instance: VotingInstance, value: string) => { void instance; void value; },
   } }, views: [] });
+  // @ts-expect-error Wrong observation type cannot widen M or replace its read contract.
   defineUI(voting, { live: { changeVote: {
-    // @ts-expect-error Wrong observation type cannot widen M or replace its read contract.
     value: (state: { parameters: { changeVote: string } }) => state.parameters.changeVote,
     set: (instance, value) => instance.setRules({ changeVote: value }),
   } }, views: [] });
