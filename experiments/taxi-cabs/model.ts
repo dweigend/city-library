@@ -1,10 +1,15 @@
 /** NetLogo Taxi Cabs, Dongping and Wilensky (2019), CC BY-NC-SA 3.0; see NOTICE.md. */
-import { Agent, Grid, Random, World, run } from 'city-library';
-import type { Field } from 'city-library';
-import type { Definition } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
-import { inputs } from './parameters.ts';
-import type { DemandKey, DemandPhase, TaxiParameters, Zone } from './parameters.ts';
+import { Agent, Grid, Random, World, run } from "city-library";
+import type { Field } from "city-library";
+import type { Definition } from "../definition.ts";
+import { parameters, stepCount } from "../parameters.ts";
+import { inputs } from "./parameters.ts";
+import type {
+  DemandKey,
+  DemandPhase,
+  TaxiParameters,
+  Zone,
+} from "./parameters.ts";
 export { inputs };
 export type { TaxiParameters, DemandKey, DemandPhase, Zone };
 
@@ -23,7 +28,7 @@ interface PatchState {
 }
 type Patch = Field<PatchState>;
 type Cab = Agent<{
-  breed: 'cab';
+  breed: "cab";
   who: number;
   vacancy: boolean;
   prevIntersection: number;
@@ -51,7 +56,7 @@ type Cab = Agent<{
   color: string;
 }>;
 type Passenger = Agent<{
-  breed: 'passenger';
+  breed: "passenger";
   who: number;
   patienceToWait: number;
   beenWaiting: number;
@@ -64,39 +69,72 @@ type Passenger = Agent<{
 export function create(options: Partial<TaxiParameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 65, y: 65, boundary: 'wrap' }, { random });
-  const grid = Grid.add({ x: 65, y: 65, boundary: 'wrap' }, {
-    state: { road: false, intersection: false, trafficLight: false, left: false, right: false,
-      up: false, down: false, numDirections: 0, greenLightUp: false, zone: 'res' as Zone, color: '#cfcfcf' },
-  });
+  const world = World.add({ x: 65, y: 65, boundary: "wrap" }, { random });
+  const grid = Grid.add(
+    { x: 65, y: 65, boundary: "wrap" },
+    {
+      state: {
+        road: false,
+        intersection: false,
+        trafficLight: false,
+        left: false,
+        right: false,
+        up: false,
+        down: false,
+        numDirections: 0,
+        greenLightUp: false,
+        zone: "res" as Zone,
+        color: "#cfcfcf",
+      },
+    },
+  );
   world.add(grid);
-  const cabs = () => world.agents.filter(agent => (agent as Cab | Passenger).breed === 'cab') as Cab[];
-  const passengers = () => world.agents.filter(agent => (agent as Cab | Passenger).breed === 'passenger') as Passenger[];
+  const cabs = () =>
+    world.agents.filter(
+      (agent) => (agent as Cab | Passenger).breed === "cab",
+    ) as Cab[];
+  const passengers = () =>
+    world.agents.filter(
+      (agent) => (agent as Cab | Passenger).breed === "passenger",
+    ) as Passenger[];
   const patchId = (patch: Patch) => `${patch.x},${patch.y}`;
   const cabId = (cab: Cab) => `cab-${cab.who}`;
-  const shuffled = <T>(items: readonly T[]) => random.sample(items, { count: items.length });
+  const shuffled = <T>(items: readonly T[]) =>
+    random.sample(items, { count: items.length });
   function choose<T>(items: readonly T[]): T {
-    if (!items.length) throw new Error('The original model requested an empty road agentset.');
+    if (!items.length)
+      throw new Error("The original model requested an empty road agentset.");
     return items[Math.floor(random.number() * items.length)]!;
   }
-  const full = (items: readonly number[]) => [...items.map(value => -value), ...items];
+  const full = (items: readonly number[]) => [
+    ...items.map((value) => -value),
+    ...items,
+  ];
   const roadIndices = full([3, 4, 10, 11, 17, 18, 24, 25, 31, 32]);
-  const rightIndices = [...[3, 10, 17, 24, 31], ...[3, 10, 17, 24, 31].map(value => -(value + 1))];
-  const leftIndices = [...[4, 11, 18, 25, 32], ...[4, 11, 18, 25, 32].map(value => -(value - 1))];
+  const rightIndices = [
+    ...[3, 10, 17, 24, 31],
+    ...[3, 10, 17, 24, 31].map((value) => -(value + 1)),
+  ];
+  const leftIndices = [
+    ...[4, 11, 18, 25, 32],
+    ...[4, 11, 18, 25, 32].map((value) => -(value - 1)),
+  ];
   const lightIndices = full([2, 5, 9, 12, 16, 19, 23, 26, 30]);
   for (const patch of grid.fields) {
     if (Math.abs(patch.x) < 12 && Math.abs(patch.y) < 12) {
-      patch.zone = 'cbd';
-      patch.color = '#ffbc79';
+      patch.zone = "cbd";
+      patch.color = "#ffbc79";
     } else if (Math.abs(patch.x) < 26 && Math.abs(patch.y) < 26) {
-      patch.zone = 'com';
-      patch.color = '#a2c8ec';
+      patch.zone = "com";
+      patch.color = "#a2c8ec";
     }
     patch.road = roadIndices.includes(patch.x) || roadIndices.includes(patch.y);
-    patch.intersection = roadIndices.includes(patch.x) && roadIndices.includes(patch.y);
+    patch.intersection =
+      roadIndices.includes(patch.x) && roadIndices.includes(patch.y);
     if (!patch.road) continue;
-    patch.color = '#000000';
-    patch.trafficLight = lightIndices.includes(patch.x) || lightIndices.includes(patch.y);
+    patch.color = "#000000";
+    patch.trafficLight =
+      lightIndices.includes(patch.x) || lightIndices.includes(patch.y);
     patch.right = rightIndices.includes(patch.y);
     patch.left = leftIndices.includes(patch.y);
     patch.up = leftIndices.includes(patch.x);
@@ -121,45 +159,100 @@ export function create(options: Partial<TaxiParameters> = {}) {
       patch.down = false;
       patch.right = true;
     }
-    patch.numDirections = Number(patch.up) + Number(patch.down) + Number(patch.left) + Number(patch.right);
+    patch.numDirections =
+      Number(patch.up) +
+      Number(patch.down) +
+      Number(patch.left) +
+      Number(patch.right);
   }
-  const roads = grid.fields.filter(patch => patch.road);
-  const lights = roads.filter(patch => patch.trafficLight);
+  const roads = grid.fields.filter((patch) => patch.road);
+  const lights = roads.filter((patch) => patch.trafficLight);
   // The source reassigns these sets after an earlier, reversed assignment.
-  const rowLights = lights.filter(patch => lightIndices.includes(patch.x));
-  const columnLights = lights.filter(patch => lightIndices.includes(patch.y));
-  for (const patch of rowLights) patch.color = '#30b949';
-  for (const patch of columnLights) patch.color = '#e33131';
-  for (const patch of lights) patch.greenLightUp = patch.color === '#30b949';
+  const rowLights = lights.filter((patch) => lightIndices.includes(patch.x));
+  const columnLights = lights.filter((patch) => lightIndices.includes(patch.y));
+  for (const patch of rowLights) patch.color = "#30b949";
+  for (const patch of columnLights) patch.color = "#e33131";
+  for (const patch of lights) patch.greenLightUp = patch.color === "#30b949";
   let rowGreen = true;
   let columnGreen = false;
   let phaseCounter = 1;
-  const phases = ['AM Peak', 'Midday', 'PM Peak', 'Evening', 'Early Morning'] as const;
-  const phaseAbbreviations: readonly DemandPhase[] = ['AM', 'MD', 'PM', 'EVE', 'EM'];
-  let currentPhase: typeof phases[number] = 'AM Peak';
-  let currentPhaseAbbreviation: DemandPhase = 'AM';
+  const phases = [
+    "AM Peak",
+    "Midday",
+    "PM Peak",
+    "Evening",
+    "Early Morning",
+  ] as const;
+  const phaseAbbreviations: readonly DemandPhase[] = [
+    "AM",
+    "MD",
+    "PM",
+    "EVE",
+    "EM",
+  ];
+  let currentPhase: (typeof phases)[number] = "AM Peak";
+  let currentPhaseAbbreviation: DemandPhase = "AM";
   let passengerWho = 0;
-  const history: { tick: number; totalMiles: number; businessMiles: number; deadMiles: number;
-    waitingPassengers: number; occupiedCabs: number; totalIncome: number }[] = [];
+  const history: {
+    tick: number;
+    totalMiles: number;
+    businessMiles: number;
+    deadMiles: number;
+    waitingPassengers: number;
+    occupiedCabs: number;
+    totalIncome: number;
+  }[] = [];
 
   function setHeading(cab: Cab, heading: number) {
     cab.rotate(heading - cab.heading);
   }
   function setupCabs() {
     for (let who = 0; who < settings.numTaxicab; who++) {
-      const patch = choose(roads.filter(patch => grid.agentsAt(patch, { source: cabs() }).length === 0));
-      const cab = Agent.add({ breed: 'cab' as const, who, vacancy: true, prevIntersection: 0,
-        numPassengersOnboard: 0, numTotalMiles: 0, numBusinessMiles: 0, numDeadMiles: 0,
-        numGridsTraveledCurrentTrip: 0, tripDistances: [] as number[], numTotalTrips: 0,
-        totalIncome: 0, currentTripIncome: 0, tripIncomes: [] as number[], tickAtPickup: 0,
-        currentTripDuration: 0, tripDurations: [] as number[], pickupOnHorizontal: false,
-        pickupOnVertical: false, destinationX: 0, destinationX2: 0, destinationY: 0,
-        destinationY2: 0, pickupX: 0, pickupY: 0, color: '#f5db33' }, { position: patch });
+      const patch = choose(
+        roads.filter(
+          (patch) => grid.agentsAt(patch, { source: cabs() }).length === 0,
+        ),
+      );
+      const cab = Agent.add(
+        {
+          breed: "cab" as const,
+          who,
+          vacancy: true,
+          prevIntersection: 0,
+          numPassengersOnboard: 0,
+          numTotalMiles: 0,
+          numBusinessMiles: 0,
+          numDeadMiles: 0,
+          numGridsTraveledCurrentTrip: 0,
+          tripDistances: [] as number[],
+          numTotalTrips: 0,
+          totalIncome: 0,
+          currentTripIncome: 0,
+          tripIncomes: [] as number[],
+          tickAtPickup: 0,
+          currentTripDuration: 0,
+          tripDurations: [] as number[],
+          pickupOnHorizontal: false,
+          pickupOnVertical: false,
+          destinationX: 0,
+          destinationX2: 0,
+          destinationY: 0,
+          destinationY2: 0,
+          pickupX: 0,
+          pickupY: 0,
+          color: "#f5db33",
+        },
+        { position: patch },
+      );
       world.add(cab);
-      if (patch.up && patch.right) setHeading(cab, Math.floor(random.number() * 100) > 50 ? 0 : 90);
-      else if (patch.up && patch.left) setHeading(cab, Math.floor(random.number() * 100) > 50 ? 0 : 270);
-      else if (patch.down && patch.right) setHeading(cab, Math.floor(random.number() * 100) > 50 ? 180 : 90);
-      else if (patch.down && patch.left) setHeading(cab, Math.floor(random.number() * 100) > 50 ? 180 : 270);
+      if (patch.up && patch.right)
+        setHeading(cab, Math.floor(random.number() * 100) > 50 ? 0 : 90);
+      else if (patch.up && patch.left)
+        setHeading(cab, Math.floor(random.number() * 100) > 50 ? 0 : 270);
+      else if (patch.down && patch.right)
+        setHeading(cab, Math.floor(random.number() * 100) > 50 ? 180 : 90);
+      else if (patch.down && patch.left)
+        setHeading(cab, Math.floor(random.number() * 100) > 50 ? 180 : 270);
       else if (patch.up) setHeading(cab, 0);
       else if (patch.down) setHeading(cab, 180);
       else if (patch.left) setHeading(cab, 270);
@@ -170,62 +263,96 @@ export function create(options: Partial<TaxiParameters> = {}) {
 
   function changeTrafficLightColors() {
     if (rowGreen) {
-      for (const patch of rowLights) patch.color = '#30b949';
-      for (const patch of columnLights) patch.color = '#e33131';
+      for (const patch of rowLights) patch.color = "#30b949";
+      for (const patch of columnLights) patch.color = "#e33131";
     }
     if (columnGreen) {
-      for (const patch of rowLights) patch.color = '#e33131';
-      for (const patch of columnLights) patch.color = '#30b949';
+      for (const patch of rowLights) patch.color = "#e33131";
+      for (const patch of columnLights) patch.color = "#30b949";
     }
   }
   function startTrafficLight() {
     // Source asks each set and repeatedly writes the globals; all ordinary members agree.
-    for (const patch of shuffled(rowLights)) rowGreen = patch.color === '#30b949';
-    for (const patch of shuffled(columnLights)) columnGreen = patch.color === '#30b949';
+    for (const patch of shuffled(rowLights))
+      rowGreen = patch.color === "#30b949";
+    for (const patch of shuffled(columnLights))
+      columnGreen = patch.color === "#30b949";
     changeTrafficLightColors();
-    if (settings.lengthOfGreenLight === 0) throw new RangeError('NetLogo source modulo by zero: length-of-green-light = 0.');
+    if (settings.lengthOfGreenLight === 0)
+      throw new RangeError(
+        "NetLogo source modulo by zero: length-of-green-light = 0.",
+      );
     if (world.tick.value % settings.lengthOfGreenLight === 0) {
       rowGreen = !rowGreen;
       columnGreen = !rowGreen;
       changeTrafficLightColors();
     }
-    for (const patch of lights) patch.greenLightUp = patch.color === '#30b949';
+    for (const patch of lights) patch.greenLightUp = patch.color === "#30b949";
   }
   function reportCurrentPhase() {
     if (phaseCounter > 4) phaseCounter = 0;
-    if (world.tick.value >= settings.lengthOfTimePeriod && world.tick.value % settings.lengthOfTimePeriod === 0) {
+    if (
+      world.tick.value >= settings.lengthOfTimePeriod &&
+      world.tick.value % settings.lengthOfTimePeriod === 0
+    ) {
       currentPhase = phases[phaseCounter]!;
       currentPhaseAbbreviation = phaseAbbreviations[phaseCounter]!;
       phaseCounter++;
     }
   }
-  const pickupRoads = (zone: Zone) => roads.filter(patch => patch.zone === zone && !patch.intersection);
-  const dropoffRoads = (zone: Zone) => roads.filter(patch => patch.zone === zone && !patch.intersection && !patch.trafficLight);
-  const pickupByZone = { cbd: pickupRoads('cbd'), com: pickupRoads('com'), res: pickupRoads('res') };
-  const dropoffByZone = { cbd: dropoffRoads('cbd'), com: dropoffRoads('com'), res: dropoffRoads('res') };
+  const pickupRoads = (zone: Zone) =>
+    roads.filter((patch) => patch.zone === zone && !patch.intersection);
+  const dropoffRoads = (zone: Zone) =>
+    roads.filter(
+      (patch) =>
+        patch.zone === zone && !patch.intersection && !patch.trafficLight,
+    );
+  const pickupByZone = {
+    cbd: pickupRoads("cbd"),
+    com: pickupRoads("com"),
+    res: pickupRoads("res"),
+  };
+  const dropoffByZone = {
+    cbd: dropoffRoads("cbd"),
+    com: dropoffRoads("com"),
+    res: dropoffRoads("res"),
+  };
   function generateDemand(origin: Zone, destination: Zone) {
     const key: DemandKey = `prob-${origin}-${destination}-${currentPhaseAbbreviation}`;
     if (random.number() >= settings[key]) return;
     const patch = choose(pickupByZone[origin]);
     const destinationPatch = choose(dropoffByZone[destination]);
-    const passenger = Agent.add({ breed: 'passenger' as const, who: passengerWho++,
-      patienceToWait: random.number({ distribution: 'normal', mean: settings.waitTimeMean, deviation: settings.waitTimeSd }),
-      beenWaiting: 0, destination: null as Patch | null, destinationX: destinationPatch.x,
-      destinationY: destinationPatch.y, numPassengersWaiting: 1 + Math.floor(random.number() * 4) }, { position: patch });
+    const passenger = Agent.add(
+      {
+        breed: "passenger" as const,
+        who: passengerWho++,
+        patienceToWait: random.number({
+          distribution: "normal",
+          mean: settings.waitTimeMean,
+          deviation: settings.waitTimeSd,
+        }),
+        beenWaiting: 0,
+        destination: null as Patch | null,
+        destinationX: destinationPatch.x,
+        destinationY: destinationPatch.y,
+        numPassengersWaiting: 1 + Math.floor(random.number() * 4),
+      },
+      { position: patch },
+    );
     passenger.destination = destinationPatch;
     world.add(passenger);
   }
   function taxiDemandAtPatch() {
     // Executed source key→zone pairs, including misleading source comments, are preserved.
-    generateDemand('cbd', 'cbd');
-    generateDemand('cbd', 'com');
-    generateDemand('cbd', 'res');
-    generateDemand('com', 'com');
-    generateDemand('com', 'cbd');
-    generateDemand('com', 'res');
-    generateDemand('res', 'res');
-    generateDemand('res', 'cbd');
-    generateDemand('res', 'com');
+    generateDemand("cbd", "cbd");
+    generateDemand("cbd", "com");
+    generateDemand("cbd", "res");
+    generateDemand("com", "com");
+    generateDemand("com", "cbd");
+    generateDemand("com", "res");
+    generateDemand("res", "res");
+    generateDemand("res", "cbd");
+    generateDemand("res", "com");
   }
   function passengersWaitForRide() {
     for (const passenger of shuffled(passengers())) {
@@ -245,10 +372,18 @@ export function create(options: Partial<TaxiParameters> = {}) {
   }
   function stopForRedElseGo(cab: Cab) {
     const here = grid.fieldAt(cab)!;
-    const direction = cab.heading === 0 ? { x: 0, y: 1 }
-      : cab.heading === 90 ? { x: 1, y: 0 }
-      : cab.heading === 180 ? { x: 0, y: -1 } : { x: -1, y: 0 };
-    const ahead = grid.fieldAt({ x: cab.x + direction.x, y: cab.y + direction.y })!;
+    const direction =
+      cab.heading === 0
+        ? { x: 0, y: 1 }
+        : cab.heading === 90
+          ? { x: 1, y: 0 }
+          : cab.heading === 180
+            ? { x: 0, y: -1 }
+            : { x: -1, y: 0 };
+    const ahead = grid.fieldAt({
+      x: cab.x + direction.x,
+      y: cab.y + direction.y,
+    })!;
     if (here.trafficLight && !here.greenLightUp && ahead.intersection) return;
     if (grid.agentsAt(ahead, { source: cabs() }).length === 0) {
       cab.move({ by: direction });
@@ -276,34 +411,51 @@ export function create(options: Partial<TaxiParameters> = {}) {
   }
   function makeUTurn(cab: Cab) {
     const heading = cab.heading;
-    setHeading(cab, heading === 0 ? 270 : heading === 180 ? 90 : heading === 90 ? 0 : 180);
+    setHeading(
+      cab,
+      heading === 0 ? 270 : heading === 180 ? 90 : heading === 90 ? 0 : 180,
+    );
     // The source U-turn deliberately does not check red lights or occupancy.
-    const direction = cab.heading === 0 ? { x: 0, y: 1 }
-      : cab.heading === 90 ? { x: 1, y: 0 }
-      : cab.heading === 180 ? { x: 0, y: -1 } : { x: -1, y: 0 };
+    const direction =
+      cab.heading === 0
+        ? { x: 0, y: 1 }
+        : cab.heading === 90
+          ? { x: 1, y: 0 }
+          : cab.heading === 180
+            ? { x: 0, y: -1 }
+            : { x: -1, y: 0 };
     cab.move({ by: direction });
     updateDeliveryAndIncome(cab);
     setHeading(cab, (heading + 180) % 360);
   }
   function updateDestinationCoordinates(cab: Cab) {
-    const destination = grid.fieldAt({ x: cab.destinationX, y: cab.destinationY })!;
+    const destination = grid.fieldAt({
+      x: cab.destinationX,
+      y: cab.destinationY,
+    })!;
     if (destination.up || destination.down) {
-      cab.destinationX2 = roadIndices.includes(cab.destinationX + 1) ? cab.destinationX + 1 : cab.destinationX - 1;
+      cab.destinationX2 = roadIndices.includes(cab.destinationX + 1)
+        ? cab.destinationX + 1
+        : cab.destinationX - 1;
       cab.destinationY2 = cab.destinationY;
     }
     if (destination.right || destination.left) {
-      cab.destinationY2 = roadIndices.includes(cab.destinationY + 1) ? cab.destinationY + 1 : cab.destinationY - 1;
+      cab.destinationY2 = roadIndices.includes(cab.destinationY + 1)
+        ? cab.destinationY + 1
+        : cab.destinationY - 1;
       cab.destinationX2 = cab.destinationX;
     }
   }
   function highlightDestinationPatches(cab: Cab, color: string) {
     if (cab.destinationY2 !== 0) {
       grid.fieldAt({ x: cab.destinationX, y: cab.destinationY })!.color = color;
-      grid.fieldAt({ x: cab.destinationX, y: cab.destinationY2 })!.color = color;
+      grid.fieldAt({ x: cab.destinationX, y: cab.destinationY2 })!.color =
+        color;
     }
     if (cab.destinationX2 !== 0) {
       grid.fieldAt({ x: cab.destinationX, y: cab.destinationY })!.color = color;
-      grid.fieldAt({ x: cab.destinationX2, y: cab.destinationY })!.color = color;
+      grid.fieldAt({ x: cab.destinationX2, y: cab.destinationY })!.color =
+        color;
     }
   }
   function deliveryRelation(cab: Cab) {
@@ -314,7 +466,10 @@ export function create(options: Partial<TaxiParameters> = {}) {
       left: cab.x < cab.destinationX && cab.x < cab.destinationX2,
       sameX: cab.x === cab.destinationX || cab.x === cab.destinationX2,
       sameY: cab.y === cab.destinationY || cab.y === cab.destinationY2,
-      up: cab.heading === 0, east: cab.heading === 90, down: cab.heading === 180, west: cab.heading === 270,
+      up: cab.heading === 0,
+      east: cab.heading === 90,
+      down: cab.heading === 180,
+      west: cab.heading === 270,
     };
   }
   function changeDirectionForDelivery(cab: Cab) {
@@ -343,10 +498,11 @@ export function create(options: Partial<TaxiParameters> = {}) {
     if (!waiting.length) return;
     const passenger = choose(waiting);
     cab.vacancy = false;
-    cab.color = '#b749d4';
+    cab.color = "#b749d4";
     cab.numPassengersOnboard = passenger.numPassengersWaiting;
-    cab.currentTripIncome = settings.firstPassengerCost
-      + (cab.numPassengersOnboard - 1) * settings.eachAdditionalPassengerCost;
+    cab.currentTripIncome =
+      settings.firstPassengerCost +
+      (cab.numPassengersOnboard - 1) * settings.eachAdditionalPassengerCost;
     cab.tickAtPickup = world.tick.value;
     cab.pickupX = cab.x;
     cab.pickupY = cab.y;
@@ -358,7 +514,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     cab.pickupOnHorizontal = here.left || here.right;
     cab.pickupOnVertical = here.up || here.down;
     updateDestinationCoordinates(cab);
-    highlightDestinationPatches(cab, '#b749d4');
+    highlightDestinationPatches(cab, "#b749d4");
     changeDirectionForDelivery(cab);
   }
   function taxicabMoveRandom(cab: Cab) {
@@ -392,12 +548,12 @@ export function create(options: Partial<TaxiParameters> = {}) {
   }
   function resetCabAfterTrip(cab: Cab) {
     cab.vacancy = true;
-    cab.color = '#f5db33';
+    cab.color = "#f5db33";
     cab.numPassengersOnboard = 0;
     cab.numGridsTraveledCurrentTrip = 0;
     cab.currentTripIncome = 0;
     cab.currentTripDuration = 0;
-    highlightDestinationPatches(cab, '#000000');
+    highlightDestinationPatches(cab, "#000000");
     cab.destinationX = 0;
     cab.destinationX2 = 0;
     cab.destinationY = 0;
@@ -407,8 +563,10 @@ export function create(options: Partial<TaxiParameters> = {}) {
     cab.pickupOnVertical = false;
   }
   function dropoffPassenger(cab: Cab) {
-    if ((cab.x === cab.destinationX || cab.x === cab.destinationX2)
-      && (cab.y === cab.destinationY || cab.y === cab.destinationY2)) {
+    if (
+      (cab.x === cab.destinationX || cab.x === cab.destinationX2) &&
+      (cab.y === cab.destinationY || cab.y === cab.destinationY2)
+    ) {
       cab.totalIncome += cab.currentTripIncome;
       cab.tripDistances.push(cab.numGridsTraveledCurrentTrip);
       cab.tripIncomes.push(cab.currentTripIncome);
@@ -505,13 +663,15 @@ export function create(options: Partial<TaxiParameters> = {}) {
     }
   }
   function record() {
-    history.push({ tick: world.tick.value,
+    history.push({
+      tick: world.tick.value,
       totalMiles: cabs().reduce((sum, cab) => sum + cab.numTotalMiles, 0),
       businessMiles: cabs().reduce((sum, cab) => sum + cab.numBusinessMiles, 0),
       deadMiles: cabs().reduce((sum, cab) => sum + cab.numDeadMiles, 0),
       waitingPassengers: passengers().length,
-      occupiedCabs: cabs().filter(cab => !cab.vacancy).length,
-      totalIncome: cabs().reduce((sum, cab) => sum + cab.totalIncome, 0) });
+      occupiedCabs: cabs().filter((cab) => !cab.vacancy).length,
+      totalIncome: cabs().reduce((sum, cab) => sum + cab.totalIncome, 0),
+    });
     if (history.length > 1001) history.splice(1, 1);
   }
   function step(count = 1) {
@@ -523,53 +683,124 @@ export function create(options: Partial<TaxiParameters> = {}) {
     return count;
   }
   function setParameters(values: Partial<TaxiParameters>) {
-    if (Reflect.ownKeys(values).some(key => ['seed', 'numTaxicab'].includes(String(key)))) {
-      throw new TypeError('Seed and taxi population are setup-only.');
+    if (
+      Reflect.ownKeys(values).some((key) =>
+        ["seed", "numTaxicab"].includes(String(key)),
+      )
+    ) {
+      throw new TypeError("Seed and taxi population are setup-only.");
     }
     settings = parameters(inputs, { ...settings, ...values });
   }
   function snapshot() {
     return {
-      tick: world.tick.value, width: 65, height: 65, parameters: { ...settings },
-      currentPhase, currentPhaseAbbreviation, phaseCounter, rowGreen, columnGreen,
-      cells: grid.fields.map(patch => ({ id: patchId(patch), x: patch.x, y: patch.y, color: patch.color,
-        road: patch.road, intersection: patch.intersection, trafficLight: patch.trafficLight,
-        zone: patch.zone, left: patch.left, right: patch.right, up: patch.up, down: patch.down,
-        greenLightUp: patch.greenLightUp })),
-      cabs: cabs().map(cab => ({ id: cabId(cab), x: cab.x, y: cab.y, heading: cab.heading,
-        color: cab.color, vacancy: cab.vacancy, numPassengersOnboard: cab.numPassengersOnboard,
-        numTotalMiles: cab.numTotalMiles, numBusinessMiles: cab.numBusinessMiles, numDeadMiles: cab.numDeadMiles,
-        numTotalTrips: cab.numTotalTrips, totalIncome: cab.totalIncome, currentTripIncome: cab.currentTripIncome,
-        currentTripDuration: cab.currentTripDuration, numGridsTraveledCurrentTrip: cab.numGridsTraveledCurrentTrip,
-        destinationX: cab.destinationX, destinationX2: cab.destinationX2,
-        destinationY: cab.destinationY, destinationY2: cab.destinationY2,
-        pickupOnHorizontal: cab.pickupOnHorizontal, pickupOnVertical: cab.pickupOnVertical,
-        tripDistances: [...cab.tripDistances], tripIncomes: [...cab.tripIncomes], tripDurations: [...cab.tripDurations] })),
-      passengers: passengers().map(passenger => ({ id: `passenger-${passenger.who}`, x: passenger.x,
-        y: passenger.y, beenWaiting: passenger.beenWaiting, patienceToWait: passenger.patienceToWait,
-        destinationX: passenger.destinationX, destinationY: passenger.destinationY,
-        numPassengersWaiting: passenger.numPassengersWaiting })),
-      tripDistances: cabs().flatMap(cab => cab.tripDistances),
-      tripIncomes: cabs().flatMap(cab => cab.tripIncomes),
-      tripDurations: cabs().flatMap(cab => cab.tripDurations),
-      history: history.map(sample => ({ ...sample })),
+      tick: world.tick.value,
+      width: 65,
+      height: 65,
+      parameters: { ...settings },
+      currentPhase,
+      currentPhaseAbbreviation,
+      phaseCounter,
+      rowGreen,
+      columnGreen,
+      cells: grid.fields.map((patch) => ({
+        id: patchId(patch),
+        x: patch.x,
+        y: patch.y,
+        color: patch.color,
+        road: patch.road,
+        intersection: patch.intersection,
+        trafficLight: patch.trafficLight,
+        zone: patch.zone,
+        left: patch.left,
+        right: patch.right,
+        up: patch.up,
+        down: patch.down,
+        greenLightUp: patch.greenLightUp,
+      })),
+      cabs: cabs().map((cab) => ({
+        id: cabId(cab),
+        x: cab.x,
+        y: cab.y,
+        heading: cab.heading,
+        color: cab.color,
+        vacancy: cab.vacancy,
+        numPassengersOnboard: cab.numPassengersOnboard,
+        numTotalMiles: cab.numTotalMiles,
+        numBusinessMiles: cab.numBusinessMiles,
+        numDeadMiles: cab.numDeadMiles,
+        numTotalTrips: cab.numTotalTrips,
+        totalIncome: cab.totalIncome,
+        currentTripIncome: cab.currentTripIncome,
+        currentTripDuration: cab.currentTripDuration,
+        numGridsTraveledCurrentTrip: cab.numGridsTraveledCurrentTrip,
+        destinationX: cab.destinationX,
+        destinationX2: cab.destinationX2,
+        destinationY: cab.destinationY,
+        destinationY2: cab.destinationY2,
+        pickupOnHorizontal: cab.pickupOnHorizontal,
+        pickupOnVertical: cab.pickupOnVertical,
+        tripDistances: [...cab.tripDistances],
+        tripIncomes: [...cab.tripIncomes],
+        tripDurations: [...cab.tripDurations],
+      })),
+      passengers: passengers().map((passenger) => ({
+        id: `passenger-${passenger.who}`,
+        x: passenger.x,
+        y: passenger.y,
+        beenWaiting: passenger.beenWaiting,
+        patienceToWait: passenger.patienceToWait,
+        destinationX: passenger.destinationX,
+        destinationY: passenger.destinationY,
+        numPassengersWaiting: passenger.numPassengersWaiting,
+      })),
+      tripDistances: cabs().flatMap((cab) => cab.tripDistances),
+      tripIncomes: cabs().flatMap((cab) => cab.tripIncomes),
+      tripDurations: cabs().flatMap((cab) => cab.tripDurations),
+      history: history.map((sample) => ({ ...sample })),
     };
   }
   record();
   return {
-    step, advance: step, snapshot, read: snapshot, setParameters,
-    world, grid, cabs, passengers,
-    startTrafficLight, changeTrafficLightColors, reportCurrentPhase,
-    generateDemand, taxiDemandAtPatch, passengersWaitForRide,
-    updateDeliveryAndIncome, stopForRedElseGo,
-    moveUp, moveDown, moveRight, moveLeft, moveStraight, makeUTurn,
-    updateDestinationCoordinates, highlightDestinationPatches,
-    deliveryRelation, changeDirectionForDelivery, pickupPassengers,
-    taxicabMoveRandom, resetCabAfterTrip, dropoffPassenger, taxicabMoveDeliver,
+    step,
+    advance: step,
+    snapshot,
+    read: snapshot,
+    setParameters,
+    world,
+    grid,
+    cabs,
+    passengers,
+    startTrafficLight,
+    changeTrafficLightColors,
+    reportCurrentPhase,
+    generateDemand,
+    taxiDemandAtPatch,
+    passengersWaitForRide,
+    updateDeliveryAndIncome,
+    stopForRedElseGo,
+    moveUp,
+    moveDown,
+    moveRight,
+    moveLeft,
+    moveStraight,
+    makeUTurn,
+    updateDestinationCoordinates,
+    highlightDestinationPatches,
+    deliveryRelation,
+    changeDirectionForDelivery,
+    pickupPassengers,
+    taxicabMoveRandom,
+    resetCabAfterTrip,
+    dropoffPassenger,
+    taxicabMoveDeliver,
     go,
   };
 }
 export const model = {
-  title: 'Taxi Cabs', inputs, create,
-  description: 'Zonal taxi demand, source-specific delivery branches and trip accounting. Dongping and Wilensky (2019), CC BY-NC-SA 3.0.',
+  title: "Taxi Cabs",
+  inputs,
+  create,
+  description:
+    "Zonal taxi demand, source-specific delivery branches and trip accounting. Dongping and Wilensky (2019), CC BY-NC-SA 3.0.",
 } satisfies Definition<TaxiParameters, ReturnType<typeof create>>;
