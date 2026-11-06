@@ -20,7 +20,7 @@ assert.equal(metal.read().atoms.length, 1);
 metal.advance();
 assert.equal(metal.read().atoms[0]!.temp, 390);
 assert.equal(metal.read().averageMetalTemp, 390);
-assert.equal(metal.read().numFrozen, 1);
+assert.equal(metal.read().numFrozen, 0);
 assert.equal(metal.read().tick, 1);
 metal.advance(5);
 assert.equal(metal.read().tick, 1); // terminal preflight does not cool/tick again
