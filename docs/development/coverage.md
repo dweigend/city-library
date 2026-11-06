@@ -132,7 +132,7 @@ Counts were verified by matching all paired semantic/API anchors and `###` opera
 | --- | --- | --- | --- | --- |
 | [api-78](../agent-loom/api-table.md#graph-add) | `Graph.add` | A5a | Delivered | Non-spatial kernel: [five public examples](a5a-examples.md), boundary/type tests and [acceptance evidence](a5a-evidence.md). |
 | [api-79](../agent-loom/api-table.md#graph-add-2) | `Graph.add` | A5a | Delivered | Non-spatial kernel: [five public examples](a5a-examples.md), boundary/type tests and [acceptance evidence](a5a-evidence.md). |
-| [api-115](../agent-loom/api-table.md#graph-generate) | `graph.generate` | A5 | Planned | Split membership, topology, algorithm, generation, layout and interchange families into bounded slices. |
+| [api-115](../agent-loom/api-table.md#graph-generate) | `graph.generate` | A5 | Delivered | All eleven existing-binding kinds; five-script freezec872f65 before runtime0a66507. Atomic owner batches, explicit RNG/order and caps; complete468-test/170-script integrated check and packed consumer pass. Independent approval pending; native NW variants remain separate. |
 | [api-131](../agent-loom/api-table.md#graph-parallel) | `graph.parallel` | A5a | Delivered | Non-spatial kernel: [five public examples](a5a-examples.md), boundary/type tests and [acceptance evidence](a5a-evidence.md). |
 | [api-132](../agent-loom/api-table.md#graph-self-loops) | `graph.selfLoops` | A5a | Delivered | Non-spatial kernel: [five public examples](a5a-examples.md), boundary/type tests and [acceptance evidence](a5a-evidence.md). |
 | [api-85](../agent-loom/api-table.md#graph-delete) | `graph.delete` | A5a | Delivered | Non-spatial kernel: [five public examples](a5a-examples.md), boundary/type tests and [acceptance evidence](a5a-evidence.md). |
@@ -171,7 +171,7 @@ Counts were verified by matching all paired semantic/API anchors and `###` opera
 | [api-123](../agent-loom/api-table.md#graph-layout) | `graph.layout` | A5 | Planned | Split membership, topology, algorithm, generation, layout and interchange families into bounded slices. |
 | [api-88](../agent-loom/api-table.md#type-readonly-graph) | `ReadonlyGraph` | A5 | Planned | Split membership, topology, algorithm, generation, layout and interchange families into bounded slices. |
 | [api-95](../agent-loom/api-table.md#type-route) | `Route` | A5 | Planned | Split membership, topology, algorithm, generation, layout and interchange families into bounded slices. |
-| [api-116](../agent-loom/api-table.md#type-generator-options) | `GeneratorOptions` | A5 | Planned | Split membership, topology, algorithm, generation, layout and interchange families into bounded slices. |
+| [api-116](../agent-loom/api-table.md#type-generator-options) | `GeneratorOptions` | A5 | Delivered | All eleven existing-binding kinds; five-script freezec872f65 before runtime0a66507. Atomic owner batches, explicit RNG/order and caps; complete468-test/170-script integrated check and packed consumer pass. Independent approval pending; native NW variants remain separate. |
 | [api-120](../agent-loom/api-table.md#type-graph-data) | `GraphData` | A5 | Planned | Split membership, topology, algorithm, generation, layout and interchange families into bounded slices. |
 | [api-124](../agent-loom/api-table.md#type-layout-options) | `LayoutOptions` | A5 | Planned | Split membership, topology, algorithm, generation, layout and interchange families into bounded slices. |
 
