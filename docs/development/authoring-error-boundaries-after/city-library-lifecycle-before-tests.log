@@ -1,0 +1,151 @@
+bun test v1.4.2 (744846f84)
+
+tests/ui-authoring.test.ts:
+(pass) public authoring contract at the common host boundary > normalization is inert and a decoded keyed action affects only its real model [2.57ms]
+(pass) public authoring contract at the common host boundary > new exclusion does not change legacy defaults, explicit ordering or factory defaults [0.12ms]
+(pass) public authoring contract at the common host boundary > explicit getter overrides a compatible conventional getter and remains pure [0.35ms]
+(pass) public authoring contract at the common host boundary > group validation happens at normalization and keeps first occurrence without nesting [0.23ms]
+(pass) public authoring contract at the common host boundary > descriptor boundary rejects primitive confusion, nonfinite values and unknown choices [0.10ms]
+(pass) public authoring contract at the common host boundary > separate uninitialized drafts and disposed session never create or mutate a model [0.69ms]
+(pass) repeated renderer failures do not republish an unchanged error state [0.11ms]
+(pass) client session restart installs a fresh owner and clears only the prior projection failure [191.05ms]
+152 |     import { strict as assert } from 'node:assert';
+153 |     import { createSession } from './ui/svelte/session.ts';
+154 |     import { model } from './experiments/wealth-distribution/model.ts';
+155 |     ${source}
+156 |   `], { cwd: import.meta.dir + '/..', stdout: 'pipe', stderr: 'pipe' });
+157 |   expect(new TextDecoder().decode(result.stderr)).toBe('');
+                                                        ^
+error: expect(received).toBe(expected)
+
+- ""
++ "21 |       assert.equal(state.error, true);
++ 22 |       assert.equal(state.status, 'Candidate enabled failure');
++ 23 |       assert.equal(state.epoch, startWithValidOwner ? 1 : 0);
++ 24 |       assert.equal(state.initialized, startWithValidOwner);
++ 25 |       assert.equal(state.observation?.peopleCount, startWithValidOwner ? 2 : undefined);
++ 26 |       assert.deepEqual(disposed, [3], 'Only the rejected candidate is disposed');
++                   ^
++ AssertionError: Only the rejected candidate is disposed
++ + actual - expected
++ 
++ + []
++ - [
++ -   3
++ - ]
++ 
++  generatedMessage: false,
++      actual: [],
++    expected: [ 3 ],
++    operator: "deepStrictEqual",
++        diff: "simple",
++        code: "ERR_ASSERTION"
++ 
++       at /home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/[eval]:26:14
++ 
++ Bun v1.4.2 (Linux x64)
++ "
+
+- Expected  - 1
++ Received  + 26
+
+      at clientSessionCase (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/tests/ui-authoring.test.ts:157:51)
+      at <anonymous> (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/tests/ui-authoring.test.ts:162:3)
+(fail) live enabled preflight rejects first setup and restart without replacing or disposing a valid owner [135.68ms]
+152 |     import { strict as assert } from 'node:assert';
+153 |     import { createSession } from './ui/svelte/session.ts';
+154 |     import { model } from './experiments/wealth-distribution/model.ts';
+155 |     ${source}
+156 |   `], { cwd: import.meta.dir + '/..', stdout: 'pipe', stderr: 'pipe' });
+157 |   expect(new TextDecoder().decode(result.stderr)).toBe('');
+                                                        ^
+error: expect(received).toBe(expected)
+
+- ""
++ "15 |       } }, monitors: [{ label: 'Tick', value: state => state.tick }], views: [],
++ 16 |     });
++ 17 |     let state; const unsubscribe = session.subscribe(value => state = value);
++ 18 |     session.setDraft('people', 2); session.initialize();
++ 19 |     session.setDraft('people', 3); session.initialize();
++ 20 |     assert.equal(state.error, true);
++                 ^
++ AssertionError: Expected values to be strictly equal:
++ 
++ false !== true
++ 
++  generatedMessage: true,
++      actual: false,
++    expected: true,
++    operator: "strictEqual",
++        diff: "simple",
++        code: "ERR_ASSERTION"
++ 
++       at /home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/[eval]:20:12
++ 
++ Bun v1.4.2 (Linux x64)
++ "
+
+- Expected  - 1
++ Received  + 22
+
+      at clientSessionCase (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/tests/ui-authoring.test.ts:157:51)
+      at <anonymous> (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/tests/ui-authoring.test.ts:193:3)
+(fail) a callback failure after candidate preflight publishes the current owner and epoch, never disposed-owner state [197.68ms]
+152 |     import { strict as assert } from 'node:assert';
+153 |     import { createSession } from './ui/svelte/session.ts';
+154 |     import { model } from './experiments/wealth-distribution/model.ts';
+155 |     ${source}
+156 |   `], { cwd: import.meta.dir + '/..', stdout: 'pipe', stderr: 'pipe' });
+157 |   expect(new TextDecoder().decode(result.stderr)).toBe('');
+                                                        ^
+error: expect(received).toBe(expected)
+
+- ""
++ " 9 |       format(value) { if (value === 1) throw Error('Primary formatter failure'); return String(value); },
++ 10 |     }], views: [] });
++ 11 |     let state; const unsubscribe = session.subscribe(value => state = value);
++ 12 |     session.setDraft('people', 2); session.initialize(); session.step(1);
++ 13 |     assert.equal(state.error, true); assert.equal(state.status, 'Primary formatter failure');
++ 14 |     assert.doesNotThrow(() => session.setDraft('people', 3));
++                 ^
++ AssertionError: Got unwanted exception.
++ Actual message: "Primary formatter failure"
++  generatedMessage: false,
++    expected: undefined,
++    operator: "doesNotThrow",
++        diff: "simple",
++        code: "ERR_ASSERTION"
++ 
++       at /home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/[eval]:14:12
++ 
++ 4 |     import { model } from './experiments/wealth-distribution/model.ts';
++ 5 | 
++ 6 |     const created = [];
++ 7 |     const definition = { ...model, create(options) { const actual = model.create(options); created.push(actual); return actual; } };
++ 8 |     const session = createSession(definition, { setup: ['people'], monitors: [{ label: 'Tick', value: state => state.tick,
++ 9 |       format(value) { if (value === 1) throw Error('Primary formatter failure'); return String(value); },
++                                                  ^
++ error: Primary formatter failure
++       at format (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/[eval]:9:46)
++       at <anonymous> (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts:103:123)
++       at map (1:11)
++       at publish (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts:103:51)
++       at setDraft (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts:200:146)
++       at getActual (node:assert:340:7)
++       at doesNotThrow (node:assert:443:41)
++       at /home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/[eval]:14:12
++ 
++ Bun v1.4.2 (Linux x64)
++ "
+
+- Expected  - 1
++ Received  + 36
+
+      at clientSessionCase (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/tests/ui-authoring.test.ts:157:51)
+      at <anonymous> (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/tests/ui-authoring.test.ts:225:3)
+(fail) persistent formatter failure keeps draft and speed current, preserves the primary error and recovers on restart [111.53ms]
+
+ 8 pass
+ 3 fail
+ 50 expect() calls
+Ran 11 tests across 1 file. [682.00ms]

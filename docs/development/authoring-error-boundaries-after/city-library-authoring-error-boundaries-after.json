@@ -1,0 +1,4320 @@
+{
+  "phase": "after",
+  "method": "Real Wealth tracked factory + publicdefineUI adapter; actualDOM controls; no private Session access or domain state writes",
+  "cases": [
+    {
+      "host": "legacy",
+      "scenario": "enabled-replacement",
+      "pageErrors": [],
+      "console": [
+        {
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "location": {
+            "url": "http://127.0.0.1:3110/favicon.ico",
+            "line": 0,
+            "column": 0,
+            "lineNumber": 0,
+            "columnNumber": 0
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/app.ts",
+          "status": 200,
+          "sha256": "b2cb10c673b6145f9a4be02fad6c0db0b526a1c0222b561f749bbf10aeb53289"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/App.svelte",
+          "status": 200,
+          "sha256": "61bb456c1831af61d2d61b0b3eb5a44847af74ba299a71c4292eda969791a49a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/shell.css",
+          "status": 200,
+          "sha256": "f775e884c4656b3bcdae1646175807fd519364c041883a7f616492e3dd5f50a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/index.ts",
+          "status": 200,
+          "sha256": "c5bc48c8e7300ed519ed49fa171af17a9fbd1dfdb6ca298cb64e264a95c89e3a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/index.ts",
+          "status": 200,
+          "sha256": "b9a534cca3ed229ab6977087bdc2344a90406360c3452e377ec339279bf1390f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/index.ts",
+          "status": 200,
+          "sha256": "429dd8eaa6a7c346c786bfd1c761d198848d70705122ae4d9c4badea65642da2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/legacy-host.css?url",
+          "status": 200,
+          "sha256": "853a33d8679e2463bd796b6675f787b58cf0fabbc0bbd014746f39d765158643"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/input.svelte",
+          "status": 200,
+          "sha256": "872d8768bd97e974588e4e8485922d4ee9ac315589cfd83743640a1d98c0a348"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/button.svelte",
+          "status": 200,
+          "sha256": "d965944b5bdfac40f18fe200d40c050ea963cf9d04b8c0732dc686faec6d79a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-content.svelte",
+          "status": 200,
+          "sha256": "0fe60a773e6b7d9c11a2f321646bc695b8664e80f7d99f3a31fc413e300ba038"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group-heading.svelte",
+          "status": 200,
+          "sha256": "1249d99bf87f604b8a1df5f65a681ea67b6c8e7495f9645e8bb7990c3b6a4b00"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group.svelte",
+          "status": 200,
+          "sha256": "03eab89bb91e74317ff7149f4eb9674644722635c6379d246e5e72f2c4f0469f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-label.svelte",
+          "status": 200,
+          "sha256": "39a277d9e92d7d4b8290bef47dddacdf65a94f97b025ff03f06a6a6cf650bfe5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-portal.svelte",
+          "status": 200,
+          "sha256": "f11bf2ee4afe6c2043163f52eb308478f332de3bbb87d067b1e2f2b008c2fda7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-item.svelte",
+          "status": 200,
+          "sha256": "ff0db7433727357d35c1263e55a0e8f9c45bf98b3747468356d6f59585e88d35"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-separator.svelte",
+          "status": 200,
+          "sha256": "beca44601ed0853f85274bcb89030a957fb0db3229cca8fd91b7911ed744e609"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-down-button.svelte",
+          "status": 200,
+          "sha256": "22a32cbb2d814f6028b9f97a072eb9a41847f5f928153b392e05b7c9f240c0cb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-value.svelte",
+          "status": 200,
+          "sha256": "1f839cd82ebf4b86ef7e5b1e504bcf425a33dd375b93d1004b02736d317729a2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-up-button.svelte",
+          "status": 200,
+          "sha256": "2c2e99af3af0ce8599b367f745d22263cc891339da009afaf5dbcd6d7421569c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select.svelte",
+          "status": 200,
+          "sha256": "55e110225733ca94d392906bbbc6155e4358f5083c2ccf468650b21d70844a1b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-trigger.svelte",
+          "status": 200,
+          "sha256": "14450b2cfcb83422f3acd41ee53886392465393970d23f1be721e4b8659a5587"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/utils.ts",
+          "status": 200,
+          "sha256": "e0238d24abcc3131837e14fc10455cb4ed221ff3607ccf447ddff0556d57e963"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/index.ts",
+          "status": 200,
+          "sha256": "c4f00a49e7f8dac85819a10345bb285a7750053d0e79254d8aedf93f6d52ef54"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/separator.svelte",
+          "status": 200,
+          "sha256": "52cdf9e94f788f776db0db93d6725d1494a35dcbed8c68920d9034f103d75bb9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/index.ts",
+          "status": 200,
+          "sha256": "58f9224d272640e92143d598143e50ec4b5beb0d53986baff4c4617e0d34b397"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-color.ts",
+          "status": 200,
+          "sha256": "567c46d71deab4dce88a72615cf71718e0e6838832e8c0f08a78f066a4abc618"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/compose.ts",
+          "status": 200,
+          "sha256": "d9a0796d93bade3a31222f58005d8561d627d476ac673acf9f8bcf4cf37304fb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/Workbench.svelte",
+          "status": 200,
+          "sha256": "323a867848beaf3b5509934838bfbe05d0fc40fb579aa791381511cab50968bc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts",
+          "status": 200,
+          "sha256": "ad42c2d1a2d9a64211f6637e0309ca4b52c13582626f48cdb0645c05e519db07"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-colors.ts",
+          "status": 200,
+          "sha256": "f774ca702ec3cb12e3c29d4e871aa11ae756ee15e3aa0370c23ac12597337272"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/index.ts",
+          "status": 200,
+          "sha256": "7f926e32202a67b136a557ded172ecd394d8c32cfc65d06e1eda11eaaac418a7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/index.ts",
+          "status": 200,
+          "sha256": "62ab5d5c13537817a95f4d79c435e4471ff6c287c8461c0ff5709a51baca495e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/index.ts",
+          "status": 200,
+          "sha256": "ff3fe7c631d1c2b3bd8243f3888c407e3e2d9d97944623c3d5c33ecda8f39d72"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/ParameterField.svelte",
+          "status": 200,
+          "sha256": "d27cf2045407a226ea2981de5fc3453209a289b658c938fb48f59f33e0169a1f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/workbench.css",
+          "status": 200,
+          "sha256": "a2894f166f3ac62325d45461c0079d5c1f1101fad66c1024b3b5003027c125a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/playback.ts",
+          "status": 200,
+          "sha256": "8701cb21d7341c8f589ccae2617f901304adad6bc673acc08f7ef376de303cf2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/View.svelte",
+          "status": 200,
+          "sha256": "32917c71c9902c8d23d1b614b6842c8b36978a0ab843d15a61acdb5c9a0c2945"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/authoring.ts",
+          "status": 200,
+          "sha256": "f3bff3e0b2e9a46122919595de00c702fc2ea8aa27360bae927559e4f97c2baf"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/actions/repeat.ts",
+          "status": 200,
+          "sha256": "915b3892813521948e2e6e991c7e4b7872fe16a76a0002f9d9b305114766f20a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-content.svelte",
+          "status": 200,
+          "sha256": "15161d9823860dec392743e3310341b61798cc2b40067fb58c2ead899aea25a4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-description.svelte",
+          "status": 200,
+          "sha256": "688d8122a3658809dc656c7ca7df6793777a9c0f21a3f79dad9fd26a65429827"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-group.svelte",
+          "status": 200,
+          "sha256": "9314d56caaa70dd1b3a3caf9e46b931403255ec15d88bed50faac6f349ff1bd8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-error.svelte",
+          "status": 200,
+          "sha256": "75047e568b990ebf4153a6376f2224cf266a48c6ac4ba4c3655cd30749fae51b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-label.svelte",
+          "status": 200,
+          "sha256": "363ac593c5be0e0b2f50ac98328e2150da7b39d7550279ae3633fd89641d4b86"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-legend.svelte",
+          "status": 200,
+          "sha256": "54b7c4c4e23ec23c60389e320eeb632b2eaf29ba20f1af4dcb113faae0beba78"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-set.svelte",
+          "status": 200,
+          "sha256": "0ce786174ef7a4e3454006dcf9eafaf42a11e3cf434aac7ba8ade347105d15eb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-separator.svelte",
+          "status": 200,
+          "sha256": "0391ba6a704e082fbddd2a6a1f29d5d9912149e9108b0efd2494c7ba2535481f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-title.svelte",
+          "status": 200,
+          "sha256": "049741c95fe1215c6cbe5253733a3e32c4e967bd834badb9707938a6d32332f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-content.svelte",
+          "status": 200,
+          "sha256": "6978c2e6defc51418bbff526293365ea3427666a1ef4aef3a87269620a7e06ce"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field.svelte",
+          "status": 200,
+          "sha256": "0f92e82ba9188cbd83db9fb029efa9df294e4e9c5c27b8f69fc8c4bf811c24f8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-trigger.svelte",
+          "status": 200,
+          "sha256": "8d0ebb15624e618ec62977f22ff89d7201845c5b77cd8d28eedecf0181724ac1"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible.svelte",
+          "status": 200,
+          "sha256": "ec1ac2ee9b761163d115d979dada09cd3005a9b1e872e6f986e459d69fa88ff5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/slider.svelte",
+          "status": 200,
+          "sha256": "8968de1296eb735455f3682b62a908e20808ae18bcd9445d279650a243ee60a9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/index.ts",
+          "status": 200,
+          "sha256": "4e99822582382a721e12303c7c6bc00f49e3306e8210586d3b68fc7b0dace0df"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/index.ts",
+          "status": 200,
+          "sha256": "6a6c698c03862ba1060b0f2728c6b96f889d3301ceebe78182cb29c67210e2f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/index.ts",
+          "status": 200,
+          "sha256": "3df55781552c050293b73d9a8693789508d87ae57fd47a46b9f7b348b67499f0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/chart.ts",
+          "status": 200,
+          "sha256": "4cd6b051d6b1a35631e56eb914d157b76b9a38207d36a38651289cc215fc895b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/canvas.ts",
+          "status": 200,
+          "sha256": "c853db128163c34d1e2113f7bf2efd91c4ae1fdcf5110fb3fd4292acb0fb760a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/network.ts",
+          "status": 200,
+          "sha256": "07cbd5079c0bf9246b747968c991160d03563b1994be448ffbcf70dfbed162ab"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/theme.ts",
+          "status": 200,
+          "sha256": "47f45915093bafcd0fd34458fea4b967ac908448db8788daa7d998caee46b498"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/views.css",
+          "status": 200,
+          "sha256": "bf9fb3be98238da8291770f799130bc4ba2b15ccd0d584c70f779bd892379b2f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/label.svelte",
+          "status": 200,
+          "sha256": "f8f9147199a1723467565c6841c0cf7225826006224fe0d53f70fca96f26c15e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-body.svelte",
+          "status": 200,
+          "sha256": "5ef8119c8aa9a8452a176286ba6354eb0f6472324b98f105452a92d1b77b18a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/checkbox.svelte",
+          "status": 200,
+          "sha256": "baea796ad4d0011635fcd1e40cbe6a38bb74a480fa7762c88e89e3aa51ac6dfc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-caption.svelte",
+          "status": 200,
+          "sha256": "53c367cf4a15542bbed6963d9edef8f8dfb8d041afc6ba14796055dd7abfb841"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-cell.svelte",
+          "status": 200,
+          "sha256": "b9c859d80310c582e85e42120d5cecaa08e470be84c650b0a498c8763f2af646"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-footer.svelte",
+          "status": 200,
+          "sha256": "7cfed9d3e5a48d1e7273315084ea1922255b4df039dd5c94ffb45f534010ad7c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-head.svelte",
+          "status": 200,
+          "sha256": "a75800e91b04b79933944fc424a39958cca8c576af36f860c5e4d75a3de22dfd"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-header.svelte",
+          "status": 200,
+          "sha256": "162bff620a9efeb335ffad68daeca14230d252b4754f48d23197c5dc6ed03ae3"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-row.svelte",
+          "status": 200,
+          "sha256": "c7c47929d4ab205dc4bb0e1cc856a47b6145f4bc30cc902b384fab3b6b56e2a0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table.svelte",
+          "status": 200,
+          "sha256": "631b7aba9609d4f7a8e3cc3d952830bb3026d963769926c6bf00d812cd34e451"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/index.ts",
+          "status": 200,
+          "sha256": "2a912684cb470b450ac063a7dab7332c90443ee3b9a4ba7c1308d0024b8feefc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/compose.ts",
+          "status": 200,
+          "sha256": "13fa468433df1b284bb16a348ed5da521b2ae4e49a7dd728a59b55221045cb8d"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/controls/form.ts",
+          "status": 200,
+          "sha256": "447f3597ae16d271b9255754f0012428d49bc170e8a66f7225ce0c8599c444ed"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/wealth-distribution/model.ts",
+          "status": 200,
+          "sha256": "20be9265cac3d6b2a5c4555807e43aab409ec5e604c31cb56bbc25d1f493608d"
+        }
+      ],
+      "states": [
+        {
+          "label": "first setup",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              }
+            ]
+          },
+          "text": "PeopleSetup\nRun1 step10 steps100 stepsSpeed\nObserved instance\n1\nPeople\n2\nTick\n0\nGrowth Amount\n\nModel initialized.\n\nModel info\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "2"
+            },
+            {
+              "name": "",
+              "value": "5"
+            },
+            {
+              "name": "live-growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "replacement enabled failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 0
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 2
+              }
+            ]
+          },
+          "text": "PeopleSetup\nRun1 step10 steps100 stepsSpeed\nObserved instance\n2\nPeople\n3\nTick\n0\nGrowth Amount\n\nEnabled failure\n\nModel info",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "",
+              "value": "5"
+            },
+            {
+              "name": "live-growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "after fixture disposal",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 0
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 2
+              }
+            ]
+          },
+          "text": "",
+          "inputs": [],
+          "pageErrors": []
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-replacement-1366-light-error.png",
+          "state": "replacement enabled failure",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-replacement-1366-dark-error.png",
+          "state": "replacement enabled failure",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-replacement-390-light-error.png",
+          "state": "replacement enabled failure",
+          "colorScheme": "light",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-replacement-390-dark-error.png",
+          "state": "replacement enabled failure",
+          "colorScheme": "dark",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-replacement-light.png",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-replacement-dark.png",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "host": "legacy",
+      "scenario": "enabled-first-setup",
+      "pageErrors": [],
+      "console": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/app.ts",
+          "status": 200,
+          "sha256": "b2cb10c673b6145f9a4be02fad6c0db0b526a1c0222b561f749bbf10aeb53289"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/App.svelte",
+          "status": 200,
+          "sha256": "61bb456c1831af61d2d61b0b3eb5a44847af74ba299a71c4292eda969791a49a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/shell.css",
+          "status": 200,
+          "sha256": "f775e884c4656b3bcdae1646175807fd519364c041883a7f616492e3dd5f50a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/index.ts",
+          "status": 200,
+          "sha256": "c5bc48c8e7300ed519ed49fa171af17a9fbd1dfdb6ca298cb64e264a95c89e3a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/index.ts",
+          "status": 200,
+          "sha256": "b9a534cca3ed229ab6977087bdc2344a90406360c3452e377ec339279bf1390f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/index.ts",
+          "status": 200,
+          "sha256": "429dd8eaa6a7c346c786bfd1c761d198848d70705122ae4d9c4badea65642da2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/legacy-host.css?url",
+          "status": 200,
+          "sha256": "853a33d8679e2463bd796b6675f787b58cf0fabbc0bbd014746f39d765158643"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/input.svelte",
+          "status": 200,
+          "sha256": "872d8768bd97e974588e4e8485922d4ee9ac315589cfd83743640a1d98c0a348"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/button.svelte",
+          "status": 200,
+          "sha256": "d965944b5bdfac40f18fe200d40c050ea963cf9d04b8c0732dc686faec6d79a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-content.svelte",
+          "status": 200,
+          "sha256": "0fe60a773e6b7d9c11a2f321646bc695b8664e80f7d99f3a31fc413e300ba038"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group-heading.svelte",
+          "status": 200,
+          "sha256": "1249d99bf87f604b8a1df5f65a681ea67b6c8e7495f9645e8bb7990c3b6a4b00"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group.svelte",
+          "status": 200,
+          "sha256": "03eab89bb91e74317ff7149f4eb9674644722635c6379d246e5e72f2c4f0469f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-item.svelte",
+          "status": 200,
+          "sha256": "ff0db7433727357d35c1263e55a0e8f9c45bf98b3747468356d6f59585e88d35"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-label.svelte",
+          "status": 200,
+          "sha256": "39a277d9e92d7d4b8290bef47dddacdf65a94f97b025ff03f06a6a6cf650bfe5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-portal.svelte",
+          "status": 200,
+          "sha256": "f11bf2ee4afe6c2043163f52eb308478f332de3bbb87d067b1e2f2b008c2fda7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-down-button.svelte",
+          "status": 200,
+          "sha256": "22a32cbb2d814f6028b9f97a072eb9a41847f5f928153b392e05b7c9f240c0cb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-up-button.svelte",
+          "status": 200,
+          "sha256": "2c2e99af3af0ce8599b367f745d22263cc891339da009afaf5dbcd6d7421569c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-separator.svelte",
+          "status": 200,
+          "sha256": "beca44601ed0853f85274bcb89030a957fb0db3229cca8fd91b7911ed744e609"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-trigger.svelte",
+          "status": 200,
+          "sha256": "14450b2cfcb83422f3acd41ee53886392465393970d23f1be721e4b8659a5587"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-value.svelte",
+          "status": 200,
+          "sha256": "1f839cd82ebf4b86ef7e5b1e504bcf425a33dd375b93d1004b02736d317729a2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select.svelte",
+          "status": 200,
+          "sha256": "55e110225733ca94d392906bbbc6155e4358f5083c2ccf468650b21d70844a1b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/utils.ts",
+          "status": 200,
+          "sha256": "e0238d24abcc3131837e14fc10455cb4ed221ff3607ccf447ddff0556d57e963"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/index.ts",
+          "status": 200,
+          "sha256": "c4f00a49e7f8dac85819a10345bb285a7750053d0e79254d8aedf93f6d52ef54"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/separator.svelte",
+          "status": 200,
+          "sha256": "52cdf9e94f788f776db0db93d6725d1494a35dcbed8c68920d9034f103d75bb9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/index.ts",
+          "status": 200,
+          "sha256": "58f9224d272640e92143d598143e50ec4b5beb0d53986baff4c4617e0d34b397"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/compose.ts",
+          "status": 200,
+          "sha256": "d9a0796d93bade3a31222f58005d8561d627d476ac673acf9f8bcf4cf37304fb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-color.ts",
+          "status": 200,
+          "sha256": "567c46d71deab4dce88a72615cf71718e0e6838832e8c0f08a78f066a4abc618"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/Workbench.svelte",
+          "status": 200,
+          "sha256": "323a867848beaf3b5509934838bfbe05d0fc40fb579aa791381511cab50968bc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts",
+          "status": 200,
+          "sha256": "ad42c2d1a2d9a64211f6637e0309ca4b52c13582626f48cdb0645c05e519db07"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-colors.ts",
+          "status": 200,
+          "sha256": "f774ca702ec3cb12e3c29d4e871aa11ae756ee15e3aa0370c23ac12597337272"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/index.ts",
+          "status": 200,
+          "sha256": "7f926e32202a67b136a557ded172ecd394d8c32cfc65d06e1eda11eaaac418a7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/index.ts",
+          "status": 200,
+          "sha256": "62ab5d5c13537817a95f4d79c435e4471ff6c287c8461c0ff5709a51baca495e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/index.ts",
+          "status": 200,
+          "sha256": "ff3fe7c631d1c2b3bd8243f3888c407e3e2d9d97944623c3d5c33ecda8f39d72"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/ParameterField.svelte",
+          "status": 200,
+          "sha256": "d27cf2045407a226ea2981de5fc3453209a289b658c938fb48f59f33e0169a1f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/View.svelte",
+          "status": 200,
+          "sha256": "32917c71c9902c8d23d1b614b6842c8b36978a0ab843d15a61acdb5c9a0c2945"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/workbench.css",
+          "status": 200,
+          "sha256": "a2894f166f3ac62325d45461c0079d5c1f1101fad66c1024b3b5003027c125a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/authoring.ts",
+          "status": 200,
+          "sha256": "f3bff3e0b2e9a46122919595de00c702fc2ea8aa27360bae927559e4f97c2baf"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/playback.ts",
+          "status": 200,
+          "sha256": "8701cb21d7341c8f589ccae2617f901304adad6bc673acc08f7ef376de303cf2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/actions/repeat.ts",
+          "status": 200,
+          "sha256": "915b3892813521948e2e6e991c7e4b7872fe16a76a0002f9d9b305114766f20a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-content.svelte",
+          "status": 200,
+          "sha256": "15161d9823860dec392743e3310341b61798cc2b40067fb58c2ead899aea25a4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-description.svelte",
+          "status": 200,
+          "sha256": "688d8122a3658809dc656c7ca7df6793777a9c0f21a3f79dad9fd26a65429827"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-error.svelte",
+          "status": 200,
+          "sha256": "75047e568b990ebf4153a6376f2224cf266a48c6ac4ba4c3655cd30749fae51b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-group.svelte",
+          "status": 200,
+          "sha256": "9314d56caaa70dd1b3a3caf9e46b931403255ec15d88bed50faac6f349ff1bd8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-label.svelte",
+          "status": 200,
+          "sha256": "363ac593c5be0e0b2f50ac98328e2150da7b39d7550279ae3633fd89641d4b86"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-legend.svelte",
+          "status": 200,
+          "sha256": "54b7c4c4e23ec23c60389e320eeb632b2eaf29ba20f1af4dcb113faae0beba78"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-separator.svelte",
+          "status": 200,
+          "sha256": "0391ba6a704e082fbddd2a6a1f29d5d9912149e9108b0efd2494c7ba2535481f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-set.svelte",
+          "status": 200,
+          "sha256": "0ce786174ef7a4e3454006dcf9eafaf42a11e3cf434aac7ba8ade347105d15eb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-title.svelte",
+          "status": 200,
+          "sha256": "049741c95fe1215c6cbe5253733a3e32c4e967bd834badb9707938a6d32332f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field.svelte",
+          "status": 200,
+          "sha256": "0f92e82ba9188cbd83db9fb029efa9df294e4e9c5c27b8f69fc8c4bf811c24f8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-content.svelte",
+          "status": 200,
+          "sha256": "6978c2e6defc51418bbff526293365ea3427666a1ef4aef3a87269620a7e06ce"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-trigger.svelte",
+          "status": 200,
+          "sha256": "8d0ebb15624e618ec62977f22ff89d7201845c5b77cd8d28eedecf0181724ac1"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible.svelte",
+          "status": 200,
+          "sha256": "ec1ac2ee9b761163d115d979dada09cd3005a9b1e872e6f986e459d69fa88ff5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/slider.svelte",
+          "status": 200,
+          "sha256": "8968de1296eb735455f3682b62a908e20808ae18bcd9445d279650a243ee60a9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/index.ts",
+          "status": 200,
+          "sha256": "4e99822582382a721e12303c7c6bc00f49e3306e8210586d3b68fc7b0dace0df"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/index.ts",
+          "status": 200,
+          "sha256": "6a6c698c03862ba1060b0f2728c6b96f889d3301ceebe78182cb29c67210e2f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/index.ts",
+          "status": 200,
+          "sha256": "3df55781552c050293b73d9a8693789508d87ae57fd47a46b9f7b348b67499f0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/canvas.ts",
+          "status": 200,
+          "sha256": "c853db128163c34d1e2113f7bf2efd91c4ae1fdcf5110fb3fd4292acb0fb760a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/network.ts",
+          "status": 200,
+          "sha256": "07cbd5079c0bf9246b747968c991160d03563b1994be448ffbcf70dfbed162ab"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/chart.ts",
+          "status": 200,
+          "sha256": "4cd6b051d6b1a35631e56eb914d157b76b9a38207d36a38651289cc215fc895b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/theme.ts",
+          "status": 200,
+          "sha256": "47f45915093bafcd0fd34458fea4b967ac908448db8788daa7d998caee46b498"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/views.css",
+          "status": 200,
+          "sha256": "bf9fb3be98238da8291770f799130bc4ba2b15ccd0d584c70f779bd892379b2f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/checkbox.svelte",
+          "status": 200,
+          "sha256": "baea796ad4d0011635fcd1e40cbe6a38bb74a480fa7762c88e89e3aa51ac6dfc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/label.svelte",
+          "status": 200,
+          "sha256": "f8f9147199a1723467565c6841c0cf7225826006224fe0d53f70fca96f26c15e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-body.svelte",
+          "status": 200,
+          "sha256": "5ef8119c8aa9a8452a176286ba6354eb0f6472324b98f105452a92d1b77b18a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-caption.svelte",
+          "status": 200,
+          "sha256": "53c367cf4a15542bbed6963d9edef8f8dfb8d041afc6ba14796055dd7abfb841"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-cell.svelte",
+          "status": 200,
+          "sha256": "b9c859d80310c582e85e42120d5cecaa08e470be84c650b0a498c8763f2af646"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-footer.svelte",
+          "status": 200,
+          "sha256": "7cfed9d3e5a48d1e7273315084ea1922255b4df039dd5c94ffb45f534010ad7c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-head.svelte",
+          "status": 200,
+          "sha256": "a75800e91b04b79933944fc424a39958cca8c576af36f860c5e4d75a3de22dfd"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-header.svelte",
+          "status": 200,
+          "sha256": "162bff620a9efeb335ffad68daeca14230d252b4754f48d23197c5dc6ed03ae3"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-row.svelte",
+          "status": 200,
+          "sha256": "c7c47929d4ab205dc4bb0e1cc856a47b6145f4bc30cc902b384fab3b6b56e2a0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table.svelte",
+          "status": 200,
+          "sha256": "631b7aba9609d4f7a8e3cc3d952830bb3026d963769926c6bf00d812cd34e451"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/index.ts",
+          "status": 200,
+          "sha256": "2a912684cb470b450ac063a7dab7332c90443ee3b9a4ba7c1308d0024b8feefc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/compose.ts",
+          "status": 200,
+          "sha256": "13fa468433df1b284bb16a348ed5da521b2ae4e49a7dd728a59b55221045cb8d"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/controls/form.ts",
+          "status": 200,
+          "sha256": "447f3597ae16d271b9255754f0012428d49bc170e8a66f7225ce0c8599c444ed"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/wealth-distribution/model.ts",
+          "status": 200,
+          "sha256": "20be9265cac3d6b2a5c4555807e43aab409ec5e604c31cb56bbc25d1f493608d"
+        }
+      ],
+      "states": [
+        {
+          "label": "first setup",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              }
+            ]
+          },
+          "text": "PeopleSetup\nRun1 step10 steps100 stepsSpeed\nObserved instance\n1\nPeople\n3\nTick\n0\nGrowth Amount\n\nEnabled failure\n\nModel info",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "",
+              "value": "5"
+            },
+            {
+              "name": "live-growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "after fixture disposal",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              }
+            ]
+          },
+          "text": "",
+          "inputs": [],
+          "pageErrors": []
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-first-setup-1366-light-error.png",
+          "state": "first setup",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-first-setup-1366-dark-error.png",
+          "state": "first setup",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-first-setup-390-light-error.png",
+          "state": "first setup",
+          "colorScheme": "light",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-first-setup-390-dark-error.png",
+          "state": "first setup",
+          "colorScheme": "dark",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-first-setup-light.png",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-enabled-first-setup-dark.png",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "host": "legacy",
+      "scenario": "formatter",
+      "pageErrors": [],
+      "console": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/app.ts",
+          "status": 200,
+          "sha256": "b2cb10c673b6145f9a4be02fad6c0db0b526a1c0222b561f749bbf10aeb53289"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/App.svelte",
+          "status": 200,
+          "sha256": "61bb456c1831af61d2d61b0b3eb5a44847af74ba299a71c4292eda969791a49a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/shell.css",
+          "status": 200,
+          "sha256": "f775e884c4656b3bcdae1646175807fd519364c041883a7f616492e3dd5f50a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/index.ts",
+          "status": 200,
+          "sha256": "c5bc48c8e7300ed519ed49fa171af17a9fbd1dfdb6ca298cb64e264a95c89e3a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/index.ts",
+          "status": 200,
+          "sha256": "b9a534cca3ed229ab6977087bdc2344a90406360c3452e377ec339279bf1390f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/index.ts",
+          "status": 200,
+          "sha256": "429dd8eaa6a7c346c786bfd1c761d198848d70705122ae4d9c4badea65642da2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/legacy-host.css?url",
+          "status": 200,
+          "sha256": "853a33d8679e2463bd796b6675f787b58cf0fabbc0bbd014746f39d765158643"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/input.svelte",
+          "status": 200,
+          "sha256": "872d8768bd97e974588e4e8485922d4ee9ac315589cfd83743640a1d98c0a348"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/button.svelte",
+          "status": 200,
+          "sha256": "d965944b5bdfac40f18fe200d40c050ea963cf9d04b8c0732dc686faec6d79a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-content.svelte",
+          "status": 200,
+          "sha256": "0fe60a773e6b7d9c11a2f321646bc695b8664e80f7d99f3a31fc413e300ba038"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group-heading.svelte",
+          "status": 200,
+          "sha256": "1249d99bf87f604b8a1df5f65a681ea67b6c8e7495f9645e8bb7990c3b6a4b00"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group.svelte",
+          "status": 200,
+          "sha256": "03eab89bb91e74317ff7149f4eb9674644722635c6379d246e5e72f2c4f0469f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-item.svelte",
+          "status": 200,
+          "sha256": "ff0db7433727357d35c1263e55a0e8f9c45bf98b3747468356d6f59585e88d35"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-label.svelte",
+          "status": 200,
+          "sha256": "39a277d9e92d7d4b8290bef47dddacdf65a94f97b025ff03f06a6a6cf650bfe5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-portal.svelte",
+          "status": 200,
+          "sha256": "f11bf2ee4afe6c2043163f52eb308478f332de3bbb87d067b1e2f2b008c2fda7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-down-button.svelte",
+          "status": 200,
+          "sha256": "22a32cbb2d814f6028b9f97a072eb9a41847f5f928153b392e05b7c9f240c0cb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-up-button.svelte",
+          "status": 200,
+          "sha256": "2c2e99af3af0ce8599b367f745d22263cc891339da009afaf5dbcd6d7421569c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-separator.svelte",
+          "status": 200,
+          "sha256": "beca44601ed0853f85274bcb89030a957fb0db3229cca8fd91b7911ed744e609"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-trigger.svelte",
+          "status": 200,
+          "sha256": "14450b2cfcb83422f3acd41ee53886392465393970d23f1be721e4b8659a5587"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-value.svelte",
+          "status": 200,
+          "sha256": "1f839cd82ebf4b86ef7e5b1e504bcf425a33dd375b93d1004b02736d317729a2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select.svelte",
+          "status": 200,
+          "sha256": "55e110225733ca94d392906bbbc6155e4358f5083c2ccf468650b21d70844a1b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/utils.ts",
+          "status": 200,
+          "sha256": "e0238d24abcc3131837e14fc10455cb4ed221ff3607ccf447ddff0556d57e963"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/index.ts",
+          "status": 200,
+          "sha256": "c4f00a49e7f8dac85819a10345bb285a7750053d0e79254d8aedf93f6d52ef54"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/separator.svelte",
+          "status": 200,
+          "sha256": "52cdf9e94f788f776db0db93d6725d1494a35dcbed8c68920d9034f103d75bb9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/index.ts",
+          "status": 200,
+          "sha256": "58f9224d272640e92143d598143e50ec4b5beb0d53986baff4c4617e0d34b397"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/compose.ts",
+          "status": 200,
+          "sha256": "d9a0796d93bade3a31222f58005d8561d627d476ac673acf9f8bcf4cf37304fb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-color.ts",
+          "status": 200,
+          "sha256": "567c46d71deab4dce88a72615cf71718e0e6838832e8c0f08a78f066a4abc618"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/Workbench.svelte",
+          "status": 200,
+          "sha256": "323a867848beaf3b5509934838bfbe05d0fc40fb579aa791381511cab50968bc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts",
+          "status": 200,
+          "sha256": "ad42c2d1a2d9a64211f6637e0309ca4b52c13582626f48cdb0645c05e519db07"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-colors.ts",
+          "status": 200,
+          "sha256": "f774ca702ec3cb12e3c29d4e871aa11ae756ee15e3aa0370c23ac12597337272"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/index.ts",
+          "status": 200,
+          "sha256": "7f926e32202a67b136a557ded172ecd394d8c32cfc65d06e1eda11eaaac418a7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/index.ts",
+          "status": 200,
+          "sha256": "62ab5d5c13537817a95f4d79c435e4471ff6c287c8461c0ff5709a51baca495e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/index.ts",
+          "status": 200,
+          "sha256": "ff3fe7c631d1c2b3bd8243f3888c407e3e2d9d97944623c3d5c33ecda8f39d72"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/ParameterField.svelte",
+          "status": 200,
+          "sha256": "d27cf2045407a226ea2981de5fc3453209a289b658c938fb48f59f33e0169a1f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/workbench.css",
+          "status": 200,
+          "sha256": "a2894f166f3ac62325d45461c0079d5c1f1101fad66c1024b3b5003027c125a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/View.svelte",
+          "status": 200,
+          "sha256": "32917c71c9902c8d23d1b614b6842c8b36978a0ab843d15a61acdb5c9a0c2945"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/authoring.ts",
+          "status": 200,
+          "sha256": "f3bff3e0b2e9a46122919595de00c702fc2ea8aa27360bae927559e4f97c2baf"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/playback.ts",
+          "status": 200,
+          "sha256": "8701cb21d7341c8f589ccae2617f901304adad6bc673acc08f7ef376de303cf2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/actions/repeat.ts",
+          "status": 200,
+          "sha256": "915b3892813521948e2e6e991c7e4b7872fe16a76a0002f9d9b305114766f20a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-content.svelte",
+          "status": 200,
+          "sha256": "15161d9823860dec392743e3310341b61798cc2b40067fb58c2ead899aea25a4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-description.svelte",
+          "status": 200,
+          "sha256": "688d8122a3658809dc656c7ca7df6793777a9c0f21a3f79dad9fd26a65429827"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-error.svelte",
+          "status": 200,
+          "sha256": "75047e568b990ebf4153a6376f2224cf266a48c6ac4ba4c3655cd30749fae51b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-group.svelte",
+          "status": 200,
+          "sha256": "9314d56caaa70dd1b3a3caf9e46b931403255ec15d88bed50faac6f349ff1bd8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-label.svelte",
+          "status": 200,
+          "sha256": "363ac593c5be0e0b2f50ac98328e2150da7b39d7550279ae3633fd89641d4b86"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-legend.svelte",
+          "status": 200,
+          "sha256": "54b7c4c4e23ec23c60389e320eeb632b2eaf29ba20f1af4dcb113faae0beba78"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-separator.svelte",
+          "status": 200,
+          "sha256": "0391ba6a704e082fbddd2a6a1f29d5d9912149e9108b0efd2494c7ba2535481f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-set.svelte",
+          "status": 200,
+          "sha256": "0ce786174ef7a4e3454006dcf9eafaf42a11e3cf434aac7ba8ade347105d15eb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-title.svelte",
+          "status": 200,
+          "sha256": "049741c95fe1215c6cbe5253733a3e32c4e967bd834badb9707938a6d32332f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field.svelte",
+          "status": 200,
+          "sha256": "0f92e82ba9188cbd83db9fb029efa9df294e4e9c5c27b8f69fc8c4bf811c24f8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-content.svelte",
+          "status": 200,
+          "sha256": "6978c2e6defc51418bbff526293365ea3427666a1ef4aef3a87269620a7e06ce"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-trigger.svelte",
+          "status": 200,
+          "sha256": "8d0ebb15624e618ec62977f22ff89d7201845c5b77cd8d28eedecf0181724ac1"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible.svelte",
+          "status": 200,
+          "sha256": "ec1ac2ee9b761163d115d979dada09cd3005a9b1e872e6f986e459d69fa88ff5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/slider.svelte",
+          "status": 200,
+          "sha256": "8968de1296eb735455f3682b62a908e20808ae18bcd9445d279650a243ee60a9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/index.ts",
+          "status": 200,
+          "sha256": "4e99822582382a721e12303c7c6bc00f49e3306e8210586d3b68fc7b0dace0df"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/index.ts",
+          "status": 200,
+          "sha256": "6a6c698c03862ba1060b0f2728c6b96f889d3301ceebe78182cb29c67210e2f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/index.ts",
+          "status": 200,
+          "sha256": "3df55781552c050293b73d9a8693789508d87ae57fd47a46b9f7b348b67499f0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/canvas.ts",
+          "status": 200,
+          "sha256": "c853db128163c34d1e2113f7bf2efd91c4ae1fdcf5110fb3fd4292acb0fb760a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/network.ts",
+          "status": 200,
+          "sha256": "07cbd5079c0bf9246b747968c991160d03563b1994be448ffbcf70dfbed162ab"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/chart.ts",
+          "status": 200,
+          "sha256": "4cd6b051d6b1a35631e56eb914d157b76b9a38207d36a38651289cc215fc895b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/theme.ts",
+          "status": 200,
+          "sha256": "47f45915093bafcd0fd34458fea4b967ac908448db8788daa7d998caee46b498"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/views.css",
+          "status": 200,
+          "sha256": "bf9fb3be98238da8291770f799130bc4ba2b15ccd0d584c70f779bd892379b2f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/checkbox.svelte",
+          "status": 200,
+          "sha256": "baea796ad4d0011635fcd1e40cbe6a38bb74a480fa7762c88e89e3aa51ac6dfc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/label.svelte",
+          "status": 200,
+          "sha256": "f8f9147199a1723467565c6841c0cf7225826006224fe0d53f70fca96f26c15e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-body.svelte",
+          "status": 200,
+          "sha256": "5ef8119c8aa9a8452a176286ba6354eb0f6472324b98f105452a92d1b77b18a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-caption.svelte",
+          "status": 200,
+          "sha256": "53c367cf4a15542bbed6963d9edef8f8dfb8d041afc6ba14796055dd7abfb841"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-cell.svelte",
+          "status": 200,
+          "sha256": "b9c859d80310c582e85e42120d5cecaa08e470be84c650b0a498c8763f2af646"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-footer.svelte",
+          "status": 200,
+          "sha256": "7cfed9d3e5a48d1e7273315084ea1922255b4df039dd5c94ffb45f534010ad7c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-head.svelte",
+          "status": 200,
+          "sha256": "a75800e91b04b79933944fc424a39958cca8c576af36f860c5e4d75a3de22dfd"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-header.svelte",
+          "status": 200,
+          "sha256": "162bff620a9efeb335ffad68daeca14230d252b4754f48d23197c5dc6ed03ae3"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-row.svelte",
+          "status": 200,
+          "sha256": "c7c47929d4ab205dc4bb0e1cc856a47b6145f4bc30cc902b384fab3b6b56e2a0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table.svelte",
+          "status": 200,
+          "sha256": "631b7aba9609d4f7a8e3cc3d952830bb3026d963769926c6bf00d812cd34e451"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/index.ts",
+          "status": 200,
+          "sha256": "2a912684cb470b450ac063a7dab7332c90443ee3b9a4ba7c1308d0024b8feefc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/compose.ts",
+          "status": 200,
+          "sha256": "13fa468433df1b284bb16a348ed5da521b2ae4e49a7dd728a59b55221045cb8d"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/controls/form.ts",
+          "status": 200,
+          "sha256": "447f3597ae16d271b9255754f0012428d49bc170e8a66f7225ce0c8599c444ed"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/wealth-distribution/model.ts",
+          "status": 200,
+          "sha256": "20be9265cac3d6b2a5c4555807e43aab409ec5e604c31cb56bbc25d1f493608d"
+        }
+      ],
+      "states": [
+        {
+          "label": "first setup",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              }
+            ]
+          },
+          "text": "PeopleSetup\nRun1 step10 steps100 stepsSpeed\nObserved instance\n1\nPeople\n2\nTick\n0\nGrowth Amount\n\nModel initialized.\n\nModel info\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "2"
+            },
+            {
+              "name": "",
+              "value": "5"
+            },
+            {
+              "name": "live-growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "formatter failure at tick1",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              }
+            ]
+          },
+          "text": "PeopleSetup\nRun1 step10 steps100 stepsSpeed\nObserved instance\n1\nPeople\n2\nGrowth Amount\n\nFormatter failure\n\nModel info\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "2"
+            },
+            {
+              "name": "",
+              "value": "5"
+            },
+            {
+              "name": "live-growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "setup draft3 after formatter failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              }
+            ]
+          },
+          "text": "PeopleSetup\nRun1 step10 steps100 stepsSpeed\nObserved instance\n1\nPeople\n2\nGrowth Amount\n\nFormatter failure\n\nModel info\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "",
+              "value": "5"
+            },
+            {
+              "name": "live-growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "speed edit after formatter failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              }
+            ]
+          },
+          "text": "PeopleSetup\nRun1 step10 steps100 stepsSpeed\nObserved instance\n1\nPeople\n2\nGrowth Amount\n\nFormatter failure\n\nModel info\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "",
+              "value": "6"
+            },
+            {
+              "name": "live-growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "restart3 after formatter failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 1,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 0,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              }
+            ]
+          },
+          "text": "PeopleSetup\nRun1 step10 steps100 stepsSpeed\nObserved instance\n2\nPeople\n3\nTick\n0\nGrowth Amount\n\nModel initialized.\n\nModel info\nCanonical observation\ninstance\tpeople\ttick\n2\t3\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "",
+              "value": "6"
+            },
+            {
+              "name": "live-growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "after fixture disposal",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 1,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 2
+              }
+            ]
+          },
+          "text": "",
+          "inputs": [],
+          "pageErrors": []
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-formatter-1366-light-error.png",
+          "state": "formatter failure at tick1",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-formatter-1366-dark-error.png",
+          "state": "formatter failure at tick1",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-formatter-390-light-error.png",
+          "state": "formatter failure at tick1",
+          "colorScheme": "light",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-formatter-390-dark-error.png",
+          "state": "formatter failure at tick1",
+          "colorScheme": "dark",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-formatter-light.png",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-legacy-formatter-dark.png",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "host": "svelte",
+      "scenario": "enabled-replacement",
+      "pageErrors": [],
+      "console": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/app.ts",
+          "status": 200,
+          "sha256": "b2cb10c673b6145f9a4be02fad6c0db0b526a1c0222b561f749bbf10aeb53289"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/App.svelte",
+          "status": 200,
+          "sha256": "61bb456c1831af61d2d61b0b3eb5a44847af74ba299a71c4292eda969791a49a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/shell.css",
+          "status": 200,
+          "sha256": "f775e884c4656b3bcdae1646175807fd519364c041883a7f616492e3dd5f50a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/index.ts",
+          "status": 200,
+          "sha256": "c5bc48c8e7300ed519ed49fa171af17a9fbd1dfdb6ca298cb64e264a95c89e3a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/index.ts",
+          "status": 200,
+          "sha256": "b9a534cca3ed229ab6977087bdc2344a90406360c3452e377ec339279bf1390f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/index.ts",
+          "status": 200,
+          "sha256": "429dd8eaa6a7c346c786bfd1c761d198848d70705122ae4d9c4badea65642da2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/legacy-host.css?url",
+          "status": 200,
+          "sha256": "853a33d8679e2463bd796b6675f787b58cf0fabbc0bbd014746f39d765158643"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/input.svelte",
+          "status": 200,
+          "sha256": "872d8768bd97e974588e4e8485922d4ee9ac315589cfd83743640a1d98c0a348"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/button.svelte",
+          "status": 200,
+          "sha256": "d965944b5bdfac40f18fe200d40c050ea963cf9d04b8c0732dc686faec6d79a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-content.svelte",
+          "status": 200,
+          "sha256": "0fe60a773e6b7d9c11a2f321646bc695b8664e80f7d99f3a31fc413e300ba038"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group-heading.svelte",
+          "status": 200,
+          "sha256": "1249d99bf87f604b8a1df5f65a681ea67b6c8e7495f9645e8bb7990c3b6a4b00"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group.svelte",
+          "status": 200,
+          "sha256": "03eab89bb91e74317ff7149f4eb9674644722635c6379d246e5e72f2c4f0469f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-item.svelte",
+          "status": 200,
+          "sha256": "ff0db7433727357d35c1263e55a0e8f9c45bf98b3747468356d6f59585e88d35"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-label.svelte",
+          "status": 200,
+          "sha256": "39a277d9e92d7d4b8290bef47dddacdf65a94f97b025ff03f06a6a6cf650bfe5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-portal.svelte",
+          "status": 200,
+          "sha256": "f11bf2ee4afe6c2043163f52eb308478f332de3bbb87d067b1e2f2b008c2fda7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-down-button.svelte",
+          "status": 200,
+          "sha256": "22a32cbb2d814f6028b9f97a072eb9a41847f5f928153b392e05b7c9f240c0cb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-up-button.svelte",
+          "status": 200,
+          "sha256": "2c2e99af3af0ce8599b367f745d22263cc891339da009afaf5dbcd6d7421569c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-separator.svelte",
+          "status": 200,
+          "sha256": "beca44601ed0853f85274bcb89030a957fb0db3229cca8fd91b7911ed744e609"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-trigger.svelte",
+          "status": 200,
+          "sha256": "14450b2cfcb83422f3acd41ee53886392465393970d23f1be721e4b8659a5587"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-value.svelte",
+          "status": 200,
+          "sha256": "1f839cd82ebf4b86ef7e5b1e504bcf425a33dd375b93d1004b02736d317729a2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/utils.ts",
+          "status": 200,
+          "sha256": "e0238d24abcc3131837e14fc10455cb4ed221ff3607ccf447ddff0556d57e963"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select.svelte",
+          "status": 200,
+          "sha256": "55e110225733ca94d392906bbbc6155e4358f5083c2ccf468650b21d70844a1b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/index.ts",
+          "status": 200,
+          "sha256": "c4f00a49e7f8dac85819a10345bb285a7750053d0e79254d8aedf93f6d52ef54"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/separator.svelte",
+          "status": 200,
+          "sha256": "52cdf9e94f788f776db0db93d6725d1494a35dcbed8c68920d9034f103d75bb9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/index.ts",
+          "status": 200,
+          "sha256": "58f9224d272640e92143d598143e50ec4b5beb0d53986baff4c4617e0d34b397"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/compose.ts",
+          "status": 200,
+          "sha256": "d9a0796d93bade3a31222f58005d8561d627d476ac673acf9f8bcf4cf37304fb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-color.ts",
+          "status": 200,
+          "sha256": "567c46d71deab4dce88a72615cf71718e0e6838832e8c0f08a78f066a4abc618"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts",
+          "status": 200,
+          "sha256": "ad42c2d1a2d9a64211f6637e0309ca4b52c13582626f48cdb0645c05e519db07"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/Workbench.svelte",
+          "status": 200,
+          "sha256": "323a867848beaf3b5509934838bfbe05d0fc40fb579aa791381511cab50968bc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-colors.ts",
+          "status": 200,
+          "sha256": "f774ca702ec3cb12e3c29d4e871aa11ae756ee15e3aa0370c23ac12597337272"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/authoring.ts",
+          "status": 200,
+          "sha256": "f3bff3e0b2e9a46122919595de00c702fc2ea8aa27360bae927559e4f97c2baf"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/playback.ts",
+          "status": 200,
+          "sha256": "8701cb21d7341c8f589ccae2617f901304adad6bc673acc08f7ef376de303cf2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/actions/repeat.ts",
+          "status": 200,
+          "sha256": "915b3892813521948e2e6e991c7e4b7872fe16a76a0002f9d9b305114766f20a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/index.ts",
+          "status": 200,
+          "sha256": "7f926e32202a67b136a557ded172ecd394d8c32cfc65d06e1eda11eaaac418a7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/index.ts",
+          "status": 200,
+          "sha256": "62ab5d5c13537817a95f4d79c435e4471ff6c287c8461c0ff5709a51baca495e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/index.ts",
+          "status": 200,
+          "sha256": "ff3fe7c631d1c2b3bd8243f3888c407e3e2d9d97944623c3d5c33ecda8f39d72"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/ParameterField.svelte",
+          "status": 200,
+          "sha256": "d27cf2045407a226ea2981de5fc3453209a289b658c938fb48f59f33e0169a1f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/workbench.css",
+          "status": 200,
+          "sha256": "a2894f166f3ac62325d45461c0079d5c1f1101fad66c1024b3b5003027c125a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/View.svelte",
+          "status": 200,
+          "sha256": "32917c71c9902c8d23d1b614b6842c8b36978a0ab843d15a61acdb5c9a0c2945"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-content.svelte",
+          "status": 200,
+          "sha256": "15161d9823860dec392743e3310341b61798cc2b40067fb58c2ead899aea25a4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-description.svelte",
+          "status": 200,
+          "sha256": "688d8122a3658809dc656c7ca7df6793777a9c0f21a3f79dad9fd26a65429827"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-error.svelte",
+          "status": 200,
+          "sha256": "75047e568b990ebf4153a6376f2224cf266a48c6ac4ba4c3655cd30749fae51b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-group.svelte",
+          "status": 200,
+          "sha256": "9314d56caaa70dd1b3a3caf9e46b931403255ec15d88bed50faac6f349ff1bd8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-label.svelte",
+          "status": 200,
+          "sha256": "363ac593c5be0e0b2f50ac98328e2150da7b39d7550279ae3633fd89641d4b86"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-legend.svelte",
+          "status": 200,
+          "sha256": "54b7c4c4e23ec23c60389e320eeb632b2eaf29ba20f1af4dcb113faae0beba78"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-separator.svelte",
+          "status": 200,
+          "sha256": "0391ba6a704e082fbddd2a6a1f29d5d9912149e9108b0efd2494c7ba2535481f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-set.svelte",
+          "status": 200,
+          "sha256": "0ce786174ef7a4e3454006dcf9eafaf42a11e3cf434aac7ba8ade347105d15eb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-title.svelte",
+          "status": 200,
+          "sha256": "049741c95fe1215c6cbe5253733a3e32c4e967bd834badb9707938a6d32332f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field.svelte",
+          "status": 200,
+          "sha256": "0f92e82ba9188cbd83db9fb029efa9df294e4e9c5c27b8f69fc8c4bf811c24f8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-content.svelte",
+          "status": 200,
+          "sha256": "6978c2e6defc51418bbff526293365ea3427666a1ef4aef3a87269620a7e06ce"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-trigger.svelte",
+          "status": 200,
+          "sha256": "8d0ebb15624e618ec62977f22ff89d7201845c5b77cd8d28eedecf0181724ac1"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible.svelte",
+          "status": 200,
+          "sha256": "ec1ac2ee9b761163d115d979dada09cd3005a9b1e872e6f986e459d69fa88ff5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/slider.svelte",
+          "status": 200,
+          "sha256": "8968de1296eb735455f3682b62a908e20808ae18bcd9445d279650a243ee60a9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/index.ts",
+          "status": 200,
+          "sha256": "4e99822582382a721e12303c7c6bc00f49e3306e8210586d3b68fc7b0dace0df"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/index.ts",
+          "status": 200,
+          "sha256": "6a6c698c03862ba1060b0f2728c6b96f889d3301ceebe78182cb29c67210e2f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/index.ts",
+          "status": 200,
+          "sha256": "3df55781552c050293b73d9a8693789508d87ae57fd47a46b9f7b348b67499f0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/canvas.ts",
+          "status": 200,
+          "sha256": "c853db128163c34d1e2113f7bf2efd91c4ae1fdcf5110fb3fd4292acb0fb760a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/network.ts",
+          "status": 200,
+          "sha256": "07cbd5079c0bf9246b747968c991160d03563b1994be448ffbcf70dfbed162ab"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/chart.ts",
+          "status": 200,
+          "sha256": "4cd6b051d6b1a35631e56eb914d157b76b9a38207d36a38651289cc215fc895b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/theme.ts",
+          "status": 200,
+          "sha256": "47f45915093bafcd0fd34458fea4b967ac908448db8788daa7d998caee46b498"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/views.css",
+          "status": 200,
+          "sha256": "bf9fb3be98238da8291770f799130bc4ba2b15ccd0d584c70f779bd892379b2f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/checkbox.svelte",
+          "status": 200,
+          "sha256": "baea796ad4d0011635fcd1e40cbe6a38bb74a480fa7762c88e89e3aa51ac6dfc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/label.svelte",
+          "status": 200,
+          "sha256": "f8f9147199a1723467565c6841c0cf7225826006224fe0d53f70fca96f26c15e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-body.svelte",
+          "status": 200,
+          "sha256": "5ef8119c8aa9a8452a176286ba6354eb0f6472324b98f105452a92d1b77b18a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-caption.svelte",
+          "status": 200,
+          "sha256": "53c367cf4a15542bbed6963d9edef8f8dfb8d041afc6ba14796055dd7abfb841"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-cell.svelte",
+          "status": 200,
+          "sha256": "b9c859d80310c582e85e42120d5cecaa08e470be84c650b0a498c8763f2af646"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-footer.svelte",
+          "status": 200,
+          "sha256": "7cfed9d3e5a48d1e7273315084ea1922255b4df039dd5c94ffb45f534010ad7c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-head.svelte",
+          "status": 200,
+          "sha256": "a75800e91b04b79933944fc424a39958cca8c576af36f860c5e4d75a3de22dfd"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-header.svelte",
+          "status": 200,
+          "sha256": "162bff620a9efeb335ffad68daeca14230d252b4754f48d23197c5dc6ed03ae3"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-row.svelte",
+          "status": 200,
+          "sha256": "c7c47929d4ab205dc4bb0e1cc856a47b6145f4bc30cc902b384fab3b6b56e2a0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table.svelte",
+          "status": 200,
+          "sha256": "631b7aba9609d4f7a8e3cc3d952830bb3026d963769926c6bf00d812cd34e451"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/wealth-distribution/model.ts",
+          "status": 200,
+          "sha256": "20be9265cac3d6b2a5c4555807e43aab409ec5e604c31cb56bbc25d1f493608d"
+        }
+      ],
+      "states": [
+        {
+          "label": "first setup",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              }
+            ]
+          },
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\nGrowth Amount\nModel info\nObserved instance\n1\nPeople\n2\nTick\n0\nPaused\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "2"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "replacement enabled failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 0
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 2
+              }
+            ]
+          },
+          "text": "Restart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\n·\nGrowth Amount\nModel info\n\nEnabled failure\n\nPaused. Setup changes pending.\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "step after replacement failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              }
+            ]
+          },
+          "text": "Restart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\n·\nGrowth Amount\nModel info\nObserved instance\n1\nPeople\n2\nTick\n1\nPaused. Setup changes pending.\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t1",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "after fixture disposal",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 1,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              }
+            ]
+          },
+          "text": "",
+          "inputs": [],
+          "pageErrors": []
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-replacement-1366-light-error.png",
+          "state": "replacement enabled failure",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-replacement-1366-dark-error.png",
+          "state": "replacement enabled failure",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-replacement-390-light-error.png",
+          "state": "replacement enabled failure",
+          "colorScheme": "light",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-replacement-390-dark-error.png",
+          "state": "replacement enabled failure",
+          "colorScheme": "dark",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-replacement-light.png",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-replacement-dark.png",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "host": "svelte",
+      "scenario": "enabled-first-setup",
+      "pageErrors": [],
+      "console": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/app.ts",
+          "status": 200,
+          "sha256": "b2cb10c673b6145f9a4be02fad6c0db0b526a1c0222b561f749bbf10aeb53289"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/App.svelte",
+          "status": 200,
+          "sha256": "61bb456c1831af61d2d61b0b3eb5a44847af74ba299a71c4292eda969791a49a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/shell.css",
+          "status": 200,
+          "sha256": "f775e884c4656b3bcdae1646175807fd519364c041883a7f616492e3dd5f50a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/index.ts",
+          "status": 200,
+          "sha256": "c5bc48c8e7300ed519ed49fa171af17a9fbd1dfdb6ca298cb64e264a95c89e3a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/index.ts",
+          "status": 200,
+          "sha256": "429dd8eaa6a7c346c786bfd1c761d198848d70705122ae4d9c4badea65642da2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/index.ts",
+          "status": 200,
+          "sha256": "b9a534cca3ed229ab6977087bdc2344a90406360c3452e377ec339279bf1390f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/legacy-host.css?url",
+          "status": 200,
+          "sha256": "853a33d8679e2463bd796b6675f787b58cf0fabbc0bbd014746f39d765158643"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/input.svelte",
+          "status": 200,
+          "sha256": "872d8768bd97e974588e4e8485922d4ee9ac315589cfd83743640a1d98c0a348"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-content.svelte",
+          "status": 200,
+          "sha256": "0fe60a773e6b7d9c11a2f321646bc695b8664e80f7d99f3a31fc413e300ba038"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group-heading.svelte",
+          "status": 200,
+          "sha256": "1249d99bf87f604b8a1df5f65a681ea67b6c8e7495f9645e8bb7990c3b6a4b00"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group.svelte",
+          "status": 200,
+          "sha256": "03eab89bb91e74317ff7149f4eb9674644722635c6379d246e5e72f2c4f0469f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-item.svelte",
+          "status": 200,
+          "sha256": "ff0db7433727357d35c1263e55a0e8f9c45bf98b3747468356d6f59585e88d35"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-label.svelte",
+          "status": 200,
+          "sha256": "39a277d9e92d7d4b8290bef47dddacdf65a94f97b025ff03f06a6a6cf650bfe5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-portal.svelte",
+          "status": 200,
+          "sha256": "f11bf2ee4afe6c2043163f52eb308478f332de3bbb87d067b1e2f2b008c2fda7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select.svelte",
+          "status": 200,
+          "sha256": "55e110225733ca94d392906bbbc6155e4358f5083c2ccf468650b21d70844a1b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-down-button.svelte",
+          "status": 200,
+          "sha256": "22a32cbb2d814f6028b9f97a072eb9a41847f5f928153b392e05b7c9f240c0cb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-up-button.svelte",
+          "status": 200,
+          "sha256": "2c2e99af3af0ce8599b367f745d22263cc891339da009afaf5dbcd6d7421569c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-separator.svelte",
+          "status": 200,
+          "sha256": "beca44601ed0853f85274bcb89030a957fb0db3229cca8fd91b7911ed744e609"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-trigger.svelte",
+          "status": 200,
+          "sha256": "14450b2cfcb83422f3acd41ee53886392465393970d23f1be721e4b8659a5587"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-value.svelte",
+          "status": 200,
+          "sha256": "1f839cd82ebf4b86ef7e5b1e504bcf425a33dd375b93d1004b02736d317729a2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/button.svelte",
+          "status": 200,
+          "sha256": "d965944b5bdfac40f18fe200d40c050ea963cf9d04b8c0732dc686faec6d79a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/utils.ts",
+          "status": 200,
+          "sha256": "e0238d24abcc3131837e14fc10455cb4ed221ff3607ccf447ddff0556d57e963"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/index.ts",
+          "status": 200,
+          "sha256": "c4f00a49e7f8dac85819a10345bb285a7750053d0e79254d8aedf93f6d52ef54"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/separator.svelte",
+          "status": 200,
+          "sha256": "52cdf9e94f788f776db0db93d6725d1494a35dcbed8c68920d9034f103d75bb9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/index.ts",
+          "status": 200,
+          "sha256": "58f9224d272640e92143d598143e50ec4b5beb0d53986baff4c4617e0d34b397"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/compose.ts",
+          "status": 200,
+          "sha256": "d9a0796d93bade3a31222f58005d8561d627d476ac673acf9f8bcf4cf37304fb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-color.ts",
+          "status": 200,
+          "sha256": "567c46d71deab4dce88a72615cf71718e0e6838832e8c0f08a78f066a4abc618"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/Workbench.svelte",
+          "status": 200,
+          "sha256": "323a867848beaf3b5509934838bfbe05d0fc40fb579aa791381511cab50968bc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts",
+          "status": 200,
+          "sha256": "ad42c2d1a2d9a64211f6637e0309ca4b52c13582626f48cdb0645c05e519db07"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-colors.ts",
+          "status": 200,
+          "sha256": "f774ca702ec3cb12e3c29d4e871aa11ae756ee15e3aa0370c23ac12597337272"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/index.ts",
+          "status": 200,
+          "sha256": "7f926e32202a67b136a557ded172ecd394d8c32cfc65d06e1eda11eaaac418a7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/index.ts",
+          "status": 200,
+          "sha256": "62ab5d5c13537817a95f4d79c435e4471ff6c287c8461c0ff5709a51baca495e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/index.ts",
+          "status": 200,
+          "sha256": "ff3fe7c631d1c2b3bd8243f3888c407e3e2d9d97944623c3d5c33ecda8f39d72"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/ParameterField.svelte",
+          "status": 200,
+          "sha256": "d27cf2045407a226ea2981de5fc3453209a289b658c938fb48f59f33e0169a1f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/workbench.css",
+          "status": 200,
+          "sha256": "a2894f166f3ac62325d45461c0079d5c1f1101fad66c1024b3b5003027c125a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/View.svelte",
+          "status": 200,
+          "sha256": "32917c71c9902c8d23d1b614b6842c8b36978a0ab843d15a61acdb5c9a0c2945"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/authoring.ts",
+          "status": 200,
+          "sha256": "f3bff3e0b2e9a46122919595de00c702fc2ea8aa27360bae927559e4f97c2baf"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/playback.ts",
+          "status": 200,
+          "sha256": "8701cb21d7341c8f589ccae2617f901304adad6bc673acc08f7ef376de303cf2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/actions/repeat.ts",
+          "status": 200,
+          "sha256": "915b3892813521948e2e6e991c7e4b7872fe16a76a0002f9d9b305114766f20a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-content.svelte",
+          "status": 200,
+          "sha256": "15161d9823860dec392743e3310341b61798cc2b40067fb58c2ead899aea25a4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-description.svelte",
+          "status": 200,
+          "sha256": "688d8122a3658809dc656c7ca7df6793777a9c0f21a3f79dad9fd26a65429827"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-error.svelte",
+          "status": 200,
+          "sha256": "75047e568b990ebf4153a6376f2224cf266a48c6ac4ba4c3655cd30749fae51b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-group.svelte",
+          "status": 200,
+          "sha256": "9314d56caaa70dd1b3a3caf9e46b931403255ec15d88bed50faac6f349ff1bd8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-label.svelte",
+          "status": 200,
+          "sha256": "363ac593c5be0e0b2f50ac98328e2150da7b39d7550279ae3633fd89641d4b86"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-legend.svelte",
+          "status": 200,
+          "sha256": "54b7c4c4e23ec23c60389e320eeb632b2eaf29ba20f1af4dcb113faae0beba78"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-separator.svelte",
+          "status": 200,
+          "sha256": "0391ba6a704e082fbddd2a6a1f29d5d9912149e9108b0efd2494c7ba2535481f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-set.svelte",
+          "status": 200,
+          "sha256": "0ce786174ef7a4e3454006dcf9eafaf42a11e3cf434aac7ba8ade347105d15eb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-title.svelte",
+          "status": 200,
+          "sha256": "049741c95fe1215c6cbe5253733a3e32c4e967bd834badb9707938a6d32332f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field.svelte",
+          "status": 200,
+          "sha256": "0f92e82ba9188cbd83db9fb029efa9df294e4e9c5c27b8f69fc8c4bf811c24f8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-content.svelte",
+          "status": 200,
+          "sha256": "6978c2e6defc51418bbff526293365ea3427666a1ef4aef3a87269620a7e06ce"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-trigger.svelte",
+          "status": 200,
+          "sha256": "8d0ebb15624e618ec62977f22ff89d7201845c5b77cd8d28eedecf0181724ac1"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible.svelte",
+          "status": 200,
+          "sha256": "ec1ac2ee9b761163d115d979dada09cd3005a9b1e872e6f986e459d69fa88ff5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/slider.svelte",
+          "status": 200,
+          "sha256": "8968de1296eb735455f3682b62a908e20808ae18bcd9445d279650a243ee60a9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/index.ts",
+          "status": 200,
+          "sha256": "4e99822582382a721e12303c7c6bc00f49e3306e8210586d3b68fc7b0dace0df"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/index.ts",
+          "status": 200,
+          "sha256": "6a6c698c03862ba1060b0f2728c6b96f889d3301ceebe78182cb29c67210e2f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/index.ts",
+          "status": 200,
+          "sha256": "3df55781552c050293b73d9a8693789508d87ae57fd47a46b9f7b348b67499f0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/canvas.ts",
+          "status": 200,
+          "sha256": "c853db128163c34d1e2113f7bf2efd91c4ae1fdcf5110fb3fd4292acb0fb760a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/network.ts",
+          "status": 200,
+          "sha256": "07cbd5079c0bf9246b747968c991160d03563b1994be448ffbcf70dfbed162ab"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/chart.ts",
+          "status": 200,
+          "sha256": "4cd6b051d6b1a35631e56eb914d157b76b9a38207d36a38651289cc215fc895b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/theme.ts",
+          "status": 200,
+          "sha256": "47f45915093bafcd0fd34458fea4b967ac908448db8788daa7d998caee46b498"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/views.css",
+          "status": 200,
+          "sha256": "bf9fb3be98238da8291770f799130bc4ba2b15ccd0d584c70f779bd892379b2f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/checkbox.svelte",
+          "status": 200,
+          "sha256": "baea796ad4d0011635fcd1e40cbe6a38bb74a480fa7762c88e89e3aa51ac6dfc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/label.svelte",
+          "status": 200,
+          "sha256": "f8f9147199a1723467565c6841c0cf7225826006224fe0d53f70fca96f26c15e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-body.svelte",
+          "status": 200,
+          "sha256": "5ef8119c8aa9a8452a176286ba6354eb0f6472324b98f105452a92d1b77b18a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-caption.svelte",
+          "status": 200,
+          "sha256": "53c367cf4a15542bbed6963d9edef8f8dfb8d041afc6ba14796055dd7abfb841"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-cell.svelte",
+          "status": 200,
+          "sha256": "b9c859d80310c582e85e42120d5cecaa08e470be84c650b0a498c8763f2af646"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-footer.svelte",
+          "status": 200,
+          "sha256": "7cfed9d3e5a48d1e7273315084ea1922255b4df039dd5c94ffb45f534010ad7c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-head.svelte",
+          "status": 200,
+          "sha256": "a75800e91b04b79933944fc424a39958cca8c576af36f860c5e4d75a3de22dfd"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-header.svelte",
+          "status": 200,
+          "sha256": "162bff620a9efeb335ffad68daeca14230d252b4754f48d23197c5dc6ed03ae3"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-row.svelte",
+          "status": 200,
+          "sha256": "c7c47929d4ab205dc4bb0e1cc856a47b6145f4bc30cc902b384fab3b6b56e2a0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table.svelte",
+          "status": 200,
+          "sha256": "631b7aba9609d4f7a8e3cc3d952830bb3026d963769926c6bf00d812cd34e451"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/wealth-distribution/model.ts",
+          "status": 200,
+          "sha256": "20be9265cac3d6b2a5c4555807e43aab409ec5e604c31cb56bbc25d1f493608d"
+        }
+      ],
+      "states": [
+        {
+          "label": "first setup",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              }
+            ]
+          },
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\nGrowth Amount\nModel info\n\nEnabled failure\n\nSetup to begin.",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "after fixture disposal",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              }
+            ]
+          },
+          "text": "",
+          "inputs": [],
+          "pageErrors": []
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-first-setup-1366-light-error.png",
+          "state": "first setup",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-first-setup-1366-dark-error.png",
+          "state": "first setup",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-first-setup-390-light-error.png",
+          "state": "first setup",
+          "colorScheme": "light",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-first-setup-390-dark-error.png",
+          "state": "first setup",
+          "colorScheme": "dark",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-first-setup-light.png",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-enabled-first-setup-dark.png",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "host": "svelte",
+      "scenario": "formatter",
+      "pageErrors": [],
+      "console": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/app.ts",
+          "status": 200,
+          "sha256": "b2cb10c673b6145f9a4be02fad6c0db0b526a1c0222b561f749bbf10aeb53289"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/App.svelte",
+          "status": 200,
+          "sha256": "61bb456c1831af61d2d61b0b3eb5a44847af74ba299a71c4292eda969791a49a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/shell.css",
+          "status": 200,
+          "sha256": "f775e884c4656b3bcdae1646175807fd519364c041883a7f616492e3dd5f50a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/index.ts",
+          "status": 200,
+          "sha256": "c5bc48c8e7300ed519ed49fa171af17a9fbd1dfdb6ca298cb64e264a95c89e3a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/index.ts",
+          "status": 200,
+          "sha256": "b9a534cca3ed229ab6977087bdc2344a90406360c3452e377ec339279bf1390f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/index.ts",
+          "status": 200,
+          "sha256": "429dd8eaa6a7c346c786bfd1c761d198848d70705122ae4d9c4badea65642da2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/legacy-host.css?url",
+          "status": 200,
+          "sha256": "853a33d8679e2463bd796b6675f787b58cf0fabbc0bbd014746f39d765158643"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/input/input.svelte",
+          "status": 200,
+          "sha256": "872d8768bd97e974588e4e8485922d4ee9ac315589cfd83743640a1d98c0a348"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/button/button.svelte",
+          "status": 200,
+          "sha256": "d965944b5bdfac40f18fe200d40c050ea963cf9d04b8c0732dc686faec6d79a6"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-content.svelte",
+          "status": 200,
+          "sha256": "0fe60a773e6b7d9c11a2f321646bc695b8664e80f7d99f3a31fc413e300ba038"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group-heading.svelte",
+          "status": 200,
+          "sha256": "1249d99bf87f604b8a1df5f65a681ea67b6c8e7495f9645e8bb7990c3b6a4b00"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-group.svelte",
+          "status": 200,
+          "sha256": "03eab89bb91e74317ff7149f4eb9674644722635c6379d246e5e72f2c4f0469f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-item.svelte",
+          "status": 200,
+          "sha256": "ff0db7433727357d35c1263e55a0e8f9c45bf98b3747468356d6f59585e88d35"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-label.svelte",
+          "status": 200,
+          "sha256": "39a277d9e92d7d4b8290bef47dddacdf65a94f97b025ff03f06a6a6cf650bfe5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-portal.svelte",
+          "status": 200,
+          "sha256": "f11bf2ee4afe6c2043163f52eb308478f332de3bbb87d067b1e2f2b008c2fda7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-down-button.svelte",
+          "status": 200,
+          "sha256": "22a32cbb2d814f6028b9f97a072eb9a41847f5f928153b392e05b7c9f240c0cb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-scroll-up-button.svelte",
+          "status": 200,
+          "sha256": "2c2e99af3af0ce8599b367f745d22263cc891339da009afaf5dbcd6d7421569c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-separator.svelte",
+          "status": 200,
+          "sha256": "beca44601ed0853f85274bcb89030a957fb0db3229cca8fd91b7911ed744e609"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-trigger.svelte",
+          "status": 200,
+          "sha256": "14450b2cfcb83422f3acd41ee53886392465393970d23f1be721e4b8659a5587"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select-value.svelte",
+          "status": 200,
+          "sha256": "1f839cd82ebf4b86ef7e5b1e504bcf425a33dd375b93d1004b02736d317729a2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/select/select.svelte",
+          "status": 200,
+          "sha256": "55e110225733ca94d392906bbbc6155e4358f5083c2ccf468650b21d70844a1b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/utils.ts",
+          "status": 200,
+          "sha256": "e0238d24abcc3131837e14fc10455cb4ed221ff3607ccf447ddff0556d57e963"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/index.ts",
+          "status": 200,
+          "sha256": "c4f00a49e7f8dac85819a10345bb285a7750053d0e79254d8aedf93f6d52ef54"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/separator/separator.svelte",
+          "status": 200,
+          "sha256": "52cdf9e94f788f776db0db93d6725d1494a35dcbed8c68920d9034f103d75bb9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/index.ts",
+          "status": 200,
+          "sha256": "58f9224d272640e92143d598143e50ec4b5beb0d53986baff4c4617e0d34b397"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/compose.ts",
+          "status": 200,
+          "sha256": "d9a0796d93bade3a31222f58005d8561d627d476ac673acf9f8bcf4cf37304fb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-color.ts",
+          "status": 200,
+          "sha256": "567c46d71deab4dce88a72615cf71718e0e6838832e8c0f08a78f066a4abc618"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/Workbench.svelte",
+          "status": 200,
+          "sha256": "323a867848beaf3b5509934838bfbe05d0fc40fb579aa791381511cab50968bc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/session.ts",
+          "status": 200,
+          "sha256": "ad42c2d1a2d9a64211f6637e0309ca4b52c13582626f48cdb0645c05e519db07"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/palette/netlogo-colors.ts",
+          "status": 200,
+          "sha256": "f774ca702ec3cb12e3c29d4e871aa11ae756ee15e3aa0370c23ac12597337272"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/index.ts",
+          "status": 200,
+          "sha256": "7f926e32202a67b136a557ded172ecd394d8c32cfc65d06e1eda11eaaac418a7"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/index.ts",
+          "status": 200,
+          "sha256": "62ab5d5c13537817a95f4d79c435e4471ff6c287c8461c0ff5709a51baca495e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/index.ts",
+          "status": 200,
+          "sha256": "ff3fe7c631d1c2b3bd8243f3888c407e3e2d9d97944623c3d5c33ecda8f39d72"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/ParameterField.svelte",
+          "status": 200,
+          "sha256": "d27cf2045407a226ea2981de5fc3453209a289b658c938fb48f59f33e0169a1f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/View.svelte",
+          "status": 200,
+          "sha256": "32917c71c9902c8d23d1b614b6842c8b36978a0ab843d15a61acdb5c9a0c2945"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/workbench.css",
+          "status": 200,
+          "sha256": "a2894f166f3ac62325d45461c0079d5c1f1101fad66c1024b3b5003027c125a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/authoring.ts",
+          "status": 200,
+          "sha256": "f3bff3e0b2e9a46122919595de00c702fc2ea8aa27360bae927559e4f97c2baf"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/playback.ts",
+          "status": 200,
+          "sha256": "8701cb21d7341c8f589ccae2617f901304adad6bc673acc08f7ef376de303cf2"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/actions/repeat.ts",
+          "status": 200,
+          "sha256": "915b3892813521948e2e6e991c7e4b7872fe16a76a0002f9d9b305114766f20a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-content.svelte",
+          "status": 200,
+          "sha256": "15161d9823860dec392743e3310341b61798cc2b40067fb58c2ead899aea25a4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-description.svelte",
+          "status": 200,
+          "sha256": "688d8122a3658809dc656c7ca7df6793777a9c0f21a3f79dad9fd26a65429827"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-error.svelte",
+          "status": 200,
+          "sha256": "75047e568b990ebf4153a6376f2224cf266a48c6ac4ba4c3655cd30749fae51b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-group.svelte",
+          "status": 200,
+          "sha256": "9314d56caaa70dd1b3a3caf9e46b931403255ec15d88bed50faac6f349ff1bd8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-label.svelte",
+          "status": 200,
+          "sha256": "363ac593c5be0e0b2f50ac98328e2150da7b39d7550279ae3633fd89641d4b86"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-legend.svelte",
+          "status": 200,
+          "sha256": "54b7c4c4e23ec23c60389e320eeb632b2eaf29ba20f1af4dcb113faae0beba78"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-separator.svelte",
+          "status": 200,
+          "sha256": "0391ba6a704e082fbddd2a6a1f29d5d9912149e9108b0efd2494c7ba2535481f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-set.svelte",
+          "status": 200,
+          "sha256": "0ce786174ef7a4e3454006dcf9eafaf42a11e3cf434aac7ba8ade347105d15eb"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field-title.svelte",
+          "status": 200,
+          "sha256": "049741c95fe1215c6cbe5253733a3e32c4e967bd834badb9707938a6d32332f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/field/field.svelte",
+          "status": 200,
+          "sha256": "0f92e82ba9188cbd83db9fb029efa9df294e4e9c5c27b8f69fc8c4bf811c24f8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-content.svelte",
+          "status": 200,
+          "sha256": "6978c2e6defc51418bbff526293365ea3427666a1ef4aef3a87269620a7e06ce"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible-trigger.svelte",
+          "status": 200,
+          "sha256": "8d0ebb15624e618ec62977f22ff89d7201845c5b77cd8d28eedecf0181724ac1"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/collapsible/collapsible.svelte",
+          "status": 200,
+          "sha256": "ec1ac2ee9b761163d115d979dada09cd3005a9b1e872e6f986e459d69fa88ff5"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/slider/slider.svelte",
+          "status": 200,
+          "sha256": "8968de1296eb735455f3682b62a908e20808ae18bcd9445d279650a243ee60a9"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/index.ts",
+          "status": 200,
+          "sha256": "4e99822582382a721e12303c7c6bc00f49e3306e8210586d3b68fc7b0dace0df"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/index.ts",
+          "status": 200,
+          "sha256": "6a6c698c03862ba1060b0f2728c6b96f889d3301ceebe78182cb29c67210e2f4"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/index.ts",
+          "status": 200,
+          "sha256": "3df55781552c050293b73d9a8693789508d87ae57fd47a46b9f7b348b67499f0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/canvas.ts",
+          "status": 200,
+          "sha256": "c853db128163c34d1e2113f7bf2efd91c4ae1fdcf5110fb3fd4292acb0fb760a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/network.ts",
+          "status": 200,
+          "sha256": "07cbd5079c0bf9246b747968c991160d03563b1994be448ffbcf70dfbed162ab"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/views/chart.ts",
+          "status": 200,
+          "sha256": "4cd6b051d6b1a35631e56eb914d157b76b9a38207d36a38651289cc215fc895b"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/theme.ts",
+          "status": 200,
+          "sha256": "47f45915093bafcd0fd34458fea4b967ac908448db8788daa7d998caee46b498"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/svelte/views/views.css",
+          "status": 200,
+          "sha256": "bf9fb3be98238da8291770f799130bc4ba2b15ccd0d584c70f779bd892379b2f"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/checkbox/checkbox.svelte",
+          "status": 200,
+          "sha256": "baea796ad4d0011635fcd1e40cbe6a38bb74a480fa7762c88e89e3aa51ac6dfc"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/label/label.svelte",
+          "status": 200,
+          "sha256": "f8f9147199a1723467565c6841c0cf7225826006224fe0d53f70fca96f26c15e"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-body.svelte",
+          "status": 200,
+          "sha256": "5ef8119c8aa9a8452a176286ba6354eb0f6472324b98f105452a92d1b77b18a8"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-caption.svelte",
+          "status": 200,
+          "sha256": "53c367cf4a15542bbed6963d9edef8f8dfb8d041afc6ba14796055dd7abfb841"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-cell.svelte",
+          "status": 200,
+          "sha256": "b9c859d80310c582e85e42120d5cecaa08e470be84c650b0a498c8763f2af646"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-footer.svelte",
+          "status": 200,
+          "sha256": "7cfed9d3e5a48d1e7273315084ea1922255b4df039dd5c94ffb45f534010ad7c"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-head.svelte",
+          "status": 200,
+          "sha256": "a75800e91b04b79933944fc424a39958cca8c576af36f860c5e4d75a3de22dfd"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-header.svelte",
+          "status": 200,
+          "sha256": "162bff620a9efeb335ffad68daeca14230d252b4754f48d23197c5dc6ed03ae3"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table-row.svelte",
+          "status": 200,
+          "sha256": "c7c47929d4ab205dc4bb0e1cc856a47b6145f4bc30cc902b384fab3b6b56e2a0"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/ui/components/ui/table/table.svelte",
+          "status": 200,
+          "sha256": "631b7aba9609d4f7a8e3cc3d952830bb3026d963769926c6bf00d812cd34e451"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/wealth-distribution/model.ts",
+          "status": 200,
+          "sha256": "20be9265cac3d6b2a5c4555807e43aab409ec5e604c31cb56bbc25d1f493608d"
+        }
+      ],
+      "states": [
+        {
+          "label": "first setup",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 0,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              }
+            ]
+          },
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\nGrowth Amount\nModel info\nObserved instance\n1\nPeople\n2\nTick\n0\nPaused\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "2"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "formatter failure at tick1",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              }
+            ]
+          },
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\nGrowth Amount\nModel info\n\nFormatter failure\n\nPaused\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t1",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "2"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "setup draft3 after formatter failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              }
+            ]
+          },
+          "text": "Restart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\n·\nGrowth Amount\nModel info\n\nFormatter failure\n\nPaused. Setup changes pending.\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t1",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "speed edit after formatter failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 0,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              }
+            ]
+          },
+          "text": "Restart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\n·\nGrowth Amount\nModel info\n\nFormatter failure\n\nPaused. Setup changes pending.\nCanonical observation\ninstance\tpeople\ttick\n1\t2\t1",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "restart3 after formatter failure",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 1,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 0,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              }
+            ]
+          },
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPeople\nGrowth Amount\nModel info\nObserved instance\n2\nPeople\n3\nTick\n0\nPaused\nCanonical observation\ninstance\tpeople\ttick\n2\t3\t0",
+          "inputs": [
+            {
+              "name": "people",
+              "value": "3"
+            },
+            {
+              "name": "growthAmount",
+              "value": "4"
+            }
+          ],
+          "pageErrors": []
+        },
+        {
+          "label": "after fixture disposal",
+          "tracker": {
+            "instances": [
+              {
+                "id": 1,
+                "people": 2,
+                "disposed": 1,
+                "advances": 1,
+                "lastRead": {
+                  "id": 1,
+                  "people": 2,
+                  "tick": 1
+                }
+              },
+              {
+                "id": 2,
+                "people": 3,
+                "disposed": 1,
+                "advances": 0,
+                "lastRead": {
+                  "id": 2,
+                  "people": 3,
+                  "tick": 0
+                }
+              }
+            ],
+            "events": [
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "advance",
+                "id": 1,
+                "count": 1
+              },
+              {
+                "action": "read",
+                "id": 1,
+                "people": 2,
+                "tick": 1
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "enabled",
+                "id": 1,
+                "people": 2
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "read",
+                "id": 2,
+                "people": 3,
+                "tick": 0
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 1
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "enabled",
+                "id": 2,
+                "people": 3
+              },
+              {
+                "action": "dispose",
+                "id": 2
+              }
+            ]
+          },
+          "text": "",
+          "inputs": [],
+          "pageErrors": []
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-formatter-1366-light-error.png",
+          "state": "formatter failure at tick1",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-formatter-1366-dark-error.png",
+          "state": "formatter failure at tick1",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-formatter-390-light-error.png",
+          "state": "formatter failure at tick1",
+          "colorScheme": "light",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-formatter-390-dark-error.png",
+          "state": "formatter failure at tick1",
+          "colorScheme": "dark",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-formatter-light.png",
+          "colorScheme": "light",
+          "width": 1366,
+          "height": 768
+        },
+        {
+          "path": "/tmp/city-library-authoring-error-boundaries-after-svelte-formatter-dark.png",
+          "colorScheme": "dark",
+          "width": 1366,
+          "height": 768
+        }
+      ]
+    }
+  ]
+}
