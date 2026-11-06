@@ -1,5 +1,5 @@
 /** Exact NetLogo Sandpile source composition; CC0, see NOTICE.md. */
-import { Grid, Random, World } from "city-library";
+import { Grid, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface SandpileParameters {
@@ -45,6 +45,19 @@ export function create(options: Partial<SandpileParameters> = {}) {
     fields.map((f) => [f, grid.neighbors(f, { neighborhood: "faces" })]),
   );
   let totalOnTick = 0;
+  type PlotPoint = Readonly<{ x: number; y: number }>;
+  let sizePlot: readonly PlotPoint[] = [], lifetimePlot: readonly PlotPoint[] = [];
+  // Source plot pens refresh only every hundred ticks. These are detached
+  // observation buffers; canonical grain state remains exclusively on Fields.
+  function updateAvalanchePlots() {
+    const distributions = [sizes, lifetimes].map(values => {
+      if (!values.length) return Object.freeze([]) as readonly PlotPoint[];
+      const maximum = Math.max(...values);
+      const counts = stats.histogram(values, { edges: Array.from({ length: maximum + 2 }, (_, i) => i) }).counts;
+      return Object.freeze(counts.flatMap((count, n) => n > 0 && count > 0 ? [Object.freeze({ x: Math.log10(n), y: Math.log10(count) })] : []));
+    });
+    [sizePlot, lifetimePlot] = [distributions[0]!, distributions[1]!];
+  }
   const sizes: number[] = [],
     lifetimes: number[] = [],
     history: { tick: number; average: number }[] = [];
@@ -88,6 +101,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
     });
   }
   function record() {
+    if (world.tick.value % 100 === 0) updateAvalanchePlots();
     history.push({ tick: world.tick.value, average: total() / fields.length });
     if (history.length > 1001) history.splice(1, 1);
   }
@@ -102,6 +116,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
     stabilize();
     totalOnTick = 0;
     sizes.length = lifetimes.length = history.length = 0;
+    sizePlot = lifetimePlot = Object.freeze([]);
     exploredIds = [];
     lastAvalancheIds = [];
     world.tick.reset();
@@ -161,6 +176,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
     },
     clearData() {
       sizes.length = lifetimes.length = 0;
+      sizePlot = lifetimePlot = Object.freeze([]);
     },
     setupUniform(n = settings.grainsPerPatch) {
       setup("uniform", n);
@@ -201,6 +217,8 @@ export function create(options: Partial<SandpileParameters> = {}) {
             }),
           ),
         ),
+        sizePlot,
+        lifetimePlot,
         sizes: Object.freeze([...sizes]),
         lifetimes: Object.freeze([...lifetimes]),
         history: Object.freeze(history.map((p) => Object.freeze({ ...p }))),
