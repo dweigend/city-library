@@ -5869,11 +5869,11 @@
       "infoSha256": "a348b2631c128d70b5670a9f3fad6c5f76c771535257b070f3dace92af67638a",
       "codeSha256": "434bfa543fe50bb5f1ab2492fb1e3e12927b37cc6c2705998631a223e771daaa",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/sandpile",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -6050,11 +6050,11 @@
       "infoSha256": "ff0808428f298cfa2a8b77ab65f65acecf3c79cba2c87f60fae4d3bf63e98132",
       "codeSha256": "c491d0b2399e6eb3d17231caf0cfd8a6278ce2f2f851254dee911db0eddafd41",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/ising",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -6239,11 +6239,11 @@
       "infoSha256": "71f625e1ff661af6141cdfe3b6b0f9a1cadd81995d53db4158a5a7cf3dec62a2",
       "codeSha256": "27a145c27c24bc86e6e692746169cfea7e56df533c53682f756556b3ae91b764",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/sand",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "pending-canvas-capture-diagnosis",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -6429,11 +6429,11 @@
       "infoSha256": "21c344854e68639bcfe70991d630c719ede6b2732a4e84237823ff913d59acb9",
       "codeSha256": "44842d1d7f4402583884bd8b0a0b2b988ca7311d2957a4424587747cbbb5a8c8",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/solid-diffusion",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -6990,11 +6990,11 @@
       "infoSha256": "dc6686438fa9360f89c8cf3de62490e29c640245583100fe5e6e034e00890e71",
       "codeSha256": "8f5c86b749ca3b23b5c26d6bd1e177d50b3bb136467d82387b2a7cb3dd113196",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/interstitial-diffusion",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "pending-canvas-capture-diagnosis",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -7392,11 +7392,11 @@
       "infoSha256": "570b9a9436838735ad39e8a9e50152a9a1068b9e8dd766b804141a3dcc1037bd",
       "codeSha256": "7913a282a5c9b3b0ea5e633a765759bcc543d93b48267caa6d644195255498b1",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/heat-diffusion",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "pending-canvas-capture-diagnosis",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -7797,11 +7797,11 @@
       "infoSha256": "45aa78e06e4a69ea3fbb0ab846ea6a84d4cca01f2b6cc81c2d5fbbedde2f104e",
       "codeSha256": "d6806f3dd64bcf39b93712d4309a351841b3f97a6ed4d276061175c94e1f5133",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/crystallization-basic",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "pending-example-correction",
+        "browserVerification": "pending-canvas-capture-diagnosis",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -10497,11 +10497,11 @@
       "infoSha256": "235d565a55fece0fdbef8d7364b848e868c4a375da9a00fd7007769f5517c62f",
       "codeSha256": "9669b3bba09e64ca253ee902a715e515c7ea2a3b8a37d2c8bf811c2a88d2db71",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/dla",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],

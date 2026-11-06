@@ -6212,33 +6212,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-source-audit.md",
+            "experiments/sandpile/source.json",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-contract.md",
+            "docs/development/selected-materials-examples.sha256",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/sandpile/model.ts",
+            "experiments/sandpile/ui.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-materials-a.test.ts",
+            "tests/selected-materials-b.test.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "research-verified": {
           "done": true,
@@ -6251,7 +6278,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Chemistry & Physics/Ising",
@@ -6265,33 +6294,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-source-audit.md",
+            "experiments/ising/source.json",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-contract.md",
+            "docs/development/selected-materials-examples.sha256",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/ising/model.ts",
+            "experiments/ising/ui.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-materials-a.test.ts",
+            "tests/selected-materials-b.test.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "research-verified": {
           "done": true,
@@ -6304,7 +6360,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Chemistry & Physics/Sand",
@@ -6318,33 +6376,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-source-audit.md",
+            "experiments/sand/source.json",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-contract.md",
+            "docs/development/selected-materials-examples.sha256",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/sand/model.ts",
+            "experiments/sand/ui.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-materials-a.test.ts",
+            "tests/selected-materials-b.test.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
           "done": false,
-          "evidence": []
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "research-verified": {
           "done": true,
@@ -6357,7 +6442,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Theme/viewport canvas capture anomaly unresolved; normal and readback artifacts retained, visual acceptance pending diagnosis."
+      ]
     },
     {
       "path": "Sample Models/Chemistry & Physics/Materials Science/Solid Diffusion",
@@ -6371,33 +6459,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-source-audit.md",
+            "experiments/solid-diffusion/source.json",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-contract.md",
+            "docs/development/selected-materials-examples.sha256",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/solid-diffusion/model.ts",
+            "experiments/solid-diffusion/ui.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-materials-a.test.ts",
+            "tests/selected-materials-b.test.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "research-verified": {
           "done": true,
@@ -6410,7 +6525,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Chemistry & Physics/Materials Science/Interstitial Diffusion",
@@ -6424,33 +6541,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-source-audit.md",
+            "experiments/interstitial-diffusion/source.json",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-contract.md",
+            "docs/development/selected-materials-examples.sha256",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/interstitial-diffusion/model.ts",
+            "experiments/interstitial-diffusion/ui.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-materials-a.test.ts",
+            "tests/selected-materials-b.test.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
           "done": false,
-          "evidence": []
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "research-verified": {
           "done": true,
@@ -6463,7 +6607,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Theme/viewport canvas capture anomaly unresolved; normal and readback artifacts retained, visual acceptance pending diagnosis."
+      ]
     },
     {
       "path": "Sample Models/Chemistry & Physics/Materials Science/Heat Diffusion",
@@ -6477,33 +6624,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-source-audit.md",
+            "experiments/heat-diffusion/source.json",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-contract.md",
+            "docs/development/selected-materials-examples.sha256",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/heat-diffusion/model.ts",
+            "experiments/heat-diffusion/ui.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-materials-a.test.ts",
+            "tests/selected-materials-b.test.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
           "done": false,
-          "evidence": []
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "research-verified": {
           "done": true,
@@ -6516,7 +6690,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Theme/viewport canvas capture anomaly unresolved; normal and readback artifacts retained, visual acceptance pending diagnosis."
+      ]
     },
     {
       "path": "Sample Models/Chemistry & Physics/Materials Science/Crystallization/Crystallization Basic",
@@ -6530,33 +6707,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-source-audit.md",
+            "experiments/crystallization-basic/source.json",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-contract.md",
+            "docs/development/selected-materials-examples.sha256",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/crystallization-basic/model.ts",
+            "experiments/crystallization-basic/ui.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "headless-verified": {
           "done": false,
-          "evidence": []
+          "evidence": [
+            "tests/selected-materials-a.test.ts",
+            "tests/selected-materials-b.test.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
           "done": false,
-          "evidence": []
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "research-verified": {
           "done": true,
@@ -6569,7 +6773,11 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Theme/viewport canvas capture anomaly unresolved; normal and readback artifacts retained, visual acceptance pending diagnosis.",
+        "Frozen example04 asserts numFrozen1 but actual source fixture0; exact one-line correction awaits explicit user agreement under PLAN."
+      ]
     },
     {
       "path": "Sample Models/Chemistry & Physics/Diffusion Limited Aggregation/DLA",
@@ -6583,33 +6791,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-source-audit.md",
+            "experiments/dla/source.json",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-contract.md",
+            "docs/development/selected-materials-examples.sha256",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/dla/model.ts",
+            "experiments/dla/ui.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-materials-a.test.ts",
+            "tests/selected-materials-b.test.ts",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-materials-browser.md",
+            "docs/development/selected-materials-integration.md"
+          ],
+          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "research-verified": {
           "done": true,
@@ -6622,7 +6857,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Earth Science/Fire",
