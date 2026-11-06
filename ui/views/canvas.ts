@@ -50,6 +50,27 @@ export function mountCanvas(
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     for (const cell of data.cells ?? [])
       drawCell(cell, data.width, data.height);
+    if ("agents" in data) {
+      ctx.save();
+      for (const segment of data.segments ?? []) {
+        const width = segment.width ?? 1;
+        // Canvas ignores lineWidth = 0, so omit invisible strokes explicitly.
+        if (width === 0) continue;
+        ctx.strokeStyle = segment.color ?? "#fff";
+        ctx.lineWidth = width * Math.min(devicePixelRatio, 2);
+        ctx.beginPath();
+        ctx.moveTo(
+          ((segment.from.x + data.width / 2) / data.width) * canvas.width,
+          ((data.height / 2 - segment.from.y) / data.height) * canvas.height,
+        );
+        ctx.lineTo(
+          ((segment.to.x + data.width / 2) / data.width) * canvas.width,
+          ((data.height / 2 - segment.to.y) / data.height) * canvas.height,
+        );
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
     if ("agents" in data)
       for (const agent of data.agents) {
         const x = ((agent.x + data.width / 2) / data.width) * canvas.width;

@@ -43,12 +43,23 @@ export interface SpatialAgent extends NetworkNode {
   readonly heading?: number;
   readonly shape?: "circle" | "triangle";
 }
+export interface SpatialSegment {
+  /** Detached endpoints in finite, centered two-dimensional world coordinates. */
+  readonly from: { readonly x: number; readonly y: number };
+  readonly to: { readonly x: number; readonly y: number };
+  /** Stroke color; defaults to white. */
+  readonly color?: string;
+  /** Nonnegative finite stroke width in CSS pixels; defaults to 1, zero omits it. */
+  readonly width?: number;
+}
 export interface SpatialData {
   /** Controlled label visibility; omit to retain the host Labels checkbox. */
   readonly showLabels?: boolean;
   readonly width: number;
   readonly height: number;
   readonly cells?: readonly Cell[];
+  /** Ordered strokes drawn over cells and beneath agents, selection and labels. */
+  readonly segments?: readonly SpatialSegment[];
   readonly agents: readonly SpatialAgent[];
 }
 export interface Series {

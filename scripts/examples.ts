@@ -1,4 +1,5 @@
 const phases = {
+  "ui-segments": ["01-canonical-agent-movement", "02-history-survives-agent-deletion", "03-source-palette-and-pixel-widths", "04-cells-segments-and-agents", "05-optional-empty-and-zero-width"],
   "selected-urban-remaining": ["01-structure-one-impulse-and-noise", "02-structure-two-sticky-activation", "03-sprawl-conversion-and-cached-threshold", "04-economic-oldest-removal-and-median", "05-defaults-isolation-and-preflight"],
   "selected-probability": ["01-birthdays", "02-galton-box", "03-binomial-rabbits", "04-three-doors", "05-stochastic-patchwork"],
   probes: ["01-forward-vectors", "02-wrap-and-hard-endpoints", "03-three-dimensional-context", "04-nonmutating-agent-sensor", "05-validation-and-detachment"],

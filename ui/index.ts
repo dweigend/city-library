@@ -8,6 +8,7 @@ export type {
   NetworkEdge,
   GridData,
   SpatialData,
+  SpatialSegment,
   Series,
 } from "./definition.ts";
 export { netLogoColor } from "./palette/netlogo-color.ts";
