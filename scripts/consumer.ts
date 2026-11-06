@@ -39,6 +39,8 @@ const gaussianCopy=gaussian.copy();if(gaussian.number({distribution:'normal',mea
 const noDraw=JSON.stringify(gaussian.state);if(gaussian.number({distribution:'normal',mean:11,deviation:0})!==11||JSON.stringify(gaussian.state)!==noDraw)throw Error('packed normal zero deviation mismatch');
 const forward=geometry.direction({heading:90});if(Math.abs(forward.x-1)>1e-12||Math.abs(forward.y)>1e-12)throw Error('packed direction mismatch');
 const probed=geometry.normalize({x:3,y:0},{space:{x:5,y:5,boundary:'wrap'}});if(probed?.x!==-2)throw Error('packed normalize mismatch');
+const mappedAffine=geometry.map({x:0,y:90},{from:[-180,180,-90,90],to:[-72.5,72.5,-36.5,36.5]});
+if(mappedAffine.x!==0||mappedAffine.y!==36.25||!Object.isFrozen(mappedAffine))throw Error('packed affine map mismatch');
 if(geometry.distance({x:2,y:0},{x:-2,y:0},{space:{x:5,y:5,boundary:'wrap'}})!==1)throw Error('packed field distance mismatch');
 const components=Graph.add();
 const ca=components.nodes.add({label:'a'}),cb=components.nodes.add({label:'b'}),cc=components.nodes.add({label:'c'});

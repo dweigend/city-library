@@ -1,4 +1,5 @@
 const phases = {
+  "affine-map": ["01-uniform-centered", "02-source-gis-envelopes", "03-unclipped-and-round-trip", "04-validation-and-domain", "05-canonical-positions-and-purity"],
   "selected-computing": ["01-neural-learning", "02-resources-and-ranking", "03-genetic-strategies", "04-swarm-and-clustering", "05-annealing-and-factory"],
   "graph-distances": ["01-native-ring-summary", "02-directed-parallel-costs", "03-signed-and-negative-cycles", "04-callback-validation-and-purity", "05-empty-directed-summaries"],
   "selected-tijuana": ["01-natural-cityscape-and-replay", "02-final-seed-economics-and-reset", "03-migration-crossing-and-partial-errors", "04-domain-display-and-node-intervention", "05-growth-reports-and-delayed-errors"],
