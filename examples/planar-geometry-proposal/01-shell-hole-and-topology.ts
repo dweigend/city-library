@@ -1,4 +1,4 @@
-// PROPOSAL ONLY: root acceptance and contract resolution must precede runtime work.
+// UNFROZEN POST-ADVISORY PROPOSAL. Root owns U1–U10; no runtime is authorized.
 import assert from "node:assert/strict";
 import { geometry, type PlanarPolygon, type PlanarXY } from "city-library";
 
@@ -20,7 +20,7 @@ for (const [point, expected] of [
   assert.equal(geometry.contains(polygon, point, { boundary: "exclude" }), expected);
 }
 // Hole edges and vertices are polygon boundary, not hole interior.
-for (const point of [{ x: 0, y: 5 }, { x: 12, y: 10 }, { x: 3, y: 5 }, { x: 7, y: 7 }]) {
+for (const point of [{ x: 0, y: 5 }, { x: 6, y: 0 }, { x: 12, y: 10 }, { x: 3, y: 5 }, { x: 5, y: 3 }, { x: 7, y: 7 }]) {
   assert.equal(geometry.contains(polygon, point, { boundary: "include" }), true);
   assert.equal(geometry.contains(polygon, point, { boundary: "exclude" }), false);
 }
@@ -43,6 +43,13 @@ const invalid: readonly PlanarPolygon[] = [
   { type: "Polygon", coordinates: [[[0, 0], [3, 0], [3, 0], [0, 3], [0, 0]]] }, // zero-length edge
   { type: "Polygon", coordinates: [[[0, 0], [1, 0], [2, 0], [0, 0]]] }, // collinear
   { type: "Polygon", coordinates: [[[0, 0], [2, 0], [0, 2], [1, 1]]] }, // unclosed
+  { type: "Polygon", coordinates: [[[0, 0], [4, 0], [2, 0], [2, 3], [0, 3], [0, 0]]] }, // adjacent backtrack
+  { type: "Polygon", coordinates: [[[2, 0], [4, 0], [4, 4], [0, 4], [0, 0], [3, 0], [2, 0]]] }, // closure-adjacent backtrack
+  // All three hole vertices are inside this U shell; its edges cross the notch.
+  { type: "Polygon", coordinates: [
+    [[0, 0], [8, 0], [8, 8], [6, 8], [6, 2], [2, 2], [2, 8], [0, 8], [0, 0]],
+    [[1, 7], [7, 7], [4, 1], [1, 7]],
+  ] },
 ];
 for (const candidate of invalid) {
   const unchanged = JSON.stringify(candidate);
@@ -51,4 +58,10 @@ for (const candidate of invalid) {
   assert.equal(JSON.stringify(candidate), unchanged);
 }
 assert.equal(JSON.stringify(polygon), before);
+// Forward collinear adjacent edges are allowed; backtracking is not.
+const forward: PlanarPolygon = { type: "Polygon", coordinates: [
+  [[0, 0], [2, 0], [4, 0], [4, 4], [0, 4], [0, 0]],
+] };
+assert.equal(geometry.contains(forward, { x: 2, y: 2 }, { boundary: "exclude" }), true);
+assert.deepEqual(geometry.bounds([{ type: "Feature", geometry: forward, properties: null }]), [0, 4, 0, 4]);
 console.log("planar proposal 01: shell/hole membership, boundaries, winding and topology");

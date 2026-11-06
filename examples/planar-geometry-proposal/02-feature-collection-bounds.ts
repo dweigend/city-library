@@ -1,4 +1,4 @@
-// PROPOSAL ONLY: public target types and operations are not delivered yet.
+// UNFROZEN POST-ADVISORY PROPOSAL. Planar types and bounds are missing; map is delivered.
 import assert from "node:assert/strict";
 import { geometry, type Bounds, type PlanarDataset, type PlanarFeature, type PlanarGeometry, type PlanarJson } from "city-library";
 
@@ -47,8 +47,18 @@ assert.equal(geometry.bounds([]), undefined);
 assert.equal(geometry.bounds([feature(null, "null")]), undefined);
 assert.equal(geometry.bounds({ features: [], coordinateSystem: { crs: "model:empty", units: "m" } }), undefined);
 // Ordinary JSON properties are data; they do not enlarge the coordinate envelope.
-const properties: Readonly<Record<string, PlanarJson>> = { coordinates: [999, -999], nested: { x: 300, y: 400 } };
+const properties: Readonly<Record<string, PlanarJson>> = { coordinates: [999, -999], nested: { x: 300, y: 400 }, valid: true, missing: null };
 assert.deepEqual(geometry.bounds([{ type: "Feature", geometry: { type: "Point", coordinates: [2, 3] }, properties }]), [2, 2, 3, 3]);
+for (const malformed of [
+  { type: "Point", coordinates: [1, 2, 0] },
+  { type: "Point", coordinates: ["1", 2] },
+  { type: "LineString", coordinates: [[0, 0]] },
+] as unknown as readonly PlanarGeometry[]) {
+  assert.throws(() => geometry.bounds([feature(malformed, "bad-shape")]), TypeError);
+}
+for (const value of [NaN, Infinity, -Infinity]) {
+  assert.throws(() => geometry.bounds([feature({ type: "Point", coordinates: [0, value] }, "nonfinite")]));
+}
 // Returned data are detached; caller edits after observation cannot rewrite that result.
 const point: [number, number] = [4, 6];
 const observed = geometry.bounds([feature({ type: "Point", coordinates: point }, "detached")]);
