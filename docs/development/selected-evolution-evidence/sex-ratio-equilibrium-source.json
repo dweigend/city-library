@@ -1,0 +1,362 @@
+{
+  "sourceSha256": "4d8a2109036db54574aaee4f662d108c249e11db2ec525fa51d25e5331c06762",
+  "slug": "sex-ratio-equilibrium",
+  "setupControl": "native setup DOM click",
+  "settings": [
+    {
+      "variable": "initial-population-size",
+      "value": {
+        "success": true,
+        "value": 500
+      }
+    },
+    {
+      "variable": "mean-longevity",
+      "value": {
+        "success": true,
+        "value": 60
+      }
+    },
+    {
+      "variable": "initial-average-male-child-chance",
+      "value": {
+        "success": true,
+        "value": 0.4
+      }
+    },
+    {
+      "variable": "initial-adult-sex-ratio",
+      "value": {
+        "success": true,
+        "value": 35
+      }
+    },
+    {
+      "variable": "gestation-period",
+      "value": {
+        "success": true,
+        "value": 5
+      }
+    },
+    {
+      "variable": "mating-chance",
+      "value": {
+        "success": true,
+        "value": 0.85
+      }
+    },
+    {
+      "variable": "maximum-litter-size",
+      "value": {
+        "success": true,
+        "value": 6
+      }
+    }
+  ],
+  "setup": {
+    "tick": {
+      "success": true,
+      "value": 0
+    },
+    "turtles": {
+      "success": true,
+      "value": 500
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 16,
+      "maxPycor": 10,
+      "minPxcor": -16,
+      "minPycor": -10,
+      "nextWhoNumber": 500,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 0,
+      "codeGlobals": {
+        "adult-age": 9,
+        "adult-sex-ratio-list": [],
+        "age-list": [],
+        "gestation-period": 5,
+        "initial-adult-sex-ratio": 35,
+        "initial-average-male-child-chance": 0.4,
+        "initial-population-size": 500,
+        "mating-chance": 0.85,
+        "maximum-litter-size": 6,
+        "mean-longevity": 60
+      }
+    },
+    "monitors": [
+      {
+        "label": "Running mean of ASR",
+        "source": "running-average-adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": "NA"
+        }
+      },
+      {
+        "label": "Running std dev of ASR",
+        "source": "running-sd-adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": "NA"
+        }
+      },
+      {
+        "label": "Adult Sex Ratio (ASR)",
+        "source": "adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": 35
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "runPause": {
+    "runningThen": true,
+    "pausedNow": true,
+    "after": {
+      "tick": {
+        "success": true,
+        "value": 6
+      },
+      "turtles": {
+        "success": true,
+        "value": 586
+      },
+      "globals": {
+        "linkDirectedness": "neither",
+        "maxPxcor": 16,
+        "maxPycor": 10,
+        "minPxcor": -16,
+        "minPycor": -10,
+        "nextWhoNumber": 586,
+        "perspective": "observe",
+        "subject": {
+          "referenceType": "nobody"
+        },
+        "ticks": 6,
+        "codeGlobals": {
+          "adult-age": 9,
+          "adult-sex-ratio-list": [
+            35,
+            35,
+            35,
+            35,
+            35,
+            34.98293515358362
+          ],
+          "age-list": [],
+          "gestation-period": 5,
+          "initial-adult-sex-ratio": 35,
+          "initial-average-male-child-chance": 0.4,
+          "initial-population-size": 500,
+          "mating-chance": 0.85,
+          "maximum-litter-size": 6,
+          "mean-longevity": 60
+        }
+      },
+      "monitors": [
+        {
+          "label": "Running mean of ASR",
+          "source": "running-average-adult-sex-ratio",
+          "value": {
+            "success": true,
+            "value": "NA"
+          }
+        },
+        {
+          "label": "Running std dev of ASR",
+          "source": "running-sd-adult-sex-ratio",
+          "value": {
+            "success": true,
+            "value": "NA"
+          }
+        },
+        {
+          "label": "Adult Sex Ratio (ASR)",
+          "source": "adult-sex-ratio",
+          "value": {
+            "success": true,
+            "value": 34.98293515358362
+          }
+        }
+      ]
+    }
+  },
+  "reset": {
+    "command": "random-seed 1 setup",
+    "success": true
+  },
+  "step": {
+    "command": "go",
+    "success": true
+  },
+  "stepState": {
+    "tick": {
+      "success": true,
+      "value": 1
+    },
+    "turtles": {
+      "success": true,
+      "value": 500
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 16,
+      "maxPycor": 10,
+      "minPxcor": -16,
+      "minPycor": -10,
+      "nextWhoNumber": 500,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 1,
+      "codeGlobals": {
+        "adult-age": 9,
+        "adult-sex-ratio-list": [
+          35
+        ],
+        "age-list": [],
+        "gestation-period": 5,
+        "initial-adult-sex-ratio": 35,
+        "initial-average-male-child-chance": 0.4,
+        "initial-population-size": 500,
+        "mating-chance": 0.85,
+        "maximum-litter-size": 6,
+        "mean-longevity": 60
+      }
+    },
+    "monitors": [
+      {
+        "label": "Running mean of ASR",
+        "source": "running-average-adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": "NA"
+        }
+      },
+      {
+        "label": "Running std dev of ASR",
+        "source": "running-sd-adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": "NA"
+        }
+      },
+      {
+        "label": "Adult Sex Ratio (ASR)",
+        "source": "adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": 35
+        }
+      }
+    ]
+  },
+  "progressCommand": {
+    "command": "repeat 9 [ go ]",
+    "success": true
+  },
+  "progress": {
+    "tick": {
+      "success": true,
+      "value": 10
+    },
+    "turtles": {
+      "success": true,
+      "value": 713
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 16,
+      "maxPycor": 10,
+      "minPxcor": -16,
+      "minPycor": -10,
+      "nextWhoNumber": 715,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 10,
+      "codeGlobals": {
+        "adult-age": 9,
+        "adult-sex-ratio-list": [
+          35,
+          35,
+          35,
+          35,
+          35,
+          34.98293515358362,
+          35.22727272727273,
+          35.08245877061469,
+          35.44668587896253,
+          35.62412342215989
+        ],
+        "age-list": [
+          49,
+          56
+        ],
+        "gestation-period": 5,
+        "initial-adult-sex-ratio": 35,
+        "initial-average-male-child-chance": 0.4,
+        "initial-population-size": 500,
+        "mating-chance": 0.85,
+        "maximum-litter-size": 6,
+        "mean-longevity": 60
+      }
+    },
+    "monitors": [
+      {
+        "label": "Running mean of ASR",
+        "source": "running-average-adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": "NA"
+        }
+      },
+      {
+        "label": "Running std dev of ASR",
+        "source": "running-sd-adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": "NA"
+        }
+      },
+      {
+        "label": "Adult Sex Ratio (ASR)",
+        "source": "adult-sex-ratio",
+        "value": {
+          "success": true,
+          "value": 35.62412342215989
+        }
+      }
+    ]
+  },
+  "probes": {
+    "fixture": {
+      "command": "clear-turtles create-males 2 [set adult? true] create-females 1 [set adult? true] ask one-of males [set adult? false]",
+      "success": true
+    },
+    "ratio": {
+      "success": true,
+      "value": 100
+    },
+    "empty": {
+      "command": "clear-turtles go",
+      "success": true
+    },
+    "emptyTick": {
+      "success": true,
+      "value": 10
+    },
+    "emptyFemaleMean": {
+      "success": false,
+      "error": "Runtime error: [object Object]"
+    }
+  }
+}

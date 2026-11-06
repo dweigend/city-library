@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import terrain from './terrain.json';
 import colors from '../../../docs/development/selected-evolution-evidence/mammoths-full-native-colors.json';
-const sha = (value: string | Uint8Array) => createHash('sha256').update(value).digest('hex');
+const sha = (value) => createHash('sha256').update(value).digest('hex');
 assert.equal(sha(await Bun.file(new URL('../source.nlogox', import.meta.url)).bytes()), terrain.sourceSha256);
 assert.equal(sha(await Bun.file(new URL('./americas.png', import.meta.url)).bytes()), '9d550543fb1da42a03624ffbf1f2358b726f60fc146963939de7e12555711293');
 assert.equal(terrain.rows.length, 97);
