@@ -1,0 +1,39 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"toolIcon\":{\"_tag\":\"website\",\"pageUrl\":\"https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox\"},\"value\":{\"at\":\"2026-11-06T08:55:29.531Z\",\"url\":\"https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox\",\"viewport\":{\"width\":1280,\"height\":800},\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\",\"loadedSourceSHA\":\"eb7880d4eff9dca3f1d82fb3122877fb439262e115720663de72f3f74528c1ea\",\"body\":\"Error\\nExtension exception: gis:load-coordinate-system is not supported by NetLogo Web. Use gis:set-coordinate-system instead.\\ncalled by command SETUP\\n\\n powered by NetLogo\\nGIS General Examples\\nFile:\\nNew\\nRevert to Original\\nExport:\\nNetLogo\\nHTML\\nMode: Interactive\\nCommands and Code: Bottom\\nModel Speed\\n-\\n+\\nticks:\\n?\\nfor shortcuts\\ndraw-cities\\ndraw-countries\\nsetup\\ndraw-rivers\\nprojection\\nWGS_84_Geographic\\nUS_Orthographic\\nLambert_Conformal_Conic\\nclear-drawing\\nmake-city-turtles\\ndraw/clear-country-labels\\nVector Data -> Turtles\\nnum-citizens-to-create\\nVector Data -> Patches\\ncreate-turtle-at-lat-lon\\nMisc.\\nRaster Data\\ndownload-background-image\\nmatch-cells-to-patches\\ndisplay-elevation\\ndisplay-population-in-patches\\ndisplay-rivers-in-patches\\nhighlight-large-city-turtles\\ndisplay-elevation-in-patches\\nlat\\nlon\\ndraw/clear-city-turtle-labels\\nsample-elevation-with-patches\\ncreate-citizens-in-countries\\ndraw-us-rivers-in-green\\ndisplay-gradient-in-patches\\ndraw-large-cities\\nFiltering Vector Datasets\\nCommand Center\\nNetLogo Code\\nModel Info\\nAgent Inspection\",\"reporter\":{\"success\":true,\"value\":[0,10585]},\"resources\":[{\"name\":\"https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox\",\"duration\":801.5}]}}"
+    }
+  ],
+  "structuredContent": {
+    "toolIcon": {
+      "_tag": "website",
+      "pageUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox"
+    },
+    "value": {
+      "at": "2026-11-06T08:55:29.531Z",
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "loadedSourceSHA": "eb7880d4eff9dca3f1d82fb3122877fb439262e115720663de72f3f74528c1ea",
+      "body": "Error\nExtension exception: gis:load-coordinate-system is not supported by NetLogo Web. Use gis:set-coordinate-system instead.\ncalled by command SETUP\n\n powered by NetLogo\nGIS General Examples\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks:\n?\nfor shortcuts\ndraw-cities\ndraw-countries\nsetup\ndraw-rivers\nprojection\nWGS_84_Geographic\nUS_Orthographic\nLambert_Conformal_Conic\nclear-drawing\nmake-city-turtles\ndraw/clear-country-labels\nVector Data -> Turtles\nnum-citizens-to-create\nVector Data -> Patches\ncreate-turtle-at-lat-lon\nMisc.\nRaster Data\ndownload-background-image\nmatch-cells-to-patches\ndisplay-elevation\ndisplay-population-in-patches\ndisplay-rivers-in-patches\nhighlight-large-city-turtles\ndisplay-elevation-in-patches\nlat\nlon\ndraw/clear-city-turtle-labels\nsample-elevation-with-patches\ncreate-citizens-in-countries\ndraw-us-rivers-in-green\ndisplay-gradient-in-patches\ndraw-large-cities\nFiltering Vector Datasets\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection",
+      "reporter": {
+        "success": true,
+        "value": [
+          0,
+          10585
+        ]
+      },
+      "resources": [
+        {
+          "name": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox",
+          "duration": 801.5
+        }
+      ]
+    }
+  },
+  "isError": false
+}

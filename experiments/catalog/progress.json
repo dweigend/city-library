@@ -11958,8 +11958,14 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-host-capabilities.md",
+            "docs/development/selected-host-capabilities-evidence/nw-general-examples-source-audit.json",
+            "docs/research/netlogo-web/evidence/computing/nw-general-examples.nlogox",
+            "docs/development/selected-host-capabilities-evidence/SHA256SUMS"
+          ],
+          "basis": "Complete procedure/widget/extension/asset-reference/source-license audit with original loaded SHA matching pinned served inventory. Actual bounded original failure observations retained; no target or full baseline inferred."
         },
         "contract-frozen": {
           "done": false,
@@ -11997,7 +12003,11 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Target contract/runtime and full original/target browser comparison remain pending.",
+        "Required independent Argon/high technical approval remains quota-blocked.",
+        "Actual original Ring succeeds; save-matrix fails specifically at unsupported NW Web file primitive. Remaining source actions, graph analysis/generators/interchange and target host adaptation remain open."
+      ]
     },
     {
       "path": "Code Examples/Extensions Examples/gis/GIS General Examples",
@@ -12011,8 +12021,14 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-host-capabilities.md",
+            "docs/development/selected-host-capabilities-evidence/gis-general-examples-source-audit.json",
+            "docs/research/netlogo-web/evidence/computing/gis-general-examples.nlogox",
+            "docs/development/selected-host-capabilities-evidence/SHA256SUMS"
+          ],
+          "basis": "Complete procedure/widget/extension/asset-reference/source-license audit with original loaded SHA matching pinned served inventory. Actual bounded original failure observations retained; no target or full baseline inferred."
         },
         "contract-frozen": {
           "done": false,
@@ -12050,7 +12066,11 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Target contract/runtime and full original/target browser comparison remain pending.",
+        "Required independent Argon/high technical approval remains quota-blocked.",
+        "Actual original Setup fails at gis:load-coordinate-system before dataset loading/reset-ticks; source baseline setup/progress remains open. Companion dataset rights/CRS/raster/WMS contracts remain unresolved."
+      ]
     }
   ]
 }
