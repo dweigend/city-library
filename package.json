@@ -26,7 +26,7 @@
     "typescript": "7.0.2"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json && tsc -p tsconfig.ui-examples.json",
     "test": "bun test tests models/agent-lab/model.test.ts",
     "examples": "bun scripts/examples.ts",
     "build": "bun build index.ts --target browser --format esm --outdir dist && tsc -p tsconfig.build.json",

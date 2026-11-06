@@ -10,3 +10,4 @@ export type {
   SpatialData,
   Series,
 } from "./definition.ts";
+export { netLogoColor } from "./palette/netlogo-color.ts";

@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.ui.json",
+  "compilerOptions": { "types": ["bun"] },
+  "include": ["examples/ui-color/**/*.ts"]
+}

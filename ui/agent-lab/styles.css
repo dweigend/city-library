@@ -126,7 +126,7 @@ input[type="checkbox"] {
 }
 .monitors {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) fit-content(65%);
   gap: 0.6rem;
   margin: 1.25rem 0;
   font-variant-numeric: tabular-nums;
@@ -138,8 +138,8 @@ dt {
 dd {
   margin: 0;
 }
-.inspector dt,
-.inspector dd {
+.monitors dt,
+.monitors dd {
   min-width: 0;
   overflow-wrap: anywhere;
 }
@@ -297,7 +297,7 @@ th {
   .monitors {
     order: 2;
     width: 100%;
-    grid-template-columns: repeat(3, minmax(0, 1fr) auto);
+    grid-template-columns: repeat(3, minmax(0, 1fr) fit-content(5rem));
     gap: 0.5rem;
     margin: 0.25rem 0;
   }
