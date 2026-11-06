@@ -1,6 +1,7 @@
 import { defineUI } from '../../ui/index.ts';
 import { model, presets } from './model.ts';
 const binding=defineUI(model,{
+ complete:s=>Boolean(s.diagnostic),
  setup:[{field:'seed'},{field:'number'},{field:'personalities'}],
  source:{url:'https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/IABM%20Textbook/chapter%202/Heroes%20and%20Cowards.nlogox',label:'Original NetLogo model · Wilensky · CC BY-NC-SA 3.0'},
  actions:presets.map(p=>({label:p.label,run:m=>m.preset(p.seed)})),
