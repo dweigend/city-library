@@ -134,7 +134,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
       }
     },
     read() {
-      return Object.freeze({ tick: world.tick.value, width: settings.width, height: settings.height, parameters: settings, done: done(), latticeVisible, atoms: Object.freeze(world.agents.map(a => Object.freeze({ id: a.id, x: a.x, y: a.y, heading: a.heading }))), lattice: Object.freeze(grid.fields.filter(f => f.x < -minX).map(f => Object.freeze({ id: f.id, x: f.x + 0.5, y: geometry.normalize({ x: f.x + 0.5, y: f.y + 0.5 }, { space })!.y }))), profile: calcConcentration(), initialProfile, profileAt15, history: Object.freeze([...history]), randomState: random.state });
+      return Object.freeze({ tick: world.tick.value, width: settings.width, height: settings.height, parameters: settings, done: done(), latticeVisible, cells: Object.freeze(grid.fields.map(f => Object.freeze({ id: f.id, x: f.x, y: f.y }))), atoms: Object.freeze(world.agents.map(a => Object.freeze({ id: a.id, x: a.x, y: a.y, heading: a.heading }))), lattice: Object.freeze(grid.fields.filter(f => f.x < -minX).map(f => Object.freeze({ id: f.id, x: f.x + 0.5, y: geometry.normalize({ x: f.x + 0.5, y: f.y + 0.5 }, { space })!.y }))), profile: calcConcentration(), initialProfile, profileAt15, history: Object.freeze([...history]), randomState: random.state });
     },
   };
 }
