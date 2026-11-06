@@ -15,7 +15,11 @@ export const ui = defineUI(model, {
   actions: [
     { label: "Setup single", run: (m) => m.setupSingle() },
     { label: "Setup random", run: (m) => m.setupRandom() },
-    { label: "Continue", run: (m) => m.continueRun(), enabled: (s) => s.done },
+    {
+      label: "Continue",
+      run: (m) => m.continueRun(),
+      enabled: (s) => s.done && !s.rulesShown,
+    },
     { label: "Show rules", run: (m) => m.showRules() },
     ...patterns.map((pattern) => ({
       label: pattern,
