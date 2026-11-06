@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import terrain from './terrain.json';
+import colors from '../../../docs/development/selected-evolution-evidence/mammoths-full-native-colors.json';
+const sha = (value: string | Uint8Array) => createHash('sha256').update(value).digest('hex');
+assert.equal(sha(await Bun.file(new URL('../source.nlogox', import.meta.url)).bytes()), terrain.sourceSha256);
+assert.equal(sha(await Bun.file(new URL('./americas.png', import.meta.url)).bytes()), '9d550543fb1da42a03624ffbf1f2358b726f60fc146963939de7e12555711293');
+assert.equal(terrain.rows.length, 97);
+assert.ok(terrain.rows.every(row => /^[01]{97}$/.test(row)));
+const bits = terrain.rows.join('');
+assert.equal(sha(bits), terrain.maskSha256);
+assert.equal(colors.postImport.length, 9409);
+assert.equal(colors.postSetup.length, 9409);
+assert.equal(sha(JSON.stringify(colors.postImport)), terrain.postImportColorsSha256);
+assert.equal(sha(JSON.stringify(colors.postSetup)), terrain.setupColorsSha256);
+assert.equal(colors.postSetup.map(color => color === 55 ? '1' : '0').join(''), bits);
+// Native nonblue import result becomes green; ocean remains a numeric blue shade.
+assert.equal(colors.postImport.map(color => Math.floor(color / 10) === 10 ? '0' : '1').join(''), bits);
+assert.equal([...bits].filter(bit => bit === '1').length, 2505);
+console.log('Mammoths XML, embedded PNG, full native pcolors and all9409 mask fields verified');
