@@ -9045,33 +9045,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/birthdays/source.nlogox",
+            "experiments/birthdays/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/birthdays/model.ts",
+            "experiments/birthdays/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9084,7 +9113,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Probability/Galton Box",
@@ -9098,33 +9129,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/galton-box/source.nlogox",
+            "experiments/galton-box/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/galton-box/model.ts",
+            "experiments/galton-box/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9137,7 +9197,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Probability/Binomial Rabbits",
@@ -9151,33 +9213,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/binomial-rabbits/source.nlogox",
+            "experiments/binomial-rabbits/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/binomial-rabbits/model.ts",
+            "experiments/binomial-rabbits/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9190,7 +9281,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Probability/Three Doors",
@@ -9204,33 +9297,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/three-doors/source.nlogox",
+            "experiments/three-doors/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/three-doors/model.ts",
+            "experiments/three-doors/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9243,7 +9365,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Probability/ProbLab/Stochastic Patchwork",
@@ -9257,33 +9381,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/stochastic-patchwork/source.nlogox",
+            "experiments/stochastic-patchwork/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/stochastic-patchwork/model.ts",
+            "experiments/stochastic-patchwork/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9296,7 +9449,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Expected Value",
@@ -9310,33 +9465,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/expected-value/source.nlogox",
+            "experiments/expected-value/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/expected-value/model.ts",
+            "experiments/expected-value/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9349,7 +9533,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Partition Permutation Distribution",
@@ -9363,33 +9549,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/partition-permutation-distribution/source.nlogox",
+            "experiments/partition-permutation-distribution/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/partition-permutation-distribution/model.ts",
+            "experiments/partition-permutation-distribution/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9402,7 +9617,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Central Limit Theorem",
@@ -9416,33 +9633,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/central-limit-theorem/source.nlogox",
+            "experiments/central-limit-theorem/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/central-limit-theorem/model.ts",
+            "experiments/central-limit-theorem/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9455,7 +9701,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Random Combinations and Permutations",
@@ -9469,33 +9717,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/random-combinations-and-permutations/source.nlogox",
+            "experiments/random-combinations-and-permutations/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/random-combinations-and-permutations/model.ts",
+            "experiments/random-combinations-and-permutations/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9508,7 +9785,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Mathematics/Fractals/Mandelbrot",
@@ -9522,33 +9801,62 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-first-contract.md",
+            "docs/development/selected-probability-last-contract.md",
+            "experiments/mandelbrot/source.nlogox",
+            "experiments/mandelbrot/NOTICE.md"
+          ],
+          "basis": "Complete source audit and actually loaded original SHA retained; canonical source identity unchanged."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "examples/selected-probability/SHA256SUMS",
+            "docs/development/selected-probability-contract.md"
+          ],
+          "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/mandelbrot/model.ts",
+            "experiments/mandelbrot/ui.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Canonical public composition transferred exactly from corrected bound B17 branch atf32305e."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-probability-first.test.ts",
+            "tests/selected-probability-last.test.ts",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Root executed focused35tests2646assertions and integrated fullcheck, with actual public examples/build/consumer."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md",
+            "docs/development/selected-probability-integration.md"
+          ],
+          "basis": "Fresh actual corrected-target per-model flows, desktop/mobile/themes; runtime byte matches and root narrow-CSS native-control regression."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-probability-evidence.md",
+            "docs/development/selected-probability-remediation.md",
+            "docs/development/selected-probability-geometry-remediation.md"
+          ],
+          "basis": "Every concrete original ran in Chromium with actual source SHA; paired setup/progress and declared deviations retained separately from corrected target evidence."
         },
         "research-verified": {
           "done": true,
@@ -9561,7 +9869,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent gemini-4-argon/high technical review remains pending; requested provider is quota-blocked. No substituted approval."
+      ]
     },
     {
       "path": "Sample Models/Computer Science/Robby the Robot",
