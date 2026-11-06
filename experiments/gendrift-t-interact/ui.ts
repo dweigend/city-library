@@ -1,0 +1,70 @@
+import { defineUI, netLogoColor } from "../../ui/index.ts";
+import { model } from "./model.ts";
+export const ui = defineUI(model, {
+  setup: [{ field: "seed" }, { field: "number" }, { field: "colors" }],
+  actions: [
+    { label: "Setup preserving walls", run: (m) => m.setup() },
+    {
+      label: "Place walls",
+      run: (m) => m.setWallMode("place"),
+      pressed: (s) => s.wallMode === "place",
+    },
+    {
+      label: "Remove walls",
+      run: (m) => m.setWallMode("remove"),
+      pressed: (s) => s.wallMode === "remove",
+    },
+    { label: "Remove all walls", run: (m) => m.removeAllWalls() },
+  ],
+  drawing: {
+    toggleLabel: "Draw walls",
+    enabled: () => true,
+    intent: (m, intent) => {
+      if (intent.phase !== "end") m.drawWall(intent.position.y);
+    },
+  },
+  source: {
+    url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Genetic%20Drift/GenDrift%20T%20interact.nlogox",
+    label: "NetLogo original · Wilensky · CC BY-NC-SA 3.0",
+  },
+  complete: (s) => s.done,
+  monitors: [
+    { label: "Tick", value: (s) => s.tick },
+    { label: "Most populous (%)", value: (s) => s.maxPercent },
+  ],
+  views: [
+    {
+      type: "spatial",
+      label: "Genetic drift and walls",
+      data: (s) => ({
+        width: s.width,
+        height: s.height,
+        cells: s.cells.map((c) => ({
+          ...c,
+          color: c.wall ? "#ffffff" : "#000000",
+        })),
+        agents: s.turtles.map((a) => ({
+          ...a,
+          color: netLogoColor(a.colorNumber),
+          size: 6,
+          shape: "triangle" as const,
+        })),
+      }),
+    },
+    {
+      type: "line",
+      label: "Turtle populations",
+      series: (s) =>
+        [5, 15, 25, 35, 45, 55, 65, 125, 85, 95].map((c, i) => ({
+          label: `Color ${c}`,
+          color: netLogoColor(c),
+          points: s.history.map((p) => ({ x: p.tick, y: p.counts[i]! })),
+        })),
+    },
+    {
+      type: "inspector",
+      label: "Selected turtle",
+      value: (s, id) => s.turtles.find((a) => a.id === id),
+    },
+  ],
+});
