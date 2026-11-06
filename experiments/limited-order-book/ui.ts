@@ -11,7 +11,7 @@ export const ui = defineUI(model, {
     { field: "initialBelief", label: "Initial belief" },
   ],
   source: {
-    url: "https://ccl.northwestern.edu/netlogo/models/LimitedOrderBook",
+    url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Limited%20Order%20Book.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [

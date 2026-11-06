@@ -1,4 +1,5 @@
 import { describe, expect, test } from "bun:test";
+import { Random } from "city-library";
 import {
   create as fruit,
   genomeTraits,
@@ -98,6 +99,21 @@ describe("selected B03 market and foraging source mechanisms", () => {
     expect(() => isolated.advance()).toThrow("division by zero");
     expect(isolated.read().tick).toBe(0);
     expect(() => isolated.submitOrder(0, true, 0, 1)).toThrow();
+  });
+
+  test("Bidding odd starting-money uses the native ceil integer bound", () => {
+    const market = bidding({ startingMoney: 25, seed: 1 });
+    const random = Random.add({ seed: 1 });
+    // Source setup: 50 even-distribution sellers consume supply and ask draws.
+    for (let i = 0; i < 100; i++) random.number();
+    random.number(); // First buyer demand precedes its money draw.
+    const expected = 12.5 + random.number({ max: 13, integer: true });
+    expect(market.read().buyers[0]!.money).toBe(expected);
+    expect(
+      market
+        .read()
+        .buyers.every((buyer) => buyer.money >= 12.5 && buyer.money <= 24.5),
+    ).toBe(true);
   });
 
   test("Bidding first pairing changes quotes without selling; cent rounding cannot freeze a quote", () => {

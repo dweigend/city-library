@@ -33,7 +33,7 @@ export const ui = defineUI(model, {
   })),
   complete: (s) => s.done,
   source: {
-    url: "https://ccl.northwestern.edu/netlogo/models/FruitWars",
+    url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Fruit%20Wars.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
@@ -135,7 +135,9 @@ export const ui = defineUI(model, {
             "proactiveAggression",
           ] as const
         ).map((key) => ({
-          label: key,
+          label: key
+            .replace(/([a-z])([A-Z])/g, "$1 $2")
+            .replace(/^./, (value) => value.toUpperCase()),
           points: s.history.flatMap((h) =>
             h[key] === null ? [] : [{ x: h.tick, y: h[key]! }],
           ),
@@ -146,7 +148,9 @@ export const ui = defineUI(model, {
       label: "Aggression distribution",
       series: (s) =>
         (["reactiveAggression", "proactiveAggression"] as const).map((key) => ({
-          label: key,
+          label: key
+            .replace(/([a-z])([A-Z])/g, "$1 $2")
+            .replace(/^./, (value) => value.toUpperCase()),
           points: Array.from({ length: 61 }, (_, x) => ({
             x,
             y: s.aggressionHistograms[key].counts[x]!,
