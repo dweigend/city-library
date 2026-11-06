@@ -1,0 +1,551 @@
+{
+  "sourceSha256": "22ef0f02410d2dad4d36cf1c21ca1ad647ad4d336fac6770e673bf3b1dd807ed",
+  "slug": "bacterial-infection",
+  "setupControl": "native setup DOM click",
+  "settings": [
+    {
+      "variable": "reproduce-every",
+      "value": {
+        "success": true,
+        "value": 2
+      }
+    },
+    {
+      "variable": "reproduce?",
+      "value": {
+        "success": true,
+        "value": true
+      }
+    },
+    {
+      "variable": "auto-dose-b?",
+      "value": {
+        "success": true,
+        "value": "yes, but skip dose 4"
+      }
+    },
+    {
+      "variable": "init#-4pores-a",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "init#-5pores-a",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "init#-6pores-a",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "init#-3pores-a",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "init#-4pores-b",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "init#-5pores-b",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "init#-6pores-b",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "init#-3pores-b",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "b-dosage",
+      "value": {
+        "success": true,
+        "value": 50
+      }
+    },
+    {
+      "variable": "dose-b-every",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "auto-dose-a?",
+      "value": {
+        "success": true,
+        "value": "yes, but skip dose 4"
+      }
+    },
+    {
+      "variable": "dose-a-every",
+      "value": {
+        "success": true,
+        "value": 4
+      }
+    },
+    {
+      "variable": "a-dosage",
+      "value": {
+        "success": true,
+        "value": 50
+      }
+    }
+  ],
+  "setup": {
+    "tick": {
+      "success": true,
+      "value": 0
+    },
+    "turtles": {
+      "success": true,
+      "value": 53
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 24,
+      "maxPycor": 10,
+      "minPxcor": -24,
+      "minPycor": -10,
+      "nextWhoNumber": 53,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 0,
+      "codeGlobals": {
+        "#-days": 0,
+        "#-hours": 0,
+        "#-minutes": 0,
+        "a-dosage": 50,
+        "a-wiped-out?": false,
+        "antibiotic-flow-rate": 0.2,
+        "auto-dose-a?": "yes, but skip dose 4",
+        "auto-dose-b?": "yes, but skip dose 4",
+        "b-dosage": 50,
+        "b-wiped-out?": false,
+        "bacteria-counts-region-a": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "bacteria-counts-region-b": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "dose-a-every": 4,
+        "dose-b-every": 4,
+        "doses-given-to-a": 0,
+        "doses-given-to-b": 0,
+        "fever-factor?": false,
+        "init#-3pores-a": 4,
+        "init#-3pores-b": 4,
+        "init#-4pores-a": 4,
+        "init#-4pores-b": 4,
+        "init#-5pores-a": 4,
+        "init#-5pores-b": 4,
+        "init#-6pores-a": 4,
+        "init#-6pores-b": 4,
+        "reproduce-every": 2,
+        "reproduce?": true
+      }
+    },
+    "monitors": [
+      {
+        "label": "doses given to B",
+        "source": "doses-given-to-b",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      },
+      {
+        "label": "# of hrs",
+        "source": "#-hours",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      },
+      {
+        "label": "# of days",
+        "source": "#-days",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      },
+      {
+        "label": "doses given to A",
+        "source": "doses-given-to-a",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "runPause": {
+    "nativeGoAbsent": true
+  },
+  "reset": {
+    "command": "random-seed 1 setup",
+    "success": true
+  },
+  "step": {
+    "command": "go",
+    "success": true
+  },
+  "stepState": {
+    "tick": {
+      "success": true,
+      "value": 1
+    },
+    "turtles": {
+      "success": true,
+      "value": 185
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 24,
+      "maxPycor": 10,
+      "minPxcor": -24,
+      "minPycor": -10,
+      "nextWhoNumber": 185,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 1,
+      "codeGlobals": {
+        "#-days": 0,
+        "#-hours": 0,
+        "#-minutes": 1,
+        "a-dosage": 50,
+        "a-wiped-out?": false,
+        "antibiotic-flow-rate": 0.2,
+        "auto-dose-a?": "yes, but skip dose 4",
+        "auto-dose-b?": "yes, but skip dose 4",
+        "b-dosage": 50,
+        "b-wiped-out?": false,
+        "bacteria-counts-region-a": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "bacteria-counts-region-b": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "dose-a-every": 4,
+        "dose-b-every": 4,
+        "doses-given-to-a": 1,
+        "doses-given-to-b": 1,
+        "fever-factor?": false,
+        "init#-3pores-a": 4,
+        "init#-3pores-b": 4,
+        "init#-4pores-a": 4,
+        "init#-4pores-b": 4,
+        "init#-5pores-a": 4,
+        "init#-5pores-b": 4,
+        "init#-6pores-a": 4,
+        "init#-6pores-b": 4,
+        "reproduce-every": 2,
+        "reproduce?": true
+      }
+    },
+    "monitors": [
+      {
+        "label": "doses given to B",
+        "source": "doses-given-to-b",
+        "value": {
+          "success": true,
+          "value": 1
+        }
+      },
+      {
+        "label": "# of hrs",
+        "source": "#-hours",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      },
+      {
+        "label": "# of days",
+        "source": "#-days",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      },
+      {
+        "label": "doses given to A",
+        "source": "doses-given-to-a",
+        "value": {
+          "success": true,
+          "value": 1
+        }
+      }
+    ]
+  },
+  "progressCommand": {
+    "command": "repeat 9 [ go ]",
+    "success": true
+  },
+  "progress": {
+    "tick": {
+      "success": true,
+      "value": 10
+    },
+    "turtles": {
+      "success": true,
+      "value": 183
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 24,
+      "maxPycor": 10,
+      "minPxcor": -24,
+      "minPycor": -10,
+      "nextWhoNumber": 186,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 10,
+      "codeGlobals": {
+        "#-days": 0,
+        "#-hours": 0,
+        "#-minutes": 10,
+        "a-dosage": 50,
+        "a-wiped-out?": false,
+        "antibiotic-flow-rate": 0.2,
+        "auto-dose-a?": "yes, but skip dose 4",
+        "auto-dose-b?": "yes, but skip dose 4",
+        "b-dosage": 50,
+        "b-wiped-out?": false,
+        "bacteria-counts-region-a": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "bacteria-counts-region-b": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "dose-a-every": 4,
+        "dose-b-every": 4,
+        "doses-given-to-a": 1,
+        "doses-given-to-b": 1,
+        "fever-factor?": false,
+        "init#-3pores-a": 4,
+        "init#-3pores-b": 4,
+        "init#-4pores-a": 4,
+        "init#-4pores-b": 4,
+        "init#-5pores-a": 4,
+        "init#-5pores-b": 4,
+        "init#-6pores-a": 4,
+        "init#-6pores-b": 4,
+        "reproduce-every": 2,
+        "reproduce?": true
+      }
+    },
+    "monitors": [
+      {
+        "label": "doses given to B",
+        "source": "doses-given-to-b",
+        "value": {
+          "success": true,
+          "value": 1
+        }
+      },
+      {
+        "label": "# of hrs",
+        "source": "#-hours",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      },
+      {
+        "label": "# of days",
+        "source": "#-days",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      },
+      {
+        "label": "doses given to A",
+        "source": "doses-given-to-a",
+        "value": {
+          "success": true,
+          "value": 1
+        }
+      }
+    ]
+  },
+  "probes": {
+    "patchPredicate": {
+      "success": true,
+      "value": [
+        true,
+        false
+      ]
+    },
+    "doseCadence": {
+      "success": true,
+      "value": [
+        false,
+        false
+      ]
+    },
+    "manual": {
+      "command": "dose-region \"A\" a-dosage set doses-given-to-a doses-given-to-a + 1",
+      "success": true
+    },
+    "doseCounts": {
+      "success": true,
+      "value": [
+        148,
+        2,
+        10
+      ]
+    },
+    "empty": {
+      "command": "ask bacterias [die] go",
+      "success": true
+    },
+    "emptyAfter": {
+      "tick": {
+        "success": true,
+        "value": 11
+      },
+      "turtles": {
+        "success": true,
+        "value": 169
+      },
+      "globals": {
+        "linkDirectedness": "neither",
+        "maxPxcor": 24,
+        "maxPycor": 10,
+        "minPxcor": -24,
+        "minPycor": -10,
+        "nextWhoNumber": 236,
+        "perspective": "observe",
+        "subject": {
+          "referenceType": "nobody"
+        },
+        "ticks": 11,
+        "codeGlobals": {
+          "#-days": 0,
+          "#-hours": 0,
+          "#-minutes": 11,
+          "a-dosage": 50,
+          "a-wiped-out?": true,
+          "antibiotic-flow-rate": 0.2,
+          "auto-dose-a?": "yes, but skip dose 4",
+          "auto-dose-b?": "yes, but skip dose 4",
+          "b-dosage": 50,
+          "b-wiped-out?": true,
+          "bacteria-counts-region-a": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bacteria-counts-region-b": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "dose-a-every": 4,
+          "dose-b-every": 4,
+          "doses-given-to-a": 2,
+          "doses-given-to-b": 1,
+          "fever-factor?": false,
+          "init#-3pores-a": 4,
+          "init#-3pores-b": 4,
+          "init#-4pores-a": 4,
+          "init#-4pores-b": 4,
+          "init#-5pores-a": 4,
+          "init#-5pores-b": 4,
+          "init#-6pores-a": 4,
+          "init#-6pores-b": 4,
+          "reproduce-every": 2,
+          "reproduce?": true
+        }
+      },
+      "monitors": [
+        {
+          "label": "doses given to B",
+          "source": "doses-given-to-b",
+          "value": {
+            "success": true,
+            "value": 1
+          }
+        },
+        {
+          "label": "# of hrs",
+          "source": "#-hours",
+          "value": {
+            "success": true,
+            "value": 0
+          }
+        },
+        {
+          "label": "# of days",
+          "source": "#-days",
+          "value": {
+            "success": true,
+            "value": 0
+          }
+        },
+        {
+          "label": "doses given to A",
+          "source": "doses-given-to-a",
+          "value": {
+            "success": true,
+            "value": 2
+          }
+        }
+      ]
+    }
+  }
+}

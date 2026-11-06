@@ -1,0 +1,1371 @@
+{
+  "scope": "Owned payload only, excluding this self-referential manifest. Historical captures retain original filenames/raw states. Hashes assert bytes, not independent approval.",
+  "runtimeHead": "624d82b94da8c4978d992162de5d7d87105e6f29",
+  "files": [
+    {
+      "path": "docs/development/selected-evolution-browser.md",
+      "bytes": 10346,
+      "sha256": "f9aef9fd7249dead4054a940b8d3ea8d77c4cea0855598f50bf23c9c6c89c11f"
+    },
+    {
+      "path": "docs/development/selected-evolution-contract.md",
+      "bytes": 10331,
+      "sha256": "8d39f254973cd7a0c3313983a2f69a18cd9dc1289b66a06e7fa2341fe54e415b"
+    },
+    {
+      "path": "docs/development/selected-evolution-delivery.md",
+      "bytes": 5275,
+      "sha256": "38f9e6d3525cdf0af97beec7275f3a1977db7d9095f5cd578d71682bc63fc578"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/01-memory-and-pollution.log",
+      "bytes": 64,
+      "sha256": "d5790ec27199acc6ee38e26d58e80470240b826ab0d31623676be1dc7437ce04"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/02-gametes-and-sex-ratio.log",
+      "bytes": 72,
+      "sha256": "40adffa52d405e907abd3a0f6cd243a06a8b92bdd3cb87c19ffad2b8afb8517b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/03-learning-and-mammoths.log",
+      "bytes": 71,
+      "sha256": "e4d18ceec6eb92ba7ced334c0691d4ccebbd287fa48bac092de797e9580e9aa8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/04-infection-and-vision.log",
+      "bytes": 70,
+      "sha256": "89abc1e01ce90cb1ace597053cf31d65bc0f41a6bb7067ba23b1fe1144833f5c"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/05-drift-and-inheritance.log",
+      "bytes": 75,
+      "sha256": "e46729a289e118383076f8b17d75cea8eb770b0ade344f0a03eba4cc175ef71d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-final-browser.json",
+      "bytes": 26018,
+      "sha256": "3f5cd81481e17d7fa8116ca968f5b84d26be85cbfc0b70ad561600ea29bce75f"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-final-desktop-dark.png",
+      "bytes": 162475,
+      "sha256": "6edf6a5119246cf824778d7ed7850b767b37327c44e401bb561fada13579f02c"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-final-mobile-dark.png",
+      "bytes": 112094,
+      "sha256": "408c1804c0100a77668e08264c1f8694ad1cf92782d861e019c6daf1c9e42c37"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-final-mobile-light.png",
+      "bytes": 110331,
+      "sha256": "0daa960cd8a7f9e011b5d4a47990667146d986908267a882cf8595845c5b3d01"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-final-progress.png",
+      "bytes": 162040,
+      "sha256": "46f34dddcec448796976cfb12d67b6b96d7475f51d98273aef4048051bb93ea6"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-final-setup.png",
+      "bytes": 158826,
+      "sha256": "7d5638f48b3cff7d349aabb53584600bdcbc2ec0e3ec52556a1dc3e67ecf10e5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-native-boundary-error.json",
+      "bytes": 1455,
+      "sha256": "a1692574a53b3d4e8ddb6205723ce3f980f66887444c627f4e0a2ada6c2252c9"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-source-progress.png",
+      "bytes": 165175,
+      "sha256": "ded4897b85f53d327eb2913025677770a0a95e09133f430342701618e30508a3"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-source-setup.png",
+      "bytes": 161182,
+      "sha256": "6b00c2a19f261cf386f8a2c83cc11b5a373d7d9263575daae63e161a80f5730f"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-source.json",
+      "bytes": 5968,
+      "sha256": "8aa12c95698832a473c88d25df94068959234bf421a09786a524645b11dfef7b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-target-desktop-dark.png",
+      "bytes": 162540,
+      "sha256": "538ab25fa11ebe58ca21687bd9f3564fe9b159a28af3a7ee7060e8cb1d9ccef5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-target-mobile-dark.png",
+      "bytes": 99601,
+      "sha256": "3680ab74209833bba823cf2d36fb00bf96237c085777f50e61ae4e1c56fa1c2d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-target-mobile-light.png",
+      "bytes": 98412,
+      "sha256": "1481b93984c6e41d0748606875648913f1c48c4082168b9252452ca845329ff8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-target-modules.json",
+      "bytes": 649,
+      "sha256": "0859aad8cd4608a9f6d28e2e84d8e70218db78edaffe66845f61abc4ff8715ff"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-target-progress.png",
+      "bytes": 162114,
+      "sha256": "dd7f9fb4532c5aeafb46094a5a1315c55f524f5e7bd130da0a66949b9e716a73"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-target-setup.png",
+      "bytes": 158851,
+      "sha256": "57181eb0ef1390c9424e62f29f6eea977f0a1954db3140c6a6f266885011749e"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/anisogamy-target.json",
+      "bytes": 24446,
+      "sha256": "aa441225b09a2f434851b341ad5f75b966c7a5c13e10efbc5d88ca9978ef019d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-source-progress.png",
+      "bytes": 166677,
+      "sha256": "9cde8356a6549357124fb31214ccf46aadaed9772046d033d3683dd99474b2ac"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-source-setup.png",
+      "bytes": 157818,
+      "sha256": "e717a115f0c69d3536d4463e688a46e9b4f4a85507eca3d50b87c97bc1056e1d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-source.json",
+      "bytes": 11461,
+      "sha256": "da0ef577d8bb936082c11749b91a8dd363d06fb6b0ee48c18dad1beef69a8c88"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-target-desktop-dark.png",
+      "bytes": 132397,
+      "sha256": "2972d41a997f7045e61103e7bfe8c9b23a78717dd1df5334487ebcc878133f4b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-target-mobile-dark.png",
+      "bytes": 86247,
+      "sha256": "2b799f3d85b55b7dcf5bc7bc6fdd52544115abf6341c0783d90c749a4b4b9a50"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-target-mobile-light.png",
+      "bytes": 84592,
+      "sha256": "6735e340d5b5d0b72abb52b540491c3e8bd92aed684c666c5c39f09dbc5e4567"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-target-modules.json",
+      "bytes": 659,
+      "sha256": "27e3f8f2b042683dcb10f9bebd0c4763fc9b0121426519f1ff385ae82b560525"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-target-progress.png",
+      "bytes": 132070,
+      "sha256": "fa2819a6089ac800cdc736a2032412b1cb00f2ff3792ccbfff8b8c74542f58a4"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-target-setup.png",
+      "bytes": 122878,
+      "sha256": "99da5ad314fc7363a0994e14add0bcd57bc717c7e4ccdfa11d13b02f7293f56f"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/bacterial-infection-target.json",
+      "bytes": 45622,
+      "sha256": "f77ad5bdd08fa585ec60230035199407239bf0596c3f2bf0e8df015a957a9fc5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-final-browser.json",
+      "bytes": 22348,
+      "sha256": "46a73c5ad3410899361b4c264687c4e7ff849639df20c97525ecc3f0fd546ad5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-final-desktop-dark.png",
+      "bytes": 83541,
+      "sha256": "946804785bf66d94b75f32712abf41a42e086c17ad997655d6a6f2e23273b656"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-final-mobile-dark.png",
+      "bytes": 43296,
+      "sha256": "01879b6d0b2f58a000faf7931a0d86a7ab50df8c1d7681ec61f744094cceda4e"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-final-mobile-light.png",
+      "bytes": 41865,
+      "sha256": "0c78404504b5912dd52bad194384ee553bbd41615a910e06a6f8d63500ba23df"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-final-progress.png",
+      "bytes": 82792,
+      "sha256": "7f7c7f0e9f9b86518c79815ac0bc94d20c749ca565aeec0ed8c4c480580c1cb9"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-final-setup.png",
+      "bytes": 82725,
+      "sha256": "c6a3286b3c0619dcd098ea662cfccb998f71d53ee7d5b84df271c8136d630bc4"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-source-progress.png",
+      "bytes": 160225,
+      "sha256": "710f7d70be36c53f94719de1e173e1e353fb404189a593599add14bbac7449ae"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-source-setup.png",
+      "bytes": 139460,
+      "sha256": "0d0fdd8719404313a66e9b4273752b3990377118873a0e57af95899ec54d2d27"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-source.json",
+      "bytes": 4981,
+      "sha256": "2a5dfc1be8711c620d232608dabb81bfc199ab82bb6becf8196010b17754aded"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-target-desktop-dark.png",
+      "bytes": 83535,
+      "sha256": "e3eb4fb5761dd36e1f52d3eb1d12a80263c511b1c6ecfe027680762c48cc3eb8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-target-mobile-dark.png",
+      "bytes": 45848,
+      "sha256": "bf4656ef936fc98116b6ded9979e36afb8ad400e698f14bc27eacf7045f63f61"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-target-mobile-light.png",
+      "bytes": 43798,
+      "sha256": "63c30248dcbaba92ef70efe32c483bef5780003eb1bf6184393d5e404ad530b9"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-target-modules.json",
+      "bytes": 654,
+      "sha256": "7361bf65597500d737042b88a6711c76622e4d8e79700447c4ea28b46f6b2b6d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-target-progress.png",
+      "bytes": 82895,
+      "sha256": "4c8d76e0ea92629634c9959d54da1b39b6a5353eb83c3c8293ff34b9516915cd"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-target-setup.png",
+      "bytes": 82822,
+      "sha256": "4afb1fac839eb0bbb00052a2ee01bfebcc7cf6814c2726cdbdb38e03cff7aef9"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-effect-target.json",
+      "bytes": 18425,
+      "sha256": "7a843c6dad8e76475ff04b239d006f273b4d19af052f76c4f035a1b9da33ef48"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/baldwin-native-weighted-and-rounding.json",
+      "bytes": 851,
+      "sha256": "b61ec52ea0efa67ef460b6589897e8e30f166cf3585e93a07773460e68c80c62"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/behavior.log",
+      "bytes": 2053,
+      "sha256": "a70545a3e541925fa551b3f48b5d5e4df9f4a9b743cd32c10a242189b291af1c"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/build.log",
+      "bytes": 160,
+      "sha256": "bfb7fb79b5b61951431ba66de54e7324d9701658c49bf8c26a10fb9836d3068d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/checks.json",
+      "bytes": 2847,
+      "sha256": "7f43a3392f4c582a41b73182e619ede03b13819f9672d35823e949c894de8851"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunk-verification.json",
+      "bytes": 4043,
+      "sha256": "03d686a4ffb09b545e31fb99ae7bbdd841eea0aed519337193e33756e3c58b8f"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-0cjxkre3.js.gz",
+      "bytes": 2621,
+      "sha256": "9e6e8a0cde12246081aef49c259bcf0dc2c8fba0c9e339a607732832758f24e6"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-14te1wac.js.gz",
+      "bytes": 2597,
+      "sha256": "1c2293f30b14dcd020ff43016e3c44b936cfbbecfecf0c629b40a870268b4708"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-3hebsndw.js.gz",
+      "bytes": 2668,
+      "sha256": "5da0ac2829f22d8efb6bef7bc88cb3d3170c8ad18ea3e21d031bd403b6317ced"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-4qh5p8mc.js.gz",
+      "bytes": 3380,
+      "sha256": "2b780993688204487b3f4df63aaa54e6c51bbff5ecb913c9026150ab71d86f0d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-65xya5cj.js.gz",
+      "bytes": 2353,
+      "sha256": "cf333539617308fd8348b850206b37efc7e1d960fa96deeeae55d93ed3ec3b94"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-7acmxy50.js.gz",
+      "bytes": 2371,
+      "sha256": "818409ac25425b66bfb70b59f8937f8966a631574d1e0ebb7c3f042c976632db"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-7nzc9azb.js.gz",
+      "bytes": 3463,
+      "sha256": "eb0502f7b8f9ffdc50b7f2783e0d8513d7f0ae8de2c4dcfe729baffac54d49fb"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-8hqnexkt.js.gz",
+      "bytes": 3444,
+      "sha256": "a260c8e80745c2690c6be6df8143cb77a3bb21562cf6fb026b821b080af131bb"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-92vp42d0.js.gz",
+      "bytes": 4233,
+      "sha256": "55608c3ee6a411c2c6de8d3ace26b7d756720df8cb0b6d2fae02c9f27aa0e084"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-9wzfbxsp.js.gz",
+      "bytes": 3380,
+      "sha256": "7c1ed9b065625173a10ad8f272b0d84f77568876dd137509899f669fc2e079fc"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-b6dyj1gx.js.gz",
+      "bytes": 2192,
+      "sha256": "dbadafe519d02527c6e184e4580f3cbb5e09a1951e3ee5725558bdc0e8420b37"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-jczkfdwv.js.gz",
+      "bytes": 3626,
+      "sha256": "0d1e774738f55c2954ae8940477a26d083bb20ae9415a6f93cfd2d1aab937865"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-n4s9dnev.js.gz",
+      "bytes": 4233,
+      "sha256": "38b53e2322fa705e6508f5d3bc0b167057b4413e9d8cbf2eb95d3ca9051ac1a2"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-r25vvb4r.js.gz",
+      "bytes": 3605,
+      "sha256": "6588c184c5b3e98d7eb17bb1b007d30003c15c48f70e453aec484874ab1e96c5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-rhkbpp1y.js.gz",
+      "bytes": 3102,
+      "sha256": "f8d13039bdff66f09e7f044cc5ab17e2ff7252e20f5ed5a570996ea67c3b8228"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-t5ntxnz2.js.gz",
+      "bytes": 3426,
+      "sha256": "d2ab4553ee3f8a46cb0a476af9d2a4aa29ece61f16ff70a0af9b9baccc4a2cb7"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-tsvzknxs.js.gz",
+      "bytes": 3062,
+      "sha256": "d1a43d353de8f1b9f74794b84940602e48a356917281589924c089909ce9722f"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-w8dtbkw5.js.gz",
+      "bytes": 2683,
+      "sha256": "5fffa5c471ed016ba273372648249d1f7fa0120a6d22559c708caa44e86662f4"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/chunks/ui-yndwbnd0.js.gz",
+      "bytes": 4202,
+      "sha256": "a3a32844f18238ad2042dce5f7681c9d6035e896656a7447d0660194c4633054"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/final-code.json",
+      "bytes": 5881,
+      "sha256": "3af53eb14e2160b278d9bb89c052855994a9afd620dd3096f135af6d060f415d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/final-control-keyboard-readbacks.json",
+      "bytes": 54901,
+      "sha256": "29fdf2f94852c9981cdd2f8fb8870e44695c2e871a3ed2554cfb47edd3f9ea53"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/final-supplement-png-comparison.json",
+      "bytes": 5361,
+      "sha256": "a0778e4ecd222193f23ae678c4468de2f55c79a96bdb0c0a604a9ca1b36ea416"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/frozen-hashes.log",
+      "bytes": 298,
+      "sha256": "7a43111b2cfb598682b1939ffa93b4ca2edf0c89f16940970606694e6c2ddacb"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/frozen-script-types.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-final-browser.json",
+      "bytes": 14613,
+      "sha256": "1c780ab40cb28030984864011f4261e4e42629f32d8133ff02ccc245bce991b1"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-final-desktop-dark.png",
+      "bytes": 164614,
+      "sha256": "d0b6487e4077d00390423f4e3ac30952370e5388be405c87cffbc48d78874731"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-final-mobile-dark.png",
+      "bytes": 132743,
+      "sha256": "9f7d759031f0b10f4ef07758cc3cce13186441aa3ae3682fcec227b871c1e052"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-final-mobile-light.png",
+      "bytes": 127836,
+      "sha256": "95b627b1f37772d3f6dea78c04f84777051a344988346c68b8769f50438b64bc"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-final-progress.png",
+      "bytes": 164678,
+      "sha256": "d69ea8619276698baadeef1aca18d9f87eb67b11517ca0484d842211a5d16bdf"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-final-setup.png",
+      "bytes": 124661,
+      "sha256": "a4ff4fb86bff0288b239482a6648204cf067fe82a8baac13a954adff0d6c46b2"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-native-boundary-error.json",
+      "bytes": 1205,
+      "sha256": "78b34b34c576938f476960701e38a093bc337c3dc165c0d860a89d749abd15bf"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-source-progress.png",
+      "bytes": 183837,
+      "sha256": "1e15a08a87bc552eeb6bbf0fdfa87f3c7a2c45ff0dbd555568bd43a5013460f4"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-source-setup.png",
+      "bytes": 182086,
+      "sha256": "b5e55290499df7edf8400698a17532777b2c2631320b1ed4206cc585b9a22e06"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-source.json",
+      "bytes": 4320,
+      "sha256": "c4a8c87c46bb0e91dc29accb31d27a30fad310c5ea6c0b4b03175669fff8526d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-target-desktop-dark.png",
+      "bytes": 169526,
+      "sha256": "c0085959da33c252e46e8ed8396eca9ee22d5ea5dcd08dfab6b4a96e7d844a4f"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-target-mobile-dark.png",
+      "bytes": 121459,
+      "sha256": "e987ca3c84d6404f540e3a791ed0c8d7193a27b1706da27acb956dc352acee97"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-target-mobile-light.png",
+      "bytes": 116026,
+      "sha256": "fc9508838b51da2e8c61419afcfa94bac5db30ef593723aae7c708643d90f104"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-target-modules.json",
+      "bytes": 658,
+      "sha256": "414f7f1d72e2a88655e04e8a6b2938a8d3c04aeff90d1b6c8d6301dd1105e651"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-target-progress.png",
+      "bytes": 169275,
+      "sha256": "cadfe8c1f1912c57d073b98736f3eddec797c96046714a3ec24cdb48570770c6"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-target-setup.png",
+      "bytes": 125020,
+      "sha256": "b82e76ec97b9fffb045326b7c3969306da9c6d107f7b7508e68cd03b3ea06c44"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-t-interact-target.json",
+      "bytes": 10077,
+      "sha256": "cbe04c0177bd561ffdcfd7b56e1096322b028ab8281facee9db17ad5480ed832"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-target-native-pointer-wall-preserved.png",
+      "bytes": 118021,
+      "sha256": "468b5107ff3d73a5756168aaa9006e1c902486e960cbc35f659d1a0bea2d9fb1"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/gendrift-target-wall-pointer-and-singleton.json",
+      "bytes": 1455,
+      "sha256": "c9075878fd8a48296ed43b50bd2319fc898d9c2aab93a056dad0f35d6b453898"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/immutable-source-verification.json",
+      "bytes": 3637,
+      "sha256": "610d246d4f26306d77876120415d579ca04ac65a9fa1b2d071d08cb32eb9a5da"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/inspect_final_supplements.py",
+      "bytes": 1963,
+      "sha256": "20aef6b6f337dd757abdbc940dd3cf0c3aaeed170a6387a924a360b034b5ce11"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/inspect_retained_pngs.py",
+      "bytes": 3922,
+      "sha256": "39a3969133069245d0a620348710dc10b6137d9392f0d37320fc2c175b9a63ae"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-climate100-dark.png",
+      "bytes": 258024,
+      "sha256": "352e42747dd298fe11772b727d1b5c643a5641f69060fb166138ec5642cd9fa7"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-climate100-light.png",
+      "bytes": 259133,
+      "sha256": "ccbfc6cb45e1d3bb546490455e189a8e3a8295ffc3a34c723a4f2b40fb0fae62"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-direction-equivalence.json",
+      "bytes": 753,
+      "sha256": "eb12e0532cd573196cb76a1869aefa8b3f9896abab50076654a4d352444b4c46"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-direction-equivalence.json.gz",
+      "bytes": 164929,
+      "sha256": "b2bc28605ce2d65fee352b8b3b5375172f4c6b18d7bf508a6c6f431be26251f8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-direction-final-browser.json",
+      "bytes": 54237,
+      "sha256": "351b9a8dd8fe91e74094b30c6f263b667737b5664756e288fb082f660fcfe9a8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-direction-final-desktop-dark.png",
+      "bytes": 277896,
+      "sha256": "9d8da6c87d7be17c091d89d920f85ed536c64231b42ef24d1ebd2a5625c2f9fb"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-direction-final-mobile-dark.png",
+      "bytes": 225852,
+      "sha256": "9f33c42b81f7ba84011300e7278beeaab237f335582b43c0ea410e7c3997fd45"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-direction-final-mobile-light.png",
+      "bytes": 224197,
+      "sha256": "dc0cbf481b5ca1ad9c2536ff8a945e06a8ab72608d6f02024ad2c214ef86fd3d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-direction-final-progress.png",
+      "bytes": 279640,
+      "sha256": "39c682861e64e23ea1609b157ff1922e16e188e1e47ea6c45886001a65d25cb5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-direction-final-setup.png",
+      "bytes": 263164,
+      "sha256": "d0b1c6fee9e0882b6d48739b4b7c76c327395324493d89ff481b7893c7f76fdf"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-full-native-colors.json",
+      "bytes": 272862,
+      "sha256": "422013bd91b510a9cf975ab39ce8b3f57f548f00312a79d28e4bd688a2469728"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-mask-verification.json",
+      "bytes": 702,
+      "sha256": "63cb7a73b5b83418efd7d4bd26022c43d03f5298a1e95d564b2c8f4b24d79da4"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-source-progress.png",
+      "bytes": 324696,
+      "sha256": "7e46c2729a33dacc7554b6ff7bb4542f97e4dcea3ae4ca75159b440a598f9252"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-source-setup.png",
+      "bytes": 303168,
+      "sha256": "6be8af197a24a593d325b22fa9ac2e8eefe7c6254393bd596a2bb9b711111da9"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-source.json",
+      "bytes": 6878,
+      "sha256": "a203c5916c080ff53140e225ab5018f681d8de4dba5b479daafe3f1c6d65cccb"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-target-desktop-dark.png",
+      "bytes": 278330,
+      "sha256": "40ba22b12fb688cfde79c277001efd4816f224b05ef7b6f0b4ec0164cb991b73"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-target-mobile-dark.png",
+      "bytes": 210452,
+      "sha256": "d832d6aae0c24256c52c80fa120ccaa488e9c7fef612e5db8654255e6ddd21c4"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-target-mobile-light.png",
+      "bytes": 209334,
+      "sha256": "51458721141bf430bd815c0b62ab2cc6519919d1a25a43661e87ff375a17b011"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-target-modules.json",
+      "bytes": 653,
+      "sha256": "80505fb5218d40f5bd16bc73460bc9d4521c7063c626042b1d605383fbe7c50b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-target-progress.png",
+      "bytes": 280046,
+      "sha256": "a996f8c74fd82e28056780195372b027aba469aa79a84287931b070f05cf2a60"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-target-setup.png",
+      "bytes": 263378,
+      "sha256": "a70b6529203fb805c31df7b8d10a15980efbcbd6c4a408c05195cc3245bec7bd"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mammoths-target.json",
+      "bytes": 23286,
+      "sha256": "7cd76bae7de1bb90322c3625eb7f3ca3c05f2e13391792fc20d8a661f94b0ccc"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-source-progress.png",
+      "bytes": 136642,
+      "sha256": "549da577bbe4b707b9db5354af8a9823549b0914e9089a7f4881008ca006ec50"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-source-setup.png",
+      "bytes": 131789,
+      "sha256": "4998a6e0f624567b0915a3b8507cb8d42ab8814a592c6dee9c0ecfd599cf46a8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-source.json",
+      "bytes": 10703,
+      "sha256": "1b4ac91750bf44c1f5aeda36102e3f00dfef334b9c08be5ea5b0c61ba6d699ad"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-target-desktop-dark.png",
+      "bytes": 109326,
+      "sha256": "edcad2245d4e33ea2b9d9070354a79347dea0e5223a7ef6bcc4f9a7d4fc59868"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-target-mobile-dark.png",
+      "bytes": 62331,
+      "sha256": "14c1134d887a138e778403bad5af228e4c519879a27117168b2417f78dc53fc3"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-target-mobile-light.png",
+      "bytes": 60253,
+      "sha256": "4a81f532367fdd9f7abe2bc4db287835ad9eafcdb5a3b370eafb39d01bcfe75a"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-target-modules.json",
+      "bytes": 660,
+      "sha256": "14eb6e74b308b317730f5a2dd401b5b40d7e3b2bb6e151abc3e1583372014eb8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-target-progress.png",
+      "bytes": 108698,
+      "sha256": "f7c2109ff0d8944aa2f7cebd36189bcedcad18e5726e77249e18ceaf0abe97c7"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-target-setup.png",
+      "bytes": 106760,
+      "sha256": "8b5d8b026120010e86fd42d498623abcf82539cc4460855faf24f0a142130534"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mendelian-inheritance-target.json",
+      "bytes": 17325,
+      "sha256": "7ef0ca97e760dc0a5108a0977e404b9751d5244863c02b4796997179bd089700"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-final-browser.json",
+      "bytes": 18912,
+      "sha256": "ec00c03ce64b351d42f43bd1d966f23c8992045fd8e2dc2457aec178c6761bc5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-final-desktop-dark.png",
+      "bytes": 173229,
+      "sha256": "74d99c753bdc5d35f2b998d900cfcbfe1ecbf15e9edbad037eeec32fe60c1738"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-final-mobile-dark.png",
+      "bytes": 153222,
+      "sha256": "4dced8b824afd6539241fdd70e635bcfed8c8e2e480df7031ea7b47b1d07d1d5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-final-mobile-light.png",
+      "bytes": 148893,
+      "sha256": "2d2ebcab8259aa031cc46692197bb048584dafd516f553da62e2b4078aa5d03d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-final-progress.png",
+      "bytes": 173697,
+      "sha256": "a02507d9e857c29cb54a85a47fdf49e17c73a97bdfc42f9a135cf7a419e35c39"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-final-setup.png",
+      "bytes": 166485,
+      "sha256": "e6010a4ba863687b64461de590429ec51d93eca278962d896f8d3258dabf6b21"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-source-progress.png",
+      "bytes": 223496,
+      "sha256": "87c740dc04d8de86c28eb34371d69135c34835adccd4eec3d50001c6411c4089"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-source-setup.png",
+      "bytes": 237911,
+      "sha256": "b12b828e57c02d5177ab803edb6f9c167e4c1eefc24be2b96ecd1b1a1aab6b7a"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-source.json",
+      "bytes": 13899,
+      "sha256": "83abe525f517fb2e16ec79a51a1b7265d537ead6036e3ec25e907a049f4abbb8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-target-desktop-dark.png",
+      "bytes": 174908,
+      "sha256": "a132b712cb9214f00aea57f7bd3a4f17627e189fb38f04210cf340132bea521d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-target-mobile-dark.png",
+      "bytes": 124393,
+      "sha256": "4eecdd6b30b9376dfe957245d149494435bb0627944a5a72e113999daec869c0"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-target-mobile-light.png",
+      "bytes": 119978,
+      "sha256": "f855f557c7ef39886ace5db14db3b6490634b671e13d0e0d8ef4c063453156d6"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-target-modules.json",
+      "bytes": 646,
+      "sha256": "ad2d42bccecb3f92675d2a2df8b1910d9d335a390cd424da0c97264aef24a02a"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-target-progress.png",
+      "bytes": 175526,
+      "sha256": "7fa1ff02642d9ed32056f4f2b2e81549cef62b045e7528d7aa46bd7db7c9cf5b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-target-setup.png",
+      "bytes": 166537,
+      "sha256": "496605d686d15048572adf4ce24aede91bbdbb6a129ccf518a0d2e8beb569292"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/mimicry-target.json",
+      "bytes": 15589,
+      "sha256": "2ea0c789dd10e08e20da83fa871e6dd51df4b0e888b632868a91157b16302af6"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/owned-commits.json",
+      "bytes": 712,
+      "sha256": "ef70c111f51c756e2f133ce1c92fc8ec5af0987f2ea9b590fb66346939670316"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/packed-consumer.log",
+      "bytes": 4208,
+      "sha256": "7e943d3722c4eea49be482765013488fd0210ed36b683a35f6c83bf9d9177f5e"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-final-browser.json",
+      "bytes": 20171,
+      "sha256": "e1be0dd59fc5371a2e9315fc9fa3bb4a72b537d90af93527d426f11bbcf0b831"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-final-desktop-dark.png",
+      "bytes": 121541,
+      "sha256": "f0c7e1567a617e11417e9858f4e703280d30ac611f562a10464d571dc6680cce"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-final-mobile-dark.png",
+      "bytes": 88567,
+      "sha256": "5fb0f6480f672769295fce8b622eeb37e4aee4906bd96a2579672d6d666caf24"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-final-mobile-light.png",
+      "bytes": 86444,
+      "sha256": "7aab2440a8fbb75ba85784330092d4094b0e579ed9c7226c404e04f525e9db6b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-final-progress.png",
+      "bytes": 120920,
+      "sha256": "288337c19eec54384d19636e4711b1ce152637a5cf4d28c010844f032963c618"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-final-setup.png",
+      "bytes": 109649,
+      "sha256": "769e0f6720bde47c9b470110d8c013a730dd1ce41eca111b15514b0ef9602214"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-native-boundary-error.json",
+      "bytes": 2192,
+      "sha256": "20118d6cd9482bc2764341d55ccaedda5d0ea669db38e8ab316b2136b0d66ae7"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-native-pollution.json",
+      "bytes": 375,
+      "sha256": "5443fae220b4c8742be8678f6fd85cad712d19df27932104dd2c0a9b593351e6"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-source-progress.png",
+      "bytes": 169591,
+      "sha256": "1a30c4b5b7574bfd82c3661bdb44ceb6ed7b8b37fe11ba750c12a590475dc51b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-source-setup.png",
+      "bytes": 168849,
+      "sha256": "2417656fd4ae755ee18953bb654ee8e2f93dd1e66b1fa5ced571152ff2088f97"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-source.json",
+      "bytes": 8210,
+      "sha256": "e1cad2530de82d19983c23901e0d600e03bf7f9e1137397d14d25bd23f3e0c28"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-target-desktop-dark.png",
+      "bytes": 121720,
+      "sha256": "38f54f1695da208baf5eef31cdb1ed9eab0eee09a4dc147a971250b72bc386a8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-target-mobile-dark.png",
+      "bytes": 72047,
+      "sha256": "12427afbf18723400bc8805d7850080d7c35b7f54d5ca345929b9361771b92ef"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-target-mobile-light.png",
+      "bytes": 70588,
+      "sha256": "c4c40286c86d0141739457df147ff1808f6c43baf2f51272215fc1ce59fc52c6"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-target-modules.json",
+      "bytes": 653,
+      "sha256": "6d7779dc0d4fea3e56a0d9989ab7cd2bc14cce823a006c195cd07d6017052348"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-target-progress.png",
+      "bytes": 120734,
+      "sha256": "2effa9c5591d0e3491cdac80d1b085567e4fa05599be8598805180f8add19b38"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-target-setup.png",
+      "bytes": 109668,
+      "sha256": "7721a3548365d7bba060a2a931abfee391bea75e80fa4936e385e7de14ecff84"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/peppered-moths-target.json",
+      "bytes": 24223,
+      "sha256": "89f123d09b91173b74c3b98a7c15fbffafad7267432beb83babd36e7d2ba522c"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/retained-png-canvas-geometry.json",
+      "bytes": 7844,
+      "sha256": "66ec9df4af88afd255f87a510aac3358df1112716d4d77b90d04c1577f862ce8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/retained-png-decoded-comparison.json",
+      "bytes": 29162,
+      "sha256": "6ceee2349cfa108aba5478a7dba2c58acc875dc639cbc8b763083d500d0fdb08"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/run-checks.mjs",
+      "bytes": 1578,
+      "sha256": "79063739e3b1db1a3f0861a17c58914e65322453813297d6e27e28e237cf75d2"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-final-browser.json",
+      "bytes": 27554,
+      "sha256": "fdcc2b21f0689d1319737602129f412270e9eced47fd81f8263d9abf65ed5636"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-final-desktop-dark.png",
+      "bytes": 265196,
+      "sha256": "6458e6cc3c67ea6d8b0bed437b68fa7e822549817085a85e8f9a320f305391a3"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-final-mobile-dark.png",
+      "bytes": 236911,
+      "sha256": "f4b3064c4a23438626eb4a8f10c09713a3b68c43ebb83f4ab404cdb9e2f58236"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-final-mobile-light.png",
+      "bytes": 231512,
+      "sha256": "bf50f5ae4fd450df439f0024592f6bc64b73b567688e033c81723bc8049a64cf"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-final-progress.png",
+      "bytes": 265316,
+      "sha256": "e51423a1abbb56d6bb723406a044fcfec08138134fd758f891a83c38ef802b0b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-final-setup.png",
+      "bytes": 211518,
+      "sha256": "8489d7aa69fcab3cd65e7bc664444fc1ed6f5290bb3ecf1313a1bcdfe99f566f"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-source-progress.png",
+      "bytes": 218138,
+      "sha256": "6c8eb883e124e2da077c79fa56f25aef53f93f4ea09d5d62e1dcdae14da0c080"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-source-setup.png",
+      "bytes": 193041,
+      "sha256": "165bc0fcd5b0f7ae2f4333c6676582f68f027bbbec8e8d70848ae7a010b9b57b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-source.json",
+      "bytes": 7967,
+      "sha256": "5a05bb48560861d858c2b94c6c8fe9c8a95e7ac66052457306e5ff643bce3c7d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-target-desktop-dark.png",
+      "bytes": 267870,
+      "sha256": "0b6ae15f819d6ea0467a20561db36862f17254476081f2c3cfb9fe51b1cfdee5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-target-mobile-dark.png",
+      "bytes": 209601,
+      "sha256": "514d7b321640aa29832f41e7407b404297035068dbd68c74069e5eb2b3232ff5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-target-mobile-light.png",
+      "bytes": 204471,
+      "sha256": "cc31558461ca2d31986f89a7bf0505017367b6360d469b479e7b481bcf837b45"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-target-modules.json",
+      "bytes": 661,
+      "sha256": "d1e8622699c44dcb2af09a0d0b120d6a82c088ef284b9344a9091f9c2e86fb58"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-target-progress.png",
+      "bytes": 268044,
+      "sha256": "6a0d0090804c00b8d3248cb1bd10b13fc0fc0961941bb751b76f3bb81f622a23"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-target-setup.png",
+      "bytes": 210474,
+      "sha256": "21ee4b89c83d80b086824e088d929b80eb1b200e14f1ca3da105b4f9d441c59b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/sex-ratio-equilibrium-target.json",
+      "bytes": 26274,
+      "sha256": "dbf3d1aab0dc4d65adbeab70c3e9f060bead7da7766c470504d938d802e0dd2d"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/target-inputs.json",
+      "bytes": 12212,
+      "sha256": "0ac18f024e25d99462fdf13bfeb1b88e5ee24f380b6a916883e405a08a42af15"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/terrain.log",
+      "bytes": 81,
+      "sha256": "86fd29f43e81467829970e8753176964f0a5dedac3bec26a1e6dfa84a4bf22cf"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/tsconfig.examples.json",
+      "bytes": 109,
+      "sha256": "77a812ba2e4ab9d493d70a404a7f9705ea1080eb2961436eca04ac04001b7cf1"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/types.log",
+      "bytes": 106,
+      "sha256": "9b709abbdc6a33c79dde7ec1272fbc2f2925b0a37404f1952e1fb3b15108fbb2"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-final-browser.json",
+      "bytes": 29156,
+      "sha256": "b09196a860615fae369ee3e6e1afa6d42e093d8c048699e56a9ee9aeaa125811"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-final-desktop-dark.png",
+      "bytes": 219627,
+      "sha256": "7013436c62ed3b6c6cfcb9749f7b0843d98015dd5eab0279562ffe9d5fdf3ea9"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-final-mobile-dark.png",
+      "bytes": 154151,
+      "sha256": "fefaee7033dab4d7b448ebd852160d446ac6be413284555091aa41f0b6b7a9f9"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-final-mobile-light.png",
+      "bytes": 152438,
+      "sha256": "cbc351e17fdae1f09dbe53c2b5d488e6634816f1491e9b8efbb657709a153c16"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-final-progress.png",
+      "bytes": 219629,
+      "sha256": "eb912b941d92fd3a5c603a879d75aae251d6b2232c371cf89a62892f038b5de8"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-final-setup.png",
+      "bytes": 211173,
+      "sha256": "58cb78d16b7b14e9b507c45b0401ca03e40ba215f84269df828aac291d806e61"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-source-progress.png",
+      "bytes": 199175,
+      "sha256": "cb3bda6ab5779b213cb769dcd724f25723013a6d55a083eb7cc07f884729a4c6"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-source-setup.png",
+      "bytes": 199306,
+      "sha256": "88fad22806dcb782e461627667be4a5244da74b0479f02f5b6c9933e3660d7d5"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-source.json",
+      "bytes": 5316,
+      "sha256": "c9157680bf495b63035a55d0dbf2be11578f0c76a7df58121df0bfc66edbd370"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-target-desktop-dark.png",
+      "bytes": 217345,
+      "sha256": "ec91252c3bf65ad6317d460324b551ea5c7efe9dcf377471315e176aa31a65a0"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-target-mobile-dark.png",
+      "bytes": 143046,
+      "sha256": "13a8acc0a9fea288bb416a0adeab3506d2337f632ed0fd87e0c68e09391cb17a"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-target-mobile-light.png",
+      "bytes": 142367,
+      "sha256": "519001c2f1e043bb5bbe79e3cf097ebc01e8af18e2d8f100ad95e88cd70a566a"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-target-modules.json",
+      "bytes": 656,
+      "sha256": "b90286f1d4377ffdcdac63b4df629c7eded523aa16636d54305a9409ea3fdde2"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-target-progress.png",
+      "bytes": 220238,
+      "sha256": "df66ffe0c2bf5e235b1431099d6a0e45b587d861a69657f264bd4899b7497e10"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-target-setup.png",
+      "bytes": 211510,
+      "sha256": "709d1500ad829857ce974d509d350dd33848f1bb0b7382ea244ec72bbcc2a425"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-evolution-target.json",
+      "bytes": 27578,
+      "sha256": "bce9092c591148f5424d302c7380ba71f81f372739d5a291e704af76c7fa08dd"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-final-fov-keyboard-inspection.json",
+      "bytes": 300,
+      "sha256": "bb7886e296946e9ad513c1fd8c7c92cae0e531efc7bf509400fa52984fa52a5b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-overlay-final-browser.json",
+      "bytes": 30187,
+      "sha256": "d37f071cb097e54015509d14d5dc605c0d4d6ec9b3cc33363ec39c1ff2426be4"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-overlay-final-desktop-dark.png",
+      "bytes": 219615,
+      "sha256": "09b0a5f4c481f16dd437dafa8951123088a90aa5ec5127274405861c81bb883b"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-overlay-final-mobile-dark.png",
+      "bytes": 154154,
+      "sha256": "43a2123294d27424c7fd52b7d192a177acf78be82f68333cd26f43b75ea3f012"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-overlay-final-mobile-light.png",
+      "bytes": 152440,
+      "sha256": "e42d331b04902941cf5b8d9ed93abf988d540efcade3b23c1d36cf38ec456727"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-overlay-final-progress.png",
+      "bytes": 219675,
+      "sha256": "bbd03367205cd26e610c3513c805448fe1b86dceb991691c9e8d82ee4f66ff95"
+    },
+    {
+      "path": "docs/development/selected-evolution-evidence/vision-overlay-final-setup.png",
+      "bytes": 211173,
+      "sha256": "58cb78d16b7b14e9b507c45b0401ca03e40ba215f84269df828aac291d806e61"
+    },
+    {
+      "path": "docs/development/selected-evolution-failed-attempts.md",
+      "bytes": 5592,
+      "sha256": "d9ddec7721aa303664143a3cb471e12a368f36d18d90e8b3841cbe3af8c8aa5c"
+    },
+    {
+      "path": "docs/development/selected-evolution-plan.md",
+      "bytes": 2244,
+      "sha256": "00422acea11ba4ae5c6bc3727ebb6ef06e8e404ca98740bfecaa5f98a0bea9fe"
+    },
+    {
+      "path": "docs/development/selected-evolution-qa.md",
+      "bytes": 2725,
+      "sha256": "fabe1b29b21b38ec6428ae5f9d13a7882f49b62a73ea4e40057c586939799e8c"
+    },
+    {
+      "path": "docs/development/selected-evolution-source-audit.json",
+      "bytes": 109875,
+      "sha256": "97162306c4e2caa9b36b297b726809a15de456504d84f344584fac04887542dc"
+    },
+    {
+      "path": "examples/selected-evolution/01-memory-and-pollution.ts",
+      "bytes": 1946,
+      "sha256": "2814195cc0edb30e5ef4a80a304164fb191e4721e0239c3e220352170693eb7d"
+    },
+    {
+      "path": "examples/selected-evolution/02-gametes-and-sex-ratio.ts",
+      "bytes": 1817,
+      "sha256": "963fe44509a01657b2b2faa1fe7f612abe29165e6ebb11e9567301604c8f9ccc"
+    },
+    {
+      "path": "examples/selected-evolution/03-learning-and-mammoths.ts",
+      "bytes": 2144,
+      "sha256": "504c6fd6b3498ea7dab029c5145adbf55a2f092f61f140cf1fa05924b5f05955"
+    },
+    {
+      "path": "examples/selected-evolution/04-infection-and-vision.ts",
+      "bytes": 1882,
+      "sha256": "764c66b661526801409cdebd496773699dd78a6de5dc8583812540fc5770f296"
+    },
+    {
+      "path": "examples/selected-evolution/05-drift-and-inheritance.ts",
+      "bytes": 1845,
+      "sha256": "feb0b5854a69e77ce14aa9f396bb5d2c313ba65b7aa59c274d0af5e33dd69f8f"
+    },
+    {
+      "path": "examples/selected-evolution/SHA256SUMS",
+      "bytes": 608,
+      "sha256": "c46e4bfb77058fb40d01e8d220147b87e40629b9902cb9a105b00c226ba95a13"
+    },
+    {
+      "path": "experiments/anisogamy/NOTICE.md",
+      "bytes": 2052,
+      "sha256": "ae5ef535cc3d52019376429903bdfb919d0c8a631f93d5d285fa95858a734c66"
+    },
+    {
+      "path": "experiments/anisogamy/model.ts",
+      "bytes": 11902,
+      "sha256": "d4fd1cb0af36f3c5d04b74a70d4e8a5508f215a9025bfe8e251f268f0f47b265"
+    },
+    {
+      "path": "experiments/anisogamy/source.nlogox",
+      "bytes": 31293,
+      "sha256": "835a1a6b3953de5588ce16ba1aebfba30a7ec8c30e6450bf1eae5dcc3d0852c3"
+    },
+    {
+      "path": "experiments/anisogamy/ui.ts",
+      "bytes": 4066,
+      "sha256": "163a9a262f4d57ebf4538493cde88e8a5c245fee674839d81d82424dbcfdf040"
+    },
+    {
+      "path": "experiments/bacterial-infection/NOTICE.md",
+      "bytes": 2080,
+      "sha256": "a78d66a54234228e5569f8a6b09d43b3190b06faaafaa85b899daf59240c5c8e"
+    },
+    {
+      "path": "experiments/bacterial-infection/model.ts",
+      "bytes": 14254,
+      "sha256": "07178aec004de467dfb3a761c3cb3f60f91a846c698796ea7202c2095ab2569e"
+    },
+    {
+      "path": "experiments/bacterial-infection/source.nlogox",
+      "bytes": 94838,
+      "sha256": "22ef0f02410d2dad4d36cf1c21ca1ad647ad4d336fac6770e673bf3b1dd807ed"
+    },
+    {
+      "path": "experiments/bacterial-infection/ui.ts",
+      "bytes": 3666,
+      "sha256": "9eeed07fcae9f36ecbfb2252d160920e69a568de1cb9abce4b3737a92e251777"
+    },
+    {
+      "path": "experiments/baldwin-effect/NOTICE.md",
+      "bytes": 2022,
+      "sha256": "02ebc617eb2268f3e7264a530e54b1542a8cb9b78a51a5dc9b3a67d63a88a03a"
+    },
+    {
+      "path": "experiments/baldwin-effect/model.ts",
+      "bytes": 11247,
+      "sha256": "d1f3b368684f549a81c53764488a3b0aee6081e8a87a7169f0896c2e3914f032"
+    },
+    {
+      "path": "experiments/baldwin-effect/source.nlogox",
+      "bytes": 64387,
+      "sha256": "3a82a6dc242192a3977ff6b3e407e08161d03946bced432875c59811bd32ceb5"
+    },
+    {
+      "path": "experiments/baldwin-effect/ui.ts",
+      "bytes": 3845,
+      "sha256": "cd00468f456ca5bfd042677e7c65847c4afad206815670a0797cb3da7bd197bb"
+    },
+    {
+      "path": "experiments/gendrift-t-interact/NOTICE.md",
+      "bytes": 2792,
+      "sha256": "67e687a4be415e372bb6630931e44c231b9c92ce3366bb21a7069477d84ec91a"
+    },
+    {
+      "path": "experiments/gendrift-t-interact/model.ts",
+      "bytes": 6784,
+      "sha256": "20036a68a8f57bd92d024b726c5ca266cdaf8fe1fe8b8a0f8cf5e2cd08e7201e"
+    },
+    {
+      "path": "experiments/gendrift-t-interact/source.nlogox",
+      "bytes": 44496,
+      "sha256": "150d47b9fc00fcf8545030d8c14e6b579584dba4e0a9e0773e11b9771232af17"
+    },
+    {
+      "path": "experiments/gendrift-t-interact/ui.ts",
+      "bytes": 2132,
+      "sha256": "4f244533cdc78f91f4dd76610e8a6e839eb7b5a5f6c66588e673b5be6faafdb3"
+    },
+    {
+      "path": "experiments/mammoths/NOTICE.md",
+      "bytes": 2342,
+      "sha256": "77d704e81d7b4da30517960ddb5368f0d848638908aacaf093d5065a23ce0026"
+    },
+    {
+      "path": "experiments/mammoths/data/README.md",
+      "bytes": 2776,
+      "sha256": "3454de245f2c99a18293ce803dbda6535a4df620df95a94af3274941d55254a8"
+    },
+    {
+      "path": "experiments/mammoths/data/americas.png",
+      "bytes": 13754,
+      "sha256": "9d550543fb1da42a03624ffbf1f2358b726f60fc146963939de7e12555711293"
+    },
+    {
+      "path": "experiments/mammoths/data/native-capture.js",
+      "bytes": 2141,
+      "sha256": "f545b752c11b46381bc82128d62154bf4abb75f43aefa32adb878a3d21972331"
+    },
+    {
+      "path": "experiments/mammoths/data/terrain.json",
+      "bytes": 10973,
+      "sha256": "1a01e23fb339797512bab8bc0b075e921ee96477a1b8bec3ed0445ffa1fc467e"
+    },
+    {
+      "path": "experiments/mammoths/data/verify.mjs",
+      "bytes": 1443,
+      "sha256": "e8617c77cb5b1ce35fa248a4fb8ac740e11814a86cfc2292160014bb0d253795"
+    },
+    {
+      "path": "experiments/mammoths/model.ts",
+      "bytes": 10343,
+      "sha256": "366c6f1f784f3c9be964977c9e7011aa6679616c7048e7f0bf5cfe83e4ba58df"
+    },
+    {
+      "path": "experiments/mammoths/source.nlogox",
+      "bytes": 39398,
+      "sha256": "8473b9d79835f81c88cd266049789fb83db4dd218c3402730d8526d3df6f824c"
+    },
+    {
+      "path": "experiments/mammoths/ui.ts",
+      "bytes": 2767,
+      "sha256": "7ee6280993302b1a6f20cf7d5e722431b84214a9cca8c0a94a72de332abbc3bf"
+    },
+    {
+      "path": "experiments/mendelian-inheritance/NOTICE.md",
+      "bytes": 2770,
+      "sha256": "220d8e261374cc762e1624df89747daced19a376ff1de42cdaf771573c756704"
+    },
+    {
+      "path": "experiments/mendelian-inheritance/model.ts",
+      "bytes": 5749,
+      "sha256": "733e128ae89564fa810944cdcf6f723dbf40128c6395ac582d5146732d705f39"
+    },
+    {
+      "path": "experiments/mendelian-inheritance/source.nlogox",
+      "bytes": 57065,
+      "sha256": "da736100e78f5f6e8e75731cc8d0bfb1e6950310f48b79e41938f94cea61c38c"
+    },
+    {
+      "path": "experiments/mendelian-inheritance/ui.ts",
+      "bytes": 2247,
+      "sha256": "d5e52351fb349df55fabc1d914cd6da1437931430977dd47e4b761acdeb23ceb"
+    },
+    {
+      "path": "experiments/mimicry/NOTICE.md",
+      "bytes": 2688,
+      "sha256": "22b667b3982fd2d346759bb1f5d9afd91ac9a71826242a362ac7e79fdb27ede1"
+    },
+    {
+      "path": "experiments/mimicry/model.ts",
+      "bytes": 7436,
+      "sha256": "97ece85ecc30eb208ea71e528c6fffaae389af05c801f8ce91161d4ac5baac09"
+    },
+    {
+      "path": "experiments/mimicry/source.nlogox",
+      "bytes": 54365,
+      "sha256": "737fea7dbc34d83638384b83f35219d0862ad5919b26cba2c39dc59f6a9ab494"
+    },
+    {
+      "path": "experiments/mimicry/ui.ts",
+      "bytes": 2856,
+      "sha256": "0fe7e192e6ff06d289a9b2c7e45df00d8c7dc615ee7ce8b4f32b8b9f084b56b6"
+    },
+    {
+      "path": "experiments/peppered-moths/NOTICE.md",
+      "bytes": 2731,
+      "sha256": "d263c4e6873aceb8afbfb912bf26ea1862fbeacc1fa27a215b79524c48f9379f"
+    },
+    {
+      "path": "experiments/peppered-moths/model.ts",
+      "bytes": 6187,
+      "sha256": "b31db091e08a6969b3c167602e98794474ea981c11e5b4040e59248a9ea64478"
+    },
+    {
+      "path": "experiments/peppered-moths/source.nlogox",
+      "bytes": 61424,
+      "sha256": "f904e2dfd900a5e5527ed50a4c4a313ab015142ae9a3027c3810633911bf21ae"
+    },
+    {
+      "path": "experiments/peppered-moths/ui.ts",
+      "bytes": 2193,
+      "sha256": "c9d27ec9ad676f1b8463b7a1576576b59a02a5952471b4309750c8d2839aa881"
+    },
+    {
+      "path": "experiments/sex-ratio-equilibrium/NOTICE.md",
+      "bytes": 2093,
+      "sha256": "17dc40c7e57d2aec492ee512db75b2131a1409fbc3a8cbb8c3873ff04d5f106d"
+    },
+    {
+      "path": "experiments/sex-ratio-equilibrium/model.ts",
+      "bytes": 11344,
+      "sha256": "a2f4f2e256616eb360a22cbaee25b5de1b2e593a9d17856efb8f15c4ba2c98f6"
+    },
+    {
+      "path": "experiments/sex-ratio-equilibrium/source.nlogox",
+      "bytes": 69462,
+      "sha256": "4d8a2109036db54574aaee4f662d108c249e11db2ec525fa51d25e5331c06762"
+    },
+    {
+      "path": "experiments/sex-ratio-equilibrium/ui.ts",
+      "bytes": 3903,
+      "sha256": "37036789c29039bc45690975da0e41434c95ecf5edd8ab35800f2d901ceb66cc"
+    },
+    {
+      "path": "experiments/vision-evolution/NOTICE.md",
+      "bytes": 2076,
+      "sha256": "78231c3549bfb99f58c885e5ebbe078e931b1f6801347ce9ba55a2da8d13af9b"
+    },
+    {
+      "path": "experiments/vision-evolution/model.ts",
+      "bytes": 10621,
+      "sha256": "788e3ee1402eae4dba206f0516e244d75eb533bdf95bc0d8953d505b15288c76"
+    },
+    {
+      "path": "experiments/vision-evolution/source.nlogox",
+      "bytes": 63072,
+      "sha256": "95001998d3949c25ff56f4ef1b993acc993b56eaea1cf75badbf6e7cda5d86a8"
+    },
+    {
+      "path": "experiments/vision-evolution/ui.ts",
+      "bytes": 3477,
+      "sha256": "b6855488aa8088eb8c662b541dcf9e3048683a3bc55d14137fc619efa058b6ee"
+    },
+    {
+      "path": "tests/selected-evolution-first.test.ts",
+      "bytes": 5093,
+      "sha256": "0df4daf5d79cb6e3e13a9daaf4210c69ffaa3e279402da53f24b182348509189"
+    },
+    {
+      "path": "tests/selected-evolution-last.test.ts",
+      "bytes": 8092,
+      "sha256": "c77c18846618978aa6650ef8bf29c56030aaae6973914b52c711032054c5a5df"
+    }
+  ]
+}
