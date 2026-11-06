@@ -18,3 +18,19 @@ The user-defined rules below govern the Svelte UI migration and every subsequent
 - **Browser and independent screenshot gate:** every UI implementation change requires real-browser interaction checks and captured, visually inspected screenshots of affected states at desktop (at least 1366×768) and narrow (390×844) sizes, including supported light/dark themes. An independent subagent must inspect the actual screenshots and review them against these rules; the implementing agent's self-review is insufficient. Record screenshot paths, checked flows, findings and responses separately from independent approval. Fix findings and repeat affected browser checks and screenshot review before acceptance. A browser or reviewer blocker leaves acceptance open; source inspection cannot substitute. Existing requirements for Antigravity `gemini-3.8-flash` review of substantial design/transfer work remain in force.
 
 The existing UI is not claimed to satisfy these rules. Migration evidence must demonstrate compliance; historical browser evidence does not establish acceptance of the migrated implementation.
+
+## Binding UI authoring rules
+
+The following user-defined rules are mandatory for public UI API design, documentation and subsequent implementation, including the Svelte migration. Readability takes priority over brevity. The shared UI provides opinionated design defaults for rapid prototyping; authors customize only when needed.
+
+- **Default first:** omission means defined, useful default behavior. Prepare shared defaults before requiring experiment-specific configuration.
+- **Flat first:** ordinary experiments use no builder chains, additional configuration layers or nested layout trees.
+- **One normal syntax:** provide one ordinary authoring form, not a collection of competing shorthand forms.
+- **Customize at the affected entry:** a special label or presentation belongs directly beside its binding.
+- **Place functions for readability:** keep short projections inline; give longer functions descriptive names and place them below the UI description.
+
+These are binding design rules, not a declaration that proposed syntax is available or frozen. Concrete simplified syntax remains a design candidate until explicitly agreed and frozen through the example-first gate. Preserve existing accepted examples and headless model contracts; domain state has one owner and UI changes it only through public model actions. Recording these rules does not authorize runtime changes or establish migration acceptance.
+
+## Binding UI API documentation
+
+The [UI specification](ui/README.md), [API table](ui/api-table.md) and [API reference](ui/api-reference.md) jointly define the shared UI authoring contract, subject to the binding authoring rules above. Source availability and unfrozen design candidates are explicitly distinguished; documentation introduces no runtime change. Independent Antigravity review is open because the attempted review failed due to provider quota.
