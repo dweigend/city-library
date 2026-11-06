@@ -22,12 +22,14 @@ equal(actual.read().tick, before.tick, 'Changing a rule does not advance time');
 equal(actual.read().randomState, before.randomState, 'Changing a rule does not draw randomness');
 
 /** Invoke only in an actual browser, against either public UI adapter. */
-export function browserChecks(container: HTMLElement) {
-  const mounted = ui.mount(container);
+export function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
+  let creations = 0;
+  const browserUI = bind({ ...model, create(options) { creations++; return model.create(options); } }, spec);
+  const mounted = browserUI.mount(container);
   try {
     equal(creations, 0, 'Mount must not create the model');
-    equal(labels(container), ['Width', 'Height', 'Seed', 'Change vote', 'Award close calls to loser'], 'Implicit setup excludes keyed live fields and preserves descriptor/key order');
-    equal(container.querySelectorAll('label').length, 5, 'Each field renders once');
+    equal(labels(container, Object.keys(model.inputs)), ['Width', 'Height', 'Seed', 'Change Vote', 'Award Close Calls To Loser'], 'Implicit setup excludes keyed live fields and preserves descriptor/key order');
+    equal(labels(container, Object.keys(model.inputs)).length, 5, 'Each descriptor field renders once; playback labels are excluded');
     const width = control(container, 'Width');
     assert(width instanceof HTMLInputElement, 'Width is a numeric input');
     equal(width.value, String(model.inputs.width.default), 'Descriptor supplies setup default');

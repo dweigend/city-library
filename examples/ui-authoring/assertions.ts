@@ -10,19 +10,41 @@ export function button(root: HTMLElement, text: string) {
   assert(result, `Missing button: ${text}`);
   return result;
 }
-export function labels(root: HTMLElement) {
-  return [...root.querySelectorAll('form label')].map(item => item.textContent?.trim());
+function labelledControl(root: HTMLElement, label: HTMLLabelElement): HTMLElement | null {
+  const linked = label.htmlFor ? root.ownerDocument.getElementById(label.htmlFor) : null;
+  if (linked && root.contains(linked)) return linked;
+  return label.querySelector<HTMLElement>('input, select, button[role="checkbox"], button[role="combobox"]');
+}
+function labelText(label: HTMLLabelElement) {
+  // Nested legacy select options are not part of its accessible label text.
+  return [...label.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).map(node => node.textContent).join('').trim() || label.textContent?.trim();
+}
+export function labels(root: HTMLElement, descriptorFields: readonly string[]) {
+  return [...root.querySelectorAll<HTMLLabelElement>('label')].filter(label => {
+    const input = labelledControl(root, label);
+    if (!input) return false;
+    const name = input.getAttribute('name') ?? '';
+    return descriptorFields.some(field => name === field || name === `live-${field}` || input.id.endsWith(`-${field}`));
+  }).map(labelText);
+}
+export function controls(root: HTMLElement, label: string): HTMLElement[] {
+  return [...root.querySelectorAll<HTMLLabelElement>('label')].filter(item => labelText(item) === label).map(item => {
+    const input = labelledControl(root, item);
+    assert(input, `Missing labelled control: ${label}`);
+    return input;
+  });
 }
 export function control(root: HTMLElement, label: string): HTMLElement {
-  const item = [...root.querySelectorAll<HTMLLabelElement>('label')].find(item => item.textContent?.trim() === label);
-  assert(item, `Missing control label: ${label}`);
-  const input = root.ownerDocument.getElementById(item.htmlFor);
-  assert(input && root.contains(input), `Missing labelled control: ${label}`);
-  return input;
+  const result = controls(root, label)[0];
+  assert(result, `Missing control label: ${label}`);
+  return result;
+}
+export function changeInput(input: HTMLElement, value: number) {
+  assert(input instanceof HTMLInputElement, 'Expected a native numeric input');
+  input.value = String(value);
+  input.dispatchEvent(new Event('input', { bubbles: true }));
+  input.dispatchEvent(new Event('change', { bubbles: true }));
 }
 export function changeNumber(root: HTMLElement, label: string, value: number) {
-  const input = control(root, label);
-  assert(input instanceof HTMLInputElement, `${label} must be a native numeric input`);
-  input.value = String(value);
-  input.dispatchEvent(new Event('change', { bubbles: true }));
+  changeInput(control(root, label), value);
 }

@@ -40,3 +40,81 @@ function negativeContracts() {
   ] }] }] });
 }
 void negativeContracts;
+
+import type { Definition } from '../../experiments/definition.ts';
+import type { VotingParameters } from '../../experiments/voting/model.ts';
+import { model as wolves, type WolfSheepParameters } from '../../experiments/wolf-sheep-predation/model.ts';
+type VotingInstance = ReturnType<typeof voting.create>;
+type VotingRead = ReturnType<VotingInstance['read']>;
+type Base = Omit<VotingInstance, 'read'>;
+type WithoutParameters = Omit<VotingRead, 'parameters'>;
+type OptionalParameters = Base & { read(): WithoutParameters & { parameters?: VotingParameters } };
+type OptionalField = Base & { read(): WithoutParameters & { parameters: Omit<VotingParameters, 'changeVote'> & { changeVote?: boolean } } };
+type WrongField = Base & { read(): WithoutParameters & { parameters: Omit<VotingParameters, 'changeVote'> & { changeVote: string } } };
+type MixedRead = Base & { read(): VotingRead | WithoutParameters };
+type MixedWrongRead = Base & { read(): VotingRead | ReturnType<WrongField['read']> };
+type CompatibleRead = Base & { read(): VotingRead | (VotingRead & { variant: 'second' }) };
+
+/** Contracts derived from the real Voting API; these are compile-only inputs, not mocks. */
+function observationCoverage(
+  optionalParameters: Definition<VotingParameters, OptionalParameters>,
+  optionalField: Definition<VotingParameters, OptionalField>,
+  wrongField: Definition<VotingParameters, WrongField>,
+  mixedRead: Definition<VotingParameters, MixedRead>,
+  mixedWrongRead: Definition<VotingParameters, MixedWrongRead>,
+  compatibleRead: Definition<VotingParameters, CompatibleRead>,
+) {
+  defineUI(optionalParameters, { live: {
+    // @ts-expect-error parameters itself must be present in every observation.
+    changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
+  }, views: [] });
+  defineUI(optionalField, { live: {
+    // @ts-expect-error The individual parameters key must be required.
+    changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
+  }, views: [] });
+  defineUI(wrongField, { live: {
+    // @ts-expect-error An incompatible observed type requires an explicit getter.
+    changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
+  }, views: [] });
+  defineUI(mixedRead, { live: {
+    // @ts-expect-error One suitable union branch is insufficient for an implicit getter.
+    changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
+  }, views: [] });
+  defineUI(mixedWrongRead, { live: {
+    // @ts-expect-error All union branches must have a compatible field, not just one.
+    changeVote: { set(instance, value) { instance.setRules({ changeVote: value }); } },
+  }, views: [] });
+  defineUI(compatibleRead, { live: { changeVote: { set(instance, value) {
+    const typed: boolean = value; instance.setRules({ changeVote: typed });
+  } } }, views: [] });
+  defineUI(optionalParameters, { live: { changeVote: {
+    value: state => state.parameters?.changeVote ?? false,
+    set(instance, value) { instance.setRules({ changeVote: value }); },
+  } }, views: [] });
+}
+void observationCoverage;
+
+function directInference() {
+  defineUI(wolves, { live: { mode: { set(instance, value) {
+    const choice: WolfSheepParameters['mode'] = value;
+    // @ts-expect-error Choice must retain its literal union, not widen to arbitrary string.
+    const impossible: 'unrelated-mode' = value;
+    instance.setRules({ mode: choice }); void impossible;
+  } } }, views: [] });
+  defineUI(voting, { live: { changeVote: {
+    // @ts-expect-error Wrong callback value cannot widen P's boolean field to string.
+    set: (instance: VotingInstance, value: string) => { void instance; void value; },
+  } }, views: [] });
+  defineUI(voting, { live: { changeVote: {
+    // @ts-expect-error Wrong observation type cannot widen M or replace its read contract.
+    value: (state: { parameters: { changeVote: string } }) => state.parameters.changeVote,
+    set: (instance, value) => instance.setRules({ changeVote: value }),
+  } }, views: [] });
+  defineUI(voting, { monitors: [{ label: 'Inferred', value(state) {
+    const tick: number = state.tick;
+    // @ts-expect-error Concrete observation does not gain unknown properties through inference.
+    void state.unknownMeasurement;
+    return tick;
+  } }], views: [] });
+}
+void directInference;

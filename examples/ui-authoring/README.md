@@ -37,3 +37,42 @@ The SHA manifest uses repository-relative paths. It freezes the five task script
 Invoke all five exported `browserChecks` functions in an actual browser against each supported public host adapter, using fresh attached containers and avoiding an application-specific test API. The helper only queries actual labels, form controls, fieldsets, monitors and chart accessibility content. It does not mutate the model directly during browser checks. The ordinary scripts may be bundled by the existing host tooling for a test harness; their import-time headless assertions also execute.
 
 These functions have not been executed at this freeze. Their current unsupported mount behavior has not been relabeled as verified failure. Runtime owners must record real execution, interactions and appropriate desktop/narrow light/dark screenshots and independent review separately. Broader invalid data/format errors, both legacy/keyed defaults, explicit value precedence, choice setter inference and optional/incompatible observation rejection need focused implementation tests as defined by the slice contract; the five examples are not exhaustive edge-case coverage.
+
+## First freeze retained before review remediation
+
+Coordinator commit `b7a972c` froze the original examples before runtime. The following original manifest is preserved verbatim; it describes historical bytes, not the revised examples. Astra design findings prompted stronger type/overlap/disposal/category contracts and corrections to real-browser query helpers. No accepted syntax or scientific expectation is weakened. Runtime remains blocked until a separate coordinator refreeze commit.
+
+```text
+3c319caf83492ce0416aa54cae4fa19abe21927a61559ca9718b9a4096816199  examples/ui-authoring/01-defaults-and-inert-entry.ts
+265d9f19d5c3c9518fe0f9f3ce82e27c752d2ad766eb879679afe3c8e8fcac96  examples/ui-authoring/02-ordered-setup-and-numeric-live.ts
+acdf46ae444dd5c924db82d71077a8ba1ae0f7b2ad4c0fd446b488f3c003975e  examples/ui-authoring/03-alternate-observation.ts
+2d4c3438bf7924b00a34696516e9c656c2b66e22eee439e723a37b568342e240  examples/ui-authoring/04-groups-format-and-categories.ts
+e5c670eeb73339ffedf5b5b570b25907d461748d12124c8aa212a66b958aaf09  examples/ui-authoring/05-independent-actions-and-legacy.ts
+0870fad00548cddc30437063328329fb28557aa75b6d2de0f0c73947d0cd3c2f  examples/ui-authoring/assertions.ts
+05c0aa54dcbd31d6ed335f72b6ea14169ca9664e6d67eaa5c5f814bdccedd107  examples/ui-authoring/authoring.types.ts
+3c7f154284e32ac9549571a3e043ea0b1796aa29d037afc615baac2f76630549  examples/ui-authoring/tsconfig.json
+```
+
+## Review remediation: second freeze
+
+The first manifest above remains historical. Before runtime, the design review required additive getter/union/choice/inference cases, explicit-getter precedence, both setup/live edit orders before and after initialization, and checking the disposed original model itself. Helpers now accept associated OR nested labels, include legacy controls outside forms, filter descriptor names rather than Speed, and select chart images rather than decorative SVG icons. Default camel-case labels are asserted with their actual capitalization. Categorical bars now specify grouped series, rejection of duplicate categories within a series, empty/zero data and signed baselines; a real Grid coordinate projection exercises shared categories, zero and negative values.
+
+The five Bun scripts were rerun successfully; [refreeze-headless.log](refreeze-headless.log) records exact commands/exits. The focused TypeScript check still exits 1 against the old runtime, recorded in [refreeze-initial-typecheck.log](refreeze-initial-typecheck.log). No browser check has been run for this revision. No old expectation was weakened; these are harness correctness fixes and stronger acceptance coverage. Separate runtime handoff is still forbidden until the coordinator's refreeze commit.
+
+### Explicit execution route for both hosts
+
+Use the existing Vite dev host (with its existing Svelte plugin and aliases), not the Bun static host, to compile the harness and Svelte adapter. From that host's real browser page, import the harness through Vite's project-file route and invoke it for each adapter:
+
+```ts
+const { runBrowserChecks } = await import('/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/examples/ui-authoring/browser-harness.ts');
+const fixture = document.createElement('section');
+document.body.append(fixture);
+try {
+  await runBrowserChecks(fixture, 'legacy');
+  await runBrowserChecks(fixture, 'svelte');
+} finally { fixture.remove(); }
+```
+
+Replace the absolute worktree prefix if the checkout moves. This is an explicit test-harness invocation, not a public application API or production route change. `browser-harness.ts` directly imports the chosen adapter and passes its public `defineUI` into the examples; it does not rely on experiment-only import redirection. It executes the five browser functions plus the full overlap matrix and explicit-precedence check. The harness creates only actual DOM containers and real model instances. Browser execution remains a required follow-up and must report concrete host/module-loading blockers rather than claiming coverage from these instructions.
+
+The revised SHA manifest additionally includes this harness and the two initial-result logs. Global example registration and TypeScript-project inclusion belong to runtime delivery after the frozen failing checkpoint, as does reconciliation of PLAN/docs/ui candidate status. Independent source/design responses and eventual browser/visual approval must remain separate.
