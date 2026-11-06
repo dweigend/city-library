@@ -1,5 +1,5 @@
 /** Random Combinations and Permutations, Wilensky (2004), CC BY-NC-SA 3.0. See NOTICE.md. */
-import { Random, stats } from "city-library";
+import { Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
@@ -48,6 +48,7 @@ function plotHistogram(values: readonly number[]) {
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed });
+  const world = World.add({ random });
   const original: (number | null)[] = Array(
       settings.width * settings.height,
     ).fill(settings.dice ? null : 0),
@@ -164,6 +165,9 @@ export function create(options: Partial<Parameters> = {}) {
     hidden = !hidden;
   }
   return {
+    get world() {
+      return world;
+    },
     advance(count = 1) {
       stepCount(count);
       for (let i = 0; i < count && !done; i++) {
@@ -214,7 +218,7 @@ export function create(options: Partial<Parameters> = {}) {
         ),
       ];
       return Object.freeze({
-        tick: 0,
+        tick: world.tick.value,
         parameters: settings,
         squares: Object.freeze(squares),
         distributionSeries: Object.freeze([

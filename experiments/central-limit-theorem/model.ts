@@ -1,5 +1,5 @@
 /** Central Limit Theorem, Wilensky (2005), CC BY-NC-SA 3.0. Full source notices: NOTICE.md. */
-import { Random, stats } from "city-library";
+import { Agent, Grid, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
@@ -16,12 +16,7 @@ export const inputs: Inputs<Parameters> = {
   alsoSums: { kind: "boolean", default: false },
   showEV: { kind: "boolean", default: true },
 };
-interface Person {
-  id: string;
-  x: number;
-  y: number;
-  chosen: boolean;
-}
+type Person = Agent<{ sourceIndex: number; chosen: boolean }>;
 function plotHistogram(values: readonly number[]) {
   const max = values.reduce(
     (max, value) => Math.max(max, Math.floor(value)),
@@ -35,29 +30,48 @@ function plotHistogram(values: readonly number[]) {
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed });
-  let tick = 0,
-    ranger = 0,
+  const grid = Grid.add(
+    { x: 31, y: 31, boundary: "wrap" },
+    { state: { active: false } },
+  );
+  const world = World.add(grid.space, { random });
+  world.add(grid);
+  const fields = grid.fields;
+  let ranger = 0,
     message = "",
-    background = "setup";
-  const people: Person[] = [],
-    means: number[] = [],
+    background = "setup",
+    nextSourceIndex = 0;
+  const means: number[] = [],
     sums: number[] = [];
+  // World membership is authoritative. This only narrows its known payload type.
+  function people() {
+    return world.agents as readonly Person[];
+  }
   function setup() {
-    people.length = 0;
+    for (const p of people()) p.delete();
+    for (const p of fields) p.active = false;
     means.length = 0;
     sums.length = 0;
-    tick = 0;
+    world.tick.reset();
     ranger = 0;
     message = "";
     background = "setup";
+    nextSourceIndex = 0;
   }
   function sproutPerson(x: number, y: number) {
-    people.push({ id: String(people.length), x, y, chosen: false });
+    const field = grid.fieldAt({ x, y })!;
+    world.add(
+      Agent.add(
+        { sourceIndex: nextSourceIndex++, chosen: false },
+        { position: field },
+      ),
+    );
   }
   function createPopulation() {
     setup();
     ranger = settings.maxValue + 1;
     background = "random";
+    for (const field of fields) field.active = field.x < ranger - 15;
     for (let x = -15; x < -15 + ranger; x++) {
       const top = Math.floor(random.number() * 31) - 15;
       for (let y = -14; y < top; y++) sproutPerson(x, y);
@@ -70,6 +84,7 @@ export function create(options: Partial<Parameters> = {}) {
     settings = parameters(inputs, { ...settings, maxValue: 30 });
     ranger = 31;
     background = "preset";
+    for (const field of fields) field.active = true;
     for (let x = -15; x <= 15; x++)
       for (let y = -14; y <= 15; y++) {
         const included =
@@ -91,22 +106,26 @@ export function create(options: Partial<Parameters> = {}) {
     if (!Number.isFinite(x) || !Number.isFinite(y))
       throw new TypeError("Drawing coordinates must be finite.");
     background = "draw";
+    for (const field of fields) field.active = true;
     ranger = settings.maxValue + 1;
     const column = Math.round(x);
     if (column < -15 || column > 15 || Math.round(y) === -15) return;
+    const occupied = fields.filter(
+      (p) => p.x === column && grid.agentsAt(p).length > 0,
+    );
     const top = Math.min(
       15,
-      1 +
-        Math.max(-15, ...people.filter((p) => p.x === column).map((p) => p.y)),
+      1 + occupied.reduce((highest, p) => Math.max(highest, p.y), -15),
     );
-    if (!people.some((p) => p.x === column && p.y === top))
-      sproutPerson(column, top);
+    const field = grid.fieldAt({ x: column, y: top })!;
+    if (grid.agentsAt(field).length === 0) sproutPerson(column, top);
   }
   function resetTurtles() {
-    for (const p of people) p.chosen = false;
+    for (const p of people()) p.chosen = false;
   }
+
   function calculateAndPlotSampleStuff() {
-    const sum = people
+    const sum = people()
       .filter((p) => p.chosen)
       .reduce((a, p) => a + p.x + 15, 0);
     sums.push(sum);
@@ -114,24 +133,23 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function go() {
     resetTurtles();
-    if (settings.sampleSize > people.length) {
+    if (settings.sampleSize > people().length) {
       message = "There are not enough people to take a sample of this size.";
       return;
     }
     message = "";
-    for (const p of random.sample(people, { count: settings.sampleSize }))
+    for (const p of random.sample(people(), { count: settings.sampleSize }))
       p.chosen = true;
-    tick++;
+    world.tick.advance();
     calculateAndPlotSampleStuff();
   }
-  function standardDeviation(values: readonly number[]) {
-    if (values.length < 2) return null;
-    const mean = values.reduce((a, b) => a + b, 0) / values.length;
-    return Math.sqrt(
-      values.reduce((a, n) => a + (n - mean) ** 2, 0) / (values.length - 1),
-    );
-  }
   return {
+    get world() {
+      return world;
+    },
+    get grid() {
+      return grid;
+    },
     advance(count = 1) {
       stepCount(count);
       for (let i = 0; i < count; i++) {
@@ -148,40 +166,48 @@ export function create(options: Partial<Parameters> = {}) {
     },
     read() {
       return Object.freeze({
-        tick,
+        tick: world.tick.value,
         width: 31,
         height: 31,
         parameters: settings,
         ranger,
         background,
         message,
-        population: people.length,
+        population: people().length,
         cells: Object.freeze(
-          Array.from({ length: 961 }, (_, i) => {
-            const x = (i % 31) - 15,
-              y = Math.floor(i / 31) - 15;
-            return Object.freeze({
-              id: `${x},${y}`,
-              x,
-              y,
-              active:
-                background !== "setup" &&
-                (background !== "random" || x < ranger - 15),
-            });
-          }),
+          fields.map((p) =>
+            Object.freeze({
+              id: `${p.x},${p.y}`,
+              x: p.x,
+              y: p.y,
+              active: p.active,
+            }),
+          ),
         ),
-        people: Object.freeze(people.map((p) => Object.freeze({ ...p }))),
+        people: Object.freeze(
+          people().map((p) =>
+            Object.freeze({
+              id: String(p.sourceIndex),
+              x: p.x,
+              y: p.y,
+              chosen: p.chosen,
+            }),
+          ),
+        ),
         means: Object.freeze([...means]),
         sums: Object.freeze([...sums]),
         meanHistogram: plotHistogram(means),
         sumHistogram: plotHistogram(sums),
         numSamples: means.length,
         expectedValue:
-          settings.showEV && people.length
-            ? people.reduce((a, p) => a + p.x + 15, 0) / people.length
+          settings.showEV && people().length
+            ? people().reduce((a, p) => a + p.x + 15, 0) / people().length
             : null,
-        stdDevMeans: standardDeviation(means),
-        stdDevSums: settings.alsoSums ? standardDeviation(sums) : null,
+        stdDevMeans:
+          stats.describe(means, { sample: true }).standardDeviation ?? null,
+        stdDevSums: settings.alsoSums
+          ? (stats.describe(sums, { sample: true }).standardDeviation ?? null)
+          : null,
         randomState: random.state,
       });
     },

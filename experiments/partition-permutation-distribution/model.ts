@@ -1,5 +1,5 @@
 /** Partition Permutation Distribution, Wilensky (2004), CC BY-NC-SA 3.0. See NOTICE.md. */
-import { Random, stats } from "city-library";
+import { Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
@@ -36,8 +36,8 @@ function plotHistogram(values: readonly number[]) {
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed });
-  let tick = 0,
-    successes = 0,
+  const world = World.add({ random });
+  let successes = 0,
     seriesTrials = 0,
     addend: number | string = 0;
   let short: number[] = [],
@@ -75,10 +75,13 @@ export function create(options: Partial<Parameters> = {}) {
   function go() {
     if (successes >= settings.numSuccesses) return;
     randomGuessAndUpdateTotal();
-    tick++;
+    world.tick.advance();
     finishUp();
   }
   return {
+    get world() {
+      return world;
+    },
     advance(count = 1) {
       stepCount(count);
       for (let i = 0; i < count && successes < settings.numSuccesses; i++) go();
@@ -98,7 +101,7 @@ export function create(options: Partial<Parameters> = {}) {
     },
     read() {
       return Object.freeze({
-        tick,
+        tick: world.tick.value,
         parameters: settings,
         successes,
         seriesTrials,

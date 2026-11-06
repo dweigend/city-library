@@ -1,4 +1,5 @@
 import { test, expect } from "bun:test";
+import { Random } from "city-library";
 import { create as expectedValue } from "../experiments/expected-value/model.ts";
 import { create as partition } from "../experiments/partition-permutation-distribution/model.ts";
 import { create as centralLimit } from "../experiments/central-limit-theorem/model.ts";
@@ -15,7 +16,12 @@ test("Partition live target reduction preserves signed draws and rejected trial 
   expect(m.read().tick).toBe(21);
   expect(m.read().runningTotal).toBe(total);
   expect(m.read().successes).toBe(0);
-  expect(m.read().addends.slice(1).some((n) => n < 0)).toBe(true);
+  expect(
+    m
+      .read()
+      .addends.slice(1)
+      .some((n) => n < 0),
+  ).toBe(true);
   expect(m.read().addends).toHaveLength(21);
   m.setRules({ targetTotal: total });
   m.advance();
@@ -226,5 +232,149 @@ test("All five expose independent deterministic detached snapshots and reject in
     expect(a.read()).toEqual(before);
     expect(() => a.advance(-1)).toThrow(RangeError);
     expect(b.read()).toEqual(before);
+  }
+});
+
+test("Canonical Expected Value grid, sampler membership and wrapped movement share one authority", () => {
+  const m = expectedValue({ setupApart: false, seed: 17 });
+  expect(m.grid.fields).toHaveLength(225);
+  expect(m.world.grids).toHaveLength(1);
+  expect(Object.is(m.world.grids[0], m.grid)).toBe(true);
+  expect(m.world.agents).toHaveLength(1);
+  const sampler = m.world.agents[0]!;
+  expect(sampler.world).toBe(m.world);
+  sampler.move({ to: { x: 7, y: 0 } });
+  sampler.rotate({ towards: { x: 8, y: 0 } });
+  sampler.move(1);
+  expect(sampler.x).toBeCloseTo(-7, 10);
+  const field = m.grid.fieldAt(sampler)!;
+  expect(m.grid.agentsAt(field)).toEqual([sampler]);
+  expect(m.grid.neighbors(field, { neighborhood: "faces" })).toHaveLength(4);
+  expect(m.read().walker.x).toBe(sampler.x);
+  const before = m.read();
+  m.read();
+  expect(m.read()).toEqual(before);
+  m.advance(2);
+  expect(m.world.tick.value).toBe(2);
+  expect(m.read().tick).toBe(2);
+  expect(m.grid.agentsAt(m.grid.fieldAt(sampler)!)).toEqual([sampler]);
+});
+
+test("Canonical CLT reset deletes actual Agents and retains the canonical Grid", () => {
+  const m = centralLimit({ sampleSize: 1 });
+  expect(m.grid.fields).toHaveLength(961);
+  expect(m.world.grids).toHaveLength(1);
+  expect(Object.is(m.world.grids[0], m.grid)).toBe(true);
+  m.drawYourOwnPeople(0, 0);
+  const person = m.world.agents[0]!;
+  const first = m.grid.fieldAt(person)!;
+  expect(m.grid.agentsAt(first)).toEqual([person]);
+  person.move({ to: { x: 2, y: 3 } });
+  expect(m.grid.agentsAt(first)).toEqual([]);
+  expect(m.grid.agentsAt(m.grid.fieldAt(person)!)).toEqual([person]);
+  expect(m.read().people[0]!.x).toBe(2);
+  m.advance(2);
+  expect(m.world.tick.value).toBe(2);
+  expect(m.read().means).toEqual([17, 17]);
+  m.setup();
+  expect(person.alive).toBe(false);
+  expect(person.world).toBeUndefined();
+  expect(m.world.agents).toHaveLength(0);
+  expect(m.grid.agentsAt(m.grid.fieldAt({ x: 2, y: 3 })!)).toEqual([]);
+  expect(m.world.tick.value).toBe(0);
+  expect(m.world.grids).toHaveLength(1);
+  expect(Object.is(m.world.grids[0], m.grid)).toBe(true);
+  m.drawYourOwnPeople(0, 0);
+  expect(m.world.agents[0]!.id).not.toBe(person.id);
+  expect(m.read().people[0]!.id).toBe("0"); // Source/display label, not identity.
+});
+
+test("Canonical Mandelbrot eagerly initializes every Field and shares moving occupancy", () => {
+  const m = mandelbrot({ numTurtles: 2, throw: 0 });
+  expect(m.grid.fields).toHaveLength(90601);
+  expect(m.world.grids).toHaveLength(1);
+  expect(Object.is(m.world.grids[0], m.grid)).toBe(true);
+  expect(
+    m.grid.fields.every(
+      (p) =>
+        p.grid === m.grid &&
+        p.counter === 0 &&
+        p.zReal === 0 &&
+        p.zImaginary === 0 &&
+        p.cReal === p.x / 100 &&
+        p.cImaginary === p.y / 100,
+    ),
+  ).toBe(true);
+  expect(m.world.agents).toHaveLength(2);
+  expect(m.world.agents.every((t) => t.world === m.world)).toBe(true);
+  const [first, second] = m.world.agents;
+  first!.move({ to: { x: 0, y: 0 } });
+  second!.move({ to: { x: 0, y: 0 } });
+  const field = m.grid.fieldAt(first!)!;
+  expect(m.grid.agentsAt(field)).toEqual([first!, second!]);
+  first!.move({ to: { x: 1, y: 0 } });
+  expect(m.grid.agentsAt(field)).toEqual([second!]);
+  expect(m.grid.agentsAt(m.grid.fieldAt(first!)!)).toEqual([first!]);
+  m.advance();
+  expect(m.world.tick.value).toBe(1);
+  expect(m.read().tick).toBe(1);
+});
+
+test("Mandelbrot snapshots eligible occupants before shared-patch counter updates", () => {
+  const m = mandelbrot({ numTurtles: 3, throw: 0 });
+  for (const turtle of m.world.agents) turtle.move({ to: { x: 0, y: 0 } });
+  const field = m.grid.fieldAt({ x: 0, y: 0 })!;
+  field.counter = 114;
+  m.advance();
+  expect(field.counter).toBe(117);
+  expect(m.read().patches.find((p) => p.x === 0 && p.y === 0)!.counter).toBe(
+    117,
+  );
+});
+
+test("Mandelbrot hard-boundary jump restores the canonical Agent instead of clipping", () => {
+  const m = mandelbrot({ numTurtles: 1, throw: 10 });
+  const turtle = m.world.agents[0]!;
+  turtle.move({ to: { x: 149, y: 0 } });
+  turtle.rotate({ towards: { x: 150, y: 0 } });
+  m.advance();
+  expect(turtle.x).toBeCloseTo(150, 10);
+  expect(turtle.y).toBeCloseTo(0, 10);
+  expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
+});
+
+test("Partition and symbolic combination own only a public World clock", () => {
+  const p = partition({ numSuccesses: 0 });
+  p.advance(20);
+  expect(p.world.tick.value).toBe(0);
+  p.setRules({ numSuccesses: 100 });
+  p.advance(3);
+  expect(p.read().tick).toBe(p.world.tick.value);
+  expect(p.world.tick.value).toBe(3);
+  const c = combinations({ dice: false });
+  c.createCombi();
+  c.finishCombi();
+  c.advance(120);
+  expect(c.read().attempts).toBe(120);
+  expect(c.read().tick).toBe(c.world.tick.value);
+  expect(c.world.tick.value).toBe(0);
+  expect(c.world.agents).toHaveLength(0);
+  expect(c.world.grids).toHaveLength(0);
+});
+
+test("Mandelbrot preflight relocates at clipped and exact-positive-edge source endpoints", () => {
+  for (const x of [150.4, 149.5]) {
+    const m = mandelbrot({ numTurtles: 1, throw: 0, seed: 17 });
+    const turtle = m.world.agents[0]!;
+    turtle.move({ to: { x, y: 0 } });
+    turtle.rotate({ towards: { x: x + 1, y: 0 } });
+    const expected = Random.add({ seed: 17 });
+    expected.state = m.read().randomState;
+    const nextX = expected.number() * 301 - 150.5,
+      nextY = expected.number() * 301 - 150.5;
+    m.advance();
+    expect(turtle.x).toBe(nextX);
+    expect(turtle.y).toBe(nextY);
+    expect(m.grid.agentsAt(m.grid.fieldAt(turtle)!)).toEqual([turtle]);
   }
 });

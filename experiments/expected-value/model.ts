@@ -1,5 +1,5 @@
 /** Expected Value, Abrahamson & Wilensky (2004), CC BY-NC-SA 3.0. Full notices: NOTICE.md. */
-import { Random, stats } from "city-library";
+import { Agent, Grid, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
@@ -43,18 +43,18 @@ function plotHistogram(values: readonly number[]) {
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed });
-  const tiles = Array.from({ length: 225 }, (_, i) => ({
-    id: String(i),
-    x: Math.floor(i / 15) - 7,
-    y: (i % 15) - 7,
-    value: -1,
-    selected: 0,
-  }));
-  let tick = 0,
-    visible = !settings.blackOut || settings.setupApart;
+  const grid = Grid.add(
+    { x: 15, y: 15, boundary: "wrap" },
+    { state: { value: -1, selected: 0 } },
+  );
+  const world = World.add(grid.space, { random });
+  world.add(grid);
+  // Canonical Field references in the original print-out order, never tile copies.
+  const tiles = [...grid.fields].sort((a, b) => a.x - b.x || a.y - b.y);
+  const walker = world.add(Agent.add({}));
+  let visible = !settings.blackOut || settings.setupApart;
   const totals: number[] = [0],
     values: number[] = [];
-  const walker = { x: 0, y: 0, heading: 0 };
   const ratios = [
     settings.ratio0,
     settings.ratio1,
@@ -103,30 +103,21 @@ export function create(options: Partial<Parameters> = {}) {
           count: tiles.length,
           compatibility: "legacy-shuffle",
         })) {
-          const neighbor = neighbors4(tile)[Math.floor(random.number() * 4)]!;
+          const neighbor = grid.neighbors(tile, { neighborhood: "faces" })[
+            Math.floor(random.number() * 4)
+          ]!;
           [tile.value, neighbor.value] = [neighbor.value, tile.value];
         }
     }
   }
-  function at(x: number, y: number) {
-    return tiles[(Math.round(x) + 7) * 15 + Math.round(y) + 7]!;
-  }
-  function wrap(n: number) {
-    return ((((n + 7.5) % 15) + 15) % 15) - 7.5;
-  }
-  function neighbors4(t: { x: number; y: number }) {
-    return [
-      [0, 1],
-      [1, 0],
-      [0, -1],
-      [-1, 0],
-    ].map(([dx, dy]) => at(wrap(t.x + dx!), wrap(t.y + dy!)));
-  }
   function setupLittleGuy() {
     const tile = random.sample(tiles, { count: 1 })[0]!;
-    walker.x = tile.x;
-    walker.y = tile.y;
-    walker.heading = Math.floor(random.number() * 4) * 90;
+    walker.move({ to: tile });
+    const neighbor = random.sample(
+      grid.neighbors(tile, { neighborhood: "faces" }),
+      { count: 1 },
+    )[0]!;
+    walker.rotate({ towards: neighbor });
   }
   function clearSelection() {
     for (const t of tiles) t.selected = 0;
@@ -137,7 +128,7 @@ export function create(options: Partial<Parameters> = {}) {
     values.length = 0;
   }
   function selectPatch() {
-    const tile = at(walker.x, walker.y);
+    const tile = grid.fieldAt(walker)!;
     tile.selected++;
     return tile.value;
   }
@@ -146,21 +137,21 @@ export function create(options: Partial<Parameters> = {}) {
     getReadyForNextSample();
     for (let i = 0; i < settings.sampleSize; i++) {
       values.push(selectPatch());
-      const rad = (walker.heading * Math.PI) / 180;
-      walker.x = wrap(walker.x + Math.round(Math.sin(rad)));
-      walker.y = wrap(walker.y + Math.round(Math.cos(rad)));
-      walker.heading =
-        (walker.heading +
-          [-90, 0, 90][Math.floor(random.number() * 3)]! +
-          360) %
-        360;
+      walker.move(1);
+      walker.rotate([-90, 0, 90][Math.floor(random.number() * 3)]!);
     }
     totals.push(values.reduce((a, b) => a + b, 0));
-    tick++;
+    world.tick.advance();
   }
   setupPatches();
   setupLittleGuy();
   return {
+    get world() {
+      return world;
+    },
+    get grid() {
+      return grid;
+    },
     advance(count = 1) {
       stepCount(count);
       for (let i = 0; i < count; i++) go();
@@ -178,7 +169,7 @@ export function create(options: Partial<Parameters> = {}) {
       const expectedValue =
         settings.sampleSize * ratios.reduce((a, n, i) => a + (n * i) / sum, 0);
       return Object.freeze({
-        tick,
+        tick: world.tick.value,
         width: 15,
         height: 15,
         parameters: settings,
@@ -195,10 +186,21 @@ export function create(options: Partial<Parameters> = {}) {
         runs: totals.length,
         totals: Object.freeze([...totals]),
         values: Object.freeze([...values]),
-        walker: Object.freeze({ ...walker }),
+        walker: Object.freeze({
+          x: walker.x,
+          y: walker.y,
+          heading: walker.heading,
+        }),
         cells: Object.freeze(
           tiles.map((t) =>
-            Object.freeze({ ...t, visible: visible || t.selected > 0 }),
+            Object.freeze({
+              id: String((t.x + 7) * 15 + t.y + 7),
+              x: t.x,
+              y: t.y,
+              value: t.value,
+              selected: t.selected,
+              visible: visible || t.selected > 0,
+            }),
           ),
         ),
         randomState: random.state,
