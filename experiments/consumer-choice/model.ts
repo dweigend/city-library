@@ -1,7 +1,7 @@
 /** Jager & Wang (2024), NetLogo Consumer Choice; CC BY-NC-SA 3.0, see NOTICE.md. */
-import { Agent, Graph, Random, World, run } from "city-library";
-import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { Agent, Graph, Random, World, run } from 'city-library';
+import type { Definition, Inputs } from '../definition.ts';
+import { parameters, stepCount } from '../parameters.ts';
 export interface ConsumerChoiceParameters {
   seed: number;
   numConsumers: number;
@@ -15,32 +15,32 @@ export interface ConsumerChoiceParameters {
 }
 export const inputs: Inputs<ConsumerChoiceParameters> = {
   seed: {
-    kind: "number",
+    kind: 'number',
     default: 1,
     min: -2147483648,
     max: 4294967295,
     integer: true,
   },
   numConsumers: {
-    kind: "number",
+    kind: 'number',
     default: 100,
     min: 0,
     max: 1000,
     integer: true,
   },
   avgConnections: {
-    kind: "number",
+    kind: 'number',
     default: 5,
     min: 0,
     max: 10,
     integer: true,
   },
-  initialOrangePercent: { kind: "number", default: 50, min: 0, max: 100 },
-  normInfluence: { kind: "number", default: 0.15, min: 0, max: 1 },
-  informationExchange: { kind: "number", default: 0.05, min: 0, max: 1 },
-  exploration: { kind: "number", default: 0.01, min: 0, max: 1 },
-  qualityOrange: { kind: "number", default: 0.5, min: 0, max: 1 },
-  qualityBlue: { kind: "number", default: 0.5, min: 0, max: 1 },
+  initialOrangePercent: { kind: 'number', default: 50, min: 0, max: 100 },
+  normInfluence: { kind: 'number', default: 0.15, min: 0, max: 1 },
+  informationExchange: { kind: 'number', default: 0.05, min: 0, max: 1 },
+  exploration: { kind: 'number', default: 0.01, min: 0, max: 1 },
+  qualityOrange: { kind: 'number', default: 0.5, min: 0, max: 1 },
+  qualityBlue: { kind: 'number', default: 0.5, min: 0, max: 1 },
 };
 type Consumer = Agent<{
   who: number;
@@ -51,11 +51,11 @@ type Consumer = Agent<{
 }>;
 type Live = Pick<
   ConsumerChoiceParameters,
-  | "normInfluence"
-  | "informationExchange"
-  | "exploration"
-  | "qualityOrange"
-  | "qualityBlue"
+  | 'normInfluence'
+  | 'informationExchange'
+  | 'exploration'
+  | 'qualityOrange'
+  | 'qualityBlue'
 >;
 export function create(options: Partial<ConsumerChoiceParameters> = {}) {
   let settings = parameters(inputs, options);
@@ -63,9 +63,9 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
     Math.ceil((settings.avgConnections * settings.numConsumers) / 2) >
     (settings.numConsumers * (settings.numConsumers - 1)) / 2
   )
-    throw new RangeError("Requested connections exceed the complete graph.");
+    throw new RangeError('Requested connections exceed the complete graph.');
   const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 51, y: 51, boundary: "hard" }, { random }),
+    world = World.add({ x: 51, y: 51, boundary: 'hard' }, { random }),
     graph = Graph.add<Consumer>();
   const consumers: Consumer[] = [];
   const qualities = () => [settings.qualityOrange, settings.qualityBlue];
@@ -100,9 +100,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
     const candidates = consumers.filter((b) => b !== a && !graph.hasEdge(a, b));
     if (!candidates.length) continue;
     const min = Math.min(...candidates.map((b) => a.distanceTo(b)));
-    const b = random.sample(
-      candidates.filter((b) => a.distanceTo(b) === min),
-    )[0]!;
+    const b = random.sample(candidates.filter((b) => a.distanceTo(b) === min))[0]!;
     graph.edges.add({ from: a, to: b });
   }
   function counts() {
@@ -141,19 +139,18 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
         run(world, () => {
           for (const a of random.sample(consumers, {
             count: consumers.length,
-            compatibility: "legacy-shuffle",
+            compatibility: 'legacy-shuffle',
           })) {
             if (random.number() < a.satisfaction[a.choice]!) {
               /* retain satisfied choice */
-            } else if (random.number() < settings.exploration)
-              a.choice = 1 - a.choice;
+            } else if (random.number() < settings.exploration) a.choice = 1 - a.choice;
             else if (a.utilities[0] !== a.utilities[1])
               a.choice = a.utilities[0]! > a.utilities[1]! ? 0 : 1;
             a.satisfaction = satisfaction(a.choice);
           }
           for (const a of random.sample(consumers, {
             count: consumers.length,
-            compatibility: "legacy-shuffle",
+            compatibility: 'legacy-shuffle',
           })) {
             const neighbors = graph.neighbors(a);
             for (const option of [0, 1]) {
@@ -165,8 +162,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
                   ? qualities()[option]!
                   : 0;
               const norm = neighbors.length
-                ? neighbors.filter((b) => b.choice === option).length /
-                  neighbors.length
+                ? neighbors.filter((b) => b.choice === option).length / neighbors.length
                 : 0;
               a.utilities[option] =
                 settings.normInfluence * norm +
@@ -181,23 +177,23 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
     },
     setParameters(values: Partial<Live>) {
       if (
-        typeof values !== "object" ||
+        typeof values !== 'object' ||
         values === null ||
         ![Object.prototype, null].includes(Object.getPrototypeOf(values)) ||
         Reflect.ownKeys(values).some(
           (k) =>
-            typeof k !== "string" ||
+            typeof k !== 'string' ||
             ![
-              "normInfluence",
-              "informationExchange",
-              "exploration",
-              "qualityOrange",
-              "qualityBlue",
+              'normInfluence',
+              'informationExchange',
+              'exploration',
+              'qualityOrange',
+              'qualityBlue',
             ].includes(k) ||
-            !("value" in Object.getOwnPropertyDescriptor(values, k)!),
+            !('value' in Object.getOwnPropertyDescriptor(values, k)!),
         )
       )
-        throw new TypeError("Supply only live parameter data.");
+        throw new TypeError('Supply only live parameter data.');
       settings = parameters(inputs, { ...settings, ...values });
     },
     read() {
@@ -234,9 +230,9 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
   };
 }
 export const model = {
-  title: "Consumer Choice",
+  title: 'Consumer Choice',
   description:
-    "Experience, information and norms in product choice. Jager & Wang (2024), CC BY-NC-SA 3.0.",
+    'Experience, information and norms in product choice. Jager & Wang (2024), CC BY-NC-SA 3.0.',
   inputs,
   create,
 } satisfies Definition<ConsumerChoiceParameters, ReturnType<typeof create>>;
