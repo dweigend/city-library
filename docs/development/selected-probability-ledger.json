@@ -65,11 +65,39 @@
           "code": "go"
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/Birthdays",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Birthdays.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Birthdays.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 2004 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.\n\n<!-- 2004 -->",
+      "dossier": "docs/research/netlogo-web/birthdays.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-first-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#birthdays",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "b29b7f837280f10e1eb64f08517b0b924ed8010ef54f4c92e5814c1449bca42d",
+        "ui.ts": "e3f03e2e579fafa9aad75d366871f854dacb710f912448997ec123b11f787462"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/birthdays-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/birthdays-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/birthdays-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/birthdays-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/birthdays-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/birthdays-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/birthdays-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "galton-box",
@@ -184,11 +212,39 @@
           "code": "balls"
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/Galton Box",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Galton%20Box.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Galton%20Box.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 2002 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.\n\n<!-- 2002 -->",
+      "dossier": "docs/research/netlogo-web/galton-box.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-first-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#galton-box",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "fcfbc39a2018ac4b331e311c46c35931e5fd8b1db3debd08166d07413d3e46cc",
+        "ui.ts": "1252187a1d0f57a879c1c47048e6beb056ca3e06c56428d064d714fc7ede7cc0"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/galton-box-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/galton-box-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/galton-box-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/galton-box-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/galton-box-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/galton-box-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/galton-box-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "binomial-rabbits",
@@ -407,11 +463,39 @@
           "code": "go"
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/Binomial Rabbits",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Binomial%20Rabbits.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Binomial%20Rabbits.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 1997 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the project: CONNECTED MATHEMATICS: MAKING SENSE OF COMPLEX PHENOMENA THROUGH BUILDING OBJECT-BASED PARALLEL MODELS (OBPML).  The project gratefully acknowledges the support of the National Science Foundation (Applications of Advanced Technologies Program) -- grant numbers RED #9552950 and REC #9632612.\n\nThis model was developed at the MIT Media Lab using CM StarLogo.  See Wilensky, U. (1993). Thesis - Connected Mathematics: Building Concrete Relationships with Mathematical Knowledge. Adapted to StarLogoT, 1997, as part of the Connected Mathematics Project.  Adapted to NetLogo, 2001, as part of the Participatory Simulations Project.\n\nThis model was converted to NetLogo as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227. Converted from StarLogoT to NetLogo, 2001.\n\n<!-- 1997 2001 Wilensky -->",
+      "dossier": "docs/research/netlogo-web/binomial-rabbits.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-first-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#binomial-rabbits",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "8c2a910e2a48b2d66608e197c77626edde3d19fe1b86217cc2843f52f5669200",
+        "ui.ts": "27bd1e2ca9f849e8f62fd149bf198ca85f9c0a8da42292def0f65f4322c37659"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/binomial-rabbits-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/binomial-rabbits-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/binomial-rabbits-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/binomial-rabbits-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/binomial-rabbits-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/binomial-rabbits-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/binomial-rabbits-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "three-doors",
@@ -480,11 +564,39 @@
           "code": null
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/Three Doors",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Three%20Doors.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Three%20Doors.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 1998 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the project: CONNECTED MATHEMATICS: MAKING SENSE OF COMPLEX PHENOMENA THROUGH BUILDING OBJECT-BASED PARALLEL MODELS (OBPML).  The project gratefully acknowledges the support of the National Science Foundation (Applications of Advanced Technologies Program) -- grant numbers RED #9552950 and REC #9632612.\n\nThis model was converted to NetLogo as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227. Converted from StarLogoT to NetLogo, 2001.\n\n<!-- 1998 2001 -->",
+      "dossier": "docs/research/netlogo-web/three-doors.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-first-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#three-doors",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "bc80089af5a455f25a7a4bc7c71e21b9fb1acf16318dd6f735fc6505760b32cb",
+        "ui.ts": "6d80ebe368f2b6d6e06fa3561a132bb4f0ba28d032bf1359e02fc232eec71b50"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/three-doors-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/three-doors-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/three-doors-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/three-doors-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/three-doors-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/three-doors-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/three-doors-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "stochastic-patchwork",
@@ -572,11 +684,39 @@
           "code": null
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Stochastic Patchwork",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Stochastic%20Patchwork.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Stochastic%20Patchwork.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 2004 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.\n\n<!-- 2004 Cite: Abrahamson, D. -->",
+      "dossier": "docs/research/netlogo-web/stochastic-patchwork.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-first-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#stochastic-patchwork",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "5e299683a51a7ef3bcaf9612de0fdd716bddf6fd58d0e3e62cc146a9907ed813",
+        "ui.ts": "a69be64a72e0f8e4d40b3ed5fb9dd4127170732ffb0df6c6267cf906d993b725"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/stochastic-patchwork-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/stochastic-patchwork-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/stochastic-patchwork-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/stochastic-patchwork-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/stochastic-patchwork-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/stochastic-patchwork-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/stochastic-patchwork-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "expected-value",
@@ -939,11 +1079,39 @@
           "code": "sum all-totals / length all-totals"
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Expected Value",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Expected%20Value.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Expected%20Value.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 2004 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.\n\n<!-- 2004 Cite: Abrahamson, D. -->",
+      "dossier": "docs/research/netlogo-web/expected-value.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-last-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#expected-value",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "d8d2a6d5334960b86e6b73ade863503c2c5c3949cf9146cb5179d34faca3e61d",
+        "ui.ts": "78e0ea2c7bdf5113144ce644973ac4ae076a6e29bc73fa2cee7f68425d84ae70"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/expected-value-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/expected-value-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/expected-value-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/expected-value-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/expected-value-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/expected-value-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/expected-value-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "partition-permutation-distribution",
@@ -1107,11 +1275,39 @@
           "code": "(length the-long-list) / (successes-so-far)"
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Partition Permutation Distribution",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Partition%20Permutation%20Distribution.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Partition%20Permutation%20Distribution.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 2004 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.\n\n<!-- 2004 Cite: Abrahamson, D. -->",
+      "dossier": "docs/research/netlogo-web/partition-permutation-distribution.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-last-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#partition-permutation-distribution",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "c10f9f195dbdc1d653ad943b3aae57e31e3d5fd2359c66293f4870979ab2f6fe",
+        "ui.ts": "13adf8bb50d5237dca7e3e631089583c1391f6231564c79945958a29919f190d"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/partition-permutation-distribution-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/partition-permutation-distribution-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/partition-permutation-distribution-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/partition-permutation-distribution-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/partition-permutation-distribution-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/partition-permutation-distribution-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/partition-permutation-distribution-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "central-limit-theorem",
@@ -1368,11 +1564,39 @@
           "code": "std-dev-sums"
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Central Limit Theorem",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Central%20Limit%20Theorem.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Central%20Limit%20Theorem.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 2005 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\n<!-- 2005 Cite: Abrahamson, D. -->",
+      "dossier": "docs/research/netlogo-web/central-limit-theorem.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-last-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#central-limit-theorem",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "9dbcc55be64d3e8aea4a6747a77babdd8d354c20be050a2d89eabf927766ca60",
+        "ui.ts": "6f5243109c7deb59700224620afd75a9457e05e59000321e625681579a425e0a"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/central-limit-theorem-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/central-limit-theorem-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/central-limit-theorem-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/central-limit-theorem-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/central-limit-theorem-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/central-limit-theorem-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/central-limit-theorem-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "random-combinations-and-permutations",
@@ -1691,11 +1915,39 @@
           "code": "count-steps"
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Random Combinations and Permutations",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Random%20Combinations%20and%20Permutations.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Random%20Combinations%20and%20Permutations.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 2004 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.\n\n<!-- 2004 Cite: Abrahamson, D. -->",
+      "dossier": "docs/research/netlogo-web/random-combinations-and-permutations.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-last-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#random-combinations-and-permutations",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "a3bfc4e7f7a6d798bc7a36d2a00d139b10743e966c0c6d8bee92020c49036711",
+        "ui.ts": "ffc133da8e96b437b779f934f8a8aaecbb5ab5705e73bcb5d691b5bee07910a2"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/random-combinations-and-permutations-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/random-combinations-and-permutations-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/random-combinations-and-permutations-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/random-combinations-and-permutations-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/random-combinations-and-permutations-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/random-combinations-and-permutations-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/random-combinations-and-permutations-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     },
     {
       "slug": "mandelbrot",
@@ -1799,11 +2051,49 @@
           "code": "hide-turtle"
         }
       ],
-      "implemented": false,
-      "headlessVerified": false,
-      "browserVerified": false,
-      "baselineCompared": false,
-      "reviewed": false
+      "implemented": true,
+      "headlessVerified": true,
+      "browserVerified": true,
+      "baselineCompared": true,
+      "reviewed": false,
+      "catalogPath": "Sample Models/Mathematics/Fractals/Mandelbrot",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/Mandelbrot.nlogox",
+      "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/Mandelbrot.nlogox",
+      "upstreamRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "netlogoVersion": "NetLogo 7.0.4",
+      "licenseNotice": "Copyright 1997 Uri Wilensky.\n\n![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)\n\nThis model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.\n\nNetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).\n\nTo inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.\n\nThis model was created as part of the project: CONNECTED MATHEMATICS: MAKING SENSE OF COMPLEX PHENOMENA THROUGH BUILDING OBJECT-BASED PARALLEL MODELS (OBPML).  The project gratefully acknowledges the support of the National Science Foundation (Applications of Advanced Technologies Program) -- grant numbers RED #9552950 and REC #9632612.\n\nThis model was converted to NetLogo as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227. Converted from StarLogoT to NetLogo, 2001.\n\n<!-- 1997 2001 -->",
+      "dossier": "docs/research/netlogo-web/mandelbrot.json",
+      "sourceAudit": "Procedures, all widget descriptors and complete Info retained; source hashes match inventory and completed dossier. Detailed semantic contracts follow in scoped contract reports.",
+      "reviewBlocker": "docs/development/connectivity-transfer-review-blocker.md",
+      "contract": "docs/development/selected-probability-last-contract.md",
+      "evidenceReport": "docs/development/selected-probability-evidence.md#mandelbrot",
+      "frozenExamples": "examples/selected-probability/SHA256SUMS",
+      "implementationHashes": {
+        "model.ts": "fb983c389cd7171cae65b0cf27b4d8dfa4abb83fba4b5d063b2623a2b813d1f0",
+        "ui.ts": "d54e7b35585bc4141148212d9a08e796cdc47688897af0444e97a2f05e79d64c"
+      },
+      "targetEvidence": {
+        "setup": "docs/development/selected-probability-evidence/mandelbrot-target-setup.png",
+        "desktop-light": "docs/development/selected-probability-evidence/mandelbrot-target-desktop-light.png",
+        "desktop-dark": "docs/development/selected-probability-evidence/mandelbrot-target-desktop-dark.png",
+        "mobile-light": "docs/development/selected-probability-evidence/mandelbrot-target-mobile-light.png",
+        "mobile-dark": "docs/development/selected-probability-evidence/mandelbrot-target-mobile-dark.png"
+      },
+      "pairedEvidence": {
+        "setup": "docs/development/selected-probability-evidence/mandelbrot-paired-setup.png",
+        "progress": "docs/development/selected-probability-evidence/mandelbrot-paired-progress.png"
+      },
+      "reviewStatus": "pending: required gemini-4-argon/high independent technical review, provider quota exhausted; no substitution or retry attempted"
     }
-  ]
+  ],
+  "counts": {
+    "models": 10,
+    "implemented": 10,
+    "headlessVerified": 10,
+    "browserVerified": 10,
+    "baselineCompared": 10,
+    "reviewed": 0,
+    "reviewPending": 10
+  },
+  "testedSourceBasis": "Frozen examples160db6d; implementation e6a731a/28cd737; browser-discovered signed-draw, shading and responsive corrections468c902. Final tested source hashes are recorded per row."
 }
