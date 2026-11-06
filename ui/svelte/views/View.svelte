@@ -55,7 +55,7 @@
         const adapter = mountCanvas(target, id => onselect(id), value => onintent(value), options);
         mounted = { ...adapter, update: (value, id, enabled) => adapter.update(current.data(value), id, enabled) };
       } else if (current.type === "line" || current.type === "bar" || current.type === "scatter") {
-        const adapter = mountChart(target, current.type, options);
+        const adapter = mountChart(target, current.type, { ...options, xAxis: current.xAxis, yAxis: current.yAxis });
         mounted = { ...adapter, update: value => adapter.update(current.series(value)) };
       }
       renderer = mounted;

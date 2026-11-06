@@ -1,3 +1,5 @@
+import type { AxisSpec } from "../definition.ts";
+
 /** Optional host-owned presentation; omitted options preserve legacy rendering. */
 export interface RendererTheme {
   readonly background: string;
@@ -10,6 +12,9 @@ export interface RendererTheme {
 }
 
 export interface RendererOptions {
+  /** Chart axis text only; never data conversion or renderer configuration. */
+  readonly xAxis?: AxisSpec;
+  readonly yAxis?: AxisSpec;
   /** A modern host supplies its own accessible controls. */
   readonly controls?: boolean;
   readonly theme?: () => RendererTheme;
