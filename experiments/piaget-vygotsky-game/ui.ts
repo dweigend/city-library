@@ -15,6 +15,7 @@ const binding=defineUI(model,{
  ],
  source:{url:'https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Psychology/Piaget-Vygotsky%20Game.nlogox',label:'Original NetLogo model · Wilensky · CC BY-NC-SA 3.0'},
  complete:s=>s.stopped,
+ actions:[{label:'Next run',run:m=>m.advance(),enabled:s=>s.stopped}],
  monitors:[{label:'Tick',value:s=>s.tick},{label:'Attempt',value:s=>s.attempts},{label:'Strategy',value:s=>s.strategy},{label:'Mean distance',value:s=>s.meanScore.toFixed(3)}],
  views:[
  {type:'spatial',label:'Target throws',data:s=>({width:s.width,height:s.height,cells:s.cells.map(c=>({...c,color:c.target?colors[s.strategy]:netLogoColor(c.trailColor)})),agents:s.players.map(p=>({...p,size:8,shape:'triangle' as const,color:netLogoColor(p.color)}))})},

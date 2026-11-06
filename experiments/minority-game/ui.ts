@@ -1,6 +1,7 @@
 import { defineUI } from '../../ui/index.ts';
 import { model } from './model.ts';
 const binding=defineUI(model,{
+ complete:s=>Boolean(s.diagnostic),
  setup:[{field:'seed'},{field:'number'},{field:'memory'},{field:'strategiesPerAgent',label:'Strategies per agent'}],
  live:[{field:'colorBy',label:'Color by',value:s=>s.parameters.colorBy,set:(m,v)=>m.setParameters({colorBy:String(v) as 'choice'|'success'})}],
  source:{url:'https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Minority%20Game.nlogox',label:'Original NetLogo model · Wilensky · CC BY-NC-SA 3.0'},
