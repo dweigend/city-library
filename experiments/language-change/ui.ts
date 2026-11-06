@@ -65,7 +65,7 @@ const binding = defineUI(model, {
         s.nodes.map((a) => ({
           id: a.id,
           label: String(a.who),
-          position: { x: a.x, y: a.y },
+          position: { x: a.x * 7, y: a.y * 7 },
           color: `hsl(0 75% ${15 + 70 * a.state}%)`,
           size: 14,
         })),
