@@ -1,0 +1,21 @@
+{
+  "scope": "Same-target RNG/inputs before and after replacing duplicated heading-vector math with existing public geometry.direction. No cross-NetLogo RNG claim. Canonical identity strings omitted, all other public observation fields retained.",
+  "beforeRuntimeCommit": "3ab8322",
+  "fixtures": [
+    {
+      "seed": 1,
+      "steps": 20
+    },
+    {
+      "seed": 1,
+      "mammothBirthRate": 0,
+      "humanBirthRate": 0,
+      "climateChangeDecayChance": 100,
+      "steps": 10
+    }
+  ],
+  "beforeSha256": "328d18701e7607f461b022b2e35e54ade3d68df278299e3e899c2ddf0e5cbccb",
+  "afterSha256": "328d18701e7607f461b022b2e35e54ade3d68df278299e3e899c2ddf0e5cbccb",
+  "equal": true,
+  "rawPublicObservations": "mammoths-direction-equivalence.json.gz"
+}

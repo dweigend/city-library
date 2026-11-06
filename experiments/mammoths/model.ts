@@ -1,5 +1,5 @@
 /** Wilensky (1997), CC BY-NC-SA 3.0; see NOTICE.md. Static native terrain: data/terrain.json. */
-import { Agent, Grid, Random, World } from "city-library";
+import { Agent, Grid, Random, World, geometry } from "city-library";
 import terrain from "./data/terrain.json";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
@@ -129,10 +129,10 @@ export function create(options: Partial<Parameters> = {}) {
     record();
   }
   function landAhead(resident: Resident, distance: number): boolean {
-    const angle = (resident.heading * Math.PI) / 180;
+    const forward = geometry.direction({ heading: resident.heading });
     const patch = grid.fieldAt({
-      x: resident.x + distance * Math.sin(angle),
-      y: resident.y + distance * Math.cos(angle),
+      x: resident.x + distance * forward.x,
+      y: resident.y + distance * forward.y,
     });
     return patch !== undefined && patch.terrain !== "ocean";
   }
