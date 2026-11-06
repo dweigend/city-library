@@ -89,34 +89,54 @@ export function createSession<P extends object, M extends ModelInstance>(definit
   const repeatFlags = new Set<number>();
   const store = writable<SessionState>();
   const isComplete = () => observation !== undefined && (spec.complete?.(observation) ?? false);
-  function publish() {
-    if (disposed) return;
-    const available = observation !== undefined;
-    store.set({
-      observation, initialized: !!instance, running, complete: isComplete(), epoch,
-      draft: { ...draft }, liveDraft: { ...liveDraft }, pending: applied ? setup.filter(field => draft[field.field] !== applied![field.field]).map(field => field.field) : [],
+  let handlingFailure = false;
+  /** Callback-free snapshot: failures must never reuse a previous owner's store value. */
+  function currentState(): SessionState {
+    return {
+      observation, initialized: !!instance, running, complete: false, epoch,
+      draft: { ...draft }, liveDraft: { ...liveDraft },
+      pending: applied ? setup.filter(field => draft[field.field] !== applied![field.field]).map(field => field.field) : [],
       status, error, fieldErrors: { ...fieldErrors }, selected, speed,
+      drawing: false, drawingAvailable: false,
+      actions: (spec.actions ?? []).map(() => ({ enabled: false, repeating: false })),
+      liveEnabled: live.map(() => observation === undefined), monitors: [],
+    };
+  }
+  function projectedState(): SessionState {
+    const available = observation !== undefined;
+    return {
+      ...currentState(), complete: isComplete(),
       drawing: available && !error && !!spec.drawing?.enabled(observation!) && (!spec.drawing?.toggleLabel || drawing),
       drawingAvailable: available && !!spec.drawing?.enabled(observation!),
       actions: (spec.actions ?? []).map((action, index) => ({ enabled: available && (action.enabled?.(observation!, selected) ?? true), pressed: available ? action.pressed?.(observation!) : undefined, repeating: repeatFlags.has(index) })),
-      liveEnabled: (spec.live ?? []).map(field => !available || (field.enabled?.(observation!) ?? true)),
+      liveEnabled: spec.live.map(field => !available || (field.enabled?.(observation!) ?? true)),
       monitors: available ? (spec.monitors ?? []).map(monitor => ({ label: monitor.label, value: monitor.format ? monitor.format(monitor.value(observation!)) : monitor.value(observation!) })) : [],
-    });
+    };
+  }
+  function publish() {
+    if (disposed || handlingFailure) return;
+    let snapshot: SessionState;
+    try { snapshot = projectedState(); }
+    catch (cause) { fail(cause, true, true); return; }
+    // Catch author projection failures, not arbitrary subscriber exceptions.
+    store.set(snapshot);
   }
   function stopRepeats() { for (const repeat of repeats) repeat?.stop(); }
   function pause() {
-    playback.stop(); stopRepeats(); drawing = false;
-    try { publish(); } catch (cause) { fail(cause); }
+    if (disposed) return;
+    playback.stop(); stopRepeats(); drawing = false; publish();
   }
-  function fail(cause: unknown) {
-    const message = cause instanceof Error ? cause.message : String(cause);
-    // A failed renderer effect can be called again by the error-state render.
-    // Publishing the same failure repeatedly would recursively invalidate that effect.
-    if (error && status === message && !running && !drawing) return;
+  function fail(cause: unknown, preservePrimary = false, forcePublication = false) {
+    if (disposed) return;
+    const message = preservePrimary && error ? status : cause instanceof Error ? cause.message : String(cause);
+    // Identical renderer errors must not recursively invalidate their own effect.
+    // Presentation edits still force a current snapshot when a projection remains broken.
+    if (!forcePublication && error && status === message && !running && !drawing) return;
     status = message; error = true; drawing = false;
-    playback.stop(); stopRepeats();
-    // A broken projection must not prevent the primary error from being displayed.
-    try { publish(); } catch { store.update(value => ({ ...value, running: false, drawing: false, error: true, status })); }
+    handlingFailure = true;
+    try { playback.stop(); stopRepeats(); running = false; }
+    finally { handlingFailure = false; }
+    store.set(currentState());
   }
   function observe() {
     if (!instance) return;
@@ -129,16 +149,16 @@ export function createSession<P extends object, M extends ModelInstance>(definit
   }
   function act(action: (model: M) => void) {
     if (!instance || disposed) return false;
-    try { action(instance); error = false; status = ""; observe(); return true; }
+    try { action(instance); error = false; status = ""; observe(); return !error; }
     catch (cause) {
-      fail(cause);
+      fail(cause, false, true);
       try { observe(); } catch { /* Retain primary error. */ }
       return false;
     }
   }
   const playback = createPlayback(
     () => !isComplete() && act(model => model.advance(1)) && !isComplete(),
-    value => { running = value; try { publish(); } catch (cause) { fail(cause); } },
+    value => { running = value; publish(); },
     frame => {
       const owner = instance;
       const id = window.setInterval(() => { if (!disposed && owner === instance) frame(); }, 550 - speed * 50);
@@ -177,7 +197,7 @@ export function createSession<P extends object, M extends ModelInstance>(definit
         next = definition.create(options as Partial<P>);
         const nextObservation = next.read() as Snapshot<M>;
         // Validate projections before destroying a working session.
-        for (const field of spec.live ?? []) field.value(nextObservation);
+        for (const field of spec.live) { field.value(nextObservation); field.enabled?.(nextObservation); }
         for (const monitor of spec.monitors ?? []) { const value = monitor.value(nextObservation); monitor.format?.(value); }
         spec.complete?.(nextObservation);
         spec.drawing?.enabled(nextObservation);
@@ -185,16 +205,17 @@ export function createSession<P extends object, M extends ModelInstance>(definit
         const old = instance;
         // flushSync first drains previously queued renderer effects. Keep their errors
         // attached to the old model until the callback installs the new owner/epoch.
+        let replaced = false;
         try {
           flushSync(() => {
-            instance = next; observation = nextObservation; selected = null;
+            instance = next; observation = nextObservation; selected = null; replaced = true;
             applied = { ...draft }; fieldErrors = {}; epoch++; error = false; status = "";
             observe();
           });
-        } finally { old?.dispose?.(); }
+        } finally { if (replaced) old?.dispose?.(); }
       } catch (cause) {
-        if (next && next !== instance) next.dispose?.();
-        fail(cause);
+        try { if (next && next !== instance) next.dispose?.(); }
+        finally { fail(cause, false, true); }
       }
     },
     setDraft(field, value) { if (disposed || !setup.some(item => item.field === field)) return; draft[field] = value; delete fieldErrors[field]; publish(); },
@@ -209,20 +230,35 @@ export function createSession<P extends object, M extends ModelInstance>(definit
         if (!instance) { liveDraft[field] = decoded; delete fieldErrors[field]; error = false; publish(); return; }
         if (observation === undefined || !(binding.enabled?.(observation) ?? true)) return;
         binding.set(instance, decoded); delete fieldErrors[field]; error = false; status = ""; observe();
-      } catch (cause) { fieldErrors[field] = cause instanceof Error ? cause.message : String(cause); fail(cause); try { observe(); } catch { /* Primary error retained. */ } }
+      } catch (cause) { fieldErrors[field] = cause instanceof Error ? cause.message : String(cause); fail(cause, false, true); try { observe(); } catch { /* Primary error retained. */ } }
     },
-    run() { if (running) { pause(); return; } if (!instance || isComplete()) return; stopRepeats(); drawing = false; playback.start(); },
-    step(count) { pause(); if (!isComplete()) act(model => model.advance(count)); },
+    run() {
+      if (disposed) return;
+      try { if (running) { pause(); return; } if (!instance || isComplete()) return; stopRepeats(); drawing = false; playback.start(); }
+      catch (cause) { fail(cause, false, true); }
+    },
+    step(count) {
+      if (disposed) return;
+      pause(); try { if (!isComplete()) act(model => model.advance(count)); } catch (cause) { fail(cause, false, true); }
+    },
     action(index) {
+      if (disposed) return;
       pause(); const action = spec.actions?.[index];
-      if (!action || observation === undefined || !(action.enabled?.(observation, selected) ?? true)) return;
-      act(model => action.run(model, selected));
+      try {
+        if (!action || observation === undefined || !(action.enabled?.(observation, selected) ?? true)) return;
+        act(model => action.run(model, selected));
+      } catch (cause) { fail(cause, false, true); }
     },
-    repeat(index) { const repeat = repeats[index]; if (!repeat) return; playback.stop(); drawing = false; if (repeat.running) repeat.stop(); else repeat.start(); publish(); },
-    setSpeed(value) { const resume = running; playback.stop(); speed = value; if (resume) playback.start(); publish(); },
-    select(id) { selected = id; try { publish(); } catch (cause) { fail(cause); } },
-    toggleDrawing() { playback.stop(); stopRepeats(); drawing = !drawing; publish(); },
-    intent(intent) { playback.stop(); act(model => spec.drawing?.intent(model, intent)); },
+    repeat(index) {
+      if (disposed) return;
+      const repeat = repeats[index]; if (!repeat) return;
+      try { playback.stop(); drawing = false; if (repeat.running) repeat.stop(); else repeat.start(); publish(); }
+      catch (cause) { fail(cause, false, true); }
+    },
+    setSpeed(value) { if (disposed) return; const resume = running; playback.stop(); speed = value; if (resume) playback.start(); publish(); },
+    select(id) { if (disposed) return; selected = id; publish(); },
+    toggleDrawing() { if (disposed) return; playback.stop(); stopRepeats(); drawing = !drawing; publish(); },
+    intent(intent) { if (disposed) return; playback.stop(); act(model => spec.drawing?.intent(model, intent)); },
     pause, fail,
     dispose() {
       if (disposed) return;

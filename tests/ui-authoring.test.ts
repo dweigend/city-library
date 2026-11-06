@@ -146,3 +146,109 @@ test('client session restart installs a fresh owner and clears only the prior pr
   expect(new TextDecoder().decode(result.stderr)).toBe('');
   expect(result.exitCode).toBe(0);
 });
+
+function clientSessionCase(source: string) {
+  const result = Bun.spawnSync([process.execPath, '--conditions=browser', '-e', `
+    import { strict as assert } from 'node:assert';
+    import { createSession } from './ui/svelte/session.ts';
+    import { model } from './experiments/wealth-distribution/model.ts';
+    ${source}
+  `], { cwd: import.meta.dir + '/..', stdout: 'pipe', stderr: 'pipe' });
+  expect(new TextDecoder().decode(result.stderr)).toBe('');
+  expect(result.exitCode).toBe(0);
+}
+
+test('live enabled preflight rejects first setup and restart without replacing or disposing a valid owner', () => {
+  clientSessionCase(`
+    for (const startWithValidOwner of [false, true]) {
+      const created = [], disposed = [];
+      const definition = { ...model, create(options) {
+        const actual = model.create(options); created.push(actual);
+        return { ...actual, dispose() { disposed.push(actual.read().peopleCount); } };
+      } };
+      const session = createSession(definition, {
+        setup: ['people'], live: { growthAmount: {
+          enabled: state => { if (state.peopleCount === 3) throw Error('Candidate enabled failure'); return true; },
+          set: (instance, value) => instance.setRules({ growthAmount: value }),
+        } }, views: [],
+      });
+      let state; const unsubscribe = session.subscribe(value => state = value);
+      if (startWithValidOwner) { session.setDraft('people', 2); session.initialize(); }
+      session.setDraft('people', 3); session.initialize();
+      assert.equal(state.error, true);
+      assert.equal(state.status, 'Candidate enabled failure');
+      assert.equal(state.epoch, startWithValidOwner ? 1 : 0);
+      assert.equal(state.initialized, startWithValidOwner);
+      assert.equal(state.observation?.peopleCount, startWithValidOwner ? 2 : undefined);
+      assert.deepEqual(disposed, [3], 'Only the rejected candidate is disposed');
+      session.setDraft('people', 2); session.initialize();
+      assert.equal(state.error, false, 'A successful later setup recovers');
+      assert.equal(state.observation.peopleCount, 2);
+      session.dispose(); unsubscribe();
+    }
+  `);
+});
+
+test('a callback failure after candidate preflight publishes the current owner and epoch, never disposed-owner state', () => {
+  clientSessionCase(`
+    const created = [], disposed = []; let candidateCalls = 0;
+    const definition = { ...model, create(options) {
+      const actual = model.create(options); created.push(actual);
+      return { ...actual, dispose() { disposed.push(actual.read().peopleCount); } };
+    } };
+    const session = createSession(definition, {
+      setup: ['people'], live: { growthAmount: {
+        enabled: state => { if (state.peopleCount === 3 && ++candidateCalls === 2) throw Error('Post-preflight failure'); return true; },
+        set: (instance, value) => instance.setRules({ growthAmount: value }),
+      } }, monitors: [{ label: 'Tick', value: state => state.tick }], views: [],
+    });
+    let state; const unsubscribe = session.subscribe(value => state = value);
+    session.setDraft('people', 2); session.initialize();
+    session.setDraft('people', 3); session.initialize();
+    assert.equal(state.error, true);
+    assert.equal(state.status, 'Post-preflight failure');
+    assert.equal(state.initialized, true);
+    assert.equal(state.epoch, 2);
+    assert.equal(state.observation.peopleCount, 3);
+    assert.equal(state.observation.tick, 0);
+    assert.deepEqual(disposed, [2], 'Old owner is disposed after replacement');
+    session.step(1);
+    assert.equal(created[1].read().tick, 1, 'Actions target the same owner exposed by the store');
+    assert.equal(created[0].read().tick, 0);
+    assert.equal(state.error, false);
+    assert.equal(state.observation.peopleCount, 3);
+    session.dispose(); unsubscribe();
+  `);
+});
+
+test('persistent formatter failure keeps draft and speed current, preserves the primary error and recovers on restart', () => {
+  clientSessionCase(`
+    const created = [];
+    const definition = { ...model, create(options) { const actual = model.create(options); created.push(actual); return actual; } };
+    const session = createSession(definition, { setup: ['people'], monitors: [{ label: 'Tick', value: state => state.tick,
+      format(value) { if (value === 1) throw Error('Primary formatter failure'); return String(value); },
+    }], views: [] });
+    let state; const unsubscribe = session.subscribe(value => state = value);
+    session.setDraft('people', 2); session.initialize(); session.step(1);
+    assert.equal(state.error, true); assert.equal(state.status, 'Primary formatter failure');
+    assert.doesNotThrow(() => session.setDraft('people', 3));
+    assert.equal(state.draft.people, 3);
+    assert.doesNotThrow(() => session.setSpeed(7));
+    assert.equal(state.speed, 7);
+    assert.equal(state.status, 'Primary formatter failure');
+    assert.equal(state.observation.tick, 1);
+    assert.deepEqual(state.pending, ['people']);
+    session.initialize();
+    assert.equal(created.length, 2); assert.equal(created[1].read().peopleCount, 3);
+    assert.equal(state.observation.tick, 0); assert.equal(state.epoch, 2);
+    assert.equal(state.error, false); assert.equal(state.status, ''); assert.deepEqual(state.pending, []);
+    session.dispose(); const before = state;
+    for (const action of [() => session.setDraft('people', 4), () => session.setSpeed(1), () => session.select('stale'),
+      () => session.toggleDrawing(), () => session.run(), () => session.step(1), () => session.action(0),
+      () => session.repeat(0), () => session.intent({ phase: 'end' }), () => session.initialize(), () => session.fail(Error('stale'))])
+      assert.doesNotThrow(action);
+    assert.equal(state, before, 'Disposed presentation actions do not republish');
+    assert.equal(created.length, 2); assert.equal(created[1].read().tick, 0);
+    unsubscribe();
+  `);
+});
