@@ -1,0 +1,331 @@
+{
+  "state": {
+    "time": 1942.0999999642372,
+    "url": "http://localhost:3150/?experiment=urban-suite-economic-disparity",
+    "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "dpr": 2,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scroll": {
+      "x": 0,
+      "y": 450
+    },
+    "dark": true,
+    "monitors": "Tick\n11\nRich\n24\nPoor\n24\nJobs\n2\nCounter\n0\nRich median\n10.9753\nPoor median\n10.1699\nView\nquality",
+    "aside": "Seed\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nQuality\nPrice\nDistance\nPoor utility\nRich utility\nTick\n11\nRich\n24\nPoor\n24\nJobs\n2\nCounter\n0\nRich median\n10.9753\nPoor median\n10.1699\nView\nquality\nLocation tests\nResidents per job\nPoor births per step\nRich births per step\nPoor price priority\nRich quality priority\nMaximum jobs\nOldest residents removed\n\nSteps completed.\n\nModel info",
+    "inputs": [
+      {
+        "name": "seed",
+        "value": "1",
+        "checked": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "checked": false
+      },
+      {
+        "name": "live-numberOfTests",
+        "value": "15",
+        "checked": false
+      },
+      {
+        "name": "live-residentsPerJob",
+        "value": "100",
+        "checked": false
+      },
+      {
+        "name": "live-poorPerStep",
+        "value": "5",
+        "checked": false
+      },
+      {
+        "name": "live-richPerStep",
+        "value": "5",
+        "checked": false
+      },
+      {
+        "name": "live-poorPricePriority",
+        "value": "0",
+        "checked": false
+      },
+      {
+        "name": "live-richQualityPriority",
+        "value": "0",
+        "checked": false
+      },
+      {
+        "name": "live-maxJobs",
+        "value": "10",
+        "checked": false
+      },
+      {
+        "name": "live-deathRate",
+        "value": "4",
+        "checked": false
+      },
+      {
+        "name": "",
+        "value": "on",
+        "checked": false
+      }
+    ],
+    "plots": [
+      "Rich: 10.975334750883977; Poor: 10.169900722761108"
+    ],
+    "overflow": false,
+    "canvas": [
+      {
+        "width": 716,
+        "height": 716,
+        "aria": "Model view. 50 agents. Arrow keys select an item.",
+        "rect": {
+          "x": 16,
+          "y": 176.6875,
+          "width": 358,
+          "height": 358
+        }
+      }
+    ]
+  },
+  "canvases": [
+    {
+      "width": 716,
+      "height": 716,
+      "aria": "Model view. 50 agents. Arrow keys select an item.",
+      "rgbaSha256": "54bd70f5ce07cfcb520fa19fe2164bac6bca057a7695430f230464a7ed1ebdfa",
+      "counts": {
+        "red": 407,
+        "white": 2123,
+        "black": 2088,
+        "gray": 4239,
+        "nonGray": 508417,
+        "transparent": 0
+      },
+      "uniqueColors": 1555,
+      "topColors": [
+        [
+          "70,140,47,255",
+          332604
+        ],
+        [
+          "68,137,45,255",
+          20626
+        ],
+        [
+          "69,139,46,255",
+          17303
+        ],
+        [
+          "69,140,46,255",
+          11686
+        ],
+        [
+          "66,133,44,255",
+          9702
+        ],
+        [
+          "70,140,46,255",
+          9301
+        ],
+        [
+          "71,144,48,255",
+          8866
+        ],
+        [
+          "66,132,44,255",
+          6871
+        ],
+        [
+          "73,147,49,255",
+          6138
+        ],
+        [
+          "67,135,45,255",
+          5488
+        ],
+        [
+          "69,139,47,255",
+          4543
+        ],
+        [
+          "64,130,43,255",
+          4131
+        ],
+        [
+          "67,134,45,255",
+          3696
+        ],
+        [
+          "66,132,45,255",
+          3667
+        ],
+        [
+          "63,126,42,255",
+          3222
+        ],
+        [
+          "66,133,45,255",
+          2943
+        ]
+      ],
+      "layers": [
+        {
+          "tag": "CANVAS",
+          "cls": "world",
+          "rect": {
+            "x": 16,
+            "y": 176.6875,
+            "width": 358,
+            "height": 358
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(238, 238, 238)",
+          "transform": "none",
+          "overflow": "clip"
+        },
+        {
+          "tag": "FIGURE",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 149.6875,
+            "width": 358,
+            "height": 385
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(238, 238, 238)",
+          "transform": "none",
+          "overflow": "hidden"
+        },
+        {
+          "tag": "DIV",
+          "cls": "views",
+          "rect": {
+            "x": 16,
+            "y": 149.6875,
+            "width": 358,
+            "height": 555.6875
+          },
+          "display": "grid",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(238, 238, 238)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "DIV",
+          "cls": "workbench",
+          "rect": {
+            "x": 16,
+            "y": -330.5,
+            "width": 358,
+            "height": 1739.9921875
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(238, 238, 238)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "DIV",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": -330.5,
+            "width": 358,
+            "height": 1739.9921875
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(238, 238, 238)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "SECTION",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": -330.5,
+            "width": 358,
+            "height": 1739.9921875
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(238, 238, 238)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "MAIN",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": -434,
+            "width": 390,
+            "height": 1843.4921875
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(238, 238, 238)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "BODY",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": -434,
+            "width": 390,
+            "height": 1843.4921875
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgb(24, 24, 24)",
+          "color": "rgb(238, 238, 238)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "HTML",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": -450,
+            "width": 390,
+            "height": 1875.4921875
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "transform": "none",
+          "overflow": "visible"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "scope": "Two-target generic Svelte integration smoke; not a new original/target baseline comparison or catalog-wide migration acceptance",
+  "runtime": "Chromium156 via T3 preview, existing owner port3102; own tab closed, foreign servers preserved",
+  "head": "fe54778",
+  "observations": {
+    "paused": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3102/?experiment=diffusion-on-a-directed-network"
+      },
+      "value": {
+        "before": "Skip to experiment\nAgent Lab\nDiffusion on a Directed Network\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nTick\n10\nNodes\n81\nActive edges\n147\nTotal value\n81.0000\nMax flow\n0.1301\nMean flow\n0.04849\nPaused\nActive directed connections\nFit\nLayout\nInspect node\nCurrent value distribution\n25\n0\n2.83\nNodes\nActive transfers \u00b7 first 20\nfrom\tto\tflow\n0\t9\t0.03874204889999999\n2\t1\t0.06559811151416917\n3\t2\t0.03965967577774554\n3\t12\t0.03965967577774554\n4\t3\t0.025991093465274544\n4\t5\t0.025991093465274544\n4\t13\t0.025991093465274544\n5\t4\t0.02785393374007587\n5\t6\t0.02785393374007587\n5\t14\t0.02785393374007587\n6\t5\t0.04008643807147627\n6\t7\t0.04008643807147627\n7\t6\t0.03755531346261054\n7\t8\t0.03755531346261054\n7\t16\t0.03755531346261054\n8\t7\t0.06149075573956708\n9\t10\t0.03874204889999999\n9\t18\t0.03874204889999999\n10\t19\t0.13006629534270187\n11\t10\t0.03874204889999999",
+        "after": "Skip to experiment\nAgent Lab\nDiffusion on a Directed Network\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nTick\n10\nNodes\n81\nActive edges\n147\nTotal value\n81.0000\nMax flow\n0.1301\nMean flow\n0.04849\nPaused\nActive directed connections\nFit\nLayout\nInspect node\nCurrent value distribution\n25\n0\n2.83\nNodes\nActive transfers \u00b7 first 20\nfrom\tto\tflow\n0\t9\t0.03874204889999999\n2\t1\t0.06559811151416917\n3\t2\t0.03965967577774554\n3\t12\t0.03965967577774554\n4\t3\t0.025991093465274544\n4\t5\t0.025991093465274544\n4\t13\t0.025991093465274544\n5\t4\t0.02785393374007587\n5\t6\t0.02785393374007587\n5\t14\t0.02785393374007587\n6\t5\t0.04008643807147627\n6\t7\t0.04008643807147627\n7\t6\t0.03755531346261054\n7\t8\t0.03755531346261054\n7\t16\t0.03755531346261054\n8\t7\t0.06149075573956708\n9\t10\t0.03874204889999999\n9\t18\t0.03874204889999999\n10\t19\t0.13006629534270187\n11\t10\t0.03874204889999999",
+        "stable": true,
+        "overflow": false,
+        "inputs": [
+          {
+            "id": "",
+            "type": "search",
+            "value": ""
+          },
+          {
+            "id": "c8-seed",
+            "type": "number",
+            "value": "1"
+          },
+          {
+            "id": "c10-gridSize",
+            "type": "number",
+            "value": "9"
+          },
+          {
+            "id": "c12-edgeChance",
+            "type": "number",
+            "value": "50"
+          },
+          {
+            "id": "c14-diffusionRate",
+            "type": "number",
+            "value": "10"
+          }
+        ]
+      }
+    },
+    "playback": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3102/?experiment=diffusion-on-a-directed-network"
+      },
+      "value": "Skip to experiment\nAgent Lab\nDiffusion on a Directed Network\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nTick\n11\nNodes\n81\nActive edges\n147\nTotal value\n81.0000\nMax flow\n0.1295\nMean flow\n0.04824\nPaused\nActive directed connections\nFit\nLayout\nInspect node\nCurrent value distribution\n26\n0\n2.83\nNodes\nActive transfers \u00b7 first 20\nfrom\tto\tflow\n0\t9\t0.03486784400999998\n2\t1\t0.06300426794052683\n3\t2\t0.038970766929468326\n3\t12\t0.038970766929468326\n4\t3\t0.02545178610210567\n4\t5\t0.02545178610210567\n4\t13\t0.02545178610210567\n5\t4\t0.027271124750626652\n5\t6\t0.027271124750626652\n5\t14\t0.027271124750626652\n6\t5\t0.0"
+    },
+    "reset": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3102/?experiment=diffusion-on-a-directed-network"
+      },
+      "value": {
+        "text": "Skip to experiment\nAgent Lab\nDiffusion on a Directed Network\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nSeed\nGrid size\nEdge chance (%)\nDiffusion rate (%)\nRewire a link\nKeep rewiring\nModel info\nTick\n0\nNodes\n81\nActive edges\n0\nTotal value\n81.0000\nMax flow\n0.000\nMean flow\n0.000\nPaused\nActive directed connections\nFit\nLayout\nInspect node\nCurrent value distribution\n81\n0\n1.89\nNodes\nActive transfers \u00b7 first 20",
+        "overflow": false
+      }
+    },
+    "mandelbrotSetup": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3102/?experiment=mandelbrot"
+      },
+      "value": {
+        "text": "Skip to experiment\nAgent Lab\nMandelbrot\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nSeed\nNumber of agents\nScale factor\nThrow\nHide agents\nModel info\nTick\n0\nComputed fields\n0\nTotal iterations\n0\nPaused\nMandelbrot",
+        "canvases": [
+          {
+            "width": 732,
+            "height": 732,
+            "rect": {
+              "width": 366,
+              "height": 366
+            }
+          }
+        ]
+      }
+    },
+    "mandelbrotProgress": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3102/?experiment=mandelbrot"
+      },
+      "value": {
+        "text": "Skip to experiment\nAgent Lab\nMandelbrot\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nSeed\nNumber of agents\nScale factor\nThrow\nHide agents\nModel info\nTick\n10\nComputed fields\n196\nTotal iterations\n200\nPaused\nMandelbrot",
+        "overflow": false
+      }
+    },
+    "hidden": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3102/?experiment=mandelbrot"
+      },
+      "value": "Skip to experiment\nAgent Lab\nMandelbrot\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNumber of agents\nScale factor\nThrow\nHide agents\nModel info\nTick\n10\nComputed fields\n196\nTotal iterations\n200\nPaused\nMandelbrot"
+    },
+    "hiddenStep": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3102/?experiment=mandelbrot"
+      },
+      "value": "Skip to experiment\nAgent Lab\nMandelbrot\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNumber of agents\nScale factor\nThrow\nHide agents\nModel info\nTick\n11\nComputed fields\n216\nTotal iterations\n220\nPaused\nMandelbrot"
+    }
+  },
+  "diagnostics": {
+    "consoleEntries": [
+      {
+        "level": "debug",
+        "text": "[vite] connecting...",
+        "timestamp": "2026-11-06T15:01:10.488Z"
+      },
+      {
+        "level": "debug",
+        "text": "[vite] connected.",
+        "timestamp": "2026-11-06T15:01:10.496Z"
+      },
+      {
+        "level": "debug",
+        "text": "[vite] connecting...",
+        "timestamp": "2026-11-06T15:04:09.804Z"
+      },
+      {
+        "level": "debug",
+        "text": "[vite] connected.",
+        "timestamp": "2026-11-06T15:04:09.806Z"
+      }
+    ],
+    "networkFailures": []
+  },
+  "screenshots": {
+    "network-setup-desktop": {
+      "url": "http://localhost:3102/?experiment=diffusion-on-a-directed-network",
+      "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw53shho-7ada022e.png",
+      "retainedPath": "docs/development/consolidation-evidence/network-setup-desktop.png",
+      "sha256": "a571857064447d3c27cccdd28cfd2a4d5c7cbadbb6e6dbd23eb086c0a4163322",
+      "pngDimensions": [
+        1280,
+        800
+      ]
+    },
+    "network-progress-narrow-light": {
+      "url": "http://localhost:3102/?experiment=diffusion-on-a-directed-network",
+      "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw53tkyy-0e378435.png",
+      "retainedPath": "docs/development/consolidation-evidence/network-progress-narrow-light.png",
+      "sha256": "af9b35033e9b361ec09e3da1a8d6bbfacb1c54466e4bd4254b888a7594fd74c9",
+      "pngDimensions": [
+        780,
+        1688
+      ]
+    },
+    "network-progress-narrow-dark-immediate": {
+      "url": "http://localhost:3102/?experiment=diffusion-on-a-directed-network",
+      "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw53txmt-af18213d.png",
+      "retainedPath": "docs/development/consolidation-evidence/network-progress-narrow-dark-immediate.png",
+      "sha256": "392f410f872f519ab73454c881e12ad397f9dfe704ef6dd748f6cb76fd418c71",
+      "pngDimensions": [
+        780,
+        1688
+      ]
+    },
+    "mandelbrot-progress-narrow-dark-immediate": {
+      "url": "http://localhost:3102/?experiment=mandelbrot",
+      "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw53v2pa-9923e3f8.png",
+      "retainedPath": "docs/development/consolidation-evidence/mandelbrot-progress-narrow-dark-immediate.png",
+      "sha256": "c3a022fcbe95209d55cb51b1c8ffff69f2ec68e0650e6f58d9009608c4a884e9",
+      "pngDimensions": [
+        780,
+        1688
+      ]
+    },
+    "mandelbrot-progress-desktop-light-immediate": {
+      "url": "http://localhost:3102/?experiment=mandelbrot",
+      "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw53v2ud-379031eb.png",
+      "retainedPath": "docs/development/consolidation-evidence/mandelbrot-progress-desktop-light-immediate.png",
+      "sha256": "a83ec569427a66366f17f950f53e7eb5727f28e2771f4b3b40e630c2c6db3d0b",
+      "pngDimensions": [
+        1280,
+        720
+      ]
+    },
+    "mandelbrot-progress-desktop-dark-settled": {
+      "url": "http://localhost:3102/?experiment=mandelbrot",
+      "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw53vt60-60273ca9.png",
+      "retainedPath": "docs/development/consolidation-evidence/mandelbrot-progress-desktop-dark-settled.png",
+      "sha256": "b91f88155f7ed2fc52c112ea0978bea19cee1ef54b071787d2540c96035b480e",
+      "pngDimensions": [
+        1280,
+        720
+      ]
+    },
+    "mandelbrot-progress-desktop-light-settled": {
+      "url": "http://localhost:3102/?experiment=mandelbrot",
+      "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw53wg52-d5ba3252.png",
+      "retainedPath": "docs/development/consolidation-evidence/mandelbrot-progress-desktop-light-settled.png",
+      "sha256": "9b12bcf7a65852ee82ed23cf97f3503c781a872279e511da0803c18ebacea165",
+      "pngDimensions": [
+        1280,
+        720
+      ]
+    }
+  },
+  "limitations": [
+    "Initial Setup selector timed out because draft edits correctly rename the action to Restart with changes; corrected selector succeeded.",
+    "Immediate post-theme captures include transition frames. Settled desktop light/dark captures inspected separately; no runtime repair claimed.",
+    "T3 desktop saved PNG1280x720 differs from reported1366x768 CSS viewport; narrow capture780x1688 matches390x844 atDPR2. Actual PNG dimensions retained.",
+    "Independent visual approval remains open; no extra review/delegate started."
+  ]
+}
