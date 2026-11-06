@@ -66,7 +66,7 @@ const binding = defineUI(model, {
           id: a.id,
           label: String(a.who),
           position: { x: a.x * 7, y: a.y * 7 },
-          color: `hsl(0, 75%, ${15 + 70 * a.state}%)`,
+          color: `rgb(${Math.round(70 + 155 * a.state)}, ${Math.round(135 - 45 * a.state)}, ${Math.round(220 - 130 * a.state)})`,
           size: 14,
         })),
       edges: (s) => s.links.map((e) => ({ ...e, color: "#929292" })),
