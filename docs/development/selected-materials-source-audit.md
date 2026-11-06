@@ -298,7 +298,7 @@ Canonical path: `Sample Models/Chemistry & Physics/Ising`. Source URL: https://w
 
 ### Binding semantic audit
 
-Wrapped 81×81 lattice. Setup independent random integer100 < probability-of-spin-up=90, spin ±1. go performs 1000 choices WITH replacement and immediate sequential updates, then advances attempted-flip ticks by 1000. Ediff=2*spin*sum(neighbors4.spin); accept Ediff<=0, else only temperature>0 and uniform<exp(-Ediff/temperature). Temperature default 2. Zero temperature never attempts exponential draw for uphill flips. sum-of-spins updated by twice NEW spin; magnetization=sum/count. No terminal condition. Probability only affects setup; temperature is live. Plot magnetization by attempted flips.
+Wrapped 81×81 lattice. Setup independent random integer100 < probability-of-spin-up=50, spin ±1. go performs 1000 choices WITH replacement and immediate sequential updates, then advances attempted-flip ticks by 1000. Ediff=2*spin*sum(neighbors4.spin); accept Ediff<=0, else only temperature>0 and uniform<exp(-Ediff/temperature). Temperature default 2.27. Zero temperature never attempts exponential draw for uphill flips. sum-of-spins updated by twice NEW spin; magnetization=sum/count. No terminal condition. Probability only affects setup; temperature is live. Plot magnetization by attempted flips.
 
 ### Exact widgets, defaults, plots and actions
 
@@ -1141,7 +1141,7 @@ Canonical path: `Sample Models/Chemistry & Physics/Materials Science/Crystalliza
 
 ### Binding semantic audit
 
-Hard 33×33 lattice, initial rectangle width/height31 with STRICT |x|<width/2,|y|<height/2 (31×31 atoms); circle toggle uses Euclidean radius width/2. Agents own temp1550 and heading. Cached neighboring-turtles includes self plus Moore sites; sides-exposed=9-count. go preflight max(temp)<melting550 stops WITHOUT tick. Reset num-frozen; randomized sequential cool-turtles uses (sum(neighboring temps)+room100*sidesExposed+own temp)/10, own twice, preceding writes visible. Separate color phase then separate rotate phase. temp-range=(initial-melting)/7 frozen at setup; color index floor((temp-melting)/range)+1; only index<0 increments num-frozen (NOT simply temp<melting). Liquid temp>=melting copies a random neighbor with temp<=melting (may include self at equality), otherwise random turn. Average after full phase then tick. Histograms are current color bins; num-frozen history uses source threshold. No latent heat, physical units or empirical validation inferred.
+Hard 33×33 lattice, initial rectangle width/height31 with STRICT |x|<width/2,|y|<height/2 (31×31 atoms); circle toggle uses Euclidean radius width/2. Agents own temp1550 and heading. Cached neighboring-turtles includes self plus Moore sites; sides-exposed=9-count. go preflight max(temp)<melting550 stops WITHOUT tick. Reset num-frozen; randomized sequential cool-turtles uses (sum(neighboring temps)+room100*sidesExposed+own temp)/10, own twice, preceding writes visible. Separate color phase then separate rotate phase. temp-range=(initial-melting)/6 frozen at setup; color index floor((temp-melting)/range)+1; only index<0 increments num-frozen (NOT simply temp<melting). Liquid temp>=melting copies a random neighbor with temp<=melting (may include self at equality), otherwise random turn. Average after full phase then tick. Histograms are current color bins; num-frozen history uses source threshold. No latent heat, physical units or empirical validation inferred.
 
 ### Exact widgets, defaults, plots and actions
 
