@@ -24,17 +24,15 @@ export function create(options:Partial<HeroesParameters>={}){
  return {
   advance(count=1){stepCount(count);for(let i=0;i<count;i++){
    diagnostic=null;
-   // A source hard-edge error aborts the shuffled phase, retaining earlier moves and no tick.
-   let failed=false;
-   try{run(world,()=>{for(const a of random.sample(actors(),{count:actors().length,compatibility:'legacy-shuffle'})){
+   // Native optimized fd < 1 retains a blocked position and continues the phase.
+   run(world,()=>{for(const a of random.sample(actors(),{count:actors().length,compatibility:'legacy-shuffle'})){
     const friend=actors()[a.friend]!,enemy=actors()[a.enemy]!;
     const target=a.personality==='brave'?{x:(friend.x+enemy.x)/2,y:(friend.y+enemy.y)/2}:{x:friend.x+(friend.x-enemy.x)/2,y:friend.y+(friend.y-enemy.y)/2};
     // directionTo permits external aiming points and keeps coincident orientation unchanged.
     const direction=a.directionTo(target);if(direction)a.rotate(direction.heading-a.heading);
     const d=geometry.direction({heading:a.heading});const endpoint=geometry.normalize({x:a.x+d.x*0.1,y:a.y+d.y*0.1},{space:world.space!,endpoints:'half-open'});
-    if(!endpoint)throw new RangeError('Source forward 0.1 crosses the hard half-open world edge.');a.move({to:endpoint});
-   }});}catch(error){if(!(error instanceof RangeError))throw error;diagnostic=error.message;failed=true;}
-   if(failed)break;record();
+    if(endpoint)a.move({to:endpoint});
+   }});record();
   }},
   preset(seed:number){const next=parameters(inputs,{seed,number:68,personalities:'mixed'});settings=next;random.reseed(seed);setup();},
   setActors(rows:readonly ActorInput[]){
