@@ -14,7 +14,7 @@ export const inputs: Inputs<AnnealingParameters> = {
   width: { kind: "number", default: 30, min: 2, max: 201, integer: true },
   height: { kind: "number", default: 30, min: 2, max: 201, integer: true },
   seed: { kind: "number", default: 1, integer: true },
-  coolingRate: { kind: "number", default: 1, min: 0, max: 50 },
+  coolingRate: { kind: "number", default: 1, min: 0, max: 50, step: 0.1 },
   swapRadius: { kind: "number", default: 1, min: 1, max: 5, integer: true },
   acceptEqualChanges: { kind: "boolean", default: false },
 };

@@ -28,7 +28,7 @@ export const inputs: Inputs<RobbyParameters> = {
     step: 2,
     integer: true,
   },
-  mutationRate: { kind: "number", default: 0.01, min: 0, max: 1 },
+  mutationRate: { kind: "number", default: 0.01, min: 0, max: 1, step: 0.001 },
   numberOfGenerations: {
     kind: "number",
     default: 100,
