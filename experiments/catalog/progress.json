@@ -2148,12 +2148,22 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "experiments/urban-suite-structure-from-randomness-1/source.nlogox",
+            "experiments/urban-suite-structure-from-randomness-1/NOTICE.md"
+          ],
+          "basis": "Complete Procedures/Widgets/Info audited; unchanged source hashes matched served inventory and research archive; target runtime not inferred."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "examples/selected-urban-remaining/SHA256SUMS",
+            "docs/development/urban-remaining-four-reference-browser.md"
+          ],
+          "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
         },
         "implemented": {
           "done": false,
@@ -2187,7 +2197,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Target implementation/UI and paired browser verification pending; independent Argon approval quota-blocked."
+      ]
     },
     {
       "path": "IABM Textbook/chapter 5/Traffic Grid Goal",
@@ -2494,12 +2506,22 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "experiments/urban-suite-structure-from-randomness-2/source.nlogox",
+            "experiments/urban-suite-structure-from-randomness-2/NOTICE.md"
+          ],
+          "basis": "Complete Procedures/Widgets/Info audited; unchanged source hashes matched served inventory and research archive; target runtime not inferred."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "examples/selected-urban-remaining/SHA256SUMS",
+            "docs/development/urban-remaining-four-reference-browser.md"
+          ],
+          "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
         },
         "implemented": {
           "done": false,
@@ -2533,7 +2555,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Target implementation/UI and paired browser verification pending; independent Argon approval quota-blocked."
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Tijuana Bordertowns",
@@ -2547,8 +2571,13 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "experiments/urban-suite-tijuana-bordertowns/source.nlogox",
+            "experiments/urban-suite-tijuana-bordertowns/NOTICE.md"
+          ],
+          "basis": "Complete Procedures/Widgets/Info audited; unchanged source hashes matched served inventory and research archive; target runtime not inferred."
         },
         "contract-frozen": {
           "done": false,
@@ -2586,7 +2615,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Full Tijuana CITYSCAPE/GO examples await original lifecycle/primitive probes; no Clear-only substitute. Independent Argon approval quota-blocked."
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Pollution",
@@ -2680,12 +2711,22 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "experiments/urban-suite-economic-disparity/source.nlogox",
+            "experiments/urban-suite-economic-disparity/NOTICE.md"
+          ],
+          "basis": "Complete Procedures/Widgets/Info audited; unchanged source hashes matched served inventory and research archive; target runtime not inferred."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "examples/selected-urban-remaining/SHA256SUMS",
+            "docs/development/urban-remaining-four-reference-browser.md"
+          ],
+          "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
         },
         "implemented": {
           "done": false,
@@ -2719,7 +2760,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Target implementation/UI and paired browser verification pending; independent Argon approval quota-blocked."
+      ]
     },
     {
       "path": "Curricular Models/Urban Suite/Urban Suite - Awareness",
@@ -2901,12 +2944,22 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "experiments/urban-suite-sprawl-effect/source.nlogox",
+            "experiments/urban-suite-sprawl-effect/NOTICE.md"
+          ],
+          "basis": "Complete Procedures/Widgets/Info audited; unchanged source hashes matched served inventory and research archive; target runtime not inferred."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-urban-remaining-contracts.md",
+            "examples/selected-urban-remaining/SHA256SUMS",
+            "docs/development/urban-remaining-four-reference-browser.md"
+          ],
+          "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
         },
         "implemented": {
           "done": false,
@@ -2940,7 +2993,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Target implementation/UI and paired browser verification pending; independent Argon approval quota-blocked."
+      ]
     },
     {
       "path": "Sample Models/Earth Science/Climate Change",
