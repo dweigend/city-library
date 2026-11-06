@@ -1,6 +1,6 @@
 # GIS General Examples provenance
 
-Original served model: https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/GIS%20General%20Examples.nlogox
+Original served model: https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox
 
 Exact SHA256 eb7880d4eff9dca3f1d82fb3122877fb439262e115720663de72f3f74528c1ea; NetLogo7.0.4; pinned Galapagos90be931773fcf499049247a8aaa1aecbe003654c. The model archive retains complete original Code/Info and Wilensky public-domain model waiver. Original model source is provenance, not a transpiled target implementation.
 
