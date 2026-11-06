@@ -55,6 +55,31 @@ type Car = Agent<{
 }>;
 
 export function create(options: Partial<TrafficParameters> = {}) {
+  // One step updates signals, visits cars in sampled order, then advances the phase.
+  // step/advance commits World time before recording; read/snapshot only observes.
+  // Public interventions select an intersection or edit its light/rules.
+  function go() {
+    updateCurrent();
+    setSignals();
+    numCarsStopped = 0;
+    for (const car of shuffled(cars())) {
+      setCarSpeed(car);
+      car.move(car.speed);
+      recordData(car);
+      setCarColor(car);
+    }
+    nextPhase();
+  }
+  function step(count = 1) {
+    stepCount(count);
+    for (let index = 0; index < count; index++) {
+      run(world, go);
+      record();
+    }
+    return count;
+  }
+
+  // This factory owns rules, signals and history; World/Grid own live agents and fields.
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed });
   const world = World.add({ x: 37, y: 37, boundary: "wrap" }, { random });
@@ -240,18 +265,6 @@ export function create(options: Partial<TrafficParameters> = {}) {
     if (phase % settings.ticksPerCycle === 0) phase = 0;
   }
 
-  function go() {
-    updateCurrent();
-    setSignals();
-    numCarsStopped = 0;
-    for (const car of shuffled(cars())) {
-      setCarSpeed(car);
-      car.move(car.speed);
-      recordData(car);
-      setCarColor(car);
-    }
-    nextPhase();
-  }
   function record() {
     history.push({
       tick: world.tick.value,
@@ -262,14 +275,6 @@ export function create(options: Partial<TrafficParameters> = {}) {
         cars().reduce((sum, car) => sum + car.waitTime, 0) / cars().length,
     });
     if (history.length > 1001) history.splice(1, 1);
-  }
-  function step(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
-      run(world, go);
-      record();
-    }
-    return count;
   }
   function selectIntersection(position: Position) {
     const point = { x: position.x, y: position.y };

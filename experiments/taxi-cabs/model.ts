@@ -67,6 +67,30 @@ type Passenger = Agent<{
 }>;
 
 export function create(options: Partial<TaxiParameters> = {}) {
+  // One step updates lights/demand/waiting, then samples cabs for pickup and travel.
+  // step/advance commits World time before history; read/snapshot derives observations.
+  // Public rule and procedure actions below operate on this same canonical state.
+  function go() {
+    startTrafficLight();
+    reportCurrentPhase();
+    taxiDemandAtField();
+    passengersWaitForRide();
+    for (const cab of shuffled(cabs())) {
+      pickupPassengers(cab);
+      if (cab.vacancy) taxicabMoveRandom(cab);
+      else taxicabMoveDeliver(cab);
+    }
+  }
+  function step(count = 1) {
+    stepCount(count);
+    for (let index = 0; index < count; index++) {
+      run(world, go);
+      record();
+    }
+    return count;
+  }
+
+  // Rules, demand phase and history belong here; World/Grid own agents and road fields.
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed });
   const world = World.add({ x: 65, y: 65, boundary: "wrap" }, { random });
@@ -651,17 +675,6 @@ export function create(options: Partial<TaxiParameters> = {}) {
     }
     dropoffPassenger(cab);
   }
-  function go() {
-    startTrafficLight();
-    reportCurrentPhase();
-    taxiDemandAtField();
-    passengersWaitForRide();
-    for (const cab of shuffled(cabs())) {
-      pickupPassengers(cab);
-      if (cab.vacancy) taxicabMoveRandom(cab);
-      else taxicabMoveDeliver(cab);
-    }
-  }
   function record() {
     history.push({
       tick: world.tick.value,
@@ -673,14 +686,6 @@ export function create(options: Partial<TaxiParameters> = {}) {
       totalIncome: cabs().reduce((sum, cab) => sum + cab.totalIncome, 0),
     });
     if (history.length > 1001) history.splice(1, 1);
-  }
-  function step(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
-      run(world, go);
-      record();
-    }
-    return count;
   }
   function setParameters(values: Partial<TaxiParameters>) {
     if (
@@ -695,6 +700,8 @@ export function create(options: Partial<TaxiParameters> = {}) {
   function snapshot() {
     return {
       tick: world.tick.value,
+      occupiedCabs: cabs().filter((cab) => !cab.vacancy).length,
+      totalIncome: cabs().reduce((sum, cab) => sum + cab.totalIncome, 0),
       width: 65,
       height: 65,
       parameters: { ...settings },

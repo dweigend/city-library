@@ -426,7 +426,75 @@ function natural(value: unknown) {
 const round = Math.round;
 const precision = (value: number, places: number) =>
   Math.round(value * 10 ** places) / 10 ** places;
+function validatedRules(
+  value: unknown,
+  complete: boolean,
+): Partial<TijuanaRules> {
+  const keys = Object.keys(inputs).filter((k) => k !== "seed");
+  if (complete) record(value, keys);
+  else {
+    if (
+      !value ||
+      typeof value !== "object" ||
+      ![Object.prototype, null].includes(Object.getPrototypeOf(value))
+    )
+      throw new TypeError("Expected rules record");
+    for (const k of Reflect.ownKeys(value))
+      if (
+        typeof k !== "string" ||
+        !keys.includes(k) ||
+        !("value" in Object.getOwnPropertyDescriptor(value, k)!)
+      )
+        throw new TypeError("Invalid rule key or accessor");
+  }
+  for (const v of Object.values(value as object))
+    if (v === undefined) throw new TypeError("Undefined rule");
+  return value as Partial<TijuanaRules>;
+}
+
 export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
+  // Public story: clear → advanceCityscape until ready → advance household/city dynamics.
+  // Each requested call advances Tick before its procedure, including documented failures.
+  // Rules, display refresh, node insertion and scenario loading are explicit interventions.
+  function advance(action: "cityscape" | "go", count = 1): ActionResult {
+    stepCount(count);
+    if (count === 0) return { status: "noop", completed: 0 };
+    if ((action === "cityscape") === globals.setupDone)
+      return {
+        status: "guarded",
+        completed: 0,
+        message:
+          action === "cityscape"
+            ? "Cityscape setup is already completed."
+            : "Cityscape setup is not completed.",
+      };
+    let completed = 0;
+    for (let i = 0; i < count; i++) {
+      boundary(action, () => {
+        const tickBefore = world.tick.value;
+        world.tick.advance();
+        if (action === "cityscape") setup();
+        else go();
+        history.push({
+          action,
+          epoch,
+          tickBefore,
+          tickAfter: world.tick.value,
+          setupDone: globals.setupDone,
+          counts: counts(),
+          seedMigrants: seedMigrants(),
+        });
+        if (history.length > 1001) history.splice(1, 1);
+        lastFailure = null;
+      });
+      completed++;
+      if (action === "cityscape" && globals.setupDone)
+        return { status: "ready", completed };
+    }
+    return { status: "advanced", completed };
+  }
+
+  // One factory owns globals and observations; World/Grid own canonical agents and fields.
   let settings = parameters(inputs, options);
   const space = { x: 171, y: 115, boundary: "hard" as const };
   const random = Random.add({ seed: settings.seed });
@@ -1384,43 +1452,6 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       throw error;
     }
   }
-  function advance(action: "cityscape" | "go", count = 1): ActionResult {
-    stepCount(count);
-    if (count === 0) return { status: "noop", completed: 0 };
-    if ((action === "cityscape") === globals.setupDone)
-      return {
-        status: "guarded",
-        completed: 0,
-        message:
-          action === "cityscape"
-            ? "Cityscape setup is already completed."
-            : "Cityscape setup is not completed.",
-      };
-    let completed = 0;
-    for (let i = 0; i < count; i++) {
-      boundary(action, () => {
-        const tickBefore = world.tick.value;
-        world.tick.advance();
-        if (action === "cityscape") setup();
-        else go();
-        history.push({
-          action,
-          epoch,
-          tickBefore,
-          tickAfter: world.tick.value,
-          setupDone: globals.setupDone,
-          counts: counts(),
-          seedMigrants: seedMigrants(),
-        });
-        if (history.length > 1001) history.splice(1, 1);
-        lastFailure = null;
-      });
-      completed++;
-      if (action === "cityscape" && globals.setupDone)
-        return { status: "ready", completed };
-    }
-    return { status: "advanced", completed };
-  }
   function resetObservations() {
     history.length = 0;
     traces.length = 0;
@@ -1443,31 +1474,6 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       ...settings,
       ...validatedRules(rules, false),
     });
-  }
-  function validatedRules(
-    value: unknown,
-    complete: boolean,
-  ): Partial<TijuanaRules> {
-    const keys = Object.keys(inputs).filter((k) => k !== "seed");
-    if (complete) record(value, keys);
-    else {
-      if (
-        !value ||
-        typeof value !== "object" ||
-        ![Object.prototype, null].includes(Object.getPrototypeOf(value))
-      )
-        throw new TypeError("Expected rules record");
-      for (const k of Reflect.ownKeys(value))
-        if (
-          typeof k !== "string" ||
-          !keys.includes(k) ||
-          !("value" in Object.getOwnPropertyDescriptor(value, k)!)
-        )
-          throw new TypeError("Invalid rule key or accessor");
-    }
-    for (const v of Object.values(value as object))
-      if (v === undefined) throw new TypeError("Undefined rule");
-    return value as Partial<TijuanaRules>;
   }
   function addNode(position: { x: number; y: number }) {
     record(position, ["x", "y"]);
