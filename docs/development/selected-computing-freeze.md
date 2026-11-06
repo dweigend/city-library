@@ -9,3 +9,5 @@ Five complete asserted public example scripts in examples/selected-computing cov
 5. Annealing anisotropic energy/rollback/temperature-only acceptance/exact1000attempts; factory old-heading move, pickup duplication and recharge/cargo ordering.
 
 No runtime/browser acceptance is claimed by this freeze. Required independent Argon/high approval remains pending under the known quota blocker. Public examples are not globally registered here because script/config ownership belongs to the parent.
+
+Pre-runtime correction: the first script derives the random OR target from the observed input activations instead of assuming a particular initialization draw count. It still asserts the exact signed learning equation on every edge and exact squared epoch error. This correction and refreshed hashes precede all runtime delegation; runtime does not yet exist.
