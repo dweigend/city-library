@@ -35,3 +35,11 @@ The native tijuana_runtime implementation agent exclusively owns experiments/urb
 ## Forty-model integration checkpoint
 
 B19 owned payload f926a58/806b571/ab7199d/0eceb36/823a72f is integrated as ace9d35/c36dc5e/2b4c7b8/8826d2b/99dcd5e; duplicate CSS c4e1992 was skipped. Exact27 source/model/UI files and137 evidence hashes were verified. Tijuana runtime ff33525 received public-Grid correction5eb6372 and thin UI d1dd6ef; final label-only clarification cb2c498 has separate fresh root screenshots. Reports reconcile executed versions rather than relabel old captures. Reference refresh e0f7ab4 verifies193 artifacts and eight unchanged target files. Final integrated check:301tests,15936assertions,120examples,four TypeScript projects,build,packed consumer. Ledger40implemented/41audited/41frozen/200research/1finallyaccepted; independent-review and documented UI/capture blockers remain.
+
+## Two independent ten-model batches
+
+B18 computing thread <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/mcp:launch:2252bfff9d209713cd3fae9e77d5dd916f4214f587661aee2f18a378019da004> is bound to experiment-selected-computing-b18,branch experiment/selected-computing-b18 from44989d5. It owns only its ten immutable B18folders,selected-computing examples/tests/docs; source/five-public-example freeze precedes delegated runtime.
+
+B06 ecology thread <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/mcp:launch:092cbeefa47e9790098217b5683e5597b7cdec1f5029da227ee1588b0dd3f79a> is bound to experiment-selected-ecology-b06,branch experiment/selected-ecology-b06 from44989d5. It owns only simple-birth-rates,daisyworld,termites,shepherds,rabbits-grass-weeds,invasive-plants,ants,heatbugs,flocking,fireflies and selected-ecology examples/tests/docs.
+
+Each thread may use at most two disjoint scoped native implementation agents and must deliver real per-model original/target Chromium reports. Parent reserves core/sharedUI/globalconfig/selection/ledger/research/Epic/integration. No additional top-level threads,review-provider substitution or duplicate literature research. Actual reusable API gaps return to parent for source-backed public-contract/example-first coordination. Assignments add no delivery counts.
