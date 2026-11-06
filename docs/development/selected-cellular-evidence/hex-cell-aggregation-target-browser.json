@@ -1,0 +1,364 @@
+{
+  "head": "ab7199dad4af71a0b1cbe7039c9bcdfdb8226b03",
+  "slug": "hex-cell-aggregation",
+  "setup": {
+    "url": "http://localhost:3119/?experiment=hex-cell-aggregation",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nAlive\n1\nEligible\n6\nApplied neighbors\n1, 2, 3, 4, 5, 6",
+      ""
+    ],
+    "status": [
+      "",
+      "Model initialized."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 1 agents. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1357,
+        "rgbaHash": 2506727941,
+        "nonzero": 5471424
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "101"
+      },
+      {
+        "name": "height",
+        "value": "101"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "live-oneNeighbor",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-twoNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-threeNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fourNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fiveNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-sixNeighbors",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  },
+  "progress": {
+    "url": "http://localhost:3119/?experiment=hex-cell-aggregation",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n1\nAlive\n2\nEligible\n8\nApplied neighbors\n1, 2, 3, 4, 5, 6",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 2 agents. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1357,
+        "rgbaHash": 2796231197,
+        "nonzero": 5471424
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "101"
+      },
+      {
+        "name": "height",
+        "value": "101"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "live-oneNeighbor",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-twoNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-threeNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fourNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fiveNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-sixNeighbors",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  },
+  "desktop-dark": {
+    "url": "http://localhost:3119/?experiment=hex-cell-aggregation",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n1\nAlive\n2\nEligible\n8\nApplied neighbors\n1, 2, 3, 4, 5, 6",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 2 agents. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1357,
+        "rgbaHash": 2796231197,
+        "nonzero": 5471424
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "101"
+      },
+      {
+        "name": "height",
+        "value": "101"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "live-oneNeighbor",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-twoNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-threeNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fourNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fiveNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-sixNeighbors",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  },
+  "mobile-dark": {
+    "url": "http://localhost:3119/?experiment=hex-cell-aggregation",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n1\nAlive\n2\nEligible\n8\nApplied neighbors\n1, 2, 3, 4, 5, 6",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 2 agents. Arrow keys select an item.",
+        "width": 716,
+        "height": 723,
+        "rgbaHash": 3556314929,
+        "nonzero": 1553004
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "101"
+      },
+      {
+        "name": "height",
+        "value": "101"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "live-oneNeighbor",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-twoNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-threeNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fourNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fiveNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-sixNeighbors",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  },
+  "mobile-light": {
+    "url": "http://localhost:3119/?experiment=hex-cell-aggregation",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n1\nAlive\n2\nEligible\n8\nApplied neighbors\n1, 2, 3, 4, 5, 6",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 2 agents. Arrow keys select an item.",
+        "width": 716,
+        "height": 723,
+        "rgbaHash": 3556314929,
+        "nonzero": 1553004
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "101"
+      },
+      {
+        "name": "height",
+        "value": "101"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "live-oneNeighbor",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-twoNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-threeNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fourNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-fiveNeighbors",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-sixNeighbors",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  }
+}

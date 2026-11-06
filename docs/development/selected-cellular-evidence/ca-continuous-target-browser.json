@@ -1,0 +1,314 @@
+{
+  "head": "ab7199dad4af71a0b1cbe7039c9bcdfdb8226b03",
+  "slug": "ca-continuous",
+  "setup": {
+    "url": "http://localhost:3119/?experiment=ca-continuous",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nRow\n100"
+    ],
+    "status": [
+      "",
+      "Model initialized."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 3982861784,
+        "nonzero": 263508
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "initialization",
+        "value": "single"
+      },
+      {
+        "name": "maxValue",
+        "value": "0.5"
+      },
+      {
+        "name": "live-addConstant",
+        "value": "0.47"
+      },
+      {
+        "name": "live-precisionLevel",
+        "value": "16"
+      },
+      {
+        "name": "live-autoContinue",
+        "value": "on",
+        "checked": false
+      }
+    ],
+    "diagnostics": {}
+  },
+  "progress": {
+    "url": "http://localhost:3119/?experiment=ca-continuous",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n3\nRow\n97"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 328405347,
+        "nonzero": 346428
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "initialization",
+        "value": "single"
+      },
+      {
+        "name": "maxValue",
+        "value": "0.5"
+      },
+      {
+        "name": "live-addConstant",
+        "value": "0.47"
+      },
+      {
+        "name": "live-precisionLevel",
+        "value": "16"
+      },
+      {
+        "name": "live-autoContinue",
+        "value": "on",
+        "checked": false
+      }
+    ],
+    "diagnostics": {}
+  },
+  "desktop-dark": {
+    "url": "http://localhost:3119/?experiment=ca-continuous",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n3\nRow\n97"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 328405347,
+        "nonzero": 346428
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "initialization",
+        "value": "single"
+      },
+      {
+        "name": "maxValue",
+        "value": "0.5"
+      },
+      {
+        "name": "live-addConstant",
+        "value": "0.47"
+      },
+      {
+        "name": "live-precisionLevel",
+        "value": "16"
+      },
+      {
+        "name": "live-autoContinue",
+        "value": "on",
+        "checked": false
+      }
+    ],
+    "diagnostics": {}
+  },
+  "mobile-dark": {
+    "url": "http://localhost:3119/?experiment=ca-continuous",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n3\nRow\n97"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 938770625,
+        "nonzero": 126168
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "initialization",
+        "value": "single"
+      },
+      {
+        "name": "maxValue",
+        "value": "0.5"
+      },
+      {
+        "name": "live-addConstant",
+        "value": "0.47"
+      },
+      {
+        "name": "live-precisionLevel",
+        "value": "16"
+      },
+      {
+        "name": "live-autoContinue",
+        "value": "on",
+        "checked": false
+      }
+    ],
+    "diagnostics": {}
+  },
+  "mobile-light": {
+    "url": "http://localhost:3119/?experiment=ca-continuous",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n3\nRow\n97"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 938770625,
+        "nonzero": 126168
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "initialization",
+        "value": "single"
+      },
+      {
+        "name": "maxValue",
+        "value": "0.5"
+      },
+      {
+        "name": "live-addConstant",
+        "value": "0.47"
+      },
+      {
+        "name": "live-precisionLevel",
+        "value": "16"
+      },
+      {
+        "name": "live-autoContinue",
+        "value": "on",
+        "checked": false
+      }
+    ],
+    "diagnostics": {}
+  }
+}
