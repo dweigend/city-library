@@ -126,7 +126,7 @@ input[type="checkbox"] {
 }
 .monitors {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) fit-content(65%);
   gap: 0.6rem;
   margin: 1.25rem 0;
   font-variant-numeric: tabular-nums;
@@ -140,11 +140,6 @@ dd {
 }
 .monitors dt,
 .monitors dd {
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-.inspector dt,
-.inspector dd {
   min-width: 0;
   overflow-wrap: anywhere;
 }
@@ -302,7 +297,7 @@ th {
   .monitors {
     order: 2;
     width: 100%;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr) fit-content(5rem));
     gap: 0.5rem;
     margin: 0.25rem 0;
   }
@@ -333,6 +328,11 @@ th {
   .view-actions select {
     min-width: 0;
     max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .monitors {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   }
 }
 @media (prefers-color-scheme: dark) {
