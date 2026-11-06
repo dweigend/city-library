@@ -1,0 +1,259 @@
+{
+  "status": "Proposal oracles only; no Graph.generate implementation or script executed",
+  "sourceSHA256": "9c80d9fa4d5d4da96224e65cd707639267da3f6494309d9d45b758164d2703db",
+  "publicRandomStreamsMatchIndependentIntegerCheck": true,
+  "randomPairSelections": {
+    "undirected": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "directed": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  "smallWorldProposedLedger": [
+    {
+      "originalSource": 0,
+      "decisionDraw": 0.6270739405881613,
+      "selectionDraw": 0.002735721180215478,
+      "currentEligiblePool": [
+        2
+      ],
+      "selected": 2
+    },
+    {
+      "originalSource": 1,
+      "decisionDraw": 0.5274470399599522,
+      "selectionDraw": 0.9810509674716741,
+      "currentEligiblePool": [
+        0,
+        3
+      ],
+      "selected": 3
+    },
+    {
+      "originalSource": 2,
+      "decisionDraw": 0.9683778982143849,
+      "selectionDraw": 0.281103502959013,
+      "currentEligiblePool": [
+        1
+      ],
+      "selected": 1
+    },
+    {
+      "originalSource": 3,
+      "decisionDraw": 0.6128388606011868,
+      "selectionDraw": 0.7207431411370635,
+      "currentEligiblePool": [
+        2
+      ],
+      "selected": 2
+    }
+  ],
+  "smallWorldProposedResult": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "preferentialLedger": [
+    {
+      "newNode": 3,
+      "available": [
+        0,
+        1,
+        2
+      ],
+      "degreesBeforeBatch": [
+        2,
+        2,
+        2
+      ],
+      "unit": 0.011704753153026104,
+      "exactThreshold": "37703649/536870912",
+      "selected": 0
+    },
+    {
+      "newNode": 3,
+      "available": [
+        1,
+        2
+      ],
+      "degreesBeforeBatch": [
+        2,
+        2,
+        2
+      ],
+      "unit": 0.06195825757458806,
+      "exactThreshold": "133054345/536870912",
+      "selected": 1
+    },
+    {
+      "newNode": 4,
+      "available": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "degreesBeforeBatch": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "unit": 0.97690763277933,
+      "exactThreshold": "10489465835/1073741824",
+      "selected": 3
+    },
+    {
+      "newNode": 4,
+      "available": [
+        0,
+        1,
+        2
+      ],
+      "degreesBeforeBatch": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "unit": 0.6990287057124078,
+      "exactThreshold": "1501152715/268435456",
+      "selected": 1
+    },
+    {
+      "newNode": 5,
+      "available": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "degreesBeforeBatch": [
+        3,
+        4,
+        2,
+        3,
+        2
+      ],
+      "unit": 0.5214452685322613,
+      "exactThreshold": "15677132625/2147483648",
+      "selected": 2
+    },
+    {
+      "newNode": 5,
+      "available": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "degreesBeforeBatch": [
+        3,
+        4,
+        2,
+        3,
+        2
+      ],
+      "unit": 0.4055216880515218,
+      "exactThreshold": "1306276791/268435456",
+      "selected": 1
+    }
+  ],
+  "preferentialFinalDegrees": [
+    3,
+    5,
+    3,
+    3,
+    2,
+    2
+  ],
+  "cubePairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "caps": {
+    "selectedNodeCap": 100000,
+    "generatedEdgeCap": 1000000,
+    "complete1415Edges": 1000405,
+    "complete1414Edges": 998991,
+    "smallWorld100000Neighbors20Edges": 1000000,
+    "preferential40013Links25Edges": 1000000,
+    "noAdditionalCandidatePairCapIntroduced": true
+  },
+  "oracleLimits": "SmallWorld pool evolution/order and singleton selection draw remain proposed contract decisions. No statistical/RNG equivalence or uniformity experiment is claimed."
+}

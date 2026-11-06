@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-06",
+  "status": "Unfrozen eleven-kind proposal; no Graph.generate implementation or example runtime executed",
+  "results": {
+    "exactPublicScriptCount": 5,
+    "all11BindingKindNamesCovered": true,
+    "syntaxTranspile": "all five parsed/transpiled with Bun.Transpiler",
+    "configuredProjectTypecheck": "passed; proposal directory intentionally not registered",
+    "directProposalTypecheck": {
+      "exitCode": 1,
+      "diagnosticCodes": {
+        "2305": 1,
+        "2339": 48
+      },
+      "missingProperties": {
+        "generate": 48
+      },
+      "interpretation": "Only missing public GeneratorOptions export and graph.generate method; not successful proposal typecheck"
+    },
+    "independentOracles": "passed: public RNG streams, integer transcript check, pair ordering, exact cumulative degree thresholds, validated current eligible pools, cube adjacency,3-4-5 geometry, cap formulas",
+    "localLinksAndAPIAnchors": 20,
+    "allEvidenceJSONParses": true,
+    "existingArchiveSHA256Verified": "9c80d9fa4d5d4da96224e65cd707639267da3f6494309d9d45b758164d2703db"
+  },
+  "commands": [
+    "Executed existing public Random.number twelve times each for seeds1/7/42/91; wrote public-random-streams.json",
+    "python3 docs/development/graph-generators-proposal-evidence/verify-oracles.py",
+    "bun run typecheck",
+    "bunx tsc --noEmit --ignoreConfig --strict --target esnext --module preserve --moduleResolution bundler --types bun --skipLibCheck --allowImportingTsExtensions examples/graph-generators-proposal/*.ts",
+    "Bun.Transpiler syntax-only transform of exactly five files",
+    "Python JSON/link/sourceSHA/kind-count validation"
+  ],
+  "authoringCorrection": "Initial TS2769 errors from World.add(Graph) and wrong World.add({space,random}) were fixed using existing World.add(space,{random}) and independently shared Agent references; no API widening.",
+  "remaining": "U1-U9 in proposal need parent review before freeze; Kleinberg and inward/directed variants remain explicit source gaps.",
+  "noClaims": [
+    "No generator runtime pass or million-edge execution",
+    "No source re-fetch/literature research/new browser",
+    "No frozen checksums or independent approval",
+    "No ledger/config/core/UI/analysis-file change"
+  ]
+}
