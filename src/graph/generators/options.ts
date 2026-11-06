@@ -1,24 +1,30 @@
 import { validateOptions } from "../../agent/state.ts";
 import { finite, normalizeSpace, type Position, type Space, type NormalizedSpace } from "../../geometry/space.ts";
 import { isRandom, type Random } from "../../random/random.ts";
+import { validateNwGenerator, type NwGeneratorOptions } from "./nw-options.ts";
+import { boolean, dense, edgeLimit, integer, number } from "./validation.ts";
+export { edgeLimit } from "./validation.ts";
 
-export type GeneratorOptions<N> =
-  | { kind: "path" | "cycle" | "star" | "wheel" | "complete"; nodes: readonly N[]; directed?: boolean }
+type GenericGeneratorOptions<N> =
+  | { kind: "path" | "cycle" | "star" | "wheel" | "complete" | "tree"; nodes: readonly N[]; directed?: boolean; branching?: never }
   | { kind: "tree"; nodes: readonly N[]; branching?: number; directed?: boolean }
   | { kind: "lattice"; nodes: readonly N[]; shape: readonly number[]; wrap?: boolean; directed?: boolean }
   | { kind: "random"; nodes: readonly N[]; probability: number; directed?: boolean; random: Random }
   | { kind: "smallWorld"; nodes: readonly N[]; neighbors: number; probability: number; random: Random }
   | { kind: "preferential"; nodes: readonly N[]; links: number; random: Random }
   | { kind: "geometric"; nodes: readonly N[]; position: (node: N) => Position; radius: number; space?: Space };
+export type GeneratorOptions<N> = GenericGeneratorOptions<N> | NwGeneratorOptions<N>;
 const keys = {
   path: ["directed"], cycle: ["directed"], star: ["directed"], wheel: ["directed"], complete: ["directed"],
   tree: ["branching", "directed"], lattice: ["shape", "wrap", "directed"],
   random: ["probability", "directed", "random"], smallWorld: ["neighbors", "probability", "random"],
   preferential: ["links", "random"], geometric: ["position", "radius", "space"],
 } as const;
-export const edgeLimit = 1_000_000;
 export interface GeneratorConfig<N> {
-  kind: keyof typeof keys;
+  kind: keyof typeof keys | "kleinberg";
+  profile?: "nw-web-topology/1";
+  clusteringExponent?: number;
+  spokes?: "in" | "out";
   nodes: readonly N[];
   directed: boolean;
   branching: number;
@@ -32,33 +38,9 @@ export interface GeneratorConfig<N> {
   radius: number;
   space?: NormalizedSpace;
 }
-function dense(value: unknown, maximum: number): unknown[] {
-  if (!Array.isArray(value)) throw new TypeError("Expected a dense array.");
-  if (value.length > maximum) throw new RangeError("Generator array exceeds its size limit.");
-  if (Reflect.ownKeys(value).length !== value.length + 1) throw new TypeError("Array has foreign or missing data properties.");
-  const copy: unknown[] = [];
-  for (let index = 0; index < value.length; index++) {
-    const descriptor = Object.getOwnPropertyDescriptor(value, String(index));
-    if (!descriptor || !("value" in descriptor)) throw new TypeError("Array requires own data indices.");
-    copy.push(descriptor.value);
-  }
-  return copy;
-}
-function number(value: unknown): number {
-  if (typeof value !== "number" || !Number.isFinite(value)) throw new TypeError("Generator parameter must be a finite number.");
-  return value;
-}
-function integer(value: unknown): number {
-  const result = number(value);
-  if (!Number.isInteger(result) || result <= 0) throw new RangeError("Generator integer must be positive.");
-  return result;
-}
-function boolean(value: unknown): boolean {
-  if (value !== undefined && typeof value !== "boolean") throw new TypeError("Generator flag must be boolean.");
-  return value ?? false;
-}
 export function validateGenerator<N>(options: GeneratorOptions<N>): GeneratorConfig<N> {
-  const supplied = validateOptions(options, ["kind", "nodes", "directed", "branching", "shape", "wrap", "probability", "neighbors", "links", "random", "position", "radius", "space"]);
+  const supplied = validateOptions(options, ["kind", "nodes", "directed", "branching", "shape", "wrap", "probability", "neighbors", "links", "random", "position", "radius", "space", "profile", "clusteringExponent", "neighborsPerSide", "spokes"]);
+  if (Object.hasOwn(supplied, "profile")) return validateNwGenerator<N>(supplied);
   if (typeof supplied.kind !== "string" || !Object.hasOwn(keys, supplied.kind)) throw new TypeError("Unknown graph generator.");
   const kind = supplied.kind as keyof typeof keys;
   const allowed: readonly string[] = ["kind", "nodes", ...keys[kind]];

@@ -1,5 +1,6 @@
 import { displacement, finite, position, type Position } from "../../geometry/space.ts";
 import { edgeLimit, type GeneratorConfig } from "./options.ts";
+import { planNwTopology } from "./nw-planning.ts";
 
 export type Connection = readonly [number, number];
 /** Private degree prefix index; intervals match the stable cumulative scan. */
@@ -25,6 +26,7 @@ class DegreeIndex {
 
 /** Plan only integer endpoint indices. Graph alone materializes/publishes edges. */
 export function planGenerator<N>(config: GeneratorConfig<N>): Connection[] {
+  if (config.profile !== undefined) return planNwTopology(config);
   const count = config.nodes.length;
   const result: Connection[] = [];
   function add(from: number, to: number) {
