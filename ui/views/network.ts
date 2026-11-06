@@ -58,14 +58,19 @@ export function mountNetwork(
   let adjusting = false;
   let disposed = false;
   const appearance = window.matchMedia("(prefers-color-scheme: dark)");
+  let appliedTheme: string | undefined;
   function updateTheme() {
-    if (!disposed) {
-      cy.style().selector("node").style({ color: labelTheme() }).selector(".selected").style({ "border-color": options.theme?.().selected ?? "#b45309" }).update();
-      cy.edges().filter(edge => edge.data("defaultColor")).data("color", edgeTheme());
-    }
+    if (disposed) return;
+    const label = labelTheme();
+    const selected = options.theme?.().selected ?? "#b45309";
+    const key = `${label}\n${selected}`;
+    if (key === appliedTheme) return;
+    cy.style().selector("node").style({ color: label }).selector(".selected").style({ "border-color": selected }).update();
+    cy.edges().filter(edge => edge.data("defaultColor")).data("color", label);
+    appliedTheme = key;
   }
   function appearanceChanged() {
-    // The host refreshes its resolved tokens in the same media-change turn.
+    // A host refresh may run in a later media-listener task; update() also reapplies tokens.
     if (options.theme) queueMicrotask(updateTheme);
     else updateTheme();
   }
@@ -159,6 +164,9 @@ export function mountNetwork(
           throw new Error("Network edge width must be positive and finite.");
         if (edge.color !== undefined && !CSS.supports("color", edge.color)) throw new Error("Invalid network edge color.");
       }
+      // The host resolves theme tokens before updating the projection. Media listeners
+      // can run in separate tasks, so their earlier microtask may still see old tokens.
+      updateTheme();
       const defaultEdgeColor = edgeTheme();
       cy.batch(() => {
         cy.nodes()
