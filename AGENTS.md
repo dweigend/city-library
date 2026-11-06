@@ -12,5 +12,5 @@
 
 - Follow PLAN's [example-first gate](PLAN.md#example-first-delivery-gate): freeze four or five asserted public scripts per expansion phase before runtime work. Preserve accepted syntax/expectations; fix implementations, never weaken examples. Clean public API design takes priority over implementation convenience.
 - The coordinator orchestrates sequencing, integration and evidence; scoped subagents or implementation threads perform implementation. Preserve concurrent work.
-- Use Antigravity `gemini-4-argon` for independent substantial design/transfer reviews. Confirm provider/model availability; never substitute silently. Record findings/responses separately from independent approval.
+- Use Antigravity `gemini-3.8-flash` for independent substantial design/transfer reviews. Confirm provider/model availability; never substitute silently. Record findings/responses separately from independent approval.
 - Consult `gpt-6-astra` with high reasoning only for deep logical analysis, never routine implementation/review.
