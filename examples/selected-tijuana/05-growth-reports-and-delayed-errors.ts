@@ -23,6 +23,8 @@ assert.equal(newBuilder.x, -81); assert.equal(newBuilder.y, 0); assert.equal(new
 // Native FACE at a coincident migrant is a no-op: retain the newly sprouted
 // builder's public-uniform integer default heading, not an invented north bias.
 assert.ok(Number.isInteger(newBuilder.heading) && newBuilder.heading >= 0 && newBuilder.heading < 360);
+assert.notEqual(newBuilder.origin, 0);
+if (newBuilder.origin === 0) throw new Error("Regularization must set its canonical Field origin.");
 assert.equal(newBuilder.origin.kind, "field");
 if (newBuilder.origin.kind === "field") assert.equal(newBuilder.origin.id, cell(regularization, -81, 0).id);
 
@@ -58,7 +60,7 @@ const built = growth.read();
 assert.equal(built.tick, 1); assert.equal(built.counts.thirdBuilders, 3);
 const builder = built.agents.find(item => item.id === original)!;
 assert.ok(builder.kind === "third-builder"); near(builder.y, 0.75); near(builder.weight, 0.55);
-assert.ok(built.agents.filter(item => item.kind === "third-builder" && item.id !== original).every(item => item.weight === 0.4));
+assert.ok(built.agents.filter(item => item.kind === "third-builder").filter(item => item.id !== original).every(item => item.weight === 0.4));
 near(cell(growth, 0, 1).landValue, 1.65);
 assert.equal(cell(growth, 0, 1).water, 2); assert.equal(cell(growth, 0, 1).electricity, 3); assert.equal(cell(growth, 0, 1).transport, 1);
 near(cell(growth, 0, 1).colonia, -3.85);
