@@ -1,0 +1,97 @@
+import { defineUI } from "../../ui/index.ts";
+import { model } from "./model.ts";
+export const ui = defineUI(model, {
+  setup: [{ field: "networkChoice", label: "Network" }, { field: "seed" }],
+  source: {
+    url: "https://ccl.northwestern.edu/netlogo/models/PageRank",
+    label: "Stonedahl & Wilensky · CC BY-NC-SA 3.0",
+  },
+  live: [
+    {
+      field: "calculationMethod",
+      label: "Calculation method",
+      value: (s) => s.parameters.calculationMethod,
+      set: (m, v) =>
+        m.setParameters({
+          calculationMethod: String(v) as "diffusion" | "random-surfer",
+        }),
+    },
+    {
+      field: "dampingFactor",
+      label: "Damping factor",
+      value: (s) => s.parameters.dampingFactor,
+      set: (m, v) => m.setParameters({ dampingFactor: Number(v) }),
+    },
+    {
+      field: "numberOfSurfers",
+      label: "Number of surfers",
+      value: (s) => s.parameters.numberOfSurfers,
+      set: (m, v) => m.setParameters({ numberOfSurfers: Number(v) }),
+    },
+    {
+      field: "watchSurfers",
+      label: "Watch surfers",
+      value: (s) => s.parameters.watchSurfers,
+      set: (m, v) => m.setParameters({ watchSurfers: Boolean(v) }),
+    },
+    {
+      field: "showPageRanks",
+      label: "Show page ranks",
+      value: (s) => s.parameters.showPageRanks,
+      set: (m, v) => m.setParameters({ showPageRanks: Boolean(v) }),
+    },
+  ],
+  monitors: [
+    { label: "Tick", value: (s) => s.tick },
+    { label: "Total rank", value: (s) => s.totalRank.toFixed(6) },
+    { label: "Maximum rank", value: (s) => s.maxRank.toFixed(6) },
+    { label: "Surfers", value: (s) => s.surfers.length },
+  ],
+  views: [
+    {
+      type: "network",
+      label: "Pages and links",
+      nodes: (s) =>
+        s.pages.map((p) => ({
+          id: String(p.id),
+          label: `${p.id}${s.parameters.showPageRanks ? `: ${p.rank.toFixed(3)}` : ""}${s.parameters.watchSurfers && p.surferCount ? ` [${p.surferCount} surfers]` : ""}`,
+          color: p.color,
+          size: Math.max(8, p.size * 10),
+          position: { x: p.x * 20, y: -p.y * 20 },
+        })),
+      edges: (s) =>
+        s.edges.map((e) => ({
+          id: e.id,
+          from: String(e.from),
+          to: String(e.to),
+          directed: true,
+          color: e.color,
+          width: e.traveledBy === null ? 1 : 3,
+        })),
+    },
+    {
+      type: "bar",
+      label: "Current ranks",
+      series: (s) => [
+        {
+          label: "PageRank",
+          points: s.pages.map((p) => ({ x: p.id, y: p.rank })),
+        },
+      ],
+    },
+    {
+      type: "table",
+      label: "Surfers",
+      rows: (s) =>
+        s.parameters.watchSurfers
+          ? s.surfers.map((p) => ({ surfer: p.id, page: p.currentPage }))
+          : [],
+    },
+    {
+      type: "table",
+      label: "Page visits",
+      rows: (s) =>
+        s.pages.map((p) => ({ page: p.id, visits: p.visits, rank: p.rank })),
+    },
+  ],
+});
