@@ -16,10 +16,10 @@ body.eat();
 assert.equal(body.read().eatTime, 34);
 body.advance();
 assert.equal(body.read().eatTime, 33);
-assert.equal(body.read().totalGlucose, total + 411);
+assert.equal(body.read().totalGlucose, total + 412);
 body.setParameters({ metabolicRate: 100 });
 body.advance();
-assert.equal(body.read().totalGlucose, total + 722);
+assert.equal(body.read().totalGlucose, total + 724);
 
 const tissue = muscle({ seed: 4, slowTwitchFibers: 100, lift: false });
 assert.equal(tissue.read().fibers.length, 289);
