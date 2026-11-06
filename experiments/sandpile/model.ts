@@ -46,15 +46,24 @@ export function create(options: Partial<SandpileParameters> = {}) {
   );
   let totalOnTick = 0;
   type PlotPoint = Readonly<{ x: number; y: number }>;
-  let sizePlot: readonly PlotPoint[] = [], lifetimePlot: readonly PlotPoint[] = [];
+  let sizePlot: readonly PlotPoint[] = [],
+    lifetimePlot: readonly PlotPoint[] = [];
   // Source plot pens refresh only every hundred ticks. These are detached
   // observation buffers; canonical grain state remains exclusively on Fields.
   function updateAvalanchePlots() {
-    const distributions = [sizes, lifetimes].map(values => {
+    const distributions = [sizes, lifetimes].map((values) => {
       if (!values.length) return Object.freeze([]) as readonly PlotPoint[];
       const maximum = Math.max(...values);
-      const counts = stats.histogram(values, { edges: Array.from({ length: maximum + 2 }, (_, i) => i) }).counts;
-      return Object.freeze(counts.flatMap((count, n) => n > 0 && count > 0 ? [Object.freeze({ x: Math.log10(n), y: Math.log10(count) })] : []));
+      const counts = stats.histogram(values, {
+        edges: Array.from({ length: maximum + 2 }, (_, i) => i),
+      }).counts;
+      return Object.freeze(
+        counts.flatMap((count, n) =>
+          n > 0 && count > 0
+            ? [Object.freeze({ x: Math.log10(n), y: Math.log10(count) })]
+            : [],
+        ),
+      );
     });
     [sizePlot, lifetimePlot] = [distributions[0]!, distributions[1]!];
   }
