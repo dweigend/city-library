@@ -1,4 +1,5 @@
 const phases = {
+  "selected-urban-remaining": ["01-structure-one-impulse-and-noise", "02-structure-two-sticky-activation", "03-sprawl-conversion-and-cached-threshold", "04-economic-oldest-removal-and-median", "05-defaults-isolation-and-preflight"],
   "selected-probability": ["01-birthdays", "02-galton-box", "03-binomial-rabbits", "04-three-doors", "05-stochastic-patchwork"],
   probes: ["01-forward-vectors", "02-wrap-and-hard-endpoints", "03-three-dimensional-context", "04-nonmutating-agent-sensor", "05-validation-and-detachment"],
   distances: ["01-unbounded-measurement", "02-mixed-wrapping", "03-xyz-and-dimension-errors", "04-canonical-field-proximity", "05-finite-validation-and-purity"],
