@@ -1,0 +1,86 @@
+{
+  "slug": "party",
+  "sessionSourceSHA256": "a86f4b7e1d631f69bf9db2a4ff54d77387a8de802487d536c3f0c1f984ebf272",
+  "source": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Party.nlogox",
+  "setupViaButton": true,
+  "setup": {
+    "ticks": {
+      "success": true,
+      "value": 0
+    },
+    "count turtles": {
+      "success": true,
+      "value": 70
+    },
+    "count group-sites": {
+      "success": true,
+      "value": 10
+    },
+    "boring-groups": {
+      "success": true,
+      "value": 0
+    },
+    "count turtles with [happy?]": {
+      "success": true,
+      "value": 5
+    }
+  },
+  "errors": [],
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "progress": {
+    "ticks": {
+      "success": true,
+      "value": 10
+    },
+    "count turtles": {
+      "success": true,
+      "value": 70
+    },
+    "count group-sites": {
+      "success": true,
+      "value": 10
+    },
+    "boring-groups": {
+      "success": true,
+      "value": 5
+    },
+    "count turtles with [happy?]": {
+      "success": true,
+      "value": 62
+    }
+  },
+  "intervention": {
+    "command": "set number 0 setup go",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 0
+      },
+      "count turtles": {
+        "success": true,
+        "value": 0
+      },
+      "boring-groups": {
+        "success": true,
+        "value": 0
+      }
+    },
+    "errors": [
+      [
+        "runtime",
+        "observer",
+        "[object Object]",
+        "set number 0 setup go",
+        "undefined"
+      ]
+    ]
+  },
+  "images": {
+    "setup": "party-original-setup.png",
+    "progress": "party-original-progress.png"
+  }
+}

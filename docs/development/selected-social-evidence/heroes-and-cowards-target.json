@@ -1,0 +1,215 @@
+{
+  "marker": "selected-social-b02:heroes-and-cowards:dc605f80d321c18a7e6711f85f1c5e58ea2e4780451369b94977a49a7d87c280",
+  "chunk": "http://localhost:3112/chunks/ui-d49sz8fn.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-d49sz8fn.js",
+      "sha256": "0484c212db0a527208dae4a5faac99406529422b40719e2650fc928e3e7b75de"
+    }
+  ],
+  "buildVersion": "1793961262254",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "number": 68,
+    "personalities": "mixed"
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "People": "68",
+    "Movement": "Active"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 21
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 10,
+  "progressMonitors": {
+    "Tick": "10",
+    "People": "68",
+    "Movement": "Active"
+  },
+  "status": "Steps completed.",
+  "historyLength": 11,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 20
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 716,
+        "height": 716,
+        "sampledColors": 61
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "16",
+      "People": "68",
+      "Movement": "Active"
+    },
+    "pause": {
+      "Tick": "16",
+      "People": "68",
+      "Movement": "Active"
+    },
+    "stable": {
+      "Tick": "16",
+      "People": "68",
+      "Movement": "Active"
+    },
+    "actions": [
+      {
+        "label": "dot",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "frozen",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "slinky",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "spiral",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "slinky 2",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "spiral 2",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "yo-yo",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "wandering flock",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "generally cool one that eventually stops",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "People": "68",
+          "Movement": "Active"
+        },
+        "status": "Action completed."
+      }
+    ],
+    "liveTest": null,
+    "resetMonitors": {
+      "Tick": "0",
+      "People": "68",
+      "Movement": "Active"
+    },
+    "infoHasOriginal": true,
+    "inspector": null,
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "heroes-and-cowards",
+    "assertions": 7,
+    "evidence": {
+      "tick": 0,
+      "presetAgents": 68,
+      "naturalTick": 100,
+      "diagnostic": null
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "heroes-and-cowards-target-setup-light.png",
+    "progress-light": "heroes-and-cowards-target-progress-light.png",
+    "desktop-dark": "heroes-and-cowards-target-desktop-dark.png",
+    "mobile-light": "heroes-and-cowards-target-mobile-light.png",
+    "mobile-dark": "heroes-and-cowards-target-mobile-dark.png"
+  }
+}

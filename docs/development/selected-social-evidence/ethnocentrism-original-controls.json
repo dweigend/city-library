@@ -1,0 +1,67 @@
+{
+  "setupClicked": true,
+  "setupTick": {
+    "success": true,
+    "value": 0
+  },
+  "nativeStepPresent": false,
+  "commandStepTick": {
+    "success": true,
+    "value": 1
+  },
+  "runTick": {
+    "success": true,
+    "value": 7
+  },
+  "pauseTick": {
+    "success": true,
+    "value": 7
+  },
+  "stableTick": {
+    "success": true,
+    "value": 7
+  },
+  "paused": true,
+  "setupResetClicked": true,
+  "resetTick": {
+    "success": true,
+    "value": 0
+  },
+  "actions": [
+    {
+      "label": "setup full",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "setup empty",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    }
+  ],
+  "probe": {
+    "command": "set death-rate 1 set immigrants-per-day 0 setup-full go",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 1
+      },
+      "count turtles": {
+        "success": true,
+        "value": 0
+      },
+      "meet": {
+        "success": true,
+        "value": 10404
+      }
+    }
+  },
+  "errors": [],
+  "alertText": []
+}

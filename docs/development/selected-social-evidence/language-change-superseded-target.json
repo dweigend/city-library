@@ -1,0 +1,199 @@
+{
+  "marker": "selected-social-b02:language-change:99f71d55846902f726fdbe73059d852e9b8510a9102a3524dad3f625d8763e9f",
+  "chunk": "http://localhost:3112/chunks/ui-1d2mjtje.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-1d2mjtje.js",
+      "sha256": "7518af0879af9f80c5dcfcdd9b41635e8c7248c818be12209eda4ae2666853d0"
+    }
+  ],
+  "buildVersion": "1793960771518",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "numNodes": 100,
+    "percentGrammar1": 60,
+    "updateAlgorithm": "individual",
+    "thresholdVal": 0.3,
+    "sinkState1": true,
+    "logistic": true,
+    "alpha": 0.025
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "Mean grammar state": "0.6000",
+    "Grammar 0": "40",
+    "Grammar 1": "60"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 1
+    },
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 1
+    },
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 95
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 10,
+  "progressMonitors": {
+    "Tick": "10",
+    "Mean grammar state": "0.8600",
+    "Grammar 0": "14",
+    "Grammar 1": "86"
+  },
+  "status": "Steps completed.",
+  "historyLength": 11,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 1
+    },
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 1
+    },
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 95
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 712,
+        "height": 764,
+        "sampledColors": 1
+      },
+      {
+        "width": 712,
+        "height": 764,
+        "sampledColors": 1
+      },
+      {
+        "width": 712,
+        "height": 764,
+        "sampledColors": 245
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "16",
+      "Mean grammar state": "0.8800",
+      "Grammar 0": "12",
+      "Grammar 1": "88"
+    },
+    "pause": {
+      "Tick": "16",
+      "Mean grammar state": "0.8800",
+      "Grammar 0": "12",
+      "Grammar 1": "88"
+    },
+    "stable": {
+      "Tick": "16",
+      "Mean grammar state": "0.8800",
+      "Grammar 0": "12",
+      "Grammar 1": "88"
+    },
+    "actions": [
+      {
+        "label": "Reset states",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "Mean grammar state": "0.6000",
+          "Grammar 0": "40",
+          "Grammar 1": "60"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "Redistribute grammars",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "Mean grammar state": "0.6000",
+          "Grammar 0": "40",
+          "Grammar 1": "60"
+        },
+        "status": "Action completed."
+      }
+    ],
+    "liveTest": {
+      "name": "live-percentGrammar1",
+      "before": "60",
+      "changed": "100",
+      "afterSetup": "100",
+      "status": "Model initialized.",
+      "resetMonitors": {
+        "Tick": "0",
+        "Mean grammar state": "1.0000",
+        "Grammar 0": "0",
+        "Grammar 1": "100"
+      }
+    },
+    "resetMonitors": {
+      "Tick": "0",
+      "Mean grammar state": "1.0000",
+      "Grammar 0": "0",
+      "Grammar 1": "100"
+    },
+    "infoHasOriginal": true,
+    "inspector": "who0originalGrammar1currentGrammar1spokenGrammar1",
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "language-change",
+    "assertions": 4,
+    "evidence": {
+      "tick": 3,
+      "nodes": 10,
+      "links": 9
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "language-change-target-setup-light.png",
+    "progress-light": "language-change-target-progress-light.png",
+    "desktop-dark": "language-change-target-desktop-dark.png",
+    "mobile-light": "language-change-target-mobile-light.png",
+    "mobile-dark": "language-change-target-mobile-dark.png"
+  }
+}
