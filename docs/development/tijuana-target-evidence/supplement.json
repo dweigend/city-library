@@ -1,0 +1,177 @@
+{
+  "date": "2026-11-06",
+  "priorRuntimeModelSHA256": "f1b2c5ad1f9486560c66187b11f298cd062251764630fa0dd7949b3b03ac9cbe",
+  "uiSHA256": "6d4dbcf58ec50978fcd90bfbe491e03f01c64a97fb4bc4a8581d9733c2b33241",
+  "nativeFinal": {
+    "toolIcon": {
+      "_tag": "website",
+      "pageUrl": "https://www.netlogoweb.org/web?url=https%3A%2F%2Fwww.netlogoweb.org%2Fassets%2Fmodelslib%2FCurricular%2520Models%2FUrban%2520Suite%2FUrban%2520Suite%2520-%2520Tijuana%2520Bordertowns.nlogox"
+    },
+    "value": {
+      "sourceSHA256": "8cada3e3638c93704f5eefbba4e9aa3840c991e2d5ab711ea759c4b31aedcfb2",
+      "engineSHA256": "09f685d38681a850d9c79783d6b5c23c887d7d773c0117562fac56a64b63e1a2",
+      "tick": 1,
+      "globals": {
+        "setup-done?": true,
+        "values": 2.2187878787878805,
+        "weights": 0.4896796536796542,
+        "marginal-value": 2.2187878787878805,
+        "marginal-weight": 0.4896796536796542,
+        "max-cost": 60.5,
+        "crossed": 0,
+        "third-phase": "stop"
+      },
+      "counts": {
+        "SERVICE-CENTERS": 3,
+        "EMPLOYMENT-CENTERS": 8,
+        "MIGRANTS": 971
+      }
+    }
+  },
+  "diagnostics": {
+    "targetConsole": [
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T08:09:26.843Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T08:16:31.851Z"
+      }
+    ],
+    "sourceConsole": [],
+    "targetFailedRequests": [],
+    "sourceFailedRequests": []
+  },
+  "executedNativeSequence": [
+    "Official launcher → direct same-origin embedded /web URL (native controls accessible there)",
+    "Native Clear button",
+    "#Command Center: random-seed 1",
+    "Native Cityscape forever button; unmodified model completed to tick0,990migrants",
+    "Command Center: go → tick1,971migrants",
+    "Native Inspect button → two migrant inspectors and one patch inspector"
+  ],
+  "targetLiveNumericEditsThenRestored": {
+    "maquiladoras": [
+      7,
+      8
+    ],
+    "serviceCenters": [
+      2,
+      3
+    ],
+    "migrationTicks": [
+      4,
+      3
+    ],
+    "crossingTicks": [
+      16,
+      15
+    ],
+    "buildingTicks": [
+      0.5,
+      6
+    ],
+    "initDensity": [
+      0.6,
+      0.7
+    ],
+    "coloniaSize": [
+      1.75,
+      2
+    ],
+    "requiredCapital": [
+      510,
+      500
+    ],
+    "carryingCapacity": [
+      5,
+      6
+    ]
+  },
+  "targetLiveBooleansToggledTwice": [
+    "colorCode",
+    "cityGrowth"
+  ],
+  "targetModeUpdates": [
+    {
+      "mode": "elevation",
+      "otherBefore": 465590,
+      "otherAfter": 1214976
+    },
+    {
+      "mode": "land value gradient",
+      "otherBefore": 1214976,
+      "otherAfter": 671814
+    },
+    {
+      "mode": "colonias",
+      "otherBefore": 671814,
+      "otherAfter": 1212840
+    },
+    {
+      "mode": "units with no water",
+      "otherBefore": 1212840,
+      "otherAfter": 1214154
+    },
+    {
+      "mode": "units with no electricity",
+      "otherBefore": 1214154,
+      "otherAfter": 1214154
+    },
+    {
+      "mode": "off",
+      "otherBefore": 1214154,
+      "otherAfter": 465590
+    }
+  ],
+  "targetInteractionObserved": {
+    "tick": 64,
+    "pointerAddNode": {
+      "nodes": 1,
+      "field": {
+        "x": 0,
+        "y": 0,
+        "water": 2,
+        "electricity": 3,
+        "transport": 1,
+        "landValue": 0.45814229249011684,
+        "occupied": "no",
+        "ctr": "+",
+        "colonia": 9.9,
+        "elevation": 9.9,
+        "colorNumber": 9.9
+      }
+    },
+    "keyboardEnter": {
+      "nodes": 2,
+      "tick": 64,
+      "focus": "CANVAS"
+    },
+    "keyboardHomeAgentInspector": {
+      "birthOrdinal": 0,
+      "kind": "service-center",
+      "x": 17,
+      "y": -3,
+      "heading": 294,
+      "size": 4,
+      "colorNumber": 4,
+      "shape": "eyeball"
+    }
+  },
+  "checks": {
+    "typecheck": "bun run typecheck passed twice; all four configured TypeScript projects",
+    "examples": "All five selected-tijuana numbered Bun scripts passed; natural replay script completed exit0. Four diagnostic scripts exit0. Five UI-segments Bun scripts were verified in prior shared slice; manifests checked again here.",
+    "hashes": "selected-tijuana six-file manifest and ui-segments five-file manifest passed",
+    "whitespace": "git diff --check passed; new UI/source report additions separately checked before handoff"
+  },
+  "caveats": [
+    "Full parent check/build/consumer and independent approval are separate.",
+    "Images marked prior runtime precede the public grid.fieldAt lookup correction; never relabelled with the corrected hash.",
+    "Native stream and target Mulberry stream differ.",
+    "Readback warning is generated by repeated getImageData QA.",
+    "No direct instrument of mounted target Random continuation: inspector purity additionally follows public headless checks and thin source code."
+  ]
+}
