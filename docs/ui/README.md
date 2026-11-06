@@ -12,9 +12,11 @@ These priorities are normative for future UI work. They do not make a proposed o
 
 ## Status and authority
 
-The table and reference jointly define the UI contract. Availability labels distinguish the current `main` API, additions in `experiment/netlogo-web-catalog`, and target behavior requiring implementation. Experimental source evidence is not a release or browser-acceptance claim. The UI is not exported by the headless `city-library` package; examples use repository UI imports.
+The table and reference define the repository UI contract. The Bun/legacy host and Svelte host are adapters for the same authoring API; private components and DOM structure are not extension points. The headless `city-library` package does not export UI code.
 
-The [design rules](../DESIGN.md) and [Agent Loom terminology](../agent-loom/terminology.md) remain binding. The UI owns presentation and host scheduling; models own domain state, validation and model time. On the experimental branch, `docs/ARCHITECTURE.md` owns the extracted system architecture. Internal Svelte components, renderer options and private DOM structures are not an experiment-author API.
+The readable-authoring slice is frozen in [five public examples](../../examples/ui-authoring/README.md), with [design feedback and responses](../development/authoring-review/design-responses.md). Its runtime and catalog migration are in progress. Source availability, passing examples, browser checks and independent acceptance are tracked separately in [PLAN](../../PLAN.md). Historical branch baselines do not describe today's feature availability.
+
+The [design rules](../DESIGN.md) and [Agent Loom terminology](../agent-loom/terminology.md) remain binding. The UI owns presentation and host scheduling; models own domain state, validation and model time. [System architecture](../ARCHITECTURE.md) owns domain boundaries and state ownership. Internal Svelte components, renderer options and private DOM structures are not an experiment-author API.
 
 When documentation and implementation differ, record the gap and fix the implementation against the accepted contract. Do not silently change examples or claim a target is delivered. New runtime slices follow the [example-first delivery gate](../../PLAN.md#example-first-delivery-gate), including four or five asserted public scripts before implementation, relevant type/behavior checks and real-browser acceptance for affected flows. API changes require an explicit design decision; substantive changes to accepted example syntax require user agreement.
 
@@ -28,6 +30,4 @@ The UI specification was commissioned on 6 November 2026 alongside terminology n
 
 ## Verification and independent review
 
-Author source inspection covered both checkout APIs. The documentation-only change adds no runtime behavior and changes no accepted examples. Local Markdown links/anchors, API ID uniqueness and whitespace are checked separately from runtime acceptance.
-
-The independent Antigravity `gemini-4-argon` review attempted on 6 November 2026 failed before producing findings because the provider quota was exhausted. No independent approval exists; no substitute reviewer was used. The requested binding status comes from the user instruction and does not imply independent review acceptance. Independent review remains open.
+The original documentation review was blocked by provider quota. Later Gemini 3.8 Flash high and Astra high reviews supplied concrete authoring-contract feedback; their scope and responses are recorded in the linked review documents. They do not establish runtime or visual approval. Current implementation checks, browser screenshots and remaining tasks belong to PLAN and the slice evidence.
