@@ -310,6 +310,7 @@ export function create(options: Partial<BankParameters> = {}) {
     read() {
       const wealth = people().map((p) => p.wealth);
       return Object.freeze({
+        sourceMarker: "cash-flow:source-v1",
         tick: world.tick.value,
         phase: "Business → balance books → bank sheet",
         width: 17,

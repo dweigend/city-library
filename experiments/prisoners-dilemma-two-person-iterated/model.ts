@@ -189,6 +189,7 @@ export function create(options: Partial<IteratedParameters> = {}) {
     },
     read() {
       return Object.freeze({
+        sourceMarker: "prisoners-dilemma-two-person-iterated:source-v1",
         tick: world.tick.value,
         parameters: settings,
         human: playerSnapshot(human),

@@ -308,6 +308,7 @@ export function create(options: Partial<BankParameters> = {}) {
     read() {
       const wealth = people().map((p) => p.wealth);
       return Object.freeze({
+        sourceMarker: "bank-reserves:source-v1",
         tick: world.tick.value,
         phase: ["Business", "Balance books", "Bank balance sheet"][
           world.tick.value % 3

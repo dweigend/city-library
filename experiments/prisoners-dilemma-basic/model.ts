@@ -95,6 +95,7 @@ export function create(options: Partial<BasicParameters> = {}) {
     },
     read() {
       return Object.freeze({
+        sourceMarker: "prisoners-dilemma-basic:source-v1",
         tick: rounds,
         rounds,
         nativeTick: null,
