@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-06",
+  "scope": "Unfrozen source/contract/example proposal; no analyze runtime executed",
+  "results": {
+    "exactScriptCount": 5,
+    "configuredProjectTypecheck": "passed; does not include unregistered proposal directory",
+    "proposalPublicTypecheck": {
+      "exitCode": 1,
+      "diagnostics": {
+        "2339": 74
+      },
+      "interpretation": "Only current missing graph.analyze diagnostics; expected preparation failure, not successful target typecheck"
+    },
+    "syntaxTranspile": "all five parsed/transpiled with Bun.Transpiler",
+    "independentExactRationalOracles": "passed",
+    "localLinksAndAPIAnchors": 22,
+    "allEvidenceJSONParsed": true,
+    "archiveAndInitialFinalLoadedSourceSHAEqual": "9c80d9fa4d5d4da96224e65cd707639267da3f6494309d9d45b758164d2703db",
+    "ownedBrowserTabClosed": true,
+    "screenshotsInspected": 3
+  },
+  "commands": [
+    "python3 docs/development/network-analysis-proposal-evidence/verify-oracles.py",
+    "bun run typecheck",
+    "bunx tsc --noEmit --ignoreConfig --strict --target esnext --module preserve --moduleResolution bundler --types bun --skipLibCheck --allowImportingTsExtensions examples/network-analysis-proposal/*.ts",
+    "Bun.Transpiler syntax-only transform of all five files",
+    "Python JSON/link/sourceSHA/script-count validation"
+  ],
+  "notClaimed": [
+    "No runtime implementation or target-analyze assertion pass",
+    "No baseline acceptance",
+    "No model-count/ledger change",
+    "No independent review or approval"
+  ]
+}
