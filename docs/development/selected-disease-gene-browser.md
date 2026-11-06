@@ -2,7 +2,7 @@
 
 Ten exact selected originals now have readable public headless TypeScript models and thin reusable-UI adapters in the bound `experiment/selected-disease-gene-b09` worktree. [Issue34](https://github.com/dweigend/city-library/issues/34) is an actual subissue of Epic1; [draft PR35](https://github.com/dweigend/city-library/pull/35) targets `experiment/netlogo-web-catalog`, stacked on [root PR4](https://github.com/dweigend/city-library/pull/4). Root owns integration, registration, combined checks and every global milestone/count.
 
-**Open acceptance gates:** frozen script05 contradicts the original at100% inoculation and remains unchanged pending explicit user agreement; required independent Argon approval remains quota-pending8194e842. Four frozen scripts pass; this is not a completed five-script phase. The exact proposed two-line correction and native error evidence are in [the objection](selected-disease-gene-frozen05-objection.md). No model is dropped. No global counter, ledger, selection or research file was changed.
+**Current acceptance:** all five complete public scripts pass after the user explicitly approved exactly two script05 corrections (100→50 and every→some). [Approval, exact diff and both freeze hashes](selected-disease-gene-freeze-amendment.md). The original100% ln0 error remains tested and preserved. Required independent Argon approval remains quota-pending8194e842; root registration/global stages still require its current combined check. No model is dropped and no global counter, ledger, selection or research file was changed.
 
 ## Scope, source identity and sequencing
 
@@ -29,7 +29,7 @@ Every report links the already completed three-publication dossier. Those scient
 
 ## Actual browser execution and final artifacts
 
-The coordinator used two owned actual T3 server Chromium tabs: official launcher and own target server on checked-free port3149. Originals were executed individually with Setup, Run/Pause and reset; Repressilator's native go-once was clicked. Each source received paired ordinary setup/progression PNGs and actual session reporters. Target Setup,1/10-step controls,Run/Pause and reset were clicked for all ten; additional source-specific actions/parameters, terminal cases and error flows are retained in raw per-model JSON. [Final immutable browser assertions](selected-disease-gene-evidence/final-browser-mechanisms.json) additionally exercise all ten public models, invalid step rejection, observation purity, isolated histories, empty/terminal cases, source-ln0, energy and full DNA protein production. A proposal-only50% inoculation check passes natively and in final target modules; it does not execute or alter frozen05.
+The coordinator used two owned actual T3 server Chromium tabs: official launcher and own target server on checked-free port3149. Originals were executed individually with Setup, Run/Pause and reset; Repressilator's native go-once was clicked. Each source received paired ordinary setup/progression PNGs and actual session reporters. Target Setup,1/10-step controls,Run/Pause and reset were clicked for all ten; additional source-specific actions/parameters, terminal cases and error flows are retained in raw per-model JSON. [Final immutable browser assertions](selected-disease-gene-evidence/final-browser-mechanisms.json) additionally exercise all ten public models, invalid step rejection, observation purity, isolated histories, empty/terminal cases, source-ln0, energy and full DNA protein production. The50% inoculation probe passes natively and in final target modules. After explicit user approval, exactly two lines of05 were amended and the actual approved five-script set rerun successfully; the earlier proposal-only records retain that identity.
 
 Desktop target1280×900 CSS, mobile390×844 CSS; screenshot mobile780×1688 pixels, deviceScale2. Original1280×800 CSS. Responsive checks resize CSS viewport; they do not claim physical mobile-device testing. Initial target capture build1793972277740 is retained in each target.json. After final display-only fixes, all ten actual immutable model/UI imports and shared imports were fetched, hashed and executed again in final build1793972578482. [Final bundles](selected-disease-gene-evidence/final-bundles.json) pins their paths/SHA256/sourceMarker/byte lengths, three-step observations and appSHA256. Unchanged five model chunks retain their initial hashes; the five formatted numeric UI chunks have separately named follow-up images and JSON. No old screenshot is relabeled as a newer build.
 
@@ -43,9 +43,9 @@ Normal original and target setup/progression flows recorded no console/runtime e
 | --- | --- |
 | `bun run typecheck` | PASS; all four repository TypeScript projects, final log retained |
 | `bun test tests/selected-disease-gene-a.test.ts tests/selected-disease-gene-b.test.ts` | PASS24tests/538 assertions, after lifecycle integration |
-| Five frozen SHA256 checks | PASS; every script remains byte-identical to d73b344 |
-| Frozen scripts01,02,03,04 | PASS unchanged |
-| Frozen script05 | FAIL: preserved source R0 logarithm before tick1; no expected result weakened |
+| Five frozen SHA256 checks | PASS against current approved manifest; original manifest retained;01–04 byte-identical to d73b344 |
+| Approved complete five-script set | PASS:01–04 unchanged;05 has exactly the two explicitly approved corrections |
+| Original pre-approval script05 | Historical FAIL retained: source R0 logarithm before tick1 |
 | Standalone `tsc -p docs/development/selected-disease-gene-evidence/tsconfig.examples.json` | PASS, covers all five public scripts without editing root registration |
 | `bun run build` | PASS |
 | `bun run consumer` | PASS: actual locally packed package, Bun, Node ESM and ambient-free TypeScript consumer |
@@ -62,4 +62,6 @@ Source MT and target Mulberry/shuffled phases are explicitly different; cosmetic
 
 Frontend-design guided thin adapters and existing compact controls; web-design-guidelines was read and latest Vercel command.md fetched before QA. Long decimal monitor strings found during screenshots were fixed with Intl.NumberFormat(maximumFractionDigits3), then affected desktop/mobile light/dark views were recaptured. Domain/chart values retain full precision. Actual keyboard Tab focuses Run with a visible2px outline; labels, role=status/aria-live=polite, overflow and empty states were checked. DNA long sequence tables have internal horizontal scrolling; no page-level horizontal overflow was observed. No new overlays, decoration, icon system or shared renderer changes were introduced. This is scoped QA, not a claim of complete accessibility certification.
 
-Independent approval remains pending; author/coordinator test evidence does not close it. Root will register the five scripts only after the explicit correction decision and a current combined check. No assignment/local result changes global105/103/105/1 or any later root-owned count.
+Independent approval remains pending; author/coordinator test evidence does not close it. Root may register the approved five-script set only after a current combined check. No assignment/local result changes global105/103/105/1 or any later root-owned count.
+
+The later [explicitly approved freeze amendment](selected-disease-gene-freeze-amendment.md) supersedes pending-correction wording in historical logs/captures. Current execution records are approved-frozen-example-runs.json/typecheck-approved.log/standalone-approved-types.log; all five pass. Existing model/UI source and bundle hashes are unchanged.

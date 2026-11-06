@@ -2,10 +2,10 @@ import assert from "node:assert/strict";
 import { create as travel } from "../../experiments/epidem-travel-and-control/model.ts";
 import { create as synthesis, mrnaStringFromDNAString, complementaryMRNABase, whichProteinForThisCodon } from "../../experiments/dna-protein-synthesis/model.ts";
 
-const controls = travel({ seed: 51, initialPeople: 100, initialAmbulance: 2, infectionChance: 0, recoveryChance: 100, averageRecoveryTime: 1, inoculationChance: 100 });
+const controls = travel({ seed: 51, initialPeople: 100, initialAmbulance: 2, infectionChance: 0, recoveryChance: 100, averageRecoveryTime: 1, inoculationChance: 50 });
 assert.equal(controls.read().agents.length, 102);
 assert.equal(controls.read().agents.filter(agent => agent.ambulance).length, 2);
-assert.ok(controls.read().agents.filter(agent => !agent.ambulance && !agent.infected).every(agent => agent.inoculated));
+assert.ok(controls.read().agents.filter(agent => !agent.ambulance && !agent.infected).some(agent => agent.inoculated));
 controls.advance(20);
 assert.equal(controls.read().agents.filter(agent => agent.infected).length, 0);
 assert.equal(controls.read().agents.length, 102);
