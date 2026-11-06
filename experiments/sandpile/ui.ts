@@ -1,12 +1,5 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
-function logCounts(values: readonly number[]) {
-  const counts = new Map<number, number>();
-  for (const n of values) counts.set(n, (counts.get(n) ?? 0) + 1);
-  return [...counts]
-    .sort((a, b) => a[0] - b[0])
-    .map(([n, c]) => ({ x: Math.log10(n), y: Math.log10(c) }));
-}
 export const ui = defineUI(model, {
   setup: [
     { field: "width" },
@@ -102,12 +95,12 @@ export const ui = defineUI(model, {
     {
       type: "scatter",
       label: "Avalanche sizes (log10)",
-      series: (s) => [{ label: "Log count", points: logCounts(s.sizes) }],
+      series: (s) => [{ label: "Log count", points: s.sizePlot }],
     },
     {
       type: "scatter",
       label: "Avalanche lifetimes (log10)",
-      series: (s) => [{ label: "Log count", points: logCounts(s.lifetimes) }],
+      series: (s) => [{ label: "Log count", points: s.lifetimePlot }],
     },
   ],
 });
