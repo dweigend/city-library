@@ -1,0 +1,14 @@
+18 | }
+19 | export function validateOptions(value: unknown, keys: readonly string[]): Record<string, unknown> {
+20 |   if (!plainRecord(value)) throw new TypeError("Expected a plain options record.");
+21 |   const result = Object.create(null) as Record<string, unknown>;
+22 |   for (const [key, descriptor] of dataEntries(value)) {
+23 |     if (!keys.includes(key)) throw new TypeError(`Unknown option: ${key}`);
+                                            ^
+TypeError: Unknown option: profile
+      at validateOptions (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/src/agent/state.ts:23:40)
+      at validateGenerator (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/src/graph/generators/options.ts:61:20)
+      at generate (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/src/graph/graph.ts:185:22)
+      at /home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/examples/nw-generator-variants-proposal/01-kleinberg-law-and-attempts.ts:20:23
+
+Bun v1.4.2 (Linux x64)
