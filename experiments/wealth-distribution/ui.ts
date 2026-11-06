@@ -1,5 +1,5 @@
-import type { SpatialData, BarSeries } from "../../ui/index.ts";
-import { defineUI } from "../../ui/index.ts";
+import { defineUI, type SpatialData, type BarSeries } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 const colors = { low: "#d94838", middle: "#60ad2c", high: "#355fa5" };
 export const ui = defineUI(model, {

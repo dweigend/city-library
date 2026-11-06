@@ -1,5 +1,5 @@
-import type { GridData } from "../../ui/index.ts";
-import { defineUI } from "../../ui/index.ts";
+import { defineUI, type GridData } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 const binding = defineUI(model, {
   setup: ["seed", { field: "setup", label: "Initial sources" }],

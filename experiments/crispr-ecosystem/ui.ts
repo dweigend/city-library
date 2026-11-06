@@ -1,6 +1,6 @@
-import type { Series, BarSeries } from "../../ui/index.ts";
+import { defineUI, type Series, type BarSeries } from "../../ui/index.ts";
 import { stats } from "city-library";
-import { defineUI } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });

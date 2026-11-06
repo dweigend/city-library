@@ -1,5 +1,10 @@
-import type { SpatialData, Series, BarSeries } from "../../ui/index.ts";
-import { defineUI } from "../../ui/index.ts";
+import {
+  defineUI,
+  type SpatialData,
+  type Series,
+  type BarSeries,
+} from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 const colors = {
   cutter: "#2466b9",

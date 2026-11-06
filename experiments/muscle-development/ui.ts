@@ -1,5 +1,5 @@
-import type { Series } from "../../ui/index.ts";
-import { defineUI } from "../../ui/index.ts";
+import { defineUI, type Series } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {

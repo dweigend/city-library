@@ -1,5 +1,5 @@
-import type { Series } from "../../ui/index.ts";
-import { defineUI, netLogoColor } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Series } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {

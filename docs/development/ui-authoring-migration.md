@@ -19,7 +19,7 @@ Wealth Distribution uses numeric Gini observations with an explicitly narrowed m
 
 ## Executed verification
 
-`bun run typecheck` passed, including the five TypeScript projects and Svelte checking with zero errors/warnings. The targeted transport, Tijuana and reference-model suites passed 42 tests / 378 assertions. All five frozen UI-authoring script hashes passed; the migration does not change those scripts or their manifest. Scoped `git diff --check` passed.
+`bun run typecheck` passed, including the five TypeScript projects and Svelte checking with zero errors/warnings. The targeted transport, Tijuana and reference-model suites passed 42 tests / 378 assertions. All five numbered frozen UI-authoring script hashes passed; this migration does not change those scripts or their manifest. The full manifest separately reports the coordinator-authorized negative type-fixture directive relocation in `examples/ui-authoring/authoring.types.ts`; that owned change must retain its explicit remediation record and is not presented as an unchanged full manifest. Scoped `git diff --check` passed.
 
 A TypeScript AST comparison resolved named helpers and compared 378 view data/series/table/inspector callbacks against the pre-migration Git versions, ignoring comments, formatting, parentheses and type assertions. The only expression change was the intended Wealth current-class bar x values (numeric positions to category strings); y counts and colors are retained. This source comparison is supporting evidence, not browser or scientific validation.
 

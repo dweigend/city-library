@@ -1,5 +1,5 @@
-import type { BarSeries } from "../../ui/index.ts";
-import { defineUI } from "../../ui/index.ts";
+import { defineUI, type BarSeries } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {

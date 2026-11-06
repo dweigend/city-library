@@ -1,6 +1,6 @@
-import type { SpatialData, Series } from "../../ui/index.ts";
+import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
 import { stats } from "city-library";
-import { defineUI } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed", "numTaxicab"],

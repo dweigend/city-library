@@ -1,5 +1,5 @@
-import { defineUI } from "../../ui/index.ts";
-import { netLogoColor } from "../../ui/index.ts";
+import { defineUI, netLogoColor } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [

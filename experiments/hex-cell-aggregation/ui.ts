@@ -1,14 +1,6 @@
-import type { SpatialData } from "../../ui/index.ts";
-import { defineUI } from "../../ui/index.ts";
+import { defineUI, type SpatialData } from "../../ui/index.ts";
+
 import { model } from "./model.ts";
-const switches = [
-  "oneNeighbor",
-  "twoNeighbors",
-  "threeNeighbors",
-  "fourNeighbors",
-  "fiveNeighbors",
-  "sixNeighbors",
-] as const;
 export const ui = defineUI(model, {
   setup: ["width", "height", "seed"],
   source: {
@@ -21,27 +13,27 @@ export const ui = defineUI(model, {
   ],
   live: {
     oneNeighbor: {
-      label: `${0 + 1} live neighbors`,
+      label: "1 live neighbors",
       set: (instance, value) => instance.setSwitches({ oneNeighbor: value }),
     },
     twoNeighbors: {
-      label: `${1 + 1} live neighbors`,
+      label: "2 live neighbors",
       set: (instance, value) => instance.setSwitches({ twoNeighbors: value }),
     },
     threeNeighbors: {
-      label: `${2 + 1} live neighbors`,
+      label: "3 live neighbors",
       set: (instance, value) => instance.setSwitches({ threeNeighbors: value }),
     },
     fourNeighbors: {
-      label: `${3 + 1} live neighbors`,
+      label: "4 live neighbors",
       set: (instance, value) => instance.setSwitches({ fourNeighbors: value }),
     },
     fiveNeighbors: {
-      label: `${4 + 1} live neighbors`,
+      label: "5 live neighbors",
       set: (instance, value) => instance.setSwitches({ fiveNeighbors: value }),
     },
     sixNeighbors: {
-      label: `${5 + 1} live neighbors`,
+      label: "6 live neighbors",
       set: (instance, value) => instance.setSwitches({ sixNeighbors: value }),
     },
   },
