@@ -1683,3 +1683,10 @@ Five scripts under `examples/selected-cellular/` are frozen by `SHA256SUMS` befo
 5. Brian: firing→refractory→off with synchronous two-neighbor birth; cyclic successor threshold reads frozen old states; stochastic OOO=100 creates an all-on next row, and OOO=0 absorbing continuation stops at bottom. Four-cell source histogram sums to one.
 
 Setup dimensions are explicit test adaptations; source defaults remain production defaults. Row coordinates are centered, top=max y. Typed live actions must validate before mutation, preserve canonical state and expose detached observations. Additional assertions will cover defaults, random purity, boundaries, all widgets/procedures and stop/resume distinctions. This is the frozen minimum contract, not the full acceptance report.
+
+
+## Root source/contract integration
+
+The source/five-example commit f926a58 was cherry-picked as ace9d35 into the integration branch before root runtime transfer. The coordinator inspected all five asserted scripts and confirmed their hashes. All nine XML archives parsed and SHA-256 matched both the independently captured served inventory and the existing scientific source dossiers. Inventory correspondence pins each byte-identical source to Galapagos90be931773fcf499049247a8aaa1aecbe003654c, even though the served XML itself does not embed that repository revision. No desktop source was substituted.
+
+Only source-audited and contract-frozen stages rise at this checkpoint. Author runtime and in-progress browser work in the separate bound branch are not counted as integrated implementation. Required independent approval remains pending. The current global model counts remain30 implemented and1 fully accepted; scientific research remains200 complete. No root library/shared UI, selection, Life or research artifact was changed by this source/contract transfer.
