@@ -139,7 +139,7 @@ All releases below require Root to verify preservation/integration and current c
 
 | Branch | Existing owner thread | Removal handoff state |
 | --- | --- | --- |
-+| `experiment/selected-biology-b07` | <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/mcp:launch:bccf9bebba299755f857624c1ab186dd216e0d8c949c043898028b08f8dcec25> | Conditional removal release received; no active resources; explicit rebinding accepted |
+| `experiment/selected-biology-b07` | <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/mcp:launch:bccf9bebba299755f857624c1ab186dd216e0d8c949c043898028b08f8dcec25> | Conditional removal release received; no active resources; explicit rebinding accepted |
 | `experiment/selected-disease-gene-b09` | <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/mcp:launch:276b6fbb7ae77e070fd2298285d61d62e0a372effe6703bcfd4d081fd4faf093> | Conditional removal release received; no active resources known; explicit rebinding accepted |
 | `experiment/selected-materials-b11` | <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/mcp:launch:b2f67becbafbc3cdb6e1e7b6bd21616ea5d84c8c57246b6d3123c5f57c33f7d9> | Conditional removal release received; no active resources; explicit rebinding accepted |
 | `experiment/selected-social-b02` | <t3-thread://v2/cb5e98d1-f255-44ff-8175-d9cf75ded5d7/mcp:launch:8957bd4426fa513f44e57a460fd1b1b35333e45728332cca101f13d82677f200> | Conditional removal release received; no active resources; explicit rebinding accepted |
@@ -177,3 +177,7 @@ All contacts used T3 thread messages in the named environment. Delivery alone wa
 | Executable handoff and consolidation start forwarded to Root and consolidation thread | Four-stream WIP integration is released; owner/archive/WIP/binding gates still apply before other worktree removals |
 
 All thirteen contacted donor owners explicitly supplied conditional removal releases and accepted the rebinding consequence. Root alone executes preservation, current cleanliness checks and removal; archive verification, residual-delta disposition and actual removal outcomes remain Root-owned. No release applies to active main/catalog/coordinator worktrees. All replies were read or received, not inferred from delivery status.
+
+## Integrator execution outcome
+
+Root completed the owner-gated consolidation outside main. See [consolidation-report.md](consolidation-report.md) for exact commits, executed565-test/150683-assertion/210-example pipeline, current tooling follow-up, actual browser smoke and limits. All13 released donor worktrees were removed only after archive/WIP/payload/cleanliness checks. The three active main/catalog/coordinator bindings remain. Ecology parent-renderer WIP is preserved in a tagged stash. These executed results supersede earlier prospective removal language above, while original handoff statements remain historical evidence. No model stage, full Svelte migration or independent visual approval follows from consolidation.
