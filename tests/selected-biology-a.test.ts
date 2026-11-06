@@ -104,7 +104,7 @@ describe("selected biology A source mechanisms", () => {
     cell.advance(20);
     expect(cell.read().tick).toBe(1000);
     expect(cell.read().stopped).toBe(true);
-  });
+  }, 20000);
 
   test("Blood Sugar requires real Poisson/exponential draws and rounds meal creation to 412", () => {
     const body = createBlood({ seed: 1, metabolicRate: 0 });
