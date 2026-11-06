@@ -11,8 +11,11 @@ const before = p.read();
 p.advance();
 const after = p.read();
 assert.equal(after.tick, 1);
-assert.equal(after.epochError, 2); // squared signed error * .5; not error proportion.
-assert.equal(after.weights[0], 1); // OR target for every case except (-1,-1).
+const target = after.activations[1] === 1 || after.activations[2] === 1 ? 1 : -1;
+assert.equal(after.epochError, (target + 1) ** 2 * .5); // signed squared error, not error proportion.
+assert.equal(after.weights[0], .5 * (target + 1));
+assert.equal(after.weights[1], .5 * (target + 1) * after.activations[1]!);
+assert.equal(after.weights[2], .5 * (target + 1) * after.activations[2]!);
 assert.deepEqual(p.read(), after); // observation must not draw or mutate.
 assert.equal(before.tick, 0);
 for (const f of ['or','xor','and','nor','nand'] as const) {
