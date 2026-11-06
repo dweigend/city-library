@@ -2,6 +2,8 @@ import { stats } from "city-library";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
+const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
+
 const binding = defineUI(model, {
   setup: [
     { field: "seed" },
@@ -46,14 +48,26 @@ const binding = defineUI(model, {
   monitors: [
     {
       label: "Mean array length",
-      value: (state) => state.averageArrayLength ?? "n/a",
+      value: (state) =>
+        state.averageArrayLength === null
+          ? "n/a"
+          : numbers.format(state.averageArrayLength),
     },
     {
       label: "Array standard deviation",
-      value: (state) => state.stdDevArrayLength ?? "n/a",
+      value: (state) =>
+        state.stdDevArrayLength === null
+          ? "n/a"
+          : numbers.format(state.stdDevArrayLength),
     },
-    { label: "Focal virus %", value: (state) => state.focalVirusPercent },
-    { label: "Focal array %", value: (state) => state.focalArrayPercent },
+    {
+      label: "Focal virus %",
+      value: (state) => numbers.format(state.focalVirusPercent),
+    },
+    {
+      label: "Focal array %",
+      value: (state) => numbers.format(state.focalArrayPercent),
+    },
     { label: "Tick", value: (state) => state.tick },
     { label: "Bacteria", value: (state) => state.bacteriaCount },
     { label: "Viruses", value: (state) => state.virusCount },
