@@ -1,6 +1,6 @@
 # Agent Lab refactor
 
-Status: authorized assignment and design; runtime not delivered.
+Status: historical authorized assignment for the first modular replacement. That bounded runtime and its checks were subsequently recorded in [refactor evidence](agent-lab-evidence.md). The integration branch has since expanded the catalog and integrated a Svelte WIP runtime; [PLAN](../../PLAN.md) and the [consolidation report](consolidation-report.md) own current scope, verification and outstanding acceptance. The assignment and original review responses below retain their checkpoint context; they are not independent approval of later work.
 
 ## Goal and architecture
 

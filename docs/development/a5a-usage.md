@@ -1,5 +1,7 @@
 # Graph kernel and network diffusion usage
 
+This page preserves the bounded A5a kernel and network-diffusion example. Later integration slices add Graph copy, connectivity, distance, analysis and generation operations; see the [current plan](../../PLAN.md), [Copy/Random integration](copy-random-integration.md) and the public `index.ts`/Graph interface for their actual scope.
+
 The bounded A5a slice exposes `Graph` and the `Graph`/`Edge` types through `city-library`. Graphs work without a World, coordinates or a renderer. The [five public examples](a5a-examples.md) are executable acceptance contracts; the [binding reference](../agent-loom/api-reference.md#graph-representations) remains the complete target.
 
 ## Original objects and persistent contacts
@@ -51,7 +53,7 @@ const model = createNetworkDiffusionModel({
 });
 model.advance(100);
 const observation = model.read();
-// Agent Lab imports this same composition; no browser is required here.
+// This retained example is headless; no browser is required here.
 ```
 
 The model import is a repository example composition, not a new package export. From the repository root, import `./examples/models/network-diffusion.ts` instead. The first example block above is the public library authoring surface; its rule is deliberately simpler than the probabilistic interactive composition.
@@ -62,8 +64,8 @@ Communities are three explicitly constructed contact groups; bridges connect con
 
 `select(id)`, `seedSelected()` and `setBridges(boolean)` are explicit model actions. Only an unaware selected node can be externally activated. Bridge edits are available for communities and affect future exposure without resetting existing adoption. Readbacks contain all persistent edges, node states, selected degree, counts, completion, RNG continuation and bounded count history. They never contain writable live Graph/Agent objects.
 
-## Current boundary
+## Historical A5a boundary and later integration
 
-The delivered kernel includes creation/representation, node and edge membership, direction queries, lifecycle and supported-state copying. Spatial edge paths/ties, World graph attachment, views/copy, routing/analysis/generators/layouts and interchange remain future slices. Supplying unsupported spatial paths rejects explicitly. Broad reference entries remain partial where those branches are pending.
+The original A5a kernel includes creation/representation, node and edge membership, direction queries, lifecycle and supported-state copying. Copy, connectivity, distance, analysis and generation subsequently gained bounded implementations. Spatial edge paths/ties, World graph attachment and broader reference coverage remain separate work; do not infer full routing/layout/interchange support from those additions. Supplying unsupported spatial paths rejects explicitly. Broad reference entries remain partial where those branches are pending.
 
-The external lab owns drawing and display coordinates only. Run/Pause controls are explicit callers of the same headless model. Counts, history, contact creation and spread rules come from that model; Cytoscape does not invent or simulate them.
+The historical diffusion host owned drawing and display coordinates only; its Run/Pause controls called this same headless model. Counts, history, contact creation and spread rules remain model-owned. The current Agent Lab discovers modular experiment entries; this example is not its current default scenario.

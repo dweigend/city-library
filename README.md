@@ -2,7 +2,7 @@
 
 A modular, TypeScript-first toolkit for procedural cities and agent-based models. Use focused geometry, graph and simulation capabilities independently, then compose the parts your model needs. Applications own visualization; the library owns domain logic and state.
 
-> **Work in progress.** A1, bounded A2a and the A5a graph kernel are implemented. The active Lab refactor adds bounded spatial/Grid and measurement capabilities plus modular NetLogo reference experiments; broader APIs remain planned and acceptance is tracked separately. No package is published. See [A5a usage](docs/development/a5a-usage.md), [Agent Lab](ui/agent-lab/README.md) and [refactor evidence](docs/development/agent-lab-evidence.md) for scope and commands.
+> **Work in progress.** The headless library includes agents/worlds, reproducible random streams, spatial movement, grids/fields, graph operations, planar geometry and statistics. Agent Lab currently discovers 125 experiment entries toward a fixed 200-model NetLogo Web selection. Implementation, scientific comparison and independent acceptance remain separate milestones. The Svelte UI is an integrated work-in-progress runtime; Taxi Cabs migration and independent visual approval remain open. No package is published. See the [current plan](PLAN.md) and [consolidation evidence](docs/development/consolidation-report.md).
 
 ## Purpose
 
@@ -16,12 +16,12 @@ The engine should make those concepts explicit and testable through simulation. 
 2. **Extend through focused libraries.** Add capabilities for city grids, traffic, resource cycles and energy systems. Develop each capability independently, then compose them into broader city simulations.
 3. **Compose a headless city engine.** Keep simulation logic and UI clearly separated. The complete engine must work without a browser or renderer, so scripts, experiments and different interfaces can use the same models.
 
-This is the development sequence; A1 establishes the first headless agent subset. The broader capabilities below remain planned.
+Agent Loom is implemented in bounded, publicly tested slices. Complete Agent Loom coverage, building generation and broader city models remain delivery goals.
 
 ## Documentation
 
 - [Agent Loom specification](docs/agent-loom/README.md): the general modeling core and current development focus.
-- [API inventory](docs/agent-loom/api-table.md): all 309 planned operation/type entries.
+- [API inventory](docs/agent-loom/api-table.md): the 309 target operation/type entries; implementation coverage is tracked separately.
 - [API reference](docs/agent-loom/api-reference.md): contracts and usage examples.
 - [Architecture](docs/ARCHITECTURE.md): module boundaries, state ownership and extension rules.
 - [UI design](docs/DESIGN.md): component, styling and UI verification rules.
@@ -54,7 +54,7 @@ flowchart TD
 
 This is a composition map, not a required startup sequence. A building generator can work without residents, a graph without coordinates, and an agent model without a grid or renderer. Kits combine the same public operations available to model authors.
 
-## Planned capabilities
+## Work areas
 
 | Area | Purpose |
 | --- | --- |
@@ -65,7 +65,18 @@ This is a composition map, not a required startup sequence. A building generator
 | City Models | Mobility, households, allocation, economy and supply |
 | Data & Experiments | Validated inputs, statistics, experiments and storage |
 
-Phase one implements the complete Agent Loom core incrementally, beginning with a small headless Agent/World model. Building generation and broader city models follow. Agent Loom is part of City Library, not a separate required engine.
+Phase one completes the Agent Loom core incrementally through public examples and verified implementation slices. Building generation and broader city models follow. Agent Loom is part of City Library, not a separate required engine.
+
+## Development and verification
+
+Use the repository-pinned Bun toolchain and install dependencies with `bun install --frozen-lockfile`.
+
+- `bun run check`: TypeScript/Svelte checks, tests, public examples, library build and packed Bun/Node/TypeScript consumer.
+- `bun run dev:ui`: existing Bun-hosted Agent Lab at http://localhost:3100.
+- `bun run dev:ui:svelte`: separate Vite/Svelte development entry.
+- `bun run build:ui:svelte`: Svelte production build.
+
+The [consolidation checkpoint](docs/development/consolidation-report.md#executed-verification-and-limits) records 565 tests and 215 public scripts passing, followed by targeted typecheck, consumer and Svelte-build checks. These are recorded results, not a claim that every model or UI state has final acceptance. Browser evidence is scoped to the models and interactions actually exercised. The [model ledger](experiments/catalog/progress-summary.json) still needs reconciliation with the later integrated batches.
 
 ## Modeling principles
 
