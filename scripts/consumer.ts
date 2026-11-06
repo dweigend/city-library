@@ -48,7 +48,11 @@ blocks.edges.add({from:ca,to:cb});blocks.edges.add({from:cb,to:cc});
 if(blocks.components({mode:'biconnected'}).length!==2)throw Error('packed biconnected mismatch');
 `, { flag: "a" });
   await command(["bun", "consumer.ts"], directory);
-  await writeFile(join(directory, "consumer.mjs"), await Bun.file(join(directory, "consumer.ts")).text());
+  // Keep the packed Node execution independent from Bun's TypeScript loader.
+  // Public type imports/annotations belong to the TS check, not the .mjs file.
+  const javascript = new Bun.Transpiler({ loader: "ts", target: "node" })
+    .transformSync(await Bun.file(join(directory, "consumer.ts")).text());
+  await writeFile(join(directory, "consumer.mjs"), javascript);
   await command(["node", "consumer.mjs"], directory);
   await writeFile(join(directory, "tsconfig.json"), JSON.stringify({ compilerOptions: { strict: true, target: "ESNext", module: "Preserve", moduleResolution: "bundler", noEmit: true, types: [], lib: ["ESNext"] }, include: ["consumer.ts"] }));
   await command([resolve("node_modules/.bin/tsc"), "-p", "tsconfig.json"], directory);
