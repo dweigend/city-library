@@ -1,6 +1,6 @@
 # City Library work plan
 
-Updated: 6 November 2026. This plan describes the integration branch `experiment/netlogo-web-catalog`. The consolidation baseline is `49da939`; readable authoring, catalog migration and renderer corrections are implemented through `720e345`. This work has not been merged into `main`. Status below separates implemented code, executed checks and independent acceptance.
+Updated: 6 November 2026. This plan describes the integration branch `experiment/netlogo-web-catalog`. The consolidation baseline is `49da939`; readable authoring and catalog migration include the independently rechecked callback correction `d069be3`. This work has not been merged into `main`. Status below separates implemented code, executed checks and independent acceptance.
 
 ## Reading order and ownership
 

@@ -17,7 +17,7 @@ The user-defined rules below govern the Svelte UI migration and every subsequent
 - **YAGNI:** add only capabilities required by the current working slice. No speculative extension systems, unused components, future settings or empty scaffolding. Add components when used, rather than installing the complete catalog.
 - **Browser and independent screenshot gate:** every UI implementation change requires real-browser interaction checks and captured, visually inspected screenshots of affected states at desktop (at least 1366×768) and narrow (390×844) sizes, including supported light/dark themes. An independent subagent must inspect the actual screenshots and review them against these rules; the implementing agent's self-review is insufficient. Record screenshot paths, checked flows, findings and responses separately from independent approval. Fix findings and repeat affected browser checks and screenshot review before acceptance. A browser or reviewer blocker leaves acceptance open; source inspection cannot substitute. Existing requirements for Antigravity `gemini-3.8-flash` review of substantial design/transfer work remain in force.
 
-The existing UI is not claimed to satisfy these rules. Migration evidence must demonstrate compliance; historical browser evidence does not establish acceptance of the migrated implementation.
+Compliance is recorded per delivered slice in [PLAN](../PLAN.md). Historical screenshots and source checks alone do not establish acceptance of a changed implementation.
 
 ## Binding UI authoring rules
 
@@ -29,8 +29,8 @@ The following user-defined rules are mandatory for public UI API design, documen
 - **Customize at the affected entry:** a special label or presentation belongs directly beside its binding.
 - **Place functions for readability:** keep short projections inline; give longer functions descriptive names and place them below the UI description.
 
-These are binding design rules, not a declaration that proposed syntax is available or frozen. Concrete simplified syntax remains a design candidate until explicitly agreed and frozen through the example-first gate. Preserve existing accepted examples and headless model contracts; domain state has one owner and UI changes it only through public model actions. Recording these rules does not authorize runtime changes or establish migration acceptance.
+These rules govern the implemented readable-authoring contract in the [UI reference](ui/api-reference.md). Legacy declarations remain compatibility syntax. Future extensions still need the example-first gate; preserve accepted examples, headless contracts and the single domain-state owner. UI changes state only through public model actions.
 
 ## Binding UI API documentation
 
-The [UI specification](ui/README.md), [API table](ui/api-table.md) and [API reference](ui/api-reference.md) jointly define the shared UI authoring contract, subject to the binding authoring rules above. Source availability and unfrozen design candidates are explicitly distinguished; documentation introduces no runtime change. Independent Antigravity review is open because the attempted review failed due to provider quota.
+The [UI specification](ui/README.md), [API table](ui/api-table.md) and [API reference](ui/api-reference.md) jointly define the shared UI authoring contract, subject to the binding authoring rules above. Source availability and unfrozen design candidates are explicitly distinguished; documentation introduces no runtime change. Later Gemini 3.8 Flash high and Astra high feedback, corrections and scoped approvals are recorded in the [authoring evidence](development/readable-authoring-evidence.md). The original quota failure remains historical evidence, not approval.
