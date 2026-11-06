@@ -1,6 +1,8 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
+const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
+
 const binding = defineUI(model, {
   setup: [{ field: "seed" }, { field: "numberPeople" }],
   live: [
@@ -39,8 +41,14 @@ const binding = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Infected %", value: (state) => state.percentInfected },
-    { label: "Immune %", value: (state) => state.percentImmune },
+    {
+      label: "Infected %",
+      value: (state) => numbers.format(state.percentInfected),
+    },
+    {
+      label: "Immune %",
+      value: (state) => numbers.format(state.percentImmune),
+    },
   ],
   views: [
     {
