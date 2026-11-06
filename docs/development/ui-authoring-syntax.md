@@ -1,6 +1,6 @@
 # UI authoring syntax slice
 
-Status: proposed delivery contract and asserted author examples, before runtime. The coordinator must commit the frozen examples before implementation handoff. No runtime or browser acceptance is claimed here. Existing `defineUI(model, spec)` and all earlier frozen examples remain compatible.
+Status: implemented authoring contract. Public examples were committed before runtime, followed by separately documented harness corrections and type-diagnostic comment relocation. Both adapters pass the frozen browser checks; the [visual review](authoring-review/independent-visual-review.md) is scoped to the inspected states. Final source-review feedback and integrated checks remain tracked in PLAN. Earlier frozen model contracts remain compatible.
 
 ## Bounded scope
 

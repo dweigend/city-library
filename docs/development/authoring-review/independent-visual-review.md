@@ -4,7 +4,7 @@ Date: 6 November 2026. Read-only review of the final authoring fixture and catal
 
 ## Scope and outcome
 
-**Visual approval is withheld pending the dark network-label correction and supplemental Tijuana canvas coverage described below.** No bar-geometry, control-overlap or error-message visibility blocker was found in the 24 authoring fixture screenshots. This is a scoped visual assessment, not scientific acceptance, approval of all 125 catalog entries, or a complete accessibility certification.
+**Scoped visual approval is granted for the inspected authoring fixtures, six reference-model view sets and targeted supplements. V1 (network theme switching), V2 (chart annotation readability) and V3 (Tijuana coverage) are closed after independent image retests. This does not approve every catalog state, full accessibility, scientific behavior or the fixed 200-model delivery.** No bar-geometry, control-overlap or error-message visibility blocker was found in the 24 authoring fixture screenshots. This is a scoped visual assessment, not scientific acceptance, approval of all 125 catalog entries, or a complete accessibility certification.
 
 All **49 screenshots** listed below were actually opened individually with the image tool: 24 authoring fixture captures and 25 rich-flow captures across Voting, Wealth Distribution, Taxi Cabs, Tijuana, Traffic Grid and Preferential Attachment. The fixtures cover legacy and Svelte hosts, zero/nonzero signed grouped bars and formatter failures. Both light/dark and actual 1366 × 768 / 390 × 844 PNGs were inspected. Screenshot files were not resized, composited or edited.
 
@@ -95,3 +95,81 @@ Pre-main work still includes final independent implementation feedback, unresolv
 | Catalog rich flows | 1366 × 768 | dark / overview | `/tmp/city-library-catalog-authoring-final-preferential-attachment-1366-dark-overview.png` | `ee034ee3fcc3d399f116f1f4082931a8dffbb73b6beaa9dc94dee9c6dfad4957` |
 | Catalog rich flows | 390 × 844 | light / overview | `/tmp/city-library-catalog-authoring-final-preferential-attachment-390-light-overview.png` | `26b39ed90c469ea64e5da773492bb683e9515ba65052da1dc1fcd107f1108879` |
 | Catalog rich flows | 390 × 844 | dark / overview | `/tmp/city-library-catalog-authoring-final-preferential-attachment-390-dark-overview.png` | `bc6a4295d080838bba3df9b56dddeb41f1c3cca8c8887e5571948fa1fd2e3231` |
+
+## Follow-up: responsive charts and unselected spatial coverage
+
+A fresh targeted review opened all 24 replacement authoring PNGs from `/tmp/city-library-authoring-acceptance.json`, plus all eight supplemental unselected Wealth/Tijuana PNGs from `/tmp/city-library-catalog-authoring-final-unselected.json`. The original pre-responsive captures are retained by the operator under its before-responsive archive. The historical inventory above records the bytes inspected on the first pass; the replacement-file hashes below identify this follow-up.
+
+**V2 closed for the inspected fixture scope.** Category names, tick values and axis/unit text are now visibly readable at 390 pixels in both hosts and themes. The SVG now uses the available width without shrinking all annotation text into the original fixed viewBox. Signed/nonzero and zero data still show the expected bar placement; no new visible clipping or label overlap appeared in the inspected two-category fixtures. Desktop captures retain readable chart labels. Reported effective font measurements of 12px (legacy) and 16px (Svelte) come from the operator's DOM checks; the reviewer independently confirms the visible improvement but did not rerun those calculations.
+
+**V3 closed for the requested coverage scope.** The eight unselected overview captures show the actual Wealth and Tijuana spatial output at scrollY 0 in light/dark at 1366 × 768 and 390 × 844. Tijuana's spatial result is now clearly visible without the selected-object inspector occupying the page; the narrower viewport naturally requires vertical scrolling to see the full page. No production change was needed for this capture correction. A 404 console entry appears in the unselected manifest without an attributed failed source URL; the source responses shown there are 200 and the page-error list is empty. That operator/network-attribution follow-up is not converted into visual approval or silently discarded here.
+
+**V1 is still open.** No corrected network dark-state captures have been received in this follow-up. Overall visual acceptance remains withheld until the dark-label correction and independent image retest.
+
+### Follow-up inspected image inventory
+
+| Source | Actual PNG | Theme/state | Path | SHA-256 |
+| --- | --- | --- | --- | --- |
+| Responsive authoring retest | 1366 × 768 | light / grouped | `/tmp/city-library-authoring-acceptance-legacy-grouped-1366-light.png` | `41913c8037c7f74fbe7e68e76f035b0b769f0a22f148f8dc4d655c9a5ff2352e` |
+| Responsive authoring retest | 1366 × 768 | dark / grouped | `/tmp/city-library-authoring-acceptance-legacy-grouped-1366-dark.png` | `3d645e54c35d89bc16c18b4e71715b31c9590614d53dc26922e5b1997c4c6019` |
+| Responsive authoring retest | 390 × 844 | light / grouped | `/tmp/city-library-authoring-acceptance-legacy-grouped-390-light.png` | `00a2c96a34cc9561360808ed18b018a7b3aa2fcdb9f5d41c98c7186380573f5f` |
+| Responsive authoring retest | 390 × 844 | dark / grouped | `/tmp/city-library-authoring-acceptance-legacy-grouped-390-dark.png` | `1cd7bdfc23af9ee8e7f5b5fdddb8481786c17ea06cb04ca26f8332705731f168` |
+| Responsive authoring retest | 1366 × 768 | light / grouped-nonzero | `/tmp/city-library-authoring-acceptance-legacy-grouped-nonzero-1366-light.png` | `a2ce25794331f8afc2009b8b5baca63537663f7da93188b07bc2c852461eb0b7` |
+| Responsive authoring retest | 1366 × 768 | dark / grouped-nonzero | `/tmp/city-library-authoring-acceptance-legacy-grouped-nonzero-1366-dark.png` | `b627e4a403e1895a15501774e90534b2eacdc75a377d83dee8fa0ae4ae8c4480` |
+| Responsive authoring retest | 390 × 844 | light / grouped-nonzero | `/tmp/city-library-authoring-acceptance-legacy-grouped-nonzero-390-light.png` | `9b295cf783c6055c7de9c9837a4ce1362360369d1e671dbbc2cb8549eac1226c` |
+| Responsive authoring retest | 390 × 844 | dark / grouped-nonzero | `/tmp/city-library-authoring-acceptance-legacy-grouped-nonzero-390-dark.png` | `1e48e8709ca36e0846022e0a5efcff7e25cee4d87f3f28828060718533a190f2` |
+| Responsive authoring retest | 1366 × 768 | light / format-error | `/tmp/city-library-authoring-acceptance-legacy-format-error-1366-light.png` | `7f120861b0954df4dca188f3131a87f725b63dea0de3f04058a2539e3a30d0ac` |
+| Responsive authoring retest | 1366 × 768 | dark / format-error | `/tmp/city-library-authoring-acceptance-legacy-format-error-1366-dark.png` | `06444d5f0810c43be5880d02b769e05e859370e2f48b7c84772ffc792585cc48` |
+| Responsive authoring retest | 390 × 844 | light / format-error | `/tmp/city-library-authoring-acceptance-legacy-format-error-390-light.png` | `0b009ab38717aa27ce9eedb8d143af0a376467a10d84d92d14d3fe185b180d06` |
+| Responsive authoring retest | 390 × 844 | dark / format-error | `/tmp/city-library-authoring-acceptance-legacy-format-error-390-dark.png` | `a84eb1a971037a8ef8de8009a5fd697cada5759ed978e3288ee6c0dba60c5baf` |
+| Responsive authoring retest | 1366 × 768 | light / grouped | `/tmp/city-library-authoring-acceptance-svelte-grouped-1366-light.png` | `a3f71ffad7e98717d80289769b4f052cdda7dc7614ed937b206a0821b94fd095` |
+| Responsive authoring retest | 1366 × 768 | dark / grouped | `/tmp/city-library-authoring-acceptance-svelte-grouped-1366-dark.png` | `83b6e608451caf832b35c27a11f6ca4458b7cc693fc8c2cc90a746999e9b8850` |
+| Responsive authoring retest | 390 × 844 | light / grouped | `/tmp/city-library-authoring-acceptance-svelte-grouped-390-light.png` | `6502ec613a1fc59a6078d299369994229828965cf9b7f62b8d82c06f4cbd5cdf` |
+| Responsive authoring retest | 390 × 844 | dark / grouped | `/tmp/city-library-authoring-acceptance-svelte-grouped-390-dark.png` | `42cb7893aac1d2361007756a7207278525cdb70ef3a3ca8ee2016755b3d91d79` |
+| Responsive authoring retest | 1366 × 768 | light / grouped-nonzero | `/tmp/city-library-authoring-acceptance-svelte-grouped-nonzero-1366-light.png` | `65b395ec10d3b749a85b79886935ebe5a7677d3ded412dc43339fbd359516e9a` |
+| Responsive authoring retest | 1366 × 768 | dark / grouped-nonzero | `/tmp/city-library-authoring-acceptance-svelte-grouped-nonzero-1366-dark.png` | `b5e6e0d344bba66ce96dadf7fedfdcad9418edcba5b8afc4b7d04696311ea0da` |
+| Responsive authoring retest | 390 × 844 | light / grouped-nonzero | `/tmp/city-library-authoring-acceptance-svelte-grouped-nonzero-390-light.png` | `c63e0189573d03f75168c26793cc00d2bc66f15b8501d31d7e48e8b888b24bee` |
+| Responsive authoring retest | 390 × 844 | dark / grouped-nonzero | `/tmp/city-library-authoring-acceptance-svelte-grouped-nonzero-390-dark.png` | `97c76cc3b4874027f1bb86c7ba4d3491c3fe4fe2a6a9aef659b473249e99c67a` |
+| Responsive authoring retest | 1366 × 768 | light / format-error | `/tmp/city-library-authoring-acceptance-svelte-format-error-1366-light.png` | `9b42af4e49bd11cd0765e07839b649ec4216644790a66433e14ba08342cb9861` |
+| Responsive authoring retest | 1366 × 768 | dark / format-error | `/tmp/city-library-authoring-acceptance-svelte-format-error-1366-dark.png` | `cd0d2e2bb36660dfd70cac5c9449c2203d6638e9e85fdfde05c276bf8e00bb44` |
+| Responsive authoring retest | 390 × 844 | light / format-error | `/tmp/city-library-authoring-acceptance-svelte-format-error-390-light.png` | `e7e1513a19d7e36707a156f9995ed9ad6d9fa3b6dc9f0a4e3a7c3a4db14b79fc` |
+| Responsive authoring retest | 390 × 844 | dark / format-error | `/tmp/city-library-authoring-acceptance-svelte-format-error-390-dark.png` | `4e26f48f7f2e5aec0baf58c4bb02e987d8395affc7a71785ea007da17d09df5f` |
+| Unselected spatial supplement | 1366 × 768 | light / unselected overview | `/tmp/city-library-catalog-authoring-final-wealth-distribution-1366-light-unselected-overview.png` | `4d71320251cc5b1023c1420adde33303dc20a3796433a6821c60470a325a05c2` |
+| Unselected spatial supplement | 1366 × 768 | dark / unselected overview | `/tmp/city-library-catalog-authoring-final-wealth-distribution-1366-dark-unselected-overview.png` | `4ec90b975e17c73def14d596a38a33b955796493f897eb52559a58933281f0e0` |
+| Unselected spatial supplement | 390 × 844 | light / unselected overview | `/tmp/city-library-catalog-authoring-final-wealth-distribution-390-light-unselected-overview.png` | `a6bef269e2b1c18b11272e0ef1afcf0a109e6ee862698a06289517cd63f370df` |
+| Unselected spatial supplement | 390 × 844 | dark / unselected overview | `/tmp/city-library-catalog-authoring-final-wealth-distribution-390-dark-unselected-overview.png` | `0aca549abeebd0e3240d78b1f00a19c972a843f6bfb3c58b3fc52767656e1142` |
+| Unselected spatial supplement | 1366 × 768 | light / unselected overview | `/tmp/city-library-catalog-authoring-final-urban-suite-tijuana-bordertowns-1366-light-unselected-overview.png` | `10acd32f341e8df5a4387f7443d525692b831cb164e7805b003a068bba94cd68` |
+| Unselected spatial supplement | 1366 × 768 | dark / unselected overview | `/tmp/city-library-catalog-authoring-final-urban-suite-tijuana-bordertowns-1366-dark-unselected-overview.png` | `f5b3bcf1b1af8e278a091fdced83192a878d8274f950ded247100c8e3df8808e` |
+| Unselected spatial supplement | 390 × 844 | light / unselected overview | `/tmp/city-library-catalog-authoring-final-urban-suite-tijuana-bordertowns-390-light-unselected-overview.png` | `38fbf6845c39cbae25f95325a9d0db45e88bd9c72303ebf1c0b1590ddefd0836` |
+| Unselected spatial supplement | 390 × 844 | dark / unselected overview | `/tmp/city-library-catalog-authoring-final-urban-suite-tijuana-bordertowns-390-dark-unselected-overview.png` | `925cf362b1eab67cae826c3fb378ada0594375a8f2925ef7c5992b3045952898` |
+
+## Follow-up: network theme switching and final scoped decision
+
+A fresh targeted review opened all **eight** after-fix network captures from `/tmp/city-library-network-theme-after.json`: fresh light, live dark, fresh dark and live light at both 1366 × 768 and 390 × 844. Four before-fix dark captures were also opened for direct comparison. No images were edited or rescaled.
+
+**V1 closed.** The live-dark labels are now visibly legible and match the already-correct fresh-dark appearance. Light labels remain readable on fresh and live-switched light backgrounds. Node colors remain the same scientific red in the inspected captures, and the displayed Tick/Nodes/Edges remain 10/12/11. The original contrast problem is confirmed to concern the captured light-to-dark transition; the before-fix fresh-dark images were already readable. The after manifest reports matching actual/expected token colors and a dark contrast value of about 6.82 versus about 2.03 in the affected before state. Those numerical DOM/Cytoscape/contrast checks belong to the operator; this reviewer independently confirms the visual before/after change and PNG dimensions. There is no new visible clipping or horizontal containment problem in these eight captures.
+
+The fresh Wealth diagnostic in `/tmp/city-library-catalog-authoring-final-wealth-404.json` attributes its newly reproduced 404 to `/favicon.ico`, while model/UI sources return 200 and page errors are empty. This removes a new source-loading regression concern for that reproduction. The older URL-less 404 entry remains historically unattributed; this review does not relabel its unknown identity after the fact.
+
+### Final scoped decision and remaining pre-main tasks
+
+No visual blocker remains in the images independently inspected for this authoring slice: the two-host chart/formatter fixtures, the six selected Svelte model views, unselected Wealth/Tijuana spatial supplements and the targeted network theme-transition retest. The earlier findings remain in this document as historical findings and retest evidence rather than being deleted.
+
+The visual decision does not replace the actual interaction runner or cover uninspected controls/states. Remaining pre-main gates include independent implementation feedback and its disposition, actual keyboard/accessibility checks not evidenced by screenshots, catalog-ledger/scientific acceptance reconciliation, the explicit public-procedure contract question, final checks/PR status and the user's explicit merge decision. No broad model or scientific approval is inferred.
+
+### Network retest image inventory
+
+| Pass | State | Actual PNG | Path | SHA-256 |
+| --- | --- | --- | --- | --- |
+| after | fresh-light | 1366 × 768 | `/tmp/city-library-network-theme-after-1366-fresh-light.png` | `30b100fe4f8e705ab1398c6ca4369101ec2d46de5f65ff0f32bd947286b72e00` |
+| after | live-dark | 1366 × 768 | `/tmp/city-library-network-theme-after-1366-live-dark.png` | `0609dbe1b88d55d147970737ea9b1ae28c70e65eb32cb6e935fd995c7f0bd70f` |
+| after | fresh-dark | 1366 × 768 | `/tmp/city-library-network-theme-after-1366-fresh-dark.png` | `e59f954e6494d6b537ac66c2253c7acfb639b1d582242f25f4a9d8884ea1ed45` |
+| after | live-light | 1366 × 768 | `/tmp/city-library-network-theme-after-1366-live-light.png` | `24d1a7f07070471e66ac39b8dd78b67a9799b7c4dc6671db3cb48e3af0111a65` |
+| after | fresh-light | 390 × 844 | `/tmp/city-library-network-theme-after-390-fresh-light.png` | `397c1e2ab064e344d4c2b4ff76cd6d475aff8d1d49e9d0e5ad1da33967851fc1` |
+| after | live-dark | 390 × 844 | `/tmp/city-library-network-theme-after-390-live-dark.png` | `32e7693ad6ab8bfbf66c73d6ca1a687621fc100b8a3b4bb4ad2bb983445d076a` |
+| after | fresh-dark | 390 × 844 | `/tmp/city-library-network-theme-after-390-fresh-dark.png` | `236819499491e956b58d54bad00c2b2999f74bde8bf54d41118feeeb0accdac5` |
+| after | live-light | 390 × 844 | `/tmp/city-library-network-theme-after-390-live-light.png` | `ac198f129247a4eccdf190c93a99d3a40b884c945602f0e6d5da8c7746f9b126` |
+| before | live-dark | 1366 × 768 | `/tmp/city-library-network-theme-before-1366-live-dark.png` | `358c0ce613d2a4ec31f0bf90e24a3d58a0bbae803a0db45dee62f3708fb4a975` |
+| before | fresh-dark | 1366 × 768 | `/tmp/city-library-network-theme-before-1366-fresh-dark.png` | `06631f2e78fe4b97065e008d54c0fd21157865a57096636003789613f009d8fb` |
+| before | live-dark | 390 × 844 | `/tmp/city-library-network-theme-before-390-live-dark.png` | `6532fdde48ec2a86fea132c3ea6f5e6d3ce66bf2c8b54fb298e376b0fe6ae758` |
+| before | fresh-dark | 390 × 844 | `/tmp/city-library-network-theme-before-390-fresh-dark.png` | `faa3392a769cf0a95450b65788a398a751835ba84f4c7c5477d4b6435dccb61d` |

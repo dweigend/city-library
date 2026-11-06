@@ -4,7 +4,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 
 ## Status and notation
 
-Availability describes repository contracts rather than historical branches. `B` means an existing baseline contract, `E` an existing extension, `F` the newly frozen readable-authoring slice whose runtime/browser acceptance is in progress, `T` a binding design rule and `C` an unfrozen future candidate. See [PLAN](../../PLAN.md) for current executed checks. Source presence alone is not independent acceptance.
+Availability describes repository contracts rather than historical branches. `B` means an existing baseline contract, `E` an existing extension, `F` the readable-authoring slice implemented and exercised in both hosts, with remaining independent-review scope tracked in PLAN, `T` a binding design rule and `C` an unfrozen future candidate. See [PLAN](../../PLAN.md) for current executed checks. Source presence alone is not independent acceptance.
 
 `P` is the model parameter object; `K = Extract<keyof P, string>`; `M` is its concrete instance; `S = ReturnType<M["read"]>`; `Scalar = string \| number \| boolean`; `Row = Readonly<Record<string, Scalar>>`. `?` marks optional properties. All declaration arrays and observation data are readonly. IDs below remain stable when delivery status changes. Each row links to its detailed contract.
 

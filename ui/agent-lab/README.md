@@ -11,7 +11,7 @@ bun install --frozen-lockfile
 CITY_LIBRARY_UI_RUNTIME=svelte bun run dev:ui:svelte
 ```
 
-Open http://localhost:3101. The Svelte runtime is an integrated work in progress, not a completed migration. Taxi Cabs currently uses its legacy entry. The Vite command without `CITY_LIBRARY_UI_RUNTIME=svelte` selects the legacy runtime.
+Open http://localhost:3101. The Svelte host supports the same authoring contract as the legacy adapter. All 125 catalog entries, including Taxi Cabs, use it without per-model fallbacks. Scientific acceptance and broader release work remain separate. The Vite command without `CITY_LIBRARY_UI_RUNTIME=svelte` selects the legacy runtime.
 
 Set `CITY_LIBRARY_UI_PORT` and optionally `CITY_LIBRARY_UI_HOST` to change the listener. Vite requires the selected port to be free. Build the Svelte runtime with `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte`; `bun run preview:ui:svelte` serves the existing build.
 
@@ -27,7 +27,7 @@ The catalog discovers paired `experiments/<slug>/model.ts` and `ui.ts` files. Re
 
 Follow [model authoring](../../docs/development/model-authoring.md) for a real example. A headless `model.ts` exports metadata, canonical input descriptors and a factory. Its instance exposes explicit actions and detached observations. A separate `ui.ts` imports `defineUI` from the public repository UI entry and binds those operations to controls and views.
 
-Preserve accepted author syntax and use the [UI contract](../../docs/ui/README.md); proposed shorter syntax is not available until separately accepted and implemented. Shared infrastructure owns rendering and cleanup. Experiment files do not reach into host DOM or private Svelte components; the existing Taxi exception remains an open migration task.
+Preserve accepted author syntax and use the [UI contract](../../docs/ui/README.md); the readable setup-string and keyed-live forms are implemented and exercised through public examples in both hosts. Shared infrastructure owns rendering and cleanup. Experiment files do not reach into host DOM or private Svelte components; Taxi grouping uses ordinary public control groups, with no private host patch.
 
 ## Verification and context
 

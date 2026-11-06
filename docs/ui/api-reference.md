@@ -2,7 +2,7 @@
 
 ## Status
 
-This reference and the [API table](api-table.md) define the repository UI contract. The [readable-authoring slice](../development/ui-authoring-syntax.md) is frozen through public examples and is being implemented in both the legacy and Svelte adapters. Its runtime/browser acceptance is still open; see [PLAN](../../PLAN.md). Existing array declarations remain compatibility syntax. The forms below describe the accepted target for this slice, not a package release.
+This reference and the [API table](api-table.md) define the repository UI contract. The [readable-authoring slice](../development/ui-authoring-syntax.md) is implemented in both the legacy and Svelte adapters, with passing public examples and real-browser checks. Final review scope and remaining tasks are in [PLAN](../../PLAN.md). Existing array declarations remain compatibility syntax. The forms below describe the accepted target for this slice, not a package release.
 
 ## Principles
 

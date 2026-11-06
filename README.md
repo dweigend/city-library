@@ -6,7 +6,7 @@ The motivation is to make room for alternatives to familiar city-building patter
 
 The library uses ordinary TypeScript. Each capability can work independently, and applications choose how to visualize its results. Agent Loom is the modeling core within City Library.
 
-> **Work in progress.** The integration branch includes a headless library and 125 experiment entries toward a fixed 200-model selection. Code presence, scientific comparison and independent acceptance are separate milestones. The Svelte runtime is integrated but still undergoing acceptance; Taxi Cabs retains its legacy entry. No package is published. See [PLAN](PLAN.md) for current scope and [consolidation evidence](docs/development/consolidation-report.md) for recorded checks and limits.
+> **Work in progress.** The integration branch includes a headless library and 125 experiment entries toward a fixed 200-model selection. Code presence, scientific comparison and independent acceptance are separate milestones. Both UI hosts support the readable authoring contract, and all 125 entries now run without a model-specific legacy fallback. Final implementation reviews are tracked separately. No package is published. See [PLAN](PLAN.md) for current scope and [consolidation evidence](docs/development/consolidation-report.md) for recorded checks and limits.
 
 ## Run the Lab
 
