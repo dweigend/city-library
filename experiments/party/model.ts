@@ -1,7 +1,7 @@
 /** NetLogo Party (1997), Uri Wilensky, CC BY-NC-SA 3.0; see NOTICE.md. */
-import { Agent, Grid, Random, World, run } from "city-library";
-import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { Agent, Grid, Random, World, run } from 'city-library';
+import type { Definition, Inputs } from '../definition.ts';
+import { parameters, stepCount } from '../parameters.ts';
 export interface PartyParameters {
   seed: number;
   number: number;
@@ -10,19 +10,19 @@ export interface PartyParameters {
 }
 export const inputs: Inputs<PartyParameters> = {
   seed: {
-    kind: "number",
+    kind: 'number',
     default: 1,
     min: -2147483648,
     max: 4294967295,
     integer: true,
   },
-  number: { kind: "number", default: 70, min: 0, max: 300, integer: true },
-  numGroups: { kind: "number", default: 10, min: 5, max: 20, integer: true },
-  tolerance: { kind: "number", default: 25, min: 0, max: 99 },
+  number: { kind: 'number', default: 70, min: 0, max: 300, integer: true },
+  numGroups: { kind: 'number', default: 10, min: 5, max: 20, integer: true },
+  tolerance: { kind: 'number', default: 25, min: 0, max: 99 },
 };
 type Person = Agent<{
   who: number;
-  sex: "male" | "female";
+  sex: 'male' | 'female';
   group: number;
   happy: boolean;
 }>;
@@ -30,10 +30,10 @@ export function create(options: Partial<PartyParameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed }),
     world = World.add(
-      { x: 82, y: 111, boundary: { x: "wrap", y: "hard" } },
+      { x: 82, y: 111, boundary: { x: 'wrap', y: 'hard' } },
       { random },
     ),
-    grid = Grid.add({ x: 82, y: 111, boundary: { x: "wrap", y: "hard" } });
+    grid = Grid.add({ x: 82, y: 111, boundary: { x: 'wrap', y: 'hard' } });
   world.add(grid);
   const interval = Math.floor(82 / settings.numGroups);
   // Sorted by source x coordinate: indices are stable public group identities.
@@ -56,12 +56,12 @@ export function create(options: Partial<PartyParameters> = {}) {
   function spread() {
     for (const a of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      compatibility: 'legacy-shuffle',
     })) {
-      a.rotate({ towards: { x: a.x, y: a.y + (a.sex === "female" ? -1 : 1) } });
+      a.rotate({ towards: { x: a.x, y: a.y + (a.sex === 'female' ? -1 : 1) } });
       a.move(4);
       while (grid.agentsAt(grid.fieldAt(a)!).some((b) => b !== a)) {
-        const direction = a.sex === "female" ? -1 : 1;
+        const direction = a.sex === 'female' ? -1 : 1;
         if (Math.abs(a.y + 2 * direction) <= 55.5) a.move(1);
         else {
           a.move({ to: { x: a.x - 1, y: 0 } });
@@ -79,7 +79,7 @@ export function create(options: Partial<PartyParameters> = {}) {
   function groupsNow() {
     return sites.map((f, index) => {
       const group = people().filter((a) => a.group === index),
-        male = group.filter((a) => a.sex === "male").length;
+        male = group.filter((a) => a.sex === 'male').length;
       return Object.freeze({
         id: f.id,
         index,
@@ -110,7 +110,7 @@ export function create(options: Partial<PartyParameters> = {}) {
         {
           who,
           group,
-          sex: random.number() < 0.5 ? ("female" as const) : ("male" as const),
+          sex: random.number() < 0.5 ? ('female' as const) : ('male' as const),
           happy: false,
         },
         { position: { x: f.x, y: f.y } },
@@ -134,7 +134,7 @@ export function create(options: Partial<PartyParameters> = {}) {
           happiness();
           for (const a of random.sample(people(), {
             count: people().length,
-            compatibility: "legacy-shuffle",
+            compatibility: 'legacy-shuffle',
           }))
             if (!a.happy) {
               a.rotate({
@@ -142,18 +142,14 @@ export function create(options: Partial<PartyParameters> = {}) {
               });
               a.move(1);
             }
-          let malcontents = people().filter(
-            (a) => !sites.includes(grid.fieldAt(a)!),
-          );
+          let malcontents = people().filter((a) => !sites.includes(grid.fieldAt(a)!));
           while (malcontents.length) {
             for (const a of random.sample(malcontents, {
               count: malcontents.length,
-              compatibility: "legacy-shuffle",
+              compatibility: 'legacy-shuffle',
             }))
               a.move(1);
-            malcontents = people().filter(
-              (a) => !sites.includes(grid.fieldAt(a)!),
-            );
+            malcontents = people().filter((a) => !sites.includes(grid.fieldAt(a)!));
           }
           for (const a of people()) a.group = sites.indexOf(grid.fieldAt(a)!);
           spread();
@@ -161,52 +157,52 @@ export function create(options: Partial<PartyParameters> = {}) {
         record();
       }
     },
-    setParameters(values: Partial<Pick<PartyParameters, "tolerance">>) {
+    setParameters(values: Partial<Pick<PartyParameters, 'tolerance'>>) {
       if (
-        typeof values !== "object" ||
+        typeof values !== 'object' ||
         values === null ||
         ![Object.prototype, null].includes(Object.getPrototypeOf(values)) ||
         Reflect.ownKeys(values).some(
           (k) =>
-            k !== "tolerance" ||
-            !("value" in Object.getOwnPropertyDescriptor(values, k)!),
+            k !== 'tolerance' ||
+            !('value' in Object.getOwnPropertyDescriptor(values, k)!),
         )
       )
-        throw new TypeError("Supply only tolerance data.");
+        throw new TypeError('Supply only tolerance data.');
       settings = parameters(inputs, { ...settings, ...values });
       stopped = false;
     },
-    setGroups(groups: readonly (readonly ("male" | "female")[])[]) {
+    setGroups(groups: readonly (readonly ('male' | 'female')[])[]) {
       if (
         !Array.isArray(groups) ||
         Object.getPrototypeOf(groups) !== Array.prototype ||
         groups.length !== sites.length
       )
-        throw new RangeError("Supply one sex array per group.");
-      const copied: ("male" | "female")[][] = [];
+        throw new RangeError('Supply one sex array per group.');
+      const copied: ('male' | 'female')[][] = [];
       let count = 0;
       for (let i = 0; i < groups.length; i++) {
         const d = Object.getOwnPropertyDescriptor(groups, String(i));
         if (
           !d ||
-          !("value" in d) ||
+          !('value' in d) ||
           !Array.isArray(d.value) ||
           Object.getPrototypeOf(d.value) !== Array.prototype
         )
-          throw new TypeError("Groups must contain own array data.");
-        const row: ("male" | "female")[] = [];
+          throw new TypeError('Groups must contain own array data.');
+        const row: ('male' | 'female')[] = [];
         for (let j = 0; j < d.value.length; j++) {
           const entry = Object.getOwnPropertyDescriptor(d.value, String(j));
           if (
             !entry ||
-            !("value" in entry) ||
-            !["male", "female"].includes(entry.value)
+            !('value' in entry) ||
+            !['male', 'female'].includes(entry.value)
           )
-            throw new TypeError("Sex entries must be male or female data.");
-          row.push(entry.value as "male" | "female");
+            throw new TypeError('Sex entries must be male or female data.');
+          row.push(entry.value as 'male' | 'female');
         }
         count += row.length;
-        if (count > 300) throw new RangeError("At most300 people.");
+        if (count > 300) throw new RangeError('At most300 people.');
         copied.push(row);
       }
       for (const a of [...people()]) a.delete();
@@ -257,9 +253,9 @@ export function create(options: Partial<PartyParameters> = {}) {
   };
 }
 export const model = {
-  title: "Party",
+  title: 'Party',
   description:
-    "Tolerance and migration among social groups. Wilensky (1997), CC BY-NC-SA 3.0.",
+    'Tolerance and migration among social groups. Wilensky (1997), CC BY-NC-SA 3.0.',
   inputs,
   create,
 } satisfies Definition<PartyParameters, ReturnType<typeof create>>;

@@ -1,10 +1,10 @@
 /** NetLogo Ethnocentrism (2003), Uri Wilensky, CC BY-NC-SA 3.0; see NOTICE.md. */
-import { Agent, Grid, Random, World, run } from "city-library";
-import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { Agent, Grid, Random, World, run } from 'city-library';
+import type { Definition, Inputs } from '../definition.ts';
+import { parameters, stepCount } from '../parameters.ts';
 export interface EthnocentrismParameters {
   seed: number;
-  setup: "empty" | "full";
+  setup: 'empty' | 'full';
   immigrantsPerDay: number;
   initialPtr: number;
   costOfGiving: number;
@@ -16,33 +16,33 @@ export interface EthnocentrismParameters {
 }
 export const inputs: Inputs<EthnocentrismParameters> = {
   seed: {
-    kind: "number",
+    kind: 'number',
     default: 1,
     min: -2147483648,
     max: 4294967295,
     integer: true,
   },
-  setup: { kind: "choice", default: "empty", options: ["empty", "full"] },
+  setup: { kind: 'choice', default: 'empty', options: ['empty', 'full'] },
   immigrantsPerDay: {
-    kind: "number",
+    kind: 'number',
     default: 1,
     min: 0,
     max: 100,
     integer: true,
   },
-  initialPtr: { kind: "number", default: 0.12, min: 0, max: 1 },
-  costOfGiving: { kind: "number", default: 0.01, min: 0, max: 1 },
-  gainOfReceiving: { kind: "number", default: 0.03, min: 0, max: 1 },
-  mutationRate: { kind: "number", default: 0.005, min: 0, max: 1 },
-  deathRate: { kind: "number", default: 0.1, min: 0, max: 1 },
+  initialPtr: { kind: 'number', default: 0.12, min: 0, max: 1 },
+  costOfGiving: { kind: 'number', default: 0.01, min: 0, max: 1 },
+  gainOfReceiving: { kind: 'number', default: 0.03, min: 0, max: 1 },
+  mutationRate: { kind: 'number', default: 0.005, min: 0, max: 1 },
+  deathRate: { kind: 'number', default: 0.1, min: 0, max: 1 },
   immigrantChanceCooperateWithSame: {
-    kind: "number",
+    kind: 'number',
     default: 0.5,
     min: 0,
     max: 1,
   },
   immigrantChanceCooperateWithDifferent: {
-    kind: "number",
+    kind: 'number',
     default: 0.5,
     min: 0,
     max: 1,
@@ -66,12 +66,12 @@ interface Encounters {
 export function create(options: Partial<EthnocentrismParameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 51, y: 51, boundary: "wrap" }, { random }),
-    grid = Grid.add({ x: 51, y: 51, boundary: "wrap" });
+    world = World.add({ x: 51, y: 51, boundary: 'wrap' }, { random }),
+    grid = Grid.add({ x: 51, y: 51, boundary: 'wrap' });
   world.add(grid);
   const agents = () => world.agents as readonly Person[];
   const neighborhoods = new Map(
-    grid.fields.map((f) => [f, grid.neighbors(f, { neighborhood: "faces" })]),
+    grid.fields.map((f) => [f, grid.neighbors(f, { neighborhood: 'faces' })]),
   );
   let who = 0;
   const emptyStats = (): Encounters => ({
@@ -89,18 +89,14 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
   >[] = [];
   function genotypes() {
     return {
-      cc: agents().filter(
-        (a) => a.cooperateWithSame && a.cooperateWithDifferent,
-      ).length,
-      cd: agents().filter(
-        (a) => a.cooperateWithSame && !a.cooperateWithDifferent,
-      ).length,
-      dc: agents().filter(
-        (a) => !a.cooperateWithSame && a.cooperateWithDifferent,
-      ).length,
-      dd: agents().filter(
-        (a) => !a.cooperateWithSame && !a.cooperateWithDifferent,
-      ).length,
+      cc: agents().filter((a) => a.cooperateWithSame && a.cooperateWithDifferent)
+        .length,
+      cd: agents().filter((a) => a.cooperateWithSame && !a.cooperateWithDifferent)
+        .length,
+      dc: agents().filter((a) => !a.cooperateWithSame && a.cooperateWithDifferent)
+        .length,
+      dd: agents().filter((a) => !a.cooperateWithSame && !a.cooperateWithDifferent)
+        .length,
     };
   }
   const history: Readonly<{
@@ -148,12 +144,12 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
     if (full)
       for (const f of random.sample(grid.fields, {
         count: grid.fields.length,
-        compatibility: "legacy-shuffle",
+        compatibility: 'legacy-shuffle',
       }))
         immigrant(f);
     record();
   }
-  setup(settings.setup === "full");
+  setup(settings.setup === 'full');
   function ratios(s: Encounters) {
     return Object.freeze({
       meetOwnPercent: s.meetOwn / Math.max(1, s.meet),
@@ -177,14 +173,14 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
           for (const a of agents()) a.ptr = settings.initialPtr;
           for (const a of random.sample(agents(), {
             count: agents().length,
-            compatibility: "legacy-shuffle",
+            compatibility: 'legacy-shuffle',
           })) {
             const ns = neighborhoods
               .get(grid.fieldAt(a)!)!
               .flatMap((f) => grid.agentsAt(f) as readonly Person[]);
             for (const b of random.sample(ns, {
               count: ns.length,
-              compatibility: "legacy-shuffle",
+              compatibility: 'legacy-shuffle',
             })) {
               turn.meet++;
               cumulative.meet++;
@@ -214,7 +210,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
           }
           const parents = random.sample(agents(), {
             count: agents().length,
-            compatibility: "legacy-shuffle",
+            compatibility: 'legacy-shuffle',
           });
           for (const a of parents)
             if (random.number() < a.ptr) {
@@ -239,7 +235,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
             }
           for (const a of random.sample(agents(), {
             count: agents().length,
-            compatibility: "legacy-shuffle",
+            compatibility: 'legacy-shuffle',
           }))
             if (random.number() < settings.deathRate) a.delete();
           last100.push(Object.freeze({ ...turn, ...genotypes() }));
@@ -254,30 +250,28 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
     setupFull() {
       setup(true);
     },
-    setParameters(
-      values: Partial<Omit<EthnocentrismParameters, "seed" | "setup">>,
-    ) {
+    setParameters(values: Partial<Omit<EthnocentrismParameters, 'seed' | 'setup'>>) {
       if (
-        typeof values !== "object" ||
+        typeof values !== 'object' ||
         values === null ||
         ![Object.prototype, null].includes(Object.getPrototypeOf(values)) ||
         Reflect.ownKeys(values).some(
           (k) =>
-            typeof k !== "string" ||
+            typeof k !== 'string' ||
             ![
-              "immigrantsPerDay",
-              "initialPtr",
-              "costOfGiving",
-              "gainOfReceiving",
-              "mutationRate",
-              "deathRate",
-              "immigrantChanceCooperateWithSame",
-              "immigrantChanceCooperateWithDifferent",
+              'immigrantsPerDay',
+              'initialPtr',
+              'costOfGiving',
+              'gainOfReceiving',
+              'mutationRate',
+              'deathRate',
+              'immigrantChanceCooperateWithSame',
+              'immigrantChanceCooperateWithDifferent',
             ].includes(k) ||
-            !("value" in Object.getOwnPropertyDescriptor(values, k)!),
+            !('value' in Object.getOwnPropertyDescriptor(values, k)!),
         )
       )
-        throw new TypeError("Supply only live parameter data.");
+        throw new TypeError('Supply only live parameter data.');
       settings = parameters(inputs, { ...settings, ...values });
     },
     read() {
@@ -343,9 +337,9 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
   };
 }
 export const model = {
-  title: "Ethnocentrism",
+  title: 'Ethnocentrism',
   description:
-    "Local cooperation, immigration, inheritance and mutation. Wilensky (2003), CC BY-NC-SA 3.0.",
+    'Local cooperation, immigration, inheritance and mutation. Wilensky (2003), CC BY-NC-SA 3.0.',
   inputs,
   create,
 } satisfies Definition<EthnocentrismParameters, ReturnType<typeof create>>;
