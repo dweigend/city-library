@@ -1,5 +1,7 @@
 # Graph generators: eleven-kind contract and five example proposals
 
+Historical proposal. The coordinator subsequently resolved U1–U9 in [the accepted implementation contract](graph-generators-contract.md) and froze the same five scripts before runtime. Earlier provisional statements below preserve their preparation context; independent approval remains pending.
+
 Status: **proposal only**, 6 November 2026. This is preparation for the existing public `graph.generate` contract, a concrete dependency of selected NW General Examples. Exactly five complete asserted public scripts cover all eleven existing kinds. No generator runtime, public export, configuration, frozen checksum, Git state, delivery ledger or UI is changed. The parent owns final decisions, acceptance/freeze and later scoped implementation. Analysis phase006ccdb is separate and untouched.
 
 ## Binding closure and current implementation evidence

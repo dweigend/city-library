@@ -33,6 +33,16 @@ assert.throws(() => failing.generate({ kind: "geometric", nodes: input, radius: 
   failing.nodes.add({ index: 9, position: { x: 0, y: 0 } }); return node.position;
 } }));
 assert.equal(failing.nodes.size, 3); assert.equal(failing.edges.size, 0);
+const reentrant = Graph.add<{ index: number }>({ parallel: true });
+const reentrantNodes = [0, 1, 2].map(index => reentrant.nodes.add({ index }));
+const positionFailure = new Error("batch preflight failed");
+assert.throws(() => reentrant.generate({ kind: "geometric", nodes: reentrantNodes, radius: 1, position: (node: { index: number }) => {
+  assert.equal(reentrant.distances({ from: node }).size, 1); // Reads see the unchanged graph during planning.
+  if (node.index === 2) throw positionFailure;
+  return { x: node.index, y: 0 };
+} }), error => error === positionFailure);
+assert.equal(reentrant.edges.size, 0);
+assert.deepEqual(reentrant.generate({ kind: "path", nodes: reentrantNodes }).map((edge: Edge<{ index: number }>) => edge.key), ["0", "1"]); // Rejected batches consume no per-graph automatic keys.
 for (const value of [NaN, Infinity]) assert.throws(() => failing.generate({ kind: "geometric", nodes: input, radius: 1, position: () => ({ x: value, y: 0 }) }));
 assert.throws(() => failing.generate({ kind: "geometric", nodes: input, radius: 1, position: () => Promise.resolve({ x: 0, y: 0 }) as unknown as Position }));
 assert.throws(() => failing.generate({ kind: "geometric", nodes: input, radius: 1, position: (node: Point) => node.index === 0 ? { x: 0, y: 0 } : { x: 0, y: 0, z: 0 } }));
