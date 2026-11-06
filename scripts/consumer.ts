@@ -120,7 +120,10 @@ function generatorTypeContract(){const graph=Graph.add<{name:string}>();const a=
 result.push(result[0]);return result;}void generatorTypeContract;
 `);
   await command(["bun", "consumer.ts"], directory);
-  await writeFile(join(directory, "consumer.mjs"), await Bun.file(join(directory, "consumer.ts")).text());
+  // Preserve the TypeScript consumer contract while executing plain JavaScript in Node.
+  const javascript = new Bun.Transpiler({ loader: "ts", target: "node" })
+    .transformSync(await Bun.file(join(directory, "consumer.ts")).text());
+  await writeFile(join(directory, "consumer.mjs"), javascript);
   await command(["node", "consumer.mjs"], directory);
   await writeFile(join(directory, "tsconfig.json"), JSON.stringify({ compilerOptions: { strict: true, target: "ESNext", module: "Preserve", moduleResolution: "bundler", noEmit: true, types: [], lib: ["ESNext"] }, include: ["consumer.ts", "summary-types.ts", "generator-types.ts"] }));
   await command([resolve("node_modules/.bin/tsc"), "-p", "tsconfig.json"], directory);
