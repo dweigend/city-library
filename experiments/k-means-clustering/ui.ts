@@ -3,7 +3,6 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     { field: "seed" },
-    { field: "numClusters", label: "Generated clusters" },
     { field: "numDataPoints", label: "Requested points" },
   ],
   source: {
@@ -12,6 +11,12 @@ export const ui = defineUI(model, {
       "Original NetLogo model \u00B7 Hjorth, Head and Wilensky \u00B7 CC BY-NC-SA 3.0",
   },
   live: [
+    {
+      field: "numClusters",
+      label: "Generated clusters / plot multiplier",
+      value: (s) => s.parameters.numClusters,
+      set: (m, v) => m.setParameters({ numClusters: Number(v) }),
+    },
     {
       field: "numCentroids",
       label: "Centroids on reset",

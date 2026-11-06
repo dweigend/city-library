@@ -27,8 +27,8 @@ export const inputs: Inputs<FactoryParameters> = {
     max: 20,
     integer: true,
   },
-  fullCharge: { kind: "number", default: 350, min: 0, max: 1000 },
-  justInTimeSupplyRobot: { kind: "number", default: 150, min: 0, max: 300 },
+  fullCharge: { kind: "number", default: 350, min: 0, max: 1000, integer: true },
+  justInTimeSupplyRobot: { kind: "number", default: 150, min: 0, max: 300, integer: true },
   showAgentName: { kind: "boolean", default: true },
   makeTrails: { kind: "boolean", default: true },
 };
