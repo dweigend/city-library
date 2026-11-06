@@ -1,5 +1,6 @@
 # B17 architecture remediation
 
+Current Mandelbrot boundary handling is superseded by [the public pure-geometry follow-up](selected-probability-geometry-remediation.md). The move/check/restore discussion below records the prior committed runtime; its evidence remains preserved.
 Status: in progress after integration-coordinator findings. This is author remediation, not independent Argon review. The ten rows are not yet integrated or finally accepted. The original report and 20 paired images describe implementation ea2cdd6; they do not verify the corrected architecture/runtime.
 
 ## Findings and ownership

@@ -1,5 +1,6 @@
 # B17 final-five canonical-state remediation
 
+Current Mandelbrot boundary handling is superseded by [the public pure-geometry follow-up](selected-probability-geometry-remediation.md). The move/check/restore discussion below records the prior committed runtime; its evidence remains preserved.
 Date: 2026-11-06. This record supersedes the ownership and implementation descriptions in `selected-probability-last-contract.md` for the five models below. The original contract/evidence remains retained as historical evidence. Source XML, notices, exact selected identities, frozen examples, source phase rules and scientific dossiers are unchanged. No independent approval is claimed. Fresh browser evidence belongs to the coordinator.
 
 ## Canonical state and public composition
