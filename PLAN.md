@@ -4,7 +4,7 @@ Updated: 5 November 2026. Status: **A1, bounded A2a and the A5a non-spatial Grap
 
 ## Reading order and ownership
 
-[README.md](README.md) introduces the product. This plan owns work areas, priorities, deliverables, and acceptance gates. [Design decisions](docs/DESIGN.md) owns current boundaries and authoring conventions. [AGENTS.md](AGENTS.md) contains stable working instructions.
+[README.md](README.md) introduces the product. This plan owns work areas, priorities, deliverables, and acceptance gates. [System architecture](docs/ARCHITECTURE.md) owns current boundaries and authoring conventions. [UI design](docs/DESIGN.md) owns UI rules. [AGENTS.md](AGENTS.md) contains stable working instructions.
 
 ## Six work areas
 
@@ -22,6 +22,8 @@ All entries are planned. P0 = coherent preparation; P1 = first standalone capabi
 | C06 | Data & Experiments | Parameters/input validation, model descriptions, metrics/statistics, bounded History, experiment series, one save/load area, versioned schemas/codecs and optional data targets | Input and loading are explicit writes; recording owns its buffer. Model time/identity remain C01's responsibility. A selected measurement record does not promise resumable model state. No UI definitions. | Validated model parameter, side-effect-free measurement and selected-data roundtrip; then two isolated experiment runs. Complete continuation requires its own state/behavior contract. | P2 → P3 |
 
 ## Active UI refactor and reference-model validation
+
+The user-defined [binding UI system rules](docs/DESIGN.md#binding-ui-system-rules) govern the proposed Svelte/shadcn-svelte migration. Rules are recorded; implementation and target acceptance remain open. Before runtime work, freeze simple public `ui.ts` authoring examples under the existing example-first gate. Each UI slice must demonstrate module encapsulation, shared components/tokens, no embedded CSS, `app.css` within 100 physical lines, and KISS/YAGNI scope. Acceptance requires shell checks plus real-browser interactions, desktop/narrow screenshots and an independent subagent review of those screenshots, with findings resolved and affected checks repeated. Preserve existing experiments and headless contracts; do not claim migration or review completion from this documentation update.
 
 The authorized [NetLogo Web catalog experiment](docs/development/netlogo-web-catalog-plan.md), tracked in [Epic #1](https://github.com/dweigend/city-library/issues/1), now targets **exactly 200 broadly selected models** from the 467 selectable entries. The user's 2026-11-05 scope update supersedes the original all-550 goal; the other 350 remain inventoried outside current scope. The root chat supplies the binding selection, including the four baseline ports and Segregation. It runs in a dedicated bound worktree from dfd0584. [Segregation](docs/development/segregation-contract.md) is the first new vertical slice; five asserted scripts preceded runtime. Catalog capture, selection, row-level audit, implementation, target verification and independent approval are separate states. Completion requires all selected 200 implemented and verified, without dropping complex entries.
 
@@ -80,7 +82,7 @@ The user requested substantial library progress and a real simulation with netwo
 
 ### Prepared domain layout
 
-The [domain layout and extension rules](docs/DESIGN.md#binding-domain-layout-and-extension-rules) define the source boundaries. All listed directories exist; empty leaf directories contain `.gitkeep`. Proposed TypeScript files are added only with working capabilities. The prepared layout itself delivered no runtime. A1 now adds working Agent/World/Random modules, explicit root exports, build/check commands and behavior tests within those boundaries; later domains remain prepared directories.
+The [domain layout and extension rules](docs/ARCHITECTURE.md#binding-domain-layout-and-extension-rules) define the source boundaries. All listed directories exist; empty leaf directories contain `.gitkeep`. Proposed TypeScript files are added only with working capabilities. The prepared layout itself delivered no runtime. A1 now adds working Agent/World/Random modules, explicit root exports, build/check commands and behavior tests within those boundaries; later domains remain prepared directories.
 
 Hexagonal topology remains a future extension. Phase one specifies square/cubic grids.
 

@@ -23,7 +23,8 @@ This is the development sequence; A1 establishes the first headless agent subset
 - [Agent Loom specification](docs/agent-loom/README.md): the general modeling core and current development focus.
 - [API inventory](docs/agent-loom/api-table.md): all 309 planned operation/type entries.
 - [API reference](docs/agent-loom/api-reference.md): contracts and usage examples.
-- [Architecture](docs/DESIGN.md): module boundaries, state ownership and extension rules.
+- [Architecture](docs/ARCHITECTURE.md): module boundaries, state ownership and extension rules.
+- [UI design](docs/DESIGN.md): component, styling and UI verification rules.
 - [Work plan](PLAN.md): delivery sequence and acceptance criteria.
 
 ## How the pieces fit
