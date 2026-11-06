@@ -1,19 +1,7 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: (
-    [
-      "seed",
-      "number",
-      "birthThreshold",
-      "grassGrowRate",
-      "grassEnergy",
-      "weedsGrowRate",
-      "weedEnergy",
-    ] as const
-  ).map((field) => ({
-    field,
-  })),
+  setup: [{ field: "seed" }, { field: "number" }],
   live: (
     [
       "birthThreshold",

@@ -1,20 +1,7 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    {
-      field: "seed",
-    },
-    {
-      field: "carryingCapacity",
-    },
-    {
-      field: "redFertility",
-    },
-    {
-      field: "blueFertility",
-    },
-  ],
+  setup: [{ field: "seed" }],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/SimpleBirthRates",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",

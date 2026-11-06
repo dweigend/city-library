@@ -11,9 +11,6 @@ export const ui = defineUI(model, {
     {
       field: "numShepherds",
     },
-    {
-      field: "sheepSpeed",
-    },
   ],
   live: [
     {
