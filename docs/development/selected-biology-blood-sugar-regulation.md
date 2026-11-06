@@ -21,6 +21,8 @@ Configured defaults: `set metabolic-rate 100.0 set glucose-sensitivity 0.75 set 
 
 Actual Run/Pause and Setup-as-reset observations: `{"paused": {"success": true, "value": 3}, "stable": {"success": true, "value": 3}, "reset": {"success": true, "value": [0, 4356, 363, 363, 124039, 0]}, "errors": [], "canvasReadback": {"width": 858, "height": 858, "nonzero": 730921}}`. Successful equal paused/stable tick reporters establish bounded stable pause; Reset may randomize again without reseeding. Additional source actions/boundary/error probes are versioned by slug in [raw results](selected-biology-evidence/browser-observations.json).
 
+Native terminal probe `setup set total-glucose 0 go` opened the confirm “The body ran out of glucose.” After accepting it through preview_dialog, ticks remained0 and total-glucose0. The initial evaluate timeout was the blocking native confirm, not a model exception. [Exact observation](selected-biology-evidence/blood-original-terminal.json).
+
 ## Target blocked
 
 Actual target Setup fails with `Unknown option: mean` because base Random rejects the pending Poisson/exponential options. No target tick or initialized state is claimed. [Source-backed public dependency request](selected-biology-random-gap.md). The parent is preparing/finalizing this independent shared capability phase.
