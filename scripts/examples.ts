@@ -1,4 +1,5 @@
 const phases = {
+  "selected-cellular": ["01-smoothlife-normalized-disk-and-annulus", "02-hex-single-activation-and-stop", "03-moving-vants-and-turing-head", "04-elementary-and-continuous-rows", "05-refractory-cycle-and-stochastic-extremes"],
   "ui-segments": ["01-canonical-agent-movement", "02-history-survives-agent-deletion", "03-source-palette-and-pixel-widths", "04-cells-segments-and-agents", "05-optional-empty-and-zero-width"],
   "selected-urban-remaining": ["01-structure-one-impulse-and-noise", "02-structure-two-sticky-activation", "03-sprawl-conversion-and-cached-threshold", "04-economic-oldest-removal-and-median", "05-defaults-isolation-and-preflight"],
   "selected-probability": ["01-birthdays", "02-galton-box", "03-binomial-rabbits", "04-three-doors", "05-stochastic-patchwork"],
