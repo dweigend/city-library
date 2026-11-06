@@ -36,4 +36,4 @@ for line in (R/'docs/development/selected-social-example-SHA256SUMS').read_text(
 paths=subprocess.check_output(['git','diff','--name-only','115e640'],cwd=R,text=True).splitlines()
 for p in paths:
  assert p.startswith(tuple('experiments/'+s+'/' for s in slugs)) or p.startswith(('examples/selected-social/','tests/selected-social','docs/development/selected-social')),p
-print(f'PASS: {len(rows)} exact Web identities/sources, five frozen scripts, ten paired original/target records, {len(images)} final PNGs, current served chunk reconciliation and owned diff.')
+print(f'PASS: {len(rows)} exact Web identities/sources, five frozen scripts, ten pre-format paired original/target records, {len(images)} pre-format PNGs, captured pre-format served chunk reconciliation and owned diff.')

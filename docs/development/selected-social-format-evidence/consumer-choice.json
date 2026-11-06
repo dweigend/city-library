@@ -1,0 +1,95 @@
+{
+  "slug": "consumer-choice",
+  "codeCommit": "c8700ec",
+  "marker": "selected-social-b02:consumer-choice:b8973c79622215eee5fb4aa29abf5c92cd80480b1d1c81c7d5c8d5b569d15236",
+  "sourceSHA256": "b8973c79622215eee5fb4aa29abf5c92cd80480b1d1c81c7d5c8d5b569d15236",
+  "sourceHashBasis": "Unchanged pinned source.nlogox; fresh target chunk marker checked. Native session was not re-run for a formatting-only change.",
+  "buildVersion": "1793962848757",
+  "loadedModelChunk": "http://localhost:3112/chunks/ui-qxka25yk.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-qxka25yk.js",
+      "sha256": "7dd0130cd40e517f2d8c7e38ac5deb362b621e8273b21b9ac332a2caae9bbb56"
+    }
+  ],
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "setup": {
+    "tick": 0,
+    "parameters": {
+      "seed": 1,
+      "numConsumers": 100,
+      "avgConnections": 5,
+      "initialOrangePercent": 50,
+      "normInfluence": 0.15,
+      "informationExchange": 0.05,
+      "exploration": 0.01,
+      "qualityOrange": 0.5,
+      "qualityBlue": 0.5
+    },
+    "monitors": {
+      "Tick": "0",
+      "Orange": "50",
+      "Blue": "50",
+      "Clustering": "0.432"
+    },
+    "status": "Model initialized.",
+    "raster": [
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 1
+      },
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 1
+      },
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 147
+      }
+    ]
+  },
+  "errors": [],
+  "step": {
+    "tick": 1,
+    "monitors": {
+      "Tick": "1",
+      "Orange": "49",
+      "Blue": "51",
+      "Clustering": "0.437"
+    },
+    "status": "Steps completed.",
+    "raster": [
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 1
+      },
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 1
+      },
+      {
+        "width": 2140,
+        "height": 1020,
+        "sampledColors": 148
+      }
+    ],
+    "errors": []
+  },
+  "images": {
+    "setup": "consumer-choice-setup.png",
+    "step": "consumer-choice-step.png"
+  }
+}
