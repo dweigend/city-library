@@ -10,6 +10,8 @@ report=['# Selected economics exact served source audit','',f"Inventory Galapago
 evidence=[]
 for slug in slugs:
  row=next(r for r in inv['rows'] if r.get('scope',{}).get('experimentSlug')==slug)
+ selected=next(r for r in selection['models'] if r['slug']==slug)
+ assert selected['catalogPath']==row['id'] and selected['deliveryBatch']=='B03'
  data=(Path('docs/research/netlogo-web/evidence/social-urban')/(slug+'.nlogox')).read_bytes()
  sha=hashlib.sha256(data).hexdigest(); blob=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
  assert sha==row['sha256'] and len(data)==row['bytes'] and blob==tree[row['catalogKey']+'.nlogox']['sha']==row['galapagos']['blobSha1']
