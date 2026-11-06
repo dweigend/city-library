@@ -61,15 +61,15 @@ const signedGraph=Graph.add({edgeState:{weight:2}});
 const signedA=signedGraph.nodes.add({}),signedB=signedGraph.nodes.add({}),signedC=signedGraph.nodes.add({});
 signedGraph.edges.add({from:signedA,to:signedB,directed:true});signedGraph.edges.add({from:signedB,to:signedC,directed:true,state:{weight:-3}});
 if(signedGraph.distances({from:signedA,cost:edge=>edge.weight,algorithm:'bellman-ford'}).get(signedC)!==-1)throw Error('packed signed distance mismatch');
-const preciseGraph=Graph.add<object,{weight:number}>({edgeState:{weight:1}});
+const preciseGraph=Graph.add({edgeState:{weight:1}});
 const preciseNodes=Array.from({length:4},()=>preciseGraph.nodes.add({}));
-preciseGraph.edges.add({from:preciseNodes[0]!,to:preciseNodes[1]!,directed:true,state:{weight:1e16}});
-preciseGraph.edges.add({from:preciseNodes[1]!,to:preciseNodes[2]!,directed:true});
-preciseGraph.edges.add({from:preciseNodes[2]!,to:preciseNodes[3]!,directed:true});
-if(preciseGraph.distances({from:preciseNodes[0]!,cost:edge=>edge.weight}).get(preciseNodes[3]!)!==1e16+2)throw Error('packed exact distance mismatch');
-preciseGraph.edges.add({from:preciseNodes[2]!,to:preciseNodes[1]!,directed:true,state:{weight:-2}});
+preciseGraph.edges.add({from:preciseNodes[0],to:preciseNodes[1],directed:true,state:{weight:1e16}});
+preciseGraph.edges.add({from:preciseNodes[1],to:preciseNodes[2],directed:true});
+preciseGraph.edges.add({from:preciseNodes[2],to:preciseNodes[3],directed:true});
+if(preciseGraph.distances({from:preciseNodes[0],cost:edge=>edge.weight}).get(preciseNodes[3])!==1e16+2)throw Error('packed exact distance mismatch');
+preciseGraph.edges.add({from:preciseNodes[2],to:preciseNodes[1],directed:true,state:{weight:-2}});
 let preciseCycleRejected=false;
-try{preciseGraph.distances({from:preciseNodes[0]!,cost:edge=>edge.weight,algorithm:'bellman-ford'});}catch(error){if(error instanceof RangeError)preciseCycleRejected=true;else throw error;}
+try{preciseGraph.distances({from:preciseNodes[0],cost:edge=>edge.weight,algorithm:'bellman-ford'});}catch(error){if(error instanceof RangeError)preciseCycleRejected=true;else throw error;}
 if(!preciseCycleRejected)throw Error('packed hidden negative cycle not rejected');
 `, { flag: "a" });
   await writeFile(join(directory, "summary-types.ts"), `import {stats,type Summary} from 'city-library';

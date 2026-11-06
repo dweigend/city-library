@@ -801,33 +801,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/consumer-choice/model.ts",
+            "experiments/consumer-choice/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/consumer-choice-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/consumer-choice-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -840,7 +870,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Rebellion",
@@ -854,33 +887,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/rebellion/model.ts",
+            "experiments/rebellion/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/rebellion-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/rebellion-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -893,7 +956,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Language Change",
@@ -907,33 +973,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/language-change/model.ts",
+            "experiments/language-change/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/language-change-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/language-change-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -946,7 +1042,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Party",
@@ -960,33 +1059,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/party/model.ts",
+            "experiments/party/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/party-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/party-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -999,7 +1128,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Ethnocentrism",
@@ -1013,33 +1145,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/ethnocentrism/model.ts",
+            "experiments/ethnocentrism/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/ethnocentrism-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/ethnocentrism-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -1052,7 +1214,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Minority Game",
@@ -1066,33 +1231,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/minority-game/model.ts",
+            "experiments/minority-game/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/minority-game-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/minority-game-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -1105,7 +1300,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Rumor Mill",
@@ -1119,33 +1317,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/rumor-mill/model.ts",
+            "experiments/rumor-mill/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/rumor-mill-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/rumor-mill-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -1158,7 +1386,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Philosophy/Signaling Game",
@@ -1172,33 +1403,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/signaling-game/model.ts",
+            "experiments/signaling-game/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/signaling-game-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/signaling-game-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -1211,7 +1472,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Psychology/Piaget-Vygotsky Game",
@@ -1225,33 +1489,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/piaget-vygotsky-game/model.ts",
+            "experiments/piaget-vygotsky-game/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/piaget-vygotsky-game-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/piaget-vygotsky-game-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -1264,7 +1558,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "IABM Textbook/chapter 2/Heroes and Cowards",
@@ -1278,33 +1575,63 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-source-audit.md",
+            "docs/development/selected-social-sources.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-contract.md",
+            "docs/development/selected-social-example-SHA256SUMS",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/heroes-and-cowards/model.ts",
+            "experiments/heroes-and-cowards/ui.ts",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "tests/selected-social-first.test.ts",
+            "tests/selected-social-last.test.ts",
+            "docs/development/selected-social-evidence/frozen-examples.log",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/heroes-and-cowards-target.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-social-report.md",
+            "docs/development/selected-social-evidence/heroes-and-cowards-original.json",
+            "docs/development/selected-social-integration.md"
+          ],
+          "basis": "Exact owned final author payload through eaa698a; actual source/target Chromium plus root source/identity/chunk/hash and focused23/4521 checks. Formatting-only author followup remains separate."
         },
         "research-verified": {
           "done": true,
@@ -1317,7 +1644,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Independent Argon/high approval pending quota-blocked task8194e842.",
+        "Readable multiline formatting and fresh final-code browser supplement requested; current executed author payload retained."
+      ]
     },
     {
       "path": "Sample Models/Social Science/Economics/Fruit Wars",
@@ -6412,12 +6742,12 @@
           "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
-          "done": false,
+          "done": true,
           "evidence": [
             "docs/development/selected-materials-browser.md",
-            "docs/development/selected-materials-integration.md"
+            "docs/development/materials-canvas-diagnosis.md"
           ],
-          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
+          "basis": "Original/target controls and paired screenshots plus fresh ordinary Chromium theme/viewport captures before readback; historical alleged blank images reconciled by exact PNG hashes/content/scroll."
         },
         "reviewed": {
           "done": false,
@@ -6443,8 +6773,7 @@
         }
       },
       "blockers": [
-        "Independent Argon/high approval pending quota-blocked task8194e842.",
-        "Theme/viewport canvas capture anomaly unresolved; normal and readback artifacts retained, visual acceptance pending diagnosis."
+        "Independent Argon/high approval pending quota-blocked task8194e842."
       ]
     },
     {
@@ -6577,12 +6906,12 @@
           "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
-          "done": false,
+          "done": true,
           "evidence": [
             "docs/development/selected-materials-browser.md",
-            "docs/development/selected-materials-integration.md"
+            "docs/development/materials-canvas-diagnosis.md"
           ],
-          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
+          "basis": "Original/target controls and paired screenshots plus fresh ordinary Chromium theme/viewport captures before readback; historical alleged blank images reconciled by exact PNG hashes/content/scroll."
         },
         "reviewed": {
           "done": false,
@@ -6608,8 +6937,7 @@
         }
       },
       "blockers": [
-        "Independent Argon/high approval pending quota-blocked task8194e842.",
-        "Theme/viewport canvas capture anomaly unresolved; normal and readback artifacts retained, visual acceptance pending diagnosis."
+        "Independent Argon/high approval pending quota-blocked task8194e842."
       ]
     },
     {
@@ -6660,12 +6988,12 @@
           "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
-          "done": false,
+          "done": true,
           "evidence": [
             "docs/development/selected-materials-browser.md",
-            "docs/development/selected-materials-integration.md"
+            "docs/development/materials-canvas-diagnosis.md"
           ],
-          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
+          "basis": "Original/target controls and paired screenshots plus fresh ordinary Chromium theme/viewport captures before readback; historical alleged blank images reconciled by exact PNG hashes/content/scroll."
         },
         "reviewed": {
           "done": false,
@@ -6691,8 +7019,7 @@
         }
       },
       "blockers": [
-        "Independent Argon/high approval pending quota-blocked task8194e842.",
-        "Theme/viewport canvas capture anomaly unresolved; normal and readback artifacts retained, visual acceptance pending diagnosis."
+        "Independent Argon/high approval pending quota-blocked task8194e842."
       ]
     },
     {
@@ -6743,12 +7070,12 @@
           "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
         },
         "browser-verified": {
-          "done": false,
+          "done": true,
           "evidence": [
             "docs/development/selected-materials-browser.md",
-            "docs/development/selected-materials-integration.md"
+            "docs/development/materials-canvas-diagnosis.md"
           ],
-          "basis": "Integrated exact owned B11 payload; actual author browser runs and root hash/source/focused checks. Full phase example gate remains open pending single source-counter correction."
+          "basis": "Original/target controls and paired screenshots plus fresh ordinary Chromium theme/viewport captures before readback; historical alleged blank images reconciled by exact PNG hashes/content/scroll."
         },
         "reviewed": {
           "done": false,
@@ -6775,7 +7102,6 @@
       },
       "blockers": [
         "Independent Argon/high approval pending quota-blocked task8194e842.",
-        "Theme/viewport canvas capture anomaly unresolved; normal and readback artifacts retained, visual acceptance pending diagnosis.",
         "Frozen example04 asserts numFrozen1 but actual source fixture0; exact one-line correction awaits explicit user agreement under PLAN."
       ]
     },

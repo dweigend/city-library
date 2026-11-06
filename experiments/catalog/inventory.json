@@ -6243,7 +6243,7 @@
         "implementation": "implemented",
         "sourceAudit": "audited",
         "headlessVerification": "verified",
-        "browserVerification": "pending-canvas-capture-diagnosis",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -6994,7 +6994,7 @@
         "implementation": "implemented",
         "sourceAudit": "audited",
         "headlessVerification": "verified",
-        "browserVerification": "pending-canvas-capture-diagnosis",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -7396,7 +7396,7 @@
         "implementation": "implemented",
         "sourceAudit": "audited",
         "headlessVerification": "verified",
-        "browserVerification": "pending-canvas-capture-diagnosis",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -7801,7 +7801,7 @@
         "implementation": "implemented",
         "sourceAudit": "audited",
         "headlessVerification": "pending-example-correction",
-        "browserVerification": "pending-canvas-capture-diagnosis",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -16532,11 +16532,11 @@
       "infoSha256": "15e8e9ced07fe11d968375d459af419d8a83c22c16866ef949b22bbf3f2e23ee",
       "codeSha256": "16dd599b4107b498ee5ed6d029f3b34d5f950a16201e90da9d98bdc25b8fc9ed",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/signaling-game",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -27782,11 +27782,11 @@
       "infoSha256": "75ebace436c2adb82e8125926457cb3c44f3e6b14145819b59b6c25b4c76823e",
       "codeSha256": "4113ec6e478620c91aa7d90d8184eee3d6c6988944c5aa034bea626d01875a26",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/piaget-vygotsky-game",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -28463,11 +28463,11 @@
       "infoSha256": "37ae578ff9a4382e414ec3b4a48b4cfe6775082fce75bb15d62e6ae449057d63",
       "codeSha256": "c0de201b71e09ff2c6c508d0910c59e6465d1cf3e89b69768c2dda28a240c055",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/consumer-choice",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -28582,11 +28582,11 @@
       "infoSha256": "a11bd472059c52bd3ccaf50b6b02e99337647e5fbb2597a162be338646de9d49",
       "codeSha256": "1eb5d5b0de30422a8a5f92ae25f78704ba08501765f2efe93a969a45214add03",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/rebellion",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -28849,11 +28849,11 @@
       "infoSha256": "3df8b07b34b8fa671ee8ed902c58492177dc773c177d8239f1388f71392c5628",
       "codeSha256": "3d0d000a7e2cea9238358e73f305a1d93b1cc644a6e4c317366205600154890e",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/language-change",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -28969,11 +28969,11 @@
       "infoSha256": "8082b7634efb58d95197213240997fcfded6f6f5df295bbc38e1760f2d98f8a3",
       "codeSha256": "bf1d1d9f6f7177a20b0507da28f62e6931eca99d49e91bb17b083a5bfd83682e",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/party",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -29495,11 +29495,11 @@
       "infoSha256": "89e9db00d8a1f26e0ec4ab72c40fcc3e819d9dc2f9f6b518c72246c510459ce9",
       "codeSha256": "6023f4971e0eee24ba902c9226ed81541517542b85942397afcf6c4b0f61aa43",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/ethnocentrism",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
@@ -29857,11 +29857,11 @@
       "infoSha256": "c76862d2057b6e9842bc640c49c02f5eb5130d4870b019eba0822ad3acd98c79",
       "codeSha256": "a30ddbaf67a351d0b982f4b369d48db59a968ee077f3d718d26be65dfc429971",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/minority-game",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -30707,11 +30707,11 @@
       "infoSha256": "3acdc1d9a811404e7547f53af45d2e8cd856a2c2587ac7e3a061b2615cf7adb9",
       "codeSha256": "c8bddbbcd4b919365a26bb2682d73668eedc2ddff19b87bf84e4041609b7dc5e",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/rumor-mill",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [
@@ -45682,11 +45682,11 @@
       "infoSha256": "b9cd8d288484fddf3281a81878f88263da5a09dcb83ab37292678e7d23deaf0e",
       "codeSha256": "75a42dd1842e7e6f9fc10d41e3e9444ca640a33bbfd9995bf8fd1278e4adc8e6",
       "delivery": {
-        "experiment": null,
-        "implementation": "open",
-        "sourceAudit": "pending",
-        "headlessVerification": "pending-catalog-acceptance",
-        "browserVerification": "pending-catalog-acceptance",
+        "experiment": "experiments/heroes-and-cowards",
+        "implementation": "implemented",
+        "sourceAudit": "audited",
+        "headlessVerification": "verified",
+        "browserVerification": "verified",
         "independentApproval": "pending"
       },
       "blockers": [],
