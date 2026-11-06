@@ -1294,6 +1294,486 @@
   ],
   "target": [
     {
+      "slug": "blood-sugar-regulation",
+      "steps": 10,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "Blood glucose",
+            "4356"
+          ],
+          [
+            "Insulin",
+            "363"
+          ],
+          [
+            "Glucagon",
+            "363"
+          ],
+          [
+            "Stored glucose",
+            "118691"
+          ],
+          [
+            "Meal time",
+            "0"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "live-metabolicRate",
+            "value": "100"
+          },
+          {
+            "name": "live-glucoseSensitivity",
+            "value": "0.75"
+          },
+          {
+            "name": "live-insulinSensitivity",
+            "value": "0.75"
+          },
+          {
+            "name": "live-glucagonSensitivity",
+            "value": "0.75"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Blood glucose",
+            "3978"
+          ],
+          [
+            "Insulin",
+            "389"
+          ],
+          [
+            "Glucagon",
+            "574"
+          ],
+          [
+            "Stored glucose",
+            "118069"
+          ],
+          [
+            "Meal time",
+            "0"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-vnsy43gj.js",
+            "sha256": "9bcda6bf6eefc34c4e94f43c87b353d4609265ed524b71c27b9b0fd5f9639f90",
+            "sourceMarker": "selected-biology-b07:blood-sugar-regulation:75efe0d13e248bbdd0850171f35e54271bb16ad78bdd3ecbe7e0afb8f3f5313f"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1806336
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "blood-sugar-regulation-target-setup.png",
+        "blood-sugar-regulation-target-progress.png",
+        "blood-sugar-regulation-target-desktop-dark.png",
+        "blood-sugar-regulation-target-mobile-light.png",
+        "blood-sugar-regulation-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "12",
+          "4010",
+          "368",
+          "583",
+          "117837",
+          "0"
+        ],
+        "stable": [
+          "12",
+          "4010",
+          "368",
+          "583",
+          "117837",
+          "0"
+        ],
+        "reset": [
+          "0",
+          "4356",
+          "363",
+          "363",
+          "118691",
+          "0"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          },
+          {
+            "label": "Eat",
+            "disabled": false
+          },
+          {
+            "label": "Follow glucose",
+            "disabled": false
+          },
+          {
+            "label": "Follow insulin",
+            "disabled": false
+          },
+          {
+            "label": "Follow glucagon",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-metabolicRate",
+          "live-glucoseSensitivity",
+          "live-insulinSensitivity",
+          "live-glucagonSensitivity"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          354
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 243.1875,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          354
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 243.1875,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "chloroplasts-and-food",
+      "steps": 40,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "CO2",
+            "100"
+          ],
+          [
+            "O2",
+            "0"
+          ],
+          [
+            "Glucose produced",
+            "0"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "initialChloroplasts",
+            "value": "3"
+          },
+          {
+            "name": "initialCarbonDioxide",
+            "value": "100"
+          },
+          {
+            "name": "live-waterflowThroughLeaf",
+            "value": "25"
+          },
+          {
+            "name": "live-intensityOfLight",
+            "value": "50"
+          },
+          {
+            "name": "live-autoStop",
+            "value": false
+          },
+          {
+            "name": "live-stopAt",
+            "value": "2000"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 456
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "40"
+          ],
+          [
+            "CO2",
+            "100"
+          ],
+          [
+            "O2",
+            "0"
+          ],
+          [
+            "Glucose produced",
+            "0"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-f4rvcwjb.js",
+            "sha256": "710778eb7d1d70e5a96ca48ac0fec4de1007fcbfe2c1fe665630a7775f1b716f",
+            "sourceMarker": "selected-biology-b07:chloroplasts-and-food:7c1ca18d90bd70a969ec8722fb056cafeea758c898a39efbaada099aa5e28f66"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 912,
+            "nonzero": 1225728
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "chloroplasts-and-food-target-setup.png",
+        "chloroplasts-and-food-target-progress.png",
+        "chloroplasts-and-food-target-desktop-dark.png",
+        "chloroplasts-and-food-target-mobile-light.png",
+        "chloroplasts-and-food-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "42",
+          "100",
+          "0",
+          "0"
+        ],
+        "stable": [
+          "42",
+          "100",
+          "0",
+          "0"
+        ],
+        "reset": [
+          "0",
+          "100",
+          "0",
+          "0"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-waterflowThroughLeaf",
+          "live-intensityOfLight",
+          "live-autoStop",
+          "live-stopAt"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 456
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          248.5
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 300.578125,
+          "width": 358,
+          "height": 242.921875
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          248.5
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 300.578125,
+          "width": 358,
+          "height": 242.921875
+        }
+      }
+    },
+    {
       "slug": "slime",
       "steps": 20,
       "setup": {
@@ -1375,11 +1855,11 @@
         "state": "success"
       },
       "attribution": {
-        "buildVersion": "1793968579671",
+        "buildVersion": "1793969543383",
         "chunks": [
           {
-            "url": "http://localhost:3147/chunks/ui-nber9bw5.js",
-            "sha256": "52e264c586ec345c778202fbf74388958f9e477ff849fbd57a39d59d7ce6c749",
+            "url": "http://localhost:3147/chunks/ui-3q794nay.js",
+            "sha256": "ed70003addd931e7d0fd36a2ef7370ac5058a9d62dbbcd9836336f41363c6f38",
             "sourceMarker": "selected-biology-b07:slime:ede03dc05cc186a9607cb2ef1b11dfde4a1c05eb57edd19e2a577768c04644da"
           }
         ],
@@ -1581,11 +2061,11 @@
         "state": "success"
       },
       "attribution": {
-        "buildVersion": "1793968579671",
+        "buildVersion": "1793969543383",
         "chunks": [
           {
-            "url": "http://localhost:3147/chunks/ui-h3kw0qsk.js",
-            "sha256": "b5ad3b8e9077635583da8a90657e35417d6607555728b3a2473f144b9ebe02e0",
+            "url": "http://localhost:3147/chunks/ui-m99k09vq.js",
+            "sha256": "041049a2f719bea6f9da2b553b46056c97f16dcda18c67531ce9dd7fca7bb5e2",
             "sourceMarker": "selected-biology-b07:fur:8f7b57b7df931ec45906251a9421017d438286b5607c20c409f722e6db311bc5"
           }
         ],
@@ -1709,231 +2189,6 @@
       }
     },
     {
-      "slug": "chloroplasts-and-food",
-      "steps": 40,
-      "setup": {
-        "monitors": [
-          [
-            "Tick",
-            "0"
-          ],
-          [
-            "CO2",
-            "100"
-          ],
-          [
-            "O2",
-            "0"
-          ],
-          [
-            "Glucose produced",
-            "0"
-          ]
-        ],
-        "status": "Model initialized.",
-        "state": "success",
-        "inputs": [
-          {
-            "name": "seed",
-            "value": "1"
-          },
-          {
-            "name": "initialChloroplasts",
-            "value": "3"
-          },
-          {
-            "name": "initialCarbonDioxide",
-            "value": "100"
-          },
-          {
-            "name": "live-waterflowThroughLeaf",
-            "value": "25"
-          },
-          {
-            "name": "live-intensityOfLight",
-            "value": "50"
-          },
-          {
-            "name": "live-autoStop",
-            "value": false
-          },
-          {
-            "name": "live-stopAt",
-            "value": "2000"
-          }
-        ],
-        "canvas": [
-          {
-            "x": 312,
-            "y": 115,
-            "width": 672,
-            "height": 456
-          }
-        ],
-        "scroll": [
-          0,
-          0
-        ],
-        "viewport": [
-          1280,
-          900
-        ]
-      },
-      "progress": {
-        "monitors": [
-          [
-            "Tick",
-            "40"
-          ],
-          [
-            "CO2",
-            "100"
-          ],
-          [
-            "O2",
-            "0"
-          ],
-          [
-            "Glucose produced",
-            "0"
-          ]
-        ],
-        "status": "Steps completed.",
-        "state": "success"
-      },
-      "attribution": {
-        "buildVersion": "1793968579671",
-        "chunks": [
-          {
-            "url": "http://localhost:3147/chunks/ui-ctd0my9f.js",
-            "sha256": "f1eab69b12628d7f0ff3f878984c9f858f8e86d4f1c70a24db91010ed5e8fabc",
-            "sourceMarker": "selected-biology-b07:chloroplasts-and-food:7c1ca18d90bd70a969ec8722fb056cafeea758c898a39efbaada099aa5e28f66"
-          }
-        ],
-        "canvas": [
-          {
-            "width": 1344,
-            "height": 912,
-            "nonzero": 1225728
-          }
-        ]
-      },
-      "diagnostics": [
-        [],
-        []
-      ],
-      "screenshots": [
-        "chloroplasts-and-food-target-setup.png",
-        "chloroplasts-and-food-target-progress.png",
-        "chloroplasts-and-food-target-desktop-dark.png",
-        "chloroplasts-and-food-target-mobile-light.png",
-        "chloroplasts-and-food-target-mobile-dark.png"
-      ],
-      "controls": {
-        "paused": [
-          "42",
-          "100",
-          "0",
-          "0"
-        ],
-        "stable": [
-          "42",
-          "100",
-          "0",
-          "0"
-        ],
-        "reset": [
-          "0",
-          "100",
-          "0",
-          "0"
-        ],
-        "status": "Model initialized.",
-        "buttons": [
-          {
-            "label": "Setup",
-            "disabled": false
-          },
-          {
-            "label": "Run",
-            "disabled": false
-          },
-          {
-            "label": "1 step",
-            "disabled": false
-          },
-          {
-            "label": "10 steps",
-            "disabled": false
-          },
-          {
-            "label": "100 steps",
-            "disabled": false
-          }
-        ],
-        "liveNames": [
-          "live-waterflowThroughLeaf",
-          "live-intensityOfLight",
-          "live-autoStop",
-          "live-stopAt"
-        ]
-      },
-      "desktop-dark": {
-        "viewport": [
-          1280,
-          900
-        ],
-        "scroll": [
-          0,
-          0
-        ],
-        "scrollWidth": 1280,
-        "theme": "dark",
-        "canvas": {
-          "x": 312,
-          "y": 115,
-          "width": 672,
-          "height": 456
-        }
-      },
-      "mobile-light": {
-        "viewport": [
-          390,
-          844
-        ],
-        "scroll": [
-          0,
-          248.5
-        ],
-        "scrollWidth": 390,
-        "theme": "light",
-        "canvas": {
-          "x": 16,
-          "y": 300.578125,
-          "width": 358,
-          "height": 242.921875
-        }
-      },
-      "mobile-dark": {
-        "viewport": [
-          390,
-          844
-        ],
-        "scroll": [
-          0,
-          248.5
-        ],
-        "scrollWidth": 390,
-        "theme": "dark",
-        "canvas": {
-          "x": 16,
-          "y": 300.578125,
-          "width": 358,
-          "height": 242.921875
-        }
-      }
-    },
-    {
       "slug": "honeycomb",
       "steps": 30,
       "setup": {
@@ -1999,11 +2254,11 @@
         "state": "success"
       },
       "attribution": {
-        "buildVersion": "1793968579671",
+        "buildVersion": "1793969543383",
         "chunks": [
           {
-            "url": "http://localhost:3147/chunks/ui-2gh02v2q.js",
-            "sha256": "e0fd6c65e2853418065fe3f1bd76ea7a173673288fafe4b537b927ebc6002aa9",
+            "url": "http://localhost:3147/chunks/ui-x1y5e6kp.js",
+            "sha256": "764ead0c4d09bce0fde2a330ab243f715417e99640a9ca63e12182005f690ae0",
             "sourceMarker": "selected-biology-b07:honeycomb:812353ef075700900bccf35cc7587137a46fb6c9d3c8a17464790669a72124db"
           }
         ],
@@ -2232,11 +2487,11 @@
         "state": "success"
       },
       "attribution": {
-        "buildVersion": "1793968579671",
+        "buildVersion": "1793969543383",
         "chunks": [
           {
-            "url": "http://localhost:3147/chunks/ui-697cj4y3.js",
-            "sha256": "f890dba66aa0175e15c8caa1171a5eee4503ec5edca391b3ed6a3048b7fe954a",
+            "url": "http://localhost:3147/chunks/ui-np6tsv4x.js",
+            "sha256": "4aafeebfd306de6a3a0b1391935fd51f70d87050e2a414491865d9cccc675777",
             "sourceMarker": "selected-biology-b07:autumn:54c2fa97ac3e235b27d603dbaf7a66234ea4ab507c5643a8df95ee5ef89b5087"
           }
         ],
@@ -2454,11 +2709,11 @@
         "state": "success"
       },
       "attribution": {
-        "buildVersion": "1793968579671",
+        "buildVersion": "1793969543383",
         "chunks": [
           {
-            "url": "http://localhost:3147/chunks/ui-3ypdjmqy.js",
-            "sha256": "e6696f528d98333fb077f2208532cf9c72efeee2d7249c5fe58a2bbdab19362d",
+            "url": "http://localhost:3147/chunks/ui-8rmf8qz2.js",
+            "sha256": "163f395904a60e480b039f7f64c68865c477b78352c0097b3dbda599eccc9ed6",
             "sourceMarker": "selected-biology-b07:sunflower-emergent:0e0e3d39384a9b2cde33f248f46c0711cf2f7742f39405dc0907485ab1a67cd8"
           }
         ],
@@ -2643,11 +2898,11 @@
         "state": "success"
       },
       "attribution": {
-        "buildVersion": "1793968579671",
+        "buildVersion": "1793969543383",
         "chunks": [
           {
-            "url": "http://localhost:3147/chunks/ui-2qd1arsz.js",
-            "sha256": "1085b9bc80236b02610433237514659462e1379c8a1f2b1ba5c102a369e39a6d",
+            "url": "http://localhost:3147/chunks/ui-0e99qvm6.js",
+            "sha256": "fe4f28e21f2c7121cd7a19518f340352b50860272ebb4706a6dd089b473c6d44",
             "sourceMarker": "selected-biology-b07:tumor:f47f5edc51141c107582ae5b30d23f613cbef305f6b2cb6bbea13c46298f0630"
           }
         ],
@@ -2851,11 +3106,11 @@
         "state": "success"
       },
       "attribution": {
-        "buildVersion": "1793968579671",
+        "buildVersion": "1793969543383",
         "chunks": [
           {
-            "url": "http://localhost:3147/chunks/ui-gsaawsq3.js",
-            "sha256": "80741fb34a300c087e028408b116b34b222acbd80f3d6482afa9b3e66fcd40c9",
+            "url": "http://localhost:3147/chunks/ui-erfhrr9h.js",
+            "sha256": "d697c7a793213a8b89a1908a9136eaf066a1bf28e8890dcbdf112b52634c2f0a",
             "sourceMarker": "selected-biology-b07:muscle-development:29c39af0fbaff47c0ecab4d901260f05a5195f807046dd895ddd66eef1163e26"
           }
         ],
@@ -3070,11 +3325,11 @@
         "state": "success"
       },
       "attribution": {
-        "buildVersion": "1793968579671",
+        "buildVersion": "1793969543383",
         "chunks": [
           {
-            "url": "http://localhost:3147/chunks/ui-z6c9v837.js",
-            "sha256": "3fe870ca21bcd8b1940272617b7dcbd7bf222c8e4a78011009f635ba06a7e15a",
+            "url": "http://localhost:3147/chunks/ui-srzw20s3.js",
+            "sha256": "fc197a7420e8ecd9f5a3beb5204b35aa9fa67656bd5a9e7c7918aa4ecf42b4a3",
             "sourceMarker": "selected-biology-b07:membrane-formation:4f3a41013090830c53ee055eac6625b1d3fcba981df7ab8d67822af037f7733d"
           }
         ],
@@ -4135,14 +4390,94 @@
           }
         }
       ]
+    },
+    {
+      "slug": "blood-sugar-regulation",
+      "observations": {
+        "initial": {
+          "Tick": "0",
+          "Blood glucose": "4356",
+          "Insulin": "363",
+          "Glucagon": "363",
+          "Stored glucose": "118691",
+          "Meal time": "0"
+        },
+        "meals": {
+          "Tick": "0",
+          "Blood glucose": "4356",
+          "Insulin": "363",
+          "Glucagon": "363",
+          "Stored glucose": "118691",
+          "Meal time": "34"
+        },
+        "progressed": {
+          "Tick": "1",
+          "Blood glucose": "4781",
+          "Insulin": "572",
+          "Glucagon": "326",
+          "Stored glucose": "118678",
+          "Meal time": "33"
+        },
+        "follow": [
+          {
+            "label": "Follow glucose",
+            "status": "Action completed.",
+            "monitors": {
+              "Tick": "1",
+              "Blood glucose": "4781",
+              "Insulin": "572",
+              "Glucagon": "326",
+              "Stored glucose": "118678",
+              "Meal time": "33"
+            }
+          },
+          {
+            "label": "Follow insulin",
+            "status": "Action completed.",
+            "monitors": {
+              "Tick": "1",
+              "Blood glucose": "4781",
+              "Insulin": "572",
+              "Glucagon": "326",
+              "Stored glucose": "118678",
+              "Meal time": "33"
+            }
+          },
+          {
+            "label": "Follow glucagon",
+            "status": "Action completed.",
+            "monitors": {
+              "Tick": "1",
+              "Blood glucose": "4781",
+              "Insulin": "572",
+              "Glucagon": "326",
+              "Stored glucose": "118678",
+              "Meal time": "33"
+            }
+          }
+        ],
+        "live": [
+          {
+            "name": "live-metabolicRate",
+            "value": "0"
+          },
+          {
+            "name": "live-glucoseSensitivity",
+            "value": "1"
+          },
+          {
+            "name": "live-insulinSensitivity",
+            "value": "1"
+          },
+          {
+            "name": "live-glucagonSensitivity",
+            "value": "1"
+          }
+        ],
+        "state": "success"
+      }
     }
   ],
-  "bloodTargetBlocker": {
-    "status": "Unknown option: mean",
-    "stage": "setup",
-    "screenshot": "blood-sugar-regulation-target-blocked.png",
-    "cause": "Base Random lacks public Poisson/exponential; parent owns dependency phase."
-  },
   "imageTransportInspection": {
     "files": [
       "sunflower-emergent-target-mobile-dark.png",
@@ -4150,5 +4485,24 @@
       "membrane-formation-target-mobile-dark.png"
     ],
     "result": "Individually reopened with view_image: single sunflower particle, coincident tumor stems and complete membrane visible. Bundled transport appeared blank; no renderer fix warranted."
+  },
+  "parentSync": {
+    "originalRuntime": "428750fe899d2e4a4f94318cd8f20860e3e6c2c3",
+    "localRuntime": "19f98ba",
+    "originalCompanion": "b3db9b4af19b58141119657d6ff620e777ee36ff",
+    "localCompanion": "6dfc324",
+    "ownership": "Parent-owned dependency sync. Exclude both local commits from owned cherry-pick list."
+  },
+  "historicalBloodTargetBlocker": {
+    "status": "Unknown option: mean",
+    "stage": "setup",
+    "screenshot": "blood-sugar-regulation-target-blocked.png",
+    "cause": "Base Random lacks public Poisson/exponential; parent owns dependency phase.",
+    "resolved": "Public dependency synchronized before fresh final target captures; blocked PNG retained as historical diagnostic only."
+  },
+  "historicalTargetAttribution": {
+    "commit": "ff16da0",
+    "buildVersion": "1793968579671",
+    "scope": "nine target records before parent sync; superseded by ten final target records, all refreshed after sync. Historical PNG blobs remain in Git at that commit."
   }
 }
