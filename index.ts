@@ -16,3 +16,4 @@ export type {
 } from "./src/geometry/space.ts";
 export { stats } from "./src/stats/index.ts";
 export type { Histogram, Summary } from "./src/stats/index.ts";
+export { geometry } from "./src/geometry/index.ts";
