@@ -15,4 +15,4 @@ export type {
   Orientation,
 } from "./src/geometry/space.ts";
 export { stats } from "./src/stats/index.ts";
-export type { Histogram } from "./src/stats/index.ts";
+export type { Histogram, Summary } from "./src/stats/index.ts";
