@@ -1,0 +1,38 @@
+[
+  {
+    "youSilent": true,
+    "partnerSilent": true,
+    "dialog": {
+      "type": "confirm",
+      "message": "You and your partner both remain silent.  You are sentenced to one year imprisonment.",
+      "defaultValue": ""
+    }
+  },
+  {
+    "youSilent": false,
+    "partnerSilent": true,
+    "dialog": {
+      "type": "confirm",
+      "message": "You confess and your partner remains silent. You go free.",
+      "defaultValue": ""
+    }
+  },
+  {
+    "youSilent": true,
+    "partnerSilent": false,
+    "dialog": {
+      "type": "confirm",
+      "message": "You remain silent, but your partner confesses.  You are sentenced to five years imprisonment.",
+      "defaultValue": ""
+    }
+  },
+  {
+    "youSilent": false,
+    "partnerSilent": false,
+    "dialog": {
+      "type": "confirm",
+      "message": "You and you partner both confess.  You are sentenced to three years imprisonment.",
+      "defaultValue": ""
+    }
+  }
+]

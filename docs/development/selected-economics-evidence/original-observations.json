@@ -1,0 +1,1714 @@
+[
+  {
+    "slug": "el-farol",
+    "hash": "236f508bc73e56fe5c8002615052842fd6b41b9a3777bc99fae835f4cdc8755a",
+    "bytes": 50864,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/IABM Textbook/chapter 3/El Farol Extensions/El Farol.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        100,
+        56,
+        10,
+        0,
+        60
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "button",
+        "display": "go",
+        "source": "go"
+      },
+      {
+        "type": "button",
+        "display": "setup",
+        "source": "setup"
+      },
+      {
+        "type": "slider",
+        "variable": "memory-size",
+        "value": 5,
+        "display": "memory-size"
+      },
+      {
+        "type": "slider",
+        "variable": "number-strategies",
+        "value": 10,
+        "display": "number-strategies"
+      },
+      {
+        "type": "plot",
+        "display": "Bar Attendance"
+      },
+      {
+        "type": "slider",
+        "variable": "overcrowding-threshold",
+        "value": 60,
+        "display": "overcrowding-threshold"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "controlStep": "native go procedure called once; native forever control clicked",
+    "paused": {
+      "success": true,
+      "value": [
+        249,
+        100,
+        64,
+        10,
+        64,
+        60
+      ]
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        12,
+        100,
+        53,
+        10,
+        53,
+        60
+      ]
+    },
+    "runtime": [],
+    "fixtures": {
+      "pure": {
+        "success": true,
+        "value": [
+          70,
+          -200
+        ]
+      },
+      "fixture": {
+        "success": true,
+        "value": [
+          13,
+          2,
+          2,
+          0
+        ]
+      },
+      "errors": []
+    }
+  },
+  {
+    "slug": "fruit-wars",
+    "hash": "42551ae637f11439da6cd3e715a3830779f8f00dbe864c5590a96216422386ae",
+    "bytes": 64650,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Economics/Fruit Wars.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        40,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "slider",
+        "variable": "initial-fruit-bushes",
+        "value": 40,
+        "display": "initial-fruit-bushes"
+      },
+      {
+        "type": "monitor",
+        "value": 40,
+        "display": "Population",
+        "source": "count foragers"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Avg Population",
+        "source": "precision average-population 3"
+      },
+      {
+        "type": "chooser",
+        "variable": "visualization",
+        "value": "Reactive Aggression",
+        "display": "visualization"
+      },
+      {
+        "type": "button",
+        "source": "setup"
+      },
+      {
+        "type": "switch",
+        "variable": "show-energy?",
+        "value": false,
+        "display": "show-energy?"
+      },
+      {
+        "type": "button",
+        "source": "go"
+      },
+      {
+        "type": "slider",
+        "variable": "initial-foragers",
+        "value": 40,
+        "display": "initial-foragers"
+      },
+      {
+        "type": "slider",
+        "variable": "ticks-to-flee",
+        "value": 49,
+        "display": "ticks-to-flee"
+      },
+      {
+        "type": "slider",
+        "variable": "rate-of-mutation",
+        "value": 1,
+        "display": "rate-of-mutation"
+      },
+      {
+        "type": "slider",
+        "variable": "collaboration-bonus",
+        "value": 5,
+        "display": "collaboration-bonus"
+      },
+      {
+        "type": "slider",
+        "variable": "max-age",
+        "value": 500,
+        "display": "max-age"
+      },
+      {
+        "type": "slider",
+        "variable": "bush-growth-chance",
+        "value": 6,
+        "display": "bush-growth-chance"
+      },
+      {
+        "type": "plot",
+        "display": "Forage Rate"
+      },
+      {
+        "type": "plot",
+        "display": "Traits over Time"
+      },
+      {
+        "type": "plot",
+        "display": "Types of Aggression (Histogram)"
+      },
+      {
+        "type": "plot",
+        "display": "Types of Aggression (Mean)"
+      },
+      {
+        "type": "plot",
+        "display": "Deaths by Type"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": true,
+      "value": [
+        1,
+        40,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": true,
+        "value": [
+          4,
+          40,
+          40,
+          0,
+          0,
+          0,
+          53.333333333333336,
+          36.5
+        ]
+      }
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        20,
+        40,
+        41,
+        0,
+        0,
+        0,
+        42.10526315789474,
+        15.434782608695652
+      ]
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks count foragers count fruit-bushes murder-count starvation-count age-death-count average-population avg-forage)",
+    "fixtures": [
+      {
+        "command": "set initial-foragers 1 set initial-fruit-bushes 0 set bush-growth-chance 0 set max-age 1 setup repeat 3 [go]",
+        "reporter": "(list ticks count foragers age-death-count)",
+        "read": {
+          "success": true,
+          "value": [
+            2,
+            0,
+            1
+          ]
+        },
+        "errors": [
+          [
+            "runtime",
+            "B03 source fixture",
+            "[object Object]",
+            "set initial-foragers 1 set initial-fruit-bushes 0 set bush-growth-chance 0 set max-age 1 setup repeat 3 [go]",
+            "undefined"
+          ]
+        ],
+        "runtime": [
+          {
+            "message": "Can't find the mean of a list with no numbers: [].\nerror while running MEAN\ncalled by plot Traits over Time\ncalled by procedure GO",
+            "start": 5,
+            "end": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "limited-order-book",
+    "hash": "acb1b7eeeabf99a1bf651bfcae391273fce16bae15c9e67bb64ee9ef0ebdb597",
+    "bytes": 65701,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Economics/Limited Order Book.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        100,
+        74166.5,
+        3679,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "button",
+        "source": "setup\n"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Price to Date$",
+        "source": "price-to-date"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Latest Price$",
+        "source": "latest-price"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Latest Volume$",
+        "source": "latest-volume"
+      },
+      {
+        "type": "monitor",
+        "value": 74166.5,
+        "display": "Total Cash$",
+        "source": "global-cash"
+      },
+      {
+        "type": "monitor",
+        "value": 3679,
+        "display": "Circulating Tokens",
+        "source": "global-tokens"
+      },
+      {
+        "type": "plot",
+        "display": "Trading Prices"
+      },
+      {
+        "type": "textBox",
+        "display": "Basic Parameters"
+      },
+      {
+        "type": "slider",
+        "variable": "trade-precision",
+        "value": 0,
+        "display": "trade-precision"
+      },
+      {
+        "type": "textBox",
+        "display": "Traders & Strategies"
+      },
+      {
+        "type": "slider",
+        "variable": "honest-traders",
+        "value": 50,
+        "display": "honest-traders"
+      },
+      {
+        "type": "slider",
+        "variable": "cunning-traders",
+        "value": 50,
+        "display": "cunning-traders"
+      },
+      {
+        "type": "textBox",
+        "display": "Market situation"
+      },
+      {
+        "type": "textBox",
+        "display": "Utility distribution"
+      },
+      {
+        "type": "monitor",
+        "value": 140116,
+        "display": "Total Utilities",
+        "source": "sum [ utility ] of traders"
+      },
+      {
+        "type": "monitor",
+        "value": 1401,
+        "display": "Average Utilities",
+        "source": "mean [ utility ] of traders"
+      },
+      {
+        "type": "monitor",
+        "value": 1402,
+        "display": "Avg (Honest)",
+        "source": "mean [ utility ] of traders with [ strategy = \"honest\" ]"
+      },
+      {
+        "type": "monitor",
+        "value": 1400,
+        "display": "Avg (Cunning)",
+        "source": "mean [ utility ] of traders with [ strategy = \"cunning\" ]"
+      },
+      {
+        "type": "monitor",
+        "value": 99.813,
+        "display": "Cunning : Honest %",
+        "source": "mean [ utility ] of traders with [ strategy = \"cunning\" ] / mean [ utility ] of traders with [ strategy = \"honest\" ] * 100"
+      },
+      {
+        "type": "plot",
+        "display": "Average Utilities Gain (%)"
+      },
+      {
+        "type": "slider",
+        "variable": "initial-cash",
+        "value": 1000,
+        "display": "initial-cash"
+      },
+      {
+        "type": "slider",
+        "variable": "initial-tokens",
+        "value": 50,
+        "display": "initial-tokens"
+      },
+      {
+        "type": "slider",
+        "variable": "initial-belief",
+        "value": 25,
+        "display": "initial-belief"
+      },
+      {
+        "type": "button",
+        "source": "go"
+      },
+      {
+        "type": "button",
+        "display": "go-once",
+        "source": "go"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": true,
+      "value": [
+        1,
+        100,
+        74166.50000000003,
+        3679,
+        16.09571428571428,
+        70,
+        70,
+        16.09571428571428
+      ]
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": true,
+        "value": [
+          4,
+          100,
+          74166.5,
+          3679,
+          16.176461538461535,
+          65,
+          260,
+          16.279615384615475
+        ]
+      }
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        10,
+        100,
+        76974.50000000001,
+        3601.5,
+        17.155624999999993,
+        64,
+        633,
+        17.225165876777368
+      ]
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks count traders sum [cash] of traders sum [stockpile] of traders latest-price latest-amount total-amount price-to-date)",
+    "fixtures": [
+      {
+        "command": "set honest-traders 1 set cunning-traders 0 setup go",
+        "reporter": "(list ticks total-amount)",
+        "read": {
+          "success": true,
+          "value": [
+            0,
+            0
+          ]
+        },
+        "errors": [
+          [
+            "runtime",
+            "B03 source fixture",
+            "[object Object]",
+            "set honest-traders 1 set cunning-traders 0 setup go",
+            "undefined"
+          ]
+        ],
+        "runtime": [
+          {
+            "message": "Division by zero.\nerror while running /\ncalled by procedure CALCULATE-INFO\ncalled by procedure GO",
+            "start": 4236,
+            "end": 4237
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bidding-market",
+    "hash": "5f86c4f77da77e22e5f0070e0828af72b3c52bdf120c8c25aab58f77129de74c",
+    "bytes": 64068,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Economics/Bidding Market.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        50,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "slider",
+        "variable": "starting-money",
+        "value": 500,
+        "display": "starting-money"
+      },
+      {
+        "type": "chooser",
+        "variable": "supply-amount",
+        "value": "high",
+        "display": "supply-amount"
+      },
+      {
+        "type": "chooser",
+        "variable": "supply-distribution",
+        "value": "even",
+        "display": "supply-distribution"
+      },
+      {
+        "type": "chooser",
+        "variable": "demand-amount",
+        "value": "high",
+        "display": "demand-amount"
+      },
+      {
+        "type": "chooser",
+        "variable": "demand-distribution",
+        "value": "even",
+        "display": "demand-distribution"
+      },
+      {
+        "type": "chooser",
+        "variable": "seller-behavior",
+        "value": "normal",
+        "display": "seller-behavior"
+      },
+      {
+        "type": "button",
+        "display": "go-once",
+        "source": "go"
+      },
+      {
+        "type": "button",
+        "display": "go",
+        "source": "go"
+      },
+      {
+        "type": "chooser",
+        "variable": "buyer-behavior",
+        "value": "normal",
+        "display": "buyer-behavior"
+      },
+      {
+        "type": "switch",
+        "variable": "sellers-ignore-full-buyers?",
+        "value": false,
+        "display": "sellers-ignore-full-buyers?"
+      },
+      {
+        "type": "switch",
+        "variable": "stars?",
+        "value": true,
+        "display": "stars?"
+      },
+      {
+        "type": "plot",
+        "display": "Seller Asking Prices (min, average, max)"
+      },
+      {
+        "type": "plot",
+        "display": "Buyer Willing-to-Pay (min, average, max)"
+      },
+      {
+        "type": "plot",
+        "display": "Items"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "% of Starting Money Used",
+        "source": "percent-money-taken"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Average Sale Price $",
+        "source": "average-price"
+      },
+      {
+        "type": "button",
+        "display": "setup",
+        "source": "setup"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": true,
+      "value": [
+        1,
+        50,
+        50,
+        0,
+        1091,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": true,
+        "value": [
+          4,
+          50,
+          50,
+          0,
+          1091,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        100,
+        50,
+        50,
+        637,
+        689,
+        15453.719999999998,
+        24.26,
+        48.075471698113205,
+        56.27208480565371
+      ]
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks count buyers count sellers total-sales remaining-supply seller-cash average-price percent-items-sold percent-demand-satisfied)",
+    "fixtures": [
+      {
+        "command": "set starting-money 0 setup go",
+        "reporter": "(list ticks total-sales count buyers with [money > 0 and want-to-buy > 0])",
+        "read": {
+          "success": true,
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      }
+    ]
+  },
+  {
+    "slug": "hotellings-law",
+    "hash": "6241899fa70ee6ab961fb8d183321c662e12f011246684fbd99ea403f6a259ad",
+    "bytes": 52054,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Economics/Hotelling's Law.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": false,
+      "error": "Reporter compile error: [object Object]"
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-stores",
+        "value": 3,
+        "display": "number-of-stores"
+      },
+      {
+        "type": "button",
+        "source": "go"
+      },
+      {
+        "type": "chooser",
+        "variable": "rules",
+        "value": "normal",
+        "display": "rules"
+      },
+      {
+        "type": "chooser",
+        "variable": "layout",
+        "value": "plane",
+        "display": "layout"
+      },
+      {
+        "type": "button",
+        "display": "go once",
+        "source": "go"
+      },
+      {
+        "type": "button",
+        "source": "setup"
+      },
+      {
+        "type": "plot",
+        "display": "revenues"
+      },
+      {
+        "type": "plot",
+        "display": "prices"
+      },
+      {
+        "type": "plot",
+        "display": "areas"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": false,
+      "error": "Reporter compile error: [object Object]"
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": false,
+        "error": "Reporter compile error: [object Object]"
+      }
+    },
+    "progress": {
+      "success": false,
+      "error": "Reporter compile error: [object Object]"
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks count consumers sum [area-count] of turtles [price] of sort turtles [area-count] of sort turtles)",
+    "fixtures": [
+      {
+        "command": "set layout \"line\" set rules \"moving-only\" setup repeat 10 [go]",
+        "reporter": "(list ticks count consumers sum [area-count] of turtles [price] of sort turtles [xcor] of sort turtles)",
+        "read": {
+          "success": false,
+          "error": "Reporter compile error: [object Object]"
+        },
+        "errors": [],
+        "runtime": []
+      }
+    ]
+  },
+  {
+    "slug": "braess-paradox",
+    "hash": "472667ac315d7e5631332194a2dd305dafcc8d8bbf8afa0af8166fd833545c56",
+    "bytes": 65890,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Economics/Braess Paradox.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "button",
+        "source": "setup"
+      },
+      {
+        "type": "button",
+        "source": "go"
+      },
+      {
+        "type": "slider",
+        "variable": "spawn-rate",
+        "value": 10,
+        "display": "spawn-rate"
+      },
+      {
+        "type": "plot",
+        "display": "Travel Time"
+      },
+      {
+        "type": "switch",
+        "variable": "middle-on?",
+        "value": true,
+        "display": "middle-on?"
+      },
+      {
+        "type": "slider",
+        "variable": "smoothing",
+        "value": 10,
+        "display": "smoothing"
+      },
+      {
+        "type": "chooser",
+        "variable": "mode",
+        "value": "Probabilistic Greedy",
+        "display": "mode"
+      },
+      {
+        "type": "slider",
+        "variable": "randomness",
+        "value": 16,
+        "display": "randomness"
+      },
+      {
+        "type": "plot",
+        "display": "Routes Taken"
+      },
+      {
+        "type": "plot",
+        "display": "Probabilities"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": true,
+      "value": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": true,
+        "value": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        800,
+        26,
+        29,
+        1.6711111111111112,
+        1.4933333333333334,
+        1.32,
+        1.345788888888889,
+        17,
+        0.16146003464508732,
+        0.32236067160193477,
+        0.5161792937529779
+      ]
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks count commuters cars-spawned top bottom middle avg spawn-time top-prob bottom-prob middle-prob)",
+    "fixtures": [
+      {
+        "command": "setup repeat 26 [go]",
+        "reporter": "(list ticks count commuters cars-spawned [ticks-here] of commuters)",
+        "read": {
+          "success": true,
+          "value": [
+            26,
+            0,
+            0,
+            []
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      },
+      {
+        "command": "go",
+        "reporter": "(list ticks count commuters cars-spawned [ticks-here] of commuters)",
+        "read": {
+          "success": true,
+          "value": [
+            27,
+            1,
+            1,
+            [
+              2
+            ]
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      }
+    ]
+  },
+  {
+    "slug": "cash-flow",
+    "hash": "ab4aea96508e1d141a7c2571868fa1532b8db35b234824e0d7df5e1b66f9126c",
+    "bytes": 50537,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Economics/Unverified/Cash Flow.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        473,
+        2460,
+        0,
+        0,
+        2460,
+        0,
+        0,
+        0,
+        0,
+        0,
+        473
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "slider",
+        "variable": "people",
+        "value": 473,
+        "display": "people"
+      },
+      {
+        "type": "slider",
+        "variable": "reserves",
+        "value": 21,
+        "display": "reserves"
+      },
+      {
+        "type": "button",
+        "display": "go",
+        "source": "go"
+      },
+      {
+        "type": "button",
+        "display": "setup",
+        "source": "setup"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Savings total",
+        "source": "savings-total"
+      },
+      {
+        "type": "monitor",
+        "value": 2460,
+        "display": "Wallets total",
+        "source": "wallets-total"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Loans total",
+        "source": "loans-total"
+      },
+      {
+        "type": "monitor",
+        "value": 2460,
+        "display": "Money total",
+        "source": "money-total"
+      },
+      {
+        "type": "textBox",
+        "display": "Income Distribution"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "poor",
+        "source": "poor"
+      },
+      {
+        "type": "monitor",
+        "value": 473,
+        "display": "middle class",
+        "source": "middle-class"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "rich",
+        "source": "rich"
+      },
+      {
+        "type": "plot",
+        "display": "Wealth Dist Hist"
+      },
+      {
+        "type": "plot",
+        "display": "Income Dist"
+      },
+      {
+        "type": "plot",
+        "display": "Money & Loans"
+      },
+      {
+        "type": "plot",
+        "display": "Savings & Wallets"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": true,
+      "value": [
+        1,
+        473,
+        -9,
+        2469,
+        0,
+        2460,
+        2469,
+        518.49,
+        1950.51,
+        35,
+        0,
+        438
+      ]
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": true,
+        "value": [
+          5,
+          473,
+          0,
+          3039,
+          579,
+          3039,
+          3039,
+          638.1899999999999,
+          1821.81,
+          117,
+          10,
+          346
+        ]
+      }
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        30,
+        473,
+        0,
+        4424,
+        2254,
+        4424,
+        4424,
+        929.04,
+        1240.96,
+        164,
+        88,
+        221
+      ]
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks count turtles wallets-total savings-total loans-total money-total bank-deposits bank-reserves bank-to-loan rich poor middle-class)",
+    "fixtures": [
+      {
+        "command": "set people 1 setup go",
+        "reporter": "(list ticks wallets-total savings-total loans-total bank-deposits bank-reserves bank-to-loan)",
+        "read": {
+          "success": true,
+          "value": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      }
+    ]
+  },
+  {
+    "slug": "bank-reserves",
+    "hash": "bdd9b8eecf2776cc32ec96e570ba3f2ad5ec173a58bcc1db07ea929973b413ff",
+    "bytes": 50957,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Economics/Unverified/Bank Reserves.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        57,
+        348,
+        0,
+        0,
+        348,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "plot",
+        "display": "Income Dist"
+      },
+      {
+        "type": "plot",
+        "display": "Savings & Wallets"
+      },
+      {
+        "type": "plot",
+        "display": "Money & Loans"
+      },
+      {
+        "type": "plot",
+        "display": "Wealth Distribution Histogram"
+      },
+      {
+        "type": "button",
+        "display": "setup",
+        "source": "setup"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Loans Total",
+        "source": "loans-total"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Bank Reserves",
+        "source": "bank-reserves"
+      },
+      {
+        "type": "monitor",
+        "value": 348,
+        "display": "Wallets Total",
+        "source": "wallets-total"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Bank to Loan",
+        "source": "bank-to-loan"
+      },
+      {
+        "type": "monitor",
+        "value": 0,
+        "display": "Savings Total",
+        "source": "savings-total"
+      },
+      {
+        "type": "monitor",
+        "value": 348,
+        "display": "Money Total",
+        "source": "money-total"
+      },
+      {
+        "type": "button",
+        "display": "go",
+        "source": "go"
+      },
+      {
+        "type": "slider",
+        "variable": "people",
+        "value": 57,
+        "display": "people"
+      },
+      {
+        "type": "slider",
+        "variable": "reserves",
+        "value": 52,
+        "display": "reserves"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": true,
+      "value": [
+        1,
+        57,
+        348,
+        0,
+        0,
+        348,
+        0,
+        0,
+        0,
+        0,
+        0,
+        57
+      ]
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": true,
+        "value": [
+          4,
+          57,
+          0,
+          348,
+          0,
+          348,
+          348,
+          180.96,
+          167.04,
+          2,
+          0,
+          55
+        ]
+      }
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        30,
+        57,
+        0,
+        330,
+        38,
+        330,
+        330,
+        171.6,
+        120.4,
+        10,
+        0,
+        47
+      ]
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks count turtles wallets-total savings-total loans-total money-total bank-deposits bank-reserves bank-to-loan rich poor middle-class)",
+    "fixtures": [
+      {
+        "command": "set people 1 setup go",
+        "reporter": "(list ticks wallets-total savings-total loans-total bank-deposits bank-reserves bank-to-loan)",
+        "read": {
+          "success": true,
+          "value": [
+            1,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      },
+      {
+        "command": "go",
+        "reporter": "(list ticks wallets-total savings-total loans-total bank-deposits bank-reserves bank-to-loan)",
+        "read": {
+          "success": true,
+          "value": [
+            2,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      },
+      {
+        "command": "go",
+        "reporter": "(list ticks wallets-total savings-total loans-total bank-deposits bank-reserves bank-to-loan)",
+        "read": {
+          "success": true,
+          "value": [
+            3,
+            0,
+            4,
+            0,
+            4,
+            2.08,
+            1.92
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      }
+    ]
+  },
+  {
+    "slug": "hotellings-law",
+    "hash": "6241899fa70ee6ab961fb8d183321c662e12f011246684fbd99ea403f6a259ad",
+    "bytes": 52054,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Economics/Hotelling's Law.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        1681,
+        1681,
+        [
+          10,
+          10,
+          10
+        ],
+        [
+          462,
+          833,
+          386
+        ]
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-stores",
+        "value": 3,
+        "display": "number-of-stores"
+      },
+      {
+        "type": "button",
+        "source": "go"
+      },
+      {
+        "type": "chooser",
+        "variable": "rules",
+        "value": "normal",
+        "display": "rules"
+      },
+      {
+        "type": "chooser",
+        "variable": "layout",
+        "value": "plane",
+        "display": "layout"
+      },
+      {
+        "type": "button",
+        "display": "go once",
+        "source": "go"
+      },
+      {
+        "type": "button",
+        "source": "setup"
+      },
+      {
+        "type": "plot",
+        "display": "revenues"
+      },
+      {
+        "type": "plot",
+        "display": "prices"
+      },
+      {
+        "type": "plot",
+        "display": "areas"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": true,
+      "value": [
+        1,
+        1681,
+        1681,
+        [
+          11,
+          11,
+          11
+        ],
+        [
+          468,
+          824,
+          389
+        ]
+      ]
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": true,
+        "value": [
+          4,
+          1681,
+          1681,
+          [
+            14,
+            14,
+            14
+          ],
+          [
+            495,
+            787,
+            399
+          ]
+        ]
+      }
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        10,
+        1681,
+        1681,
+        [
+          8,
+          6,
+          10
+        ],
+        [
+          609,
+          343,
+          729
+        ]
+      ]
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks count consumers sum [area-count] of turtles (map [t -> [price] of t] sort turtles) (map [t -> [area-count] of t] sort turtles))",
+    "fixtures": [
+      {
+        "command": "set layout \"line\" set rules \"moving-only\" setup repeat 10 [go]",
+        "reporter": "(list ticks count consumers sum [area-count] of turtles (map [t -> [price] of t] sort turtles) (map [t -> [xcor] of t] sort turtles))",
+        "read": {
+          "success": true,
+          "value": [
+            10,
+            41,
+            41,
+            [
+              10,
+              10,
+              10
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      }
+    ]
+  },
+  {
+    "slug": "prisoners-dilemma-basic",
+    "hash": "a2fdd21082bd5cd3e8e5c5fb91cde6631cd8ac146bd02ed702a0fe51e379237b",
+    "bytes": 46616,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Prisoner's Dilemma/Prisoner's Dilemma Basic.nlogox",
+    "setup": "Setup button clicked; default youSilent=true partnerSilent=false known=true",
+    "progress": {
+      "success": true,
+      "value": [
+        false,
+        true,
+        true,
+        [
+          "face sucker"
+        ]
+      ]
+    },
+    "dialogMessage": "You remain silent, but your partner confesses. You are sentenced to five years imprisonment.",
+    "dialogAccepted": true,
+    "errors": [],
+    "runtime": []
+  },
+  {
+    "slug": "prisoners-dilemma-two-person-iterated",
+    "hash": "32461d17a6a52c10378a3f907a699260d9d07972a728647baa45894f05999978",
+    "bytes": 51916,
+    "sourceURL": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Prisoner's Dilemma/Prisoner's Dilemma Two Person Iterated.nlogox",
+    "version": "NetLogo 7.0.4",
+    "setup": {
+      "success": true,
+      "value": [
+        0,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "widgets": [
+      {
+        "type": "view"
+      },
+      {
+        "type": "button",
+        "display": "Setup",
+        "source": "setup"
+      },
+      {
+        "type": "monitor",
+        "value": 3,
+        "display": "human score",
+        "source": "[ score ] of one-of users"
+      },
+      {
+        "type": "monitor",
+        "value": 3,
+        "display": "computer score",
+        "source": "[ score ] of one-of computers"
+      },
+      {
+        "type": "plot",
+        "display": "Average Score"
+      },
+      {
+        "type": "button",
+        "display": "Play Once",
+        "source": "play"
+      },
+      {
+        "type": "button",
+        "display": "Play Repeatedly",
+        "source": "play"
+      },
+      {
+        "type": "switch",
+        "variable": "select-computer-strategy?",
+        "value": true,
+        "display": "select-computer-strategy?"
+      },
+      {
+        "type": "chooser",
+        "variable": "human-strategy",
+        "value": "act-randomly",
+        "display": "human-strategy"
+      },
+      {
+        "type": "chooser",
+        "variable": "computer-strategy",
+        "value": "tit-for-tat",
+        "display": "computer-strategy"
+      },
+      {
+        "type": "output"
+      },
+      {
+        "type": "switch",
+        "variable": "display-history?",
+        "value": true,
+        "display": "display-history?"
+      }
+    ],
+    "errors": [],
+    "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "step": {
+      "success": true,
+      "value": [
+        1,
+        8,
+        3,
+        4,
+        1.5
+      ]
+    },
+    "runPause": {
+      "started": "true",
+      "paused": "false",
+      "read": {
+        "success": true,
+        "value": [
+          4,
+          13,
+          13,
+          2.6,
+          2.6
+        ]
+      }
+    },
+    "progress": {
+      "success": true,
+      "value": [
+        12,
+        36,
+        31,
+        2.769,
+        2.385
+      ]
+    },
+    "runtime": [],
+    "dialog": false,
+    "reporter": "(list ticks [score] of one-of users [score] of one-of computers [average-score] of one-of users [average-score] of one-of computers)",
+    "fixtures": [
+      {
+        "command": "set human-strategy \"cooperate\" set computer-strategy \"defect\" set select-computer-strategy? true setup play",
+        "reporter": "(list ticks [score] of one-of users [score] of one-of computers [average-score] of one-of users [average-score] of one-of computers)",
+        "read": {
+          "success": true,
+          "value": [
+            1,
+            3,
+            8,
+            1.5,
+            4
+          ]
+        },
+        "errors": [],
+        "runtime": []
+      }
+    ]
+  }
+]
