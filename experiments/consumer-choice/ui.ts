@@ -60,10 +60,10 @@ const binding = defineUI(model, {
         s.consumers.map((a) => ({
           id: a.id,
           label: String(a.who),
-          position: { x: a.x, y: a.y },
+          position: { x: a.x * 12, y: a.y * 12 },
           color: a.choice === 0 ? "#e58b20" : "#377ac7",
           size:
-            8 *
+            4 *
             (1 +
               4 *
                 (a.choice === 0
