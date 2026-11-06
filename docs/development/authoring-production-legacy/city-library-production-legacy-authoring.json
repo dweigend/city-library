@@ -1,0 +1,799 @@
+{
+  "baseURL": "http://127.0.0.1:3112",
+  "host": "Actual Bun Agent Lab with its production stylesheet; no injected fixture or styles",
+  "cases": [
+    {
+      "slug": "taxi-cabs",
+      "pageErrors": [],
+      "console": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3112/styles.css",
+          "status": 200,
+          "bytes": 5545,
+          "sha256": "9b0b87714a47147b923822f8d18805146947c307cf894bfede229aad37045875"
+        }
+      ],
+      "states": [
+        {
+          "label": "setup",
+          "tick": "0",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nNum Taxicab\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\nTime of day\nAM Peak\nWaiting passengers\n0\nOccupied cabs\n0\nTotal income ($)\n0.00\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd \u00b7 cbd \u00b7 AM\nres \u00b7 com \u00b7 AM\nres \u00b7 cbd \u00b7 AM\nres \u00b7 res \u00b7 AM\ncom \u00b7 res \u00b7 AM\ncom \u00b7 cbd \u00b7 AM\ncom \u00b7 com \u00b7 AM\ncbd \u00b7 res \u00b7 AM\ncbd \u00b7 com \u00b7 AM\nMD\ncbd \u00b7 cbd \u00b7 MD\ncbd \u00b7 com \u00b7 MD\ncbd \u00b7 res \u00b7 MD\ncom \u00b7 com \u00b7 MD\ncom \u00b7 cbd \u00b7 MD\ncom \u00b7 res \u00b7 MD\nres \u00b7 res \u00b7 MD\nres \u00b7 cbd \u00b7 MD\nres \u00b7 com \u00b7 MD\nPM\nres \u00b7 res \u00b7 PM\ncom \u00b7 res \u00b7 PM\ncom \u00b7 cbd \u00b7 PM\ncom \u00b7 com \u00b7 PM\ncbd \u00b7 res \u00b7 PM\ncbd \u00b7 com \u00b7 PM\ncbd \u00b7 cbd \u00b7 PM\nres \u00b7 com \u00b7 PM\nres \u00b7 cbd \u00b7 PM\nEVE\nres \u00b7 cbd \u00b7 EVE\nres \u00b7 com \u00b7 EVE\ncbd \u00b7 cbd \u00b7 EVE\ncbd \u00b7 com \u00b7 EVE\ncbd \u00b7 res \u00b7 EVE\ncom \u00b7 com \u00b7 EVE\ncom \u00b7 cbd \u00b7 EVE\ncom \u00b7 res \u00b7 EVE\nres \u00b7 res \u00b7 EVE\nEM\nres \u00b7 cbd \u00b7 EM\nres \u00b7 res \u00b7 EM\nres \u00b7 com \u00b7 EM\ncbd \u00b7 cbd \u00b7 EM\ncbd \u00b7 com \u00b7 EM\ncbd \u00b7 res \u00b7 EM\ncom \u00b7 com \u00b7 EM\ncom \u00b7 cbd \u00b7 EM\ncom \u00b7 res \u00b7 EM\n\nModel initialized.\n\nModel info\nTaxi service\nTaxicabs travelling distance\n1\n0\n1\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+        },
+        {
+          "label": "10 steps",
+          "tick": "10",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nNum Taxicab\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n10\nTime of day\nAM Peak\nWaiting passengers\n10\nOccupied cabs\n0\nTotal income ($)\n0.00\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd \u00b7 cbd \u00b7 AM\nres \u00b7 com \u00b7 AM\nres \u00b7 cbd \u00b7 AM\nres \u00b7 res \u00b7 AM\ncom \u00b7 res \u00b7 AM\ncom \u00b7 cbd \u00b7 AM\ncom \u00b7 com \u00b7 AM\ncbd \u00b7 res \u00b7 AM\ncbd \u00b7 com \u00b7 AM\nMD\ncbd \u00b7 cbd \u00b7 MD\ncbd \u00b7 com \u00b7 MD\ncbd \u00b7 res \u00b7 MD\ncom \u00b7 com \u00b7 MD\ncom \u00b7 cbd \u00b7 MD\ncom \u00b7 res \u00b7 MD\nres \u00b7 res \u00b7 MD\nres \u00b7 cbd \u00b7 MD\nres \u00b7 com \u00b7 MD\nPM\nres \u00b7 res \u00b7 PM\ncom \u00b7 res \u00b7 PM\ncom \u00b7 cbd \u00b7 PM\ncom \u00b7 com \u00b7 PM\ncbd \u00b7 res \u00b7 PM\ncbd \u00b7 com \u00b7 PM\ncbd \u00b7 cbd \u00b7 PM\nres \u00b7 com \u00b7 PM\nres \u00b7 cbd \u00b7 PM\nEVE\nres \u00b7 cbd \u00b7 EVE\nres \u00b7 com \u00b7 EVE\ncbd \u00b7 cbd \u00b7 EVE\ncbd \u00b7 com \u00b7 EVE\ncbd \u00b7 res \u00b7 EVE\ncom \u00b7 com \u00b7 EVE\ncom \u00b7 cbd \u00b7 EVE\ncom \u00b7 res \u00b7 EVE\nres \u00b7 res \u00b7 EVE\nEM\nres \u00b7 cbd \u00b7 EM\nres \u00b7 res \u00b7 EM\nres \u00b7 com \u00b7 EM\ncbd \u00b7 cbd \u00b7 EM\ncbd \u00b7 com \u00b7 EM\ncbd \u00b7 res \u00b7 EM\ncom \u00b7 com \u00b7 EM\ncom \u00b7 cbd \u00b7 EM\ncom \u00b7 res \u00b7 EM\n\nSteps completed.\n\nModel info\nTaxi service\nTaxicabs travelling distance\n157\n0\n10\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+        },
+        {
+          "label": "fare1.5 live",
+          "tick": "10",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nNum Taxicab\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n10\nTime of day\nAM Peak\nWaiting passengers\n10\nOccupied cabs\n0\nTotal income ($)\n0.00\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd \u00b7 cbd \u00b7 AM\nres \u00b7 com \u00b7 AM\nres \u00b7 cbd \u00b7 AM\nres \u00b7 res \u00b7 AM\ncom \u00b7 res \u00b7 AM\ncom \u00b7 cbd \u00b7 AM\ncom \u00b7 com \u00b7 AM\ncbd \u00b7 res \u00b7 AM\ncbd \u00b7 com \u00b7 AM\nMD\ncbd \u00b7 cbd \u00b7 MD\ncbd \u00b7 com \u00b7 MD\ncbd \u00b7 res \u00b7 MD\ncom \u00b7 com \u00b7 MD\ncom \u00b7 cbd \u00b7 MD\ncom \u00b7 res \u00b7 MD\nres \u00b7 res \u00b7 MD\nres \u00b7 cbd \u00b7 MD\nres \u00b7 com \u00b7 MD\nPM\nres \u00b7 res \u00b7 PM\ncom \u00b7 res \u00b7 PM\ncom \u00b7 cbd \u00b7 PM\ncom \u00b7 com \u00b7 PM\ncbd \u00b7 res \u00b7 PM\ncbd \u00b7 com \u00b7 PM\ncbd \u00b7 cbd \u00b7 PM\nres \u00b7 com \u00b7 PM\nres \u00b7 cbd \u00b7 PM\nEVE\nres \u00b7 cbd \u00b7 EVE\nres \u00b7 com \u00b7 EVE\ncbd \u00b7 cbd \u00b7 EVE\ncbd \u00b7 com \u00b7 EVE\ncbd \u00b7 res \u00b7 EVE\ncom \u00b7 com \u00b7 EVE\ncom \u00b7 cbd \u00b7 EVE\ncom \u00b7 res \u00b7 EVE\nres \u00b7 res \u00b7 EVE\nEM\nres \u00b7 cbd \u00b7 EM\nres \u00b7 res \u00b7 EM\nres \u00b7 com \u00b7 EM\ncbd \u00b7 cbd \u00b7 EM\ncbd \u00b7 com \u00b7 EM\ncbd \u00b7 res \u00b7 EM\ncom \u00b7 com \u00b7 EM\ncom \u00b7 cbd \u00b7 EM\ncom \u00b7 res \u00b7 EM\n\nRule updated.\n\nModel info\nTaxi service\nTaxicabs travelling distance\n157\n0\n10\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+        },
+        {
+          "label": "seed2 draft",
+          "tick": "10",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nNum Taxicab\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n10\nTime of day\nAM Peak\nWaiting passengers\n10\nOccupied cabs\n0\nTotal income ($)\n0.00\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd \u00b7 cbd \u00b7 AM\nres \u00b7 com \u00b7 AM\nres \u00b7 cbd \u00b7 AM\nres \u00b7 res \u00b7 AM\ncom \u00b7 res \u00b7 AM\ncom \u00b7 cbd \u00b7 AM\ncom \u00b7 com \u00b7 AM\ncbd \u00b7 res \u00b7 AM\ncbd \u00b7 com \u00b7 AM\nMD\ncbd \u00b7 cbd \u00b7 MD\ncbd \u00b7 com \u00b7 MD\ncbd \u00b7 res \u00b7 MD\ncom \u00b7 com \u00b7 MD\ncom \u00b7 cbd \u00b7 MD\ncom \u00b7 res \u00b7 MD\nres \u00b7 res \u00b7 MD\nres \u00b7 cbd \u00b7 MD\nres \u00b7 com \u00b7 MD\nPM\nres \u00b7 res \u00b7 PM\ncom \u00b7 res \u00b7 PM\ncom \u00b7 cbd \u00b7 PM\ncom \u00b7 com \u00b7 PM\ncbd \u00b7 res \u00b7 PM\ncbd \u00b7 com \u00b7 PM\ncbd \u00b7 cbd \u00b7 PM\nres \u00b7 com \u00b7 PM\nres \u00b7 cbd \u00b7 PM\nEVE\nres \u00b7 cbd \u00b7 EVE\nres \u00b7 com \u00b7 EVE\ncbd \u00b7 cbd \u00b7 EVE\ncbd \u00b7 com \u00b7 EVE\ncbd \u00b7 res \u00b7 EVE\ncom \u00b7 com \u00b7 EVE\ncom \u00b7 cbd \u00b7 EVE\ncom \u00b7 res \u00b7 EVE\nres \u00b7 res \u00b7 EVE\nEM\nres \u00b7 cbd \u00b7 EM\nres \u00b7 res \u00b7 EM\nres \u00b7 com \u00b7 EM\ncbd \u00b7 cbd \u00b7 EM\ncbd \u00b7 com \u00b7 EM\ncbd \u00b7 res \u00b7 EM\ncom \u00b7 com \u00b7 EM\ncom \u00b7 cbd \u00b7 EM\ncom \u00b7 res \u00b7 EM\n\nRule updated.\n\nModel info\nTaxi service\nTaxicabs travelling distance\n157\n0\n10\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+        },
+        {
+          "label": "seed2 restart",
+          "tick": "0",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nNum Taxicab\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\nTime of day\nAM Peak\nWaiting passengers\n0\nOccupied cabs\n0\nTotal income ($)\n0.00\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd \u00b7 cbd \u00b7 AM\nres \u00b7 com \u00b7 AM\nres \u00b7 cbd \u00b7 AM\nres \u00b7 res \u00b7 AM\ncom \u00b7 res \u00b7 AM\ncom \u00b7 cbd \u00b7 AM\ncom \u00b7 com \u00b7 AM\ncbd \u00b7 res \u00b7 AM\ncbd \u00b7 com \u00b7 AM\nMD\ncbd \u00b7 cbd \u00b7 MD\ncbd \u00b7 com \u00b7 MD\ncbd \u00b7 res \u00b7 MD\ncom \u00b7 com \u00b7 MD\ncom \u00b7 cbd \u00b7 MD\ncom \u00b7 res \u00b7 MD\nres \u00b7 res \u00b7 MD\nres \u00b7 cbd \u00b7 MD\nres \u00b7 com \u00b7 MD\nPM\nres \u00b7 res \u00b7 PM\ncom \u00b7 res \u00b7 PM\ncom \u00b7 cbd \u00b7 PM\ncom \u00b7 com \u00b7 PM\ncbd \u00b7 res \u00b7 PM\ncbd \u00b7 com \u00b7 PM\ncbd \u00b7 cbd \u00b7 PM\nres \u00b7 com \u00b7 PM\nres \u00b7 cbd \u00b7 PM\nEVE\nres \u00b7 cbd \u00b7 EVE\nres \u00b7 com \u00b7 EVE\ncbd \u00b7 cbd \u00b7 EVE\ncbd \u00b7 com \u00b7 EVE\ncbd \u00b7 res \u00b7 EVE\ncom \u00b7 com \u00b7 EVE\ncom \u00b7 cbd \u00b7 EVE\ncom \u00b7 res \u00b7 EVE\nres \u00b7 res \u00b7 EVE\nEM\nres \u00b7 cbd \u00b7 EM\nres \u00b7 res \u00b7 EM\nres \u00b7 com \u00b7 EM\ncbd \u00b7 cbd \u00b7 EM\ncbd \u00b7 com \u00b7 EM\ncbd \u00b7 res \u00b7 EM\ncom \u00b7 com \u00b7 EM\ncom \u00b7 cbd \u00b7 EM\ncom \u00b7 res \u00b7 EM\n\nModel initialized.\n\nModel info\nTaxi service\nTaxicabs travelling distance\n1\n0\n1\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-taxi-cabs-1366-light.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366,
+            "font": "system-ui, sans-serif",
+            "stylesheets": [
+              "http://127.0.0.1:3112/styles.css"
+            ]
+          },
+          "actualWidth": 1366,
+          "actualHeight": 768,
+          "sha256": "ad4b20083f869c1cf61bf4b5ea51cf7f81a0e11859829ba45c2eb6073c8f5077"
+        },
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-taxi-cabs-1366-dark.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366,
+            "font": "system-ui, sans-serif",
+            "stylesheets": [
+              "http://127.0.0.1:3112/styles.css"
+            ]
+          },
+          "actualWidth": 1366,
+          "actualHeight": 768,
+          "sha256": "6e9d4d56c95ac4bdeb5084402bbcfb89cd449d3064c2637be109692de156a888"
+        },
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-taxi-cabs-390-light.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390,
+            "font": "system-ui, sans-serif",
+            "stylesheets": [
+              "http://127.0.0.1:3112/styles.css"
+            ]
+          },
+          "actualWidth": 390,
+          "actualHeight": 844,
+          "sha256": "11ddba776a1529a1be8117ce8a3e30b6830768dd60908d24218791f1a2600e16"
+        },
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-taxi-cabs-390-dark.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390,
+            "font": "system-ui, sans-serif",
+            "stylesheets": [
+              "http://127.0.0.1:3112/styles.css"
+            ]
+          },
+          "actualWidth": 390,
+          "actualHeight": 844,
+          "sha256": "a97b7627c7708a82502a08b03fc31c31ade6f82a2dd045e9dadecad3b9cd14d1"
+        },
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-taxi-cabs-390-dark-groups.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "purpose": "Actual styled AM demand group after editing every45 narrow input",
+          "actualWidth": 390,
+          "actualHeight": 844,
+          "sha256": "39c547942e8c7a7465772d28d14506564676600e98a3e4636c5c4c19142851dc"
+        }
+      ],
+      "groups": {
+        "AM": 9,
+        "MD": 9,
+        "PM": 9,
+        "EVE": 9,
+        "EM": 9
+      },
+      "narrowDemandReachability": [
+        {
+          "name": "live-prob-cbd-cbd-AM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 402.421875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-com-AM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 467.015625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-cbd-AM",
+          "value": "1",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 531.609375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-res-AM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 596.203125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-res-AM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 660.796875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-cbd-AM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 725.390625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-com-AM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 336.984375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-res-AM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 401.578125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-com-AM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 466.171875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-cbd-MD",
+          "value": "0.97",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 581.546875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-com-MD",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 646.140625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-res-MD",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 710.734375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-com-MD",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 739.328125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-cbd-MD",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 336.921875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-res-MD",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 401.515625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-res-MD",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 466.109375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-cbd-MD",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 530.703125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-com-MD",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 595.296875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-res-PM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 710.671875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-res-PM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 739.265625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-cbd-PM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 337.859375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-com-PM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 402.453125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-res-PM",
+          "value": "1",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 467.046875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-com-PM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 531.640625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-cbd-PM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 596.234375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-com-PM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 660.828125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-cbd-PM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 688.421875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-cbd-EVE",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 337.796875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-com-EVE",
+          "value": "1",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 402.390625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-cbd-EVE",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 466.984375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-com-EVE",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 531.578125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-res-EVE",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 596.171875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-com-EVE",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 660.765625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-cbd-EVE",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 725.359375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-res-EVE",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 336.953125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-res-EVE",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 401.546875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-cbd-EM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 516.921875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-res-EM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 581.515625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-res-com-EM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 646.109375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-cbd-EM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 710.703125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-com-EM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 739.296875,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-cbd-res-EM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 500.890625,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-com-EM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 565.484375,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-cbd-EM",
+          "value": "0",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 630.078125,
+            "width": 326,
+            "height": 40
+          }
+        },
+        {
+          "name": "live-prob-com-res-EM",
+          "value": "1",
+          "visible": true,
+          "box": {
+            "x": 32,
+            "y": 694.671875,
+            "width": 326,
+            "height": 40
+          }
+        }
+      ],
+      "after45EditsTick": "10",
+      "finalSeed": "2",
+      "finalLiveValue": "1.5"
+    },
+    {
+      "slug": "wealth-distribution",
+      "pageErrors": [],
+      "console": [],
+      "httpFailures": [],
+      "requestFailures": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3112/styles.css",
+          "status": 200,
+          "bytes": 5545,
+          "sha256": "9b0b87714a47147b923822f8d18805146947c307cf894bfede229aad37045875"
+        }
+      ],
+      "states": [
+        {
+          "label": "setup",
+          "tick": "0",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nPeople\nBest Land\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\nPeople\n250\nTotal wealth\n8027\nGini\n0.278\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\n\nModel initialized.\n\nModel info\nResources and wealth classes\nCurrent wealth classes\n99\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n99\n0\n1\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n1\nGini"
+        },
+        {
+          "label": "10 steps",
+          "tick": "10",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nPeople\nBest Land\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n10\nPeople\n250\nTotal wealth\n11900\nGini\n0.363\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\n\nSteps completed.\n\nModel info\nResources and wealth classes\nCurrent wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n164\n0\n10\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n10\nGini"
+        },
+        {
+          "label": "growth5 live",
+          "tick": "10",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nPeople\nBest Land\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n10\nPeople\n250\nTotal wealth\n11900\nGini\n0.363\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\n\nRule updated.\n\nModel info\nResources and wealth classes\nCurrent wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n164\n0\n10\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n10\nGini"
+        },
+        {
+          "label": "seed2 draft",
+          "tick": "10",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nPeople\nBest Land\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n10\nPeople\n250\nTotal wealth\n11900\nGini\n0.363\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\n\nRule updated.\n\nModel info\nResources and wealth classes\nCurrent wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n164\n0\n10\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n10\nGini"
+        },
+        {
+          "label": "seed2 restart",
+          "tick": "0",
+          "text": "Skip to experiment\nAgent Lab\nExperiment\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nRebellion\nRepressilator 1D\nRobby the Robot\nRobotic Factory\nRumor Mill\nSand\nSandpile\nSegregation\nSex Ratio Equilibrium\nShepherds\nSignaling Game\nSimple Birth Rates\nSimple Genetic Algorithm\nSimulated Annealing\nSlime\nSmoothLife\nSolid Diffusion\nStochastic Patchwork\nSunflower Emergent\nTaxi Cabs\nTermites\nThree Doors\nTraffic 2 Lanes\nTraffic Basic\nTraffic Grid\nTraffic Grid Goal\nTraffic Intersection\nTumor\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus\nVirus on a Network\nVision Evolution\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nPeople\nBest Land\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\nPeople\n250\nTotal wealth\n8090\nGini\n0.256\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\n\nModel initialized.\n\nModel info\nResources and wealth classes\nCurrent wealth classes\n112\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n112\n0\n1\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n1\nGini"
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-wealth-distribution-1366-light.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366,
+            "font": "system-ui, sans-serif",
+            "stylesheets": [
+              "http://127.0.0.1:3112/styles.css"
+            ]
+          },
+          "actualWidth": 1366,
+          "actualHeight": 768,
+          "sha256": "d6584c21a1530381fbcdd95c42ad8fc46d1306c63989ef6f6700f89414d16fc7"
+        },
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-wealth-distribution-1366-dark.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366,
+            "font": "system-ui, sans-serif",
+            "stylesheets": [
+              "http://127.0.0.1:3112/styles.css"
+            ]
+          },
+          "actualWidth": 1366,
+          "actualHeight": 768,
+          "sha256": "c2bb1b5ad8dd3b56ce09e62cc2346294fda0f497025111eeb074027a67da9aed"
+        },
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-wealth-distribution-390-light.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390,
+            "font": "system-ui, sans-serif",
+            "stylesheets": [
+              "http://127.0.0.1:3112/styles.css"
+            ]
+          },
+          "actualWidth": 390,
+          "actualHeight": 844,
+          "sha256": "9bd74ae7414b4dcaea7cd3376e502f315f780c1c535c344d1c2443fc37385799"
+        },
+        {
+          "path": "/tmp/city-library-production-legacy-authoring-wealth-distribution-390-dark.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390,
+            "font": "system-ui, sans-serif",
+            "stylesheets": [
+              "http://127.0.0.1:3112/styles.css"
+            ]
+          },
+          "actualWidth": 390,
+          "actualHeight": 844,
+          "sha256": "fc92cd62c7af992669332c338dda0a8f9ff75e89b4681bb13c543297c21ae04c"
+        }
+      ],
+      "categoryText": "Current wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople",
+      "categoryAria": "x axis: Wealth class; y axis: People; People: x Low, y 164; x Middle, y 64; x High, y 22",
+      "gini": "0.363",
+      "finalSeed": "2",
+      "finalLiveValue": "5"
+    }
+  ],
+  "verification": "BothactualproductionCSSflows passed;11exactPNG (8overview,1Taxigroupdetail,2Wealthcategorydetails),alloverviewscrollY0;nohorizontaloverflow;45narrowTaxiDemandInputsactuallyeditedatunchangedtick10;noPageErrors/consoleerrors/networkfailures;seed2Restarttick0preserveslivevalues.",
+  "limits": [
+    "Actualstyledlegacyhostverification,notindependentdesignapproval.",
+    "NohiddenmodelAPIsorfakeDOM;defaultSetup/step/live/draft/restartonly.",
+    "Own3112serverstoppedafterverification;3110and3100/3101/3102preserved."
+  ],
+  "categoryDetailShots": [
+    {
+      "path": "/tmp/city-library-production-legacy-authoring-wealth-distribution-390-light-categories.png",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "purpose": "Actual production-styled categorical chart detail at tick10",
+      "text": "Current wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople",
+      "aria": "x axis: Wealth class; y axis: People; People: x Low, y 164; x Middle, y 64; x High, y 22"
+    },
+    {
+      "path": "/tmp/city-library-production-legacy-authoring-wealth-distribution-390-dark-categories.png",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "purpose": "Actual production-styled categorical chart detail at tick10",
+      "text": "Current wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople",
+      "aria": "x axis: Wealth class; y axis: People; People: x Low, y 164; x Middle, y 64; x High, y 22"
+    }
+  ],
+  "serverCleanup": {
+    "port": 3112,
+    "pid": 3242224,
+    "status": "Stopped owned server after all captures; ss shows no listener on3112.3110 left running;3100/3101/3102 untouched."
+  }
+}
