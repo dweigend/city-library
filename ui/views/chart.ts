@@ -98,9 +98,17 @@ export function mountChart(
       svg.setAttribute(
         "aria-label",
         series
-          .map(
-            (line) => `${line.label}: ${line.points.at(-1)?.y ?? "no samples"}`,
-          )
+          .map((line) => {
+            const valid = line.points.filter(
+              (point) => Number.isFinite(point.x) && Number.isFinite(point.y),
+            );
+            const description = mode === "line"
+              ? valid.at(-1)?.y ?? "no samples"
+              : valid.length
+                ? valid.map((point) => `x ${point.x}, y ${point.y}`).join("; ")
+                : "no samples";
+            return `${line.label}: ${description}`;
+          })
           .join("; "),
       );
     },

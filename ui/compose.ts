@@ -267,7 +267,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
       if (spec.live?.length) {
         const group = document.createElement("div");
         group.className = "live-controls";
-        controls.insertBefore(group, monitors);
+        controls.insertBefore(group, status);
         const inputs = Object.entries(definition.inputs) as [
           string,
           Descriptor,
