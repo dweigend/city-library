@@ -28,7 +28,12 @@ export const ui = defineUI(model, {
     },
   ],
   actions: [
-    { label: "One generation to limit", run: (m) => m.advanceToLimit() },
+    {
+      label: "One generation to limit",
+      run: (m) => m.advanceToLimit(),
+      enabled: (s) => s.tick < s.parameters.numberOfGenerations,
+      repeat: { label: "Run to limit", intervalMs: 300 },
+    },
     {
       label: "View environment",
       run: (m) => m.showEnvironment(),
@@ -58,7 +63,7 @@ export const ui = defineUI(model, {
         height: 10,
         cells: s.cells.map((c) => ({
           ...c,
-          color: c.can ? "#f0ae37" : c.collected ? "#b9b9b9" : "#ffffff",
+          color: !s.visuals ? "#ffffff" : c.can ? "#f0ae37" : c.collected ? "#b9b9b9" : "#ffffff",
         })),
         segments: s.trail.map((t) => ({
           from: { x: t.from.x - 4.5, y: t.from.y - 4.5 },
