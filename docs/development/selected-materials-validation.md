@@ -1,5 +1,7 @@
 # Selected materials executed validation and open gates
 
+Current amendment: the explicit user-approved single counter correction and successful five-script run are recorded in [materials-approved-correction.md](materials-approved-correction.md). Earlier pending/failure statements below are historical checkpoints, not current gate status. Model/UI/runtime and old capture bytes remain unchanged.
+
 ## Executed
 
 - Exact inventory/archive/Galapagos Git-blob reconciliation:8/8 pass. `python docs/development/selected-materials-audit.py`; no served source substitution. [Source evidence](selected-materials-evidence/source-validation.json).

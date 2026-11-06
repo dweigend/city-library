@@ -1,4 +1,6 @@
-# Eight materials ports: integration with explicit pending gates
+# Eight materials ports: integration with approved counter correction
+
+Current amendment: the explicit user-approved single counter correction and successful five-script run are recorded in [materials-approved-correction.md](materials-approved-correction.md). Earlier pending/failure statements below are historical checkpoints, not current gate status. Model/UI/runtime and old capture bytes remain unchanged.
 
 The exact nine owned commits from [draft PR23](https://github.com/dweigend/city-library/pull/23), head60f551b9c71964e7f05ba5f107176f57da9f16a6, were cherry-picked in the author's ordered handoff. No merge or shared-file copy. [Issue20](https://github.com/dweigend/city-library/issues/20), [handoff](selected-materials-handoff.md), [complete eight-model source/target browser comparison](selected-materials-browser.md). Original source identities and selected membership are unchanged.
 
