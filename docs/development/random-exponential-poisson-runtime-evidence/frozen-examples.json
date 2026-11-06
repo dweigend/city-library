@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "count": 5,
+  "results": [
+    {
+      "script": "examples/random-exponential-poisson-proposal/01-exponential-transform-and-consumption.ts",
+      "exitCode": 0,
+      "stdout": "distribution proposal01: exponential formula, defaults, zero, underflow and overflow continuation\n",
+      "stderr": ""
+    },
+    {
+      "script": "examples/random-exponential-poisson-proposal/02-poisson-product-branch.ts",
+      "exitCode": 0,
+      "stdout": "distribution proposal02: low-mean product stopping, stream trace, zero mass and default mean\n",
+      "stderr": ""
+    },
+    {
+      "script": "examples/random-exponential-poisson-proposal/03-poisson-high-mean-and-continuation.ts",
+      "exitCode": 0,
+      "stdout": "distribution proposal03: branch boundary, liver mean, upper bound, moments and exact self-continuation\n",
+      "stderr": ""
+    },
+    {
+      "script": "examples/random-exponential-poisson-proposal/04-validation-cache-and-local-stream.ts",
+      "exitCode": 0,
+      "stdout": "distribution proposal04: rejection before consumption, closed keys, normal cache and local restoration\n",
+      "stderr": ""
+    },
+    {
+      "script": "examples/random-exponential-poisson-proposal/05-blood-sugar-parameter-scenario.ts",
+      "exitCode": 0,
+      "stdout": "distribution proposal05: actual liver/hormone parameters, moments, half-life and World continuation\n",
+      "stderr": ""
+    }
+  ]
+}
