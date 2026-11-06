@@ -18,4 +18,4 @@ export type {
 export { stats } from "./src/stats/index.ts";
 export type { Histogram, Summary } from "./src/stats/index.ts";
 export { geometry } from "./src/geometry/index.ts";
-export type { Bounds } from "./src/geometry/index.ts";
+export type { Bounds, PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset } from "./src/geometry/index.ts";
