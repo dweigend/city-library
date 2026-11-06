@@ -50,6 +50,7 @@ export const ui = defineUI(model, {
       type: "spatial",
       label: "Foragers and fruit bushes",
       data: (s) => ({
+        showLabels: true,
         width: 65,
         height: 65,
         agents: [
