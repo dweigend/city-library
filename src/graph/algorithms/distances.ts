@@ -1,5 +1,6 @@
 import { validateOptions } from "../../agent/state.ts";
 import type { Edge } from "../edge.ts";
+import { addCosts, dyadic, roundedCost, unitCost } from "./dyadic-costs.ts";
 
 type Algorithm = "auto" | "breadth" | "dijkstra" | "bellman-ford";
 export interface DistanceOptions<N extends object, E extends object> {
@@ -17,7 +18,7 @@ export interface DistanceSummary<N extends object> {
   readonly eccentricity: ReadonlyMap<N, number>;
   readonly reachablePairs: number;
 }
-interface Arc<N> { to: N; cost: number }
+interface Arc<N> { to: N; cost: bigint }
 interface Prepared<N> { nodes: readonly N[]; adjacency: Map<N, Arc<N>[]> }
 type Cost<N extends object, E extends object> = (edge: Edge<N, E>) => number;
 
@@ -39,8 +40,9 @@ function prepare<N extends object, E extends object>(nodes: readonly N[], edges:
     const weight = cost === undefined ? 1 : cost(edge);
     if (typeof weight !== "number" || !Number.isFinite(weight)) throw new TypeError("Edge cost must be a finite number.");
     if (!signed && weight < 0) throw new RangeError("Negative costs require explicit Bellman–Ford.");
-    adjacency.get(edge.from)!.push({ to: edge.to, cost: weight });
-    if (!edge.directed && edge.from !== edge.to) adjacency.get(edge.to)!.push({ to: edge.from, cost: weight });
+    const exact = cost === undefined ? unitCost : dyadic(weight);
+    adjacency.get(edge.from)!.push({ to: edge.to, cost: exact });
+    if (!edge.directed && edge.from !== edge.to) adjacency.get(edge.to)!.push({ to: edge.from, cost: exact });
   }
   return { nodes, adjacency };
 }
@@ -62,10 +64,10 @@ function breadth<N>(graph: Prepared<N>, from: N): Map<N, number> {
   return result;
 }
 /** Lazy binary min heap: stale improvements are discarded when popped. */
-function dijkstra<N>(graph: Prepared<N>, from: N): Map<N, number> {
-  const result = new Map([[from, 0]]);
-  const heap: { node: N; value: number }[] = [];
-  function push(node: N, value: number) {
+function dijkstra<N>(graph: Prepared<N>, from: N): Map<N, bigint> {
+  const result = new Map([[from, 0n]]);
+  const heap: { node: N; value: bigint }[] = [];
+  function push(node: N, value: bigint) {
     let index = heap.length;
     heap.push({ node, value });
     while (index > 0) {
@@ -92,12 +94,12 @@ function dijkstra<N>(graph: Prepared<N>, from: N): Map<N, number> {
     }
     return first;
   }
-  push(from, 0);
+  push(from, 0n);
   while (heap.length) {
     const { node, value } = pop();
     if (result.get(node) !== value) continue;
     for (const arc of graph.adjacency.get(node)!) {
-      const candidate = sum(value, arc.cost);
+      const candidate = addCosts(value, arc.cost);
       const previous = result.get(arc.to);
       if (previous === undefined || candidate < previous) {
         result.set(arc.to, candidate);
@@ -107,15 +109,15 @@ function dijkstra<N>(graph: Prepared<N>, from: N): Map<N, number> {
   }
   return result;
 }
-function bellmanFord<N>(graph: Prepared<N>, from: N): Map<N, number> {
-  const result = new Map([[from, 0]]);
+function bellmanFord<N>(graph: Prepared<N>, from: N): Map<N, bigint> {
+  const result = new Map([[from, 0n]]);
   for (let pass = 0; pass < graph.nodes.length; pass++) {
     let changed = false;
     for (const node of graph.nodes) {
       const value = result.get(node);
       if (value === undefined) continue;
       for (const arc of graph.adjacency.get(node)!) {
-        const candidate = sum(value, arc.cost);
+        const candidate = addCosts(value, arc.cost);
         const previous = result.get(arc.to);
         if (previous === undefined || candidate < previous) {
           if (pass === graph.nodes.length - 1) throw new RangeError("Reachable negative cycle.");
@@ -129,7 +131,9 @@ function bellmanFord<N>(graph: Prepared<N>, from: N): Map<N, number> {
   return result;
 }
 function run<N>(graph: Prepared<N>, from: N, algorithm: Exclude<Algorithm, "auto">): Map<N, number> {
-  return algorithm === "breadth" ? breadth(graph, from) : algorithm === "dijkstra" ? dijkstra(graph, from) : bellmanFord(graph, from);
+  if (algorithm === "breadth") return breadth(graph, from);
+  const exact = algorithm === "dijkstra" ? dijkstra(graph, from) : bellmanFord(graph, from);
+  return new Map([...exact].map(([node, value]) => [node, roundedCost(value)]));
 }
 export function distances<N extends object, E extends object>(nodes: readonly N[], edges: Iterable<Edge<N, E>>, options: DistanceOptions<N, E> & { from: N }): ReadonlyMap<N, number> {
   const settings = validateOptions(options, ["from", "cost", "algorithm"]);
@@ -152,13 +156,14 @@ export function distanceSummary<N extends object, E extends object>(nodes: reado
     throw new TypeError("Invalid disconnected policy.");
   const graph = prepare(nodes, edges, cost, false);
   const eccentricity = new Map<N, number>();
-  let total = 0, reachablePairs = 0, diameter = 0, radius = Infinity;
+  let total = 0n;
+  let reachablePairs = 0, diameter = 0, radius = Infinity;
   for (const from of nodes) {
     const result = run(graph, from, cost === undefined ? "breadth" : "dijkstra");
     if (settings.disconnected === "reject" && result.size !== nodes.length) throw new RangeError("Graph has unreachable pairs.");
     let maximum = 0;
     for (const [to, distance] of result) if (to !== from) {
-      total = sum(total, distance);
+      total = addCosts(total, dyadic(distance));
       reachablePairs++;
       maximum = Math.max(maximum, distance);
     }
@@ -167,7 +172,7 @@ export function distanceSummary<N extends object, E extends object>(nodes: reado
     radius = Math.min(radius, maximum);
   }
   return Object.freeze({
-    ...(reachablePairs ? { mean: total / reachablePairs } : {}),
+    ...(reachablePairs ? { mean: roundedCost(total) / reachablePairs } : {}),
     ...(nodes.length ? { diameter, radius } : {}),
     eccentricity, reachablePairs,
   });

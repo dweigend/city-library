@@ -1,4 +1,5 @@
 const phases = {
+  "graph-distance-precision": ["01-large-prefixes", "02-hidden-negative-cycles", "03-cancellation-and-overflow", "04-summary-and-callbacks", "05-independent-integer-oracle"],
   "selected-ecology": ["01-birth-and-temperature", "02-transport-and-herding", "03-resources-and-invasion", "04-foraging-and-heat", "05-flocking-and-flashes"],
   "affine-map": ["01-uniform-centered", "02-source-gis-envelopes", "03-unclipped-and-round-trip", "04-validation-and-domain", "05-canonical-positions-and-purity"],
   "selected-computing": ["01-neural-learning", "02-resources-and-ranking", "03-genetic-strategies", "04-swarm-and-clustering", "05-annealing-and-factory"],
