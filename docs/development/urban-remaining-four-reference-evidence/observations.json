@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 1,
+  "executedAt": "2026-11-06",
+  "scope": "Four original NetLogo Web models only; no target comparison, implementation or independent approval",
+  "browser": "configured T3 Chromium preview",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+  "version": "NetLogo7.0.4",
+  "seedPolicy": "Native unspecified seed for normal runs; Sprawl right/left tie fixture explicitly random-seed1",
+  "structureOne": {
+    "sha256": "8a5573912ba6d29d9101b9d1fbfbbc7cf5629ad0f799d370cfb39cb9cae1944e",
+    "loadedBytes": 40383,
+    "setup": {
+      "tick": 0,
+      "count": 16900,
+      "total": -338,
+      "maxAbsolute": 1,
+      "min": -1,
+      "max": 1,
+      "noise": false
+    },
+    "progress": {
+      "tick": 52,
+      "count": 16900,
+      "total": -337.9999999999987,
+      "maxAbsolute": 0.18153589126705744,
+      "min": -0.17512725144034338,
+      "max": 0.18153589126705744,
+      "noise": false
+    },
+    "nativeNoiseStep": {
+      "tick": 53,
+      "count": 16900,
+      "total": -481.9999999999986,
+      "maxAbsolute": 1.1781625312652941,
+      "min": -1.1731777582894831,
+      "max": 1.1781625312652941,
+      "noise": true
+    },
+    "impulseFixture": {
+      "tick": 1,
+      "input": {
+        "x": 0,
+        "y": 0,
+        "activity": 5
+      },
+      "nonzero": [
+        {
+          "x": 0,
+          "y": 129,
+          "activity": 1
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "activity": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "activity": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "activity": 1
+        },
+        {
+          "x": 129,
+          "y": 0,
+          "activity": 1
+        }
+      ],
+      "total": 5
+    },
+    "zeroFixture": {
+      "tick": 0,
+      "total": 0,
+      "activityAll": 0,
+      "error": "Division by zero. error while running / on line1, called by RECOLOR-PATCHES, called by GO",
+      "route": "Native Command Center output",
+      "phase": "staging/commit completed; recolor failed before tick"
+    },
+    "commands": [
+      "set keep-adding-randomness? false ask patches [ set activity 0 ] ask patch 0 0 [ set activity 5 ] reset-ticks go",
+      "ask patches [ set activity 0 ] reset-ticks go"
+    ],
+    "consoleErrors": [],
+    "failedNetworkRequests": []
+  },
+  "structureTwo": {
+    "sha256": "9a83bc7a5ff539f3a02fe8a20c5d8cb5d3366bb72993519db5a0a31f51be0839",
+    "loadedBytes": 42440,
+    "setup": {
+      "tick": 0,
+      "count": 16900,
+      "total": 338,
+      "mean": 0.02,
+      "max": 1,
+      "threshold": 4.5,
+      "above": 0,
+      "white": 0
+    },
+    "progress": {
+      "tick": 83,
+      "count": 16900,
+      "total": -1737.9999999999905,
+      "mean": -0.10284023668638997,
+      "max": 4.427691399526066,
+      "threshold": 4.5,
+      "above": 0,
+      "white": 39
+    },
+    "plotValuesAt83": {
+      "currentAbove": 0,
+      "maxPotential": 4.427691399526066,
+      "meanTimesTen": -1.028402366863901
+    },
+    "liveThreshold": {
+      "tick": 83,
+      "count": 16900,
+      "total": -1737.9999999999905,
+      "mean": -0.10284023668638997,
+      "max": 4.427691399526066,
+      "threshold": 0,
+      "above": 7935,
+      "white": 39
+    },
+    "setupThresholdZero": {
+      "tick": 0,
+      "above": 8457,
+      "white": 0,
+      "total": 14
+    },
+    "fixtures": [
+      {
+        "tick": 0,
+        "count": 16900,
+        "total": 84500,
+        "mean": 5,
+        "max": 5,
+        "threshold": 5,
+        "above": 0,
+        "white": 0
+      },
+      {
+        "tick": 1,
+        "count": 16900,
+        "total": 202822,
+        "mean": 12.00130177514793,
+        "max": 13,
+        "threshold": 10,
+        "above": 16900,
+        "white": 16900
+      },
+      {
+        "tick": 2,
+        "count": 16900,
+        "total": 100,
+        "mean": 0.005917159763313609,
+        "max": 1,
+        "threshold": 10,
+        "above": 0,
+        "white": 16900
+      }
+    ],
+    "strictTieCommandOutput": [
+      0,
+      5,
+      50
+    ],
+    "commands": [
+      "set threshold 5 ask patches [ set potential 5 ] show (list (count patches with [ potential > threshold ]) (mean [ potential ] of patches) ((mean [ potential ] of patches) * 10))",
+      "set threshold 10 ask patches [ set potential 12 ] reset-ticks go",
+      "ask patches [ set potential 0 ] go"
+    ],
+    "finalReset": {
+      "tick": 0,
+      "threshold": 4.5,
+      "white": 0
+    },
+    "consoleErrors": [],
+    "failedNetworkRequests": []
+  },
+  "sprawl": {
+    "sha256": "47a13701ed91c04aad70f39ad79d41709d01e27b5143328fe319f369e9ef0d3b",
+    "loadedBytes": 48581,
+    "defaults": {
+      "smoothness": 15,
+      "maxAttraction": 15,
+      "seekerSearchAngle": 84,
+      "population": 200,
+      "seekerPatience": 60,
+      "waitBetweenSeeking": 15
+    },
+    "setup": {
+      "tick": 0,
+      "counts": {
+        "seekers": 200
+      },
+      "buildThreshold": 7,
+      "totalAttraction": 8685.999999999995,
+      "origin": 6.769957631296986,
+      "agents": [
+        {
+          "who": 0,
+          "kind": "seekers",
+          "x": 0,
+          "y": 0,
+          "heading": 150
+        },
+        {
+          "who": 1,
+          "kind": "seekers",
+          "x": 0,
+          "y": 0,
+          "heading": 125
+        }
+      ]
+    },
+    "progress": {
+      "tick": 21,
+      "counts": {
+        "houses": 149,
+        "seekers": 51
+      },
+      "buildThreshold": 7,
+      "totalAttraction": 8732.151469534785,
+      "origin": 3.479999999999996,
+      "agents": [
+        {
+          "who": 0,
+          "kind": "houses",
+          "x": 1.7335852469321449,
+          "y": -0.9285137576462434,
+          "heading": 144
+        },
+        {
+          "who": 1,
+          "kind": "houses",
+          "x": 2.984893458877341,
+          "y": -1.3530171186392965,
+          "heading": 107
+        }
+      ]
+    },
+    "liveMaxChange": {
+      "tick": 21,
+      "currentMaxAttraction": 0,
+      "cachedBuildThreshold": 7
+    },
+    "maxZeroSetup": {
+      "tick": 0,
+      "seekers": 200,
+      "totalAttraction": 0,
+      "buildThreshold": 0
+    },
+    "maxZeroGo": {
+      "tick": 1,
+      "houses": 200,
+      "originAttraction": 0,
+      "stayCounterEach": 14
+    },
+    "randomBinding": {
+      "positiveFractional": "ceil(bound)",
+      "negativeFractional": "floor(bound), signed result",
+      "zero": "returns0 without RNG call",
+      "observedSamples": [
+        {
+          "bound": 0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "bound": 0.1,
+          "values": [
+            0
+          ]
+        },
+        {
+          "bound": 1.1,
+          "values": [
+            0,
+            1
+          ]
+        },
+        {
+          "bound": 2.1,
+          "values": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "bound": -2.1,
+          "values": [
+            -2,
+            -1,
+            0
+          ]
+        }
+      ],
+      "zeroRngBefore": "cb8c5f4ee79925ef79d18b80337611a3f454e4e0793902493f4779e6acc5d4f2",
+      "zeroRngAfter": "cb8c5f4ee79925ef79d18b80337611a3f454e4e0793902493f4779e6acc5d4f2",
+      "smallBoundRng": {
+        "before": "79f369b00cf53089c443394511afcc2b43964da0c6cd8c0630886da5a5ff7f41",
+        "after": "df4dbfd4f82b38d468a0651e80ca5a7ca3076fa1b27f76aa9977af12ed183cf1"
+      },
+      "bindingSource": "Read actual loaded workspace.randomPrims.random; no engine implementation copied"
+    },
+    "phaseFixtures": [
+      {
+        "tick": 1,
+        "agents": [
+          {
+            "who": 200,
+            "kind": "houses",
+            "x": 0,
+            "y": 0,
+            "heading": 0,
+            "counter": 4
+          }
+        ],
+        "origin": 0.05,
+        "totalAttraction": 0.05
+      },
+      {
+        "tick": 1,
+        "agents": [
+          {
+            "who": 201,
+            "kind": "seekers",
+            "x": 0,
+            "y": 0.5,
+            "heading": 0,
+            "counter": 0
+          }
+        ],
+        "origin": 0,
+        "totalAttraction": 0.01
+      },
+      {
+        "tick": 2,
+        "agents": [
+          {
+            "who": 201,
+            "kind": "houses",
+            "x": 0,
+            "y": 0.5,
+            "heading": 0,
+            "counter": 4
+          }
+        ],
+        "origin": 0,
+        "totalAttraction": 0.060000000000000005
+      },
+      {
+        "tick": 3,
+        "agents": [
+          {
+            "who": 201,
+            "kind": "seekers",
+            "x": 0,
+            "y": 0.5,
+            "heading": 0,
+            "counter": 1
+          }
+        ],
+        "origin": 0,
+        "totalAttraction": 0.11000000000000001
+      },
+      {
+        "tick": 1,
+        "agents": [
+          {
+            "who": 202,
+            "kind": "seekers",
+            "x": -0.16278407722857877,
+            "y": 0.47275928779965826,
+            "heading": 341,
+            "counter": 0
+          }
+        ],
+        "origin": 0.01,
+        "totalAttraction": 6.01
+      }
+    ],
+    "nativeAdditionalSettings": {
+      "smoothness": 1,
+      "maxAttraction": 15,
+      "searchAngle": 90,
+      "population": 1,
+      "patience": 0,
+      "wait": 5,
+      "result": {
+        "tick": 1,
+        "counts": {
+          "houses": 1
+        },
+        "buildThreshold": 7,
+        "totalAttraction": 8686.05000000001,
+        "origin": 2.9,
+        "agents": [
+          {
+            "who": 0,
+            "kind": "houses",
+            "x": 0,
+            "y": 0,
+            "heading": 150
+          }
+        ]
+      }
+    },
+    "commands": [
+      "go",
+      "show n-values 5 [ random 0 ]",
+      "show (list (sort remove-duplicates n-values 100 [ random 0.1 ]) (sort remove-duplicates n-values 100 [ random 1.1 ]) (sort remove-duplicates n-values 100 [ random 2.1 ]) (sort remove-duplicates n-values 100 [ random -2.1 ]))",
+      "ask turtles [ die ] ask patches [ set attraction 0 ] set max-attraction 15 set build-threshold 7 set seeker-search-angle 90 set seeker-patience 1 set wait-between-seeking 5 create-seekers 1 [ setxy 0 0 set heading 0 set patience-counter 0 ] reset-ticks go",
+      "ask turtles [ die ] ask patches [ set attraction 0 ] create-seekers 1 [ setxy 0 0 set heading 0 set patience-counter 1 ] reset-ticks go",
+      "go",
+      "ask houses [ set stay-counter 1 ] go",
+      "ask turtles [ die ] ask patches [ set attraction 0 ] ask patch 1 0 [ set attraction 3 ] ask patch -1 0 [ set attraction 3 ] create-seekers 1 [ setxy 0 0 set heading 0 set patience-counter 1 ] random-seed 1 reset-ticks go",
+      "show n-values 5 [ random 0.1 ]"
+    ],
+    "finalReset": {
+      "tick": 0,
+      "seekers": 200,
+      "defaultsRestored": true
+    },
+    "consoleErrors": [],
+    "failedNetworkRequests": []
+  },
+  "economic": {
+    "sha256": "2ac2e2cf4385c7431daa57b81bc8280c62b40e305cd3acb4208df92a9783e940",
+    "loadedBytes": 63762,
+    "defaults": {
+      "numberOfTests": 15,
+      "residentsPerJob": 100,
+      "poorPerStep": 5,
+      "richPerStep": 5,
+      "poorPricePriority": 0,
+      "richQualityPriority": 0,
+      "maxJobs": 10,
+      "deathRate": 4
+    },
+    "setup": {
+      "tick": 0,
+      "counts": {
+        "jobs": 1,
+        "rich": 5,
+        "poor": 5
+      },
+      "counter": 0,
+      "view": "quality",
+      "priceRange": [
+        31.32386826718243,
+        49.156730108400964
+      ],
+      "qualityRange": [
+        31.32386826718243,
+        49.156730108400964
+      ],
+      "originCache": 0
+    },
+    "progress": {
+      "tick": 14,
+      "counts": {
+        "jobs": 2,
+        "poor": 27,
+        "rich": 27
+      },
+      "counter": 30,
+      "view": "quality",
+      "priceRange": [
+        28.736756725731485,
+        53.76768959815023
+      ],
+      "qualityRange": [
+        28.736756725731485,
+        53.76768959815023
+      ],
+      "originCache": 0.01
+    },
+    "zeroCandidatesNativeGo": {
+      "tick": 1,
+      "counter": 10,
+      "newborns": 10,
+      "allAtOrigin": true,
+      "allUtilityZero": true,
+      "observerContinues": true
+    },
+    "zeroCandidatesImpactFixture": {
+      "tick": 2,
+      "counts": {
+        "jobs": 1,
+        "poor": 5,
+        "rich": 5
+      },
+      "origin": {
+        "price": 38.914033536687384,
+        "quality": 38.914033536687384
+      },
+      "counter": 10
+    },
+    "medianCommandOutput": [
+      0,
+      0
+    ],
+    "counterAndCapFixture": {
+      "before": {
+        "jobs": 5,
+        "jobWho": [
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "counter": 100,
+        "threshold": 100,
+        "maxJobs": 5,
+        "birthRates": 0
+      },
+      "after": {
+        "tick": 3,
+        "jobs": 4,
+        "jobWho": [
+          32,
+          33,
+          34,
+          35
+        ],
+        "counter": 100,
+        "originCache": 10.01
+      }
+    },
+    "jobNoCandidatesFixture": {
+      "tick": 4,
+      "counter": 0,
+      "jobs": [
+        {
+          "who": 32,
+          "x": 2,
+          "y": 10,
+          "utility": 0
+        },
+        {
+          "who": 33,
+          "x": 3,
+          "y": 10,
+          "utility": 0
+        },
+        {
+          "who": 34,
+          "x": 4,
+          "y": 10,
+          "utility": 0
+        },
+        {
+          "who": 35,
+          "x": 0,
+          "y": 10,
+          "utility": 0
+        },
+        {
+          "who": 36,
+          "x": -40,
+          "y": 21,
+          "utility": 0
+        }
+      ]
+    },
+    "views": {
+      "before": {
+        "tick": 0,
+        "view": "quality",
+        "landSha": "8cbccb925756557a29d5fa247bfb0cccecb5b7cc22f5cf6b91803d4df98fb086",
+        "minPoor": 0,
+        "maxPoor": 0,
+        "minRich": 0,
+        "maxRich": 0
+      },
+      "afterEach": [
+        {
+          "tick": 0,
+          "view": "price",
+          "landSha": "8cbccb925756557a29d5fa247bfb0cccecb5b7cc22f5cf6b91803d4df98fb086",
+          "minPoor": 0,
+          "maxPoor": 0,
+          "minRich": 0,
+          "maxRich": 0
+        },
+        {
+          "tick": 0,
+          "view": "dist",
+          "landSha": "8cbccb925756557a29d5fa247bfb0cccecb5b7cc22f5cf6b91803d4df98fb086",
+          "minPoor": 0,
+          "maxPoor": 0,
+          "minRich": 0,
+          "maxRich": 0
+        },
+        {
+          "tick": 0,
+          "view": "rich-utility",
+          "landSha": "8cbccb925756557a29d5fa247bfb0cccecb5b7cc22f5cf6b91803d4df98fb086",
+          "minPoor": 0.03461386316570532,
+          "maxPoor": 0.24519660084428835,
+          "minRich": 0.6417929462050902,
+          "maxRich": 407.83599632159996
+        },
+        {
+          "tick": 0,
+          "view": "poor-utility",
+          "landSha": "8cbccb925756557a29d5fa247bfb0cccecb5b7cc22f5cf6b91803d4df98fb086",
+          "minPoor": 0.03461386316570532,
+          "maxPoor": 0.24519660084428835,
+          "minRich": 0.6417929462050902,
+          "maxRich": 407.83599632159996
+        },
+        {
+          "tick": 0,
+          "view": "quality",
+          "landSha": "8cbccb925756557a29d5fa247bfb0cccecb5b7cc22f5cf6b91803d4df98fb086",
+          "minPoor": 0.03461386316570532,
+          "maxPoor": 0.24519660084428835,
+          "minRich": 0.6417929462050902,
+          "maxRich": 407.83599632159996
+        }
+      ],
+      "scienceLandHashUnchanged": true,
+      "utilityColorCachesUpdated": true
+    },
+    "nativeAdditionalSettings": {
+      "numberOfTests": 15,
+      "poorPerStep": 1,
+      "richPerStep": 2,
+      "poorPricePriority": -0.5,
+      "richQualityPriority": 0.5,
+      "residentsPerJob": 10,
+      "maxJobs": 5,
+      "deathRate": 0,
+      "result": {
+        "tick": 4,
+        "counts": {
+          "jobs": 2,
+          "rich": 13,
+          "poor": 9
+        },
+        "counter": 0,
+        "view": "quality",
+        "priceRange": [
+          31.637106949854253,
+          52.19672578610047
+        ],
+        "qualityRange": [
+          31.637106949854253,
+          52.19672578610047
+        ],
+        "originCache": 0.01
+      }
+    },
+    "commands": [
+      "ask rich [ die ] ask poor [ die ] ask patches [ set quality 40 set price 40 ] set counter 0",
+      "show (list (median [ min [ distance myself ] of jobs ] of rich) (median [ min [ distance myself ] of jobs ] of poor))",
+      "ask turtles with [ breed != jobs ] [ die ] ask jobs [ die ] create-jobs 5 [ setxy (who mod 5) 10 ] set poor-per-step 0 set rich-per-step 0 set max-jobs 5 set death-rate 0 set counter 100 set residents-per-job 100",
+      "set max-jobs 20 set counter 101"
+    ],
+    "travelPlotPrimitive": "median [ min [distance myself] of jobs ] of rich/poor; actual distances, not sd-dist cache",
+    "consoleErrors": [],
+    "failedNetworkRequests": []
+  },
+  "runtimeErrors": [
+    {
+      "model": "Structure from Randomness1",
+      "case": "injected all-zero field",
+      "error": "Division by zero during RECOLOR-PATCHES before tick"
+    }
+  ],
+  "limits": [
+    "Original sessions only. Every model still needs paired target browser/mobile/theme evidence and independent technical review.",
+    "No cross-RNG trajectory/statistical or empirical scientific validation claimed.",
+    "Display-only random ask shuffles may consume source RNG even when scalar equations do not need randomness; no claim of zero original RNG for such asks.",
+    "Source selected-subset candidate STOP exercised deterministically at numberOfTests0; no exhaustive crowded-world sampling study performed."
+  ],
+  "toolErrors": [],
+  "cleanup": "Only this agent's same tab reused; previous instances unloaded, final Sprawl reset to defaults/tick0 and tab closed."
+}
