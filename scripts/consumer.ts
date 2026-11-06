@@ -81,6 +81,10 @@ const packedEigen=analysisGraph.analyze({measure:'eigenvector'}).get(analysisA);
 if(packedEigen===undefined||Math.abs(packedEigen-1/Math.sqrt(2))>1e-10)throw Error('packed eigenvector mismatch');
 const packedRank=analysisGraph.analyze({measure:'pageRank'}).get(analysisA);
 if(packedRank===undefined||Math.abs(packedRank-0.5)>1e-10)throw Error('packed PageRank mismatch');
+const generatedGraph=Graph.add();
+const generatedNodes=Array.from({length:3},()=>generatedGraph.nodes.add({}));
+const generatedPath=generatedGraph.generate({kind:'path',nodes:generatedNodes,directed:true});
+if(generatedPath.length!==2||generatedPath[0].from!==generatedNodes[0]||generatedPath[1].to!==generatedNodes[2]||!Object.isFrozen(generatedPath))throw Error('packed generator mismatch');
 `, { flag: "a" });
   await writeFile(join(directory, "summary-types.ts"), `import {stats,type Summary} from 'city-library';
 function summaryTypeContract(){const summary:Summary=stats.describe([1,2,3],{sample:true});const median:number|undefined=summary.median;
@@ -89,10 +93,15 @@ summary.sum=0;
 return median;}
 void summaryTypeContract;
 `);
+  await writeFile(join(directory, "generator-types.ts"), `import {Graph,type GeneratorOptions,type Edge} from 'city-library';
+function generatorTypeContract(){const graph=Graph.add<{name:string}>();const a=graph.nodes.add({name:'a'}),b=graph.nodes.add({name:'b'});const options:GeneratorOptions<{name:string}>={kind:'path',nodes:[a,b],directed:true};const result:readonly Edge<{name:string}>[]=graph.generate(options);
+// @ts-expect-error Generated edge containers are readonly.
+result.push(result[0]);return result;}void generatorTypeContract;
+`);
   await command(["bun", "consumer.ts"], directory);
   await writeFile(join(directory, "consumer.mjs"), await Bun.file(join(directory, "consumer.ts")).text());
   await command(["node", "consumer.mjs"], directory);
-  await writeFile(join(directory, "tsconfig.json"), JSON.stringify({ compilerOptions: { strict: true, target: "ESNext", module: "Preserve", moduleResolution: "bundler", noEmit: true, types: [], lib: ["ESNext"] }, include: ["consumer.ts", "summary-types.ts"] }));
+  await writeFile(join(directory, "tsconfig.json"), JSON.stringify({ compilerOptions: { strict: true, target: "ESNext", module: "Preserve", moduleResolution: "bundler", noEmit: true, types: [], lib: ["ESNext"] }, include: ["consumer.ts", "summary-types.ts", "generator-types.ts"] }));
   await command([resolve("node_modules/.bin/tsc"), "-p", "tsconfig.json"], directory);
   console.log("packed consumer: Bun, Node ESM and ambient-free TypeScript passed");
 } finally { await rm(directory, { recursive: true, force: true }); }

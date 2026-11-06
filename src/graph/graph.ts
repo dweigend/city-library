@@ -6,6 +6,8 @@ import { connects, direction, opposite, type Direction } from "./queries.ts";
 import { components, type ComponentMode } from "./algorithms/connectivity.ts";
 import { distances, allDistances, distanceSummary, type DistanceOptions, type DistanceSummary, type SummaryOptions } from "./algorithms/distances.ts";
 import { analyze, type AnalysisOptions } from "./algorithms/analysis.ts";
+import { validateGenerator, type GeneratorOptions } from "./generators/options.ts";
+import { planGenerator } from "./generators/planning.ts";
 
 interface EdgeOptions<N extends object, E extends object> {
   from: N; to: N; directed?: boolean; key?: string; state?: E;
@@ -29,6 +31,7 @@ export interface Graph<N extends object = object, E extends object = {}> {
   allDistances(options?: DistanceOptions<N, E>): ReadonlyMap<N, ReadonlyMap<N, number>>;
   distanceSummary(options?: SummaryOptions<N, E>): DistanceSummary<N>;
   analyze(options: AnalysisOptions<N, E>): ReadonlyMap<N, number>;
+  generate(options: GeneratorOptions<N>): readonly Edge<N, E>[];
   delete(options?: { edgesOnly?: boolean }): void;
 }
 interface GraphOptions<E extends object> { edgeState?: E; parallel?: boolean; selfLoops?: boolean }
@@ -164,6 +167,39 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
     allDistances(options = {}) { return allDistances([...members], graph.edges, options); },
     distanceSummary(options = {}) { return distanceSummary([...members], graph.edges, options); },
     analyze(options) { return analyze([...members], graph.edges, options); },
+    generate(options) {
+      // Reject enclosing readers before any planning callback or draw.
+      guard.validate();
+      const config = validateGenerator(options);
+      const selected = new Set(config.nodes);
+      for (const node of config.nodes) if (!members.has(node)) throw new TypeError("Generator nodes must be current graph members.");
+      for (const edge of edges) if (selected.has(edge.from) && selected.has(edge.to)) throw new TypeError("Selected induced subgraph must be edgeless.");
+      cloneEdgeState(defaults);
+      const prepared = guard.read(() => {
+        const connections = planGenerator(config);
+        // A callback may have deleted a referenced component outside this graph.
+        const first = cloneEdgeState(defaults);
+        const states = connections.map((_, index) => index === 0 ? first : cloneEdgeState(defaults));
+        return { connections, states };
+      });
+      guard.validate();
+      let cursor = nextKey;
+      const created = prepared.connections.map(([from, to], index) => {
+        let key: string | undefined;
+        if (parallel) {
+          while (keys.has(String(cursor))) cursor++;
+          key = String(cursor++);
+        }
+        return createEdge(graph, config.nodes[from]!, config.nodes[to]!, config.directed, key, prepared.states[index]!, removeEdge);
+      });
+      // No caller code runs between complete materialization and publication.
+      for (const edge of created) {
+        edges.add(edge);
+        if (edge.key !== undefined) keys.set(edge.key, edge);
+      }
+      nextKey = cursor;
+      return Object.freeze(created);
+    },
     delete(options = {}) {
       const edgesOnly = flag(validateOptions(options, ["edgesOnly"]).edgesOnly);
       if (edges.size === 0 && (edgesOnly || members.size === 0)) return;
