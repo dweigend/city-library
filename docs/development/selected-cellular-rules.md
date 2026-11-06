@@ -1,0 +1,44 @@
+# Selected B19 row and multistate implementations
+
+Author implementation evidence for CA 1D Elementary, CA Continuous, CA Stochastic, Brian's Brain and Cyclic CA. Exact archived sources, complete notices, widget XML and procedure listings are pinned by [the scoped source audit](selected-cellular-plan.md). The five asserted public scripts were committed at f926a58 before runtime; scripts 04–05 exercise this scope unchanged.
+
+## Ownership and reuse
+
+Each `experiments/<slug>/model.ts` is a public headless entrypoint. Each model constructs one public `World`, its `Random` stream, and one canonical `Grid`. All live cell values reside on Grid fields; update arrays are temporary snapshots, never competing state. `World.tick` advances exclusively through `run`, except explicit source Setup actions resetting it. Cached neighborhoods contain references to canonical Grid fields. UI imports the model entrypoint, invokes defined actions, and projects detached observations. No core exports, shared UI, selection, research or ledger files were changed.
+
+The existing public Grid/World/Random contracts cover these sources. Source-specific state-transition equations and cached offsets are ordinary model composition. We rejected both a private cellular engine and transpiled NetLogo. No dependency was added. No genuine core gap was required.
+
+## Procedures and adaptations
+
+| Model | Public procedures/actions | Source semantics and explicit adaptations |
+| --- | --- | --- |
+| CA 1D Elementary | `elementaryTransition`, `listRules`; instance `advance`, `setupSingle`, `setupRandom`, `continueRun`, `setRules`, `setRuleBit`, `showRules`, `read` | Eight bit patterns index left/center/right as 4/2/1. New values are written into the next row; horizontal wrap and hard vertical boundary. Source XML slider says 78, but `startup`/`refresh-rules` reads the saved switch vector and produces effective rule **105**, observed by coordinator in original Chromium. Target defaults to that effective initialized rule, with immediate rule/bit synchronization rather than a UI polling loop. Rule preview preserves tick and prevents advance until setup. |
+| CA Continuous | `fractionalPart`, `iteratedMap`; instance `advance`, `setupSingle`, `setupRandom`, `continueRun`, `setRules`, `read` | Each cell uses the three Moore neighbors one row above, computes their mean, adds the constant, takes `x−trunc(x)` and rounds to the requested decimal precision. Initial single/random top row and continuation copy preserve source meaning. Numeric colors retain source scale-color green value 0..2; presentation converts numeric colors. |
+| CA Stochastic | `binaryListToIndex`, `entropy`; instance `advance`, `setupRandom`, `setupExample`, `continueRun`, `setRules`, `read` | Eight probabilities in percent, all five original example tables, live probability/color/plot settings. A matched zero-probability pattern draws nothing; every nonzero matched probability draws once, including 100%. Four-cell histogram starts at each x strictly less than max-x (width−1 samples), wraps the four-cell window, normalizes counts and computes source length-four topological/metric entropy. Source auto-clear clears displayed history on continuation; bounded target history retains at most 1001 observations. |
+| Brian's Brain | `brainTransition`; instance `advance`, `setupBlank`, `setupRandom`, `setInitialDensity`, `setCells`, `setDrawing`, `beginBrush`, `moveBrush`, `endBrush`, `read` | Toroidal Moore neighbors, all neighbor counts frozen before changing cells. Off with exactly two firing neighbors becomes firing; firing becomes refractory; refractory becomes off. Brush begins with target-color equality deciding erase versus paint for the whole stroke. Firing/refractory modes, pointer and existing keyboard drawing are exposed. Values 0/1/2 denote off/firing/refractory. |
+| Cyclic CA | `cyclicOffsets`, `cyclicTransition`, all 20 exported `presets`; instance `advance`, `setThreshold`, `setCells`, `read` | Moore square or von Neumann diamond offsets at radius1..6, periodic unique canonical neighbors (including self only when an offset wraps onto self), frozen predecessor states and next-state-count threshold. Setup applies every original preset. `none` and the frozen script's `custom` both retain explicit caller settings. Source palette selection and stochastic setup use public Random, with no source-stream identity claim. Radius/neighborhood/number of states/preset are setup inputs: this makes cached topology and palette ownership explicit instead of exposing the source's stale-neighborhood/live-number-of-states error path. Threshold remains live. Impossible thresholds retain source frozen dynamics and display a warning rather than blocking setup. |
+
+Source production dimensions are retained: Elementary257×129, Continuous201×201, Stochastic161×161, Brain87×115, Cyclic201×201. Configurable odd centered dimensions are a fixture adaptation; APIs reject even dimensions before constructing a World. The three row models have x-wrap/y-hard boundaries. Brain/Cyclic are toroidal. Empty unvisited row cells remain source-black; changing live color inputs affects subsequent coloring without rewriting stored source color memory.
+
+All source `ask` shuffles that do not affect deterministic outcomes are omitted. Stochastic initialization/trials follow canonical Grid field order using public Mulberry32 rather than NetLogo's generator. Color palette draws are also explicit. Matching source seeds or stochastic trajectories is not claimed; equation checks, update phases, boundaries, conditional RNG draw behavior and absorbing conditions are independently tested.
+
+A row model at its bottom row completes the last valid row first. A following attempted step stops before `run` and adds no tick. The next manual attempt, or explicit Continue action, copies the bottom row to the top and resumes. Automatic continuation copies without stopping, except CA Stochastic's all-off/OOO=0 and all-on/III=100 absorbing conditions. Plot flags only affect observation histories and never scientific cell state.
+
+`read()` returns frozen detached cells, parameters, measurements, tick and RNG continuation. It draws no random numbers and advances no tick. Invalid live values, unknown properties, accessors and invalid/sparse fixtures are rejected before mutation. Source Setup actions intentionally draw new initialization values from the instance stream; host Reset reconstructs the instance and restores its selected seed.
+
+## Executed checks
+
+- `bun examples/selected-cellular/04-elementary-and-continuous-rows.ts`: passed unchanged.
+- `bun examples/selected-cellular/05-refractory-cycle-and-stochastic-extremes.ts`: passed unchanged.
+- `bun test tests/selected-cellular-rules.test.ts`: 15 passed, 0 failed; 2117 assertions.
+- `bun run typecheck`: passed after coordinator reused already installed pinned dependencies through a local untracked node_modules link. No install or manifest change.
+
+The tests cover all 256 elementary rules × eight patterns, source startup105, bit synchronization, row stop/resume/automatic continuation, preview and setup, continuous equations/precision, stochastic zero-draw and 100% paths, histogram normalization/entropy, absorbing states, all five stochastic example tables, Brain toroidal births/refractory timing/erase strokes, both Cyclic geometries/all20 presets/periodic synchronous propagation, and atomic failures/pure observations.
+
+## UI design QA and remaining acceptance
+
+`frontend-design` was read and applied: existing compact forms, actions, numeric monitors and Grid views; no new chrome, icon system, CSS, runtime framework or dependency. `web-design-guidelines` was read after the UI implementations; current upstream command.md was fetched successfully on 2026-11-06. Source inspection found no added DOM, focus, animation, navigation or theme overrides. Controls use the existing labeled native shared toolkit; UI writes only via public model actions. The eight elementary rule-bit actions expose pressed state, and Brain drawing reuses existing pointer/keyboard behavior.
+
+Original/target Chromium screenshots, run/pause/reset and parameter interactions, desktop/mobile, light/dark, keyboard/overflow and diagnostics are owned by the coordinating agent and remain separate browser evidence. This document does not claim those checks ran in this implementation subtask. The coordinator also owns complete build/packed-consumer integration evidence.
+
+Independent Antigravity gemini-4-argon high review remains pending due to the recorded quota blocker 8194e842. No retry/substitute approval was attempted. Author test success is not independent approval or a scientific distribution-equivalence study.
