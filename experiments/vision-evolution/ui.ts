@@ -123,7 +123,10 @@ export const ui = defineUI(model, {
     {
       type: "inspector",
       label: "Selected fish",
-      value: (s, id) => s.fish.find((a) => a.id === id),
+      value: (s, id) => {
+        const fishId = id?.startsWith("fov-") ? id.slice(4) : id;
+        return s.fish.find((a) => a.id === fishId);
+      },
     },
   ],
 });
