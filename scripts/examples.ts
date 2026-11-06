@@ -1,4 +1,5 @@
 const phases = {
+  summary: ["01-population-and-median", "02-sample-and-empty", "03-single-pass-and-detachment", "04-invalid-and-overflow", "05-domain-report-composition"],
   "ui-color": ["01-source-anchors", "02-floor-quantization", "03-source-cycle-wrap", "04-detached-field-projection", "05-invalid-and-large-inputs"],
   "selected-urban-feedback": ["01-positive-powers-and-normalization", "02-positive-moore-wrap", "03-path-source-setup-and-disturb", "04-cells-snapshot-and-strict-age", "05-defaults-isolation-and-atomic-fixtures"],
   "selected-urban": ["01-awareness-contact-and-expiry", "02-pollution-phases-and-stop", "03-recycling-order-and-energy", "04-defaults-isolation-and-validation", "05-live-seeking-and-cap"],
