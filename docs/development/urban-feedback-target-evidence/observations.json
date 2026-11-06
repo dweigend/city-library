@@ -1,0 +1,155 @@
+{
+  "executedAt": "2026-11-06",
+  "runtime": "ae9d234",
+  "browser": "T3 Chromium",
+  "port": 3110,
+  "seed": 1,
+  "referenceExecutedBy": "Separate scoped original-browser agent; see urban-feedback-reference-browser.md",
+  "feedback": {
+    "setup": {
+      "monitors": "Tick\n0\nMaximum activity\n0.998487\nTotal activity\n213.032",
+      "parameters": [
+        {
+          "name": "seed",
+          "value": "1"
+        },
+        {
+          "name": "live-alpha",
+          "value": "1.1"
+        },
+        {
+          "name": "live-mooreNeighborhood",
+          "value": false
+        }
+      ]
+    },
+    "progress22": {
+      "monitors": "Tick\n22\nMaximum activity\n1.00000\nTotal activity\n46.7673",
+      "figures": [
+        "Selected",
+        "Activity",
+        "Activity distribution \u00b7 descending rank\n1\n0\n440\nActivity"
+      ]
+    },
+    "runPause": {
+      "monitors": "Tick\n25\nMaximum activity\n1.00000\nTotal activity\n36.7376"
+    },
+    "liveBeforeStep": {
+      "monitors": "Tick\n25\nMaximum activity\n1.00000\nTotal activity\n36.7376"
+    },
+    "alpha0Moore": {
+      "monitors": "Tick\n26\nMaximum activity\n1.00000\nTotal activity\n441.000"
+    },
+    "mobile": {
+      "overflow": false,
+      "inspection": "id\ncl_17izzbfuwx252\nx\n-10\ny\n-10\nactivity\n1"
+    },
+    "resetPreservesRules": {
+      "monitors": "Tick\n0\nMaximum activity\n0.998487\nTotal activity\n213.032",
+      "alpha": "0",
+      "moore": true
+    },
+    "mooreAlpha1": {
+      "monitors": "Tick\n1\nMaximum activity\n1.00000\nTotal activity\n276.144"
+    },
+    "diagnostics": {
+      "console": [],
+      "failed": []
+    }
+  },
+  "path": {
+    "setup": {
+      "monitors": "Tick\n0\nFirms\n200\nSettled\n0\nSearching\n200\nLargest regional population\n5\nMaximum cell occupancy\n5\nSetup warning\n\u2014"
+    },
+    "progress32": {
+      "monitors": "Tick\n32\nFirms\n200\nSettled\n108\nSearching\n92\nLargest regional population\n27\nMaximum cell occupancy\n27\nSetup warning\n\u2014"
+    },
+    "disturb": {
+      "monitors": "Tick\n32\nFirms\n200\nSettled\n0\nSearching\n200\nLargest regional population\n27\nMaximum cell occupancy\n27\nSetup warning\n\u2014"
+    },
+    "liveBeforeStep": {
+      "monitors": "Tick\n32\nFirms\n200\nSettled\n0\nSearching\n200\nLargest regional population\n27\nMaximum cell occupancy\n27\nSetup warning\n\u2014",
+      "live": [
+        [
+          "live-regionSize",
+          "2"
+        ],
+        [
+          "live-increasingReturns",
+          "0.75"
+        ],
+        [
+          "live-attempts",
+          "3"
+        ],
+        [
+          "live-birth",
+          true
+        ]
+      ]
+    },
+    "birthStep": {
+      "monitors": "Tick\n33\nFirms\n201\nSettled\n171\nSearching\n30\nLargest regional population\n34\nMaximum cell occupancy\n6\nSetup warning\n\u2014"
+    },
+    "runPause": {
+      "monitors": "Tick\n63\nFirms\n231\nSettled\n178\nSearching\n53\nLargest regional population\n87\nMaximum cell occupancy\n22\nSetup warning\n\u2014"
+    },
+    "mobile": {
+      "overflow": false,
+      "inspection": "id\ncl_2onvjxtb8u40t56\nx\n4\ny\n4\nheading\n270\nmovedIn\ntrue",
+      "monitors": "Tick\n63\nFirms\n231\nSettled\n178\nSearching\n53\nLargest regional population\n87\nMaximum cell occupancy\n22\nSetup warning\n\u2014"
+    },
+    "invalidSetup": {
+      "monitors": "Tick\n63\nFirms\n231\nSettled\n178\nSearching\n53\nLargest regional population\n87\nMaximum cell occupancy\n22\nSetup warning\n\u2014",
+      "validity": "Value must be greater than or equal to 0."
+    },
+    "distribute200": {
+      "monitors": "Tick\n0\nFirms\n121\nSettled\n0\nSearching\n121\nLargest regional population\n1\nMaximum cell occupancy\n1\nSetup warning\n\u2014"
+    },
+    "distribute100": {
+      "monitors": "Tick\n0\nFirms\n0\nSettled\n0\nSearching\n0\nLargest regional population\n0\nMaximum cell occupancy\n0\nSetup warning\nCan't distribute, fewer patches than people.",
+      "overflow": false
+    },
+    "emptyBirthStep": {
+      "monitors": "Tick\n0\nFirms\n0\nSettled\n0\nSearching\n0\nLargest regional population\n0\nMaximum cell occupancy\n0\nSetup warning\n\u2014",
+      "status": "Cannot birth a firm without an existing parent."
+    },
+    "emptyBirthRun": {
+      "monitors": "Tick\n0\nFirms\n0\nSettled\n0\nSearching\n0\nLargest regional population\n0\nMaximum cell occupancy\n0\nSetup warning\n\u2014",
+      "status": "Cannot birth a firm without an existing parent.",
+      "runPressed": "false"
+    },
+    "emptyRecovery": {
+      "monitors": "Tick\n1\nFirms\n0\nSettled\n0\nSearching\n0\nLargest regional population\n0\nMaximum cell occupancy\n0\nSetup warning\n\u2014",
+      "status": "Steps completed."
+    },
+    "restored": {
+      "monitors": "Tick\n0\nFirms\n200\nSettled\n0\nSearching\n200\nLargest regional population\n5\nMaximum cell occupancy\n5\nSetup warning\n\u2014"
+    },
+    "diagnostics": {
+      "console": [],
+      "failed": []
+    }
+  },
+  "referenceSources": {
+    "feedback": {
+      "sha256": "ed8e7de693797f0ebe625d742032dbf95614e0a31c88b41eed83db3a47ff42b6",
+      "version": "NetLogo7.0.4",
+      "sourceRunDate": "2026-11-05"
+    },
+    "path": {
+      "sha256": "1b5216c6077d80c441626f1cdb9c108a73adca17a17be4020adeb96e2e67e931",
+      "version": "NetLogo7.0.4",
+      "sourceRunDate": "2026-11-05"
+    }
+  },
+  "limits": [
+    "No repeated original browser sessions in this task.",
+    "No browser injection of target deterministic fixture states.",
+    "Independent Argon approval remains quota-blocked.",
+    "Target source-size glyphs replaced with fixed glyphs; source population and histogram reports preserved.",
+    "Source monitor tie draws replaced by all winning areas in pure headless observations.",
+    "Expected empty-birth error is target status text, not JavaScript console failure."
+  ],
+  "uiCommit": "d23f5e0"
+}
