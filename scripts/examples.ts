@@ -1,4 +1,5 @@
 const phases = {
+  "selected-probability": ["01-birthdays", "02-galton-box", "03-binomial-rabbits", "04-three-doors", "05-stochastic-patchwork"],
   probes: ["01-forward-vectors", "02-wrap-and-hard-endpoints", "03-three-dimensional-context", "04-nonmutating-agent-sensor", "05-validation-and-detachment"],
   distances: ["01-unbounded-measurement", "02-mixed-wrapping", "03-xyz-and-dimension-errors", "04-canonical-field-proximity", "05-finite-validation-and-purity"],
   normal: ["01-affine-normal", "02-cache-and-continuation", "03-zero-and-validation", "04-local-and-reseed", "05-overflow-and-existing-uniform"],
