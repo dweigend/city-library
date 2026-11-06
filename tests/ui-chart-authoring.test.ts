@@ -75,4 +75,23 @@ describe("chart authoring data and geometry", () => {
       expect(prepareChartData(mode, input).series[0]!.points).toEqual([{ x: 5, y: 2 }, { x: 1, y: -1 }]);
     }
   });
+  test("responsive plot coordinates fit CSS-sized SVG units while preserving signed groups", () => {
+    const data = prepareChartData("bar", [
+      { label: "X", points: [{ x: "West", y: -1 }, { x: "East", y: 1 }] },
+      { label: "Y", points: [{ x: "West", y: -1 }, { x: "East", y: 1 }] },
+    ]);
+    for (const width of [280, 366, 640, 1000]) {
+      const geometry = chartGeometry(data, 64, width, 134);
+      const west = geometry.bar(data.series[0]!.points[0]!, 0);
+      const neighboringWest = geometry.bar(data.series[1]!.points[0]!, 1);
+      expect(west.x).toBeGreaterThanOrEqual(64);
+      expect(west.x + west.width).toBeLessThanOrEqual(neighboringWest.x);
+      expect(neighboringWest.x + neighboringWest.width).toBeLessThan(width - 14);
+      expect(west.y).toBe(geometry.y(0));
+      expect(west.y + west.height).toBe(134);
+      expect(geometry.y(1)).toBe(14);
+    }
+    expect(data.series[0]!.points).toEqual([{ x: 0, y: -1, category: "West" }, { x: 1, y: 1, category: "East" }]);
+  });
+
 });

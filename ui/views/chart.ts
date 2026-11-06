@@ -50,10 +50,10 @@ export function prepareChartData(mode: Mode, input: readonly (Series | BarSeries
 }
 
 /** Shared geometry used by SVG rendering; empty series retain their category slot. */
-export function chartGeometry(data: ReturnType<typeof prepareChartData>, left = 36) {
-  const width = 626 - left;
+export function chartGeometry(data: ReturnType<typeof prepareChartData>, left = 36, viewportWidth = 640, bottom = 154) {
+  const width = Math.max(1, viewportWidth - 14 - left);
   const x = (value: number) => left + ((value - data.minX) / (data.maxX - data.minX)) * width;
-  const y = (value: number) => 154 - ((value - data.minY) / (data.maxY - data.minY)) * 140;
+  const y = (value: number) => bottom - ((value - data.minY) / (data.maxY - data.minY)) * Math.max(1, bottom - 14);
   const slot = width / Math.max(1, data.categories.length);
   const groupWidth = slot * 0.8;
   const barWidth = groupWidth / Math.max(1, data.series.length);
@@ -86,7 +86,15 @@ export function mountChart<M extends Mode = "line">(
   const svg = document.createElementNS(ns, "svg");
   svg.classList.add(options.theme ? "model-chart" : "chart");
   const xAxis = axisText(options.xAxis), yAxis = axisText(options.yAxis);
-  svg.setAttribute("viewBox", `0 0 640 ${xAxis ? 216 : 180}`);
+  // A stable intrinsic height prevents viewBox changes from feeding back into layout.
+  // Match SVG user units to the actual CSS viewport so inherited text is not shrunk.
+  const intrinsicHeight = xAxis ? 216 : 180;
+  svg.setAttribute("height", String(intrinsicHeight));
+  let viewportWidth = 640;
+  let viewportHeight = intrinsicHeight;
+  let lastData: ReturnType<typeof prepareChartData> | undefined;
+  let disposed = false;
+  svg.setAttribute("viewBox", `0 0 ${viewportWidth} ${viewportHeight}`);
   svg.setAttribute("role", "img");
   container.append(svg);
   const legend = document.createElement("div");
@@ -101,31 +109,33 @@ export function mountChart<M extends Mode = "line">(
     svg.append(node);
     return node;
   }
-  return {
-    update(input: readonly (M extends "bar" ? BarSeries : Series)[]) {
-      // Validate before replacing the last valid chart on a rejected update.
-      const data = prepareChartData(mode, input);
+  function render(data: ReturnType<typeof prepareChartData>) {
       const left = yAxis ? 64 : 36;
-      const geometry = chartGeometry(data, left);
+      const right = viewportWidth - 14;
+      const bottom = Math.max(32, viewportHeight - (xAxis ? 62 : 26));
+      const geometry = chartGeometry(data, left, viewportWidth, bottom);
       svg.replaceChildren();
       legend.replaceChildren();
       const axes = document.createElementNS(ns, "path");
-      axes.setAttribute("d", `M${left} 12V154H628`);
+      axes.setAttribute("d", `M${left} 12V${bottom}H${right}`);
       axes.setAttribute("class", "axes");
       svg.append(axes);
-      for (const [value, px, py] of [[data.maxY, left - 34, 16], [data.minY, left - 34, 158]] as const)
+      for (const [value, px, py] of [[data.maxY, left - 34, 16], [data.minY, left - 34, bottom + 4]] as const)
         text(Number.isInteger(value) ? String(value) : value.toPrecision(3), px, py);
       if (data.categorical)
-        data.categories.forEach((category, index) => text(category, geometry.categoryX(index), 177, "middle"));
-      else text(Number.isInteger(data.maxX) ? String(data.maxX) : data.maxX.toPrecision(3), 598, 177);
+        data.categories.forEach((category, index) => text(category, geometry.categoryX(index), bottom + 23, "middle"));
+      else text(Number.isInteger(data.maxX) ? String(data.maxX) : data.maxX.toPrecision(3), right - 28, bottom + 23);
       if (mode === "bar" && data.minY < 0) {
         const baseline = document.createElementNS(ns, "path");
-        baseline.setAttribute("d", `M${left} ${geometry.y(0)}H628`);
+        baseline.setAttribute("d", `M${left} ${geometry.y(0)}H${right}`);
         baseline.setAttribute("class", "axes");
         svg.append(baseline);
       }
-      if (xAxis) text(xAxis, (left + 626) / 2, 207, "middle");
-      if (yAxis) text(yAxis, 14, 84, "middle").setAttribute("transform", "rotate(-90 14 84)");
+      if (xAxis) text(xAxis, (left + right) / 2, viewportHeight - 9, "middle");
+      if (yAxis) {
+        const center = (14 + bottom) / 2;
+        text(yAxis, 14, center, "middle").setAttribute("transform", `rotate(-90 14 ${center})`);
+      }
       const palette = options.theme?.().series ?? ["#287e9b", "#b45309", "#4c8b54", "#9759a2"];
       data.series.forEach((line, index) => {
         const color = line.color ?? palette[index % palette.length]!;
@@ -175,7 +185,35 @@ export function mountChart<M extends Mode = "line">(
         return `${line.label}: ${description}`;
       });
       svg.setAttribute("aria-label", [xAxis && `x axis: ${xAxis}`, yAxis && `y axis: ${yAxis}`, ...descriptions].filter(Boolean).join("; "));
+  }
+  function resize(width: number, height: number) {
+    if (disposed || width <= 0 || height <= 0) return;
+    if (Math.abs(width - viewportWidth) < 0.5 && Math.abs(height - viewportHeight) < 0.5) return;
+    viewportWidth = width;
+    viewportHeight = height;
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    if (lastData) render(lastData);
+  }
+  const observer = new ResizeObserver(entries => {
+    const entry = entries[0];
+    if (entry) resize(entry.contentRect.width, entry.contentRect.height);
+  });
+  observer.observe(svg);
+  return {
+    update(input: readonly (M extends "bar" ? BarSeries : Series)[]) {
+      // Reject invalid data before replacing the last valid observation or SVG.
+      const data = prepareChartData(mode, input);
+      const bounds = svg.getBoundingClientRect();
+      resize(bounds.width, bounds.height);
+      lastData = data;
+      render(data);
     },
-    dispose() { svg.remove(); legend.remove(); },
+    dispose() {
+      disposed = true;
+      observer.disconnect();
+      lastData = undefined;
+      svg.remove();
+      legend.remove();
+    },
   };
 }
