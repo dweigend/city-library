@@ -1,0 +1,80 @@
+import { defineUI } from "../../ui/index.ts";
+import { model } from "./model.ts";
+
+const binding = defineUI(model, {
+  setup: [{ field: "seed" }, { field: "numWater" }, { field: "numLipids" }],
+  live: [
+    {
+      field: "waterWaterForce",
+      value: (state) => state.parameters.waterWaterForce,
+      set: (instance, value) =>
+        instance.setParameters({ waterWaterForce: Number(value) }),
+    },
+    {
+      field: "waterOilForce",
+      value: (state) => state.parameters.waterOilForce,
+      set: (instance, value) =>
+        instance.setParameters({ waterOilForce: Number(value) }),
+    },
+    {
+      field: "tooCloseForce",
+      value: (state) => state.parameters.tooCloseForce,
+      set: (instance, value) =>
+        instance.setParameters({ tooCloseForce: Number(value) }),
+    },
+    {
+      field: "randomForce",
+      value: (state) => state.parameters.randomForce,
+      set: (instance, value) =>
+        instance.setParameters({ randomForce: Number(value) }),
+    },
+  ],
+  source: {
+    url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Membrane%20Formation.nlogox",
+    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+  },
+  monitors: [
+    { label: "Tick", value: (state) => state.tick },
+    { label: "Molecules", value: (state) => state.agents.length },
+    { label: "Lipids", value: (state) => state.links.length },
+    {
+      label: "Hydrophobic isolation",
+      value: (state) => state.hydrophobicIsolation.toFixed(3),
+    },
+  ],
+  views: [
+    {
+      type: "spatial",
+      label: "Membrane Formation",
+      data: (state) => ({
+        width: state.width,
+        height: state.height,
+        agents: state.agents.map((agent) => ({ ...agent, size: 6 })),
+        segments: state.links.map((link) => ({
+          from: link.from,
+          to: link.to,
+          color: "#888888",
+          width: 1,
+        })),
+      }),
+    },
+    {
+      type: "line",
+      label: "Hydrophobic isolation",
+      series: (state) => [
+        {
+          label: "Ratio",
+          color: "#888888",
+          points: state.history.flatMap((point) => [
+            { x: point.tick, y: point.hydrophobicIsolation },
+          ]),
+        },
+      ],
+    },
+  ],
+});
+
+export { model };
+export const sourceMarker =
+  "selected-biology-b07:membrane-formation:4f3a41013090830c53ee055eac6625b1d3fcba981df7ab8d67822af037f7733d";
+export const ui = { ...binding, model, sourceMarker };
