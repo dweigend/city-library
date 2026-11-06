@@ -183,9 +183,15 @@ export function createSession<P extends object, M extends ModelInstance>(definit
         spec.drawing?.enabled(nextObservation);
         for (const action of spec.actions ?? []) { action.enabled?.(nextObservation, null); action.pressed?.(nextObservation); }
         const old = instance;
-        instance = next; observation = nextObservation; selected = null;
-        applied = { ...draft }; fieldErrors = {}; epoch++; error = false; status = "";
-        try { flushSync(() => observe()); } finally { old?.dispose?.(); }
+        // flushSync first drains previously queued renderer effects. Keep their errors
+        // attached to the old model until the callback installs the new owner/epoch.
+        try {
+          flushSync(() => {
+            instance = next; observation = nextObservation; selected = null;
+            applied = { ...draft }; fieldErrors = {}; epoch++; error = false; status = "";
+            observe();
+          });
+        } finally { old?.dispose?.(); }
       } catch (cause) {
         if (next && next !== instance) next.dispose?.();
         fail(cause);

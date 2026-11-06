@@ -113,3 +113,36 @@ test('repeated renderer failures do not republish an unchanged error state', () 
   expect(notifications).toBe(afterFirst + 1);
   session.dispose(); unsubscribe();
 });
+
+test('client session restart installs a fresh owner and clears only the prior projection failure', () => {
+  // Use Svelte's real client scheduler, without faking a document or claiming a browser test.
+  // Rendering/effect ordering is additionally exercised by the real-browser acceptance fixture.
+  const result = Bun.spawnSync([process.execPath, '--conditions=browser', '-e', `
+    import { strict as assert } from 'node:assert';
+    import { createSession } from './ui/svelte/session.ts';
+    import { model } from './experiments/wealth-distribution/model.ts';
+    const instances = [];
+    const definition = { ...model, create(options) { const instance = model.create({ ...options, people: 2 }); instances.push(instance); return instance; } };
+    const session = createSession(definition, { setup: [], monitors: [{ label: 'Tick', value: state => state.tick, format(value) { if (value === 1) throw Error('Actual projection failure'); return String(value); } }], views: [] });
+    let state;
+    const unsubscribe = session.subscribe(value => state = value);
+    session.initialize();
+    assert.equal(state.initialized, true);
+    session.step(1);
+    assert.equal(instances[0].read().tick, 1);
+    assert.equal(state.error, true);
+    assert.equal(state.status, 'Actual projection failure');
+    session.initialize();
+    assert.equal(instances.length, 2);
+    assert.equal(state.epoch, 2);
+    assert.equal(instances[1].read().tick, 0);
+    assert.equal(instances[0].read().tick, 1);
+    assert.equal(state.error, false);
+    assert.equal(state.status, '');
+    session.step(1);
+    assert.equal(state.error, true, 'A genuine new-owner failure must still be displayed');
+    session.dispose(); unsubscribe();
+  `], { cwd: import.meta.dir + '/..', stdout: 'pipe', stderr: 'pipe' });
+  expect(new TextDecoder().decode(result.stderr)).toBe('');
+  expect(result.exitCode).toBe(0);
+});
