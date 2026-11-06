@@ -1,4 +1,5 @@
 const phases = {
+  "graph-distances": ["01-native-ring-summary", "02-directed-parallel-costs", "03-signed-and-negative-cycles", "04-callback-validation-and-purity", "05-empty-directed-summaries"],
   "selected-tijuana": ["01-natural-cityscape-and-replay", "02-final-seed-economics-and-reset", "03-migration-crossing-and-partial-errors", "04-domain-display-and-node-intervention", "05-growth-reports-and-delayed-errors"],
   "selected-cellular": ["01-smoothlife-normalized-disk-and-annulus", "02-hex-single-activation-and-stop", "03-moving-vants-and-turing-head", "04-elementary-and-continuous-rows", "05-refractory-cycle-and-stochastic-extremes"],
   "ui-segments": ["01-canonical-agent-movement", "02-history-survives-agent-deletion", "03-source-palette-and-pixel-widths", "04-cells-segments-and-agents", "05-optional-empty-and-zero-width"],
