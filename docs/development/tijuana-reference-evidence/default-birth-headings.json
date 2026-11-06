@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-06",
+  "command": "random-seed 1 create-third-order-builders 8 show [ heading ] of third-order-builders ask patch 0 0 [ sprout-migrants 8 ] show [ heading ] of migrants",
+  "result": {
+    "toolIcon": {
+      "_tag": "website",
+      "pageUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Tijuana%20Bordertowns.nlogox"
+    },
+    "value": {
+      "sourceSha256": "8cada3e3638c93704f5eefbba4e9aa3840c991e2d5ab711ea759c4b31aedcfb2",
+      "text": "maquiladoras\n#-service-centers\n3 go\n2 cityscape\n1 clear\nmigration-ticks\n ticks\nvisual-update\noff\nelevation\nland value gradient\ncolonias\nunits with no water\nunits with no electricity\ncolor-code?\ncity-growth?\nbuilding-ticks\ninit-density\ncolonia-size\ncrossing-ticks\n ticks\ninspect\nrequired-capital\nadd node\ncarrying-capacity\nsavings\nN/A\nsavings node\nN/A\nupdate-now\nweights\n0\ncrossed\n0\nmarginal\n0\nirregular settlers\n8\nno power\nN/A\nno water\nN/A\nvalues\n0\nbuilders\n8\nCommand Center\nobserver> random-seed 1 create-third-order-builders 8 show [ heading ] of third-order-builders ask patch 0 0 [ sprout-migrants 8 ] show [ heading ] of migrants\nobserver: [290 36 29 251 64 124 270 216]\nobserver: [251 134 43 228 136 61 169 197]\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection",
+      "births": [
+        {
+          "who": 0,
+          "kind": "THIRD-ORDER-BUILDERS",
+          "heading": 29
+        },
+        {
+          "who": 1,
+          "kind": "THIRD-ORDER-BUILDERS",
+          "heading": 124
+        },
+        {
+          "who": 2,
+          "kind": "THIRD-ORDER-BUILDERS",
+          "heading": 36
+        },
+        {
+          "who": 3,
+          "kind": "THIRD-ORDER-BUILDERS",
+          "heading": 290
+        },
+        {
+          "who": 4,
+          "kind": "THIRD-ORDER-BUILDERS",
+          "heading": 216
+        },
+        {
+          "who": 5,
+          "kind": "THIRD-ORDER-BUILDERS",
+          "heading": 64
+        },
+        {
+          "who": 6,
+          "kind": "THIRD-ORDER-BUILDERS",
+          "heading": 251
+        },
+        {
+          "who": 7,
+          "kind": "THIRD-ORDER-BUILDERS",
+          "heading": 270
+        },
+        {
+          "who": 8,
+          "kind": "MIGRANTS",
+          "heading": 61
+        },
+        {
+          "who": 9,
+          "kind": "MIGRANTS",
+          "heading": 197
+        },
+        {
+          "who": 10,
+          "kind": "MIGRANTS",
+          "heading": 134
+        },
+        {
+          "who": 11,
+          "kind": "MIGRANTS",
+          "heading": 169
+        },
+        {
+          "who": 12,
+          "kind": "MIGRANTS",
+          "heading": 43
+        },
+        {
+          "who": 13,
+          "kind": "MIGRANTS",
+          "heading": 228
+        },
+        {
+          "who": 14,
+          "kind": "MIGRANTS",
+          "heading": 251
+        },
+        {
+          "who": 15,
+          "kind": "MIGRANTS",
+          "heading": 136
+        }
+      ]
+    }
+  }
+}
