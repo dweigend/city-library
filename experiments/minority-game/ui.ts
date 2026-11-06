@@ -5,7 +5,7 @@ const binding=defineUI(model,{
  setup:[{field:'seed'},{field:'number'},{field:'memory'},{field:'strategiesPerAgent',label:'Strategies per agent'}],
  live:[{field:'colorBy',label:'Color by',value:s=>s.parameters.colorBy,set:(m,v)=>m.setParameters({colorBy:String(v) as 'choice'|'success'})}],
  source:{url:'https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Minority%20Game.nlogox',label:'Original NetLogo model · Wilensky · CC BY-NC-SA 3.0'},
- monitors:[{label:'Tick',value:s=>s.tick},{label:'History',value:s=>s.fullHistory.join('')},{label:'Minority',value:s=>s.minority},{label:'Average score',value:s=>s.avgScore.toFixed(3)},{label:'Movement',value:s=>s.diagnostic??'Active'}],
+ monitors:[{label:'Tick',value:s=>s.tick},{label:'History',value:s=>s.fullHistory.join('')},{label:'Minority',value:s=>s.minority},{label:'Average score',value:s=>s.avgScore.toFixed(3)},{label:'Movement',value:s=>s.diagnostic?'Average score is zero':'Active'}],
  views:[
   {type:'spatial',label:'Players',data:s=>({width:s.width,height:s.height,agents:s.agents.map(a=>({...a,heading:90,size:5,shape:'triangle' as const,color:s.parameters.colorBy==='choice'?(a.choice===0?'#e13b3b':'#3675db'):a.score>s.avgScore+(s.stdevScore??0)?'#e13b3b':a.score<s.avgScore-(s.stdevScore??0)?'#3675db':'#399557'}))})},
   {type:'line',label:'Scores',series:s=>[{label:'Maximum',color:'#d83838',points:s.scoreHistory.map(p=>({x:p.tick,y:p.maxScore}))},{label:'Minimum',color:'#3675db',points:s.scoreHistory.map(p=>({x:p.tick,y:p.minScore}))},{label:'Average',color:'#399557',points:s.scoreHistory.map(p=>({x:p.tick,y:p.avgScore}))}]},
