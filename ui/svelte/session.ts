@@ -1,3 +1,4 @@
+import { normalizeAuthoring, decodeControl, groupLive } from "../authoring.ts";
 import { flushSync } from "svelte";
 import { writable, type Readable } from "svelte/store";
 import type { Definition } from "../../experiments/definition.ts";
@@ -11,6 +12,7 @@ export interface Parameter {
   field: string;
   label: string;
   descriptor: Descriptor;
+  group?: string;
   widget?: "number" | "range" | "select" | "checkbox" | "text" | "color";
 }
 export interface SessionState {
@@ -20,6 +22,7 @@ export interface SessionState {
   complete: boolean;
   epoch: number;
   draft: Readonly<Record<string, Value>>;
+  liveDraft: Readonly<Record<string, Value>>;
   pending: readonly string[];
   status: string;
   error: boolean;
@@ -35,6 +38,7 @@ export interface SessionState {
 export interface Session extends Readable<SessionState> {
   readonly setup: readonly Parameter[];
   readonly live: readonly Parameter[];
+  readonly liveGroups: readonly { readonly label?: string; readonly fields: readonly Parameter[] }[];
   readonly actions: readonly { label: string; repeat?: { label: string; intervalMs: number } }[];
   readonly views: readonly (View<unknown> | Inspector<unknown>)[];
   readonly drawingLabel?: string;
@@ -57,7 +61,8 @@ export interface Session extends Readable<SessionState> {
 }
 
 /** One session owns the model reference; stores carry only detached observations and UI state. */
-export function createSession<P extends object, M extends ModelInstance>(definition: Definition<P, M>, spec: UISpec<P, M>): Session {
+export function createSession<P extends object, M extends ModelInstance>(definition: Definition<P, M>, sourceSpec: UISpec<P, M>): Session {
+  const spec = normalizeAuthoring(definition, sourceSpec);
   const descriptors = new Map(Object.entries(definition.inputs) as [string, Descriptor][]);
   const title = (field: string) => field.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/^./, value => value.toUpperCase());
   function parameter(field: string, label?: string, widget?: Parameter["widget"]): Parameter {
@@ -66,8 +71,9 @@ export function createSession<P extends object, M extends ModelInstance>(definit
     return { field, label: label ?? title(field), descriptor, widget };
   }
   const setup = (spec.setup ?? [...descriptors.keys()].map(field => ({ field }))).map(field => parameter(field.field, "label" in field ? field.label : undefined, "widget" in field ? field.widget : undefined));
-  const live = (spec.live ?? []).map(field => parameter(field.field, field.label, field.widget));
+  const live = spec.live.map(field => ({ ...parameter(field.field, field.label, field.widget), group: field.group }));
   let draft: Record<string, Value> = Object.fromEntries([...descriptors].map(([field, descriptor]) => [field, descriptor.default]));
+  let liveDraft: Record<string, Value> = Object.fromEntries(live.map(item => [item.field, item.descriptor.default]));
   let applied: Record<string, Value> | undefined;
   let fieldErrors: Record<string, string> = {};
   let instance: M | undefined;
@@ -88,28 +94,34 @@ export function createSession<P extends object, M extends ModelInstance>(definit
     const available = observation !== undefined;
     store.set({
       observation, initialized: !!instance, running, complete: isComplete(), epoch,
-      draft: { ...draft }, pending: applied ? setup.filter(field => !live.some(item => item.field === field.field) && draft[field.field] !== applied![field.field]).map(field => field.field) : [],
+      draft: { ...draft }, liveDraft: { ...liveDraft }, pending: applied ? setup.filter(field => draft[field.field] !== applied![field.field]).map(field => field.field) : [],
       status, error, fieldErrors: { ...fieldErrors }, selected, speed,
       drawing: available && !error && !!spec.drawing?.enabled(observation!) && (!spec.drawing?.toggleLabel || drawing),
       drawingAvailable: available && !!spec.drawing?.enabled(observation!),
       actions: (spec.actions ?? []).map((action, index) => ({ enabled: available && (action.enabled?.(observation!, selected) ?? true), pressed: available ? action.pressed?.(observation!) : undefined, repeating: repeatFlags.has(index) })),
       liveEnabled: (spec.live ?? []).map(field => !available || (field.enabled?.(observation!) ?? true)),
-      monitors: available ? (spec.monitors ?? []).map(monitor => ({ label: monitor.label, value: monitor.value(observation!) })) : [],
+      monitors: available ? (spec.monitors ?? []).map(monitor => ({ label: monitor.label, value: monitor.format ? monitor.format(monitor.value(observation!)) : monitor.value(observation!) })) : [],
     });
   }
   function stopRepeats() { for (const repeat of repeats) repeat?.stop(); }
-  function pause() { playback.stop(); stopRepeats(); drawing = false; publish(); }
-  function fail(cause: unknown) {
+  function pause() {
     playback.stop(); stopRepeats(); drawing = false;
-    status = cause instanceof Error ? cause.message : String(cause);
-    error = true;
+    try { publish(); } catch (cause) { fail(cause); }
+  }
+  function fail(cause: unknown) {
+    const message = cause instanceof Error ? cause.message : String(cause);
+    // A failed renderer effect can be called again by the error-state render.
+    // Publishing the same failure repeatedly would recursively invalidate that effect.
+    if (error && status === message && !running && !drawing) return;
+    status = message; error = true; drawing = false;
+    playback.stop(); stopRepeats();
     // A broken projection must not prevent the primary error from being displayed.
     try { publish(); } catch { store.update(value => ({ ...value, running: false, drawing: false, error: true, status })); }
   }
   function observe() {
     if (!instance) return;
     observation = instance.read() as Snapshot<M>;
-    for (const field of spec.live ?? []) draft[field.field] = field.value(observation);
+    for (const field of spec.live ?? []) liveDraft[field.field] = field.value(observation);
     if (isComplete()) { playback.stop(); stopRepeats(); drawing = false; }
     if (spec.drawing && !spec.drawing.enabled(observation)) drawing = false;
     for (const repeat of repeats) repeat?.sync();
@@ -126,7 +138,7 @@ export function createSession<P extends object, M extends ModelInstance>(definit
   }
   const playback = createPlayback(
     () => !isComplete() && act(model => model.advance(1)) && !isComplete(),
-    value => { running = value; publish(); },
+    value => { running = value; try { publish(); } catch (cause) { fail(cause); } },
     frame => {
       const owner = instance;
       const id = window.setInterval(() => { if (!disposed && owner === instance) frame(); }, 550 - speed * 50);
@@ -148,22 +160,25 @@ export function createSession<P extends object, M extends ModelInstance>(definit
     if (view.type === "spatial") return { ...view, data: (state: unknown) => view.data(state as Snapshot<M>) };
     if (view.type === "inspector") return { ...view, value: (state: unknown, id: string | null) => view.value(state as Snapshot<M>, id) };
     if (view.type === "table") return { ...view, rows: (state: unknown) => view.rows(state as Snapshot<M>) };
+    if (view.type === "bar") return { ...view, series: (state: unknown) => view.series(state as Snapshot<M>) };
     return { ...view, series: (state: unknown) => view.series(state as Snapshot<M>) };
   });
   publish();
   return {
-    subscribe: store.subscribe, setup, live, views, actions: spec.actions ?? [],
+    subscribe: store.subscribe, setup, live, liveGroups: groupLive(live), views, actions: spec.actions ?? [],
     drawingLabel: spec.drawing?.toggleLabel, description: definition.description, source: spec.source,
     initialize() {
       if (disposed) return;
       pause();
       let next: M | undefined;
       try {
-        next = definition.create({ ...draft } as Partial<P>);
+        const options = { ...draft, ...liveDraft };
+        for (const [field, descriptor] of descriptors) options[field] = decodeControl(descriptor, options[field]);
+        next = definition.create(options as Partial<P>);
         const nextObservation = next.read() as Snapshot<M>;
         // Validate projections before destroying a working session.
         for (const field of spec.live ?? []) field.value(nextObservation);
-        for (const monitor of spec.monitors ?? []) monitor.value(nextObservation);
+        for (const monitor of spec.monitors ?? []) { const value = monitor.value(nextObservation); monitor.format?.(value); }
         spec.complete?.(nextObservation);
         spec.drawing?.enabled(nextObservation);
         for (const action of spec.actions ?? []) { action.enabled?.(nextObservation, null); action.pressed?.(nextObservation); }
@@ -176,16 +191,19 @@ export function createSession<P extends object, M extends ModelInstance>(definit
         fail(cause);
       }
     },
-    setDraft(field, value) { draft[field] = value; delete fieldErrors[field]; publish(); },
+    setDraft(field, value) { if (disposed || !setup.some(item => item.field === field)) return; draft[field] = value; delete fieldErrors[field]; publish(); },
     setLive(field, value) {
+      if (disposed) return;
       const index = live.findIndex(item => item.field === field);
-      const binding = spec.live?.[index];
+      const binding = spec.live[index];
       if (!binding) return;
-      playback.stop();
-      if (!instance) { draft[field] = value; delete fieldErrors[field]; publish(); return; }
-      if (observation === undefined || !(binding.enabled?.(observation) ?? true)) return;
-      try { binding.set(instance, value); delete fieldErrors[field]; error = false; status = ""; observe(); }
-      catch (cause) { fieldErrors[field] = cause instanceof Error ? cause.message : String(cause); fail(cause); try { observe(); } catch { /* Primary error retained. */ } }
+      playback.stop(); stopRepeats();
+      try {
+        const decoded = decodeControl(live[index]!.descriptor, value);
+        if (!instance) { liveDraft[field] = decoded; delete fieldErrors[field]; error = false; publish(); return; }
+        if (observation === undefined || !(binding.enabled?.(observation) ?? true)) return;
+        binding.set(instance, decoded); delete fieldErrors[field]; error = false; status = ""; observe();
+      } catch (cause) { fieldErrors[field] = cause instanceof Error ? cause.message : String(cause); fail(cause); try { observe(); } catch { /* Primary error retained. */ } }
     },
     run() { if (running) { pause(); return; } if (!instance || isComplete()) return; stopRepeats(); drawing = false; playback.start(); },
     step(count) { pause(); if (!isComplete()) act(model => model.advance(count)); },

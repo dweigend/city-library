@@ -1,3 +1,5 @@
+import type { LegacyLiveField } from "./definition.ts";
+import { normalizeAuthoring, groupLive, decodeControl } from "./authoring.ts";
 import type { Definition } from "../experiments/definition.ts";
 import type {
   BoundEntry,
@@ -13,14 +15,25 @@ import { createPlayback } from "./playback.ts";
 import { createRepeatedAction } from "./actions/repeat.ts";
 
 /** Concrete model types stay here; only the bound mounted handle enters the catalog. */
+export function defineUI<P extends object, M>(
+  definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
+  spec: Omit<UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>, 'live'> & {
+    readonly live?: readonly LegacyLiveField<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>[];
+  },
+): BoundEntry;
+export function defineUI<P extends object, M>(
+  definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
+  spec: UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>,
+): BoundEntry;
 export function defineUI<P extends object, M extends ModelInstance>(
   definition: Definition<P, M>,
-  spec: UISpec<P, M>,
+  sourceSpec: UISpec<P, M>,
 ): BoundEntry {
   return {
     title: definition.title,
     description: definition.description,
     mount(container) {
+      const spec = normalizeAuthoring(definition, sourceSpec);
       const events = new AbortController();
       const setup = createForm(definition, spec);
       const controls = document.createElement("aside");
@@ -96,7 +109,8 @@ export function defineUI<P extends object, M extends ModelInstance>(
           const title = document.createElement("dt");
           title.textContent = monitor.label;
           const value = document.createElement("dd");
-          value.textContent = String(monitor.value(state));
+          const observed = monitor.value(state);
+          value.textContent = monitor.format ? monitor.format(observed) : String(observed);
           monitors.append(title, value);
         }
         for (const button of buttons) {
@@ -273,7 +287,15 @@ export function defineUI<P extends object, M extends ModelInstance>(
           string,
           Descriptor,
         ][];
-        for (const live of spec.live) {
+        for (const liveGroup of groupLive(spec.live)) {
+          let target: HTMLElement = group;
+          if (liveGroup.label !== undefined) {
+            const fieldset = document.createElement("fieldset");
+            const legend = document.createElement("legend");
+            legend.textContent = liveGroup.label;
+            fieldset.append(legend); group.append(fieldset); target = fieldset;
+          }
+          for (const live of liveGroup.fields) {
           const descriptor = inputs.find(([key]) => key === live.field)?.[1];
           if (!descriptor) throw new Error(`Unknown live input: ${live.field}`);
           const label = document.createElement("label");
@@ -317,12 +339,12 @@ export function defineUI<P extends object, M extends ModelInstance>(
             control.checked = Boolean(descriptor.default);
           else control.value = String(descriptor.default);
           control.name = `live-${live.field}`;
-          const readControl = () =>
+          const readControl = () => decodeControl(descriptor,
             descriptor.kind === "boolean"
               ? (control as HTMLInputElement).checked
               : descriptor.kind === "number"
-                ? Number(control.value)
-                : control.value;
+                ? (control as HTMLInputElement).valueAsNumber
+                : control.value);
           setup.registerReader(live.field, readControl);
           control.addEventListener(
             "change",
@@ -330,7 +352,8 @@ export function defineUI<P extends object, M extends ModelInstance>(
               playback.stop();
               if (!control.reportValidity()) return;
               if (!instance) {
-                status.textContent = "Setup values updated.";
+                try { readControl(); status.textContent = "Setup values updated."; }
+                catch (error) { fail(error); }
                 return;
               }
               act((model) => live.set(model, readControl()), "Rule updated.");
@@ -338,12 +361,13 @@ export function defineUI<P extends object, M extends ModelInstance>(
             { signal: events.signal },
           );
           label.append(control);
-          group.append(label);
+          target.append(label);
           liveControls.push({
             control,
             value: live.value,
             enabled: live.enabled,
           });
+          }
         }
       }
       function disposeViews() {
@@ -405,7 +429,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
             view.type === "bar" ||
             view.type === "scatter"
           ) {
-            const adapter = mountChart(figure, view.type);
+            const adapter = mountChart(figure, view.type, { xAxis: view.xAxis, yAxis: view.yAxis });
             views.push({
               render: (state) => adapter.update(view.series(state)),
               dispose: () => adapter.dispose(),

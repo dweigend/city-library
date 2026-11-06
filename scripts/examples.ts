@@ -1,4 +1,5 @@
 const phases = {
+  "ui-authoring": ["01-defaults-and-inert-entry", "02-ordered-setup-and-numeric-live", "03-alternate-observation", "04-groups-format-and-categories", "05-independent-actions-and-legacy"],
   "model-authoring": ["01-taxi-reporters", "02-taxi-observation-purity", "03-taxi-intervention-isolation", "04-taxi-replay-accounting"],
   "selected-materials": ["01-sandpile-ising", "02-sand", "03-atomic-diffusion", "04-thermal-phases", "05-dla"],
   "selected-biology": ["01-photosynthesis-and-signaling", "02-patterns-and-construction", "03-homeostasis-and-exercise", "04-season-and-self-assembly", "05-phyllotaxis-and-turnover"],

@@ -6,7 +6,7 @@
   import ChevronDown from "@lucide/svelte/icons/chevron-down";
   import ParameterField from "./ParameterField.svelte";
   import View from "./views/View.svelte";
-  import type { Session } from "./session.ts";
+  import type { Session, Parameter } from "./session.ts";
   import "./workbench.css";
 
   let { session }: { session: Session } = $props();
@@ -19,6 +19,10 @@
   const snapshot = $derived($session);
   function setup() { if (form.reportValidity()) session.initialize(); }
 </script>
+
+{#snippet liveControl(parameter: Parameter)}
+  <ParameterField {parameter} live value={snapshot.liveDraft[parameter.field]!} disabled={!snapshot.liveEnabled[session.live.indexOf(parameter)]} error={snapshot.fieldErrors[parameter.field]} onchange={value => session.setLive(parameter.field, value)} />
+{/snippet}
 
 <div class="lab-workbench">
   <div class="lab-transport" role="group" aria-label="Simulation controls">
@@ -36,8 +40,14 @@
         {#each session.setup as parameter (parameter.field)}
           <ParameterField {parameter} value={snapshot.draft[parameter.field]!} pending={snapshot.pending.includes(parameter.field)} error={snapshot.fieldErrors[parameter.field]} onchange={value => session.setDraft(parameter.field, value)} />
         {/each}
-        {#each session.live as parameter, index (parameter.field)}
-          <ParameterField {parameter} live value={snapshot.draft[parameter.field]!} disabled={!snapshot.liveEnabled[index]} error={snapshot.fieldErrors[parameter.field]} onchange={value => session.setLive(parameter.field, value)} />
+        {#each session.liveGroups as group}
+          {#if group.label !== undefined}
+            <Field.Set><Field.Legend>{group.label}</Field.Legend><Field.Group>
+              {#each group.fields as parameter (parameter.field)}{@render liveControl(parameter)}{/each}
+            </Field.Group></Field.Set>
+          {:else}
+            {#each group.fields as parameter (parameter.field)}{@render liveControl(parameter)}{/each}
+          {/if}
         {/each}
       </Field.Group>
     </form>

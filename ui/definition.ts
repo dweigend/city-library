@@ -67,6 +67,15 @@ export interface Series {
   readonly color?: string;
   readonly points: readonly { readonly x: number; readonly y: number }[];
 }
+export interface AxisSpec {
+  readonly label?: string;
+  readonly unit?: string;
+}
+export interface BarSeries {
+  readonly label: string;
+  readonly color?: string;
+  readonly points: readonly { readonly x: string | number; readonly y: number }[];
+}
 export type View<S> =
   | {
       readonly type: "network";
@@ -85,9 +94,18 @@ export type View<S> =
       readonly data: (state: S) => SpatialData;
     }
   | {
-      readonly type: "line" | "bar" | "scatter";
+      readonly type: "line" | "scatter";
+      readonly xAxis?: AxisSpec;
+      readonly yAxis?: AxisSpec;
       readonly label: string;
       readonly series: (state: S) => readonly Series[];
+    }
+  | {
+      readonly type: "bar";
+      readonly label: string;
+      readonly xAxis?: AxisSpec;
+      readonly yAxis?: AxisSpec;
+      readonly series: (state: S) => readonly BarSeries[];
     }
   | {
       readonly type: "table";
@@ -111,6 +129,33 @@ export type DrawingIntent =
     }
   | { readonly phase: "end"; readonly position?: never };
 
+export interface SetupField<P extends object> {
+  readonly field: Extract<keyof P, string>;
+  readonly label?: string;
+  readonly widget?: "number" | "range" | "select" | "checkbox" | "text";
+}
+export interface LegacyLiveField<P extends object, M extends ModelInstance> {
+  readonly field: Extract<keyof P, string>;
+  readonly label?: string;
+  readonly widget?: "color";
+  readonly group?: string;
+  readonly value: (state: Snapshot<M>) => string | number | boolean;
+  readonly set: (model: M, value: string | number | boolean) => void;
+  readonly enabled?: (state: Snapshot<M>) => boolean;
+}
+type KeyedField<P extends object, M extends ModelInstance, K extends keyof P> = {
+  readonly label?: string;
+  readonly widget?: "color";
+  readonly group?: string;
+  readonly set: (model: M, value: P[K]) => void;
+  readonly enabled?: (state: Snapshot<M>) => boolean;
+} & ([Snapshot<M>] extends [{ readonly parameters: { readonly [F in K]-?: P[F] } }]
+  ? { readonly value?: (state: Snapshot<M>) => P[K] }
+  : { readonly value: (state: Snapshot<M>) => P[K] });
+export type KeyedLive<P extends object, M extends ModelInstance> = {
+  readonly [K in Extract<keyof P, string>]?: KeyedField<P, M, K>;
+};
+
 export interface UISpec<P extends object, M extends ModelInstance> {
   readonly drawing?: {
     /** Optional host-owned mode toggle, initially off for each mounted instance. */
@@ -118,11 +163,7 @@ export interface UISpec<P extends object, M extends ModelInstance> {
     readonly enabled: (state: Snapshot<M>) => boolean;
     readonly intent: (model: M, intent: DrawingIntent) => void;
   };
-  readonly setup?: readonly {
-    readonly field: Extract<keyof P, string>;
-    readonly label?: string;
-    readonly widget?: "number" | "range" | "select" | "checkbox" | "text";
-  }[];
+  readonly setup?: readonly (Extract<keyof P, string> | SetupField<P>)[];
   readonly actions?: readonly {
     readonly label: string;
     readonly run: (model: M, selected: string | null) => void;
@@ -131,17 +172,11 @@ export interface UISpec<P extends object, M extends ModelInstance> {
     /** Independent host cadence; never scientific model time. */
     readonly repeat?: { readonly label: string; readonly intervalMs: number };
   }[];
-  readonly live?: readonly {
-    readonly widget?: "color";
-    readonly field: Extract<keyof P, string>;
-    readonly label?: string;
-    readonly value: (state: Snapshot<M>) => string | number | boolean;
-    readonly set: (model: M, value: string | number | boolean) => void;
-    readonly enabled?: (state: Snapshot<M>) => boolean;
-  }[];
+  readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M>;
   readonly monitors?: readonly {
     readonly label: string;
     readonly value: (state: Snapshot<M>) => string | number;
+    readonly format?: (value: string | number) => string;
   }[];
   readonly complete?: (state: Snapshot<M>) => boolean;
   readonly source?: { readonly url: string; readonly label: string };
