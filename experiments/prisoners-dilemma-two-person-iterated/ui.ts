@@ -31,16 +31,16 @@ export const ui = defineUI(model, {
       label: "Players",
       rows: (s) => [
         {
-          player: "Human",
-          score: s.human.score,
-          average: s.human.averageScore,
-          lastAction: s.human.defectNow ? "Defect" : "Cooperate",
+          Player: "Human",
+          Score: s.human.score,
+          Average: s.human.averageScore,
+          "Last action": s.human.defectNow ? "Defect" : "Cooperate",
         },
         {
-          player: "Computer",
-          score: s.computer.score,
-          average: s.computer.averageScore,
-          lastAction: s.computer.defectNow ? "Defect" : "Cooperate",
+          Player: "Computer",
+          Score: s.computer.score,
+          Average: s.computer.averageScore,
+          "Last action": s.computer.defectNow ? "Defect" : "Cooperate",
         },
       ],
     },
@@ -62,7 +62,7 @@ export const ui = defineUI(model, {
     {
       type: "table",
       label: "History",
-      rows: (s) => s.output.slice(-12).map((message) => ({ message })),
+      rows: (s) => s.output.slice(-12).map((message) => ({ Message: message })),
     },
   ],
 });

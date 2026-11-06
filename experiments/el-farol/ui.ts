@@ -78,7 +78,7 @@ export const ui = defineUI(model, {
             id: p.id,
             strategy: p.bestStrategy,
             attend: p.attend,
-            lastScoredPrediction: p.prediction,
+            "Last scored prediction": p.prediction,
           }
         );
       },
