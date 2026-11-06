@@ -8,6 +8,7 @@ import { distances, allDistances, distanceSummary, type DistanceOptions, type Di
 import { analyze, type AnalysisOptions } from "./algorithms/analysis.ts";
 import { validateGenerator, type GeneratorOptions } from "./generators/options.ts";
 import { planGenerator } from "./generators/planning.ts";
+import { prepareCopy, type PreparedCopy } from "./copy.ts";
 
 interface EdgeOptions<N extends object, E extends object> {
   from: N; to: N; directed?: boolean; key?: string; state?: E;
@@ -32,6 +33,7 @@ export interface Graph<N extends object = object, E extends object = {}> {
   distanceSummary(options?: SummaryOptions<N, E>): DistanceSummary<N>;
   analyze(options: AnalysisOptions<N, E>): ReadonlyMap<N, number>;
   generate(options: GeneratorOptions<N>): readonly Edge<N, E>[];
+  copy(options?: { nodes?: readonly N[]; edges?: readonly Edge<N, E>[]; direction?: "original" | "reverse" | "undirected" }): Graph<N, E>;
   delete(options?: { edgesOnly?: boolean }): void;
 }
 interface GraphOptions<E extends object> { edgeState?: E; parallel?: boolean; selfLoops?: boolean }
@@ -47,6 +49,10 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
   const parallel = flag(settings.parallel);
   const selfLoops = flag(settings.selfLoops);
   const defaults = cloneEdgeState((Object.hasOwn(settings, "edgeState") ? settings.edgeState : {}) as E);
+  return owner<N, E>(parallel, selfLoops, defaults);
+}
+/** One topology/lifecycle owner, also used for fully prepared independent copies. */
+function owner<N extends object, E extends object>(parallel: boolean, selfLoops: boolean, defaults: E, initial?: PreparedCopy<N, E>): Graph<N, E> {
   const members = new Set<N>();
   const edges = new Set<Edge<N, E>>();
   const keys = new Map<string, Edge<N, E>>();
@@ -167,6 +173,12 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
     allDistances(options = {}) { return allDistances([...members], graph.edges, options); },
     distanceSummary(options = {}) { return distanceSummary([...members], graph.edges, options); },
     analyze(options) { return analyze([...members], graph.edges, options); },
+    copy(options = {}) {
+      return guard.read(() => {
+        const prepared = prepareCopy([...members], [...edges], defaults, parallel, selfLoops, options);
+        return owner(prepared.parallel, prepared.selfLoops, prepared.defaults, prepared);
+      });
+    },
     generate(options) {
       // Reject enclosing readers before any planning callback or draw.
       guard.validate();
@@ -209,6 +221,17 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
     },
   };
   registerFramework(graph, "graph");
+  if (initial) {
+    // Preparation already completed every caller-controlled reflection and
+    // liveness check. Materialize before registering ANY Agent membership hook.
+    const created = initial.edges.map(edge => createEdge(graph, edge.from, edge.to, edge.directed, edge.key, edge.state, removeEdge));
+    for (const node of initial.nodes) graph.nodes.add(node);
+    for (const edge of created) {
+      edges.add(edge);
+      if (edge.key !== undefined) keys.set(edge.key, edge);
+    }
+    // Fresh cursor intentionally remains zero; future allocation skips live keys.
+  }
   return Object.freeze(graph);
 }
 export const Graph = Object.freeze({ add });
