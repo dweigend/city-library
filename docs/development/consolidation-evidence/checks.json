@@ -8,8 +8,8 @@
   "tests": 565,
   "assertions": 150683,
   "testFiles": 65,
-  "registeredExamples": 210,
-  "globalCheck": "bun run check: typecheck (five TS projects and Svelte check), tests, 210 examples, build and packed Bun/NodeESM/ambient-free TypeScript consumer",
+  "registeredExamples": 215,
+  "globalCheck": "bun run check: typecheck (five TS projects and Svelte check), tests, 215 examples, build and packed Bun/NodeESM/ambient-free TypeScript consumer",
   "followupToolingCommit": "fe54778",
   "followupChecks": [
     {
@@ -26,5 +26,6 @@
     }
   ],
   "browser": "Two-target actualChromium156 smoke; exact actions/states/7PNGs in browser-smoke.json. No independent visual approval, full modelmigration or fresh original baseline claim.",
-  "whitespace": "Source staged diff checks pass. Raw historical Vite logs intentionally retain emitted whitespace; no evidence bytes normalized."
+  "whitespace": "Source staged diff checks pass. Raw historical Vite logs intentionally retain emitted whitespace; no evidence bytes normalized.",
+  "exampleCountVerification": "43 registered phases of five scripts, including the five UI migration scripts; all execute in the successful global runner"
 }
