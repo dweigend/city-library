@@ -1,4 +1,5 @@
 const phases = {
+  "selected-urban-feedback": ["01-positive-powers-and-normalization", "02-positive-moore-wrap", "03-path-source-setup-and-disturb", "04-cells-snapshot-and-strict-age", "05-defaults-isolation-and-atomic-fixtures"],
   "selected-urban": ["01-awareness-contact-and-expiry", "02-pollution-phases-and-stop", "03-recycling-order-and-energy", "04-defaults-isolation-and-validation", "05-live-seeking-and-cap"],
   "netlogo-grid-batch": ["01-life-synchronous-blinker", "02-fire-front-and-embers", "03-percolation-stop-and-wrap", "04-atomic-inputs-and-drawing", "05-defaults-and-isolation"],
   a1: ["01-energy-model", "02-independent-worlds", "03-membership-lifecycle", "04-copy-and-custom-state", "05-execution-errors"],
