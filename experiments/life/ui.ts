@@ -1,13 +1,7 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "initialDensity" },
-    { field: "initialization" },
-  ],
+  setup: ["width", "height", "seed", "initialDensity", "initialization"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Life",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
@@ -36,22 +30,16 @@ export const ui = defineUI(model, {
       else model.endBrush();
     },
   },
-  live: [
-    {
-      field: "foreground",
-      label: "Foreground",
+  live: {
+    foreground: {
       widget: "color",
-      value: (state) => state.parameters.foreground,
-      set: (model, value) => model.setColors({ foreground: String(value) }),
+      set: (model, value) => model.setColors({ foreground: value }),
     },
-    {
-      field: "background",
-      label: "Background",
+    background: {
       widget: "color",
-      value: (state) => state.parameters.background,
-      set: (model, value) => model.setColors({ background: String(value) }),
+      set: (model, value) => model.setColors({ background: value }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "Living", value: (state) => state.counts.living },

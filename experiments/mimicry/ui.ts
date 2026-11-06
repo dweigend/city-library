@@ -1,14 +1,18 @@
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: (["memoryDuration", "mutationRate", "memorySize"] as const).map(
-    (field) => ({
-      field,
-      value: (s) => s.parameters[field],
-      set: (m, value) => m.setParameters({ [field]: Number(value) }),
-    }),
-  ),
+  setup: ["seed"],
+  live: {
+    memoryDuration: {
+      set: (m, value) => m.setParameters({ memoryDuration: value }),
+    },
+    mutationRate: {
+      set: (m, value) => m.setParameters({ mutationRate: value }),
+    },
+    memorySize: {
+      set: (m, value) => m.setParameters({ memorySize: value }),
+    },
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Mimicry.nlogox",
     label: "NetLogo Mimicry · Wilensky · CC BY-NC-SA 3.0",

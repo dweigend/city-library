@@ -1,12 +1,7 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "initialization" },
-  ],
+  setup: ["width", "height", "seed", "initialization"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/BriansBrain",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -25,13 +20,11 @@ export const ui = defineUI(model, {
       pressed: (s) => s.drawing && s.brush === 2,
     },
   ],
-  live: [
-    {
-      field: "initialDensity",
-      value: (s) => s.parameters.initialDensity,
-      set: (m, v) => m.setInitialDensity(Number(v)),
+  live: {
+    initialDensity: {
+      set: (m, v) => m.setInitialDensity(v),
     },
-  ],
+  },
   drawing: {
     enabled: (s) => s.drawing,
     intent(m, i) {

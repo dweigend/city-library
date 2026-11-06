@@ -1,30 +1,34 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "startBlacks" },
-    { field: "startWhites" },
-  ],
-  live: (
-    [
-      "scenario",
-      "solarLuminosity",
-      "albedoSurface",
-      "albedoBlacks",
-      "albedoWhites",
-      "showTempMap",
-      "showDaisies",
-      "paintDaisiesAs",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, v) =>
-      m.setRules({
-        [field]: v,
-      }),
-  })),
+  setup: ["seed", "startBlacks", "startWhites"],
+  live: {
+    scenario: {
+      set: (m, v) => m.setRules({ scenario: v }),
+    },
+    solarLuminosity: {
+      set: (m, v) => m.setRules({ solarLuminosity: v }),
+    },
+    albedoSurface: {
+      set: (m, v) => m.setRules({ albedoSurface: v }),
+    },
+    albedoBlacks: {
+      set: (m, v) => m.setRules({ albedoBlacks: v }),
+    },
+    albedoWhites: {
+      set: (m, v) => m.setRules({ albedoWhites: v }),
+    },
+    showTempMap: {
+      set: (m, v) => m.setRules({ showTempMap: v }),
+    },
+    showDaisies: {
+      set: (m, v) => m.setRules({ showDaisies: v }),
+    },
+    paintDaisiesAs: {
+      set: (m, v) => m.setRules({ paintDaisiesAs: v }),
+    },
+  },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Daisyworld",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -69,26 +73,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Daisyworld",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: s.parameters.showTempMap
-            ? netLogoColor(
-                10 +
-                  9.999 * Math.max(0, Math.min(1, (c.temperature + 50) / 160)),
-              )
-            : "#8d8d8d",
-        })),
-        agents: s.parameters.showDaisies
-          ? s.daisies.map((a) => ({
-              ...a,
-              color: a.kind === "black" ? "#000000" : "#ffffff",
-              size: 6,
-            }))
-          : [],
-      }),
+      data: daisyworldData,
     },
     {
       type: "line",
@@ -130,3 +115,27 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function daisyworldData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: s.parameters.showTempMap
+        ? netLogoColor(
+            10 + 9.999 * Math.max(0, Math.min(1, (c.temperature + 50) / 160)),
+          )
+        : "#8d8d8d",
+    })),
+    agents: s.parameters.showDaisies
+      ? s.daisies.map((a) => ({
+          ...a,
+          color: a.kind === "black" ? "#000000" : "#ffffff",
+          size: 6,
+        }))
+      : [],
+  };
+}

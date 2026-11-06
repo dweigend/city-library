@@ -1,25 +1,28 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "numberOfMammoths" },
-    { field: "numberOfHumans" },
-  ],
-  live: (
-    [
-      "mammothBirthRate",
-      "humanBirthRate",
-      "mammothSpeed",
-      "humanSpeed",
-      "oddsOfKilling",
-      "climateChangeDecayChance",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, value) => m.setParameters({ [field]: Number(value) }),
-  })),
+  setup: ["seed", "numberOfMammoths", "numberOfHumans"],
+  live: {
+    mammothBirthRate: {
+      set: (m, value) => m.setParameters({ mammothBirthRate: value }),
+    },
+    humanBirthRate: {
+      set: (m, value) => m.setParameters({ humanBirthRate: value }),
+    },
+    mammothSpeed: {
+      set: (m, value) => m.setParameters({ mammothSpeed: value }),
+    },
+    humanSpeed: {
+      set: (m, value) => m.setParameters({ humanSpeed: value }),
+    },
+    oddsOfKilling: {
+      set: (m, value) => m.setParameters({ oddsOfKilling: value }),
+    },
+    climateChangeDecayChance: {
+      set: (m, value) => m.setParameters({ climateChangeDecayChance: value }),
+    },
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Mammoths.nlogox",
     label: "NetLogo Mammoths · Wilensky · CC BY-NC-SA 3.0",
@@ -36,23 +39,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Americas habitat",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color:
-            c.terrain === "ocean"
-              ? "#245eaa"
-              : c.terrain === "changed"
-                ? "#a7d67c"
-                : "#329b32",
-        })),
-        agents: [
-          ...s.mammoths.map((a) => ({ ...a, color: "#8c541f", size: 5 })),
-          ...s.humans.map((a) => ({ ...a, color: "#ffdf00", size: 4 })),
-        ],
-      }),
+      data: americasHabitatData,
     },
     {
       type: "line",
@@ -77,18 +64,45 @@ export const ui = defineUI(model, {
     {
       type: "inspector",
       label: "Resident",
-      value: (s, id) => {
-        const a = [...s.mammoths, ...s.humans].find((a) => a.id === id);
-        return a
-          ? {
-              breed: a.breed,
-              ageMonths: a.age,
-              settled: a.settled,
-              sourceX: a.originalX,
-              sourceY: a.originalY,
-            }
-          : undefined;
-      },
+      value: residentInspector,
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function americasHabitatData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color:
+        c.terrain === "ocean"
+          ? "#245eaa"
+          : c.terrain === "changed"
+            ? "#a7d67c"
+            : "#329b32",
+    })),
+    agents: [
+      ...s.mammoths.map((a) => ({ ...a, color: "#8c541f", size: 5 })),
+      ...s.humans.map((a) => ({ ...a, color: "#ffdf00", size: 4 })),
+    ],
+  };
+}
+
+function residentInspector(
+  s: UIObservation,
+  id: string | null,
+): Readonly<Record<string, string | number | boolean>> | undefined {
+  const a = [...s.mammoths, ...s.humans].find((a) => a.id === id);
+  return a
+    ? {
+        breed: a.breed,
+        ageMonths: a.age,
+        settled: a.settled,
+        sourceX: a.originalX,
+        sourceY: a.originalY,
+      }
+    : undefined;
+}

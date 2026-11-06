@@ -1,23 +1,25 @@
+import type { SpatialData, Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "number" }],
-  live: (
-    [
-      "birthThreshold",
-      "grassGrowRate",
-      "grassEnergy",
-      "weedsGrowRate",
-      "weedEnergy",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, v) =>
-      m.setRules({
-        [field]: Number(v),
-      }),
-  })),
+  setup: ["seed", "number"],
+  live: {
+    birthThreshold: {
+      set: (m, v) => m.setRules({ birthThreshold: v }),
+    },
+    grassGrowRate: {
+      set: (m, v) => m.setRules({ grassGrowRate: v }),
+    },
+    grassEnergy: {
+      set: (m, v) => m.setRules({ grassEnergy: v }),
+    },
+    weedsGrowRate: {
+      set: (m, v) => m.setRules({ weedsGrowRate: v }),
+    },
+    weedEnergy: {
+      set: (m, v) => m.setRules({ weedEnergy: v }),
+    },
+  },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RabbitsGrassWeeds",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -37,42 +39,47 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Rabbits and resources",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color:
-            c.cover === "grass"
-              ? "#389b39"
-              : c.cover === "weeds"
-                ? "#b539ba"
-                : "#000000",
-        })),
-        agents: s.rabbits.map((a) => ({
-          ...a,
-          color: "#ffffff",
-          size: 5,
-        })),
-      }),
+      data: rabbitsAndResourcesData,
     },
     {
       type: "line",
       label: "Populations (resources / 4)",
-      series: (s) =>
-        (["rabbits", "grass", "weeds"] as const).map((key) => ({
-          label: key,
-          color:
-            key === "rabbits"
-              ? "#d73027"
-              : key === "grass"
-                ? "#389b39"
-                : "#b539ba",
-          points: s.history.map((p) => ({
-            x: p.tick,
-            y: p[key],
-          })),
-        })),
+      series: populationsResources4Series,
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function rabbitsAndResourcesData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color:
+        c.cover === "grass"
+          ? "#389b39"
+          : c.cover === "weeds"
+            ? "#b539ba"
+            : "#000000",
+    })),
+    agents: s.rabbits.map((a) => ({
+      ...a,
+      color: "#ffffff",
+      size: 5,
+    })),
+  };
+}
+
+function populationsResources4Series(s: UIObservation): readonly Series[] {
+  return (["rabbits", "grass", "weeds"] as const).map((key) => ({
+    label: key,
+    color:
+      key === "rabbits" ? "#d73027" : key === "grass" ? "#389b39" : "#b539ba",
+    points: s.history.map((p) => ({
+      x: p.tick,
+      y: p[key],
+    })),
+  }));
+}

@@ -7,7 +7,9 @@ import { agentLabCatalog } from "./scripts/agent-lab-vite.ts";
 const root = fileURLToPath(new URL(".", import.meta.url));
 const portText = process.env.CITY_LIBRARY_UI_PORT ?? "3101";
 if (!/^\d+$/.test(portText) || Number(portText) < 1 || Number(portText) > 65535)
-  throw new RangeError("CITY_LIBRARY_UI_PORT must be an integer from 1 to 65535.");
+  throw new RangeError(
+    "CITY_LIBRARY_UI_PORT must be an integer from 1 to 65535.",
+  );
 
 const runtime = process.env.CITY_LIBRARY_UI_RUNTIME ?? "legacy";
 if (runtime !== "legacy" && runtime !== "svelte")
@@ -15,7 +17,11 @@ if (runtime !== "legacy" && runtime !== "svelte")
 
 export default defineConfig({
   root: `${root}ui/agent-lab`,
-  plugins: [agentLabCatalog(root, { runtime, legacyEntries: ["taxi-cabs"] }), svelte({ configFile: `${root}svelte.config.js` }), tailwindcss()],
+  plugins: [
+    agentLabCatalog(root, { runtime, legacyEntries: [] }),
+    svelte({ configFile: `${root}svelte.config.js` }),
+    tailwindcss(),
+  ],
   resolve: {
     dedupe: ["svelte"],
     alias: {

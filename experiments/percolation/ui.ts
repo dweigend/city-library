@@ -7,19 +7,17 @@ const colors = {
   saturated: "#000000",
 };
 export const ui = defineUI(model, {
-  setup: [{ field: "width" }, { field: "height" }, { field: "seed" }],
+  setup: ["width", "height", "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Percolation",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (state) => state.done,
-  live: [
-    {
-      field: "porosity",
-      value: (state) => state.parameters.porosity,
-      set: (model, value) => model.setRules({ porosity: Number(value) }),
+  live: {
+    porosity: {
+      set: (model, value) => model.setRules({ porosity: value }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "Total oil", value: (state) => state.totalOil },

@@ -2,33 +2,22 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "numAndroids" }],
-  live: [
-    {
-      field: "infectionChance",
-      value: (state) => state.parameters.infectionChance,
+  setup: ["seed", "numAndroids"],
+  live: {
+    infectionChance: {
       set: (instance, value) =>
-        instance.setParameters({ infectionChance: Number(value) }),
+        instance.setParameters({ infectionChance: value }),
     },
-    {
-      field: "stepSize",
-      value: (state) => state.parameters.stepSize,
-      set: (instance, value) =>
-        instance.setParameters({ stepSize: Number(value) }),
+    stepSize: {
+      set: (instance, value) => instance.setParameters({ stepSize: value }),
     },
-    {
-      field: "avoid",
-      value: (state) => state.parameters.avoid,
-      set: (instance, value) =>
-        instance.setParameters({ avoid: Boolean(value) }),
+    avoid: {
+      set: (instance, value) => instance.setParameters({ avoid: value }),
     },
-    {
-      field: "chase",
-      value: (state) => state.parameters.chase,
-      set: (instance, value) =>
-        instance.setParameters({ chase: Boolean(value) }),
+    chase: {
+      set: (instance, value) => instance.setParameters({ chase: value }),
     },
-  ],
+  },
   actions: [
     { label: "Infect", run: (instance) => instance.infect() },
     { label: "Keep plots", run: (instance) => instance.setupKeep() },

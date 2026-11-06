@@ -1,37 +1,24 @@
+import type { GridData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "initial" },
-  ],
+  setup: ["width", "height", "seed", "initial"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Sandpile",
     label: "Original NetLogo model · Weintrop et al. / Wilensky · CC0",
   },
-  live: [
-    {
-      field: "grainsPerField",
-      label: "Grains per field",
-      value: (s) => s.parameters.grainsPerField,
-      set: (m, v) => m.setLive({ grainsPerField: Number(v) }),
+  live: {
+    grainsPerField: {
+      set: (m, v) => m.setLive({ grainsPerField: v }),
     },
-    {
-      field: "dropLocation",
-      label: "Drop location",
-      value: (s) => s.parameters.dropLocation,
-      set: (m, v) =>
-        m.setLive({ dropLocation: v as "center" | "random" | "mouse-click" }),
+    dropLocation: {
+      set: (m, v) => m.setLive({ dropLocation: v }),
     },
-    {
-      field: "animateAvalanches",
+    animateAvalanches: {
       label: "Highlight avalanches",
-      value: (s) => s.parameters.animateAvalanches,
-      set: (m, v) => m.setLive({ animateAvalanches: Boolean(v) }),
+      set: (m, v) => m.setLive({ animateAvalanches: v }),
     },
-  ],
+  },
   actions: [
     { label: "Setup random", run: (m) => m.setupRandom() },
     { label: "Setup uniform", run: (m) => m.setupUniform() },
@@ -67,19 +54,7 @@ export const ui = defineUI(model, {
     {
       type: "grid",
       label: "Pile",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: c.explored
-            ? "#43d36b"
-            : s.parameters.animateAvalanches && c.fired
-              ? "#ef4040"
-              : (["#000000", "#032b63", "#105ab4", "#5388d3"][c.n] ??
-                "#ffffff"),
-        })),
-      }),
+      data: pileData,
     },
     {
       type: "line",
@@ -103,3 +78,20 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function pileData(s: UIObservation): GridData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: c.explored
+        ? "#43d36b"
+        : s.parameters.animateAvalanches && c.fired
+          ? "#ef4040"
+          : (["#000000", "#032b63", "#105ab4", "#5388d3"][c.n] ?? "#ffffff"),
+    })),
+  };
+}

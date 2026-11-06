@@ -1,3 +1,4 @@
+import type { Series, BarSeries } from "../../ui/index.ts";
 import { stats } from "city-library";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
@@ -5,38 +6,23 @@ import { model } from "./model.ts";
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "initialBacteria" },
-    { field: "initialViruses" },
-    { field: "maxVirusTypes" },
-  ],
-  live: [
-    {
-      field: "infectionChance",
-      value: (state) => state.parameters.infectionChance,
+  setup: ["seed", "initialBacteria", "initialViruses", "maxVirusTypes"],
+  live: {
+    infectionChance: {
       set: (instance, value) =>
-        instance.setParameters({ infectionChance: Number(value) }),
+        instance.setParameters({ infectionChance: value }),
     },
-    {
-      field: "spacerLossChance",
-      value: (state) => state.parameters.spacerLossChance,
+    spacerLossChance: {
       set: (instance, value) =>
-        instance.setParameters({ spacerLossChance: Number(value) }),
+        instance.setParameters({ spacerLossChance: value }),
     },
-    {
-      field: "crispr",
-      value: (state) => state.parameters.crispr,
-      set: (instance, value) =>
-        instance.setParameters({ crispr: Boolean(value) }),
+    crispr: {
+      set: (instance, value) => instance.setParameters({ crispr: value }),
     },
-    {
-      field: "plottedVirus",
-      value: (state) => state.parameters.plottedVirus,
-      set: (instance, value) =>
-        instance.setParameters({ plottedVirus: Number(value) }),
+    plottedVirus: {
+      set: (instance, value) => instance.setParameters({ plottedVirus: value }),
     },
-  ],
+  },
   actions: [
     { label: "Plot new virus", run: (instance) => instance.plotNewVirus() },
   ],
@@ -86,67 +72,17 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "CRISPR-virus coevolution",
-      series: (state) => [
-        {
-          label: "Virus %",
-          points: state.coevolutionHistory.map((p) => ({
-            x: p.tick,
-            y: p.focalVirusPercent,
-          })),
-        },
-        {
-          label: "Array %",
-          points: state.coevolutionHistory.map((p) => ({
-            x: p.tick,
-            y: p.focalArrayPercent,
-          })),
-        },
-      ],
+      series: cRISPRVirusCoevolutionSeries,
     },
     {
       type: "bar",
       label: "Sequence histogram",
-      series: (state) => [
-        {
-          label: "Viruses",
-          points: stats
-            .histogram(state.virusSequences, {
-              edges: Array.from(
-                { length: state.parameters.maxVirusTypes + 1 },
-                (_, i) => i - 0.5,
-              ),
-            })
-            .counts.map((y, x) => ({ x, y })),
-        },
-        {
-          label: "Arrays",
-          points: stats
-            .histogram(state.arraySequences, {
-              edges: Array.from(
-                { length: state.parameters.maxVirusTypes + 1 },
-                (_, i) => i - 0.5,
-              ),
-            })
-            .counts.map((y, x) => ({ x, y })),
-        },
-      ],
+      series: sequenceHistogramSeries,
     },
     {
       type: "bar",
       label: "Array length histogram",
-      series: (state) => [
-        {
-          label: "Arrays",
-          points: stats
-            .histogram(state.arrayLengths, {
-              edges: Array.from(
-                { length: Math.max(1, ...state.arrayLengths) + 2 },
-                (_, i) => i - 0.5,
-              ),
-            })
-            .counts.map((y, x) => ({ x, y })),
-        },
-      ],
+      series: arrayLengthHistogramSeries,
     },
     {
       type: "line",
@@ -165,24 +101,7 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "History",
-      series: (state) => [
-        {
-          label: "Bacteria",
-          color: "#db9a35",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.bacteria),
-          })),
-        },
-        {
-          label: "Viruses",
-          color: "#9272b8",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.viruses),
-          })),
-        },
-      ],
+      series: historySeries,
     },
   ],
 });
@@ -191,3 +110,90 @@ export { model };
 export const sourceMarker =
   "selected-disease-gene-b09:crispr-ecosystem:9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function cRISPRVirusCoevolutionSeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Virus %",
+      points: state.coevolutionHistory.map((p) => ({
+        x: p.tick,
+        y: p.focalVirusPercent,
+      })),
+    },
+    {
+      label: "Array %",
+      points: state.coevolutionHistory.map((p) => ({
+        x: p.tick,
+        y: p.focalArrayPercent,
+      })),
+    },
+  ];
+}
+
+function sequenceHistogramSeries(state: UIObservation): readonly BarSeries[] {
+  return [
+    {
+      label: "Viruses",
+      points: stats
+        .histogram(state.virusSequences, {
+          edges: Array.from(
+            { length: state.parameters.maxVirusTypes + 1 },
+            (_, i) => i - 0.5,
+          ),
+        })
+        .counts.map((y, x) => ({ x, y })),
+    },
+    {
+      label: "Arrays",
+      points: stats
+        .histogram(state.arraySequences, {
+          edges: Array.from(
+            { length: state.parameters.maxVirusTypes + 1 },
+            (_, i) => i - 0.5,
+          ),
+        })
+        .counts.map((y, x) => ({ x, y })),
+    },
+  ];
+}
+
+function arrayLengthHistogramSeries(
+  state: UIObservation,
+): readonly BarSeries[] {
+  return [
+    {
+      label: "Arrays",
+      points: stats
+        .histogram(state.arrayLengths, {
+          edges: Array.from(
+            { length: Math.max(1, ...state.arrayLengths) + 2 },
+            (_, i) => i - 0.5,
+          ),
+        })
+        .counts.map((y, x) => ({ x, y })),
+    },
+  ];
+}
+
+function historySeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Bacteria",
+      color: "#db9a35",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.bacteria),
+      })),
+    },
+    {
+      label: "Viruses",
+      color: "#9272b8",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.viruses),
+      })),
+    },
+  ];
+}

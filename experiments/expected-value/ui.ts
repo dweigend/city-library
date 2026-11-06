@@ -1,3 +1,4 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const palette = [
@@ -11,7 +12,7 @@ const palette = [
 ];
 export const ui = defineUI(model, {
   setup: [
-    { field: "seed" },
+    "seed",
     ...(
       [
         "ratio0",
@@ -23,27 +24,22 @@ export const ui = defineUI(model, {
         "ratio6",
       ] as const
     ).map((field, i) => ({ field, label: `Ratio ${i} units` })),
-    { field: "sampleSize", label: "Sample size" },
-    { field: "setupApart", label: "Setup apart" },
+    "sampleSize",
+    "setupApart",
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/ExpectedValue",
     label: "Abrahamson & Wilensky (2004) · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "blackOut",
-      label: "Black out",
-      value: (s) => s.parameters.blackOut,
-      set: (m, v) => m.setDisplay({ blackOut: Boolean(v) }),
+  live: {
+    blackOut: {
+      set: (m, v) => m.setDisplay({ blackOut: v }),
     },
-    {
-      field: "dieNums",
+    dieNums: {
       label: "Die numbers",
-      value: (s) => s.parameters.dieNums,
-      set: (m, v) => m.setDisplay({ dieNums: Boolean(v) }),
+      set: (m, v) => m.setDisplay({ dieNums: v }),
     },
-  ],
+  },
   actions: [{ label: "Clear selection", run: (m) => m.clearSelection() }],
   monitors: [
     { label: "Tick", value: (s) => s.tick },
@@ -57,38 +53,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Tiles",
-      data: (s) => ({
-        width: 15,
-        height: 15,
-        showLabels: true,
-        cells: s.cells.map((t) => ({
-          id: t.id,
-          x: t.x,
-          y: t.y,
-          color: t.visible ? palette[t.value]! : "#101010",
-        })),
-        agents: [
-          {
-            id: "walker",
-            x: s.walker.x,
-            y: s.walker.y,
-            color: "#2563eb",
-            size: 12,
-          },
-          ...s.cells
-            .filter((t) => t.selected)
-            .map((t) => ({
-              id: `selection-${t.id}`,
-              x: t.x,
-              y: t.y,
-              label: s.parameters.dieNums
-                ? ["○", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"][t.value]
-                : String(t.value),
-              color: "#b91c1c",
-              size: 6,
-            })),
-        ],
-      }),
+      data: tilesData,
     },
     {
       type: "bar",
@@ -122,3 +87,40 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function tilesData(s: UIObservation): SpatialData {
+  return {
+    width: 15,
+    height: 15,
+    showLabels: true,
+    cells: s.cells.map((t) => ({
+      id: t.id,
+      x: t.x,
+      y: t.y,
+      color: t.visible ? palette[t.value]! : "#101010",
+    })),
+    agents: [
+      {
+        id: "walker",
+        x: s.walker.x,
+        y: s.walker.y,
+        color: "#2563eb",
+        size: 12,
+      },
+      ...s.cells
+        .filter((t) => t.selected)
+        .map((t) => ({
+          id: `selection-${t.id}`,
+          x: t.x,
+          y: t.y,
+          label: s.parameters.dieNums
+            ? ["○", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"][t.value]
+            : String(t.value),
+          color: "#b91c1c",
+          size: 6,
+        })),
+    ],
+  };
+}

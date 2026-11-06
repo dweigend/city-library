@@ -1,17 +1,8 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    {
-      field: "seed",
-    },
-    {
-      field: "number",
-    },
-    {
-      field: "density",
-    },
-  ],
+  setup: ["seed", "number", "density"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Termites",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -34,19 +25,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Wood chips and termites",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: c.chip ? "#eeee2b" : "#000000",
-        })),
-        agents: s.termites.map((a) => ({
-          ...a,
-          color: a.carrying ? "#ee8d24" : "#ffffff",
-          size: 4,
-        })),
-      }),
+      data: woodChipsAndTermitesData,
     },
     {
       type: "inspector",
@@ -55,3 +34,21 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function woodChipsAndTermitesData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: c.chip ? "#eeee2b" : "#000000",
+    })),
+    agents: s.termites.map((a) => ({
+      ...a,
+      color: a.carrying ? "#ee8d24" : "#ffffff",
+      size: 4,
+    })),
+  };
+}

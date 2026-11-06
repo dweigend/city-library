@@ -1,32 +1,27 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model, actionSymbol } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
+  setup: ["seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RobbytheRobot",
     label:
       "Original NetLogo model \u00B7 Mitchell, Tisue and Wilensky \u00B7 CC0",
   },
-  live: [
-    {
-      field: "populationSize",
+  live: {
+    populationSize: {
       label: "Next population",
-      value: (s) => s.parameters.populationSize,
-      set: (m, v) => m.setParameters({ populationSize: Number(v) }),
+      set: (m, v) => m.setParameters({ populationSize: v }),
     },
-    {
-      field: "mutationRate",
+    mutationRate: {
       label: "Mutation probability",
-      value: (s) => s.parameters.mutationRate,
-      set: (m, v) => m.setParameters({ mutationRate: Number(v) }),
+      set: (m, v) => m.setParameters({ mutationRate: v }),
     },
-    {
-      field: "numberOfGenerations",
+    numberOfGenerations: {
       label: "Generation limit",
-      value: (s) => s.parameters.numberOfGenerations,
-      set: (m, v) => m.setParameters({ numberOfGenerations: Number(v) }),
+      set: (m, v) => m.setParameters({ numberOfGenerations: v }),
     },
-  ],
+  },
   actions: [
     {
       label: "One generation to limit",
@@ -58,34 +53,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Robby environment",
-      data: (s) => ({
-        width: 10,
-        height: 10,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: !s.visuals ? "#ffffff" : c.can ? "#f0ae37" : c.collected ? "#b9b9b9" : "#ffffff",
-        })),
-        segments: s.trail.map((t) => ({
-          from: { x: t.from.x - 4.5, y: t.from.y - 4.5 },
-          to: { x: t.to.x - 4.5, y: t.to.y - 4.5 },
-          color: "#2467bb",
-        })),
-        agents:
-          s.visuals && s.robot
-            ? [
-                {
-                  id: "robot",
-                  x: s.robot.x - 4.5,
-                  y: s.robot.y - 4.5,
-                  heading: s.robot.heading,
-                  label: String(s.robot.score),
-                  color: "#2467bb",
-                  size: 15,
-                  shape: "triangle" as const,
-                },
-              ]
-            : [],
-      }),
+      data: robbyEnvironmentData,
     },
     {
       type: "scatter",
@@ -128,3 +96,42 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function robbyEnvironmentData(s: UIObservation): SpatialData {
+  return {
+    width: 10,
+    height: 10,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: !s.visuals
+        ? "#ffffff"
+        : c.can
+          ? "#f0ae37"
+          : c.collected
+            ? "#b9b9b9"
+            : "#ffffff",
+    })),
+    segments: s.trail.map((t) => ({
+      from: { x: t.from.x - 4.5, y: t.from.y - 4.5 },
+      to: { x: t.to.x - 4.5, y: t.to.y - 4.5 },
+      color: "#2467bb",
+    })),
+    agents:
+      s.visuals && s.robot
+        ? [
+            {
+              id: "robot",
+              x: s.robot.x - 4.5,
+              y: s.robot.y - 4.5,
+              heading: s.robot.heading,
+              label: String(s.robot.score),
+              color: "#2467bb",
+              size: 15,
+              shape: "triangle" as const,
+            },
+          ]
+        : [],
+  };
+}

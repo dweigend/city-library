@@ -1,15 +1,14 @@
+import type { GridData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "blockSide", label: "Block side" }],
-  live: [
-    {
-      field: "targetPercent",
+  setup: ["seed", "blockSide"],
+  live: {
+    targetPercent: {
       label: "Target color (%)",
-      value: (s) => s.parameters.targetPercent,
-      set: (m, v) => m.setRules({ targetPercent: Number(v) }),
+      set: (m, v) => m.setRules({ targetPercent: v }),
     },
-  ],
+  },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/StochasticPatchwork",
     label: "Original · Abrahamson and Wilensky · CC BY-NC-SA 3.0",
@@ -22,20 +21,7 @@ export const ui = defineUI(model, {
     {
       type: "grid",
       label: "Patchwork",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((p) => ({
-          ...p,
-          color: !p.inBlock
-            ? "#80552e"
-            : !p.drawn
-              ? "#d4bb77"
-              : p.target
-                ? "#16833b"
-                : "#245ba5",
-        })),
-      }),
+      data: patchworkData,
     },
     {
       type: "bar",
@@ -49,3 +35,22 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function patchworkData(s: UIObservation): GridData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((p) => ({
+      ...p,
+      color: !p.inBlock
+        ? "#80552e"
+        : !p.drawn
+          ? "#d4bb77"
+          : p.target
+            ? "#16833b"
+            : "#245ba5",
+    })),
+  };
+}

@@ -1,21 +1,28 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: (
-    [
-      "numPop",
-      "geneLength",
-      "plasticity",
-      "numTrials",
-      "mutationRate",
-      "smoothness",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, value) => m.setParameters({ [field]: Number(value) }),
-  })),
+  setup: ["seed"],
+  live: {
+    numPop: {
+      set: (m, value) => m.setParameters({ numPop: value }),
+    },
+    geneLength: {
+      set: (m, value) => m.setParameters({ geneLength: value }),
+    },
+    plasticity: {
+      set: (m, value) => m.setParameters({ plasticity: value }),
+    },
+    numTrials: {
+      set: (m, value) => m.setParameters({ numTrials: value }),
+    },
+    mutationRate: {
+      set: (m, value) => m.setParameters({ mutationRate: value }),
+    },
+    smoothness: {
+      set: (m, value) => m.setParameters({ smoothness: value }),
+    },
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Baldwin%20Effect.nlogox",
     label: "NetLogo Baldwin Effect · Wilensky · CC BY-NC-SA 3.0",
@@ -38,89 +45,103 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Plastic alleles (%)",
-      series: (s) =>
-        (["nonPlasticity", "randomPlasticity", "smartPlasticity"] as const).map(
-          (key) => ({
-            label: key.startsWith("non")
-              ? "Non-learners"
-              : key.startsWith("random")
-                ? "Random learners"
-                : "Smart learners",
-            color:
-              key === "nonPlasticity"
-                ? "#888888"
-                : key === "randomPlasticity"
-                  ? "#d73027"
-                  : "#4575b4",
-            points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
-          }),
-        ),
+      series: plasticAllelesSeries,
     },
     {
       type: "line",
       label: "Correct inherited alleles (%)",
-      series: (s) =>
-        (["nonCorrect", "randomCorrect", "smartCorrect"] as const).map(
-          (key) => ({
-            label: key.startsWith("non")
-              ? "Non-learners"
-              : key.startsWith("random")
-                ? "Random learners"
-                : "Smart learners",
-            color:
-              key === "nonCorrect"
-                ? "#888888"
-                : key === "randomCorrect"
-                  ? "#d73027"
-                  : "#4575b4",
-            points: s.history.flatMap((p) =>
-              p[key] === undefined ? [] : [{ x: p.tick, y: p[key]! }],
-            ),
-          }),
-        ),
+      series: correctInheritedAllelesSeries,
     },
     {
       type: "line",
       label: "Mean fitness",
-      series: (s) =>
-        (["nonFitness", "randomFitness", "smartFitness"] as const).map(
-          (key) => ({
-            label: key.startsWith("non")
-              ? "Non-learners"
-              : key.startsWith("random")
-                ? "Random learners"
-                : "Smart learners",
-            color:
-              key === "nonFitness"
-                ? "#888888"
-                : key === "randomFitness"
-                  ? "#d73027"
-                  : "#4575b4",
-            points: s.history.flatMap((p) =>
-              p[key] === undefined ? [] : [{ x: p.tick, y: p[key]! }],
-            ),
-          }),
-        ),
+      series: meanFitnessSeries,
     },
     {
       type: "inspector",
       label: "Genotype and learned phenotype",
-      value: (s, id) => {
-        const a = [
-          ...s.nonLearners,
-          ...s.randomLearners,
-          ...s.smartLearners,
-        ].find((a) => a.id === id);
-        return a
-          ? {
-              genotype: a.genotype.join(""),
-              phenotype: a.phenotype.join(""),
-              fitness: a.fitness,
-              plasticity: a.plasticityFrequency,
-              correctAlleles: a.correctAlleleFrequency,
-            }
-          : undefined;
-      },
+      value: genotypeAndLearnedPhenotypeInspector,
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function plasticAllelesSeries(s: UIObservation): readonly Series[] {
+  return (
+    ["nonPlasticity", "randomPlasticity", "smartPlasticity"] as const
+  ).map((key) => ({
+    label: key.startsWith("non")
+      ? "Non-learners"
+      : key.startsWith("random")
+        ? "Random learners"
+        : "Smart learners",
+    color:
+      key === "nonPlasticity"
+        ? "#888888"
+        : key === "randomPlasticity"
+          ? "#d73027"
+          : "#4575b4",
+    points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
+  }));
+}
+
+function correctInheritedAllelesSeries(s: UIObservation): readonly Series[] {
+  return (["nonCorrect", "randomCorrect", "smartCorrect"] as const).map(
+    (key) => ({
+      label: key.startsWith("non")
+        ? "Non-learners"
+        : key.startsWith("random")
+          ? "Random learners"
+          : "Smart learners",
+      color:
+        key === "nonCorrect"
+          ? "#888888"
+          : key === "randomCorrect"
+            ? "#d73027"
+            : "#4575b4",
+      points: s.history.flatMap((p) =>
+        p[key] === undefined ? [] : [{ x: p.tick, y: p[key]! }],
+      ),
+    }),
+  );
+}
+
+function meanFitnessSeries(s: UIObservation): readonly Series[] {
+  return (["nonFitness", "randomFitness", "smartFitness"] as const).map(
+    (key) => ({
+      label: key.startsWith("non")
+        ? "Non-learners"
+        : key.startsWith("random")
+          ? "Random learners"
+          : "Smart learners",
+      color:
+        key === "nonFitness"
+          ? "#888888"
+          : key === "randomFitness"
+            ? "#d73027"
+            : "#4575b4",
+      points: s.history.flatMap((p) =>
+        p[key] === undefined ? [] : [{ x: p.tick, y: p[key]! }],
+      ),
+    }),
+  );
+}
+
+function genotypeAndLearnedPhenotypeInspector(
+  s: UIObservation,
+  id: string | null,
+): Readonly<Record<string, string | number | boolean>> | undefined {
+  const a = [...s.nonLearners, ...s.randomLearners, ...s.smartLearners].find(
+    (a) => a.id === id,
+  );
+  return a
+    ? {
+        genotype: a.genotype.join(""),
+        phenotype: a.phenotype.join(""),
+        fitness: a.fitness,
+        plasticity: a.plasticityFrequency,
+        correctAlleles: a.correctAlleleFrequency,
+      }
+    : undefined;
+}

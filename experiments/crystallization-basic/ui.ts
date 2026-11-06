@@ -1,23 +1,29 @@
 import { defineUI } from "../../ui/index.ts";
-import { netLogoColor } from "../../ui/palette/netlogo-color.ts";
-import { model, type CrystalParameters } from "./model.ts";
+import { netLogoColor } from "../../ui/index.ts";
+import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     { field: "width", label: "Metal width" },
     { field: "height", label: "Metal height" },
-    { field: "seed" },
+    "seed",
     { field: "initMetalTemp", label: "Initial metal temperature" },
-    { field: "circle" },
+    "circle",
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/CrystallizationBasic",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
-  live: (["meltingTemp", "roomTemp", "histogram"] as const).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, v) => m.setRules({ [field]: v } as Partial<CrystalParameters>),
-  })),
+  live: {
+    meltingTemp: {
+      set: (m, v) => m.setRules({ meltingTemp: v }),
+    },
+    roomTemp: {
+      set: (m, v) => m.setRules({ roomTemp: v }),
+    },
+    histogram: {
+      set: (m, v) => m.setRules({ histogram: v }),
+    },
+  },
   complete: (s) => s.done,
   monitors: [
     { label: "Tick", value: (s) => s.tick },

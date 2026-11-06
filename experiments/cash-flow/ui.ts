@@ -1,14 +1,13 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "people" }, { field: "seed" }],
-  live: [
-    {
-      field: "reserves",
-      value: (s) => s.parameters.reserves,
-      set: (m, value) => m.setRules({ reserves: Number(value) }),
+  setup: ["people", "seed"],
+  live: {
+    reserves: {
+      set: (m, value) => m.setRules({ reserves: value }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Unverified/Cash%20Flow.nlogox",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
@@ -46,23 +45,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Income distribution",
-      series: (s) => [
-        {
-          label: "Rich",
-          color: "#38a339",
-          points: s.history.map((p) => ({ x: p.tick, y: p.rich })),
-        },
-        {
-          label: "Middle",
-          color: "#8d8d8d",
-          points: s.history.map((p) => ({ x: p.tick, y: p.middleClass })),
-        },
-        {
-          label: "Poor",
-          color: "#d43b36",
-          points: s.history.map((p) => ({ x: p.tick, y: p.poor })),
-        },
-      ],
+      series: incomeDistributionSeries,
     },
     {
       type: "line",
@@ -82,18 +65,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Savings and wallets",
-      series: (s) => [
-        {
-          label: "Savings",
-          color: "#315bd5",
-          points: s.history.map((p) => ({ x: p.tick, y: p.savingsTotal })),
-        },
-        {
-          label: "Wallets",
-          color: "#38a339",
-          points: s.history.map((p) => ({ x: p.tick, y: p.walletsTotal })),
-        },
-      ],
+      series: savingsAndWalletsSeries,
     },
     {
       type: "bar",
@@ -112,3 +84,40 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function incomeDistributionSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Rich",
+      color: "#38a339",
+      points: s.history.map((p) => ({ x: p.tick, y: p.rich })),
+    },
+    {
+      label: "Middle",
+      color: "#8d8d8d",
+      points: s.history.map((p) => ({ x: p.tick, y: p.middleClass })),
+    },
+    {
+      label: "Poor",
+      color: "#d43b36",
+      points: s.history.map((p) => ({ x: p.tick, y: p.poor })),
+    },
+  ];
+}
+
+function savingsAndWalletsSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Savings",
+      color: "#315bd5",
+      points: s.history.map((p) => ({ x: p.tick, y: p.savingsTotal })),
+    },
+    {
+      label: "Wallets",
+      color: "#38a339",
+      points: s.history.map((p) => ({ x: p.tick, y: p.walletsTotal })),
+    },
+  ];
+}

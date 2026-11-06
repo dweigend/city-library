@@ -2,25 +2,23 @@ import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "preset" },
-    { field: "neighborhood" },
-    { field: "radius" },
-    { field: "numStates" },
+    "width",
+    "height",
+    "seed",
+    "preset",
+    "neighborhood",
+    "radius",
+    "numStates",
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/CyclicCA",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "threshold",
-      value: (s) => s.parameters.threshold,
-      set: (m, v) => m.setThreshold(Number(v)),
+  live: {
+    threshold: {
+      set: (m, v) => m.setThreshold(v),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Neighbors", value: (s) => s.neighborCount },

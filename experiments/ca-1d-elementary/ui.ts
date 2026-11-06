@@ -1,13 +1,7 @@
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model, patterns } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "initialization" },
-    { field: "density" },
-  ],
+  setup: ["width", "height", "seed", "initialization", "density"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/CA1DElementary",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -32,28 +26,20 @@ export const ui = defineUI(model, {
         s.rules.find((r) => r.pattern === pattern)!.next,
     })),
   ],
-  live: [
-    {
-      field: "rule",
-      value: (s) => s.parameters.rule,
-      set: (m, v) => m.setRules({ rule: Number(v) }),
+  live: {
+    rule: {
+      set: (m, v) => m.setRules({ rule: v }),
     },
-    {
-      field: "autoContinue",
-      value: (s) => s.parameters.autoContinue,
-      set: (m, v) => m.setRules({ autoContinue: Boolean(v) }),
+    autoContinue: {
+      set: (m, v) => m.setRules({ autoContinue: v }),
     },
-    {
-      field: "foreground",
-      value: (s) => s.parameters.foreground,
-      set: (m, v) => m.setRules({ foreground: Number(v) }),
+    foreground: {
+      set: (m, v) => m.setRules({ foreground: v }),
     },
-    {
-      field: "background",
-      value: (s) => s.parameters.background,
-      set: (m, v) => m.setRules({ background: Number(v) }),
+    background: {
+      set: (m, v) => m.setRules({ background: v }),
     },
-  ],
+  },
   complete: (s) => s.done,
   monitors: [
     { label: "Tick", value: (s) => s.tick },

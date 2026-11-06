@@ -1,20 +1,13 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "numberOfStores", label: "Stores" },
-    { field: "layout", label: "Layout" },
-  ],
-  live: [
-    {
-      field: "rules",
-      label: "Rules",
-      value: (s) => s.parameters.rules,
-      set: (m, v) =>
-        m.setRules({ rules: v as "normal" | "moving-only" | "pricing-only" }),
+  setup: ["seed", { field: "numberOfStores", label: "Stores" }, "layout"],
+  live: {
+    rules: {
+      set: (m, v) => m.setRules({ rules: v }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Hotelling's%20Law.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -27,22 +20,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Stores and market areas",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.consumers.map((c) => ({
-          ...c,
-          color: netLogoColor(
-            (s.stores.find((t) => t.id === c.preferredStore)?.color ?? 0) + 2,
-          ),
-        })),
-        agents: s.stores.map((t) => ({
-          ...t,
-          color: netLogoColor(t.color),
-          label: String(t.price),
-          size: 12,
-        })),
-      }),
+      data: storesAndMarketAreasData,
     },
     {
       type: "line",
@@ -95,3 +73,24 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function storesAndMarketAreasData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.consumers.map((c) => ({
+      ...c,
+      color: netLogoColor(
+        (s.stores.find((t) => t.id === c.preferredStore)?.color ?? 0) + 2,
+      ),
+    })),
+    agents: s.stores.map((t) => ({
+      ...t,
+      color: netLogoColor(t.color),
+      label: String(t.price),
+      size: 12,
+    })),
+  };
+}

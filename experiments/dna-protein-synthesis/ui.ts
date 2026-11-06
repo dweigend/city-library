@@ -2,33 +2,19 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "initialDNAString" },
-    { field: "userCreatedCode" },
-  ],
-  live: [
-    {
-      field: "nucleotidesAffected",
-      value: (state) => state.parameters.nucleotidesAffected,
+  setup: ["seed", "initialDNAString", "userCreatedCode"],
+  live: {
+    nucleotidesAffected: {
       set: (instance, value) =>
-        instance.setParameters({ nucleotidesAffected: Number(value) }),
+        instance.setParameters({ nucleotidesAffected: value }),
     },
-    {
-      field: "mutationType",
-      value: (state) => state.parameters.mutationType,
-      set: (instance, value) =>
-        instance.setParameters({
-          mutationType: value as "deletion" | "insertion" | "substitution",
-        }),
+    mutationType: {
+      set: (instance, value) => instance.setParameters({ mutationType: value }),
     },
-    {
-      field: "showGenes",
-      value: (state) => state.parameters.showGenes,
-      set: (instance, value) =>
-        instance.setParameters({ showGenes: Boolean(value) }),
+    showGenes: {
+      set: (instance, value) => instance.setParameters({ showGenes: value }),
     },
-  ],
+  },
   actions: [
     {
       label: "1. Transcribe",

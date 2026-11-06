@@ -1,3 +1,4 @@
+import type { SpatialData, Series, BarSeries } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const colors = {
@@ -11,38 +12,29 @@ const colors = {
   order: "#d19845",
 };
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "numberOfRobots", label: "Robots" }],
+  setup: ["seed", { field: "numberOfRobots", label: "Robots" }],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RoboticFactory",
     label:
       "Original NetLogo model \u00B7 Martin and Wilensky \u00B7 CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "fullCharge",
-      label: "Full charge",
-      value: (s) => s.parameters.fullCharge,
-      set: (m, v) => m.setParameters({ fullCharge: Number(v) }),
+  live: {
+    fullCharge: {
+      set: (m, v) => m.setParameters({ fullCharge: v }),
     },
-    {
-      field: "justInTimeSupplyRobot",
+    justInTimeSupplyRobot: {
       label: "Dispatch charge",
-      value: (s) => s.parameters.justInTimeSupplyRobot,
-      set: (m, v) => m.setParameters({ justInTimeSupplyRobot: Number(v) }),
+      set: (m, v) => m.setParameters({ justInTimeSupplyRobot: v }),
     },
-    {
-      field: "showAgentName",
+    showAgentName: {
       label: "Agent names",
-      value: (s) => s.parameters.showAgentName,
-      set: (m, v) => m.setParameters({ showAgentName: Boolean(v) }),
+      set: (m, v) => m.setParameters({ showAgentName: v }),
     },
-    {
-      field: "makeTrails",
+    makeTrails: {
       label: "Trails",
-      value: (s) => s.parameters.makeTrails,
-      set: (m, v) => m.setParameters({ makeTrails: Boolean(v) }),
+      set: (m, v) => m.setParameters({ makeTrails: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "New sheets", value: (s) => s.newSheets },
@@ -54,21 +46,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Factory floor",
-      data: (s) => ({
-        width: 33,
-        height: 33,
-        showLabels: s.parameters.showAgentName,
-        agents: [...s.machines, ...s.robots, ...s.orders].map((a) => ({
-          ...a,
-          id: String(a.id),
-          color: colors[a.kind],
-          size: a.kind === "robot" ? 9 : 13,
-          label: a.label,
-          shape:
-            a.kind === "robot" ? ("triangle" as const) : ("circle" as const),
-        })),
-        segments: s.trails.map((t) => ({ ...t, color: "#5b7e9e", width: 1 })),
-      }),
+      data: factoryFloorData,
     },
     {
       type: "line",
@@ -85,63 +63,17 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Outstanding orders",
-      series: (s) => [
-        {
-          label: "Total",
-          points: s.history.map((p) => ({ x: p.tick, y: p.orders })),
-        },
-        {
-          label: "Deluxe",
-          points: s.history.map((p) => ({ x: p.tick, y: p.deluxe })),
-        },
-        {
-          label: "Standard",
-          points: s.history.map((p) => ({ x: p.tick, y: p.standard })),
-        },
-      ],
+      series: outstandingOrdersSeries,
     },
     {
       type: "bar",
       label: "Robot energy",
-      series: (s) => [
-        {
-          label: "Robots",
-          points: s.energyHistogram.counts.map((count, i) => ({
-            x: s.energyHistogram.edges[i]!,
-            y: count,
-          })),
-        },
-        {
-          label: "Below zero",
-          points: [{ x: -50, y: s.energyHistogram.underflow }],
-        },
-        {
-          label: "Above 600",
-          points: [{ x: 650, y: s.energyHistogram.overflow }],
-        },
-      ],
+      series: robotEnergySeries,
     },
     {
       type: "line",
       label: "Supply of machines",
-      series: (s) => [
-        {
-          label: "Finishers",
-          points: s.history.map((p) => ({ x: p.tick, y: p.finishers })),
-        },
-        {
-          label: "Cutters",
-          points: s.history.map((p) => ({ x: p.tick, y: p.cutters })),
-        },
-        {
-          label: "Stitchers",
-          points: s.history.map((p) => ({ x: p.tick, y: p.stitchers })),
-        },
-        {
-          label: "Loading dock",
-          points: s.history.map((p) => ({ x: p.tick, y: p.dock })),
-        },
-      ],
+      series: supplyOfMachinesSeries,
     },
     {
       type: "table",
@@ -157,3 +89,80 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function factoryFloorData(s: UIObservation): SpatialData {
+  return {
+    width: 33,
+    height: 33,
+    showLabels: s.parameters.showAgentName,
+    agents: [...s.machines, ...s.robots, ...s.orders].map((a) => ({
+      ...a,
+      id: String(a.id),
+      color: colors[a.kind],
+      size: a.kind === "robot" ? 9 : 13,
+      label: a.label,
+      shape: a.kind === "robot" ? ("triangle" as const) : ("circle" as const),
+    })),
+    segments: s.trails.map((t) => ({ ...t, color: "#5b7e9e", width: 1 })),
+  };
+}
+
+function outstandingOrdersSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Total",
+      points: s.history.map((p) => ({ x: p.tick, y: p.orders })),
+    },
+    {
+      label: "Deluxe",
+      points: s.history.map((p) => ({ x: p.tick, y: p.deluxe })),
+    },
+    {
+      label: "Standard",
+      points: s.history.map((p) => ({ x: p.tick, y: p.standard })),
+    },
+  ];
+}
+
+function robotEnergySeries(s: UIObservation): readonly BarSeries[] {
+  return [
+    {
+      label: "Robots",
+      points: s.energyHistogram.counts.map((count, i) => ({
+        x: s.energyHistogram.edges[i]!,
+        y: count,
+      })),
+    },
+    {
+      label: "Below zero",
+      points: [{ x: -50, y: s.energyHistogram.underflow }],
+    },
+    {
+      label: "Above 600",
+      points: [{ x: 650, y: s.energyHistogram.overflow }],
+    },
+  ];
+}
+
+function supplyOfMachinesSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Finishers",
+      points: s.history.map((p) => ({ x: p.tick, y: p.finishers })),
+    },
+    {
+      label: "Cutters",
+      points: s.history.map((p) => ({ x: p.tick, y: p.cutters })),
+    },
+    {
+      label: "Stitchers",
+      points: s.history.map((p) => ({ x: p.tick, y: p.stitchers })),
+    },
+    {
+      label: "Loading dock",
+      points: s.history.map((p) => ({ x: p.tick, y: p.dock })),
+    },
+  ];
+}

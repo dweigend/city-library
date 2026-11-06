@@ -1,25 +1,22 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "population" }],
+  setup: ["seed", "population"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Ants",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "diffusionRate",
+  live: {
+    diffusionRate: {
       label: "Diffusion rate (%)",
-      value: (s) => s.parameters.diffusionRate,
-      set: (m, v) => m.setRules({ diffusionRate: Number(v) }),
+      set: (m, v) => m.setRules({ diffusionRate: v }),
     },
-    {
-      field: "evaporationRate",
+    evaporationRate: {
       label: "Evaporation rate (%)",
-      value: (s) => s.parameters.evaporationRate,
-      set: (m, v) => m.setRules({ evaporationRate: Number(v) }),
+      set: (m, v) => m.setRules({ evaporationRate: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     {
@@ -35,26 +32,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Nest, food and pheromone",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: c.nest
-            ? "#a536c7"
-            : c.food > 0
-              ? ["#000000", "#00dddd", "#55aaff", "#2244dd"][
-                  c.foodSourceNumber
-                ]!
-              : `hsl(120 80% ${Math.max(0, Math.min(90, ((c.chemical - 0.1) / 4.9) * 90))}%)`,
-        })),
-        agents: s.ants.map((a) => ({
-          ...a,
-          color: a.carrying ? "#ffac30" : "#ee3333",
-          shape: "triangle" as const,
-          size: 8,
-        })),
-      }),
+      data: nestFoodAndPheromoneData,
     },
     {
       type: "inspector",
@@ -76,3 +54,26 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function nestFoodAndPheromoneData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: c.nest
+        ? "#a536c7"
+        : c.food > 0
+          ? ["#000000", "#00dddd", "#55aaff", "#2244dd"][c.foodSourceNumber]!
+          : `hsl(120 80% ${Math.max(0, Math.min(90, ((c.chemical - 0.1) / 4.9) * 90))}%)`,
+    })),
+    agents: s.ants.map((a) => ({
+      ...a,
+      color: a.carrying ? "#ffac30" : "#ee3333",
+      shape: "triangle" as const,
+      size: 8,
+    })),
+  };
+}

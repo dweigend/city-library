@@ -1,42 +1,29 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "number" }],
+  setup: ["seed", "number"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Fireflies",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "strategy",
-      value: (s) => s.parameters.strategy,
-      set: (m, v) => m.setRules({ strategy: String(v) as "delay" | "advance" }),
+  live: {
+    strategy: {
+      set: (m, v) => m.setRules({ strategy: v }),
     },
-    {
-      field: "flashLength",
-      label: "Flash length",
-      value: (s) => s.parameters.flashLength,
-      set: (m, v) => m.setRules({ flashLength: Number(v) }),
+    flashLength: {
+      set: (m, v) => m.setRules({ flashLength: v }),
     },
-    {
-      field: "cycleLength",
-      label: "Cycle length",
-      value: (s) => s.parameters.cycleLength,
-      set: (m, v) => m.setRules({ cycleLength: Number(v) }),
+    cycleLength: {
+      set: (m, v) => m.setRules({ cycleLength: v }),
     },
-    {
-      field: "flashesToReset",
-      label: "Flashes to reset",
-      value: (s) => s.parameters.flashesToReset,
-      set: (m, v) => m.setRules({ flashesToReset: Number(v) }),
+    flashesToReset: {
+      set: (m, v) => m.setRules({ flashesToReset: v }),
     },
-    {
-      field: "showDarkFireflies",
-      label: "Show dark fireflies",
-      value: (s) => s.parameters.showDarkFireflies,
-      set: (m, v) => m.setRules({ showDarkFireflies: Boolean(v) }),
+    showDarkFireflies: {
+      set: (m, v) => m.setRules({ showDarkFireflies: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Flashing", value: (s) => s.flashingCount },
@@ -46,18 +33,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Fireflies",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        agents: s.fireflies
-          .filter((f) => !f.hidden)
-          .map((f) => ({
-            ...f,
-            color: f.flashing ? "#ffff38" : "#555555",
-            shape: "triangle" as const,
-            size: 8,
-          })),
-      }),
+      data: firefliesData,
     },
     {
       type: "inspector",
@@ -77,3 +53,20 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function firefliesData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    agents: s.fireflies
+      .filter((f) => !f.hidden)
+      .map((f) => ({
+        ...f,
+        color: f.flashing ? "#ffff38" : "#555555",
+        shape: "triangle" as const,
+        size: 8,
+      })),
+  };
+}

@@ -3,26 +3,21 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: [
-    { field: "seed" },
-    { field: "innerRadiusX" },
-    { field: "innerRadiusY" },
-    { field: "outerRadiusX" },
-    { field: "outerRadiusY" },
+    "seed",
+    "innerRadiusX",
+    "innerRadiusY",
+    "outerRadiusX",
+    "outerRadiusY",
   ],
-  live: [
-    {
-      field: "initialDensity",
-      value: (state) => state.parameters.initialDensity,
+  live: {
+    initialDensity: {
       set: (instance, value) =>
-        instance.setParameters({ initialDensity: Number(value) }),
+        instance.setParameters({ initialDensity: value }),
     },
-    {
-      field: "ratio",
-      value: (state) => state.parameters.ratio,
-      set: (instance, value) =>
-        instance.setParameters({ ratio: Number(value) }),
+    ratio: {
+      set: (instance, value) => instance.setParameters({ ratio: value }),
     },
-  ],
+  },
   actions: [{ label: "Restart", run: (instance) => instance.restart() }],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Fur.nlogox",

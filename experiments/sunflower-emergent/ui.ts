@@ -2,52 +2,31 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: [
-    {
-      field: "ringDist",
-      value: (state) => state.parameters.ringDist,
+  setup: ["seed"],
+  live: {
+    ringDist: {
+      set: (instance, value) => instance.setParameters({ ringDist: value }),
+    },
+    particleSize: {
+      set: (instance, value) => instance.setParameters({ particleSize: value }),
+    },
+    fixedTemps: {
+      set: (instance, value) => instance.setParameters({ fixedTemps: value }),
+    },
+    showTemps: {
+      set: (instance, value) => instance.setParameters({ showTemps: value }),
+    },
+    energyApproximation: {
       set: (instance, value) =>
-        instance.setParameters({ ringDist: Number(value) }),
+        instance.setParameters({ energyApproximation: value }),
     },
-    {
-      field: "particleSize",
-      value: (state) => state.parameters.particleSize,
-      set: (instance, value) =>
-        instance.setParameters({ particleSize: Number(value) }),
+    alpha: {
+      set: (instance, value) => instance.setParameters({ alpha: value }),
     },
-    {
-      field: "fixedTemps",
-      value: (state) => state.parameters.fixedTemps,
-      set: (instance, value) =>
-        instance.setParameters({ fixedTemps: Boolean(value) }),
+    beta: {
+      set: (instance, value) => instance.setParameters({ beta: value }),
     },
-    {
-      field: "showTemps",
-      value: (state) => state.parameters.showTemps,
-      set: (instance, value) =>
-        instance.setParameters({ showTemps: Boolean(value) }),
-    },
-    {
-      field: "energyApproximation",
-      value: (state) => state.parameters.energyApproximation,
-      set: (instance, value) =>
-        instance.setParameters({
-          energyApproximation: value as "inverse distance" | "exponential",
-        }),
-    },
-    {
-      field: "alpha",
-      value: (state) => state.parameters.alpha,
-      set: (instance, value) =>
-        instance.setParameters({ alpha: Number(value) }),
-    },
-    {
-      field: "beta",
-      value: (state) => state.parameters.beta,
-      set: (instance, value) => instance.setParameters({ beta: Number(value) }),
-    },
-  ],
+  },
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Sunflower%20Emergent.nlogox",

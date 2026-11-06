@@ -1,12 +1,7 @@
 import { defineUI, netLogoColor } from "../../ui/index.ts";
-import { model, patterns } from "./model.ts";
+import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "density" },
-  ],
+  setup: ["width", "height", "seed", "density"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/CAStochastic",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -16,45 +11,50 @@ export const ui = defineUI(model, {
     { label: "Setup example", run: (m) => m.setupExample() },
     { label: "Continue", run: (m) => m.continueRun(), enabled: (s) => s.done },
   ],
-  live: [
-    ...patterns.map((field) => ({
-      field,
-      value: (s: ReturnType<ReturnType<typeof model.create>["read"]>) =>
-        s.parameters[field],
-      set: (m: ReturnType<typeof model.create>, v: string | number | boolean) =>
-        m.setRules({ [field]: Number(v) }),
-    })),
-    {
-      field: "example",
-      value: (s) => s.parameters.example,
-      set: (m, v) => m.setRules({ example: Number(v) }),
+  live: {
+    OOO: {
+      set: (m, v) => m.setRules({ OOO: v }),
     },
-    {
-      field: "autoContinue",
-      value: (s) => s.parameters.autoContinue,
-      set: (m, v) => m.setRules({ autoContinue: Boolean(v) }),
+    OOI: {
+      set: (m, v) => m.setRules({ OOI: v }),
     },
-    {
-      field: "autoClear",
-      value: (s) => s.parameters.autoClear,
-      set: (m, v) => m.setRules({ autoClear: Boolean(v) }),
+    OIO: {
+      set: (m, v) => m.setRules({ OIO: v }),
     },
-    {
-      field: "plot",
-      value: (s) => s.parameters.plot,
-      set: (m, v) => m.setRules({ plot: Boolean(v) }),
+    OII: {
+      set: (m, v) => m.setRules({ OII: v }),
     },
-    {
-      field: "onColor",
-      value: (s) => s.parameters.onColor,
-      set: (m, v) => m.setRules({ onColor: Number(v) }),
+    IOO: {
+      set: (m, v) => m.setRules({ IOO: v }),
     },
-    {
-      field: "offColor",
-      value: (s) => s.parameters.offColor,
-      set: (m, v) => m.setRules({ offColor: Number(v) }),
+    IOI: {
+      set: (m, v) => m.setRules({ IOI: v }),
     },
-  ],
+    IIO: {
+      set: (m, v) => m.setRules({ IIO: v }),
+    },
+    III: {
+      set: (m, v) => m.setRules({ III: v }),
+    },
+    example: {
+      set: (m, v) => m.setRules({ example: v }),
+    },
+    autoContinue: {
+      set: (m, v) => m.setRules({ autoContinue: v }),
+    },
+    autoClear: {
+      set: (m, v) => m.setRules({ autoClear: v }),
+    },
+    plot: {
+      set: (m, v) => m.setRules({ plot: v }),
+    },
+    onColor: {
+      set: (m, v) => m.setRules({ onColor: v }),
+    },
+    offColor: {
+      set: (m, v) => m.setRules({ offColor: v }),
+    },
+  },
   complete: (s) => s.done,
   monitors: [
     { label: "Tick", value: (s) => s.tick },

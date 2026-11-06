@@ -2,33 +2,24 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "numWater" }, { field: "numLipids" }],
-  live: [
-    {
-      field: "waterWaterForce",
-      value: (state) => state.parameters.waterWaterForce,
+  setup: ["seed", "numWater", "numLipids"],
+  live: {
+    waterWaterForce: {
       set: (instance, value) =>
-        instance.setParameters({ waterWaterForce: Number(value) }),
+        instance.setParameters({ waterWaterForce: value }),
     },
-    {
-      field: "waterOilForce",
-      value: (state) => state.parameters.waterOilForce,
+    waterOilForce: {
       set: (instance, value) =>
-        instance.setParameters({ waterOilForce: Number(value) }),
+        instance.setParameters({ waterOilForce: value }),
     },
-    {
-      field: "tooCloseForce",
-      value: (state) => state.parameters.tooCloseForce,
+    tooCloseForce: {
       set: (instance, value) =>
-        instance.setParameters({ tooCloseForce: Number(value) }),
+        instance.setParameters({ tooCloseForce: value }),
     },
-    {
-      field: "randomForce",
-      value: (state) => state.parameters.randomForce,
-      set: (instance, value) =>
-        instance.setParameters({ randomForce: Number(value) }),
+    randomForce: {
+      set: (instance, value) => instance.setParameters({ randomForce: value }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Membrane%20Formation.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",

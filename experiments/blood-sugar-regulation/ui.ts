@@ -1,34 +1,27 @@
+import type { SpatialData, Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: [
-    {
-      field: "metabolicRate",
-      value: (state) => state.parameters.metabolicRate,
+  setup: ["seed"],
+  live: {
+    metabolicRate: {
       set: (instance, value) =>
-        instance.setParameters({ metabolicRate: Number(value) }),
+        instance.setParameters({ metabolicRate: value }),
     },
-    {
-      field: "glucoseSensitivity",
-      value: (state) => state.parameters.glucoseSensitivity,
+    glucoseSensitivity: {
       set: (instance, value) =>
-        instance.setParameters({ glucoseSensitivity: Number(value) }),
+        instance.setParameters({ glucoseSensitivity: value }),
     },
-    {
-      field: "insulinSensitivity",
-      value: (state) => state.parameters.insulinSensitivity,
+    insulinSensitivity: {
       set: (instance, value) =>
-        instance.setParameters({ insulinSensitivity: Number(value) }),
+        instance.setParameters({ insulinSensitivity: value }),
     },
-    {
-      field: "glucagonSensitivity",
-      value: (state) => state.parameters.glucagonSensitivity,
+    glucagonSensitivity: {
       set: (instance, value) =>
-        instance.setParameters({ glucagonSensitivity: Number(value) }),
+        instance.setParameters({ glucagonSensitivity: value }),
     },
-  ],
+  },
   actions: [
     { label: "Eat", run: (instance) => instance.eat() },
     { label: "Follow glucose", run: (instance) => instance.followGlucose() },
@@ -52,46 +45,12 @@ const binding = defineUI(model, {
     {
       type: "spatial",
       label: "Blood Sugar Regulation",
-      data: (state) => ({
-        width: state.width,
-        height: state.height,
-        agents: state.agents
-          .filter(
-            (agent) => agent.breed !== "liver" && agent.breed !== "pancreas",
-          )
-          .map((agent) => ({
-            ...agent,
-            size: agent.id === state.followingId ? 9 : 3,
-          })),
-        cells: [...state.liverCells, ...state.pancreaticCells],
-      }),
+      data: bloodSugarRegulationData,
     },
     {
       type: "line",
       label: "Signal molecules",
-      series: (state) => [
-        {
-          label: "Glucose",
-          color: "#888888",
-          points: state.history.flatMap((point) => [
-            { x: point.tick, y: point.glucose },
-          ]),
-        },
-        {
-          label: "Insulin",
-          color: "#58b8ed",
-          points: state.history.flatMap((point) => [
-            { x: point.tick, y: point.insulin },
-          ]),
-        },
-        {
-          label: "Glucagon",
-          color: "#e43838",
-          points: state.history.flatMap((point) => [
-            { x: point.tick, y: point.glucagon },
-          ]),
-        },
-      ],
+      series: signalMoleculesSeries,
     },
   ],
 });
@@ -100,3 +59,45 @@ export { model };
 export const sourceMarker =
   "selected-biology-b07:blood-sugar-regulation:75efe0d13e248bbdd0850171f35e54271bb16ad78bdd3ecbe7e0afb8f3f5313f";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function bloodSugarRegulationData(state: UIObservation): SpatialData {
+  return {
+    width: state.width,
+    height: state.height,
+    agents: state.agents
+      .filter((agent) => agent.breed !== "liver" && agent.breed !== "pancreas")
+      .map((agent) => ({
+        ...agent,
+        size: agent.id === state.followingId ? 9 : 3,
+      })),
+    cells: [...state.liverCells, ...state.pancreaticCells],
+  };
+}
+
+function signalMoleculesSeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Glucose",
+      color: "#888888",
+      points: state.history.flatMap((point) => [
+        { x: point.tick, y: point.glucose },
+      ]),
+    },
+    {
+      label: "Insulin",
+      color: "#58b8ed",
+      points: state.history.flatMap((point) => [
+        { x: point.tick, y: point.insulin },
+      ]),
+    },
+    {
+      label: "Glucagon",
+      color: "#e43838",
+      points: state.history.flatMap((point) => [
+        { x: point.tick, y: point.glucagon },
+      ]),
+    },
+  ];
+}

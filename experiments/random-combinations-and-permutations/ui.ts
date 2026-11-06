@@ -1,3 +1,4 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const colors = [
@@ -9,47 +10,26 @@ const colors = [
   "#eab308",
 ];
 export const ui = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "width" },
-    { field: "height" },
-    { field: "choices", label: "Choices" },
-    { field: "dice", label: "Dice" },
-  ],
+  setup: ["seed", "width", "height", "choices", "dice"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RandomCombinationsandPermutations",
     label: "Wilensky (2004) · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
-  live: [
-    {
-      field: "singleSuccess",
-      label: "Single success",
-      value: (s) => s.parameters.singleSuccess,
-      set: (m, v) => m.setRules({ singleSuccess: Boolean(v) }),
+  live: {
+    singleSuccess: {
+      set: (m, v) => m.setRules({ singleSuccess: v }),
     },
-    {
-      field: "analysisType",
-      label: "Analysis type",
-      value: (s) => s.parameters.analysisType,
-      set: (m, v) =>
-        m.setRules({
-          analysisType: v as "combination" | "permutations" | "both",
-        }),
+    analysisType: {
+      set: (m, v) => m.setRules({ analysisType: v }),
     },
-    {
-      field: "bars",
-      label: "Bars",
-      value: (s) => s.parameters.bars,
-      set: (m, v) => m.setRules({ bars: Boolean(v) }),
+    bars: {
+      set: (m, v) => m.setRules({ bars: v }),
     },
-    {
-      field: "sampleSize",
-      label: "Sample size",
-      value: (s) => s.parameters.sampleSize,
-      set: (m, v) => m.setRules({ sampleSize: Number(v) }),
+    sampleSize: {
+      set: (m, v) => m.setRules({ sampleSize: v }),
     },
-  ],
+  },
   actions: [
     {
       label: "Create Combi",
@@ -97,36 +77,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Combination and guess",
-      data: (s) => ({
-        width: 11,
-        height: 7,
-        showLabels: s.parameters.dice,
-        cells: s.squares.map((p) => ({
-          id: p.id,
-          x: p.x,
-          y: p.y,
-          color:
-            p.original && s.hidden
-              ? "#525252"
-              : p.value === null
-                ? "#4b5563"
-                : s.parameters.dice
-                  ? "#d1fae5"
-                  : colors[p.value]!,
-        })),
-        agents: s.parameters.dice
-          ? s.squares
-              .filter((p) => p.value !== null && !(p.original && s.hidden))
-              .map((p) => ({
-                id: `die-${p.id}`,
-                x: p.x,
-                y: p.y,
-                color: "#111827",
-                size: 3,
-                label: String(p.value! + 1),
-              }))
-          : [],
-      }),
+      data: combinationAndGuessData,
     },
     {
       type: "bar",
@@ -140,3 +91,38 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function combinationAndGuessData(s: UIObservation): SpatialData {
+  return {
+    width: 11,
+    height: 7,
+    showLabels: s.parameters.dice,
+    cells: s.squares.map((p) => ({
+      id: p.id,
+      x: p.x,
+      y: p.y,
+      color:
+        p.original && s.hidden
+          ? "#525252"
+          : p.value === null
+            ? "#4b5563"
+            : s.parameters.dice
+              ? "#d1fae5"
+              : colors[p.value]!,
+    })),
+    agents: s.parameters.dice
+      ? s.squares
+          .filter((p) => p.value !== null && !(p.original && s.hidden))
+          .map((p) => ({
+            id: `die-${p.id}`,
+            x: p.x,
+            y: p.y,
+            color: "#111827",
+            size: 3,
+            label: String(p.value! + 1),
+          }))
+      : [],
+  };
+}

@@ -1,7 +1,7 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
+  setup: ["seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Birthdays",
     label: "Original · Uri Wilensky · CC BY-NC-SA 3.0",

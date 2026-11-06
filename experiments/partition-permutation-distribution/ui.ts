@@ -1,38 +1,27 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
+  setup: ["seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/PartitionPermutationDistribution",
     label: "Wilensky (2004) · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
-  live: [
-    {
-      field: "targetTotal",
-      label: "Target total",
-      value: (s) => s.parameters.targetTotal,
-      set: (m, v) => m.setRules({ targetTotal: Number(v) }),
+  live: {
+    targetTotal: {
+      set: (m, v) => m.setRules({ targetTotal: v }),
     },
-    {
-      field: "numSuccesses",
+    numSuccesses: {
       label: "Number of successes",
-      value: (s) => s.parameters.numSuccesses,
-      set: (m, v) => m.setRules({ numSuccesses: Number(v) }),
+      set: (m, v) => m.setRules({ numSuccesses: v }),
     },
-    {
-      field: "diminishingSampleSpace",
-      label: "Diminishing sample space",
-      value: (s) => s.parameters.diminishingSampleSpace,
-      set: (m, v) => m.setRules({ diminishingSampleSpace: Boolean(v) }),
+    diminishingSampleSpace: {
+      set: (m, v) => m.setRules({ diminishingSampleSpace: v }),
     },
-    {
-      field: "waitAtFull",
-      label: "Wait at full",
-      value: (s) => s.parameters.waitAtFull,
-      set: (m, v) => m.setRules({ waitAtFull: Boolean(v) }),
+    waitAtFull: {
+      set: (m, v) => m.setRules({ waitAtFull: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Successes", value: (s) => s.successes },

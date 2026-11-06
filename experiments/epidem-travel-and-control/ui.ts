@@ -1,76 +1,51 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "initialPeople" },
-    { field: "initialAmbulance" },
-  ],
-  live: [
-    {
-      field: "infectionChance",
-      value: (state) => state.parameters.infectionChance,
+  setup: ["seed", "initialPeople", "initialAmbulance"],
+  live: {
+    infectionChance: {
       set: (instance, value) =>
-        instance.setParameters({ infectionChance: Number(value) }),
+        instance.setParameters({ infectionChance: value }),
     },
-    {
-      field: "recoveryChance",
-      value: (state) => state.parameters.recoveryChance,
+    recoveryChance: {
       set: (instance, value) =>
-        instance.setParameters({ recoveryChance: Number(value) }),
+        instance.setParameters({ recoveryChance: value }),
     },
-    {
-      field: "averageRecoveryTime",
-      value: (state) => state.parameters.averageRecoveryTime,
+    averageRecoveryTime: {
       set: (instance, value) =>
-        instance.setParameters({ averageRecoveryTime: Number(value) }),
+        instance.setParameters({ averageRecoveryTime: value }),
     },
-    {
-      field: "averageIsolationTendency",
-      value: (state) => state.parameters.averageIsolationTendency,
+    averageIsolationTendency: {
       set: (instance, value) =>
-        instance.setParameters({ averageIsolationTendency: Number(value) }),
+        instance.setParameters({ averageIsolationTendency: value }),
     },
-    {
-      field: "inoculationChance",
-      value: (state) => state.parameters.inoculationChance,
+    inoculationChance: {
       set: (instance, value) =>
-        instance.setParameters({ inoculationChance: Number(value) }),
+        instance.setParameters({ inoculationChance: value }),
     },
-    {
-      field: "averageHospitalGoingTendency",
-      value: (state) => state.parameters.averageHospitalGoingTendency,
+    averageHospitalGoingTendency: {
       set: (instance, value) =>
-        instance.setParameters({ averageHospitalGoingTendency: Number(value) }),
+        instance.setParameters({ averageHospitalGoingTendency: value }),
     },
-    {
-      field: "intraMobility",
-      value: (state) => state.parameters.intraMobility,
+    intraMobility: {
       set: (instance, value) =>
-        instance.setParameters({ intraMobility: Number(value) }),
+        instance.setParameters({ intraMobility: value }),
     },
-    {
-      field: "travelTendency",
-      value: (state) => state.parameters.travelTendency,
+    travelTendency: {
       set: (instance, value) =>
-        instance.setParameters({ travelTendency: Number(value) }),
+        instance.setParameters({ travelTendency: value }),
     },
-    {
-      field: "edges",
-      value: (state) => state.parameters.edges,
-      set: (instance, value) =>
-        instance.setParameters({ edges: Boolean(value) }),
+    edges: {
+      set: (instance, value) => instance.setParameters({ edges: value }),
     },
-    {
-      field: "travel",
-      value: (state) => state.parameters.travel,
-      set: (instance, value) =>
-        instance.setParameters({ travel: Boolean(value) }),
+    travel: {
+      set: (instance, value) => instance.setParameters({ travel: value }),
     },
-  ],
+  },
   actions: [],
   complete: (state) => state.stopped,
   source: {
@@ -99,24 +74,7 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "History",
-      series: (state) => [
-        {
-          label: "Infected",
-          color: "#df4545",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.infected),
-          })),
-        },
-        {
-          label: "Recovered",
-          color: "#35a85b",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.cured),
-          })),
-        },
-      ],
+      series: historySeries,
     },
   ],
 });
@@ -125,3 +83,26 @@ export { model };
 export const sourceMarker =
   "selected-disease-gene-b09:epidem-travel-and-control:7bde08421020920d17631b85cbef80c945a6a97857040a079c8aacbc3a35ac07";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function historySeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Infected",
+      color: "#df4545",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.infected),
+      })),
+    },
+    {
+      label: "Recovered",
+      color: "#35a85b",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.cured),
+      })),
+    },
+  ];
+}

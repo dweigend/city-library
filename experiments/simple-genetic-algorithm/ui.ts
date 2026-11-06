@@ -1,37 +1,28 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "width", label: "Genome width" }, { field: "seed" }],
+  setup: [{ field: "width", label: "Genome width" }, "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/SimpleGeneticAlgorithm",
     label: "Stonedahl & Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "populationSize",
-      label: "Population size",
-      value: (s) => s.parameters.populationSize,
-      set: (m, v) => m.setParameters({ populationSize: Number(v) }),
+  live: {
+    populationSize: {
+      set: (m, v) => m.setParameters({ populationSize: v }),
     },
-    {
-      field: "crossoverRate",
+    crossoverRate: {
       label: "Crossover rate (%)",
-      value: (s) => s.parameters.crossoverRate,
-      set: (m, v) => m.setParameters({ crossoverRate: Number(v) }),
+      set: (m, v) => m.setParameters({ crossoverRate: v }),
     },
-    {
-      field: "mutationRate",
+    mutationRate: {
       label: "Mutation rate (%)",
-      value: (s) => s.parameters.mutationRate,
-      set: (m, v) => m.setParameters({ mutationRate: Number(v) }),
+      set: (m, v) => m.setParameters({ mutationRate: v }),
     },
-    {
-      field: "plotDiversity",
-      label: "Plot diversity",
-      value: (s) => s.parameters.plotDiversity,
-      set: (m, v) => m.setParameters({ plotDiversity: Boolean(v) }),
+    plotDiversity: {
+      set: (m, v) => m.setParameters({ plotDiversity: v }),
     },
-  ],
+  },
   complete: (s) => s.done,
   monitors: [
     { label: "Generation", value: (s) => s.tick },
@@ -58,23 +49,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Fitness",
-      series: (s) => [
-        {
-          label: "Best",
-          color: "#d74343",
-          points: s.history.map((h) => ({ x: h.tick, y: h.best })),
-        },
-        {
-          label: "Average",
-          color: "#47a66a",
-          points: s.history.map((h) => ({ x: h.tick, y: h.mean })),
-        },
-        {
-          label: "Worst",
-          color: "#3975bc",
-          points: s.history.map((h) => ({ x: h.tick, y: h.worst })),
-        },
-      ],
+      series: fitnessSeries,
     },
     {
       type: "line",
@@ -91,3 +66,25 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function fitnessSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Best",
+      color: "#d74343",
+      points: s.history.map((h) => ({ x: h.tick, y: h.best })),
+    },
+    {
+      label: "Average",
+      color: "#47a66a",
+      points: s.history.map((h) => ({ x: h.tick, y: h.mean })),
+    },
+    {
+      label: "Worst",
+      color: "#3975bc",
+      points: s.history.map((h) => ({ x: h.tick, y: h.worst })),
+    },
+  ];
+}

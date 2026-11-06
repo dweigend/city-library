@@ -2,22 +2,20 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
+    "width",
+    "height",
+    "seed",
     { field: "probabilityOfSpinUp", label: "Initial spin up (%)" },
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Ising",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "temperature",
-      value: (s) => s.parameters.temperature,
-      set: (m, v) => m.setTemperature(Number(v)),
+  live: {
+    temperature: {
+      set: (m, v) => m.setTemperature(v),
     },
-  ],
+  },
   monitors: [
     { label: "Attempted flips", value: (s) => s.tick },
     { label: "Magnetization", value: (s) => s.magnetization.toFixed(4) },

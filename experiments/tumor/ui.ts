@@ -2,15 +2,12 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: [
-    {
-      field: "leaveTrail",
-      value: (state) => state.parameters.leaveTrail,
-      set: (instance, value) =>
-        instance.setParameters({ leaveTrail: Boolean(value) }),
+  setup: ["seed"],
+  live: {
+    leaveTrail: {
+      set: (instance, value) => instance.setParameters({ leaveTrail: value }),
     },
-  ],
+  },
   actions: [
     {
       label: "Kill transitory cells",

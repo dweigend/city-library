@@ -1,14 +1,15 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "seed" },
-    { field: "tradePrecision", label: "Trade precision" },
-    { field: "honestTraders", label: "Honest traders" },
-    { field: "cunningTraders", label: "Cunning traders" },
-    { field: "initialCash", label: "Initial cash" },
-    { field: "initialTokens", label: "Initial tokens" },
-    { field: "initialBelief", label: "Initial belief" },
+    "seed",
+    "tradePrecision",
+    "honestTraders",
+    "cunningTraders",
+    "initialCash",
+    "initialTokens",
+    "initialBelief",
   ],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Limited%20Order%20Book.nlogox",
@@ -57,50 +58,12 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Trading prices",
-      series: (s) => [
-        {
-          label: "Latest",
-          points: s.history
-            .filter((h) => h.tick > 0)
-            .map((h) => ({ x: h.tick, y: h.latestPrice })),
-        },
-        {
-          label: "Recent",
-          points: s.history.map((h) => ({ x: h.tick, y: h.recentPrice })),
-        },
-        {
-          label: "To date",
-          points: s.history.map((h) => ({ x: h.tick, y: h.priceToDate })),
-        },
-      ],
+      series: tradingPricesSeries,
     },
     {
       type: "line",
       label: "Average utility gain (%)",
-      series: (s) => [
-        {
-          label: "Everyone",
-          points: s.history.flatMap((h) =>
-            h.everyoneGain === null ? [] : [{ x: h.tick, y: h.everyoneGain }],
-          ),
-        },
-        {
-          label: "Honest",
-          points: s.history.flatMap((h) =>
-            h.honestGain === null || !Number.isFinite(h.honestGain)
-              ? []
-              : [{ x: h.tick, y: h.honestGain }],
-          ),
-        },
-        {
-          label: "Cunning",
-          points: s.history.flatMap((h) =>
-            h.cunningGain === null || !Number.isFinite(h.cunningGain)
-              ? []
-              : [{ x: h.tick, y: h.cunningGain }],
-          ),
-        },
-      ],
+      series: averageUtilityGainSeries,
     },
     {
       type: "table",
@@ -118,3 +81,51 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function tradingPricesSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Latest",
+      points: s.history
+        .filter((h) => h.tick > 0)
+        .map((h) => ({ x: h.tick, y: h.latestPrice })),
+    },
+    {
+      label: "Recent",
+      points: s.history.map((h) => ({ x: h.tick, y: h.recentPrice })),
+    },
+    {
+      label: "To date",
+      points: s.history.map((h) => ({ x: h.tick, y: h.priceToDate })),
+    },
+  ];
+}
+
+function averageUtilityGainSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Everyone",
+      points: s.history.flatMap((h) =>
+        h.everyoneGain === null ? [] : [{ x: h.tick, y: h.everyoneGain }],
+      ),
+    },
+    {
+      label: "Honest",
+      points: s.history.flatMap((h) =>
+        h.honestGain === null || !Number.isFinite(h.honestGain)
+          ? []
+          : [{ x: h.tick, y: h.honestGain }],
+      ),
+    },
+    {
+      label: "Cunning",
+      points: s.history.flatMap((h) =>
+        h.cunningGain === null || !Number.isFinite(h.cunningGain)
+          ? []
+          : [{ x: h.tick, y: h.cunningGain }],
+      ),
+    },
+  ];
+}

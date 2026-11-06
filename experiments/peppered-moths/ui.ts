@@ -1,17 +1,25 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: (
-    ["numMoths", "speed", "mutation", "selection", "cyclePollution"] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, value) =>
-      m.setParameters({
-        [field]: field === "cyclePollution" ? Boolean(value) : Number(value),
-      }),
-  })),
+  setup: ["seed"],
+  live: {
+    numMoths: {
+      set: (m, value) => m.setParameters({ numMoths: value }),
+    },
+    speed: {
+      set: (m, value) => m.setParameters({ speed: value }),
+    },
+    mutation: {
+      set: (m, value) => m.setParameters({ mutation: value }),
+    },
+    selection: {
+      set: (m, value) => m.setParameters({ selection: value }),
+    },
+    cyclePollution: {
+      set: (m, value) => m.setParameters({ cyclePollution: value }),
+    },
+  },
   actions: [
     { label: "Pollute", run: (m) => m.polluteWorld() },
     { label: "Clean up", run: (m) => m.cleanUpWorld() },
@@ -45,19 +53,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Color populations",
-      series: (s) =>
-        (["light", "medium", "dark", "pollution"] as const).map((key) => ({
-          label: key,
-          color:
-            key === "light"
-              ? "#888888"
-              : key === "medium"
-                ? "#4575b4"
-                : key === "dark"
-                  ? "#d73027"
-                  : "#7b6db0",
-          points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
-        })),
+      series: colorPopulationsSeries,
     },
     {
       type: "inspector",
@@ -69,3 +65,20 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function colorPopulationsSeries(s: UIObservation): readonly Series[] {
+  return (["light", "medium", "dark", "pollution"] as const).map((key) => ({
+    label: key,
+    color:
+      key === "light"
+        ? "#888888"
+        : key === "medium"
+          ? "#4575b4"
+          : key === "dark"
+            ? "#d73027"
+            : "#7b6db0",
+    points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
+  }));
+}

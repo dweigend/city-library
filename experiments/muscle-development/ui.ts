@@ -1,34 +1,24 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "slowTwitchFibers" }],
-  live: [
-    {
-      field: "daysBetweenWorkouts",
-      value: (state) => state.parameters.daysBetweenWorkouts,
+  setup: ["seed", "slowTwitchFibers"],
+  live: {
+    daysBetweenWorkouts: {
       set: (instance, value) =>
-        instance.setParameters({ daysBetweenWorkouts: Number(value) }),
+        instance.setParameters({ daysBetweenWorkouts: value }),
     },
-    {
-      field: "hoursOfSleep",
-      value: (state) => state.parameters.hoursOfSleep,
-      set: (instance, value) =>
-        instance.setParameters({ hoursOfSleep: Number(value) }),
+    hoursOfSleep: {
+      set: (instance, value) => instance.setParameters({ hoursOfSleep: value }),
     },
-    {
-      field: "intensity",
-      value: (state) => state.parameters.intensity,
-      set: (instance, value) =>
-        instance.setParameters({ intensity: Number(value) }),
+    intensity: {
+      set: (instance, value) => instance.setParameters({ intensity: value }),
     },
-    {
-      field: "lift",
-      value: (state) => state.parameters.lift,
-      set: (instance, value) =>
-        instance.setParameters({ lift: Boolean(value) }),
+    lift: {
+      set: (instance, value) => instance.setParameters({ lift: value }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Muscle%20Development.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -67,22 +57,7 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "Hormones",
-      series: (state) => [
-        {
-          label: "Anabolic",
-          color: "#348b34",
-          points: state.history.flatMap((point) => [
-            { x: point.tick, y: point.anabolic },
-          ]),
-        },
-        {
-          label: "Catabolic",
-          color: "#d4ba25",
-          points: state.history.flatMap((point) => [
-            { x: point.tick, y: point.catabolic },
-          ]),
-        },
-      ],
+      series: hormonesSeries,
     },
   ],
 });
@@ -91,3 +66,24 @@ export { model };
 export const sourceMarker =
   "selected-biology-b07:muscle-development:29c39af0fbaff47c0ecab4d901260f05a5195f807046dd895ddd66eef1163e26";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function hormonesSeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Anabolic",
+      color: "#348b34",
+      points: state.history.flatMap((point) => [
+        { x: point.tick, y: point.anabolic },
+      ]),
+    },
+    {
+      label: "Catabolic",
+      color: "#d4ba25",
+      points: state.history.flatMap((point) => [
+        { x: point.tick, y: point.catabolic },
+      ]),
+    },
+  ];
+}

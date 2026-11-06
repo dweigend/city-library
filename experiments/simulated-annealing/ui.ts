@@ -1,32 +1,24 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "width" }, { field: "height" }, { field: "seed" }],
+  setup: ["width", "height", "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/SimulatedAnnealing",
     label:
       "Original NetLogo model \u00B7 Stonedahl and Wilensky \u00B7 CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "coolingRate",
+  live: {
+    coolingRate: {
       label: "Cooling (%)",
-      value: (s) => s.parameters.coolingRate,
-      set: (m, v) => m.setParameters({ coolingRate: Number(v) }),
+      set: (m, v) => m.setParameters({ coolingRate: v }),
     },
-    {
-      field: "swapRadius",
-      label: "Swap radius",
-      value: (s) => s.parameters.swapRadius,
-      set: (m, v) => m.setParameters({ swapRadius: Number(v) }),
+    swapRadius: {
+      set: (m, v) => m.setParameters({ swapRadius: v }),
     },
-    {
-      field: "acceptEqualChanges",
-      label: "Accept equal changes",
-      value: (s) => s.parameters.acceptEqualChanges,
-      set: (m, v) => m.setParameters({ acceptEqualChanges: Boolean(v) }),
+    acceptEqualChanges: {
+      set: (m, v) => m.setParameters({ acceptEqualChanges: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Temperature", value: (s) => s.temperature.toPrecision(6) },

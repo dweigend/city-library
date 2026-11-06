@@ -1,36 +1,38 @@
+import type { SpatialData, Series } from "../../ui/index.ts";
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model, type Parameters } from "./model.ts";
-const rules = [
-  "ticksToFlee",
-  "rateOfMutation",
-  "collaborationBonus",
-  "maxAge",
-  "bushGrowthChance",
-  "showEnergy",
-  "visualization",
-] as const;
-const labels = {
-  ticksToFlee: "Ticks to flee",
-  rateOfMutation: "Mutation rate (%)",
-  collaborationBonus: "Collaboration bonus",
-  maxAge: "Maximum age",
-  bushGrowthChance: "Bush growth chance (%)",
-  showEnergy: "Show energy",
-  visualization: "Visualization",
-};
 export const ui = defineUI(model, {
   setup: [
-    { field: "seed" },
+    "seed",
     { field: "initialFruitBushes", label: "Initial bushes" },
-    { field: "initialForagers", label: "Initial foragers" },
+    "initialForagers",
   ],
-  live: rules.map((field) => ({
-    field,
-    label: labels[field],
-    value: (s) => s.parameters[field],
-    set: (m, v) =>
-      m.setRules({ [field]: v } as Pick<Partial<Parameters>, typeof field>),
-  })),
+  live: {
+    ticksToFlee: {
+      set: (m, v) => m.setRules({ ticksToFlee: v }),
+    },
+    rateOfMutation: {
+      label: "Mutation rate (%)",
+      set: (m, v) => m.setRules({ rateOfMutation: v }),
+    },
+    collaborationBonus: {
+      set: (m, v) => m.setRules({ collaborationBonus: v }),
+    },
+    maxAge: {
+      label: "Maximum age",
+      set: (m, v) => m.setRules({ maxAge: v }),
+    },
+    bushGrowthChance: {
+      label: "Bush growth chance (%)",
+      set: (m, v) => m.setRules({ bushGrowthChance: v }),
+    },
+    showEnergy: {
+      set: (m, v) => m.setRules({ showEnergy: v }),
+    },
+    visualization: {
+      set: (m, v) => m.setRules({ visualization: v }),
+    },
+  },
   complete: (s) => s.done,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Fruit%20Wars.nlogox",
@@ -49,69 +51,12 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Foragers and fruit bushes",
-      data: (s) => ({
-        showLabels: true,
-        width: 65,
-        height: 65,
-        agents: [
-          ...s.bushes.map((b) => ({
-            ...b,
-            color: netLogoColor(b.color),
-            size: 13,
-          })),
-          ...s.deaths.map((d) => ({
-            ...d,
-            color: "#de3030",
-            label: "×",
-            size: 5,
-          })),
-          ...s.foragers.map((a) => {
-            const key = (
-              {
-                Strength: "strength",
-                Speed: "speed",
-                Intelligence: "intelligence",
-                "Reactive Aggression": "reactiveAggression",
-                "Proactive Aggression": "proactiveAggression",
-              } as const
-            )[
-              s.parameters.visualization as Exclude<
-                Parameters["visualization"],
-                "None"
-              >
-            ];
-            return {
-              ...a,
-              color: key
-                ? `hsl(${key === "intelligence" ? 220 : key === "speed" ? 110 : 25} 65% ${20 + 60 * Math.min(1, a[key] / 40)}%)`
-                : "#888888",
-              label: s.parameters.showEnergy
-                ? String(Math.round(a.energy))
-                : "",
-              shape: "triangle" as const,
-              size: 9,
-            };
-          }),
-        ],
-      }),
+      data: foragersAndFruitBushesData,
     },
     {
       type: "line",
       label: "Death causes (%)",
-      series: (s) => [
-        {
-          label: "Murders",
-          points: s.history.map((h) => ({ x: h.tick, y: h.murderRate })),
-        },
-        {
-          label: "Starvation",
-          points: s.history.map((h) => ({ x: h.tick, y: h.starvationRate })),
-        },
-        {
-          label: "Old age",
-          points: s.history.map((h) => ({ x: h.tick, y: h.ageDeathRate })),
-        },
-      ],
+      series: deathCausesSeries,
     },
     {
       type: "line",
@@ -126,23 +71,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Mean traits",
-      series: (s) =>
-        (
-          [
-            "strength",
-            "speed",
-            "intelligence",
-            "reactiveAggression",
-            "proactiveAggression",
-          ] as const
-        ).map((key) => ({
-          label: key
-            .replace(/([a-z])([A-Z])/g, "$1 $2")
-            .replace(/^./, (value) => value.toUpperCase()),
-          points: s.history.flatMap((h) =>
-            h[key] === null ? [] : [{ x: h.tick, y: h[key]! }],
-          ),
-        })),
+      series: meanTraitsSeries,
     },
     {
       type: "bar",
@@ -160,3 +89,87 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function foragersAndFruitBushesData(s: UIObservation): SpatialData {
+  return {
+    showLabels: true,
+    width: 65,
+    height: 65,
+    agents: [
+      ...s.bushes.map((b) => ({
+        ...b,
+        color: netLogoColor(b.color),
+        size: 13,
+      })),
+      ...s.deaths.map((d) => ({
+        ...d,
+        color: "#de3030",
+        label: "×",
+        size: 5,
+      })),
+      ...s.foragers.map((a) => {
+        const key = (
+          {
+            Strength: "strength",
+            Speed: "speed",
+            Intelligence: "intelligence",
+            "Reactive Aggression": "reactiveAggression",
+            "Proactive Aggression": "proactiveAggression",
+          } as const
+        )[
+          s.parameters.visualization as Exclude<
+            Parameters["visualization"],
+            "None"
+          >
+        ];
+        return {
+          ...a,
+          color: key
+            ? `hsl(${key === "intelligence" ? 220 : key === "speed" ? 110 : 25} 65% ${20 + 60 * Math.min(1, a[key] / 40)}%)`
+            : "#888888",
+          label: s.parameters.showEnergy ? String(Math.round(a.energy)) : "",
+          shape: "triangle" as const,
+          size: 9,
+        };
+      }),
+    ],
+  };
+}
+
+function deathCausesSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Murders",
+      points: s.history.map((h) => ({ x: h.tick, y: h.murderRate })),
+    },
+    {
+      label: "Starvation",
+      points: s.history.map((h) => ({ x: h.tick, y: h.starvationRate })),
+    },
+    {
+      label: "Old age",
+      points: s.history.map((h) => ({ x: h.tick, y: h.ageDeathRate })),
+    },
+  ];
+}
+
+function meanTraitsSeries(s: UIObservation): readonly Series[] {
+  return (
+    [
+      "strength",
+      "speed",
+      "intelligence",
+      "reactiveAggression",
+      "proactiveAggression",
+    ] as const
+  ).map((key) => ({
+    label: key
+      .replace(/([a-z])([A-Z])/g, "$1 $2")
+      .replace(/^./, (value) => value.toUpperCase()),
+    points: s.history.flatMap((h) =>
+      h[key] === null ? [] : [{ x: h.tick, y: h[key]! }],
+    ),
+  }));
+}

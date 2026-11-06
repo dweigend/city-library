@@ -1,56 +1,39 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "bugCount", label: "Bug count" }],
+  setup: ["seed", "bugCount"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Heatbugs",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
-  live: [
-    {
-      field: "maxOutputHeat",
-      label: "Max output heat",
-      value: (s) => s.parameters.maxOutputHeat,
-      set: (m, v) => m.setRules({ maxOutputHeat: Number(v) }),
+  live: {
+    maxOutputHeat: {
+      set: (m, v) => m.setRules({ maxOutputHeat: v }),
     },
-    {
-      field: "minOutputHeat",
-      label: "Min output heat",
-      value: (s) => s.parameters.minOutputHeat,
-      set: (m, v) => m.setRules({ minOutputHeat: Number(v) }),
+    minOutputHeat: {
+      set: (m, v) => m.setRules({ minOutputHeat: v }),
     },
-    {
-      field: "maxIdealTemp",
+    maxIdealTemp: {
       label: "Max ideal temperature",
-      value: (s) => s.parameters.maxIdealTemp,
-      set: (m, v) => m.setRules({ maxIdealTemp: Number(v) }),
+      set: (m, v) => m.setRules({ maxIdealTemp: v }),
     },
-    {
-      field: "minIdealTemp",
+    minIdealTemp: {
       label: "Min ideal temperature",
-      value: (s) => s.parameters.minIdealTemp,
-      set: (m, v) => m.setRules({ minIdealTemp: Number(v) }),
+      set: (m, v) => m.setRules({ minIdealTemp: v }),
     },
-    {
-      field: "evaporationRate",
-      label: "Evaporation rate",
-      value: (s) => s.parameters.evaporationRate,
-      set: (m, v) => m.setRules({ evaporationRate: Number(v) }),
+    evaporationRate: {
+      set: (m, v) => m.setRules({ evaporationRate: v }),
     },
-    {
-      field: "diffusionRate",
-      label: "Diffusion rate",
-      value: (s) => s.parameters.diffusionRate,
-      set: (m, v) => m.setRules({ diffusionRate: Number(v) }),
+    diffusionRate: {
+      set: (m, v) => m.setRules({ diffusionRate: v }),
     },
-    {
-      field: "randomMoveChance",
+    randomMoveChance: {
       label: "Random move chance (%)",
-      value: (s) => s.parameters.randomMoveChance,
-      set: (m, v) => m.setRules({ randomMoveChance: Number(v) }),
+      set: (m, v) => m.setRules({ randomMoveChance: v }),
     },
-  ],
+  },
   actions: [
     { label: "Deep freeze", run: (m) => m.deepFreeze() },
     { label: "Heat up", run: (m) => m.heatUp() },
@@ -81,22 +64,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Heat and bugs",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: `hsl(0 80% ${Math.min(100, (c.temp / 150) * 100)}%)`,
-        })),
-        agents: s.bugs.map((b) => ({
-          ...b,
-          shape: "triangle" as const,
-          size: b.id === s.watched ? 14 : 8,
-          color: s.colorByUnhappiness
-            ? `hsl(220 80% ${20 + 60 * (1 - b.unhappiness / (s.maxUnhappiness || 1))}%)`
-            : `hsl(90 80% ${30 + (40 * (b.idealTemp - s.parameters.minIdealTemp)) / (s.parameters.maxIdealTemp - s.parameters.minIdealTemp || 1)}%)`,
-        })),
-      }),
+      data: heatAndBugsData,
     },
     {
       type: "inspector",
@@ -117,3 +85,24 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function heatAndBugsData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: `hsl(0 80% ${Math.min(100, (c.temp / 150) * 100)}%)`,
+    })),
+    agents: s.bugs.map((b) => ({
+      ...b,
+      shape: "triangle" as const,
+      size: b.id === s.watched ? 14 : 8,
+      color: s.colorByUnhappiness
+        ? `hsl(220 80% ${20 + 60 * (1 - b.unhappiness / (s.maxUnhappiness || 1))}%)`
+        : `hsl(90 80% ${30 + (40 * (b.idealTemp - s.parameters.minIdealTemp)) / (s.parameters.maxIdealTemp - s.parameters.minIdealTemp || 1)}%)`,
+    })),
+  };
+}

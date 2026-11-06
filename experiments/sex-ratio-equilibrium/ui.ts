@@ -1,8 +1,9 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "seed" },
+    "seed",
     { field: "initialPopulationSize", label: "Initial population" },
     { field: "initialAdultSexRatio", label: "Initial male percentage" },
     {
@@ -10,18 +11,20 @@ export const ui = defineUI(model, {
       label: "Initial male-child chance",
     },
   ],
-  live: (
-    [
-      "meanLongevity",
-      "gestationPeriod",
-      "maximumLitterSize",
-      "matingChance",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, v) => m.setParameters({ [field]: Number(v) }),
-  })),
+  live: {
+    meanLongevity: {
+      set: (m, v) => m.setParameters({ meanLongevity: v }),
+    },
+    gestationPeriod: {
+      set: (m, v) => m.setParameters({ gestationPeriod: v }),
+    },
+    maximumLitterSize: {
+      set: (m, v) => m.setParameters({ maximumLitterSize: v }),
+    },
+    matingChance: {
+      set: (m, v) => m.setParameters({ matingChance: v }),
+    },
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Sex%20Ratio%20Equilibrium.nlogox",
     label: "NetLogo original · Wilensky · CC BY-NC-SA 3.0",
@@ -60,28 +63,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Population by sex",
-      series: (s) => [
-        {
-          label: "Males",
-          color: "#3bb34b",
-          points: s.history.map((p) => ({ x: p.tick, y: p.males })),
-        },
-        {
-          label: "Females",
-          color: "#428bd0",
-          points: s.history.map((p) => ({ x: p.tick, y: p.females })),
-        },
-        {
-          label: "Carrying",
-          color: "#f6a130",
-          points: s.history.map((p) => ({ x: p.tick, y: p.pregnant })),
-        },
-        {
-          label: "Not carrying",
-          color: "#5555a0",
-          points: s.history.map((p) => ({ x: p.tick, y: p.nonPregnant })),
-        },
-      ],
+      series: populationBySexSeries,
     },
     {
       type: "line",
@@ -118,22 +100,54 @@ export const ui = defineUI(model, {
     {
       type: "inspector",
       label: "Selected individual",
-      value: (s, id) => {
-        const a = [...s.males, ...s.females].find((a) => a.id === id);
-        return a
-          ? {
-              sex: a.sex,
-              age: a.age,
-              longevity: a.longevity,
-              adult: a.adult,
-              maleChildChance: a.maleChildChance,
-              carrying: a.carrying,
-              gestation: a.gestation,
-              partners: a.numOfExes,
-              children: a.numOfChildren,
-            }
-          : undefined;
-      },
+      value: selectedIndividualInspector,
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function populationBySexSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Males",
+      color: "#3bb34b",
+      points: s.history.map((p) => ({ x: p.tick, y: p.males })),
+    },
+    {
+      label: "Females",
+      color: "#428bd0",
+      points: s.history.map((p) => ({ x: p.tick, y: p.females })),
+    },
+    {
+      label: "Carrying",
+      color: "#f6a130",
+      points: s.history.map((p) => ({ x: p.tick, y: p.pregnant })),
+    },
+    {
+      label: "Not carrying",
+      color: "#5555a0",
+      points: s.history.map((p) => ({ x: p.tick, y: p.nonPregnant })),
+    },
+  ];
+}
+
+function selectedIndividualInspector(
+  s: UIObservation,
+  id: string | null,
+): Readonly<Record<string, string | number | boolean>> | undefined {
+  const a = [...s.males, ...s.females].find((a) => a.id === id);
+  return a
+    ? {
+        sex: a.sex,
+        age: a.age,
+        longevity: a.longevity,
+        adult: a.adult,
+        maleChildChance: a.maleChildChance,
+        carrying: a.carrying,
+        gestation: a.gestation,
+        partners: a.numOfExes,
+        children: a.numOfChildren,
+      }
+    : undefined;
+}

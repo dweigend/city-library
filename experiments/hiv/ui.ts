@@ -1,36 +1,29 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "initialPeople" }],
-  live: [
-    {
-      field: "averageCommitment",
-      value: (state) => state.parameters.averageCommitment,
+  setup: ["seed", "initialPeople"],
+  live: {
+    averageCommitment: {
       set: (instance, value) =>
-        instance.setParameters({ averageCommitment: Number(value) }),
+        instance.setParameters({ averageCommitment: value }),
     },
-    {
-      field: "averageCouplingTendency",
-      value: (state) => state.parameters.averageCouplingTendency,
+    averageCouplingTendency: {
       set: (instance, value) =>
-        instance.setParameters({ averageCouplingTendency: Number(value) }),
+        instance.setParameters({ averageCouplingTendency: value }),
     },
-    {
-      field: "averageCondomUse",
-      value: (state) => state.parameters.averageCondomUse,
+    averageCondomUse: {
       set: (instance, value) =>
-        instance.setParameters({ averageCondomUse: Number(value) }),
+        instance.setParameters({ averageCondomUse: value }),
     },
-    {
-      field: "averageTestFrequency",
-      value: (state) => state.parameters.averageTestFrequency,
+    averageTestFrequency: {
       set: (instance, value) =>
-        instance.setParameters({ averageTestFrequency: Number(value) }),
+        instance.setParameters({ averageTestFrequency: value }),
     },
-  ],
+  },
   actions: [],
   complete: (state) => state.stopped,
   source: {
@@ -58,32 +51,7 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "History",
-      series: (state) => [
-        {
-          label: "Infected %",
-          color: "#df4545",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.infected),
-          })),
-        },
-        {
-          label: "Known %",
-          color: "#408dde",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.known),
-          })),
-        },
-        {
-          label: "Coupled",
-          color: "#888888",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.coupled),
-          })),
-        },
-      ],
+      series: historySeries,
     },
   ],
 });
@@ -92,3 +60,34 @@ export { model };
 export const sourceMarker =
   "selected-disease-gene-b09:hiv:ed3e832a9fadd101ff65eb20a313ee0941496db02d6d3cf15371568745f997d5";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function historySeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Infected %",
+      color: "#df4545",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.infected),
+      })),
+    },
+    {
+      label: "Known %",
+      color: "#408dde",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.known),
+      })),
+    },
+    {
+      label: "Coupled",
+      color: "#888888",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.coupled),
+      })),
+    },
+  ];
+}

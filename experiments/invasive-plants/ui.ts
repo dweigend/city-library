@@ -1,66 +1,38 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "initialDensity", label: "Initial density" },
-    { field: "initialResistanceShape", label: "Initial resistance shape" },
-  ],
+  setup: ["seed", "initialDensity", "initialResistanceShape"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/InvasivePlants",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "seedProductionRate",
-      label: "Seed production rate",
-      value: (s) => s.parameters.seedProductionRate,
-      set: (m, v) => m.setRules({ seedProductionRate: Number(v) }),
+  live: {
+    seedProductionRate: {
+      set: (m, v) => m.setRules({ seedProductionRate: v }),
     },
-    {
-      field: "spreadDistance",
-      label: "Spread distance",
-      value: (s) => s.parameters.spreadDistance,
-      set: (m, v) => m.setRules({ spreadDistance: Number(v) }),
+    spreadDistance: {
+      set: (m, v) => m.setRules({ spreadDistance: v }),
     },
-    {
-      field: "weedKillerThreshold",
-      label: "Weed killer threshold",
-      value: (s) => s.parameters.weedKillerThreshold,
-      set: (m, v) => m.setRules({ weedKillerThreshold: Number(v) }),
+    weedKillerThreshold: {
+      set: (m, v) => m.setRules({ weedKillerThreshold: v }),
     },
-    {
-      field: "weedKillerEffectiveness",
-      label: "Weed killer effectiveness",
-      value: (s) => s.parameters.weedKillerEffectiveness,
-      set: (m, v) => m.setRules({ weedKillerEffectiveness: Number(v) }),
+    weedKillerEffectiveness: {
+      set: (m, v) => m.setRules({ weedKillerEffectiveness: v }),
     },
-    {
-      field: "weedKillerRate",
-      label: "Weed killer rate",
-      value: (s) => s.parameters.weedKillerRate,
-      set: (m, v) => m.setRules({ weedKillerRate: Number(v) }),
+    weedKillerRate: {
+      set: (m, v) => m.setRules({ weedKillerRate: v }),
     },
-    {
-      field: "showSeeds",
-      label: "Show seeds",
-      value: (s) => s.parameters.showSeeds,
-      set: (m, v) => m.setRules({ showSeeds: Boolean(v) }),
+    showSeeds: {
+      set: (m, v) => m.setRules({ showSeeds: v }),
     },
-    {
-      field: "drawMode",
-      label: "Draw mode",
-      value: (s) => s.parameters.drawMode,
-      set: (m, v) =>
-        m.setRules({ drawMode: String(v) as "infestation" | "resistance" }),
+    drawMode: {
+      set: (m, v) => m.setRules({ drawMode: v }),
     },
-    {
-      field: "drawValue",
-      label: "Draw value",
-      value: (s) => s.parameters.drawValue,
-      set: (m, v) => m.setRules({ drawValue: Number(v) }),
+    drawValue: {
+      set: (m, v) => m.setRules({ drawValue: v }),
     },
-  ],
+  },
   actions: [
     { label: "Clear fields", run: (m) => m.clearFields() },
     { label: "Clear plots", run: (m) => m.clearPlots() },
@@ -89,32 +61,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Infestation, resistance and seeds",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: `hsl(120 80% ${Math.sqrt(c.infestation / 100) * 45}%)`,
-        })),
-        agents: [
-          ...s.cells
-            .filter((c) => c.hasResistanceBlock && c.resistance > 0)
-            .map((c) => ({
-              ...c,
-              size: Math.sqrt(c.resistance / 100) * 10,
-              color: "#999999",
-              shape: "circle" as const,
-            })),
-          ...s.seeds
-            .filter((seed) => !seed.hidden)
-            .map((seed) => ({
-              ...seed,
-              size: 4,
-              color: "#44ee44",
-              shape: "circle" as const,
-            })),
-        ],
-      }),
+      data: infestationResistanceAndSeedsData,
     },
     {
       type: "inspector",
@@ -148,3 +95,34 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function infestationResistanceAndSeedsData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: `hsl(120 80% ${Math.sqrt(c.infestation / 100) * 45}%)`,
+    })),
+    agents: [
+      ...s.cells
+        .filter((c) => c.hasResistanceBlock && c.resistance > 0)
+        .map((c) => ({
+          ...c,
+          size: Math.sqrt(c.resistance / 100) * 10,
+          color: "#999999",
+          shape: "circle" as const,
+        })),
+      ...s.seeds
+        .filter((seed) => !seed.hidden)
+        .map((seed) => ({
+          ...seed,
+          size: 4,
+          color: "#44ee44",
+          shape: "circle" as const,
+        })),
+    ],
+  };
+}

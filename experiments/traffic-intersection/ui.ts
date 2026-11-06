@@ -1,58 +1,35 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: [
-    {
-      field: "auto",
-      value: (state) => state.parameters.auto,
-      set: (instance, value) =>
-        instance.setParameters({ auto: Boolean(value) }),
+  setup: ["seed"],
+  live: {
+    auto: {
+      set: (instance, value) => instance.setParameters({ auto: value }),
     },
-    {
-      field: "speedLimit",
-      value: (state) => state.parameters.speedLimit,
-      set: (instance, value) =>
-        instance.setParameters({ speedLimit: Number(value) }),
+    speedLimit: {
+      set: (instance, value) => instance.setParameters({ speedLimit: value }),
     },
-    {
-      field: "maxAccel",
-      value: (state) => state.parameters.maxAccel,
-      set: (instance, value) =>
-        instance.setParameters({ maxAccel: Number(value) }),
+    maxAccel: {
+      set: (instance, value) => instance.setParameters({ maxAccel: value }),
     },
-    {
-      field: "maxBrake",
-      value: (state) => state.parameters.maxBrake,
-      set: (instance, value) =>
-        instance.setParameters({ maxBrake: Number(value) }),
+    maxBrake: {
+      set: (instance, value) => instance.setParameters({ maxBrake: value }),
     },
-    {
-      field: "freqNorth",
-      value: (state) => state.parameters.freqNorth,
-      set: (instance, value) =>
-        instance.setParameters({ freqNorth: Number(value) }),
+    freqNorth: {
+      set: (instance, value) => instance.setParameters({ freqNorth: value }),
     },
-    {
-      field: "freqEast",
-      value: (state) => state.parameters.freqEast,
-      set: (instance, value) =>
-        instance.setParameters({ freqEast: Number(value) }),
+    freqEast: {
+      set: (instance, value) => instance.setParameters({ freqEast: value }),
     },
-    {
-      field: "greenLength",
-      value: (state) => state.parameters.greenLength,
-      set: (instance, value) =>
-        instance.setParameters({ greenLength: Number(value) }),
+    greenLength: {
+      set: (instance, value) => instance.setParameters({ greenLength: value }),
     },
-    {
-      field: "yellowLength",
-      value: (state) => state.parameters.yellowLength,
-      set: (instance, value) =>
-        instance.setParameters({ yellowLength: Number(value) }),
+    yellowLength: {
+      set: (instance, value) => instance.setParameters({ yellowLength: value }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Unverified/Traffic%20Intersection.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -84,31 +61,7 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "Waiting cars",
-      series: (state) => [
-        {
-          label: "Overall",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: point.waiting,
-          })),
-        },
-        {
-          label: "Northbound",
-          color: "#dc3434",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: point.waitingNorth,
-          })),
-        },
-        {
-          label: "Eastbound",
-          color: "#345bd6",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: point.waitingEast,
-          })),
-        },
-      ],
+      series: waitingCarsSeries,
     },
     {
       type: "inspector",
@@ -122,3 +75,33 @@ export { model };
 export const sourceMarker =
   "selected-transport-b04:traffic-intersection:231db7a8ab42c4bb097f57fbde6520b6b1c64d6c39d3e96c2c3d57e6aaa4b5c9";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function waitingCarsSeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Overall",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: point.waiting,
+      })),
+    },
+    {
+      label: "Northbound",
+      color: "#dc3434",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: point.waitingNorth,
+      })),
+    },
+    {
+      label: "Eastbound",
+      color: "#345bd6",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: point.waitingEast,
+      })),
+    },
+  ];
+}

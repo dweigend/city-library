@@ -1,7 +1,8 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "number" }, { field: "colors" }],
+  setup: ["seed", "number", "colors"],
   actions: [
     { label: "Setup preserving walls", run: (m) => m.setup() },
     {
@@ -39,20 +40,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Genetic drift and walls",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: c.wall ? "#ffffff" : "#000000",
-        })),
-        agents: s.agents.map((a) => ({
-          ...a,
-          color: netLogoColor(a.colorNumber),
-          size: 6,
-          shape: "triangle" as const,
-        })),
-      }),
+      data: geneticDriftAndWallsData,
     },
     {
       type: "line",
@@ -71,3 +59,22 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function geneticDriftAndWallsData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: c.wall ? "#ffffff" : "#000000",
+    })),
+    agents: s.agents.map((a) => ({
+      ...a,
+      color: netLogoColor(a.colorNumber),
+      size: 6,
+      shape: "triangle" as const,
+    })),
+  };
+}

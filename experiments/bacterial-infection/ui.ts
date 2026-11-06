@@ -1,43 +1,44 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: (
-    [
-      "seed",
-      "init3PoresA",
-      "init4PoresA",
-      "init5PoresA",
-      "init6PoresA",
-      "init3PoresB",
-      "init4PoresB",
-      "init5PoresB",
-      "init6PoresB",
-    ] as const
-  ).map((field) => ({ field })),
-  live: (
-    [
-      "reproduce",
-      "reproduceEvery",
-      "autoDoseA",
-      "autoDoseB",
-      "aDosage",
-      "bDosage",
-      "doseAEvery",
-      "doseBEvery",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, v) =>
-      m.setParameters({
-        [field]:
-          field === "reproduce"
-            ? Boolean(v)
-            : field === "autoDoseA" || field === "autoDoseB"
-              ? String(v)
-              : Number(v),
-      }),
-  })),
+  setup: [
+    "seed",
+    "init3PoresA",
+    "init4PoresA",
+    "init5PoresA",
+    "init6PoresA",
+    "init3PoresB",
+    "init4PoresB",
+    "init5PoresB",
+    "init6PoresB",
+  ] as const,
+  live: {
+    reproduce: {
+      set: (m, v) => m.setParameters({ reproduce: v }),
+    },
+    reproduceEvery: {
+      set: (m, v) => m.setParameters({ reproduceEvery: v }),
+    },
+    autoDoseA: {
+      set: (m, v) => m.setParameters({ autoDoseA: v }),
+    },
+    autoDoseB: {
+      set: (m, v) => m.setParameters({ autoDoseB: v }),
+    },
+    aDosage: {
+      set: (m, v) => m.setParameters({ aDosage: v }),
+    },
+    bDosage: {
+      set: (m, v) => m.setParameters({ bDosage: v }),
+    },
+    doseAEvery: {
+      set: (m, v) => m.setParameters({ doseAEvery: v }),
+    },
+    doseBEvery: {
+      set: (m, v) => m.setParameters({ doseBEvery: v }),
+    },
+  },
   actions: [
     { label: "Manual dose A", run: (m) => m.doseRegion("A") },
     { label: "Manual dose B", run: (m) => m.doseRegion("B") },
@@ -57,33 +58,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Patients A and B",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color:
-            c.x === 0
-              ? "#999999"
-              : c.portType === "input"
-                ? "#9b2121"
-                : c.portType === "output"
-                  ? "#9b8d21"
-                  : c.region
-                    ? "#ffd7d7"
-                    : "#4a4a4a",
-        })),
-        agents: [
-          ...s.bacteria.map((a) => ({
-            ...a,
-            color: ["#a536c7", "#389b39", "#8b603f", "#ce3030"][
-              a.variation - 3
-            ]!,
-            size: 10,
-          })),
-          ...s.antibiotics.map((a) => ({ ...a, color: "#dd2020", size: 4 })),
-        ],
-      }),
+      data: patientsAAndBData,
     },
     ...(["A", "B"] as const).map((region) => ({
       type: "bar" as const,
@@ -114,18 +89,53 @@ export const ui = defineUI(model, {
     {
       type: "inspector",
       label: "Selected bacterium",
-      value: (s, id) => {
-        const a = s.bacteria.find((a) => a.id === id);
-        return a
-          ? {
-              variation: a.variation,
-              age: a.age,
-              region: a.region ?? "",
-              targetX: a.targetX,
-              targetY: a.targetY,
-            }
-          : undefined;
-      },
+      value: selectedBacteriumInspector,
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function patientsAAndBData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color:
+        c.x === 0
+          ? "#999999"
+          : c.portType === "input"
+            ? "#9b2121"
+            : c.portType === "output"
+              ? "#9b8d21"
+              : c.region
+                ? "#ffd7d7"
+                : "#4a4a4a",
+    })),
+    agents: [
+      ...s.bacteria.map((a) => ({
+        ...a,
+        color: ["#a536c7", "#389b39", "#8b603f", "#ce3030"][a.variation - 3]!,
+        size: 10,
+      })),
+      ...s.antibiotics.map((a) => ({ ...a, color: "#dd2020", size: 4 })),
+    ],
+  };
+}
+
+function selectedBacteriumInspector(
+  s: UIObservation,
+  id: string | null,
+): Readonly<Record<string, string | number | boolean>> | undefined {
+  const a = s.bacteria.find((a) => a.id === id);
+  return a
+    ? {
+        variation: a.variation,
+        age: a.age,
+        region: a.region ?? "",
+        targetX: a.targetX,
+        targetY: a.targetY,
+      }
+    : undefined;
+}

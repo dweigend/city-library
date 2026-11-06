@@ -1,30 +1,25 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "initialPeople" }],
-  live: [
-    {
-      field: "infectionChance",
-      value: (state) => state.parameters.infectionChance,
+  setup: ["seed", "initialPeople"],
+  live: {
+    infectionChance: {
       set: (instance, value) =>
-        instance.setParameters({ infectionChance: Number(value) }),
+        instance.setParameters({ infectionChance: value }),
     },
-    {
-      field: "recoveryChance",
-      value: (state) => state.parameters.recoveryChance,
+    recoveryChance: {
       set: (instance, value) =>
-        instance.setParameters({ recoveryChance: Number(value) }),
+        instance.setParameters({ recoveryChance: value }),
     },
-    {
-      field: "averageRecoveryTime",
-      value: (state) => state.parameters.averageRecoveryTime,
+    averageRecoveryTime: {
       set: (instance, value) =>
-        instance.setParameters({ averageRecoveryTime: Number(value) }),
+        instance.setParameters({ averageRecoveryTime: value }),
     },
-  ],
+  },
   actions: [],
   complete: (state) => state.stopped,
   source: {
@@ -52,24 +47,7 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "History",
-      series: (state) => [
-        {
-          label: "Infected",
-          color: "#df4545",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.infected),
-          })),
-        },
-        {
-          label: "Recovered",
-          color: "#35a85b",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.cured),
-          })),
-        },
-      ],
+      series: historySeries,
     },
   ],
 });
@@ -78,3 +56,26 @@ export { model };
 export const sourceMarker =
   "selected-disease-gene-b09:epidem-basic:049c5556e76cf22b7ec76e801c09134d02cf29619ea46c8c9578e9862be2c07a";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function historySeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Infected",
+      color: "#df4545",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.infected),
+      })),
+    },
+    {
+      label: "Recovered",
+      color: "#35a85b",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.cured),
+      })),
+    },
+  ];
+}

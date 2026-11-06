@@ -1,23 +1,7 @@
 import { defineUI } from "../../ui/index.ts";
-import { model, type SmoothLifeParameters } from "./model.ts";
-const liveFields = [
-  "minBirth",
-  "maxBirth",
-  "minSurvive",
-  "maxSurvive",
-  "innerStepWidth",
-  "outerStepWidth",
-  "paintValue",
-  "paintRadius",
-] as const;
+import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "innerRadius" },
-    { field: "outerRadius" },
-  ],
+  setup: ["width", "height", "seed", "innerRadius", "outerRadius"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/SmoothLife",
     label: "Original NetLogo model · Head & Wilensky · CC BY-NC-SA 3.0",
@@ -38,18 +22,32 @@ export const ui = defineUI(model, {
       },
     },
   ],
-  live: liveFields.map((field) => ({
-    field,
-    value: (state: ReturnType<ReturnType<typeof model.create>["read"]>) =>
-      state.parameters[field],
-    set: (
-      instance: ReturnType<typeof model.create>,
-      value: string | number | boolean,
-    ) =>
-      instance.setRules({
-        [field]: Number(value),
-      } as Partial<SmoothLifeParameters>),
-  })),
+  live: {
+    minBirth: {
+      set: (instance, value) => instance.setRules({ minBirth: value }),
+    },
+    maxBirth: {
+      set: (instance, value) => instance.setRules({ maxBirth: value }),
+    },
+    minSurvive: {
+      set: (instance, value) => instance.setRules({ minSurvive: value }),
+    },
+    maxSurvive: {
+      set: (instance, value) => instance.setRules({ maxSurvive: value }),
+    },
+    innerStepWidth: {
+      set: (instance, value) => instance.setRules({ innerStepWidth: value }),
+    },
+    outerStepWidth: {
+      set: (instance, value) => instance.setRules({ outerStepWidth: value }),
+    },
+    paintValue: {
+      set: (instance, value) => instance.setRules({ paintValue: value }),
+    },
+    paintRadius: {
+      set: (instance, value) => instance.setRules({ paintRadius: value }),
+    },
+  },
   drawing: {
     enabled: (state) => state.drawing,
     intent(instance, intent) {

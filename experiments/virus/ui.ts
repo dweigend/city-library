@@ -1,38 +1,30 @@
+import type { SpatialData, Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "numberPeople" }],
-  live: [
-    {
-      field: "infectiousness",
-      value: (state) => state.parameters.infectiousness,
+  setup: ["seed", "numberPeople"],
+  live: {
+    infectiousness: {
       set: (instance, value) =>
-        instance.setParameters({ infectiousness: Number(value) }),
+        instance.setParameters({ infectiousness: value }),
     },
-    {
-      field: "chanceRecover",
-      value: (state) => state.parameters.chanceRecover,
+    chanceRecover: {
       set: (instance, value) =>
-        instance.setParameters({ chanceRecover: Number(value) }),
+        instance.setParameters({ chanceRecover: value }),
     },
-    {
-      field: "duration",
-      value: (state) => state.parameters.duration,
-      set: (instance, value) =>
-        instance.setParameters({ duration: Number(value) }),
+    duration: {
+      set: (instance, value) => instance.setParameters({ duration: value }),
     },
-    {
-      field: "agentShape",
-      value: (state) => state.parameters.agentShape,
+    agentShape: {
       set: (instance, value) =>
         instance.setParameters({
           agentShape: value === "circle" ? "circle" : "person",
         }),
     },
-  ],
+  },
   actions: [],
   complete: (state) => state.stopped,
   source: {
@@ -54,48 +46,12 @@ const binding = defineUI(model, {
     {
       type: "spatial",
       label: "Virus",
-      data: (state) => ({
-        width: state.width,
-        height: state.height,
-        agents: state.agents.map((agent) => ({
-          ...agent,
-          shape:
-            agent.shape === "person"
-              ? ("triangle" as const)
-              : ("circle" as const),
-          size: 5,
-        })),
-      }),
+      data: virusData,
     },
     {
       type: "line",
       label: "History",
-      series: (state) => [
-        {
-          label: "Population",
-          color: "#408dde",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.population),
-          })),
-        },
-        {
-          label: "Infected %",
-          color: "#df4545",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.infected),
-          })),
-        },
-        {
-          label: "Immune %",
-          color: "#888888",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.immune),
-          })),
-        },
-      ],
+      series: historySeries,
     },
   ],
 });
@@ -104,3 +60,47 @@ export { model };
 export const sourceMarker =
   "selected-disease-gene-b09:virus:43e370765de7a5601d5b39e40904372016289974c24c94de32634132c3692683";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function virusData(state: UIObservation): SpatialData {
+  return {
+    width: state.width,
+    height: state.height,
+    agents: state.agents.map((agent) => ({
+      ...agent,
+      shape:
+        agent.shape === "person" ? ("triangle" as const) : ("circle" as const),
+      size: 5,
+    })),
+  };
+}
+
+function historySeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Population",
+      color: "#408dde",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.population),
+      })),
+    },
+    {
+      label: "Infected %",
+      color: "#df4545",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.infected),
+      })),
+    },
+    {
+      label: "Immune %",
+      color: "#888888",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.immune),
+      })),
+    },
+  ];
+}

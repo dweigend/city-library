@@ -1,32 +1,38 @@
+import type { Series, SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
-import { model, type InterstitialParameters } from "./model.ts";
+import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "initialBulkConcentration", label: "Initial bulk concentration" },
-    { field: "initialColumnsPopulated", label: "Initial columns populated" },
+    "width",
+    "height",
+    "seed",
+    "initialBulkConcentration",
+    "initialColumnsPopulated",
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/InterstitialDiffusion",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
-  live: (
-    [
-      "maxTicks",
-      "constantLeftSurface",
-      "leftSurfaceConcentration",
-      "constantRightSurface",
-      "rightSurfaceConcentration",
-      "goMode",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, v) =>
-      m.setRules({ [field]: v } as Partial<InterstitialParameters>),
-  })),
+  live: {
+    maxTicks: {
+      set: (m, v) => m.setRules({ maxTicks: v }),
+    },
+    constantLeftSurface: {
+      set: (m, v) => m.setRules({ constantLeftSurface: v }),
+    },
+    leftSurfaceConcentration: {
+      set: (m, v) => m.setRules({ leftSurfaceConcentration: v }),
+    },
+    constantRightSurface: {
+      set: (m, v) => m.setRules({ constantRightSurface: v }),
+    },
+    rightSurfaceConcentration: {
+      set: (m, v) => m.setRules({ rightSurfaceConcentration: v }),
+    },
+    goMode: {
+      set: (m, v) => m.setRules({ goMode: v }),
+    },
+  },
   actions: [
     { label: "Show/hide lattice atoms", run: (m) => m.toggleLattice() },
   ],
@@ -46,75 +52,12 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Concentration profile",
-      series: (s) => [
-        {
-          label: "Current",
-          color: "#a39600",
-          points: s.profile.map((p) => ({ x: p.x, y: p.concentration })),
-        },
-        {
-          label: "Initial",
-          color: "#d491ce",
-          points: s.initialProfile.map((p) => ({ x: p.x, y: p.concentration })),
-        },
-        ...(s.profileAt15
-          ? [
-              {
-                label: "After 15 ticks",
-                color: "#909090",
-                points: s.profileAt15.map((p) => ({
-                  x: p.x,
-                  y: p.concentration,
-                })),
-              },
-            ]
-          : []),
-      ],
+      series: concentrationProfileSeries,
     },
     {
       type: "spatial",
       label: "Lattice and diffusing atoms",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({ ...c, color: "#000000" })),
-        segments:
-          s.parameters.goMode === "draw-profile"
-            ? s.profile
-                .slice(1)
-                .map((p, i) => ({
-                  from: {
-                    x: s.profile[i]!.x,
-                    y:
-                      (s.height - 1) / 2 -
-                      25 +
-                      25 * s.profile[i]!.concentration,
-                  },
-                  to: {
-                    x: p.x,
-                    y: (s.height - 1) / 2 - 25 + 25 * p.concentration,
-                  },
-                  color: "#eedb00",
-                  width: 2,
-                }))
-            : [],
-        agents: [
-          ...(s.latticeVisible
-            ? s.lattice.map((a) => ({
-                ...a,
-                color: "#355fa5",
-                size: 7,
-                shape: "circle" as const,
-              }))
-            : []),
-          ...s.atoms.map((a) => ({
-            ...a,
-            color: "#eedb00",
-            size: 3,
-            shape: "circle" as const,
-          })),
-        ],
-      }),
+      data: latticeAndDiffusingAtomsData,
     },
     {
       type: "inspector",
@@ -123,3 +66,71 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function concentrationProfileSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Current",
+      color: "#a39600",
+      points: s.profile.map((p) => ({ x: p.x, y: p.concentration })),
+    },
+    {
+      label: "Initial",
+      color: "#d491ce",
+      points: s.initialProfile.map((p) => ({ x: p.x, y: p.concentration })),
+    },
+    ...(s.profileAt15
+      ? [
+          {
+            label: "After 15 ticks",
+            color: "#909090",
+            points: s.profileAt15.map((p) => ({
+              x: p.x,
+              y: p.concentration,
+            })),
+          },
+        ]
+      : []),
+  ];
+}
+
+function latticeAndDiffusingAtomsData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({ ...c, color: "#000000" })),
+    segments:
+      s.parameters.goMode === "draw-profile"
+        ? s.profile.slice(1).map((p, i) => ({
+            from: {
+              x: s.profile[i]!.x,
+              y: (s.height - 1) / 2 - 25 + 25 * s.profile[i]!.concentration,
+            },
+            to: {
+              x: p.x,
+              y: (s.height - 1) / 2 - 25 + 25 * p.concentration,
+            },
+            color: "#eedb00",
+            width: 2,
+          }))
+        : [],
+    agents: [
+      ...(s.latticeVisible
+        ? s.lattice.map((a) => ({
+            ...a,
+            color: "#355fa5",
+            size: 7,
+            shape: "circle" as const,
+          }))
+        : []),
+      ...s.atoms.map((a) => ({
+        ...a,
+        color: "#eedb00",
+        size: 3,
+        shape: "circle" as const,
+      })),
+    ],
+  };
+}

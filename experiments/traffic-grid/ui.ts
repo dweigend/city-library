@@ -2,44 +2,25 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "gridSizeX" },
-    { field: "gridSizeY" },
-    { field: "numCars" },
-  ],
-  live: [
-    {
-      field: "power",
-      value: (state) => state.parameters.power,
-      set: (instance, value) =>
-        instance.setParameters({ power: Boolean(value) }),
+  setup: ["seed", "gridSizeX", "gridSizeY", "numCars"],
+  live: {
+    power: {
+      set: (instance, value) => instance.setParameters({ power: value }),
     },
-    {
-      field: "speedLimit",
-      value: (state) => state.parameters.speedLimit,
-      set: (instance, value) =>
-        instance.setParameters({ speedLimit: Number(value) }),
+    speedLimit: {
+      set: (instance, value) => instance.setParameters({ speedLimit: value }),
     },
-    {
-      field: "ticksPerCycle",
-      value: (state) => state.parameters.ticksPerCycle,
+    ticksPerCycle: {
       set: (instance, value) =>
-        instance.setParameters({ ticksPerCycle: Number(value) }),
+        instance.setParameters({ ticksPerCycle: value }),
     },
-    {
-      field: "currentPhase",
-      value: (state) => state.parameters.currentPhase,
-      set: (instance, value) =>
-        instance.setParameters({ currentPhase: Number(value) }),
+    currentPhase: {
+      set: (instance, value) => instance.setParameters({ currentPhase: value }),
     },
-    {
-      field: "currentAuto",
-      value: (state) => state.parameters.currentAuto,
-      set: (instance, value) =>
-        instance.setParameters({ currentAuto: Boolean(value) }),
+    currentAuto: {
+      set: (instance, value) => instance.setParameters({ currentAuto: value }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%20Grid.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",

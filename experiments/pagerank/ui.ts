@@ -1,46 +1,28 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "networkChoice", label: "Network" }, { field: "seed" }],
+  setup: [{ field: "networkChoice", label: "Network" }, "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/PageRank",
     label: "Stonedahl & Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "calculationMethod",
-      label: "Calculation method",
-      value: (s) => s.parameters.calculationMethod,
-      set: (m, v) =>
-        m.setParameters({
-          calculationMethod: String(v) as "diffusion" | "random-surfer",
-        }),
+  live: {
+    calculationMethod: {
+      set: (m, v) => m.setParameters({ calculationMethod: v }),
     },
-    {
-      field: "dampingFactor",
-      label: "Damping factor",
-      value: (s) => s.parameters.dampingFactor,
-      set: (m, v) => m.setParameters({ dampingFactor: Number(v) }),
+    dampingFactor: {
+      set: (m, v) => m.setParameters({ dampingFactor: v }),
     },
-    {
-      field: "numberOfSurfers",
-      label: "Number of surfers",
-      value: (s) => s.parameters.numberOfSurfers,
-      set: (m, v) => m.setParameters({ numberOfSurfers: Number(v) }),
+    numberOfSurfers: {
+      set: (m, v) => m.setParameters({ numberOfSurfers: v }),
     },
-    {
-      field: "watchSurfers",
-      label: "Watch surfers",
-      value: (s) => s.parameters.watchSurfers,
-      set: (m, v) => m.setParameters({ watchSurfers: Boolean(v) }),
+    watchSurfers: {
+      set: (m, v) => m.setParameters({ watchSurfers: v }),
     },
-    {
-      field: "showPageRanks",
-      label: "Show page ranks",
-      value: (s) => s.parameters.showPageRanks,
-      set: (m, v) => m.setParameters({ showPageRanks: Boolean(v) }),
+    showPageRanks: {
+      set: (m, v) => m.setParameters({ showPageRanks: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Total rank", value: (s) => s.totalRank.toFixed(6) },

@@ -1,8 +1,9 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const binding = defineUI(model, {
   setup: [
-    { field: "seed" },
+    "seed",
     { field: "numConsumers", label: "Consumers" },
     { field: "avgConnections", label: "Average connections" },
     { field: "initialOrangePercent", label: "Initial orange (%)" },
@@ -11,38 +12,25 @@ const binding = defineUI(model, {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Consumer%20Choice.nlogox",
     label: "Original NetLogo model · Jager & Wang · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "normInfluence",
-      label: "Norm influence",
-      value: (s) => s.parameters.normInfluence,
-      set: (m, v) => m.setParameters({ normInfluence: Number(v) }),
+  live: {
+    normInfluence: {
+      set: (m, v) => m.setParameters({ normInfluence: v }),
     },
-    {
-      field: "informationExchange",
-      label: "Information exchange",
-      value: (s) => s.parameters.informationExchange,
-      set: (m, v) => m.setParameters({ informationExchange: Number(v) }),
+    informationExchange: {
+      set: (m, v) => m.setParameters({ informationExchange: v }),
     },
-    {
-      field: "exploration",
-      label: "Exploration",
-      value: (s) => s.parameters.exploration,
-      set: (m, v) => m.setParameters({ exploration: Number(v) }),
+    exploration: {
+      set: (m, v) => m.setParameters({ exploration: v }),
     },
-    {
-      field: "qualityOrange",
+    qualityOrange: {
       label: "Orange quality",
-      value: (s) => s.parameters.qualityOrange,
-      set: (m, v) => m.setParameters({ qualityOrange: Number(v) }),
+      set: (m, v) => m.setParameters({ qualityOrange: v }),
     },
-    {
-      field: "qualityBlue",
+    qualityBlue: {
       label: "Blue quality",
-      value: (s) => s.parameters.qualityBlue,
-      set: (m, v) => m.setParameters({ qualityBlue: Number(v) }),
+      set: (m, v) => m.setParameters({ qualityBlue: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Orange", value: (s) => s.orangeCount },
@@ -83,36 +71,12 @@ const binding = defineUI(model, {
     {
       type: "inspector",
       label: "Consumer",
-      value: (s, id) => {
-        const a = s.consumers.find((a) => a.id === id);
-        return a
-          ? {
-              who: a.who,
-              product: a.choice === 0 ? "orange" : "blue",
-              satisfaction: a.satisfaction[a.choice]!,
-              orangeExperience: a.personalExperience[0]!,
-              blueExperience: a.personalExperience[1]!,
-              orangeUtility: a.utilities[0]!,
-              blueUtility: a.utilities[1]!,
-            }
-          : undefined;
-      },
+      value: consumerInspector,
     },
     {
       type: "line",
       label: "Market shares (consumers)",
-      series: (s) => [
-        {
-          label: "Orange",
-          color: "#e58b20",
-          points: s.history.map((p) => ({ x: p.tick, y: p.orangeCount })),
-        },
-        {
-          label: "Blue",
-          color: "#377ac7",
-          points: s.history.map((p) => ({ x: p.tick, y: p.blueCount })),
-        },
-      ],
+      series: marketSharesConsumersSeries,
     },
     {
       type: "line",
@@ -135,3 +99,38 @@ export const sourceMarker =
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function consumerInspector(
+  s: UIObservation,
+  id: string | null,
+): Readonly<Record<string, string | number | boolean>> | undefined {
+  const a = s.consumers.find((a) => a.id === id);
+  return a
+    ? {
+        who: a.who,
+        product: a.choice === 0 ? "orange" : "blue",
+        satisfaction: a.satisfaction[a.choice]!,
+        orangeExperience: a.personalExperience[0]!,
+        blueExperience: a.personalExperience[1]!,
+        orangeUtility: a.utilities[0]!,
+        blueUtility: a.utilities[1]!,
+      }
+    : undefined;
+}
+
+function marketSharesConsumersSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Orange",
+      color: "#e58b20",
+      points: s.history.map((p) => ({ x: p.tick, y: p.orangeCount })),
+    },
+    {
+      label: "Blue",
+      color: "#377ac7",
+      points: s.history.map((p) => ({ x: p.tick, y: p.blueCount })),
+    },
+  ];
+}

@@ -1,30 +1,27 @@
+import type { SpatialData, Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "seed" },
-    { field: "startingMoney", label: "Starting money" },
-    { field: "supplyAmount", label: "Supply amount" },
-    { field: "supplyDistribution", label: "Supply distribution" },
-    { field: "demandAmount", label: "Demand amount" },
-    { field: "demandDistribution", label: "Demand distribution" },
-    { field: "sellerBehavior", label: "Seller behavior" },
-    { field: "buyerBehavior", label: "Buyer behavior" },
+    "seed",
+    "startingMoney",
+    "supplyAmount",
+    "supplyDistribution",
+    "demandAmount",
+    "demandDistribution",
+    "sellerBehavior",
+    "buyerBehavior",
   ],
-  live: [
-    {
-      field: "sellersIgnoreFullBuyers",
+  live: {
+    sellersIgnoreFullBuyers: {
       label: "Ignore full buyers",
-      value: (s) => s.parameters.sellersIgnoreFullBuyers,
-      set: (m, v) => m.setRules({ sellersIgnoreFullBuyers: Boolean(v) }),
+      set: (m, v) => m.setRules({ sellersIgnoreFullBuyers: v }),
     },
-    {
-      field: "stars",
+    stars: {
       label: "Sale markers",
-      value: (s) => s.parameters.stars,
-      set: (m, v) => m.setRules({ stars: Boolean(v) }),
+      set: (m, v) => m.setRules({ stars: v }),
     },
-  ],
+  },
   complete: (s) => s.done,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Bidding%20Market.nlogox",
@@ -51,30 +48,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Buyers and sellers",
-      data: (s) => ({
-        width: 29,
-        height: 29,
-        agents: [
-          ...s.sellers.map((t) => ({
-            ...t,
-            color: t.itemsForSale > 0 ? "#447abd" : "#666666",
-            label: String(t.itemsForSale),
-            size: 5 + Math.sqrt(t.itemsForSale),
-          })),
-          ...s.buyers.map((t) => ({
-            ...t,
-            color: t.wantToBuy > 0 ? "#cb7641" : "#666666",
-            label: String(t.wantToBuy),
-            size: 5 + Math.sqrt(t.bought),
-          })),
-        ],
-        segments: s.edges.map((l) => ({
-          from: s.sellers.find((t) => t.id === l.seller)!,
-          to: s.buyers.find((t) => t.id === l.buyer)!,
-          color: l.sale ? "#d9b52f" : "#426795",
-          width: l.sale && s.parameters.stars ? 2 : 1,
-        })),
-      }),
+      data: buyersAndSellersData,
     },
     {
       type: "line",
@@ -115,23 +89,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Market outcomes",
-      series: (s) => [
-        {
-          label: "Money taken (%)",
-          points: s.history.map((h) => ({ x: h.tick, y: h.percentMoneyTaken })),
-        },
-        {
-          label: "Items sold (%)",
-          points: s.history.map((h) => ({ x: h.tick, y: h.percentItemsSold })),
-        },
-        {
-          label: "Demand met (%)",
-          points: s.history.map((h) => ({
-            x: h.tick,
-            y: h.percentDemandSatisfied,
-          })),
-        },
-      ],
+      series: marketOutcomesSeries,
     },
     {
       type: "line",
@@ -145,3 +103,52 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function buyersAndSellersData(s: UIObservation): SpatialData {
+  return {
+    width: 29,
+    height: 29,
+    agents: [
+      ...s.sellers.map((t) => ({
+        ...t,
+        color: t.itemsForSale > 0 ? "#447abd" : "#666666",
+        label: String(t.itemsForSale),
+        size: 5 + Math.sqrt(t.itemsForSale),
+      })),
+      ...s.buyers.map((t) => ({
+        ...t,
+        color: t.wantToBuy > 0 ? "#cb7641" : "#666666",
+        label: String(t.wantToBuy),
+        size: 5 + Math.sqrt(t.bought),
+      })),
+    ],
+    segments: s.edges.map((l) => ({
+      from: s.sellers.find((t) => t.id === l.seller)!,
+      to: s.buyers.find((t) => t.id === l.buyer)!,
+      color: l.sale ? "#d9b52f" : "#426795",
+      width: l.sale && s.parameters.stars ? 2 : 1,
+    })),
+  };
+}
+
+function marketOutcomesSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Money taken (%)",
+      points: s.history.map((h) => ({ x: h.tick, y: h.percentMoneyTaken })),
+    },
+    {
+      label: "Items sold (%)",
+      points: s.history.map((h) => ({ x: h.tick, y: h.percentItemsSold })),
+    },
+    {
+      label: "Demand met (%)",
+      points: s.history.map((h) => ({
+        x: h.tick,
+        y: h.percentDemandSatisfied,
+      })),
+    },
+  ];
+}

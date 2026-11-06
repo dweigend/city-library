@@ -1,40 +1,31 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "walkerCount" }],
-  live: [
-    {
-      field: "minimumRoutePopularity",
-      value: (state) => state.parameters.minimumRoutePopularity,
+  setup: ["seed", "walkerCount"],
+  live: {
+    minimumRoutePopularity: {
       set: (instance, value) =>
-        instance.setParameters({ minimumRoutePopularity: Number(value) }),
+        instance.setParameters({ minimumRoutePopularity: value }),
     },
-    {
-      field: "walkerVisionDist",
-      value: (state) => state.parameters.walkerVisionDist,
+    walkerVisionDist: {
       set: (instance, value) =>
-        instance.setParameters({ walkerVisionDist: Number(value) }),
+        instance.setParameters({ walkerVisionDist: value }),
     },
-    {
-      field: "popularityDecayRate",
-      value: (state) => state.parameters.popularityDecayRate,
+    popularityDecayRate: {
       set: (instance, value) =>
-        instance.setParameters({ popularityDecayRate: Number(value) }),
+        instance.setParameters({ popularityDecayRate: value }),
     },
-    {
-      field: "popularityPerStep",
-      value: (state) => state.parameters.popularityPerStep,
+    popularityPerStep: {
       set: (instance, value) =>
-        instance.setParameters({ popularityPerStep: Number(value) }),
+        instance.setParameters({ popularityPerStep: value }),
     },
-    {
-      field: "showPopularity",
-      value: (state) => state.parameters.showPopularity,
+    showPopularity: {
       set: (instance, value) =>
-        instance.setParameters({ showPopularity: Boolean(value) }),
+        instance.setParameters({ showPopularity: value }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Paths.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -55,19 +46,7 @@ const binding = defineUI(model, {
     {
       type: "spatial",
       label: "Paths",
-      data: (state) => ({
-        width: state.width,
-        height: state.height,
-        cells: state.cells,
-        agents: [
-          ...state.walkers.map((walker) => ({
-            ...walker,
-            shape: "triangle" as const,
-            size: 5,
-          })),
-          ...state.buildings.map((building) => ({ ...building, size: 12 })),
-        ],
-      }),
+      data: pathsData,
     },
     {
       type: "inspector",
@@ -81,3 +60,21 @@ export { model };
 export const sourceMarker =
   "selected-transport-b04:paths:89f74e30ca5a70a0fc139e99c6e2ea62e9509ce1c8c76bc8cffa154cf3cd75d0";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function pathsData(state: UIObservation): SpatialData {
+  return {
+    width: state.width,
+    height: state.height,
+    cells: state.cells,
+    agents: [
+      ...state.walkers.map((walker) => ({
+        ...walker,
+        shape: "triangle" as const,
+        size: 5,
+      })),
+      ...state.buildings.map((building) => ({ ...building, size: 12 })),
+    ],
+  };
+}

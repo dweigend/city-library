@@ -1,58 +1,40 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "lacINumber" }, { field: "rnapNumber" }],
-  live: [
-    {
-      field: "lactose",
-      value: (state) => state.parameters.lactose,
-      set: (instance, value) =>
-        instance.setParameters({ lactose: Boolean(value) }),
+  setup: ["seed", "lacINumber", "rnapNumber"],
+  live: {
+    lactose: {
+      set: (instance, value) => instance.setParameters({ lactose: value }),
     },
-    {
-      field: "glucose",
-      value: (state) => state.parameters.glucose,
-      set: (instance, value) =>
-        instance.setParameters({ glucose: Boolean(value) }),
+    glucose: {
+      set: (instance, value) => instance.setParameters({ glucose: value }),
     },
-    {
-      field: "levelSpace",
-      value: (state) => state.parameters.levelSpace,
-      set: (instance, value) =>
-        instance.setParameters({ levelSpace: Boolean(value) }),
+    levelSpace: {
+      set: (instance, value) => instance.setParameters({ levelSpace: value }),
     },
-    {
-      field: "lacIBondLeakage",
-      value: (state) => state.parameters.lacIBondLeakage,
+    lacIBondLeakage: {
       set: (instance, value) =>
-        instance.setParameters({ lacIBondLeakage: Number(value) }),
+        instance.setParameters({ lacIBondLeakage: value }),
     },
-    {
-      field: "lacILactoseBindingChance",
-      value: (state) => state.parameters.lacILactoseBindingChance,
+    lacILactoseBindingChance: {
       set: (instance, value) =>
-        instance.setParameters({ lacILactoseBindingChance: Number(value) }),
+        instance.setParameters({ lacILactoseBindingChance: value }),
     },
-    {
-      field: "lacILactoseSeparationChance",
-      value: (state) => state.parameters.lacILactoseSeparationChance,
+    lacILactoseSeparationChance: {
       set: (instance, value) =>
-        instance.setParameters({ lacILactoseSeparationChance: Number(value) }),
+        instance.setParameters({ lacILactoseSeparationChance: value }),
     },
-    {
-      field: "lacYDegradationChance",
-      value: (state) => state.parameters.lacYDegradationChance,
+    lacYDegradationChance: {
       set: (instance, value) =>
-        instance.setParameters({ lacYDegradationChance: Number(value) }),
+        instance.setParameters({ lacYDegradationChance: value }),
     },
-    {
-      field: "lacZDegradationChance",
-      value: (state) => state.parameters.lacZDegradationChance,
+    lacZDegradationChance: {
       set: (instance, value) =>
-        instance.setParameters({ lacZDegradationChance: Number(value) }),
+        instance.setParameters({ lacZDegradationChance: value }),
     },
-  ],
+  },
   actions: [{ label: "Reset parameters", run: (instance) => instance.reset() }],
   complete: (state) => state.stopped,
   source: {
@@ -83,24 +65,7 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "History",
-      series: (state) => [
-        {
-          label: "Energy",
-          color: "#888888",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.energy),
-          })),
-        },
-        {
-          label: "LacZ",
-          color: "#df4545",
-          points: state.history.map((point) => ({
-            x: point.tick,
-            y: Number(point.lacZ),
-          })),
-        },
-      ],
+      series: historySeries,
     },
   ],
 });
@@ -109,3 +74,26 @@ export { model };
 export const sourceMarker =
   "selected-disease-gene-b09:genevo-1-genetic-switch:6f46710d78daad311551c2ee934317d98ef52ad92779b8312ba66dcd4c7d330e";
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function historySeries(state: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Energy",
+      color: "#888888",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.energy),
+      })),
+    },
+    {
+      label: "LacZ",
+      color: "#df4545",
+      points: state.history.map((point) => ({
+        x: point.tick,
+        y: Number(point.lacZ),
+      })),
+    },
+  ];
+}

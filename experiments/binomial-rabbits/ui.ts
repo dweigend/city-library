@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "seed" },
+    "seed",
     { field: "number", label: "Rabbits" },
     { field: "hop1", label: "Hop 1" },
     { field: "ratio1", label: "Ratio 1" },
@@ -12,19 +12,14 @@ export const ui = defineUI(model, {
     { field: "ratio3", label: "Ratio 3" },
   ],
   complete: (s) => s.done,
-  live: [
-    {
-      field: "hops",
-      value: (s) => s.parameters.hops,
-      set: (m, v) => m.setRules({ hops: Number(v) }),
+  live: {
+    hops: {
+      set: (m, v) => m.setRules({ hops: v }),
     },
-    {
-      field: "xScaling",
-      label: "X scaling",
-      value: (s) => s.parameters.xScaling,
-      set: (m, v) => m.setRules({ xScaling: Number(v) }),
+    xScaling: {
+      set: (m, v) => m.setRules({ xScaling: v }),
     },
-  ],
+  },
   actions: [{ label: "Go one hop", run: (m) => m.goOneHop() }],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/BinomialRabbits",

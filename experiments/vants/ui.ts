@@ -1,12 +1,8 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "width" },
-    { field: "height" },
-    { field: "seed" },
-    { field: "numVants" },
-  ],
+  setup: ["width", "height", "seed", "numVants"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Vants",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -29,20 +25,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Vants",
-      data: (state) => ({
-        width: state.width,
-        height: state.height,
-        cells: state.cells.map((cell) => ({
-          ...cell,
-          color: cell.on ? "#000000" : "#ffffff",
-        })),
-        agents: state.agents.map((agent) => ({
-          ...agent,
-          color: "#d73027",
-          size: 8,
-          shape: "triangle" as const,
-        })),
-      }),
+      data: vantsData,
     },
     {
       type: "inspector",
@@ -51,3 +34,22 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function vantsData(state: UIObservation): SpatialData {
+  return {
+    width: state.width,
+    height: state.height,
+    cells: state.cells.map((cell) => ({
+      ...cell,
+      color: cell.on ? "#000000" : "#ffffff",
+    })),
+    agents: state.agents.map((agent) => ({
+      ...agent,
+      color: "#d73027",
+      size: 8,
+      shape: "triangle" as const,
+    })),
+  };
+}

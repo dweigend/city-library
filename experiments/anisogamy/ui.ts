@@ -1,28 +1,31 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: (
-    [
-      "worldSize",
-      "maxAdults",
-      "zygoteFitnessThreshold",
-      "gameteFitnessThreshold",
-      "mutationSigma",
-      "speedSizeCorrelation",
-      "allowAssortativeFusion",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, value) =>
-      m.setParameters({
-        [field]:
-          field === "speedSizeCorrelation" || field === "allowAssortativeFusion"
-            ? Boolean(value)
-            : Number(value),
-      }),
-  })),
+  setup: ["seed"],
+  live: {
+    worldSize: {
+      set: (m, value) => m.setParameters({ worldSize: value }),
+    },
+    maxAdults: {
+      set: (m, value) => m.setParameters({ maxAdults: value }),
+    },
+    zygoteFitnessThreshold: {
+      set: (m, value) => m.setParameters({ zygoteFitnessThreshold: value }),
+    },
+    gameteFitnessThreshold: {
+      set: (m, value) => m.setParameters({ gameteFitnessThreshold: value }),
+    },
+    mutationSigma: {
+      set: (m, value) => m.setParameters({ mutationSigma: value }),
+    },
+    speedSizeCorrelation: {
+      set: (m, value) => m.setParameters({ speedSizeCorrelation: value }),
+    },
+    allowAssortativeFusion: {
+      set: (m, value) => m.setParameters({ allowAssortativeFusion: value }),
+    },
+  },
   actions: [
     {
       label: "Restore default parameters",
@@ -45,24 +48,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Adults, gametes and zygotes",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({ ...c, color: netLogoColor(c.color) })),
-        agents: [...s.adults, ...s.gametes, ...s.zygotes].map((a) => ({
-          ...a,
-          color: netLogoColor(
-            a.matingTypeTrait +
-              (a.breed === "adult" ? 1 : a.breed === "gamete" ? -1 : 3),
-          ),
-          size:
-            a.breed === "gamete"
-              ? Math.max(2, a.size * 8)
-              : a.breed === "zygote"
-                ? 5
-                : 7,
-        })),
-      }),
+      data: adultsGametesAndZygotesData,
     },
     {
       type: "line",
@@ -112,20 +98,46 @@ export const ui = defineUI(model, {
     {
       type: "inspector",
       label: "Inherited strategy",
-      value: (s, id) => {
-        const a = [...s.adults, ...s.gametes, ...s.zygotes].find(
-          (a) => a.id === id,
-        );
-        return a
-          ? {
-              breed: a.breed,
-              matingType: a.matingTypeTrait,
-              massTrait: a.gameteSizeTrait,
-              life: a.life,
-              incubationTime: a.incubationTime,
-            }
-          : undefined;
-      },
+      value: inheritedStrategyInspector,
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function adultsGametesAndZygotesData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({ ...c, color: netLogoColor(c.color) })),
+    agents: [...s.adults, ...s.gametes, ...s.zygotes].map((a) => ({
+      ...a,
+      color: netLogoColor(
+        a.matingTypeTrait +
+          (a.breed === "adult" ? 1 : a.breed === "gamete" ? -1 : 3),
+      ),
+      size:
+        a.breed === "gamete"
+          ? Math.max(2, a.size * 8)
+          : a.breed === "zygote"
+            ? 5
+            : 7,
+    })),
+  };
+}
+
+function inheritedStrategyInspector(
+  s: UIObservation,
+  id: string | null,
+): Readonly<Record<string, string | number | boolean>> | undefined {
+  const a = [...s.adults, ...s.gametes, ...s.zygotes].find((a) => a.id === id);
+  return a
+    ? {
+        breed: a.breed,
+        matingType: a.matingTypeTrait,
+        massTrait: a.gameteSizeTrait,
+        life: a.life,
+        incubationTime: a.incubationTime,
+      }
+    : undefined;
+}

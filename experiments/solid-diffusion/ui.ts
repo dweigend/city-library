@@ -1,7 +1,8 @@
+import type { Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "width" }, { field: "height" }, { field: "seed" }],
+  setup: ["width", "height", "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/SolidDiffusion",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
@@ -31,18 +32,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Atoms by column",
-      series: (s) => [
-        {
-          label: "Greens",
-          color: "#38a339",
-          points: s.columns.map((c) => ({ x: c.x, y: c.greens })),
-        },
-        {
-          label: "Blues",
-          color: "#315bd5",
-          points: s.columns.map((c) => ({ x: c.x, y: c.blues })),
-        },
-      ],
+      series: atomsByColumnSeries,
     },
     {
       type: "line",
@@ -60,3 +50,20 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function atomsByColumnSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Greens",
+      color: "#38a339",
+      points: s.columns.map((c) => ({ x: c.x, y: c.greens })),
+    },
+    {
+      label: "Blues",
+      color: "#315bd5",
+      points: s.columns.map((c) => ({ x: c.x, y: c.blues })),
+    },
+  ];
+}

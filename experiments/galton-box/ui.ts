@@ -1,31 +1,20 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "numberOfRows", label: "Number of rows" },
-  ],
+  setup: ["seed", "numberOfRows"],
   complete: (s) => s.done,
-  live: [
-    {
-      field: "numberOfBalls",
-      label: "Number of balls",
-      value: (s) => s.parameters.numberOfBalls,
-      set: (m, v) => m.setRules({ numberOfBalls: Number(v) }),
+  live: {
+    numberOfBalls: {
+      set: (m, v) => m.setRules({ numberOfBalls: v }),
     },
-    {
-      field: "chanceOfBouncingRight",
+    chanceOfBouncingRight: {
       label: "Bounce right (%)",
-      value: (s) => s.parameters.chanceOfBouncingRight,
-      set: (m, v) => m.setRules({ chanceOfBouncingRight: Number(v) }),
+      set: (m, v) => m.setRules({ chanceOfBouncingRight: v }),
     },
-    {
-      field: "pileUp",
-      label: "Pile up",
-      value: (s) => s.parameters.pileUp,
-      set: (m, v) => m.setRules({ pileUp: Boolean(v) }),
+    pileUp: {
+      set: (m, v) => m.setRules({ pileUp: v }),
     },
-  ],
+  },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/GaltonBox",
     label: "Original · Uri Wilensky · CC BY-NC-SA 3.0",

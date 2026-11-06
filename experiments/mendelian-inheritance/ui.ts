@@ -2,18 +2,16 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "seed" },
+    "seed",
     { field: "maleGenotype", label: "Male parent genotype" },
     { field: "femaleGenotype", label: "Female parent genotype" },
   ],
-  live: [
-    {
-      field: "numberOfOffspring",
+  live: {
+    numberOfOffspring: {
       label: "Offspring per trial",
-      value: (s) => s.parameters.numberOfOffspring,
-      set: (m, v) => m.setParameters({ numberOfOffspring: Number(v) }),
+      set: (m, v) => m.setParameters({ numberOfOffspring: v }),
     },
-  ],
+  },
   actions: [
     { label: "Make F1 generation", run: (m) => m.makeF1Generation() },
     { label: "Clear F1 generation", run: (m) => m.clearF1Generation() },

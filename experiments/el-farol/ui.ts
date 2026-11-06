@@ -1,19 +1,17 @@
+import type { SpatialData, Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
-    { field: "memorySize", label: "Memory size" },
+    "memorySize",
     { field: "numberStrategies", label: "Number of strategies" },
-    { field: "seed" },
+    "seed",
   ],
-  live: [
-    {
-      field: "overcrowdingThreshold",
-      label: "Overcrowding threshold",
-      value: (s) => s.parameters.overcrowdingThreshold,
-      set: (m, value) => m.setRules({ overcrowdingThreshold: Number(value) }),
+  live: {
+    overcrowdingThreshold: {
+      set: (m, value) => m.setRules({ overcrowdingThreshold: value }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/IABM%20Textbook/chapter%203/El%20Farol%20Extensions/El%20Farol.nlogox",
     label: "Original NetLogo model · Rand & Wilensky · CC BY-NC-SA 3.0",
@@ -27,46 +25,12 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Homes and bar",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          id: c.id,
-          x: c.x,
-          y: c.y,
-          color:
-            c.area === "bar"
-              ? "#315bd5"
-              : c.area === "home"
-                ? "#38a339"
-                : "#171717",
-        })),
-        agents: s.people.map((p) => ({
-          id: p.id,
-          x: p.x,
-          y: p.y,
-          color: "#ffffff",
-          size: 6,
-        })),
-      }),
+      data: homesAndBarData,
     },
     {
       type: "line",
       label: "Bar attendance",
-      series: (s) => [
-        {
-          label: "Attendance",
-          points: s.plotHistory.map((p) => ({ x: p.tick, y: p.attendance })),
-        },
-        {
-          label: "Threshold",
-          color: "#d43b36",
-          points: [
-            { x: 0, y: s.parameters.overcrowdingThreshold },
-            { x: Math.max(10, s.tick), y: s.parameters.overcrowdingThreshold },
-          ],
-        },
-      ],
+      series: barAttendanceSeries,
     },
     {
       type: "inspector",
@@ -85,3 +49,47 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function homesAndBarData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      id: c.id,
+      x: c.x,
+      y: c.y,
+      color:
+        c.area === "bar"
+          ? "#315bd5"
+          : c.area === "home"
+            ? "#38a339"
+            : "#171717",
+    })),
+    agents: s.people.map((p) => ({
+      id: p.id,
+      x: p.x,
+      y: p.y,
+      color: "#ffffff",
+      size: 6,
+    })),
+  };
+}
+
+function barAttendanceSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Attendance",
+      points: s.plotHistory.map((p) => ({ x: p.tick, y: p.attendance })),
+    },
+    {
+      label: "Threshold",
+      color: "#d43b36",
+      points: [
+        { x: 0, y: s.parameters.overcrowdingThreshold },
+        { x: Math.max(10, s.tick), y: s.parameters.overcrowdingThreshold },
+      ],
+    },
+  ];
+}

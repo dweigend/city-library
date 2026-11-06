@@ -1,52 +1,36 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "numNodes", label: "Language users" }],
+  setup: ["seed", { field: "numNodes", label: "Language users" }],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Language%20Change.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "percentGrammar1",
+  live: {
+    percentGrammar1: {
       label: "Grammar 1 on redistribution (%)",
-      value: (s) => s.parameters.percentGrammar1,
-      set: (m, v) => m.setParameters({ percentGrammar1: Number(v) }),
+      set: (m, v) => m.setParameters({ percentGrammar1: v }),
     },
-    {
-      field: "updateAlgorithm",
+    updateAlgorithm: {
       label: "Learning rule",
-      value: (s) => s.parameters.updateAlgorithm,
-      set: (m, v) =>
-        m.setParameters({
-          updateAlgorithm: String(v) as "individual" | "threshold" | "reward",
-        }),
+      set: (m, v) => m.setParameters({ updateAlgorithm: v }),
     },
-    {
-      field: "thresholdVal",
+    thresholdVal: {
       label: "Threshold",
-      value: (s) => s.parameters.thresholdVal,
-      set: (m, v) => m.setParameters({ thresholdVal: Number(v) }),
+      set: (m, v) => m.setParameters({ thresholdVal: v }),
     },
-    {
-      field: "sinkState1",
+    sinkState1: {
       label: "Grammar 1 is a sink",
-      value: (s) => s.parameters.sinkState1,
-      set: (m, v) => m.setParameters({ sinkState1: Boolean(v) }),
+      set: (m, v) => m.setParameters({ sinkState1: v }),
     },
-    {
-      field: "logistic",
+    logistic: {
       label: "Logistic speech bias",
-      value: (s) => s.parameters.logistic,
-      set: (m, v) => m.setParameters({ logistic: Boolean(v) }),
+      set: (m, v) => m.setParameters({ logistic: v }),
     },
-    {
-      field: "alpha",
-      label: "Alpha",
-      value: (s) => s.parameters.alpha,
-      set: (m, v) => m.setParameters({ alpha: Number(v) }),
+    alpha: {
+      set: (m, v) => m.setParameters({ alpha: v }),
     },
-  ],
+  },
   actions: [
     { label: "Reset states", run: (m) => m.resetNodes() },
     { label: "Redistribute grammars", run: (m) => m.redistributeGrammars() },

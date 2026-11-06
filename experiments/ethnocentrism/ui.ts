@@ -1,63 +1,42 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "setup", label: "Initial population" }],
+  setup: ["seed", { field: "setup", label: "Initial population" }],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Ethnocentrism.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "immigrantsPerDay",
-      label: "Immigrants per day",
-      value: (s) => s.parameters.immigrantsPerDay,
-      set: (m, v) => m.setParameters({ immigrantsPerDay: Number(v) }),
+  live: {
+    immigrantsPerDay: {
+      set: (m, v) => m.setParameters({ immigrantsPerDay: v }),
     },
-    {
-      field: "initialPtr",
+    initialPtr: {
       label: "Initial reproduction probability",
-      value: (s) => s.parameters.initialPtr,
-      set: (m, v) => m.setParameters({ initialPtr: Number(v) }),
+      set: (m, v) => m.setParameters({ initialPtr: v }),
     },
-    {
-      field: "costOfGiving",
-      label: "Cost of giving",
-      value: (s) => s.parameters.costOfGiving,
-      set: (m, v) => m.setParameters({ costOfGiving: Number(v) }),
+    costOfGiving: {
+      set: (m, v) => m.setParameters({ costOfGiving: v }),
     },
-    {
-      field: "gainOfReceiving",
-      label: "Gain of receiving",
-      value: (s) => s.parameters.gainOfReceiving,
-      set: (m, v) => m.setParameters({ gainOfReceiving: Number(v) }),
+    gainOfReceiving: {
+      set: (m, v) => m.setParameters({ gainOfReceiving: v }),
     },
-    {
-      field: "mutationRate",
-      label: "Mutation rate",
-      value: (s) => s.parameters.mutationRate,
-      set: (m, v) => m.setParameters({ mutationRate: Number(v) }),
+    mutationRate: {
+      set: (m, v) => m.setParameters({ mutationRate: v }),
     },
-    {
-      field: "deathRate",
-      label: "Death rate",
-      value: (s) => s.parameters.deathRate,
-      set: (m, v) => m.setParameters({ deathRate: Number(v) }),
+    deathRate: {
+      set: (m, v) => m.setParameters({ deathRate: v }),
     },
-    {
-      field: "immigrantChanceCooperateWithSame",
+    immigrantChanceCooperateWithSame: {
       label: "Immigrant cooperation with same tag",
-      value: (s) => s.parameters.immigrantChanceCooperateWithSame,
-      set: (m, v) =>
-        m.setParameters({ immigrantChanceCooperateWithSame: Number(v) }),
+      set: (m, v) => m.setParameters({ immigrantChanceCooperateWithSame: v }),
     },
-    {
-      field: "immigrantChanceCooperateWithDifferent",
+    immigrantChanceCooperateWithDifferent: {
       label: "Immigrant cooperation with different tag",
-      value: (s) => s.parameters.immigrantChanceCooperateWithDifferent,
       set: (m, v) =>
-        m.setParameters({ immigrantChanceCooperateWithDifferent: Number(v) }),
+        m.setParameters({ immigrantChanceCooperateWithDifferent: v }),
     },
-  ],
+  },
   actions: [
     { label: "Setup empty", run: (m) => m.setupEmpty() },
     { label: "Setup full", run: (m) => m.setupFull() },
@@ -75,39 +54,12 @@ const binding = defineUI(model, {
     {
       type: "spatial",
       label: "Group tags and cooperation strategies",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        agents: s.agents.map((a) => ({
-          id: a.id,
-          x: a.x - 25,
-          y: a.y - 25,
-          label:
-            (a.cooperateWithSame ? "C" : "D") +
-            (a.cooperateWithDifferent ? "C" : "D"),
-          color: ["#d64c4c", "#3d7ec4", "#d1b72e", "#3e9a58"][a.tag]!,
-          shape: a.cooperateWithSame
-            ? ("circle" as const)
-            : ("triangle" as const),
-          size: a.cooperateWithDifferent ? 8 : 5,
-        })),
-      }),
+      data: groupTagsAndCooperationStrategiesData,
     },
     {
       type: "inspector",
       label: "Individual strategy",
-      value: (s, id) => {
-        const a = s.agents.find((a) => a.id === id);
-        return a
-          ? {
-              who: a.who,
-              tag: a.tag,
-              cooperateWithSame: a.cooperateWithSame,
-              cooperateWithDifferent: a.cooperateWithDifferent,
-              reproductionProbability: a.ptr,
-            }
-          : undefined;
-      },
+      value: individualStrategyInspector,
     },
     {
       type: "line",
@@ -128,3 +80,39 @@ export const sourceMarker =
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function groupTagsAndCooperationStrategiesData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    agents: s.agents.map((a) => ({
+      id: a.id,
+      x: a.x - 25,
+      y: a.y - 25,
+      label:
+        (a.cooperateWithSame ? "C" : "D") +
+        (a.cooperateWithDifferent ? "C" : "D"),
+      color: ["#d64c4c", "#3d7ec4", "#d1b72e", "#3e9a58"][a.tag]!,
+      shape: a.cooperateWithSame ? ("circle" as const) : ("triangle" as const),
+      size: a.cooperateWithDifferent ? 8 : 5,
+    })),
+  };
+}
+
+function individualStrategyInspector(
+  s: UIObservation,
+  id: string | null,
+): Readonly<Record<string, string | number | boolean>> | undefined {
+  const a = s.agents.find((a) => a.id === id);
+  return a
+    ? {
+        who: a.who,
+        tag: a.tag,
+        cooperateWithSame: a.cooperateWithSame,
+        cooperateWithDifferent: a.cooperateWithDifferent,
+        reproductionProbability: a.ptr,
+      }
+    : undefined;
+}

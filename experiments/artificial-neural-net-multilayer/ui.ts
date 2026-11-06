@@ -1,7 +1,7 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
+  setup: ["seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/ArtificialNeuralNet-Multilayer",
     label: "Wilensky · CC BY-NC-SA 3.0",
@@ -14,45 +14,28 @@ export const ui = defineUI(model, {
       },
     },
   ],
-  live: [
-    {
-      field: "learningRate",
-      label: "Learning rate",
-      value: (s) => s.parameters.learningRate,
-      set: (m, v) => m.setParameters({ learningRate: Number(v) }),
+  live: {
+    learningRate: {
+      set: (m, v) => m.setParameters({ learningRate: v }),
     },
-    {
-      field: "examplesPerEpoch",
-      label: "Examples per epoch",
-      value: (s) => s.parameters.examplesPerEpoch,
-      set: (m, v) => m.setParameters({ examplesPerEpoch: Number(v) }),
+    examplesPerEpoch: {
+      set: (m, v) => m.setParameters({ examplesPerEpoch: v }),
     },
-    {
-      field: "targetFunction",
-      label: "Target function",
-      value: (s) => s.parameters.targetFunction,
-      set: (m, v) =>
-        m.setParameters({ targetFunction: String(v) as "or" | "xor" }),
+    targetFunction: {
+      set: (m, v) => m.setParameters({ targetFunction: v }),
     },
-    {
-      field: "input1",
+    input1: {
       label: "Input 1",
-      value: (s) => s.parameters.input1,
-      set: (m, v) => m.setParameters({ input1: Number(v) }),
+      set: (m, v) => m.setParameters({ input1: v }),
     },
-    {
-      field: "input2",
+    input2: {
       label: "Input 2",
-      value: (s) => s.parameters.input2,
-      set: (m, v) => m.setParameters({ input2: Number(v) }),
+      set: (m, v) => m.setParameters({ input2: v }),
     },
-    {
-      field: "showWeights",
-      label: "Show weights",
-      value: (s) => s.parameters.showWeights,
-      set: (m, v) => m.setParameters({ showWeights: Boolean(v) }),
+    showWeights: {
+      set: (m, v) => m.setParameters({ showWeights: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Epoch", value: (s) => s.tick },
     { label: "Epoch error", value: (s) => s.epochError.toFixed(5) },

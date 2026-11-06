@@ -1,27 +1,13 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI, netLogoColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    {
-      field: "seed",
+  setup: ["seed", "numSheep", "numShepherds"],
+  live: {
+    sheepSpeed: {
+      set: (m, v) => m.setRules({ sheepSpeed: v }),
     },
-    {
-      field: "numSheep",
-    },
-    {
-      field: "numShepherds",
-    },
-  ],
-  live: [
-    {
-      field: "sheepSpeed",
-      value: (s) => s.parameters.sheepSpeed,
-      set: (m, v) =>
-        m.setRules({
-          sheepSpeed: Number(v),
-        }),
-    },
-  ],
+  },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Shepherds",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -44,28 +30,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Sheep and shepherds",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        cells: s.cells.map((c) => ({
-          ...c,
-          color: netLogoColor(c.green),
-        })),
-        agents: [
-          ...s.sheep
-            .filter((a) => !a.hidden)
-            .map((a) => ({
-              ...a,
-              color: "#ffffff",
-              size: 5,
-            })),
-          ...s.shepherds.map((a) => ({
-            ...a,
-            color: a.carriedSheep === null ? "#aa7038" : "#2878cb",
-            size: 6,
-          })),
-        ],
-      }),
+      data: sheepAndShepherdsData,
     },
     {
       type: "line",
@@ -83,3 +48,30 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function sheepAndShepherdsData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    cells: s.cells.map((c) => ({
+      ...c,
+      color: netLogoColor(c.green),
+    })),
+    agents: [
+      ...s.sheep
+        .filter((a) => !a.hidden)
+        .map((a) => ({
+          ...a,
+          color: "#ffffff",
+          size: 5,
+        })),
+      ...s.shepherds.map((a) => ({
+        ...a,
+        color: a.carriedSheep === null ? "#aa7038" : "#2878cb",
+        size: 6,
+      })),
+    ],
+  };
+}

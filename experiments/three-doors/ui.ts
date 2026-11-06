@@ -1,11 +1,8 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "seed" },
-    { field: "number", label: "Racers" },
-    { field: "gradation" },
-  ],
+  setup: ["seed", { field: "number", label: "Racers" }, "gradation"],
   complete: (s) => s.done,
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/ThreeDoors",
@@ -19,19 +16,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Race",
-      data: (s) => ({
-        width: s.width,
-        height: s.height,
-        agents: s.racers.map((r) => ({
-          id: r.id,
-          x: r.x,
-          y: r.y,
-          heading: 0,
-          shape: "triangle",
-          size: 5,
-          color: `rgb(${Math.round(240 - (140 * r.hunch) / 100)},${Math.round(240 - (140 * r.hunch) / 100)},${Math.round(240 - (140 * r.hunch) / 100)})`,
-        })),
-      }),
+      data: raceData,
     },
     {
       type: "scatter",
@@ -45,3 +30,21 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function raceData(s: UIObservation): SpatialData {
+  return {
+    width: s.width,
+    height: s.height,
+    agents: s.racers.map((r) => ({
+      id: r.id,
+      x: r.x,
+      y: r.y,
+      heading: 0,
+      shape: "triangle",
+      size: 5,
+      color: `rgb(${Math.round(240 - (140 * r.hunch) / 100)},${Math.round(240 - (140 * r.hunch) / 100)},${Math.round(240 - (140 * r.hunch) / 100)})`,
+    })),
+  };
+}

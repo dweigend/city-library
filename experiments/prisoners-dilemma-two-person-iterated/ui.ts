@@ -1,20 +1,21 @@
 import { defineUI } from "../../ui/index.ts";
-import { model, type IteratedParameters } from "./model.ts";
+import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
-  live: (
-    [
-      "humanStrategy",
-      "computerStrategy",
-      "selectComputerStrategy",
-      "displayHistory",
-    ] as const
-  ).map((field) => ({
-    field,
-    value: (s) => s.parameters[field],
-    set: (m, value) =>
-      m.setRules({ [field]: value } as Partial<IteratedParameters>),
-  })),
+  setup: ["seed"],
+  live: {
+    humanStrategy: {
+      set: (m, value) => m.setRules({ humanStrategy: value }),
+    },
+    computerStrategy: {
+      set: (m, value) => m.setRules({ computerStrategy: value }),
+    },
+    selectComputerStrategy: {
+      set: (m, value) => m.setRules({ selectComputerStrategy: value }),
+    },
+    displayHistory: {
+      set: (m, value) => m.setRules({ displayHistory: value }),
+    },
+  },
   actions: [{ label: "Play once", run: (m) => m.play() }],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Two%20Person%20Iterated.nlogox",
@@ -29,20 +30,7 @@ export const ui = defineUI(model, {
     {
       type: "table",
       label: "Players",
-      rows: (s) => [
-        {
-          Player: "Human",
-          Score: s.human.score,
-          Average: s.human.averageScore,
-          "Last action": s.human.defectNow ? "Defect" : "Cooperate",
-        },
-        {
-          Player: "Computer",
-          Score: s.computer.score,
-          Average: s.computer.averageScore,
-          "Last action": s.computer.defectNow ? "Defect" : "Cooperate",
-        },
-      ],
+      rows: playersRows,
     },
     {
       type: "line",
@@ -66,3 +54,24 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function playersRows(
+  s: UIObservation,
+): readonly Readonly<Record<string, string | number | boolean>>[] {
+  return [
+    {
+      Player: "Human",
+      Score: s.human.score,
+      Average: s.human.averageScore,
+      "Last action": s.human.defectNow ? "Defect" : "Cooperate",
+    },
+    {
+      Player: "Computer",
+      Score: s.computer.score,
+      Average: s.computer.averageScore,
+      "Last action": s.computer.defectNow ? "Defect" : "Cooperate",
+    },
+  ];
+}

@@ -1,34 +1,23 @@
+import type { SpatialData, Series } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [
-    { field: "numPhilosophers", label: "Philosophers" },
-    { field: "seed" },
-  ],
+  setup: [{ field: "numPhilosophers", label: "Philosophers" }, "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers",
     label: "Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "hungryChance",
-      label: "Hungry chance",
-      value: (s) => s.parameters.hungryChance,
-      set: (m, v) => m.setParameters({ hungryChance: Number(v) }),
+  live: {
+    hungryChance: {
+      set: (m, v) => m.setParameters({ hungryChance: v }),
     },
-    {
-      field: "fullChance",
-      label: "Full chance",
-      value: (s) => s.parameters.fullChance,
-      set: (m, v) => m.setParameters({ fullChance: Number(v) }),
+    fullChance: {
+      set: (m, v) => m.setParameters({ fullChance: v }),
     },
-    {
-      field: "cooperation",
-      label: "Cooperation",
-      value: (s) => s.parameters.cooperation,
-      set: (m, v) => m.setParameters({ cooperation: Boolean(v) }),
+    cooperation: {
+      set: (m, v) => m.setParameters({ cooperation: v }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Thinking", value: (s) => s.thinking },
@@ -39,35 +28,7 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Table",
-      data: (s) => ({
-        width: 1,
-        height: 1,
-        agents: [
-          ...s.philosophers.map((p) => ({
-            id: `p-${p.id}`,
-            x: p.x,
-            y: p.y,
-            heading: p.heading,
-            label: String(p.id),
-            color:
-              p.state === "THINKING"
-                ? "#3975bc"
-                : p.state === "HUNGRY"
-                  ? "#d74343"
-                  : "#47a66a",
-            size: 25,
-          })),
-          ...s.forks.map((f) => ({
-            id: `f-${f.id}`,
-            x: f.x,
-            y: f.y,
-            heading: f.heading,
-            label: `Fork ${f.id}`,
-            color: s.parameters.cooperation && f.marked ? "#c15cbd" : "#e5e5e5",
-            size: 9,
-          })),
-        ],
-      }),
+      data: tableData,
     },
     {
       type: "bar",
@@ -83,23 +44,7 @@ export const ui = defineUI(model, {
     {
       type: "line",
       label: "Resource allocation",
-      series: (s) => [
-        {
-          label: "Thinking",
-          color: "#3975bc",
-          points: s.history.map((h) => ({ x: h.tick, y: h.thinking })),
-        },
-        {
-          label: "Hungry",
-          color: "#d74343",
-          points: s.history.map((h) => ({ x: h.tick, y: h.hungry })),
-        },
-        {
-          label: "Eating",
-          color: "#47a66a",
-          points: s.history.map((h) => ({ x: h.tick, y: h.eating })),
-        },
-      ],
+      series: resourceAllocationSeries,
     },
     {
       type: "table",
@@ -113,3 +58,57 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function tableData(s: UIObservation): SpatialData {
+  return {
+    width: 1,
+    height: 1,
+    agents: [
+      ...s.philosophers.map((p) => ({
+        id: `p-${p.id}`,
+        x: p.x,
+        y: p.y,
+        heading: p.heading,
+        label: String(p.id),
+        color:
+          p.state === "THINKING"
+            ? "#3975bc"
+            : p.state === "HUNGRY"
+              ? "#d74343"
+              : "#47a66a",
+        size: 25,
+      })),
+      ...s.forks.map((f) => ({
+        id: `f-${f.id}`,
+        x: f.x,
+        y: f.y,
+        heading: f.heading,
+        label: `Fork ${f.id}`,
+        color: s.parameters.cooperation && f.marked ? "#c15cbd" : "#e5e5e5",
+        size: 9,
+      })),
+    ],
+  };
+}
+
+function resourceAllocationSeries(s: UIObservation): readonly Series[] {
+  return [
+    {
+      label: "Thinking",
+      color: "#3975bc",
+      points: s.history.map((h) => ({ x: h.tick, y: h.thinking })),
+    },
+    {
+      label: "Hungry",
+      color: "#d74343",
+      points: s.history.map((h) => ({ x: h.tick, y: h.hungry })),
+    },
+    {
+      label: "Eating",
+      color: "#47a66a",
+      points: s.history.map((h) => ({ x: h.tick, y: h.eating })),
+    },
+  ];
+}

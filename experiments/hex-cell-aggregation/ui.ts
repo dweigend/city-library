@@ -1,3 +1,4 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const switches = [
@@ -9,7 +10,7 @@ const switches = [
   "sixNeighbors",
 ] as const;
 export const ui = defineUI(model, {
-  setup: [{ field: "width" }, { field: "height" }, { field: "seed" }],
+  setup: ["width", "height", "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/HexCellAggregation",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
@@ -18,16 +19,32 @@ export const ui = defineUI(model, {
   actions: [
     { label: "Read switches", run: (instance) => instance.readSwitches() },
   ],
-  live: switches.map((field, index) => ({
-    field,
-    label: `${index + 1} live neighbors`,
-    value: (state: ReturnType<ReturnType<typeof model.create>["read"]>) =>
-      state.parameters[field],
-    set: (
-      instance: ReturnType<typeof model.create>,
-      value: string | number | boolean,
-    ) => instance.setSwitches({ [field]: value }),
-  })),
+  live: {
+    oneNeighbor: {
+      label: `${0 + 1} live neighbors`,
+      set: (instance, value) => instance.setSwitches({ oneNeighbor: value }),
+    },
+    twoNeighbors: {
+      label: `${1 + 1} live neighbors`,
+      set: (instance, value) => instance.setSwitches({ twoNeighbors: value }),
+    },
+    threeNeighbors: {
+      label: `${2 + 1} live neighbors`,
+      set: (instance, value) => instance.setSwitches({ threeNeighbors: value }),
+    },
+    fourNeighbors: {
+      label: `${3 + 1} live neighbors`,
+      set: (instance, value) => instance.setSwitches({ fourNeighbors: value }),
+    },
+    fiveNeighbors: {
+      label: `${4 + 1} live neighbors`,
+      set: (instance, value) => instance.setSwitches({ fiveNeighbors: value }),
+    },
+    sixNeighbors: {
+      label: `${5 + 1} live neighbors`,
+      set: (instance, value) => instance.setSwitches({ sixNeighbors: value }),
+    },
+  },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     {
@@ -44,36 +61,47 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Hex cells",
-      data: (state) => ({
-        width: state.width,
-        height: state.height + 1,
-        agents: state.cells
-          .filter((cell) => cell.alive)
-          .map((cell) => ({
-            id: cell.id,
-            x: cell.x,
-            y: cell.displayY,
-            color: cell.liveNeighborCount === 6 ? "#d73027" : "#f28e2b",
-            size: 4,
-          })),
-      }),
+      data: hexCellsData,
     },
     {
       type: "inspector",
       label: "Cell",
-      value: (state, id) => {
-        const cell = state.cells.find((cell) => cell.id === id);
-        return cell
-          ? {
-              x: cell.x,
-              y: cell.y,
-              alive: cell.alive,
-              liveNeighbors: cell.liveNeighborCount,
-              eligible: cell.eligible,
-              neighbors: cell.neighborIds.length,
-            }
-          : undefined;
-      },
+      value: cellInspector,
     },
   ],
 });
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function hexCellsData(state: UIObservation): SpatialData {
+  return {
+    width: state.width,
+    height: state.height + 1,
+    agents: state.cells
+      .filter((cell) => cell.alive)
+      .map((cell) => ({
+        id: cell.id,
+        x: cell.x,
+        y: cell.displayY,
+        color: cell.liveNeighborCount === 6 ? "#d73027" : "#f28e2b",
+        size: 4,
+      })),
+  };
+}
+
+function cellInspector(
+  state: UIObservation,
+  id: string | null,
+): Readonly<Record<string, string | number | boolean>> | undefined {
+  const cell = state.cells.find((cell) => cell.id === id);
+  return cell
+    ? {
+        x: cell.x,
+        y: cell.y,
+        alive: cell.alive,
+        liveNeighbors: cell.liveNeighborCount,
+        eligible: cell.eligible,
+        neighbors: cell.neighborIds.length,
+      }
+    : undefined;
+}

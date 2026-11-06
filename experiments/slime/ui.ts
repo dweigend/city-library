@@ -2,33 +2,22 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "population" }],
-  live: [
-    {
-      field: "sniffThreshold",
-      value: (state) => state.parameters.sniffThreshold,
+  setup: ["seed", "population"],
+  live: {
+    sniffThreshold: {
       set: (instance, value) =>
-        instance.setParameters({ sniffThreshold: Number(value) }),
+        instance.setParameters({ sniffThreshold: value }),
     },
-    {
-      field: "sniffAngle",
-      value: (state) => state.parameters.sniffAngle,
-      set: (instance, value) =>
-        instance.setParameters({ sniffAngle: Number(value) }),
+    sniffAngle: {
+      set: (instance, value) => instance.setParameters({ sniffAngle: value }),
     },
-    {
-      field: "wiggleAngle",
-      value: (state) => state.parameters.wiggleAngle,
-      set: (instance, value) =>
-        instance.setParameters({ wiggleAngle: Number(value) }),
+    wiggleAngle: {
+      set: (instance, value) => instance.setParameters({ wiggleAngle: value }),
     },
-    {
-      field: "wiggleBias",
-      value: (state) => state.parameters.wiggleBias,
-      set: (instance, value) =>
-        instance.setParameters({ wiggleBias: Number(value) }),
+    wiggleBias: {
+      set: (instance, value) => instance.setParameters({ wiggleBias: value }),
     },
-  ],
+  },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Slime.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",

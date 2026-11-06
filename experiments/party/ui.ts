@@ -1,8 +1,9 @@
+import type { SpatialData } from "../../ui/index.ts";
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const binding = defineUI(model, {
   setup: [
-    { field: "seed" },
+    "seed",
     { field: "number", label: "People" },
     { field: "numGroups", label: "Groups" },
   ],
@@ -10,14 +11,12 @@ const binding = defineUI(model, {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Party.nlogox",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "tolerance",
+  live: {
+    tolerance: {
       label: "Opposite-sex tolerance (%)",
-      value: (s) => s.parameters.tolerance,
-      set: (m, v) => m.setParameters({ tolerance: Number(v) }),
+      set: (m, v) => m.setParameters({ tolerance: v }),
     },
-  ],
+  },
   complete: (s) => s.stopped,
   monitors: [
     { label: "Tick", value: (s) => s.tick },
@@ -28,30 +27,7 @@ const binding = defineUI(model, {
     {
       type: "spatial",
       label: "Party groups",
-      data: (s) => ({
-        width: s.width + 12,
-        height: s.height,
-        showLabels: true,
-        agents: [
-          ...s.people.map((a) => ({
-            id: a.id,
-            x: a.x + 39.5,
-            y: a.y,
-            color: a.sex === "female" ? "#dc70b5" : "#4281cd",
-            size: 8,
-            shape: "circle" as const,
-          })),
-          ...s.groups.map((g) => ({
-            id: g.id,
-            x: g.x + 39.5,
-            y: 0,
-            label: String(g.count),
-            color: g.boring ? "#888888" : "#b8b8b8",
-            size: 3,
-            shape: "circle" as const,
-          })),
-        ],
-      }),
+      data: partyGroupsData,
     },
     {
       type: "inspector",
@@ -94,3 +70,32 @@ export const sourceMarker =
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
+
+type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+
+function partyGroupsData(s: UIObservation): SpatialData {
+  return {
+    width: s.width + 12,
+    height: s.height,
+    showLabels: true,
+    agents: [
+      ...s.people.map((a) => ({
+        id: a.id,
+        x: a.x + 39.5,
+        y: a.y,
+        color: a.sex === "female" ? "#dc70b5" : "#4281cd",
+        size: 8,
+        shape: "circle" as const,
+      })),
+      ...s.groups.map((g) => ({
+        id: g.id,
+        x: g.x + 39.5,
+        y: 0,
+        label: String(g.count),
+        color: g.boring ? "#888888" : "#b8b8b8",
+        size: 3,
+        shape: "circle" as const,
+      })),
+    ],
+  };
+}
