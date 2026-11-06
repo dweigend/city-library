@@ -29,7 +29,7 @@ const binding = defineUI(model, {
       type: "spatial",
       label: "Party groups",
       data: (s) => ({
-        width: s.width,
+        width: s.width + 12,
         height: s.height,
         showLabels: true,
         agents: [

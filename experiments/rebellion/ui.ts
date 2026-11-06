@@ -58,7 +58,7 @@ const binding = defineUI(model, {
       data: (s) => ({
         width: s.width,
         height: s.height,
-        agents: s.agents.map((a) => ({
+        agents: s.agents.toSorted((a, b) => Number(a.kind === "cop") - Number(b.kind === "cop")).map((a) => ({
           id: a.id,
           label: String(a.who),
           x: a.x - 19.5,
