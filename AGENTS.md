@@ -2,6 +2,7 @@
 
 - Discuss work in German; write repository content and commits in English.
 - Check branch/status; preserve concurrent work, README and its approved diagram unless the task requires changes. Never commit secrets or dependencies.
+- Follow the [Git delivery workflow](docs/development/git-workflow.md) for branch ownership, authorized commit/push/PR delivery, main-merge approval and cleanup; use the [git-delivery skill](.agents/skills/git-delivery/SKILL.md) for delivery requests.
 - Read relevant sections of [README](README.md) (orientation), [PLAN](PLAN.md) (scope, sequence, acceptance), [ARCHITECTURE](docs/ARCHITECTURE.md) (architecture, contracts, source context) and [DESIGN](docs/DESIGN.md) (UI only) before changes. Follow current decisions over historical experiments; flag unresolved contracts instead of inventing APIs.
 - Use strict TypeScript and Bun. Deliver the smallest useful slice with PLAN's reuse/provenance, public examples, documentation and authorized independent reviews. Run `bun run typecheck` for TypeScript changes and relevant behavior/public-consumer checks. Report executed checks only; distinguish proposals, source evidence and verified target behavior in PLAN.
 - Follow [architecture rules](docs/ARCHITECTURE.md#binding-architecture-rules): headless, framework-independent domain logic; thin, separate UI; dependencies toward core contracts; one domain-state owner. Expose every domain function through public TypeScript APIs; UI writes only through defined actions/functions.
