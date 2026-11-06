@@ -1,0 +1,12 @@
+import { strict as assert } from "node:assert";
+import { stats, Random } from "city-library";
+const random = Random.add({ seed: 19 });
+const state = random.state;
+for (const values of [[NaN], [Infinity], [Number.MAX_VALUE, Number.MAX_VALUE], [Number.MAX_VALUE, -Number.MAX_VALUE]]) assert.throws(() => stats.describe(values));
+assert.throws(() => stats.describe([1], { sample: "yes" } as unknown as { sample: boolean }));
+assert.throws(() => stats.describe([1], { unused: true } as unknown as { sample: boolean }));
+let read = false;
+const bad = Object.defineProperty({}, "sample", { enumerable: true, get() { read = true; return true; } });
+assert.throws(() => stats.describe([1], bad));
+assert.equal(read, false);
+assert.deepEqual(random.state, state);
