@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.dev.json",
+  "compilerOptions": { "typeRoots": ["../../node_modules/@types"] },
+  "include": ["../../examples/selected-biology/*.ts"]
+}
