@@ -5,6 +5,24 @@ import { create as centralLimit } from "../experiments/central-limit-theorem/mod
 import { create as combinations } from "../experiments/random-combinations-and-permutations/model.ts";
 import { create as mandelbrot } from "../experiments/mandelbrot/model.ts";
 
+test("Partition live target reduction preserves signed draws and rejected trial ticks", () => {
+  const m = partition({ seed: 1 });
+  m.advance();
+  const total = m.read().runningTotal;
+  expect(total).toBeGreaterThan(2);
+  m.setRules({ targetTotal: 2 });
+  m.advance(20);
+  expect(m.read().tick).toBe(21);
+  expect(m.read().runningTotal).toBe(total);
+  expect(m.read().successes).toBe(0);
+  expect(m.read().addends.slice(1).some((n) => n < 0)).toBe(true);
+  expect(m.read().addends).toHaveLength(21);
+  m.setRules({ targetTotal: total });
+  m.advance();
+  expect(m.read().successes).toBe(1);
+  expect(m.read().previous).toEqual([total]);
+});
+
 test("Expected Value retains setup's empty run and uses the frozen sample size", () => {
   const m = expectedValue({
     ratio0: 0,

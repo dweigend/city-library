@@ -50,9 +50,10 @@ export function create(options: Partial<Parameters> = {}) {
     const space = settings.diminishingSampleSpace
       ? settings.targetTotal - total
       : settings.targetTotal;
-    if (space <= 0)
-      throw new RangeError("The remaining sample space is not positive.");
-    addend = 1 + Math.floor(random.number() * space);
+    // NetLogo random accepts negative bounds: integers toward zero, excluding
+    // the bound itself. Live target changes can make the remaining gap <= 0.
+    const draw = Math.floor(random.number() * Math.abs(space));
+    addend = 1 + (space < 0 ? -draw : draw);
     if (total + addend <= settings.targetTotal) {
       short.push(addend);
       ribbon.push({ value: addend, color: Math.floor(random.number() * 14) });

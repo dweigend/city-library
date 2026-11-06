@@ -138,6 +138,11 @@ dt {
 dd {
   margin: 0;
 }
+.monitors dt,
+.monitors dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .inspector dt,
 .inspector dd {
   min-width: 0;
@@ -297,7 +302,7 @@ th {
   .monitors {
     order: 2;
     width: 100%;
-    grid-template-columns: repeat(3, minmax(0, 1fr) auto);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     gap: 0.5rem;
     margin: 0.25rem 0;
   }

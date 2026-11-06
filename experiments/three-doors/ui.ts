@@ -29,7 +29,7 @@ export const ui = defineUI(model, {
           heading: 0,
           shape: "triangle",
           size: 5,
-          color: `rgb(${Math.round(30 + (210 * r.hunch) / 100)},${Math.round(30 + (210 * r.hunch) / 100)},${Math.round(30 + (210 * r.hunch) / 100)})`,
+          color: `rgb(${Math.round(240 - (140 * r.hunch) / 100)},${Math.round(240 - (140 * r.hunch) / 100)},${Math.round(240 - (140 * r.hunch) / 100)})`,
         })),
       }),
     },
