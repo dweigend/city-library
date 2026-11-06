@@ -143,6 +143,11 @@ dd {
   min-width: 0;
   overflow-wrap: anywhere;
 }
+@media (max-width: 480px) {
+  .monitors:not(.inspector) {
+    grid-template-columns: repeat(2, minmax(0, 1fr) fit-content(5rem));
+  }
+}
 .status,
 #catalog-status {
   font-size: 0.875rem;
