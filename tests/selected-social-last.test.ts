@@ -62,3 +62,16 @@ test('signaling natural learned threshold stops before another round or random d
 test('rumor all-informed stop is a preflight without time or randomness',()=>{
  const m=rumor();for(let y=-50;y<=50;y++)for(let x=-50;x<=50;x++)m.hearAt({x,y});const before=m.read();m.advance(100);const after=m.read();expect(after.clique).toBe(10201);expect(after.tick).toBe(0);expect(after.stopped).toBe(true);expect(after.randomState).toEqual(before.randomState);expect(after.totalHeard).toBe(before.totalHeard);m.advance(0);expect(m.read()).toEqual(after);
 });
+
+test('heroes blocked short forward retains position while the phase and tick continue',()=>{
+ const m=heroes({number:3});
+ m.setActors([
+  {x:16.49,y:0,personality:'cowardly',friend:1,enemy:2},
+  {x:16.4,y:0,personality:'brave',friend:2,enemy:2},
+  {x:-16,y:0,personality:'brave',friend:1,enemy:1},
+ ]);
+ m.advance();const after=m.read();expect(after.agents[0]!.x).toBe(16.49);expect(after.agents[0]!.y).toBe(0);
+ expect(after.agents[1]!.x).toBeCloseTo(16.3,12);expect(after.agents[2]!.x).toBeCloseTo(-15.9,12);
+ expect(after.tick).toBe(1);expect(after.diagnostic).toBeNull();
+ const natural=heroes();natural.advance(100);expect(natural.read().tick).toBe(100);expect(natural.read().diagnostic).toBeNull();
+});
