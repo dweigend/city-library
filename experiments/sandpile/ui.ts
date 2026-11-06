@@ -6,7 +6,6 @@ export const ui = defineUI(model, {
     { field: "height" },
     { field: "seed" },
     { field: "initial" },
-    { field: "grainsPerPatch", label: "Grains per patch" },
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Sandpile",

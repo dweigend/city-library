@@ -6,7 +6,6 @@ export const ui = defineUI(model, {
     { field: "height" },
     { field: "seed" },
     { field: "probabilityOfSpinUp", label: "Initial spin up (%)" },
-    { field: "temperature" },
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Ising",
