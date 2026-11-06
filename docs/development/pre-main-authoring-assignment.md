@@ -17,3 +17,7 @@ The user authorized implementation of the pre-main encapsulation, readable autho
 - Both UI hosts handle setup/live defaults, explicit actions, format/category/group presentation and disposal without a second state owner. Taxi has no private DOM/mount author patch and no model-specific shared-shell exception after migration.
 - Actual desktop and narrow light/dark screenshots and interaction checks are inspected by an independent agent. Gemini 3.8 Flash and Astra high provide independent contract/implementation feedback; findings, fixes and approval are recorded separately.
 - The 125-entry source inventory is checked for authoring consistency. This work does not raise scientific-validation counts or silently reduce the fixed 200-model delivery scope. Remaining ledger/independent per-model acceptance work stays explicit.
+
+## Independent remaining-work audits
+
+At each major checkpoint (frozen authoring contract, integrated implementation, browser/verification handoff), commission a fresh independent subagent to audit remaining pre-main tasks against the actual diff, current PLAN and evidence. Record concrete remaining tasks, priority, acceptance criterion and supporting source/evidence. Keep scientific, UI, documentation and merge-scope gates distinct. Update PLAN from findings; an implementation commit alone does not close its verification or independent-review gate. Gemini 3.8 Flash high and Astra high feedback is required as requested; do not silently substitute if unavailable.
