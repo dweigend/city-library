@@ -1,0 +1,78 @@
+import { defineUI } from "../../ui/index.ts";
+import { model } from "./model.ts";
+
+const binding = defineUI(model, {
+  setup: [{ field: "seed" }, { field: "initialPeople" }],
+  live: [
+    {
+      field: "infectionChance",
+      value: (state) => state.parameters.infectionChance,
+      set: (instance, value) =>
+        instance.setParameters({ infectionChance: Number(value) }),
+    },
+    {
+      field: "recoveryChance",
+      value: (state) => state.parameters.recoveryChance,
+      set: (instance, value) =>
+        instance.setParameters({ recoveryChance: Number(value) }),
+    },
+    {
+      field: "averageRecoveryTime",
+      value: (state) => state.parameters.averageRecoveryTime,
+      set: (instance, value) =>
+        instance.setParameters({ averageRecoveryTime: Number(value) }),
+    },
+  ],
+  actions: [],
+  complete: (state) => state.stopped,
+  source: {
+    url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox",
+    label: "Original NetLogo model · source notices",
+  },
+  monitors: [
+    { label: "Tick", value: (state) => state.tick },
+    { label: "Infected", value: (state) => state.infectedCount },
+    { label: "Recovered", value: (state) => state.curedCount },
+    { label: "R0", value: (state) => state.r0 },
+    { label: "Infection rate", value: (state) => state.betaN },
+    { label: "Recovery rate", value: (state) => state.gamma },
+  ],
+  views: [
+    {
+      type: "spatial",
+      label: "epiDEM Basic",
+      data: (state) => ({
+        width: state.width,
+        height: state.height,
+        agents: state.agents.map((agent) => ({ ...agent, size: 5 })),
+      }),
+    },
+    {
+      type: "line",
+      label: "History",
+      series: (state) => [
+        {
+          label: "Infected",
+          color: "#df4545",
+          points: state.history.map((point) => ({
+            x: point.tick,
+            y: Number(point.infected),
+          })),
+        },
+        {
+          label: "Recovered",
+          color: "#35a85b",
+          points: state.history.map((point) => ({
+            x: point.tick,
+            y: Number(point.cured),
+          })),
+        },
+      ],
+    },
+  ],
+});
+
+export { model };
+export const sourceMarker =
+  "selected-disease-gene-b09:epidem-basic:049c5556e76cf22b7ec76e801c09134d02cf29619ea46c8c9578e9862be2c07a";
+export const ui = { ...binding, model, sourceMarker };
