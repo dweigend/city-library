@@ -1,0 +1,233 @@
+{
+  "date": "2026-11-06",
+  "runtime": "f32305e",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "observations": [
+    {
+      "slug": "birthdays",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=birthdays"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nSuccesses\n1\nSuccess rate (%)\n100.00"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "galton-box",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=galton-box"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nBalls\n1\nState\nActive"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "binomial-rabbits",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=binomial-rabbits"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nMean\n-0.025\nX scale\n44\nY scale\n3416.667"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "three-doors",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=three-doors"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nState\nRacing"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "stochastic-patchwork",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=stochastic-patchwork"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nTarget color\n8"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "expected-value",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=expected-value"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nExpected value\n30.000\nRuns\n2\nThis sample total\n25\nMean of samples\n12.500\nCalculation\n10 \u00d7 (0 \u00d7 0/16 + 1 \u00d7 1/16 + 2 \u00d7 6/16 + 3 \u00d7 5/16 + 4 \u00d7 0/16 + 5 \u00d7 4/16 + 6 \u00d7 0/16)"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "partition-permutation-distribution",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=partition-permutation-distribution"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nSuccesses\n0\nRunning total\n46\nPrevious addends\nAddend\n46"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "central-limit-theorem",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=central-limit-theorem"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nPopulation\n434\nSamples\n1\nExpected value\n15.000\nStd dev means\nN/A\nStd dev sums\nN/A\nState\nReady"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "random-combinations-and-permutations",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=random-combinations-and-permutations"
+        },
+        "value": {
+          "monitors": [
+            "Search attempts\n0\nSteps in sample\n0\nSamples\n0\nCombination successes\n0\nPermutation successes\n0\nMean combination\nN/A\nMean permutations\nN/A\nRatio\nN/A\nInstructions\nYou are in Dice mode. Please pick dice faces for every square."
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "mandelbrot",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=mandelbrot"
+        },
+        "value": {
+          "monitors": [
+            "Tick\n1\nComputed patches\n1491\nTotal iterations\n1500"
+          ],
+          "overflow": false,
+          "status": ""
+        }
+      },
+      "screenshot": {
+        "retained": false,
+        "repositoryPath": null
+      }
+    },
+    {
+      "slug": "random-combinations-and-permutations-color-mode",
+      "result": {
+        "toolIcon": {
+          "_tag": "website",
+          "pageUrl": "http://localhost:3112/?experiment=random-combinations-and-permutations"
+        },
+        "value": {
+          "monitors": [
+            "Search attempts\n1\nSteps in sample\n1\nSamples\n0\nCombination successes\n0\nPermutation successes\n0\nMean combination\nN/A\nMean permutations\nN/A\nRatio\nN/A\nInstructions\nThe program guesses combinations randomly and tracks matches."
+          ],
+          "overflow": false
+        }
+      },
+      "screenshot": {
+        "retained": true,
+        "repositoryPath": "docs/development/selected-probability-integration-evidence/random-combinations-and-permutations-color-mode.png"
+      }
+    }
+  ],
+  "monitorScreenshot": {
+    "repositoryPath": "docs/development/selected-probability-integration-evidence/combination-monitors.png",
+    "content": "Scrolled mobile combination board and charts; filename is historical, not a monitor-only crop."
+  }
+}
