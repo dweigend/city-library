@@ -8,4 +8,4 @@ Original example04 SHA-256 at freeze d4102d6: `eebac55fbd04bf8cf0395b1161175ab54
 
 Authorized replacement SHA-256: `9d4e26cdc6417c67235ec497432ab7e2e2dc36216ebcee951bce9c8ba05cc5a8`.
 
-The other four example hashes are unchanged. The [original correction patch](selected-materials-example-correction.patch) remains a historical description of the now-applied change. The historical failing output is preserved in selected-materials-evidence/frozen-examples.log; new verification will be recorded separately. This correction does not clear the independent-review, canvas-capture or local dependency gates.
+The other four example hashes are unchanged. The [original correction patch](selected-materials-example-correction.patch) remains a historical description of the now-applied change. The historical failing output is preserved in selected-materials-evidence/frozen-examples.log; the complete five-script rerun passed and is recorded separately in [refrozen-examples.log](selected-materials-evidence/refrozen-examples.log). This correction does not clear the independent-review, canvas-capture or local dependency gates.

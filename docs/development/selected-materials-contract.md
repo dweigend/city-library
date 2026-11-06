@@ -9,3 +9,5 @@ Source-specific public named procedure actions and readback spellings are fixed 
 Frozen scenarios cover open-boundary avalanches and unique-site/lifetime counts; signed Metropolis energy and attempted-flip time; old/next sand phase barrier and tick-zero spout; vacancy conservation and canonical occupancy; interstitial blocked hops, reservoirs, profile editing and stop; thermal equation/material action; self-inclusive crystallization cooling and terminal barrier; DLA radial motion, birth throttle, natural growth and stop. Stochastic checks assert mechanisms/invariants only.
 
 Independent approval: pending, Argon quota blocker 8194e842, no retry/substitution. No source/browser milestone is inferred from this freeze.
+
+Authorized source-counter correction: the user approved example04 `numFrozen`1→0. Commit08d38c6 changed only that expectation, recorded old/new hashes and refroze it before the complete five-script rerun. All five now pass; see [refreeze decision](selected-materials-example-refreeze.md). API syntax, setup inputs, physics and every other assertion remain as originally frozen.
