@@ -1,0 +1,24 @@
+{
+  "slug": "vants",
+  "command": "setup let initial [heading] of turtle 0 repeat 25 [ go-forward ] repeat 25 [ go-reverse ] show ([heading] of turtle 0 = initial)",
+  "execution": "Original NetLogo Command Center, editor population followed by native Enter",
+  "observed": {
+    "file": "Vants.nlogox",
+    "sha": "66ee2a39c0879a05bd850ed5424d7650be59d23741be8126f8b2e7888c0977d7",
+    "tick": 50,
+    "patches": 58081,
+    "values": {},
+    "rowOn": [],
+    "rowOnCount": 0,
+    "turtles": 1,
+    "visibleTurtles": 1,
+    "heads": [
+      {
+        "x": 0,
+        "y": 0,
+        "heading": 270
+      }
+    ],
+    "console": " powered by NetLogo\nVants\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 50\n?\nfor shortcuts\nsetup\nforward\nnum-vants\nreverse\nCommand Center\nobserver> setup let initial [heading] of turtle 0 repeat 25 [ go-forward ] repeat 25 [ go-reverse ] show ([heading] of turtle 0 = initial)\nobserver: true\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+}

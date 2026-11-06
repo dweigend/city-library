@@ -1,0 +1,309 @@
+{
+  "head": "ab7199dad4af71a0b1cbe7039c9bcdfdb8226b03",
+  "slug": "cyclic-ca",
+  "setup": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nNeighbors\n48\nStates\n3\nThreshold\n3\nStatus"
+    ],
+    "status": [
+      "",
+      "Model initialized."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 715853381,
+        "nonzero": 5419008
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "none"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "3"
+      }
+    ],
+    "diagnostics": {}
+  },
+  "progress": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n30\nNeighbors\n48\nStates\n3\nThreshold\n3\nStatus"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 715853381,
+        "nonzero": 5419008
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "none"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "3"
+      }
+    ],
+    "diagnostics": {}
+  },
+  "desktop-dark": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n30\nNeighbors\n48\nStates\n3\nThreshold\n3\nStatus"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 715853381,
+        "nonzero": 5419008
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "none"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "3"
+      }
+    ],
+    "diagnostics": {}
+  },
+  "mobile-dark": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n30\nNeighbors\n48\nStates\n3\nThreshold\n3\nStatus"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1649780262,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "none"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "3"
+      }
+    ],
+    "diagnostics": {}
+  },
+  "mobile-light": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n30\nNeighbors\n48\nStates\n3\nThreshold\n3\nStatus"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1649780262,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "none"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "3"
+      }
+    ],
+    "diagnostics": {}
+  }
+}

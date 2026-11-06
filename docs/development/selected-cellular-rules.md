@@ -30,7 +30,7 @@ A row model at its bottom row completes the last valid row first. A following at
 
 - `bun examples/selected-cellular/04-elementary-and-continuous-rows.ts`: passed unchanged.
 - `bun examples/selected-cellular/05-refractory-cycle-and-stochastic-extremes.ts`: passed unchanged.
-- `bun test tests/selected-cellular-rules.test.ts`: 15 passed, 0 failed; 2117 assertions.
+- `bun test tests/selected-cellular-rules.test.ts`: 16 passed, 0 failed; 2118 assertions (including the coordinator’s executed-original palette regression).
 - `bun run typecheck`: passed after coordinator reused already installed pinned dependencies through a local untracked node_modules link. No install or manifest change.
 
 The tests cover all 256 elementary rules × eight patterns, source startup105, bit synchronization, row stop/resume/automatic continuation, preview and setup, continuous equations/precision, stochastic zero-draw and 100% paths, histogram normalization/entropy, absorbing states, all five stochastic example tables, Brain toroidal births/refractory timing/erase strokes, both Cyclic geometries/all20 presets/periodic synchronous propagation, and atomic failures/pure observations.

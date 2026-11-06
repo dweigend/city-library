@@ -1,0 +1,49 @@
+{
+  "parameter": "numVants",
+  "value": 2,
+  "observed": {
+    "url": "http://localhost:3119/?experiment=vants",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nBlack cells\n0",
+      "id\ncl_4pdnel3dhmujicyk\nwho\n0\nx\n0\ny\n0\nheading\n180"
+    ],
+    "status": [
+      "",
+      "Model initialized."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 2 agents. Arrow keys select an item. Selected cl_4pdnel3dhmujicyk",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 4101168640,
+        "nonzero": 5419008
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "241"
+      },
+      {
+        "name": "height",
+        "value": "241"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "numVants",
+        "value": "2"
+      }
+    ]
+  }
+}
