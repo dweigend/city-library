@@ -4992,33 +4992,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/chloroplasts-and-food/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "docs/development/selected-biology-source-audit.md"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/chloroplasts-and-food/model.ts",
+            "experiments/chloroplasts-and-food/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-chloroplasts-and-food.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-chloroplasts-and-food.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5031,7 +5057,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Slime",
@@ -5045,33 +5073,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/slime/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "docs/development/selected-biology-source-audit.md"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/slime/model.ts",
+            "experiments/slime/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-slime.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-slime.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5084,7 +5138,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Fur",
@@ -5098,33 +5154,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/fur/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "docs/development/selected-biology-source-audit.md"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/fur/model.ts",
+            "experiments/fur/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-fur.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-fur.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5137,7 +5219,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Blood Sugar Regulation",
@@ -5151,33 +5235,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/blood-sugar-regulation/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "examples/selected-biology/03-homeostasis-and-exercise.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/blood-sugar-regulation/model.ts",
+            "experiments/blood-sugar-regulation/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
           "done": false,
-          "evidence": []
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Runtime/mechanism tests pass, but immutable public03 fails at411 vs412. Exact source-backed proposed correction awaits explicit user agreement; no silent relaxation."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-blood-sugar-regulation.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-blood-sugar-regulation.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5190,7 +5300,10 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842.",
+        "Frozen script03 expects411/722, actual source creation rounds to412/724; exact patch awaits explicit user agreement, full03/wholephase not accepted."
+      ]
     },
     {
       "path": "Sample Models/Biology/Honeycomb",
@@ -5204,33 +5317,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/honeycomb/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "docs/development/selected-biology-source-audit.md"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/honeycomb/model.ts",
+            "experiments/honeycomb/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-honeycomb.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-honeycomb.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5243,7 +5382,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Autumn",
@@ -5257,33 +5398,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/autumn/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "docs/development/selected-biology-source-audit.md"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/autumn/model.ts",
+            "experiments/autumn/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-autumn.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-autumn.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5296,7 +5463,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Membrane Formation",
@@ -5310,33 +5479,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/membrane-formation/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "docs/development/selected-biology-source-audit.md"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/membrane-formation/model.ts",
+            "experiments/membrane-formation/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-membrane-formation.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-membrane-formation.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5349,7 +5544,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Sunflower Emergent",
@@ -5363,33 +5560,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/sunflower-emergent/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "docs/development/selected-biology-source-audit.md"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/sunflower-emergent/model.ts",
+            "experiments/sunflower-emergent/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-sunflower-emergent.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-sunflower-emergent.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5402,7 +5625,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Tumor",
@@ -5416,33 +5641,59 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/tumor/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "docs/development/selected-biology-source-audit.md"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/tumor/model.ts",
+            "experiments/tumor/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-tumor.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-tumor.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5455,7 +5706,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Muscle Development",
@@ -5469,33 +5722,60 @@
           ]
         },
         "source-audited": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-source-audit.md",
+            "docs/development/selected-biology-source-audit.json",
+            "experiments/muscle-development/source.nlogox"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "contract-frozen": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-examples.sha256",
+            "examples/selected-biology/03-homeostasis-and-exercise.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "implemented": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "experiments/muscle-development/model.ts",
+            "experiments/muscle-development/ui.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "headless-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-handoff.md",
+            "docs/development/selected-biology-evidence/final-checks.json",
+            "docs/development/selected-biology-evidence/final-check-03.log",
+            "docs/development/selected-biology-integration-evidence/verify-muscle-tail.ts"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending. Root separately executed the exact unchanged frozen Muscle tail after blocked Blood assertion."
         },
         "browser-verified": {
-          "done": false,
-          "evidence": []
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-muscle-development.md",
+            "docs/development/selected-biology-evidence/images.sha256",
+            "docs/development/selected-biology-evidence/status-fix.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "reviewed": {
           "done": false,
           "evidence": []
         },
         "baseline-compared": {
-          "done": false,
-          "evidence": [],
-          "basis": "pending actual reference and target browser comparison"
+          "done": true,
+          "evidence": [
+            "docs/development/selected-biology-muscle-development.md",
+            "docs/development/selected-biology-evidence/browser-observations.json"
+          ],
+          "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
         "research-verified": {
           "done": true,
@@ -5508,7 +5788,9 @@
           "basis": "research-complete200; all structural/sourcehash checks, breadth/source-fidelity sight inspection; primary evidence tiers explicit; not scientific peer review"
         }
       },
-      "blockers": []
+      "blockers": [
+        "Required independent Argon/high approval pending quota-blocked task8194e842."
+      ]
     },
     {
       "path": "Sample Models/Biology/Evolution/Mimicry",
