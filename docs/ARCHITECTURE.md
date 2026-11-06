@@ -2,6 +2,10 @@
 
 Status: binding Agent Loom target and system architecture for the integration branch. Updated: 6 November 2026. Delivered headless subsets include agents/worlds, standard Mulberry random streams and distributions, spatial movement, Grid/Field operations, Graph operations, planar geometry and statistics; this is not complete Agent Loom parity. The [work plan](../PLAN.md) owns current progress and acceptance, and the [consolidation report](development/consolidation-report.md) records executed integration checks and their limits. [UI design](DESIGN.md) owns visual, component, styling and browser-review rules. The [README](../README.md) remains the public introduction.
 
+## Reading this document
+
+For a runnable introduction, start with [model authoring](development/model-authoring.md). This document owns the rules behind that workflow: [domain ownership](#binding-architecture-rules), [module layout](#binding-domain-layout-and-extension-rules), [public contracts](#dependency-and-public-contract-rules) and [time, randomness and observations](#time-randomness-and-observation). [UI design](DESIGN.md) and the [UI specification](ui/README.md) own presentation and author-facing bindings. Use [PLAN](../PLAN.md) for current priorities and acceptance status.
+
 ## Binding architecture rules
 
 These rules are mandatory throughout the project, including libraries, applications, examples and future adapters. They are normative constraints, not claims of implemented functionality. The [Agent Loom specification](agent-loom/README.md) is also binding for phase one. Broader city scenarios remain design sketches unless explicitly accepted.

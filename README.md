@@ -1,31 +1,32 @@
 # City Library
 
-A modular, TypeScript-first toolkit for procedural cities and agent-based models. Use focused geometry, graph and simulation capabilities independently, then compose the parts your model needs. Applications own visualization; the library owns domain logic and state.
+City Library is an open, composable system for experimenting with city simulations. It brings together agents, space, networks and measurements so different ideas about urban layouts, transport, resources and energy can be explored through explicit models.
 
-> **Work in progress.** The headless library includes agents/worlds, reproducible random streams, spatial movement, grids/fields, graph operations, planar geometry and statistics. Agent Lab currently discovers 125 experiment entries toward a fixed 200-model NetLogo Web selection. Implementation, scientific comparison and independent acceptance remain separate milestones. The Svelte UI is an integrated work-in-progress runtime; Taxi Cabs migration and independent visual approval remain open. No package is published. See the [current plan](PLAN.md) and [consolidation evidence](docs/development/consolidation-report.md).
+The motivation is to make room for alternatives to familiar city-building patterns, including questions about more sustainable cities. A simulation makes assumptions and consequences inspectable; it does not establish that a planning choice will have a particular real-world impact.
 
-## Purpose
+The library uses ordinary TypeScript. Each capability can work independently, and applications choose how to visualize its results. Agent Loom is the modeling core within City Library.
 
-City Library aims to become a city engine for exploring sustainable cities of the future. The motivation is that many city builders reproduce familiar urban patterns rather than help explore how cities could be planned more sustainably. This project puts those future possibilities at the center: how urban layouts, transport, resource cycles and energy systems could work together under different planning choices.
+> **Work in progress.** The integration branch includes a headless library and 125 experiment entries toward a fixed 200-model selection. Code presence, scientific comparison and independent acceptance are separate milestones. The Svelte runtime is integrated but still undergoing acceptance; Taxi Cabs retains its legacy entry. No package is published. See [PLAN](PLAN.md) for current scope and [consolidation evidence](docs/development/consolidation-report.md) for recorded checks and limits.
 
-The engine should make those concepts explicit and testable through simulation. Sustainability is a design question to investigate through stated assumptions and observable outcomes.
+## Run the Lab
 
-## Development approach
+From the repository root, use Bun 1.4.2 and start the Svelte work-in-progress runtime:
 
-1. **Agent Loom first.** Build the agent modeling core as pure logic, without a UI. Establish independently usable and testable simulation behavior before adding presentation.
-2. **Extend through focused libraries.** Add capabilities for city grids, traffic, resource cycles and energy systems. Develop each capability independently, then compose them into broader city simulations.
-3. **Compose a headless city engine.** Keep simulation logic and UI clearly separated. The complete engine must work without a browser or renderer, so scripts, experiments and different interfaces can use the same models.
+```sh
+bun install --frozen-lockfile
+CITY_LIBRARY_UI_RUNTIME=svelte bun run dev:ui:svelte
+```
 
-Agent Loom is implemented in bounded, publicly tested slices. Complete Agent Loom coverage, building generation and broader city models remain delivery goals.
+Open http://localhost:3101. Choose an experiment, set its initial values and press Setup. Advance one step at a time or use Run/Pause. Live controls call model actions; setup controls prepare the next initialization.
 
-## Documentation
+The runtime variable is required: the Vite command defaults to legacy rendering. For the older Bun host, run `bun run dev:ui` and open http://localhost:3100. See [Lab usage](ui/agent-lab/README.md) for ports, updates and migration limits.
 
-- [Agent Loom specification](docs/agent-loom/README.md): the general modeling core and current development focus.
-- [API inventory](docs/agent-loom/api-table.md): the 309 target operation/type entries; implementation coverage is tracked separately.
-- [API reference](docs/agent-loom/api-reference.md): contracts and usage examples.
-- [Architecture](docs/ARCHITECTURE.md): module boundaries, state ownership and extension rules.
-- [UI design](docs/DESIGN.md): component, styling and UI verification rules.
-- [Work plan](PLAN.md): delivery sequence and acceptance criteria.
+## Write and explore
+
+- [Write a model](docs/development/model-authoring.md): follow a real headless model and its UI binding.
+- [Documentation](docs/README.md): find architecture, APIs, authoring rules and evidence.
+- [Agent Loom reference](docs/agent-loom/README.md): target contracts and operation inventory; delivered coverage is tracked separately.
+- [Work plan](PLAN.md): current priorities and acceptance gates.
 
 ## How the pieces fit
 
@@ -52,39 +53,10 @@ flowchart TD
     Data --> Apps
 ```
 
-This is a composition map, not a required startup sequence. A building generator can work without residents, a graph without coordinates, and an agent model without a grid or renderer. Kits combine the same public operations available to model authors.
+This is a composition map, not a required startup sequence. A graph needs no coordinates, an agent model needs no grid, and a building generator need not create residents. Broader building generation and city-domain models remain delivery goals.
 
-## Work areas
+## Development
 
-| Area | Purpose |
-| --- | --- |
-| Simulation | Agents, worlds, lifecycle, time and execution |
-| Spatial Structures | Geometry, grids, fields, neighborhoods and spatial queries |
-| Graphs | Connections, routes, network generation and analysis |
-| Generation | Terrain, streets, parcels and alternative building generators |
-| City Models | Mobility, households, allocation, economy and supply |
-| Data & Experiments | Validated inputs, statistics, experiments and storage |
+`bun run check` runs TypeScript/Svelte checks, tests, public examples, the library build and a packed Bun/Node/TypeScript consumer. The consumer requires Node 26.8.2. `bun run build:ui:svelte` builds the Vite host; use `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte` when building the Svelte runtime explicitly.
 
-Phase one completes the Agent Loom core incrementally through public examples and verified implementation slices. Building generation and broader city models follow. Agent Loom is part of City Library, not a separate required engine.
-
-## Development and verification
-
-Use the repository-pinned Bun toolchain and install dependencies with `bun install --frozen-lockfile`.
-
-- `bun run check`: TypeScript/Svelte checks, tests, public examples, library build and packed Bun/Node/TypeScript consumer.
-- `bun run dev:ui`: existing Bun-hosted Agent Lab at http://localhost:3100.
-- `bun run dev:ui:svelte`: separate Vite/Svelte development entry.
-- `bun run build:ui:svelte`: Svelte production build.
-
-The [consolidation checkpoint](docs/development/consolidation-report.md#executed-verification-and-limits) records 565 tests and 215 public scripts passing, followed by targeted typecheck, consumer and Svelte-build checks. These are recorded results, not a claim that every model or UI state has final acceptance. Browser evidence is scoped to the models and interactions actually exercised. The [model ledger](experiments/catalog/progress-summary.json) still needs reconciliation with the later integrated batches.
-
-## Modeling principles
-
-- Write ordinary TypeScript with directly typed model properties and native collections.
-- Keep each capability independently usable and compose through public APIs.
-- Give each live value one owner; share canonical references across domains.
-- Make randomness, execution order, units, defaults and failure behavior explicit.
-- Keep rendering and host I/O outside the domain logic. UI edits use defined actions.
-- Add replaceable variants through focused contracts while preserving existing behavior.
-
-Generator results describe geometry and declared properties. Connecting them to residents, capacities or a live simulation is explicit. Saving measurements does not imply that a complete model can be resumed.
+Keep model state under one owner, use public actions for changes and keep rendering outside the headless library. New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md) and [UI design](docs/DESIGN.md) define the binding rules.
