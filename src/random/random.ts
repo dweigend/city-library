@@ -3,12 +3,14 @@ import { validateOptions } from "../agent/state.ts";
 import { normalizeSeed, snapshot, validateState, type RandomState, type StreamState } from "./continuation.ts";
 import { sample, type SampleOptions } from "./sampling.ts";
 import { uniformDraw, type UniformOptions } from "./uniform.ts";
+import { normalDraw, polarGaussian, type NormalOptions } from "./normal.ts";
 export interface Random {
   readonly algorithm: "mulberry32";
   readonly seed: number;
   state: RandomState;
   number(): number;
   number(options: UniformOptions): number;
+  number(options: NormalOptions): number;
   sample<T>(source: Iterable<T>, options?: SampleOptions<T>): T[];
   reseed(seed: number): void;
   copy(): Random;
@@ -29,14 +31,26 @@ function add(options: { seed?: number; algorithm?: "mulberry32" } = {}): Random 
     value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
     return ((value ^ (value >>> 14)) >>> 0) / 0x100000000;
   }
+  function gaussian(): number {
+    if (state.gaussian !== null) {
+      const value = state.gaussian;
+      state.gaussian = null;
+      return value;
+    }
+    const pair = polarGaussian(draw);
+    state.gaussian = pair.companion;
+    return pair.value;
+  }
   const random: Random = {
     algorithm: "mulberry32",
     get seed() { return state.seed; },
     get state() { return snapshot(state); },
     set state(value: RandomState) { state = validateState(value); },
-    number(options: UniformOptions = {}) {
+    number(options: UniformOptions | NormalOptions = {}) {
       if (arguments.length > 1) throw new TypeError("Unexpected number arguments.");
-      return uniformDraw(options, draw);
+      // Inspect only validated data: even a distribution getter must not run.
+      const record = validateOptions(options, ["distribution", "min", "max", "integer", "mean", "deviation"]);
+      return record.distribution === "normal" ? normalDraw(record, gaussian) : uniformDraw(record, draw);
     },
     sample<T>(source: Iterable<T>, options: SampleOptions<T> = {}) {
       if (arguments.length > 2) throw new TypeError("Unexpected sample arguments.");

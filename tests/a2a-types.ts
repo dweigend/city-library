@@ -16,7 +16,7 @@ function typeContracts() {
   // @ts-expect-error Deferred entropy construction is not advertised.
   Random.add({ seed: "random" });
   // @ts-expect-error Deferred distribution overload is not advertised.
-  random.number({ distribution: "normal" });
+  random.number({ distribution: "exponential" });
   // @ts-expect-error Deferred raw variants are not advertised.
   random.raw({ kind: "int32" });
   return [energy, copied, value];
