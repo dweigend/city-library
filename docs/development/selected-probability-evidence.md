@@ -1,5 +1,7 @@
 # B17 executed transfer evidence
 
+Historical runtime evidence at ea2cdd6. Integration-coordinator architecture findings prevent integration/acceptance; see [active remediation](selected-probability-remediation.md). These images do not verify the subsequent corrected runtime.
+
 Executed 5–6 November 2026. Issue [#9](https://github.com/dweigend/city-library/issues/9), under Epic #1. Scope is exactly the ten fixed B17 catalog paths. **10 implemented; 10 headless-verified; 10 target-browser-verified; 10 original-baseline comparisons; 0 independently reviewed; 10 technical reviews pending.** This is a scoped integration handoff, not final acceptance of the 200-model catalog.
 
 ## Source and execution basis
