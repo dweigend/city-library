@@ -1,3 +1,4 @@
+import type { RendererOptions } from "./appearance.ts";
 import type {
   Cell,
   GridData,
@@ -9,16 +10,20 @@ export function mountCanvas(
   container: HTMLElement,
   select: (id: string) => void,
   intent?: (intent: DrawingIntent) => void,
+  options: RendererOptions = {},
 ) {
   const canvas = document.createElement("canvas");
-  canvas.className = "world";
+  canvas.className = options.theme ? "model-canvas" : "world";
   canvas.tabIndex = 0;
   container.append(canvas);
   const context = canvas.getContext("2d");
   if (!context) throw new Error("Canvas 2D is unavailable.");
   const ctx = context;
+  let disposed = false;
   let latest: GridData | SpatialData | undefined;
   let pixelWidth = 400;
+  let availableWidth = 400;
+  let displayHeightLimit = Infinity;
   let selected: string | null = null;
   let showLabels = false;
   let drawingEnabled = false;
@@ -29,7 +34,7 @@ export function mountCanvas(
   labels.type = "checkbox";
   labelControl.append(labels, "Labels");
   labelControl.hidden = true;
-  container.insertBefore(labelControl, canvas);
+  if (options.controls !== false) container.insertBefore(labelControl, canvas);
   labels.addEventListener("change", () => {
     showLabels = labels.checked;
     draw();
@@ -46,7 +51,8 @@ export function mountCanvas(
   function draw() {
     const data = latest;
     if (!data) return;
-    ctx.fillStyle = "#151515";
+    const theme = options.theme?.();
+    ctx.fillStyle = theme?.background ?? "#151515";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     for (const cell of data.cells ?? [])
       drawCell(cell, data.width, data.height);
@@ -56,7 +62,7 @@ export function mountCanvas(
         const width = segment.width ?? 1;
         // Canvas ignores lineWidth = 0, so omit invisible strokes explicitly.
         if (width === 0) continue;
-        ctx.strokeStyle = segment.color ?? "#fff";
+        ctx.strokeStyle = segment.color ?? theme?.foreground ?? "#fff";
         ctx.lineWidth = width * Math.min(devicePixelRatio, 2);
         ctx.beginPath();
         ctx.moveTo(
@@ -82,7 +88,7 @@ export function mountCanvas(
         ctx.save();
         ctx.translate(x, y);
         ctx.rotate(((agent.heading ?? 0) * Math.PI) / 180);
-        ctx.fillStyle = agent.color ?? "#fff";
+        ctx.fillStyle = agent.color ?? theme?.foreground ?? "#fff";
         ctx.beginPath();
         if (agent.shape === "triangle") {
           ctx.moveTo(0, -size / 2);
@@ -92,22 +98,26 @@ export function mountCanvas(
         } else ctx.arc(0, 0, size / 2, 0, Math.PI * 2);
         ctx.fill();
         if (agent.id === selected) {
-          ctx.strokeStyle = "#fbbf24";
+          ctx.strokeStyle = theme?.selected ?? "#fbbf24";
           ctx.lineWidth = 2;
           ctx.stroke();
         }
         ctx.restore();
         if ((data.showLabels ?? showLabels) && agent.label) {
-          ctx.font = `${12 * Math.min(devicePixelRatio, 2)}px system-ui, sans-serif`;
+          ctx.font = theme?.font ?? `${12 * Math.min(devicePixelRatio, 2)}px system-ui, sans-serif`;
           ctx.lineWidth = 3;
-          ctx.strokeStyle = "#151515";
-          ctx.fillStyle = "#fff";
+          ctx.strokeStyle = theme?.background ?? "#151515";
+          ctx.fillStyle = theme?.foreground ?? "#fff";
           ctx.strokeText(agent.label, x + size, y - size);
           ctx.fillText(agent.label, x + size, y - size);
         }
       }
   }
   function resizeBuffer() {
+    if (options.theme) {
+      const ratio = latest ? latest.width / latest.height : 1;
+      pixelWidth = Math.max(1, Math.min(availableWidth, displayHeightLimit * ratio)) * Math.min(devicePixelRatio, 2);
+    }
     const height = pixelWidth * (latest ? latest.height / latest.width : 1);
     if (canvas.width !== Math.round(pixelWidth))
       canvas.width = Math.round(pixelWidth);
@@ -115,13 +125,15 @@ export function mountCanvas(
       canvas.height = Math.round(height);
   }
   const resize = new ResizeObserver((entries) => {
-    pixelWidth =
-      Math.max(1, entries[0]?.contentRect.width ?? 200) *
-      Math.min(devicePixelRatio, 2);
+    const width = Math.max(1, entries[0]?.contentRect.width ?? 200);
+    if (options.theme) {
+      availableWidth = width;
+      displayHeightLimit = parseFloat(getComputedStyle(canvas).maxHeight) || Infinity;
+    } else pixelWidth = width * Math.min(devicePixelRatio, 2);
     resizeBuffer();
     draw();
   });
-  resize.observe(canvas);
+  resize.observe(options.theme ? container : canvas);
   function pick(event: MouseEvent) {
     const data = latest;
     if (!data) return;
@@ -182,13 +194,17 @@ export function mountCanvas(
     if (canvas.hasPointerCapture(active)) canvas.releasePointerCapture(active);
     intent?.({ phase: "end" });
   }
+  function setDrawingPresentation(enabled: boolean) {
+    if (options.theme) canvas.dataset.drawing = String(enabled);
+    else canvas.style.touchAction = enabled ? "none" : "auto";
+  }
   function stopDrawing() {
     drawingEnabled = false;
-    canvas.style.touchAction = "auto";
+    setDrawingPresentation(false);
     endStroke();
     // The end intent may synchronously render the old observation.
     drawingEnabled = false;
-    canvas.style.touchAction = "auto";
+    setDrawingPresentation(false);
   }
   function pointerEnd(event: PointerEvent) {
     if (pointer === event.pointerId) endStroke();
@@ -252,9 +268,9 @@ export function mountCanvas(
     update(data: GridData | SpatialData, id: string | null, drawing = false) {
       if (!drawing) stopDrawing();
       drawingEnabled = Boolean(intent) && drawing;
-      canvas.style.touchAction = drawingEnabled ? "none" : "auto";
+      setDrawingPresentation(drawingEnabled);
       latest = data;
-      canvas.style.aspectRatio = `${data.width} / ${data.height}`;
+      if (!options.theme) canvas.style.aspectRatio = `${data.width} / ${data.height}`;
       resizeBuffer();
       selected = id;
       labelControl.hidden =
@@ -268,7 +284,10 @@ export function mountCanvas(
       draw();
     },
     stopDrawing,
+    setLabels(value: boolean) { showLabels = value; draw(); },
     dispose() {
+      if (disposed) return;
+      disposed = true;
       stopDrawing();
       resize.disconnect();
       canvas.removeEventListener("pointerdown", pointerDown);

@@ -71,6 +71,15 @@ export async function discoverEntries(
   return result.sort((a, b) => a.title.localeCompare(b.title));
 }
 
+/** Shared literal lazy-import module for the Bun and Vite hosts. */
+export function createCatalogModule(
+  entries: readonly DiscoveredEntry[],
+  version: string,
+  importPath: (entry: DiscoveredEntry) => string = (entry) => entry.uiPath,
+): string {
+  return `export const version=${JSON.stringify(version)};export const catalog=[${entries.map((entry) => `{slug:${JSON.stringify(entry.slug)},title:${JSON.stringify(entry.title)},description:${JSON.stringify(entry.description)},error:${JSON.stringify(entry.error)},load:async()=>{${entry.error ? `throw new Error(${JSON.stringify(entry.error)});` : `const module=await import(${JSON.stringify(importPath(entry))});return module.ui;`}}}`).join(",")}];`;
+}
+
 async function serve() {
   const portText = process.env.CITY_LIBRARY_UI_PORT ?? "3100";
   if (
@@ -94,7 +103,7 @@ async function serve() {
     try {
       const entries = await discoverEntries();
       const nextVersion = String(Date.now());
-      const code = `export const version=${JSON.stringify(nextVersion)};export const catalog=[${entries.map((entry) => `{slug:${JSON.stringify(entry.slug)},title:${JSON.stringify(entry.title)},description:${JSON.stringify(entry.description)},error:${JSON.stringify(entry.error)},load:async()=>{${entry.error ? `throw new Error(${JSON.stringify(entry.error)});` : `const module=await import(${JSON.stringify(entry.uiPath)});return module.ui;`}}}`).join(",")}];`;
+      const code = createCatalogModule(entries, nextVersion);
       const built = await Bun.build({
         entrypoints: [resolve(root, "ui/agent-lab/app.ts")],
         target: "browser",

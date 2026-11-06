@@ -1,12 +1,14 @@
+import type { RendererOptions } from "./appearance.ts";
 import cytoscape from "cytoscape";
 import type { NetworkEdge, NetworkNode } from "../definition.ts";
 
 export function mountNetwork(
   container: HTMLElement,
   select: (id: string) => void,
+  options: RendererOptions = {},
 ) {
   const canvas = document.createElement("div");
-  canvas.className = "network";
+  canvas.className = options.theme ? "model-network" : "network";
   container.append(canvas);
   const cy = cytoscape({
     container: canvas,
@@ -17,6 +19,7 @@ export function mountNetwork(
     autounselectify: true,
   });
   function labelTheme() {
+    if (options.theme) return options.theme().muted;
     return (
       getComputedStyle(canvas).getPropertyValue("--muted").trim() || "#626262"
     );
@@ -30,7 +33,8 @@ export function mountNetwork(
         height: "data(size)",
         "background-color": "data(color)",
         label: "data(label)",
-        "font-size": 11,
+        "font-size": options.theme ? parseFloat(getComputedStyle(container).fontSize) : 11,
+        ...(options.theme ? { "font-family": getComputedStyle(container).fontFamily } : {}),
         "text-valign": "bottom",
         "text-margin-y": 5,
         color: labelTheme(),
@@ -38,7 +42,7 @@ export function mountNetwork(
     },
     {
       selector: ".selected",
-      style: { "border-width": 3, "border-color": "#b45309" },
+      style: { "border-width": 3, "border-color": options.theme?.().selected ?? "#b45309" },
     },
     {
       selector: "edge",
@@ -56,11 +60,16 @@ export function mountNetwork(
   const appearance = window.matchMedia("(prefers-color-scheme: dark)");
   function updateTheme() {
     if (!disposed) {
-      cy.style().selector("node").style({ color: labelTheme() }).update();
+      cy.style().selector("node").style({ color: labelTheme() }).selector(".selected").style({ "border-color": options.theme?.().selected ?? "#b45309" }).update();
       cy.edges().filter(edge => edge.data("defaultColor")).data("color", edgeTheme());
     }
   }
-  appearance.addEventListener("change", updateTheme);
+  function appearanceChanged() {
+    // The host refreshes its resolved tokens in the same media-change turn.
+    if (options.theme) queueMicrotask(updateTheme);
+    else updateTheme();
+  }
+  appearance.addEventListener("change", appearanceChanged);
   cy.on("tap", "node", (event) => select(event.target.id()));
   function fit() {
     if (!disposed) {
@@ -104,7 +113,7 @@ export function mountNetwork(
     button.addEventListener("click", action);
     actions.append(button);
   }
-  container.insertBefore(actions, canvas);
+  if (options.controls !== false) container.insertBefore(actions, canvas);
   const chooser = document.createElement("select");
   chooser.setAttribute("aria-label", "Select network node");
   actions.append(chooser);
@@ -170,7 +179,7 @@ export function mountNetwork(
           }
           element.data({
             label: nodes.length <= 80 ? (node.label ?? "") : "",
-            color: node.color ?? "#48778a",
+            color: node.color ?? options.theme?.().node ?? "#48778a",
             size: node.size ?? 16,
           });
           element.toggleClass("selected", selected === node.id);
@@ -205,9 +214,12 @@ export function mountNetwork(
         `${nodes.length} nodes and ${edges.length} connections`,
       );
     },
+    fit,
+    layout,
     dispose() {
+      if (disposed) return;
       disposed = true;
-      appearance.removeEventListener("change", updateTheme);
+      appearance.removeEventListener("change", appearanceChanged);
       resize.disconnect();
       cy.destroy();
       actions.remove();

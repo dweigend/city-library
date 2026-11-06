@@ -12,5 +12,9 @@
     "ui/**/*.ts",
     "experiments/**/*.ts",
     "models/agent-lab/model.ts"
+  ],
+  "exclude": [
+    "ui/components/**",
+    "ui/svelte/**"
   ]
 }

@@ -1,17 +1,19 @@
+import type { RendererOptions } from "./appearance.ts";
 import type { Series } from "../definition.ts";
 
 const ns = "http://www.w3.org/2000/svg";
 export function mountChart(
   container: HTMLElement,
   mode: "line" | "bar" | "scatter" = "line",
+  options: RendererOptions = {},
 ) {
   const svg = document.createElementNS(ns, "svg");
-  svg.classList.add("chart");
+  svg.classList.add(options.theme ? "model-chart" : "chart");
   svg.setAttribute("viewBox", "0 0 640 180");
   svg.setAttribute("role", "img");
   container.append(svg);
   const legend = document.createElement("div");
-  legend.className = "legend";
+  legend.className = options.theme ? "model-legend" : "legend";
   container.append(legend);
   return {
     update(series: readonly Series[]) {
@@ -44,10 +46,11 @@ export function mountChart(
           : value.toPrecision(3);
         svg.append(text);
       }
+      const palette = options.theme?.().series ?? ["#287e9b", "#b45309", "#4c8b54", "#9759a2"];
       series.forEach((line, index) => {
         const color =
           line.color ??
-          ["#287e9b", "#b45309", "#4c8b54", "#9759a2"][index % 4]!;
+          palette[index % palette.length]!;
         const valid = line.points.filter(
           (point) => Number.isFinite(point.x) && Number.isFinite(point.y),
         );
@@ -91,8 +94,20 @@ export function mountChart(
           }
         const label = document.createElement("span");
         label.textContent = line.label;
-        label.style.borderInlineStart = `3px solid ${color}`;
-        label.style.paddingInlineStart = ".35rem";
+        if (options.theme) {
+          const swatch = document.createElementNS(ns, "svg");
+          swatch.setAttribute("viewBox", "0 0 12 12");
+          swatch.setAttribute("aria-hidden", "true");
+          const mark = document.createElementNS(ns, "rect");
+          mark.setAttribute("width", "12");
+          mark.setAttribute("height", "12");
+          mark.setAttribute("fill", color);
+          swatch.append(mark);
+          label.prepend(swatch);
+        } else {
+          label.style.borderInlineStart = `3px solid ${color}`;
+          label.style.paddingInlineStart = ".35rem";
+        }
         legend.append(label);
       });
       svg.setAttribute(

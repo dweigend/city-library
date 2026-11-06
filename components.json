@@ -1,0 +1,14 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema.json",
+  "tailwind": { "css": "ui/agent-lab/app.css", "baseColor": "neutral" },
+  "aliases": {
+    "lib": "$lib",
+    "components": "$lib/components",
+    "ui": "$lib/components/ui",
+    "utils": "$lib/utils",
+    "hooks": "$lib/hooks"
+  },
+  "typescript": { "config": "tsconfig.svelte.json" },
+  "iconLibrary": "lucide",
+  "registry": "https://shadcn-svelte.com/registry"
+}
