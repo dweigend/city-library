@@ -65,3 +65,7 @@ const forward: PlanarPolygon = { type: "Polygon", coordinates: [
 assert.equal(geometry.contains(forward, { x: 2, y: 2 }, { boundary: "exclude" }), true);
 assert.deepEqual(geometry.bounds([{ type: "Feature", geometry: forward, properties: null }]), [0, 4, 0, 4]);
 console.log("planar proposal 01: shell/hole membership, boundaries, winding and topology");
+
+// Accepted default is include on both exterior and hole boundaries.
+assert.equal(geometry.contains(polygon, { x: 0, y: 5 }), true);
+assert.equal(geometry.contains(polygon, { x: 3, y: 5 }, { boundary: undefined }), true);

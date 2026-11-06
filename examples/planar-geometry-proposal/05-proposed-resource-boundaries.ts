@@ -37,3 +37,6 @@ assert.throws(() => geometry.contains(beyond, { x: 0, y: 0 }, { boundary: "exclu
 // Limits and failure bookkeeping must not poison a later unrelated call.
 assert.equal(geometry.contains(rectangle(5), { x: 0.5, y: 1 }, { boundary: "exclude" }), true);
 console.log("planar proposal 05: candidate containment-only count accounting; no inferred bounds/map caps");
+
+assert.throws(() => geometry.contains(rectangle(5), { x: 1000000001, y: 0 }), RangeError);
+assert.deepEqual(geometry.bounds([{ type: "Feature", geometry: tooMany, properties: null }]), [0, 2045, 0, 4]);

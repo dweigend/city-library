@@ -67,3 +67,13 @@ point[0] = 50;
 assert.deepEqual(observed, [4, 4, 6, 6]);
 assert.deepEqual(geometry.bounds([feature({ type: "Point", coordinates: point }, "fresh")]), [50, 50, 6, 6]);
 console.log("planar proposal 02: every geometry family, empty/null and detached bounds");
+
+// Pure bounds does not inherit codec/containment cardinality or magnitude caps.
+assert.deepEqual(geometry.bounds([feature({ type: "Point", coordinates: [-Number.MAX_VALUE, Number.MAX_VALUE] }, "finite-extreme")]), [-Number.MAX_VALUE, -Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE]);
+assert.equal(geometry.bounds(Array.from({ length: 10001 }, () => feature(null, "no-positions"))), undefined);
+const repeated = Array.from({ length: 100001 }, () => [2, 3] as const);
+assert.deepEqual(geometry.bounds([feature({ type: "MultiPoint", coordinates: repeated }, "uncapped-query")]), [2, 2, 3, 3]);
+// Members may overlap: per-Polygon topology does not invent a global partition rule.
+const square = shapes[4]!;
+assert.equal(square.type, "Polygon");
+if (square.type === "Polygon") assert.deepEqual(geometry.bounds([feature({ type: "MultiPolygon", coordinates: [square.coordinates, square.coordinates] }, "overlapping-members")]), [0, 2, 0, 2]);
