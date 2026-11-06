@@ -1,6 +1,6 @@
 import { defineUI, type UISpec } from '../../ui/index.ts';
 import { model, type WealthParameters } from '../../experiments/wealth-distribution/model.ts';
-import { assert, equal, labels, button } from './assertions.ts';
+import { assert, equal, labels, button, settle } from './assertions.ts';
 
 type Instance = ReturnType<typeof model.create>;
 export const spec = {
@@ -29,7 +29,7 @@ equal(second.read().randomState, secondBefore.randomState, 'Other instance RNG r
 legacySpec.live[0].set(second, 5);
 equal(second.read().parameters.growthAmount, 5, 'Legacy scalar-union setter remains accepted');
 
-export function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
+export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
   const left = container.ownerDocument.createElement('section');
   const right = container.ownerDocument.createElement('section');
   const old = container.ownerDocument.createElement('section');
@@ -41,16 +41,17 @@ export function browserChecks(container: HTMLElement, bind: typeof defineUI = de
   const browserUI = bind(tracked, spec);
   const mounted = [browserUI.mount(left), browserUI.mount(right), bind(model, legacySpec).mount(old)];
   try {
+    await settle(container);
     equal(labels(left, Object.keys(model.inputs)), ['Growth Amount'], 'Explicit empty setup leaves only live controls');
     equal(labels(old, Object.keys(model.inputs)).filter(label => label === 'Growth Amount').length, 2, 'Legacy omitted setup preserves duplicate live/setup behavior');
-    button(left, 'Setup').click(); button(right, 'Setup').click();
-    const action = button(left, 'One interval'); action.click();
+    button(left, 'Setup').click(); await settle(container); button(right, 'Setup').click(); await settle(container);
+    const action = button(left, 'One interval'); action.click(); await settle(container);
     equal(left.querySelector('dd')?.textContent?.trim(), '1', 'Mounted action advances only its model');
     equal(right.querySelector('dd')?.textContent?.trim(), '0', 'Second mounted entry remains independent');
     const disposedModel = browserInstances[0]!;
     const disposedBefore = disposedModel.read();
     mounted[0]!.dispose();
-    action.click();
+    action.click(); await settle(container);
     equal(disposedModel.read().tick, disposedBefore.tick, 'A stale action cannot advance its disposed original model');
     equal(disposedModel.read().randomState, disposedBefore.randomState, 'A stale action cannot consume its disposed original RNG');
     equal(right.querySelector('dd')?.textContent?.trim(), '0', 'A stale disposed action cannot affect another entry');

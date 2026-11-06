@@ -13,13 +13,13 @@ export async function runBrowserChecks(container: HTMLElement, host: 'legacy' | 
   for (const example of examples) {
     const fixture = container.ownerDocument.createElement('section');
     container.append(fixture);
-    try { example.browserChecks(fixture, bind); }
+    try { await example.browserChecks(fixture, bind); }
     finally { fixture.remove(); }
   }
   for (const check of [examples[1].overlapBrowserChecks, examples[2].precedenceBrowserChecks]) {
     const fixture = container.ownerDocument.createElement('section');
     container.append(fixture);
-    try { check(fixture, bind); } finally { fixture.remove(); }
+    try { await check(fixture, bind); } finally { fixture.remove(); }
   }
   return { host, examples: 5, overlapAndPrecedence: true } as const;
 }

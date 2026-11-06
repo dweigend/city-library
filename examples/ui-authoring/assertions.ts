@@ -48,3 +48,12 @@ export function changeInput(input: HTMLElement, value: number) {
 export function changeNumber(root: HTMLElement, label: string, value: number) {
   changeInput(control(root, label), value);
 }
+
+/** Test scheduling only: neither host promises synchronously rendered event effects. */
+export async function settle(root: HTMLElement): Promise<void> {
+  await Promise.resolve();
+  const view = root.ownerDocument.defaultView;
+  assert(view, 'Browser checks require an actual attached browser document');
+  await new Promise<void>(resolve => view.requestAnimationFrame(() => resolve()));
+  await Promise.resolve();
+}

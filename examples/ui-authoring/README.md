@@ -76,3 +76,21 @@ try {
 Replace the absolute worktree prefix if the checkout moves. This is an explicit test-harness invocation, not a public application API or production route change. `browser-harness.ts` directly imports the chosen adapter and passes its public `defineUI` into the examples; it does not rely on experiment-only import redirection. It executes the five browser functions plus the full overlap matrix and explicit-precedence check. The harness creates only actual DOM containers and real model instances. Browser execution remains a required follow-up and must report concrete host/module-loading blockers rather than claiming coverage from these instructions.
 
 The revised SHA manifest additionally includes this harness and the two initial-result logs. Global example registration and TypeScript-project inclusion belong to runtime delivery after the frozen failing checkpoint, as does reconciliation of PLAN/docs/ui candidate status. Independent source/design responses and eventual browser/visual approval must remain separate.
+
+## Scheduling correction after second freeze
+
+Coordinator commit `ce42cc3` preserved the second freeze. Its manifest remains below before changing the asynchronous test harness. Browser assertions must await host rendering after events; no public synchronous-DOM guarantee exists. The next revision only waits for a microtask, an actual browser animation frame and its following microtask. Scientific values, event order and asserted expectations remain unchanged. The harness awaits every check before removing its container. No runtime change or browser acceptance is claimed.
+
+```text
+eec8d251d60f6e65e2aaf9d5730d6c0de419c86f5532dc1584d5187263f41b08  examples/ui-authoring/01-defaults-and-inert-entry.ts
+c46904f2a9cad391cf51ceac0c08498665cd886ed8cc4135a6ac347d1e503f6a  examples/ui-authoring/02-ordered-setup-and-numeric-live.ts
+084da6c7c864e50381b69f66355a18aced872ec578a7d16c7ef5fc77ea8f892e  examples/ui-authoring/03-alternate-observation.ts
+604c6465f32353ac60427a911201842fbe79e608be57d7499b9dace2b3f6883c  examples/ui-authoring/04-groups-format-and-categories.ts
+5d29669a60cacf4e87656e448f44a5828bb8e033c0e30a6378606d505b50786c  examples/ui-authoring/05-independent-actions-and-legacy.ts
+34ef69cefbe6f195f8d558c879bf5b84eeb5e77e33968f71d5549e85a69f5d22  examples/ui-authoring/assertions.ts
+159de1b9c13722d398825bf18b2e864a32a9b45abdfc4cd8b2f3451675bfdc37  examples/ui-authoring/authoring.types.ts
+3c7f154284e32ac9549571a3e043ea0b1796aa29d037afc615baac2f76630549  examples/ui-authoring/tsconfig.json
+10c710eef2ae67625792b2849514d2e58bc14cc01bfb1903ddbd9d69ea75a970  examples/ui-authoring/browser-harness.ts
+5392c802645b73cc32d14de4365049d9acc2f3e143a021870a554c6c77e1184e  examples/ui-authoring/refreeze-headless.log
+91404f66a38c693ea6be8256c0572771e80fafc28a9e400a51e6a5241ee31d7f  examples/ui-authoring/refreeze-initial-typecheck.log
+```
