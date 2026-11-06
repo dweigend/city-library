@@ -1,0 +1,89 @@
+{
+  "slug": "language-change",
+  "sessionSourceSHA256": "99f71d55846902f726fdbe73059d852e9b8510a9102a3524dad3f625d8763e9f",
+  "source": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Language Change.nlogox",
+  "setupViaButton": true,
+  "setup": {
+    "ticks": {
+      "success": true,
+      "value": 0
+    },
+    "count nodes": {
+      "success": true,
+      "value": 100
+    },
+    "count links": {
+      "success": true,
+      "value": 99
+    },
+    "count nodes with [state = 1]": {
+      "success": true,
+      "value": 60
+    },
+    "mean [state] of nodes": {
+      "success": true,
+      "value": 0.6
+    }
+  },
+  "errors": [],
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "progress": {
+    "ticks": {
+      "success": true,
+      "value": 10
+    },
+    "count nodes": {
+      "success": true,
+      "value": 100
+    },
+    "count links": {
+      "success": true,
+      "value": 99
+    },
+    "count nodes with [state = 1]": {
+      "success": true,
+      "value": 51
+    },
+    "mean [state] of nodes": {
+      "success": true,
+      "value": 0.51
+    }
+  },
+  "intervention": {
+    "command": "set num-nodes 10 set percent-grammar-1 0 set update-algorithm \"threshold\" set threshold-val 0 set sink-state-1? false setup go",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 1
+      },
+      "[state] of nodes": {
+        "success": true,
+        "value": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "count links": {
+        "success": true,
+        "value": 9
+      }
+    },
+    "errors": []
+  },
+  "images": {
+    "setup": "language-change-original-setup.png",
+    "progress": "language-change-original-progress.png"
+  }
+}

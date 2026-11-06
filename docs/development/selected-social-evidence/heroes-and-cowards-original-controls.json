@@ -1,0 +1,122 @@
+{
+  "setupClicked": true,
+  "setupTick": {
+    "success": true,
+    "value": 0
+  },
+  "nativeStepPresent": false,
+  "commandStepTick": {
+    "success": true,
+    "value": 1
+  },
+  "runTick": {
+    "success": true,
+    "value": 45
+  },
+  "pauseTick": {
+    "success": true,
+    "value": 45
+  },
+  "stableTick": {
+    "success": true,
+    "value": 45
+  },
+  "paused": true,
+  "setupResetClicked": true,
+  "resetTick": {
+    "success": true,
+    "value": 0
+  },
+  "actions": [
+    {
+      "label": "dot",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "frozen",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "slinky",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "spiral",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "slinky 2",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "spiral 2",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "yo-yo",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "wandering flock",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "label": "generally cool one that eventually stops",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    }
+  ],
+  "probe": {
+    "command": "setup ask turtle 0 [setxy 16.49 0 set heading 90 carefully [fd 0.1] []]",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 0
+      },
+      "[(list xcor ycor)] of turtle 0": {
+        "success": true,
+        "value": [
+          16.49,
+          0
+        ]
+      }
+    }
+  },
+  "errors": [],
+  "alertText": []
+}

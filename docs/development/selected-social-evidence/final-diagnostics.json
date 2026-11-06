@@ -1,0 +1,232 @@
+{
+  "scope": "Console warn/error and window error/rejection hooks installed after mount, before default Setup/1-step. Does not claim capture of pre-hook navigation messages.",
+  "records": [
+    {
+      "slug": "consumer-choice",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nOrange\n49\nBlue\n51\nClustering\n0.437",
+      "views": [
+        "Consumer connections",
+        "Market shares (consumers)",
+        "Consumer clustering"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "Orange: 49; Blue: 51"
+        },
+        {
+          "role": "img",
+          "label": "Same-choice neighbor fraction: 0.43704581529581515"
+        }
+      ],
+      "tables": 0,
+      "modelInfo": "Model infoExperience, information and norms in product choice. Jager & Wang (2024), CC BY-NC-SA 3.0.Original NetLogo model · Jager & Wang · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "rebellion",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nPolice\n64\nCitizens\n1120\nQuiet\n1092\nActive\n7\nJailed\n21\nWatched citizen\n—",
+      "views": [
+        "Citizens and police",
+        "All citizen types"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "Quiet: 1092; Jailed: 21; Active: 7"
+        }
+      ],
+      "tables": 0,
+      "modelInfo": "Model infoGrievance, local arrest risk and asynchronous policing. Wilensky (2004), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "language-change",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nMean grammar state\n0.5700\nGrammar 0\n43\nGrammar 1\n57",
+      "views": [
+        "Language network",
+        "Mean state of language users"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "Mean grammar state: 0.57"
+        }
+      ],
+      "tables": 0,
+      "modelInfo": "Model infoAsynchronous grammar adoption on a preferential-attachment tree. Wilensky (2007), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "party",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nHappy\n11\nSingle-sex groups\n0",
+      "views": [
+        "Party groups",
+        "Number happy",
+        "Single-sex groups"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "Happy: 11"
+        },
+        {
+          "role": "img",
+          "label": "Single-sex groups: 0"
+        }
+      ],
+      "tables": 0,
+      "modelInfo": "Model infoTolerance and migration among social groups. Wilensky (1997), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "ethnocentrism",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nPopulation\n1\nEncounters\n0\nCooperation\n0.0%",
+      "views": [
+        "Group tags and cooperation strategies",
+        "Strategy counts"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "CC: 0; CD: 0; DC: 0; DD: 1"
+        }
+      ],
+      "tables": 0,
+      "modelInfo": "Model infoLocal cooperation, immigration, inheritance and mutation. Wilensky (2003), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "minority-game",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nHistory\n010000\nMinority\n1\nAverage score\n0.487\nMovement\nActive",
+      "views": [
+        "Players",
+        "Scores",
+        "Success histogram",
+        "Success rate",
+        "Number picking zero"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "Maximum: 1; Minimum: 0; Average: 0.4870259481037924"
+        },
+        {
+          "role": "img",
+          "label": "Players: x 0.02, y 257; x 0.06, y 0; x 0.1, y 0; x 0.14, y 0; x 0.18, y 0; x 0.22, y 0; x 0.26, y 0; x 0.30000000000000004, y 0; x 0.33999999999999997, y 0; x 0.38, y 0; x 0.42000000000000004, y 0; x 0.45999999999999996, y 0; x 0.5, y 0; x 0.54, y 0; x 0.5800000000000001, y 0; x 0.62, y 0; x 0.66, y 0; x 0.7, y 0; x 0.74, y 0; x 0.78, y 0; x 0.8200000000000001, y 0; x 0.86, y 0; x 0.9, y 0; x 0.94, y 0; x 0.98, y 244"
+        },
+        {
+          "role": "img",
+          "label": "Maximum: 1; Minimum: 0; Average: 0.4870259481037924"
+        },
+        {
+          "role": "img",
+          "label": "Zero: 259"
+        }
+      ],
+      "tables": 0,
+      "modelInfo": "Model infoAdaptive competition through scored binary strategies. Wilensky (2004), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "rumor-mill",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nClique (%)\n0.020\nTimes heard\n2",
+      "views": [
+        "Rumor spread",
+        "Rumor spread (%)",
+        "Successive differences",
+        "Successive ratios"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "Informed: 0.019605920988138417"
+        },
+        {
+          "role": "img",
+          "label": "Newly informed: 1"
+        },
+        {
+          "role": "img",
+          "label": "Ratio: 2"
+        }
+      ],
+      "tables": 0,
+      "modelInfo": "Model infoRepeated local exposure with a snapshot of informed senders. Wilensky (1997), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "signaling-game",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nProbability of success\n51.39%\nCorrect\n1\nWrong\n0\nSuccess rate\n100.00%",
+      "views": [
+        "Current signal",
+        "Probability of success (%)",
+        "Sender probabilities (%)",
+        "Receiver probabilities (%)",
+        "Printed output"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "Probability: 51.388888888888886"
+        }
+      ],
+      "tables": 3,
+      "modelInfo": "Model infoTwo-sided urn reinforcement learns shared signals. Wilensky (2016), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "piaget-vygotsky-game",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nAttempt\n1\nStrategy\nP-V\nMean distance\n34.567",
+      "views": [
+        "Target throws",
+        "Average distance from target",
+        "Strategy averages"
+      ],
+      "charts": [
+        {
+          "role": "img",
+          "label": "Random: no samples; Piagetian: no samples; Vygotskiian: no samples; P-V: 34.56666666666667"
+        },
+        {
+          "role": "img",
+          "label": "Random: no samples; Piagetian: no samples; Vygotskiian: no samples; P-V: no samples"
+        }
+      ],
+      "tables": 0,
+      "modelInfo": "Model infoIndividual memory and socially bounded learning in repeated target throws. Wilensky (2005), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    },
+    {
+      "slug": "heroes-and-cowards",
+      "messages": [],
+      "errors": [],
+      "status": "Steps completed.",
+      "monitors": "Tick\n1\nPeople\n68\nMovement\nActive",
+      "views": [
+        "Friends and enemies"
+      ],
+      "charts": [],
+      "tables": 0,
+      "modelInfo": "Model infoFriend–enemy midpoint and avoidance movement. Wilensky (2014), CC BY-NC-SA 3.0.Original NetLogo model · Wilensky · CC BY-NC-SA 3.0"
+    }
+  ]
+}

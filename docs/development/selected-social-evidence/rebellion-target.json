@@ -1,0 +1,182 @@
+{
+  "marker": "selected-social-b02:rebellion:859b52417ee69fda8f0f193be666828f9023bef4fce6b84f1d07e09836a53fce",
+  "chunk": "http://localhost:3112/chunks/ui-9snhr7fq.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/ui-9snhr7fq.js",
+      "sha256": "e2bac16e1e03353bd89ba2e2cd3d1e6351da09fa7cd3d0389129038c15b29cd8"
+    },
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    }
+  ],
+  "buildVersion": "1793961065493",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "initialCopDensity": 4,
+    "initialAgentDensity": 70,
+    "vision": 7,
+    "governmentLegitimacy": 0.82,
+    "maxJailTerm": 30,
+    "movement": true,
+    "visualization": "2D"
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "Police": "64",
+    "Citizens": "1120",
+    "Quiet": "1120",
+    "Active": "0",
+    "Jailed": "0",
+    "Watched citizen": "—"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 248
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 5,
+  "progressMonitors": {
+    "Tick": "5",
+    "Police": "64",
+    "Citizens": "1120",
+    "Quiet": "629",
+    "Active": "356",
+    "Jailed": "135",
+    "Watched citizen": "—"
+  },
+  "status": "Steps completed.",
+  "historyLength": 6,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 231
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 716,
+        "height": 716,
+        "sampledColors": 635
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "10",
+      "Police": "64",
+      "Citizens": "1120",
+      "Quiet": "649",
+      "Active": "83",
+      "Jailed": "388",
+      "Watched citizen": "—"
+    },
+    "pause": {
+      "Tick": "10",
+      "Police": "64",
+      "Citizens": "1120",
+      "Quiet": "649",
+      "Active": "83",
+      "Jailed": "388",
+      "Watched citizen": "—"
+    },
+    "stable": {
+      "Tick": "10",
+      "Police": "64",
+      "Citizens": "1120",
+      "Quiet": "649",
+      "Active": "83",
+      "Jailed": "388",
+      "Watched citizen": "—"
+    },
+    "actions": [
+      {
+        "label": "Watch one",
+        "enabled": true,
+        "monitors": {
+          "Tick": "10",
+          "Police": "64",
+          "Citizens": "1120",
+          "Quiet": "649",
+          "Active": "83",
+          "Jailed": "388",
+          "Watched citizen": "485"
+        },
+        "status": "Action completed."
+      }
+    ],
+    "liveTest": {
+      "name": "live-governmentLegitimacy",
+      "before": "0.82",
+      "changed": "1",
+      "afterSetup": "1",
+      "status": "Model initialized.",
+      "resetMonitors": {
+        "Tick": "0",
+        "Police": "64",
+        "Citizens": "1120",
+        "Quiet": "1120",
+        "Active": "0",
+        "Jailed": "0",
+        "Watched citizen": "—"
+      }
+    },
+    "resetMonitors": {
+      "Tick": "0",
+      "Police": "64",
+      "Citizens": "1120",
+      "Quiet": "1120",
+      "Active": "0",
+      "Jailed": "0",
+      "Watched citizen": "—"
+    },
+    "infoHasOriginal": true,
+    "inspector": null,
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "rebellion",
+    "assertions": 4,
+    "evidence": {
+      "tick": 2,
+      "quiet": 16,
+      "watched": true
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "rebellion-target-setup-light.png",
+    "progress-light": "rebellion-target-progress-light.png",
+    "desktop-dark": "rebellion-target-desktop-dark.png",
+    "mobile-light": "rebellion-target-mobile-light.png",
+    "mobile-dark": "rebellion-target-mobile-dark.png"
+  }
+}

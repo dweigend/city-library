@@ -1,0 +1,151 @@
+{
+  "marker": "selected-social-b02:minority-game:5da641101e48d2ca325cfffa3f1bdaf27708152b628ab5504a95a2798a53e1a1",
+  "chunk": "http://localhost:3112/chunks/ui-dz686zmt.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/ui-dz686zmt.js",
+      "sha256": "83ea6f1833aa28b579bce1aca57cbda24906d4a2b61e762d03fbace613f76b7b"
+    },
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    }
+  ],
+  "buildVersion": "1793961568867",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "number": 501,
+    "memory": 6,
+    "strategiesPerAgent": 5,
+    "colorBy": "success"
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "History": "101000",
+    "Minority": "0",
+    "Average score": "0.000",
+    "Movement": "Active"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 6
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 10,
+  "progressMonitors": {
+    "Tick": "10",
+    "History": "111100",
+    "Minority": "1",
+    "Average score": "4.784",
+    "Movement": "Active"
+  },
+  "status": "Steps completed.",
+  "historyLength": 11,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 65
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 716,
+        "height": 716,
+        "sampledColors": 152
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "16",
+      "History": "111011",
+      "Minority": "0",
+      "Average score": "7.551",
+      "Movement": "Active"
+    },
+    "pause": {
+      "Tick": "16",
+      "History": "111011",
+      "Minority": "0",
+      "Average score": "7.551",
+      "Movement": "Active"
+    },
+    "stable": {
+      "Tick": "16",
+      "History": "111011",
+      "Minority": "0",
+      "Average score": "7.551",
+      "Movement": "Active"
+    },
+    "actions": [],
+    "liveTest": {
+      "name": "live-colorBy",
+      "before": "success",
+      "changed": "choice",
+      "afterSetup": "choice",
+      "status": "Model initialized.",
+      "resetMonitors": {
+        "Tick": "0",
+        "History": "101000",
+        "Minority": "0",
+        "Average score": "0.000",
+        "Movement": "Active"
+      }
+    },
+    "resetMonitors": {
+      "Tick": "0",
+      "History": "101000",
+      "Minority": "0",
+      "Average score": "0.000",
+      "Movement": "Active"
+    },
+    "infoHasOriginal": true,
+    "inspector": null,
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "minority-game",
+    "assertions": 36,
+    "evidence": {
+      "tick": 1,
+      "history": 0,
+      "minority": 0,
+      "singleDiagnostic": "Source move-turtles divides by zero after scoring and tick; movement omitted."
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "minority-game-target-setup-light.png",
+    "progress-light": "minority-game-target-progress-light.png",
+    "desktop-dark": "minority-game-target-desktop-dark.png",
+    "mobile-light": "minority-game-target-mobile-light.png",
+    "mobile-dark": "minority-game-target-mobile-dark.png"
+  }
+}

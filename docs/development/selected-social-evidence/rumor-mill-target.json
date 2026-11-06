@@ -1,0 +1,186 @@
+{
+  "marker": "selected-social-b02:rumor-mill:4807e040a21562f9feaa2bf5a99c6819f26918b0cd76e0460af802d980521b63",
+  "chunk": "http://localhost:3112/chunks/ui-hagb0n13.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-hagb0n13.js",
+      "sha256": "98bc5c65c68e435727143d1f4823a7156b50a54f87436b49f971c3a21295f8b3"
+    }
+  ],
+  "buildVersion": "1793960930389",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "setup": "one",
+    "initClique": 0.1,
+    "eightMode": false
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "Clique (%)": "0.010",
+    "Times heard": "1"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 65
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 10,
+  "progressMonitors": {
+    "Tick": "10",
+    "Clique (%)": "0.608",
+    "Times heard": "177"
+  },
+  "status": "Steps completed.",
+  "historyLength": 11,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 72
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 716,
+        "height": 716,
+        "sampledColors": 113
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "16",
+      "Clique (%)": "1.372",
+      "Times heard": "728"
+    },
+    "pause": {
+      "Tick": "16",
+      "Clique (%)": "1.372",
+      "Times heard": "728"
+    },
+    "stable": {
+      "Tick": "16",
+      "Clique (%)": "1.372",
+      "Times heard": "728"
+    },
+    "actions": [
+      {
+        "label": "Seed center",
+        "enabled": true,
+        "monitors": {
+          "Tick": "16",
+          "Clique (%)": "1.372",
+          "Times heard": "729"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "Seed random",
+        "enabled": true,
+        "monitors": {
+          "Tick": "16",
+          "Clique (%)": "1.451",
+          "Times heard": "737"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "Color: normal",
+        "enabled": true,
+        "monitors": {
+          "Tick": "16",
+          "Clique (%)": "1.451",
+          "Times heard": "737"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "Color: when heard",
+        "enabled": true,
+        "monitors": {
+          "Tick": "16",
+          "Clique (%)": "1.451",
+          "Times heard": "737"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "Color: times heard",
+        "enabled": true,
+        "monitors": {
+          "Tick": "16",
+          "Clique (%)": "1.451",
+          "Times heard": "737"
+        },
+        "status": "Action completed."
+      }
+    ],
+    "liveTest": {
+      "name": "live-initClique",
+      "before": "0.1",
+      "changed": "10",
+      "afterSetup": "10",
+      "status": "Model initialized.",
+      "resetMonitors": {
+        "Tick": "0",
+        "Clique (%)": "0.010",
+        "Times heard": "1"
+      }
+    },
+    "resetMonitors": {
+      "Tick": "0",
+      "Clique (%)": "0.010",
+      "Times heard": "1"
+    },
+    "infoHasOriginal": true,
+    "inspector": null,
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "rumor-mill",
+    "assertions": 7,
+    "evidence": {
+      "tick": 2,
+      "clique": 10201,
+      "stopped": true
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "rumor-mill-target-setup-light.png",
+    "progress-light": "rumor-mill-target-progress-light.png",
+    "desktop-dark": "rumor-mill-target-desktop-dark.png",
+    "mobile-light": "rumor-mill-target-mobile-light.png",
+    "mobile-dark": "rumor-mill-target-mobile-dark.png"
+  }
+}

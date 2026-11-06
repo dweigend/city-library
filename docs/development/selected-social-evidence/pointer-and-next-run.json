@@ -1,0 +1,73 @@
+{
+  "targetRumor": {
+    "input": "T3 actual click at CSS899,134 after Spread rumor enabled",
+    "before": {
+      "tick": 0,
+      "timesHeard": 1,
+      "clique": 1
+    },
+    "after": {
+      "tick": 0,
+      "timesHeard": 2,
+      "clique": 2
+    },
+    "status": "Drawing updated."
+  },
+  "originalRumor": {
+    "clique": {
+      "success": true,
+      "value": 1
+    },
+    "timesHeard": {
+      "success": true,
+      "value": 1
+    },
+    "tick": {
+      "success": true,
+      "value": 0
+    },
+    "mouse": {
+      "success": true,
+      "value": [
+        34.833333333333314,
+        30.833333333333314,
+        false
+      ]
+    }
+  },
+  "targetNextRun": {
+    "parameters": {
+      "randomizeStrategyEachRun": false,
+      "strategy": "Piagetian",
+      "attemptsPerRun": 2,
+      "moveError": 0,
+      "stopAfterEachRun": true
+    },
+    "afterTenStepClick": {
+      "tick": 2,
+      "attempt": 2,
+      "meanDistance": 34.667,
+      "stepDisabled": true,
+      "nextEnabled": true
+    },
+    "afterNextRunClick": {
+      "tick": 3,
+      "attempt": 1,
+      "meanDistance": 27.9,
+      "nextEnabled": false
+    }
+  },
+  "limitations": "The original mouse procedure repeats during pointer-down; only actual observed exposure counts are reported. The target has no separate Reset: repeated Setup is the tested reset action.",
+  "originalRumorHeld": {
+    "method": "DOM mouseover/move/down held200ms/up after actual fast T3 click was missed",
+    "mouseDown": true,
+    "mouseInside": true,
+    "coordinates": [
+      35.5,
+      30.166666666666686
+    ],
+    "clique": 2,
+    "timesHeard": 6,
+    "tick": 0
+  }
+}
