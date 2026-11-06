@@ -69,7 +69,7 @@ export const ui = defineUI(model, {
       label: "Adult mating types",
       series: (s) =>
         (["blueAdults", "redAdults"] as const).map((key) => ({
-          label: key,
+          label: key.startsWith("blue") ? "Blue" : "Red",
           color: key === "blueAdults" ? "#4575b4" : "#d73027",
           points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
         })),
@@ -79,7 +79,7 @@ export const ui = defineUI(model, {
       label: "Gamete mating types",
       series: (s) =>
         (["blueGametes", "redGametes"] as const).map((key) => ({
-          label: key,
+          label: key.startsWith("blue") ? "Blue" : "Red",
           color: key === "blueGametes" ? "#4575b4" : "#d73027",
           points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
         })),
@@ -89,7 +89,7 @@ export const ui = defineUI(model, {
       label: "Mean gamete mass trait",
       series: (s) =>
         (["blueMeanTrait", "redMeanTrait"] as const).map((key) => ({
-          label: key,
+          label: key.startsWith("blue") ? "Blue" : "Red",
           color: key === "blueMeanTrait" ? "#4575b4" : "#d73027",
           points: s.history.flatMap((p) =>
             p[key] === undefined ? [] : [{ x: p.tick, y: p[key]! }],
@@ -101,7 +101,7 @@ export const ui = defineUI(model, {
       label: "Adult gamete mass traits",
       series: (s) =>
         (["blue", "red"] as const).map((key) => ({
-          label: key,
+          label: key.startsWith("blue") ? "Blue" : "Red",
           color: key === "blue" ? "#4575b4" : "#d73027",
           points: s.traitDistribution[key].counts.map((count, i) => ({
             x: s.traitDistribution[key].edges[i]!,

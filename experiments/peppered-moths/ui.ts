@@ -50,10 +50,12 @@ export const ui = defineUI(model, {
           label: key,
           color:
             key === "light"
-              ? "#aaaaaa"
+              ? "#888888"
               : key === "medium"
-                ? "#777777"
-                : "#222222",
+                ? "#4575b4"
+                : key === "dark"
+                  ? "#d73027"
+                  : "#7b6db0",
           points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
         })),
     },

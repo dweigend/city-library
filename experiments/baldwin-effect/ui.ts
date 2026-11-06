@@ -41,7 +41,11 @@ export const ui = defineUI(model, {
       series: (s) =>
         (["nonPlasticity", "randomPlasticity", "smartPlasticity"] as const).map(
           (key) => ({
-            label: key,
+            label: key.startsWith("non")
+              ? "Non-learners"
+              : key.startsWith("random")
+                ? "Random learners"
+                : "Smart learners",
             color:
               key === "nonPlasticity"
                 ? "#888888"
@@ -58,7 +62,11 @@ export const ui = defineUI(model, {
       series: (s) =>
         (["nonCorrect", "randomCorrect", "smartCorrect"] as const).map(
           (key) => ({
-            label: key,
+            label: key.startsWith("non")
+              ? "Non-learners"
+              : key.startsWith("random")
+                ? "Random learners"
+                : "Smart learners",
             color:
               key === "nonCorrect"
                 ? "#888888"
@@ -77,7 +85,11 @@ export const ui = defineUI(model, {
       series: (s) =>
         (["nonFitness", "randomFitness", "smartFitness"] as const).map(
           (key) => ({
-            label: key,
+            label: key.startsWith("non")
+              ? "Non-learners"
+              : key.startsWith("random")
+                ? "Random learners"
+                : "Smart learners",
             color:
               key === "nonFitness"
                 ? "#888888"
