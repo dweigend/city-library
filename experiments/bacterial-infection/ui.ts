@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -63,7 +63,7 @@ export const ui = defineUI(model, {
     ...(["A", "B"] as const).map((region) => ({
       type: "bar" as const,
       label: `Patient ${region} pore counts`,
-      series: (s: ReturnType<ReturnType<typeof model.create>["read"]>) => [
+      series: (s: Observation<typeof model>) => [
         {
           label: region,
           points: (region === "A"
@@ -76,7 +76,7 @@ export const ui = defineUI(model, {
     ...(["A", "B"] as const).map((region) => ({
       type: "line" as const,
       label: `Population in ${region}`,
-      series: (s: ReturnType<ReturnType<typeof model.create>["read"]>) =>
+      series: (s: Observation<typeof model>) =>
         [3, 4, 5, 6].map((v, i) => ({
           label: `${v} pores`,
           color: ["#a536c7", "#389b39", "#8b603f", "#ce3030"][i]!,
@@ -94,7 +94,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function patientsAAndBData(s: UIObservation): SpatialData {
   return {

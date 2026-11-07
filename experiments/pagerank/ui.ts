@@ -25,8 +25,16 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Total rank", value: (s) => s.totalRank.toFixed(6) },
-    { label: "Maximum rank", value: (s) => s.maxRank.toFixed(6) },
+    {
+      label: "Total rank",
+      value: (s) => s.totalRank,
+      format: (value: number) => value.toFixed(6),
+    },
+    {
+      label: "Maximum rank",
+      value: (s) => s.maxRank,
+      format: (value: number) => value.toFixed(6),
+    },
     { label: "Surfers", value: (s) => s.surfers.length },
   ],
   views: [

@@ -29,7 +29,8 @@ export const ui = defineUI(model, {
     { label: "Tick", value: (s) => s.tick },
     {
       label: "Average metal temperature",
-      value: (s) => s.averageMetalTemp.toFixed(3),
+      value: (s) => s.averageMetalTemp,
+      format: (value: number) => value.toFixed(3),
     },
     { label: "Source frozen count", value: (s) => s.numFrozen },
   ],

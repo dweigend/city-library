@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -31,7 +31,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function raceData(s: UIObservation): SpatialData {
   return {
@@ -44,7 +44,12 @@ function raceData(s: UIObservation): SpatialData {
       heading: 0,
       shape: "triangle",
       size: 5,
-      color: `rgb(${Math.round(240 - (140 * r.hunch) / 100)},${Math.round(240 - (140 * r.hunch) / 100)},${Math.round(240 - (140 * r.hunch) / 100)})`,
+      color: hunchColor(r.hunch),
     })),
   };
+}
+
+function hunchColor(hunch: number): string {
+  const channel = Math.round(240 - (140 * hunch) / 100);
+  return `rgb(${channel},${channel},${channel})`;
 }

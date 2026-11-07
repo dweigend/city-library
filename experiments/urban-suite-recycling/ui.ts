@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -41,15 +41,18 @@ export const ui = defineUI(model, {
     { label: "Wastefuls", value: (state) => state.counts.wastefuls },
     {
       label: "New (%)",
-      value: (state) => state.landPercentages.new.toFixed(2),
+      value: (state) => state.landPercentages.new,
+      format: (value: number) => value.toFixed(2),
     },
     {
       label: "Recycled (%)",
-      value: (state) => state.landPercentages.recycled.toFixed(2),
+      value: (state) => state.landPercentages.recycled,
+      format: (value: number) => value.toFixed(2),
     },
     {
       label: "Waste (%)",
-      value: (state) => state.landPercentages.waste.toFixed(2),
+      value: (state) => state.landPercentages.waste,
+      format: (value: number) => value.toFixed(2),
     },
   ],
   views: [
@@ -78,7 +81,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function peopleAndResourcesData(state: UIObservation): SpatialData {
   return {

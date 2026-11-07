@@ -1,5 +1,6 @@
 import {
   defineUI,
+  type Observation,
   type SpatialData,
   type Series,
   type BarSeries,
@@ -44,7 +45,11 @@ export const ui = defineUI(model, {
     { label: "Tick", value: (s) => s.tick },
     { label: "New sheets", value: (s) => s.newSheets },
     { label: "Products ready", value: (s) => s.productsReady },
-    { label: "Idle / tick", value: (s) => s.idlePerTick.toFixed(3) },
+    {
+      label: "Idle / tick",
+      value: (s) => s.idlePerTick,
+      format: (value: number) => value.toFixed(3),
+    },
     { label: "Diagnostic", value: (s) => s.diagnostic ?? "\u2014" },
   ],
   views: [
@@ -95,7 +100,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function factoryFloorData(s: UIObservation): SpatialData {
   return {

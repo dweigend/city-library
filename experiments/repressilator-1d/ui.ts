@@ -1,4 +1,4 @@
-import { defineUI, type BarSeries, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type BarSeries, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -81,7 +81,7 @@ export const sourceMarker =
   "selected-disease-gene-b09:repressilator-1d:e222752e0f629c0ae1f6df4f6858fcecb5629868ffd6a52ed602e172084f1315";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function completedSignalDurationsSeries(
   state: UIObservation,

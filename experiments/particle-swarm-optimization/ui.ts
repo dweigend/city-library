@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type SpatialData } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -43,7 +43,11 @@ export const ui = defineUI(model, {
   complete: (s) => s.complete,
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Best value found", value: (s) => s.globalBestValue.toFixed(5) },
+    {
+      label: "Best value found",
+      value: (s) => s.globalBestValue,
+      format: (value: number) => value.toFixed(5),
+    },
   ],
   views: [
     {
@@ -64,7 +68,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function searchLandscapeData(s: UIObservation): SpatialData {
   return {

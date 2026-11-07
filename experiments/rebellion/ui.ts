@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 const binding = defineUI(model, {
@@ -68,7 +68,7 @@ export const sourceMarker =
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function citizensAndPoliceData(s: UIObservation): SpatialData {
   return {

@@ -1,4 +1,4 @@
-import { defineUI, type Series, type BarSeries } from "../../ui/index.ts";
+import { defineUI, type Observation, type Series, type BarSeries } from "../../ui/index.ts";
 import { stats } from "city-library";
 
 import { model } from "./model.ts";
@@ -111,7 +111,7 @@ export const sourceMarker =
   "selected-disease-gene-b09:crispr-ecosystem:9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function cRISPRVirusCoevolutionSeries(state: UIObservation): readonly Series[] {
   return [

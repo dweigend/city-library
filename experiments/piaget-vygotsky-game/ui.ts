@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type SpatialData } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model, type Strategy } from "./model.ts";
 const colors: Record<Strategy, string> = {
@@ -47,7 +47,11 @@ const binding = defineUI(model, {
     { label: "Tick", value: (s) => s.tick },
     { label: "Attempt", value: (s) => s.attempts },
     { label: "Strategy", value: (s) => s.strategy },
-    { label: "Mean distance", value: (s) => s.meanScore.toFixed(3) },
+    {
+      label: "Mean distance",
+      value: (s) => s.meanScore,
+      format: (value: number) => value.toFixed(3),
+    },
   ],
   views: [
     {
@@ -94,7 +98,7 @@ export const sourceMarker =
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function targetThrowsData(s: UIObservation): SpatialData {
   return {

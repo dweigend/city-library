@@ -1,4 +1,4 @@
-import { defineUI, type BarSeries, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type BarSeries, type Series } from "../../ui/index.ts";
 import { stats } from "city-library";
 
 import { model } from "./model.ts";
@@ -73,7 +73,7 @@ export const sourceMarker =
   "selected-disease-gene-b09:crispr-bacterium:e87977797048bf809aa58a41d6dc746c59d6d5e0ba94957db2996815725f4813";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function guideAndSpacerSequencesSeries(
   state: UIObservation,

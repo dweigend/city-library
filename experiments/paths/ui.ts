@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -61,7 +61,7 @@ export const sourceMarker =
   "selected-transport-b04:paths:89f74e30ca5a70a0fc139e99c6e2ea62e9509ce1c8c76bc8cffa154cf3cd75d0";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function pathsData(state: UIObservation): SpatialData {
   return {

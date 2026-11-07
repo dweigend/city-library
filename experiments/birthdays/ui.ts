@@ -9,7 +9,11 @@ export const ui = defineUI(model, {
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Successes", value: (s) => s.successes },
-    { label: "Success rate (%)", value: (s) => s.successRate.toFixed(2) },
+    {
+      label: "Success rate (%)",
+      value: (s) => s.successRate,
+      format: (value: number) => value.toFixed(2),
+    },
   ],
   views: [
     {

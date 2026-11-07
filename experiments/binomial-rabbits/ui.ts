@@ -27,9 +27,17 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Mean", value: (s) => s.mean.toFixed(3) },
+    {
+      label: "Mean",
+      value: (s) => s.mean,
+      format: (value: number) => value.toFixed(3),
+    },
     { label: "X scale", value: (s) => s.xScale },
-    { label: "Y scale", value: (s) => s.yScale.toFixed(3) },
+    {
+      label: "Y scale",
+      value: (s) => s.yScale,
+      format: (value: number) => value.toFixed(3),
+    },
   ],
   views: [
     {

@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -30,11 +30,15 @@ export const ui = defineUI(model, {
     { label: "Centers", value: (state) => state.counts.centers },
     {
       label: "Mean awareness",
-      value: (state) => state.meanAwareness?.toFixed(3) ?? "—",
+      value: (state) => state.meanAwareness ?? "—",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
     {
       label: "Mean non-usage",
-      value: (state) => state.meanNonUsage?.toFixed(3) ?? "—",
+      value: (state) => state.meanNonUsage ?? "—",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
   ],
   views: [
@@ -89,7 +93,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function peopleAndAwarenessCentersData(state: UIObservation): SpatialData {
   return {

@@ -1,4 +1,4 @@
-import { defineUI, type GridData } from "../../ui/index.ts";
+import { defineUI, type Observation, type GridData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -46,7 +46,11 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Average", value: (s) => s.average.toFixed(4) },
+    {
+      label: "Average",
+      value: (s) => s.average,
+      format: (value: number) => value.toFixed(4),
+    },
     { label: "Last avalanche size", value: (s) => s.sizes.at(-1) ?? 0 },
     { label: "Last avalanche lifetime", value: (s) => s.lifetimes.at(-1) ?? 0 },
   ],
@@ -79,7 +83,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function pileData(s: UIObservation): GridData {
   return {

@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -38,8 +38,10 @@ export const ui = defineUI(model, {
       label: "Grass / 4",
       value: (state) =>
         state.parameters.mode === "sheep-wolves-grass"
-          ? (state.counts.grass / 4).toFixed(0)
+          ? state.counts.grass / 4
           : "—",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(0) : value,
     },
   ],
   views: [
@@ -63,7 +65,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function animalsAndGrassData(state: UIObservation): SpatialData {
   return {

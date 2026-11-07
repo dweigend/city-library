@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
@@ -24,10 +24,9 @@ export const ui = defineUI(model, {
     ...(["monarchColor", "viceroyColor"] as const).flatMap((group) =>
       (["min", "mean", "max"] as const).map((metric) => ({
         label: `${group === "monarchColor" ? "Monarch color" : "Viceroy color"} ${metric}`,
-        value: (s: ReturnType<ReturnType<typeof model.create>["read"]>) => {
-          const value = s[group][metric];
-          return value === undefined ? "N/A" : Number(value.toFixed(3));
-        },
+        value: (s: Observation<typeof model>) => s[group][metric] ?? "N/A",
+        format: (value: number | string) =>
+          typeof value === "number" ? String(Number(value.toFixed(3))) : value,
       })),
     ),
   ],

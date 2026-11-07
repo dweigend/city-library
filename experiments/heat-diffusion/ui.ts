@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type GridData } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation, type GridData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -35,7 +35,11 @@ export const ui = defineUI(model, {
   actions: [{ label: "Update alpha", run: (m) => m.updateAlpha() }],
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Heat diffusivity", value: (s) => s.heatDiffusivity.toFixed(6) },
+    {
+      label: "Heat diffusivity",
+      value: (s) => s.heatDiffusivity,
+      format: (value: number) => value.toFixed(6),
+    },
   ],
   views: [
     {
@@ -51,7 +55,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function plateTemperatureData(s: UIObservation): GridData {
   return {

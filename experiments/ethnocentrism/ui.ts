@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 const binding = defineUI(model, {
@@ -47,7 +47,8 @@ const binding = defineUI(model, {
     { label: "Encounters", value: (s) => s.turn.meet },
     {
       label: "Cooperation",
-      value: (s) => (s.turnRatios.coopPercent * 100).toFixed(1) + "%",
+      value: (s) => s.turnRatios.coopPercent,
+      format: (value: number) => (value * 100).toFixed(1) + "%",
     },
   ],
   views: [
@@ -81,7 +82,7 @@ export const sourceMarker =
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function groupTagsAndCooperationStrategiesData(s: UIObservation): SpatialData {
   return {

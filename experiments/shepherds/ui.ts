@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type SpatialData } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -19,7 +19,8 @@ export const ui = defineUI(model, {
     },
     {
       label: "Current efficiency (%)",
-      value: (s) => s.herdingEfficiency.toFixed(1),
+      value: (s) => s.herdingEfficiency,
+      format: (value: number) => value.toFixed(1),
     },
     {
       label: "Carried sheep",
@@ -49,7 +50,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function sheepAndShepherdsData(s: UIObservation): SpatialData {
   return {

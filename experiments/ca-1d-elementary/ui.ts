@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation } from "../../ui/index.ts";
 import { model, patterns } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["width", "height", "seed", "initialization", "density"],
@@ -22,7 +22,7 @@ export const ui = defineUI(model, {
           pattern,
           !m.read().rules.find((r) => r.pattern === pattern)!.next,
         ),
-      pressed: (s: ReturnType<ReturnType<typeof model.create>["read"]>) =>
+      pressed: (s: Observation<typeof model>) =>
         s.rules.find((r) => r.pattern === pattern)!.next,
     })),
   ],

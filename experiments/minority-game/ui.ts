@@ -1,5 +1,6 @@
 import {
   defineUI,
+  type Observation,
   type SpatialData,
   type Series,
   type BarSeries,
@@ -22,7 +23,11 @@ const binding = defineUI(model, {
     { label: "Tick", value: (s) => s.tick },
     { label: "History", value: (s) => s.fullHistory.join("") },
     { label: "Minority", value: (s) => s.minority },
-    { label: "Average score", value: (s) => s.avgScore.toFixed(3) },
+    {
+      label: "Average score",
+      value: (s) => s.avgScore,
+      format: (value: number) => value.toFixed(3),
+    },
     {
       label: "Movement",
       value: (s) => (s.diagnostic ? "Average score is zero" : "Active"),
@@ -85,7 +90,7 @@ export const sourceMarker =
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function playersData(s: UIObservation): SpatialData {
   return {

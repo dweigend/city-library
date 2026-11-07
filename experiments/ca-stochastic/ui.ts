@@ -59,10 +59,15 @@ export const ui = defineUI(model, {
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Row", value: (s) => s.row },
-    { label: "Metric entropy", value: (s) => s.entropy.metric.toFixed(5) },
+    {
+      label: "Metric entropy",
+      value: (s) => s.entropy.metric,
+      format: (value: number) => value.toFixed(5),
+    },
     {
       label: "Topological entropy",
-      value: (s) => s.entropy.topological.toFixed(5),
+      value: (s) => s.entropy.topological,
+      format: (value: number) => value.toFixed(5),
     },
   ],
   views: [

@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -50,7 +50,8 @@ const binding = defineUI(model, {
       value: (state) =>
         state.cars
           .find((car) => car.id === state.selectedCarId)!
-          .speed.toFixed(3),
+          .speed,
+      format: (value: number) => value.toFixed(3),
     },
   ],
   views: [
@@ -87,7 +88,7 @@ export const sourceMarker =
   "selected-transport-b04:traffic-2-lanes:6a3d627581f1a628e42ff2ca13c643824f9a441309d08645e101df13d09f17d9";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function twoLanesData(state: UIObservation): SpatialData {
   const selected = state.cars.find((car) => car.id === state.selectedCarId)!;

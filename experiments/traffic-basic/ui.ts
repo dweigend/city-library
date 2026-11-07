@@ -1,4 +1,4 @@
-import { defineUI, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -23,7 +23,8 @@ const binding = defineUI(model, {
       value: (state) =>
         state.cars
           .find((car) => car.id === state.selectedCarId)!
-          .speed.toFixed(3),
+          .speed,
+      format: (value: number) => value.toFixed(3),
     },
   ],
   views: [
@@ -58,7 +59,7 @@ export const sourceMarker =
   "selected-transport-b04:traffic-basic:77495cbc72df4370fe07d37ca59241585fdc63b8fec36a13c70da7ba65a6a7c3";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function carSpeedsSeries(state: UIObservation): readonly Series[] {
   return [

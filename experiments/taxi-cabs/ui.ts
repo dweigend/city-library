@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData, type Series } from "../../ui/index.ts";
 import { stats } from "city-library";
 
 import { model } from "./model.ts";
@@ -319,7 +319,7 @@ export const ui = defineUI(model, {
     {
       label: "Total income ($)",
       value: (state) => state.totalIncome,
-      format: (value) => (typeof value === "number" ? value.toFixed(2) : value),
+      format: (value: number) => value.toFixed(2),
     },
   ],
   views: [
@@ -385,7 +385,7 @@ function histogram(values: readonly number[]) {
   }));
 }
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function taxiServiceData(state: UIObservation): SpatialData {
   return {

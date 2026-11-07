@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -65,7 +65,7 @@ export const ui = defineUI(model, {
         "Land mobility histogram",
         "Food preference histogram",
       ][i]!,
-      series: (s: ReturnType<ReturnType<typeof model.create>["read"]>) => [
+      series: (s: Observation<typeof model>) => [
         {
           label: "Fish",
           points: s[key].counts.map((y, index) => ({
@@ -86,7 +86,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function waterLandAndVisionData(s: UIObservation): SpatialData {
   return {

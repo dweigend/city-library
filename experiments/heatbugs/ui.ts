@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -56,7 +56,9 @@ export const ui = defineUI(model, {
     { label: "Bugs", value: (s) => s.bugs.length },
     {
       label: "Mean unhappiness",
-      value: (s) => s.meanUnhappiness?.toFixed(3) ?? "undefined",
+      value: (s) => s.meanUnhappiness ?? "undefined",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
     { label: "Watched bug", value: (s) => s.watched ?? "none" },
   ],
@@ -86,7 +88,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function heatAndBugsData(s: UIObservation): SpatialData {
   return {

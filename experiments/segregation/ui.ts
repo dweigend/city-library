@@ -23,8 +23,16 @@ export const ui = defineUI(model, {
     { label: "Tick", value: (state) => state.tick },
     { label: "Residents", value: (state) => state.counts.population },
     { label: "Unhappy", value: (state) => state.counts.unhappy },
-    { label: "Unhappy (%)", value: (state) => state.percentUnhappy.toFixed(1) },
-    { label: "Similar (%)", value: (state) => state.percentSimilar.toFixed(1) },
+    {
+      label: "Unhappy (%)",
+      value: (state) => state.percentUnhappy,
+      format: (value: number) => value.toFixed(1),
+    },
+    {
+      label: "Similar (%)",
+      value: (state) => state.percentSimilar,
+      format: (value: number) => value.toFixed(1),
+    },
     {
       label: "State",
       value: (state) =>

@@ -1,4 +1,10 @@
-import { defineUI, type SpatialData, type BarSeries } from "../../ui/index.ts";
+import {
+  defineUI,
+  type Observation,
+  type SpatialData,
+  type SpatialAgent,
+  type BarSeries,
+} from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 const colors = { low: "#d94838", middle: "#60ad2c", high: "#355fa5" };
@@ -39,7 +45,7 @@ export const ui = defineUI(model, {
     {
       label: "Gini",
       value: (state) => state.gini,
-      format: (value) => (typeof value === "number" ? value.toFixed(3) : value),
+      format: (value: number) => value.toFixed(3),
     },
   ],
   views: [
@@ -107,7 +113,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function resourcesAndWealthClassesData(state: UIObservation): SpatialData {
   return {
@@ -117,15 +123,15 @@ function resourcesAndWealthClassesData(state: UIObservation): SpatialData {
       id: cell.id,
       x: cell.x,
       y: cell.y,
-      color: `rgb(${Math.round((cell.grain / 50) * 255)},${Math.round((cell.grain / 50) * 255)},0)`,
+      color: grainColor(cell.grain),
     })),
-    agents: state.agents.map((agent) => ({
+    agents: state.agents.map((agent): SpatialAgent => ({
       id: agent.id,
       x: agent.x,
       y: agent.y,
       heading: agent.heading,
       color: colors[agent.class],
-      shape: "triangle" as const,
+      shape: "triangle",
       size: 8,
     })),
   };
@@ -143,4 +149,9 @@ function wealthClassSeries(state: UIObservation): readonly BarSeries[] {
       ],
     },
   ];
+}
+
+function grainColor(grain: number): string {
+  const channel = Math.round((grain / 50) * 255);
+  return `rgb(${channel},${channel},0)`;
 }

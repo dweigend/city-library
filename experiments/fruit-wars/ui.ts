@@ -1,6 +1,7 @@
 import {
   defineUI,
   netLogoColor,
+  type Observation,
   type SpatialData,
   type Series,
 } from "../../ui/index.ts";
@@ -95,7 +96,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function foragersAndFruitBushesData(s: UIObservation): SpatialData {
   return {

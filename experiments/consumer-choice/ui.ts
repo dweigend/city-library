@@ -1,4 +1,4 @@
-import { defineUI, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 const binding = defineUI(model, {
@@ -37,7 +37,9 @@ const binding = defineUI(model, {
     { label: "Blue", value: (s) => s.blueCount },
     {
       label: "Clustering",
-      value: (s) => (s.cluster === null ? "—" : s.cluster.toFixed(3)),
+      value: (s) => s.cluster ?? "—",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
   ],
   views: [
@@ -100,7 +102,7 @@ export const sourceMarker =
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function consumerInspector(
   s: UIObservation,

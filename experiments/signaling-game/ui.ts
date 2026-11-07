@@ -28,14 +28,16 @@ const binding = defineUI(model, {
     { label: "Tick", value: (s) => s.tick },
     {
       label: "Probability of success",
-      value: (s) => (100 * s.probabilityOfSuccess).toFixed(2) + "%",
+      value: (s) => s.probabilityOfSuccess,
+      format: (value: number) => (100 * value).toFixed(2) + "%",
     },
     { label: "Correct", value: (s) => s.timesCorrect },
     { label: "Wrong", value: (s) => s.timesWrong },
     {
       label: "Success rate",
-      value: (s) =>
-        s.successRate === null ? "—" : (100 * s.successRate).toFixed(2) + "%",
+      value: (s) => s.successRate ?? "—",
+      format: (value: number | string) =>
+        typeof value === "number" ? (100 * value).toFixed(2) + "%" : value,
     },
   ],
   views: [

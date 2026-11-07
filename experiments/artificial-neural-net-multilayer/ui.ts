@@ -38,8 +38,16 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Epoch", value: (s) => s.tick },
-    { label: "Epoch error", value: (s) => s.epochError.toFixed(5) },
-    { label: "Output activation", value: (s) => s.activations[5]!.toFixed(3) },
+    {
+      label: "Epoch error",
+      value: (s) => s.epochError,
+      format: (value: number) => value.toFixed(5),
+    },
+    {
+      label: "Output activation",
+      value: (s) => s.activations[5]!,
+      format: (value: number) => value.toFixed(3),
+    },
     {
       label: "Test",
       value: (s) =>

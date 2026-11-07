@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type SpatialData } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model, actionSymbol } from "./model.ts";
 export const ui = defineUI(model, {
@@ -43,7 +43,11 @@ export const ui = defineUI(model, {
   ],
   monitors: [
     { label: "Generation", value: (s) => s.tick },
-    { label: "Best fitness", value: (s) => s.bestFitness.toFixed(2) },
+    {
+      label: "Best fitness",
+      value: (s) => s.bestFitness,
+      format: (value: number) => value.toFixed(2),
+    },
     {
       label: "Trial score",
       value: (s) => (s.visuals && s.robot ? s.robot.score : "\u2014"),
@@ -97,7 +101,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function robbyEnvironmentData(s: UIObservation): SpatialData {
   return {

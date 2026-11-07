@@ -1,4 +1,4 @@
-import { defineUI, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -57,7 +57,7 @@ export const sourceMarker =
   "selected-disease-gene-b09:epidem-basic:049c5556e76cf22b7ec76e801c09134d02cf29619ea46c8c9578e9862be2c07a";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function historySeries(state: UIObservation): readonly Series[] {
   return [

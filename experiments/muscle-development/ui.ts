@@ -1,4 +1,4 @@
-import { defineUI, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -25,7 +25,11 @@ const binding = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Muscle mass", value: (state) => state.muscleMass.toFixed(2) },
+    {
+      label: "Muscle mass",
+      value: (state) => state.muscleMass,
+      format: (value: number) => value.toFixed(2),
+    },
   ],
   views: [
     {
@@ -67,7 +71,7 @@ export const sourceMarker =
   "selected-biology-b07:muscle-development:29c39af0fbaff47c0ecab4d901260f05a5195f807046dd895ddd66eef1163e26";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function hormonesSeries(state: UIObservation): readonly Series[] {
   return [

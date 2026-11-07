@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -61,7 +61,7 @@ export const sourceMarker =
   "selected-disease-gene-b09:virus:43e370765de7a5601d5b39e40904372016289974c24c94de32634132c3692683";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function virusData(state: UIObservation): SpatialData {
   return {

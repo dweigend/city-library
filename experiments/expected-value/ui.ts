@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 const palette = [
@@ -43,10 +43,18 @@ export const ui = defineUI(model, {
   actions: [{ label: "Clear selection", run: (m) => m.clearSelection() }],
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Expected value", value: (s) => s.expectedValue.toFixed(3) },
+    {
+      label: "Expected value",
+      value: (s) => s.expectedValue,
+      format: (value: number) => value.toFixed(3),
+    },
     { label: "Runs", value: (s) => s.runs },
     { label: "This sample total", value: (s) => s.sampleTotal },
-    { label: "Mean of samples", value: (s) => s.mean.toFixed(3) },
+    {
+      label: "Mean of samples",
+      value: (s) => s.mean,
+      format: (value: number) => value.toFixed(3),
+    },
     { label: "Calculation", value: (s) => s.calculation },
   ],
   views: [
@@ -88,7 +96,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function tilesData(s: UIObservation): SpatialData {
   return {

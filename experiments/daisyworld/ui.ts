@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type SpatialData } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -58,7 +58,8 @@ export const ui = defineUI(model, {
     },
     {
       label: "Global temperature",
-      value: (s) => s.globalTemperature.toFixed(3),
+      value: (s) => s.globalTemperature,
+      format: (value: number) => value.toFixed(3),
     },
     {
       label: "Black daisies",
@@ -116,7 +117,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function daisyworldData(s: UIObservation): SpatialData {
   return {

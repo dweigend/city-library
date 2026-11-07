@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type SpatialData } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model, type TijuanaRead } from "./model.ts";
 
@@ -102,42 +102,55 @@ export const ui = defineUI(model, {
       label: "Nodes / rings",
       value: (s) => `${s.counts.nodes} / ${s.counts.rings}`,
     },
-    { label: "Values", value: (s) => s.globals.values.toFixed(2) },
-    { label: "Weights", value: (s) => s.globals.weights.toFixed(3) },
-    { label: "Marginal", value: (s) => s.globals.marginalValue.toFixed(1) },
+    {
+      label: "Values",
+      value: (s) => s.globals.values,
+      format: (value: number) => value.toFixed(2),
+    },
+    {
+      label: "Weights",
+      value: (s) => s.globals.weights,
+      format: (value: number) => value.toFixed(3),
+    },
+    {
+      label: "Marginal",
+      value: (s) => s.globals.marginalValue,
+      format: (value: number) => value.toFixed(1),
+    },
     {
       label: "Marginal weight",
-      value: (s) => s.globals.marginalWeight.toFixed(3),
+      value: (s) => s.globals.marginalWeight,
+      format: (value: number) => value.toFixed(3),
     },
     { label: "Max cost", value: (s) => s.globals.maxCost },
     { label: "Crossed", value: (s) => s.globals.crossed },
     {
       label: "Savings",
       value: (s) =>
-        reported(s.reports.savings, s.reports.unavailable.savings, 0),
+        reportValue(s.reports.savings, s.reports.unavailable.savings),
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(0) : value,
     },
     {
       label: "Savings node",
       value: (s) =>
-        reported(s.reports.savingsNode, s.reports.unavailable.savingsNode, 3),
+        reportValue(s.reports.savingsNode, s.reports.unavailable.savingsNode),
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
     {
       label: "No water (%)",
       value: (s) =>
-        reported(
-          s.reports.noWaterPercent,
-          s.reports.unavailable.noWaterPercent,
-          0,
-        ),
+        reportValue(s.reports.noWaterPercent, s.reports.unavailable.noWaterPercent),
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(0) : value,
     },
     {
       label: "No power (%)",
       value: (s) =>
-        reported(
-          s.reports.noPowerPercent,
-          s.reports.unavailable.noPowerPercent,
-          0,
-        ),
+        reportValue(s.reports.noPowerPercent, s.reports.unavailable.noPowerPercent),
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(0) : value,
     },
     { label: "Pen segments", value: (s) => s.traces.length },
     { label: "Recorded calls", value: (s) => s.history.length },
@@ -160,7 +173,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function selectedAgentOrFieldInspector(
   state: UIObservation,
@@ -216,8 +229,7 @@ function spatial(state: TijuanaRead): SpatialData {
   };
 }
 
-const reported = (
+const reportValue = (
   value: number | undefined,
   reason: string | null,
-  digits: number,
-) => (value === undefined ? `N/A (${reason})` : value.toFixed(digits));
+) => (value === undefined ? `N/A (${reason})` : value);

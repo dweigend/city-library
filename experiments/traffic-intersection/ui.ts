@@ -1,4 +1,4 @@
-import { defineUI, type Series } from "../../ui/index.ts";
+import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -76,7 +76,7 @@ export const sourceMarker =
   "selected-transport-b04:traffic-intersection:231db7a8ab42c4bb097f57fbde6520b6b1c64d6c39d3e96c2c3d57e6aaa4b5c9";
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function waitingCarsSeries(state: UIObservation): readonly Series[] {
   return [

@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -43,13 +43,22 @@ export const ui = defineUI(model, {
     { label: "Samples", value: (s) => s.numSamples },
     {
       label: "Expected value",
-      value: (s) => s.expectedValue?.toFixed(3) ?? "N/A",
+      value: (s) => s.expectedValue ?? "N/A",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
     {
       label: "Std dev means",
-      value: (s) => s.stdDevMeans?.toFixed(3) ?? "N/A",
+      value: (s) => s.stdDevMeans ?? "N/A",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
-    { label: "Std dev sums", value: (s) => s.stdDevSums?.toFixed(3) ?? "N/A" },
+    {
+      label: "Std dev sums",
+      value: (s) => s.stdDevSums ?? "N/A",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
+    },
     { label: "State", value: (s) => s.message || "Ready" },
   ],
   views: [
@@ -71,7 +80,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function populationData(s: UIObservation): SpatialData {
   return {

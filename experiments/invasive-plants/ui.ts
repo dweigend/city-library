@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -53,7 +53,8 @@ export const ui = defineUI(model, {
     { label: "Year", value: (s) => s.tick },
     {
       label: "Aggregate infestation",
-      value: (s) => s.aggregateInfestation.toFixed(2),
+      value: (s) => s.aggregateInfestation,
+      format: (value: number) => value.toFixed(2),
     },
     { label: "Seeds", value: (s) => s.seeds.length },
   ],
@@ -96,7 +97,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function infestationResistanceAndSeedsData(s: UIObservation): SpatialData {
   return {

@@ -18,7 +18,11 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Attempted flips", value: (s) => s.tick },
-    { label: "Magnetization", value: (s) => s.magnetization.toFixed(4) },
+    {
+      label: "Magnetization",
+      value: (s) => s.magnetization,
+      format: (value: number) => value.toFixed(4),
+    },
   ],
   views: [
     {

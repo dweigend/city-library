@@ -1,4 +1,4 @@
-import { defineUI, type SpatialData } from "../../ui/index.ts";
+import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 const colors = [
@@ -64,13 +64,22 @@ export const ui = defineUI(model, {
     { label: "Permutation successes", value: (s) => s.countPermisSuccesses },
     {
       label: "Mean combination",
-      value: (s) => s.combiMean?.toFixed(3) ?? "N/A",
+      value: (s) => s.combiMean ?? "N/A",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
     {
       label: "Mean permutations",
-      value: (s) => s.permisMean?.toFixed(3) ?? "N/A",
+      value: (s) => s.permisMean ?? "N/A",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(3) : value,
     },
-    { label: "Ratio", value: (s) => s.ratio?.toFixed(2) ?? "N/A" },
+    {
+      label: "Ratio",
+      value: (s) => s.ratio ?? "N/A",
+      format: (value: number | string) =>
+        typeof value === "number" ? value.toFixed(2) : value,
+    },
     { label: "Instructions", value: (s) => s.instructions },
   ],
   views: [
@@ -92,7 +101,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function combinationAndGuessData(s: UIObservation): SpatialData {
   return {

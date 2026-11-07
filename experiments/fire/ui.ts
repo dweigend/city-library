@@ -1,4 +1,4 @@
-import { defineUI, type GridData } from "../../ui/index.ts";
+import { defineUI, type Observation, type GridData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -10,7 +10,11 @@ export const ui = defineUI(model, {
   complete: (state) => state.done,
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Burned (%)", value: (state) => state.percentBurned.toFixed(2) },
+    {
+      label: "Burned (%)",
+      value: (state) => state.percentBurned,
+      format: (value: number) => value.toFixed(2),
+    },
     { label: "Fires", value: (state) => state.counts.fires },
     { label: "Embers", value: (state) => state.counts.embers },
   ],
@@ -23,7 +27,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function forestData(state: UIObservation): GridData {
   return {

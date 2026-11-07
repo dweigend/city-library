@@ -25,7 +25,11 @@ const binding = defineUI(model, {
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "Population", value: (state) => state.agents.length },
-    { label: "Chemical", value: (state) => state.chemicalTotal.toFixed(2) },
+    {
+      label: "Chemical",
+      value: (state) => state.chemicalTotal,
+      format: (value: number) => value.toFixed(2),
+    },
   ],
   views: [
     {

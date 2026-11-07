@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Series } from "../../ui/index.ts";
+import { defineUI, netLogoColor, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 
@@ -70,7 +70,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function potentialMaximumAndMean10Series(
   state: UIObservation,

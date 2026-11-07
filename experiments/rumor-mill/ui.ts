@@ -1,4 +1,4 @@
-import { defineUI, type GridData } from "../../ui/index.ts";
+import { defineUI, type Observation, type GridData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 const binding = defineUI(model, {
@@ -50,7 +50,11 @@ const binding = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Clique (%)", value: (s) => s.percent.toFixed(3) },
+    {
+      label: "Clique (%)",
+      value: (s) => s.percent,
+      format: (value: number) => value.toFixed(3),
+    },
     { label: "Times heard", value: (s) => s.totalHeard },
   ],
   views: [
@@ -107,7 +111,7 @@ export const sourceMarker =
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
 
-type UIObservation = ReturnType<ReturnType<typeof model.create>["read"]>;
+type UIObservation = Observation<typeof model>;
 
 function rumorSpreadData(s: UIObservation): GridData {
   return {

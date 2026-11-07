@@ -30,7 +30,8 @@ const binding = defineUI(model, {
     { label: "Lipids", value: (state) => state.edges.length },
     {
       label: "Hydrophobic isolation",
-      value: (state) => state.hydrophobicIsolation.toFixed(3),
+      value: (state) => state.hydrophobicIsolation,
+      format: (value: number) => value.toFixed(3),
     },
   ],
   views: [

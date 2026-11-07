@@ -37,7 +37,11 @@ const binding = defineUI(model, {
   ],
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Mean grammar state", value: (s) => s.meanState.toFixed(4) },
+    {
+      label: "Mean grammar state",
+      value: (s) => s.meanState,
+      format: (value: number) => value.toFixed(4),
+    },
     { label: "Grammar 0", value: (s) => s.grammar0 },
     { label: "Grammar 1", value: (s) => s.grammar1 },
   ],
@@ -50,7 +54,7 @@ const binding = defineUI(model, {
           id: a.id,
           label: String(a.who),
           position: { x: a.x * 7, y: a.y * 7 },
-          color: `rgb(${Math.round(70 + 155 * a.state)}, ${Math.round(135 - 45 * a.state)}, ${Math.round(220 - 130 * a.state)})`,
+          color: grammarColor(a.state),
           size: 14,
         })),
       edges: (s) => s.edges.map((e) => ({ ...e, color: "#929292" })),
@@ -90,3 +94,10 @@ export const sourceMarker =
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
 export const ui = { ...binding, model, sourceMarker };
+
+function grammarColor(state: number): string {
+  const red = Math.round(70 + 155 * state);
+  const green = Math.round(135 - 45 * state);
+  const blue = Math.round(220 - 130 * state);
+  return `rgb(${red}, ${green}, ${blue})`;
+}
