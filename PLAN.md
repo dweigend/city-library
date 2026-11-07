@@ -1,6 +1,6 @@
 # City Library work plan
 
-Updated: 6 November 2026. This plan describes the integration branch `experiment/netlogo-web-catalog`. The consolidation baseline is `49da939`; readable authoring and catalog migration include the independently rechecked callback correction `d069be3`. This work has not been merged into `main`. Status below separates implemented code, executed checks and independent acceptance.
+Updated: 7 November 2026. This plan describes the integration branch `experiment/netlogo-web-catalog`. The consolidation baseline is `49da939`; readable authoring and catalog migration include the independently rechecked callback correction `d069be3`. This work has not been merged into `main`. Status below separates implemented code, executed checks and independent acceptance.
 
 ## Reading order and ownership
 
@@ -37,6 +37,19 @@ The [assignment](docs/development/pre-main-authoring-assignment.md) covers publi
 - The fresh Svelte catalog smoke executed 125 setups and 124 valid one-step actions, with no per-model legacy fallback. Tijuana correctly retains its cityscape precondition. Six richer flows, lifecycle switching and desktop/narrow light/dark captures are retained in [catalog browser evidence](docs/development/authoring-catalog-browser/).
 - An independent agent actually inspected the captures and closed its three visual findings. Its [review](docs/development/authoring-review/independent-visual-review.md) approves only the inspected authoring states, not complete accessibility or scientific parity.
 - The [pre-boundary-correction local check](docs/development/authoring-final-checks/checks.json) passed 580 tests / 150783 assertions and all 224 public scripts, build and packed consumer. Astra then reproduced two uncovered session errors. Correction `d069be3` passes 11 targeted tests / 53 expectations, full typecheck, Svelte build and the new real-browser error matrix; the [complete post-correction check](docs/development/authoring-boundary-final-checks/checks.json) passed 583 tests / 150789 assertions, all 224 public scripts, typechecks, build and the actual packed consumer. The Svelte production build passed with retained chunk-size warnings. Independent source rechecks and remote CI remain separate gates.
+
+### Remaining syntax work from the cross-thread review
+
+The syntax review was checked against integration checkpoint `c754a9c` on 7 November. Keyed live controls, concise setup, grouping, categorical axes and the formatter hook are delivered; this does not finish the authoring improvements. The following work remains open:
+
+- [ ] **Correlate monitor formatter types.** A numeric `value` getter must allow `format: value => value.toFixed(3)` without a type guard. Preserve string and genuinely union-valued monitors, reject incompatible formatter arguments, and retain both hosts' error boundaries. The frozen first slice intentionally uses `string | number`; this is a new example-first extension, not a defect to hide by editing its accepted examples.
+- [ ] **Expose a readable observation type.** Offer an approved public way to type extracted projections from a model definition, through both UI entrypoints. Replace repeated nested `ReturnType` expressions in current author-facing scripts. The existing internal `Snapshot<M>` alias is not re-exported and alone does not address definition-level authoring. Settle naming and inference in public examples before implementation.
+- [ ] **Decide selection identity.** Inspectors and actions still receive `string | null`; the public contract does not settle collisions between entity kinds or views. Choose and document a compatible uniqueness/namespace rule or an explicit typed selection extension. Demonstrate equal source IDs for an agent and a cell, stale selection, restart and selection-dependent actions in both hosts. No collision in Wealth has been reproduced by this source audit; do not claim one.
+- [ ] **Finish adopting raw monitor values.** Several catalog monitors still call `toFixed()` inside `value`. After the formatter contract is accepted, migrate presentation-only formatting while preserving displayed precision, units, scientific reporter values and failure behavior. Inspect each case rather than mechanically rewriting all rounding.
+- [ ] **Finish projection readability.** Simplify repeated color calculations and remove unnecessary assertions where contextual inference suffices. Keep colors and trajectories stable; named pure projections must explain the mapping without moving domain logic into UI helpers.
+- [ ] **Keep one recommended authoring path.** Current experiment entries already use keyed live objects; keep that syntax in new documentation and examples. Retain legacy array support and its tested setup precedence as compatibility behavior rather than changing those semantics merely for uniformity.
+
+Sequence these as bounded expansions with four or five asserted public examples before each runtime phase, independent contract review, type/public-consumer checks, and real-browser checks for affected behavior. The selection design needs an explicit recorded decision; this list does not introduce a new API. Keep the original freeze documents and historical evidence intact.
 
 ### Remaining independent merge audit
 
