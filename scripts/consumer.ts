@@ -104,6 +104,29 @@ const packedNwNodes=Array.from({length:4},()=>packedNwGraph.nodes.add({}));
 const packedNwEdges=packedNwGraph.generate({kind:'kleinberg',profile:'nw-web-topology/1',nodes:packedNwNodes,shape:[2,2],clusteringExponent:0,directed:true,random:Random.add({seed:1})});
 if(packedNwEdges.length!==7||packedNwEdges[4].from!==packedNwNodes[1]||packedNwEdges[4].to!==packedNwNodes[0])throw Error('packed pinned topology variant mismatch');
 
+import {topology,type Layout} from 'city-library';
+const packedLayout:Layout=topology.square({columns:2,rows:1});
+const packedLayoutGrid=Grid.add({layout:packedLayout,state:{temperature:1}});
+packedLayoutGrid.fields[0]!.temperature=3;
+if(packedLayoutGrid.neighbors(packedLayoutGrid.fields[0]!)[0]!==packedLayoutGrid.fields[1])throw Error('packed layout neighbors mismatch');
+if(packedLayoutGrid.fields[1]!.temperature!==1||packedLayoutGrid.fields[0]!.grid!==packedLayoutGrid)throw Error('packed canonical layout Field mismatch');
+if('space' in packedLayoutGrid||'cellSize' in packedLayoutGrid||'diffuse' in packedLayoutGrid)throw Error('packed layout capabilities mismatch');
+const packedHex=topology.hex({columns:3,rows:3});
+if(packedHex.neighbors({cell:4}).length!==6)throw Error('packed hex adjacency mismatch');
+const packedImported=topology.fromPolygons({polygons:packedLayout.cells.map(cell=>packedLayout.polygon({cell}))});
+if(packedImported.cellAt({position:{x:1,y:0.5}})!==0)throw Error('packed layout tie mismatch');
+const packedMerge=geometry.merge({layout:packedLayout,cells:[1,0]});
+if(packedMerge.status!=='ok'||geometry.area({shape:packedMerge.shape})!==2||packedMerge.sourceCells.join(',')!=='1,0')throw Error('packed merge mismatch');
+if(packedMerge.status==='ok'){
+const packedSplit=geometry.split({shape:packedMerge.shape,point:{x:1,y:0},direction:{x:0,y:1}});
+if(packedSplit.status!=='ok'||packedSplit.parts.reduce((sum,shape)=>sum+geometry.area({shape}),0)!==2)throw Error('packed split mismatch');
+}
+const packedLayoutWorld=World.add();packedLayoutWorld.add(packedLayoutGrid);
+const packedWalker=Agent.add({label:'layout walker'},{position:{x:0.5,y:0.5}});packedLayoutWorld.add(packedWalker);
+if(packedLayoutGrid.agentsAt(packedLayoutGrid.fields[0]!)[0]!==packedWalker)throw Error('packed layout occupancy mismatch');
+packedWalker.move({to:{x:1.5,y:0.5}});
+if(packedLayoutGrid.agentsAt(packedLayoutGrid.fields[0]!).length!==0||packedLayoutGrid.agentsAt(packedLayoutGrid.fields[1]!)[0]!==packedWalker)throw Error('packed layout movement mismatch');
+
 
 
 `, { flag: "a" });
@@ -113,6 +136,24 @@ function summaryTypeContract(){const summary:Summary=stats.describe([1,2,3],{sam
 summary.sum=0;
 return median;}
 void summaryTypeContract;
+`);
+  await writeFile(join(directory, "grid-parcel-types.ts"), `import {Grid,World,topology,type Layout,type LayoutGrid,type LayoutField,type PlanarGeometry} from 'city-library';
+function layoutTypeContract(){
+const layout:Layout=topology.hex({columns:2,rows:2});
+const grid:LayoutGrid<{temperature:number}>=Grid.add({layout,state:{temperature:1}});
+const field:LayoutField<{temperature:number}>=World.add().add(grid).fields[0]!;
+field.temperature=2;
+const owner:LayoutGrid<{temperature:number}>=field.grid;
+const shape:PlanarGeometry=layout.polygon({cell:0});
+// @ts-expect-error Layout Grids do not have a uniform cell size.
+grid.cellSize;
+// @ts-expect-error Layout Grids do not have regular diffusion.
+grid.diffuse('temperature');
+// @ts-expect-error The Field retains typed direct state.
+field.temperature='wrong';
+// @ts-expect-error Field owner does not pretend to have a regular Space.
+field.grid.space;
+return [owner,shape];}void layoutTypeContract;
 `);
   await writeFile(join(directory, "generator-types.ts"), `import {Graph,type GeneratorOptions,type Edge} from 'city-library';
 function generatorTypeContract(){const graph=Graph.add<{name:string}>();const a=graph.nodes.add({name:'a'}),b=graph.nodes.add({name:'b'});const options:GeneratorOptions<{name:string}>={kind:'path',nodes:[a,b],directed:true};const result:readonly Edge<{name:string}>[]=graph.generate(options);
@@ -125,7 +166,7 @@ result.push(result[0]);return result;}void generatorTypeContract;
     .transformSync(await Bun.file(join(directory, "consumer.ts")).text());
   await writeFile(join(directory, "consumer.mjs"), javascript);
   await command(["node", "consumer.mjs"], directory);
-  await writeFile(join(directory, "tsconfig.json"), JSON.stringify({ compilerOptions: { strict: true, target: "ESNext", module: "Preserve", moduleResolution: "bundler", noEmit: true, types: [], lib: ["ESNext"] }, include: ["consumer.ts", "summary-types.ts", "generator-types.ts"] }));
+  await writeFile(join(directory, "tsconfig.json"), JSON.stringify({ compilerOptions: { strict: true, target: "ESNext", module: "Preserve", moduleResolution: "bundler", noEmit: true, types: [], lib: ["ESNext"] }, include: ["consumer.ts", "summary-types.ts", "generator-types.ts", "grid-parcel-types.ts"] }));
   await command([resolve("node_modules/.bin/tsc"), "-p", "tsconfig.json"], directory);
   console.log("packed consumer: Bun, Node ESM and ambient-free TypeScript passed");
 } finally { await rm(directory, { recursive: true, force: true }); }

@@ -1,5 +1,9 @@
 # City Library work plan
 
+## Grid and parcel foundations — locally completed phase
+
+The authorized headless first phase is tracked in [the scoped phase plan](docs/grid-parcels/PHASE-PLAN.md), with the full [saved target catalogue](docs/grid-parcels/API.md) and explicit [implementation/backlog ledger](docs/grid-parcels/STATUS.md). Five public scripts were frozen in `158b803` before runtime commits `aa824df`, `49ff219` and `c92289a`; their checksums remain unchanged. Square/hex/authored layouts, queries, area, bounded merge/split and typed layout Fields are implemented. [Verification](docs/grid-parcels/VERIFICATION.md) records the passing complete project check, packed consumer, additional conservation tests and independent Gemini scoped approval at `1fda843`. The user subsequently authorized pushing `feat/grid-parcel-foundations` and opening a detailed PR against `experiment/netlogo-web-catalog`. Package publication and main merge remain unauthorized. This additive phase preserves the existing regular Grid contract.
+
 Updated: 7 November 2026. This plan describes the integration branch `experiment/netlogo-web-catalog`. The consolidation baseline is `49da939`; readable authoring and catalog migration include the independently rechecked callback correction `d069be3`. This work has not been merged into `main`. Status below separates implemented code, executed checks and independent acceptance.
 
 ## Reading order and ownership

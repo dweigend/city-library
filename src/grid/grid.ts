@@ -1,8 +1,14 @@
 import type { Agent } from "../agent/agent.ts";
 import { createOccupancyIndex } from "./occupancy.ts";
+import { createField, reservedFieldKeys, type Field } from "./field.ts";
+import { gridIdentity, type GridMembership } from "./membership.ts";
+import { addLayoutGrid, type LayoutGrid } from "./layout-grid.ts";
+import type { Layout } from "./topology/index.ts";
+export type { Field } from "./field.ts";
+export type { GridMembership } from "./membership.ts";
+export type { LayoutGrid, LayoutField } from "./layout-grid.ts";
 import {
   frameworkRecord,
-  issueId,
   registerFramework,
   requireAgent,
 } from "../agent/lifecycle.ts";
@@ -17,23 +23,10 @@ import {
   type Position,
   type Space,
 } from "../geometry/space.ts";
-export type Field<F extends object = {}> = F & {
-  readonly id: string;
-  readonly grid: Grid<F>;
-  readonly x: number;
-  readonly y: number;
-  readonly z: number | undefined;
-};
 type NumericKey<F> = Extract<
   { [K in keyof F]-?: F[K] extends number ? K : never }[keyof F],
   string
 >;
-const gridIdentity: unique symbol = Symbol("Grid membership");
-/** State-independent admission type; it erases payload without widening it to any. */
-export interface GridMembership {
-  readonly [gridIdentity]: true;
-  readonly space: NormalizedSpace;
-}
 export interface Grid<F extends object = {}> extends GridMembership {
   readonly space: NormalizedSpace;
   readonly cellSize: number;
@@ -53,7 +46,7 @@ export interface Grid<F extends object = {}> extends GridMembership {
     options?: { rate?: number; neighborhood?: "faces" | "moore" },
   ): void;
 }
-const reserved = new Set(["id", "grid", "x", "y", "z"]);
+function add<F extends object>(options: { layout: Layout; state: F }): LayoutGrid<F>;
 function add<F extends object>(
   space: Space,
   options: { state: F; cellSize?: number; boundary?: Space["boundary"] },
@@ -63,9 +56,9 @@ function add(
   options?: { cellSize?: number; boundary?: Space["boundary"] },
 ): Grid<{}>;
 function add<F extends object>(
-  input: Space = { x: 40, y: 40 },
+  input: Space | { layout: Layout; state: F } = { x: 40, y: 40 },
   options: { state?: F; cellSize?: number; boundary?: Space["boundary"] } = {},
-): Grid<F> {
+): Grid<F> | LayoutGrid<F> {
   if (
     arguments.length > 2 ||
     (arguments.length > 0 && arguments[0] === undefined) ||
@@ -74,8 +67,12 @@ function add<F extends object>(
     throw new TypeError(
       "Grid.add accepts Space and options without placeholders.",
     );
+  if (typeof input === "object" && input !== null && Object.hasOwn(input, "layout")) {
+    if (arguments.length !== 1) throw new TypeError("Layout Grid.add accepts one options record.");
+    return addLayoutGrid<F>(input as { layout: Layout; state: F });
+  }
   const opts = validateOptions(options, ["state", "cellSize", "boundary"]);
-  const space = normalizeSpace(input, opts.boundary as Space["boundary"]);
+  const space = normalizeSpace(input as Space, opts.boundary as Space["boundary"]);
   const cellSize = finite(opts.cellSize ?? 1);
   if (cellSize <= 0) throw new RangeError("Cell size must be positive.");
   const counts = axes
@@ -87,7 +84,7 @@ function add<F extends object>(
   if (!Number.isSafeInteger(size) || size > 1_000_000)
     throw new RangeError("Too many fields.");
   const initial = (Object.hasOwn(opts, "state") ? opts.state : {}) as F;
-  cloneModelState(initial, reserved, "Field");
+  cloneModelState(initial, reservedFieldKeys, "Field");
   const fields: Field<F>[] = [];
   const indices = new Map<Field<F>, number>();
   let occupancy: ReturnType<typeof createOccupancyIndex<Field<F>>> | undefined;
@@ -268,22 +265,14 @@ function add<F extends object>(
   };
   registerFramework(grid, "grid");
   for (let index = 0; index < size; index++) {
-    const field = cloneModelState(initial, reserved, "Field") as Field<F>;
     const indicesValue = coordinates(index);
-    const properties: PropertyDescriptorMap = {
-      id: { value: issueId(), enumerable: true },
-      grid: { value: grid, enumerable: true },
-    };
-    for (const [i, axis] of axes.entries())
-      properties[axis] = {
-        value:
-          i < space.dimensions
-            ? -space[axis]! / 2 + (indicesValue[i]! + 0.5) * cellSize
-            : undefined,
-        enumerable: true,
-      };
-    Object.defineProperties(field, properties);
-    registerFramework(field, "field");
+    const field = createField(initial, grid, {
+      x: -space.x / 2 + (indicesValue[0]! + 0.5) * cellSize,
+      y: -space.y / 2 + (indicesValue[1]! + 0.5) * cellSize,
+      ...(space.dimensions === 3
+        ? { z: -space.z! / 2 + (indicesValue[2]! + 0.5) * cellSize }
+        : {}),
+    });
     fields.push(field);
     indices.set(field, index);
   }

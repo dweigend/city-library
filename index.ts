@@ -8,7 +8,9 @@ export type { Edge } from "./src/graph/index.ts";
 export type { GeneratorOptions } from "./src/graph/index.ts";
 
 export { Grid } from "./src/grid/index.ts";
-export type { Field } from "./src/grid/index.ts";
+export { topology } from "./src/grid/topology/index.ts";
+export type { Layout, BoundarySegment } from "./src/grid/topology/index.ts";
+export type { Field, LayoutGrid, LayoutField } from "./src/grid/index.ts";
 export type {
   Space,
   Position,
@@ -18,4 +20,4 @@ export type {
 export { stats } from "./src/stats/index.ts";
 export type { Histogram, Summary } from "./src/stats/index.ts";
 export { geometry } from "./src/geometry/index.ts";
-export type { Bounds, PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset } from "./src/geometry/index.ts";
+export type { Bounds, PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset, ParcelShape, MergeResult, SplitResult } from "./src/geometry/index.ts";
