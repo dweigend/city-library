@@ -4,7 +4,11 @@ Date: 2026-11-07. Branch: `feat/grid-parcel-foundations`.
 Worktree: `/home/david/.t3/worktrees/city-library/feat-grid-parcel-foundations`.
 Verified clean starting head: `dc7b164abd23c8e7b7f11c902195ab030c5f1c4b`, identical
 to committed `experiment/netlogo-web-catalog`. No concurrent checkout contents
-were imported or staged. No push, PR, publication or main merge was performed.
+were imported or staged. Implementation and review first completed locally.
+The user subsequently authorized pushing the feature branch and opening a PR
+against `experiment/netlogo-web-catalog`. Package publication and main merge
+remain outside that authorization. The checks below precede GitHub delivery;
+later delivery documentation changes do not alter the reviewed runtime.
 
 ## Preserved sequence
 
