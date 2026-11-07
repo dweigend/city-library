@@ -1,5 +1,9 @@
 # City Library work plan
 
+## Grid and parcel foundations — active isolated phase
+
+The authorized headless first phase is tracked in [the scoped phase plan](docs/grid-parcels/PHASE-PLAN.md), with the full [saved target catalogue](docs/grid-parcels/API.md). Its five public scripts must be frozen and committed before runtime edits. Work remains local on `feat/grid-parcel-foundations`; no publication or main merge is authorized. This additive phase preserves the existing regular Grid contract.
+
 Updated: 7 November 2026. This plan describes the integration branch `experiment/netlogo-web-catalog`. The consolidation baseline is `49da939`; readable authoring and catalog migration include the independently rechecked callback correction `d069be3`. This work has not been merged into `main`. Status below separates implemented code, executed checks and independent acceptance.
 
 ## Reading order and ownership
