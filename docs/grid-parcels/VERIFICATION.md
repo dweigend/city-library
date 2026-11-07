@@ -58,9 +58,18 @@ are complementary shell evidence.
 ## Independent review
 
 Availability confirmed through orchestrator capabilities: Antigravity provider,
-`gemini-3.8-flash`, with high thinking supported. Independent substantial review
-is pending; passing author checks are not independent approval. Review findings,
-author responses and fresh re-review decisions will be recorded separately.
+`gemini-3.8-flash`, with high thinking supported. The independent review completed
+against `dc7b164..1fda843` and granted **scoped phase-one approval**, with no blocking
+findings. The original [review report](reviews/01-gemini.md) is preserved separately
+from the [author response](reviews/RESPONSE.md). The review ran the five frozen
+examples, 21 phase tests / 1365 expectations, regular spatial/occupancy regressions,
+typechecks and a packed consumer. These are reviewer-reported checks, distinct
+from the author-run command results above.
+
+Only evidence/documentation commits followed the reviewed implementation; no
+runtime correction was required and no fresh corrective re-review was needed.
+Approval covers this bounded phase, not the deferred catalogue, publication,
+scientific model parity or arbitrary-scale computational geometry.
 
 ## Limits
 
