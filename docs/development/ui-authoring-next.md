@@ -1,6 +1,6 @@
 # Readable observations, formatter types and selection identity
 
-Status: pre-runtime public examples, corrected after independent Argon contract review. The coordinator must commit the freeze before implementation; the public spelling uses explicit scalar formatter annotations. This is an extension of the delivered authoring contract, not a rewrite of its historical freeze.
+Status: implemented through both public adapters after example freeze `2dacc27`, runtime `aa58643` and catalog refactor `1f48e05`. The public spelling uses explicit scalar formatter annotations. Current executed checks, screenshots and independent review scope are in the [delivery report](syntax-refactor-report.md). This is an extension of the delivered authoring contract, not a rewrite of its historical freeze.
 
 ## Scope
 

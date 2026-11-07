@@ -52,3 +52,7 @@ sha256sum -c examples/ui-authoring-next/SHA256SUMS
 The manifest uses repository-relative paths and freezes the five scripts, assertion helper, browser harness, compile-only type contracts and focused tsconfig. README and runtime documentation are outside the manifest so later truthful evidence/status updates do not change the executable contract. Register this phase in the normal runner/typecheck during runtime delivery; it is not registered as an already passing phase at this initial checkpoint.
 
 Pre-freeze Argon review approved the design and identified four harness/coverage gaps; all were corrected before this first committed freeze. The response is in the phase contract. Corrected scripts pass Bun; the corrected pre-runtime TypeScript run still fails on the absent public contracts as expected (`/tmp/city-library-syntax-prefreeze-typecheck.log`).
+
+## Delivery
+
+Runtime `aa58643` and catalog refactor `1f48e05` implement this unchanged freeze. Both authoring typechecks and the five scripts pass. The independent real-browser matrix passed all forty host/size/theme example flows and inspected twelve PNGs. The [delivery report](../../docs/development/syntax-refactor-report.md) records the complete source checks, catalog comparisons, actual screenshot dimensions and independent review limits. Earlier initial-failure records above remain historical evidence.

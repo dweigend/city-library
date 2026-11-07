@@ -1,0 +1,9 @@
+# Independent source review
+
+Astra high reviewed runtime/type commit `aa58643` against example freeze `2dacc27`. Its scoped approval covers the ordinary inferred authoring path: concrete observations, required and optional formatter compatibility, full-union checks, both adapters, no inferred `any` in the examined callbacks, and unchanged callback/ownership execution. Targeted compiler probes, both authoring typechecks, manifest verification and the new runtime regression passed. Removing the negative directives produced actual expected compiler errors rather than implicit-any errors.
+
+The reviewer identified a precise limit: an explicitly supplied third generic argument with a deliberately widened bivariant method signature can erase getter/formatter correlation. A private `RuntimeSpec` annotation has the same effect. Normal inferred calls reject the mismatch. Approval does not claim soundness under deliberate type widening or private host contracts. Public examples leave the inference generic to `defineUI`; the public `Monitor<S,V>` uses strict function properties. No universal TypeScript soundness claim is made.
+
+A separate non-implementing native agent reviewed all 101 catalog UI diffs against `11d697f` and granted scoped source approval. It confirmed scalar/union display semantics, unavailable reasons, trailing-zero removal, percentages, the three equivalent color mappings, clean public imports and preservation of models/core/old frozen examples. It checked the comparison totals and new manifest, without running a browser or broad tests.
+
+These source reviews are distinct from the actual-browser and pixel review in [browser-matrix/review.md](browser-matrix/review.md). The remaining main gates include catalog-ledger reconciliation, the fixed 200-model scope, scientific and independent model acceptance, broader model-script readability, the public domain-procedure rule and explicit merge authorization.
