@@ -1,0 +1,402 @@
+{
+  "sourceSha256": "f904e2dfd900a5e5527ed50a4c4a313ab015142ae9a3027c3810633911bf21ae",
+  "slug": "peppered-moths",
+  "setupControl": "native setup DOM click",
+  "settings": [
+    {
+      "variable": "cycle-pollution?",
+      "value": {
+        "success": true,
+        "value": false
+      }
+    },
+    {
+      "variable": "speed",
+      "value": {
+        "success": true,
+        "value": 41
+      }
+    },
+    {
+      "variable": "mutation",
+      "value": {
+        "success": true,
+        "value": 15
+      }
+    },
+    {
+      "variable": "selection",
+      "value": {
+        "success": true,
+        "value": 50
+      }
+    },
+    {
+      "variable": "num-moths",
+      "value": {
+        "success": true,
+        "value": 100
+      }
+    }
+  ],
+  "setup": {
+    "tick": {
+      "success": true,
+      "value": 0
+    },
+    "turtles": {
+      "success": true,
+      "value": 100
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 16,
+      "maxPycor": 20,
+      "minPxcor": -16,
+      "minPycor": -20,
+      "nextWhoNumber": 100,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 0,
+      "codeGlobals": {
+        "cycle-pollution?": false,
+        "dark-moths": 31,
+        "darkening?": true,
+        "darkness": 0,
+        "light-moths": 31,
+        "medium-moths": 38,
+        "mutation": 15,
+        "num-moths": 100,
+        "selection": 50,
+        "speed": 41
+      }
+    },
+    "monitors": [
+      {
+        "label": "Dark Moths",
+        "source": "dark-moths",
+        "value": {
+          "success": true,
+          "value": 31
+        }
+      },
+      {
+        "label": "Medium Moths",
+        "source": "medium-moths",
+        "value": {
+          "success": true,
+          "value": 38
+        }
+      },
+      {
+        "label": "Light Moths",
+        "source": "light-moths",
+        "value": {
+          "success": true,
+          "value": 31
+        }
+      },
+      {
+        "label": "Total Moths",
+        "source": "light-moths + medium-moths + dark-moths",
+        "value": {
+          "success": true,
+          "value": 100
+        }
+      },
+      {
+        "label": "Pollution (%)",
+        "source": "100 * darkness / 8",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "runPause": {
+    "runningThen": true,
+    "pausedNow": true,
+    "after": {
+      "tick": {
+        "success": true,
+        "value": 3
+      },
+      "turtles": {
+        "success": true,
+        "value": 137
+      },
+      "globals": {
+        "linkDirectedness": "neither",
+        "maxPxcor": 16,
+        "maxPycor": 20,
+        "minPxcor": -16,
+        "minPycor": -20,
+        "nextWhoNumber": 290,
+        "perspective": "observe",
+        "subject": {
+          "referenceType": "nobody"
+        },
+        "ticks": 3,
+        "codeGlobals": {
+          "cycle-pollution?": false,
+          "dark-moths": 23,
+          "darkening?": true,
+          "darkness": 0,
+          "light-moths": 65,
+          "medium-moths": 49,
+          "mutation": 15,
+          "num-moths": 100,
+          "selection": 50,
+          "speed": 41
+        }
+      },
+      "monitors": [
+        {
+          "label": "Dark Moths",
+          "source": "dark-moths",
+          "value": {
+            "success": true,
+            "value": 23
+          }
+        },
+        {
+          "label": "Medium Moths",
+          "source": "medium-moths",
+          "value": {
+            "success": true,
+            "value": 49
+          }
+        },
+        {
+          "label": "Light Moths",
+          "source": "light-moths",
+          "value": {
+            "success": true,
+            "value": 65
+          }
+        },
+        {
+          "label": "Total Moths",
+          "source": "light-moths + medium-moths + dark-moths",
+          "value": {
+            "success": true,
+            "value": 137
+          }
+        },
+        {
+          "label": "Pollution (%)",
+          "source": "100 * darkness / 8",
+          "value": {
+            "success": true,
+            "value": 0
+          }
+        }
+      ]
+    }
+  },
+  "reset": {
+    "command": "random-seed 1 setup",
+    "success": true
+  },
+  "step": {
+    "command": "go",
+    "success": true
+  },
+  "stepState": {
+    "tick": {
+      "success": true,
+      "value": 1
+    },
+    "turtles": {
+      "success": true,
+      "value": 127
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 16,
+      "maxPycor": 20,
+      "minPxcor": -16,
+      "minPycor": -20,
+      "nextWhoNumber": 172,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 1,
+      "codeGlobals": {
+        "cycle-pollution?": false,
+        "dark-moths": 30,
+        "darkening?": true,
+        "darkness": 0,
+        "light-moths": 46,
+        "medium-moths": 51,
+        "mutation": 15,
+        "num-moths": 100,
+        "selection": 50,
+        "speed": 41
+      }
+    },
+    "monitors": [
+      {
+        "label": "Dark Moths",
+        "source": "dark-moths",
+        "value": {
+          "success": true,
+          "value": 30
+        }
+      },
+      {
+        "label": "Medium Moths",
+        "source": "medium-moths",
+        "value": {
+          "success": true,
+          "value": 51
+        }
+      },
+      {
+        "label": "Light Moths",
+        "source": "light-moths",
+        "value": {
+          "success": true,
+          "value": 46
+        }
+      },
+      {
+        "label": "Total Moths",
+        "source": "light-moths + medium-moths + dark-moths",
+        "value": {
+          "success": true,
+          "value": 127
+        }
+      },
+      {
+        "label": "Pollution (%)",
+        "source": "100 * darkness / 8",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      }
+    ]
+  },
+  "progressCommand": {
+    "command": "repeat 9 [ go ]",
+    "success": true
+  },
+  "progress": {
+    "tick": {
+      "success": true,
+      "value": 10
+    },
+    "turtles": {
+      "success": true,
+      "value": 191
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 16,
+      "maxPycor": 20,
+      "minPxcor": -16,
+      "minPycor": -20,
+      "nextWhoNumber": 766,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 10,
+      "codeGlobals": {
+        "cycle-pollution?": false,
+        "dark-moths": 3,
+        "darkening?": true,
+        "darkness": 0,
+        "light-moths": 147,
+        "medium-moths": 41,
+        "mutation": 15,
+        "num-moths": 100,
+        "selection": 50,
+        "speed": 41
+      }
+    },
+    "monitors": [
+      {
+        "label": "Dark Moths",
+        "source": "dark-moths",
+        "value": {
+          "success": true,
+          "value": 3
+        }
+      },
+      {
+        "label": "Medium Moths",
+        "source": "medium-moths",
+        "value": {
+          "success": true,
+          "value": 41
+        }
+      },
+      {
+        "label": "Light Moths",
+        "source": "light-moths",
+        "value": {
+          "success": true,
+          "value": 147
+        }
+      },
+      {
+        "label": "Total Moths",
+        "source": "light-moths + medium-moths + dark-moths",
+        "value": {
+          "success": true,
+          "value": 191
+        }
+      },
+      {
+        "label": "Pollution (%)",
+        "source": "100 * darkness / 8",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      }
+    ]
+  },
+  "probes": {
+    "fixture": {
+      "command": "set num-moths 0 set speed 100 set cycle-pollution? false setup repeat 8 [pollute-world]",
+      "success": false,
+      "error": "[object Object]"
+    },
+    "endpoint": {
+      "success": true,
+      "value": [
+        0,
+        true,
+        9,
+        0
+      ]
+    },
+    "turn": {
+      "command": "pollute-world",
+      "success": true
+    },
+    "flipped": {
+      "success": true,
+      "value": [
+        1,
+        true
+      ]
+    },
+    "emptyGo": {
+      "command": "go",
+      "success": true
+    },
+    "emptyTick": {
+      "success": true,
+      "value": 1
+    }
+  }
+}

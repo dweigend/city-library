@@ -1,0 +1,824 @@
+{
+  "slug": "peppered-moths",
+  "uiCommit": "1d14850969a89cf38cbfeebf7537641c8a3fd296",
+  "capturePolicy": "Fresh independent load at each viewport/theme; earlier theme-switch captures retained, no renderer repair claimed",
+  "variants": [
+    {
+      "name": "desktop-light",
+      "width": 1440,
+      "height": 1050,
+      "theme": "light",
+      "setup": {
+        "monitors": {
+          "Tick": "0",
+          "Light": "27",
+          "Medium": "38",
+          "Dark": "35",
+          "Pollution (%)": "0"
+        },
+        "status": "Model initialized.",
+        "statusState": "success",
+        "controls": [
+          {
+            "id": "setup-seed",
+            "name": "seed",
+            "type": "number",
+            "value": "1",
+            "checked": false,
+            "label": "Seed"
+          },
+          {
+            "id": "",
+            "name": "",
+            "type": "range",
+            "value": "5",
+            "checked": false,
+            "label": "Speed"
+          },
+          {
+            "id": "",
+            "name": "live-numMoths",
+            "type": "number",
+            "value": "100",
+            "checked": false,
+            "label": "Num Moths"
+          },
+          {
+            "id": "",
+            "name": "live-speed",
+            "type": "number",
+            "value": "41",
+            "checked": false,
+            "label": "Speed"
+          },
+          {
+            "id": "",
+            "name": "live-mutation",
+            "type": "number",
+            "value": "15",
+            "checked": false,
+            "label": "Mutation"
+          },
+          {
+            "id": "",
+            "name": "live-selection",
+            "type": "number",
+            "value": "50",
+            "checked": false,
+            "label": "Selection"
+          },
+          {
+            "id": "",
+            "name": "live-cyclePollution",
+            "type": "checkbox",
+            "value": "on",
+            "checked": false,
+            "label": "Cycle Pollution"
+          },
+          {
+            "id": "",
+            "name": "",
+            "type": "checkbox",
+            "value": "on",
+            "checked": false,
+            "label": "Labels"
+          }
+        ],
+        "figures": [
+          "Moth",
+          "Moths and pollution",
+          "Color populations"
+        ],
+        "overflow": false,
+        "viewport": [
+          1440,
+          1050
+        ],
+        "scroll": [
+          0,
+          0
+        ]
+      },
+      "setupDiagnostics": {
+        "console": [],
+        "omitted": [
+          "160 older network entries"
+        ]
+      },
+      "progress": {
+        "read": {
+          "monitors": {
+            "Tick": "10",
+            "Light": "194",
+            "Medium": "52",
+            "Dark": "3",
+            "Pollution (%)": "0"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-numMoths",
+              "type": "number",
+              "value": "100",
+              "checked": false,
+              "label": "Num Moths"
+            },
+            {
+              "id": "",
+              "name": "live-speed",
+              "type": "number",
+              "value": "41",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mutation",
+              "type": "number",
+              "value": "15",
+              "checked": false,
+              "label": "Mutation"
+            },
+            {
+              "id": "",
+              "name": "live-selection",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Selection"
+            },
+            {
+              "id": "",
+              "name": "live-cyclePollution",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Cycle Pollution"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Moth",
+            "Moths and pollution",
+            "Color populations"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "errors": []
+      },
+      "diagnostics": {
+        "console": [],
+        "omitted": [
+          "160 older network entries"
+        ]
+      }
+    },
+    {
+      "name": "desktop-dark",
+      "width": 1440,
+      "height": 1050,
+      "theme": "dark",
+      "setup": {
+        "monitors": {
+          "Tick": "0",
+          "Light": "27",
+          "Medium": "38",
+          "Dark": "35",
+          "Pollution (%)": "0"
+        },
+        "status": "Model initialized.",
+        "statusState": "success",
+        "controls": [
+          {
+            "id": "setup-seed",
+            "name": "seed",
+            "type": "number",
+            "value": "1",
+            "checked": false,
+            "label": "Seed"
+          },
+          {
+            "id": "",
+            "name": "",
+            "type": "range",
+            "value": "5",
+            "checked": false,
+            "label": "Speed"
+          },
+          {
+            "id": "",
+            "name": "live-numMoths",
+            "type": "number",
+            "value": "100",
+            "checked": false,
+            "label": "Num Moths"
+          },
+          {
+            "id": "",
+            "name": "live-speed",
+            "type": "number",
+            "value": "41",
+            "checked": false,
+            "label": "Speed"
+          },
+          {
+            "id": "",
+            "name": "live-mutation",
+            "type": "number",
+            "value": "15",
+            "checked": false,
+            "label": "Mutation"
+          },
+          {
+            "id": "",
+            "name": "live-selection",
+            "type": "number",
+            "value": "50",
+            "checked": false,
+            "label": "Selection"
+          },
+          {
+            "id": "",
+            "name": "live-cyclePollution",
+            "type": "checkbox",
+            "value": "on",
+            "checked": false,
+            "label": "Cycle Pollution"
+          },
+          {
+            "id": "",
+            "name": "",
+            "type": "checkbox",
+            "value": "on",
+            "checked": false,
+            "label": "Labels"
+          }
+        ],
+        "figures": [
+          "Moth",
+          "Moths and pollution",
+          "Color populations"
+        ],
+        "overflow": false,
+        "viewport": [
+          1440,
+          1050
+        ],
+        "scroll": [
+          0,
+          0
+        ]
+      },
+      "progress": {
+        "read": {
+          "monitors": {
+            "Tick": "10",
+            "Light": "194",
+            "Medium": "52",
+            "Dark": "3",
+            "Pollution (%)": "0"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-numMoths",
+              "type": "number",
+              "value": "100",
+              "checked": false,
+              "label": "Num Moths"
+            },
+            {
+              "id": "",
+              "name": "live-speed",
+              "type": "number",
+              "value": "41",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mutation",
+              "type": "number",
+              "value": "15",
+              "checked": false,
+              "label": "Mutation"
+            },
+            {
+              "id": "",
+              "name": "live-selection",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Selection"
+            },
+            {
+              "id": "",
+              "name": "live-cyclePollution",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Cycle Pollution"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Moth",
+            "Moths and pollution",
+            "Color populations"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "errors": []
+      },
+      "diagnostics": {
+        "console": [],
+        "omitted": [
+          "160 older network entries"
+        ]
+      }
+    },
+    {
+      "name": "mobile-dark",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "setup": {
+        "monitors": {
+          "Tick": "0",
+          "Light": "27",
+          "Medium": "38",
+          "Dark": "35",
+          "Pollution (%)": "0"
+        },
+        "status": "Model initialized.",
+        "statusState": "success",
+        "controls": [
+          {
+            "id": "setup-seed",
+            "name": "seed",
+            "type": "number",
+            "value": "1",
+            "checked": false,
+            "label": "Seed"
+          },
+          {
+            "id": "",
+            "name": "",
+            "type": "range",
+            "value": "5",
+            "checked": false,
+            "label": "Speed"
+          },
+          {
+            "id": "",
+            "name": "live-numMoths",
+            "type": "number",
+            "value": "100",
+            "checked": false,
+            "label": "Num Moths"
+          },
+          {
+            "id": "",
+            "name": "live-speed",
+            "type": "number",
+            "value": "41",
+            "checked": false,
+            "label": "Speed"
+          },
+          {
+            "id": "",
+            "name": "live-mutation",
+            "type": "number",
+            "value": "15",
+            "checked": false,
+            "label": "Mutation"
+          },
+          {
+            "id": "",
+            "name": "live-selection",
+            "type": "number",
+            "value": "50",
+            "checked": false,
+            "label": "Selection"
+          },
+          {
+            "id": "",
+            "name": "live-cyclePollution",
+            "type": "checkbox",
+            "value": "on",
+            "checked": false,
+            "label": "Cycle Pollution"
+          },
+          {
+            "id": "",
+            "name": "",
+            "type": "checkbox",
+            "value": "on",
+            "checked": false,
+            "label": "Labels"
+          }
+        ],
+        "figures": [
+          "Moth",
+          "Moths and pollution",
+          "Color populations"
+        ],
+        "overflow": false,
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          0
+        ]
+      },
+      "progress": {
+        "read": {
+          "monitors": {
+            "Tick": "10",
+            "Light": "194",
+            "Medium": "52",
+            "Dark": "3",
+            "Pollution (%)": "0"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-numMoths",
+              "type": "number",
+              "value": "100",
+              "checked": false,
+              "label": "Num Moths"
+            },
+            {
+              "id": "",
+              "name": "live-speed",
+              "type": "number",
+              "value": "41",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mutation",
+              "type": "number",
+              "value": "15",
+              "checked": false,
+              "label": "Mutation"
+            },
+            {
+              "id": "",
+              "name": "live-selection",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Selection"
+            },
+            {
+              "id": "",
+              "name": "live-cyclePollution",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Cycle Pollution"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Moth",
+            "Moths and pollution",
+            "Color populations"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            349.5
+          ]
+        },
+        "errors": []
+      },
+      "diagnostics": {
+        "console": [],
+        "omitted": [
+          "160 older network entries"
+        ]
+      }
+    },
+    {
+      "name": "mobile-light",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "setup": {
+        "monitors": {
+          "Tick": "0",
+          "Light": "27",
+          "Medium": "38",
+          "Dark": "35",
+          "Pollution (%)": "0"
+        },
+        "status": "Model initialized.",
+        "statusState": "success",
+        "controls": [
+          {
+            "id": "setup-seed",
+            "name": "seed",
+            "type": "number",
+            "value": "1",
+            "checked": false,
+            "label": "Seed"
+          },
+          {
+            "id": "",
+            "name": "",
+            "type": "range",
+            "value": "5",
+            "checked": false,
+            "label": "Speed"
+          },
+          {
+            "id": "",
+            "name": "live-numMoths",
+            "type": "number",
+            "value": "100",
+            "checked": false,
+            "label": "Num Moths"
+          },
+          {
+            "id": "",
+            "name": "live-speed",
+            "type": "number",
+            "value": "41",
+            "checked": false,
+            "label": "Speed"
+          },
+          {
+            "id": "",
+            "name": "live-mutation",
+            "type": "number",
+            "value": "15",
+            "checked": false,
+            "label": "Mutation"
+          },
+          {
+            "id": "",
+            "name": "live-selection",
+            "type": "number",
+            "value": "50",
+            "checked": false,
+            "label": "Selection"
+          },
+          {
+            "id": "",
+            "name": "live-cyclePollution",
+            "type": "checkbox",
+            "value": "on",
+            "checked": false,
+            "label": "Cycle Pollution"
+          },
+          {
+            "id": "",
+            "name": "",
+            "type": "checkbox",
+            "value": "on",
+            "checked": false,
+            "label": "Labels"
+          }
+        ],
+        "figures": [
+          "Moth",
+          "Moths and pollution",
+          "Color populations"
+        ],
+        "overflow": false,
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          0
+        ]
+      },
+      "progress": {
+        "read": {
+          "monitors": {
+            "Tick": "10",
+            "Light": "194",
+            "Medium": "52",
+            "Dark": "3",
+            "Pollution (%)": "0"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-numMoths",
+              "type": "number",
+              "value": "100",
+              "checked": false,
+              "label": "Num Moths"
+            },
+            {
+              "id": "",
+              "name": "live-speed",
+              "type": "number",
+              "value": "41",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mutation",
+              "type": "number",
+              "value": "15",
+              "checked": false,
+              "label": "Mutation"
+            },
+            {
+              "id": "",
+              "name": "live-selection",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Selection"
+            },
+            {
+              "id": "",
+              "name": "live-cyclePollution",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Cycle Pollution"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Moth",
+            "Moths and pollution",
+            "Color populations"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            349.5
+          ]
+        },
+        "errors": []
+      },
+      "diagnostics": {
+        "console": [],
+        "omitted": [
+          "160 older network entries"
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "url": "http://127.0.0.1:3148/app.js",
+      "sha256": "5cea43b967f4bdf49c8ab959cc5d779c94e4056ba5348d215c7dbfa703e48dca",
+      "bytes": 40203,
+      "markers": []
+    },
+    {
+      "url": "http://127.0.0.1:3148/chunks/ui-7acmxy50.js",
+      "sha256": "6942f70bbe4fa9cf9c48320fe90f4c459563f1fa2a9edad8b417716d3118126f",
+      "bytes": 7327,
+      "markers": [
+        "B08-peppered-moths-native-composition-v1"
+      ],
+      "archivedGzip": "chunks/ui-7acmxy50.js.gz"
+    },
+    {
+      "url": "http://127.0.0.1:3148/chunks/app-shg8ggtp.js",
+      "sha256": "51c2db44ec3165d6bcfc98de2e15a7a08a1ea9d0fe6b75479934fbc2748d4589",
+      "bytes": 1104040,
+      "markers": []
+    }
+  ]
+}

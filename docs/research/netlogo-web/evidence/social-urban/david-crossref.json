@@ -1,0 +1,833 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Clio+and+the+Economics+of+QWERTY+David+1985&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2384230,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                25
+              ]
+            ],
+            "date-time": "2026-09-25T03:13:23Z",
+            "timestamp": 1790306003201,
+            "version": "4.1.0"
+          },
+          "reference-count": 18,
+          "publisher": "Elsevier BV",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1985,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "1985-01-01T00:00:00Z",
+                "timestamp": 473385600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "System"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1985,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1016/0346-251x(85)90002-8",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                10,
+                9
+              ]
+            ],
+            "date-time": "2002-10-09T18:54:43Z",
+            "timestamp": 1034189683000
+          },
+          "page": "1-8",
+          "source": "Crossref",
+          "is-referenced-by-count": 7,
+          "title": [
+            "Intelligent call and the qwerty phenomenon: A rationale"
+          ],
+          "prefix": "10.1016",
+          "volume": "13",
+          "author": [
+            {
+              "given": "Martin",
+              "family": "Phillips",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "issue": "1",
+              "key": "10.1016/0346-251X(85)90002-8_BIB1",
+              "doi-asserted-by": "crossref",
+              "first-page": "9",
+              "DOI": "10.1558/cj.v1i1.9-14",
+              "article-title": "The application of instructional technology to language learning",
+              "volume": "1",
+              "author": "Alatis",
+              "year": "1983",
+              "journal-title": "CALICO Journal"
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/0346-251X(85)90002-8_BIB2",
+              "doi-asserted-by": "crossref",
+              "first-page": "277",
+              "DOI": "10.1016/0346-251X(82)90022-7",
+              "article-title": "Computer-based education and the teaching of English for Specific Purposes: report on a project in progress",
+              "volume": "10",
+              "author": "Botha",
+              "year": "1982",
+              "journal-title": "System"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/0346-251X(85)90002-8_BIB3",
+              "doi-asserted-by": "crossref",
+              "first-page": "13",
+              "DOI": "10.1016/0346-251X(83)90004-0",
+              "article-title": "Language lessons on the PLATO IV system",
+              "volume": "11",
+              "author": "Chapelle",
+              "year": "1983",
+              "journal-title": "System"
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/0346-251X(85)90002-8_BIB4",
+              "first-page": "46",
+              "article-title": "Authoring techniques and computer-assisted language learning. How can the teacher make best use of the microcomputer?",
+              "volume": "6",
+              "author": "Davies",
+              "year": "1982",
+              "journal-title": "INTUS NEWS/-NUUS"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB5",
+              "first-page": "92",
+              "article-title": "Designer's needs versus learner's needs: conversation in the L2 classroom",
+              "author": "Early",
+              "year": "1982",
+              "journal-title": "ELT Documents 113\u2014Humanistic Approaches: an Empirical View"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB6",
+              "series-title": "Language as social semiotic",
+              "author": "Halliday",
+              "year": "1978"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB7",
+              "series-title": "Paper presented at IATEFL Conference",
+              "article-title": "John and Mary\u2014The Pleasures of Manipulation",
+              "author": "Higgins",
+              "year": "1983"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB8",
+              "series-title": "Paper presented at Conference of Portuguese Branch of TESOL",
+              "article-title": "CAN Computers Teach?",
+              "author": "Higgins",
+              "year": "1983"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/0346-251X(85)90002-8_BIB9",
+              "doi-asserted-by": "crossref",
+              "first-page": "21",
+              "DOI": "10.1016/0346-251X(83)90005-2",
+              "article-title": "Creating CALL courseware: some possibilities",
+              "volume": "11",
+              "author": "Holmes",
+              "year": "1983",
+              "journal-title": "System"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB10",
+              "first-page": "96",
+              "article-title": "The Uses of an Analytic Generator: the Computer as Teacher of English for Specific Purposes",
+              "author": "Johns",
+              "year": "1981",
+              "journal-title": "ELT Documents 112\u2014The ESP Teacher: Role, Development and Prospects"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB11",
+              "series-title": "An Introduction to Computer Assisted Language Teaching",
+              "author": "Kenning",
+              "year": "1983"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB12",
+              "first-page": "18",
+              "article-title": "What Makes Computer Games Fun?",
+              "author": "Malone",
+              "year": "1982",
+              "journal-title": "Computers in Schools"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/0346-251X(85)90002-8_BIB13",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1016/0346-251X(81)90062-2",
+              "article-title": "Reflections on the use of computers in second-language acquisition\u2014II",
+              "volume": "10",
+              "author": "Marty",
+              "year": "1982",
+              "journal-title": "System"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/0346-251X(85)90002-8_BIB14",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1016/0346-251X(81)90062-2",
+              "article-title": "Reflections on the use of computers in second-language acquisition\u2014II",
+              "volume": "10",
+              "author": "Marty",
+              "year": "1982",
+              "journal-title": "System"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB15",
+              "series-title": "Mindstorms",
+              "author": "Papert",
+              "year": "1982"
+            },
+            {
+              "key": "10.1016/0346-251X(85)90002-8_BIB16",
+              "first-page": "27",
+              "article-title": "The microcomputer and ESP: purposes, programs and priorities",
+              "volume": "16",
+              "author": "Phillips",
+              "year": "1983",
+              "journal-title": "ESPMENA Bulletin"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/0346-251X(85)90002-8_BIB17",
+              "doi-asserted-by": "crossref",
+              "first-page": "33",
+              "DOI": "10.1016/0346-251X(83)90006-4",
+              "article-title": "Whither CAI? The need for communicative courseware",
+              "volume": "11",
+              "author": "Sanders",
+              "year": "1983",
+              "journal-title": "System"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/0346-251X(85)90002-8_BIB18",
+              "doi-asserted-by": "crossref",
+              "first-page": "41",
+              "DOI": "10.1016/0346-251X(83)90007-6",
+              "article-title": "Veni, vidi, vici via videodisc: A simulator for instructional conversations",
+              "volume": "11",
+              "author": "Schneider",
+              "year": "1983",
+              "journal-title": "System"
+            }
+          ],
+          "container-title": [
+            "System"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0346251X85900028?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0346251X85900028?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                3,
+                7
+              ]
+            ],
+            "date-time": "2020-03-07T07:55:49Z",
+            "timestamp": 1583567749000
+          },
+          "score": 23.907162,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0346251X85900028"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1985,
+                1
+              ]
+            ]
+          },
+          "references-count": 18,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1985,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0346251X85900028"
+          ],
+          "URL": "https://doi.org/10.1016/0346-251x(85)90002-8",
+          "ISSN": [
+            "0346-251X"
+          ],
+          "issn-type": [
+            {
+              "value": "0346-251X",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1985,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                17
+              ]
+            ],
+            "date-time": "2026-09-17T21:30:24Z",
+            "timestamp": 1789680624567,
+            "version": "4.0.1"
+          },
+          "reference-count": 0,
+          "publisher": "Project MUSE",
+          "issue": "2",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "hms"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1985,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1353/hms.2011.0597",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                1,
+                30
+              ]
+            ],
+            "date-time": "2011-01-30T14:01:26Z",
+            "timestamp": 1296396086000
+          },
+          "page": "154-165",
+          "source": "Crossref",
+          "is-referenced-by-count": 4,
+          "title": [
+            "David Hume's Practical Economics"
+          ],
+          "prefix": "10.1353",
+          "volume": "11",
+          "author": [
+            {
+              "given": "Tom",
+              "family": "Velk",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "A.R.",
+              "family": "Riggs",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "147",
+          "container-title": [
+            "Hume Studies"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                20
+              ]
+            ],
+            "date-time": "2024-01-20T02:09:40Z",
+            "timestamp": 1705716580000
+          },
+          "score": 22.607458,
+          "resource": {
+            "primary": {
+              "URL": "https://muse.jhu.edu/article/389431"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1985,
+                11
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  1985,
+                  11
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1353/hms.2011.0597",
+          "ISSN": [
+            "1947-9921"
+          ],
+          "issn-type": [
+            {
+              "value": "1947-9921",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1985,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                28
+              ]
+            ],
+            "date-time": "2025-09-28T05:40:11Z",
+            "timestamp": 1759038011550,
+            "version": "3.44.0"
+          },
+          "reference-count": 10,
+          "publisher": "Elsevier BV",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    2,
+                    1
+                  ]
+                ],
+                "date-time": "2023-02-01T00:00:00Z",
+                "timestamp": 1675209600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    2,
+                    1
+                  ]
+                ],
+                "date-time": "2023-02-01T00:00:00Z",
+                "timestamp": 1675209600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/legal/tdmrep-license"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2022,
+                    12,
+                    30
+                  ]
+                ],
+                "date-time": "2022-12-30T00:00:00Z",
+                "timestamp": 1672358400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/100018966",
+              "name": "USI",
+              "doi-asserted-by": "publisher",
+              "id": [
+                {
+                  "id": "10.13039/100018966",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "elsevier.com",
+              "sciencedirect.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Economics Letters"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2023,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.econlet.2022.110974",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                12,
+                31
+              ]
+            ],
+            "date-time": "2022-12-31T10:50:50Z",
+            "timestamp": 1672483850000
+          },
+          "page": "110974",
+          "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "special_numbering": "C",
+          "title": [
+            "Does brick size matter? Albert G. Keller on another QWERTY story"
+          ],
+          "prefix": "10.1016",
+          "volume": "223",
+          "author": [
+            {
+              "given": "Luca",
+              "family": "Fiorito",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Massimiliano",
+              "family": "Vatiero",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "year": "1976",
+              "series-title": "The Landscape of Towns",
+              "author": "Aston",
+              "key": "10.1016/j.econlet.2022.110974_b1"
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.econlet.2022.110974_b2",
+              "first-page": "165",
+              "article-title": "And you may ask yourself, what is that beautiful house: How tax laws distort behavior through the lens of architecture",
+              "volume": "10",
+              "author": "Conway",
+              "year": "2019",
+              "journal-title": "Columbia J. Tax Law"
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.econlet.2022.110974_b3",
+              "first-page": "332",
+              "article-title": "Clio and the economics of QWERTY",
+              "volume": "75",
+              "author": "David",
+              "year": "1985",
+              "journal-title": "Amer. Econ. Rev."
+            },
+            {
+              "year": "1915",
+              "series-title": "Societal Evolution",
+              "author": "Keller",
+              "key": "10.1016/j.econlet.2022.110974_b4"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.econlet.2022.110974_b5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1086/467198",
+              "article-title": "The fable of the keys",
+              "volume": "33",
+              "author": "Liebowitz",
+              "year": "1990",
+              "journal-title": "J. Law Econ."
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/j.econlet.2022.110974_b6",
+              "doi-asserted-by": "crossref",
+              "first-page": "125",
+              "DOI": "10.1093/joclec/nhs034",
+              "article-title": "The troubled path of the lock-in movement",
+              "volume": "9",
+              "author": "Liebowitz",
+              "year": "2013",
+              "journal-title": "J. Compet. Law Econ."
+            },
+            {
+              "key": "10.1016/j.econlet.2022.110974_b7",
+              "first-page": "29",
+              "article-title": "The tax on bricks and tiles, 1784-1850. Its application to the country at large and, in particular, to the county of norfolk",
+              "volume": "13",
+              "author": "Lucas",
+              "year": "1997",
+              "journal-title": "Constr. Hist."
+            },
+            {
+              "key": "10.1016/j.econlet.2022.110974_b8",
+              "series-title": "Challenges to Authority and the Recognition of Rights: From Magna Carta to Modernity",
+              "first-page": "176",
+              "article-title": "The impact of tax on the landscape: Social expectations and the built environment in nineteenth-century america",
+              "author": "Stebbings",
+              "year": "2018"
+            },
+            {
+              "issue": "2",
+              "key": "10.1016/j.econlet.2022.110974_b9",
+              "doi-asserted-by": "crossref",
+              "first-page": "383",
+              "DOI": "10.1017/S0022050700041164",
+              "article-title": "Reassessing technological backwardness: Absolving the silly little bobtailed coal car",
+              "volume": "55",
+              "author": "Van\u00a0Vleck",
+              "year": "1995",
+              "journal-title": "J. Econ. Hist."
+            },
+            {
+              "year": "1915",
+              "series-title": "Imperial Germany and the Industrial Revolution",
+              "author": "Veblen",
+              "key": "10.1016/j.econlet.2022.110974_b10"
+            }
+          ],
+          "container-title": [
+            "Economics Letters"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0165176522004487?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0165176522004487?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                28
+              ]
+            ],
+            "date-time": "2025-09-28T05:15:34Z",
+            "timestamp": 1759036534000
+          },
+          "score": 22.409521,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0165176522004487"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                2
+              ]
+            ]
+          },
+          "references-count": 10,
+          "alternative-id": [
+            "S0165176522004487"
+          ],
+          "URL": "https://doi.org/10.1016/j.econlet.2022.110974",
+          "ISSN": [
+            "0165-1765"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0165-1765"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                2
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "Elsevier",
+              "name": "publisher",
+              "label": "This article is maintained by"
+            },
+            {
+              "value": "Does brick size matter? Albert G. Keller on another QWERTY story",
+              "name": "articletitle",
+              "label": "Article Title"
+            },
+            {
+              "value": "Economics Letters",
+              "name": "journaltitle",
+              "label": "Journal Title"
+            },
+            {
+              "value": "https://doi.org/10.1016/j.econlet.2022.110974",
+              "name": "articlelink",
+              "label": "CrossRef DOI link to publisher maintained version"
+            },
+            {
+              "value": "article",
+              "name": "content_type",
+              "label": "Content Type"
+            },
+            {
+              "value": "\u00a9 2022 The Author(s). Published by Elsevier B.V.",
+              "name": "copyright",
+              "label": "Copyright"
+            }
+          ],
+          "article-number": "110974"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

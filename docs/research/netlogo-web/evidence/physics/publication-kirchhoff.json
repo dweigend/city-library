@@ -1,0 +1,214 @@
+{
+  "query": "10.1002/andp.18471481202",
+  "consultedUrl": "https://api.crossref.org/works/10.1002/andp.18471481202",
+  "checkedAt": "2026-11-05",
+  "items": [
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            3
+          ]
+        ],
+        "date-time": "2026-11-03T20:14:32Z",
+        "timestamp": 1793736872597,
+        "version": "4.6.1"
+      },
+      "reference-count": 1,
+      "publisher": "Wiley",
+      "issue": "12",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                15
+              ]
+            ],
+            "date-time": "2006-03-15T00:00:00Z",
+            "timestamp": 1142380800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 58147,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "onlinelibrary.wiley.com"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "Annalen der Physik"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1847,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1002/andp.18471481202",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2007,
+            5,
+            11
+          ]
+        ],
+        "date-time": "2007-05-11T18:17:21Z",
+        "timestamp": 1178907441000
+      },
+      "page": "497-508",
+      "update-policy": "https://doi.org/10.1002/crossmark_policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 986,
+      "title": [
+        "Ueber die Aufl\u00f6sung der Gleichungen, auf welche man bei der Untersuchung der linearen Vertheilung galvanischer Str\u00f6me gef\u00fchrt wird"
+      ],
+      "prefix": "10.1002",
+      "volume": "148",
+      "author": [
+        {
+          "given": "G.",
+          "family": "Kirchhoff",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "311",
+      "published-online": {
+        "date-parts": [
+          [
+            2006,
+            3,
+            15
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_1_1_2",
+          "first-page": "513",
+          "volume": "64",
+          "journal-title": "Annalen"
+        }
+      ],
+      "container-title": [
+        "Annalen der Physik"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fandp.18471481202",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/andp.18471481202",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2023,
+            11,
+            3
+          ]
+        ],
+        "date-time": "2023-11-03T13:03:31Z",
+        "timestamp": 1699016611000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://onlinelibrary.wiley.com/doi/10.1002/andp.18471481202"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1847,
+            1
+          ]
+        ]
+      },
+      "references-count": 1,
+      "journal-issue": {
+        "issue": "12",
+        "published-print": {
+          "date-parts": [
+            [
+              1847,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1002/andp.18471481202"
+      ],
+      "URL": "https://doi.org/10.1002/andp.18471481202",
+      "archive": [
+        "Portico"
+      ],
+      "relation": {},
+      "ISSN": [
+        "0003-3804",
+        "1521-3889"
+      ],
+      "issn-type": [
+        {
+          "value": "0003-3804",
+          "type": "print"
+        },
+        {
+          "value": "1521-3889",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1847,
+            1
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "2006-03-15",
+          "order": 2,
+          "name": "published",
+          "label": "Published",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        }
+      ]
+    }
+  ]
+}

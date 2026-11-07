@@ -1,0 +1,19 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?filter=isbn%3A9780262328135&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 0,
+      "items": [],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

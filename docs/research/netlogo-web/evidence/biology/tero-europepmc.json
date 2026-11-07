@@ -1,0 +1,286 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1177894%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1126/science.1177894\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "20093467",
+          "source": "MED",
+          "pmid": "20093467",
+          "doi": "10.1126/science.1177894",
+          "title": "Rules for biologically inspired adaptive network design.",
+          "authorString": "Tero A, Takagi S, Saigusa T, Ito K, Bebber DP, Fricker MD, Yumiki K, Kobayashi R, Nakagaki T.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Tero A",
+                "lastName": "Tero",
+                "firstName": "Atsushi",
+                "initials": "A",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Research Institute for Electronic Science, Hokkaido University, Sapporo 060-0812, Japan."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Takagi S",
+                "lastName": "Takagi",
+                "firstName": "Seiji",
+                "initials": "S"
+              },
+              {
+                "fullName": "Saigusa T",
+                "lastName": "Saigusa",
+                "firstName": "Tetsu",
+                "initials": "T"
+              },
+              {
+                "fullName": "Ito K",
+                "lastName": "Ito",
+                "firstName": "Kentaro",
+                "initials": "K"
+              },
+              {
+                "fullName": "Bebber DP",
+                "lastName": "Bebber",
+                "firstName": "Dan P",
+                "initials": "DP",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4440-1482"
+                }
+              },
+              {
+                "fullName": "Fricker MD",
+                "lastName": "Fricker",
+                "firstName": "Mark D",
+                "initials": "MD",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8942-6897"
+                }
+              },
+              {
+                "fullName": "Yumiki K",
+                "lastName": "Yumiki",
+                "firstName": "Kenji",
+                "initials": "K"
+              },
+              {
+                "fullName": "Kobayashi R",
+                "lastName": "Kobayashi",
+                "firstName": "Ryo",
+                "initials": "R"
+              },
+              {
+                "fullName": "Nakagaki T",
+                "lastName": "Nakagaki",
+                "firstName": "Toshiyuki",
+                "initials": "T",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3446-4888"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3446-4888"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8942-6897"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4440-1482"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "5964",
+            "volume": "327",
+            "journalIssueId": 1692173,
+            "dateOfPublication": "2010 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2010,
+            "journal": {
+              "medlineAbbreviation": "Science",
+              "title": "Science (New York, N.Y.)",
+              "essn": "1095-9203",
+              "issn": "0036-8075",
+              "nlmid": "0404511",
+              "isoabbreviation": "Science"
+            },
+            "printPublicationDate": "2010-01-01"
+          },
+          "pubYear": "2010",
+          "pageInfo": "439-442",
+          "abstractText": "Transport networks are ubiquitous in both social and biological systems. Robust network performance involves a complex trade-off involving cost, transport efficiency, and fault tolerance. Biological networks have been honed by many cycles of evolutionary selection pressure and are likely to yield reasonable solutions to such combinatorial optimization problems. Furthermore, they develop without centralized control and may represent a readily scalable solution for growing networks in general. We show that the slime mold Physarum polycephalum forms networks with comparable efficiency, fault tolerance, and cost to those of real-world infrastructure networks--in this case, the Tokyo rail system. The core mechanisms needed for adaptive network formation can be captured in a biologically inspired mathematical model that may be useful to guide network construction in other domains.",
+          "affiliation": "Research Institute for Electronic Science, Hokkaido University, Sapporo 060-0812, Japan.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Natural Environment Research Council",
+                "grantId": "NER/A/S/2002/00882",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Physarum polycephalum",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "CY",
+                      "qualifierName": "cytology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GD",
+                      "qualifierName": "growth & development"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Systems Biology"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Railroads"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Food"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computer Simulation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Tokyo"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "html",
+                "site": "www.sciencemag.org",
+                "url": "http://www.sciencemag.org/cgi/content/full/327/5964/439"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "abs",
+                "site": "www.sciencemag.org",
+                "url": "http://www.sciencemag.org/cgi/content/abstract/327/5964/439"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.1177894"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "20093462",
+                "reference": "Science. 2010 Jan 22;327(5964):419-20. doi: 10.1126/science.1185570",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 263,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2010-02-02",
+          "dateOfCreation": "2010-01-23",
+          "dateOfRevision": "2022-04-08",
+          "firstPublicationDate": "2010-01-01",
+          "firstIndexDate": "2010-02-03",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

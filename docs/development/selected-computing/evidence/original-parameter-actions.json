@@ -1,0 +1,644 @@
+{
+  "robotic-factory": {
+    "control": "make-trails? true→false by switch click, non-ticking",
+    "state": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robotic%20Factory.nlogox",
+      "title": "NetLogo Web: Robotic Factory",
+      "at": "2026-11-06T09:15:56.248Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "d7e79d6b2647227ce73799b2b94c0f9dbdbfeb3d42e825ed96e270549194c9fd",
+      "tick": 0,
+      "metrics": {
+        "count robots": {
+          "success": true,
+          "value": 5
+        },
+        "sum [supply] of storages": {
+          "success": true,
+          "value": 0
+        },
+        "sum [supply] of loading-docks": {
+          "success": true,
+          "value": 10
+        },
+        "count orders": {
+          "success": true,
+          "value": 0
+        },
+        "sum [idleness] of robots": {
+          "success": true,
+          "value": 0
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "full-charge",
+          "value": 350
+        },
+        {
+          "type": "slider",
+          "variable": "just-in-time-supply-robot",
+          "value": 150
+        },
+        {
+          "type": "slider",
+          "variable": "number-of-robots",
+          "value": 5
+        },
+        {
+          "type": "switch",
+          "variable": "show-agent-name?",
+          "value": true
+        },
+        {
+          "type": "switch",
+          "variable": "make-trails?",
+          "value": false
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  },
+  "dining-philosophers": {
+    "control": "cooperation? toggled by native widget click, non-ticking",
+    "state": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Dining%20Philosophers.nlogox",
+      "title": "NetLogo Web: Dining Philosophers",
+      "at": "2026-11-06T09:16:49.381Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "94a061a1c0c2d8e69a8e6f3dfd4a154222d44d6676693cdc3430fb7e76d47e51",
+      "tick": 0,
+      "metrics": {
+        "count philosophers": {
+          "success": true,
+          "value": 20
+        },
+        "count forks": {
+          "success": true,
+          "value": 20
+        },
+        "count philosophers with [state = \"EATING\"]": {
+          "success": true,
+          "value": 0
+        },
+        "sum [total-eaten] of philosophers": {
+          "success": true,
+          "value": 0
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "num-philosophers",
+          "value": 20
+        },
+        {
+          "type": "slider",
+          "variable": "hungry-chance",
+          "value": 0.5
+        },
+        {
+          "type": "slider",
+          "variable": "full-chance",
+          "value": 0.5
+        },
+        {
+          "type": "switch",
+          "variable": "cooperation?",
+          "value": true
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  },
+  "artificial-neural-net-perceptron": {
+    "control": "show-weights? toggled by native widget click, non-ticking",
+    "state": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Artificial%20Neural%20Net%20-%20Perceptron.nlogox",
+      "title": "NetLogo Web: Artificial Neural Net - Perceptron",
+      "at": "2026-11-06T09:18:20.364Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "d9cd6c06309d80a0f6e0b48105912f23529c14ae63ee030152a7172cb60e13cb",
+      "tick": 0,
+      "metrics": {
+        "epoch-error": {
+          "success": true,
+          "value": 0
+        },
+        "[activation] of perceptron": {
+          "success": true,
+          "value": 1
+        },
+        "[weight] of links": {
+          "success": true,
+          "value": [
+            0.002103660240097248,
+            0.04755215051267739,
+            -0.014002193593794836
+          ]
+        }
+      },
+      "widgets": [
+        {
+          "type": "chooser",
+          "variable": "input-1",
+          "value": 1
+        },
+        {
+          "type": "chooser",
+          "variable": "input-2",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "learning-rate",
+          "value": 0.5
+        },
+        {
+          "type": "slider",
+          "variable": "examples-per-epoch",
+          "value": 500
+        },
+        {
+          "type": "chooser",
+          "variable": "target-function",
+          "value": "xor"
+        },
+        {
+          "type": "switch",
+          "variable": "show-weights?",
+          "value": true
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  },
+  "artificial-neural-net-multilayer": {
+    "control": "show-weights? toggled by native widget click, non-ticking",
+    "state": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Artificial%20Neural%20Net%20-%20Multilayer.nlogox",
+      "title": "NetLogo Web: Artificial Neural Net - Multilayer",
+      "at": "2026-11-06T09:18:39.257Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "dec9e3394cde9d0fae15d15a0e75763f854dd908e00804924667e92e8211d4e9",
+      "tick": 0,
+      "metrics": {
+        "epoch-error": {
+          "success": true,
+          "value": 0
+        },
+        "[activation] of output-node-1": {
+          "success": true,
+          "value": 0.502089411787819
+        },
+        "[weight] of links": {
+          "success": true,
+          "value": [
+            0.07569043676696438,
+            -0.04240179869509458,
+            0.01399298117770749,
+            0.04983396657934397,
+            -0.015228990856383559,
+            0.04321490722946386,
+            -0.04034353467114602,
+            0.028798038944212456,
+            0.0212786420430765
+          ]
+        }
+      },
+      "widgets": [
+        {
+          "type": "chooser",
+          "variable": "input-1",
+          "value": 1
+        },
+        {
+          "type": "chooser",
+          "variable": "input-2",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "learning-rate",
+          "value": 0.5
+        },
+        {
+          "type": "slider",
+          "variable": "examples-per-epoch",
+          "value": 500
+        },
+        {
+          "type": "chooser",
+          "variable": "target-function",
+          "value": "xor"
+        },
+        {
+          "type": "switch",
+          "variable": "show-weights?",
+          "value": true
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  },
+  "simple-genetic-algorithm": {
+    "control": "plot-diversity? toggled by native widget click, non-ticking",
+    "state": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Simple%20Genetic%20Algorithm.nlogox",
+      "title": "NetLogo Web: Simple Genetic Algorithm",
+      "at": "2026-11-06T09:19:27.166Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "aa1d94df44a71c7cbe8b02d11a0ac1e027fa19294a0726c1a03913786175c67e",
+      "tick": 0,
+      "metrics": {
+        "count turtles": {
+          "success": true,
+          "value": 100
+        },
+        "max [fitness] of turtles": {
+          "success": true,
+          "value": 64
+        },
+        "mean [fitness] of turtles": {
+          "success": true,
+          "value": 49.93
+        },
+        "diversity": {
+          "success": true,
+          "value": 0.990339999999999
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "population-size",
+          "value": 100
+        },
+        {
+          "type": "slider",
+          "variable": "mutation-rate",
+          "value": 0
+        },
+        {
+          "type": "switch",
+          "variable": "plot-diversity?",
+          "value": false
+        },
+        {
+          "type": "slider",
+          "variable": "crossover-rate",
+          "value": 70
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  },
+  "particle-swarm-optimization": {
+    "control": "highlight-mode→True best using native chooser, no tick",
+    "state": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Particle%20Swarm%20Optimization.nlogox",
+      "title": "NetLogo Web: Particle Swarm Optimization",
+      "at": "2026-11-06T09:19:54.141Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "d03ded09553798a66fa7c70ee9aef25d5852dba403cdf388c4bcd2dd7a3b6d0e",
+      "tick": 0,
+      "metrics": {
+        "count turtles": {
+          "success": true,
+          "value": 50
+        },
+        "global-best-val": {
+          "success": true,
+          "value": 0
+        },
+        "max [personal-best-val] of turtles": {
+          "success": true,
+          "value": 0.9850782618606598
+        },
+        "max [val] of patches": {
+          "success": true,
+          "value": 1
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "landscape-smoothness",
+          "value": 20
+        },
+        {
+          "type": "slider",
+          "variable": "population-size",
+          "value": 50
+        },
+        {
+          "type": "slider",
+          "variable": "particle-inertia",
+          "value": 0.98
+        },
+        {
+          "type": "slider",
+          "variable": "particle-speed-limit",
+          "value": 10
+        },
+        {
+          "type": "slider",
+          "variable": "attraction-to-personal-best",
+          "value": 2
+        },
+        {
+          "type": "slider",
+          "variable": "attraction-to-global-best",
+          "value": 1
+        },
+        {
+          "type": "chooser",
+          "variable": "highlight-mode",
+          "value": "True best"
+        },
+        {
+          "type": "chooser",
+          "variable": "trails-mode",
+          "value": "None"
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  },
+  "simulated-annealing": {
+    "control": "accept-equal-changes? toggled by native widget click, non-ticking",
+    "state": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Unverified/Simulated%20Annealing.nlogox",
+      "title": "NetLogo Web: Simulated Annealing",
+      "at": "2026-11-06T09:20:22.567Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "ca4208f3c66a516874234d4f1670ebc20919f9b32a656a84a878a9a41304f6cb",
+      "tick": 0,
+      "metrics": {
+        "temperature": {
+          "success": true,
+          "value": 1
+        },
+        "global-energy": {
+          "success": true,
+          "value": 1760
+        },
+        "sum [brightness] of patches": {
+          "success": true,
+          "value": 450
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "cooling-rate",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "swap-radius",
+          "value": 1
+        },
+        {
+          "type": "switch",
+          "variable": "accept-equal-changes?",
+          "value": true
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    },
+    "singleCommandStep": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Unverified/Simulated%20Annealing.nlogox",
+      "title": "NetLogo Web: Simulated Annealing",
+      "at": "2026-11-06T09:21:21.654Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "ca4208f3c66a516874234d4f1670ebc20919f9b32a656a84a878a9a41304f6cb",
+      "tick": 1,
+      "metrics": {
+        "temperature": {
+          "success": true,
+          "value": 0.99
+        },
+        "global-energy": {
+          "success": true,
+          "value": 1864
+        },
+        "sum [brightness] of patches": {
+          "success": true,
+          "value": 450
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "cooling-rate",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "swap-radius",
+          "value": 1
+        },
+        {
+          "type": "switch",
+          "variable": "accept-equal-changes?",
+          "value": true
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  },
+  "k-means-clustering": {
+    "control": "num-centroids7→5, Reset centroids; preserves140data and tick0",
+    "state": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/K-Means%20Clustering.nlogox",
+      "title": "NetLogo Web: K-Means Clustering",
+      "at": "2026-11-06T09:22:50.564Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "fdffc0ac8c8d8b25286039bb9ec53648bb7c12d8829600e5d56185980ba572c6",
+      "tick": 0,
+      "metrics": {
+        "count data-points": {
+          "success": true,
+          "value": 140
+        },
+        "count centroids": {
+          "success": true,
+          "value": 5
+        },
+        "any-centroids-moved?": {
+          "success": true,
+          "value": true
+        },
+        "mean [square-deviation] of centroids": {
+          "success": true,
+          "value": 8999.61272924712
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "num-centroids",
+          "value": 5
+        },
+        {
+          "type": "slider",
+          "variable": "num-clusters",
+          "value": 7
+        },
+        {
+          "type": "slider",
+          "variable": "num-data-points",
+          "value": 138
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  },
+  "robby-the-robot": {
+    "singleCommandStep": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+      "title": "NetLogo Web: Robby the Robot",
+      "at": "2026-11-06T09:23:31.948Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "ecaa2ce7c1d195fe6383354fc790025aa5c9d239f25f99f0fed71e04eaaf8d19",
+      "tick": 1,
+      "metrics": {
+        "count individuals": {
+          "success": true,
+          "value": 100
+        },
+        "best-fitness": {
+          "success": true,
+          "value": -1.6
+        },
+        "step-counter": {
+          "success": true,
+          "value": 0
+        },
+        "count cans": {
+          "success": true,
+          "value": 50
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "population-size",
+          "value": 100
+        },
+        {
+          "type": "slider",
+          "variable": "mutation-rate",
+          "value": 0.01
+        },
+        {
+          "type": "slider",
+          "variable": "number-of-generations",
+          "value": 100
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    },
+    "boundedGenerations": {
+      "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+      "title": "NetLogo Web: Robby the Robot",
+      "at": "2026-11-06T09:24:15.482Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "sourceSha256": "ecaa2ce7c1d195fe6383354fc790025aa5c9d239f25f99f0fed71e04eaaf8d19",
+      "tick": 2,
+      "metrics": {
+        "count individuals": {
+          "success": true,
+          "value": 100
+        },
+        "best-fitness": {
+          "success": true,
+          "value": 1.5
+        },
+        "step-counter": {
+          "success": true,
+          "value": 0
+        },
+        "count cans": {
+          "success": true,
+          "value": 43
+        }
+      },
+      "widgets": [
+        {
+          "type": "slider",
+          "variable": "population-size",
+          "value": 100
+        },
+        {
+          "type": "slider",
+          "variable": "mutation-rate",
+          "value": 0.01
+        },
+        {
+          "type": "slider",
+          "variable": "number-of-generations",
+          "value": 2
+        }
+      ],
+      "runtimeErrors": [],
+      "compilerErrors": []
+    }
+  }
+}

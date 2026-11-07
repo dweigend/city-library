@@ -1,0 +1,730 @@
+{
+  "baseURL": "http://127.0.0.1:3110",
+  "phase": "final canonical authoring runtime",
+  "entries": [
+    {
+      "slug": "voting",
+      "errors": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "httpFailures": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/voting/ui.ts",
+          "status": 200,
+          "sha256": "7596a078c4a82b8655c8e3867160aaf4236c4fef401f6887c24008a0c26d4070"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/voting/model.ts",
+          "status": 200,
+          "sha256": "43ce0f3c8d4c7581a198a0e35acbc327032ddd3950d14ba812d74c81b2f7fffb"
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-voting-1366-light-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-voting-1366-dark-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-voting-390-light-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-voting-390-dark-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        }
+      ],
+      "setup": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nHeight\nSeed\nChange vote if tied\nAward Close Calls To Loser\nModel info\nTick\n0\nBlue\n11326\nGreen\n11475\nPaused\nVotes"
+      },
+      "shadowRoots": 0,
+      "stepped": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nHeight\nSeed\nChange vote if tied\nAward Close Calls To Loser\nModel info\nTick\n10\nBlue\n10999\nGreen\n11802\nPaused\nVotes"
+      },
+      "boolean": "true",
+      "edited": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nHeight\nSeed\nChange vote if tied\nAward Close Calls To Loser\nModel info\nTick\n10\nBlue\n10999\nGreen\n11802\nPaused\nVotes"
+      },
+      "running": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nHeight\nSeed\nChange vote if tied\nAward Close Calls To Loser\nModel info\nTick\n12\nBlue\n10818\nGreen\n11983\nRunning\nVotes"
+      },
+      "paused": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nHeight\nSeed\nChange vote if tied\nAward Close Calls To Loser\nModel info\nTick\n12\nBlue\n10818\nGreen\n11983\nPaused\nVotes"
+      },
+      "pauseStable": true,
+      "selection": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nHeight\nSeed\nChange vote if tied\nAward Close Calls To Loser\nModel info\nTick\n12\nBlue\n10818\nGreen\n11983\nPaused\nSelected\nid\ncl_17izzbfuwx252\nx\n-75\ny\n-75\nvote\n0\nVotes"
+      },
+      "pendingSeed": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nRestart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nHeight\nSeed\n·\nChange vote if tied\nAward Close Calls To Loser\nModel info\nTick\n12\nBlue\n10818\nGreen\n11983\nPaused. Setup changes pending.\nSelected\nid\ncl_17izzbfuwx252\nx\n-75\ny\n-75\nvote\n0\nVotes"
+      },
+      "restarted": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nHeight\nSeed\nChange vote if tied\nAward Close Calls To Loser\nModel info\nTick\n0\nBlue\n11262\nGreen\n11539\nPaused\nVotes",
+        "seed": "2"
+      },
+      "switched": {
+        "url": "http://127.0.0.1:3110/?experiment=wealth-distribution",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\n\nSetup to begin.\n\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations and Permutations\nR"
+      }
+    },
+    {
+      "slug": "wealth-distribution",
+      "errors": [],
+      "console": [],
+      "httpFailures": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/wealth-distribution/ui.ts",
+          "status": 200,
+          "sha256": "682856ed9810a65e110b3467f3f0a9fe4e900aceb2f6c419d3d61c6c0a613e05"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/wealth-distribution/model.ts",
+          "status": 200,
+          "sha256": "20be9265cac3d6b2a5c4555807e43aab409ec5e604c31cb56bbc25d1f493608d"
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-wealth-distribution-1366-light-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-wealth-distribution-1366-dark-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-wealth-distribution-390-light-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-wealth-distribution-390-dark-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        }
+      ],
+      "setup": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n0\nPeople\n250\nTotal wealth\n8027\nGini\n0.278\nPaused\nResources and wealth classes\nCurrent wealth classes\n99\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n99\n0\n1\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n1\nGini"
+      },
+      "shadowRoots": 0,
+      "stepped": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n10\nPeople\n250\nTotal wealth\n11900\nGini\n0.363\nPaused\nResources and wealth classes\nCurrent wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n164\n0\n10\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n10\nGini"
+      },
+      "categoryText": "Current wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople",
+      "categoryAria": "x axis: Wealth class; y axis: People; People: x Low, y 164; x Middle, y 64; x High, y 22",
+      "gini": "0.363",
+      "edited": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n10\nPeople\n250\nTotal wealth\n11900\nGini\n0.363\nPaused\nResources and wealth classes\nCurrent wealth classes\n164\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n164\n0\n10\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n10\nGini"
+      },
+      "running": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n12\nPeople\n250\nTotal wealth\n12701\nGini\n0.368\nRunning\nResources and wealth classes\nCurrent wealth classes\n171\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n171\n0\n12\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n12\nGini"
+      },
+      "paused": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n12\nPeople\n250\nTotal wealth\n12701\nGini\n0.368\nPaused\nResources and wealth classes\nCurrent wealth classes\n171\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n171\n0\n12\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n12\nGini"
+      },
+      "pauseStable": true,
+      "selection": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n12\nPeople\n250\nTotal wealth\n12701\nGini\n0.368\nPaused\nSelected\nid\ncl_4tz5r2u6957bcs1\nx\n-22\ny\n6\nheading\n180\nwealth\n31\nage\n9\nlife\n12\nmetabolism\n8\nvision\n3\nclass\nlow\nResources and wealth classes\nCurrent wealth classes\n171\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n171\n0\n12\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n12\nGini"
+      },
+      "pendingSeed": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nRestart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\n·\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n12\nPeople\n250\nTotal wealth\n12701\nGini\n0.368\nPaused. Setup changes pending.\nSelected\nid\ncl_4tz5r2u6957bcs1\nx\n-22\ny\n6\nheading\n180\nwealth\n31\nage\n9\nlife\n12\nmetabolism\n8\nvision\n3\nclass\nlow\nResources and wealth classes\nCurrent wealth classes\n171\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n171\n0\n12\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n12\nGini"
+      },
+      "restarted": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nWealth Distribution\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n0\nPeople\n250\nTotal wealth\n8090\nGini\n0.256\nPaused\nResources and wealth classes\nCurrent wealth classes\n112\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n112\n0\n1\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n1\nGini",
+        "seed": "2"
+      },
+      "switched": {
+        "url": "http://127.0.0.1:3110/?experiment=wealth-distribution",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nLoading experiment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nPeople\nBest Land\nGrowth Interval\nGrowth Amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nModel info\nTick\n0\nPeople\n250\nTotal wealth\n8090\nGini\n0.256\nPaused\nResources and wealth classes\nCurrent wealth classes\n112\n0\nLow\nMiddle\nHigh\nWealth class\nPeople\nPeople\nWealth classes\n112\n0\n1\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n1\nGini\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimiz"
+      }
+    },
+    {
+      "slug": "taxi-cabs",
+      "errors": [],
+      "console": [],
+      "httpFailures": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/taxi-cabs/ui.ts",
+          "status": 200,
+          "sha256": "583b9fc573a80996056cf34fed716dae634215ab46d169470132c3b484c463a3"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/taxi-cabs/model.ts",
+          "status": 200,
+          "sha256": "38f557b4170556ea68592f13e9dae1e85e71ccff05911e4de52ce72593b0dc96"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/taxi-cabs/parameters.ts",
+          "status": 200,
+          "sha256": "7e7f519454730571febdb7325ca7fc9e590a929a3d15fa3ad3b06b8939bf9093"
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-taxi-cabs-1366-light-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-taxi-cabs-1366-dark-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-taxi-cabs-390-light-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-taxi-cabs-390-dark-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-taxi-cabs-390-dark-controls.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "purpose": "reachable flat AM controls",
+          "pngWidth": 390,
+          "pngHeight": 844
+        }
+      ],
+      "setup": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nTaxi Cabs\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n0\nTime of day\nAM Peak\nWaiting passengers\n0\nOccupied cabs\n0\nTotal income ($)\n0.00\nPaused\nTaxi service\nTaxicabs travelling distance\n1\n0\n1\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+      },
+      "shadowRoots": 0,
+      "stepped": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nTaxi Cabs\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n10\nTime of day\nAM Peak\nWaiting passengers\n10\nOccupied cabs\n0\nTotal income ($)\n0.00\nPaused\nTaxi service\nTaxicabs travelling distance\n157\n0\n10\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+      },
+      "groups": {
+        "AM": 9,
+        "MD": 9,
+        "PM": 9,
+        "EVE": 9,
+        "EM": 9
+      },
+      "edited": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nTaxi Cabs\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n10\nTime of day\nAM Peak\nWaiting passengers\n10\nOccupied cabs\n0\nTotal income ($)\n0.00\nPaused\nTaxi service\nTaxicabs travelling distance\n157\n0\n10\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+      },
+      "running": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nTaxi Cabs\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n12\nTime of day\nAM Peak\nWaiting passengers\n12\nOccupied cabs\n0\nTotal income ($)\n0.00\nRunning\nTaxi service\nTaxicabs travelling distance\n174\n0\n12\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+      },
+      "paused": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nTaxi Cabs\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n12\nTime of day\nAM Peak\nWaiting passengers\n12\nOccupied cabs\n0\nTotal income ($)\n0.00\nPaused\nTaxi service\nTaxicabs travelling distance\n174\n0\n12\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips"
+      },
+      "pauseStable": true,
+      "selection": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nTaxi Cabs\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n12\nTime of day\nAM Peak\nWaiting passengers\n12\nOccupied cabs\n0\nTotal income ($)\n0.00\nPaused\nTaxi service\nTaxicabs travelling distance\n174\n0\n12\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips\nCab\nid\ncab-0\nx\n29\ny\n18\nheading\n270\ncolor\n#f5db33\nvacancy\ntrue\nnumPassengersOnboard\n0\nnumTotalMiles\n12\nnumBusinessMiles\n0\nnumDeadMiles\n12\nnumTotalTrips\n0\ntotalIncome\n0\ncurrentTripIncome\n0\ncurrentTripDuration\n0\nnumGridsTraveledCurrentTrip\n0\ndestinationX\n0\ndestinationX2\n0\ndestinationY\n0\ndestinationY2\n0\npickupOnHorizontal\nfalse\npickupOnVertical\nfalse"
+      },
+      "narrowControls": {
+        "groupVisible": true,
+        "text": "AM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM"
+      },
+      "pendingSeed": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nTaxi Cabs\nRestart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\n·\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n12\nTime of day\nAM Peak\nWaiting passengers\n12\nOccupied cabs\n0\nTotal income ($)\n0.00\nPaused. Setup changes pending.\nTaxi service\nTaxicabs travelling distance\n174\n0\n12\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips\nCab\nid\ncab-0\nx\n29\ny\n18\nheading\n270\ncolor\n#f5db33\nvacancy\ntrue\nnumPassengersOnboard\n0\nnumTotalMiles\n12\nnumBusinessMiles\n0\nnumDeadMiles\n12\nnumTotalTrips\n0\ntotalIncome\n0\ncurrentTripIncome\n0\ncurrentTripDuration\n0\nnumGridsTraveledCurrentTrip\n0\ndestinationX\n0\ndestinationX2\n0\ndestinationY\n0\ndestinationY2\n0\npickupOnHorizontal\nfalse\npickupOnVertical\nfalse"
+      },
+      "restarted": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nTaxi Cabs\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n0\nTime of day\nAM Peak\nWaiting passengers\n0\nOccupied cabs\n0\nTotal income ($)\n0.00\nPaused\nTaxi service\nTaxicabs travelling distance\n1\n0\n1\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips",
+        "seed": "2"
+      },
+      "switched": {
+        "url": "http://127.0.0.1:3110/?experiment=taxi-cabs",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nLoading experiment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nNum Taxicab\nLength Of Green Light\nLength Of Time Period\nWait Time Mean\nWait Time Sd\nFirst Passenger Cost\nEach Additional Passenger Cost\nEach Grid Cost\nEach Tick Cost\nAM\ncbd · cbd · AM\nres · com · AM\nres · cbd · AM\nres · res · AM\ncom · res · AM\ncom · cbd · AM\ncom · com · AM\ncbd · res · AM\ncbd · com · AM\nMD\ncbd · cbd · MD\ncbd · com · MD\ncbd · res · MD\ncom · com · MD\ncom · cbd · MD\ncom · res · MD\nres · res · MD\nres · cbd · MD\nres · com · MD\nPM\nres · res · PM\ncom · res · PM\ncom · cbd · PM\ncom · com · PM\ncbd · res · PM\ncbd · com · PM\ncbd · cbd · PM\nres · com · PM\nres · cbd · PM\nEVE\nres · cbd · EVE\nres · com · EVE\ncbd · cbd · EVE\ncbd · com · EVE\ncbd · res · EVE\ncom · com · EVE\ncom · cbd · EVE\ncom · res · EVE\nres · res · EVE\nEM\nres · cbd · EM\nres · res · EM\nres · com · EM\ncbd · cbd · EM\ncbd · com · EM\ncbd · res · EM\ncom · com · EM\ncom · cbd · EM\ncom · res · EM\nModel info\nTick\n0\nTime of day\nAM Peak\nWaiting passengers\n0\nOccupied cabs\n0\nTotal income ($)\n0.00\nPaused\nTaxi service\nTaxicabs travelling distance\n1\n0\n1\nTotal miles\nBusiness miles\nDead miles\nTrip income distribution ($)\n1\n0\n295\nCompleted trips\nTrip distance distribution (grids)\n1\n0\n295\nCompleted trips\nTrip duration distribution (ticks)\n1\n0\n295\nCompleted trips\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbit"
+      }
+    },
+    {
+      "slug": "urban-suite-tijuana-bordertowns",
+      "errors": [],
+      "console": [],
+      "httpFailures": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/urban-suite-tijuana-bordertowns/ui.ts",
+          "status": 200,
+          "sha256": "087ff9a956a90d47f91241c6a8d300ed52660c26a7fb5283920abbb89d8a5d8a"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/urban-suite-tijuana-bordertowns/model.ts",
+          "status": 200,
+          "sha256": "bd5dfa63b6e864acb188347dfd311bc3800cd6e2b13520b97ee9f5748cb334a2"
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-urban-suite-tijuana-bordertowns-1366-light-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-urban-suite-tijuana-bordertowns-1366-dark-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-urban-suite-tijuana-bordertowns-390-light-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-urban-suite-tijuana-bordertowns-390-dark-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        }
+      ],
+      "setup": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\noff\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\ncleared\nTick\n0\nEpoch\n0\nServices / jobs\n0 / 0\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n0\nNodes / rings\n0 / 0\nValues\n0.00\nWeights\n0.000\nMarginal\n0.0\nMarginal weight\n0.000\nMax cost\n0\nCrossed\n0\nSavings\nN/A (empty-subset)\nSavings node\nN/A (empty-subset)\nNo water (%)\nN/A (zero-denominator)\nNo power (%)\nN/A (zero-denominator)\nPen segments\n0\nRecorded calls\n0\nLast failure\nNone\nWarnings\nNone\nCompleted\nTijuana"
+      },
+      "shadowRoots": 0,
+      "cityscapeReady": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\noff\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\nready\nTick\n0\nEpoch\n1\nServices / jobs\n3 / 8\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n845\nNodes / rings\n0 / 0\nValues\n2.13\nWeights\n0.458\nMarginal\n2.1\nMarginal weight\n0.458\nMax cost\n58.03\nCrossed\n0\nSavings\n0\nSavings node\nN/A (empty-subset)\nNo water (%)\n14\nNo power (%)\n9\nPen segments\n42470\nRecorded calls\n336\nLast failure\nNone\nWarnings\nNone\nPaused\nTijuana"
+      },
+      "stepped": {
+        "tick": "1",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\noff\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\nready\nTick\n1\nEpoch\n1\nServices / jobs\n3 / 8\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n842\nNodes / rings\n0 / 0\nValues\n2.13\nWeights\n0.458\nMarginal\n2.1\nMarginal weight\n0.458\nMax cost\n57.59\nCrossed\n0\nSavings\n5\nSavings node\nN/A (empty-subset)\nNo water (%)\n13\nNo power (%)\n9\nPen segments\n42470\nRecorded calls\n337\nLast failure\nNone\nWarnings\nNone\nPaused\nTijuana"
+      },
+      "edited": {
+        "tick": "1",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\nland value gradient\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\nready\nTick\n1\nEpoch\n1\nServices / jobs\n3 / 8\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n842\nNodes / rings\n0 / 0\nValues\n2.13\nWeights\n0.458\nMarginal\n2.1\nMarginal weight\n0.458\nMax cost\n57.59\nCrossed\n0\nSavings\n5\nSavings node\nN/A (empty-subset)\nNo water (%)\n13\nNo power (%)\n9\nPen segments\n42470\nRecorded calls\n337\nLast failure\nNone\nWarnings\nNone\nPaused\nTijuana"
+      },
+      "running": {
+        "tick": "3",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\nland value gradient\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\nready\nTick\n3\nEpoch\n1\nServices / jobs\n3 / 8\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n842\nNodes / rings\n0 / 0\nValues\n2.13\nWeights\n0.458\nMarginal\n2.1\nMarginal weight\n0.458\nMax cost\n57.59\nCrossed\n0\nSavings\n16\nSavings node\nN/A (empty-subset)\nNo water (%)\n13\nNo power (%)\n9\nPen segments\n42470\nRecorded calls\n339\nLast failure\nNone\nWarnings\nNone\nRunning\nTijuana"
+      },
+      "paused": {
+        "tick": "4",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\nland value gradient\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\nready\nTick\n4\nEpoch\n1\nServices / jobs\n3 / 8\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n843\nNodes / rings\n0 / 0\nValues\n2.13\nWeights\n0.458\nMarginal\n2.1\nMarginal weight\n0.458\nMax cost\n57.59\nCrossed\n0\nSavings\n22\nSavings node\nN/A (empty-subset)\nNo water (%)\n13\nNo power (%)\n9\nPen segments\n42470\nRecorded calls\n340\nLast failure\nNone\nWarnings\nNone\nPaused\nTijuana"
+      },
+      "pauseStable": true,
+      "selection": {
+        "tick": "4",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\nland value gradient\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\nready\nTick\n4\nEpoch\n1\nServices / jobs\n3 / 8\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n843\nNodes / rings\n0 / 0\nValues\n2.13\nWeights\n0.458\nMarginal\n2.1\nMarginal weight\n0.458\nMax cost\n57.59\nCrossed\n0\nSavings\n22\nSavings node\nN/A (empty-subset)\nNo water (%)\n13\nNo power (%)\n9\nPen segments\n42470\nRecorded calls\n340\nLast failure\nNone\nWarnings\nNone\nPaused\nSelected agent or field\nid\ncl_10ieahlk9ftmmwjd\nbirthOrdinal\n0\nx\n17\ny\n-3\nheading\n294\nsize\n4\ncolorNumber\n4\nshape\neyeball\nlabel\nhidden\nfalse\npenDown\nfalse\npenSize\n1\nkind\nservice-center\nTijuana"
+      },
+      "pendingSeed": {
+        "tick": "4",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nRestart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\n·\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\nland value gradient\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\nready\nTick\n4\nEpoch\n1\nServices / jobs\n3 / 8\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n843\nNodes / rings\n0 / 0\nValues\n2.13\nWeights\n0.458\nMarginal\n2.1\nMarginal weight\n0.458\nMax cost\n57.59\nCrossed\n0\nSavings\n22\nSavings node\nN/A (empty-subset)\nNo water (%)\n13\nNo power (%)\n9\nPen segments\n42470\nRecorded calls\n340\nLast failure\nNone\nWarnings\nNone\nPaused. Setup changes pending.\nSelected agent or field\nid\ncl_10ieahlk9ftmmwjd\nbirthOrdinal\n0\nx\n17\ny\n-3\nheading\n294\nsize\n4\ncolorNumber\n4\nshape\neyeball\nlabel\nhidden\nfalse\npenDown\nfalse\npenSize\n1\nkind\nservice-center\nTijuana"
+      },
+      "restarted": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nUrban Suite - Tijuana Bordertowns\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\nland value gradient\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\ncleared\nTick\n0\nEpoch\n0\nServices / jobs\n0 / 0\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n0\nNodes / rings\n0 / 0\nValues\n0.00\nWeights\n0.000\nMarginal\n0.0\nMarginal weight\n0.000\nMax cost\n0\nCrossed\n0\nSavings\nN/A (empty-subset)\nSavings node\nN/A (empty-subset)\nNo water (%)\nN/A (zero-denominator)\nNo power (%)\nN/A (zero-denominator)\nPen segments\n0\nRecorded calls\n0\nLast failure\nNone\nWarnings\nNone\nCompleted\nTijuana",
+        "seed": "2"
+      },
+      "switched": {
+        "url": "http://127.0.0.1:3110/?experiment=urban-suite-tijuana-bordertowns",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nLoading experiment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nMaquiladoras\nService Centers\nMigration Ticks\nCrossing Ticks\nBuilding Ticks\nInitial density\nColonia Size\nRequired Capital\nCarrying Capacity\nVisual Update\nland value gradient\nColor Code\nCity Growth\nClear\nCityscape step\n100 cityscape calls\nCityscape continue\nKeep building\nUpdate now\nAdd node\nModel info\nPhase\ncleared\nTick\n0\nEpoch\n0\nServices / jobs\n0 / 0\nBuilders (1 / 2 / 3)\n0 / 0 / 0\nSeed migrants\n0\nIrregular settlers\n0\nNodes / rings\n0 / 0\nValues\n0.00\nWeights\n0.000\nMarginal\n0.0\nMarginal weight\n0.000\nMax cost\n0\nCrossed\n0\nSavings\nN/A (empty-subset)\nSavings node\nN/A (empty-subset)\nNo water (%)\nN/A (zero-denominator)\nNo power (%)\nN/A (zero-denominator)\nPen segments\n0\nRecorded calls\n0\nLast failure\nNone\nWarnings\nNone\nCompleted\nTijuana\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T intera"
+      }
+    },
+    {
+      "slug": "traffic-grid",
+      "errors": [],
+      "console": [],
+      "httpFailures": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/traffic-grid/ui.ts",
+          "status": 200,
+          "sha256": "3b3916680a37968a0c857c50cf871102bb36cebd971b3d77905ac7a342ae7c39"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/traffic-grid/model.ts",
+          "status": 200,
+          "sha256": "853bb52addf0d03887536367d2eb165a186319b6ad963550a42b3b507dd76636"
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-traffic-grid-1366-light-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-traffic-grid-1366-dark-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-traffic-grid-390-light-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-traffic-grid-390-dark-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        }
+      ],
+      "setup": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nTraffic Grid\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n0\nPhase\n0\nStopped cars\n200\nPaused\nTraffic grid\nStopped cars\n200\n0\n1\nStopped cars\nAverage speed of cars\n1\n0\n1\nAverage speed of cars\nAverage wait time of cars\n1\n0\n1\nAverage wait time of cars"
+      },
+      "shadowRoots": 0,
+      "stepped": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nTraffic Grid\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n10\nPhase\n10\nStopped cars\n121\nPaused\nTraffic grid\nStopped cars\n200\n0\n10\nStopped cars\nAverage speed of cars\n1\n0\n10\nAverage speed of cars\nAverage wait time of cars\n4.23\n0\n10\nAverage wait time of cars"
+      },
+      "edited": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nTraffic Grid\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n10\nPhase\n10\nStopped cars\n121\nPaused\nTraffic grid\nStopped cars\n200\n0\n10\nStopped cars\nAverage speed of cars\n1\n0\n10\nAverage speed of cars\nAverage wait time of cars\n4.23\n0\n10\nAverage wait time of cars"
+      },
+      "running": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nTraffic Grid\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n12\nPhase\n12\nStopped cars\n124\nRunning\nTraffic grid\nStopped cars\n200\n0\n12\nStopped cars\nAverage speed of cars\n1\n0\n12\nAverage speed of cars\nAverage wait time of cars\n5.21\n0\n12\nAverage wait time of cars"
+      },
+      "paused": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nTraffic Grid\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n12\nPhase\n12\nStopped cars\n124\nPaused\nTraffic grid\nStopped cars\n200\n0\n12\nStopped cars\nAverage speed of cars\n1\n0\n12\nAverage speed of cars\nAverage wait time of cars\n5.21\n0\n12\nAverage wait time of cars"
+      },
+      "pauseStable": true,
+      "selection": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nTraffic Grid\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n12\nPhase\n12\nStopped cars\n124\nPaused\nTraffic grid\nStopped cars\n200\n0\n12\nStopped cars\nAverage speed of cars\n1\n0\n12\nAverage speed of cars\nAverage wait time of cars\n5.21\n0\n12\nAverage wait time of cars\nCar\nid\ncar-0\nx\n11\ny\n-11.98\nheading\n180\nspeed\n0\nupCar\ntrue\nwaitTime\n7\ncolor\n#355bd5\nsize\n1\nlabel\nhouseId\nworkId\ngoalId"
+      },
+      "pendingSeed": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nTraffic Grid\nRestart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\n·\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n12\nPhase\n12\nStopped cars\n124\nPaused. Setup changes pending.\nTraffic grid\nStopped cars\n200\n0\n12\nStopped cars\nAverage speed of cars\n1\n0\n12\nAverage speed of cars\nAverage wait time of cars\n5.21\n0\n12\nAverage wait time of cars\nCar\nid\ncar-0\nx\n11\ny\n-11.98\nheading\n180\nspeed\n0\nupCar\ntrue\nwaitTime\n7\ncolor\n#355bd5\nsize\n1\nlabel\nhouseId\nworkId\ngoalId"
+      },
+      "restarted": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nTraffic Grid\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n0\nPhase\n0\nStopped cars\n200\nPaused\nTraffic grid\nStopped cars\n200\n0\n1\nStopped cars\nAverage speed of cars\n1\n0\n1\nAverage speed of cars\nAverage wait time of cars\n1\n0\n1\nAverage wait time of cars",
+        "seed": "2"
+      },
+      "switched": {
+        "url": "http://127.0.0.1:3110/?experiment=traffic-grid",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nLoading experiment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nGrid Size X\nGrid Size Y\nNum Cars\nPower\nSpeed Limit\nTicks Per Cycle\nCurrent Phase\nCurrent Auto\nChange light\nSelect intersection\nModel info\nTick\n0\nPhase\n0\nStopped cars\n200\nPaused\nTraffic grid\nStopped cars\n200\n0\n1\nStopped cars\nAverage speed of cars\n1\n0\n1\nAverage speed of cars\nAverage wait time of cars\n1\n0\n1\nAverage wait time of cars\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nPart"
+      }
+    },
+    {
+      "slug": "preferential-attachment",
+      "errors": [],
+      "console": [],
+      "httpFailures": [],
+      "sources": [
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/preferential-attachment/ui.ts",
+          "status": 200,
+          "sha256": "1e55fe1861ee882efb40ec97b10308cd4adbfaeeb32ef260248526319a6cffb3"
+        },
+        {
+          "url": "http://127.0.0.1:3110/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/experiments/preferential-attachment/model.ts",
+          "status": 200,
+          "sha256": "a0972d79dc6a2e2fed028d206b80624e50a910f202956c487312b8cd7281f379"
+        }
+      ],
+      "shots": [
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-preferential-attachment-1366-light-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-preferential-attachment-1366-dark-overview.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollY": 0,
+            "scrollWidth": 1366
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-preferential-attachment-390-light-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        },
+        {
+          "path": "/tmp/city-library-catalog-authoring-final-preferential-attachment-390-dark-overview.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollY": 0,
+            "scrollWidth": 390
+          }
+        }
+      ],
+      "setup": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nPreferential Attachment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nModel info\nTick\n0\nNodes\n2\nEdges\n1\nPaused\nNetwork\nFit\nLayout\nInspect node\nDegree distribution\n2\n0\n1\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count"
+      },
+      "shadowRoots": 0,
+      "stepped": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nPreferential Attachment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nModel info\nTick\n10\nNodes\n12\nEdges\n11\nPaused\nNetwork\nFit\nLayout\nInspect node\nDegree distribution\n8\n0\n6\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count"
+      },
+      "edited": {
+        "tick": "10",
+        "text": "Skip to experiment\nAgent Lab\nPreferential Attachment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nModel info\nTick\n10\nNodes\n12\nEdges\n11\nPaused\nNetwork\nFit\nLayout\nInspect node\nDegree distribution\n8\n0\n6\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count"
+      },
+      "running": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nPreferential Attachment\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nModel info\nTick\n12\nNodes\n14\nEdges\n13\nRunning\nNetwork\nFit\nLayout\nInspect node\nDegree distribution\n9\n0\n7\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count"
+      },
+      "paused": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nPreferential Attachment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nModel info\nTick\n12\nNodes\n14\nEdges\n13\nPaused\nNetwork\nFit\nLayout\nInspect node\nDegree distribution\n9\n0\n7\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count"
+      },
+      "pauseStable": true,
+      "pendingSeed": {
+        "tick": "12",
+        "text": "Skip to experiment\nAgent Lab\nPreferential Attachment\nRestart with changes\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\n·\nModel info\nTick\n12\nNodes\n14\nEdges\n13\nPaused. Setup changes pending.\nNetwork\nFit\nLayout\nInspect node\nDegree distribution\n9\n0\n7\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count"
+      },
+      "restarted": {
+        "tick": "0",
+        "text": "Skip to experiment\nAgent Lab\nPreferential Attachment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nModel info\nTick\n0\nNodes\n2\nEdges\n1\nPaused\nNetwork\nFit\nLayout\nInspect node\nDegree distribution\n2\n0\n1\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count",
+        "seed": "2"
+      },
+      "switched": {
+        "url": "http://127.0.0.1:3110/?experiment=preferential-attachment",
+        "text": "Skip to experiment\nAgent Lab\nVoting\nLoading experiment\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nModel info\nTick\n0\nNodes\n2\nEdges\n1\nPaused\nNetwork\nFit\nLayout\nInspect node\nDegree distribution\n2\n0\n1\nNodes\nDegree distribution · log₁₀\n1\n0\n1\nlog count\nAnisogamy\nAnts\nArtificial Neural Net - Multilayer\nArtificial Neural Net - Perceptron\nAutumn\nBacterial Infection\nBaldwin Effect\nBank Reserves\nBidding Market\nBinomial Rabbits\nBirthdays\nBlood Sugar Regulation\nBraess' Paradox\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCash Flow\nCentral Limit Theorem\nChloroplasts and Food\nConsumer Choice\nCRISPR Bacterium\nCRISPR Ecosystem\nCrystallization Basic\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nDining Philosophers\nDisease Solo\nDLA\nDNA Protein Synthesis\nEl Farol\nepiDEM Basic\nepiDEM Travel and Control\nEthnocentrism\nExpected Value\nFire\nFireflies\nFlocking\nFruit Wars\nFur\nGalton Box\nGenDrift T interact\nGenEvo 1 Genetic Switch\nHeat Diffusion\nHeatbugs\nHeroes and Cowards\nHex Cell Aggregation\nHIV\nHoneycomb\nHotelling's Law\nInterstitial Diffusion\nInvasive Plants\nIsing\nK-Means Clustering\nLanguage Change\nLife\nLimited Order Book\nMammoths\nMandelbrot\nMembrane Formation\nMendelian Inheritance\nMimicry\nMinority Game\nMuscle Development\nPageRank\nParticle Swarm Optimization\nPartition Permutation Distribution\nParty\nPaths\nPeppered Moths\nPercolation\nPiaget-Vygotsky Game\nPreferential Attachment\nPrisoner's Dilemma Basic\nPrisoner's Dilemma Two Person Iterated\nRabbits Grass Weeds\nRandom Combinations"
+      }
+    }
+  ]
+}

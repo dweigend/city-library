@@ -1,0 +1,109 @@
+{
+  "slug": "robby-the-robot",
+  "name": "Robby the Robot",
+  "catalogPath": "Sample Models/Computer Science/Robby the Robot",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+  "deliveryBatch": "B18",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can evolutionary search improve a robot's behavior without directly programming a successful strategy? NetLogo Robby the Robot evolves lookup tables mapping local observations to actions in a can-collecting world. Mitchell's Complexity [1] describes Robby's original teaching example; Holland [2] supplies genetic-search foundations; Mitchell's genetic-algorithm monograph [3] develops selection, recombination, mutation, and evaluation. A strategy is tested through rewards for collecting cans and penalties for inappropriate actions or collisions. Reproduction changes the strategy population, while a separate demonstration shows one controller acting. Performance depends on the reward scheme, evaluation environments, population size, and evolutionary settings. The finite sensor table assumes local observations are sufficient for useful behavior and does not guarantee an optimal policy. Improvement on sampled rooms illustrates adaptation to a specified fitness test, rather than general robotic intelligence or unrestricted real-world transfer.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robby%20the%20Robot.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 ecaa2ce7c1d195fe6383354fc790025aa5c9d239f25f99f0fed71e04eaaf8d19",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/robby-the-robot.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Mitchell, M., Tisue, S. and Wilensky, U. (2012).  NetLogo Robby the Robot model.  http://ccl.northwestern.edu/netlogo/models/RobbytheRobot.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/robby-the-robot.nlogox",
+    "evidenceFile": "evidence/computing/robby-the-robot.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1093/oso/9780195124415.001.0001",
+      "authors": [
+        "Melanie Mitchell"
+      ],
+      "title": "Complexity A Guided Tour",
+      "year": 2009,
+      "venue": "Oxford University PressNew York, NY",
+      "doi": "10.1093/oso/9780195124415.001.0001",
+      "url": "https://doi.org/10.1093/oso/9780195124415.001.0001",
+      "relevance": "Direct provenance: NetLogo Info identifies Mitchell’s Robby example and its strategy-table experiment.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1093%2Foso%2F9780195124415.001.0001",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1093_oso_9780195124415_001_0001.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1093_oso_9780195124415_001_0001.json"
+      },
+      "publisher": "Oxford University PressNew York, NY",
+      "isbn": [
+        "9780195124415",
+        "9780197700600"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.7551/mitpress/1090.001.0001",
+      "authors": [
+        "John H. Holland"
+      ],
+      "title": "Adaptation in Natural and Artificial Systems: An Introductory Analysis with Applications to Biology, Control, and Artificial Intelligence",
+      "year": 1992,
+      "venue": "The MIT Press",
+      "doi": "10.7551/mitpress/1090.001.0001",
+      "url": "https://doi.org/10.7551/mitpress/1090.001.0001",
+      "relevance": "Genetic adaptation grounds selection, crossover and mutation of controller encodings.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.7551%2Fmitpress%2F1090.001.0001",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_7551_mitpress_1090_001_0001.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_7551_mitpress_1090_001_0001.json"
+      },
+      "publisher": "The MIT Press",
+      "isbn": [
+        "9780262275552"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.7551/mitpress/3927.001.0001",
+      "authors": [
+        "Melanie Mitchell"
+      ],
+      "title": "An Introduction to Genetic Algorithms",
+      "year": 1996,
+      "venue": "The MIT Press",
+      "doi": "10.7551/mitpress/3927.001.0001",
+      "url": "https://doi.org/10.7551/mitpress/3927.001.0001",
+      "relevance": "Explains evaluation, representation choices and limitations of genetic search for behavior.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.7551%2Fmitpress%2F3927.001.0001",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_7551_mitpress_3927_001_0001.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_7551_mitpress_3927_001_0001.json"
+      },
+      "publisher": "The MIT Press",
+      "isbn": [
+        "9780262280013"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

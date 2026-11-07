@@ -1,0 +1,641 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          5
+        ]
+      ],
+      "date-time": "2026-11-05T07:06:52Z",
+      "timestamp": 1793862412023,
+      "version": "4.6.1"
+    },
+    "reference-count": 58,
+    "publisher": "Association for Computing Machinery (ACM)",
+    "issue": "5",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1999,
+              9,
+              1
+            ]
+          ],
+          "date-time": "1999-09-01T00:00:00Z",
+          "timestamp": 936144000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "J. ACM"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1999,
+          9
+        ]
+      ]
+    },
+    "abstract": "<jats:p>The network structure of a hyperlinked environment can be a rich source of information about the content of the environment, provided we have effective means for understanding it. We develop a set of algorithmic tools for extracting information from the link structures of such environments, and report on experiments that demonstrate their effectiveness in a variety of context on the World Wide Web. The central issue we address within our framework is the distillation of broad search topics, through the discovery of \u201cauthorative\u201d information sources on such topics. We propose and test an algorithmic formulation of the notion of authority, based on the relationship between a set of relevant authoritative pages and the set of \u201chub pages\u201d that join them together in  the link structure. Our formulation has connections to the eigenvectors of certain matrices associated with the link graph; these connections in turn motivate additional heuristrics for link-based analysis.</jats:p>",
+    "DOI": "10.1145/324133.324140",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2002,
+          7,
+          27
+        ]
+      ],
+      "date-time": "2002-07-27T07:26:13Z",
+      "timestamp": 1027754773000
+    },
+    "page": "604-632",
+    "update-policy": "https://doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 5840,
+    "title": [
+      "Authoritative sources in a hyperlinked environment"
+    ],
+    "prefix": "10.1145",
+    "volume": "46",
+    "author": [
+      {
+        "given": "Jon M.",
+        "family": "Kleinberg",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Cornell Univ., Ithaca, NY"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          1999,
+          9
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_1_1_1",
+        "volume-title": "Proceedings of the 6th International World Wide Web Conference (Santa Clara, Calif., Apr. 7-11)",
+        "author": "AROCENA G.O.",
+        "year": "1997"
+      },
+      {
+        "key": "e_1_2_1_2_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "75",
+        "DOI": "10.1145/258549.258595",
+        "volume-title": "Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems (CHI '97)",
+        "author": "BARRETT R.",
+        "year": "1997"
+      },
+      {
+        "key": "e_1_2_1_3_1",
+        "volume-title": "Facility Location: A Survey of Applications and Methods",
+        "author": "BERMAN O."
+      },
+      {
+        "key": "e_1_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/179606.179671"
+      },
+      {
+        "key": "e_1_2_1_5_1",
+        "volume-title": "Proceedings of the 7th International World Wide Web Conference",
+        "author": "BHARAT K.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_6_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "104",
+        "DOI": "10.1145/290941.290972",
+        "volume-title": "Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+        "author": "BHARAT K.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/146802.146826"
+      },
+      {
+        "key": "e_1_2_1_8_1",
+        "first-page": "107",
+        "volume-title": "Proceedings of the 7th International World Wide Web Conference",
+        "author": "BRIN S.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_9_1",
+        "volume-title": "Proceedings of the 6th International World Wide Web Conference (Santa Clara, Calif., Apr. 7-11)",
+        "author": "CARRIERE J.",
+        "year": "1997"
+      },
+      {
+        "key": "e_1_2_1_10_1",
+        "volume-title": "Proceedings of the ACM SIGIR Workshop on Hypertext Information Retrieval on the Web",
+        "author": "CHAKRABARTI S.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_11_1",
+        "first-page": "65",
+        "volume-title": "Proceed-ings of the 7th International World Wide Web Conference",
+        "author": "CHAKRABARTI S.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_12_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "CHUNG F. R. K. 1997. Spectral Graph Theory. AMS Press Providence R.I.  CHUNG F. R. K. 1997. Spectral Graph Theory. AMS Press Providence R.I.",
+        "DOI": "10.1090/cbms/092"
+      },
+      {
+        "key": "e_1_2_1_13_1",
+        "volume-title": "Proceedings of the 6th International World Wide Web Conference (Santa Clara, Calif., Apr. 7-11)",
+        "author": "CHEKURI C.",
+        "year": "1997"
+      },
+      {
+        "key": "e_1_2_1_14_1",
+        "first-page": "330",
+        "volume-title": "Proceedings of the 15th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+        "author": "CUTTING D.R.",
+        "year": "1992"
+      },
+      {
+        "key": "e_1_2_1_15_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "55",
+        "DOI": "10.1007/BF02021864",
+        "article-title": "The analysis of square matrices of scientometric transactions",
+        "volume": "3",
+        "author": "DE SOLLA PRICE D.",
+        "year": "1981",
+        "journal-title": "Sciento-metrics"
+      },
+      {
+        "key": "e_1_2_1_16_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "391",
+        "DOI": "10.1002/(SICI)1097-4571(199009)41:6<391::AID-ASI1>3.0.CO;2-9",
+        "article-title": "Indexing by latent semantic analysis",
+        "volume": "41",
+        "author": "DEERWESTER S.",
+        "year": "1990",
+        "journal-title": "J. Amer. Soc. Info. Sci."
+      },
+      {
+        "key": "e_1_2_1_17_1",
+        "unstructured": "DIGITAL EQUIPMENT CORPORATION. AltaVista search engine http://altavista.digital.com/.  DIGITAL EQUIPMENT CORPORATION. AltaVista search engine http://altavista.digital.com/."
+      },
+      {
+        "key": "e_1_2_1_18_1",
+        "article-title": "Lower bounds for the partitioning of graphs. IBM",
+        "author": "DONATH W.E.",
+        "year": "1973",
+        "journal-title": "J. Res. Develop. 17."
+      },
+      {
+        "key": "e_1_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0306-4573(88)90077-5"
+      },
+      {
+        "key": "e_1_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0306-4573(94)90021-3"
+      },
+      {
+        "key": "e_1_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0306-4573(88)90026-X"
+      },
+      {
+        "key": "e_1_2_1_22_1",
+        "unstructured": "EGGHE L. AND ROUSSEAU R. 1990. Introduction to Informetrics Elsevier North-Holland Am-sterdam The Netherlands.  EGGHE L. AND ROUSSEAU R. 1990. Introduction to Informetrics Elsevier North-Holland Am-sterdam The Netherlands."
+      },
+      {
+        "key": "e_1_2_1_23_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "298",
+        "DOI": "10.21136/CMJ.1973.101168",
+        "article-title": "Algebraic connectivity of graphs",
+        "volume": "23",
+        "author": "FIELDER M.",
+        "year": "1973",
+        "journal-title": "Czech. Math. J."
+      },
+      {
+        "key": "e_1_2_1_24_1",
+        "volume-title": "Proceedings of the 39th IEEE Symposium on Foundations of Computer Science (Palo Alto, Calif., Nov. 8-11)",
+        "author": "FRIEZE A.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/48511.48518"
+      },
+      {
+        "key": "e_1_2_1_26_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "471",
+        "DOI": "10.1126/science.178.4060.471",
+        "article-title": "Citation analysis as a tool in journal evaluation",
+        "volume": "178",
+        "author": "GARFIELD E.",
+        "year": "1972",
+        "journal-title": "Science"
+      },
+      {
+        "key": "e_1_2_1_27_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "93",
+        "DOI": "10.1016/0306-4573(78)90066-3",
+        "article-title": "On the citation influence methodology of Pinski and",
+        "volume": "14",
+        "author": "GELLER N.",
+        "year": "1978",
+        "journal-title": "Narin. Inf. Proc. Manage."
+      },
+      {
+        "key": "e_1_2_1_28_1",
+        "first-page": "225",
+        "volume-title": "Proceedings of the 9th ACM Conference on Hypertext and Hypermedia",
+        "author": "GIBSON D.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_29_1",
+        "first-page": "311",
+        "volume-title": "Proceedings of the 24th International Conference on Very Large Databases",
+        "author": "GIBSON D.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_30_1",
+        "unstructured": "GOLUB G. AND VAN LOAN C. F. 1989. Matrix Computations. Johns Hopkins University Press Baltimore Md.  GOLUB G. AND VAN LOAN C. F. 1989. Matrix Computations. Johns Hopkins University Press Baltimore Md."
+      },
+      {
+        "key": "e_1_2_1_31_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "417",
+        "DOI": "10.1037/h0071325",
+        "article-title": "Analysis of a complex statistical variable into principal components",
+        "volume": "24",
+        "author": "HOTELLING H.",
+        "year": "1933",
+        "journal-title": "J. Educ. Psychol."
+      },
+      {
+        "key": "e_1_2_1_32_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "377",
+        "DOI": "10.2307/2785990",
+        "article-title": "An input-output approach to clique identification",
+        "volume": "28",
+        "author": "HUBBELL C. H.",
+        "year": "1965",
+        "journal-title": "Sociometry"
+      },
+      {
+        "key": "e_1_2_1_33_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "HUBERMAN B. PIROLLI P. PITKOW J. AND LUKOSE R. 1998. Strong regularities in world wide web surfing. Science 280.  HUBERMAN B. PIROLLI P. PITKOW J. AND LUKOSE R. 1998. Strong regularities in world wide web surfing. Science 280.",
+        "DOI": "10.1126/science.280.5360.95"
+      },
+      {
+        "key": "e_1_2_1_34_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "JOLLIFFE I. T. 1986. Principal Component Analysis. Springer-Verlag New York.  JOLLIFFE I. T. 1986. Principal Component Analysis. Springer-Verlag New York.",
+        "DOI": "10.1007/978-1-4757-1904-8"
+      },
+      {
+        "key": "e_1_2_1_35_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "39",
+        "DOI": "10.1007/BF02289026",
+        "article-title": "A new status index derived from sociometric analysis",
+        "volume": "18",
+        "author": "KATZ L.",
+        "year": "1953",
+        "journal-title": "Psychometrika"
+      },
+      {
+        "key": "e_1_2_1_36_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "10",
+        "DOI": "10.1002/asi.5090140103",
+        "article-title": "Bibliographic coupling between scientific papers",
+        "volume": "14",
+        "author": "KESSLER M. M.",
+        "year": "1963",
+        "journal-title": "Amer. Document."
+      },
+      {
+        "key": "e_1_2_1_37_1",
+        "volume-title": "Proceedings of the Annual Meeting of the American Society of Information Science",
+        "author": "LARSON R.",
+        "year": "1996"
+      },
+      {
+        "key": "e_1_2_1_38_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "85",
+        "DOI": "10.1007/BF02293787",
+        "article-title": "Joint-space analysis of 'pick-any' data: Analysis of choices from an uncon-strained set of alternatives",
+        "volume": "44",
+        "author": "LEVINE J. H.",
+        "year": "1979",
+        "journal-title": "Psychometrika"
+      },
+      {
+        "key": "e_1_2_1_39_1",
+        "volume-title": "Proceedings of the 6th International World Wide Web Conference (Santa Clara, Calif., Apr. 7-11)",
+        "author": "MARCHIORI M.",
+        "year": "1997"
+      },
+      {
+        "key": "e_1_2_1_40_1",
+        "volume-title": "Proceedings of the 1st International World Wide Web Conference",
+        "author": "MCBRYAN O.",
+        "year": "1994"
+      },
+      {
+        "key": "e_1_2_1_41_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "111",
+        "DOI": "10.1002/(SICI)1097-4571(198605)37:3<111::AID-ASI2>3.0.CO;2-D",
+        "article-title": "Co-cited author mapping as a valid representation of intellectual structure",
+        "volume": "37",
+        "author": "MCCAIN K.",
+        "year": "1986",
+        "journal-title": "J. Amer. Soc. Info. Sci."
+      },
+      {
+        "key": "e_1_2_1_42_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "297",
+        "DOI": "10.1007/BF02021645",
+        "article-title": "An improved method for analyzing square scientometric transaction matrices",
+        "volume": "4",
+        "author": "NOMA E.",
+        "year": "1982",
+        "journal-title": "Scientometrics"
+      },
+      {
+        "key": "e_1_2_1_43_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "29",
+        "DOI": "10.1002/asi.4630350105",
+        "article-title": "Co-citation analysis and the invisible college",
+        "volume": "35",
+        "author": "NOMA E.",
+        "year": "1984",
+        "journal-title": "J. Amer. Soc. Info. Sci."
+      },
+      {
+        "key": "e_1_2_1_44_1",
+        "first-page": "159",
+        "volume-title": "Proceedings of the 17th ACM SIGACT-SIGMOD-SIGART Symposium on Principles of Database Systems",
+        "author": "PAPADIMITRIOU C.H.",
+        "year": "1998"
+      },
+      {
+        "key": "e_1_2_1_45_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "297",
+        "DOI": "10.1016/0306-4573(76)90048-0",
+        "article-title": "Citation influence for journal aggregates of scientific publications: Theory, with application to the literature of physics",
+        "volume": "12",
+        "author": "PINSKI G.",
+        "year": "1976",
+        "journal-title": "Inf. Proc. Manage."
+      },
+      {
+        "key": "e_1_2_1_46_1",
+        "first-page": "118",
+        "volume-title": "Proceedings of ACM SIGCHI Conference on Human Factors in Computing Systems (CHI '96)",
+        "author": "PIROLLI P.",
+        "year": "1996"
+      },
+      {
+        "key": "e_1_2_1_47_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "383",
+        "DOI": "10.1145/258549.258805",
+        "volume-title": "Proceedings of ACM SIGCHI Conference on Human Factors in Computing Systems (CHI '97)",
+        "author": "PITKOW J.",
+        "year": "1997"
+      },
+      {
+        "key": "e_1_2_1_48_1",
+        "unstructured": "SALTON G. 1989. Automatic Text Processing. Addison-Wesley Reading Mass.   SALTON G. 1989. Automatic Text Processing. Addison-Wesley Reading Mass."
+      },
+      {
+        "key": "e_1_2_1_49_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "669",
+        "DOI": "10.1002/(SICI)1097-4571(199110)42:9<669::AID-ASI5>3.0.CO;2-Y",
+        "article-title": "Subject and citation indexing. Part I: The clustering structure of composite representations in the cystic fibrosis document collection",
+        "volume": "42",
+        "author": "SHAW W. M.",
+        "year": "1991",
+        "journal-title": "J. Amer. Soc. Info. Sci."
+      },
+      {
+        "key": "e_1_2_1_50_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "676",
+        "DOI": "10.1002/(SICI)1097-4571(199110)42:9<676::AID-ASI6>3.0.CO;2-2",
+        "article-title": "Subject and citation indexing. Part II: The optimal, cluster-based retrieval performance of composite representations",
+        "volume": "42",
+        "author": "SHAW W. M.",
+        "year": "1991",
+        "journal-title": "J. Amer. Soc. Info. Sci."
+      },
+      {
+        "key": "e_1_2_1_51_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "265",
+        "DOI": "10.1002/asi.4630240406",
+        "article-title": "Co-citation in the scientific literature: A new measure of the relationship between two documents",
+        "volume": "24",
+        "author": "SMALL H.",
+        "year": "1973",
+        "journal-title": "J. Amer. Soc. Info. Sci."
+      },
+      {
+        "key": "e_1_2_1_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/(SICI)1097-4571(198605)37:3%3C97::AID-ASI1%3E3.0.CO;2-K"
+      },
+      {
+        "key": "e_1_2_1_53_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "17",
+        "DOI": "10.1177/030631277400400102",
+        "article-title": "The structure of the scientific literatures I. Identifying and graphing specialties",
+        "volume": "4",
+        "author": "SMALL H.",
+        "year": "1974",
+        "journal-title": "Science Studies"
+      },
+      {
+        "key": "e_1_2_1_54_1",
+        "volume-title": "Proceedings of the 6th International World Wide Web Conference (Santa Clara, Calif., Apr. 7-11)",
+        "author": "SPERTUS E.",
+        "year": "1997"
+      },
+      {
+        "key": "e_1_2_1_55_1",
+        "unstructured": "VAN RIJSBERGEN C. J. 1979. Information Retrieval. Butterworths London England.   VAN RIJSBERGEN C. J. 1979. Information Retrieval. Butterworths London England."
+      },
+      {
+        "key": "e_1_2_1_56_1",
+        "first-page": "180",
+        "volume-title": "Proceedings of the 7th ACM Conference on Hypertext (Washington, D.C., Mar. 16-20)",
+        "author": "WEISS R.",
+        "year": "1996"
+      },
+      {
+        "key": "e_1_2_1_57_1",
+        "unstructured": "WIRED DIGITAL INC. Hotbot http://www.hotbot.com.  WIRED DIGITAL INC. Hotbot http://www.hotbot.com."
+      },
+      {
+        "key": "e_1_2_1_58_1",
+        "unstructured": "YAHOO!CORPORATION Yahoo! http://www.yahoo.com.  YAHOO!CORPORATION Yahoo! http://www.yahoo.com."
+      }
+    ],
+    "container-title": [
+      "Journal of the ACM"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/10.1145/324133.324140",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/324133.324140",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          17
+        ]
+      ],
+      "date-time": "2025-06-17T21:39:53Z",
+      "timestamp": 1750196393000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/324133.324140"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1999,
+          9
+        ]
+      ]
+    },
+    "references-count": 58,
+    "journal-issue": {
+      "issue": "5",
+      "published-print": {
+        "date-parts": [
+          [
+            1999,
+            9
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1145/324133.324140"
+    ],
+    "URL": "https://doi.org/10.1145/324133.324140",
+    "relation": {},
+    "ISSN": [
+      "0004-5411",
+      "1557-735X"
+    ],
+    "issn-type": [
+      {
+        "value": "0004-5411",
+        "type": "print"
+      },
+      {
+        "value": "1557-735X",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1999,
+          9
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "1999-09-01",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

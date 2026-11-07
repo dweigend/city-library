@@ -1,0 +1,59 @@
+{
+  "slug": "anisogamy",
+  "command": "clear-turtles go",
+  "success": false,
+  "error": {
+    "message": "Can't find the mean of a list with no numbers: [].",
+    "primitive": "mean",
+    "stackTraceMessage": "error while running MEAN\ncalled by plot average gamete-size trait (µm)\ncalled by procedure GO",
+    "kind": "a",
+    "keys": [
+      "message",
+      "stackTrace",
+      "stackTraceMessage",
+      "primitive",
+      "sourceStart",
+      "sourceEnd",
+      "messageKey"
+    ]
+  },
+  "after": {
+    "tick": {
+      "success": true,
+      "value": 1
+    },
+    "turtles": {
+      "success": true,
+      "value": 0
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 32,
+      "maxPycor": 32,
+      "minPxcor": -32,
+      "minPycor": -32,
+      "nextWhoNumber": 0,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 1,
+      "codeGlobals": {
+        "allow-assortative-fusion?": false,
+        "average-adult-lifetime": 500,
+        "gamete-fitness-threshold": 0,
+        "gamete-provisioning-budget": 0.5,
+        "max-adults": 100,
+        "max-gamete-size": 0.7978845608028654,
+        "mutation-σ": 0.025,
+        "spawning-probability": 1.5,
+        "speed-size-correlation?": false,
+        "tick-advance-amount": 1,
+        "whole-tick?": true,
+        "world-size": 65,
+        "zygote-fitness-threshold": 0.45
+      }
+    },
+    "monitors": []
+  }
+}

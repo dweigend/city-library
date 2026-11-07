@@ -1,6 +1,6 @@
 # Agent Loom API inventory
 
-&gt; **Specification only.** These 309 operation/type entries define the phase-one target across 16 areas. City Library currently exports none of them.
+&gt; **Binding target inventory.** These 309 operation/type entries define the phase-one target across 16 areas. Only the bounded subsets tracked in PLAN.md and the delivery inventory are implemented; this table is not a runtime availability list.
 
 [Overview](README.md) · [Detailed reference and examples](api-reference.md)
 

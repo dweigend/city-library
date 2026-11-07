@@ -1,0 +1,177 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Fireflies.nlogox",
+  "title": "NetLogo Web: Fireflies",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "dpr": 2
+  },
+  "sha256": "3e27054691236c9aadca9d425a1c4b66cc0452e4195c2266e09ba3729f5e7cb2",
+  "version": "NetLogo 7.0.4",
+  "tick": 0,
+  "count": 1500,
+  "globals": {
+    "number": 1500,
+    "flash-length": 1,
+    "strategy": "delay",
+    "flashes-to-reset": 1,
+    "show-dark-fireflies?": false,
+    "cycle-length": 10
+  },
+  "widgets": [
+    {
+      "type": "view",
+      "dimensions": {
+        "minPxcor": -35,
+        "maxPxcor": 35,
+        "minPycor": -35,
+        "maxPycor": 35,
+        "patchSize": 6,
+        "wrappingAllowedInX": true,
+        "wrappingAllowedInY": true
+      }
+    },
+    {
+      "type": "slider",
+      "variable": "number",
+      "display": "number",
+      "currentValue": 1500
+    },
+    {
+      "type": "slider",
+      "variable": "flash-length",
+      "display": "flash-length",
+      "currentValue": 1
+    },
+    {
+      "type": "chooser",
+      "variable": "strategy",
+      "display": "strategy",
+      "currentValue": "delay"
+    },
+    {
+      "type": "slider",
+      "variable": "flashes-to-reset",
+      "display": "flashes-to-reset",
+      "currentValue": 1
+    },
+    {
+      "type": "switch",
+      "variable": "show-dark-fireflies?",
+      "display": "show-dark-fireflies?",
+      "currentValue": false
+    },
+    {
+      "type": "slider",
+      "variable": "cycle-length",
+      "display": "cycle-length",
+      "currentValue": 10
+    },
+    {
+      "type": "button",
+      "source": "setup",
+      "display": "setup"
+    },
+    {
+      "type": "button",
+      "source": "go",
+      "display": "go",
+      "running": false
+    },
+    {
+      "type": "plot",
+      "display": "Flashing Fireflies"
+    }
+  ],
+  "turtles": [
+    {
+      "id": 0,
+      "x": 24.308221621081323,
+      "y": 23.089950299750143,
+      "color": 3,
+      "heading": 319,
+      "clock": 5,
+      "threshold": 1,
+      "reset-level": 1,
+      "window": -1,
+      "hidden?": true
+    },
+    {
+      "id": 1,
+      "x": -7.774003245760291,
+      "y": -0.9376700270091334,
+      "color": 3,
+      "heading": 120,
+      "clock": 9,
+      "threshold": 1,
+      "reset-level": 1,
+      "window": -1,
+      "hidden?": true
+    },
+    {
+      "id": 2,
+      "x": 24.993707882629153,
+      "y": -1.9436631599992822,
+      "color": 3,
+      "heading": 349,
+      "clock": 4,
+      "threshold": 1,
+      "reset-level": 1,
+      "window": -1,
+      "hidden?": true
+    },
+    {
+      "id": 3,
+      "x": 3.8644397128581858,
+      "y": 15.4201518008732,
+      "color": 3,
+      "heading": 171,
+      "clock": 9,
+      "threshold": 1,
+      "reset-level": 1,
+      "window": -1,
+      "hidden?": true
+    },
+    {
+      "id": 4,
+      "x": -35.4027724603105,
+      "y": -8.298886686947185,
+      "color": 3,
+      "heading": 121,
+      "clock": 3,
+      "threshold": 1,
+      "reset-level": 1,
+      "window": -1,
+      "hidden?": true
+    },
+    {
+      "id": 5,
+      "x": -20.3158918801179,
+      "y": 27.652390511094644,
+      "color": 3,
+      "heading": 73,
+      "clock": 6,
+      "threshold": 1,
+      "reset-level": 1,
+      "window": -1,
+      "hidden?": true
+    }
+  ],
+  "patchTotals": {},
+  "patchColors": {
+    "0": 5041
+  },
+  "colors": {
+    "3": 1349,
+    "45": 151
+  },
+  "readback": [
+    {
+      "width": 852,
+      "height": 852,
+      "nonblack": 33804
+    }
+  ],
+  "text": " powered by NetLogo\nFireflies\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 0\n?\nfor shortcuts\nnumber\nflash-length\nstrategy\ndelay\nadvance\nflashes-to-reset\nshow-dark-fireflies?\ncycle-length\nsetup\ngo\nTime\nNumber\nFlashing Fireflies\n0\n50\n100\n0\n500\n1000\n1500\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+}

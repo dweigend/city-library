@@ -1,0 +1,658 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=A+better+way+to+construct+the+sunflower+head+Vogel+1979&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1803217,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                30
+              ]
+            ],
+            "date-time": "2026-10-30T14:54:37Z",
+            "timestamp": 1793372077265,
+            "version": "4.5.0"
+          },
+          "reference-count": 9,
+          "publisher": "Elsevier BV",
+          "issue": "3-4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1979,
+                    6,
+                    1
+                  ]
+                ],
+                "date-time": "1979-06-01T00:00:00Z",
+                "timestamp": 297043200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Mathematical Biosciences"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1979,
+                6
+              ]
+            ]
+          },
+          "DOI": "10.1016/0025-5564(79)90080-4",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                26
+              ]
+            ],
+            "date-time": "2002-07-26T00:19:18Z",
+            "timestamp": 1027642758000
+          },
+          "page": "179-189",
+          "source": "Crossref",
+          "is-referenced-by-count": 322,
+          "title": [
+            "A better way to construct the sunflower head"
+          ],
+          "prefix": "10.1016",
+          "volume": "44",
+          "author": [
+            {
+              "given": "Helmut",
+              "family": "Vogel",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/0025-5564(79)90080-4_BIB1",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1016/0025-5564(74)90072-8",
+              "article-title": "Constructing the sunflower head",
+              "volume": "20",
+              "author": "Mathai",
+              "year": "1974",
+              "journal-title": "Math. Biosci."
+            },
+            {
+              "key": "10.1016/0025-5564(79)90080-4_BIB2",
+              "series-title": "Recherches sur l'usage des feuilles dans les plantes",
+              "author": "Bonnet",
+              "year": "1754"
+            },
+            {
+              "key": "10.1016/0025-5564(79)90080-4_BIB3",
+              "doi-asserted-by": "crossref",
+              "first-page": "116",
+              "DOI": "10.1038/scientificamerican0369-116",
+              "article-title": "The multiple fascination of the Fibonacci sequence",
+              "volume": "220",
+              "author": "Gardner",
+              "year": "1969",
+              "journal-title": "Sci. Am."
+            },
+            {
+              "key": "10.1016/0025-5564(79)90080-4_BIB4",
+              "first-page": "116",
+              "article-title": "Zwischen Zahl und Raum",
+              "author": "Menninger",
+              "year": "1960"
+            },
+            {
+              "key": "10.1016/0025-5564(79)90080-4_BIB5",
+              "first-page": "59",
+              "article-title": "Riddles in Mathematics",
+              "author": "Northrop",
+              "year": "1960"
+            },
+            {
+              "key": "10.1016/0025-5564(79)90080-4_BIB6",
+              "first-page": "217",
+              "article-title": "The geometry of phyllotaxis and its origin",
+              "volume": "II",
+              "author": "Richards",
+              "year": "1948",
+              "journal-title": "Soc. Exper. Biol. Symp."
+            },
+            {
+              "key": "10.1016/0025-5564(79)90080-4_BIB7",
+              "doi-asserted-by": "crossref",
+              "first-page": "509",
+              "DOI": "10.1098/rstb.1951.0007",
+              "article-title": "Phyllotaxis: its quantitative expression and relation to growth in the apex",
+              "volume": "235",
+              "author": "Richards",
+              "year": "1950",
+              "journal-title": "Philos. Trans. Roy. Soc. London Ser. B"
+            },
+            {
+              "issue": "4",
+              "key": "10.1016/0025-5564(79)90080-4_BIB8",
+              "first-page": "423",
+              "article-title": "Recherches sur la structure du rendement en grains du tournesol",
+              "volume": "18",
+              "author": "Piquemal",
+              "year": "1968",
+              "journal-title": "Ann. Am\u00e9lior. Plantes"
+            },
+            {
+              "key": "10.1016/0025-5564(79)90080-4_BIB9",
+              "unstructured": "G. Piquemal, personal communication."
+            }
+          ],
+          "container-title": [
+            "Mathematical Biosciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0025556479900804?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0025556479900804?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                4,
+                12
+              ]
+            ],
+            "date-time": "2019-04-12T09:23:58Z",
+            "timestamp": 1555061038000
+          },
+          "score": 59.743805,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0025556479900804"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1979,
+                6
+              ]
+            ]
+          },
+          "references-count": 9,
+          "journal-issue": {
+            "issue": "3-4",
+            "published-print": {
+              "date-parts": [
+                [
+                  1979,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0025556479900804"
+          ],
+          "URL": "https://doi.org/10.1016/0025-5564(79)90080-4",
+          "ISSN": [
+            "0025-5564"
+          ],
+          "issn-type": [
+            {
+              "value": "0025-5564",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1979,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "institution": [
+            {
+              "name": "Front Matter"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                9
+              ]
+            ],
+            "date-time": "2026-09-09T19:06:55Z",
+            "timestamp": 1788980815009,
+            "version": "build-2803163510"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                27
+              ]
+            ]
+          },
+          "group-title": "Aaron Tay's Musings about Librarianship",
+          "reference-count": 0,
+          "publisher": "Front Matter",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    4,
+                    27
+                  ]
+                ],
+                "date-time": "2020-04-27T00:00:00Z",
+                "timestamp": 1587945600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    4,
+                    27
+                  ]
+                ],
+                "date-time": "2020-04-27T00:00:00Z",
+                "timestamp": 1587945600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "abstract": "<jats:p>Boolean query in 2D Search for Lens.org (sneak peak)</jats:p>",
+          "DOI": "10.59350/tbv3a-asb51",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                5
+              ]
+            ],
+            "date-time": "2025-12-05T21:24:24Z",
+            "timestamp": 1764969864000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "2D Search - a better way to visualize and construct complex nested Boolean queries?"
+          ],
+          "prefix": "10.59350",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0003-0159-013X",
+              "authenticated-orcid": false,
+              "given": "Chee Hsien",
+              "family": "Tay",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "id": [
+                    {
+                      "id": "https://ror.org/050qmg959",
+                      "id-type": "ROR",
+                      "asserted-by": "publisher"
+                    }
+                  ],
+                  "name": "Singapore Management University"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "31795",
+          "link": [
+            {
+              "URL": "https://aarontay.substack.com/p/2d-search-better-way-to-visualize-and",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                9
+              ]
+            ],
+            "date-time": "2026-09-09T18:27:46Z",
+            "timestamp": 1788978466000
+          },
+          "score": 25.709711,
+          "resource": {
+            "primary": {
+              "URL": "https://aarontay.substack.com/p/2d-search-better-way-to-visualize-and"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                27
+              ]
+            ]
+          },
+          "references-count": 0,
+          "version": {
+            "version": "v1"
+          },
+          "URL": "https://doi.org/10.59350/tbv3a-asb51",
+          "relation": {
+            "has-version": [
+              {
+                "id-type": "doi",
+                "id": "10.59350/4zt9y-yey47",
+                "asserted-by": "subject"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.59350/4zt9y-yey47",
+                "asserted-by": "object"
+              }
+            ],
+            "is-part-of": [
+              {
+                "id-type": "doi",
+                "id": "10.59350/musings",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                27
+              ]
+            ]
+          },
+          "subtype": "blog"
+        },
+        {
+          "institution": [
+            {
+              "name": "Front Matter"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                9
+              ]
+            ],
+            "date-time": "2026-09-09T19:06:53Z",
+            "timestamp": 1788980813549,
+            "version": "build-2803163510"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                27
+              ]
+            ]
+          },
+          "group-title": "Aaron Tay's Musings about Librarianship",
+          "reference-count": 0,
+          "publisher": "Front Matter",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    4,
+                    27
+                  ]
+                ],
+                "date-time": "2020-04-27T00:00:00Z",
+                "timestamp": 1587945600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    4,
+                    27
+                  ]
+                ],
+                "date-time": "2020-04-27T00:00:00Z",
+                "timestamp": 1587945600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "abstract": "<jats:p>Boolean query in 2D Search for Lens.org (sneak peak)</jats:p>",
+          "DOI": "10.59350/4zt9y-yey47",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                13
+              ]
+            ],
+            "date-time": "2025-06-13T17:34:38Z",
+            "timestamp": 1749836078000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "2D Search - a better way to visualize and construct complex nested Boolean queries?"
+          ],
+          "prefix": "10.59350",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0003-0159-013X",
+              "authenticated-orcid": false,
+              "given": "Chee Hsien",
+              "family": "Tay",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "id": [
+                    {
+                      "id": "https://ror.org/050qmg959",
+                      "id-type": "ROR",
+                      "asserted-by": "publisher"
+                    }
+                  ],
+                  "name": "Singapore Management University"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "31795",
+          "link": [
+            {
+              "URL": "https://aarontay.substack.com/p/2d-search-better-way-to-visualize-and",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.rogue-scholar.org/posts/10.59350/4zt9y-yey47.md",
+              "content-type": "text/markdown",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://rogue-scholar.org/api/records/zhfq0-cms25/files/10.59350_4zt9y-yey47.pdf/content",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.rogue-scholar.org/posts/10.59350/4zt9y-yey47.epub",
+              "content-type": "application/epub+zip",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.rogue-scholar.org/posts/10.59350/4zt9y-yey47.xml",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                9
+              ]
+            ],
+            "date-time": "2026-09-09T18:27:46Z",
+            "timestamp": 1788978466000
+          },
+          "score": 25.657654,
+          "resource": {
+            "primary": {
+              "URL": "https://aarontay.substack.com/p/2d-search-better-way-to-visualize-and"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                27
+              ]
+            ]
+          },
+          "references-count": 0,
+          "version": {
+            "version": "v1"
+          },
+          "URL": "https://doi.org/10.59350/4zt9y-yey47",
+          "relation": {
+            "is-version-of": [
+              {
+                "id-type": "doi",
+                "id": "10.59350/tbv3a-asb51",
+                "asserted-by": "subject"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.59350/tbv3a-asb51",
+                "asserted-by": "object"
+              }
+            ],
+            "is-part-of": [
+              {
+                "id-type": "doi",
+                "id": "10.59350/musings",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                27
+              ]
+            ]
+          },
+          "subtype": "blog"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

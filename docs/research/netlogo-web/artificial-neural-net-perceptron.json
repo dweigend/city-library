@@ -1,0 +1,110 @@
+{
+  "slug": "artificial-neural-net-perceptron",
+  "name": "Artificial Neural Net - Perceptron",
+  "catalogPath": "Sample Models/Computer Science/Artificial Neural Net - Perceptron",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Artificial%20Neural%20Net%20-%20Perceptron.nlogox",
+  "deliveryBatch": "B18",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Which Boolean distinctions can a single learned threshold represent? NetLogo Artificial Neural Net Perceptron trains weighted connections from two inputs and a bias to one output, comparing predictions with a selected target function. Rosenblatt [1] provides the original perceptron framework. Rumelhart and colleagues [2] establish a multilayer alternative, and Cybenko [3] analyzes the expressive power of networks with sigmoidal hidden units. These comparisons clarify why changing learning rate cannot make one linear separator represent exclusive OR. The baseline displays weights, classification boundaries, and training error under repeated examples. Inputs, thresholding, finite examples, and update rules are deliberate simplifications. Failure on a nonseparable task is a representational limitation rather than evidence of faulty training alone. The model illustrates supervised learning and its architectural constraints; it does not reproduce biological neural circuitry or demonstrate generalization to unseen datasets.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Artificial%20Neural%20Net%20-%20Perceptron.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Artificial%20Neural%20Net%20-%20Perceptron.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 d9cd6c06309d80a0f6e0b48105912f23529c14ae63ee030152a7172cb60e13cb",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/artificial-neural-net-perceptron.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Rand, W. and Wilensky, U. (2006).  NetLogo Artificial Neural Net - Perceptron model.  http://ccl.northwestern.edu/netlogo/models/ArtificialNeuralNet-Perceptron.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/artificial-neural-net-perceptron.nlogox",
+    "evidenceFile": "evidence/computing/artificial-neural-net-perceptron.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1037/h0042519",
+      "authors": [
+        "F. Rosenblatt"
+      ],
+      "title": "The perceptron: A probabilistic model for information storage and organization in the brain.",
+      "year": 1958,
+      "venue": "Psychological Review",
+      "doi": "10.1037/h0042519",
+      "url": "https://doi.org/10.1037/h0042519",
+      "relevance": "Original threshold-learning architecture directly supports the baseline mechanism.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1037%2Fh0042519",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1037_h0042519.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1037_h0042519.json"
+      },
+      "publisher": "American Psychological Association (APA)",
+      "volume": "65",
+      "issue": "6",
+      "pages": "386-408",
+      "verified": true
+    },
+    {
+      "id": "10.1038/323533a0",
+      "authors": [
+        "David E. Rumelhart",
+        "Geoffrey E. Hinton",
+        "Ronald J. Williams"
+      ],
+      "title": "Learning representations by back-propagating errors",
+      "year": 1986,
+      "venue": "Nature",
+      "doi": "10.1038/323533a0",
+      "url": "https://doi.org/10.1038/323533a0",
+      "relevance": "Multilayer backpropagation provides the scientifically relevant contrast to single-layer limitations.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2F323533a0",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1038_323533a0.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1038_323533a0.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "323",
+      "issue": "6088",
+      "pages": "533-536",
+      "verified": true
+    },
+    {
+      "id": "10.1007/bf02551274",
+      "authors": [
+        "G. Cybenko"
+      ],
+      "title": "Approximation by superpositions of a sigmoidal function",
+      "year": 1989,
+      "venue": "Mathematics of Control, Signals, and Systems",
+      "doi": "10.1007/bf02551274",
+      "url": "https://doi.org/10.1007/bf02551274",
+      "relevance": "Approximation theory clarifies what adding nonlinear hidden units changes; it does not guarantee learning or generalization.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF02551274",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_bf02551274.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_bf02551274.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "2",
+      "issue": "4",
+      "pages": "303-314",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

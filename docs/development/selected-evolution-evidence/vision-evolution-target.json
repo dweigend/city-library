@@ -1,0 +1,1277 @@
+{
+  "slug": "vision-evolution",
+  "url": "http://127.0.0.1:3148/?experiment=vision-evolution",
+  "errors": [],
+  "loadedAt": "2026-11-06T13:05:38.136Z",
+  "setup": {
+    "monitors": {
+      "Tick": "0",
+      "Fish": "50",
+      "Food": "80"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "65",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "35",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "step": {
+    "monitors": {
+      "Tick": "1",
+      "Fish": "50",
+      "Food": "77"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "65",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "35",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "running": {
+    "monitors": {
+      "Tick": "3",
+      "Fish": "51",
+      "Food": "73"
+    },
+    "status": "Running.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "65",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "35",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "paused": {
+    "monitors": {
+      "Tick": "3",
+      "Fish": "51",
+      "Food": "73"
+    },
+    "status": "Paused.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "65",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "35",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "reset": {
+    "monitors": {
+      "Tick": "0",
+      "Fish": "50",
+      "Food": "80"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "65",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "35",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "progress": {
+    "monitors": {
+      "Tick": "10",
+      "Fish": "51",
+      "Food": "63"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "65",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "35",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "mobileDark": {
+    "monitors": {
+      "Tick": "10",
+      "Fish": "51",
+      "Food": "63"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "65",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "35",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      549
+    ]
+  },
+  "mobileLight": {
+    "monitors": {
+      "Tick": "10",
+      "Fish": "51",
+      "Food": "63"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "65",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "35",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      549
+    ]
+  },
+  "parameterWrites": [
+    {
+      "id": "live-showVision",
+      "value": "on",
+      "checked": false,
+      "status": "Rule updated."
+    },
+    {
+      "id": "live-reproductionRate",
+      "value": "0",
+      "checked": false,
+      "status": "Rule updated."
+    },
+    {
+      "id": "live-foodReplenishRate",
+      "value": "0",
+      "checked": false,
+      "status": "Rule updated."
+    }
+  ],
+  "afterParameters": {
+    "monitors": {
+      "Tick": "11",
+      "Fish": "51",
+      "Food": "62"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      549
+    ]
+  },
+  "extinction": {
+    "monitors": {
+      "Tick": "0",
+      "Fish": "0",
+      "Food": "80"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-initialNumberFish",
+        "name": "initialNumberFish",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Initial Number Fish"
+      },
+      {
+        "id": "setup-initialNumberFood",
+        "name": "initialNumberFood",
+        "type": "number",
+        "value": "80",
+        "checked": false,
+        "label": "Initial Number Food"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-energyGainFromFood",
+        "type": "number",
+        "value": "100",
+        "checked": false,
+        "label": "Energy Gain From Food"
+      },
+      {
+        "id": "",
+        "name": "live-foodReplenishRate",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Food Replenish Rate"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0.1",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-reproductionRate",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Reproduction Rate"
+      },
+      {
+        "id": "",
+        "name": "live-eyeCost",
+        "type": "number",
+        "value": "9",
+        "checked": false,
+        "label": "Eye Cost"
+      },
+      {
+        "id": "",
+        "name": "live-maxEyeSize",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Max Eye Size"
+      },
+      {
+        "id": "",
+        "name": "live-showVision",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Show Vision"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected fish",
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      549
+    ]
+  },
+  "extinctionRunDisabled": true
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "heroes-and-cowards",
+  "codeCommit": "c8700ec",
+  "marker": "selected-social-b02:heroes-and-cowards:dc605f80d321c18a7e6711f85f1c5e58ea2e4780451369b94977a49a7d87c280",
+  "sourceSHA256": "dc605f80d321c18a7e6711f85f1c5e58ea2e4780451369b94977a49a7d87c280",
+  "sourceHashBasis": "Unchanged pinned source.nlogox; fresh target chunk marker checked. Native session was not re-run for a formatting-only change.",
+  "buildVersion": "1793962848757",
+  "loadedModelChunk": "http://localhost:3112/chunks/ui-c1ttexn5.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-c1ttexn5.js",
+      "sha256": "cd1bf13376684e5e75eb97506721ff3411a667a00e533e264157eddd09b9789e"
+    }
+  ],
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "setup": {
+    "tick": 0,
+    "parameters": {
+      "seed": 1,
+      "number": 68,
+      "personalities": "mixed"
+    },
+    "monitors": {
+      "Tick": "0",
+      "People": "68",
+      "Movement": "Active"
+    },
+    "status": "Model initialized.",
+    "raster": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "sampledColors": 21
+      }
+    ]
+  },
+  "errors": [],
+  "step": {
+    "tick": 1,
+    "monitors": {
+      "Tick": "1",
+      "People": "68",
+      "Movement": "Active"
+    },
+    "status": "Steps completed.",
+    "raster": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "sampledColors": 13
+      }
+    ],
+    "errors": []
+  },
+  "images": {
+    "setup": "heroes-and-cowards-setup.png",
+    "step": "heroes-and-cowards-step.png"
+  }
+}

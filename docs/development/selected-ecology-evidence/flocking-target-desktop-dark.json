@@ -1,0 +1,124 @@
+{
+  "url": "http://localhost:3126/?experiment=flocking",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "dpr": 2
+  },
+  "appearance": "dark",
+  "monitors": [
+    "Tick\n10\nBirds\n300",
+    ""
+  ],
+  "inputs": [
+    {
+      "name": "",
+      "value": "flocking"
+    },
+    {
+      "name": "seed",
+      "value": "1"
+    },
+    {
+      "name": "population",
+      "value": "300"
+    },
+    {
+      "name": "",
+      "value": "5"
+    },
+    {
+      "name": "live-vision",
+      "value": "5"
+    },
+    {
+      "name": "live-minimumSeparation",
+      "value": "1"
+    },
+    {
+      "name": "live-maxAlignTurn",
+      "value": "5"
+    },
+    {
+      "name": "live-maxCohereTurn",
+      "value": "3"
+    },
+    {
+      "name": "live-maxSeparateTurn",
+      "value": "1.5"
+    },
+    {
+      "name": "",
+      "value": "on",
+      "checked": false
+    }
+  ],
+  "status": [
+    "",
+    "Steps completed."
+  ],
+  "charts": [],
+  "buttons": [
+    {
+      "text": "Setup",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Run",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "1 step",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "10 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "100 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    }
+  ],
+  "readback": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "nonblack": 1806336,
+      "rgbaFNV32": 3780937289,
+      "rect": {
+        "x": 312,
+        "y": 115,
+        "width": 672,
+        "height": 672
+      }
+    }
+  ],
+  "overflow": false,
+  "assets": [
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "460917c5dbe86baa7e86b7e4b708e7ae681861bb431223738a0a2431ca666798"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-prcdc02n.js",
+      "sha256": "db247d2181b10bbbc4faf8d6157269982c927e6c7713b3859026dafcbed85864"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    }
+  ],
+  "text": "Skip to experiment\nAgent Lab\nExperiment\nAnts\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nExpected Value\nFire\nFireflies\nFlocking\nGalton Box\nHeatbugs\nHex Cell Aggregation\nInvasive Plants\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRabbits Grass Weeds\nRandom Combinations and Permutations\nSegregation\nShepherds\nSimple Birth Rates\nSmoothLife\nStochastic Patchwork\nTermites\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nPopulation\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n10\nBirds\n300\nVision\nMinimum separation\nMax alignment turn\nMax cohesion turn\nMax separation turn\n\nSteps completed.\n\nModel info\nFlock"
+}

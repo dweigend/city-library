@@ -1,0 +1,124 @@
+{
+  "slug": "koch-curve",
+  "name": "Koch Curve",
+  "catalogPath": "Sample Models/Mathematics/Fractals/Koch Curve",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/Koch%20Curve.nlogox",
+  "deliveryBatch": "B16",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can a finite replacement rule create an increasingly intricate curve? NetLogo Koch Curve repeatedly replaces each segment with four shorter segments arranged around a triangular bump. The construction makes successive approximations visible, allowing segment count, scale, and apparent roughness to be compared. Chaos and Fractals [1] explains self-similar constructions and dimension; Mandelbrot's research monograph [2] places such curves within fractal geometry; the Algorithmic Beauty of Plants [3] provides a complementary rewriting and turtle-graphics formulation. The mathematical limiting curve differs fundamentally from any finite display: the simulation always stops at a finite iteration depth and finite numerical resolution. The model illustrates recursive substitution and scaling, rather than directly simulating erosion or coastline formation. Similar-looking natural boundaries require their own mechanisms and empirical measurements before fractal analogies become explanatory claims.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/Koch%20Curve.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/Koch%20Curve.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 4ba38749967fabce7b4b17bd1f0719df46b18251ed7c4b0ca76cdbd636aca7bd",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/koch-curve.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (1998).  NetLogo Koch Curve model.  http://ccl.northwestern.edu/netlogo/models/KochCurve.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/koch-curve.nlogox",
+    "evidenceFile": "evidence/computing/koch-curve.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1007/978-1-4757-4740-9",
+      "authors": [
+        "Heinz-Otto Peitgen",
+        "Hartmut Jürgens",
+        "Dietmar Saupe"
+      ],
+      "title": "Chaos and Fractals: New Frontiers of Science",
+      "year": 1992,
+      "venue": "Springer New York",
+      "doi": "10.1007/978-1-4757-4740-9",
+      "url": "https://doi.org/10.1007/978-1-4757-4740-9",
+      "relevance": "Self-similar replacement and fractal dimension directly explain the iterative construction.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-4757-4740-9",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_4757_4740_9.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_4757_4740_9.json"
+      },
+      "publisher": "Springer New York",
+      "isbn": [
+        "9781475747423",
+        "9781475747409"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-1-4757-4017-2",
+      "authors": [
+        "Benoit B. Mandelbrot"
+      ],
+      "title": "Fractals and Chaos",
+      "year": 2004,
+      "venue": "Springer New York",
+      "doi": "10.1007/978-1-4757-4017-2",
+      "url": "https://doi.org/10.1007/978-1-4757-4017-2",
+      "relevance": "Fractal geometry provides the limiting-curve context and cautions against equating visual roughness with physical mechanism.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-4757-4017-2",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_4757_4017_2.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_4757_4017_2.json"
+      },
+      "publisher": "Springer New York",
+      "isbn": [
+        "9781441918970",
+        "9781475740172"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-1-4613-8476-2",
+      "authors": [
+        "Przemyslaw Prusinkiewicz",
+        "Aristid Lindenmayer"
+      ],
+      "title": "The Algorithmic Beauty of Plants",
+      "year": 1990,
+      "venue": "The Virtual Laboratory",
+      "doi": "10.1007/978-1-4613-8476-2",
+      "url": "https://doi.org/10.1007/978-1-4613-8476-2",
+      "relevance": "Rewriting and turtle graphics supply a scientific generative representation of recursive curves.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-4613-8476-2",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and selected full-text sections",
+        "access": "Open institutional/author repository copy; selected sections read. Full-text access via publisher not established.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Chapter 1, pp. 1–7: Koch replacement, parallel rewriting, DOL systems and turtle interpretation. Selected chapter sections support the grammar-to-geometry mechanism; the entire book was not read.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_4613_8476_2.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "fullTextEvidence": {
+          "doi": "10.1007/978-1-4613-8476-2",
+          "consultedUrl": "https://algorithmicbotany.org/papers/abop/abop.pdf",
+          "checkedAt": "2026-11-05",
+          "evidenceType": "selected full-text sections",
+          "sectionsRead": "Chapter 1, pp. 1–7: Koch replacement, parallel rewriting, DOL systems and turtle interpretation.",
+          "finding": "Selected chapter sections support the grammar-to-geometry mechanism; the entire book was not read.",
+          "retrievedSha256": "4ac9203216a2767ef721b8c5940da96943a2cdab6c35a1e5777999cf9106cc8b",
+          "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+        },
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_4613_8476_2.json"
+      },
+      "publisher": "Springer New York",
+      "isbn": [
+        "9780387946764",
+        "9781461384762"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

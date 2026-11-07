@@ -1,0 +1,117 @@
+{
+  "slug": "piaget-vygotsky-game",
+  "sessionSourceSHA256": "f0020ad932d3667cc9e5b710018366515484172bd10814aa4b1f2575f2db84c1",
+  "source": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Psychology/Piaget-Vygotsky Game.nlogox",
+  "setupViaButton": true,
+  "setup": {
+    "ticks": {
+      "success": true,
+      "value": 0
+    },
+    "count turtles": {
+      "success": true,
+      "value": 30
+    },
+    "attempts": {
+      "success": true,
+      "value": 0
+    },
+    "strategy": {
+      "success": true,
+      "value": "Vygotskiian"
+    },
+    "mean [score] of turtles": {
+      "success": true,
+      "value": 122
+    },
+    "p-results": {
+      "success": true,
+      "value": []
+    },
+    "v-results": {
+      "success": true,
+      "value": []
+    }
+  },
+  "errors": [],
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "progress": {
+    "ticks": {
+      "success": true,
+      "value": 10
+    },
+    "count turtles": {
+      "success": true,
+      "value": 30
+    },
+    "attempts": {
+      "success": true,
+      "value": 10
+    },
+    "strategy": {
+      "success": true,
+      "value": "Vygotskiian"
+    },
+    "mean [score] of turtles": {
+      "success": true,
+      "value": 17.933333333333334
+    },
+    "p-results": {
+      "success": true,
+      "value": []
+    },
+    "v-results": {
+      "success": true,
+      "value": []
+    }
+  },
+  "intervention": {
+    "command": "set number-of-players 10 set strategy \"Piagetian\" set randomize-strategy-each-run? false set move-error 0 set attempts-per-run 2 set stop-after-each-run? true setup repeat 5 [go]",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 5
+      },
+      "attempts": {
+        "success": true,
+        "value": 1
+      },
+      "strategy": {
+        "success": true,
+        "value": "Piagetian"
+      },
+      "p-results": {
+        "success": true,
+        "value": [
+          27,
+          33.6,
+          24.1
+        ]
+      },
+      "[score] of turtles": {
+        "success": true,
+        "value": [
+          45,
+          10,
+          12,
+          12,
+          52,
+          15,
+          13,
+          3,
+          39,
+          40
+        ]
+      }
+    },
+    "errors": []
+  },
+  "images": {
+    "setup": "piaget-vygotsky-game-original-setup.png",
+    "progress": "piaget-vygotsky-game-original-progress.png"
+  }
+}

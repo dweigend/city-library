@@ -1,0 +1,110 @@
+{
+  "slug": "enzyme-kinetics",
+  "name": "Enzyme Kinetics",
+  "catalogPath": "Sample Models/Chemistry & Physics/Chemical Reactions/Enzyme Kinetics",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Chemical%20Reactions/Enzyme%20Kinetics.nlogox",
+  "deliveryBatch": "B15",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "NetLogo Enzyme Kinetics investigates why catalytic reaction rates saturate and change under inhibition. Enzymes and substrates associate into complexes, complexes dissociate or release product, and inhibitor molecules can compete for available enzymes. Revisits and translates the original 1913 experiments, including the distinction between fitted specificity and the modern Michaelis constant [1]. Provides the kinetic treatment of enzyme-substrate intermediates [2]. Provides a stochastic-reaction reference for fluctuations and reaction-event interpretation [3]. The NetLogo interaction probabilities and spatial encounters are pedagogical; quasi-steady-state and well-mixed assumptions must be checked before fitting its outputs to a Michaelis-Menten law. The simulation illustrates finite enzyme capacity, substrate dependence and competitive occupation without establishing measured biochemical parameters. Reproducing these patterns establishes rule fidelity, not empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Chemical%20Reactions/Enzyme%20Kinetics.nlogox",
+    "checkedAt": "2026-11-05",
+    "revision": "NetLogo 7.0.4; SHA-256 e5449cd48b247cd4e19a1d720bec4275e45039e6819a63542f6765bd94c446a9",
+    "evidence": "Full served model XML, Procedures and Info downloaded and consulted; retained at evidence/physics/enzyme-kinetics.nlogox",
+    "notes": "This dossier describes the original NetLogo baseline; it does not establish reimplementation behavior or empirical validation.",
+    "citation": "* Stieff, M. and Wilensky, U. (2001).  NetLogo Enzyme Kinetics model.  http://ccl.northwestern.edu/netlogo/models/EnzymeKinetics.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "infoEvidenceFile": "evidence/physics/enzyme-kinetics-source.json",
+    "evidenceFile": "evidence/physics/enzyme-kinetics.nlogox"
+  },
+  "publications": [
+    {
+      "id": "1",
+      "authors": [
+        "Kenneth A. Johnson",
+        "Roger S. Goody"
+      ],
+      "title": "The Original Michaelis Constant: Translation of the 1913 Michaelis–Menten Paper",
+      "year": 2011,
+      "venue": "Biochemistry",
+      "doi": "10.1021/bi201284u",
+      "url": "https://doi.org/10.1021/bi201284u",
+      "relevance": "Revisits and translates the original 1913 experiments, including the distinction between fitted specificity and the modern Michaelis constant; relevant here to finite enzyme capacity, substrate dependence and competitive occupation without establishing measured biochemical parameters.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1021/bi201284u",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata, abstract and accessible full-text sections",
+        "access": "Open institutional author manuscript; historical discussion and abstract consulted, not a claim to have read every supplementary page",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-michaelis.json",
+        "verified": true,
+        "additionalConsultedUrls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC3381512/"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/physics/abstracts-02.json"
+        ],
+        "primaryReadingNotes": "The manuscript identifies Johnson and Goody as authors, supplies the 1913 translation separately, and distinguishes the specificity constant from the modern Michaelis constant."
+      },
+      "verified": true,
+      "volume": "50",
+      "issue": "39",
+      "pages": "8264-8269",
+      "publisher": "American Chemical Society (ACS)"
+    },
+    {
+      "id": "2",
+      "authors": [
+        "George Edward Briggs",
+        "John Burdon Sanderson Haldane"
+      ],
+      "title": "A Note on the Kinetics of Enzyme Action",
+      "year": 1925,
+      "venue": "Biochemical Journal",
+      "doi": "10.1042/bj0190338",
+      "url": "https://doi.org/10.1042/bj0190338",
+      "relevance": "Provides the kinetic treatment of enzyme-substrate intermediates; relevant here to finite enzyme capacity, substrate dependence and competitive occupation without establishing measured biochemical parameters.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query=A%20note%20on%20the%20kinetics%20of%20enzyme%20action%20Briggs%20Haldane%201925&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-briggs.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "19",
+      "issue": "2",
+      "pages": "338-339",
+      "publisher": "Portland Press Ltd."
+    },
+    {
+      "id": "3",
+      "authors": [
+        "Daniel T. Gillespie"
+      ],
+      "title": "Exact stochastic simulation of coupled chemical reactions",
+      "year": 1977,
+      "venue": "The Journal of Physical Chemistry",
+      "doi": "10.1021/j100540a008",
+      "url": "https://doi.org/10.1021/j100540a008",
+      "relevance": "Provides a stochastic-reaction reference for fluctuations and reaction-event interpretation; relevant here to finite enzyme capacity, substrate dependence and competitive occupation without establishing measured biochemical parameters.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1021/j100540a008",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-gillespie2.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "81",
+      "issue": "25",
+      "pages": "2340-2361",
+      "publisher": "American Chemical Society (ACS)"
+    }
+  ],
+  "gaps": []
+}

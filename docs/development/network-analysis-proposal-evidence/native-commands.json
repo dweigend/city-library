@@ -1,0 +1,17 @@
+{
+  "prelude": "native Setup button; CommandCenter opened; 'set nb-nodes 5' then native Ring, native Star, native closeness display",
+  "path": [
+    "setup create-turtles 4 ask turtle 0 [ create-undirected-edge-with turtle 1 ] ask turtle 1 [ create-undirected-edge-with turtle 2 ] nw:set-context turtles undirected-edges layout-circle sort turtles 12",
+    "show map [ t -> (list [who] of t [nw:closeness-centrality] of t [nw:betweenness-centrality] of t [nw:eigenvector-centrality] of t) ] sort turtles"
+  ],
+  "directedPath": [
+    "setup set links-to-use \"directed\" create-turtles 3 ask turtle 0 [ create-directed-edge-to turtle 1 ] ask turtle 1 [ create-directed-edge-to turtle 2 ] nw:set-context turtles directed-edges layout-circle sort turtles 12",
+    "show map [ t -> (list [who] of t [nw:closeness-centrality] of t [nw:betweenness-centrality] of t [nw:eigenvector-centrality] of t) ] sort turtles"
+  ],
+  "directedCycle": [
+    "ask turtle 2 [ create-directed-edge-to turtle 0 ]",
+    "show map [ t -> (list [who] of t [nw:closeness-centrality] of t [nw:betweenness-centrality] of t [nw:eigenvector-centrality] of t) ] sort turtles"
+  ],
+  "invalidContext": "show nw:closeness-centrality",
+  "method": "Set native Command Center CodeMirror contents, focus that editor, press actual Enter using T3 preview_act. No model source/code editor modification. Raw readbacks use session.runReporter."
+}

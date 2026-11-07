@@ -1,0 +1,1648 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Why+flying+insects+gather+at+artificial+light+Fabian+Sondhi+Allen+2024&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1732118,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                18
+              ]
+            ],
+            "date-time": "2026-10-18T22:40:01Z",
+            "timestamp": 1792363201055,
+            "version": "4.4.0"
+          },
+          "reference-count": 52,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    1,
+                    30
+                  ]
+                ],
+                "date-time": "2024-01-30T00:00:00Z",
+                "timestamp": 1706572800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    1,
+                    30
+                  ]
+                ],
+                "date-time": "2024-01-30T00:00:00Z",
+                "timestamp": 1706572800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/100006363",
+              "name": "National Geographic Society",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "EC-82941R-21"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "EC-82941R-21"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100006363",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100000181",
+              "name": "United States Department of Defense | United States Air Force | AFMC | Air Force Office of Scientific Research",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "AFOSR MURI award FA9550-22-1-0315"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "AFOSR MURI award FA9550-22-1-0315"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000181",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100000001",
+              "name": "National Science Foundation",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "NSF IOS-1750833"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "NSF IOS-1750833"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000001",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nat Commun"
+          ],
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Explanations of why nocturnal insects fly erratically around fires and lamps have included theories of \u201clunar navigation\u201d and \u201cescape to the light\u201d. However, without three-dimensional flight data to test them rigorously, the cause for this odd behaviour has remained\u00a0unsolved. We employed high-resolution motion capture in the laboratory and stereo-videography in the field to reconstruct the 3D kinematics of insect flights around artificial lights. Contrary to the expectation of attraction, insects do not steer directly toward the light. Instead, insects turn their dorsum toward the light, generating flight bouts perpendicular to the source. Under natural sky light, tilting the dorsum towards the brightest visual hemisphere helps maintain proper flight attitude and control. Near artificial sources, however, this highly conserved dorsal-light-response can produce continuous steering around the light and trap an insect. Our guidance model demonstrates that this dorsal tilting is sufficient to create the seemingly erratic flight paths of insects near lights and is the most plausible model for why flying insects gather at artificial lights.</jats:p>",
+          "DOI": "10.1038/s41467-024-44785-3",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                30
+              ]
+            ],
+            "date-time": "2024-01-30T12:02:35Z",
+            "timestamp": 1706616155000
+          },
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 113,
+          "title": [
+            "Why flying insects gather at artificial light"
+          ],
+          "prefix": "10.1038",
+          "volume": "15",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-0366-7236",
+              "authenticated-orcid": false,
+              "given": "Samuel T.",
+              "family": "Fabian",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-7704-3944",
+              "authenticated-orcid": false,
+              "given": "Yash",
+              "family": "Sondhi",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Pablo E.",
+              "family": "Allen",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jamie C.",
+              "family": "Theobald",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-3370-244X",
+              "authenticated-orcid": false,
+              "given": "Huai-Ti",
+              "family": "Lin",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                30
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "44785_CR1",
+              "unstructured": "Dey, P. Fluttering to the Flame: Moths in Art, Literature, and Poetry. Roundglasssustain.com. Available at: https://roundglasssustain.com/wildvaults/moths (2022). Accessed 15 January 2024."
+            },
+            {
+              "key": "44785_CR2",
+              "unstructured": "Ford, E. B. Moths (The \u201cNew Naturalist\u201d Series). pp. 13\u201317 (Collins, London, 1967)."
+            },
+            {
+              "key": "44785_CR3",
+              "unstructured": "Gardiner, B. O. C. The very first light-trap, 1565. Entomologist\u2019s Record and Journal of Variation, Vol 107, 45\u201346 (1995)."
+            },
+            {
+              "key": "44785_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "2274",
+              "DOI": "10.1016/j.biocon.2011.06.004",
+              "volume": "144",
+              "author": "F van Langevelde",
+              "year": "2011",
+              "unstructured": "van Langevelde, F., Ettema, J. A., Donners, M., WallisDeVries, M. F. & Groenendijk, D. Effect of spectral composition of artificial light on the attraction of moths. Biol. Conserv. 144, 2274\u20132281 (2011).",
+              "journal-title": "Biol. Conserv."
+            },
+            {
+              "key": "44785_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "1283",
+              "DOI": "10.1093/ee/26.6.1283",
+              "volume": "26",
+              "author": "JL Yela",
+              "year": "1997",
+              "unstructured": "Yela, J. L. & Holyoak, M. Effects of moonlight and meteorological factors on light and bait trap catches of Noctuid moths (Lepidoptera: Noctuidae). Environ. Entomol. 26, 1283\u20131290 (1997).",
+              "journal-title": "Environ. Entomol."
+            },
+            {
+              "key": "44785_CR6",
+              "first-page": "13",
+              "volume": "27",
+              "author": "HS Robinson",
+              "year": "1952",
+              "unstructured": "Robinson, H. S. On the behaviour of night-flying insects in the neighbourhood of a bright source of light. Proc. R. Entomol. Soc. Lond. 27, 13\u201321 (1952).",
+              "journal-title": "Proc. R. Entomol. Soc. Lond."
+            },
+            {
+              "key": "44785_CR7",
+              "first-page": "52",
+              "volume": "39",
+              "author": "GA Mazokhin-Porshnyakov",
+              "year": "1960",
+              "unstructured": "Mazokhin-Porshnyakov, G. A. Why insects fly to light by night. Revue d\u2019Entomologie de l\u2019URSS 39, 52\u201358 (1960).",
+              "journal-title": "Revue d\u2019Entomologie de l\u2019URSS"
+            },
+            {
+              "key": "44785_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "786",
+              "DOI": "10.1016/0003-3472(79)90015-0",
+              "volume": "27",
+              "author": "S Sotthibandhu",
+              "year": "1979",
+              "unstructured": "Sotthibandhu, S. & Baker, R. R. Celestial orientation by the large yellow underwing moth, Noctua pronuba L. Animal Behaviour 27, 786\u2013800 (1979).",
+              "journal-title": "Animal Behaviour"
+            },
+            {
+              "key": "44785_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "1172",
+              "DOI": "10.1038/2061172a0",
+              "volume": "206",
+              "author": "PS Callahan",
+              "year": "1965",
+              "unstructured": "Callahan, P. S. Far Infra-red emission and detection by night-flying moths. Nature 206, 1172\u20131173 (1965).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "44785_CR10",
+              "first-page": "3",
+              "volume": "1",
+              "author": "HS Robinson",
+              "year": "1950",
+              "unstructured": "Robinson, H. S. & Robinson, P. J. Some notes on the observed behaviour of Lepidoptera ln flight in the vicinity of light sources. Entomol. Gaz. 1, 3\u201315 (1950).",
+              "journal-title": "Entomol. Gaz."
+            },
+            {
+              "key": "44785_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "1971",
+              "DOI": "10.1016/0022-1910(73)90191-1",
+              "volume": "19",
+              "author": "HS Hsiao",
+              "year": "1973",
+              "unstructured": "Hsiao, H. S. Flight paths of night-flying moths to light. J. Insect Physiol. 19, 1971\u20131976 (1973).",
+              "journal-title": "J. Insect Physiol."
+            },
+            {
+              "key": "44785_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "167",
+              "DOI": "10.1111/icad.12447",
+              "volume": "14",
+              "author": "DH Boyes",
+              "year": "2021",
+              "unstructured": "Boyes, D. H., Evans, D. M., Fox, R., Parsons, M. S. & Pocock, M. J. O. Is light pollution driving moth population declines? A review of causal mechanisms across the life cycle. Insect Conserv. Divers. 14, 167\u2013187 (2021).",
+              "journal-title": "Insect Conserv. Divers."
+            },
+            {
+              "key": "44785_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "11337",
+              "DOI": "10.1002/ece3.4557",
+              "volume": "8",
+              "author": "ACS Owens",
+              "year": "2018",
+              "unstructured": "Owens, A. C. S. & Lewis, S. M. The impact of artificial light at night on nocturnal insects: A review and synthesis. Ecol. Evol. 8, 11337\u201311358 (2018).",
+              "journal-title": "Ecol. Evol."
+            },
+            {
+              "key": "44785_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "127",
+              "DOI": "10.1017/S0007485318000378",
+              "volume": "109",
+              "author": "P Gaydecki",
+              "year": "2019",
+              "unstructured": "Gaydecki, P. Automated moth flight analysis in the vicinity of artificial light. Bull. Entomol. Res. 109, 127\u2013140 (2019).",
+              "journal-title": "Bull. Entomol. Res."
+            },
+            {
+              "key": "44785_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "1705",
+              "DOI": "10.1016/0022-1910(72)90100-X",
+              "volume": "18",
+              "author": "HS Hsiao",
+              "year": "1972",
+              "unstructured": "Hsiao, H. S. The attraction of moths (Trichoplusia ni) to infrared radiation. J. Insect Physiol. 18, 1705\u20131714 (1972).",
+              "journal-title": "J. Insect Physiol."
+            },
+            {
+              "key": "44785_CR16",
+              "unstructured": "Lees, D. & Zilli, A. Moths: Their Biology, Diversity and Evolution. pp. 208 (Natural History Museum, 2019)."
+            },
+            {
+              "key": "44785_CR17",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sourakov, A. & Chadd, R. W. The Lives of Moths: A Natural History of Our Planet\u2019s Moth Life. (Princeton University Press, 2022).",
+              "DOI": "10.1515/9780691230368"
+            },
+            {
+              "key": "44785_CR18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Riley, J. R. Flying insects in the field. in Video Techniques in Animal Ecology and Behaviour (ed. Wratten, S. D.) 1-15 (Springer Netherlands, 1994).",
+              "DOI": "10.1007/978-94-011-0699-3_1"
+            },
+            {
+              "key": "44785_CR19",
+              "unstructured": "Sotthibandu, S. Behaviour of Moths in Relation to Light Traps. (University of Manchester, 1978)."
+            },
+            {
+              "key": "44785_CR20",
+              "unstructured": "Gaydecki, P. A. A Quantification of the Behaviourial Dynamics of Certain Lepidoptera in Response to Light. PhD Thesis (Cranfield Inst. Technol., Bedford., 1984)."
+            },
+            {
+              "key": "44785_CR21",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Nilsson, D.-E., Smolka, J. & Bok, M. The vertical light-gradient and its potential impact on animal distribution and behavior. Front. Ecol. Evol. 10 https://doi.org/10.3389/fevo.2022.951328 (2022).",
+              "DOI": "10.3389/fevo.2022.951328"
+            },
+            {
+              "key": "44785_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "385",
+              "DOI": "10.1242/jeb.42.3.385",
+              "volume": "42",
+              "author": "LJ Goodman",
+              "year": "1965",
+              "unstructured": "Goodman, L. J. The role of certain optomotor reactions in regulating stability in the rolling plane during flight in the desert locust, Schistocerca gregaria. J. Exp. Biol. 42, 385\u2013407 (1965).",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "44785_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "335",
+              "DOI": "10.1007/BF00609936",
+              "volume": "141",
+              "author": "G Stange",
+              "year": "1981",
+              "unstructured": "Stange, G. The ocellar component of flight equilibrium control in dragonflies. J. Comp. Physiol. 141, 335\u2013347 (1981).",
+              "journal-title": "J. Comp. Physiol."
+            },
+            {
+              "key": "44785_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1242/jeb.93.1.1",
+              "volume": "93",
+              "author": "CP Taylor",
+              "year": "1981",
+              "unstructured": "Taylor, C. P. Contribution of compound eyes and ocelli to steering of locusts in flight: I. behavioural analysis. J. Exp. Biol. 93, 1\u201318 (1981).",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "44785_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "277",
+              "DOI": "10.1146/annurev.en.29.010184.001425",
+              "volume": "29",
+              "author": "R Wehner",
+              "year": "1984",
+              "unstructured": "Wehner, R. Astronavigation in Insects. Annu. Rev. Entomol. 29, 277\u2013298 (1984).",
+              "journal-title": "Annu. Rev. Entomol."
+            },
+            {
+              "key": "44785_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "422",
+              "DOI": "10.1007/BF00339921",
+              "volume": "32",
+              "author": "H Mittelstaedt",
+              "year": "1950",
+              "unstructured": "Mittelstaedt, H. Physiologie des Gleichgewichtssinnes bei fliegenden Libellen. Z. Vgl. Physiol. 32, 422\u2013463 (1950).",
+              "journal-title": "Z. Vgl. Physiol."
+            },
+            {
+              "key": "44785_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "283",
+              "DOI": "10.3233/VES-1997-7402",
+              "volume": "7",
+              "author": "H Mittelstaedt",
+              "year": "1997",
+              "unstructured": "Mittelstaedt, H. Interaction of eye-, head-, and trunk-bound information in spatial perception and control. J. Vestib. Res. 7, 283\u2013302 (1997).",
+              "journal-title": "J. Vestib. Res."
+            },
+            {
+              "key": "44785_CR28",
+              "first-page": "285",
+              "volume": "5",
+              "author": "R Hengstenberg",
+              "year": "1993",
+              "unstructured": "Hengstenberg, R. Multisensory control in insect oculomotor systems. Rev. Oculomot. Res. 5, 285\u2013298 (1993).",
+              "journal-title": "Rev. Oculomot. Res."
+            },
+            {
+              "key": "44785_CR29",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Goulard, R., Verbe, A., Vercher, J.-L. & Viollet, S. Role of the light source position in freely falling hoverflies\u2019 stabilization performances. Biol. Lett. 14 https://doi.org/10.1098/rsbl.2018.0051 (2018).",
+              "DOI": "10.1098/rsbl.2018.0051"
+            },
+            {
+              "key": "44785_CR30",
+              "first-page": "20202676",
+              "volume": "288",
+              "author": "ST Fabian",
+              "year": "2021",
+              "unstructured": "Fabian, S. T., Zhou, R. & Lin, H.-T. Dragondrop: a novel passive mechanism for aerial righting in the dragonfly. Proc. Biol. Sci. 288, 20202676 (2021).",
+              "journal-title": "Proc. Biol. Sci."
+            },
+            {
+              "key": "44785_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "20200268",
+              "DOI": "10.1098/rsif.2020.0268",
+              "volume": "17",
+              "author": "AT Bode-Oke",
+              "year": "2020",
+              "unstructured": "Bode-Oke, A. T. & Dong, H. The reverse flight of a monarch butterfly (Danaus plexippus) is characterized by a weight-supporting upstroke and postural changes. J. R. Soc. Interface 17, 20200268 (2020).",
+              "journal-title": "J. R. Soc. Interface"
+            },
+            {
+              "key": "44785_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "4191",
+              "DOI": "10.1242/jeb.00663",
+              "volume": "206",
+              "author": "SP Sane",
+              "year": "2003",
+              "unstructured": "Sane, S. P. The aerodynamics of insect flight. J. Exp. Biol. 206, 4191\u20134208 (2003).",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "44785_CR33",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Dickinson, M. H. & Muijres, F. T. The aerodynamics and control of free flight manoeuvres in Drosophila. Philos. Trans. R. Soc. Lond. B Biol. Sci. 371 https://doi.org/10.1098/rstb.2015.0388 (2016).",
+              "DOI": "10.1098/rstb.2015.0388"
+            },
+            {
+              "key": "44785_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "165",
+              "DOI": "10.1038/nature07810",
+              "volume": "458",
+              "author": "A Kamikouchi",
+              "year": "2009",
+              "unstructured": "Kamikouchi, A. et al. The neural basis of Drosophila gravity-sensing and hearing. Nature 458, 165\u2013171 (2009).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "44785_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "333",
+              "DOI": "10.1038/nature14045",
+              "volume": "517",
+              "author": "M Mischiati",
+              "year": "2015",
+              "unstructured": "Mischiati, M. et al. Internal models direct dragonfly interception steering. Nature 517, 333\u2013338 (2015).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "44785_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "413",
+              "DOI": "10.1007/s13355-013-0219-x",
+              "volume": "48",
+              "author": "M Shimoda",
+              "year": "2013",
+              "unstructured": "Shimoda, M. & Honda, K.-I. Insect reactions to light and its applications to pest management. Appl. Entomol. Zool. 48, 413\u2013421 (2013).",
+              "journal-title": "Appl. Entomol. Zool."
+            },
+            {
+              "key": "44785_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "19990",
+              "DOI": "10.1073/pnas.1107519108",
+              "volume": "108",
+              "author": "IG Ros",
+              "year": "2011",
+              "unstructured": "Ros, I. G., Bassman, L. C., Badger, M. A., Pierson, A. N. & Biewener, A. A. Pigeons steer like helicopters and generate down- and upstroke lift during low speed turns. Proc. Natl. Acad. Sci. USA. 108, 19990\u201319995 (2011).",
+              "journal-title": "Proc. Natl. Acad. Sci. USA."
+            },
+            {
+              "key": "44785_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "94",
+              "DOI": "10.1016/S0003-3472(87)80214-2",
+              "volume": "35",
+              "author": "R Robin Baker",
+              "year": "1987",
+              "unstructured": "Robin Baker, R. Integrated use of moon and magnetic compasses by the heart-and-dart moth, Agrotis exclamationis. Anim. Behav. 35, 94\u2013101 (1987).",
+              "journal-title": "Anim. Behav."
+            },
+            {
+              "key": "44785_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "188",
+              "DOI": "10.1111/icad.12476",
+              "volume": "14",
+              "author": "G Brehm",
+              "year": "2021",
+              "unstructured": "Brehm, G. et al. Moths are strongly attracted to ultraviolet and blue radiation. Insect Conserv. Divers. 14, 188\u2013198 (2021).",
+              "journal-title": "Insect Conserv. Divers."
+            },
+            {
+              "key": "44785_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "13592",
+              "DOI": "10.11609/jott.4694.11.5.13592-13604",
+              "volume": "11",
+              "author": "G Iyer",
+              "year": "2019",
+              "unstructured": "Iyer, G. & Kitching, I. J. A preliminary study of the hawkmoth diversity (Lepidoptera: Sphingidae) of Kanyakumari District, Tamil Nadu, India. J. Threat. Taxa 11, 13592\u201313604 (2019).",
+              "journal-title": "J. Threat. Taxa"
+            },
+            {
+              "key": "44785_CR41",
+              "unstructured": "Janzen, D. H. Two ways to be a tropical big moth: Santa Rosa saturniids and sphingids. in Oxford Surveys in Evolutionary Biology (eds. Dawkins, R. & Ridley, M.) 1 85\u2013142 (1984)."
+            },
+            {
+              "key": "44785_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "485",
+              "DOI": "10.1038/s41586-022-05182-2",
+              "volume": "610",
+              "author": "GCHE de Croon",
+              "year": "2022",
+              "unstructured": "de Croon, G. C. H. E. et al. Accommodating unobservability to control flight attitude with optic flow. Nature 610, 485\u2013490 (2022).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "44785_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "B85",
+              "DOI": "10.1364/AO.54.000B85",
+              "volume": "54",
+              "author": "G Palmer",
+              "year": "2014",
+              "unstructured": "Palmer, G. & Johnsen, S. Downwelling spectral irradiance during evening twilight as a function of the lunar phase. Appl. Opt. 54, B85 (2014).",
+              "journal-title": "Appl. Opt."
+            },
+            {
+              "key": "44785_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "1245",
+              "DOI": "10.1126/science.aaa3042",
+              "volume": "348",
+              "author": "S Sponberg",
+              "year": "2015",
+              "unstructured": "Sponberg, S., Dyhr, J. P., Hall, R. W. & Daniel, T. L. Luminance-dependent visual processing enables moth flight in low light. Science 348, 1245\u20131248 (2015).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "44785_CR45",
+              "first-page": "203",
+              "volume": "81",
+              "author": "R Hengstenberg",
+              "year": "1988",
+              "unstructured": "Hengstenberg, R. & Bayer, N. The importance of gravity for roll control during flight in the blowfly Calliphora. Verh. Dtsch. Zool. Ges. 81, 203 (1988).",
+              "journal-title": "Verh. Dtsch. Zool. Ges."
+            },
+            {
+              "key": "44785_CR46",
+              "doi-asserted-by": "publisher",
+              "first-page": "1352",
+              "DOI": "10.1111/1365-2656.12540",
+              "volume": "85",
+              "author": "T Degen",
+              "year": "2016",
+              "unstructured": "Degen, T. et al. Street lighting: sex-independent impacts on moth movement. J. Anim. Ecol 85, 1352\u20131360 (2016).",
+              "journal-title": "J. Anim. Ecol"
+            },
+            {
+              "key": "44785_CR47",
+              "unstructured": "Baker, R. Moths: Population estimates, light-traps and migration. in Case Studies in Population Biology (ed. Cook, L. M.) 188\u2013211 (Manchester University Press: Manchester, 1985)."
+            },
+            {
+              "key": "44785_CR48",
+              "doi-asserted-by": "publisher",
+              "first-page": "818",
+              "DOI": "10.1038/276818a0",
+              "volume": "276",
+              "author": "RR Baker",
+              "year": "1978",
+              "unstructured": "Baker, R. R. & Sadovy, Y. The distance and nature of the light-trap response of moths. Nature 276, 818\u2013821 (1978).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "44785_CR49",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Foster, J. J. et al. Light pollution forces a change in dung beetle orientation behavior. Curr. Biol. https://doi.org/10.1016/j.cub.2021.06.038 (2021).",
+              "DOI": "10.1016/j.cub.2021.06.038"
+            },
+            {
+              "key": "44785_CR50",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Degen, J. et al. Streetlights affect moth orientation beyond flight-to-light behaviour. bioRxiv 2022.10.06.511092 https://doi.org/10.1101/2022.10.06.511092 (2022).",
+              "DOI": "10.1101/2022.10.06.511092"
+            },
+            {
+              "key": "44785_CR51",
+              "doi-asserted-by": "publisher",
+              "first-page": "232",
+              "DOI": "10.1093/aesa/66.1.232",
+              "volume": "66",
+              "author": "A Davidson",
+              "year": "1973",
+              "unstructured": "Davidson, A., Gallagher, J. E. & Hsiao, H. S. Reactions of some moths and aquatic insects to light traps fitted with polarizing filters. Ann. Entomol. Soc. Am. 66, 232\u2013233 (1973).",
+              "journal-title": "Ann. Entomol. Soc. Am."
+            },
+            {
+              "key": "44785_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "20210184",
+              "DOI": "10.1098/rsif.2021.0184",
+              "volume": "18",
+              "author": "D-E Nilsson",
+              "year": "2021",
+              "unstructured": "Nilsson, D.-E. & Smolka, J. Quantifying biologically essential aspects of environmental light. J. R. Soc. Interface 18, 20210184 (2021).",
+              "journal-title": "J. R. Soc. Interface"
+            }
+          ],
+          "container-title": [
+            "Nature Communications"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.nature.com/articles/s41467-024-44785-3.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/s41467-024-44785-3",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/s41467-024-44785-3.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                30
+              ]
+            ],
+            "date-time": "2024-01-30T12:04:18Z",
+            "timestamp": 1706616258000
+          },
+          "score": 55.324844,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/s41467-024-44785-3"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                30
+              ]
+            ]
+          },
+          "references-count": 52,
+          "journal-issue": {
+            "issue": "1",
+            "published-online": {
+              "date-parts": [
+                [
+                  2024,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "44785"
+          ],
+          "URL": "https://doi.org/10.1038/s41467-024-44785-3",
+          "relation": {
+            "has-preprint": [
+              {
+                "id-type": "doi",
+                "id": "10.1101/2023.04.11.536486",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "2041-1723"
+          ],
+          "issn-type": [
+            {
+              "value": "2041-1723",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                30
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "6 March 2023",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "4 January 2024",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "30 January 2024",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ],
+          "article-number": "689"
+        },
+        {
+          "institution": [
+            {
+              "name": "bioRxiv"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                15
+              ]
+            ],
+            "date-time": "2026-01-15T19:21:28Z",
+            "timestamp": 1768504888307,
+            "version": "3.49.0"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2023,
+                4,
+                12
+              ]
+            ]
+          },
+          "group-title": "Animal Behavior and Cognition",
+          "reference-count": 51,
+          "publisher": "openRxiv",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "accepted": {
+            "date-parts": [
+              [
+                2023,
+                4,
+                12
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n                <jats:p>For millennia, humans have watched nocturnal insects flying erratically around fires and lamps. Explanations have included theories of \u201clunar navigation\u201d and \u201cescape to light\u201d. However, without three-dimensional flight data to test them rigorously, this odd behaviour has remained unexplained. We employed high-resolution motion capture in the laboratory and stereo-videography in the field to reconstruct the 3D kinematics of insect flights around artificial lights. Contrary to the expectation of attraction, insects do not steer directly toward the light. Instead, insects turn their dorsum toward the light, generating flight bouts perpendicular to the source. Under natural sky light, tilting the dorsum towards the brightest visual hemisphere helps maintain proper flight attitude and control. Near artificial sources, however, this highly conserved dorsal-light-response can produce continuous steering around the light and trap an insect. Our guidance model demonstrates that this dorsal tilting is sufficient to create the seemingly erratic flight paths of insects near lights and is the most plausible model for why flying insects gather at artificial lights.</jats:p>",
+          "DOI": "10.1101/2023.04.11.536486",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2023,
+                4,
+                12
+              ]
+            ],
+            "date-time": "2023-04-12T21:05:36Z",
+            "timestamp": 1681333536000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 5,
+          "title": [
+            "Why flying insects gather at artificial light"
+          ],
+          "prefix": "10.64898",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-0366-7236",
+              "authenticated-orcid": false,
+              "given": "Samuel T",
+              "family": "Fabian",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-7704-3944",
+              "authenticated-orcid": false,
+              "given": "Yash",
+              "family": "Sondhi",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-9126-7111",
+              "authenticated-orcid": false,
+              "given": "Pablo",
+              "family": "Allen",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-7648-3772",
+              "authenticated-orcid": false,
+              "given": "Jamie",
+              "family": "Theobald",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-3370-244X",
+              "authenticated-orcid": false,
+              "given": "Huai-Ti",
+              "family": "Lin",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "54368",
+          "reference": [
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.1",
+              "unstructured": "Dey, P . Fluttering to the Flame: Moths in Art, Literature, and Poetry. Round glass Sustain (2022)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.2",
+              "unstructured": "Ford, E. B . Moths (The \u201cNew Naturalist\u201d Series). London (see pp. 63\u201366) (1955)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.3",
+              "unstructured": "Gardiner, B. O. C . The very first light-trap, 1565. Entomologist\u2019s Record and Journal of Variation 45\u201346 (1995)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.4",
+              "doi-asserted-by": "crossref",
+              "first-page": "2274",
+              "DOI": "10.1016/j.biocon.2011.06.004",
+              "article-title": "Effect of spectral composition of artificial light on the attraction of moths",
+              "volume": "144",
+              "year": "2011",
+              "journal-title": "Biol. Conserv"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/ee/26.6.1283"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.6",
+              "first-page": "13",
+              "article-title": "On the behaviour of night-flying insects in the neighbourhood of a bright source of light",
+              "volume": "27",
+              "year": "1952",
+              "journal-title": "Proc. R. Entomol. Soc. Lond"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.7",
+              "first-page": "52",
+              "article-title": "Why insects fly to light by night",
+              "volume": "39",
+              "year": "1960",
+              "journal-title": "Revue d\u2019Entomologie de l\u2019URSS"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0003-3472(79)90015-0"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.9",
+              "doi-asserted-by": "crossref",
+              "first-page": "1172",
+              "DOI": "10.1038/2061172a0",
+              "article-title": "Far Infra-red Emission and Detection by Night-flying Moths",
+              "volume": "206",
+              "year": "1965",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.10",
+              "first-page": "3",
+              "article-title": "Some notes on the observed behaviour of Lepidoptera ln flight in the vicinity of light sources",
+              "volume": "1",
+              "year": "1950",
+              "journal-title": "Entomol. Gaz"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.11",
+              "doi-asserted-by": "crossref",
+              "first-page": "1971",
+              "DOI": "10.1016/0022-1910(73)90191-1",
+              "article-title": "Flight paths of night-flying moths to light",
+              "volume": "19",
+              "year": "1973",
+              "journal-title": "J. Insect Physiol"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.12",
+              "first-page": "167",
+              "article-title": "Is light pollution driving moth population declines?",
+              "volume": "14",
+              "year": "2021",
+              "journal-title": "A review of causal mechanisms across the life cycle. Insect Conserv. Divers"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.13",
+              "doi-asserted-by": "crossref",
+              "first-page": "11337",
+              "DOI": "10.1002/ece3.4557",
+              "article-title": "The impact of artificial light at night on nocturnal insects: A review and synthesis",
+              "volume": "8",
+              "year": "2018",
+              "journal-title": "Ecol. Evol"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.14",
+              "doi-asserted-by": "crossref",
+              "first-page": "127",
+              "DOI": "10.1017/S0007485318000378",
+              "article-title": "Automated moth flight analysis in the vicinity of artificial light",
+              "volume": "109",
+              "year": "2019",
+              "journal-title": "Bull. Entomol. Res"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.15",
+              "doi-asserted-by": "crossref",
+              "first-page": "1705",
+              "DOI": "10.1016/0022-1910(72)90100-X",
+              "article-title": "The attraction of moths (Trichoplusia ni) to infrared radiation",
+              "volume": "18",
+              "year": "1972",
+              "journal-title": "J. Insect Physiol"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.16",
+              "unstructured": "Lees, D. & Zilli, A . Moths: Their biology, diversity and evolution. (2019)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.17",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sourakov, A. & Chadd, R. W . The Lives of Moths: A Natural History of Our Planet\u2019s Moth Life. (Princeton University Press, 2022).",
+              "DOI": "10.1515/9780691230368"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Riley, J. R. Flying insects in the field. in Video Techniques in Animal Ecology and Behaviour (ed. Wratten, S. D. ) 1\u201315 (Springer Netherlands, 1994).",
+              "DOI": "10.1007/978-94-011-0699-3_1"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.19",
+              "unstructured": "Sotthibandu, S. Behaviour of Moths in Relation to Light Traps. (University of Manchester, 1978)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.20",
+              "unstructured": "Gaydecki, P. A. A Quantification of the Behaviourial Dynamics of Certain Lepidoptera in Response to Light. (Cranfield Inst. Technol., Bedford., 1984)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.21",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Nilsson, D.-E. , Smolka, J. & Bok, M . The vertical light-gradient and its potential impact on animal distribution and behavior. Front. Ecol. Evol. 10, (2022).",
+              "DOI": "10.3389/fevo.2022.951328"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.22",
+              "doi-asserted-by": "crossref",
+              "first-page": "385",
+              "DOI": "10.1242/jeb.42.3.385",
+              "article-title": "The role of certain optomotor reactions in regulating stability in the rolling plane during flight in the desert locust, Schistocerca gregaria",
+              "volume": "42",
+              "year": "1965",
+              "journal-title": "J. Exp. Biol"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.23",
+              "doi-asserted-by": "crossref",
+              "first-page": "335",
+              "DOI": "10.1007/BF00609936",
+              "article-title": "The ocellar component of flight equilibrium control in dragonflies",
+              "volume": "141",
+              "year": "1981",
+              "journal-title": "J. Comp. Physiol"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.24",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1242/jeb.93.1.1",
+              "article-title": "Contribution of compound eyes and ocelli to steering of locusts in flight: I. behavioural analysis",
+              "volume": "93",
+              "year": "1981",
+              "journal-title": "J. Exp. Biol"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.en.29.010184.001425"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.26",
+              "doi-asserted-by": "crossref",
+              "first-page": "422",
+              "DOI": "10.1007/BF00339921",
+              "article-title": "Physiologie des Gleichgewichtssinnes bei fliegenden Libellen",
+              "volume": "32",
+              "year": "1950",
+              "journal-title": "Z. Vgl. Physiol"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.27",
+              "doi-asserted-by": "crossref",
+              "first-page": "283",
+              "DOI": "10.3233/VES-1997-7402",
+              "article-title": "Interaction of eye-, head-, and trunk-bound information in spatial perception and control",
+              "volume": "7",
+              "year": "1997",
+              "journal-title": "J. Vestib. Res"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.28",
+              "first-page": "285",
+              "article-title": "Multisensory control in insect oculomotor systems",
+              "volume": "5",
+              "year": "1993",
+              "journal-title": "Rev. Oculomot. Res"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.29",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Goulard, R. , Verbe, A. , Vercher, J.-L. & Viollet, S . Role of the light source position in freely falling hoverflies\u2019 stabilization performances. Biol. Lett. 14, (2018).",
+              "DOI": "10.1098/rsbl.2018.0051"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.30",
+              "first-page": "20202676",
+              "article-title": "Dragondrop: a novel passive mechanism for aerial righting in the dragonfly",
+              "volume": "288",
+              "year": "2021",
+              "journal-title": "Proc. Biol. Sci"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.31",
+              "doi-asserted-by": "crossref",
+              "first-page": "20200268",
+              "DOI": "10.1098/rsif.2020.0268",
+              "article-title": "The reverse flight of a monarch butterfly (Danaus plexippus) is characterized by a weight-supporting upstroke and postural changes",
+              "volume": "17",
+              "year": "2020",
+              "journal-title": "J. R. Soc. Interface"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.32",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/jeb.00663"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.33",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Dickinson, M. H. & Muijres, F. T . The aerodynamics and control of free flight manoeuvres in Drosophila. Philos. Trans. R. Soc. Lond. B Biol. Sci. 371, (2016).",
+              "DOI": "10.1098/rstb.2015.0388"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature07810"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature14045"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.36",
+              "doi-asserted-by": "crossref",
+              "first-page": "413",
+              "DOI": "10.1007/s13355-013-0219-x",
+              "article-title": "Insect reactions to light and its applications to pest management",
+              "volume": "48",
+              "year": "2013",
+              "journal-title": "Appl. Entomol. Zool"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.37",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1107519108"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.38",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0003-3472(87)80214-2"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.39",
+              "doi-asserted-by": "crossref",
+              "first-page": "188",
+              "DOI": "10.1111/icad.12476",
+              "article-title": "Moths are strongly attracted to ultraviolet and blue radiation",
+              "volume": "14",
+              "year": "2021",
+              "journal-title": "Insect Conserv. Divers"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.40",
+              "doi-asserted-by": "crossref",
+              "first-page": "13592",
+              "DOI": "10.11609/jott.4694.11.5.13592-13604",
+              "article-title": "A preliminary study of the hawkmoth diversity (Lepidoptera: Sphingidae) of Kanyakumari District, Tamil Nadu",
+              "volume": "11",
+              "year": "2019",
+              "journal-title": "India. J. Threat. Taxa"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.41",
+              "unstructured": "Janzen, D. H. Two ways to be a tropical big moth: Santa Rosa saturniids and sphingids. in Oxford surveys in Evolutionary Biology (eds. Dawkins, R. & Ridley, M .) vol. 1 85\u2013142 (1984)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.42",
+              "doi-asserted-by": "crossref",
+              "first-page": "485",
+              "DOI": "10.1038/s41586-022-05182-2",
+              "article-title": "Accommodating unobservability to control flight attitude with optic flow",
+              "volume": "610",
+              "year": "2022",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.43",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Palmer, G. & Johnsen, S . Downwelling spectral irradiance during evening twilight as a function of the lunar phase. Appl. Opt. 54, B85 (2014).",
+              "DOI": "10.1364/AO.54.000B85"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.44",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.aaa3042"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.45",
+              "unstructured": "Hengstenberg, R. & Bayer, N . The importance of gravity for roll control during flight in the blowfly Calliphora. Verh. Dtsch. Zool. Ges. 81, 203 (1988)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.46",
+              "doi-asserted-by": "crossref",
+              "first-page": "1352",
+              "DOI": "10.1111/1365-2656.12540",
+              "article-title": "Street lighting: sex-independent impacts on moth movement",
+              "volume": "85",
+              "year": "2016",
+              "journal-title": "J. Anim. Ecol"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.47",
+              "unstructured": "Baker, R. Moths: Population estimates, light-traps and migration. in Case Studies in Population Biology (ed. Cook, L. M. ) 188\u2013211 (Manchester University Press: Manchester, 1985)."
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.48",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/276818a0"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.49",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cub.2021.06.038"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.50",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1101/2022.10.06.511092"
+            },
+            {
+              "key": "2023041702152913000_2023.04.11.536486v1.51",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/aesa/66.1.232"
+            }
+          ],
+          "link": [
+            {
+              "URL": "https://syndication.highwire.org/content/doi/10.1101/2023.04.11.536486",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                15
+              ]
+            ],
+            "date-time": "2026-01-15T04:32:26Z",
+            "timestamp": 1768451546000
+          },
+          "score": 55.371227,
+          "resource": {
+            "primary": {
+              "URL": "http://biorxiv.org/lookup/doi/10.1101/2023.04.11.536486"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                4,
+                12
+              ]
+            ]
+          },
+          "references-count": 51,
+          "URL": "https://doi.org/10.1101/2023.04.11.536486",
+          "relation": {
+            "is-preprint-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/s41467-024-44785-3",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                4,
+                12
+              ]
+            ]
+          },
+          "subtype": "preprint"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                2,
+                21
+              ]
+            ],
+            "date-time": "2025-02-21T22:17:05Z",
+            "timestamp": 1740176225631,
+            "version": "3.37.3"
+          },
+          "reference-count": 0,
+          "publisher": "IOP Publishing",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    4,
+                    1
+                  ]
+                ],
+                "date-time": "2024-04-01T00:00:00Z",
+                "timestamp": 1711929600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://iopscience.iop.org/page/copyright"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    4,
+                    1
+                  ]
+                ],
+                "date-time": "2024-04-01T00:00:00Z",
+                "timestamp": 1711929600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://iopscience.iop.org/info/page/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "iopscience.iop.org"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Phys. World"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                4,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Scientists from Costa Rica, the UK and US have now revealed why and how insects gather around a light source.</jats:p>",
+          "DOI": "10.1088/2058-7058/37/04/09",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                13
+              ]
+            ],
+            "date-time": "2024-05-13T13:09:21Z",
+            "timestamp": 1715605761000
+          },
+          "page": "7ii-7ii",
+          "update-policy": "https://doi.org/10.1088/crossmark-policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Seeing the light: why flying insects gather at artificial illumination"
+          ],
+          "prefix": "10.1088",
+          "volume": "37",
+          "author": [
+            {
+              "given": "Liam",
+              "family": "Critchley",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "266",
+          "container-title": [
+            "Physics World"
+          ],
+          "link": [
+            {
+              "URL": "https://iopscience.iop.org/article/10.1088/2058-7058/37/04/09",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://iopscience.iop.org/article/10.1088/2058-7058/37/04/09/pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://iopscience.iop.org/article/10.1088/2058-7058/37/04/09/pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://iopscience.iop.org/article/10.1088/2058-7058/37/04/09/pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                13
+              ]
+            ],
+            "date-time": "2024-05-13T13:09:22Z",
+            "timestamp": 1715605762000
+          },
+          "score": 49.07968,
+          "resource": {
+            "primary": {
+              "URL": "https://iopscience.iop.org/article/10.1088/2058-7058/37/04/09"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2024,
+                4,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2024,
+                  4,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1088/2058-7058/37/04/09",
+          "ISSN": [
+            "0953-8585",
+            "2058-7058"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0953-8585"
+            },
+            {
+              "type": "electronic",
+              "value": "2058-7058"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                4,
+                1
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "Seeing the light: why flying insects gather at artificial illumination",
+              "name": "article_title",
+              "label": "Article Title"
+            },
+            {
+              "value": "Physics World",
+              "name": "journal_title",
+              "label": "Journal Title"
+            },
+            {
+              "value": "paper",
+              "name": "article_type",
+              "label": "Article Type"
+            },
+            {
+              "value": "\u00a9 Copyright 2024 IOP Publishing Ltd.",
+              "name": "copyright_information",
+              "label": "Copyright Information"
+            },
+            {
+              "name": "date_received",
+              "label": "Date Received",
+              "group": {
+                "name": "publication_dates",
+                "label": "Publication dates"
+              }
+            },
+            {
+              "name": "date_accepted",
+              "label": "Date Accepted",
+              "group": {
+                "name": "publication_dates",
+                "label": "Publication dates"
+              }
+            },
+            {
+              "name": "date_epub",
+              "label": "Online publication date",
+              "group": {
+                "name": "publication_dates",
+                "label": "Publication dates"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

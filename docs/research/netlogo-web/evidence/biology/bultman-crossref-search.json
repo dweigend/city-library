@@ -1,0 +1,1803 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Molecular+analysis+of+the+mouse+agouti+gene+predicts+a+secreted+protein+Bultman+Michaud+Woychik+1992&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 8816617,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                4
+              ]
+            ],
+            "date-time": "2026-10-04T19:15:42Z",
+            "timestamp": 1791141342761,
+            "version": "4.1.0"
+          },
+          "reference-count": 85,
+          "publisher": "Cold Spring Harbor Laboratory",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Genes Dev."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          },
+          "abstract": "<jats:p>The mouse agouti gene controls the deposition of yellow and black pigment in developing hairs. Several dominant alleles, including lethal yellow (Ay), result in the exclusive production of yellow pigment and have pleiotropic effects that include obesity and increased tumor susceptibility. In an interspecific backcross, we established genetic limits for the agouti gene and found that the Ay and the lethal non-agouti (ax) allele were not separated from a previously identified probe at the breakpoint of the Is1GsO chromosomal rearrangement. Using the Is1GsO probe, we isolated the agouti gene, and find that it has the potential to code for a secreted protein expressed in hair follicles and the epidermis, and that the level of expression correlates with the synthesis of yellow pigment. In the Ay mutation, there is a chromosomal rearrangement that results in the production of a chimeric RNA expressed in nearly every tissue of the body. The 5' portion of this chimeric RNA contains highly expressed novel 5' sequences, but the 3' portion retains the protein-coding potential of the nonmutant allele. We speculate that dominant pleiotropic effects of Ay are caused by ectopic activation of a signaling pathway similar to that used during normal hair growth.</jats:p>",
+          "DOI": "10.1101/gad.7.3.454",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                6,
+                5
+              ]
+            ],
+            "date-time": "2007-06-05T21:15:46Z",
+            "timestamp": 1181078146000
+          },
+          "page": "454-467",
+          "source": "Crossref",
+          "is-referenced-by-count": 359,
+          "title": [
+            "Cloning of the mouse agouti gene predicts a secreted protein ubiquitously expressed in mice carrying the lethal yellow mutation."
+          ],
+          "prefix": "10.1101",
+          "volume": "7",
+          "author": [
+            {
+              "given": "M W",
+              "family": "Miller",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "D M",
+              "family": "Duhl",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "H",
+              "family": "Vrieling",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "S P",
+              "family": "Cordes",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "M M",
+              "family": "Ollmann",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "B M",
+              "family": "Winkes",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "G S",
+              "family": "Barsh",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "246",
+          "published-online": {
+            "date-parts": [
+              [
+                1993,
+                3,
+                1
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "2021111418074358000_7.3.454.1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0888-7543(89)90080-3"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.2",
+              "doi-asserted-by": "crossref",
+              "first-page": "811",
+              "DOI": "10.1093/genetics/121.4.811",
+              "article-title": "Physical and genetic characterization of a 75-kilobase deletion asssociated with a1 , a recessive lethal allele at the mouse agouti locus.",
+              "volume": "121",
+              "year": "1989",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.3",
+              "doi-asserted-by": "crossref",
+              "first-page": "683",
+              "DOI": "10.1242/dev.109.3.683",
+              "article-title": "Effects of the lethal yellow (Ay ) mutation in mouse aggregation chimeras.",
+              "volume": "109",
+              "year": "1990",
+              "journal-title": "Development"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.88.18.8062"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.5",
+              "first-page": "73",
+              "article-title": "Ultrastructural observations of lethal yellow (Ay/Ay ) mouse embryos.",
+              "volume": "35",
+              "year": "1976",
+              "journal-title": "J. Embryol. Exp. Morphol"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.6",
+              "doi-asserted-by": "crossref",
+              "first-page": "499",
+              "DOI": "10.1152/ajplegacy.1958.193.3.499",
+              "article-title": "Physiologic observations on yellow obesity in the mouse.",
+              "volume": "193",
+              "year": "1958",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.7",
+              "doi-asserted-by": "crossref",
+              "first-page": "177",
+              "DOI": "10.1093/genetics/26.2.177",
+              "article-title": "Influence of certain coat color mutations on body size in mice, rats, and rabbits.",
+              "volume": "26",
+              "year": "1941",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.32.833.868"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.9",
+              "first-page": "123",
+              "article-title": "agouti locus mutations at Harwell.",
+              "volume": "77",
+              "year": "1987",
+              "journal-title": "Mouse News Lett."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.10",
+              "unstructured": "Coleman, D.L. 1982. Diabetes-obesity syndromes. In The mouse in biomedical research IV (ed. H.L. Foster, J.D. Small, and J.G. Fox), pp. 125\u2013132. Academic Press, New York."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.80.1.247"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.12",
+              "doi-asserted-by": "crossref",
+              "first-page": "437",
+              "DOI": "10.1128/jvi.49.2.437-444.1984",
+              "article-title": "DNAs of two molecularly cloned endogenous ecotropic proviruses are poorly infectious in DNA transfection assays.",
+              "volume": "49",
+              "year": "1984",
+              "journal-title": "J. Virol."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0888-7543(89)90347-9"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.14",
+              "first-page": "7",
+              "article-title": "Sur quelques anomalies apparentes des proportions Mendeliennes.",
+              "volume": "9",
+              "year": "1908",
+              "journal-title": "Arch. Zool. Exp. Gen."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.15",
+              "doi-asserted-by": "crossref",
+              "first-page": "153",
+              "DOI": "10.1093/oxfordjournals.jhered.a102826",
+              "article-title": "Hereditary adiposity in mice.",
+              "volume": "18",
+              "year": "1927",
+              "journal-title": "J. Hered."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.16",
+              "first-page": "1205",
+              "article-title": "Influence of the lethal yellow (Ay ) gene on the development of reticular neoplasms.",
+              "volume": "45",
+              "year": "1970",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.17",
+              "doi-asserted-by": "crossref",
+              "first-page": "20",
+              "DOI": "10.1093/oxfordjournals.jhered.a107920",
+              "article-title": "Mutations at the agouti locus in the mouse.",
+              "volume": "60",
+              "year": "1969",
+              "journal-title": "J. Hered."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.18",
+              "first-page": "22",
+              "article-title": "The proopiomelanocortin family.",
+              "volume": "342",
+              "year": "1990",
+              "journal-title": "Prog. Clin. Biol. Res."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01725754"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01664187"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0092-8674(91)90071-6"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0092-8674(92)90402-X"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.85.23.8998"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.24",
+              "doi-asserted-by": "crossref",
+              "first-page": "589",
+              "DOI": "10.1242/dev.110.2.589",
+              "article-title": "Isolation of the mouse Hox-2.9 gene: Analysis of embryonic expression suggests that positional information along the anterior-posterior axis is specified by mesoderm.",
+              "volume": "110",
+              "year": "1990",
+              "journal-title": "Development"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jez.1401550106"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.257.5073.1121"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0092-8674(88)90020-7"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1210/endo-79-6-1165"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/1523-1747.ep12515889"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1600-0749.1990.tb00257.x"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1600-0749.1990.tb00295.x"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.32",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Green, E.L. 1981. Genetics and probability in animal breeding experiments. Oxford University Press, New York.",
+              "DOI": "10.1007/978-1-349-04904-2"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.33",
+              "doi-asserted-by": "crossref",
+              "first-page": "2902",
+              "DOI": "10.1096/fasebj.5.14.1752358",
+              "article-title": "Enzymatic control of pigmentation in mammals.",
+              "volume": "5",
+              "year": "1991",
+              "journal-title": "FASEB J."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.34",
+              "first-page": "527",
+              "article-title": "The islets of Langerhans in yellow obese mice.",
+              "volume": "12",
+              "year": "1963",
+              "journal-title": "Metabolism"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0026-0495(77)90128-7"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jnci/3.3.303"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.37",
+              "first-page": "463",
+              "article-title": "Relationship between the lethal yellow (Ay ) gene of the mouse and susceptibility to spontaneous pulmonary tumors.",
+              "volume": "7",
+              "year": "1947",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.38",
+              "first-page": "969",
+              "article-title": "Influence of the Ay gene on mammary-gland tumors, hepatomas, and normal growth in mice.",
+              "volume": "26",
+              "year": "1961",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.39",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0092-8674(90)90303-V"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.85.12.4392"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0092-8674(92)90510-J"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.42",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1083/jcb.108.2.229"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.43",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.84.21.7473"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.44",
+              "first-page": "173",
+              "article-title": "Modulation of host defense by the neuropeptide alpha-MSH.",
+              "volume": "63",
+              "year": "1990",
+              "journal-title": "Yale J. Biol. Med."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.45",
+              "doi-asserted-by": "crossref",
+              "first-page": "747",
+              "DOI": "10.1093/genetics/115.4.747",
+              "article-title": "Molecular markers for the agouti coat color locus of the mouse.",
+              "volume": "115",
+              "year": "1987",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.46",
+              "doi-asserted-by": "crossref",
+              "first-page": "95",
+              "DOI": "10.1017/S0016672300022485",
+              "article-title": "A recessive allele of the mouse agouti locus showing lethality with yellow, Ay .",
+              "volume": "46",
+              "year": "1985",
+              "journal-title": "Genet. Res."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.47",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1083/jcb.111.6.2587"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.48",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/1523-1747.ep12276832"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.49",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/349709a0"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.50",
+              "unstructured": "Morse, H.C. 1981. The laboratory mouse\u2014historical perspective. In The mouse in biomedical research (ed. H.L. Foster, J.D. Small, and J.G. Fox), pp. 1\u201316. Academic Press, New York."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.51",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1325670"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.52",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jez.1402430314"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.53",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0888-7543(92)90149-M"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.54",
+              "doi-asserted-by": "crossref",
+              "first-page": "9831",
+              "DOI": "10.1016/S0021-9258(19)38746-0",
+              "article-title": "A novel mouse gene family coding for cationic, cysteine-rich peptides. Regulation in small intestine and cells of myeloid origin.",
+              "volume": "265",
+              "year": "1990",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.55",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dvg.1020090302"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.56",
+              "first-page": "153",
+              "article-title": "Investigation of the lethal yellow (Ay/Ay ) embryo using mouse chimaeras.",
+              "volume": "52",
+              "year": "1979",
+              "journal-title": "J. Embryol Exp. Morphol."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.57",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/dvg.1020040103"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.58",
+              "doi-asserted-by": "crossref",
+              "first-page": "485",
+              "DOI": "10.1093/genetics/54.2.485",
+              "article-title": "A cis-trans position effect at the A locus of the house mouse.",
+              "volume": "54",
+              "year": "1966",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.59",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0012-1606(75)90329-2"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.60",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0012-1606(80)90422-4"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.61",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jez.1402200108"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.62",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jez.1401970113"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.63",
+              "doi-asserted-by": "crossref",
+              "first-page": "23",
+              "DOI": "10.1016/0027-5107(89)90019-5",
+              "article-title": "Functional and structural analyses of mouse genomic regions screened by the morphological specific-locus test.",
+              "volume": "212",
+              "year": "1989",
+              "journal-title": "Mutation Res."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.64",
+              "first-page": "907",
+              "article-title": "Crossing over within a \u201clocus\u201d of the mouse.",
+              "volume": "48",
+              "year": "1963",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.65",
+              "doi-asserted-by": "crossref",
+              "first-page": "327",
+              "DOI": "10.1101/SQB.1951.016.01.024",
+              "article-title": "X-ray-induced mutations in mice.",
+              "volume": "16",
+              "year": "1951",
+              "journal-title": "Cold Spring Harbor Symp. Quant. Biol."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.66",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0012-1606(75)90301-2"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.67",
+              "unstructured": "Searle, A.G. 1968. Comparative genetics of coat color in mammals. Academic Press, New York."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.68",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jez.1401370109"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.69",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jez.1401370110"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.70",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Silvers, W.K. 1979. The agouti and extension series of alleles, umbrous and sable. In The coat colors of mice, pp. 6\u201344. Springer-Verlag, New York.",
+              "DOI": "10.1007/978-1-4612-6164-3_2"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.71",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jez.1401300203"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.72",
+              "doi-asserted-by": "crossref",
+              "first-page": "419",
+              "DOI": "10.1111/j.1749-6632.1991.tb24406.x",
+              "article-title": "Genomic organization and molecular genetics of the agouti locus in the mouse.",
+              "volume": "642",
+              "year": "1991",
+              "journal-title": "Ann. N.Y. Acad. Sci."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.73",
+              "doi-asserted-by": "crossref",
+              "first-page": "93",
+              "DOI": "10.1093/genetics/117.1.93",
+              "article-title": "Genetic organization of the agouti region of the mouse.",
+              "volume": "117",
+              "year": "1987",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.74",
+              "doi-asserted-by": "crossref",
+              "first-page": "85",
+              "DOI": "10.1093/genetics/117.1.85",
+              "article-title": "Allelic variation within the Emv-15 locus defines genomic sequences closely linked to the agouti locus on mouse chromosome 2.",
+              "volume": "117",
+              "year": "1987",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.75",
+              "doi-asserted-by": "crossref",
+              "first-page": "669",
+              "DOI": "10.1093/genetics/122.3.669",
+              "article-title": "Recombinant inbred strain and interspecific backcross analysis of molecular markers flanking the murine agouti coat color locus.",
+              "volume": "122",
+              "year": "1989",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.76",
+              "first-page": "193S",
+              "article-title": "Genetic control of signal transduction in mouse melanocytes.",
+              "volume": "92",
+              "year": "1989",
+              "journal-title": "J. Invest. Dermatol,"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.77",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.6328651"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.78",
+              "first-page": "189",
+              "article-title": "Increase of induced skin tumors in the mouse by the lethal yellow gene (Ay ).",
+              "volume": "31",
+              "year": "1963",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.79",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-2836(85)90046-4"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.80",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/14.11.4683"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.81",
+              "doi-asserted-by": "crossref",
+              "first-page": "267",
+              "DOI": "10.1093/oxfordjournals.jhered.a107436",
+              "article-title": "Pseudoallelism at the agouti locus in the mouse.",
+              "volume": "56",
+              "year": "1965",
+              "journal-title": "J. Hered."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.82",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/282721"
+            },
+            {
+              "key": "2021111418074358000_7.3.454.83",
+              "first-page": "295",
+              "article-title": "Phaeomelanin synthesis and obesity in mice. Interaction of the viable yellow (Avy ) and sombre (Eso ) mutations.",
+              "volume": "69",
+              "year": "1978",
+              "journal-title": "J. Hered."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.84",
+              "doi-asserted-by": "crossref",
+              "first-page": "151",
+              "DOI": "10.1093/oxfordjournals.jhered.a110206",
+              "article-title": "Prenatal determination of obesity, tumor susceptibility, and coat color pattern in viable yellow (Avy ) mice. The yellow mouse syndrome.",
+              "volume": "77",
+              "year": "1986",
+              "journal-title": "J. Hered."
+            },
+            {
+              "key": "2021111418074358000_7.3.454.85",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.87.7.2588"
+            }
+          ],
+          "container-title": [
+            "Genes &amp; Development"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://syndication.highwire.org/content/doi/10.1101/gad.7.3.454",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                14
+              ]
+            ],
+            "date-time": "2024-02-14T21:24:04Z",
+            "timestamp": 1707945844000
+          },
+          "score": 35.464832,
+          "resource": {
+            "primary": {
+              "URL": "http://genesdev.cshlp.org/lookup/doi/10.1101/gad.7.3.454"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          },
+          "references-count": 85,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1993,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1101/gad.7.3.454"
+          ],
+          "URL": "https://doi.org/10.1101/gad.7.3.454",
+          "ISSN": [
+            "0890-9369",
+            "1549-5477"
+          ],
+          "issn-type": [
+            {
+              "value": "0890-9369",
+              "type": "print"
+            },
+            {
+              "value": "1549-5477",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                9
+              ]
+            ],
+            "date-time": "2026-10-09T12:42:12Z",
+            "timestamp": 1791549732156,
+            "version": "4.3.4"
+          },
+          "reference-count": 65,
+          "publisher": "Elsevier BV",
+          "issue": "7",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1992,
+                    12,
+                    1
+                  ]
+                ],
+                "date-time": "1992-12-01T00:00:00Z",
+                "timestamp": 723168000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Cell"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1992,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.1016/s0092-8674(05)80067-4",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2005,
+                11,
+                11
+              ]
+            ],
+            "date-time": "2005-11-11T12:14:42Z",
+            "timestamp": 1131711282000
+          },
+          "page": "1195-1204",
+          "source": "Crossref",
+          "is-referenced-by-count": 653,
+          "title": [
+            "Molecular characterization of the mouse agouti locus"
+          ],
+          "prefix": "10.1016",
+          "volume": "71",
+          "author": [
+            {
+              "given": "Scott J.",
+              "family": "Bultman",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Edward J.",
+              "family": "Michaud",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Richard P.",
+              "family": "Woychik",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib1",
+              "series-title": "Current Protocols in Molecular Biology",
+              "author": "Ausubel",
+              "year": "1988"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib2",
+              "first-page": "1408",
+              "article-title": "Purification of biologically active globin messenger RNA by chromotography on oligothymidylic acid-cellulose",
+              "volume": "69",
+              "author": "Aviv",
+              "year": "1972"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "137",
+              "DOI": "10.1016/0378-1119(83)90183-X",
+              "article-title": "Double cos site vectors: simplified cosmid cloning",
+              "volume": "26",
+              "author": "Bates",
+              "year": "1983",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib4",
+              "first-page": "8062",
+              "article-title": "Molecular characterization of a region of DNA associated with mutations at the agouti locus in the mouse",
+              "volume": "88",
+              "author": "Bultman",
+              "year": "1991"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib5",
+              "first-page": "73",
+              "article-title": "Ultrastructural observations of lethal yellow (Ay/Ay) mouse embryos",
+              "volume": "35",
+              "author": "Calarco",
+              "year": "1976",
+              "journal-title": "J. Embryol. Exp. Morphol."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "499",
+              "DOI": "10.1152/ajplegacy.1958.193.3.499",
+              "article-title": "Physiologic observations on yellow obesity in the mouse",
+              "volume": "193",
+              "author": "Carpenter",
+              "year": "1958",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "868",
+              "DOI": "10.1126/science.32.833.868",
+              "article-title": "On a modified Mendelian ratio among yellow mice",
+              "volume": "32",
+              "author": "Castle",
+              "year": "1910",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib8",
+              "first-page": "123",
+              "article-title": "Les races pures et leurs combinaisons chez les souris",
+              "volume": "3",
+              "author": "Cu\u00e8not",
+              "year": "1905",
+              "journal-title": "Arch. Zool. Exp. Gen."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib9",
+              "first-page": "1205",
+              "article-title": "Influence of the lethal yellow (Ay) gene on development of reticular neoplasms",
+              "volume": "45",
+              "author": "Deringer",
+              "year": "1970",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "387",
+              "DOI": "10.1093/nar/12.1Part1.387",
+              "article-title": "A comprehensive set of sequence analysis programs for the VAX",
+              "volume": "12",
+              "author": "Devereux",
+              "year": "1984",
+              "journal-title": "Nucl. Acids Res."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "412",
+              "DOI": "10.1038/269412a0",
+              "article-title": "In vitro duplication and cure of hematopoietic defects in genetically anaemic mice",
+              "volume": "269",
+              "author": "Dexter",
+              "year": "1977",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "496",
+              "DOI": "10.1126/science.105.2732.496-a",
+              "article-title": "Hereditary obesity and efficient food utilization in mice",
+              "volume": "105",
+              "author": "Dickerson",
+              "year": "1947",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib13",
+              "first-page": "816",
+              "article-title": "A fifth allelomorph in the agouti series of the house mouse",
+              "volume": "14",
+              "author": "Dunn",
+              "year": "1928"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "421",
+              "DOI": "10.1016/0092-8674(92)90180-K",
+              "article-title": "Molecular cloning and expression of a new member of the nerve growth factor receptor family that is characteristic for Hodgkin's disease",
+              "volume": "68",
+              "author": "D\u00fcrkop",
+              "year": "1992",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib15",
+              "doi-asserted-by": "crossref",
+              "first-page": "155",
+              "DOI": "10.1007/BF01664187",
+              "article-title": "Giant cell differentiation and lethality of homozygous yellow mouse embryos",
+              "volume": "34",
+              "author": "Eaton",
+              "year": "1963",
+              "journal-title": "Genetica"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib16",
+              "doi-asserted-by": "crossref",
+              "first-page": "767",
+              "DOI": "10.1016/0092-8674(91)90071-6",
+              "article-title": "splotch (Sp2H), a mutation affecting development of the mouse neural tube, shows a deletion within the paired homeodomain of Pax-3",
+              "volume": "67",
+              "author": "Epstein",
+              "year": "1991",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib17",
+              "doi-asserted-by": "crossref",
+              "first-page": "266",
+              "DOI": "10.1016/0003-2697(84)90381-6",
+              "article-title": "Addendum: a technique for radiolabeling DNA restriction endonuclease fragments to high specific activity",
+              "volume": "137",
+              "author": "Feinberg",
+              "year": "1984",
+              "journal-title": "Anal. Biochem."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib18",
+              "first-page": "420",
+              "article-title": "Effect of diet on obesity of yellow mice in inbred lines",
+              "volume": "77",
+              "author": "Fenton",
+              "year": "1951"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib19",
+              "doi-asserted-by": "crossref",
+              "first-page": "217",
+              "DOI": "10.1016/0092-8674(92)90402-X",
+              "article-title": "Tackling a weighty problem",
+              "volume": "69",
+              "author": "Friedman",
+              "year": "1992",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "185",
+              "DOI": "10.1016/0092-8674(88)90020-7",
+              "article-title": "The dominant-white spotting (W) locus of the mouse encodes the c-kit protooncogene",
+              "volume": "55",
+              "author": "Geissler",
+              "year": "1988",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "279",
+              "DOI": "10.1530/jrf.0.0760279",
+              "article-title": "Progressive infertility in female lethal yellow mice",
+              "volume": "76",
+              "author": "Granholm",
+              "year": "1986",
+              "journal-title": "J. Reprod. Fertil."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib22",
+              "series-title": "Genetic Variants and Strains of the Laboratory Mouse",
+              "first-page": "17",
+              "article-title": "Catalogue of mutant genes and polymorphic loci",
+              "author": "Green",
+              "year": "1989"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib23",
+              "first-page": "527",
+              "article-title": "The islets of Langerhans in yellow obese mice",
+              "volume": "12",
+              "author": "Hellerstr\u00f6m",
+              "year": "1963",
+              "journal-title": "Metabolism"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib24",
+              "first-page": "303",
+              "article-title": "Relationship between the lethal yellow (Ay) gene of the mouse and susceptibility to induced pulmonary tumors",
+              "volume": "3",
+              "author": "Heston",
+              "year": "1942",
+              "journal-title": "J. Cancer Inst."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib25",
+              "first-page": "463",
+              "article-title": "Relationship between the lethal yellow (Ay) gene of the mouse and susceptibility to spontaneous pulmonary tumors",
+              "volume": "7",
+              "author": "Heston",
+              "year": "1947",
+              "journal-title": "J. Cancer Inst."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib26",
+              "first-page": "969",
+              "article-title": "Influence of the Ay gene on mammary-gland tumors, hepatomas, and normal growth in mice",
+              "volume": "26",
+              "author": "Heston",
+              "year": "1961",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib27",
+              "first-page": "197",
+              "article-title": "Genetic obesity and neoplasia",
+              "volume": "29",
+              "author": "Heston",
+              "year": "1962",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib28",
+              "first-page": "189",
+              "article-title": "Increase of induced skin tumors in the mouse by the lethal yellow gene (Ay)",
+              "volume": "31",
+              "author": "Heston",
+              "year": "1963",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib29",
+              "doi-asserted-by": "crossref",
+              "first-page": "221",
+              "DOI": "10.1093/oxfordjournals.jhered.a106643",
+              "article-title": "An extreme nonagouti mutant in the mouse",
+              "volume": "47",
+              "author": "Hollander",
+              "year": "1956",
+              "journal-title": "J. Hered."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib30",
+              "doi-asserted-by": "crossref",
+              "first-page": "173",
+              "DOI": "10.1126/science.3018929",
+              "article-title": "Molecular analysis of the hotspot of recombination in the murine major histocompatibility complex",
+              "volume": "234",
+              "author": "Kobori",
+              "year": "1986",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "8125",
+              "DOI": "10.1093/nar/15.20.8125",
+              "article-title": "An analysis of 5\u2032-noncoding sequence from 699 vertebrate messenger RNAs",
+              "volume": "15",
+              "author": "Kozak",
+              "year": "1987",
+              "journal-title": "Nucl. Acids Res."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib32",
+              "doi-asserted-by": "crossref",
+              "first-page": "105",
+              "DOI": "10.1016/0022-2836(82)90515-0",
+              "article-title": "A simple method for displaying the hydropathic character of a protein",
+              "volume": "157",
+              "author": "Kyte",
+              "year": "1982",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib33",
+              "first-page": "4808",
+              "article-title": "Recombination within and between the human insulin and \u03b2-globin gene loci",
+              "volume": "80",
+              "author": "Lebo",
+              "year": "1983"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib34",
+              "doi-asserted-by": "crossref",
+              "first-page": "853",
+              "DOI": "10.1038/346853a0",
+              "article-title": "Disruption of formin-encoding transcripts in two mutant limb deformity alleles",
+              "volume": "346",
+              "author": "Maas",
+              "year": "1990",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib35",
+              "doi-asserted-by": "crossref",
+              "first-page": "62",
+              "DOI": "10.1016/0012-1606(68)90023-7",
+              "article-title": "An experimental analysis of the pigment defect caused by mutations at the W and SI loci in mice",
+              "volume": "18",
+              "author": "Mayer",
+              "year": "1968",
+              "journal-title": "Dev. Biol."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib36",
+              "doi-asserted-by": "crossref",
+              "first-page": "399",
+              "DOI": "10.1182/blood.V26.4.399.399",
+              "article-title": "The cellular basis of the genetically determined hemopoietic defect in anemic mice of genotype Si/SId",
+              "volume": "26",
+              "author": "McCulloch",
+              "year": "1965",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib37",
+              "doi-asserted-by": "crossref",
+              "first-page": "709",
+              "DOI": "10.1038/349709a0",
+              "article-title": "Novel myosin heavy chain encoded by murine dilute coat color locus",
+              "volume": "349",
+              "author": "Mercer",
+              "year": "1991",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib38",
+              "doi-asserted-by": "crossref",
+              "first-page": "459",
+              "DOI": "10.1093/nar/10.2.459",
+              "article-title": "A catalogue of splice junction sequences",
+              "volume": "10",
+              "author": "Mount",
+              "year": "1982",
+              "journal-title": "Nucl. Acids Res."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib39",
+              "doi-asserted-by": "crossref",
+              "first-page": "1248",
+              "DOI": "10.1126/science.1325670",
+              "article-title": "The cloning of a family of genes that encode the melanocortin receptors",
+              "volume": "257",
+              "author": "Mountjoy",
+              "year": "1992",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib40",
+              "first-page": "153",
+              "article-title": "Investigation of the lethal yellow Ay/Ay embryo using mouse chimeras",
+              "volume": "52",
+              "author": "Papaioannou",
+              "year": "1979",
+              "journal-title": "J. Embryol. Exp. Morphol."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib41",
+              "first-page": "2444",
+              "article-title": "Improved tools for biological sequence comparison",
+              "volume": "85",
+              "author": "Pearson",
+              "year": "1988"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib42",
+              "doi-asserted-by": "crossref",
+              "first-page": "593",
+              "DOI": "10.1016/0026-0495(76)90013-5",
+              "article-title": "Effect of hypophysectomy on weight gain and body composition in the genetically obese yellow (Ay/a) mouse",
+              "volume": "25",
+              "author": "Plocher",
+              "year": "1976",
+              "journal-title": "Metabolism"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib43",
+              "doi-asserted-by": "crossref",
+              "first-page": "197",
+              "DOI": "10.1002/jez.1400890203",
+              "article-title": "An analysis of the development of homozygous yellow mouse embryos",
+              "volume": "89",
+              "author": "Robertson",
+              "year": "1942",
+              "journal-title": "J. Exp. Zool."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib44",
+              "first-page": "907",
+              "article-title": "Crossing-over within the a \u201clocus\u201d of the mouse",
+              "volume": "48",
+              "author": "Russell",
+              "year": "1963",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib45",
+              "doi-asserted-by": "crossref",
+              "first-page": "466",
+              "DOI": "10.1016/0012-1606(75)90301-2",
+              "article-title": "Ultrastructural change of melanosomes associated with agouti pattern formation in mouse hair",
+              "volume": "47",
+              "author": "Sakurai",
+              "year": "1975",
+              "journal-title": "Dev. Biol."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib46",
+              "series-title": "Molecular Cloning: A Laboratory Manual",
+              "author": "Sambrook",
+              "year": "1989"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib47",
+              "first-page": "5463",
+              "article-title": "DNA sequencing with chain-terminating inhibitors",
+              "volume": "74",
+              "author": "Sanger",
+              "year": "1977"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib48",
+              "doi-asserted-by": "crossref",
+              "first-page": "1905",
+              "DOI": "10.1093/nar/13.6.1905",
+              "article-title": "Removal of DNA sequences from hybridisation probes",
+              "volume": "13",
+              "author": "Sealey",
+              "year": "1985",
+              "journal-title": "Nucl. Acids Res."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib49",
+              "doi-asserted-by": "crossref",
+              "first-page": "5799",
+              "DOI": "10.1093/nar/18.19.5799",
+              "article-title": "Point mutations in AAUAAA and the poly(A) addition site: effects on the accuracy and efficiency of cleavage and polyadenylation in vitro",
+              "volume": "18",
+              "author": "Sheets",
+              "year": "1990",
+              "journal-title": "Nucl. Acids Res."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib50",
+              "doi-asserted-by": "crossref",
+              "first-page": "181",
+              "DOI": "10.1002/jez.1401370109",
+              "article-title": "An experimental approach to action of genes at the agouti locus in the mouse. II. Transplants of newborn aa ventral skin to ata, Awa, and aa hosts",
+              "volume": "137",
+              "author": "Silvers",
+              "year": "1958",
+              "journal-title": "J. Exp. Zool."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib51",
+              "doi-asserted-by": "crossref",
+              "first-page": "189",
+              "DOI": "10.1002/jez.1401370110",
+              "article-title": "An experimental approach to action of genes at the agouti locus in the mouse. III. Transplants of newborn Aw-, A-, at-skin to Ay-, Aw-, A- and aa hosts",
+              "volume": "137",
+              "author": "Silvers",
+              "year": "1958",
+              "journal-title": "J. Exp. Zool."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib52",
+              "doi-asserted-by": "crossref",
+              "first-page": "368",
+              "DOI": "10.1126/science.134.3476.368",
+              "article-title": "Genes and pigment cells of mammals",
+              "volume": "134",
+              "author": "Silvers",
+              "year": "1961",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib53",
+              "series-title": "The Coat Colors of Mice: A Model for Mammalian Gene Action and Interaction",
+              "first-page": "6",
+              "article-title": "The agouti and extension series of alleles, umbrous, and sable",
+              "author": "Silvers",
+              "year": "1979"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib54",
+              "doi-asserted-by": "crossref",
+              "first-page": "199",
+              "DOI": "10.1002/jez.1401300203",
+              "article-title": "An experimental approach to action of genes at the agouti locus in the mouse",
+              "volume": "130",
+              "author": "Silvers",
+              "year": "1955",
+              "journal-title": "J. Exp. Zool."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib55",
+              "doi-asserted-by": "crossref",
+              "first-page": "93",
+              "DOI": "10.1093/genetics/117.1.93",
+              "article-title": "Genetic organization of the agouti region of the mouse",
+              "volume": "117",
+              "author": "Siracusa",
+              "year": "1987",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib56",
+              "doi-asserted-by": "crossref",
+              "first-page": "895",
+              "DOI": "10.1016/0092-8674(86)90012-7",
+              "article-title": "Gene organizaton and recombinational hotspots in the murine major histocompatibility complex",
+              "volume": "44",
+              "author": "Steinmetz",
+              "year": "1986",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib57",
+              "first-page": "4767",
+              "article-title": "DNA sequence analysis with a modified bacteriophage T7 DNA polymerase",
+              "volume": "84",
+              "author": "Tabor",
+              "year": "1987"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib58",
+              "doi-asserted-by": "crossref",
+              "first-page": "239S",
+              "DOI": "10.1111/1523-1747.ep13075730",
+              "article-title": "Genetic control of signal transduction in mouse melanocytes",
+              "volume": "92",
+              "author": "Takeuchi",
+              "year": "1989",
+              "journal-title": "J. Invest. Dermatol."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib59",
+              "doi-asserted-by": "crossref",
+              "first-page": "2029",
+              "DOI": "10.1128/MCB.5.8.2029",
+              "article-title": "Recombination hot spot in the human \u03b2-globin gene cluster: meiotic recombination of human DNA fragments in Saccharomyces cerevisiae",
+              "volume": "5",
+              "author": "Treco",
+              "year": "1985",
+              "journal-title": "Mol. Cell. Biol."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib60",
+              "doi-asserted-by": "crossref",
+              "first-page": "4683",
+              "DOI": "10.1093/nar/14.11.4683",
+              "article-title": "A new method for predicting signal cleavage sites",
+              "volume": "14",
+              "author": "von Heijne",
+              "year": "1986",
+              "journal-title": "Nucl. Acids Res."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib61",
+              "doi-asserted-by": "crossref",
+              "first-page": "5",
+              "DOI": "10.1016/0092-8674(90)90280-R",
+              "article-title": "Steel locus defines new multipotent growth factor",
+              "volume": "63",
+              "author": "Witte",
+              "year": "1990",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib62",
+              "doi-asserted-by": "crossref",
+              "first-page": "151",
+              "DOI": "10.1093/oxfordjournals.jhered.a110206",
+              "article-title": "Prenatal determination of obesity, tumor susceptibility, and coat color pattern in viable yellow (Avy/a) mice",
+              "volume": "77",
+              "author": "Wolff",
+              "year": "1986",
+              "journal-title": "J. Hered."
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib63",
+              "doi-asserted-by": "crossref",
+              "first-page": "36",
+              "DOI": "10.1038/318036a0",
+              "article-title": "An inherited limb deformity created by insertional mutagenesis in a transgenic mouse",
+              "volume": "318",
+              "author": "Woychik",
+              "year": "1985",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib64",
+              "first-page": "2588",
+              "article-title": "Molecular and genetic characterization of a radiation-induced structural rearrangement in mouse chromosome 2 causing mutations at the limb deformity and agouti loci",
+              "volume": "87",
+              "author": "Woychik",
+              "year": "1990"
+            },
+            {
+              "key": "10.1016/S0092-8674(05)80067-4_bib65",
+              "doi-asserted-by": "crossref",
+              "first-page": "850",
+              "DOI": "10.1038/346850a0",
+              "article-title": "\u2018Formins\u201d: proteins deduced from the alternative transcripts of the limb deformity gene",
+              "volume": "346",
+              "author": "Woychik",
+              "year": "1990",
+              "journal-title": "Nature"
+            }
+          ],
+          "container-title": [
+            "Cell"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0092867405800674?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0092867405800674?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                19
+              ]
+            ],
+            "date-time": "2021-07-19T15:11:18Z",
+            "timestamp": 1626707478000
+          },
+          "score": 27.715624,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0092867405800674"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1992,
+                12
+              ]
+            ]
+          },
+          "references-count": 65,
+          "journal-issue": {
+            "issue": "7",
+            "published-print": {
+              "date-parts": [
+                [
+                  1992,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0092867405800674"
+          ],
+          "URL": "https://doi.org/10.1016/s0092-8674(05)80067-4",
+          "ISSN": [
+            "0092-8674"
+          ],
+          "issn-type": [
+            {
+              "value": "0092-8674",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1992,
+                12
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                5
+              ]
+            ],
+            "date-time": "2022-04-05T00:03:36Z",
+            "timestamp": 1649117016265
+          },
+          "reference-count": 0,
+          "publisher": "Elsevier BV",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1993,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "1993-03-01T00:00:00Z",
+                "timestamp": 730944000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Trends in Genetics"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1016/0168-9525(93)90219-8",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                2,
+                12
+              ]
+            ],
+            "date-time": "2003-02-12T17:35:37Z",
+            "timestamp": 1045071337000
+          },
+          "page": "73",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Molecular characterization of the mouse agouti locus"
+          ],
+          "prefix": "10.1016",
+          "volume": "9",
+          "member": "78",
+          "container-title": [
+            "Trends in Genetics"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0168952593902198?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0168952593902198?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                3,
+                27
+              ]
+            ],
+            "date-time": "2019-03-27T14:50:43Z",
+            "timestamp": 1553698243000
+          },
+          "score": 27.393694,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0168952593902198"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1993,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0168952593902198"
+          ],
+          "URL": "https://doi.org/10.1016/0168-9525(93)90219-8",
+          "ISSN": [
+            "0168-9525"
+          ],
+          "issn-type": [
+            {
+              "value": "0168-9525",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

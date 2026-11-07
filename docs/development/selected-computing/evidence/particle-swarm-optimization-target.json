@@ -1,0 +1,869 @@
+{
+  "actions": [
+    "Setup",
+    "1 step",
+    "Run",
+    "Pause",
+    "100 steps × 1",
+    "Highlight True best live",
+    "Trails Traces live",
+    "Setup retains selected visualization parameters",
+    "10 steps draw Traces",
+    "Setup resets model"
+  ],
+  "setup-desktop-light": {
+    "at": "2026-11-06T09:15:12.006Z",
+    "url": "http://localhost:3188/?experiment=particle-swarm-optimization",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793956449128",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "2f124b9cfc5fe6c822692758d9312077c0a80bb7430f13f2bc1b121ce529c8a8",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-1vhzhptb.js",
+        "bytes": 12249,
+        "sha256": "e4055f95d3b0d5ec5ec8b3a4bed85e2c99944b7c60b9162e59fc771d17a68fac",
+        "modelMarkers": [
+          "particle-swarm-optimization"
+        ]
+      }
+    ],
+    "monitors": {
+      "Tick": "0",
+      "Best value found": "0.00000"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "width",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "landscapeSmoothness",
+        "value": "20",
+        "disabled": false
+      },
+      {
+        "name": "populationSize",
+        "value": "50",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-particleInertia",
+        "value": "0.98",
+        "disabled": false
+      },
+      {
+        "name": "live-particleSpeedLimit",
+        "value": "10",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToPersonalBest",
+        "value": "2",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToGlobalBest",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-highlightMode",
+        "value": "None",
+        "disabled": false
+      },
+      {
+        "name": "live-trailsMode",
+        "value": "None",
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best value: 0"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Search landscape",
+      "Best found"
+    ]
+  },
+  "step": {
+    "at": "2026-11-06T09:15:12.425Z",
+    "url": "http://localhost:3188/?experiment=particle-swarm-optimization",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793956449128",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "2f124b9cfc5fe6c822692758d9312077c0a80bb7430f13f2bc1b121ce529c8a8",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-1vhzhptb.js",
+        "bytes": 12249,
+        "sha256": "e4055f95d3b0d5ec5ec8b3a4bed85e2c99944b7c60b9162e59fc771d17a68fac",
+        "modelMarkers": [
+          "particle-swarm-optimization"
+        ]
+      }
+    ],
+    "monitors": {
+      "Tick": "1",
+      "Best value found": "0.88114"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "width",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "landscapeSmoothness",
+        "value": "20",
+        "disabled": false
+      },
+      {
+        "name": "populationSize",
+        "value": "50",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-particleInertia",
+        "value": "0.98",
+        "disabled": false
+      },
+      {
+        "name": "live-particleSpeedLimit",
+        "value": "10",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToPersonalBest",
+        "value": "2",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToGlobalBest",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-highlightMode",
+        "value": "None",
+        "disabled": false
+      },
+      {
+        "name": "live-trailsMode",
+        "value": "None",
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best value: 0.8811350524970247"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Search landscape",
+      "Best found"
+    ]
+  },
+  "progress-desktop-light": {
+    "at": "2026-11-06T09:15:12.922Z",
+    "url": "http://localhost:3188/?experiment=particle-swarm-optimization",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793956449128",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "2f124b9cfc5fe6c822692758d9312077c0a80bb7430f13f2bc1b121ce529c8a8",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-1vhzhptb.js",
+        "bytes": 12249,
+        "sha256": "e4055f95d3b0d5ec5ec8b3a4bed85e2c99944b7c60b9162e59fc771d17a68fac",
+        "modelMarkers": [
+          "particle-swarm-optimization"
+        ]
+      }
+    ],
+    "monitors": {
+      "Tick": "12",
+      "Best value found": "1.00000"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "width",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "landscapeSmoothness",
+        "value": "20",
+        "disabled": false
+      },
+      {
+        "name": "populationSize",
+        "value": "50",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-particleInertia",
+        "value": "0.98",
+        "disabled": false
+      },
+      {
+        "name": "live-particleSpeedLimit",
+        "value": "10",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToPersonalBest",
+        "value": "2",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToGlobalBest",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-highlightMode",
+        "value": "None",
+        "disabled": false
+      },
+      {
+        "name": "live-trailsMode",
+        "value": "None",
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best value: 0.9835442517230543"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Search landscape",
+      "Best found"
+    ]
+  },
+  "desktop-dark": {
+    "at": "2026-11-06T09:15:54.356Z",
+    "url": "http://localhost:3188/?experiment=particle-swarm-optimization",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "dark",
+    "buildVersion": "1793956449128",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "2f124b9cfc5fe6c822692758d9312077c0a80bb7430f13f2bc1b121ce529c8a8",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-1vhzhptb.js",
+        "bytes": 12249,
+        "sha256": "e4055f95d3b0d5ec5ec8b3a4bed85e2c99944b7c60b9162e59fc771d17a68fac",
+        "modelMarkers": [
+          "particle-swarm-optimization"
+        ]
+      }
+    ],
+    "monitors": {
+      "Tick": "10",
+      "Best value found": "0.98354"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "width",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "landscapeSmoothness",
+        "value": "20",
+        "disabled": false
+      },
+      {
+        "name": "populationSize",
+        "value": "50",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-particleInertia",
+        "value": "0.98",
+        "disabled": false
+      },
+      {
+        "name": "live-particleSpeedLimit",
+        "value": "10",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToPersonalBest",
+        "value": "2",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToGlobalBest",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-highlightMode",
+        "value": "True best",
+        "disabled": false
+      },
+      {
+        "name": "live-trailsMode",
+        "value": "Traces",
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best value: 0.9835442517230543"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Search landscape",
+      "Best found"
+    ]
+  },
+  "mobile-light": {
+    "at": "2026-11-06T09:15:54.800Z",
+    "url": "http://localhost:3188/?experiment=particle-swarm-optimization",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "light",
+    "buildVersion": "1793956449128",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "2f124b9cfc5fe6c822692758d9312077c0a80bb7430f13f2bc1b121ce529c8a8",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-1vhzhptb.js",
+        "bytes": 12249,
+        "sha256": "e4055f95d3b0d5ec5ec8b3a4bed85e2c99944b7c60b9162e59fc771d17a68fac",
+        "modelMarkers": [
+          "particle-swarm-optimization"
+        ]
+      }
+    ],
+    "monitors": {
+      "Tick": "10",
+      "Best value found": "0.98354"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "width",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "landscapeSmoothness",
+        "value": "20",
+        "disabled": false
+      },
+      {
+        "name": "populationSize",
+        "value": "50",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-particleInertia",
+        "value": "0.98",
+        "disabled": false
+      },
+      {
+        "name": "live-particleSpeedLimit",
+        "value": "10",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToPersonalBest",
+        "value": "2",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToGlobalBest",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-highlightMode",
+        "value": "True best",
+        "disabled": false
+      },
+      {
+        "name": "live-trailsMode",
+        "value": "Traces",
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best value: 0.9835442517230543"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Search landscape",
+      "Best found"
+    ]
+  },
+  "mobile-dark": {
+    "at": "2026-11-06T09:15:55.017Z",
+    "url": "http://localhost:3188/?experiment=particle-swarm-optimization",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793956449128",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "2f124b9cfc5fe6c822692758d9312077c0a80bb7430f13f2bc1b121ce529c8a8",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-1vhzhptb.js",
+        "bytes": 12249,
+        "sha256": "e4055f95d3b0d5ec5ec8b3a4bed85e2c99944b7c60b9162e59fc771d17a68fac",
+        "modelMarkers": [
+          "particle-swarm-optimization"
+        ]
+      }
+    ],
+    "monitors": {
+      "Tick": "10",
+      "Best value found": "0.98354"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "width",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "landscapeSmoothness",
+        "value": "20",
+        "disabled": false
+      },
+      {
+        "name": "populationSize",
+        "value": "50",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-particleInertia",
+        "value": "0.98",
+        "disabled": false
+      },
+      {
+        "name": "live-particleSpeedLimit",
+        "value": "10",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToPersonalBest",
+        "value": "2",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToGlobalBest",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-highlightMode",
+        "value": "True best",
+        "disabled": false
+      },
+      {
+        "name": "live-trailsMode",
+        "value": "Traces",
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best value: 0.9835442517230543"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Search landscape",
+      "Best found"
+    ]
+  },
+  "reset": {
+    "at": "2026-11-06T09:15:55.998Z",
+    "url": "http://localhost:3188/?experiment=particle-swarm-optimization",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793956449128",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "2f124b9cfc5fe6c822692758d9312077c0a80bb7430f13f2bc1b121ce529c8a8",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-1vhzhptb.js",
+        "bytes": 12249,
+        "sha256": "e4055f95d3b0d5ec5ec8b3a4bed85e2c99944b7c60b9162e59fc771d17a68fac",
+        "modelMarkers": [
+          "particle-swarm-optimization"
+        ]
+      }
+    ],
+    "monitors": {
+      "Tick": "0",
+      "Best value found": "0.00000"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "width",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "201",
+        "disabled": false
+      },
+      {
+        "name": "landscapeSmoothness",
+        "value": "20",
+        "disabled": false
+      },
+      {
+        "name": "populationSize",
+        "value": "50",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-particleInertia",
+        "value": "0.98",
+        "disabled": false
+      },
+      {
+        "name": "live-particleSpeedLimit",
+        "value": "10",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToPersonalBest",
+        "value": "2",
+        "disabled": false
+      },
+      {
+        "name": "live-attractionToGlobalBest",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-highlightMode",
+        "value": "True best",
+        "disabled": false
+      },
+      {
+        "name": "live-trailsMode",
+        "value": "Traces",
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best value: 0"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Search landscape",
+      "Best found"
+    ]
+  },
+  "diagnostics": {
+    "console": [
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.090Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.095Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.101Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.817Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.821Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.826Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:09:03.093Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.722Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.723Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.727Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:52.856Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:11:26.662Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:12:40.985Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:14:45.952Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:15:12.422Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:15:54.800Z"
+      }
+    ],
+    "failedRequests": []
+  }
+}

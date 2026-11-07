@@ -1,0 +1,150 @@
+2026-11-06T14:50:09.577421+00:00
+Command: ['bun', 'run', 'build:ui:svelte']
+Task environment: {'CITY_LIBRARY_UI_RUNTIME': 'svelte'}
+$ bun --bun run vite build --config vite.config.ts
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 1068 modules transformed.
+rendering chunks...
+computing gzip size...
+agent-lab-output/svelte/build-version                      0.01 kB
+agent-lab-output/svelte/index.html                         0.66 kB │ gzip:   0.34 kB
+agent-lab-output/svelte/assets/legacy-host-t3o7XmAO.css    0.18 kB │ gzip:   0.12 kB
+agent-lab-output/svelte/assets/svelte-c-k1q7E3.css         3.06 kB │ gzip:   0.99 kB
+agent-lab-output/svelte/assets/styles-EqBpdCYr.css         4.38 kB │ gzip:   1.55 kB
+agent-lab-output/svelte/assets/index-Dn-25gpO.css         38.49 kB │ gzip:   7.26 kB
+agent-lab-output/svelte/assets/ui-Cf0CPLG8.js              2.16 kB │ gzip:   1.08 kB
+agent-lab-output/svelte/assets/ui-KSOR7P31.js              2.30 kB │ gzip:   1.20 kB
+agent-lab-output/svelte/assets/ui-Cg1lSEow.js              2.33 kB │ gzip:   1.23 kB
+agent-lab-output/svelte/assets/ui-Ci-JBiY4.js              2.39 kB │ gzip:   1.24 kB
+agent-lab-output/svelte/assets/ui-Bvl3D89K.js              2.40 kB │ gzip:   1.25 kB
+agent-lab-output/svelte/assets/ui-DXETmAQA.js              2.54 kB │ gzip:   1.30 kB
+agent-lab-output/svelte/assets/ui-DRs5kmKk.js              2.74 kB │ gzip:   1.28 kB
+agent-lab-output/svelte/assets/ui-wAVxHEVh.js              2.83 kB │ gzip:   1.30 kB
+agent-lab-output/svelte/assets/ui-CQ7oyaWX.js              2.92 kB │ gzip:   1.41 kB
+agent-lab-output/svelte/assets/ui-CpPYv8Yz.js              2.99 kB │ gzip:   1.44 kB
+agent-lab-output/svelte/assets/ui-BHBL_ues.js              3.03 kB │ gzip:   1.27 kB
+agent-lab-output/svelte/assets/ui-CxV1svpW.js              3.05 kB │ gzip:   1.50 kB
+agent-lab-output/svelte/assets/ui-ChcznAMA.js              3.30 kB │ gzip:   1.55 kB
+agent-lab-output/svelte/assets/ui-CWGNWpe2.js              3.35 kB │ gzip:   1.63 kB
+agent-lab-output/svelte/assets/ui-D7EIywEU.js              3.38 kB │ gzip:   1.57 kB
+agent-lab-output/svelte/assets/ui-C3b5lDCb.js              3.46 kB │ gzip:   1.53 kB
+agent-lab-output/svelte/assets/ui-DiwfOMG9.js              3.48 kB │ gzip:   1.59 kB
+agent-lab-output/svelte/assets/ui-CDPh9amF.js              3.55 kB │ gzip:   1.58 kB
+agent-lab-output/svelte/assets/ui-BgzC_C_f.js              3.55 kB │ gzip:   1.71 kB
+agent-lab-output/svelte/assets/ui-FdEA6D9L.js              3.56 kB │ gzip:   1.66 kB
+agent-lab-output/svelte/assets/ui-DBWXqRa2.js              3.59 kB │ gzip:   1.82 kB
+agent-lab-output/svelte/assets/ui-DoYlZ2CW.js              3.62 kB │ gzip:   1.74 kB
+agent-lab-output/svelte/assets/ui-WFS1GgZv.js              3.62 kB │ gzip:   1.54 kB
+agent-lab-output/svelte/assets/ui-BmRQNwfp.js              3.64 kB │ gzip:   1.66 kB
+agent-lab-output/svelte/assets/ui-BsMcXnDX.js              3.65 kB │ gzip:   1.65 kB
+agent-lab-output/svelte/assets/ui-Baj-4b85.js              3.66 kB │ gzip:   1.73 kB
+agent-lab-output/svelte/assets/ui-Cwa7UfDT.js              3.68 kB │ gzip:   1.62 kB
+agent-lab-output/svelte/assets/ui-BxBwlqdp.js              3.71 kB │ gzip:   1.65 kB
+agent-lab-output/svelte/assets/ui-C1vfHSpr.js              3.72 kB │ gzip:   1.68 kB
+agent-lab-output/svelte/assets/ui-DcW-9YZw.js              3.93 kB │ gzip:   1.66 kB
+agent-lab-output/svelte/assets/ui-BP7cdhDO.js              3.93 kB │ gzip:   1.75 kB
+agent-lab-output/svelte/assets/ui-CQBqsQPZ.js              3.94 kB │ gzip:   1.78 kB
+agent-lab-output/svelte/assets/ui-BTLUzMlT.js              3.99 kB │ gzip:   1.74 kB
+agent-lab-output/svelte/assets/ui-B31oonmU.js              4.02 kB │ gzip:   1.84 kB
+agent-lab-output/svelte/assets/ui-BdcyBvIi.js              4.06 kB │ gzip:   1.81 kB
+agent-lab-output/svelte/assets/ui-DJApJukG.js              4.13 kB │ gzip:   1.75 kB
+agent-lab-output/svelte/assets/ui-Di9Z25dB.js              4.14 kB │ gzip:   1.80 kB
+agent-lab-output/svelte/assets/ui-DYxVDZKP.js              4.31 kB │ gzip:   1.87 kB
+agent-lab-output/svelte/assets/ui-CcMWyww7.js              4.34 kB │ gzip:   1.96 kB
+agent-lab-output/svelte/assets/ui-DxKEmKEf.js              4.43 kB │ gzip:   1.86 kB
+agent-lab-output/svelte/assets/ui-DX2NwWVO.js              4.44 kB │ gzip:   1.81 kB
+agent-lab-output/svelte/assets/ui-iemZGkGW.js              4.48 kB │ gzip:   1.96 kB
+agent-lab-output/svelte/assets/ui-D41NvCPA.js              4.54 kB │ gzip:   1.98 kB
+agent-lab-output/svelte/assets/ui-CCHKHr8-.js              4.57 kB │ gzip:   2.10 kB
+agent-lab-output/svelte/assets/ui-glLxF8d8.js              4.59 kB │ gzip:   2.03 kB
+agent-lab-output/svelte/assets/ui-BFXzNdTh.js              4.61 kB │ gzip:   2.06 kB
+agent-lab-output/svelte/assets/ui-DyVv7UIu.js              4.62 kB │ gzip:   2.11 kB
+agent-lab-output/svelte/assets/ui-DvBm2642.js              4.69 kB │ gzip:   2.06 kB
+agent-lab-output/svelte/assets/ui-DY1GS3m5.js              4.70 kB │ gzip:   2.11 kB
+agent-lab-output/svelte/assets/ui-ByLSBTaV.js              4.85 kB │ gzip:   1.92 kB
+agent-lab-output/svelte/assets/ui-CbY7C5bx.js              4.87 kB │ gzip:   2.09 kB
+agent-lab-output/svelte/assets/ui-Cwk96NQw.js              4.93 kB │ gzip:   2.16 kB
+agent-lab-output/svelte/assets/ui-BMi6CbGi.js              4.96 kB │ gzip:   2.08 kB
+agent-lab-output/svelte/assets/ui-Bke6xCAU.js              5.00 kB │ gzip:   2.19 kB
+agent-lab-output/svelte/assets/ui-C822AcD7.js              5.01 kB │ gzip:   2.16 kB
+agent-lab-output/svelte/assets/ui-DIyAFqZx.js              5.07 kB │ gzip:   2.05 kB
+agent-lab-output/svelte/assets/ui-CT9rJZso.js              5.12 kB │ gzip:   2.42 kB
+agent-lab-output/svelte/assets/ui-BGW61G9e.js              5.17 kB │ gzip:   2.30 kB
+agent-lab-output/svelte/assets/ui-GOWbJzvI.js              5.24 kB │ gzip:   2.11 kB
+agent-lab-output/svelte/assets/ui-oiCuaeEJ.js              5.29 kB │ gzip:   2.24 kB
+agent-lab-output/svelte/assets/ui-hyB2ohi0.js              5.31 kB │ gzip:   2.24 kB
+agent-lab-output/svelte/assets/ui-BoycRLtJ.js              5.38 kB │ gzip:   2.17 kB
+agent-lab-output/svelte/assets/ui-B2qxqY5J.js              5.41 kB │ gzip:   2.34 kB
+agent-lab-output/svelte/assets/ui-C96So6Jx.js              5.43 kB │ gzip:   2.20 kB
+agent-lab-output/svelte/assets/ui-DqgRbIgY.js              5.47 kB │ gzip:   2.31 kB
+agent-lab-output/svelte/assets/ui-CNh1feqn.js              5.48 kB │ gzip:   2.37 kB
+agent-lab-output/svelte/assets/ui-Cvw9RHRJ.js              5.54 kB │ gzip:   2.35 kB
+agent-lab-output/svelte/assets/ui-DZVT7lrA.js              5.60 kB │ gzip:   2.33 kB
+agent-lab-output/svelte/assets/ui-CubHpY_b.js              5.63 kB │ gzip:   2.29 kB
+agent-lab-output/svelte/assets/ui-Domhi2A-.js              5.69 kB │ gzip:   2.23 kB
+agent-lab-output/svelte/assets/ui-BPreQIJ7.js              5.71 kB │ gzip:   2.28 kB
+agent-lab-output/svelte/assets/ui-OsydjKgk.js              5.84 kB │ gzip:   2.39 kB
+agent-lab-output/svelte/assets/ui-DzaWvwNm.js              5.98 kB │ gzip:   2.41 kB
+agent-lab-output/svelte/assets/ui-lInoloLv.js              5.99 kB │ gzip:   2.33 kB
+agent-lab-output/svelte/assets/ui-UsOhXKXw.js              6.07 kB │ gzip:   2.31 kB
+agent-lab-output/svelte/assets/ui-vRUWCUIW.js              6.11 kB │ gzip:   2.43 kB
+agent-lab-output/svelte/assets/ui-CEBJnPgr.js              6.21 kB │ gzip:   2.46 kB
+agent-lab-output/svelte/assets/ui-BZqiFfLD.js              6.23 kB │ gzip:   2.48 kB
+agent-lab-output/svelte/assets/ui-CkYtPDmW.js              6.31 kB │ gzip:   2.46 kB
+agent-lab-output/svelte/assets/ui-DWloy2RF.js              6.33 kB │ gzip:   2.69 kB
+agent-lab-output/svelte/assets/ui-DIHZAkTB.js              6.36 kB │ gzip:   2.65 kB
+agent-lab-output/svelte/assets/ui-BlPPp6AV.js              6.43 kB │ gzip:   2.41 kB
+agent-lab-output/svelte/assets/ui-DpaW4OHs.js              6.43 kB │ gzip:   2.63 kB
+agent-lab-output/svelte/assets/ui-4JDqmKkd.js              6.48 kB │ gzip:   2.64 kB
+agent-lab-output/svelte/assets/ui-DgXgBd9K.js              6.49 kB │ gzip:   2.65 kB
+agent-lab-output/svelte/assets/ui-Dy0RLPPi.js              6.63 kB │ gzip:   2.71 kB
+agent-lab-output/svelte/assets/ui-SbqP7nKR.js              6.75 kB │ gzip:   2.78 kB
+agent-lab-output/svelte/assets/ui-DH6a-xNy.js              6.76 kB │ gzip:   2.63 kB
+agent-lab-output/svelte/assets/ui-COQ8PqST.js              6.81 kB │ gzip:   2.64 kB
+agent-lab-output/svelte/assets/ui-Bq1DVNhx.js              6.81 kB │ gzip:   2.95 kB
+agent-lab-output/svelte/assets/ui-4SP7mEOj.js              6.87 kB │ gzip:   2.40 kB
+agent-lab-output/svelte/assets/ui-CJFoQzMi.js              6.88 kB │ gzip:   2.71 kB
+agent-lab-output/svelte/assets/ui-mXwc_BTg.js              6.90 kB │ gzip:   2.74 kB
+agent-lab-output/svelte/assets/ui-CosNTWDX.js              7.00 kB │ gzip:   2.70 kB
+agent-lab-output/svelte/assets/ui-CYXVeubp.js              7.14 kB │ gzip:   2.84 kB
+agent-lab-output/svelte/assets/ui-BMAOzyWA.js              7.17 kB │ gzip:   2.66 kB
+agent-lab-output/svelte/assets/ui-D0smGvxT.js              7.23 kB │ gzip:   2.73 kB
+agent-lab-output/svelte/assets/ui-C9aYLr0z.js              7.27 kB │ gzip:   2.69 kB
+agent-lab-output/svelte/assets/ui-DgDcb6vL.js              7.45 kB │ gzip:   2.65 kB
+agent-lab-output/svelte/assets/ui-W55dKex0.js              7.47 kB │ gzip:   2.73 kB
+agent-lab-output/svelte/assets/ui-BgqoXAu2.js              7.58 kB │ gzip:   2.72 kB
+agent-lab-output/svelte/assets/ui-pajwUbsO.js              7.73 kB │ gzip:   2.78 kB
+agent-lab-output/svelte/assets/ui-DNPhW2nn.js              7.75 kB │ gzip:   2.99 kB
+agent-lab-output/svelte/assets/ui-DmvcebGL.js              7.76 kB │ gzip:   2.74 kB
+agent-lab-output/svelte/assets/ui-D9A_AJAX.js              7.87 kB │ gzip:   2.96 kB
+agent-lab-output/svelte/assets/ui-DhL2ItLn.js              7.91 kB │ gzip:   2.90 kB
+agent-lab-output/svelte/assets/ui-CQ2qbGvp.js              8.08 kB │ gzip:   2.83 kB
+agent-lab-output/svelte/assets/ui-BOcxoJFW.js              8.16 kB │ gzip:   3.32 kB
+agent-lab-output/svelte/assets/ui-CZ626EMv.js              8.23 kB │ gzip:   2.84 kB
+agent-lab-output/svelte/assets/ui-BoQJBEse.js              8.25 kB │ gzip:   2.89 kB
+agent-lab-output/svelte/assets/ui-CiEk7yjQ.js              8.31 kB │ gzip:   3.30 kB
+agent-lab-output/svelte/assets/ui-D8dHLSck.js              8.67 kB │ gzip:   3.59 kB
+agent-lab-output/svelte/assets/ui-CabYlSFS.js              8.73 kB │ gzip:   3.41 kB
+agent-lab-output/svelte/assets/ui-BZu5UX6F.js              8.84 kB │ gzip:   3.11 kB
+agent-lab-output/svelte/assets/ui-BdxD2E_F.js              9.35 kB │ gzip:   3.30 kB
+agent-lab-output/svelte/assets/ui-DNCAHaYG.js              9.35 kB │ gzip:   3.24 kB
+agent-lab-output/svelte/assets/ui-D3003Kgs.js              9.40 kB │ gzip:   3.59 kB
+agent-lab-output/svelte/assets/ui-BLBhJNmJ.js             10.26 kB │ gzip:   3.46 kB
+agent-lab-output/svelte/assets/ui-De6HDgtX.js             10.29 kB │ gzip:   3.71 kB
+agent-lab-output/svelte/assets/ui-CPqnYKv-.js             10.43 kB │ gzip:   3.63 kB
+agent-lab-output/svelte/assets/ui-Qx5YEfyh.js             11.59 kB │ gzip:   4.11 kB
+agent-lab-output/svelte/assets/ui-BGglV142.js             15.48 kB │ gzip:   5.48 kB
+agent-lab-output/svelte/assets/ui-B_Fmp91i.js             16.24 kB │ gzip:   3.40 kB
+agent-lab-output/svelte/assets/ui-_eiWUeNf.js             26.77 kB │ gzip:   8.30 kB
+agent-lab-output/svelte/assets/ui-VmPwneB8.js             32.22 kB │ gzip:  10.06 kB
+agent-lab-output/svelte/assets/svelte-BRzKgNXg.js         61.62 kB │ gzip:  16.44 kB
+agent-lab-output/svelte/assets/index-C2t3khJO.js         284.61 kB │ gzip:  87.80 kB
+agent-lab-output/svelte/assets/parameters-CulRFafX.js    531.71 kB │ gzip: 171.90 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.96s

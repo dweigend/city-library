@@ -1,0 +1,114 @@
+{
+  "slug": "pac-man",
+  "name": "Pac-Man",
+  "catalogPath": "Sample Models/Games/Pac-Man",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Pac-Man.nlogox",
+  "deliveryBatch": "B20",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How should an agent balance collecting rewards with avoiding pursuit in a changing maze? NetLogo Pac-Man combines navigation, pellets, pursuing ghosts, temporary power effects, lives, and level progression. Pepels and colleagues [1] study real-time Monte Carlo planning in Ms Pac-Man, Gan and colleagues [2] develop another real-time search approach, and Bellemare and colleagues [3] frame arcade games as controlled evaluation environments. These publications motivate scientific questions about action selection and benchmarking; the NetLogo game does not thereby implement their planners. The concrete rules for ghost behavior, movement timing, power duration, scoring, and resetting define this baseline. Related arcade environments can differ materially, so scores are not interchangeable. The simulation illustrates an interactive decision process with competing short-term goals rather than a validated model of human strategy or evidence of general intelligence.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Pac-Man.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Pac-Man.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 5b31ca1dff490dca1665a5410903dc6db352628332c7ceee8655e235cf786892",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/pac-man.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2001).  NetLogo Pac-Man model.  http://ccl.northwestern.edu/netlogo/models/Pac-Man.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/pac-man.nlogox",
+    "evidenceFile": "evidence/computing/pac-man.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1109/tciaig.2013.2291577",
+      "authors": [
+        "Tom Pepels",
+        "Mark H. M. Winands",
+        "Marc Lanctot"
+      ],
+      "title": "Real-Time Monte Carlo Tree Search in Ms Pac-Man",
+      "year": 2014,
+      "venue": "IEEE Transactions on Computational Intelligence and AI in Games",
+      "doi": "10.1109/tciaig.2013.2291577",
+      "url": "https://doi.org/10.1109/tciaig.2013.2291577",
+      "relevance": "Original Ms Pac-Man planning research is a close scientific application; its MCTS controller is distinct from NetLogo’s built-in game rules.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1109%2FTCIAIG.2013.2291577",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1109_tciaig_2013_2291577.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1109_tciaig_2013_2291577.json"
+      },
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "volume": "6",
+      "issue": "3",
+      "pages": "245-257",
+      "verified": true
+    },
+    {
+      "id": "10.3233/icg-2011-34404",
+      "authors": [
+        "Xiaocong Gan",
+        "Yun Bao",
+        "Zhangang Han"
+      ],
+      "title": "Real-Time Search Method in Nondeterministic Game — Ms. Pac-Man",
+      "year": 2011,
+      "venue": "ICGA Journal",
+      "doi": "10.3233/icg-2011-34404",
+      "url": "https://doi.org/10.3233/icg-2011-34404",
+      "relevance": "Independent real-time search work supports analysis of decisions under time pressure and uncertain opponent behavior.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.3233%2FICG-2011-34404",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_3233_icg_2011_34404.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_3233_icg_2011_34404.json"
+      },
+      "publisher": "SAGE Publications",
+      "volume": "34",
+      "issue": "4",
+      "pages": "209-222",
+      "verified": true
+    },
+    {
+      "id": "10.1613/jair.3912",
+      "authors": [
+        "M. G. Bellemare",
+        "Y. Naddaf",
+        "J. Veness",
+        "M. Bowling"
+      ],
+      "title": "The Arcade Learning Environment: An Evaluation Platform for General Agents",
+      "year": 2013,
+      "venue": "Journal of Artificial Intelligence Research",
+      "doi": "10.1613/jair.3912",
+      "url": "https://doi.org/10.1613/jair.3912",
+      "relevance": "Arcade evaluation methodology explains why fixed rules and reproducible scoring matter when comparing agents.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1613%2Fjair.3912",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1613_jair_3912.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1613_jair_3912.json"
+      },
+      "publisher": "AI Access Foundation",
+      "volume": "47",
+      "pages": "253-279",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,1641 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Biochemistry+of+Indian+summer+physiology+of+autumnal+leaf+coloration+Matile+2000&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 4489633,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                27
+              ]
+            ],
+            "date-time": "2026-09-27T13:44:09Z",
+            "timestamp": 1790516649896,
+            "version": "4.1.0"
+          },
+          "reference-count": 37,
+          "publisher": "Elsevier BV",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2000,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2000-03-01T00:00:00Z",
+                "timestamp": 951868800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Experimental Gerontology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2000,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1016/s0531-5565(00)00081-4",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                26
+              ]
+            ],
+            "date-time": "2002-07-26T02:18:34Z",
+            "timestamp": 1027649914000
+          },
+          "page": "145-158",
+          "source": "Crossref",
+          "is-referenced-by-count": 152,
+          "title": [
+            "Biochemistry of Indian summer: physiology of autumnal leaf coloration"
+          ],
+          "prefix": "10.1016",
+          "volume": "35",
+          "author": [
+            {
+              "given": "Philippe",
+              "family": "Matile",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB1",
+              "doi-asserted-by": "crossref",
+              "first-page": "201",
+              "DOI": "10.1016/0168-9452(86)90018-X",
+              "article-title": "Autolysis of chlorophyll in aqueous and detergent suspensions of chloroplast fragments",
+              "volume": "43",
+              "author": "Amir\u2013Shapira",
+              "year": "1986",
+              "journal-title": "Plant Sci"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1027",
+              "DOI": "10.1105/tpc.7.7.1027",
+              "article-title": "Plant carotenoids",
+              "volume": "7",
+              "author": "Bartley",
+              "year": "1995",
+              "journal-title": "Plant Cell"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB3",
+              "doi-asserted-by": "crossref",
+              "first-page": "181",
+              "DOI": "10.1093/jxb/48.2.181",
+              "article-title": "The molecular biology of leaf senescence",
+              "volume": "48",
+              "author": "Buchanan\u2013Wollaston",
+              "year": "1997",
+              "journal-title": "J Exp Bot"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB4",
+              "doi-asserted-by": "crossref",
+              "first-page": "229",
+              "DOI": "10.1093/forestscience/35.1.229",
+              "article-title": "Anthocyanins in autumn leaves of quaking aspen in Colorado",
+              "volume": "35",
+              "author": "Chang",
+              "year": "1989",
+              "journal-title": "Forest Sci"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB5",
+              "first-page": "77",
+              "article-title": "Chlorophyll catabolism in Chlorella protothecoides.",
+              "volume": "34",
+              "author": "Engel",
+              "year": "1996",
+              "journal-title": "Plant Physiol Biochem"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB6",
+              "doi-asserted-by": "crossref",
+              "first-page": "21811",
+              "DOI": "10.1074/jbc.274.31.21811",
+              "article-title": "Chlorophyll b to chlorophyll a conversion precedes chlorophyll degradation in Hordeum vulgare L",
+              "volume": "274",
+              "author": "Folly",
+              "year": "1999",
+              "journal-title": "J Biol Chem"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB7",
+              "doi-asserted-by": "crossref",
+              "first-page": "1986",
+              "DOI": "10.1126/science.270.5244.1986",
+              "article-title": "Inhibition of leaf senescence by autoregulated production of cytokinin",
+              "volume": "270",
+              "author": "Gan",
+              "year": "1995",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB8",
+              "doi-asserted-by": "crossref",
+              "first-page": "685",
+              "DOI": "10.1146/annurev.arplant.47.1.685",
+              "article-title": "The chlorophyll-carotenoid proteins of oxygenic photosynthesis",
+              "volume": "47",
+              "author": "Green",
+              "year": "1996",
+              "journal-title": "Ann Rev Plant Physiol Plant Mol Biol"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB9",
+              "series-title": "Introduction to Ecological Biochemistry, 4th edition",
+              "author": "Harborne",
+              "year": "1993"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB10",
+              "doi-asserted-by": "crossref",
+              "first-page": "330",
+              "DOI": "10.1007/s000180050434",
+              "article-title": "Chlorophyll breakdown in higher plants and algae",
+              "volume": "56",
+              "author": "H\u00f6rtensteiner",
+              "year": "1999",
+              "journal-title": "Cell Mol Life Sci"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB11",
+              "doi-asserted-by": "crossref",
+              "first-page": "237",
+              "DOI": "10.1111/j.1469-8137.1995.tb04293.x",
+              "article-title": "Chlorophyll breakdown in senescent leaves",
+              "volume": "129",
+              "author": "H\u00f6rtensteiner",
+              "year": "1995",
+              "journal-title": "New Phytol"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB12",
+              "doi-asserted-by": "crossref",
+              "first-page": "15335",
+              "DOI": "10.1074/jbc.273.25.15335",
+              "article-title": "The key step in chlorophyll breakdown in higher plants",
+              "volume": "273",
+              "author": "H\u00f6rtensteiner",
+              "year": "1998",
+              "journal-title": "J Biol Chem"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "H\u00f6rtensteiner, S., Rodoni, S., Schellenberg, M., Vicentini, F., Nandi, O. I., Qiu, Y -L., & Matile, P. (2000) Evolution of chlorophyll degradation: The significance of RCC reductase. Plant Biol 2, 63\u201367.",
+              "DOI": "10.1055/s-2000-9149"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB14",
+              "doi-asserted-by": "crossref",
+              "first-page": "1156",
+              "DOI": "10.1139/x90-154",
+              "article-title": "Foliar senescence in an aspen (Populus tremuloides) clone",
+              "volume": "20",
+              "author": "Killingbeck",
+              "year": "1990",
+              "journal-title": "Can J For Res"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB15",
+              "doi-asserted-by": "crossref",
+              "first-page": "35",
+              "DOI": "10.1021/ar970225n",
+              "article-title": "Solving the riddle of chlorophyll breakdown",
+              "volume": "32",
+              "author": "Kr\u00e4utler",
+              "year": "1999",
+              "journal-title": "Acc Chem Res"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB16",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Matile, P. (1992). Chloroplast senescence. In N. R. Baker, H. Thomas (Eds.), Crop Photosynthesis: Spatial and Temporal Determinants (pp. 413\u2013440), Amsterdam: Elsevier.",
+              "DOI": "10.1016/B978-0-444-89608-7.50025-3"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB17",
+              "first-page": "87",
+              "article-title": "Fluorescent idioblasts in autumn leaves of Ginkgo biloba",
+              "volume": "104",
+              "author": "Matile",
+              "year": "1994",
+              "journal-title": "Bot Helv"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB18",
+              "doi-asserted-by": "crossref",
+              "first-page": "13",
+              "DOI": "10.1111/j.1438-8677.1992.tb00261.x",
+              "article-title": "Spectral optical properties, pigments and optical brighteners in autumn leaves of Ginkgo biloba L",
+              "volume": "105",
+              "author": "Matile",
+              "year": "1992",
+              "journal-title": "Bot Acta"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB19",
+              "doi-asserted-by": "crossref",
+              "first-page": "96",
+              "DOI": "10.1007/BF01258685",
+              "article-title": "Localization of chlorophyllase in the chloroplast envelope",
+              "volume": "201",
+              "author": "Matile",
+              "year": "1997",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB20",
+              "doi-asserted-by": "crossref",
+              "first-page": "67",
+              "DOI": "10.1146/annurev.arplant.50.1.67",
+              "article-title": "Chlorophyll degradation",
+              "volume": "50",
+              "author": "Matile",
+              "year": "1999",
+              "journal-title": "Annu Rev Plant Physiol Plant Mol Biol"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB21",
+              "doi-asserted-by": "crossref",
+              "first-page": "1285",
+              "DOI": "10.1093/jxb/40.11.1285",
+              "article-title": "The effect of the autumn senescence of leaves on the internal cycling of nitrogen for the spring growth of apple trees",
+              "volume": "40",
+              "author": "Millard",
+              "year": "1989",
+              "journal-title": "J Exp Bot"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB22",
+              "doi-asserted-by": "crossref",
+              "first-page": "401",
+              "DOI": "10.1002/anie.199704011",
+              "article-title": "Tracking down chlorophyll breakdown in plants",
+              "volume": "36",
+              "author": "M\u00fchlecker",
+              "year": "1997",
+              "journal-title": "Angew Chem Int Ed Engl"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB23",
+              "doi-asserted-by": "crossref",
+              "first-page": "682",
+              "DOI": "10.1111/j.1399-3054.1963.tb08346.x",
+              "article-title": "Changes in the content of dry matter and major nutrient elements of apple foliage during senescence and abscission",
+              "volume": "16",
+              "author": "Oland",
+              "year": "1963",
+              "journal-title": "Physiol Plant"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB24",
+              "doi-asserted-by": "crossref",
+              "first-page": "139",
+              "DOI": "10.1016/S0176-1617(98)80124-7",
+              "article-title": "Chlorophyll breakdown in senescing barley leaves as correlated with phaeophorbide a oxygenase activity",
+              "volume": "152",
+              "author": "Rodoni",
+              "year": "1998",
+              "journal-title": "J Plant Physiol"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB25",
+              "doi-asserted-by": "crossref",
+              "first-page": "235",
+              "DOI": "10.1055/s-2007-969133",
+              "article-title": "6-Hydroxykynurens\u00e4ure, die erste N-haltige Verbindung aus den Bl\u00e4ttern von Ginkgo biloba",
+              "volume": "52",
+              "author": "Schennen",
+              "year": "1986",
+              "journal-title": "Planta Med"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB26",
+              "doi-asserted-by": "crossref",
+              "first-page": "364",
+              "DOI": "10.1007/s004250050644",
+              "article-title": "Chlorophyll b reduction during senescence of barley seedlings",
+              "volume": "209",
+              "author": "Scheumann",
+              "year": "1999",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB27",
+              "doi-asserted-by": "crossref",
+              "first-page": "388",
+              "DOI": "10.1111/j.1399-3054.1992.tb01334.x",
+              "article-title": "Cytokinin biochemistry in relation to leaf senescence. VII. Endogenous cytokinin levels and exogenous applications of cytokinins in relation to sequential leaf senescence of tobacco",
+              "volume": "86",
+              "author": "Singh",
+              "year": "1992",
+              "journal-title": "Physiol Plant"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB28",
+              "unstructured": "Sitte, P., Falk, H., & Liedvogel, B. Chromoplasts. (1980). In F.-C. Czygan, (Ed.), Pigments in plants (2nd edition, pp. 117\u2013148). Stuttgart: Gustav Fischer."
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB29",
+              "doi-asserted-by": "crossref",
+              "first-page": "419",
+              "DOI": "10.1111/j.1469-8137.1994.tb04243.x",
+              "article-title": "Gene expression during leaf senescence",
+              "volume": "126",
+              "author": "Smart",
+              "year": "1994",
+              "journal-title": "New Phytol"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB30",
+              "doi-asserted-by": "crossref",
+              "first-page": "89",
+              "DOI": "10.1007/BF01539960",
+              "article-title": "Degradation of chloroplast DNA in second leaves of rice (Oryza sativa) before leaf yellowing",
+              "volume": "160",
+              "author": "Sodmergen",
+              "year": "1991",
+              "journal-title": "Protoplasma"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB31",
+              "unstructured": "Stoll, A. (1912). \u00dcber Chlorophyllase und die Chlorophyllide. PhD thesis ETH Nr. 49."
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB32",
+              "doi-asserted-by": "crossref",
+              "first-page": "91",
+              "DOI": "10.1007/BF00395902",
+              "article-title": "Composition and function of plastoglobuli. II. Lipid composition of leaves and plastoglobuli during beech leaf senescence",
+              "volume": "163",
+              "author": "Tevini",
+              "year": "1985",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB33",
+              "doi-asserted-by": "crossref",
+              "first-page": "3",
+              "DOI": "10.1111/j.1469-8137.1989.tb04211.x",
+              "article-title": "Catabolism of chlorophyll in vivo",
+              "volume": "111",
+              "author": "Thomas",
+              "year": "1989",
+              "journal-title": "New Phytol"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB34",
+              "doi-asserted-by": "crossref",
+              "first-page": "3",
+              "DOI": "10.1111/j.1438-8677.1996.tb00862.x",
+              "article-title": "Gregor Mendel\u2019s green and yellow pea seeds",
+              "volume": "109",
+              "author": "Thomas",
+              "year": "1996",
+              "journal-title": "Bot Acta"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB35",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Vicentini, F., H\u00f6rtensteiner, S., Schellenberg, M., Thomas, H., & Matile P. (1995). Chlorophyll breakdown in senescent leaves: Identification of the lesion in a stay-green genotype of Festuca pratensis. New Phytol 129, 247\u2013252,",
+              "DOI": "10.1111/j.1469-8137.1995.tb04294.x"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB36",
+              "doi-asserted-by": "crossref",
+              "unstructured": "W\u00fcthrich, K. L., Bovet, L., Hunziker, P. E., Donnison, I. S., & H\u00f6rtensteiner, S. (2000) Molecular cloning, functional expression and characterization of RCC reductase involved in chlorophyll catabolism. Plant J 21, 189\u2013198.",
+              "DOI": "10.1046/j.1365-313x.2000.00667.x"
+            },
+            {
+              "key": "10.1016/S0531-5565(00)00081-4_BIB37",
+              "doi-asserted-by": "crossref",
+              "first-page": "922",
+              "DOI": "10.1093/oxfordjournals.pcp.a029455",
+              "article-title": "Evidence for programmed cell death during leaf senescence in plants",
+              "volume": "39",
+              "author": "Yen",
+              "year": "1998",
+              "journal-title": "Plant Cell Physiol"
+            }
+          ],
+          "container-title": [
+            "Experimental Gerontology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0531556500000814?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0531556500000814?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                12,
+                6
+              ]
+            ],
+            "date-time": "2024-12-06T13:48:03Z",
+            "timestamp": 1733492883000
+          },
+          "score": 80.99013,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0531556500000814"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2000,
+                3
+              ]
+            ]
+          },
+          "references-count": 37,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  2000,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0531556500000814"
+          ],
+          "URL": "https://doi.org/10.1016/s0531-5565(00)00081-4",
+          "ISSN": [
+            "0531-5565"
+          ],
+          "issn-type": [
+            {
+              "value": "0531-5565",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2000,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                1
+              ]
+            ],
+            "date-time": "2026-10-01T07:21:43Z",
+            "timestamp": 1790839303492,
+            "version": "4.1.0"
+          },
+          "reference-count": 15,
+          "publisher": "Elsevier BV",
+          "issue": "9",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1967,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "1967-09-01T00:00:00Z",
+                "timestamp": -73699200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Insect Physiology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1967,
+                9
+              ]
+            ]
+          },
+          "DOI": "10.1016/0022-1910(67)90136-9",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                10,
+                25
+              ]
+            ],
+            "date-time": "2003-10-25T01:06:34Z",
+            "timestamp": 1067043994000
+          },
+          "page": "1343-1349",
+          "source": "Crossref",
+          "is-referenced-by-count": 44,
+          "title": [
+            "Experimental induction and elimination of adult diapause and autumnal coloration in Chrysopa carnea (Neuroptera)"
+          ],
+          "prefix": "10.1016",
+          "volume": "13",
+          "author": [
+            {
+              "given": "Ellis G.",
+              "family": "Macleod",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB1",
+              "series-title": "Insect Physiology",
+              "first-page": "43",
+              "article-title": "Photoperiod and insect development",
+              "author": "Beck",
+              "year": "1963"
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB2",
+              "first-page": "12",
+              "article-title": "Ueber den Farbenwechsel von Chrysopa vulgaris Schn",
+              "volume": "2",
+              "author": "Brauer",
+              "year": "1853",
+              "journal-title": "Verh. zool.-bot. Ges., Wien"
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB3",
+              "author": "Danilevskii",
+              "year": "1965"
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB4",
+              "doi-asserted-by": "crossref",
+              "first-page": "575",
+              "DOI": "10.1093/jee/55.4.575",
+              "article-title": "A lard-can device for experiments in photoperiodism",
+              "volume": "55",
+              "author": "Dutky",
+              "year": "1962",
+              "journal-title": "J. econ. Ent."
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB5",
+              "first-page": "1463",
+              "article-title": "Beitr\u00e4ge zur Kenntnis des Umf\u00e4rbungsprozesses bei Chrysopa vulgaris Schn.",
+              "volume": "2",
+              "author": "Janda",
+              "year": "1937"
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB6",
+              "volume": "1",
+              "author": "Killington",
+              "year": "1936"
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB7",
+              "author": "Kolbe",
+              "year": "1893"
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB8",
+              "first-page": "85",
+              "author": "Krukenberg",
+              "year": "1886"
+            },
+            {
+              "issue": "4",
+              "key": "10.1016/0022-1910(67)90136-9_BIB9",
+              "first-page": "11",
+              "article-title": "Etudes sur les chrysopides. L'hibernation chez Chrysopa vulgaris Schneider",
+              "volume": "6",
+              "author": "Lacroix",
+              "year": "1926",
+              "journal-title": "Bull. Soc. Sci. nat., Nantes"
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB10",
+              "author": "Lees",
+              "year": "1955"
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB11",
+              "doi-asserted-by": "crossref",
+              "first-page": "536",
+              "DOI": "10.1007/BF02933905",
+              "article-title": "Bemerkungen \u00fcber Farben der Hautdecke und Nerven der Dr\u00fcsen bei Insekten",
+              "volume": "12",
+              "author": "Leydig",
+              "year": "1876",
+              "journal-title": "Arch. mikr. Anat. EntwMech."
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB12",
+              "doi-asserted-by": "crossref",
+              "first-page": "613",
+              "DOI": "10.4039/Ent98613-6",
+              "article-title": "Photoperiod control of an \u2018obligatory\u2019 pupal diapause",
+              "volume": "98",
+              "author": "Mansingh",
+              "year": "1966",
+              "journal-title": "Can. Ent."
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB13",
+              "first-page": "1287",
+              "article-title": "The biology of the Chrysopidae",
+              "volume": "58",
+              "author": "Smith",
+              "year": "1922",
+              "journal-title": "Mem. Cornell agric. Exp. Sta."
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB14",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1146/annurev.en.07.010162.000245",
+              "article-title": "Photoperiodism in insects and mites",
+              "volume": "7",
+              "author": "de Wilde",
+              "year": "1962",
+              "journal-title": "A. Rev. Ent."
+            },
+            {
+              "key": "10.1016/0022-1910(67)90136-9_BIB15",
+              "doi-asserted-by": "crossref",
+              "first-page": "511",
+              "DOI": "10.2307/1539252",
+              "article-title": "Physiology of insect diapause\u2014XIV. An endocrine mechanism for the photoperiodic control of pupal diapause in the oak silkworm Antheraea perneyi",
+              "volume": "127",
+              "author": "Williams",
+              "year": "1964",
+              "journal-title": "Biol. Bull., Woods Hole"
+            }
+          ],
+          "container-title": [
+            "Journal of Insect Physiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0022191067901369?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0022191067901369?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                2,
+                18
+              ]
+            ],
+            "date-time": "2019-02-18T21:26:09Z",
+            "timestamp": 1550525169000
+          },
+          "score": 29.72791,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0022191067901369"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1967,
+                9
+              ]
+            ]
+          },
+          "references-count": 15,
+          "journal-issue": {
+            "issue": "9",
+            "published-print": {
+              "date-parts": [
+                [
+                  1967,
+                  9
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0022191067901369"
+          ],
+          "URL": "https://doi.org/10.1016/0022-1910(67)90136-9",
+          "ISSN": [
+            "0022-1910"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-1910",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1967,
+                9
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                8
+              ]
+            ],
+            "date-time": "2026-01-08T08:05:30Z",
+            "timestamp": 1767859530553,
+            "version": "3.49.0"
+          },
+          "reference-count": 55,
+          "publisher": "MDPI AG",
+          "issue": "6",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    6,
+                    19
+                  ]
+                ],
+                "date-time": "2023-06-19T00:00:00Z",
+                "timestamp": 1687132800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "funder": [
+            {
+              "name": "Jiangsu Specially Appointed Professor Program",
+              "award": [
+                "JSAPP2016"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "JSAPP2016"
+                  ]
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Forests"
+          ],
+          "abstract": "<jats:p>Anthocyanin biosynthesis determines the leaf color of Acer palmatum as a widely-planted landscape tree. Previously, ApMYB1 has been characterized as a positive regulator of anthocyanin biosynthesis. To further elucidate the mechanism of leaf coloration, the present study identified a basic helix-loop-helix (bHLH) transcription factor (ApbHLH1) through the phylogenetic analysis of 156 putative bHLH proteins in Acer palmatum and eight reference bHLHs which were known to be involved in the anthocyanin biosynthesis of selected plants. Protein structure comparison showed that ApbHLH1 has a conserved bHLH domain, and its N-terminal contains an MYB-interacting region. The expression of ApbHLH1 in leaves was found to not be correlated with anthocyanin contents either in green, semi-red leaves or during leaf autumnal senescence when anthocyanin content increased. ApbHLH1 expression in detached leaves was induced by exogenous senescence-promoting chemicals, including H2O2, SA, MeJA, ACC and ABA, with certain durations. In particular, either high light or low temperature induced ApbHLH1 expression significantly, and combination of high light and low temperatures seemed more effective in inducing ApbHLH1 expression. Luciferase complementation imaging assays confirmed the physical interaction between ApbHLH1 and ApMYB1, which could be abolished by either the truncating MYB-interacting region of ApbHLH1 or the deleting bHLH interacting domain of ApMYB1. The transient expression of ApbHLH1 could not induce anthocyanin production, while the co-expression of ApbHLH1 and ApMYB1 resulted in a higher accumulation of anthocyanins compared to the expression of ApMYB1 alone in tobacco leaves. Collectively, our results revealed that ApbHLH1 participated in leaf coloration through binding with ApMYB1 and enhancing the ApMYB1 function of promoting anthocyanin biosynthesis during leaf autumnal reddening in Acer palmatum. ApbHLH1 could have the potential for breeding color-leafed plants through co-transformation with ApMYB1.</jats:p>",
+          "DOI": "10.3390/f14061262",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                19
+              ]
+            ],
+            "date-time": "2023-06-19T02:29:19Z",
+            "timestamp": 1687141759000
+          },
+          "page": "1262",
+          "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Identification of ApbHLH1 as a Partner Interacting with ApMYB1 to Promote Anthocyanin Biosynthesis during Autumnal Leaf Coloration in Acer palmatum"
+          ],
+          "prefix": "10.3390",
+          "volume": "14",
+          "author": [
+            {
+              "given": "Long",
+              "family": "Chen",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Co-Innovation Center for Sustainable Forestry in Southern China, College of Biology and the Environment, Nanjing Forestry University, Nanjing 210037, China"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Sujing",
+              "family": "Sun",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Co-Innovation Center for Sustainable Forestry in Southern China, College of Biology and the Environment, Nanjing Forestry University, Nanjing 210037, China"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Gengcheng",
+              "family": "Qiu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Co-Innovation Center for Sustainable Forestry in Southern China, College of Biology and the Environment, Nanjing Forestry University, Nanjing 210037, China"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-4572-9386",
+              "authenticated-orcid": false,
+              "given": "Jiading",
+              "family": "Yang",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Co-Innovation Center for Sustainable Forestry in Southern China, College of Biology and the Environment, Nanjing Forestry University, Nanjing 210037, China"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1968",
+          "published-online": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                19
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "ref_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "166",
+              "DOI": "10.1016/j.tree.2008.10.006",
+              "article-title": "Unravelling the evolution of autumn colours: An interdisciplinary approach",
+              "volume": "24",
+              "author": "Archetti",
+              "year": "2009",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "ref_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1361779",
+              "DOI": "10.1080/16546628.2017.1361779",
+              "article-title": "Anthocyanidins and anthocyanins: Colored pigments as food, pharmaceutical ingredients, and the potential health benefits",
+              "volume": "61",
+              "author": "Khoo",
+              "year": "2017",
+              "journal-title": "Food Nutr. Res."
+            },
+            {
+              "key": "ref_3",
+              "doi-asserted-by": "crossref",
+              "first-page": "52",
+              "DOI": "10.3389/fchem.2018.00052",
+              "article-title": "Anthocyanin biosynthesis and degradation mechanisms in solanaceous vegetables: A review",
+              "volume": "6",
+              "author": "Liu",
+              "year": "2018",
+              "journal-title": "Front. Chem."
+            },
+            {
+              "key": "ref_4",
+              "first-page": "222",
+              "article-title": "Flavonoids: Biosynthesis, biological functions, and biotechnological applications",
+              "volume": "3",
+              "author": "Rius",
+              "year": "2012",
+              "journal-title": "Front. Plant Sci."
+            },
+            {
+              "key": "ref_5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1265",
+              "DOI": "10.1002/ptr.5642",
+              "article-title": "Chemistry, pharmacology and health benefits of anthocyanins",
+              "volume": "30",
+              "author": "Smeriglio",
+              "year": "2016",
+              "journal-title": "Phytother. Res."
+            },
+            {
+              "key": "ref_6",
+              "doi-asserted-by": "crossref",
+              "first-page": "733",
+              "DOI": "10.1111/j.1365-313X.2008.03447.x",
+              "article-title": "Biosynthesis of plant pigments: Anthocyanins, betalains and carotenoids",
+              "volume": "54",
+              "author": "Tanaka",
+              "year": "2008",
+              "journal-title": "Plant J."
+            },
+            {
+              "key": "ref_7",
+              "doi-asserted-by": "crossref",
+              "first-page": "4",
+              "DOI": "10.1016/j.envexpbot.2015.05.012",
+              "article-title": "Multiple functional roles of anthocyanins in plant-environment interactions",
+              "volume": "119",
+              "author": "Landi",
+              "year": "2015",
+              "journal-title": "Environ. Exp. Bot."
+            },
+            {
+              "key": "ref_8",
+              "doi-asserted-by": "crossref",
+              "first-page": "81",
+              "DOI": "10.1016/j.pbi.2014.05.011",
+              "article-title": "Engineering anthocyanin biosynthesis in plants",
+              "volume": "19",
+              "author": "Zhang",
+              "year": "2014",
+              "journal-title": "Curr. Opin. Plant Biol."
+            },
+            {
+              "key": "ref_9",
+              "doi-asserted-by": "crossref",
+              "first-page": "573",
+              "DOI": "10.1016/j.tplants.2010.06.005",
+              "article-title": "MYB transcription factors in Arabidopsis",
+              "volume": "15",
+              "author": "Dubos",
+              "year": "2010",
+              "journal-title": "Trends Plant Sci."
+            },
+            {
+              "key": "ref_10",
+              "doi-asserted-by": "crossref",
+              "first-page": "933",
+              "DOI": "10.1111/nph.17397",
+              "article-title": "Repressors of anthocyanin biosynthesis",
+              "volume": "231",
+              "author": "LaFountain",
+              "year": "2021",
+              "journal-title": "New Phytol."
+            },
+            {
+              "key": "ref_11",
+              "doi-asserted-by": "crossref",
+              "first-page": "132",
+              "DOI": "10.1111/nph.12620",
+              "article-title": "Complexity and robustness of the flavonoid transcriptional regulatory network revealed by comprehensive analyses of MYB\u2013bHLH\u2013WDR complexes and their targets in Arabidopsis seed",
+              "volume": "202",
+              "author": "Xu",
+              "year": "2014",
+              "journal-title": "New Phytol."
+            },
+            {
+              "key": "ref_12",
+              "doi-asserted-by": "crossref",
+              "first-page": "63",
+              "DOI": "10.1016/j.tplants.2004.12.011",
+              "article-title": "MYB\u2013bHLH\u2013WD40 protein complex and the evolution of cellular diversity",
+              "volume": "10",
+              "author": "Ramsay",
+              "year": "2005",
+              "journal-title": "Trends Plant Sci."
+            },
+            {
+              "key": "ref_13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Zhang, B., and Schrader, A. (2017). TRANSPARENT TESTA GLABRA 1-dependent regulation of flavonoid biosynthesis. Plants, 6.",
+              "DOI": "10.3390/plants6040065"
+            },
+            {
+              "key": "ref_14",
+              "doi-asserted-by": "crossref",
+              "first-page": "61",
+              "DOI": "10.1016/j.gene.2011.05.031",
+              "article-title": "Leucoanthocyanidin dioxygenase in Arabidopsis thaliana: Characterization of mutant alleles and regulation by MYB\u2013BHLH\u2013TTG1 transcription factor complexes",
+              "volume": "484",
+              "author": "Appelhagen",
+              "year": "2011",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "ref_15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Ma, Y., Ma, X., Gao, X., Wu, W., and Zhou, B. (2021). Light induced regulation pathway of anthocyanin biosynthesis in plants. Int. J. Mol. Sci., 22.",
+              "DOI": "10.3390/ijms222011116"
+            },
+            {
+              "key": "ref_16",
+              "doi-asserted-by": "crossref",
+              "first-page": "457",
+              "DOI": "10.1007/s11103-013-0074-8",
+              "article-title": "Identification of key amino acids for the evolution of promoter target specificity of anthocyanin and proanthocyanidin regulating MYB factors",
+              "volume": "82",
+              "author": "Heppel",
+              "year": "2013",
+              "journal-title": "Plant Mol. Biol."
+            },
+            {
+              "key": "ref_17",
+              "doi-asserted-by": "crossref",
+              "first-page": "735",
+              "DOI": "10.1093/molbev/msg088",
+              "article-title": "The basic helix-loop-helix transcription factor family in plants: A genome-wide study of protein structure and functional diversity",
+              "volume": "20",
+              "author": "Heim",
+              "year": "2003",
+              "journal-title": "Mol. Biol. Evol."
+            },
+            {
+              "key": "ref_18",
+              "doi-asserted-by": "crossref",
+              "first-page": "22",
+              "DOI": "10.1111/j.1365-313X.2004.02183.x",
+              "article-title": "Comprehensive identification of Arabidopsis thaliana MYB transcription factors interacting with R/B-like BHLH proteins",
+              "volume": "40",
+              "author": "Zimmermann",
+              "year": "2004",
+              "journal-title": "Plant J."
+            },
+            {
+              "key": "ref_19",
+              "doi-asserted-by": "crossref",
+              "first-page": "4859",
+              "DOI": "10.1242/dev.00681",
+              "article-title": "A network of redundant bHLH proteins functions in all TTG1-dependent pathways of Arabidopsis",
+              "volume": "130",
+              "author": "Zhang",
+              "year": "2003",
+              "journal-title": "Development"
+            },
+            {
+              "key": "ref_20",
+              "doi-asserted-by": "crossref",
+              "first-page": "814",
+              "DOI": "10.1111/j.1365-313X.2007.03373.x",
+              "article-title": "Regulation of the anthocyanin biosynthetic pathway by the TTG1/bHLH/Myb transcriptional complex in Arabidopsis seedlings",
+              "volume": "53",
+              "author": "Gonzalez",
+              "year": "2008",
+              "journal-title": "Plant J."
+            },
+            {
+              "key": "ref_21",
+              "doi-asserted-by": "crossref",
+              "first-page": "3197",
+              "DOI": "10.1093/jxb/erz155",
+              "article-title": "Evolutionary comparison of competitive protein-complex formation of MYB, bHLH, and WDR proteins in plants",
+              "volume": "70",
+              "author": "Zhang",
+              "year": "2019",
+              "journal-title": "J. Exp. Bot."
+            },
+            {
+              "key": "ref_22",
+              "doi-asserted-by": "crossref",
+              "first-page": "477",
+              "DOI": "10.1016/j.tplants.2013.06.003",
+              "article-title": "New insights into the regulation of anthocyanin biosynthesis in fruits",
+              "volume": "18",
+              "author": "Jaakola",
+              "year": "2013",
+              "journal-title": "Trends Plant Sci."
+            },
+            {
+              "key": "ref_23",
+              "doi-asserted-by": "crossref",
+              "first-page": "771",
+              "DOI": "10.1016/0305-1978(92)90036-D",
+              "article-title": "Distribution of anthocyanins in aceraceae leaves",
+              "volume": "20",
+              "author": "Ji",
+              "year": "1992",
+              "journal-title": "Biochem. Syst. Ecol."
+            },
+            {
+              "key": "ref_24",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sun, S., Zhang, Q., Yu, Y., Feng, J., Liu, C., and Yang, J. (2022). Leaf coloration in Acer palmatum is associated with a positive regulator ApMYB1 with potential for breeding color-leafed plants. Plants, 11.",
+              "DOI": "10.3390/plants11060759"
+            },
+            {
+              "key": "ref_25",
+              "doi-asserted-by": "crossref",
+              "first-page": "149",
+              "DOI": "10.1023/A:1020470224740",
+              "article-title": "The chequered history of the development and use of simultaneous equations for the accurate determination of chlorophylls a and b",
+              "volume": "73",
+              "author": "Porra",
+              "year": "2002",
+              "journal-title": "Photosynth. Res."
+            },
+            {
+              "key": "ref_26",
+              "doi-asserted-by": "crossref",
+              "first-page": "1787",
+              "DOI": "10.3389/fpls.2017.01787",
+              "article-title": "High Ambient Temperature Represses Anthocyanin Biosynthesis through Degradation of HY5",
+              "volume": "8",
+              "author": "Kim",
+              "year": "2017",
+              "journal-title": "Front. Plant Sci."
+            },
+            {
+              "key": "ref_27",
+              "doi-asserted-by": "crossref",
+              "first-page": "1107",
+              "DOI": "10.1093/jexbot/51.347.1107",
+              "article-title": "Functional role of anthocyanins in the leaves of Quintinia serrata A. Cunn",
+              "volume": "51",
+              "author": "Gould",
+              "year": "2000",
+              "journal-title": "J. Exp. Bot."
+            },
+            {
+              "key": "ref_28",
+              "doi-asserted-by": "crossref",
+              "first-page": "1619",
+              "DOI": "10.1105/tpc.12.9.1619",
+              "article-title": "Anthocyanin1 of petunia encodes a basic helix-loop-helix protein that directly activates transcription of structural anthocyanin genes",
+              "volume": "12",
+              "author": "Spelt",
+              "year": "2000",
+              "journal-title": "Plant Cell"
+            },
+            {
+              "key": "ref_29",
+              "doi-asserted-by": "crossref",
+              "first-page": "337",
+              "DOI": "10.1111/pbi.13201",
+              "article-title": "An apple MYB transcription factor regulates cold tolerance and anthocyanin accumulation and undergoes MIEL1-mediated degradation",
+              "volume": "18",
+              "author": "An",
+              "year": "2020",
+              "journal-title": "Plant Biotechnol. J."
+            },
+            {
+              "key": "ref_30",
+              "doi-asserted-by": "crossref",
+              "first-page": "1884",
+              "DOI": "10.1111/j.1365-3040.2012.02523.x",
+              "article-title": "The bHLH transcription factor MdbHLH3 promotes anthocyanin accumulation and fruit colouration in response to low temperature in apples",
+              "volume": "35",
+              "author": "Xie",
+              "year": "2012",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_31",
+              "doi-asserted-by": "crossref",
+              "first-page": "2731",
+              "DOI": "10.1093/molbev/msr121",
+              "article-title": "MEGA5: Molecular evolutionary genetics analysis using maximum likelihood, evolutionary distance, and maximum parsimony methods",
+              "volume": "28",
+              "author": "Tamura",
+              "year": "2011",
+              "journal-title": "Mol. Biol. Evol."
+            },
+            {
+              "key": "ref_32",
+              "doi-asserted-by": "crossref",
+              "first-page": "42",
+              "DOI": "10.1002/cppb.20066",
+              "article-title": "Luciferase complementation assay for protein-protein interactions in plants",
+              "volume": "3",
+              "author": "Zhou",
+              "year": "2018",
+              "journal-title": "Curr. Protoc. Plant Biol."
+            },
+            {
+              "key": "ref_33",
+              "doi-asserted-by": "crossref",
+              "first-page": "368",
+              "DOI": "10.1104/pp.107.111740",
+              "article-title": "Firefly luciferase complementation imaging assay for protein-protein interactions in plants",
+              "volume": "146",
+              "author": "Chen",
+              "year": "2008",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "ref_34",
+              "first-page": "69",
+              "article-title": "Luciferase complementation assay for detecting protein interactions (in Chinese with English abstract)",
+              "volume": "55",
+              "author": "Zhao",
+              "year": "2020",
+              "journal-title": "Chin. Bull. Bot."
+            },
+            {
+              "key": "ref_35",
+              "doi-asserted-by": "crossref",
+              "first-page": "pdb-rot4666",
+              "DOI": "10.1101/pdb.prot4666",
+              "article-title": "Transformation of agrobacterium using the freeze-thaw method",
+              "volume": "2006",
+              "author": "Weigel",
+              "year": "2006",
+              "journal-title": "Cold Spring Harb. Protoc."
+            },
+            {
+              "key": "ref_36",
+              "doi-asserted-by": "crossref",
+              "first-page": "543",
+              "DOI": "10.1046/j.1365-313x.2000.00760.x",
+              "article-title": "In vivo analysis of plant promoters and transcription factors by agroinfiltration of tobacco leaves",
+              "volume": "22",
+              "author": "Yang",
+              "year": "2000",
+              "journal-title": "Plant J."
+            },
+            {
+              "key": "ref_37",
+              "doi-asserted-by": "crossref",
+              "first-page": "1298",
+              "DOI": "10.1016/j.ygeno.2018.08.010",
+              "article-title": "Phylogenetic analysis of protein sequences based on a novel k-mer natural vector method",
+              "volume": "111",
+              "author": "Zhang",
+              "year": "2019",
+              "journal-title": "Genomics"
+            },
+            {
+              "key": "ref_38",
+              "doi-asserted-by": "crossref",
+              "first-page": "442",
+              "DOI": "10.1016/j.scienta.2008.09.003",
+              "article-title": "Correlation between chromaticity values and major anthocyanins in seven Acer palmatum Thunb. cultivars",
+              "volume": "119",
+              "author": "Schmitzer",
+              "year": "2009",
+              "journal-title": "Sci. Hortic."
+            },
+            {
+              "key": "ref_39",
+              "doi-asserted-by": "crossref",
+              "first-page": "329",
+              "DOI": "10.1016/j.copbio.2012.07.004",
+              "article-title": "Metabolic engineering of anthocyanins and condensed tannins in plants",
+              "volume": "24",
+              "author": "Dixon",
+              "year": "2013",
+              "journal-title": "Curr. Opin. Biotechnol."
+            },
+            {
+              "key": "ref_40",
+              "doi-asserted-by": "crossref",
+              "first-page": "962",
+              "DOI": "10.1105/tpc.113.122069",
+              "article-title": "A Conserved Network of Transcriptional Activators and Repressors Regulates Anthocyanin Pigmentation in Eudicots",
+              "volume": "26",
+              "author": "Albert",
+              "year": "2014",
+              "journal-title": "Plant Cell"
+            },
+            {
+              "key": "ref_41",
+              "doi-asserted-by": "crossref",
+              "first-page": "1431",
+              "DOI": "10.1093/pcp/pcx075",
+              "article-title": "Advances in the MYB\u2013bHLH\u2013WD Repeat (MBW) Pigment Regulatory Model: Addition of a WRKY Factor and Co-option of an Anthocyanin MYB for Betalain Regulation",
+              "volume": "58",
+              "author": "Lloyd",
+              "year": "2017",
+              "journal-title": "Plant Cell Physiol."
+            },
+            {
+              "key": "ref_42",
+              "doi-asserted-by": "crossref",
+              "first-page": "711",
+              "DOI": "10.1016/j.molp.2016.01.014",
+              "article-title": "DELLA Proteins Promote Anthocyanin Biosynthesis via Sequestering MYBL2 and JAZ Suppressors of the MYB/bHLH/WD40 Complex in Arabidopsis thaliana",
+              "volume": "9",
+              "author": "Xie",
+              "year": "2016",
+              "journal-title": "Mol. Plant"
+            },
+            {
+              "key": "ref_43",
+              "doi-asserted-by": "crossref",
+              "first-page": "555",
+              "DOI": "10.1007/s11033-019-05162-2",
+              "article-title": "Identification, characterization, and expression analysis of a serotonin receptor involved in the reproductive process of the Pacific abalone, Haliotis discus hannai",
+              "volume": "47",
+              "author": "Sharker",
+              "year": "2020",
+              "journal-title": "Mol. Biol. Rep."
+            },
+            {
+              "key": "ref_44",
+              "doi-asserted-by": "crossref",
+              "first-page": "1749",
+              "DOI": "10.1105/tpc.013839",
+              "article-title": "The Arabidopsis basic/helix-loop-helix transcription factor family",
+              "volume": "15",
+              "author": "Huq",
+              "year": "2003",
+              "journal-title": "Plant Cell"
+            },
+            {
+              "key": "ref_45",
+              "doi-asserted-by": "crossref",
+              "first-page": "677611",
+              "DOI": "10.3389/fpls.2021.677611",
+              "article-title": "Regulatory Mechanisms of bHLH Transcription Factors in Plant Adaptive Responses to Various Abiotic Stresses",
+              "volume": "12",
+              "author": "Qian",
+              "year": "2021",
+              "journal-title": "Front. Plant Sci."
+            },
+            {
+              "key": "ref_46",
+              "doi-asserted-by": "crossref",
+              "first-page": "347",
+              "DOI": "10.1146/annurev-arplant-050718-095859",
+              "article-title": "Leaf Senescence: Systems and Dynamics Aspects",
+              "volume": "70",
+              "author": "Woo",
+              "year": "2019",
+              "journal-title": "Annu. Rev. Plant Biol."
+            },
+            {
+              "key": "ref_47",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Dong, Y., Qu, Y., Qi, R., Bai, X., Tian, G., Wang, Y., Wang, J., and Zhang, K. (2018). Transcriptome Analysis of the Biosynthesis of Anthocyanins in Begonia semperflorens under Low-Temperature and High-Light Conditions. Forests, 9.",
+              "DOI": "10.3390/f9020087"
+            },
+            {
+              "key": "ref_48",
+              "doi-asserted-by": "crossref",
+              "first-page": "84",
+              "DOI": "10.1016/j.scienta.2009.01.008",
+              "article-title": "Light-induced expression of basic helix-loop-helix genes involved in anthocyanin biosynthesis in flowers and leaves of Asiatic hybrid lily",
+              "volume": "121",
+              "author": "Nakatsuka",
+              "year": "2009",
+              "journal-title": "Sci. Hortic."
+            },
+            {
+              "key": "ref_49",
+              "doi-asserted-by": "crossref",
+              "first-page": "1684",
+              "DOI": "10.1104/pp.20.01188",
+              "article-title": "Light-Induced Basic/Helix-Loop-Helix64 Enhances Anthocyanin Biosynthesis and Undergoes CONSTITUTIVELY PHOTOMORPHOGENIC1-Mediated Degradation in Pear",
+              "volume": "184",
+              "author": "Tao",
+              "year": "2020",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "ref_50",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Qiu, Z., Wang, X., Gao, J., Guo, Y., Huang, Z., and Du, Y. (2016). The Tomato Hoffman\u2019s Anthocyaninless Gene Encodes a bHLH Transcription Factor Involved in Anthocyanin Biosynthesis That Is Developmentally Regulated and Induced by Low Temperatures. PLoS ONE, 11.",
+              "DOI": "10.1371/journal.pone.0151067"
+            },
+            {
+              "key": "ref_51",
+              "doi-asserted-by": "crossref",
+              "first-page": "217",
+              "DOI": "10.1007/s11240-016-1044-z",
+              "article-title": "Synergistic effects of light and temperature on anthocyanin biosynthesis in callus cultures of red-fleshed apple (Malus sieversii f. niedzwetzkyana)",
+              "volume": "127",
+              "author": "Wang",
+              "year": "2016",
+              "journal-title": "Plant Cell Tissue Organ Cult."
+            },
+            {
+              "key": "ref_52",
+              "doi-asserted-by": "crossref",
+              "first-page": "1067",
+              "DOI": "10.1007/s00425-012-1650-x",
+              "article-title": "Flavonoid biosynthesis-related genes in grape skin are differentially regulated by temperature and light conditions",
+              "volume": "236",
+              "author": "Azuma",
+              "year": "2012",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "ref_53",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Guo, J., Sun, B., He, H., Zhang, Y., Tian, H., and Wang, B. (2021). Current Understanding of bHLH Transcription Factors in Plant Abiotic Stress Tolerance. Int. J. Mol. Sci., 22.",
+              "DOI": "10.3390/ijms22094921"
+            },
+            {
+              "key": "ref_54",
+              "doi-asserted-by": "crossref",
+              "first-page": "6863",
+              "DOI": "10.1038/s41598-021-85754-w",
+              "article-title": "Genome-wide characterization and analysis of bHLH transcription factors related to anthocyanin biosynthesis in spine grapes (Vitis davidii)",
+              "volume": "11",
+              "author": "Li",
+              "year": "2021",
+              "journal-title": "Sci. Rep."
+            },
+            {
+              "key": "ref_55",
+              "doi-asserted-by": "crossref",
+              "first-page": "826",
+              "DOI": "10.1093/pcp/pcaa010",
+              "article-title": "FvbHLH9 Functions as a Positive Regulator of Anthocyanin Biosynthesis by Forming a HY5\u2013bHLH9 Transcription Complex in Strawberry Fruits",
+              "volume": "61",
+              "author": "Li",
+              "year": "2020",
+              "journal-title": "Plant Cell Physiol."
+            }
+          ],
+          "container-title": [
+            "Forests"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.mdpi.com/1999-4907/14/6/1262/pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                10
+              ]
+            ],
+            "date-time": "2025-10-10T19:56:09Z",
+            "timestamp": 1760126169000
+          },
+          "score": 28.517853,
+          "resource": {
+            "primary": {
+              "URL": "https://www.mdpi.com/1999-4907/14/6/1262"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                19
+              ]
+            ]
+          },
+          "references-count": 55,
+          "journal-issue": {
+            "issue": "6",
+            "published-online": {
+              "date-parts": [
+                [
+                  2023,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "f14061262"
+          ],
+          "URL": "https://doi.org/10.3390/f14061262",
+          "ISSN": [
+            "1999-4907"
+          ],
+          "issn-type": [
+            {
+              "value": "1999-4907",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                19
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

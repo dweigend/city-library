@@ -1,0 +1,33 @@
+{
+  "model": "epidem-travel-and-control",
+  "command": "random-seed 51 set initial-people 100 set initial-ambulance 2 set infection-chance 0 set recovery-chance 100 set average-recovery-time 1 set inoculation-chance 50 setup repeat 20 [go]",
+  "title": "epiDEM Travel and Control",
+  "reports": {
+    "ticks": {
+      "success": true,
+      "value": 1
+    },
+    "count turtles": {
+      "success": true,
+      "value": 102
+    },
+    "count turtles with [infected?]": {
+      "success": true,
+      "value": 0
+    },
+    "count turtles with [cured?]": {
+      "success": true,
+      "value": 5
+    },
+    "count turtles with [inoculated?]": {
+      "success": true,
+      "value": 52
+    },
+    "count turtles with [susceptible?]": {
+      "success": true,
+      "value": 43
+    }
+  },
+  "errors": [],
+  "text": " powered by NetLogo\nepiDEM Travel and Control\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nhours:\n?\nfor shortcuts\nsetup\ngo\ninitial-people\naverage-isolation-tendency\ninoculation-chance\naverage-hospital-going-tendency\ninfection-chance\nrecovery-chance\nintra-mobility\naverage-recovery-time\nhours\n% total pop.\nCumulative Infected and Recovered\n% infected\n0\n5\n10\n0\n10\nhours\n# people\nPopulati"
+}

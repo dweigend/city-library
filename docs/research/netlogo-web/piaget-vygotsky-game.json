@@ -1,0 +1,103 @@
+{
+  "slug": "piaget-vygotsky-game",
+  "name": "Piaget-Vygotsky Game",
+  "catalogPath": "Sample Models/Psychology/Piaget-Vygotsky Game",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Psychology/Piaget-Vygotsky%20Game.nlogox",
+  "deliveryBatch": "B02",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether individual feedback and social learning can complement one another. In NetLogo's Piaget-Vygotsky Game model, marble-rolling agents adjust their launch choices using personal performance, neighboring performance or both, approaching a common target. The selected literature connects this mechanism to explicit comparison of learning hypotheses: the original thought experiment operationalizes competing learning accounts [1]; collaborative critique changes the modeled social-learning relationship [2]; developmental constructivism supplies a theoretical background for individual adaptation [3]. Motor adjustment is a deliberately narrow learning proxy; mapping it onto developmental theories is contestable and does not validate an educational intervention. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Psychology/Piaget-Vygotsky%20Game.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Psychology/Piaget-Vygotsky%20Game.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/piaget-vygotsky-game.nlogox",
+    "sha256": "f0020ad932d3667cc9e5b710018366515484172bd10814aa4b1f2575f2db84c1",
+    "citation": "For the model itself: * Abrahamson, D. and Wilensky, U. (2005). NetLogo Piaget-Vygotsky Game model. http://ccl.northwestern.edu/netlogo/models/Piaget-VygotskyGame. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is a modernized version of the model presented in: - Abrahamson, D., & Wilensky, U. (2005). \"Piaget? Vygotsky? I'm game!: Agent-based modeling for psychology research\". Paper presented at the annual meeting of the Jean Piaget Society. https://ccl.northwestern.edu/papers/Abrahamson_Wilensky_JPS20.pdf The original model is available at: http://ccl.sesp.northwestern.edu/research/conferences/JPS2005/JPS2005.nlogo For more about the additions suggested in EXTENDING THE MODEL, see: - Abrahamson, D., Wilensky, U. & Levin, J. (2007) \"Agent-Based Modeling as a Bridge Between Cognitive and Social Perspectives on Learning\". Paper presented at the annual meeting of the American Educational Research Association, Chicago, IL. http://ccl.northwestern.edu/2007/abr-wil-levin-aera2007.pdf",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/piaget-vygotsky-game.nlogox"
+  },
+  "publications": [
+    {
+      "authors": [
+        "Dor Abrahamson",
+        "Uri Wilensky"
+      ],
+      "title": "Piaget? Vygotsky? I’m Game!: Agent-Based Modeling for Psychology Research",
+      "year": 2005,
+      "venue": "Annual Meeting of the Jean Piaget Society, Vancouver, June 1–3",
+      "doi": null,
+      "url": "https://ccl.northwestern.edu/papers/Abrahamson_Wilensky_JPS20.pdf",
+      "verification": {
+        "consultedUrl": "https://ccl.northwestern.edu/papers/Abrahamson_Wilensky_JPS20.pdf",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "fulltext",
+        "access": "Public author-university conference manuscript",
+        "notes": "Title page, abstract and model argument consulted; manuscript states it is a conference paper being revised for journal submission. Not represented as a peer-reviewed journal article. No DOI displayed. DOI follow-up 2026-11-05: rechecked the Northwestern original conference manuscript and searched exact title/author combinations. No DOI is displayed in the manuscript or identified in that search; one registry request was rate-limited. This remains the 2005 conference manuscript, not an inferred journal version; DOI absence is not proven.",
+        "evidencePath": "evidence/social-urban/web-primary-learning-language.json",
+        "additionalEvidencePaths": [
+          "evidence/social-urban/doi-followup-conferences.json"
+        ],
+        "evidenceFile": "evidence/social-urban/web-primary-learning-language.json"
+      },
+      "id": "abrahamson",
+      "relevance": "the original thought experiment operationalizes competing learning accounts",
+      "verified": true
+    },
+    {
+      "authors": [
+        "Dor Abrahamson",
+        "Uri Wilensky",
+        "James Levin"
+      ],
+      "title": "Agent-Based Modeling as a Bridge Between Cognitive and Social Perspectives on Learning",
+      "year": 2007,
+      "venue": "Annual Meeting of the American Educational Research Association, Chicago",
+      "doi": null,
+      "url": "https://ccl.northwestern.edu/2007/abr-wil-levin-aera2007.pdf",
+      "verification": {
+        "consultedUrl": "https://ccl.northwestern.edu/2007/abr-wil-levin-aera2007.pdf",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "fulltext",
+        "access": "Public author-university conference manuscript",
+        "notes": "Title page and original/modified learning-model discussion consulted. This paper explicitly critiques one-way conceptualization of the zone of proximal development; it is not validation of real learner performance. No DOI displayed. DOI follow-up 2026-11-05: checked the Berkeley author-hosted original manuscript and Crossref title/author search. No DOI is displayed in the manuscript and no exact work was identified among returned registry candidates. Retain the original conference-paper URL; DOI absence is not proven.",
+        "evidencePath": "evidence/social-urban/web-primary-learning-language.json",
+        "additionalEvidencePaths": [
+          "evidence/social-urban/doi-followup-conferences.json"
+        ],
+        "evidenceFile": "evidence/social-urban/web-primary-learning-language.json"
+      },
+      "id": "bridge",
+      "relevance": "collaborative critique changes the modeled social-learning relationship",
+      "verified": true
+    },
+    {
+      "id": "piaget",
+      "creatorRole": "author",
+      "authors": [
+        "Jean Piaget"
+      ],
+      "title": "The origins of intelligence in children.",
+      "year": 1952,
+      "venue": "W W Norton & Co",
+      "doi": "10.1037/11494-000",
+      "url": "https://doi.org/10.1037/11494-000",
+      "relevance": "developmental constructivism supplies a theoretical background for individual adaptation",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=The+origins+of+intelligence+in+children+Piaget+1952&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/piaget-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/piaget-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

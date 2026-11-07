@@ -1,0 +1,15 @@
+{
+  "slug": "ca-stochastic",
+  "command": "set auto-continue? true set density 0 set OOO 0 setup-random repeat (world-height - 1) [ go ] go",
+  "resume": "set OOO 100 go",
+  "bottom": {
+    "tick": 160,
+    "row": -80,
+    "console": " powered by NetLogo\nCA Stochastic\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 160\n?\nfor shortcuts\nGo\nIII\n %\nIIO\n %\nIOI\n %\nIOO\n %\nOII\n %\nOIO\n %\nOOI\n %\nOOO\n %\nSetup Random\nProbability Cell Turns On:\noff-color\non-color\nColors:\nSetup Example\nauto-clear?\ndensity\n %\nexample\nauto-continue?\nplot?\ntime\nentropy\nentropy-plot\ntopologic\nmetric\n0\n100\n200\n300\n0\n1\nCommand Center\nobserver> set auto-continue? true set density 0 set OOO 0 setup-random repeat (world-height - 1) [ go ] go\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  },
+  "resumed": {
+    "tick": 161,
+    "row": 79,
+    "console": " powered by NetLogo\nCA Stochastic\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 161\n?\nfor shortcuts\nGo\nIII\n %\nIIO\n %\nIOI\n %\nIOO\n %\nOII\n %\nOIO\n %\nOOI\n %\nOOO\n %\nSetup Random\nProbability Cell Turns On:\noff-color\non-color\nColors:\nSetup Example\nauto-clear?\ndensity\n %\nexample\nauto-continue?\nplot?\ntime\nentropy\nentropy-plot\ntopologic\nmetric\n200\n300\n250\n0\n1\nCommand Center\nobserver> set auto-continue? true set density 0 set OOO 0 setup-random repeat (world-height - 1) [ go ] go\nobserver> set OOO 100 go\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+}

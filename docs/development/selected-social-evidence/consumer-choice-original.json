@@ -1,0 +1,119 @@
+{
+  "slug": "consumer-choice",
+  "sessionSourceSHA256": "b8973c79622215eee5fb4aa29abf5c92cd80480b1d1c81c7d5c8d5b569d15236",
+  "source": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Consumer Choice.nlogox",
+  "setupViaButton": true,
+  "setup": {
+    "ticks": {
+      "success": true,
+      "value": 0
+    },
+    "count turtles": {
+      "success": true,
+      "value": 100
+    },
+    "count links": {
+      "success": true,
+      "value": 250
+    },
+    "count consumers with [choice = 0]": {
+      "success": true,
+      "value": 56
+    },
+    "consumer-cluster": {
+      "success": true,
+      "value": 0.5349538239538237
+    }
+  },
+  "errors": [],
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "progress": {
+    "ticks": {
+      "success": true,
+      "value": 10
+    },
+    "count turtles": {
+      "success": true,
+      "value": 100
+    },
+    "count links": {
+      "success": true,
+      "value": 250
+    },
+    "count consumers with [choice = 0]": {
+      "success": true,
+      "value": 52
+    },
+    "consumer-cluster": {
+      "success": true,
+      "value": 0.566073593073593
+    }
+  },
+  "intervention": {
+    "command": "set num-consumers 10 set avg-connections 0 set initial-%-orange-product 100 set quality-orange 0 set quality-blue 0 set exploration 1 set norm-influence 0 set information-exchange 0 setup go",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 1
+      },
+      "count consumers with [choice = 0]": {
+        "success": true,
+        "value": 0
+      },
+      "[utilities] of consumers": {
+        "success": true,
+        "value": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "errors": []
+  },
+  "images": {
+    "setup": "consumer-choice-original-setup.png",
+    "progress": "consumer-choice-original-progress.png"
+  }
+}

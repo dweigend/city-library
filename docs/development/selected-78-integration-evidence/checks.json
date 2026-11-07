@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-06",
+  "integrationCommit": "f7c4c61240e09f8e71c37a8b0eb4ac9ce372c449",
+  "command": "bun run check",
+  "exitCode": 0,
+  "tests": 412,
+  "assertions": 40183,
+  "registeredPublicScripts": 150,
+  "typeProjects": 4,
+  "build": true,
+  "packedConsumers": [
+    "Bun source condition",
+    "Node ESM built bundle",
+    "ambient-free strict TypeScript"
+  ],
+  "separateFocused": {
+    "graphPrecisionRoutingConnectivityBoundary": {
+      "tests": 30,
+      "assertions": 15343
+    },
+    "materials": {
+      "tests": 12,
+      "assertions": 79
+    },
+    "social": {
+      "tests": 23,
+      "assertions": 4521
+    }
+  },
+  "limits": [
+    "B11 material phase not globally registered: frozen04 counter correction requires explicit agreement; other4 separately passed unchanged.",
+    "Author social multiline-formatting/final-code browser followup pending, not included.",
+    "No independent approval or model science validation from checks."
+  ],
+  "files": [
+    {
+      "file": "earlier-consumer-failure.txt",
+      "bytes": 1694,
+      "sha256": "f4d679346707014b38b45ebe7efb8eb95a38961629324cf5a1eb0a21a0e894d9"
+    },
+    {
+      "file": "full-check.log",
+      "bytes": 53133,
+      "sha256": "c01130081a4c4e33430fff1cc91078ff46fb1f43afe93389518f47943cedd09a"
+    },
+    {
+      "file": "precision-consumer-recheck.log",
+      "bytes": 3780,
+      "sha256": "55eacb3f6d08b5e62b7f189b5749bd4b465ae99994c930342cbfd7967f56267f"
+    }
+  ]
+}

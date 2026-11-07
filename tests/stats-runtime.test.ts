@@ -1,0 +1,70 @@
+import { test, expect } from "bun:test";
+import { stats } from "city-library";
+
+test("statistics reject accessor schemas without reading them and reject primitive string sources", () => {
+  let reads = 0;
+  const options = Object.defineProperty({}, "edges", {
+    get() {
+      reads += 1;
+      return [0, 1];
+    },
+  });
+  expect(() => stats.histogram([0.5], options as { edges: number[] })).toThrow(
+    TypeError,
+  );
+  expect(reads).toBe(0);
+  const edges = [0, 1];
+  Object.defineProperty(edges, "0", {
+    get() {
+      reads += 1;
+      return 0;
+    },
+  });
+  expect(() => stats.histogram([0.5], { edges })).toThrow(TypeError);
+  expect(reads).toBe(0);
+  expect(() => stats.gini("" as unknown as Iterable<number>)).toThrow(
+    TypeError,
+  );
+  expect(() =>
+    stats.histogram("" as unknown as Iterable<number>, { edges: [0, 1] }),
+  ).toThrow(TypeError);
+  const extra = Object.assign([0, 1], { named: true });
+  expect(() => stats.histogram([0.5], { edges: extra })).toThrow(TypeError);
+});
+
+test("Gini is scale/permutation invariant, pure, finite for large unequal values", () => {
+  const values = [3, 0, 8, 1];
+  const before = [...values];
+  expect(stats.gini(values)).toBeCloseTo(stats.gini([...values].reverse()), 14);
+  expect(stats.gini(values)).toBeCloseTo(
+    stats.gini(values.map((x) => 100 * x)),
+    14,
+  );
+  expect(values).toEqual(before);
+  expect(stats.gini([0, Number.MAX_VALUE])).toBe(0.5);
+});
+
+test("histogram handles final endpoint, outliers and one-pass iterables", () => {
+  let visits = 0;
+  function* input() {
+    for (const value of [-2, 0, 0.5, 1, 2, 3]) {
+      visits += 1;
+      yield value;
+    }
+  }
+  expect(stats.histogram(input(), { edges: [0, 1, 2] })).toEqual({
+    edges: [0, 1, 2],
+    counts: [2, 2],
+    underflow: 1,
+    overflow: 1,
+  });
+  expect(visits).toBe(6);
+});
+
+test("statistics reject malformed sources rather than silently treat them as empty", () => {
+  expect(() => stats.gini({} as never)).toThrow(TypeError);
+  expect(() => stats.gini(null as never)).toThrow(TypeError);
+  expect(() =>
+    stats.histogram([], { edges: [0, 1], unexpected: true } as never),
+  ).toThrow(TypeError);
+});

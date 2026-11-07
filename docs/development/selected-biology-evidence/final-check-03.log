@@ -1,0 +1,38 @@
+bun test v1.4.2 (744846f84)
+
+tests/random-exponential-poisson.test.ts:
+(pass) both closed option branches reject wrong types/ranges/keys before word or normal cache changes [1.58ms]
+(pass) exponential keeps literal log transform, signed zero, finite underflow and post-draw overflow [0.24ms]
+(pass) positive small-mean product is do-first, equality/zero stop, and zero mean never requests a draw [0.06ms]
+(pass) log-factorial agrees with independent finite sums across the table boundary and admitted scales [1.22ms]
+(pass) PTRS consumes U then V, rejects us0/negative/tail proposals, and permits V0 [0.06ms]
+(pass) PTRS uses printed .43 and inclusive squeeze boundaries, not Table1/PTRD .445 [0.03ms]
+(pass) PTRS log acceptance straddles an independently summed Poisson mass boundary [0.04ms]
+(pass) PTRS has no inherited million-attempt retry cap [5.57ms]
+(pass) mixed distributions preserve cached normal, copy/local/state and World ownership [0.40ms]
+(pass) high-mean Poisson samples match independently computed mode masses and analytical moments [70.04ms]
+
+tests/selected-biology-b.test.ts:
+(pass) Selected biology B07 source procedures > Autumn setup converts sugar before the first tick; cold water procedure returns only locally [11.15ms]
+(pass) Selected biology B07 source procedures > Autumn transitions living leaves into persistent dead leaves then preflight-stops [9.92ms]
+(pass) Selected biology B07 source procedures > Membrane uses one distinct water partner for each lipid and conserves membership [8.65ms]
+(pass) Selected biology B07 source procedures > Membrane self-inclusive hydrophobic isolation equals one for an isolated one-lipid oil [0.40ms]
+(pass) Selected biology B07 source procedures > Sunflower setup tick is one and live ring distance affects only new placements [1.13ms]
+(pass) Selected biology B07 source procedures > Sunflower counts temporary candidates and stops before the outer ring [2689.32ms]
+(pass) Selected biology B07 source procedures > Tumor hatches have source age zero and are not activated in their birth phase [0.91ms]
+(pass) Selected biology B07 source procedures > Tumor kill actions preserve source cached reporter until the next completed tick [0.17ms]
+(pass) Selected biology B07 source procedures > Muscle all-slow fibers have max four; hormone bounds and mass remain exact [59.52ms]
+(pass) Selected biology B07 source procedures > Detached reads cannot mutate canonical state; invalid live edits fail atomically [5.30ms]
+
+tests/selected-biology-a.test.ts:
+(pass) selected biology A source mechanisms > Slime deposition, diffusion and evaporation conserve the declared mass [152.47ms]
+(pass) selected biology A source mechanisms > Honeycomb's diffusion cadence starts at preincrement tick zero [52.68ms]
+(pass) selected biology A source mechanisms > Fur preserves the source's uninitialized new-color tie behavior [764.95ms]
+(pass) selected biology A source mechanisms > Chloroplast water inlet is the actual left boundary, with canonical flow ties [130.25ms]
+(pass) selected biology A source mechanisms > Natural photosynthesis creates oxygen and glucose and preserves source counts [4401.48ms]
+(pass) selected biology A source mechanisms > Blood Sugar requires real Poisson/exponential draws and rounds meal creation to 412 [1610.56ms]
+
+ 26 pass
+ 0 fail
+ 286 expect() calls
+Ran 26 tests across 3 files. [9.99s]

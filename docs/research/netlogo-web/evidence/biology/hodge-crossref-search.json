@@ -1,0 +1,2382 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+plastic+plant+root+responses+to+heterogeneous+supplies+of+nutrients+Hodge+2004&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1680970,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T03:58:03Z",
+            "timestamp": 1793851083149,
+            "version": "4.6.1"
+          },
+          "reference-count": 154,
+          "publisher": "Wiley",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2004,
+                    2,
+                    3
+                  ]
+                ],
+                "date-time": "2004-02-03T00:00:00Z",
+                "timestamp": 1075766400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "New Phytologist"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2004,
+                4
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Summary</jats:title>\n                  <jats:p>When roots encounter a nutrient\u2010rich zone or patch they often proliferate within it. Roots experiencing nutrient\u2010rich patches can also enhance their physiological ion\u2010uptake capacities compared with roots of the same plant outside the patch zone. These plastic responses by the root system have been proposed as the major mechanism by which plants cope with the naturally occurring heterogeneous supplies of nutrients in soil. Various attempts to predict how contrasting species will respond to patches have been made based on specific root length (SRL), root demography and biomass allocation within the patch zone. No one criterion has proved definitive. Actually demonstrating that root proliferation is beneficial to the plant, especially in terms of nitrogen capture from patches, has also proved troublesome. Yet by growing plants under more realistic conditions, such as in interspecific plant competition, and with a complex organic patch, a direct benefit can be demonstrated. Thus, as highlighted in this review, the environmental context in which the root response is expressed is as important as the magnitude of the response itself.</jats:p>\n                  <jats:p>\n                    <jats:table-wrap position=\"anchor\">\n                      <jats:table frame=\"void\">\n                        <jats:col/>\n                        <jats:col/>\n                        <jats:col/>\n                        <jats:thead>\n                          <jats:tr>\n                            <jats:th/>\n                            <jats:th>Contents</jats:th>\n                            <jats:th/>\n                          </jats:tr>\n                        </jats:thead>\n                        <jats:tbody>\n                          <jats:tr>\n                            <jats:td>I.</jats:td>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss3\">Introduction</jats:ext-link>\n                            </jats:td>\n                            <jats:td>9</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>II.</jats:td>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss4\">Morphological responses</jats:ext-link>\n                            </jats:td>\n                            <jats:td>10</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>III.</jats:td>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss9\">Root demography</jats:ext-link>\n                            </jats:td>\n                            <jats:td>14</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>IV.</jats:td>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss10\">Physiological plasticity</jats:ext-link>\n                            </jats:td>\n                            <jats:td>14</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>V.</jats:td>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss11\">Root plasticity in patches in competition and symbiosis with microorganisms</jats:ext-link>\n                            </jats:td>\n                            <jats:td>16</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>VI.</jats:td>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss12\">Influence of patch attributes</jats:ext-link>\n                            </jats:td>\n                            <jats:td>17</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>VII.</jats:td>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss13\">Control of root proliferation</jats:ext-link>\n                            </jats:td>\n                            <jats:td>19</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>VIII.</jats:td>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss14\">Conclusions</jats:ext-link>\n                            </jats:td>\n                            <jats:td>20</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td/>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss15\">Acknowledgements</jats:ext-link>\n                            </jats:td>\n                            <jats:td>20</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td/>\n                            <jats:td>\n                              <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#ss16\">References</jats:ext-link>\n                            </jats:td>\n                            <jats:td>20</jats:td>\n                          </jats:tr>\n                        </jats:tbody>\n                      </jats:table>\n                    </jats:table-wrap>\n                  </jats:p>",
+          "DOI": "10.1111/j.1469-8137.2004.01015.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                12,
+                27
+              ]
+            ],
+            "date-time": "2004-12-27T23:52:00Z",
+            "timestamp": 1104191520000
+          },
+          "page": "9-24",
+          "source": "Crossref",
+          "is-referenced-by-count": 1464,
+          "title": [
+            "The plastic plant: root responses to heterogeneous supplies of nutrients"
+          ],
+          "prefix": "10.1111",
+          "volume": "162",
+          "author": [
+            {
+              "given": "Angela",
+              "family": "Hodge",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2004,
+                2,
+                3
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_10_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.1999.00460.x"
+            },
+            {
+              "key": "e_1_2_10_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00317233"
+            },
+            {
+              "key": "e_1_2_10_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2389.1975.tb01943.x"
+            },
+            {
+              "key": "e_1_2_10_5_1",
+              "first-page": "382",
+              "volume-title": "Modelling wastewater renovation for land treatment",
+              "author": "Barber SA",
+              "year": "1981"
+            },
+            {
+              "key": "e_1_2_10_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1992.tb02165.x"
+            },
+            {
+              "key": "e_1_2_10_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1071/PP9920493"
+            },
+            {
+              "key": "e_1_2_10_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1009819516976"
+            },
+            {
+              "key": "e_1_2_10_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1995.tb01834.x"
+            },
+            {
+              "key": "e_1_2_10_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-662-09784-7_6"
+            },
+            {
+              "key": "e_1_2_10_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00346491"
+            },
+            {
+              "key": "e_1_2_10_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00377135"
+            },
+            {
+              "key": "e_1_2_10_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2259721"
+            },
+            {
+              "key": "e_1_2_10_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00328419"
+            },
+            {
+              "key": "e_1_2_10_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.2002.00389.x"
+            },
+            {
+              "key": "e_1_2_10_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.es.16.110185.002051"
+            },
+            {
+              "key": "e_1_2_10_17_1",
+              "first-page": "1405",
+              "article-title": "Superroot, a recessive mutation in Arabidopsis, confers auxin expression",
+              "volume": "7",
+              "author": "Boerjan W",
+              "year": "1995",
+              "journal-title": "Plant Cell"
+            },
+            {
+              "key": "e_1_2_10_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3040.1991.tb01368.x"
+            },
+            {
+              "key": "e_1_2_10_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/B978-0-12-155070-7.50017-2"
+            },
+            {
+              "key": "e_1_2_10_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00317406"
+            },
+            {
+              "key": "e_1_2_10_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00329699"
+            },
+            {
+              "key": "e_1_2_10_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1989.tb02382.x"
+            },
+            {
+              "key": "e_1_2_10_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00320417"
+            },
+            {
+              "key": "e_1_2_10_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/j.1537-2197.1996.tb12714.x"
+            },
+            {
+              "key": "e_1_2_10_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2446501"
+            },
+            {
+              "key": "e_1_2_10_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.ecolsys.28.1.545"
+            },
+            {
+              "key": "e_1_2_10_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1574-6976.1998.tb00359.x"
+            },
+            {
+              "key": "e_1_2_10_28_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.es.11.110180.001313"
+            },
+            {
+              "key": "e_1_2_10_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.217.4563.941"
+            },
+            {
+              "key": "e_1_2_10_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1996.tb01912.x"
+            },
+            {
+              "key": "e_1_2_10_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1996.tb01913.x"
+            },
+            {
+              "key": "e_1_2_10_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1004290705961"
+            },
+            {
+              "key": "e_1_2_10_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420050072"
+            },
+            {
+              "key": "e_1_2_10_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.1998.00188.x"
+            },
+            {
+              "key": "e_1_2_10_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/j.1537-2197.1991.tb14492.x"
+            },
+            {
+              "key": "e_1_2_10_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1989.tb00713.x"
+            },
+            {
+              "key": "e_1_2_10_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1975.tb01409.x"
+            },
+            {
+              "key": "e_1_2_10_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/26.1.79"
+            },
+            {
+              "key": "e_1_2_10_39_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/29.2.435"
+            },
+            {
+              "key": "e_1_2_10_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/24.6.1189"
+            },
+            {
+              "key": "e_1_2_10_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0367-2530(17)30963-5"
+            },
+            {
+              "key": "e_1_2_10_42_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "EdwardsEJ BenhamDG MarlandLA FitterAH.2004.Root production is determined by radiation flux in a temperate grassland.Global Change Biology(In press.)",
+              "DOI": "10.1111/j.1365-2486.2004.00729.x"
+            },
+            {
+              "key": "e_1_2_10_43_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2745.1999.00376.x"
+            },
+            {
+              "key": "e_1_2_10_44_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1991.tb00565.x"
+            },
+            {
+              "key": "e_1_2_10_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1941037"
+            },
+            {
+              "key": "e_1_2_10_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0065-2504(08)60005-7"
+            },
+            {
+              "key": "e_1_2_10_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.2000.00686.x"
+            },
+            {
+              "key": "e_1_2_10_48_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01101680"
+            },
+            {
+              "key": "e_1_2_10_49_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2745.1999.00390.x"
+            },
+            {
+              "key": "e_1_2_10_50_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2745.1999.00396.x"
+            },
+            {
+              "key": "e_1_2_10_51_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2259869"
+            },
+            {
+              "key": "e_1_2_10_52_1",
+              "first-page": "87",
+              "volume-title": "Ecologicai interactions in soil",
+              "author": "Fitter AH",
+              "year": "1985"
+            },
+            {
+              "key": "e_1_2_10_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01972076"
+            },
+            {
+              "key": "e_1_2_10_54_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/B978-0-12-155070-7.50016-0"
+            },
+            {
+              "key": "e_1_2_10_55_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420050415"
+            },
+            {
+              "key": "e_1_2_10_56_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420050892"
+            },
+            {
+              "key": "e_1_2_10_57_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2002.2120"
+            },
+            {
+              "key": "e_1_2_10_58_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1004298804353"
+            },
+            {
+              "key": "e_1_2_10_59_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.arplant.53.100301.135256"
+            },
+            {
+              "key": "e_1_2_10_60_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.0022-0477.2001.00589.x"
+            },
+            {
+              "key": "e_1_2_10_61_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420050527"
+            },
+            {
+              "key": "e_1_2_10_62_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2001)082[2534:SNHACB]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_10_63_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2435.2002.00667.x"
+            },
+            {
+              "key": "e_1_2_10_64_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3040.1992.tb00997.x"
+            },
+            {
+              "key": "e_1_2_10_65_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1006587813950"
+            },
+            {
+              "key": "e_1_2_10_66_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.0022-0477.2001.00609.x"
+            },
+            {
+              "key": "e_1_2_10_67_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/40.2.263"
+            },
+            {
+              "key": "e_1_2_10_68_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1161-0301(14)80161-5"
+            },
+            {
+              "key": "e_1_2_10_69_1",
+              "volume-title": "Plant strategies and vegtation processes",
+              "author": "Grime JP",
+              "year": "1979"
+            },
+            {
+              "key": "e_1_2_10_70_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/B978-0-12-155070-7.50006-8"
+            },
+            {
+              "key": "e_1_2_10_71_1",
+              "first-page": "5",
+              "volume-title": "Plasticity in plants",
+              "author": "Grime JP",
+              "year": "1986"
+            },
+            {
+              "key": "e_1_2_10_72_1",
+              "first-page": "381",
+              "volume-title": "Plant root growth: an ecological perspective.",
+              "author": "Grime JP",
+              "year": "1991"
+            },
+            {
+              "key": "e_1_2_10_73_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00649507"
+            },
+            {
+              "key": "e_1_2_10_74_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1940183"
+            },
+            {
+              "key": "e_1_2_10_75_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.0028-646x.2001.00200.x"
+            },
+            {
+              "key": "e_1_2_10_76_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/erg249"
+            },
+            {
+              "key": "e_1_2_10_77_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.2003.00662.x"
+            },
+            {
+              "key": "e_1_2_10_78_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.1998.00216.x"
+            },
+            {
+              "key": "e_1_2_10_79_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-3040.1999.00454.x"
+            },
+            {
+              "key": "e_1_2_10_80_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/50.336.1243"
+            },
+            {
+              "key": "e_1_2_10_81_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0038-0717(99)00070-X"
+            },
+            {
+              "key": "e_1_2_10_82_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1360-1385(00)01656-3"
+            },
+            {
+              "key": "e_1_2_10_83_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.2000.00602.x"
+            },
+            {
+              "key": "e_1_2_10_84_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2435.2000.t01-1-00470.x"
+            },
+            {
+              "key": "e_1_2_10_85_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2745.2000.00434.x"
+            },
+            {
+              "key": "e_1_2_10_86_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0038-0717(00)00095-X"
+            },
+            {
+              "key": "e_1_2_10_87_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35095041"
+            },
+            {
+              "key": "e_1_2_10_88_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00011335"
+            },
+            {
+              "key": "e_1_2_10_89_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420050650"
+            },
+            {
+              "key": "e_1_2_10_90_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/j.1537-2197.1996.tb12785.x"
+            },
+            {
+              "key": "e_1_2_10_91_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/b97-926"
+            },
+            {
+              "key": "e_1_2_10_92_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0065-2504(08)60215-9"
+            },
+            {
+              "key": "e_1_2_10_93_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00442-002-1089-z"
+            },
+            {
+              "key": "e_1_2_10_94_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00379798"
+            },
+            {
+              "key": "e_1_2_10_95_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00012250"
+            },
+            {
+              "key": "e_1_2_10_96_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00650316"
+            },
+            {
+              "key": "e_1_2_10_97_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261666"
+            },
+            {
+              "key": "e_1_2_10_98_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939320"
+            },
+            {
+              "key": "e_1_2_10_99_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/344058a0"
+            },
+            {
+              "key": "e_1_2_10_100_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00333714"
+            },
+            {
+              "key": "e_1_2_10_101_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.96.20.11387"
+            },
+            {
+              "key": "e_1_2_10_102_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.18174/njas.v30i3.16978"
+            },
+            {
+              "key": "e_1_2_10_103_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0038-0717(96)00291-X"
+            },
+            {
+              "key": "e_1_2_10_104_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2435.2002.00642.x"
+            },
+            {
+              "key": "e_1_2_10_105_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0169-5347(97)01001-X"
+            },
+            {
+              "key": "e_1_2_10_106_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.2002.00393.x"
+            },
+            {
+              "key": "e_1_2_10_107_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00010283"
+            },
+            {
+              "key": "e_1_2_10_108_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-662-09784-7_9"
+            },
+            {
+              "key": "e_1_2_10_109_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00317089"
+            },
+            {
+              "key": "e_1_2_10_110_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420000507"
+            },
+            {
+              "key": "e_1_2_10_111_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-294x.2000.01034.x"
+            },
+            {
+              "key": "e_1_2_10_112_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-313X.2002.01251.x"
+            },
+            {
+              "key": "e_1_2_10_113_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1015822003011"
+            },
+            {
+              "key": "e_1_2_10_114_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02257536"
+            },
+            {
+              "key": "e_1_2_10_115_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261632"
+            },
+            {
+              "key": "e_1_2_10_116_1",
+              "first-page": "25",
+              "article-title": "Ecological consequences of arthropod grazing on VA mycorrhizal fungi",
+              "volume": "94",
+              "author": "McGonigle TP",
+              "year": "1988",
+              "journal-title": "Proceedings of the Royal Society of Edinburgh, Series B"
+            },
+            {
+              "key": "e_1_2_10_117_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/anbo.1996.0130"
+            },
+            {
+              "key": "e_1_2_10_118_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0007-1536(59)80044-9"
+            },
+            {
+              "key": "e_1_2_10_119_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2404913"
+            },
+            {
+              "key": "e_1_2_10_120_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2005.01089.x"
+            },
+            {
+              "key": "e_1_2_10_121_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0007-1536(59)80043-7"
+            },
+            {
+              "key": "e_1_2_10_122_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/plb.1997.46.3.237"
+            },
+            {
+              "key": "e_1_2_10_123_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.2002.00413_1.x"
+            },
+            {
+              "key": "e_1_2_10_124_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1993.tb03905.x"
+            },
+            {
+              "key": "e_1_2_10_125_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420050239"
+            },
+            {
+              "key": "e_1_2_10_126_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/treephys/18.10.665"
+            },
+            {
+              "key": "e_1_2_10_127_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9615(2002)072[0293:FRAONN]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_10_128_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02257566"
+            },
+            {
+              "key": "e_1_2_10_129_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0167-7012(95)00077-1"
+            },
+            {
+              "key": "e_1_2_10_130_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1994.tb02969.x"
+            },
+            {
+              "key": "e_1_2_10_131_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/anbo.1996.0020"
+            },
+            {
+              "key": "e_1_2_10_132_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1010377818094"
+            },
+            {
+              "key": "e_1_2_10_133_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1983.tb04499.x"
+            },
+            {
+              "key": "e_1_2_10_134_1",
+              "first-page": "237",
+              "volume-title": "Variation in plant growth.",
+              "author": "Robinson D",
+              "year": "1998"
+            },
+            {
+              "key": "e_1_2_10_135_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1994.tb04013.x"
+            },
+            {
+              "key": "e_1_2_10_136_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.1999.0656"
+            },
+            {
+              "key": "e_1_2_10_137_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-662-09784-7_1"
+            },
+            {
+              "key": "e_1_2_10_138_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2006.01124.x"
+            },
+            {
+              "key": "e_1_2_10_139_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oxfordjournals.aob.a088130"
+            },
+            {
+              "key": "e_1_2_10_140_1",
+              "first-page": "461",
+              "article-title": "Sensitivity of simulated phosphorus uptake to parameters used by a mechanistic\u2010mathematical model",
+              "volume": "36",
+              "author": "Silberbush M",
+              "year": "1983",
+              "journal-title": "Plant and Soil"
+            },
+            {
+              "key": "e_1_2_10_141_1",
+              "volume-title": "Mycorrhizal symbiosis",
+              "author": "Smith SE",
+              "year": "1997"
+            },
+            {
+              "key": "e_1_2_10_142_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1937216"
+            },
+            {
+              "key": "e_1_2_10_143_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02182690"
+            },
+            {
+              "key": "e_1_2_10_144_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2435.2000.00417.x"
+            },
+            {
+              "key": "e_1_2_10_145_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oso/9780195124927.001.0001"
+            },
+            {
+              "key": "e_1_2_10_146_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2260018"
+            },
+            {
+              "key": "e_1_2_10_147_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00011582"
+            },
+            {
+              "key": "e_1_2_10_148_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2001)082[0882:MDISAA]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_10_149_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1988.tb09155.x"
+            },
+            {
+              "key": "e_1_2_10_150_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00007976"
+            },
+            {
+              "key": "e_1_2_10_151_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2001.00618.x"
+            },
+            {
+              "key": "e_1_2_10_152_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.126.2.875"
+            },
+            {
+              "key": "e_1_2_10_153_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.279.5349.407"
+            },
+            {
+              "key": "e_1_2_10_154_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/51.342.51"
+            },
+            {
+              "key": "e_1_2_10_155_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.96.11.6529"
+            }
+          ],
+          "container-title": [
+            "New Phytologist"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1469-8137.2004.01015.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-8137.2004.01015.x",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1111/j.1469-8137.2004.01015.x",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://nph.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-8137.2004.01015.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                9,
+                1
+              ]
+            ],
+            "date-time": "2023-09-01T17:41:39Z",
+            "timestamp": 1693590099000
+          },
+          "score": 52.983208,
+          "resource": {
+            "primary": {
+              "URL": "https://nph.onlinelibrary.wiley.com/doi/10.1111/j.1469-8137.2004.01015.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                2,
+                3
+              ]
+            ]
+          },
+          "references-count": 154,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2004,
+                  4
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/j.1469-8137.2004.01015.x"
+          ],
+          "URL": "https://doi.org/10.1111/j.1469-8137.2004.01015.x",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0028-646X",
+            "1469-8137"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-646X",
+              "type": "print"
+            },
+            {
+              "value": "1469-8137",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T03:06:19Z",
+            "timestamp": 1793156779777,
+            "version": "4.5.0"
+          },
+          "reference-count": 123,
+          "publisher": "Wiley",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    4,
+                    28
+                  ]
+                ],
+                "date-time": "2006-04-28T00:00:00Z",
+                "timestamp": 1146182400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 4288,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "New Phytologist"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1994,
+                8
+              ]
+            ]
+          },
+          "abstract": "<jats:title>SUMMARY</jats:title>\n                  <jats:p>When the root system of a nutrient deficient plant is supplied locally with the nutrient, the roots grow and proliferate in the nutrient\u2010rich zone, sometimes spectacularly so. In addition, uptake per unit of root is faster in the nutrient\u2010rich zone. These are often thought of as compensatory responses. The extra surface area and faster uptake from the localized supply offset the inability of the rest of the root system to contribute to nutrient acquisition. This is the picture obtained from a few, well\u2010known studies of young cereals. But is it supported by all the evidence that is available?</jats:p>\n                  <jats:p>\n                    This review assesses how various attributes respond to localized supplies of nutrients. The attributes are: root growth and development; uptake rates; nutrient contents; root;shoot interactions; and whole\u2010plant growth. The nutrients considered are K, NH\n                    <jats:sub>4</jats:sub>\n                    <jats:sup>+</jats:sup>\n                    , NO\n                    <jats:sub>3</jats:sub>\n                    <jats:sup>\u2212</jats:sup>\n                    and P. The experiments reviewed used techniques ranging from solution cultures to field studies. Most used as controls plants that were amply and uniformly supplied with the nutrient; some used plants uniformly deprived of the nutrient.\n                  </jats:p>\n                  <jats:p>One third of the measurements of root growth showed little or no response to a localized nutrient supply. Many others did, and the general tendency was for a stimulation of growth in a nutrient\u2010rich zone to be mirrored by a suppression of growth elsewhere. Responses varied with time, species and nutrient. The response of a root system to locally available nutrients can be predicted in general terms. But the precise degree and direction of growth cannot. Simple rules of root development sometimes apply. But these cannot account for many other observations of development that do not follow any simple rule.</jats:p>\n                  <jats:p>\n                    Uptake per unit of root was usually up to\n                    <jats:italic>c.</jats:italic>\n                    three\u2010fold faster when roots of nutrient\u2010deprived plants were supplied locally. Exceptionally, increases of five\u2010 to ten\u2010fold were measured. Generally, this increase was related inversely to the fraction of the root system with access to the nutrient. But within particular studies that relation did not hold.\n                  </jats:p>\n                  <jats:p>\n                    Root:shoot ratio usually increased or hardly changed in locally supplied plants. Their nutrient content usually declined more than growth. On average, therefore, the nutrient was less concentrated in the tissues of a locally supplied plant. This may indicate the diversion or mobilization of nutrients from potential storage pools to supplement the amounts taken up from the localized supply. An exception to this was for N in the one C4 species studied,\n                    <jats:italic>Zea mays.</jats:italic>\n                  </jats:p>\n                  <jats:p>When comparing these attributes, the growth of whole plants was least affected by a non\u2010uniform supply of nutrients, and least variable. This is circumstantial evidence that some of the responses did compensate partially for non\u2010uniform supplies of nutrients. But within species and nutrient treatments, there was no consistent association between specific responses and any apparent compensation.</jats:p>\n                  <jats:p>\n                    <jats:table-wrap position=\"anchor\">\n                      <jats:table frame=\"void\">\n                        <jats:col/>\n                        <jats:col/>\n                        <jats:col/>\n                        <jats:thead>\n                          <jats:tr>\n                            <jats:th/>\n                            <jats:th>Contents</jats:th>\n                            <jats:th/>\n                          </jats:tr>\n                        </jats:thead>\n                        <jats:tbody>\n                          <jats:tr>\n                            <jats:td/>\n                            <jats:td>Summary</jats:td>\n                            <jats:td>635</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>I.</jats:td>\n                            <jats:td>Introduction</jats:td>\n                            <jats:td>636</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>II.</jats:td>\n                            <jats:td>Experimental methods</jats:td>\n                            <jats:td>638</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>III.</jats:td>\n                            <jats:td>Root growth</jats:td>\n                            <jats:td>642</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>IV.</jats:td>\n                            <jats:td>Uptake rate per unit of root</jats:td>\n                            <jats:td>647</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>V.</jats:td>\n                            <jats:td>Xutrient content</jats:td>\n                            <jats:td>648</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>VI.</jats:td>\n                            <jats:td>Root: shoot partitioning</jats:td>\n                            <jats:td>649</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>VII.</jats:td>\n                            <jats:td>Growth: do responses compensate?</jats:td>\n                            <jats:td>649</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td>VIII.</jats:td>\n                            <jats:td>Conclusions</jats:td>\n                            <jats:td>652</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td/>\n                            <jats:td>Acknowledgements</jats:td>\n                            <jats:td>653</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td/>\n                            <jats:td>References</jats:td>\n                            <jats:td>653</jats:td>\n                          </jats:tr>\n                          <jats:tr>\n                            <jats:td/>\n                            <jats:td>Appendix</jats:td>\n                            <jats:td>656</jats:td>\n                          </jats:tr>\n                        </jats:tbody>\n                      </jats:table>\n                    </jats:table-wrap>\n                  </jats:p>",
+          "DOI": "10.1111/j.1469-8137.1994.tb02969.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2006-04-29T07:04:06Z",
+            "timestamp": 1146294246000
+          },
+          "page": "635-674",
+          "source": "Crossref",
+          "is-referenced-by-count": 677,
+          "title": [
+            "The responses of plants to non\u2010uniform supplies of nutrients"
+          ],
+          "prefix": "10.1111",
+          "volume": "127",
+          "author": [
+            {
+              "given": "DAVID",
+              "family": "ROBINSON",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                28
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_1_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.48.5.631"
+            },
+            {
+              "key": "e_1_2_1_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0098-8472(93)90060-S"
+            },
+            {
+              "key": "e_1_2_1_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2136/sssaj1980.03615995004400050034x"
+            },
+            {
+              "key": "e_1_2_1_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1971.tb04584.x"
+            },
+            {
+              "key": "e_1_2_1_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00936340"
+            },
+            {
+              "key": "e_1_2_1_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1976.tb04856.x"
+            },
+            {
+              "key": "e_1_2_1_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0168-9525(94)90230-5"
+            },
+            {
+              "key": "e_1_2_1_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1993.tb01772.x"
+            },
+            {
+              "key": "e_1_2_1_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/01904168309363154"
+            },
+            {
+              "key": "e_1_2_1_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2389.1980.tb02073.x"
+            },
+            {
+              "key": "e_1_2_1_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3040.1991.tb01368.x"
+            },
+            {
+              "key": "e_1_2_1_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00010968"
+            },
+            {
+              "key": "e_1_2_1_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/B978-0-12-155070-7.50017-2"
+            },
+            {
+              "key": "e_1_2_1_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00317406"
+            },
+            {
+              "key": "e_1_2_1_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2389539"
+            },
+            {
+              "key": "e_1_2_1_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2389538"
+            },
+            {
+              "key": "e_1_2_1_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1989.tb02382.x"
+            },
+            {
+              "key": "e_1_2_1_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oxfordjournals.aob.a087758"
+            },
+            {
+              "key": "e_1_2_1_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02374218"
+            },
+            {
+              "key": "e_1_2_1_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1994.tb00386.x"
+            },
+            {
+              "key": "e_1_2_1_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1942040"
+            },
+            {
+              "key": "e_1_2_1_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3869579"
+            },
+            {
+              "key": "e_1_2_1_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1071/SR9680075"
+            },
+            {
+              "key": "e_1_2_1_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/220805a0"
+            },
+            {
+              "key": "e_1_2_1_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/40.7.753"
+            },
+            {
+              "key": "e_1_2_1_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02182341"
+            },
+            {
+              "key": "e_1_2_1_28_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/27.5.1102"
+            },
+            {
+              "key": "e_1_2_1_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/28.5.1071"
+            },
+            {
+              "key": "e_1_2_1_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1992.tb00089.x"
+            },
+            {
+              "key": "e_1_2_1_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1987.tb00192.x"
+            },
+            {
+              "key": "e_1_2_1_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3040.1989.tb01942.x"
+            },
+            {
+              "key": "e_1_2_1_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1975.tb01409.x"
+            },
+            {
+              "key": "e_1_2_1_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01373813"
+            },
+            {
+              "key": "e_1_2_1_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01378245"
+            },
+            {
+              "key": "e_1_2_1_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01349514"
+            },
+            {
+              "key": "e_1_2_1_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/26.1.79"
+            },
+            {
+              "key": "e_1_2_1_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/29.2.435"
+            },
+            {
+              "key": "e_1_2_1_39_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/24.6.1189"
+            },
+            {
+              "key": "e_1_2_1_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2134/agronj1958.00021962005000100012x"
+            },
+            {
+              "key": "e_1_2_1_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1941037"
+            },
+            {
+              "key": "e_1_2_1_42_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00011140"
+            },
+            {
+              "key": "e_1_2_1_43_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/B978-0-12-155070-7.50016-0"
+            },
+            {
+              "key": "e_1_2_1_44_1",
+              "volume-title": "Environmental physiology of plants",
+              "author": "Fitter AH",
+              "year": "1987"
+            },
+            {
+              "key": "e_1_2_1_45_1",
+              "first-page": "61",
+              "volume-title": "Plant root growth: an ecological perspective",
+              "author": "Fogel R",
+              "year": "1991"
+            },
+            {
+              "key": "e_1_2_1_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/x90-202"
+            },
+            {
+              "key": "e_1_2_1_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1975.tb03806.x"
+            },
+            {
+              "key": "e_1_2_1_48_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2136/sssaj1988.03615995005200030035x"
+            },
+            {
+              "key": "e_1_2_1_49_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3040.1992.tb00997.x"
+            },
+            {
+              "key": "e_1_2_1_50_1",
+              "first-page": "73",
+              "article-title": "Absorption of nutrients as affected by the number of roots supplied with the nutrient",
+              "volume": "9",
+              "author": "Gile PL",
+              "year": "1917",
+              "journal-title": "Journal of Agricultural Research"
+            },
+            {
+              "key": "e_1_2_1_51_1",
+              "first-page": "31",
+              "volume-title": "De oecologie van het wortelstelsel der dewassen",
+              "author": "Goedewaagen MAJ",
+              "year": "1955"
+            },
+            {
+              "key": "e_1_2_1_52_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.82.1.254"
+            },
+            {
+              "key": "e_1_2_1_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/40.2.263"
+            },
+            {
+              "key": "e_1_2_1_54_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1989.tb06213.x"
+            },
+            {
+              "key": "e_1_2_1_55_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1071/BI9691313"
+            },
+            {
+              "key": "e_1_2_1_56_1",
+              "first-page": "381",
+              "volume-title": "Plant root growth: an ecological perspective",
+              "author": "Grime JP",
+              "year": "1991"
+            },
+            {
+              "key": "e_1_2_1_57_1",
+              "volume-title": "Comparative plant ecology, A functional approach to common British species",
+              "author": "Grime JP",
+              "year": "1988"
+            },
+            {
+              "key": "e_1_2_1_58_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00649507"
+            },
+            {
+              "key": "e_1_2_1_59_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2258733"
+            },
+            {
+              "key": "e_1_2_1_60_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1071/BI9721169"
+            },
+            {
+              "key": "e_1_2_1_61_1",
+              "volume-title": "Population biology of plants",
+              "author": "Harper JL",
+              "year": "1977"
+            },
+            {
+              "key": "e_1_2_1_62_1",
+              "first-page": "1",
+              "volume-title": "Population biology and evolution of clonal organisms",
+              "author": "Harper JL",
+              "year": "1985"
+            },
+            {
+              "key": "e_1_2_1_63_1",
+              "first-page": "475",
+              "article-title": "Diurnal patterns of dry weight increment and short\u2010term plant growth studies",
+              "volume": "3",
+              "author": "Hunt R.",
+              "year": "1980",
+              "journal-title": "Plant, Cell and Environment"
+            },
+            {
+              "key": "e_1_2_1_64_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0038-0717(89)90152-1"
+            },
+            {
+              "key": "e_1_2_1_65_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00379798"
+            },
+            {
+              "key": "e_1_2_1_66_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00012250"
+            },
+            {
+              "key": "e_1_2_1_67_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00650316"
+            },
+            {
+              "key": "e_1_2_1_68_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939320"
+            },
+            {
+              "key": "e_1_2_1_69_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261666"
+            },
+            {
+              "key": "e_1_2_1_70_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/344058a0"
+            },
+            {
+              "key": "e_1_2_1_71_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.18174/njas.v30i3.16978"
+            },
+            {
+              "key": "e_1_2_1_72_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.18174/njas.v32i1.16927"
+            },
+            {
+              "key": "e_1_2_1_73_1",
+              "unstructured": "JagerADe1985.Response of plants to a localized nutrient supply.Ph.D. thesis University of Utrecht The Netherlands ."
+            },
+            {
+              "key": "e_1_2_1_74_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1438-8677.1979.tb01172.x"
+            },
+            {
+              "key": "e_1_2_1_75_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2134/agronj1974.00021962006600040022x"
+            },
+            {
+              "key": "e_1_2_1_76_1",
+              "first-page": "103",
+              "volume-title": "Root development and function",
+              "author": "Klepper B.",
+              "year": "1987"
+            },
+            {
+              "key": "e_1_2_1_77_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1982.tb04535.x"
+            },
+            {
+              "key": "e_1_2_1_78_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02860714"
+            },
+            {
+              "key": "e_1_2_1_79_1",
+              "first-page": "177",
+              "volume-title": "Mechanisms of regulation of plant growth",
+              "author": "Lean GF",
+              "year": "1974"
+            },
+            {
+              "key": "e_1_2_1_80_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2260661"
+            },
+            {
+              "key": "e_1_2_1_81_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oxfordjournals.aob.a086383"
+            },
+            {
+              "key": "e_1_2_1_82_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/251316a0"
+            },
+            {
+              "key": "e_1_2_1_83_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.89.16.7360"
+            },
+            {
+              "key": "e_1_2_1_84_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/b72-296"
+            },
+            {
+              "key": "e_1_2_1_85_1",
+              "first-page": "353",
+              "article-title": "Nutrient distribution in root zones. II. The concept of external vs. internal nutrient supply",
+              "volume": "12",
+              "author": "McClure GW",
+              "year": "1968",
+              "journal-title": "Agrochimica"
+            },
+            {
+              "key": "e_1_2_1_86_1",
+              "first-page": "105",
+              "volume-title": "The development and function of roots",
+              "author": "McCully ME",
+              "year": "1975"
+            },
+            {
+              "key": "e_1_2_1_87_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00257647"
+            },
+            {
+              "key": "e_1_2_1_88_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3040.1988.tb01769.x"
+            },
+            {
+              "key": "e_1_2_1_89_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2134/agronj1958.00021962005000020013x"
+            },
+            {
+              "key": "e_1_2_1_90_1",
+              "volume-title": "Solute movement in the soil\u2010root system",
+              "author": "Nye PH",
+              "year": "1977"
+            },
+            {
+              "key": "e_1_2_1_91_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1992.tb05256.x"
+            },
+            {
+              "key": "e_1_2_1_92_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01373498"
+            },
+            {
+              "key": "e_1_2_1_93_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/28.4.864"
+            },
+            {
+              "key": "e_1_2_1_94_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1993.tb03905.x"
+            },
+            {
+              "key": "e_1_2_1_95_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1991.tb02958.x"
+            },
+            {
+              "key": "e_1_2_1_96_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1941649"
+            },
+            {
+              "key": "e_1_2_1_97_1",
+              "first-page": "49",
+              "volume-title": "Scottish Crop Research Institute Report 1991",
+              "author": "Robinson D.",
+              "year": "1991"
+            },
+            {
+              "key": "e_1_2_1_98_1",
+              "first-page": "53",
+              "volume-title": "Resource capture by Crops",
+              "author": "Robinson D.",
+              "year": "1994"
+            },
+            {
+              "key": "e_1_2_1_99_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "RobinsonD LinehanDJ GordonDC.1994.Capture of nitrate from soil by wheat in relation to root length inflow and nitrogen availability. New Phytologist (in the press).",
+              "DOI": "10.1111/j.1469-8137.1994.tb04013.x"
+            },
+            {
+              "key": "e_1_2_1_100_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/38.4.551-a"
+            },
+            {
+              "key": "e_1_2_1_101_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1983.tb04499.x"
+            },
+            {
+              "key": "e_1_2_1_102_1",
+              "first-page": "378",
+              "volume-title": "Plant analysis and fertilizer problems",
+              "author": "Rorison IH",
+              "year": "1974"
+            },
+            {
+              "key": "e_1_2_1_103_1",
+              "first-page": "145",
+              "volume-title": "Methods in plant ecology",
+              "author": "Rorison IH",
+              "year": "1986"
+            },
+            {
+              "key": "e_1_2_1_104_1",
+              "volume-title": "Plant root systems: their function and interaction with the soil",
+              "author": "Russell RS",
+              "year": "1977"
+            },
+            {
+              "key": "e_1_2_1_105_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0098-8472(93)90056-L"
+            },
+            {
+              "key": "e_1_2_1_106_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jpln.19891520102"
+            },
+            {
+              "key": "e_1_2_1_107_1",
+              "first-page": "1147",
+              "article-title": "The development of plant roots: new approaches to underground problems",
+              "volume": "3",
+              "author": "Schiefelbein J",
+              "year": "1991",
+              "journal-title": "The Plant Cell"
+            },
+            {
+              "key": "e_1_2_1_108_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/anbo.1993.1087"
+            },
+            {
+              "key": "e_1_2_1_109_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oxfordjournals.aob.a088130"
+            },
+            {
+              "key": "e_1_2_1_110_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/36.9.1441"
+            },
+            {
+              "key": "e_1_2_1_111_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.83.3.552"
+            },
+            {
+              "key": "e_1_2_1_112_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.py.31.090193.001203"
+            },
+            {
+              "key": "e_1_2_1_113_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02182690"
+            },
+            {
+              "key": "e_1_2_1_114_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2136/sssaj1974.03615995003800020034x"
+            },
+            {
+              "key": "e_1_2_1_115_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02370555"
+            },
+            {
+              "key": "e_1_2_1_116_1",
+              "volume-title": "Resource competition and community structure",
+              "author": "Tilman D.",
+              "year": "1982"
+            },
+            {
+              "key": "e_1_2_1_117_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0016-7061(93)90116-3"
+            },
+            {
+              "key": "e_1_2_1_118_1",
+              "first-page": "399",
+              "volume-title": "Plant root growth: an ecological perspective",
+              "author": "Vaughan D",
+              "year": "1991"
+            },
+            {
+              "key": "e_1_2_1_119_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2260018"
+            },
+            {
+              "key": "e_1_2_1_120_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2389.1991.tb00411.x"
+            },
+            {
+              "key": "e_1_2_1_121_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1438-8677.1958.tb00613.x"
+            },
+            {
+              "key": "e_1_2_1_122_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1399-3054.1980.tb02669.x"
+            },
+            {
+              "key": "e_1_2_1_123_1",
+              "unstructured": "WitDeCT.1953.A physical theory on placement of fertilizers.Verslagen van Landbouwkundige Onderzoekingenno. 59.4:1\u201371."
+            },
+            {
+              "key": "e_1_2_1_124_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/b70-098"
+            }
+          ],
+          "container-title": [
+            "New Phytologist"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1469-8137.1994.tb02969.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-8137.1994.tb02969.x",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://nph.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-8137.1994.tb02969.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                9,
+                1
+              ]
+            ],
+            "date-time": "2023-09-01T13:13:52Z",
+            "timestamp": 1693574032000
+          },
+          "score": 25.386364,
+          "resource": {
+            "primary": {
+              "URL": "https://nph.onlinelibrary.wiley.com/doi/10.1111/j.1469-8137.1994.tb02969.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1994,
+                8
+              ]
+            ]
+          },
+          "references-count": 123,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  1994,
+                  8
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/j.1469-8137.1994.tb02969.x"
+          ],
+          "URL": "https://doi.org/10.1111/j.1469-8137.1994.tb02969.x",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0028-646X",
+            "1469-8137"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-646X",
+              "type": "print"
+            },
+            {
+              "value": "1469-8137",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1994,
+                8
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                14
+              ]
+            ],
+            "date-time": "2026-08-14T00:48:59Z",
+            "timestamp": 1786668539108,
+            "version": "build-2736575974"
+          },
+          "reference-count": 52,
+          "publisher": "Wiley",
+          "issue": "10",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    10,
+                    7
+                  ]
+                ],
+                "date-time": "2020-10-07T00:00:00Z",
+                "timestamp": 1602028800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 6,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "besjournals.onlinelibrary.wiley.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Functional Ecology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2020,
+                10
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title><jats:p>\n<jats:list>\n\n<jats:list-item><jats:p>Some plants respond to both neighbours and nutrient levels below\u2010ground independently, while others respond only to nutrients. These responses have important ecological implications, but debate about the appropriate control treatments used in experiments has led many to debate results.</jats:p></jats:list-item>\n\n<jats:list-item><jats:p>When plants ignore neighbours, and only respond to nutrient levels this is sometimes called an ideal\u2010free distribution (IFD). When individual plants respond to neighbours by increasing root production to pre\u2010empt the uptake of neighbours, and do so at the expense of reproduction, this has become known as a tragedy of the commons (TOC). Here, I describe how the history of competition experiments has largely been a history of experiments that only control two of three critical variables: (a) total nutrients per plant; (b) soil nutrient concentration and (c) pot volume. These confounding effects are the source of debate about results.</jats:p></jats:list-item>\n\n<jats:list-item><jats:p>In one study, split\u2010root pea plants were grown with and without a below\u2010ground neighbour at many pot volumes with equal total nutrients per\u2010plant. The researchers explicitly argued that plant growth responses would not be affected by the concentration of nutrients in soil, and therefore they explicitly confounded soil nutrient concentration with neighbour presence. Here, I reanalyse a subset of their data, controlling for soil nutrient concentration, but confounding pot volume with neighbour presence.</jats:p></jats:list-item>\n\n<jats:list-item><jats:p>When I controlled for soil nutrient concentration, the presence of a below\u2010ground neighbour had no effects on plant size, or allocation, and the effects of volume also disappeared. The reanalysis suggests that the behaviour of peas in this study was consistent with an IFD model, and that the previously reported volume and neighbour responses may have been due to the confounding of nutrient concentration.</jats:p></jats:list-item>\n\n<jats:list-item><jats:p>The results of the study in question depend very much on whether one does analyses that control for pot volume or whether one does analyses that control for soil nutrient concentration. Ultimately, these analyses lead to two different interpretations of the data. New experimental designs are emerging that fully control pot volume and nutrients across competition treatment, and I discuss possible paths forward in this ongoing debate.</jats:p></jats:list-item>\n</jats:list>\n</jats:p>",
+          "DOI": "10.1111/1365-2435.13517",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2020-10-07T10:10:14Z",
+            "timestamp": 1602065414000
+          },
+          "page": "2199-2209",
+          "update-policy": "https://doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 19,
+          "title": [
+            "Interpreting plant root responses to nutrients, neighbours and pot volume depends on researchers\u2019 assumptions"
+          ],
+          "prefix": "10.1111",
+          "volume": "34",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-7188-7265",
+              "authenticated-orcid": false,
+              "given": "Gordon G.",
+              "family": "McNickle",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Botany and Plant Pathology Purdue University West Lafayette IN USA"
+                },
+                {
+                  "name": "Purdue Center for Plant Biology Purdue University West Lafayette IN USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2020,
+                10,
+                7
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_5_2_1",
+              "unstructured": "Bates D. M.(2007).Linear mixed model implementation in lme4."
+            },
+            {
+              "key": "e_1_2_5_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1034/j.1600-0706.2001.11309.x"
+            },
+            {
+              "key": "e_1_2_5_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev-ecolsys-102710-145006"
+            },
+            {
+              "key": "e_1_2_5_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1189736"
+            },
+            {
+              "key": "e_1_2_5_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0040-5809(76)90040-X"
+            },
+            {
+              "key": "e_1_2_5_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/1365-2435.12450"
+            },
+            {
+              "key": "e_1_2_5_8_1",
+              "article-title": "Data from: Corrections for rooting volume and plant size reveal negative effects of neighbour presence on root allocation in pea",
+              "author": "Chen B. J. W.",
+              "year": "2015",
+              "journal-title": "Dryad Digital Repository"
+            },
+            {
+              "key": "e_1_2_5_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11104-006-9002-x"
+            },
+            {
+              "key": "e_1_2_5_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.2005.01386.x"
+            },
+            {
+              "key": "e_1_2_5_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1150726"
+            },
+            {
+              "key": "e_1_2_5_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.2004.01310.x"
+            },
+            {
+              "key": "e_1_2_5_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261158"
+            },
+            {
+              "key": "e_1_2_5_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3040.2009.01936.x"
+            },
+            {
+              "key": "e_1_2_5_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/657992"
+            },
+            {
+              "key": "e_1_2_5_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.27.3.457"
+            },
+            {
+              "key": "e_1_2_5_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2001)082[2534:SNHACB]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_5_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1006587813950"
+            },
+            {
+              "key": "e_1_2_5_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.0022-0477.2001.00609.x"
+            },
+            {
+              "key": "e_1_2_5_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3546023"
+            },
+            {
+              "key": "e_1_2_5_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261095"
+            },
+            {
+              "key": "e_1_2_5_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[1118:EATQII]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_5_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/1365-2745.12954"
+            },
+            {
+              "key": "e_1_2_5_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2006.01204.x"
+            },
+            {
+              "issue": "25",
+              "key": "e_1_2_5_25_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "159",
+              "DOI": "10.1016/S0065-2504(08)60215-9",
+              "article-title": "Foraging in plants\u2010the role of morphological plasticity in resource acquisition",
+              "volume": "25",
+              "author": "Hutchings M. J.",
+              "year": "1994",
+              "journal-title": "Advances in Ecological Research"
+            },
+            {
+              "key": "e_1_2_5_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0173758"
+            },
+            {
+              "key": "e_1_2_5_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11258-004-6737-4"
+            },
+            {
+              "key": "e_1_2_5_28_1",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1017/CBO9780511621123",
+              "volume-title": "The methodology of scientific research programmes, philisophical papers",
+              "author": "Lakatos I.",
+              "year": "1978"
+            },
+            {
+              "key": "e_1_2_5_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35083573"
+            },
+            {
+              "key": "e_1_2_5_30_1",
+              "first-page": "667",
+              "article-title": "Evolutionary stable strategies for nutrient foraging and below\u2010ground competition in plants",
+              "volume": "14",
+              "author": "McNickle G. G.",
+              "year": "2012",
+              "journal-title": "Evolutionary Ecology Research"
+            },
+            {
+              "key": "e_1_2_5_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/1365-2745.12259"
+            },
+            {
+              "key": "e_1_2_5_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/aobpla/plu066"
+            },
+            {
+              "key": "e_1_2_5_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tree.2009.03.004"
+            },
+            {
+              "key": "e_1_2_5_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/1365-2435.12508"
+            },
+            {
+              "key": "e_1_2_5_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00425-013-1910-4"
+            },
+            {
+              "key": "e_1_2_5_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/416584"
+            },
+            {
+              "key": "e_1_2_5_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2010.01702.x"
+            },
+            {
+              "key": "e_1_2_5_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2008.01354.x"
+            },
+            {
+              "key": "e_1_2_5_39_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2006.0113"
+            },
+            {
+              "key": "e_1_2_5_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.2005.01520.x"
+            },
+            {
+              "key": "e_1_2_5_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0055805"
+            },
+            {
+              "key": "e_1_2_5_42_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1071/FP12049"
+            },
+            {
+              "key": "e_1_2_5_43_1",
+              "volume-title": "R: A language and environment for statistical computing",
+              "author": "R\u2010Development\u2010Core\u2010Team",
+              "year": "2009"
+            },
+            {
+              "key": "e_1_2_5_44_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0065-2504(08)60032-X"
+            },
+            {
+              "key": "e_1_2_5_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2007.01210.x"
+            },
+            {
+              "key": "e_1_2_5_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2404218"
+            },
+            {
+              "key": "e_1_2_5_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3565196"
+            },
+            {
+              "key": "e_1_2_5_48_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2255655"
+            },
+            {
+              "key": "e_1_2_5_49_1",
+              "volume-title": "Resource competition and community structure",
+              "author": "Tilman D.",
+              "year": "1982"
+            },
+            {
+              "key": "e_1_2_5_50_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.35.6.820"
+            },
+            {
+              "key": "e_1_2_5_51_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1440-1703.2001.00368.x"
+            },
+            {
+              "key": "e_1_2_5_52_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0378-4290(98)00156-7"
+            },
+            {
+              "key": "e_1_2_5_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.baae.2019.07.001"
+            }
+          ],
+          "container-title": [
+            "Functional Ecology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/1365-2435.13517",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1111/1365-2435.13517",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/1365-2435.13517",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                9,
+                5
+              ]
+            ],
+            "date-time": "2023-09-05T14:06:03Z",
+            "timestamp": 1693922763000
+          },
+          "score": 24.772717,
+          "resource": {
+            "primary": {
+              "URL": "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2435.13517"
+            }
+          },
+          "editor": [
+            {
+              "given": "Oscar",
+              "family": "Godoy",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "editor"
+                }
+              ]
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                10
+              ]
+            ]
+          },
+          "references-count": 52,
+          "journal-issue": {
+            "issue": "10",
+            "published-print": {
+              "date-parts": [
+                [
+                  2020,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/1365-2435.13517"
+          ],
+          "URL": "https://doi.org/10.1111/1365-2435.13517",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0269-8463",
+            "1365-2435"
+          ],
+          "issn-type": [
+            {
+              "value": "0269-8463",
+              "type": "print"
+            },
+            {
+              "value": "1365-2435",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                10
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2019-02-01",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2019-12-15",
+              "order": 1,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2020-10-07",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

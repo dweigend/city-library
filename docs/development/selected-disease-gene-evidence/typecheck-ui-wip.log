@@ -1,0 +1,4 @@
+$ tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json && tsc -p tsconfig.ui-examples.json
+experiments/genevo-1-genetic-switch/model.ts(153,58): error TS2339: Property 'near' does not exist on type 'Molecule'.
+experiments/genevo-1-genetic-switch/model.ts(154,40): error TS2339: Property 'near' does not exist on type 'Molecule'.
+error: script "typecheck" exited with code 1

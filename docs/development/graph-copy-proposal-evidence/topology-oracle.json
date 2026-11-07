@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Independent labeled fixture table; not copy runtime",
+  "reverseExpected": [
+    [
+      "b",
+      "a",
+      true,
+      "forward"
+    ],
+    [
+      "a",
+      "b",
+      true,
+      "backward"
+    ],
+    [
+      "a",
+      "a",
+      true,
+      "loop"
+    ]
+  ],
+  "undirectedMultiplicities": {
+    "a-b": 2,
+    "a-a": 1
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "cyclic-ca",
+  "command": "set preset-parameters \"none\" set radius 1 set num-states 3 set threshold 1 set neighborhood \"Moore\" setup ask patches [ set pcolor first color-list ] ask patch 1 0 [ set pcolor item 1 color-list ] go",
+  "execution": "Original NetLogo Command Center, editor population followed by native Enter",
+  "observed": {
+    "file": "Cyclic CA.nlogox",
+    "sha": "e8669163bfd4c70e39f2dfe3d4f2a775e6770a931d2fcf6fc73fcb4a82820c50",
+    "tick": 1,
+    "patches": 40401,
+    "values": {
+      "init-pos": {
+        "unique": [
+          0,
+          1
+        ],
+        "trueCount": 0,
+        "min": 0,
+        "max": 1
+      }
+    },
+    "rowOn": [],
+    "rowOnCount": 0,
+    "turtles": 0,
+    "visibleTurtles": 0,
+    "heads": [],
+    "colors": [
+      5,
+      45,
+      85
+    ],
+    "successorCells": 9,
+    "console": " powered by NetLogo\nCyclic CA\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 1\n?\nfor shortcuts\nChoose preset parameter configurations.\nSelect \"none\" to vary parameter sliders.\npreset-parameters\nnone\n133\n3-color bootstrap\namoeba\nblack and white\ncubism\ncyclic spirals\ndiamond spirals\nfossil debris\nmacaroni\nmultistrands\npercolation mix\nweak spirals\nGreenberg–Hastings\nimperfect\nlava lamp\nmaps\nperfect\nsquarish spirals\nstripes\nturbulent phase\nneighborhood\nvon Neumann\nMoore\nradius\nnum-states\nthreshold\ngo\nsetup\nCommand Center\nobserver> set preset-parameters \"none\" set radius 1 set num-states 3 set threshold 1 set neighborhood \"Moore\" setup ask patches [ set pcolor first color-list ] ask patch 1 0 [ set pcolor item 1 color-list ] go\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+}

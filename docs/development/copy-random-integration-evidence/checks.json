@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-06",
+  "checkCodeCheckpoint": "d1286e3",
+  "command": "bun run check",
+  "exitCode": 0,
+  "tests": 487,
+  "assertions": 46204,
+  "publicScripts": 180,
+  "typeProjects": 4,
+  "build": true,
+  "packedConsumers": [
+    "Bun",
+    "Node ESM",
+    "ambient-free TypeScript"
+  ],
+  "modelStagesUnchanged": {
+    "implemented": 95,
+    "headless": 94,
+    "browserAndBaseline": 95,
+    "reviewed": 1
+  },
+  "laterScopedChange": {
+    "commit": "e1c4ae8",
+    "scope": "UI completion status derives from same post-action snapshot; no model/runtime change",
+    "executed": [
+      "four TypeScript projects",
+      "one playback test/nine assertions"
+    ],
+    "browser": "requested actual Chromium followup in B07; pending, not claimed passed"
+  },
+  "logs": [
+    {
+      "file": "docs/development/copy-random-integration-evidence/check.log",
+      "sha256": "09dd1810bff7d23cc1e701c3914a1bc4c81af148d9e2eb8d7748ffe29aeb3355"
+    },
+    {
+      "file": "docs/development/copy-random-integration-evidence/completion-status-playback.log",
+      "sha256": "9f92d3c4e022738f75541c8667d2cf1e2fddfcf81d052c7053cac44e1ed82f86"
+    },
+    {
+      "file": "docs/development/copy-random-integration-evidence/completion-status-types.log",
+      "sha256": "9b709abbdc6a33c79dde7ec1272fbc2f2925b0a37404f1952e1fb3b15108fbb2"
+    },
+    {
+      "file": "docs/development/copy-random-integration-evidence/root-copy-focused.log",
+      "sha256": "f8a8bd854493da1b7ccd52139610f6ed722cf0f3d76d399ed93b924d3ed45f0a"
+    },
+    {
+      "file": "docs/development/copy-random-integration-evidence/root-random-focused.log",
+      "sha256": "e055673f4f68699f4cf4a23bb9471fb19a0f23da0ba3edb7a771b2c222a0f7e7"
+    },
+    {
+      "file": "docs/development/copy-random-integration-evidence/root-types.log",
+      "sha256": "9b709abbdc6a33c79dde7ec1272fbc2f2925b0a37404f1952e1fb3b15108fbb2"
+    }
+  ]
+}

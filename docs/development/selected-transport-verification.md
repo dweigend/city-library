@@ -1,0 +1,30 @@
+# Selected transport verification and integration boundary
+
+Scope: the seven fixed B04 originals only. Issue: https://github.com/dweigend/city-library/issues/25. Base ac0c7eb. Parent owns registration, global checks/counts and integration into experiment/netlogo-web-catalog. No README, diagram, root API, shared UI/config, ledger, selection or research file changed. The local node_modules symlink points at the existing pinned installation in the catalog worktree; no dependencies were committed or changed.
+
+## Executed shell checks
+
+- `bun run typecheck`: all four existing TypeScript projects passed after final runtime formatting and UI integration.
+- `bun test tests/selected-transport*.test.ts`: 19 tests, 213 assertions, zero failures. Coverage includes source phase order, strict light timing, canonical occupancy, live population selection, Paths distance-self behavior, speed overshoot/negative following speed, taxi zero-light failure, U-turn occupancy bypass, movement-only fare, passenger aging, trip accounting, observation purity and isolation.
+- Each of the five `bun examples/selected-transport/0{1..5}-*.ts` scripts executed separately with assertions enabled and passed. The exact filenames and frozen hashes are in selected-transport/frozen-SHA256SUMS; `sha256sum -c` passed after implementation. No frozen file was edited after f29c5df.
+- Additional standalone frozen-example typecheck: `bun node_modules/typescript/bin/tsc -p /tmp/selected-transport-frozen-tsconfig.json` passed. Temporary config extends this worktree's tsconfig.dev.json, includes only its absolute examples/selected-transport/*.ts paths and points typeRoots at the existing pinned node_modules/@types. First attempt without explicit typeRoots failed TS2688 (Bun types cannot resolve from /tmp); corrected environment config passed. Shared project registration is deliberately left to parent.
+- `bun run build` passed; `bun run consumer` passed packed Bun, Node ESM and ambient-free TypeScript consumers. Experiments are repository public authoring modules, not newly published package subpaths; this consumer check covers the unchanged library they compose.
+- `git diff --check` and the frozen SHA check passed. No package publication occurred. Full global regression and phase registration belong to parent; only these executed checks are claimed.
+
+## Implementation evidence
+
+The source/five-script freeze f29c5df preceded both scoped native runtime workers. Worker one owned Paths/Traffic Basic/Traffic 2 Lanes/Traffic Intersection; worker two owned Traffic Grid/Traffic Grid Goal/Taxi Cabs. Their complete results were awaited. Coordinator commits ed45779 and 5e038f5 contain those implementations/tests; c4ebeb6 contains thin UI and 1cbbdb9 expands the city procedures into conventional multiline TypeScript. The source-specific shared Grid/Goal composition lives within an owned experiment, not core. No generic routing, movement or occupancy engine was copied into a model.
+
+All models expose create/inputs/model, step/snapshot/setParameters and source-specific actions. UI uses the same factory through read/advance aliases. Agent owns positions; Grid owns cells and patch values; World owns live membership and completed ticks; temporary occupancy query sets are not another state owner. Model reporters return detached observations. Histories retain setup plus the latest1000 samples; this bounded presentation history is an explicit adaptation from the unbounded original plots.
+
+The source audit found no real dependency on Graph.analyze, Graph.findRoute, Routes or generators. Paths is a local visible-route preference; Grid Goal chooses a Moore neighbor greedily; Taxi Cabs executes directional delivery rules. Those are not global routing promises. Parent was notified of this finding and the native Paths distance-self source bug. The corrected audit does not change any frozen expectation, syntax or scope, so no frozen-contract amendment was made.
+
+## Design QA and limitations
+
+Applied frontend-design, then reviewed all seven UI bindings against the freshly fetched Vercel guidelines (2026-11-06). Reused existing compact controls/tokens, native labels/buttons/disclosures, source links, explicit Run/Pause and drawing toggles. No new icons, shared chrome or styling framework. Taxi's45 demand controls use native nested disclosures, nine per phase; all53 live controls remain bound through the single shared setup/live reader. Native inputs retain validation, names and autocomplete behavior.
+
+Actual T3 Chromium screenshots were inspected individually at1440×1100 desktop and390×844 mobile in both light and dark themes. Horizontal document width stayed390 on mobile. Mobile layout places live inputs after views; scene captures explicitly scroll the full first canvas into view, with scroll/geometry retained. Controls and long labels fit. Keyboard Tab after Seed produced visible2px solid focus in every target. Canvas inspection/drawing preserves the shared host's accessibility model; this is not a claim of complete accessibility compliance or a new keyboard drawing system.
+
+Some desktop screenshots intentionally show only the upper plots; mobile scene images include further charts. Each PNG is a viewport capture, never a claim to be full-page. A bundled tool display initially rendered the Paths setup PNG white; loading that same file individually showed the intact green scene. No file or renderer was changed to address the tool presentation. Ordinary desktop/mobile/theme captures were retained BEFORE any getImageData diagnostics. Later sampled pixel colors were39–303 per scene; pixel reads were diagnostic, not a renderer fix.
+
+No independent approval is claimed. Required Antigravity gemini-4-argon/high review remains PENDING on existing quota-blocked task8194e842; no retry, substitute or new review task was launched. No Astra consultation was necessary. Research remains the existing completed three-publication strand, not a new literature pass. These author checks and browser comparisons do not establish scientific distribution/trajectory validation or final acceptance.

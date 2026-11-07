@@ -1,0 +1,21 @@
+Refreeze commit: 08d38c6
+
+$ bun examples/selected-materials/01-sandpile-ising.ts
+exit=0
+materials 01: avalanche barrier and Metropolis mechanism passed
+
+$ bun examples/selected-materials/02-sand.ts
+exit=0
+materials 02: synchronous falling sand and spout ordering passed
+
+$ bun examples/selected-materials/03-atomic-diffusion.ts
+exit=0
+materials 03: vacancy exchange, exclusion and reservoirs passed
+
+$ bun examples/selected-materials/04-thermal-phases.ts
+exit=0
+materials 04: thermal equations and crystallization phase barriers passed
+
+$ bun examples/selected-materials/05-dla.ts
+exit=0
+materials 05: DLA birth throttle, radial motion and sticking passed

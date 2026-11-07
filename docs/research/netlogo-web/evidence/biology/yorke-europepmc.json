@@ -1,0 +1,267 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Foxfordjournals.aje.a112666%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1093/oxfordjournals.aje.a112666\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "218446",
+          "source": "MED",
+          "pmid": "218446",
+          "doi": "10.1093/oxfordjournals.aje.a112666",
+          "title": "Seasonality and the requirements for perpetuation and eradication of viruses in populations.",
+          "authorString": "Yorke JA, Nathanson N, Pianigiani G, Martin J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Yorke JA",
+                "lastName": "Yorke",
+                "firstName": "J A",
+                "initials": "JA"
+              },
+              {
+                "fullName": "Nathanson N",
+                "lastName": "Nathanson",
+                "firstName": "N",
+                "initials": "N"
+              },
+              {
+                "fullName": "Pianigiani G",
+                "lastName": "Pianigiani",
+                "firstName": "G",
+                "initials": "G"
+              },
+              {
+                "fullName": "Martin J",
+                "lastName": "Martin",
+                "firstName": "J",
+                "initials": "J"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "109",
+            "journalIssueId": 168727,
+            "dateOfPublication": "1979 Feb",
+            "monthOfPublication": 2,
+            "yearOfPublication": 1979,
+            "journal": {
+              "medlineAbbreviation": "Am J Epidemiol",
+              "title": "American journal of epidemiology",
+              "essn": "1476-6256",
+              "issn": "0002-9262",
+              "nlmid": "7910653",
+              "isoabbreviation": "Am J Epidemiol"
+            },
+            "printPublicationDate": "1979-02-01"
+          },
+          "pubYear": "1979",
+          "pageInfo": "103-123",
+          "abstractText": "Perpetuation of a virus in a population is distinct from the ability to persist in a cell culture or individual host. Parameters which determine perpetuation include: 1) the size of the population; 2) the turnover of the population; 3) the proportion of immunes in the population; 4) the transmissibility of the infection; and 5) the generation time between sequential infections. These parameters may be grouped into two composite factors which most directly affect transmission dynamics and perpetuation: (a) population turnover per generation period, and (b) transmissibility or the fraction of susceptibles infected per existing infection. Perpetuation in small populations usually requires either the ability to persist in individuals or rapid population turnover. Conversely, human viruses which initiate only acute infections require larger populations to persist. Seasonal variation in transmissibility can greatly increase the minimum population size in which persistence is possible, and we argue that the population size of 500,000 for measles persistence (described by Bartlett) is primarily a consequence of seasonal variation. Computer modelling can be used to examine the effect of changes in parameters which determine the seasonal cycle of virus perpetuation and fadeout. Finally, human infections are reviewed to indicate those which have been eradicated (smallpox), are on the threshold of eradication (poliomyelitis), are possibly eradicable (measles), or could be candidates for future efforts (hepatitis A and hepatitis B). In developing a strategy for eradication two points are of great potential utility: first, the seasonal trough should be exploited as a time for effective intervention; and, second, containment efforts should be directed at epidemiologically important population groupings such as schools.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, U.S. Gov't, P.H.S.",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Virus Diseases",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Poliomyelitis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Poxviridae Infections",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "VE",
+                      "qualifierName": "veterinary"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Ectromelia, Infectious",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Measles",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TM",
+                      "qualifierName": "transmission"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Rodent Diseases",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Immunization"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Seasons"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Computers"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "United States"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Maryland"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "abs",
+                "site": "aje.oxfordjournals.org",
+                "url": "http://aje.oxfordjournals.org/cgi/content/abstract/109/2/103"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/oxfordjournals.aje.a112666"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 75,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1979-05-26",
+          "dateOfCreation": "1979-02-01",
+          "dateOfRevision": "2019-05-09",
+          "firstPublicationDate": "1979-02-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

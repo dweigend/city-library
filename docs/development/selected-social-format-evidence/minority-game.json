@@ -1,0 +1,73 @@
+{
+  "slug": "minority-game",
+  "codeCommit": "c8700ec",
+  "marker": "selected-social-b02:minority-game:5da641101e48d2ca325cfffa3f1bdaf27708152b628ab5504a95a2798a53e1a1",
+  "sourceSHA256": "5da641101e48d2ca325cfffa3f1bdaf27708152b628ab5504a95a2798a53e1a1",
+  "sourceHashBasis": "Unchanged pinned source.nlogox; fresh target chunk marker checked. Native session was not re-run for a formatting-only change.",
+  "buildVersion": "1793962848757",
+  "loadedModelChunk": "http://localhost:3112/chunks/ui-272agyne.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-272agyne.js",
+      "sha256": "fa52cb254fbe1e5cc3225ef3e4da1341f902221b55c0633ea14ff1c18fbe646a"
+    }
+  ],
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "setup": {
+    "tick": 0,
+    "parameters": {
+      "seed": 1,
+      "number": 501,
+      "memory": 6,
+      "strategiesPerAgent": 5,
+      "colorBy": "success"
+    },
+    "monitors": {
+      "Tick": "0",
+      "History": "101000",
+      "Minority": "0",
+      "Average score": "0.000",
+      "Movement": "Active"
+    },
+    "status": "Model initialized.",
+    "raster": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "sampledColors": 6
+      }
+    ]
+  },
+  "errors": [],
+  "step": {
+    "tick": 1,
+    "monitors": {
+      "Tick": "1",
+      "History": "010000",
+      "Minority": "1",
+      "Average score": "0.487",
+      "Movement": "Active"
+    },
+    "status": "Steps completed.",
+    "raster": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "sampledColors": 11
+      }
+    ],
+    "errors": []
+  },
+  "images": {
+    "setup": "minority-game-setup.png",
+    "step": "minority-game-step.png"
+  }
+}

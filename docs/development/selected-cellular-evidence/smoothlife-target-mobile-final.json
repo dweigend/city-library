@@ -1,0 +1,164 @@
+{
+  "head": "c4e1992",
+  "slug": "smoothlife",
+  "mobile-dark": {
+    "url": "http://localhost:3119/?experiment=smoothlife",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n43\nDisk cells\n29\nAnnulus cells\n224"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 16384 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1725507204,
+        "nonzero": 476475
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "128"
+      },
+      {
+        "name": "height",
+        "value": "128"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "innerRadius",
+        "value": "3"
+      },
+      {
+        "name": "outerRadius",
+        "value": "9"
+      },
+      {
+        "name": "live-minBirth",
+        "value": "0.278"
+      },
+      {
+        "name": "live-maxBirth",
+        "value": "0.365"
+      },
+      {
+        "name": "live-minSurvive",
+        "value": "0.267"
+      },
+      {
+        "name": "live-maxSurvive",
+        "value": "0.445"
+      },
+      {
+        "name": "live-innerStepWidth",
+        "value": "0.147"
+      },
+      {
+        "name": "live-outerStepWidth",
+        "value": "0.028"
+      },
+      {
+        "name": "live-paintValue",
+        "value": "1"
+      },
+      {
+        "name": "live-paintRadius",
+        "value": "3"
+      }
+    ]
+  },
+  "mobile-light": {
+    "url": "http://localhost:3119/?experiment=smoothlife",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n43\nDisk cells\n29\nAnnulus cells\n224"
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 16384 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1725507204,
+        "nonzero": 476475
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "128"
+      },
+      {
+        "name": "height",
+        "value": "128"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "innerRadius",
+        "value": "3"
+      },
+      {
+        "name": "outerRadius",
+        "value": "9"
+      },
+      {
+        "name": "live-minBirth",
+        "value": "0.278"
+      },
+      {
+        "name": "live-maxBirth",
+        "value": "0.365"
+      },
+      {
+        "name": "live-minSurvive",
+        "value": "0.267"
+      },
+      {
+        "name": "live-maxSurvive",
+        "value": "0.445"
+      },
+      {
+        "name": "live-innerStepWidth",
+        "value": "0.147"
+      },
+      {
+        "name": "live-outerStepWidth",
+        "value": "0.028"
+      },
+      {
+        "name": "live-paintValue",
+        "value": "1"
+      },
+      {
+        "name": "live-paintRadius",
+        "value": "3"
+      }
+    ]
+  }
+}

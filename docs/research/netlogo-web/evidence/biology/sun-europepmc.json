@@ -1,0 +1,291 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fj.1462-2920.2012.02879.x%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1111/j.1462-2920.2012.02879.x\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "23057534",
+          "source": "MED",
+          "pmid": "23057534",
+          "doi": "10.1111/j.1462-2920.2012.02879.x",
+          "title": "Phage mutations in response to CRISPR diversification in a bacterial population.",
+          "authorString": "Sun CL, Barrangou R, Thomas BC, Horvath P, Fremaux C, Banfield JF.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Sun CL",
+                "lastName": "Sun",
+                "firstName": "Christine L",
+                "initials": "CL",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "University of California, Berkeley, CA, USA. christine_sun@berkeley.edu"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Barrangou R",
+                "lastName": "Barrangou",
+                "firstName": "Rodolphe",
+                "initials": "R",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0648-3504"
+                }
+              },
+              {
+                "fullName": "Thomas BC",
+                "lastName": "Thomas",
+                "firstName": "Brian C",
+                "initials": "BC"
+              },
+              {
+                "fullName": "Horvath P",
+                "lastName": "Horvath",
+                "firstName": "Philippe",
+                "initials": "P",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2015-8123"
+                }
+              },
+              {
+                "fullName": "Fremaux C",
+                "lastName": "Fremaux",
+                "firstName": "Christophe",
+                "initials": "C"
+              },
+              {
+                "fullName": "Banfield JF",
+                "lastName": "Banfield",
+                "firstName": "Jillian F",
+                "initials": "JF",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-8203-8771"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-8203-8771"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0648-3504"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2015-8123"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "recommended_reviews",
+              "related_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "15",
+            "journalIssueId": 2004542,
+            "dateOfPublication": "2013 Feb",
+            "monthOfPublication": 2,
+            "yearOfPublication": 2013,
+            "journal": {
+              "medlineAbbreviation": "Environ Microbiol",
+              "title": "Environmental microbiology",
+              "essn": "1462-2920",
+              "issn": "1462-2912",
+              "nlmid": "100883692",
+              "isoabbreviation": "Environ Microbiol"
+            },
+            "printPublicationDate": "2013-02-01"
+          },
+          "pubYear": "2013",
+          "pageInfo": "463-470",
+          "abstractText": "Interactions between bacteria and their coexisting phage populations impact evolution and can strongly influence biogeochemical processes in natural ecosystems. Periodically, mutation or migration results in exposure of a host to a phage to which it has no immunity; alternatively, a phage may be exposed to a host it cannot infect. To explore the processes by which coexisting, co-evolving hosts and phage populations establish, we cultured Streptococcus thermophilus DGCC7710 with phage 2972 and tracked CRISPR (clustered regularly interspaced short palindromic repeats) diversification and host-phage co-evolution in a population derived from a colony that acquired initial CRISPR-encoded immunity. After 1 week of co-culturing, the coexisting host-phage populations were metagenomically characterized using 454 FLX Titanium sequencing. The evolved genomes were compared with reference genomes to identify newly incorporated spacers in S.\u2009thermophilus DGCC7710 and recently acquired single-nucleotide polymorphisms (SNPs) in phage 2972. Following phage exposure, acquisition of immune elements (spacers) led to a genetically diverse population with multiple subdominant strain lineages. Phage mutations that circumvented three early immunization events were localized in the proto-spacer adjacent motif (PAM) or near the PAM end of the proto-spacer, suggesting a strong selective advantage for the phage that mutated in this region. The sequential fixation or near fixation of these single mutations indicates selection events so severe that single phage genotypes ultimately gave rise to all surviving lineages and potentially carried traits unrelated to immunity to fixation.",
+          "affiliation": "University of California, Berkeley, CA, USA. christine_sun@berkeley.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Streptococcus thermophilus",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "VI",
+                      "qualifierName": "virology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacteriophages",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "DNA, Intergenic",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Base Sequence"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Mutation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Polymorphism, Single Nucleotide"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genome, Viral",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Molecular Sequence Data"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genetic Variation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Evolution"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "DNA, Intergenic",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1111/j.1462-2920.2012.02879.x"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 86,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "Y",
+          "dbCrossReferenceList": {
+            "dbName": [
+              "EMBL"
+            ]
+          },
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2013-09-23",
+          "dateOfCreation": "2012-10-13",
+          "dateOfRevision": "2018-12-02",
+          "electronicPublicationDate": "2012-10-12",
+          "firstPublicationDate": "2012-10-12",
+          "firstIndexDate": "2012-10-13",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

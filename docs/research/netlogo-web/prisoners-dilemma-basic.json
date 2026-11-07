@@ -1,0 +1,99 @@
+{
+  "slug": "prisoners-dilemma-basic",
+  "name": "Prisoner's Dilemma Basic",
+  "catalogPath": "Sample Models/Social Science/Prisoner's Dilemma/Prisoner's Dilemma Basic",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Basic.nlogox",
+  "deliveryBatch": "B03",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether individually attractive choices can produce mutually inferior outcomes. In NetLogo's Prisoner's Dilemma Basic model, two players choose confession or silence and receive prison sentences from a fixed payoff matrix. The selected literature connects this mechanism to dominance and strategic interdependence: equilibrium supplies the formal benchmark for mutual best responses [1]; repeated-game strategies demonstrate why one-shot reasoning has limits [2]; reciprocity changes the conditions under which cooperation persists [3]. One-shot play, common payoffs and no binding communication define the dilemma; results cannot directly predict behavior under trust, repetition or social preferences. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Basic.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Basic.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/prisoners-dilemma-basic.nlogox",
+    "sha256": "a2fdd21082bd5cd3e8e5c5fb91cde6631cd8ac146bd02ed702a0fe51e379237b",
+    "citation": "For the model itself: * Wilensky, U. (2002). NetLogo Prisoner's Dilemma Basic model. http://ccl.northwestern.edu/netlogo/models/Prisoner'sDilemmaBasic. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Info does not identify a scientific original; related publications below are contextual comparisons, not asserted source derivations.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/prisoners-dilemma-basic.nlogox"
+  },
+  "publications": [
+    {
+      "id": "nash",
+      "creatorRole": "author",
+      "authors": [
+        "John F. Nash"
+      ],
+      "title": "Equilibrium points in n-person games",
+      "year": 1950,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.36.1.48",
+      "url": "https://doi.org/10.1073/pnas.36.1.48",
+      "relevance": "equilibrium supplies the formal benchmark for mutual best responses",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.36.1.48",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/nash-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/nash-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "axelrodeff",
+      "creatorRole": "author",
+      "authors": [
+        "Robert Axelrod"
+      ],
+      "title": "Effective Choice in the Prisoner's Dilemma",
+      "year": 1980,
+      "venue": "Journal of Conflict Resolution",
+      "doi": "10.1177/002200278002400101",
+      "url": "https://doi.org/10.1177/002200278002400101",
+      "relevance": "repeated-game strategies demonstrate why one-shot reasoning has limits",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1177%2F002200278002400101",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/axelrodeff-crossref.json",
+        "evidenceSummary": "This is a “primer” on how to play the iterated Prisoner's Dilemma game effectively. Existing research approaches offer the participant limited help in understanding how to cope effectively with such interactions. To gain a deeper understanding of how to be effective in such a partially competitive and partially cooperative environment, a computer tournament was conducted for the iterated Prisoner's Dilemma. Decision rules were submitted by entrants who were recruited primarily from experts in game theory from a variety of disciplines: psychology, political science, economics, sociology, and mathematics. The results of the tournament demonstrate that there are subtle reasons for an individualistic pragmatist to cooperate as long as the other side does, to be somewhat for-giving, and to be optimistic about the other side's responsiveness.",
+        "evidenceFile": "evidence/social-urban/axelrodeff-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "axelrodcoop",
+      "creatorRole": "author",
+      "authors": [
+        "Robert Axelrod",
+        "William D. Hamilton"
+      ],
+      "title": "The Evolution of Cooperation",
+      "year": 1981,
+      "venue": "Science",
+      "doi": "10.1126/science.7466396",
+      "url": "https://doi.org/10.1126/science.7466396",
+      "relevance": "reciprocity changes the conditions under which cooperation persists",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1126%2Fscience.7466396",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/axelrodcoop-crossref.json",
+        "evidenceSummary": "Cooperation in organisms, whether bacteria or primates, has been a difficulty for evolutionary theory since Darwin. On the assumption that interactions between pairs of individuals occur on a probabilistic basis, a model is developed based on the concept of an evolutionarily stable strategy in the context of the Prisoner's Dilemma game. Deductions from the model, and the results of a computer tournament show how cooperation based on reciprocity can get started in an asocial world, can thrive while interacting with a wide range of other strategies, and can resist invasion once fully established. Potential applications include specific aspects of territoriality, mating, and disease.",
+        "evidenceFile": "evidence/social-urban/axelrodcoop-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

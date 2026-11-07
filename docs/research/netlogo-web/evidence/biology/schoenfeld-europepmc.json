@@ -1,0 +1,245 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1519%2Fjsc.0b013e3181e840f3%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1519/jsc.0b013e3181e840f3\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "20847704",
+          "source": "MED",
+          "pmid": "20847704",
+          "doi": "10.1519/jsc.0b013e3181e840f3",
+          "title": "The mechanisms of muscle hypertrophy and their application to resistance training.",
+          "authorString": "Schoenfeld BJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Schoenfeld BJ",
+                "lastName": "Schoenfeld",
+                "firstName": "Brad J",
+                "initials": "BJ",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Global Fitness Services, Scarsdale, New York, USA. brad@workout911.com"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "10",
+            "volume": "24",
+            "journalIssueId": 1765524,
+            "dateOfPublication": "2010 Oct",
+            "monthOfPublication": 10,
+            "yearOfPublication": 2010,
+            "journal": {
+              "medlineAbbreviation": "J Strength Cond Res",
+              "title": "Journal of strength and conditioning research",
+              "essn": "1533-4287",
+              "issn": "1064-8011",
+              "isoabbreviation": "J Strength Cond Res",
+              "nlmid": "9415084"
+            },
+            "printPublicationDate": "2010-10-01"
+          },
+          "pubYear": "2010",
+          "pageInfo": "2857-2872",
+          "abstractText": "The quest to increase lean body mass is widely pursued by those who lift weights. Research is lacking, however, as to the best approach for maximizing exercise-induced muscle growth. Bodybuilders generally train with moderate loads and fairly short rest intervals that induce high amounts of metabolic stress. Powerlifters, on the other hand, routinely train with high-intensity loads and lengthy rest periods between sets. Although both groups are known to display impressive muscularity, it is not clear which method is superior for hypertrophic gains. It has been shown that many factors mediate the hypertrophic process and that mechanical tension, muscle damage, and metabolic stress all can play a role in exercise-induced muscle growth. Therefore, the purpose of this paper is twofold: (a) to extensively review the literature as to the mechanisms of muscle hypertrophy and their application to exercise training and (b) to draw conclusions from the research as to the optimal protocol for maximizing muscle growth.",
+          "affiliation": "Global Fitness Services, Scarsdale, New York, USA. brad@workout911.com",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscle, Skeletal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GD",
+                      "qualifierName": "growth & development"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Satellite Cells, Skeletal Muscle",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Hormones",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cytokines",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscle Development",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Weight Lifting",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Female"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Resistance Training"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Hormones",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Cytokines",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "html",
+                "site": "AllenPress",
+                "url": "http://nsca.allenpress.com/nscaonline/?request=get-document&issn=1064-8011&volume=024&issue=10&page=2857"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "abs",
+                "site": "AllenPress",
+                "url": "http://nsca.allenpress.com/nscaonline/?request=get-abstract&issn=1064-8011&volume=024&issue=10&page=2857"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1519/JSC.0b013e3181e840f3"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 652,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2011-02-09",
+          "dateOfCreation": "2010-09-18",
+          "dateOfRevision": "2022-04-10",
+          "firstPublicationDate": "2010-10-01",
+          "firstIndexDate": "2010-10-09",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

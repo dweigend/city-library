@@ -1,0 +1,27 @@
+.lab-workbench { display: grid; grid-template-columns: minmax(13rem, 17rem) minmax(0, 1fr); gap: 1rem 1.5rem; align-items: start; }
+.lab-transport { grid-column: 1 / -1; position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; padding-block: .75rem; background: var(--background); border-bottom: 1px solid var(--border); }
+.lab-speed { display: flex; gap: .75rem; align-items: center; width: 9rem; margin-inline: .5rem; font-size: .875rem; }
+.lab-transport > button:last-child { display: none; }
+.lab-parameters { display: grid; gap: 1rem; min-width: 0; }
+.lab-parameters [data-slot="field-group"] { gap: 1rem; }
+.lab-model-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.lab-results { min-width: 0; }
+.lab-monitors { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; padding-block: .25rem .75rem; }
+.lab-monitors dt { color: var(--muted-foreground); font-size: .75rem; }
+.lab-monitors dd { font-size: .875rem; font-variant-numeric: tabular-nums; font-weight: 500; }
+.lab-views { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.lab-views > :first-child { grid-column: 1 / -1; }
+.lab-empty { display: grid; min-height: 18rem; place-items: center; }
+.lab-error { color: var(--destructive); padding-block: .5rem; }
+.lab-info-trigger { display: flex; align-items: center; gap: .5rem; font-size: .875rem; color: var(--muted-foreground); }
+.lab-info-trigger svg { width: 1rem; height: 1rem; }
+.lab-model-info { display: grid; gap: .5rem; padding-top: .75rem; font-size: .875rem; color: var(--muted-foreground); }
+.lab-model-info a { text-decoration: underline; text-underline-offset: .2em; }
+@media (max-width: 760px) {
+  .lab-workbench { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .lab-transport { gap: .5rem; }
+  .lab-transport > button:last-child { display: inline-flex; }
+  .lab-parameters { display: none; }
+  .lab-parameters[data-open="true"] { display: grid; }
+  .lab-views { grid-template-columns: minmax(0, 1fr); }
+}

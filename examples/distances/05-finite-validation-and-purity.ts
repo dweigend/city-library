@@ -1,0 +1,10 @@
+import { strict as assert } from "node:assert";
+import { Random, geometry } from "city-library";
+const random = Random.add({ seed: 13 }), before = random.state;
+const a = Object.freeze({ x: 0, y: 0 }), b = Object.freeze({ x: 1e308, y: 1e308 });
+const space = { x: 10, y: 10 };
+assert.equal(geometry.distance(a, b, { space }), Math.hypot(1e308, 1e308));
+assert.throws(() => geometry.distance(a, { x: Infinity, y: 0 }, { space }));
+assert.throws(() => geometry.distance({ x: -Number.MAX_VALUE, y: 0 }, { x: Number.MAX_VALUE, y: 0 }, { space }));
+assert.throws(() => geometry.distance(a, a, { space, wrap: "yes" } as unknown as { space: typeof space; wrap: boolean }));
+assert.deepEqual(random.state, before); assert.equal(a.x, 0); assert.equal(b.x, 1e308);

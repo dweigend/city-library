@@ -1,0 +1,206 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1534%2Fgenetics.116.195198%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1534/genetics.116.195198\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "27729492",
+          "source": "MED",
+          "pmid": "27729492",
+          "pmcid": "PMC5068836",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC5068836"
+            ]
+          },
+          "doi": "10.1534/genetics.116.195198",
+          "title": "Experiments on Plant Hybrids by Gregor Mendel.",
+          "authorString": "Abbott S, Fairbanks DJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Abbott S",
+                "lastName": "Abbott",
+                "firstName": "Scott",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "*Department of Integrated Studies, Utah Valley University, Orem, Utah 84058."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Fairbanks DJ",
+                "lastName": "Fairbanks",
+                "firstName": "Daniel J",
+                "initials": "DJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7422-0549"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biology, Utah Valley University, Orem, Utah 84058."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7422-0549"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "204",
+            "journalIssueId": 2462215,
+            "dateOfPublication": "2016 Oct",
+            "monthOfPublication": 10,
+            "yearOfPublication": 2016,
+            "journal": {
+              "medlineAbbreviation": "Genetics",
+              "title": "Genetics",
+              "essn": "1943-2631",
+              "issn": "0016-6731",
+              "nlmid": "0374636",
+              "isoabbreviation": "Genetics"
+            },
+            "printPublicationDate": "2016-10-01"
+          },
+          "pubYear": "2016",
+          "pageInfo": "407-422",
+          "affiliation": "*Department of Integrated Studies, Utah Valley University, Orem, Utah 84058.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Historical Article",
+              "Seminal Article",
+              "discussion",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Plants"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genetics"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Inheritance Patterns",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "History, 19th Century"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Pisum sativum",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1534/genetics.116.195198"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5068836"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5068836?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 49,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2018-01-11",
+          "dateOfCreation": "2016-10-13",
+          "dateOfRevision": "2026-01-27",
+          "firstPublicationDate": "2016-10-01",
+          "firstIndexDate": "2016-10-13",
+          "fullTextReceivedDate": "2020-07-12",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "name": "wolf-sheep-predation-target-mobile-dark",
+  "read": {
+    "toolIcon": {
+      "_tag": "website",
+      "pageUrl": "http://localhost:3120/?experiment=wolf-sheep-predation"
+    },
+    "value": {
+      "url": "http://localhost:3120/?experiment=wolf-sheep-predation",
+      "text": "Skip to experiment\nAgent Lab\nExperiment\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDiffusion on a Directed Network\nExpected Value\nFire\nGalton Box\nHex Cell Aggregation\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRandom Combinations and Permutations\nSegregation\nSmoothLife\nStochastic Patchwork\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nMode\nsheep-wolves\nsheep-wolves-grass\nInitial Sheep\nInitial Wolves\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSheep food gain\nWolf food gain\nSheep reproduction (%)\nWolf reproduction (%)\nGrass regrowth\nTick\n8\nSheep\n107\nWolves\n58\nGrass / 4\n321\n\nSteps completed.\n\nModel info\nAnimals and grass\nLabels\nPopulations\n331\n0\n8\nSheep\nWolves\nGrass / 4",
+      "inputs": [
+        {
+          "id": "experiment",
+          "type": "select-one",
+          "value": "wolf-sheep-predation",
+          "disabled": false
+        },
+        {
+          "id": "setup-seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "setup-mode",
+          "type": "select-one",
+          "value": "sheep-wolves-grass",
+          "disabled": false
+        },
+        {
+          "id": "setup-initialSheep",
+          "type": "number",
+          "value": "100",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "setup-initialWolves",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "number",
+          "value": "20",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "number",
+          "value": "0",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": true,
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "",
+          "text": "Setup",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "Run",
+          "disabled": false,
+          "pressed": "false"
+        },
+        {
+          "id": "",
+          "text": "1 step",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "10 steps",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "id": "",
+          "text": "100 steps",
+          "disabled": false,
+          "pressed": null
+        }
+      ],
+      "canvases": [
+        {
+          "width": 716,
+          "height": 716,
+          "pixel": [
+            96,
+            173,
+            44,
+            255
+          ]
+        }
+      ],
+      "overflow": {
+        "client": 390,
+        "scroll": 390
+      },
+      "source": null
+    }
+  },
+  "snapshot": {
+    "url": "http://localhost:3120/?experiment=wolf-sheep-predation",
+    "screenshotPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw4prlad-e917ce78.png"
+  }
+}

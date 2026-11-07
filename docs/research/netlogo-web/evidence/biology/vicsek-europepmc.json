@@ -1,0 +1,134 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1103%2Fphysrevlett.75.1226%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1103/physrevlett.75.1226\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "10060237",
+          "source": "MED",
+          "pmid": "10060237",
+          "doi": "10.1103/physrevlett.75.1226",
+          "title": "Novel type of phase transition in a system of self-driven particles.",
+          "authorString": "Vicsek T, Czir\u00f3k A, Ben-Jacob E, Cohen I, Shochet O.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Vicsek T",
+                "lastName": "Vicsek",
+                "initials": "T"
+              },
+              {
+                "fullName": "Czir\u00f3k A",
+                "lastName": "Czir\u00f3k",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2694-5163"
+                }
+              },
+              {
+                "fullName": "Ben-Jacob E",
+                "lastName": "Ben-Jacob",
+                "initials": "E"
+              },
+              {
+                "fullName": "Cohen I I",
+                "lastName": "Cohen",
+                "initials": "I"
+              },
+              {
+                "fullName": "Shochet O",
+                "lastName": "Shochet",
+                "initials": "O"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2694-5163"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6",
+            "volume": "75",
+            "journalIssueId": 1248381,
+            "dateOfPublication": "1995 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 1995,
+            "journal": {
+              "medlineAbbreviation": "Phys Rev Lett",
+              "title": "Physical review letters",
+              "essn": "1079-7114",
+              "issn": "0031-9007",
+              "nlmid": "0401141",
+              "isoabbreviation": "Phys Rev Lett"
+            },
+            "printPublicationDate": "1995-08-01"
+          },
+          "pubYear": "1995",
+          "pageInfo": "1226-1229",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1103/PhysRevLett.75.1226"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 1827,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "1995-08-07",
+          "dateOfRevision": "2024-05-10",
+          "firstPublicationDate": "1995-08-01",
+          "firstIndexDate": "2009-12-22",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

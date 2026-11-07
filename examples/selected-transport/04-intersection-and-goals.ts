@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import { create as intersection } from '../../experiments/traffic-intersection/model.ts';
+import { create as goals } from '../../experiments/traffic-grid-goal/model.ts';
+
+const crossing = intersection({ seed: 1, freqNorth: 0, freqEast: 0, auto: false });
+assert.equal(crossing.snapshot().cars.length, 0);
+crossing.changeToYellow();
+assert.equal(crossing.snapshot().lights.filter(light => light.color === 'yellow').length, 1);
+crossing.changeToRed();
+assert.equal(crossing.snapshot().lights.filter(light => light.color === 'red').length, 1);
+crossing.step(5);
+assert.equal(crossing.snapshot().cars.length, 0);
+assert.equal(crossing.snapshot().accidents.length, 0);
+assert.equal(crossing.snapshot().tick, 5);
+crossing.setParameters({ freqNorth: 100, freqEast: 100 });
+crossing.step(1);
+assert.equal(crossing.snapshot().cars.length, 2);
+const commuters = goals({ seed: 1, numCars: 3 });
+assert.equal(commuters.snapshot().cars.length, 3);
+assert.ok(commuters.snapshot().cars.every(car => car.houseId !== car.workId && car.goalId === car.workId));
+commuters.watchCar(commuters.snapshot().cars[0]!.id);
+assert.equal(commuters.snapshot().watchedCarId, commuters.snapshot().cars[0]!.id);
+commuters.step(5);
+assert.equal(commuters.snapshot().tick, 5);
+commuters.stopWatching();
+assert.equal(commuters.snapshot().watchedCarId, null);

@@ -1,0 +1,41 @@
+{
+  "sourceSHA256": "dc605f80d321c18a7e6711f85f1c5e58ea2e4780451369b94977a49a7d87c280",
+  "command": "set number 3 setup ask turtle 0 [setxy 16.49 0 set color red set friend turtle 1 set enemy turtle 2] ask turtle 1 [setxy 16.4 0 set color blue set friend turtle 2 set enemy turtle 2] ask turtle 2 [setxy -16 0 set color blue set friend turtle 1 set enemy turtle 1] go",
+  "compiled": true,
+  "error": null,
+  "tick": {
+    "success": true,
+    "value": 1
+  },
+  "positions": {
+    "success": true,
+    "value": [
+      [
+        0,
+        16.49,
+        0
+      ],
+      [
+        1,
+        16.299999999999997,
+        0
+      ],
+      [
+        2,
+        -15.9,
+        0
+      ]
+    ]
+  },
+  "markerProbe": {
+    "command": "ask turtle 0 [ setxy 16.49 0 set heading 90 set color green carefully [fd 0.1 set color red] [set color blue]]"
+  },
+  "decisiveMarkerResult": {
+    "x": 16.49,
+    "y": 0,
+    "color": 15,
+    "error": null,
+    "meaning": "RED after fd executed: blocked optimized forward is a no-op, not an exception."
+  },
+  "supersedes": "Earlier careful fd probe established retained position only. The inferred error/tick-abort was unsupported and is corrected."
+}

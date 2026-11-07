@@ -1,0 +1,18 @@
+import assert from "node:assert/strict";
+import { create } from "../../experiments/giant-component/model.ts";
+const a=create({numberOfNodes:12,seed:42}),b=create({numberOfNodes:12,seed:42});
+a.advance(20);b.advance(20);
+const x=a.read(),y=b.read();
+const endpoints=(state:typeof x)=>state.edges.map(edge=>[state.nodes.findIndex(node=>node.id===edge.from),state.nodes.findIndex(node=>node.id===edge.to)]);
+assert.deepEqual(endpoints(x),endpoints(y));
+assert.deepEqual(x.nodes.map(node=>node.highlighted),y.nodes.map(node=>node.highlighted));
+assert.deepEqual(x.randomState,y.randomState);
+assert.equal(x.nodeCount,12);
+assert.equal(x.edgeCount,20);
+assert.equal(x.tick,20);
+assert.equal(x.nodes.filter(node=>node.highlighted).length,x.giantSize);
+assert.deepEqual(a.read(),x);
+assert.ok(Object.isFrozen(x.nodes)&&Object.isFrozen(x.nodes[0]));
+assert.throws(()=>a.advance(-1));
+assert.throws(()=>create({numberOfNodes:1}));
+assert.deepEqual(a.read(),x);

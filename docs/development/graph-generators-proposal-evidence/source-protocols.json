@@ -1,0 +1,26 @@
+{
+  "sourcePath": "docs/research/netlogo-web/evidence/computing/nw-general-examples.nlogox",
+  "sha256": "9c80d9fa4d5d4da96224e65cd707639267da3f6494309d9d45b758164d2703db",
+  "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+  "primaryURL": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Code%20Examples/Extensions%20Examples/nw/NW%20General%20Examples.nlogox",
+  "netlogoVersion": "NetLogo 7.0.4",
+  "provenanceMethod": "Read existing archived exact served source; no archive fetch/research/browser in this task",
+  "procedures": {
+    "generate": "to generate [ generator-task ]\n  if clear-before-generating? [ setup ]\n  ; we have a general \"generate\" procedure that basically just takes a task\n  ; parameter and runs it, but takes care of calling layout and update plots\n  run generator-task\n  layout-turtles\n  update-plots\nend",
+    "preferential-attachment": "to preferential-attachment\n  generate [ -> nw:generate-preferential-attachment turtles get-links-to-use nb-nodes 1 ]\nend",
+    "ring": "to ring\n  generate [ -> nw:generate-ring turtles get-links-to-use nb-nodes ]\nend",
+    "star": "to star\n  generate [ -> nw:generate-star turtles get-links-to-use nb-nodes ]\nend",
+    "wheel": "to wheel\n  ifelse links-to-use = \"directed\" [\n    ifelse spokes-direction = \"inward\" [\n      generate [ -> nw:generate-wheel-inward turtles get-links-to-use nb-nodes ]\n    ]\n    [ ; if it's not inward, it's outward\n      generate [ -> nw:generate-wheel-outward turtles get-links-to-use nb-nodes ]\n    ]\n  ]\n  [ ; for an undirected network, we don't care about spokes\n    generate [ -> nw:generate-wheel turtles get-links-to-use nb-nodes ]\n  ]\nend",
+    "lattice-2d": "to lattice-2d\n  generate [ -> nw:generate-lattice-2d turtles get-links-to-use nb-rows nb-cols wrap ]\nend",
+    "small-world-ring": "to small-world-ring\n  generate [ -> nw:generate-watts-strogatz turtles get-links-to-use nb-nodes neighborhood-size rewire-prob ]\nend",
+    "small-world-lattice": "to small-world-lattice\n  generate [ -> nw:generate-small-world turtles get-links-to-use nb-rows nb-cols clustering-exponent wrap ]\nend",
+    "generate-random": "to generate-random\n  generate  [ -> nw:generate-random turtles get-links-to-use nb-nodes connection-prob ]\nend"
+  },
+  "manualConsultation": {
+    "url": "https://docs.netlogo.org/nw.html#nwgenerate-small-world",
+    "observedVersion": "7.0.4",
+    "checkedAt": "2026-11-06",
+    "scope": "Official primary extension documentation for generator protocols only; not pinned extension source revision or executed runtime evidence"
+  },
+  "sourceFormulaLimit": "Code delegates Kleinberg generation to nw:generate-small-world with row/column/exponent/wrap; Code/Info and consulted manual do not provide a complete probability equation or metric/shortcut-count contract."
+}

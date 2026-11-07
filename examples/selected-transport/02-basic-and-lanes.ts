@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import { create as basic } from '../../experiments/traffic-basic/model.ts';
+import { create as lanes } from '../../experiments/traffic-2-lanes/model.ts';
+
+const road = basic({ seed: 1, numberOfCars: 1, acceleration: 0, deceleration: 0 });
+const start = road.snapshot().cars[0]!;
+road.step(1);
+assert.equal(road.snapshot().cars[0]!.speed, start.speed);
+assert.equal(road.snapshot().tick, 1);
+road.setParameters({ acceleration: 0.0099 });
+road.step(200);
+assert.equal(road.snapshot().cars[0]!.speed, 1);
+const highway = lanes({ seed: 1, numberOfCars: 1 });
+assert.equal(highway.snapshot().cars.length, 1);
+assert.equal(highway.snapshot().cars[0]!.speed, 0.5);
+highway.setParameters({ numberOfCars: 3 });
+highway.step(1);
+assert.equal(highway.snapshot().cars.length, 3);
+highway.selectCar(highway.snapshot().cars[0]!.id);
+assert.equal(highway.snapshot().selectedCarId, highway.snapshot().cars[0]!.id);
+highway.setParameters({ numberOfCars: 1 });
+highway.step(1);
+assert.equal(highway.snapshot().cars.length, 1);
+assert.equal(highway.snapshot().tick, 2);
+assert.ok(highway.snapshot().cars.every(car => car.speed >= 0 && car.speed <= 1));

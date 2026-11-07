@@ -1,0 +1,113 @@
+{
+  "slug": "emergent-shapes-ellipse",
+  "name": "Emergent Shapes - Ellipse",
+  "catalogPath": "Sample Models/Mathematics/Conic Sections/Emergent Shapes - Ellipse",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Conic%20Sections/Emergent%20Shapes%20-%20Ellipse.nlogox",
+  "deliveryBatch": "B16",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can simple feedback recover a geometric constraint without directly drawing its equation? NetLogo Emergent Shapes Ellipse asks agents to approach positions whose distances to two fixed foci sum to a prescribed constant. Agents continue when their movement improves the constraint and choose a new direction when it worsens. Differential geometry [1] gives the curve context, computational geometry [2] supplies distance-based geometric reasoning, and Rosin's ellipse-fitting study [3] provides a contrasting numerical approach with its own normalization issues. The resulting point distribution illustrates decentralized search for a level set. Agent step size, stopping tolerance, initial positions, and random choices influence the approximation. This is a demonstration of constraint satisfaction, rather than evidence that natural elliptical forms arise by this rule or that every agent samples the ellipse uniformly.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Conic%20Sections/Emergent%20Shapes%20-%20Ellipse.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Conic%20Sections/Emergent%20Shapes%20-%20Ellipse.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 9df0c7739f8abdae7c93861153488577c1f2b7245669f7828c6a6bbd1fb6f12e",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/emergent-shapes-ellipse.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Brandes, A. and Wilensky, U. (1998).  NetLogo Emergent Shapes - Ellipse model.  http://ccl.northwestern.edu/netlogo/models/EmergentShapes-Ellipse.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/emergent-shapes-ellipse.nlogox",
+    "evidenceFile": "evidence/computing/emergent-shapes-ellipse.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1007/978-1-84882-891-9",
+      "authors": [
+        "Andrew Pressley"
+      ],
+      "title": "Elementary Differential Geometry",
+      "year": 2010,
+      "venue": "Springer Undergraduate Mathematics Series",
+      "doi": "10.1007/978-1-84882-891-9",
+      "url": "https://doi.org/10.1007/978-1-84882-891-9",
+      "relevance": "Curve geometry provides the mathematical interpretation of the two-focus distance constraint.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-84882-891-9",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_84882_891_9.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_84882_891_9.json"
+      },
+      "publisher": "Springer London",
+      "isbn": [
+        "9781848828902",
+        "9781848828919"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-3-540-77974-2",
+      "authors": [
+        "Mark de Berg",
+        "Otfried Cheong",
+        "Marc van Kreveld",
+        "Mark Overmars"
+      ],
+      "title": "Computational Geometry: Algorithms and Applications",
+      "year": 2008,
+      "venue": "Springer Berlin Heidelberg",
+      "doi": "10.1007/978-3-540-77974-2",
+      "url": "https://doi.org/10.1007/978-3-540-77974-2",
+      "relevance": "Distance predicates and finite approximations frame the spatial constraint calculation.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-3-540-77974-2",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_3_540_77974_2.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_3_540_77974_2.json"
+      },
+      "publisher": "Springer Berlin Heidelberg",
+      "isbn": [
+        "9783540779735",
+        "9783540779742"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1016/0167-8655(93)90062-i",
+      "authors": [
+        "Paul L. Rosin"
+      ],
+      "title": "A note on the least squares fitting of ellipses",
+      "year": 1993,
+      "venue": "Pattern Recognition Letters",
+      "doi": "10.1016/0167-8655(93)90062-i",
+      "url": "https://doi.org/10.1016/0167-8655(93)90062-i",
+      "relevance": "Ellipse fitting is a directly relevant contrasting numerical method; it does not describe NetLogo’s agent search rule.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2F0167-8655%2893%2990062-I",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_0167_8655_93_90062_i.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_0167_8655_93_90062_i.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "14",
+      "issue": "10",
+      "pages": "799-808",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

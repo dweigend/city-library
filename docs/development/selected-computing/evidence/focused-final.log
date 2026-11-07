@@ -1,0 +1,45 @@
+bun test v1.4.2 (744846f84)
+
+tests/selected-computing-spatial.test.ts:
+(pass) B18 Simulated Annealing native rules > native450bright patches, directed anisotropic energy and exact1000 attempts [72.95ms]
+(pass) B18 Simulated Annealing native rules > T0equal switch and rejection rollback; read is detached and RNG-neutral [0.87ms]
+(pass) B18 Simulated Annealing native rules > target seeded replay and no-temperature automatic stop [302.64ms]
+(pass) B18 K-Means native source contract > native per-cluster rounded default140points and seven centroids [15.32ms]
+(pass) B18 K-Means native source contract > assign/update non-ticking, empty clusters retained and strict threshold [0.92ms]
+(pass) B18 K-Means native source contract > rejected scenario is atomic and observations preserve stream [13.16ms]
+(pass) B18 PSO actual landscape and update phases > native201square,50particles,global best remains zero after setup [824.08ms]
+(pass) B18 PSO actual landscape and update phases > velocity axis clipping and wrapped motion; arriving optimum noticed NEXT go [1.04ms]
+(pass) B18 PSO actual landscape and update phases > inertia0 and attraction0 yields no movement; scenario invalid is atomic [0.35ms]
+(pass) B18 Robby full native fitness and intervention actions > ternary sensor weights, action map and source273 display normalization [0.09ms]
+(pass) B18 Robby full native fitness and intervention actions > real20x100 evaluations, same seed replay, defaults and live next-population [323.71ms]
+(pass) B18 Robby full native fitness and intervention actions > native gen0display guard, explicit trial fixture, wall/can actions, non-ticking trial [55.17ms]
+(pass) B18 Robotic Factory canonical source quirks > nine machines, default robots5energy350dock10 and first old-heading motion [3.05ms]
+(pass) B18 Robotic Factory canonical source quirks > finisher queued>1 startup and four/seven countdown; finish called publicly has no tick [1.45ms]
+(pass) B18 Robotic Factory canonical source quirks > invalid destination errors retain partial state and do not tick [3.36ms]
+(pass) B18 Robotic Factory canonical source quirks > read and rejected intervention preserve canonical state/RNG; fullCharge is live [1.56ms]
+
+tests/selected-computing-network.test.ts:
+(pass) B18 neural source equations and action boundaries > strict signed threshold, all truth functions and single-example update [1.06ms]
+(pass) B18 neural source equations and action boundaries > zero second weight has explicit vertical or degenerate geometry [0.11ms]
+(pass) B18 neural source equations and action boundaries > multilayer hidden deltas use old outgoing weights before all updates [0.56ms]
+(pass) B18 neural source equations and action boundaries > zero learning rate retains weights through real epochs and errors remain defined [0.86ms]
+(pass) B18 neural source equations and action boundaries > invalid neural interventions are atomic and observations detached [0.41ms]
+(pass) B18 philosopher asynchronous resource protocol > defaults, hungry barrier and later consumption [0.95ms]
+(pass) B18 philosopher asynchronous resource protocol > native deadlock continues ticking without hidden reset or repair [0.62ms]
+(pass) B18 philosopher asynchronous resource protocol > one marked fork and adjacent exclusive ownership across cooperative activation [20.64ms]
+(pass) B18 philosopher asynchronous resource protocol > invalid fork ownership and population changes leave state untouched [0.26ms]
+(pass) B18 PageRank canonical directed networks > native network sizes and directed adjacencies [6.52ms]
+(pass) B18 PageRank canonical directed networks > synchronous old ranks and damping preserve rank mass including isolated pages [0.84ms]
+(pass) B18 PageRank canonical directed networks > surfers increment OLD page visits and method changes keep cumulative visits [0.79ms]
+(pass) B18 PageRank canonical directed networks > invalid network fixtures do not mutate live graph or random state [0.41ms]
+(pass) B18 binary-genotype scientific helpers and reproduction > five pinned Hamming cases and strict invalid array contract [0.17ms]
+(pass) B18 binary-genotype scientific helpers and reproduction > source normalized diversity reaches one and no-variation reproduction preserves zeroes [1.68ms]
+(pass) B18 binary-genotype scientific helpers and reproduction > single-point crossover excludes endpoints and preserves combined bit counts [4.17ms]
+(pass) B18 binary-genotype scientific helpers and reproduction > all-ones preflight cannot advance time and invalid genomes are atomic [0.39ms]
+(pass) B18 isolated replay and bounded observations > each public factory replays independently and read never draws [474.28ms]
+(pass) B18 isolated replay and bounded observations > long-running history is bounded while scientific tick keeps advancing [1.95ms]
+
+ 35 pass
+ 0 fail
+ 6679 expect() calls
+Ran 35 tests across 2 files. [2.15s]

@@ -1,0 +1,24 @@
+bun test v1.4.2 (744846f84)
+
+tests/ui-chart-authoring.test.ts:
+(pass) chart authoring data and geometry > first-seen categories share grouped positions without imputing missing observations [0.85ms]
+(pass) chart authoring data and geometry > negative and positive values extend in opposite directions from zero [0.06ms]
+(pass) chart authoring data and geometry > mixed x modes across all series and duplicate categories reject [0.21ms]
+(pass) chart authoring data and geometry > empty categorical input invents no categories or samples and leaves finite geometry [0.04ms]
+(pass) chart authoring data and geometry > numeric legacy bars retain coordinates, repeated positions and finite filtering [0.06ms]
+(pass) chart authoring data and geometry > line and scatter use unchanged finite numeric point order [0.12ms]
+
+tests/ui-authoring.test.ts:
+(pass) public authoring contract at the common host boundary > normalization is inert and a decoded keyed action affects only its real model [2.95ms]
+(pass) public authoring contract at the common host boundary > new exclusion does not change legacy defaults, explicit ordering or factory defaults [0.14ms]
+(pass) public authoring contract at the common host boundary > explicit getter overrides a compatible conventional getter and remains pure [0.55ms]
+(pass) public authoring contract at the common host boundary > group validation happens at normalization and keeps first occurrence without nesting [0.28ms]
+(pass) public authoring contract at the common host boundary > descriptor boundary rejects primitive confusion, nonfinite values and unknown choices [0.13ms]
+(pass) public authoring contract at the common host boundary > separate uninitialized drafts and disposed session never create or mutate a model [0.71ms]
+(pass) repeated renderer failures do not republish an unchanged error state [0.13ms]
+(pass) client session restart installs a fresh owner and clears only the prior projection failure [174.36ms]
+
+ 14 pass
+ 0 fail
+ 75 expect() calls
+Ran 14 tests across 2 files. [224.00ms]

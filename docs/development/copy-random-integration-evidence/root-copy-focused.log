@@ -1,0 +1,17 @@
+bun test v1.4.2 (744846f84)
+
+tests/graph-copy.test.ts:
+(pass) source-order filters and all direction transforms preserve every selected labeled edge independently [9.11ms]
+(pass) undirected promotion retains opposite arcs and uses a fresh automatic-key owner [0.40ms]
+(pass) state extraction preserves hidden data, null prototypes and framework backreferences without rebinding [0.21ms]
+(pass) late clone failures create no target Agent participants; recovery registers exactly one owner [0.66ms]
+(pass) final liveness validation catches foreign deletion from a later reflection, including Map/Set and defaults [0.54ms]
+(pass) source reflection rejects structural reentrancy and Agent deletion, permits reads and independent owners [0.80ms]
+(pass) array subclasses, strict own descriptors, complete validation and membership precede state reflection [0.33ms]
+(pass) shared Agent identities retain World positions, continuation and independent graph hooks [0.52ms]
+(pass) a large generated edge batch copies through the owner without public add scans or generator limits [170.24ms]
+
+ 9 pass
+ 0 fail
+ 3205 expect() calls
+Ran 9 tests across 1 file. [192.00ms]

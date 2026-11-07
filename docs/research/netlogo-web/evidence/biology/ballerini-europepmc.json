@@ -1,0 +1,397 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0711437105%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1073/pnas.0711437105\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "18227508",
+          "source": "MED",
+          "pmid": "18227508",
+          "pmcid": "PMC2234121",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC2234121"
+            ]
+          },
+          "doi": "10.1073/pnas.0711437105",
+          "title": "Interaction ruling animal collective behavior depends on topological rather than metric distance: evidence from a field study.",
+          "authorString": "Ballerini M, Cabibbo N, Candelier R, Cavagna A, Cisbani E, Giardina I, Lecomte V, Orlandi A, Parisi G, Procaccini A, Viale M, Zdravkovic V.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Ballerini M",
+                "lastName": "Ballerini",
+                "firstName": "M",
+                "initials": "M",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Centre for Statistical Mechanics and Complexity, Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia, Dipartimento di Fisica, and Sezione Instituto Nazionale di Fisica Nucleare, Universita' di Roma La Sapienza, Roma, Italy."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Cabibbo N",
+                "lastName": "Cabibbo",
+                "firstName": "N",
+                "initials": "N"
+              },
+              {
+                "fullName": "Candelier R",
+                "lastName": "Candelier",
+                "firstName": "R",
+                "initials": "R",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-1523-6249"
+                }
+              },
+              {
+                "fullName": "Cavagna A",
+                "lastName": "Cavagna",
+                "firstName": "A",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2057-5971"
+                }
+              },
+              {
+                "fullName": "Cisbani E",
+                "lastName": "Cisbani",
+                "firstName": "E",
+                "initials": "E",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-6774-8473"
+                }
+              },
+              {
+                "fullName": "Giardina I",
+                "lastName": "Giardina",
+                "firstName": "I",
+                "initials": "I",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6900-1739"
+                }
+              },
+              {
+                "fullName": "Lecomte V",
+                "lastName": "Lecomte",
+                "firstName": "V",
+                "initials": "V",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4025-5852"
+                }
+              },
+              {
+                "fullName": "Orlandi A",
+                "lastName": "Orlandi",
+                "firstName": "A",
+                "initials": "A"
+              },
+              {
+                "fullName": "Parisi G",
+                "lastName": "Parisi",
+                "firstName": "G",
+                "initials": "G"
+              },
+              {
+                "fullName": "Procaccini A",
+                "lastName": "Procaccini",
+                "firstName": "A",
+                "initials": "A"
+              },
+              {
+                "fullName": "Viale M",
+                "lastName": "Viale",
+                "firstName": "M",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4808-4103"
+                }
+              },
+              {
+                "fullName": "Zdravkovic V",
+                "lastName": "Zdravkovic",
+                "firstName": "V",
+                "initials": "V"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6900-1739"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-1523-6249"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-6774-8473"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2057-5971"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4025-5852"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4808-4103"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "recommended_reviews",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "4",
+            "volume": "105",
+            "journalIssueId": 1503425,
+            "dateOfPublication": "2008 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2008,
+            "journal": {
+              "medlineAbbreviation": "Proc Natl Acad Sci U S A",
+              "title": "Proceedings of the National Academy of Sciences of the United States of America",
+              "essn": "1091-6490",
+              "issn": "0027-8424",
+              "isoabbreviation": "Proc Natl Acad Sci U S A",
+              "nlmid": "7505876"
+            },
+            "printPublicationDate": "2008-01-01"
+          },
+          "pubYear": "2008",
+          "pageInfo": "1232-1237",
+          "abstractText": "Numerical models indicate that collective animal behavior may emerge from simple local rules of interaction among the individuals. However, very little is known about the nature of such interaction, so that models and theories mostly rely on aprioristic assumptions. By reconstructing the three-dimensional positions of individual birds in airborne flocks of a few thousand members, we show that the interaction does not depend on the metric distance, as most current models and theories assume, but rather on the topological distance. In fact, we discovered that each bird interacts on average with a fixed number of neighbors (six to seven), rather than with all neighbors within a fixed metric distance. We argue that a topological interaction is indispensable to maintain a flock's cohesion against the large density changes caused by external perturbations, typically predation. We support this hypothesis by numerical simulations, showing that a topological interaction grants significantly higher cohesion of the aggregation compared with a standard metric one.",
+          "affiliation": "Centre for Statistical Mechanics and Complexity, Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia, Dipartimento di Fisica, and Sezione Instituto Nazionale di Fisica Nucleare, Universita' di Roma La Sapienza, Roma, Italy.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Birds",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Behavior, Animal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Predatory Behavior",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Aggression",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Flight, Animal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Time Factors"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Social Environment"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Vision, Ocular",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "Unpaywall",
+                "url": "https://doi.org/10.1073/pnas.0711437105"
+              },
+              {
+                "availability": "Free after 6 months",
+                "availabilityCode": "F6",
+                "documentStyle": "abs",
+                "site": "www.pnas.org",
+                "url": "http://www.pnas.org/cgi/content/abstract/105/4/1232"
+              },
+              {
+                "availability": "Free after 6 months",
+                "availabilityCode": "F6",
+                "documentStyle": "html",
+                "site": "www.pnas.org",
+                "url": "http://www.pnas.org/cgi/content/full/105/4/1232"
+              },
+              {
+                "availability": "Free after 6 months",
+                "availabilityCode": "F6",
+                "documentStyle": "pdf",
+                "site": "www.pnas.org",
+                "url": "http://www.pnas.org/cgi/reprint/105/4/1232.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.0711437105"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2234121"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2234121?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.0711437105"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 704,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2008-02-25",
+          "dateOfCreation": "2008-01-30",
+          "dateOfRevision": "2024-05-10",
+          "electronicPublicationDate": "2008-01-28",
+          "firstPublicationDate": "2008-01-28",
+          "firstIndexDate": "2010-09-23",
+          "fullTextReceivedDate": "2025-02-02",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

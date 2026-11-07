@@ -1,0 +1,144 @@
+{
+  "beforeHeads": {
+    "refs/heads/experiment/netlogo-web-catalog": "c3ce38a3a1cde7b7473291925e440251d77362ad",
+    "refs/heads/experiment/planar-contains-bounds": "1ce2a381546f527b08a82a143df6a7757fdcc679",
+    "refs/heads/experiment/selected-biology-b07": "56bd761acdd765e47d33ed1f19a81dbc1664ffe7",
+    "refs/heads/experiment/selected-cellular-b19": "823a72fc7b55ce03de55001e127a358bc206a4c0",
+    "refs/heads/experiment/selected-computing-b18": "a0181e3634ab6245834f9087277dd0e8846110e1",
+    "refs/heads/experiment/selected-disease-gene-b09": "80e3907a4ec621e451161a8bc5e4318a143111e6",
+    "refs/heads/experiment/selected-ecology-b06": "743a9b33cd74b62c0083dc5e28725817b27fafc4",
+    "refs/heads/experiment/selected-economics-b03": "c06aff11bf0f62c0621def6d04e22a9d803a3a92",
+    "refs/heads/experiment/selected-evolution-b08": "552a04b4989b2eb850b8ccbd4a34e34e467d2302",
+    "refs/heads/experiment/selected-grid-batch": "f06704109bb041642fff9930806dcd9826d07c72",
+    "refs/heads/experiment/selected-materials-b11": "6bddf8d3defb549aa6d0de98bf7ab5919dd7c214",
+    "refs/heads/experiment/selected-probability-b17": "c8dc7a7ea287a16f9858ea54fb2e914c4d71fd34",
+    "refs/heads/experiment/selected-social-b02": "d8c5e6630cca3e7ff6d1b4c1920437ece2457342",
+    "refs/heads/experiment/selected-transport-b04": "11ca9fca9e9b3431f9c27df8d1f263f2ea315e03",
+    "refs/heads/main": "d9be5852f1c7e62fd2fffe9bffe21b8705a7a5ef"
+  },
+  "donors": [
+    {
+      "branch": "experiment/planar-contains-bounds",
+      "sha": "1ce2a381546f527b08a82a143df6a7757fdcc679",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-planar-contains-bounds",
+      "pr": 33
+    },
+    {
+      "branch": "experiment/selected-biology-b07",
+      "sha": "56bd761acdd765e47d33ed1f19a81dbc1664ffe7",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-biology-b07",
+      "pr": 30
+    },
+    {
+      "branch": "experiment/selected-cellular-b19",
+      "sha": "823a72fc7b55ce03de55001e127a358bc206a4c0",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-cellular-b19",
+      "pr": 14
+    },
+    {
+      "branch": "experiment/selected-computing-b18",
+      "sha": "a0181e3634ab6245834f9087277dd0e8846110e1",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-computing-b18",
+      "pr": 16
+    },
+    {
+      "branch": "experiment/selected-disease-gene-b09",
+      "sha": "80e3907a4ec621e451161a8bc5e4318a143111e6",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-disease-gene-b09",
+      "pr": 35
+    },
+    {
+      "branch": "experiment/selected-ecology-b06",
+      "sha": "743a9b33cd74b62c0083dc5e28725817b27fafc4",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-ecology-b06",
+      "pr": 18
+    },
+    {
+      "branch": "experiment/selected-economics-b03",
+      "sha": "c06aff11bf0f62c0621def6d04e22a9d803a3a92",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-economics-b03",
+      "pr": 26
+    },
+    {
+      "branch": "experiment/selected-evolution-b08",
+      "sha": "552a04b4989b2eb850b8ccbd4a34e34e467d2302",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-evolution-b08",
+      "pr": 31
+    },
+    {
+      "branch": "experiment/selected-grid-batch",
+      "sha": "f06704109bb041642fff9930806dcd9826d07c72",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-grid-batch",
+      "pr": 6
+    },
+    {
+      "branch": "experiment/selected-materials-b11",
+      "sha": "6bddf8d3defb549aa6d0de98bf7ab5919dd7c214",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-materials-b11",
+      "pr": 23
+    },
+    {
+      "branch": "experiment/selected-probability-b17",
+      "sha": "c8dc7a7ea287a16f9858ea54fb2e914c4d71fd34",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-probability-b17",
+      "pr": 11
+    },
+    {
+      "branch": "experiment/selected-social-b02",
+      "sha": "d8c5e6630cca3e7ff6d1b4c1920437ece2457342",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-social-b02",
+      "pr": 22
+    },
+    {
+      "branch": "experiment/selected-transport-b04",
+      "sha": "11ca9fca9e9b3431f9c27df8d1f263f2ea315e03",
+      "archive": "refs/tags/archive/20261106-consolidation-01/experiment-selected-transport-b04",
+      "pr": 27
+    }
+  ],
+  "mainWorktreeHashes": {
+    "docs/agent-loom/terminology.md": "990b6ab513c3731d4fa9ddf4c82da97da7380a3aadf24802eb273c1374a8ff96",
+    "docs/ui/README.md": "aad4880e1eb880b7c6f4d643ef3921b34a9870da524d3f28e1b56806350bf8b3",
+    "docs/ui/api-reference.md": "250805384a972049fbe497de8c06af1134da566bd4b5d1635c3d44476b4a15f4",
+    "docs/ui/api-table.md": "6c42ceb75a0ed0c4b581157bda04c4c5c223da63932a4d35800db60e0bc250f9",
+    "AGENTS.md": "c90a4e8f04a95edbbd6285909aef05722413b6fb27e14b92b326cd8c04ee7065",
+    "PLAN.md": "e562a588c90a4deff05642c46517a7db1086245810b0278ecf894271df20c3cf",
+    "docs/DESIGN.md": "c38ab3f4fe73250c786c47c1287cd41e4c37e5361fe669cc62112f95bd724d2e",
+    "docs/agent-loom/README.md": "68cbd20b58e90b54e1e3317f78b7241378ebd3dae7d129179214aaa84bbe1654",
+    "docs/decisions/network-visualization.md": "f884d6fd990f8c358a81ece63bbb6ce0632a694cc26c265771cd62be7cbafb96",
+    "docs/development/a2a-usage.md": "ed146f006cd27d4cabe831434e186145d8164485a73aa1a8b7c8040430ad7b49",
+    "docs/development/a5a-usage.md": "e4530cf49b8f9faecb14288760509f36458859b8df38e2b087bc8f21a8b4fc70",
+    "docs/development/a5a.md": "6a75e1c60b6087fabb97299bbfc6a1116b06b6a82a312ab90f64ab60c9e02e24",
+    "docs/development/cytoscape.md": "af02dbbd14321087c51cf3feff9421d31b2e770846462166b3b60023b5ba738a",
+    "models/agent-lab/README.md": "261ffb13f8812b4695e4a2e4b015af25183a18ab2915f9d1a7eea6fedde0617f",
+    "models/agent-lab/model.test.ts": "db7d91a188a64bde9b58f2c760348727240db2826a6ac63495d7fcf3b8562647",
+    "ui/playback.ts": "a750e9c56b120606109e4371cb133f647c055d70536ab215970ccabd2b8daf3e"
+  },
+  "localMain": "dfd0584d6c72fd63dc7f68ba3f737559d57c0fab",
+  "integrationBefore": "c3ce38a3a1cde7b7473291925e440251d77362ad",
+  "afterHeads": {
+    "refs/heads/experiment/netlogo-web-catalog": "c3ce38a3a1cde7b7473291925e440251d77362ad",
+    "refs/heads/main": "d9be5852f1c7e62fd2fffe9bffe21b8705a7a5ef"
+  },
+  "closedPrs": [
+    33,
+    30,
+    14,
+    16,
+    35,
+    18,
+    26,
+    31,
+    6,
+    23,
+    11,
+    22,
+    27
+  ],
+  "date": "2026-11-07",
+  "independentAudits": {
+    "branch_archive_audit": "Confirmed all 13 heads match prior consolidation evidence and published archive tags; no unaccounted new commits.",
+    "branch_cleanup_safety": "Confirmed PR heads, published archives, protected coordination binding and all 16 unchanged main WIP hashes."
+  },
+  "verification": "Remote refs and closed/unmerged PR states read back after atomic deletion with explicit expected-head leases. No runtime or browser checks: Git references and documentation only."
+}

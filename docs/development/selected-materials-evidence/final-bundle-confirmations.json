@@ -1,0 +1,239 @@
+[
+  {
+    "slug": "sandpile",
+    "url": "http://localhost:3111/chunks/ui-jsr087xx.js",
+    "sha256": "44bdb9bbeede1888cf16ab1e87754e3787fda99079f9f005821861c1186c5ba1",
+    "bytes": 9474,
+    "state": {
+      "monitors": {
+        "Tick": "1",
+        "Average": "1.4951",
+        "Last avalanche size": "1",
+        "Last avalanche lifetime": "1"
+      },
+      "status": "Steps completed.",
+      "errors": [],
+      "figures": [
+        {
+          "name": null,
+          "text": "PileLabels"
+        },
+        {
+          "name": null,
+          "text": "Average grain count1.5001Average"
+        },
+        {
+          "name": null,
+          "text": "Avalanche sizes (log10)101Log count"
+        },
+        {
+          "name": null,
+          "text": "Avalanche lifetimes (log10)101Log count"
+        }
+      ],
+      "overflow": false
+    },
+    "sameAsCaptured": false
+  },
+  {
+    "slug": "ising",
+    "url": "http://localhost:3111/chunks/ui-fx5zyqrw.js",
+    "sha256": "4ddcde1b934550a147825d82f19ac0af67c4814411d757d9c0bb985bc6ef7374",
+    "bytes": 4894,
+    "state": {
+      "monitors": {
+        "Attempted flips": "1000",
+        "Magnetization": "0.0111"
+      },
+      "status": "Steps completed.",
+      "errors": [],
+      "figures": [
+        {
+          "name": null,
+          "text": "SpinsLabels"
+        },
+        {
+          "name": null,
+          "text": "Magnetization101000Magnetization"
+        }
+      ],
+      "overflow": false
+    },
+    "sameAsCaptured": true
+  },
+  {
+    "slug": "sand",
+    "url": "http://localhost:3111/chunks/ui-qefn7rts.js",
+    "sha256": "246069505578a8fd0f71f1991be6e41d269f5d40f6f4baba0f691aa2da4539b4",
+    "bytes": 6042,
+    "state": {
+      "monitors": {
+        "Tick": "1",
+        "Sand sites": "3"
+      },
+      "status": "Steps completed.",
+      "errors": [],
+      "figures": [
+        {
+          "name": null,
+          "text": "SandLabels"
+        }
+      ],
+      "overflow": false
+    },
+    "sameAsCaptured": true
+  },
+  {
+    "slug": "solid-diffusion",
+    "url": "http://localhost:3111/chunks/ui-f76xjzv2.js",
+    "sha256": "59c9784073109710e21b00c2b4879d08208c71b7728d130e13425616eda0b3f6",
+    "bytes": 6122,
+    "state": {
+      "monitors": {
+        "Tick": "1",
+        "Vacancies": "35",
+        "Max diffusion distance squared": "0"
+      },
+      "status": "Steps completed.",
+      "errors": [],
+      "figures": [
+        {
+          "name": null,
+          "text": "AtomsLabels"
+        },
+        {
+          "name": null,
+          "text": "Atoms by column35017GreensBlues"
+        },
+        {
+          "name": null,
+          "text": "Max diffusion distance squared401Distance squared"
+        }
+      ],
+      "overflow": false
+    },
+    "sameAsCaptured": true
+  },
+  {
+    "slug": "interstitial-diffusion",
+    "url": "http://localhost:3111/chunks/ui-nrrhy6nt.js",
+    "sha256": "715da1de95a97fbe292b97b3daac2e6d9da897c5dbf019093421d5c9fff8f32f",
+    "bytes": 12202,
+    "state": {
+      "monitors": {
+        "Tick": "1",
+        "Diffusing atoms": "1757"
+      },
+      "status": "Steps completed.",
+      "errors": [],
+      "figures": [
+        {
+          "name": null,
+          "text": "Diffusing atom"
+        },
+        {
+          "name": null,
+          "text": "Concentration profile1020CurrentInitial"
+        },
+        {
+          "name": null,
+          "text": "Lattice and diffusing atomsLabels"
+        }
+      ],
+      "overflow": false
+    },
+    "sameAsCaptured": true
+  },
+  {
+    "slug": "heat-diffusion",
+    "url": "http://localhost:3111/chunks/ui-d9v2spk1.js",
+    "sha256": "16c21a7ab19c43ca7773c810879a161384a203d3cac7f7f07505658671eebaeb",
+    "bytes": 8480,
+    "state": {
+      "monitors": {
+        "Tick": "1",
+        "Heat diffusivity": "0.104131"
+      },
+      "status": "Steps completed.",
+      "errors": [],
+      "figures": [
+        {
+          "name": null,
+          "text": "Patch"
+        },
+        {
+          "name": null,
+          "text": "Plate temperatureLabels"
+        }
+      ],
+      "overflow": false
+    },
+    "sameAsCaptured": false
+  },
+  {
+    "slug": "crystallization-basic",
+    "url": "http://localhost:3111/chunks/ui-gfd5aza4.js",
+    "sha256": "ecc24f8790537bb897e64fcc581a17b1177ed84478e0beafac3f5171215af5b2",
+    "bytes": 8498,
+    "state": {
+      "monitors": {
+        "Tick": "1",
+        "Average metal temperature": "1477.440",
+        "Source frozen count": "0"
+      },
+      "status": "Steps completed.",
+      "errors": [],
+      "figures": [
+        {
+          "name": null,
+          "text": "Atom"
+        },
+        {
+          "name": null,
+          "text": "Metal atomsLabels"
+        },
+        {
+          "name": null,
+          "text": "Temperatures83306100–550550–717717–883883–10501050–12171217–13831383–1550"
+        },
+        {
+          "name": null,
+          "text": "Number solidified101Source frozen count"
+        },
+        {
+          "name": null,
+          "text": "Average metal temperature155001Average"
+        }
+      ],
+      "overflow": false
+    },
+    "sameAsCaptured": false
+  },
+  {
+    "slug": "dla",
+    "url": "http://localhost:3111/chunks/ui-zr5tpre5.js",
+    "sha256": "b3ce496dc531fd2e882f99b7c8d25d298a561ed5ba83a48c71d47fda14542501",
+    "bytes": 5908,
+    "state": {
+      "monitors": {
+        "Tick": "1",
+        "Radius": "0.000",
+        "Walkers": "0"
+      },
+      "status": "Steps completed.",
+      "errors": [],
+      "figures": [
+        {
+          "name": null,
+          "text": "Walker"
+        },
+        {
+          "name": null,
+          "text": "Aggregate and walkersLabels"
+        }
+      ],
+      "overflow": false
+    },
+    "sameAsCaptured": false
+  }
+]

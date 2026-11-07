@@ -1,0 +1,359 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          5
+        ]
+      ],
+      "date-time": "2026-11-05T16:03:42Z",
+      "timestamp": 1793894622888,
+      "version": "4.8.0"
+    },
+    "reference-count": 31,
+    "publisher": "American Association for the Advancement of Science (AAAS)",
+    "issue": "5439",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Science"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1999,
+          10,
+          15
+        ]
+      ]
+    },
+    "abstract": "<jats:p>Systems as diverse as genetic networks or the World Wide Web are best described as networks with complex topology. A common property of many large networks is that the vertex connectivities follow a scale-free power-law distribution. This feature was found to be a consequence of two generic mechanisms: (i) networks expand continuously by the addition of new vertices, and (ii) new vertices attach preferentially to sites that are already well connected. A model based on these two ingredients reproduces the observed stationary scale-free distributions, which indicates that the development of large networks is governed by robust self-organizing phenomena that go beyond the particulars of the individual systems.</jats:p>",
+    "DOI": "10.1126/science.286.5439.509",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2002,
+          7,
+          27
+        ]
+      ],
+      "date-time": "2002-07-27T05:42:20Z",
+      "timestamp": 1027748540000
+    },
+    "page": "509-512",
+    "source": "Crossref",
+    "is-referenced-by-count": 28903,
+    "title": [
+      "Emergence of Scaling in Random Networks"
+    ],
+    "prefix": "10.1126",
+    "volume": "286",
+    "author": [
+      {
+        "given": "Albert-La\u0301szlo\u0301",
+        "family": "Baraba\u0301si",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Physics, University of Notre Dame, Notre Dame, IN 46556, USA."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Re\u0301ka",
+        "family": "Albert",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Physics, University of Notre Dame, Notre Dame, IN 46556, USA."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "221",
+    "reference": [
+      {
+        "key": "e_1_3_1_2_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.284.5411.79"
+      },
+      {
+        "key": "e_1_3_1_2_3",
+        "unstructured": "; R. F. Service ibid. p. 80."
+      },
+      {
+        "key": "e_1_3_1_3_2",
+        "unstructured": "G. Weng U. S. Bhalla R. Iyengar ibid. p. 92."
+      },
+      {
+        "key": "e_1_3_1_4_2",
+        "unstructured": "C. Koch and G. Laurent ibid. p. 96."
+      },
+      {
+        "key": "e_1_3_1_5_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "S. Wasserman and K. Faust Social Network Analysis (Cambridge Univ. Press Cambridge 1994).",
+        "DOI": "10.1017/CBO9780511815478"
+      },
+      {
+        "key": "e_1_3_1_6_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Members of the Clever project Sci. Am. 280 54 (June 1999).",
+        "DOI": "10.1038/scientificamerican0699-54"
+      },
+      {
+        "key": "e_1_3_1_7_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "130",
+        "DOI": "10.1038/43601",
+        "volume": "401",
+        "author": "Albert R.",
+        "year": "1999",
+        "unstructured": "Albert R., Jeong H., Barab\u00e1si A.-L., Nature 401, 130 (1999);",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "e_1_3_1_7_3",
+        "doi-asserted-by": "crossref",
+        "first-page": "173",
+        "DOI": "10.1016/S0378-4371(99)00291-5",
+        "volume": "272",
+        "author": "Barab\u00e1si A.-L.",
+        "year": "1999",
+        "unstructured": "Barab\u00e1si A.-L., Albert R., Jeong H., Physica A 272, 173 (1999);",
+        "journal-title": "Physica A"
+      },
+      {
+        "key": "e_1_3_1_7_4",
+        "unstructured": "; see also ."
+      },
+      {
+        "key": "e_1_3_1_8_2",
+        "unstructured": "P. Erd\u0151s and"
+      },
+      {
+        "key": "e_1_3_1_8_3",
+        "first-page": "17",
+        "volume": "5",
+        "author": "R\u00e9nyi A.",
+        "year": "1960",
+        "unstructured": "R\u00e9nyi A., Publ. Math. Inst. Hung. Acad. Sci. 5, 17 (1960);",
+        "journal-title": "Publ. Math. Inst. Hung. Acad. Sci."
+      },
+      {
+        "key": "e_1_3_1_8_4",
+        "unstructured": "; B. Bollob\u00e1s Random Graphs (Academic Press London 1985)."
+      },
+      {
+        "key": "e_1_3_1_9_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.280.5360.98"
+      },
+      {
+        "key": "e_1_3_1_9_3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "; Nature 400 107 (1999).",
+        "DOI": "10.1038/21987"
+      },
+      {
+        "key": "e_1_3_1_10_2",
+        "unstructured": "In addition to the distribution of incoming links the WWW displays a number of other scale-free features characterizing the organization of the Web pages within a domain ["
+      },
+      {
+        "key": "e_1_3_1_10_3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/43604"
+      },
+      {
+        "key": "e_1_3_1_10_4",
+        "unstructured": "] the distribution of searches ["
+      },
+      {
+        "key": "e_1_3_1_10_5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.280.5360.95"
+      },
+      {
+        "key": "e_1_3_1_10_6",
+        "unstructured": "] or the number of links per Web page (6)."
+      },
+      {
+        "key": "e_1_3_1_11_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/30918"
+      },
+      {
+        "key": "e_1_3_1_12_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "131",
+        "DOI": "10.1007/s100510050359",
+        "volume": "4",
+        "author": "Redner S.",
+        "year": "1998",
+        "unstructured": "Redner S., Eur. Phys. J. B 4, 131 (1998).",
+        "journal-title": "Eur. Phys. J. B"
+      },
+      {
+        "key": "e_1_3_1_13_2",
+        "unstructured": "We also studied the neural network of the worm Caenorhabditis elegans (3 10) and the benchmark diagram of a computer chip (see ). We found that P(k) for both was consistent with power-law tails despite the fact that for C. elegans the relatively small size of the system (306 vertices) severely limits the data quality whereas for the wiring diagram of the chips vertices with over 200 edges have been eliminated from the database."
+      },
+      {
+        "key": "e_1_3_1_14_2",
+        "first-page": "60",
+        "volume": "2",
+        "author": "Milgram S.",
+        "year": "1967",
+        "unstructured": "Milgram S., Psychol. Today 2, 60 (1967);",
+        "journal-title": "Psychol. Today"
+      },
+      {
+        "key": "e_1_3_1_14_3",
+        "unstructured": "; M. Kochen ed. The Small World (Ablex Norwood NJ 1989)."
+      },
+      {
+        "key": "e_1_3_1_15_2",
+        "unstructured": "J. Guare Six Degrees of Separation: A Play (Vintage Books New York 1990)."
+      },
+      {
+        "key": "e_1_3_1_16_2",
+        "first-page": "15",
+        "volume": "82",
+        "author": "Barth\u00e9l\u00e9my M.",
+        "year": "1999",
+        "unstructured": "Barth\u00e9l\u00e9my M., Amaral L. A. N., Phys. Rev. Lett. 82, 15 (1999).",
+        "journal-title": "Phys. Rev. Lett."
+      },
+      {
+        "key": "e_1_3_1_17_2",
+        "unstructured": "For most networks the connectivity m of the newly added vertices is not constant. However choosing m randomly will not change the exponent \u03b3 (Y. Tu personal communication)."
+      },
+      {
+        "key": "e_1_3_1_18_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.284.5411.107"
+      },
+      {
+        "key": "e_1_3_1_19_2",
+        "unstructured": "Preferential attachment was also used to model evolving networks (L. A. N. Amaral and M. Barth\u00e9l\u00e9my personal communication)."
+      },
+      {
+        "key": "e_1_3_1_20_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "130",
+        "DOI": "10.1038/20144",
+        "volume": "399",
+        "author": "Banavar J. R.",
+        "year": "1999",
+        "unstructured": "Banavar J. R., Maritan A., Rinaldo A., Nature 399, 130 (1999).",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "e_1_3_1_21_2",
+        "unstructured": "We thank D. J. Watts for providing the C. elegans and power grid data B. C. Tjaden for supplying the actor data H. Jeong for collecting the data on the WWW and L. A. N. Amaral for helpful discussions. This work was partially supported by NSF Career Award DMR-9710998."
+      }
+    ],
+    "container-title": [
+      "Science"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.science.org/doi/pdf/10.1126/science.286.5439.509",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          13
+        ]
+      ],
+      "date-time": "2024-01-13T05:09:53Z",
+      "timestamp": 1705122593000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.science.org/doi/10.1126/science.286.5439.509"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1999,
+          10,
+          15
+        ]
+      ]
+    },
+    "references-count": 31,
+    "journal-issue": {
+      "issue": "5439",
+      "published-print": {
+        "date-parts": [
+          [
+            1999,
+            10,
+            15
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1126/science.286.5439.509"
+    ],
+    "URL": "https://doi.org/10.1126/science.286.5439.509",
+    "relation": {},
+    "ISSN": [
+      "0036-8075",
+      "1095-9203"
+    ],
+    "issn-type": [
+      {
+        "value": "0036-8075",
+        "type": "print"
+      },
+      {
+        "value": "1095-9203",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1999,
+          10,
+          15
+        ]
+      ]
+    }
+  }
+}

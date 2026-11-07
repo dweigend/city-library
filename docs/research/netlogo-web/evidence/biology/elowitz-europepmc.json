@@ -1,0 +1,321 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F35002125%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/35002125\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "10659856",
+          "source": "MED",
+          "pmid": "10659856",
+          "doi": "10.1038/35002125",
+          "title": "A synthetic oscillatory network of transcriptional regulators.",
+          "authorString": "Elowitz MB, Leibler S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Elowitz MB",
+                "lastName": "Elowitz",
+                "firstName": "M B",
+                "initials": "MB",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Molecular Biology and Physics, Princeton University, New Jersey 08544, USA. melowitz@princeton.edu"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Leibler S",
+                "lastName": "Leibler",
+                "firstName": "S",
+                "initials": "S"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "related_data",
+              "ebi_train_online",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6767",
+            "volume": "403",
+            "journalIssueId": 995794,
+            "dateOfPublication": "2000 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2000,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "nlmid": "0410462",
+              "isoabbreviation": "Nature"
+            },
+            "printPublicationDate": "2000-01-01"
+          },
+          "pubYear": "2000",
+          "pageInfo": "335-338",
+          "abstractText": "Networks of interacting biomolecules carry out many essential functions in living cells, but the 'design principles' underlying the functioning of such intracellular networks remain poorly understood, despite intensive efforts including quantitative analysis of relatively simple systems. Here we present a complementary approach to this problem: the design and construction of a synthetic network to implement a particular function. We used three transcriptional repressor systems that are not part of any natural biological clock to build an oscillating network, termed the repressilator, in Escherichia coli. The network periodically induces the synthesis of green fluorescent protein as a readout of its state in individual cells. The resulting oscillations, with typical periods of hours, are slower than the cell-division cycle, so the state of the oscillator has to be transmitted from generation to generation. This artificial clock displays noisy behaviour, possibly because of stochastic fluctuations of its components. Such 'rational network design may lead both to the engineering of new cellular behaviours and to an improved understanding of naturally occurring networks.",
+          "affiliation": "Department of Molecular Biology and Physics, Princeton University, New Jersey 08544, USA. melowitz@princeton.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, U.S. Gov't, P.H.S.",
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Escherichia coli",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacterial Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Escherichia coli Proteins"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "DNA-Binding Proteins"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Luminescent Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "BI",
+                      "qualifierName": "biosynthesis"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Green Fluorescent Proteins"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Repressor Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Viral Proteins"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "RNA, Messenger",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Stochastic Processes"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Transcription, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Clocks"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genes, Bacterial"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Plasmids"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Fourier Analysis"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Viral Regulatory and Accessory Proteins"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Promoter Regions, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Lac Repressors"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "phage repressor proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "tetracycline resistance-encoding transposon repressor protein",
+                "registryNumber": "0"
+              },
+              {
+                "name": "RNA, Messenger",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Viral Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Bacterial Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Repressor Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Escherichia coli Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "DNA-Binding Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Luminescent Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Green Fluorescent Proteins",
+                "registryNumber": "147336-22-9"
+              },
+              {
+                "name": "Viral Regulatory and Accessory Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Lac Repressors",
+                "registryNumber": "0"
+              },
+              {
+                "name": "LacI protein, E coli",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/35002125"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 2464,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2000-02-11",
+          "dateOfCreation": "2000-02-05",
+          "dateOfRevision": "2025-04-21",
+          "firstPublicationDate": "2000-01-01",
+          "firstIndexDate": "2008-12-23",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "slug": "cyclic-ca",
+  "name": "Cyclic CA",
+  "catalogPath": "Sample Models/Computer Science/Cellular Automata/Cyclic CA",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Cellular%20Automata/Cyclic%20CA.nlogox",
+  "deliveryBatch": "B19",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can cyclic local competition organize a disordered field into waves and spirals? NetLogo Cyclic CA assigns each patch a state on a color cycle. A patch advances only when enough neighbors occupy its successor state, using a selectable Moore or von Neumann neighborhood and radius. Fisch and colleagues [1] study threshold-range scaling in cyclic and excitable automata, Shalizi and Shalizi [2] examine how to quantify organization in cyclic systems, and Greenberg and Hastings [3] provide a related excitable-media comparison. The original model freezes states before updating to preserve simultaneous decisions. Threshold, state count, neighborhood geometry, and finite boundaries determine whether activity persists or freezes. Attractive spiral images illustrate local interaction and symmetry breaking; they do not by themselves quantify organization or establish a chemical, neural, or ecological explanation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Cellular%20Automata/Cyclic%20CA.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Cellular%20Automata/Cyclic%20CA.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 e8669163bfd4c70e39f2dfe3d4f2a775e6770a931d2fcf6fc73fcb4a82820c50",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/cyclic-ca.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Gurkan, C. and Wilensky, U. (2025).  NetLogo Cyclic CA model.  http://ccl.northwestern.edu/netlogo/models/CyclicCA.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/cyclic-ca.nlogox",
+    "evidenceFile": "evidence/computing/cyclic-ca.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1007/bf01890834",
+      "authors": [
+        "Robert Fisch",
+        "Janko Gravner",
+        "David Griffeath"
+      ],
+      "title": "Threshold-range scaling of excitable cellular automata",
+      "year": 1991,
+      "venue": "Statistics and Computing",
+      "doi": "10.1007/bf01890834",
+      "url": "https://doi.org/10.1007/bf01890834",
+      "relevance": "Directly cited original study links threshold, interaction radius and color cycling to collective patterns.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF01890834",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and selected full-text sections",
+        "access": "Open institutional/author repository copy; selected sections read. Full-text access via publisher not established.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Abstract and section 1: state cycle, threshold, interaction range, synchronous update, and GH versus CCA. Contact-driven cycling in every state differs from the automatic refractory progression in Greenberg–Hastings-type systems. Pattern resemblance does not erase this rule distinction.",
+        "snapshot": "evidence/computing/doi-10_1007_bf01890834.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "fullTextEvidence": {
+          "doi": "10.1007/bf01890834",
+          "consultedUrl": "https://www.math.ucdavis.edu/~gravner/papers/fgg.pdf",
+          "checkedAt": "2026-11-05",
+          "evidenceType": "selected full-text sections",
+          "sectionsRead": "Abstract and section 1: state cycle, threshold, interaction range, synchronous update, and GH versus CCA.",
+          "finding": "Contact-driven cycling in every state differs from the automatic refractory progression in Greenberg–Hastings-type systems. Pattern resemblance does not erase this rule distinction.",
+          "retrievedSha256": "c650616ae90f0c1a638682b8958e3c2582aec704889db8b96e21b237ae9da36f",
+          "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+        },
+        "evidenceFile": "evidence/computing/doi-10_1007_bf01890834.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "1",
+      "issue": "1",
+      "pages": "23-39",
+      "verified": true
+    },
+    {
+      "id": "10.1117/12.485805",
+      "authors": [
+        "Cosma R. Shalizi",
+        "Kristina L. Shalizi"
+      ],
+      "title": "Quantifying self-organization in cyclic cellular automata",
+      "year": 2003,
+      "venue": "SPIE Proceedings",
+      "doi": "10.1117/12.485805",
+      "url": "https://doi.org/10.1117/12.485805",
+      "relevance": "Directly cited scientific treatment distinguishes measured organization from visual impressions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1117%2F12.485805",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1117_12_485805.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1117_12_485805.json"
+      },
+      "publisher": "SPIE",
+      "volume": "5114",
+      "pages": "108",
+      "verified": true
+    },
+    {
+      "id": "10.1137/0134040",
+      "authors": [
+        "J. M. Greenberg",
+        "S. P. Hastings"
+      ],
+      "title": "Spatial Patterns for Discrete Models of Diffusion in Excitable Media",
+      "year": 1978,
+      "venue": "SIAM Journal on Applied Mathematics",
+      "doi": "10.1137/0134040",
+      "url": "https://doi.org/10.1137/0134040",
+      "relevance": "A foundational related model clarifies the distinction between contact-driven cyclic changes and automatic refractory transitions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1137%2F0134040",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1137_0134040.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1137_0134040.json"
+      },
+      "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+      "volume": "34",
+      "issue": "3",
+      "pages": "515-523",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

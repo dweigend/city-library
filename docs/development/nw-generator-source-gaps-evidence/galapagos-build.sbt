@@ -1,0 +1,421 @@
+import org.nlogo.PlayScrapePlugin
+import org.nlogo.PlayScrapePlugin.credentials.{ fromCredentialsProfile, fromEnvironmentVariables }
+import com.typesafe.sbt.web.Import.WebKeys.webTarget
+import com.typesafe.sbt.web.{ Compat, PathMapping }
+import com.typesafe.sbt.web.pipeline.Pipeline
+import sbt.io.Path.relativeTo
+import sbt.IO
+
+import java.nio.file.{ Files, StandardCopyOption }
+
+import scala.sys.process.{ Process, ProcessLogger }
+
+name    := "Galapagos"
+version := "1.0-SNAPSHOT"
+
+val tortoiseVersion = "1.0-6168dd2"
+
+resolvers ++= Seq(
+  "tortoise"                at "https://dl.cloudsmith.io/public/netlogo/tortoise/maven/"
+, "netlogo"                 at "https://dl.cloudsmith.io/public/netlogo/netlogo/maven/"
+, "play-scraper-workaround" at "https://dl.cloudsmith.io/public/netlogo/play-scraper-workaround/maven/"
+)
+
+scalaVersion := "3.7.0"
+scalacOptions ++= Seq(
+  "-encoding", "UTF-8",
+  "-deprecation",
+  "-unchecked",
+  "-feature",
+  "-experimental",
+  "-Xfatal-warnings",
+  // The Play-generated routes code throws errors about inexhaustive matches, so we squelch them for now.  -Jeremy B
+  // June 2025
+  "-Wconf:src=routes/main/.*:silent",
+  // And in Scala 3 for explicit implicits not using `using` -Jeremy B June 2025
+  "-Wconf:src=twirl/main/views/html/.*:silent"
+)
+// Play includes some of the same compiler flags we do, but duplicate flags is a warn/error in Scala 3.  Feels weird to
+// drop them here, so we just de-duplicate them.  -Jeremy B June 2025
+scalacOptions ~= { options =>
+  options.distinct
+}
+
+lazy val root = (project in file("."))
+  .enablePlugins(PlayScala, PlayScrapePlugin)
+  .settings(
+    // Disable NPM node modules
+    Assets / JsEngineKeys.npmNodeModules := Nil,
+    TestAssets / JsEngineKeys.npmNodeModules := Nil
+  )
+
+libraryDependencies ++= Seq(
+  ehcache
+, filters
+, guice
+, "org.scala-lang.modules" %% "scala-parallel-collections" % "1.2.0"
+, "org.nlogo" % "compilerjvm"  % tortoiseVersion
+, "org.nlogo" % "netlogowebjs" % tortoiseVersion
+// akka-testkit must match the akka version used by Play -Jeremy B September 2022
+, "com.typesafe.akka"      %% "akka-testkit"       % play.core.PlayVersion.akkaVersion % Test
+, "org.scalatestplus.play" %% "scalatestplus-play" % "6.0.1" % Test
+)
+
+evictionErrorLevel := Level.Warn
+
+Assets / unmanagedResourceDirectories += baseDirectory.value / "node_modules"
+
+// This is definitely not meant to be universal, just to get the info without the typical color codes -Jeremy B February
+// 202
+def unAnsi(str: String): String =
+  str.replaceAll("\\u001B\\[\\d+m", "")
+
+def runNpm(log: Logger, runDir: File, args: Seq[String], env: (String, String)*): Unit = {
+  val npmArgs = Seq("npm") ++ args
+  log.info(npmArgs.mkString(" "))
+
+  val output = new StringBuilder()
+  val writingLogger = ProcessLogger(
+    (out) => {
+      output.append(unAnsi(out))
+      output.append("\n")
+      log.info(out)
+    }
+  , (err) => {
+      output.append(unAnsi(err))
+      output.append("\n")
+    }
+  )
+  val result = Process(npmArgs, runDir, env:_*).!(writingLogger)
+  if (result != 0) {
+    throw new MessageOnlyException(s"npm command indicated an unsuccessful result.\n\n${output.toString}")
+  }
+  ()
+}
+
+// Using `ci` instead of `install` means deploys will follow exactly what's in the `package.json`, which is what we
+// want. -Jeremy B May 2026
+lazy val npmInstall = taskKey[Unit]("runs `npm ci` if necessary based on current repo status")
+npmInstall := {
+  val log           = streams.value.log
+  val nodeDir       = baseDirectory.value / "node_modules"
+  val nodeExists    = nodeDir.exists && nodeDir.isDirectory && nodeDir.list.length > 0
+  val integrityFile = nodeDir / ".package-lock.json"
+  val packageJson   = baseDirectory.value / "package.json"
+  if (!nodeExists || !integrityFile.exists || integrityFile.olderThan(packageJson)) {
+    runNpm(log, baseDirectory.value, Seq("ci", "--ignore-optional"))
+  }
+}
+
+lazy val coffeeInputDirectory  = Def.setting[File] { baseDirectory.value / "app" / "assets" / "javascripts" }
+lazy val coffeeOutputDirectory = Def.setting[File] { baseDirectory.value / "target" / "coffee-output" / "main" }
+
+lazy val coffee = taskKey[Unit]("compile coffeescript files")
+coffee := Def.task {
+  val log               = streams.value.log
+  val baseDir           = baseDirectory.value
+  val coffeeInputDir    = coffeeInputDirectory.value
+  val coffeeChangedDir  = baseDirectory.value / "target" / "coffee-changed"
+  val coffeeOutputDir   = coffeeOutputDirectory.value
+  val coffeeInputPath   = coffeeInputDir.asPath
+  val coffeeChangedPath = coffeeChangedDir.asPath
+  val coffeeOutputPath  = coffeeOutputDir.asPath
+
+  // get our file paths straight
+  val inOutFiles = (coffeeInputDir ** ("*.coffee")).get.map( (sourceFile) => {
+    val relativePath     = coffeeInputPath.relativize(sourceFile.asPath)
+    val changedFile      = coffeeChangedPath.resolve(relativePath).toFile
+    val fileName         = sourceFile.getName.split("\\.").dropRight(1).mkString(".")
+    val relativeParent   = relativePath.getParent
+    val outputParentPath = if (relativeParent == null) {
+      coffeeOutputPath
+    } else {
+      coffeeOutputPath.resolve(relativePath.getParent)
+    }
+    val outputFile = outputParentPath.resolve(s"$fileName.js").toFile
+    (sourceFile, changedFile, outputFile)
+  })
+
+  // get only the coffee files that have changed
+  val changedFiles = inOutFiles.filter({ case (sourceFile, _, outputFile) =>
+    !outputFile.exists || outputFile.olderThan(sourceFile)
+  })
+
+  // compile the coffee files if necessary.
+  if (changedFiles.length == 0) {
+    log.info("No changes found in CoffeeScript files.")
+  } else {
+    log.info(s"Compiling ${changedFiles.length} changed CoffeeScript file(s).")
+    // put the changed coffee files into a temp directory, so we can compile them while maintaining their relative paths.
+    IO.delete(coffeeChangedDir)
+    changedFiles.foreach({ case (sourceFile, changedFile, _) =>
+      Files.createDirectories(changedFile.getParentFile.asPath)
+      Files.copy(sourceFile.toPath, changedFile.toPath, StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING)
+    })
+    runNpm(
+      log,
+      baseDir,
+      Seq("exec", "--", "coffee", "--compile", "--map", "--output", coffeeOutputPath.toString, coffeeChangedPath.toString)
+    )
+  }
+
+  // then copy all the non-coffee script files, too
+  (coffeeInputDir ** ("*.js")).get.foreach( (sourceFile) => {
+    val sourcePath = sourceFile.asPath
+    val outputPath = coffeeInputPath.relativize(sourcePath)
+    IO.copyFile(sourcePath.toFile, coffeeOutputPath.resolve(outputPath).toFile)
+  })
+
+}.dependsOn(npmInstall).value
+
+lazy val coffeelint = taskKey[Unit]("lint coffeescript files")
+coffeelint := Def.task {
+  runNpm(
+    streams.value.log,
+    baseDirectory.value,
+    Seq("exec", "--", "coffeelint", "-f", "coffeelint.json", coffeeInputDirectory.value.toString)
+  )
+}.dependsOn(npmInstall).value
+
+// Local release automation. Three tasks bracket the two required manual pauses (edit release notes,
+// generate the standalone bundle). See project/ReleaseTasks.scala. -Jeremy B July 2026
+lazy val tortoiseDirectory = settingKey[File]("location of the sibling Tortoise repo, used to gather release-note commits and sync the models library")
+tortoiseDirectory := baseDirectory.value / ".." / "Tortoise"
+
+lazy val startRelease = inputKey[Unit]("begin a release: branch, sync models library, bump version, and draft release notes")
+startRelease := {
+  val args = Def.spaceDelimited("<version>").parsed
+  ReleaseTasks.start(streams.value.log, baseDirectory.value, tortoiseDirectory.value, args)
+}
+
+lazy val finalizeRelease = inputKey[Unit]("commit the prepared release changes (run after editing the drafted release notes)")
+finalizeRelease := {
+  val args = Def.spaceDelimited("<version>").parsed
+  ReleaseTasks.finalizeRelease(streams.value.log, baseDirectory.value, args)
+}
+
+lazy val tagRelease = inputKey[Unit]("commit the standalone HTML bundle and create the release tag (run after generating the bundle)")
+tagRelease := {
+  val args = Def.spaceDelimited("<version>").parsed
+  ReleaseTasks.tagRelease(streams.value.log, baseDirectory.value, args)
+}
+
+lazy val setupHTTPS = taskKey[Unit]("configure HTTPS")
+setupHTTPS := {
+  val keyStorePath = sys.env.getOrElse("GALAPAGOS_KEYSTORE_PATH",
+    sys.error("setupHTTPS requires GALAPAGOS_KEYSTORE_PATH to point at the PKCS12 keystore"))
+  val httpsPort = sys.env.getOrElse("GALAPAGOS_HTTPS_PORT", "9001")
+  System.getProperties().setProperty("http.port", "disabled")
+  System.getProperties().setProperty("https.port", httpsPort)
+  System.getProperties().setProperty("play.server.https.keyStore.path", keyStorePath)
+  System.getProperties().setProperty("play.server.https.keyStore.type", "PKCS12")
+}
+
+lazy val testInputDirectory  = Def.setting[File] { baseDirectory.value / "test" / "assets" / "javascripts" }
+lazy val testOutputDirectory = Def.setting[File] { baseDirectory.value / "target" / "coffee-output" / "test" }
+
+lazy val mochaTest = taskKey[Unit]("run mocha js tests")
+mochaTest := Def.task {
+  val log = streams.value.log
+  log.info("Running mocha JS tests")
+  IO.delete(testOutputDirectory.value)
+  runNpm(
+    log,
+    baseDirectory.value,
+    Seq("exec", "--", "coffee", "--compile", "--map", "--output", testOutputDirectory.value.toString, testInputDirectory.value.toString)
+  )
+  runNpm(
+    log,
+    baseDirectory.value,
+    Seq("exec", "mocha", "--", s"${testOutputDirectory.value.toString}/**/*.js")
+  )
+}.dependsOn(coffee).value
+
+lazy val bundleDirectory = Def.setting[File] { baseDirectory.value / "target" / "rollup" }
+
+lazy val bundle = taskKey[Pipeline.Stage]("full coffeescript build and bundle with rollup as pipeline")
+bundle / includeFilter := "*.coffee" || "*.js"
+bundle / excludeFilter := HiddenFileFilter
+bundle := Def.task {
+  val streamsValue    = streams.value
+  val baseDir         = baseDirectory.value
+  val scriptsDir      = "javascripts" + java.io.File.separator
+  val include         = (bundle / includeFilter).value
+  val exclude         = (bundle / excludeFilter).value
+  val coffeeOutputDir = coffeeOutputDirectory.value
+  val bundleDir       = bundleDirectory.value.relativeTo(baseDir).get
+  val rollupDev       = sys.env.getOrElse("ROLLUP_DEV", "0")
+
+  (inputMappings: Seq[PathMapping]) => {
+
+    // Partition input mappings into files we want to bundle and files we just want to ignore and pass through to the
+    // next pipeline stage. - David D. 7/2021
+    val (outputMappings, ignoredFiles) = inputMappings.partition({
+      case (file, relativePath) =>
+        relativePath.startsWith(scriptsDir) && !file.isDirectory && !exclude.accept(file) && include.accept(file)
+    })
+
+    // Run the function only if files have changed since the last run - David D. 7/2021
+    val runBundler = FileFunction.cached(streamsValue.cacheDirectory / "rollup", FilesInfo.hash) { _ =>
+      IO.delete(bundleDir)
+      runNpm(
+        streamsValue.log,
+        baseDir,
+        Seq("exec", "--", "rollup", "--config", "rollup.config.js",
+          // Custom arguments with the 'config-' prefix are passed through to rollup.config.js. - David D. 7/2021
+          "--config-sourceDir", coffeeOutputDir.getPath,
+          "--config-targetDir", bundleDir.getPath,
+          // Rollup prints all messages, including info to STDERR, but SBT would then display everything as errors and
+          // clutter the output. The --silent flag causes Rollup to output only errors, which we still want to see.
+          // - David D. 7/2021
+          "--silent"
+        ),
+        "ROLLUP_DEV" -> rollupDev
+      )
+      (bundleDir ** ("*.js" || "*.js.map")).get.toSet
+    }
+
+    val bundledFiles: Seq[PathMapping] = runBundler(outputMappings.map(_._1).toSet) pair relativeTo(bundleDir)
+    bundledFiles ++ ignoredFiles
+  }
+}.dependsOn(coffee).value
+
+(Compile / compile) := (Compile / compile).dependsOn(npmInstall).value
+
+// I'm probably missing something very simple, but basic glob patterns aren't working to get the color-picker directory
+// excluded, so I went with the brute force method.  -Jeremy B August 2025
+val substringFilterMaker = (filter: String) => new FileFilter {
+  def accept(file: File): Boolean = {
+    file.toString.contains(filter)
+  }
+}
+
+// Don't digest chunks, because they are `import`ed by filename in other script files. Besides, they already contain
+// a digest in their filename anyway, so there is no need to do it twice.
+// - David D. 7/2021
+digest / excludeFilter := "*.chunk.js" || "*.chunk.js.map" || "*.png" || "*.html" || "*.ttf" ||
+  substringFilterMaker("public/pages/color-picker") || "simulation.bundle.js.map" || "netTangoBuilder.bundle.js.map" ||
+  "simulation.bundle.debug.js.map"
+
+// We want to run the bundler in different modes in production and development. Unfortunately pipelineStages don't
+// provide a way to run hooks only in development (`pipelineStages in Assets` are run in prod *and* dev). So we need to
+// use a playRunHook to detect if we're in development mode (`sbt run`). - David D. 7/2021
+PlayKeys.playRunHooks += PlayDevMode()
+
+// Used in Dev and Prod
+Assets / pipelineStages ++= Seq(bundle)
+
+// Used in Prod
+pipelineStages ++= Seq(digest)
+
+Test / javaOptions ++= Seq(
+  "--add-exports=java.base/sun.security.x509=ALL-UNNAMED"
+, "--add-opens=java.base/sun.security.ssl=ALL-UNNAMED"
+)
+
+Test / test := (Test / test).dependsOn(mochaTest).value
+
+Test / fork := true
+
+routesGenerator := InjectedRoutesGenerator
+
+scrapeRoutes ++= Seq(
+  "/humans.txt",
+  "/docs/authoring",
+  "/docs/differences",
+  "/docs/faq",
+  "/docs/attributions",
+  "/whats-new",
+  "/model/list.json",
+  "/model/statuses.json",
+  "/tortoise-engine.min.js",
+  "/tortoise-engine.min.js.map",
+  "/target/classes/js/tortoise-engine.js",
+  "/netlogo-agentmodel.js",
+  "/settings",
+  "/tortoise-compiler.js",
+  "/tortoise-compiler.js.map",
+  "/assets/javascripts/pages/simulation.bundle.js.map",
+  "/assets/javascripts/pages/netTangoBuilder.bundle.js.map",
+  "/server-error",
+  "/not-found",
+  "/robots.txt",
+  "/standalone",
+  "/standalone-debug",
+  "/launch",
+  "/web",
+  "/jumpto",
+  "/nettango-builder",
+  "/nettango-library",
+  "/nettango-player",
+  "/nettango-player-standalone",
+  "/ntango-build",
+  "/ntango-play",
+  "/ntango-play-standalone",
+  "/model-linker",
+  "/docs/hosting-sharing",
+  "/versions.json"
+  )
+
+scrapeDelay := 120
+
+// enable this when any file metadata changes are made (usually in the `Play-Scraper` project)
+// scrapeForceUpload := true
+
+def isBuildServer: Boolean = !Option(System.getenv("BUILD_SERVER")).isEmpty
+
+def buildBranch: String =
+  if (Option(System.getenv("CHANGE_TARGET")).isEmpty)
+    System.getenv("BUILD_BRANCH")
+  else
+    "PR-" + System.getenv("CHANGE_ID") + "-" + System.getenv("CHANGE_TARGET")
+
+scrapePublishCredential := (Def.settingDyn {
+  if (isBuildServer)
+    Def.setting { fromEnvironmentVariables }
+  else
+    // Requires setting up a credentials profile, ask Robert for more details
+    Def.setting { fromCredentialsProfile("nlw-admin") }
+}).value
+
+scrapePublishBucketID := (Def.settingDyn {
+  val branchDeploy = Map(
+    "production"      -> "netlogo-web-prod-content",
+    "main"            -> "netlogo-web-staging-content",
+    "modelingcommons" -> "netlogo-web-modelingcommons-content",
+    "scrape-test"     -> "netlogo-web-experiments-content/scrape-test"
+  )
+
+  if (isBuildServer)
+    Def.setting { branchDeploy.get(buildBranch) }
+  else
+    Def.setting { branchDeploy.get("production") }
+}).value
+
+scrapePublishDistributionID := (Def.settingDyn {
+  val branchPublish = Map(
+    "production"      -> "E3AIHWIXSMPCAI",
+    "main"            -> "E360I3EFLPUZR0",
+    "modelingcommons" -> "E3UEBDSNEZ97GK",
+    "scrape-test"     -> "E2TDYOH5TZH83M"
+  )
+
+  if (isBuildServer)
+    Def.setting { branchPublish.get(buildBranch) }
+  else
+    Def.setting { branchPublish.get("production") }
+}).value
+
+scrapeAbsoluteURL := (Def.settingDyn {
+  val branchURL = Map(
+    "production"      -> "netlogoweb.org",
+    "main"            -> "staging.netlogoweb.org",
+    "modelingcommons" -> "modelingcommons.netlogoweb.org",
+    "scrape-test"     -> "experiments.netlogoweb.org/scrape-test"
+  )
+
+  if (isBuildServer)
+    Def.setting { branchURL.get(buildBranch) }
+  else
+    Def.setting { branchURL.get("production") }
+}).value

@@ -1,0 +1,433 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1068%2Fb240247",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            30
+          ]
+        ],
+        "date-time": "2026-10-30T20:52:15Z",
+        "timestamp": 1793393535011,
+        "version": "4.5.0"
+      },
+      "reference-count": 29,
+      "publisher": "SAGE Publications",
+      "issue": "2",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1997,
+                4,
+                1
+              ]
+            ],
+            "date-time": "1997-04-01T00:00:00Z",
+            "timestamp": 859852800000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Environ Plann B Plann Des"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1997,
+            4
+          ]
+        ]
+      },
+      "abstract": "<jats:p>In this paper we describe a cellular automaton (CA) simulation model developed to predict urban growth as part of a project for estimating the regional and broader impact of urbanization on the San Francisco Bay area's climate. The rules of the model are more complex than those of a typical CA and involve the use of multiple data sources, including topography, road networks, and existing settlement distributions, and their modification over time. In addition, the control parameters of the model are allowed to self-modify: that is, the CA adapts itself to the circumstances it generates, in particular, during periods of rapid growth or stagnation. In addition, the model was written to allow the accumulation of probabilistic estimates based on Monte Carlo methods. Calibration of the model has been accomplished by the use of historical maps to compare model predictions of urbanization, based solely upon the distribution in year 1900, with observed data for years 1940, 1954, 1962, 1974, and 1990. The complexity of this model has made calibration a particularly demanding step. Lessons learned about the methods, measures, and strategies developed to calibrate the model may be of use in other environmental modeling contexts. With the calibration complete, the model is being used to generate a set of future scenarios for the San Francisco Bay area along with their probabilities based on the Monte Carlo version of the model. Animated dynamic mapping of the simulations will be used to allow visualization of the impact of future urban growth.</jats:p>",
+      "DOI": "10.1068/b240247",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2006,
+            10,
+            12
+          ]
+        ],
+        "date-time": "2006-10-12T12:43:36Z",
+        "timestamp": 1160657016000
+      },
+      "page": "247-261",
+      "source": "Crossref",
+      "is-referenced-by-count": 1167,
+      "title": [
+        "A Self-Modifying Cellular Automaton Model of Historical Urbanization in the San Francisco Bay Area"
+      ],
+      "prefix": "10.1177",
+      "volume": "24",
+      "author": [
+        {
+          "given": "K C",
+          "family": "Clarke",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Geology and Geography, Hunter College, The City University of New York Graduate School and University Center, 695 Park Avenue, New York, NY 10021"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "S",
+          "family": "Hoppen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Geology and Geography, Hunter College, The City University of New York Graduate School and University Center, 695 Park Avenue, New York, NY 10021"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "L",
+          "family": "Gaydos",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "US Geological Survey, EROS Data Center, NASA-Ames Research Center, Moffett Field, CA 94035"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "179",
+      "published-online": {
+        "date-parts": [
+          [
+            1997,
+            4
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_1_2_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3133/pp964"
+        },
+        {
+          "key": "e_1_2_1_3_1",
+          "volume-title": "Fractal Cities",
+          "author": "Batty M",
+          "year": "1994",
+          "unstructured": "Batty M, Longley P, 1994 Fractal Cities (Academic Press, London)"
+        },
+        {
+          "key": "e_1_2_1_4_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/b21S031"
+        },
+        {
+          "key": "e_1_2_1_5_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/a170585"
+        },
+        {
+          "key": "e_1_2_1_6_1",
+          "volume-title": "Atlas of California",
+          "author": "Donley M",
+          "year": "1979",
+          "unstructured": "Donley M, Allan S, Caro P, Patton C, 1979 Atlas of California (Academic Book Center, Culver City, CA"
+        },
+        {
+          "key": "e_1_2_1_7_1",
+          "first-page": "809",
+          "article-title": "\u201cThe 1990 conterminous US AVHRR data set\u201d",
+          "volume": "58",
+          "author": "Eidenshink J C",
+          "year": "1992",
+          "unstructured": "Eidenshink J C, 1992, \u201cThe 1990 conterminous US AVHRR data set\u201d Photogrammetric Engineering and Remote Sensing 58 809\u2013813",
+          "journal-title": "Photogrammetric Engineering and Remote Sensing"
+        },
+        {
+          "key": "e_1_2_1_8_1",
+          "volume-title": "Proceedings of the 17th International Cartographic Conference Barcelona",
+          "author": "Gaydos L J",
+          "year": "1995",
+          "unstructured": "Gaydos L J, Acevedo W, Bell C, 1995, \u201cUsing animated cartography to illustrate global change\u201d Proceedings of the 17th International Cartographic Conference Barcelona, Institut Cartogr\u00e0fic de Catalunya, Parc de Montjuic, 08038 Barcelona, Spain"
+        },
+        {
+          "key": "e_1_2_1_9_1",
+          "volume-title": "Innovation Diffusion as a Spatial Process",
+          "author": "H\u00e4gerstrand T",
+          "year": "1967",
+          "unstructured": "H\u00e4gerstrand T, 1967 Innovation Diffusion as a Spatial Process (University of Chicago Press, Chicago, IL)"
+        },
+        {
+          "key": "e_1_2_1_10_1",
+          "volume-title": "Population and the Urban Future",
+          "author": "Hauser P N",
+          "year": "1982",
+          "unstructured": "Hauser P N, Gardner R W, Laquian A A, El-Shakhs S, 1982 Population and the Urban Future (State University of New York Press, Albany, NY)"
+        },
+        {
+          "key": "e_1_2_1_11_1",
+          "volume-title": "The Death and Life of Great American Cities",
+          "author": "Jacobs J",
+          "year": "1961",
+          "unstructured": "Jacobs J, 1961 The Death and Life of Great American Cities (Random House, New York)"
+        },
+        {
+          "key": "e_1_2_1_12_1",
+          "first-page": "286",
+          "article-title": "\u201cProgress in global land data sets and land characterization: USGS research program\u201d",
+          "volume": "5",
+          "author": "Kirtland D",
+          "year": "1993",
+          "unstructured": "Kirtland D, 1993, \u201cProgress in global land data sets and land characterization: USGS research program\u201d World Resource Review 5 286\u2013302",
+          "journal-title": "World Resource Review"
+        },
+        {
+          "key": "e_1_2_1_13_1",
+          "first-page": "206",
+          "article-title": "\u201cAn analysis of human-induced land transformations in the San Francisco Bay/Sacramento area\u201d",
+          "volume": "6",
+          "author": "Kirtland D",
+          "year": "1994",
+          "unstructured": "Kirtland D, DeCola L, Gaydos L, Acevedo W, Clarke K, Bell C, 1994, \u201cAn analysis of human-induced land transformations in the San Francisco Bay/Sacramento area\u201d World Resource Review 6 206\u2013217",
+          "journal-title": "World Resource Review"
+        },
+        {
+          "key": "e_1_2_1_14_1",
+          "first-page": "1",
+          "volume-title": "The Restless Urban Landscape",
+          "author": "Knox P L",
+          "year": "1993",
+          "unstructured": "Knox P L, (Ed.), 1993 The Restless Urban Landscape (Prentice-Hall, Englewood Cliffs, NJ) pp 1\u201313"
+        },
+        {
+          "key": "e_1_2_1_15_1",
+          "volume-title": "\u201cBASS II: A new generation of metropolitan simulation models\u201d",
+          "author": "Landis J",
+          "year": "1992",
+          "unstructured": "Landis J, 1992, \u201cBASS II: A new generation of metropolitan simulation models\u201d, WP-573, Institute of Urban and Regional Development, University of California at Berkeley, Berkeley, CA"
+        },
+        {
+          "key": "e_1_2_1_16_1",
+          "first-page": "1453",
+          "article-title": "\u201cDevelopment of a land cover characteristics data base for the conterminous US\u201d",
+          "volume": "57",
+          "author": "Loveland T R",
+          "year": "1991",
+          "unstructured": "Loveland T R, Merchant J, Ohlen D O, Brown J, 1991, \u201cDevelopment of a land cover characteristics data base for the conterminous US\u201d Photogrammetric Engineering and Remote Sensing 57 1453\u20131463",
+          "journal-title": "Photogrammetric Engineering and Remote Sensing"
+        },
+        {
+          "key": "e_1_2_1_17_1",
+          "first-page": "A23",
+          "article-title": "\u201cThumbs up for video on Bay area growth\u201d",
+          "volume": "65",
+          "author": "Petit C",
+          "year": "1994",
+          "unstructured": "Petit C, 1994, \u201cThumbs up for video on Bay area growth\u201d San Francisco Chronicle 65 A23",
+          "journal-title": "San Francisco Chronicle"
+        },
+        {
+          "key": "e_1_2_1_18_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2747/0272-3638.15.1.25"
+        },
+        {
+          "key": "e_1_2_1_19_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1068/b240263"
+        },
+        {
+          "key": "e_1_2_1_20_1",
+          "first-page": "438",
+          "volume-title": "Beyond the Hundredth Meridian",
+          "author": "Stegner W",
+          "year": "1954",
+          "unstructured": "Stegner W, 1954 Beyond the Hundredth Meridian (Houghton Mifflin, Boston, MA) page 438"
+        },
+        {
+          "key": "e_1_2_1_21_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-94-009-9394-5_18"
+        },
+        {
+          "key": "e_1_2_1_22_1",
+          "volume-title": "United States Geological Survey",
+          "author": "USGS",
+          "year": "1994",
+          "unstructured": "USGS, 1994, http://geo.arc.nasa.gov/usgs/erosames.html, United States Geological Survey, Eros Data Center, NASA\u2013Ames Research Center, Moffett Field, CA"
+        },
+        {
+          "key": "e_1_2_1_23_1",
+          "volume-title": "Geography and Urban Evolution in the San Francisco Bay Area",
+          "author": "Vance J E",
+          "year": "1964",
+          "unstructured": "Vance J EJr, 1964 Geography and Urban Evolution in the San Francisco Bay Area Institute of Governmental Studies, University of California, Berkeley, CA"
+        },
+        {
+          "key": "e_1_2_1_24_1",
+          "volume-title": "Theory of Self-Reproducing Automata",
+          "author": "von Neumann J",
+          "year": "1966",
+          "unstructured": "von Neumann J, 1966 Theory of Self-Reproducing Automata Ed. Burks A, (University of Illinois Press, Champaign, IL)"
+        },
+        {
+          "key": "e_1_2_1_25_1",
+          "volume-title": "\u201cCellular dynamics and GIS: Modelling spatial complexity\u201d",
+          "author": "White R",
+          "year": "1992",
+          "unstructured": "White R, Engelen G, 1992a, \u201cCellular dynamics and GIS: Modelling spatial complexity\u201d, WP-9263, Research Institute for Knowledge Systems (RIKS), Maastricht, The Netherlands"
+        },
+        {
+          "key": "e_1_2_1_26_1",
+          "volume-title": "\u201cCellular automata and fractal urban form: A cellular modelling approach to the evolution of urban land use patterns\u201d",
+          "author": "White R",
+          "year": "1992",
+          "unstructured": "White R, Engelen G, 1992b, \u201cCellular automata and fractal urban form: A cellular modelling approach to the evolution of urban land use patterns\u201d, WP-9264, RIKS, Maastricht, The Netherlands"
+        },
+        {
+          "key": "e_1_2_1_27_1",
+          "first-page": "137",
+          "volume-title": "Spatial Interaction, Theory and Planning Models",
+          "author": "Wilson A",
+          "year": "1978",
+          "unstructured": "Wilson A, 1978, \u201cSpatial interaction and settlement structure: Toward an explicit Central Place Theory\u201d, in Spatial Interaction, Theory and Planning Models Eds Karlqvist A, , (North-Holland, Amsterdam) pp 137\u2013156"
+        },
+        {
+          "key": "e_1_2_1_28_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-2789(84)90245-8"
+        },
+        {
+          "key": "e_1_2_1_29_1",
+          "volume-title": "Cellular Automata and Complexity: Collected Papers",
+          "author": "Wolfram S",
+          "year": "1994",
+          "unstructured": "Wolfram S, 1994, \u201cCellular automata\u201d, in Cellular Automata and Complexity: Collected Papers (Addison Wesley, Steven Wolfram, Reading, MA)"
+        },
+        {
+          "key": "e_1_2_1_30_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/490553"
+        }
+      ],
+      "container-title": [
+        "Environment and Planning B: Planning and Design"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1068/b240247",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1068/b240247",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            1,
+            5
+          ]
+        ],
+        "date-time": "2026-01-05T15:21:41Z",
+        "timestamp": 1767626501000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://journals.sagepub.com/doi/10.1068/b240247"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1997,
+            4
+          ]
+        ]
+      },
+      "references-count": 29,
+      "journal-issue": {
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              1997,
+              4
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1068/b240247"
+      ],
+      "URL": "https://doi.org/10.1068/b240247",
+      "relation": {},
+      "ISSN": [
+        "0265-8135",
+        "1472-3417"
+      ],
+      "issn-type": [
+        {
+          "value": "0265-8135",
+          "type": "print"
+        },
+        {
+          "value": "1472-3417",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1997,
+            4
+          ]
+        ]
+      }
+    }
+  }
+}

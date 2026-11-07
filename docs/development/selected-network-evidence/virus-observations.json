@@ -1,0 +1,75 @@
+{
+  "modelPath": "Sample Models/Networks/Virus on a Network",
+  "slug": "virus-on-a-network",
+  "executedBy": "integration coordinator",
+  "documentedBy": "scoped documentation agent from coordinator observations and retained artifacts",
+  "executionDate": "2026-11-05",
+  "reference": {
+    "launcherUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Virus%20on%20a%20Network.nlogox",
+    "version": "NetLogo 7.0.4",
+    "galapagosRevision": "90be931773fcf499049247a8aaa1aecbe003654c",
+    "sha256": "3ebb041175d22c6a1b32279dc25af14b4f76c06f2eb18e62539ca84f1f8dd5d1",
+    "browserLoadedSourceHashVerified": true,
+    "seed": "unspecified native seed",
+    "viewport": { "width": 1280, "height": 800 },
+    "states": [
+      { "action": "Setup", "tick": 0, "susceptible": 147, "infected": 3, "resistant": 0, "nodes": 150, "edges": 450, "image": "virus-reference-setup.png" },
+      { "action": "Native Go then Pause", "tick": 143, "susceptible": 81, "infected": 54, "resistant": 15, "image": "virus-reference-progress.png" },
+      { "action": "Live spread 0; Go until extinction", "tick": 275, "susceptible": 131, "infected": 0, "resistant": 19, "image": "virus-reference-extinction.png" },
+      { "action": "Go after extinction", "tick": 275, "tickUnchanged": true },
+      { "action": "Restore spread 2.5; Setup", "tick": 0, "susceptible": 147, "infected": 3, "resistant": 0, "edges": 450 }
+    ]
+  },
+  "defaultParameters": { "numberOfNodes": 150, "averageNodeDegree": 6, "initialOutbreakSize": 3, "spreadChance": 2.5, "recoveryChance": 5, "resistanceChance": 5, "checkFrequency": 1 },
+  "target": {
+    "implementationCommit": "2fab83b",
+    "integrationSmokeIncludesCommit": "37ed804",
+    "seed": 1,
+    "rng": "Mulberry",
+    "desktopViewport": { "width": 1280, "height": 800 },
+    "mobileViewport": { "width": 390, "height": 844 },
+    "states": [
+      { "action": "Setup", "tick": 0, "susceptible": 147, "infected": 3, "resistant": 0, "nodes": 150, "edges": 450, "image": "virus-target-setup.png" },
+      { "action": "100 steps", "tick": 100, "susceptible": 133, "infected": 13, "resistant": 4 },
+      { "action": "Four ten-step and three single-step clicks", "tick": 143, "susceptible": 131, "infected": 13, "resistant": 6, "image": "virus-target-progress.png" },
+      { "action": "Run then Pause", "tick": 145, "susceptible": 133, "infected": 11, "resistant": 6 },
+      { "action": "Live spread 0; 100 steps", "tick": 202, "susceptible": 144, "infected": 0, "resistant": 6, "runDisabled": true, "stepsDisabled": true },
+      { "action": "Restore spread 2.5; Setup", "tick": 0, "susceptible": 147, "infected": 3, "resistant": 0 }
+    ],
+    "integrationSmoke": [
+      { "action": "Setup then 10 steps", "tick": 10, "susceptible": 145, "infected": 5, "resistant": 0 },
+      { "action": "Live check frequency 2 then 1 step", "tick": 11, "selectedNodeCheckTimer": 1 },
+      { "action": "1 step", "tick": 12, "selectedNodeCheckTimer": 0 },
+      { "action": "Nodes 9 then Setup", "nativeValidation": "Value must be >= 10", "preservedTick": 12, "inputRestoredTo": 150 }
+    ],
+    "mobile": {
+      "themes": ["dark", "light"],
+      "selectedNode": { "index": 0, "xApprox": 4.9495299859, "yApprox": -19.36844, "status": "susceptible", "checkTimer": 0 },
+      "fitAndLayoutPreservedTick": 202,
+      "horizontalDocumentOverflow": false,
+      "images": ["virus-target-mobile-inspection.png", "virus-target-mobile-dark.png", "virus-target-mobile-light.png"]
+    }
+  },
+  "diagnostics": {
+    "referenceApplicationConsoleErrors": [],
+    "referenceFailedNetworkRequests": [],
+    "targetApplicationConsoleErrors": [],
+    "targetFailedNetworkRequests": [],
+    "correctedAutomationFailures": [
+      { "operation": "Wait for wrong reference .netlogo-ticks selector", "timeoutMs": 5000, "correction": "Native Pause and actual tick observation recorded 143" },
+      { "operation": "Select invented target option value cl_0", "correction": "Read actual options and select existing first node" }
+    ]
+  },
+  "comparison": {
+    "alignedProgressTick": 143,
+    "crossRngTrajectoryEqualityClaimed": false,
+    "statisticalDistributionEquivalenceTested": false,
+    "observedFunctionalAgreement": ["default population, edge count and initial states", "status totals conserve population", "live spread zero followed by extinction", "extinction prevents further scientific ticks", "Setup restores initial states", "percentage chart semantics"],
+    "headlessAndSourceOnlyContracts": ["nearest-unconnected generation", "frozen spread-sender phase", "new infections eligible for same-tick recovery", "integer recovery quantization", "atomic state and connection fixtures"],
+    "declaredAdaptations": ["Mulberry RNG and omitted appearance-only draws", "independent presentation layout and neutral edge styling", "setup-only population, degree and outbreak", "extra fixture APIs and bounded history"],
+    "independentTechnicalApproval": "pending",
+    "empiricalScientificValidationClaimed": false
+  },
+  "relatedReport": "../virus-network-browser-report.md",
+  "researchDossier": "../../research/netlogo-web/virus-on-a-network.md"
+}

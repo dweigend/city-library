@@ -1,0 +1,59 @@
+{
+  "slug": "smoothlife",
+  "command": "setup ask patches [ set state 0.4 ] go",
+  "execution": "Original NetLogo Command Center, editor population followed by native Enter",
+  "observed": {
+    "file": "SmoothLife.nlogox",
+    "sha": "9ad3e7b9643589d8daa4391867cefd87e5688bd2c9142b514668bcf2fa663352",
+    "tick": 1,
+    "patches": 16384,
+    "values": {
+      "inner-count": {
+        "unique": [
+          29
+        ],
+        "trueCount": 0,
+        "min": 29,
+        "max": 29
+      },
+      "outer-count": {
+        "unique": [
+          224
+        ],
+        "trueCount": 0,
+        "min": 224,
+        "max": 224
+      },
+      "inner-filling": {
+        "unique": [
+          0
+        ],
+        "trueCount": 0,
+        "min": 0,
+        "max": 0
+      },
+      "outer-filling": {
+        "unique": [
+          0
+        ],
+        "trueCount": 0,
+        "min": 0,
+        "max": 0
+      },
+      "state": {
+        "unique": [
+          0.013461140965034497
+        ],
+        "trueCount": 0,
+        "min": 0.013461140965034497,
+        "max": 0.013461140965034497
+      }
+    },
+    "rowOn": [],
+    "rowOnCount": 0,
+    "turtles": 0,
+    "visibleTurtles": 0,
+    "heads": [],
+    "console": " powered by NetLogo\nSmoothLife\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 1\n?\nfor shortcuts\nouter-radius\nsetup\ngo\nmin-birth\nmax-birth\nmin-survive\nmax-survive\ninner-step-width\nouter-step-width\npaint\nerase-all\npaint-value\npaint-radius\ninner-radius\nouter-state\ninner-state\nTransition​Function\n0\n1\n0\n1\nvisualize-transition\nCommand Center\nobserver> setup ask patches [ set state 0.4 ] go\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+}

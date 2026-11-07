@@ -1,0 +1,358 @@
+{
+  "url": "http://localhost:3120/?experiment=wealth-distribution",
+  "title": "Agent Lab",
+  "loading": false,
+  "visibleText": "Skip to experiment\nAgent Lab\nExperiment\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDiffusion on a Directed Network\nExpected Value\nFire\nGalton Box\nHex Cell Aggregation\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRandom Combinations and Permutations\nSegregation\nSmoothLife\nStochastic Patchwork\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nPeople\nBest Land\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nGrowth interval\nGrowth amount\nMaximum vision\nMaximum metabolism\nMinimum life\nMaximum life\nTick\n9\nPeople\n250\nTotal wealth\n11627\nGini\n0.353\n\nMinimum life cannot exceed maximum life.\n\nModel info\n\nResources, metabolism and unequal holdings. Adapted from Uri Wilensky (1998), CC BY-NC-SA 3.0.\n\nOriginal NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0\nResources and wealth classes\nCurrent wealth classes\n149\n0\n2\nPeople · low / middle / high\nWealth classes\n149\n0\n9\nlow\nmiddle\nhigh\nLorenz curve (%)\n100\n0\n100\nWealth\nEquality\nGini index\n1\n0\n9\nGini",
+  "interactiveElements": [],
+  "consoleEntries": [
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:25:49.746Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:25:49.746Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:25:49.746Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:27:24.550Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:28:35.531Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:28:59.295Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:29:30.531Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:30:32.072Z"
+    }
+  ],
+  "networkEntries": [
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:28.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:30.378Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:32.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:34.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:36.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:38.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:40.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:42.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:44.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:46.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:48.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:50.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:52.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:54.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:56.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:30:58.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:00.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:02.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:04.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:06.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:08.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:10.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:12.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:14.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:16.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:18.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:20.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:22.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:24.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:26.353Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:28.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:30.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:32.392Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:34.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:36.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:38.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:40.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:42.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:44.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:31:46.351Z"
+    }
+  ],
+  "actionTimeline": [
+    {
+      "id": "b24da832-dc64-4695-8371-44eaae520052",
+      "action": "scroll",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T08:31:33.081Z",
+      "completedAt": "2026-11-06T08:31:33.082Z"
+    },
+    {
+      "id": "17650058-9228-4e17-bf4b-04e09f8a4bca",
+      "action": "scroll",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T08:31:33.315Z",
+      "completedAt": "2026-11-06T08:31:33.316Z"
+    }
+  ],
+  "screenshot": {
+    "mimeType": "image/png",
+    "width": 780,
+    "height": 1688
+  },
+  "accessibilityTree": "- generic [ref=t3-8ebdcace-90-e1] [box=0,16,390,2238]:\n  - link \"Skip to experiment\" [ref=t3-8ebdcace-90-e2] [cursor=pointer] [box=16,-80,157,38]:\n    - /url: \"#experiment-content\"\n  - main [ref=t3-8ebdcace-90-e3] [box=0,16,390,2238]:\n    - generic [ref=t3-8ebdcace-90-e4] [box=16,16,358,80]:\n      - heading \"Agent Lab\" [level=1] [ref=t3-8ebdcace-90-e5] [box=16,16,101,28]\n      - generic [ref=t3-8ebdcace-90-e6] [box=15,55,1,1]: Experiment\n      - combobox \"Experiment\" [ref=t3-8ebdcace-90-e7] [box=16,56,358,40]:\n        - option \"Binomial Rabbits\" [box=0,0,0,0]\n        - option \"Birthdays\" [box=0,0,0,0]\n        - option \"Brian's Brain\" [box=0,0,0,0]\n        - option \"CA 1D Elementary\" [box=0,0,0,0]\n        - option \"CA Continuous\" [box=0,0,0,0]\n        - option \"CA Stochastic\" [box=0,0,0,0]\n        - option \"Central Limit Theorem\" [box=0,0,0,0]\n        - option \"Cyclic CA\" [box=0,0,0,0]\n        - option \"Diffusion on a Directed Network\" [box=0,0,0,0]\n        - option \"Expected Value\" [box=0,0,0,0]\n        - option \"Fire\" [box=0,0,0,0]\n        - option \"Galton Box\" [box=0,0,0,0]\n        - option \"Hex Cell Aggregation\" [box=0,0,0,0]\n        - option \"Life\" [box=0,0,0,0]\n        - option \"Mandelbrot\" [box=0,0,0,0]\n        - option \"Partition Permutation Distribution\" [box=0,0,0,0]\n        - option \"Percolation\" [box=0,0,0,0]\n        - option \"Preferential Attachment\" [box=0,0,0,0]\n        - option \"Random Combinations and Permutations\" [box=0,0,0,0]\n        - option \"Segregation\" [box=0,0,0,0]\n        - option \"SmoothLife\" [box=0,0,0,0]\n        - option \"Stochastic Patchwork\" [box=0,0,0,0]\n        - option \"Three Doors\" [box=0,0,0,0]\n        - option \"Turing Machine 2D\" [box=0,0,0,0]\n        - option \"Urban Suite - Awareness\" [box=0,0,0,0]\n        - option \"Urban Suite - Cells\" [box=0,0,0,0]\n        - option \"Urban Suite - Economic Disparity\" [box=0,0,0,0]\n        - option \"Urban Suite - Path Dependence\" [box=0,0,0,0]\n        - option \"Urban Suite - Pollution\" [box=0,0,0,0]\n        - option \"Urban Suite - Positive Feedback\" [box=0,0,0,0]\n        - option \"Urban Suite - Recycling\" [box=0,0,0,0]\n        - option \"Urban Suite - Sprawl Effect\" [box=0,0,0,0]\n        - option \"Urban Suite - Structure from Randomness 1\" [box=0,0,0,0]\n        - option \"Urban Suite - Structure from Randomness 2\" [box=0,0,0,0]\n        - option \"Urban Suite - Tijuana Bordertowns\" [box=0,0,0,0]\n        - option \"Vants\" [box=0,0,0,0]\n        - option \"Virus on a Network\" [box=0,0,0,0]\n        - option \"Voting\" [box=0,0,0,0]\n        - option \"Wealth Distribution\" [selected] [box=0,0,0,0]\n        - option \"Wolf Sheep Predation\" [box=0,0,0,0]\n    - region \"Experiment workbench\" [ref=t3-8ebdcace-90-e8] [box=16,120,358,2135]:\n      - generic [ref=t3-8ebdcace-90-e10] [box=16,120,358,2135]:\n        - complementary [ref=t3-8ebdcace-90-e11] [box=0,0,0,0]:\n          - form \"Model setup\" [ref=t3-8ebdcace-90-e12] [box=16,120,358,142]:\n            - generic [ref=t3-8ebdcace-90-e13] [box=16,120,174,65]:\n              - text: Seed\n              - spinbutton \"Seed\" [ref=t3-8ebdcace-90-e14] [box=16,144,174,40]: \"1\"\n            - generic [ref=t3-8ebdcace-90-e15] [box=200,120,174,65]:\n              - text: People\n              - spinbutton \"People\" [ref=t3-8ebdcace-90-e16] [box=200,144,174,40]: \"200\"\n            - generic [ref=t3-8ebdcace-90-e17] [box=16,197,174,65]:\n              - text: Best Land\n              - spinbutton \"Best Land\" [ref=t3-8ebdcace-90-e18] [box=16,221,174,40]: \"10\"\n            - button \"Setup\" [ref=t3-8ebdcace-90-e19] [cursor=pointer] [box=200,221,174,40]\n          - generic [ref=t3-8ebdcace-90-e20] [box=16,277,358,117]:\n            - button \"Run\" [ref=t3-8ebdcace-90-e21] [cursor=pointer] [box=16,277,51,40]\n            - button \"1 step\" [ref=t3-8ebdcace-90-e22] [cursor=pointer] [box=75,277,67,40]\n            - button \"10 steps\" [ref=t3-8ebdcace-90-e23] [cursor=pointer] [box=150,277,84,40]\n            - button \"100 steps\" [ref=t3-8ebdcace-90-e24] [cursor=pointer] [box=241,277,93,40]\n            - generic [ref=t3-8ebdcace-90-e25] [box=16,325,358,69]:\n              - text: Speed\n              - slider \"Speed\" [ref=t3-8ebdcace-90-e26] [box=18,352,358,40]: \"5\"\n          - generic [ref=t3-8ebdcace-90-e27] [box=16,1618,358,444]:\n            - generic [ref=t3-8ebdcace-90-e28] [box=16,1618,358,65]:\n              - text: Growth interval\n              - spinbutton \"Growth interval\" [ref=t3-8ebdcace-90-e29] [box=16,1642,358,40]: \"3\"\n            - generic [ref=t3-8ebdcace-90-e30] [box=16,1694,358,65]:\n              - text: Growth amount\n              - spinbutton \"Growth amount\" [ref=t3-8ebdcace-90-e31] [box=16,1718,358,40]: \"1\"\n            - generic [ref=t3-8ebdcace-90-e32] [box=16,1769,358,65]:\n              - text: Maximum vision\n              - spinbutton \"Maximum vision\" [ref=t3-8ebdcace-90-e33] [box=16,1794,358,40]: \"5\"\n            - generic [ref=t3-8ebdcace-90-e34] [box=16,1845,358,65]:\n              - text: Maximum metabolism\n              - spinbutton \"Maximum metabolism\" [ref=t3-8ebdcace-90-e35] [box=16,1870,358,40]: \"15\"\n            - generic [ref=t3-8ebdcace-90-e36] [box=16,1921,358,65]:\n              - text: Minimum life\n              - spinbutton \"Minimum life\" [ref=t3-8ebdcace-90-e37] [box=16,1946,358,40]: \"1\"\n            - generic [ref=t3-8ebdcace-90-e38] [box=16,1997,358,65]:\n              - text: Maximum life\n              - spinbutton \"Maximum life\" [ref=t3-8ebdcace-90-e39] [box=16,2021,358,40]: \"83\"\n          - generic [ref=t3-8ebdcace-90-e59] [box=16,414,358,51]:\n            - term [ref=t3-8ebdcace-90-e284] [box=16,414,124,22]: Tick\n            - definition [ref=t3-8ebdcace-90-e285] [box=148,414,46,22]: \"9\"\n            - term [ref=t3-8ebdcace-90-e286] [box=201,414,124,22]: People\n            - definition [ref=t3-8ebdcace-90-e287] [box=333,414,41,22]: \"250\"\n            - term [ref=t3-8ebdcace-90-e288] [box=16,444,124,22]: Total wealth\n            - definition [ref=t3-8ebdcace-90-e289] [box=148,444,46,22]: \"11627\"\n            - term [ref=t3-8ebdcace-90-e290] [box=201,444,124,22]: Gini\n            - definition [ref=t3-8ebdcace-90-e291] [box=333,444,41,22]: \"0.353\"\n          - status [ref=t3-8ebdcace-90-e40] [box=16,485,283,21]: Minimum life cannot exceed maximum life.\n          - group [ref=t3-8ebdcace-90-e41] [box=16,2105,358,133]:\n            - generic \"Model info\" [active] [ref=t3-8ebdcace-90-e42] [cursor=pointer] [box=16,2105,358,21]\n            - paragraph [ref=t3-8ebdcace-90-e324] [box=16,2140,358,42]: Resources, metabolism and unequal holdings. Adapted from Uri Wilensky (1998), CC BY-NC-SA 3.0.\n            - link \"Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0\" [ref=t3-8ebdcace-90-e325] [cursor=pointer] [box=16,2197,345,40]:\n              - /url: https://ccl.northwestern.edu/netlogo/models/WealthDistribution\n        - generic [ref=t3-8ebdcace-90-e43] [box=16,522,358,1068]:\n          - figure \"Resources and wealth classes\" [ref=t3-8ebdcace-90-e68] [box=16,522,358,385]:\n            - generic [ref=t3-8ebdcace-90-e69] [box=16,522,358,19]: Resources and wealth classes\n            - group \"Model view. 250 agents. Arrow keys select an item.\" [ref=t3-8ebdcace-90-e70] [box=16,549,358,358]\n          - figure \"Current wealth classes\" [ref=t3-8ebdcace-90-e71] [box=16,931,358,147]:\n            - generic [ref=t3-8ebdcace-90-e72] [box=16,931,358,19]: Current wealth classes\n            - 'img \"People · low / middle / high: 25\" [ref=t3-8ebdcace-90-e249] [box=16,958,358,101]':\n              - generic [ref=t3-8ebdcace-90-e293] [box=17,960,12,9]: \"149\"\n              - generic [ref=t3-8ebdcace-90-e294] [box=17,1039,4,9]: \"0\"\n              - generic [ref=t3-8ebdcace-90-e295] [box=351,1050,4,9]: \"2\"\n            - generic [ref=t3-8ebdcace-90-e299] [box=16,1059,187,19]: People · low / middle / high\n          - figure \"Wealth classes\" [ref=t3-8ebdcace-90-e83] [box=16,1102,358,147]:\n            - generic [ref=t3-8ebdcace-90-e84] [box=16,1102,358,19]: Wealth classes\n            - 'img \"low: 149; middle: 76; high: 25\" [ref=t3-8ebdcace-90-e258] [box=16,1129,358,101]':\n              - generic [ref=t3-8ebdcace-90-e301] [box=17,1131,12,9]: \"149\"\n              - generic [ref=t3-8ebdcace-90-e302] [box=17,1210,4,9]: \"0\"\n              - generic [ref=t3-8ebdcace-90-e303] [box=351,1221,4,9]: \"9\"\n            - generic [ref=t3-8ebdcace-90-e90] [box=16,1229,358,19]:\n              - generic [ref=t3-8ebdcace-90-e307] [box=16,1229,31,19]: low\n              - generic [ref=t3-8ebdcace-90-e308] [box=63,1229,54,19]: middle\n              - generic [ref=t3-8ebdcace-90-e309] [box=133,1229,38,19]: high\n          - figure \"Lorenz curve (%)\" [ref=t3-8ebdcace-90-e94] [box=16,1272,358,147]:\n            - generic [ref=t3-8ebdcace-90-e95] [box=16,1272,358,19]: Lorenz curve (%)\n            - 'img \"Wealth: 100; Equality: 100\" [ref=t3-8ebdcace-90-e96] [box=16,1299,358,101]':\n              - generic [ref=t3-8ebdcace-90-e311] [box=17,1301,12,9]: \"100\"\n              - generic [ref=t3-8ebdcace-90-e312] [box=17,1381,4,9]: \"0\"\n              - generic [ref=t3-8ebdcace-90-e313] [box=351,1391,12,9]: \"100\"\n            - generic [ref=t3-8ebdcace-90-e103] [box=16,1400,358,19]:\n              - generic [ref=t3-8ebdcace-90-e316] [box=16,1400,54,19]: Wealth\n              - generic [ref=t3-8ebdcace-90-e317] [box=86,1400,61,19]: Equality\n          - figure \"Gini index\" [ref=t3-8ebdcace-90-e106] [box=16,1443,358,147]:\n            - generic [ref=t3-8ebdcace-90-e107] [box=16,1443,358,19]: Gini index\n            - 'img \"Gini: 0.3529023823858261\" [ref=t3-8ebdcace-90-e277] [box=16,1470,358,101]':\n              - generic [ref=t3-8ebdcace-90-e319] [box=17,1472,4,9]: \"1\"\n              - generic [ref=t3-8ebdcace-90-e320] [box=17,1552,4,9]: \"0\"\n              - generic [ref=t3-8ebdcace-90-e321] [box=351,1562,4,9]: \"9\"\n            - generic [ref=t3-8ebdcace-90-e323] [box=16,1571,35,19]: Gini",
+  "omitted": [
+    "160 older network entries",
+    "10 older action timeline entries",
+    "38 of 40 actionTimeline"
+  ]
+}

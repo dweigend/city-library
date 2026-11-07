@@ -1,0 +1,160 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Shepherds.nlogox",
+  "title": "NetLogo Web: Shepherds",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "dpr": 2
+  },
+  "sha256": "e4e4d8447dfcd1b8971ded3dbfd12d9298bf210d43fceb2aec06646998b73100",
+  "version": "NetLogo 7.0.4",
+  "tick": 50,
+  "count": 180,
+  "globals": {
+    "sheep-speed": 0.02,
+    "num-shepherds": 30,
+    "num-sheep": 150,
+    "sheepless-neighborhoods": 1701,
+    "herding-efficiency": 69.25895765472313
+  },
+  "widgets": [
+    {
+      "type": "view",
+      "dimensions": {
+        "minPxcor": -25,
+        "maxPxcor": 25,
+        "minPycor": -25,
+        "maxPycor": 25,
+        "patchSize": 8,
+        "wrappingAllowedInX": true,
+        "wrappingAllowedInY": true
+      }
+    },
+    {
+      "type": "button",
+      "source": "go",
+      "running": false
+    },
+    {
+      "type": "button",
+      "source": "setup"
+    },
+    {
+      "type": "slider",
+      "variable": "sheep-speed",
+      "display": "sheep-speed",
+      "currentValue": 0.02
+    },
+    {
+      "type": "slider",
+      "variable": "num-shepherds",
+      "display": "num-shepherds",
+      "currentValue": 30
+    },
+    {
+      "type": "slider",
+      "variable": "num-sheep",
+      "display": "num-sheep",
+      "currentValue": 150
+    },
+    {
+      "type": "monitor",
+      "source": "herding-efficiency",
+      "display": "current efficiency",
+      "currentValue": 69.3
+    },
+    {
+      "type": "plot",
+      "display": "Herding Efficiency"
+    }
+  ],
+  "turtles": [
+    {
+      "id": 0,
+      "x": 0.607480129861405,
+      "y": 24.050744773264228,
+      "color": 9.9,
+      "heading": 19,
+      "hidden?": false
+    },
+    {
+      "id": 1,
+      "x": 13.625081822659824,
+      "y": -5.578480571517273,
+      "color": 9.9,
+      "heading": 188,
+      "hidden?": false
+    },
+    {
+      "id": 2,
+      "x": -3.1425155115778205,
+      "y": -10.219548054757032,
+      "color": 9.9,
+      "heading": 218,
+      "hidden?": false
+    },
+    {
+      "id": 3,
+      "x": -18.191632870309085,
+      "y": -5.941312080681585,
+      "color": 9.9,
+      "heading": 54,
+      "hidden?": false
+    },
+    {
+      "id": 4,
+      "x": 25.17103524086185,
+      "y": -9.716180809263337,
+      "color": 9.9,
+      "heading": 105,
+      "hidden?": false
+    },
+    {
+      "id": 5,
+      "x": -10.15385174102259,
+      "y": -3.7427603489537353,
+      "color": 9.9,
+      "heading": 297,
+      "hidden?": false
+    }
+  ],
+  "patchTotals": {
+    "sheep-nearby": 1200
+  },
+  "patchColors": {
+    "55.204590389851354": 1,
+    "54.98287705723878": 1,
+    "55.34408861982447": 1,
+    "55.02525417754066": 1,
+    "54.84397134492352": 1,
+    "54.90813200523074": 1,
+    "55.25877737051844": 1,
+    "54.87640452632065": 1,
+    "54.82917170668982": 1,
+    "54.772318561103695": 1,
+    "54.84584525780917": 1,
+    "54.62175823655179": 1,
+    "54.83545121265911": 1,
+    "54.94542794192426": 1,
+    "55.19653327147038": 1,
+    "54.81101414674756": 1,
+    "54.72820793831581": 1,
+    "55.138922611515774": 1,
+    "54.614477087055164": 1,
+    "54.629703677604795": 1
+  },
+  "colors": {
+    "35": 19,
+    "105": 11,
+    "9.9": 150
+  },
+  "readback": [
+    {
+      "width": 816,
+      "height": 816,
+      "nonblack": 665856
+    }
+  ],
+  "text": " powered by NetLogo\nShepherds\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 50\n?\nfor shortcuts\ngo\nsetup\nsheep-speed\nnum-shepherds\nnum-sheep\ncurrent efficiency\n69.3\nTime\nPercent\nHerding Efficiency\n0\n200\n0\n100\nCommand Center\nobserver> repeat 50 [ go ]\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+}

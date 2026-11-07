@@ -1,0 +1,325 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1138140%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1126/science.1138140\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "17379808",
+          "source": "MED",
+          "pmid": "17379808",
+          "doi": "10.1126/science.1138140",
+          "title": "CRISPR provides acquired resistance against viruses in prokaryotes.",
+          "authorString": "Barrangou R, Fremaux C, Deveau H, Richards M, Boyaval P, Moineau S, Romero DA, Horvath P.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Barrangou R",
+                "lastName": "Barrangou",
+                "firstName": "Rodolphe",
+                "initials": "R",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0648-3504"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Fremaux C",
+                "lastName": "Fremaux",
+                "firstName": "Christophe",
+                "initials": "C"
+              },
+              {
+                "fullName": "Deveau H",
+                "lastName": "Deveau",
+                "firstName": "H\u00e9l\u00e8ne",
+                "initials": "H"
+              },
+              {
+                "fullName": "Richards M",
+                "lastName": "Richards",
+                "firstName": "Melissa",
+                "initials": "M"
+              },
+              {
+                "fullName": "Boyaval P",
+                "lastName": "Boyaval",
+                "firstName": "Patrick",
+                "initials": "P"
+              },
+              {
+                "fullName": "Moineau S",
+                "lastName": "Moineau",
+                "firstName": "Sylvain",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2832-5101"
+                }
+              },
+              {
+                "fullName": "Romero DA",
+                "lastName": "Romero",
+                "firstName": "Dennis A",
+                "initials": "DA"
+              },
+              {
+                "fullName": "Horvath P",
+                "lastName": "Horvath",
+                "firstName": "Philippe",
+                "initials": "P",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2015-8123"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0648-3504"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2832-5101"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2015-8123"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "recommended_reviews",
+              "related_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "5819",
+            "volume": "315",
+            "journalIssueId": 1385097,
+            "dateOfPublication": "2007 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 2007,
+            "journal": {
+              "medlineAbbreviation": "Science",
+              "title": "Science (New York, N.Y.)",
+              "essn": "1095-9203",
+              "issn": "0036-8075",
+              "nlmid": "0404511",
+              "isoabbreviation": "Science"
+            },
+            "printPublicationDate": "2007-03-01"
+          },
+          "pubYear": "2007",
+          "pageInfo": "1709-1712",
+          "abstractText": "Clustered regularly interspaced short palindromic repeats (CRISPR) are a distinctive feature of the genomes of most Bacteria and Archaea and are thought to be involved in resistance to bacteriophages. We found that, after viral challenge, bacteria integrated new spacers derived from phage genomic sequences. Removal or addition of particular spacers modified the phage-resistance phenotype of the cell. Thus, CRISPR, together with associated cas genes, provided resistance against phages, and resistance specificity is determined by spacer-phage sequence similarity.",
+          "affiliation": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Streptococcus thermophilus",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "VI",
+                      "qualifierName": "virology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Streptococcus Phages",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "DNA, Bacterial",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "DNA, Intergenic",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Evolution, Molecular"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Virus Replication"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Repetitive Sequences, Nucleic Acid"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mutation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Polymorphism, Single Nucleotide"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Genes, Bacterial"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genome, Viral"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Molecular Sequence Data"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Viral Plaque Assay"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "DNA, Bacterial",
+                "registryNumber": "0"
+              },
+              {
+                "name": "DNA, Intergenic",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.1138140"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "17379781",
+                "reference": "Science. 2007 Mar 23;315(5819):1650-1. doi: 10.1126/science.315.5819.1650a",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 4472,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "Y",
+          "dbCrossReferenceList": {
+            "dbName": [
+              "EMBL",
+              "INTERPRO"
+            ]
+          },
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2007-04-05",
+          "dateOfCreation": "2007-03-24",
+          "dateOfRevision": "2024-01-04",
+          "firstPublicationDate": "2007-03-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

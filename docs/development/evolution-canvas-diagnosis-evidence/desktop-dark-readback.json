@@ -1,0 +1,183 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 1050
+  },
+  "scroll": {
+    "x": 0,
+    "y": 349
+  },
+  "dark": true,
+  "monitors": "Seed\nNumber Of Mammoths\nNumber Of Humans\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nMonths\n10\nYears\n0.8333333333333334\nMammoths\n485\nHumans\n41\nHunting deaths\n13\nClimate deaths\n330\nMammoth Birth Rate\nHuman Birth Rate\nMammoth Speed\nHuman Speed\nOdds Of Killing\nClimate Change Decay Chance\n\nSteps completed.\n\nModel info",
+  "canvases": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "aria": "Model view. 526 agents. Arrow keys select an item.",
+      "rgbaSha256": "6effb8cb4911135d7736d14794a8c1ea34e1933b52b8979ca2a8dc8b9213e047",
+      "counts": {
+        "mammoth": 27807,
+        "human": 1448,
+        "ocean": 1146006,
+        "changedLand": 383563,
+        "land": 0,
+        "transparent": 0
+      },
+      "ancestors": [
+        {
+          "tag": "CANVAS",
+          "cls": "world",
+          "rect": {
+            "x": 328,
+            "y": -234,
+            "width": 672,
+            "height": 672
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(238, 238, 238)",
+          "background": "rgb(21, 21, 21)",
+          "transform": "none",
+          "overflow": "clip"
+        },
+        {
+          "tag": "FIGURE",
+          "cls": "",
+          "rect": {
+            "x": 328,
+            "y": -261,
+            "width": 1072,
+            "height": 699
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(238, 238, 238)",
+          "background": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "overflow": "hidden"
+        },
+        {
+          "tag": "DIV",
+          "cls": "views",
+          "rect": {
+            "x": 328,
+            "y": -261,
+            "width": 1072,
+            "height": 1287
+          },
+          "display": "grid",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(238, 238, 238)",
+          "background": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "DIV",
+          "cls": "workbench",
+          "rect": {
+            "x": 40,
+            "y": -261,
+            "width": 1360,
+            "height": 1287
+          },
+          "display": "grid",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(238, 238, 238)",
+          "background": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "DIV",
+          "cls": "",
+          "rect": {
+            "x": 40,
+            "y": -261,
+            "width": 1360,
+            "height": 1287
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(238, 238, 238)",
+          "background": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "SECTION",
+          "cls": "",
+          "rect": {
+            "x": 40,
+            "y": -261,
+            "width": 1360,
+            "height": 1287
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(238, 238, 238)",
+          "background": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "MAIN",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": -325,
+            "width": 1408,
+            "height": 1351
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(238, 238, 238)",
+          "background": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "BODY",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": -325,
+            "width": 1440,
+            "height": 1351
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(238, 238, 238)",
+          "background": "rgb(24, 24, 24)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "HTML",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": -349,
+            "width": 1440,
+            "height": 1399
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "transform": "none",
+          "overflow": "visible"
+        }
+      ]
+    }
+  ]
+}

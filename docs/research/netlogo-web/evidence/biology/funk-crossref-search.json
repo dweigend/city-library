@@ -1,0 +1,1882 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+spread+of+awareness+and+its+impact+on+epidemic+outbreaks+Funk+Gilad+Watkins+Jansen+2009&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3737203,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T07:41:20Z",
+            "timestamp": 1793864480767,
+            "version": "4.6.1"
+          },
+          "reference-count": 32,
+          "publisher": "National Academy of Sciences",
+          "issue": "16",
+          "content-domain": {
+            "domain": [
+              "www.pnas.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Proc. Natl. Acad. Sci. U.S.A."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2009,
+                4,
+                21
+              ]
+            ]
+          },
+          "abstract": "<jats:p>When a disease breaks out in a human population, changes in behavior in response to the outbreak can alter the progression of the infectious agent. In particular, people aware of a disease in their proximity can take measures to reduce their susceptibility. Even if no centralized information is provided about the presence of a disease, such awareness can arise through first-hand observation and word of mouth. To understand the effects this can have on the spread of a disease, we formulate and analyze a mathematical model for the spread of awareness in a host population, and then link this to an epidemiological model by having more informed hosts reduce their susceptibility. We find that, in a well-mixed population, this can result in a lower size of the outbreak, but does not affect the epidemic threshold. If, however, the behavioral response is treated as a local effect arising in the proximity of an outbreak, it can completely stop a disease from spreading, although only if the infection rate is below a threshold. We show that the impact of locally spreading awareness is amplified if the social network of potential infection events and the network over which individuals communicate overlap, especially so if the networks have a high level of clustering. These findings suggest that care needs to be taken both in the interpretation of disease parameters, as well as in the prediction of the fate of future outbreaks.</jats:p>",
+          "DOI": "10.1073/pnas.0810762106",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                3,
+                30
+              ]
+            ],
+            "date-time": "2009-03-30T21:44:29Z",
+            "timestamp": 1238449469000
+          },
+          "page": "6872-6877",
+          "update-policy": "https://doi.org/10.1073/pnas.cm10313",
+          "source": "Crossref",
+          "is-referenced-by-count": 1042,
+          "title": [
+            "The spread of awareness and its impact on epidemic outbreaks"
+          ],
+          "prefix": "10.1073",
+          "volume": "106",
+          "author": [
+            {
+              "given": "Sebastian",
+              "family": "Funk",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "School of Biological Sciences and"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Erez",
+              "family": "Gilad",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Biological Sciences and"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Chris",
+              "family": "Watkins",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, Royal Holloway, University of London, Egham TW20 0EX, United Kingdom"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Vincent A. A.",
+              "family": "Jansen",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Biological Sciences and"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "341",
+          "published-online": {
+            "date-parts": [
+              [
+                2009,
+                4,
+                21
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_3_1_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/446733a"
+            },
+            {
+              "key": "e_1_3_3_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/146268"
+            },
+            {
+              "key": "e_1_3_3_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/146150"
+            },
+            {
+              "key": "e_1_3_3_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1521/aeap.13.2.160.19736"
+            },
+            {
+              "key": "e_1_3_3_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/1461444807082691"
+            },
+            {
+              "key": "e_1_3_3_6_2",
+              "volume-title": "Consensus Document on the Epidemiology of SARS",
+              "author": "World Health Organization",
+              "year": "2003",
+              "unstructured": "; World Health Organization Consensus Document on the Epidemiology of SARS (World Health Organization, Geneva, Switzerland, 2003)."
+            },
+            {
+              "key": "e_1_3_3_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.physa.2006.07.017"
+            },
+            {
+              "key": "e_1_3_3_8_2",
+              "first-page": "3",
+              "article-title": "Thought contagion as abstract evolution",
+              "volume": "2",
+              "author": "Lynch A",
+              "year": "1991",
+              "unstructured": "A Lynch, Thought contagion as abstract evolution. J Ideas 2, 3\u201310 (1991).",
+              "journal-title": "J Ideas"
+            },
+            {
+              "key": "e_1_3_3_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/204225a0"
+            },
+            {
+              "key": "e_1_3_3_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.73.046138"
+            },
+            {
+              "key": "e_1_3_3_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0610941104"
+            },
+            {
+              "key": "e_1_3_3_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0611071104"
+            },
+            {
+              "key": "e_1_3_3_13_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1731324100"
+            },
+            {
+              "key": "e_1_3_3_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pcbi.1000280"
+            },
+            {
+              "key": "e_1_3_3_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0606774104"
+            },
+            {
+              "key": "e_1_3_3_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsif.2008.0271"
+            },
+            {
+              "key": "e_1_3_3_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.96.208701"
+            },
+            {
+              "key": "e_1_3_3_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.mbs.2005.03.006"
+            },
+            {
+              "key": "e_1_3_3_19_2",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/oso/9780198545996.001.0001",
+              "volume-title": "Infectious Diseases of Humans: Dynamics and Control",
+              "author": "Anderson RM",
+              "year": "1991",
+              "unstructured": "RM Anderson, RM May Infectious Diseases of Humans: Dynamics and Control (Oxford Univ Press, Oxford, 1991)."
+            },
+            {
+              "key": "e_1_3_3_20_2",
+              "volume-title": "Mathematical Epidemiology of Infectious Diseases",
+              "author": "Diekmann O",
+              "year": "2000",
+              "unstructured": "O Diekmann, JAP Heesterbeek Mathematical Epidemiology of Infectious Diseases (Wiley, Chichester, UK, 2000)."
+            },
+            {
+              "key": "e_1_3_3_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature02541"
+            },
+            {
+              "key": "e_1_3_3_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/imammb/3.4.229"
+            },
+            {
+              "key": "e_1_3_3_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0025-5564(96)00129-0"
+            },
+            {
+              "key": "e_1_3_3_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1090/S0273-0979-06-01148-7"
+            },
+            {
+              "key": "e_1_3_3_25_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1999.1064"
+            },
+            {
+              "key": "e_1_3_3_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.286.5439.509"
+            },
+            {
+              "key": "e_1_3_3_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.1999.0716"
+            },
+            {
+              "key": "e_1_3_3_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1086478"
+            },
+            {
+              "key": "e_1_3_3_29_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35082140"
+            },
+            {
+              "key": "e_1_3_3_30_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pmed.0050074"
+            },
+            {
+              "key": "e_1_3_3_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.1997.0131"
+            },
+            {
+              "key": "e_1_3_3_32_2",
+              "first-page": "1",
+              "article-title": "Influenza in Canada: 2007\u20132008 season update",
+              "volume": "34",
+              "author": "Reyes F",
+              "year": "2008",
+              "unstructured": "F Reyes, et al., Influenza in Canada: 2007\u20132008 season update. Can Commun Dis Rep 34, 1\u20139 (2008).",
+              "journal-title": "Can Commun Dis Rep"
+            }
+          ],
+          "container-title": [
+            "Proceedings of the National Academy of Sciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://pnas.org/doi/pdf/10.1073/pnas.0810762106",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                12
+              ]
+            ],
+            "date-time": "2024-03-12T02:30:55Z",
+            "timestamp": 1710210655000
+          },
+          "score": 43.52503,
+          "resource": {
+            "primary": {
+              "URL": "https://pnas.org/doi/full/10.1073/pnas.0810762106"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                4,
+                21
+              ]
+            ]
+          },
+          "references-count": 32,
+          "journal-issue": {
+            "issue": "16",
+            "published-print": {
+              "date-parts": [
+                [
+                  2009,
+                  4,
+                  21
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1073/pnas.0810762106"
+          ],
+          "URL": "https://doi.org/10.1073/pnas.0810762106",
+          "ISSN": [
+            "0027-8424",
+            "1091-6490"
+          ],
+          "issn-type": [
+            {
+              "value": "0027-8424",
+              "type": "print"
+            },
+            {
+              "value": "1091-6490",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                4,
+                21
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2008-10-27",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2009-04-21",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                16
+              ]
+            ],
+            "date-time": "2026-10-16T16:01:12Z",
+            "timestamp": 1792166472148,
+            "version": "4.4.0"
+          },
+          "reference-count": 38,
+          "publisher": "AIP Publishing",
+          "issue": "3",
+          "funder": [
+            {
+              "DOI": "10.13039/501100001809",
+              "name": "National Natural Science Foundation of China",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "62173065"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "62173065"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100001809",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/501100018542",
+              "name": "Natural Science Foundation of Sichuan Province",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "2023NSFSC0501"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "2023NSFSC0501"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100018542",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/501100005089",
+              "name": "Natural Science Foundation of Beijing Municipality",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "4242040"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "4242040"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100005089",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "pubs.aip.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:p>The co-evolution of epidemic and information spread within multilayer networks is a current hot topic in network science. During epidemic outbreaks, the accompanying information exhibits both outbreak and reception game behaviors; yet, these complex phenomena have been scarcely addressed in existing research. In this paper, we model information outbreaks using activated individuals who transmit messages to their neighbors, while also considering the game behaviors of information receivers. By focusing on these two factors, we establish a multilayer network model featuring both information outbreaks and reception games. Employing the microscopic Markov chain method, we analyze the propagation dynamics within this network and derive epidemic thresholds, corroborating these results with Monte Carlo simulations. Our findings indicate that information outbreaks suppress epidemic outbreaks, whereas increased costs of information reception promote epidemic spread. Smooth information dissemination further inhibits the transmission of the epidemic. Additionally, we observe that heterogeneity in the network structure between the virtual and physical layers reduces the ultimate scale of epidemic infection, with the virtual layer exerting a more substantial influence. These insights are crucial for elucidating the co-evolutionary mechanisms of spread within multilayer networks and for developing effective epidemic prevention and control strategies.</jats:p>",
+          "DOI": "10.1063/5.0236359",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                6
+              ]
+            ],
+            "date-time": "2025-03-06T12:23:48Z",
+            "timestamp": 1741263828000
+          },
+          "update-policy": "https://doi.org/10.1063/aip-crossmark-policy-page",
+          "source": "Crossref",
+          "is-referenced-by-count": 13,
+          "title": [
+            "Epidemic spread dynamics in multilayer networks: Probing the impact of information outbreaks and reception games"
+          ],
+          "prefix": "10.1063",
+          "volume": "35",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-1479-3107",
+              "authenticated-orcid": false,
+              "given": "Jianbo",
+              "family": "Wang",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "School of Computer Science and Software Engineering, Southwest Petroleum University 1 , Chengdu 610500,",
+                  "place": [
+                    "China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0009-0004-5564-293X",
+              "authenticated-orcid": false,
+              "given": "Haoxing",
+              "family": "He",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Computer Science and Software Engineering, Southwest Petroleum University 1 , Chengdu 610500,",
+                  "place": [
+                    "China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-8391-6510",
+              "authenticated-orcid": false,
+              "given": "Ping",
+              "family": "Li",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Computer Science and Software Engineering, Southwest Petroleum University 1 , Chengdu 610500,",
+                  "place": [
+                    "China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-2020-767X",
+              "authenticated-orcid": false,
+              "given": "Zhanwei",
+              "family": "Du",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Public Health, The University of Hong Kong 2 , Hong Kong 999077,",
+                  "place": [
+                    "China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0009-0005-3004-0948",
+              "authenticated-orcid": false,
+              "given": "Xiaoke",
+              "family": "Xu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Computational Communication Research Center, Beijing Normal University 3 , Zhuhai 519087,",
+                  "place": [
+                    "China"
+                  ]
+                },
+                {
+                  "name": "School of Journalism and Communication, Beijing Normal University 4 , Beijing 100875,",
+                  "place": [
+                    "China"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "317",
+          "published-online": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                6
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "2025030617233065200_c1",
+              "doi-asserted-by": "publisher",
+              "first-page": "197",
+              "DOI": "10.1126/science.1176225",
+              "article-title": "Antigenic and genetic characteristics of swine-origin 2009 A(H1N1) influenza viruses circulating in humans",
+              "volume": "325",
+              "year": "2009",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2025030617233065200_c2",
+              "volume-title": "Theory of Spreading on Complex Networks: Hidden Rules of Epidemics",
+              "year": "2020"
+            },
+            {
+              "key": "2025030617233065200_c3",
+              "doi-asserted-by": "publisher",
+              "first-page": "e014466",
+              "DOI": "10.1136/bmjgh-2023-014466",
+              "article-title": "Informing the pandemic response: The role of the WHO\u2019s COVID-19 weekly epidemiological update",
+              "volume": "9",
+              "year": "2024",
+              "journal-title": "BMJ Glob. Health"
+            },
+            {
+              "key": "2025030617233065200_c4",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1186/1471-2334-13-185",
+              "article-title": "An infectious disease model on empirical networks of human contact: Bridging the gap between dynamic network data and contact matrices",
+              "volume": "13",
+              "year": "2013",
+              "journal-title": "BMC Infect. Dis."
+            },
+            {
+              "key": "2025030617233065200_c5",
+              "doi-asserted-by": "publisher",
+              "first-page": "525",
+              "DOI": "10.1097/QAD.0b013e328322ffac",
+              "article-title": "Estimation of the current global burden of cryptococcal meningitis among persons living with HIV/AIDS",
+              "volume": "23",
+              "year": "2009",
+              "journal-title": "Aids"
+            },
+            {
+              "key": "2025030617233065200_c6",
+              "doi-asserted-by": "publisher",
+              "first-page": "036112",
+              "DOI": "10.1103/PhysRevE.82.036112",
+              "article-title": "Epidemic spreading in evolving networks",
+              "volume": "82",
+              "year": "2010",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "2025030617233065200_c7",
+              "doi-asserted-by": "publisher",
+              "first-page": "599",
+              "DOI": "10.1137/S0036144500371907",
+              "article-title": "The mathematics of infectious diseases",
+              "volume": "42",
+              "year": "2000",
+              "journal-title": "SIAM Rev."
+            },
+            {
+              "key": "2025030617233065200_c8",
+              "doi-asserted-by": "publisher",
+              "first-page": "377",
+              "DOI": "10.1093/imammb/20.4.377",
+              "article-title": "J.D. Murray: Mathematical biology, volume I (an introduction) and volume II (spatial models and biomedical applications)",
+              "volume": "20",
+              "year": "2003",
+              "journal-title": "Math. Med. Biol."
+            },
+            {
+              "key": "2025030617233065200_c9",
+              "doi-asserted-by": "publisher",
+              "first-page": "120920",
+              "DOI": "10.1016/j.physa.2019.04.156",
+              "article-title": "The impact of information dissemination strategies to epidemic spreading on complex networks",
+              "volume": "536",
+              "year": "2019",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "2025030617233065200_c10",
+              "doi-asserted-by": "publisher",
+              "first-page": "1829",
+              "DOI": "10.1161/CIRCULATIONAHA.112.000897",
+              "article-title": "Digital social networks and health",
+              "volume": "127",
+              "year": "2013",
+              "journal-title": "Circulation"
+            },
+            {
+              "key": "2025030617233065200_c11",
+              "doi-asserted-by": "publisher",
+              "first-page": "1252",
+              "DOI": "10.1109/TCSII.2018.2877406",
+              "article-title": "Analysis of epidemic spreading process in adaptive networks",
+              "volume": "66",
+              "year": "2018",
+              "journal-title": "IEEE Trans. Circuits Syst. II-Express Briefs"
+            },
+            {
+              "key": "2025030617233065200_c12",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/j.mbs.2009.11.009",
+              "article-title": "The impact of information transmission on epidemic outbreaks",
+              "volume": "225",
+              "year": "2010",
+              "journal-title": "Math. Biosci."
+            },
+            {
+              "key": "2025030617233065200_c13",
+              "doi-asserted-by": "publisher",
+              "first-page": "6872",
+              "DOI": "10.1073/pnas.0810762106",
+              "article-title": "The spread of awareness and its impact on epidemic outbreaks",
+              "volume": "106",
+              "year": "2009",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "2025030617233065200_c14",
+              "doi-asserted-by": "publisher",
+              "first-page": "128701",
+              "DOI": "10.1103/PhysRevLett.111.128701",
+              "article-title": "Dynamical interplay between awareness and epidemic spreading in multiplex networks",
+              "volume": "111",
+              "year": "2013",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "2025030617233065200_c15",
+              "doi-asserted-by": "publisher",
+              "first-page": "012808",
+              "DOI": "10.1103/PhysRevE.90.012808",
+              "article-title": "Competing spreading processes on multiplex networks: Awareness and epidemics",
+              "volume": "90",
+              "year": "2014",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "2025030617233065200_c16",
+              "doi-asserted-by": "publisher",
+              "first-page": "29259",
+              "DOI": "10.1038/srep29259",
+              "article-title": "Suppressing disease spreading by using information diffusion on multiplex networks",
+              "volume": "6",
+              "year": "2016",
+              "journal-title": "Sci. Rep."
+            },
+            {
+              "key": "2025030617233065200_c17",
+              "doi-asserted-by": "publisher",
+              "first-page": "437",
+              "DOI": "10.1016/j.amc.2018.03.050",
+              "article-title": "Coupling dynamics of epidemic spreading and information diffusion on complex networks",
+              "volume": "332",
+              "year": "2018",
+              "journal-title": "Appl. Math. Comput."
+            },
+            {
+              "key": "2025030617233065200_c18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1140/epjb/e2019-90570-7",
+              "article-title": "Impact of awareness in metapopulation epidemic model to suppress the infected individuals for different graphs",
+              "volume": "92",
+              "year": "2019",
+              "journal-title": "Eur. Phys. J B."
+            },
+            {
+              "key": "2025030617233065200_c19",
+              "doi-asserted-by": "publisher",
+              "first-page": "268",
+              "DOI": "10.1016/j.matcom.2021.04.017",
+              "article-title": "Interplay between epidemic and information spreading on multiplex networks",
+              "volume": "188",
+              "year": "2021",
+              "journal-title": "Math. Comput. Simul."
+            },
+            {
+              "key": "2025030617233065200_c20",
+              "doi-asserted-by": "publisher",
+              "first-page": "814",
+              "DOI": "10.1109/TNSE.2021.3055352",
+              "article-title": "Epidemic threshold in temporal multiplex networks with individual layer preference",
+              "volume": "8",
+              "year": "2021",
+              "journal-title": "IEEE. Trans. Net. Sci. Eng."
+            },
+            {
+              "key": "2025030617233065200_c21",
+              "doi-asserted-by": "publisher",
+              "first-page": "1454",
+              "DOI": "10.1109/TCYB.2019.2960605",
+              "article-title": "Epidemic propagation with positive and negative preventive information in multiplex networks",
+              "volume": "51",
+              "year": "2020",
+              "journal-title": "IEEE. Trans. Cybern."
+            },
+            {
+              "key": "2025030617233065200_c22",
+              "doi-asserted-by": "publisher",
+              "first-page": "172202",
+              "DOI": "10.1007/s11432-020-3076-1",
+              "article-title": "The impact of information dissemination on vaccination in multiplex networks",
+              "volume": "65",
+              "year": "2022",
+              "journal-title": "Sci. China Inform. Sci."
+            },
+            {
+              "key": "2025030617233065200_c23",
+              "doi-asserted-by": "publisher",
+              "first-page": "14583",
+              "DOI": "10.1007/s11071-023-08581-w",
+              "article-title": "Information-epidemic co-evolution propagation under policy intervention in multiplex networks",
+              "volume": "111",
+              "year": "2023",
+              "journal-title": "Nonlinear Dyn."
+            },
+            {
+              "key": "2025030617233065200_c24",
+              "doi-asserted-by": "publisher",
+              "first-page": "350",
+              "DOI": "10.7498/aps.72.20222206",
+              "article-title": "Bilayer network spreading dynamics driven by community structure and activity",
+              "volume": "72",
+              "year": "2023",
+              "journal-title": "Acta. Phys. Sin."
+            },
+            {
+              "key": "2025030617233065200_c25",
+              "doi-asserted-by": "publisher",
+              "first-page": "073128",
+              "DOI": "10.1063/5.0205793",
+              "article-title": "Impact of community structure on the spread of epidemics on time-varying multiplex networks",
+              "volume": "34",
+              "year": "2024",
+              "journal-title": "Chaos"
+            },
+            {
+              "key": "2025030617233065200_c26",
+              "doi-asserted-by": "publisher",
+              "first-page": "063128",
+              "DOI": "10.1063/5.0151881",
+              "article-title": "Impact of simplicial complexes on epidemic spreading in partially mapping activity-driven multiplex networks",
+              "volume": "33",
+              "year": "2023",
+              "journal-title": "Chaos"
+            },
+            {
+              "key": "2025030617233065200_c27",
+              "doi-asserted-by": "publisher",
+              "first-page": "033403",
+              "DOI": "10.1088/1742-5468/ad2dd7",
+              "article-title": "Epidemic process on partially overlapped multi-layer networks",
+              "volume": "2024",
+              "year": "2024",
+              "journal-title": "J. Stat. Mech-Theory. Exp."
+            },
+            {
+              "key": "2025030617233065200_c28",
+              "doi-asserted-by": "publisher",
+              "first-page": "114858",
+              "DOI": "10.1016/j.chaos.2024.114858",
+              "article-title": "Heterogeneous propagation processes between awareness and epidemic on signed multiplex networks",
+              "volume": "183",
+              "year": "2024",
+              "journal-title": "Chaos Solitons Fractals"
+            },
+            {
+              "key": "2025030617233065200_c29",
+              "doi-asserted-by": "publisher",
+              "first-page": "7686",
+              "DOI": "10.1109/TCYB.2022.3198732",
+              "article-title": "Epidemic spreading in metapopulation networks coupled with awareness propagation",
+              "volume": "53",
+              "year": "2023",
+              "journal-title": "IEEE Trans. Cyber."
+            },
+            {
+              "key": "2025030617233065200_c30"
+            },
+            {
+              "key": "2025030617233065200_c31",
+              "doi-asserted-by": "publisher",
+              "first-page": "7662",
+              "DOI": "10.1073/pnas.1805871115",
+              "article-title": "Science audiences, misinformation, and fake news",
+              "volume": "116",
+              "year": "2019",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "2025030617233065200_c32",
+              "doi-asserted-by": "publisher",
+              "first-page": "3200",
+              "DOI": "10.1103/PhysRevLett.86.3200",
+              "article-title": "Epidemic spreading in scale-free networks",
+              "volume": "86",
+              "year": "2001",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "2025030617233065200_c33",
+              "doi-asserted-by": "publisher",
+              "first-page": "033065",
+              "DOI": "10.1103/PhysRevResearch.5.033065",
+              "article-title": "Dynamics of information-awareness-epidemic-activity coevolution in multiplex networks",
+              "volume": "5",
+              "year": "2023",
+              "journal-title": "Phys. Rev. Res."
+            },
+            {
+              "key": "2025030617233065200_c34",
+              "doi-asserted-by": "publisher",
+              "first-page": "1783",
+              "DOI": "10.1038/srep01783",
+              "article-title": "Origins of power-law degree distribution in the heterogeneity of human activity in social networks",
+              "volume": "3",
+              "year": "2013",
+              "journal-title": "Sci. Rep."
+            },
+            {
+              "key": "2025030617233065200_c35",
+              "doi-asserted-by": "publisher",
+              "first-page": "208",
+              "DOI": "10.1016/j.plrev.2009.08.001",
+              "article-title": "Evolutionary game theory: Temporal and spatial effects beyond replicator dynamics",
+              "volume": "6",
+              "year": "2009",
+              "journal-title": "Phys. Life. Rev."
+            },
+            {
+              "key": "2025030617233065200_c36",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/j.physrep.2017.05.004",
+              "article-title": "Statistical physics of human cooperation",
+              "volume": "687",
+              "year": "2017",
+              "journal-title": "Phys. Rep."
+            },
+            {
+              "key": "2025030617233065200_c37",
+              "doi-asserted-by": "publisher",
+              "first-page": "056109",
+              "DOI": "10.1103/PhysRevE.85.056109",
+              "article-title": "Community structure and scale-free collections of Erd\u0151s-R\u00e9nyi graphs",
+              "volume": "85",
+              "year": "2012",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "2025030617233065200_c38",
+              "doi-asserted-by": "publisher",
+              "first-page": "21",
+              "DOI": "10.1145/1217299.1217301",
+              "article-title": "Graph evolution: Densification and shrinking diameters",
+              "volume": "1",
+              "year": "2007",
+              "journal-title": "ACM Trans. Knowl. Discovery Data"
+            }
+          ],
+          "container-title": [
+            "Chaos: An Interdisciplinary Journal of Nonlinear Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0236359/20427964/033118_1_5.0236359.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0236359/20427964/033118_1_5.0236359.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                6
+              ]
+            ],
+            "date-time": "2025-03-06T12:23:52Z",
+            "timestamp": 1741263832000
+          },
+          "score": 26.415257,
+          "resource": {
+            "primary": {
+              "URL": "https://pubs.aip.org/cha/article/35/3/033118/3338792/Epidemic-spread-dynamics-in-multilayer-networks"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                1
+              ]
+            ]
+          },
+          "references-count": 38,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  2025,
+                  3,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1063/5.0236359",
+          "ISSN": [
+            "1054-1500",
+            "1089-7682"
+          ],
+          "issn-type": [
+            {
+              "value": "1054-1500",
+              "type": "print"
+            },
+            {
+              "value": "1089-7682",
+              "type": "electronic"
+            }
+          ],
+          "published-other": {
+            "date-parts": [
+              [
+                2025,
+                3
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                1
+              ]
+            ]
+          },
+          "article-number": "033118"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T08:39:04Z",
+            "timestamp": 1793176744464,
+            "version": "4.5.0"
+          },
+          "reference-count": 44,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    7,
+                    28
+                  ]
+                ],
+                "date-time": "2017-07-28T00:00:00Z",
+                "timestamp": 1501200000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    7,
+                    28
+                  ]
+                ],
+                "date-time": "2017-07-28T00:00:00Z",
+                "timestamp": 1501200000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/501100003329",
+              "name": "Ministerio de Econom\u00eda y Competitividad",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "MTM2014-52402-C3-3-P"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "MTM2014-52402-C3-3-P"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100003329",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100008722",
+              "name": "Universitat de Girona",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "MPCUdG2016/047"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "MPCUdG2016/047"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100008722",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "J. Math. Biol."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2018,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1007/s00285-017-1166-x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                7,
+                28
+              ]
+            ],
+            "date-time": "2017-07-28T10:17:08Z",
+            "timestamp": 1501237028000
+          },
+          "page": "1027-1057",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 25,
+          "title": [
+            "Oscillations in epidemic models with spread of awareness"
+          ],
+          "prefix": "10.1007",
+          "volume": "76",
+          "author": [
+            {
+              "given": "Winfried",
+              "family": "Just",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Joan",
+              "family": "Salda\u00f1a",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ying",
+              "family": "Xin",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                7,
+                28
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "1166_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "046138",
+              "DOI": "10.1103/PhysRevE.73.046138",
+              "volume": "73",
+              "author": "E Agliari",
+              "year": "2006",
+              "unstructured": "Agliari E, Burioni R, Cassi D, Neri FM (2006) Efficiency of information spreading in a population of diffusing agents. Phys Rev E 73:046138",
+              "journal-title": "Phys Rev E"
+            },
+            {
+              "key": "1166_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "061904",
+              "DOI": "10.1103/PhysRevE.76.061904",
+              "volume": "76",
+              "author": "F Bagnoli",
+              "year": "2007",
+              "unstructured": "Bagnoli F, Li\u00f2 P, Sguanci L (2007) Risk perception in epidemic modeling. Phys Rev E 76:061904",
+              "journal-title": "Phys Rev E"
+            },
+            {
+              "key": "1166_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "1669",
+              "DOI": "10.1098/rspb.2005.3153",
+              "volume": "272",
+              "author": "CT Bauch",
+              "year": "2005",
+              "unstructured": "Bauch CT (2005) Imitation dynamics predict vaccinating behaviour. Proc R Soc B 272:1669\u20131675",
+              "journal-title": "Proc R Soc B"
+            },
+            {
+              "key": "1166_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "031127",
+              "DOI": "10.1103/PhysRevE.76.031127",
+              "volume": "76",
+              "author": "R Breban",
+              "year": "2007",
+              "unstructured": "Breban R, Vardavas R, Blower S (2007) Mean-field analysis of an inductive reasoning game: application to influenza vaccination. Phys Rev E 76:031127",
+              "journal-title": "Phys Rev E"
+            },
+            {
+              "key": "1166_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "361",
+              "DOI": "10.3934/mbe.2004.1.361",
+              "volume": "1",
+              "author": "C Castillo-Chavez",
+              "year": "2004",
+              "unstructured": "Castillo-Chavez C, Song B (2004) Dynamical models of tuberculaosis and their applications. Math Biosci Eng 1:361\u2013404",
+              "journal-title": "Math Biosci Eng"
+            },
+            {
+              "key": "1166_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "301",
+              "DOI": "10.1016/j.tpb.2007.01.001",
+              "volume": "71",
+              "author": "A d\u2019Onofrio",
+              "year": "2007",
+              "unstructured": "d\u2019Onofrio A, Manfredi P, Salinelli E (2007) Vaccinating behavior, information, and the dynamics of SIR vaccine preventable diseases. Theor Popul Biol 71:301\u2013317",
+              "journal-title": "Theor Popul Biol"
+            },
+            {
+              "key": "1166_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "337",
+              "DOI": "10.1093/imammb/dqn019",
+              "volume": "25",
+              "author": "A d\u2019Onofrio",
+              "year": "2007",
+              "unstructured": "d\u2019Onofrio A, Manfredi P, Salinelli E (2007) Fatal SIR diseases and rational exemption to vaccination. Math Med Biol 25:337\u2013357",
+              "journal-title": "Math Med Biol"
+            },
+            {
+              "key": "1166_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "e3955",
+              "DOI": "10.1371/journal.pone.0003955",
+              "volume": "3",
+              "author": "JM Epstein",
+              "year": "2008",
+              "unstructured": "Epstein JM, Parker J, Cummings D, Hammond RA (2008) Coupled contagion dynamics of fear and disease: mathematical and computational explorations. PLoS ONE 3:e3955",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "1166_CR9",
+              "unstructured": "Fefferman N (2014) Private communication Dec 12"
+            },
+            {
+              "key": "1166_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "255",
+              "DOI": "10.1136/sti.2004.009415",
+              "volume": "80",
+              "author": "KA Fenton",
+              "year": "2004",
+              "unstructured": "Fenton KA, Lowndes CM (2004) Recent trends in the epidemiology of sexually transmitted infections in the European Union. Sex Transm Infect 80:255\u2013263",
+              "journal-title": "Sex Transm Infect"
+            },
+            {
+              "key": "1166_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "733",
+              "DOI": "10.1038/446733a",
+              "volume": "446",
+              "author": "N Ferguson",
+              "year": "2007",
+              "unstructured": "Ferguson N (2007) Capturing human behaviour. Nature 446:733",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "1166_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "6872",
+              "DOI": "10.1073/pnas.0810762106",
+              "volume": "21",
+              "author": "S Funk",
+              "year": "2009",
+              "unstructured": "Funk S, Gilad E, Watkins C, Jansen VAA (2009) The spread of awareness and its impact on epidemic outbreaks. PNAS 21:6872\u20136877",
+              "journal-title": "PNAS"
+            },
+            {
+              "key": "1166_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "501",
+              "DOI": "10.1016/j.jtbi.2010.02.032",
+              "volume": "264",
+              "author": "S Funk",
+              "year": "2010",
+              "unstructured": "Funk S, Gilad E, Jansen VAA (2010) Endemic disease, awareness, and local behavioral response. J Theor Biol 264:501\u2013509",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "1166_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "1247",
+              "DOI": "10.1098/rsif.2010.0142",
+              "volume": "7",
+              "author": "S Funk",
+              "year": "2010",
+              "unstructured": "Funk S, Salath\u00e9 M, Jansen VAA (2010) Modelling the influence of human behaviour on the spread of infection diseases: a review. J R Soc Interface 7:1247\u20131256",
+              "journal-title": "J R Soc Interface"
+            },
+            {
+              "key": "1166_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "417",
+              "DOI": "10.1038/nature03072",
+              "volume": "433",
+              "author": "NC Grassly",
+              "year": "2005",
+              "unstructured": "Grassly NC, Fraser C, Garnett GP (2005) Host immunity and synchronized epidemics of syphilis across the United States. Nature 433:417\u2013421",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "1166_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "38004",
+              "DOI": "10.1209/0295-5075/82/38004",
+              "volume": "82",
+              "author": "T Gross",
+              "year": "2008",
+              "unstructured": "Gross T, Kevrekidis IG (2008) Robust oscillations in SIS epidemics on adaptive networks: coarse graining by automated moment closure. Europhys Lett 82:38004",
+              "journal-title": "Europhys Lett"
+            },
+            {
+              "key": "1166_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "208701",
+              "DOI": "10.1103/PhysRevLett.96.208701",
+              "volume": "96",
+              "author": "T Gross",
+              "year": "2006",
+              "unstructured": "Gross T, D\u2019Lima CJD, Blasius B (2006) Epidemic dynamics on an adaptive network. Phys Rev Lett 96:208701",
+              "journal-title": "Phys Rev Lett"
+            },
+            {
+              "key": "1166_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1137/S0036142993253461",
+              "volume": "34",
+              "author": "J Guckenheimer",
+              "year": "1997",
+              "unstructured": "Guckenheimer J, Myers M, Sturmfels B (1997) Computing Hopf bifurcations I. SIAM J Numer Anal 34:1\u201321",
+              "journal-title": "SIAM J Numer Anal"
+            },
+            {
+              "key": "1166_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "411",
+              "DOI": "10.1007/s00285-012-0555-4",
+              "volume": "67",
+              "author": "D Juher",
+              "year": "2013",
+              "unstructured": "Juher D, Ripoll J, Salda\u00f1a J (2013) Outbreak analysis of an SIS epidemic model with rewiring. J Math Biol 67:411\u2013432",
+              "journal-title": "J Math Biol"
+            },
+            {
+              "key": "1166_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "457",
+              "DOI": "10.1016/j.jtbi.2014.10.013",
+              "volume": "365",
+              "author": "D Juher",
+              "year": "2015",
+              "unstructured": "Juher D, Kiss IZ, Salda\u00f1a J (2015) Analysis of an epidemic model with awareness decay on regular random networks. J Theor Biol 365:457\u2013468",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "1166_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/j.mbs.2009.11.009",
+              "volume": "225",
+              "author": "IZ Kiss",
+              "year": "2010",
+              "unstructured": "Kiss IZ, Cassell J, Recker M, Simon PL (2010) The impact of information transmission on epidemic outbreaks. Math Biosci 225:1\u201310",
+              "journal-title": "Math Biosci"
+            },
+            {
+              "key": "1166_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "e24157",
+              "DOI": "10.1371/journal.pone.0024157",
+              "volume": "6",
+              "author": "P-C Kuo",
+              "year": "2011",
+              "unstructured": "Kuo P-C, Huang J-H, Liu M-D (2011) Avian influenza risk perception and preventive behavior among traditional market workers and shoppers in Taiwan: practical implications for prevention. PLoS ONE 6:e24157",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "1166_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "139",
+              "DOI": "10.1186/1471-2334-10-139",
+              "volume": "10",
+              "author": "JTF Lau",
+              "year": "2010",
+              "unstructured": "Lau JTF, Griffiths S, Choi KC, Tsui HY (2010) Avoidance behaviors and negative psychological responses in the general population in the initial stage of the H1N1 pandemic in Hong Kong. BMC Infect Dis 10:139",
+              "journal-title": "BMC Infect Dis"
+            },
+            {
+              "key": "1166_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "71",
+              "DOI": "10.1016/j.jtbi.2014.02.037",
+              "volume": "352",
+              "author": "C Llensa",
+              "year": "2014",
+              "unstructured": "Llensa C, Juher D, Salda\u00f1a J (2014) On the early epidemic dynamics for pairwise models. J Theor Biol 352:71\u201381",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "issue": "2017",
+              "key": "1166_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "1317",
+              "DOI": "10.3934/mbe.2017068",
+              "volume": "14",
+              "author": "X Lu",
+              "year": "2017",
+              "unstructured": "Lu X, Wang S, Liu S, Li J (2017) An SEI infection model incorporating media impact. Math Biosci Eng 14(2017):1317\u20131335. doi:10.3934/mbe.2017068",
+              "journal-title": "Math Biosci Eng"
+            },
+            {
+              "key": "1166_CR26",
+              "volume-title": "Modeling the interplay between human behavior and the spread of infectious diseases",
+              "year": "2013",
+              "unstructured": "Manfredi P, d\u2019Onofrio A (eds) (2013) Modeling the interplay between human behavior and the spread of infectious diseases. Springer, New York"
+            },
+            {
+              "issue": "2014",
+              "key": "1166_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "1337",
+              "DOI": "10.3934/mbe.2014.11.1337",
+              "volume": "11",
+              "author": "K Pawelek",
+              "year": "2014",
+              "unstructured": "Pawelek K, Oeldorf-Hirsch A, Rong L (2014) Modeling the impact of twitter on influenza epidemics. Math Biosci Eng 11(2014):1337\u20131356",
+              "journal-title": "Math Biosci Eng"
+            },
+            {
+              "key": "1166_CR28",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Perko L (2001) Differential equations and dynamical systems, third ed. Texts in Applied Mathematics 7, Springer, New York",
+              "DOI": "10.1007/978-1-4613-0003-8"
+            },
+            {
+              "key": "1166_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "185",
+              "DOI": "10.1016/j.mbs.2006.08.015",
+              "volume": "204",
+              "author": "TC Reluga",
+              "year": "2006",
+              "unstructured": "Reluga TC, Bauch CT, Galvani AP (2006) Evolving public perceptions and stability of vaccine uptake. Math Biosci 204:185\u2013198",
+              "journal-title": "Math Biosci"
+            },
+            {
+              "key": "1166_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "52",
+              "DOI": "10.1016/j.jtbi.2008.10.027",
+              "volume": "257",
+              "author": "S Risau-Gusm\u00e1n",
+              "year": "2009",
+              "unstructured": "Risau-Gusm\u00e1n S, Zanette DH (2009) Contact switching as a control strategy for epidemic outbreaks. J Theor Biol 257:52\u201360",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "1166_CR31",
+              "unstructured": "Sahneh FD, Scoglio C (2011) Epidemic spread in human networks. In: Proceedings of the 50th IEEE conference on decision and control 2011"
+            },
+            {
+              "key": "1166_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "632",
+              "DOI": "10.1038/srep00632",
+              "volume": "2",
+              "author": "FD Sahneh",
+              "year": "2012",
+              "unstructured": "Sahneh FD, Chowdhury FN, Scoglio CM (2012) On the existence of a threshold for preventive behavioral responses to suppress epidemic spreading. Sci Rep 2:632",
+              "journal-title": "Sci Rep"
+            },
+            {
+              "key": "1166_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "136",
+              "DOI": "10.1051/mmnp/20149209",
+              "volume": "9",
+              "author": "FD Sahneh",
+              "year": "2014",
+              "unstructured": "Sahneh FD, Chowdhury FN, Brase G, Scoglio CM (2014) Individual-based information dissemination in multilayer epidemic modeling. Math Model Nat Phenom 9:136\u2013152",
+              "journal-title": "Math Model Nat Phenom"
+            },
+            {
+              "key": "1166_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "036112",
+              "DOI": "10.1103/PhysRevE.82.036112",
+              "volume": "82",
+              "author": "Y Schwarzkopf",
+              "year": "2010",
+              "unstructured": "Schwarzkopf Y, R\u00e1kos A, Mukamel D (2010) Epidemic spreading in evolving networks. Phys Rev E 82:036112",
+              "journal-title": "Phys Rev E"
+            },
+            {
+              "key": "1166_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "066101",
+              "DOI": "10.1103/PhysRevE.77.066101",
+              "volume": "77",
+              "author": "LB Shaw",
+              "year": "2008",
+              "unstructured": "Shaw LB, Schwartz IB (2008) Fluctuating epidemics on adaptive networks. Phys Rev E 77:066101",
+              "journal-title": "Phys Rev E"
+            },
+            {
+              "key": "1166_CR36",
+              "first-page": "277",
+              "volume": "4",
+              "author": "A Szab\u00f3",
+              "year": "2012",
+              "unstructured": "Szab\u00f3 A, Simon PL, Kiss IZ (2012) Detailed study of bifurcations in an epidemic model on a dynamic network. Differ Equ Appl 4:277\u2013296",
+              "journal-title": "Differ Equ Appl"
+            },
+            {
+              "key": "1166_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "1153",
+              "DOI": "10.1007/s00285-015-0902-3",
+              "volume": "72",
+              "author": "A Szab\u00f3-Solticzky",
+              "year": "2015",
+              "unstructured": "Szab\u00f3-Solticzky A, Berthouze L, Kiss IZ, Simon PL (2015) Oscillating epidemics in a dynamic network model: stochastic and mean-field analysis. J Math Biol 72:1153\u20131176",
+              "journal-title": "J Math Biol"
+            },
+            {
+              "key": "1166_CR38",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Task Force on Community Preventive Services (2007) Recommendations for use of behavioral interventions to reduce the risk of sexual transmission of HIV among men who have sex with men. Am J Prev Med 32(4S)",
+              "DOI": "10.1016/j.amepre.2006.12.005"
+            },
+            {
+              "key": "1166_CR39",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Totten S, MacLean R, Payne E (2015) Infectious syphilis in Canada: 2003\u20132012. Canada Communicable Disease Report CCDR, vol. 41\u201302, Feb 2015. http://www.phac-aspc.gc.ca/publicat/ccdr-rmtc/15vol41/dr-rm41-02/surv-3-eng.php",
+              "DOI": "10.14745/ccdr.v41i02a03"
+            },
+            {
+              "key": "1166_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "e85",
+              "DOI": "10.1371/journal.pcbi.0030085",
+              "volume": "3",
+              "author": "R Vardavas",
+              "year": "2007",
+              "unstructured": "Vardavas R, Breban R, Blower S (2007) Can influenza epidemics be prevented by voluntary vaccination? PLoS Comput Biol 3:e85",
+              "journal-title": "PLoS Comput Biol"
+            },
+            {
+              "key": "1166_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "175",
+              "DOI": "10.1093/imammb/13.3.175",
+              "volume": "13",
+              "author": "JX Velasco-Hern\u00e1ndez",
+              "year": "1996",
+              "unstructured": "Velasco-Hern\u00e1ndez JX, Brauer F, Castillo-Chaves C (1996) Effects of treatment and prevalence-dependent recruitment on the dynamics of a fatal disease. IMA J Math Appl Med Biol 13:175\u2013192",
+              "journal-title": "IMA J Math Appl Med Biol"
+            },
+            {
+              "key": "1166_CR42",
+              "unstructured": "Wilton J (2015) The (re)emergence of STIs among MSM: why does it matter and what can be done? Prevention in Focus, Fall 2015, CATIE (the Canadian AIDS Treatment Information Exchange). http://www.catie.ca/en/pif/fall-2015/reemergence-stis-among-msm-why-does-it-matter-and-what-can-be-done"
+            },
+            {
+              "key": "1166_CR43",
+              "unstructured": "Xin Y (2016) Influence of awareness that results from direct experience on the spread of epidemics. Preprint, arXiv:1611.05100v2"
+            },
+            {
+              "key": "1166_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "036107",
+              "DOI": "10.1103/PhysRevE.85.036107",
+              "volume": "85",
+              "author": "J Zhou",
+              "year": "2012",
+              "unstructured": "Zhou J, Xiao G, Cheong SA, Fu X, Wong L, Ma S, Cheng TH (2012) Epidemic reemergence in adaptive complex networks. Phys Rev E 85:036107",
+              "journal-title": "Phys Rev E"
+            }
+          ],
+          "container-title": [
+            "Journal of Mathematical Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/article/10.1007/s00285-017-1166-x/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/s00285-017-1166-x.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/s00285-017-1166-x.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                8
+              ]
+            ],
+            "date-time": "2025-04-08T22:41:32Z",
+            "timestamp": 1744152092000
+          },
+          "score": 26.031672,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/s00285-017-1166-x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017,
+                7,
+                28
+              ]
+            ]
+          },
+          "references-count": 44,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2018,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "1166"
+          ],
+          "URL": "https://doi.org/10.1007/s00285-017-1166-x",
+          "ISSN": [
+            "0303-6812",
+            "1432-1416"
+          ],
+          "issn-type": [
+            {
+              "value": "0303-6812",
+              "type": "print"
+            },
+            {
+              "value": "1432-1416",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                7,
+                28
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "28 June 2016",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "16 July 2017",
+              "order": 2,
+              "name": "revised",
+              "label": "Revised",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "28 July 2017",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

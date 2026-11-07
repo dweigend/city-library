@@ -1,0 +1,220 @@
+{
+  "url": "http://localhost:3126/?experiment=heatbugs",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "dpr": 2
+  },
+  "appearance": "light",
+  "monitors": [
+    "Tick\n10\nBugs\n100\nMean unhappiness\n15.586\nWatched bug\nnone",
+    ""
+  ],
+  "inputs": [
+    {
+      "name": "",
+      "value": "heatbugs"
+    },
+    {
+      "name": "seed",
+      "value": "1"
+    },
+    {
+      "name": "bugCount",
+      "value": "100"
+    },
+    {
+      "name": "",
+      "value": "5"
+    },
+    {
+      "name": "live-maxOutputHeat",
+      "value": "25"
+    },
+    {
+      "name": "live-minOutputHeat",
+      "value": "5"
+    },
+    {
+      "name": "live-maxIdealTemp",
+      "value": "40"
+    },
+    {
+      "name": "live-minIdealTemp",
+      "value": "10"
+    },
+    {
+      "name": "live-evaporationRate",
+      "value": "0.01"
+    },
+    {
+      "name": "live-diffusionRate",
+      "value": "0.9"
+    },
+    {
+      "name": "live-randomMoveChance",
+      "value": "0"
+    },
+    {
+      "name": "",
+      "value": "on",
+      "checked": false
+    }
+  ],
+  "status": [
+    "",
+    "Steps completed."
+  ],
+  "charts": [
+    {
+      "label": "Unhappiness: 15.585798117496756",
+      "rect": {
+        "x": 16,
+        "y": 651.984375,
+        "width": 358,
+        "height": 100.6875
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Setup",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Run",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "1 step",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "10 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "100 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Deep freeze",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Heat up",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Ideal temperature",
+      "aria": null,
+      "disabled": false,
+      "pressed": "true"
+    },
+    {
+      "text": "Happiness",
+      "aria": null,
+      "disabled": false,
+      "pressed": "false"
+    },
+    {
+      "text": "Watch happiest",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Watch saddest",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Reset perspective",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    }
+  ],
+  "readback": [
+    {
+      "width": 716,
+      "height": 716,
+      "nonblack": 288865,
+      "rgbaFNV32": 1484949690,
+      "rect": {
+        "x": 16,
+        "y": 242.984375,
+        "width": 358,
+        "height": 358
+      }
+    }
+  ],
+  "overflow": false,
+  "assets": [
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "460917c5dbe86baa7e86b7e4b708e7ae681861bb431223738a0a2431ca666798"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-9p6da46h.js",
+      "sha256": "731848713288f75d17dada47510b974bfdb96bc88de065ff5d92163e71e9759a"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "460917c5dbe86baa7e86b7e4b708e7ae681861bb431223738a0a2431ca666798"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-9p6da46h.js",
+      "sha256": "731848713288f75d17dada47510b974bfdb96bc88de065ff5d92163e71e9759a"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "460917c5dbe86baa7e86b7e4b708e7ae681861bb431223738a0a2431ca666798"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-9p6da46h.js",
+      "sha256": "731848713288f75d17dada47510b974bfdb96bc88de065ff5d92163e71e9759a"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "460917c5dbe86baa7e86b7e4b708e7ae681861bb431223738a0a2431ca666798"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-9p6da46h.js",
+      "sha256": "731848713288f75d17dada47510b974bfdb96bc88de065ff5d92163e71e9759a"
+    }
+  ],
+  "text": "Skip to experiment\nAgent Lab\nExperiment\nAnts\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nExpected Value\nFire\nFireflies\nFlocking\nGalton Box\nHeatbugs\nHex Cell Aggregation\nInvasive Plants\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRabbits Grass Weeds\nRandom Combinations and Permutations\nSegregation\nShepherds\nSimple Birth Rates\nSmoothLife\nStochastic Patchwork\nTermites\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nBug count\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nDeep freeze\nHeat up\nIdeal temperature\nHappiness\nWatch happiest\nWatch saddest\nReset perspective\nTick\n10\nBugs\n100\nMean unhappiness\n15.586\nWatched bug\nnone\nMax output heat\nMin output heat\nMax ideal temperature\nMin ideal temperature\nEvaporation rate\nDiffusion rate\nRandom move chance (%)\n\nSteps completed.\n\nModel info\nHeat and bugs\nAverage bug unhappiness\n23.2\n0\n10\nUnhappiness"
+}

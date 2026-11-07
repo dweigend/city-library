@@ -1,0 +1,101 @@
+{
+  "slug": "braess-paradox",
+  "name": "Braess Paradox",
+  "catalogPath": "Sample Models/Social Science/Economics/Braess Paradox",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Braess%20Paradox.nlogox",
+  "deliveryBatch": "B03",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether adding a fast route can worsen travel times under selfish route choice. In NetLogo's Braess Paradox model, commuters choose between network routes whose costs depend on congestion, allowing comparison before and after a shortcut is opened. The selected literature connects this mechanism to selfish routing and collective inefficiency: the source-cited paradox demonstrates harmful added capacity [1]; user-equilibrium conditions distinguish individual route optimality from system optimality [2]; inefficiency bounds formalize the consequences of selfish routing [3]. The paradox depends on the cost functions and demand; additional capacity does not universally worsen networks and adaptive runs need not instantly reach equilibrium. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Braess%20Paradox.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Braess%20Paradox.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/braess-paradox.nlogox",
+    "sha256": "472667ac315d7e5631332194a2dd305dafcc8d8bbf8afa0af8166fd833545c56",
+    "citation": "For the model itself: * Rasmussen, L. and Wilensky, U. (2019). NetLogo Braess Paradox model. http://ccl.northwestern.edu/netlogo/models/BraessParadox. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Braess, D., Nagurney, A., and Wakolbinger, T.(2005). On a paradox of traffic planning. _Transportation science, 39(4):446–450._ Fudenberg, D. and Tirole, J.(1991). Game theory, 1991. _Cambridge, Massachusetts, 393(12):80._",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/braess-paradox.nlogox"
+  },
+  "publications": [
+    {
+      "id": "braess",
+      "creatorRole": "author",
+      "authors": [
+        "Dietrich Braess",
+        "Anna Nagurney",
+        "Tina Wakolbinger"
+      ],
+      "title": "On a Paradox of Traffic Planning",
+      "year": 2005,
+      "venue": "Transportation Science",
+      "doi": "10.1287/trsc.1050.0127",
+      "url": "https://doi.org/10.1287/trsc.1050.0127",
+      "relevance": "the source-cited paradox demonstrates harmful added capacity",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1287%2Ftrsc.1050.0127",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/braess-crossref.json",
+        "evidenceSummary": "For each point of a road network, let there be given the number of cars starting from it, and the destination of the cars. Under these conditions one wishes to estimate the distribution of traffic flow. Whether one street is preferable to another depends not only on the quality of the road, but also on the density of the flow. If every driver takes the path that looks most favorable to him, the resultant running times need not be minimal. Furthermore, it is indicated by an example that an extension of the road network may cause a redistribution of the traffic that results in longer individual running times.",
+        "evidenceFile": "evidence/social-urban/braess-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "wardrop",
+      "creatorRole": "author",
+      "authors": [
+        "J G WARDROP"
+      ],
+      "title": "ROAD PAPER. SOME THEORETICAL ASPECTS OF ROAD TRAFFIC RESEARCH.",
+      "year": 1952,
+      "venue": "Proceedings of the Institution of Civil Engineers",
+      "doi": "10.1680/ipeds.1952.11259",
+      "url": "https://doi.org/10.1680/ipeds.1952.11259",
+      "relevance": "user-equilibrium conditions distinguish individual route optimality from system optimality",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1680%2Fipeds.1952.11259",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/wardrop-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/wardrop-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "roughgarden",
+      "creatorRole": "author",
+      "authors": [
+        "Tim Roughgarden",
+        "Éva Tardos"
+      ],
+      "title": "How bad is selfish routing?",
+      "year": 2002,
+      "venue": "Journal of the ACM",
+      "doi": "10.1145/506147.506153",
+      "url": "https://doi.org/10.1145/506147.506153",
+      "relevance": "inefficiency bounds formalize the consequences of selfish routing",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1145%2F506147.506153",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/roughgarden-crossref.json",
+        "evidenceSummary": "We consider the problem of routing traffic to optimize the performance of a congested network. We are given a network, a rate of traffic between each pair of nodes, and a latency function for each edge specifying the time needed to traverse the edge given its congestion; the objective is to route traffic such that the sum of all travel times---the total latency---is minimized.In many settings, it may be expensive or impossible to regulate network traffic so as to implement an optimal assignment of routes. In the absence of regulation by some central authority, we assume that each network user routes its traffic on the minimum-latency path available to it, given the network congestion caused by the other users. In general such a \"selfishly motivated\" assignment of traffic to paths will not minimize the total latency; hence, this lack of regulation carries the cost of decreased network per",
+        "evidenceFile": "evidence/social-urban/roughgarden-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

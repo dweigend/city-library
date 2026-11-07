@@ -1,0 +1,417 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2F14651858.cd003255%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 2,
+    "request": {
+      "queryString": "DOI:\"10.1002/14651858.cd003255\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "11869658",
+          "source": "MED",
+          "pmid": "11869658",
+          "pmcid": "PMC8407100",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC8407100"
+            ]
+          },
+          "doi": "10.1002/14651858.cd003255",
+          "title": "Condom effectiveness in reducing heterosexual HIV transmission.",
+          "authorString": "Weller S, Davis K.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Weller S",
+                "lastName": "Weller",
+                "firstName": "S",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Preventive Medicine, University of Texas Medical Branch, Galveston, Texas 77555-1153, USA. sweller@utmb.edu"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Davis K",
+                "lastName": "Davis",
+                "firstName": "K",
+                "initials": "K"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "journalIssueId": 1056818,
+            "dateOfPublication": "2002 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2002,
+            "journal": {
+              "medlineAbbreviation": "Cochrane Database Syst Rev",
+              "title": "The Cochrane database of systematic reviews",
+              "essn": "1469-493X",
+              "issn": "1469-493X",
+              "isoabbreviation": "Cochrane Database Syst Rev",
+              "nlmid": "100909747"
+            },
+            "printPublicationDate": "2002-01-01"
+          },
+          "pubYear": "2002",
+          "pageInfo": "CD003255",
+          "abstractText": "<h4>Background</h4>The amount of protection that condoms provide for HIV and other sexually transmitted infections is unknown. Cohort studies of sexually active HIV serodiscordant couples with follow-up of the seronegative partner, provide a situation in which a seronegative partner has known exposure to the disease and disease incidence can be estimated. When some individuals use condoms and some do not, namely some individuals use condoms 100% of the time and some never use (0%) condoms, condom effectiveness can be estimated by comparing the two incidence rates. Condom effectiveness is the proportionate reduction in disease due to the use of condoms.<h4>Objectives</h4>The objective of this review is to estimate condom effectiveness in reducing heterosexual transmission of HIV.<h4>Search strategy</h4>Studies were located using electronic databases (AIDSLINE, CINAHL, Embase, and MEDLINE) and handsearched reference lists.<h4>Selection criteria</h4>For inclusion, studies had to have: (1) data concerning sexually active HIV serodiscordant heterosexual couples, (2) a longitudinal study design, (3) HIV status determined by serology, and (4) contain condom usage information on a cohort of always (100%) or never (0%) condom users.<h4>Data collection and analysis</h4>Studies identified through the above search strategy that met the inclusion criteria were reviewed for inclusion in the analysis. Sample sizes, number of seroconversions, and the person-years of disease-free exposure time were recorded for each cohort. If available, the direction of transmission in the cohort (male-to-female, female-to-male), date of study enrollment, source of infection in the index case, and the presence of other STDs was recorded. Duplicate reports on the same cohort and studies with incomplete or nonsepecific information were excluded. HIV incidence was estimated from the cohorts of \"always\" users and for the cohorts of \"never\" users. Effectiveness was estimated from these two incidence estimates.<h4>Main results</h4>Of the 4709 references that were initially identified, 14 were included in the final analysis. There were 13 cohorts of \"always\" users that yielded an homogeneous HIV incidence estimate of 1.14 [95% C.I.:.56, 2.04] per 100 person-years. There were 10 cohorts of \"never\" users that appeared to be heterogeneous. The studies with the longest follow-up time, consisting mainly of studies of partners of hemophiliac and transfusion patients, yielded an HIV incidence estimate of 5.75 [95% C.I.: 3.16, 9.66] per 100 person-years. Overall effectiveness, the proportionate reduction in HIV seroconversion with condom use, is approximately 80%.<h4>Reviewer's conclusions</h4>This review indicates that consistent use of condoms results in 80% reduction in HIV incidence. Consistent use is defined as using a condom for all acts of penetrative vaginal intercourse. Because the studies used in this review did not report on the \"correctness\" of use, namely whether condoms were used correctly and perfectly for each and every act of intercourse, effectiveness and not efficacy is estimated. Also, this estimate refers in general to the male condom and not specifically to the latex condom, since studies also tended not to specify the type of condom that was used. Thus, condom effectiveness is similar to, although lower than, that for contraception.",
+          "affiliation": "Preventive Medicine, University of Texas Medical Branch, Galveston, Texas 77555-1153, USA. sweller@utmb.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Systematic Review",
+              "systematic-review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Infections",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TM",
+                      "qualifierName": "transmission"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Seropositivity"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cohort Studies"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Condoms",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ST",
+                      "qualifierName": "standards"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "SN",
+                      "qualifierName": "statistics & numerical data"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Heterosexuality"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Seronegativity"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Female"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Evaluation Studies as Topic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Disease Transmission, Infectious"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1002/14651858.CD003255"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC8407100"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC8407100?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1002/14651858.cd003255"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "11687062",
+                "reference": "Cochrane Database Syst Rev. 2001;(3):CD003255. doi: 10.1002/14651858.CD003255.",
+                "type": "Update of",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 310,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2002-05-28",
+          "dateOfCreation": "2002-03-01",
+          "dateOfRevision": "2026-09-11",
+          "firstPublicationDate": "2002-01-01",
+          "firstIndexDate": "2008-12-24",
+          "fullTextReceivedDate": "2025-02-04",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "11687062",
+          "source": "MED",
+          "pmid": "11687062",
+          "doi": "10.1002/14651858.cd003255",
+          "title": "Condom effectiveness in reducing heterosexual HIV transmission.",
+          "authorString": "Weller S, Davis K.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Weller S",
+                "lastName": "Weller",
+                "firstName": "S",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Preventive Medicine and Community Health, University of Texas Medical Branch, Galveston, Texas 77555 - 1153, USA. sweller@utmb.edu"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Davis K",
+                "lastName": "Davis",
+                "firstName": "K",
+                "initials": "K"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "3",
+            "journalIssueId": 1025933,
+            "dateOfPublication": "2001 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2001,
+            "journal": {
+              "medlineAbbreviation": "Cochrane Database Syst Rev",
+              "title": "The Cochrane database of systematic reviews",
+              "essn": "1469-493X",
+              "issn": "1469-493X",
+              "isoabbreviation": "Cochrane Database Syst Rev",
+              "nlmid": "100909747"
+            },
+            "printPublicationDate": "2001-01-01"
+          },
+          "pubYear": "2001",
+          "pageInfo": "CD003255",
+          "abstractText": "<h4>Background</h4>The amount of protection that condoms provide for HIV and other sexually transmitted diseases is unknown. Cohort studies of sexually active HIV serodiscordant couples with follow-up of the seronegative partner, provide a situation in which a seronegative partner has known exposure to the disease and disease incidence can be estimated. When some individuals use condoms and some do not, namely some individuals use condoms 100% of the time and some never use (0%) condoms, condom effectiveness can be estimated by comparing the two incidence rates. Condom effectiveness is the proportionate reduction in disease due to the use of condoms.<h4>Objectives</h4>The objective of this review is to estimate condom effectiveness in reducing heterosexual transmission of HIV.<h4>Search strategy</h4>Studies were located using electronic databases (AIDSLINE, CINAHL, Embase, and MEDLINE) and handsearched reference lists.<h4>Selection criteria</h4>For inclusion, studies had to have: (1) data concerning sexually active HIV serodiscordant heterosexual couples, (2) a longitudinal study design, (3) HIV status determined by serology, and (4) contain condom usage information on a cohort of always (100%) or never (0%) condom users.<h4>Data collection and analysis</h4>Studies identified through the above search strategy that met the inclusion criteria were reviewed for inclusion in the analysis. Sample sizes, number of seroconversions, and the person-years of disease-free exposure time were recorded for each cohort. If available, the direction of transmission in the cohort (male-to-female, female-to-male), date of study enrollment, source of infection in the index case, and the presence of STDs was recorded. Duplicate reports on the same cohort and studies with incomplete or nonsepecific information were excluded. HIV incidence was estimated from the cohorts of \"always\" users and for the cohorts of \"never\" users. Effectiveness was estimated from these two incidence estimates.<h4>Main results</h4>Of the 4709 references that were initially identified, 14 were included in the final analysis. There were 13 cohorts of \"always\" users that yielded an homogeneous HIV incidence estimate of 1.14 [95% C.I.:.56, 2.04] per 100 person-years. There were 10 cohorts of \"never\" users that appeared to be heterogeneous. The studies with the longest follow-up time, consisting mainly of studies of partners of hemophiliac and transfusion patients, yielded an HIV incidence estimate of 5.75 [95% C.I.: 3.16, 9.66] per 100 person-years. Overall effectiveness, the proportionate reduction in HIV seroconversion with condom use, is approximately 80%.<h4>Reviewer's conclusions</h4>This review indicates that consistent use of condoms results in 80% reduction in HIV incidence. Consistent use is defined as using a condom for all acts of penetrative vaginal intercourse. Because the studies used in this review did not report on the \"correctness\" of use, namely whether condoms were used correctly and perfectly for each and every act of intercourse, effectiveness and not efficacy is estimated. Also, this estimate refers in general to the male condom and not specifically to the latex condom, since studies also tended not to specify the type of condom that was used. Thus, condom effectiveness is similar to, although lower than, that for contraception.",
+          "affiliation": "Department of Preventive Medicine and Community Health, University of Texas Medical Branch, Galveston, Texas 77555 - 1153, USA. sweller@utmb.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Systematic Review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Infections",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TM",
+                      "qualifierName": "transmission"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Seropositivity"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cohort Studies"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Condoms",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "SN",
+                      "qualifierName": "statistics & numerical data"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Heterosexuality"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Seronegativity"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Unpaywall",
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/8407100"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1002/14651858.CD003255"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "11869658",
+                "reference": "Cochrane Database Syst Rev. 2002;(1):CD003255. doi: 10.1002/14651858.CD003255.",
+                "type": "Update in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 92,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2002-03-28",
+          "dateOfCreation": "2001-11-01",
+          "dateOfRevision": "2026-09-11",
+          "firstPublicationDate": "2001-01-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

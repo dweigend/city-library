@@ -1,0 +1,866 @@
+{
+  "sourcePath": "docs/research/netlogo-web/evidence/computing/nw-general-examples.nlogox",
+  "sha256": "9c80d9fa4d5d4da96224e65cd707639267da3f6494309d9d45b758164d2703db",
+  "inventory": {
+    "id": "Code Examples/Extensions Examples/nw/NW General Examples",
+    "index": 365,
+    "sha256": "9c80d9fa4d5d4da96224e65cd707639267da3f6494309d9d45b758164d2703db",
+    "bytes": 65022,
+    "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/nw/NW%20General%20Examples.nlogox",
+    "webStatus": "compiling",
+    "galapagos": {
+      "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "blobSha1": "3a9d4298be78b0cfaf16a1241c5e7b0595b330d8",
+      "matchesServedBytes": true,
+      "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Code%20Examples/Extensions%20Examples/nw/NW%20General%20Examples.nlogox"
+    },
+    "desktopModels": {
+      "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+      "blobSha1": "890bba36248b8a6ac8ad59f408b0ce8f2a4fe85b",
+      "matchesServedBytes": false
+    },
+    "widgetCounts": {
+      "view": 1,
+      "button": 23,
+      "note": 4,
+      "slider": 7,
+      "monitor": 3,
+      "chooser": 3,
+      "switch": 2,
+      "plot": 1
+    }
+  },
+  "procedures": [
+    {
+      "declaration": "to setup",
+      "sourceLine": 18
+    },
+    {
+      "declaration": "to-report get-links-to-use",
+      "sourceLine": 26
+    },
+    {
+      "declaration": "to layout-turtles",
+      "sourceLine": 36
+    },
+    {
+      "declaration": "to weak-component",
+      "sourceLine": 61
+    },
+    {
+      "declaration": "to community-detection",
+      "sourceLine": 67
+    },
+    {
+      "declaration": "to highlight-bicomponents",
+      "sourceLine": 73
+    },
+    {
+      "declaration": "to highlight-maximal-cliques",
+      "sourceLine": 95
+    },
+    {
+      "declaration": "to find-biggest-cliques",
+      "sourceLine": 120
+    },
+    {
+      "declaration": "to highlight-clusters [ clusters ]",
+      "sourceLine": 135
+    },
+    {
+      "declaration": "to color-clusters [ clusters ]",
+      "sourceLine": 147
+    },
+    {
+      "declaration": "to betweenness",
+      "sourceLine": 171
+    },
+    {
+      "declaration": "to eigenvector",
+      "sourceLine": 175
+    },
+    {
+      "declaration": "to closeness",
+      "sourceLine": 179
+    },
+    {
+      "declaration": "to centrality [ measure ]",
+      "sourceLine": 185
+    },
+    {
+      "declaration": "to normalize-sizes-and-colors",
+      "sourceLine": 204
+    },
+    {
+      "declaration": "to generate [ generator-task ]",
+      "sourceLine": 222
+    },
+    {
+      "declaration": "to preferential-attachment",
+      "sourceLine": 231
+    },
+    {
+      "declaration": "to ring",
+      "sourceLine": 235
+    },
+    {
+      "declaration": "to star",
+      "sourceLine": 239
+    },
+    {
+      "declaration": "to wheel",
+      "sourceLine": 243
+    },
+    {
+      "declaration": "to lattice-2d",
+      "sourceLine": 257
+    },
+    {
+      "declaration": "to small-world-ring",
+      "sourceLine": 261
+    },
+    {
+      "declaration": "to small-world-lattice",
+      "sourceLine": 265
+    },
+    {
+      "declaration": "to generate-random",
+      "sourceLine": 269
+    },
+    {
+      "declaration": "to save-matrix",
+      "sourceLine": 277
+    },
+    {
+      "declaration": "to load-matrix",
+      "sourceLine": 282
+    },
+    {
+      "declaration": "to save-graphml",
+      "sourceLine": 286
+    },
+    {
+      "declaration": "to load-graphml",
+      "sourceLine": 291
+    }
+  ],
+  "activeExtensionPrimitives": [
+    "nw:betweenness-centrality",
+    "nw:bicomponent-clusters",
+    "nw:biggest-maximal-cliques",
+    "nw:closeness-centrality",
+    "nw:eigenvector-centrality",
+    "nw:generate-lattice-2d",
+    "nw:generate-preferential-attachment",
+    "nw:generate-random",
+    "nw:generate-ring",
+    "nw:generate-small-world",
+    "nw:generate-star",
+    "nw:generate-watts-strogatz",
+    "nw:generate-wheel",
+    "nw:generate-wheel-inward",
+    "nw:generate-wheel-outward",
+    "nw:load-graphml",
+    "nw:load-matrix",
+    "nw:louvain-communities",
+    "nw:maximal-cliques",
+    "nw:mean-path-length",
+    "nw:save-graphml",
+    "nw:save-matrix",
+    "nw:set-context",
+    "nw:weak-component-clusters"
+  ],
+  "commentOnlyMentions": [],
+  "widgets": [
+    {
+      "type": "view",
+      "attributes": {
+        "x": "665",
+        "wrappingAllowedX": "false",
+        "y": "10",
+        "frameRate": "30.0",
+        "minPycor": "-16",
+        "height": "499",
+        "showTickCounter": "false",
+        "patchSize": "15.0",
+        "fontSize": "10",
+        "wrappingAllowedY": "false",
+        "width": "499",
+        "tickCounterLabel": "ticks",
+        "maxPycor": "16",
+        "updateMode": "1",
+        "maxPxcor": "16",
+        "minPxcor": "-16"
+      },
+      "text": "",
+      "xml": "<view x=\"665\" wrappingAllowedX=\"false\" y=\"10\" frameRate=\"30.0\" minPycor=\"-16\" height=\"499\" showTickCounter=\"false\" patchSize=\"15.0\" fontSize=\"10\" wrappingAllowedY=\"false\" width=\"499\" tickCounterLabel=\"ticks\" maxPycor=\"16\" updateMode=\"1\" maxPxcor=\"16\" minPxcor=\"-16\" />\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "510",
+        "y": "30",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "110"
+      },
+      "text": "betweenness",
+      "xml": "<button x=\"510\" y=\"30\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"110\">betweenness</button>\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "305",
+        "y": "10",
+        "backgroundDark": "0",
+        "fontSize": "12",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Clusterers & Cliques",
+      "xml": "<note x=\"305\" y=\"10\" backgroundDark=\"0\" fontSize=\"12\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Clusterers &amp; Cliques</note>\n    "
+    },
+    {
+      "type": "slider",
+      "attributes": {
+        "x": "10",
+        "step": "1",
+        "y": "190",
+        "max": "1000",
+        "width": "280",
+        "display": "nb-nodes",
+        "height": "50",
+        "min": "0",
+        "direction": "Horizontal",
+        "default": "100.0",
+        "variable": "nb-nodes"
+      },
+      "text": "",
+      "xml": "<slider x=\"10\" step=\"1\" y=\"190\" max=\"1000\" width=\"280\" display=\"nb-nodes\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"100.0\" variable=\"nb-nodes\" />\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "510",
+        "y": "10",
+        "backgroundDark": "0",
+        "fontSize": "12",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Centrality",
+      "xml": "<note x=\"510\" y=\"10\" backgroundDark=\"0\" fontSize=\"12\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Centrality</note>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "10",
+        "y": "245",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "160",
+        "display": "preferential attachment"
+      },
+      "text": "preferential-attachment",
+      "xml": "<button x=\"10\" y=\"245\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"160\" display=\"preferential attachment\">preferential-attachment</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "510",
+        "y": "75",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "110"
+      },
+      "text": "eigenvector",
+      "xml": "<button x=\"510\" y=\"75\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"110\">eigenvector</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "510",
+        "y": "120",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "110"
+      },
+      "text": "closeness",
+      "xml": "<button x=\"510\" y=\"120\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"110\">closeness</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "305",
+        "y": "30",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "190",
+        "display": "weak component clusters"
+      },
+      "text": "weak-component",
+      "xml": "<button x=\"305\" y=\"30\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"190\" display=\"weak component clusters\">weak-component</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "305",
+        "y": "278",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "85",
+        "display": "save matrix"
+      },
+      "text": "save-matrix",
+      "xml": "<button x=\"305\" y=\"278\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"85\" display=\"save matrix\">save-matrix</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "305",
+        "y": "323",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "85",
+        "display": "load matrix"
+      },
+      "text": "load-matrix",
+      "xml": "<button x=\"305\" y=\"323\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"85\" display=\"load matrix\">load-matrix</button>\n    "
+    },
+    {
+      "type": "monitor",
+      "attributes": {
+        "x": "410",
+        "precision": "17",
+        "y": "555",
+        "height": "60",
+        "fontSize": "11",
+        "width": "100"
+      },
+      "text": "count turtles",
+      "xml": "<monitor x=\"410\" precision=\"17\" y=\"555\" height=\"60\" fontSize=\"11\" width=\"100\">count turtles</monitor>\n    "
+    },
+    {
+      "type": "monitor",
+      "attributes": {
+        "x": "305",
+        "precision": "17",
+        "y": "555",
+        "height": "60",
+        "fontSize": "11",
+        "width": "100"
+      },
+      "text": "count links",
+      "xml": "<monitor x=\"305\" precision=\"17\" y=\"555\" height=\"60\" fontSize=\"11\" width=\"100\">count links</monitor>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "305",
+        "y": "210",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "190",
+        "display": "biggest maximal cliques"
+      },
+      "text": "find-biggest-cliques",
+      "xml": "<button x=\"305\" y=\"210\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"190\" display=\"biggest maximal cliques\">find-biggest-cliques</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "175",
+        "y": "245",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "55"
+      },
+      "text": "ring",
+      "xml": "<button x=\"175\" y=\"245\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"55\">ring</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "235",
+        "y": "245",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "55"
+      },
+      "text": "star",
+      "xml": "<button x=\"235\" y=\"245\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"55\">star</button>\n    "
+    },
+    {
+      "type": "monitor",
+      "attributes": {
+        "x": "515",
+        "precision": "3",
+        "y": "555",
+        "height": "60",
+        "fontSize": "11",
+        "width": "140",
+        "display": "Mean path length"
+      },
+      "text": "nw:mean-path-length",
+      "xml": "<monitor x=\"515\" precision=\"3\" y=\"555\" height=\"60\" fontSize=\"11\" width=\"140\" display=\"Mean path length\">nw:mean-path-length</monitor>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "305",
+        "y": "120",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "true",
+        "kind": "Observer",
+        "width": "190",
+        "display": "highlight bicomponents"
+      },
+      "text": "highlight-bicomponents",
+      "xml": "<button x=\"305\" y=\"120\" height=\"40\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"190\" display=\"highlight bicomponents\">highlight-bicomponents</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "305",
+        "y": "165",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "true",
+        "kind": "Observer",
+        "width": "190",
+        "display": "highlight maximal cliques"
+      },
+      "text": "highlight-maximal-cliques",
+      "xml": "<button x=\"305\" y=\"165\" height=\"40\" disableUntilTicks=\"true\" forever=\"true\" kind=\"Observer\" width=\"190\" display=\"highlight maximal cliques\">highlight-maximal-cliques</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "395",
+        "y": "278",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "100",
+        "display": "save GraphML"
+      },
+      "text": "save-graphml",
+      "xml": "<button x=\"395\" y=\"278\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"100\" display=\"save GraphML\">save-graphml</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "395",
+        "y": "323",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "100",
+        "display": "load GraphML"
+      },
+      "text": "load-graphml",
+      "xml": "<button x=\"395\" y=\"323\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"100\" display=\"load GraphML\">load-graphml</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "305",
+        "y": "75",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "190",
+        "display": "detect communities"
+      },
+      "text": "community-detection",
+      "xml": "<button x=\"305\" y=\"75\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"190\" display=\"detect communities\">community-detection</button>\n    "
+    },
+    {
+      "type": "chooser",
+      "attributes": {
+        "x": "190",
+        "y": "75",
+        "height": "60",
+        "variable": "layout",
+        "current": "0",
+        "width": "100",
+        "display": "layout"
+      },
+      "text": "",
+      "xml": "<chooser x=\"190\" y=\"75\" height=\"60\" variable=\"layout\" current=\"0\" width=\"100\" display=\"layout\">\n      <choice type=\"string\" value=\"spring\" />\n      <choice type=\"string\" value=\"circle\" />\n      <choice type=\"string\" value=\"radial\" />\n      <choice type=\"string\" value=\"tutte\" />\n    </chooser>\n    "
+    },
+    {
+      "type": "chooser",
+      "attributes": {
+        "x": "100",
+        "y": "10",
+        "height": "60",
+        "variable": "links-to-use",
+        "current": "0",
+        "width": "190",
+        "display": "links-to-use"
+      },
+      "text": "",
+      "xml": "<chooser x=\"100\" y=\"10\" height=\"60\" variable=\"links-to-use\" current=\"0\" width=\"190\" display=\"links-to-use\">\n      <choice type=\"string\" value=\"undirected\" />\n      <choice type=\"string\" value=\"directed\" />\n    </chooser>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "10",
+        "y": "10",
+        "height": "60",
+        "disableUntilTicks": "false",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "85",
+        "display": "setup/clear"
+      },
+      "text": "setup",
+      "xml": "<button x=\"10\" y=\"10\" height=\"60\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"85\" display=\"setup/clear\">setup</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "10",
+        "y": "75",
+        "height": "60",
+        "disableUntilTicks": "false",
+        "forever": "true",
+        "kind": "Observer",
+        "width": "85",
+        "display": "layout"
+      },
+      "text": "layout-turtles",
+      "xml": "<button x=\"10\" y=\"75\" height=\"60\" disableUntilTicks=\"false\" forever=\"true\" kind=\"Observer\" width=\"85\" display=\"layout\">layout-turtles</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "100",
+        "y": "75",
+        "height": "60",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "85",
+        "display": "layout once"
+      },
+      "text": "layout-turtles",
+      "xml": "<button x=\"100\" y=\"75\" height=\"60\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"85\" display=\"layout once\">layout-turtles</button>\n    "
+    },
+    {
+      "type": "switch",
+      "attributes": {
+        "x": "95",
+        "y": "145",
+        "height": "40",
+        "on": "true",
+        "variable": "clear-before-generating?",
+        "width": "195",
+        "display": "clear-before-generating?"
+      },
+      "text": "",
+      "xml": "<switch x=\"95\" y=\"145\" height=\"40\" on=\"true\" variable=\"clear-before-generating?\" width=\"195\" display=\"clear-before-generating?\" />\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "15",
+        "y": "155",
+        "backgroundDark": "0",
+        "fontSize": "12",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Generators",
+      "xml": "<note x=\"15\" y=\"155\" backgroundDark=\"0\" fontSize=\"12\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Generators</note>\n    "
+    },
+    {
+      "type": "chooser",
+      "attributes": {
+        "x": "100",
+        "y": "290",
+        "height": "60",
+        "variable": "spokes-direction",
+        "current": "1",
+        "width": "190",
+        "display": "spokes-direction"
+      },
+      "text": "",
+      "xml": "<chooser x=\"100\" y=\"290\" height=\"60\" variable=\"spokes-direction\" current=\"1\" width=\"190\" display=\"spokes-direction\">\n      <choice type=\"string\" value=\"inward\" />\n      <choice type=\"string\" value=\"outward\" />\n    </chooser>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "10",
+        "y": "290",
+        "height": "60",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "85"
+      },
+      "text": "wheel",
+      "xml": "<button x=\"10\" y=\"290\" height=\"60\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"85\">wheel</button>\n    "
+    },
+    {
+      "type": "slider",
+      "attributes": {
+        "x": "100",
+        "step": "0.01",
+        "y": "355",
+        "max": "1",
+        "width": "190",
+        "display": "connection-prob",
+        "height": "50",
+        "min": "0",
+        "direction": "Horizontal",
+        "default": "0.2",
+        "variable": "connection-prob"
+      },
+      "text": "",
+      "xml": "<slider x=\"100\" step=\"0.01\" y=\"355\" max=\"1\" width=\"190\" display=\"connection-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.2\" variable=\"connection-prob\" />\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "10",
+        "y": "355",
+        "height": "50",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "85",
+        "display": "random"
+      },
+      "text": "generate-random",
+      "xml": "<button x=\"10\" y=\"355\" height=\"50\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"85\" display=\"random\">generate-random</button>\n    "
+    },
+    {
+      "type": "slider",
+      "attributes": {
+        "x": "10",
+        "step": "1",
+        "y": "410",
+        "max": "floor ((nb-nodes - 1) / 2)",
+        "width": "280",
+        "display": "neighborhood-size",
+        "height": "50",
+        "min": "0",
+        "direction": "Horizontal",
+        "default": "3.0",
+        "variable": "neighborhood-size"
+      },
+      "text": "",
+      "xml": "<slider x=\"10\" step=\"1\" y=\"410\" max=\"floor ((nb-nodes - 1) / 2)\" width=\"280\" display=\"neighborhood-size\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"3.0\" variable=\"neighborhood-size\" />\n    "
+    },
+    {
+      "type": "slider",
+      "attributes": {
+        "x": "100",
+        "step": "0.01",
+        "y": "465",
+        "max": "1",
+        "width": "190",
+        "display": "rewire-prob",
+        "height": "50",
+        "min": "0",
+        "direction": "Horizontal",
+        "default": "0.1",
+        "variable": "rewire-prob"
+      },
+      "text": "",
+      "xml": "<slider x=\"100\" step=\"0.01\" y=\"465\" max=\"1\" width=\"190\" display=\"rewire-prob\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"0.1\" variable=\"rewire-prob\" />\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "10",
+        "y": "465",
+        "height": "50",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "85",
+        "display": "small world"
+      },
+      "text": "small-world-ring",
+      "xml": "<button x=\"10\" y=\"465\" height=\"50\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"85\" display=\"small world\">small-world-ring</button>\n    "
+    },
+    {
+      "type": "slider",
+      "attributes": {
+        "x": "120",
+        "step": "1",
+        "y": "520",
+        "max": "20",
+        "width": "170",
+        "display": "nb-rows",
+        "height": "50",
+        "min": "0",
+        "direction": "Horizontal",
+        "default": "8.0",
+        "variable": "nb-rows"
+      },
+      "text": "",
+      "xml": "<slider x=\"120\" step=\"1\" y=\"520\" max=\"20\" width=\"170\" display=\"nb-rows\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"8.0\" variable=\"nb-rows\" />\n    "
+    },
+    {
+      "type": "slider",
+      "attributes": {
+        "x": "120",
+        "step": "0.1",
+        "y": "630",
+        "max": "10",
+        "width": "170",
+        "display": "clustering-exponent",
+        "height": "50",
+        "min": "0",
+        "direction": "Horizontal",
+        "default": "2.0",
+        "variable": "clustering-exponent"
+      },
+      "text": "",
+      "xml": "<slider x=\"120\" step=\"0.1\" y=\"630\" max=\"10\" width=\"170\" display=\"clustering-exponent\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"2.0\" variable=\"clustering-exponent\" />\n    "
+    },
+    {
+      "type": "slider",
+      "attributes": {
+        "x": "120",
+        "step": "1",
+        "y": "575",
+        "max": "20",
+        "width": "170",
+        "display": "nb-cols",
+        "height": "50",
+        "min": "0",
+        "direction": "Horizontal",
+        "default": "8.0",
+        "variable": "nb-cols"
+      },
+      "text": "",
+      "xml": "<slider x=\"120\" step=\"1\" y=\"575\" max=\"20\" width=\"170\" display=\"nb-cols\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"8.0\" variable=\"nb-cols\" />\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "10",
+        "y": "630",
+        "height": "50",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "105",
+        "display": "kleinberg"
+      },
+      "text": "small-world-lattice",
+      "xml": "<button x=\"10\" y=\"630\" height=\"50\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"105\" display=\"kleinberg\">small-world-lattice</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "10",
+        "y": "575",
+        "height": "50",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "105",
+        "display": "lattice 2D"
+      },
+      "text": "lattice-2d",
+      "xml": "<button x=\"10\" y=\"575\" height=\"50\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"105\" display=\"lattice 2D\">lattice-2d</button>\n    "
+    },
+    {
+      "type": "switch",
+      "attributes": {
+        "x": "10",
+        "y": "520",
+        "height": "50",
+        "on": "false",
+        "variable": "wrap",
+        "width": "105",
+        "display": "wrap"
+      },
+      "text": "",
+      "xml": "<switch x=\"10\" y=\"520\" height=\"50\" on=\"false\" variable=\"wrap\" width=\"105\" display=\"wrap\" />\n    "
+    },
+    {
+      "type": "plot",
+      "attributes": {
+        "x": "305",
+        "autoPlotX": "true",
+        "yMax": "10.0",
+        "autoPlotY": "true",
+        "yAxis": "Nb nodes",
+        "y": "375",
+        "xMin": "0.0",
+        "height": "175",
+        "legend": "false",
+        "xMax": "10.0",
+        "yMin": "0.0",
+        "width": "315",
+        "xAxis": "Degrees",
+        "display": "Degree distribution"
+      },
+      "text": "",
+      "xml": "<plot x=\"305\" autoPlotX=\"true\" yMax=\"10.0\" autoPlotY=\"true\" yAxis=\"Nb nodes\" y=\"375\" xMin=\"0.0\" height=\"175\" legend=\"false\" xMax=\"10.0\" yMin=\"0.0\" width=\"315\" xAxis=\"Degrees\" display=\"Degree distribution\">\n      <setup />\n      <update />\n      <pen interval=\"1.0\" mode=\"1\" display=\"default\" color=\"-16777216\" legend=\"true\">\n        <setup />\n        <update>histogram [ count my-links ] of turtles</update>\n      </pen>\n    </plot>\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "305",
+        "y": "255",
+        "backgroundDark": "0",
+        "fontSize": "12",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Files",
+      "xml": "<note x=\"305\" y=\"255\" backgroundDark=\"0\" fontSize=\"12\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Files</note>\n  "
+    }
+  ],
+  "code": "extensions [ nw ]\n\n; we have two different kinds of link breeds, one directed and one undirected, just\n; to show what the different networks look like with directed vs. undirected links\ndirected-link-breed [ directed-edges directed-edge ]\nundirected-link-breed [ undirected-edges undirected-edge ]\n\nglobals [\n  highlighted-node                ; used for the \"highlight mode\" buttons to keep track of the currently highlighted node\n  highlight-bicomponents-on       ; indicates that highlight-bicomponents mode is active\n  stop-highlight-bicomponents     ; indicates that highlight-bicomponents mode needs to stop\n  highlight-maximal-cliques-on    ; indicates highlight-maximal-cliques mode is active\n  stop-highlight-maximal-cliques  ; indicates highlight-maximal-cliques mode needs to stop\n]\n\nto setup\n  clear-all\n  set-current-plot \"Degree distribution\"\n  set-default-shape turtles \"circle\"\n  reset-ticks\nend\n\n;; Reports the link set corresponding to the value of the links-to-use combo box\nto-report get-links-to-use\n  report ifelse-value links-to-use = \"directed\"\n    [ directed-edges ]\n    [ undirected-edges ]\nend\n\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;; Layouts\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\nto layout-turtles\n  if layout = \"radial\" and count turtles > 1 [\n    let root-agent max-one-of turtles [ count my-links ]\n    layout-radial turtles links root-agent\n  ]\n  if layout = \"spring\" [\n    let factor sqrt count turtles\n    if factor = 0 [ set factor 1 ]\n    layout-spring turtles links (1 / factor) (14 / factor) (1.5 / factor)\n  ]\n  if layout = \"circle\" [\n    layout-circle sort turtles max-pxcor * 0.9\n  ]\n  if layout = \"tutte\" [\n    layout-circle sort turtles max-pxcor * 0.9\n    layout-tutte max-n-of (count turtles * 0.5) turtles [ count my-links ] links 12\n  ]\n  display\nend\n\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;; Clusterers\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n; Colorizes each node according to which component it is part of\nto weak-component\n  nw:set-context turtles get-links-to-use\n  color-clusters nw:weak-component-clusters\nend\n\n; Colorizes each node according to the community it is part of\nto community-detection\n  nw:set-context turtles get-links-to-use\n  color-clusters nw:louvain-communities\nend\n\n; Allows the user to mouse over and highlight all bicomponents\nto highlight-bicomponents\n\n  if stop-highlight-bicomponents = true [\n    ; we're asked to stop - do so\n    set stop-highlight-bicomponents false\n    set highlight-bicomponents-on false\n    stop\n  ]\n  set highlight-bicomponents-on true ; we're on!\n  if highlight-maximal-cliques-on = true [\n    ; if the other guy is on, he needs to stop\n    set stop-highlight-maximal-cliques true\n  ]\n\n  if mouse-inside? [\n    nw:set-context turtles get-links-to-use\n    highlight-clusters nw:bicomponent-clusters\n  ]\n  display\nend\n\n; Allows the user to mouse over and highlight all maximal cliques\nto highlight-maximal-cliques\n  if (links-to-use != \"undirected\") [\n    user-message \"Maximal cliques only work with undirected links.\"\n    stop\n  ]\n  if stop-highlight-maximal-cliques = true [\n    ; we're asked to stop - do so\n    set stop-highlight-maximal-cliques false\n    set highlight-maximal-cliques-on false\n    stop\n  ]\n  set highlight-maximal-cliques-on true ; we're on!\n  if highlight-bicomponents-on = true [\n    ; if the other guy is on, he needs to stop\n    set stop-highlight-bicomponents true\n  ]\n\n  if mouse-inside? [\n    nw:set-context turtles undirected-edges\n    highlight-clusters nw:maximal-cliques\n  ]\n  display\nend\n\n; Colorizes the biggest maximal clique in the graph, or a random one if there is more than one\nto find-biggest-cliques\n  if links-to-use != \"undirected\" [\n    user-message \"Maximal cliques only work with undirected links.\"\n    stop\n  ]\n  nw:set-context turtles undirected-edges\n  color-clusters nw:biggest-maximal-cliques\nend\n\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;; Highlighting and coloring of clusters\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n; Allows the user to mouse over different nodes and\n; highlight all the clusters that this node is a part of\nto highlight-clusters [ clusters ]\n  ; get the node with neighbors that is closest to the mouse\n  let node min-one-of turtles [ distancexy mouse-xcor mouse-ycor ]\n  if node != nobody and node != highlighted-node [\n    set highlighted-node node\n    ; find all clusters the node is in and assign them different colors\n    color-clusters filter [ cluster -> member? node cluster ] clusters\n    ; highlight target node\n    ask node [ set color white ]\n  ]\nend\n\nto color-clusters [ clusters ]\n  ; reset all colors\n  ask turtles [ set color gray ]\n  ask links [ set color gray - 2 ]\n  let n length clusters\n  ; Generate a unique hue for each cluster\n  let hues n-values n [ i -> (360 * i / n) ]\n\n  ; loop through the clusters and colors zipped together\n  (foreach clusters hues [ [cluster hue] ->\n    ask cluster [ ; for each node in the cluster\n                  ; give the node the color of its cluster\n      set color hsb hue 100 100\n      ; Color links contained in the cluster slightly darker than the cluster color\n      ask my-links with [ member? other-end cluster ] [ set color hsb hue 100 75 ]\n    ]\n  ])\nend\n\n\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;; Centrality Measures\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\nto betweenness\n  centrality [ -> nw:betweenness-centrality ]\nend\n\nto eigenvector\n  centrality [ -> nw:eigenvector-centrality ]\nend\n\nto closeness\n  centrality [ -> nw:closeness-centrality ]\nend\n\n; Takes a centrality measure as a reporter task, runs it for all nodes\n; and set labels, sizes and colors of turtles to illustrate result\nto centrality [ measure ]\n  nw:set-context turtles get-links-to-use\n  ask turtles [\n    let res (runresult measure) ; run the task for the turtle\n    ifelse is-number? res [\n      set label precision res 2\n      set size res ; this will be normalized later\n    ]\n    [ ; if the result is not a number, it is because eigenvector returned false (in the case of disconnected graphs\n      set label res\n      set size 1\n    ]\n  ]\n  normalize-sizes-and-colors\nend\n\n; We want the size of the turtles to reflect their centrality, but different measures\n; give different ranges of size, so we normalize the sizes according to the formula\n; below. We then use the normalized sizes to pick an appropriate color.\nto normalize-sizes-and-colors\n  if count turtles > 0 [\n    let sizes sort [ size ] of turtles ; initial sizes in increasing order\n    let delta last sizes - first sizes ; difference between biggest and smallest\n    ifelse delta = 0 [ ; if they are all the same size\n      ask turtles [ set size 1 ]\n    ]\n    [ ; remap the size to a range between 0.5 and 2.5\n      ask turtles [ set size ((size - first sizes) / delta) * 2 + 0.5 ]\n    ]\n    ask turtles [ set color scale-color red size 0 5 ] ; using a higher range max not to get too white...\n  ]\nend\n\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;; Generators\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\nto generate [ generator-task ]\n  if clear-before-generating? [ setup ]\n  ; we have a general \"generate\" procedure that basically just takes a task\n  ; parameter and runs it, but takes care of calling layout and update plots\n  run generator-task\n  layout-turtles\n  update-plots\nend\n\nto preferential-attachment\n  generate [ -> nw:generate-preferential-attachment turtles get-links-to-use nb-nodes 1 ]\nend\n\nto ring\n  generate [ -> nw:generate-ring turtles get-links-to-use nb-nodes ]\nend\n\nto star\n  generate [ -> nw:generate-star turtles get-links-to-use nb-nodes ]\nend\n\nto wheel\n  ifelse links-to-use = \"directed\" [\n    ifelse spokes-direction = \"inward\" [\n      generate [ -> nw:generate-wheel-inward turtles get-links-to-use nb-nodes ]\n    ]\n    [ ; if it's not inward, it's outward\n      generate [ -> nw:generate-wheel-outward turtles get-links-to-use nb-nodes ]\n    ]\n  ]\n  [ ; for an undirected network, we don't care about spokes\n    generate [ -> nw:generate-wheel turtles get-links-to-use nb-nodes ]\n  ]\nend\n\nto lattice-2d\n  generate [ -> nw:generate-lattice-2d turtles get-links-to-use nb-rows nb-cols wrap ]\nend\n\nto small-world-ring\n  generate [ -> nw:generate-watts-strogatz turtles get-links-to-use nb-nodes neighborhood-size rewire-prob ]\nend\n\nto small-world-lattice\n  generate [ -> nw:generate-small-world turtles get-links-to-use nb-rows nb-cols clustering-exponent wrap ]\nend\n\nto generate-random\n  generate  [ -> nw:generate-random turtles get-links-to-use nb-nodes connection-prob ]\nend\n\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;; Saving and loading of network files\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\nto save-matrix\n  nw:set-context turtles get-links-to-use\n  nw:save-matrix \"matrix.txt\"\nend\n\nto load-matrix\n  generate [ -> nw:load-matrix \"matrix.txt\" turtles get-links-to-use ]\nend\n\nto save-graphml\n  nw:set-context turtles get-links-to-use\n  nw:save-graphml \"demo.graphml\"\nend\n\nto load-graphml\n  nw:set-context turtles get-links-to-use\n  nw:load-graphml \"demo.graphml\"\nend\n\n\n; Public Domain:\n; To the extent possible under law, Uri Wilensky has waived all\n; copyright and related or neighboring rights to this model.",
+  "info": "## WHAT IS IT?\n\nThis model demonstrates various features of the Netlogo NW extension: it allows you to generate various kinds of networks, lay them out on screen, and get information about them.\n\n## HOW TO USE IT\n\nThe SETUP/CLEAR button initializes the model and clears any existing networks.\n\nThe LINKS-TO-USE chooser allow you to specify whether you want to use directed or undirected links: all the generators use the kind of links selected in the chooser. You can generate different networks with different kinds of links without clearing everything in between.\n\nThe value of LINKS-TO-USE is used by the different clusterers and measures as well. Be careful to use the right value for the network you are interested in. For example, if you ask for betweenness centrality with \"directed links\" selected in the chooser, but the network on the screen is undirected, the betweenness centrality values will all be zero, because the algorithm only takes directed links into account.\n\nThere is another chooser called LAYOUT. NetLogo currently offers four different kinds of layouts (this is not new in the NW extension - they were all available before):\n\n- [circle](http://ccl.northwestern.edu/netlogo/docs/dictionary.html#layout-circle)\n\n- [radial](http://ccl.northwestern.edu/netlogo/docs/dictionary.html#layout-radial)\n\n- [spring](http://ccl.northwestern.edu/netlogo/docs/dictionary.html#layout-spring)\n\n- [tutte](http://ccl.northwestern.edu/netlogo/docs/dictionary.html#layout-tutte)\n\nClicking the LAYOUT forever button will ensure that the chosen layout is applied continuously. This is especially useful in the case of the spring layout. For other layouts, you can also use the LAYOUT ONCE button.\n\n### Generators\n\nThe first thing that you will see in the **Generators** section of the model is a slider labeled NB-NODES. It allows you to specify the number of nodes you want to have in your network. The first six generator buttons (PREFERENTIAL ATTACHMENT, RING, STAR, WHEEL, RANDOM, and SMALL WORLD) will take the value of that slider into account.\n\nBy default, using one of the generators will clear the current network first. You can disable this using the CLEAR-BEFORE-GENERATING? switch. Note that at any time, you can press the SETUP/CLEAR button to erase everything and start over.\n\nHere is a description of each of generator.\n\nPREFERENTIAL ATTACHMENT\n\nGenerates a new network using the [Barab\u00e1si\u2013Albert](https://en.wikipedia.org/wiki/Barab%C3%A1si%E2%80%93Albert_model) algorithm. This network will have the property of being \"scale free\": the distribution of degrees (i.e. the number of links for each turtle) should follow a power law.\n\nTurtles are added, one by one, each forming one link to a previously added turtle, until _nb-nodes_ is reached. The more links a turtle already has, the greater the probability that new turtles form links with it when they are added.\n\nRING\n\nGenerates a [ring network](https://en.wikipedia.org/wiki/Ring_network) of NB-NODES turtles, in which each turtle is connected to exactly two other turtles.\n\nSTAR\n\nGenerates a [star network](https://en.wikipedia.org/wiki/Star_graph) in which there is one central turtle and every other turtle is connected only to this central node. The number of turtles can be as low as one, but it won't look much like a star.\n\nWHEEL\n\nGenerates a [wheel network](https://en.wikipedia.org/wiki/Wheel_graph), which is basically a [ring network](https://en.wikipedia.org/wiki/Ring_network) with an additional \"central\" turtle that is connected to every other turtle. The number of nodes must be at least four.\n\nOn the right side of the WHEEL button, you will see a chooser allowing you the select either \"inward\" or \"outward\". This will allow to specify if the \"spokes\" of the wheel point toward the central turtle (inward) or away from it (outward). This is, of course, meaningful only in the case of a directed network.\n\nRANDOM\n\nGenerates a new random network of NB-NODES turtles in which each one has a  connection probability (between 0 and 1) of being connected to each other turtles (this is specified through the CONNECTION-PROB slider). The algorithm uses the [Erd\u0151s\u2013R\u00e9nyi model](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model).\n\nSMALL WORLD\n\nGenerates a new [Watts-Strogatz small-world network](https://en.wikipedia.org/wiki/Watts_and_Strogatz_model). The algorithm begins by creating a ring of nodes, where each node is connected to NEIGHBORHOOD-SIZE nodes on either side. Then, each link is rewired with probability REWIRE-PROB.\n\nLATTICE 2D\n\nGenerates a new 2D [lattice network](https://en.wikipedia.org/wiki/Lattice_graph) (basically, a grid) of NB-ROWS rows and NB-COLS columns. The grid will wrap around itself if the WRAP switch is set to \"on\".\n\nKLEINBERG\n\nGenerates a new [small-world network](https://en.wikipedia.org/wiki/Small-world_network) using the [Kleinberg Model](https://en.wikipedia.org/wiki/Small_world_routing#The_Kleinberg_Model).\n\nThe generator uses the same sliders and switch as the lattice 2D generator, namely, NB-ROWS, NO-COLS and WRAP. The algorithm proceeds by generating a lattice of the given number of rows and columns (the lattice will wrap around itself if WRAP is \"on\"). The \"small world effect\" is created by adding additional links between the nodes in the lattice. The higher the CLUSTERING-EXPONENT, the more the algorithm will favor already close-by nodes when adding new links. A clustering exponent of `2.0` is typically used.\n\n### Clusters and cliques\n\nNow that you have generated one or more networks, there are things that you might want to know about them.\n\nWEAK COMPONENT CLUSTERS\n\nThis button will assign a different color to all the \"weakly\" [connected components](https://en.wikipedia.org/wiki/Connected_component_%28graph_theory%29) in the current network. A weakly connected component is simply a group of nodes where there is a path from each node to every other node. A \"strongly\" connected component would be one where there is a _directed_ path from each node to every other. The extension does not support the identification of strongly connected components at the moment.\n\nDETECT COMMUNITIES\n\nDetects community structure present in the network. It does this by maximizing modularity using the [Louvain method](https://en.wikipedia.org/wiki/Louvain_Modularity).\n\nHIGHLIGHT BICOMPONENTS\n\nClicking on this button will put you in a mode where you use your mouse to highlight the different [bicomponent clusters](https://en.wikipedia.org/wiki/Biconnected_component) in the current network. A bicomponent (also known as a maximal biconnected subgraph) is a part of a network that cannot be disconnected by removing only one node (i.e. you need to remove at least two to disconnect it).\n\nNote that one turtle can be a member of more than one bicomponent at once. If it is the case, all the bicomponents that the target turtle is part of will be highlighted when you move your mouse pointer near it, but they will be of different color.\n\nHIGHLIGHT MAXIMAL CLIQUES\n\nThe general usage for this is the same as for the **highlight bicomponents** mode. Note you should not try to use both highlight modes at the same time.\n\nA [clique](https://en.wikipedia.org/wiki/Clique_%28graph_theory%29) is a subset of a network in which every node has a direct link to every other node. A maximal clique is a clique that is not, itself, contained in a bigger clique.\n\nBIGGEST MAXIMAL CLIQUES\n\nThis simply highlights the biggest of all the maximal cliques in the networks. If there are multiple cliques that are equally big (as is often the case), it will highlight them with different colors.\n\n### Centrality measures\n\nBesides all the clusterers and the clique finder, you can also calculate some centrality measures on your networks. All the centrality measures will label the nodes will the result of the calculation and adjust their size and color to reflect that result.\n\nBETWEENNESS\n\nTo calculate the [betweenness centrality](https://en.wikipedia.org/wiki/Betweenness_centrality) of a turtle, you take every other possible pairs of turtles and, for each pair, you calculate the proportion of shortest paths between members of the pair that passes through the current turtle. The betweenness centrality of a turtle is the sum of these.\n\nEIGENVECTOR\n\nThe [Eigenvector centrality](https://en.wikipedia.org/wiki/Centrality#Eigenvector_centrality) of a node can be thought of as the proportion of its time that an agent forever \"walking\" at random on the network would spend on this node. In practice, turtles that are connected to a lot of other turtles that are themselves well-connected (and so) get a higher Eigenvector centrality score.\n\nEigenvector centrality is only defined for connected networks, and will report `false` for disconnected graphs.\n\nCLOSENESS\n\nThe [closeness centrality](https://en.wikipedia.org/wiki/Centrality#Closeness_centrality) of a turtle is defined as the inverse of the sum of it's distances to all other turtles.\n\nNote that this primitive reports the _intra-component_ closeness of a turtle, that is, it takes into account only the distances to the turtles that are part of the same [component](https://en.wikipedia.org/wiki/Connected_component_%28graph_theory%29) as the current turtle, since distance to turtles in other components is undefined. The closeness centrality of an isolated turtle is defined to be zero.\n\n### Files\n\nLOAD / SAVE MATRIX\n\nFinally, you can save and load your networks. This can be done through the use of simple text files containing an [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix).\n\nThe model currently always save the network to your NetLogo directory in a file called `matrix.txt` when you click the SAVE MATRIX button. When you click the LOAD MATRIX button, it reads from the same location and creates a new network from the file.\n\nLOAD / SAVE GRAPHML\n\nYou can also save and load GraphML files. Please see the [extension's documentation](http://ccl.northwestern.edu/netlogo/docs/nw.html#save-graphml) for more detail on handling GraphML files. The demo simply saves the current network to (and can load from) the file `demo.graphml` in your default directory.\n\n## THINGS TO NOTICE\n\n- When you generate preferential attachment networks, notice the distribution of node degrees in the histogram. What does it look like? What happens if you generate a network with more nodes, or multiple preferential attachment networks?\n\n- When you generate a small world network, what is the MEAN PATH LENGTH value that you can see on the monitor? How does it compare the a random network with the same number of nodes?\n\n## THINGS TO TRY\n\n- In general, different layouts work best for different kind of graphs. Can you try every combination of graph/layout? Which layout do you prefer for each kind of graph? Why?\n\n- Try the spring layout with a lattice 2D network, with WRAP set to off. How does it look? Now try it with WRAP set to on. Can you explain the difference?\n\n- Generate a small world network with a low clustering exponent (e.g., 0.1). What is the size of the biggest maximal clique? Now try it with a big exponent (e.g. 10.0). What is the size? Try it multiple times. Do you see a pattern? What if you crank up the number of rows and columns?\n\n## EXTENDING THE MODEL\n\nThe current version of the demo does not take link weights into account. You can add a \"weight\" variable to each link breed. Can you add a button assigning random weights to the links? Can you make it so that link thickness reflects the \"weight\" of the link? Look at the extensions documentation for primitive that take weights into account. Can you integrate those in the demo?\n\n## NETLOGO FEATURES\n\nThis model demonstrates the `nw` extension primitives.\n\nBut aside from that, notice the interesting use it makes of tasks for the centrality buttons. We have only one `centrality` procedure in the code that does all the hard work, and the other procedures call it with a `measure` reporter task as a parameter, that the `centrality` primitive then runs with `runresult`. This removes a lot of code duplication.\n\nAnother nice tidbit is how the `foreach` command is used in the `color-clusters` primitive. Notice how it loops over both the `clusters` list and the `colors` and then uses the `cluster` and `cluster-color` arguments to access members of each pair of cluster/color.\n\n## RELATED MODELS\n\nA couple of models already in the model library, namely the \"Giant Component\" model and the \"Small World\" model could be build much more easily by using the primitives in the network extension. Such versions of these two models are included in the \"demo\" folder of the extension, but trying to make the modifications yourself would be an excellent exercise.\n\n<!-- 2012 -->",
+  "includes": []
+}

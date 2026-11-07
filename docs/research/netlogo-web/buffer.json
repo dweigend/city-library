@@ -1,0 +1,101 @@
+{
+  "slug": "buffer",
+  "name": "Buffer",
+  "catalogPath": "Sample Models/Chemistry & Physics/Chemical Reactions/Acids and Bases/Buffer",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Chemical%20Reactions/Acids%20and%20Bases/Buffer.nlogox",
+  "deliveryBatch": "B15",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "NetLogo Buffer investigates how a weak acid and its conjugate base resist added acid or base. Added hydronium reacts with conjugate base, while added hydroxide consumes weak acid; finite reservoirs determine whether the mixture can continue resisting changes. Connects acid strength and conjugate-species balance to preservation of neutrality [1]. Develops measurement and mathematical interpretation of buffer capacity [2]. Provides the proton-donor and proton-acceptor mechanism behind the two neutralizing reactions [3]. This teaching model does not establish physiological safety ranges or calibrated solution activities; buffering has finite capacity and depends on species amounts as well as dissociation balance. The simulation illustrates why a buffered solution responds weakly to some additions but changes sharply after a reservoir is depleted. Reproducing these patterns establishes rule fidelity, not empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Chemical%20Reactions/Acids%20and%20Bases/Buffer.nlogox",
+    "checkedAt": "2026-11-05",
+    "revision": "NetLogo 7.0.4; SHA-256 f73e667308fe41760960f0c5a8eb1cd309e3c88af0dcf8f7f842982617cf2031",
+    "evidence": "Full served model XML, Procedures and Info downloaded and consulted; retained at evidence/physics/buffer.nlogox",
+    "notes": "This dossier describes the original NetLogo baseline; it does not establish reimplementation behavior or empirical validation.",
+    "citation": "* Stieff, M. and Wilensky, U. (2001).  NetLogo Buffer model.  http://ccl.northwestern.edu/netlogo/models/Buffer.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "infoEvidenceFile": "evidence/physics/buffer-source.json",
+    "evidenceFile": "evidence/physics/buffer.nlogox"
+  },
+  "publications": [
+    {
+      "id": "1",
+      "authors": [
+        "Lawrence J. Henderson"
+      ],
+      "title": "CONCERNING THE RELATIONSHIP BETWEEN THE STRENGTH OF ACIDS AND THEIR CAPACITY TO PRESERVE NEUTRALITY",
+      "year": 1908,
+      "venue": "American Journal of Physiology-Legacy Content",
+      "doi": "10.1152/ajplegacy.1908.21.2.173",
+      "url": "https://doi.org/10.1152/ajplegacy.1908.21.2.173",
+      "relevance": "Connects acid strength and conjugate-species balance to preservation of neutrality; relevant here to why a buffered solution responds weakly to some additions but changes sharply after a reservoir is depleted.",
+      "verification": {
+        "consultedUrl": "https://doi.org/10.1152/ajplegacy.1908.21.2.173",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-henderson.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "21",
+      "issue": "2",
+      "pages": "173-179",
+      "publisher": "American Physiological Society"
+    },
+    {
+      "id": "2",
+      "authors": [
+        "Donald D. Van Slyke"
+      ],
+      "title": "ON THE MEASUREMENT OF BUFFER VALUES AND ON THE RELATIONSHIP OF BUFFER VALUE TO THE DISSOCIATION CONSTANT OF THE BUFFER AND THE CONCENTRATION AND REACTION OF THE BUFFER SOLUTION",
+      "year": 1922,
+      "venue": "Journal of Biological Chemistry",
+      "doi": "10.1016/s0021-9258(18)85845-8",
+      "url": "https://doi.org/10.1016/s0021-9258(18)85845-8",
+      "relevance": "Develops measurement and mathematical interpretation of buffer capacity; relevant here to why a buffered solution responds weakly to some additions but changes sharply after a reservoir is depleted.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016/S0021-9258%2818%2985845-8",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-vanSlyke.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "52",
+      "issue": "2",
+      "pages": "525-570",
+      "publisher": "Elsevier BV"
+    },
+    {
+      "id": "3",
+      "authors": [
+        "J. N. Brönsted"
+      ],
+      "title": "Einige Bemerkungen über den Begriff der Säuren und Basen",
+      "year": 1923,
+      "venue": "Recueil des Travaux Chimiques des Pays-Bas",
+      "doi": "10.1002/recl.19230420815",
+      "url": "https://doi.org/10.1002/recl.19230420815",
+      "relevance": "Provides the proton-donor and proton-acceptor mechanism behind the two neutralizing reactions; relevant here to why a buffered solution responds weakly to some additions but changes sharply after a reservoir is depleted.",
+      "verification": {
+        "consultedUrl": "https://doi.org/10.1002/recl.19230420815",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-bronsted.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "42",
+      "issue": "8",
+      "pages": "718-728",
+      "publisher": "Wiley"
+    }
+  ],
+  "gaps": []
+}

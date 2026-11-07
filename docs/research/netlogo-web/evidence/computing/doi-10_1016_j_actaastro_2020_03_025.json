@@ -1,0 +1,559 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          9
+        ]
+      ],
+      "date-time": "2026-09-09T11:24:04Z",
+      "timestamp": 1788953044195,
+      "version": "build-2803163510"
+    },
+    "reference-count": 32,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2020-07-01T00:00:00Z",
+          "timestamp": 1593561600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2020-07-01T00:00:00Z",
+          "timestamp": 1593561600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Acta Astronautica"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.actaastro.2020.03.025",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          3,
+          26
+        ]
+      ],
+      "date-time": "2020-03-26T02:47:58Z",
+      "timestamp": 1585190878000
+    },
+    "page": "70-81",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 54,
+    "special_numbering": "C",
+    "title": [
+      "Fuel-optimal powered descent guidance with free final-time and path constraints"
+    ],
+    "prefix": "10.1016",
+    "volume": "172",
+    "author": [
+      {
+        "given": "Runqiu",
+        "family": "Yang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xinfu",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib1",
+        "series-title": "Guidance and Control Conference",
+        "article-title": "A manually retargeted automatic descent and landing system for lem",
+        "author": "Klumpp",
+        "year": "1966"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.actaastro.2020.03.025_bib2",
+        "doi-asserted-by": "crossref",
+        "first-page": "133",
+        "DOI": "10.1016/0005-1098(74)90019-3",
+        "article-title": "Apollo lunar descent guidance",
+        "volume": "10",
+        "author": "Klumpp",
+        "year": "1974",
+        "journal-title": "Automatica"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.actaastro.2020.03.025_bib3",
+        "doi-asserted-by": "crossref",
+        "first-page": "378",
+        "DOI": "10.2514/1.19220",
+        "article-title": "Guidance and control design for hazard avoidance and safe landing on mars",
+        "volume": "43",
+        "author": "Wong",
+        "year": "2006",
+        "journal-title": "J. Spacecraft Rockets"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.actaastro.2020.03.025_bib4",
+        "doi-asserted-by": "crossref",
+        "first-page": "188",
+        "DOI": "10.2514/1.45779",
+        "article-title": "Guidance, navigation, and control system performance trades for mars pinpoint landing",
+        "volume": "47",
+        "author": "Steinfeldt",
+        "year": "2010",
+        "journal-title": "J. Spacecraft Rockets"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.actaastro.2020.03.025_bib5",
+        "doi-asserted-by": "crossref",
+        "first-page": "447",
+        "DOI": "10.2514/1.G004048",
+        "article-title": "Augmented apollo powered descent guidance",
+        "volume": "42",
+        "author": "Lu",
+        "year": "2019",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.actaastro.2020.03.025_bib6",
+        "doi-asserted-by": "crossref",
+        "first-page": "324",
+        "DOI": "10.2514/1.25023",
+        "article-title": "Minimum-fuel powered descent for mars pinpoint landing",
+        "volume": "44",
+        "author": "Topcu",
+        "year": "2007",
+        "journal-title": "J. Spacecraft Rockets"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.actaastro.2020.03.025_bib7",
+        "doi-asserted-by": "crossref",
+        "first-page": "813",
+        "DOI": "10.2514/1.G003243",
+        "article-title": "Propellant-optimal powered descent guidance",
+        "volume": "41",
+        "author": "Lu",
+        "year": "2018",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib8",
+        "doi-asserted-by": "crossref",
+        "first-page": "547",
+        "DOI": "10.1016/j.actaastro.2019.01.046",
+        "article-title": "Fixed-time pinpoint mars landing using two sliding-surface autonomous guidance",
+        "volume": "159",
+        "author": "Zhang",
+        "year": "2019",
+        "journal-title": "Acta Astronaut."
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib9",
+        "series-title": "AIAA/AAS Astrodynamics Specialist Conference and Exhibit",
+        "article-title": "A comparison of powered descent guidance laws for mars pinpoint landing",
+        "author": "Ploen",
+        "year": "2006"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.actaastro.2020.03.025_bib10",
+        "doi-asserted-by": "crossref",
+        "first-page": "1353",
+        "DOI": "10.2514/1.27553",
+        "article-title": "Convex programming approach to powered descent guidance for mars landing",
+        "volume": "30",
+        "author": "Acikmese",
+        "year": "2007",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.actaastro.2020.03.025_bib11",
+        "doi-asserted-by": "crossref",
+        "first-page": "1161",
+        "DOI": "10.2514/1.47202",
+        "article-title": "Minimum-landing-error powered-descent guidance for mars landing using convex optimization",
+        "volume": "33",
+        "author": "Blackmore",
+        "year": "2010",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib12",
+        "series-title": "AIAA Guidance, Navigation, and Control Conference",
+        "article-title": "Successive convexification for fuel-optimal powered landing with aerodynamic drag and non-convex constraints",
+        "author": "Szmuk",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib13",
+        "series-title": "AIAA Guidance, Navigation, and Control Conference",
+        "article-title": "Fuel-optimal rocket landing with aerodynamic controls",
+        "author": "Liu",
+        "year": "2017"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.actaastro.2020.03.025_bib14",
+        "doi-asserted-by": "crossref",
+        "first-page": "65",
+        "DOI": "10.2514/1.G003537",
+        "article-title": "Fuel-optimal rocket landing with aerodynamic controls",
+        "volume": "42",
+        "author": "Liu",
+        "year": "2019",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.actaastro.2020.03.025_bib15",
+        "doi-asserted-by": "crossref",
+        "first-page": "23",
+        "DOI": "10.1007/s42064-017-0003-8",
+        "article-title": "Survey of convex optimization for aerospace applications",
+        "volume": "1",
+        "author": "Liu",
+        "year": "2017",
+        "journal-title": "Astrodynamics"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.actaastro.2020.03.025_bib16",
+        "doi-asserted-by": "crossref",
+        "first-page": "375",
+        "DOI": "10.2514/1.58436",
+        "article-title": "Autonomous trajectory planning for rendezvous and proximity operations by conic optimization",
+        "volume": "36",
+        "author": "Lu",
+        "year": "2013",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.actaastro.2020.03.025_bib17",
+        "doi-asserted-by": "crossref",
+        "first-page": "1725",
+        "DOI": "10.2514/1.G000218",
+        "article-title": "Model predictive control of swarms of spacecraft using sequential convex programming",
+        "volume": "37",
+        "author": "Morgan",
+        "year": "2014",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.actaastro.2020.03.025_bib18",
+        "doi-asserted-by": "crossref",
+        "first-page": "227",
+        "DOI": "10.2514/1.G001210",
+        "article-title": "Entry trajectory optimization by second-order cone programming",
+        "volume": "39",
+        "author": "Liu",
+        "year": "2015",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib19",
+        "doi-asserted-by": "crossref",
+        "first-page": "60",
+        "DOI": "10.1016/j.actaastro.2017.04.013",
+        "article-title": "Reentry trajectory optimization with waypoint and no-fly zone constraints using multiphase convex programming",
+        "volume": "137",
+        "author": "Zhao",
+        "year": "2017",
+        "journal-title": "Acta Astronaut."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.actaastro.2020.03.025_bib20",
+        "doi-asserted-by": "crossref",
+        "first-page": "1881",
+        "DOI": "10.1109/TAES.2016.150741",
+        "article-title": "Exact convex relaxation for optimal flight of aerodynamically controlled missiles",
+        "volume": "52",
+        "author": "Liu",
+        "year": "2016",
+        "journal-title": "IEEE Trans. Aero. Electron. Syst."
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.actaastro.2020.03.025_bib21",
+        "doi-asserted-by": "crossref",
+        "first-page": "2603",
+        "DOI": "10.2514/1.G002150",
+        "article-title": "Constrained trajectory optimization for planetary entry via sequential convex programming",
+        "volume": "40",
+        "author": "Wang",
+        "year": "2017",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib22",
+        "series-title": "AIAA Scitech 2019 Forum",
+        "first-page": "1666",
+        "article-title": "Comparison of convex optimization-based approaches to solve nonconvex optimal control problems",
+        "author": "Yang",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib23",
+        "volume": "Ch. 2",
+        "author": "Boyd",
+        "year": "2004"
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib24",
+        "volume": "Ch. 7",
+        "author": "Stoer",
+        "year": "1993"
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib25",
+        "volume": "Ch. 3",
+        "author": "Stetter",
+        "year": "1973"
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib26",
+        "series-title": "AIAA Guidance, Navigation, and Control Conference",
+        "article-title": "A pseudospectral-convex optimization algorithm for rocket landing guidance",
+        "author": "Wang",
+        "year": "2018"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.actaastro.2020.03.025_bib27",
+        "doi-asserted-by": "crossref",
+        "first-page": "320",
+        "DOI": "10.2514/1.G002818",
+        "article-title": "Pseudospectral convex optimization for powered descent and landing",
+        "volume": "41",
+        "author": "Sagliano",
+        "year": "2017",
+        "journal-title": "J. Guid. Contr. Dynam."
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib28",
+        "series-title": "Advances in Global Pseudospectral Methods for Optimal Control",
+        "author": "Garg",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib29",
+        "series-title": "2013 European Control Conference (ECC)",
+        "article-title": "Ecos: an socp solver for embedded systems",
+        "author": "Domahidi",
+        "year": "2013"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.actaastro.2020.03.025_bib30",
+        "doi-asserted-by": "crossref",
+        "first-page": "249",
+        "DOI": "10.1007/s10107-002-0349-3",
+        "article-title": "On implementing a primal-dual interior-point method for conic quadratic optimization",
+        "volume": "95",
+        "author": "Andersen",
+        "year": "2003",
+        "journal-title": "Math. Program."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.actaastro.2020.03.025_bib31",
+        "doi-asserted-by": "crossref",
+        "first-page": "181",
+        "DOI": "10.1137/1037043",
+        "article-title": "A survey of the maximum principles for optimal control problems with state constraints",
+        "volume": "37",
+        "author": "Hartl",
+        "year": "1995",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "key": "10.1016/j.actaastro.2020.03.025_bib32",
+        "volume": "Ch. 3",
+        "author": "Bryson",
+        "year": "1975"
+      }
+    ],
+    "container-title": [
+      "Acta Astronautica"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0094576520301533?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0094576520301533?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          9,
+          25
+        ]
+      ],
+      "date-time": "2025-09-25T14:47:50Z",
+      "timestamp": 1758811670000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0094576520301533"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          7
+        ]
+      ]
+    },
+    "references-count": 32,
+    "alternative-id": [
+      "S0094576520301533"
+    ],
+    "URL": "https://doi.org/10.1016/j.actaastro.2020.03.025",
+    "relation": {},
+    "ISSN": [
+      "0094-5765"
+    ],
+    "issn-type": [
+      {
+        "value": "0094-5765",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          7
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Fuel-optimal powered descent guidance with free final-time and path constraints",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Acta Astronautica",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.actaastro.2020.03.025",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "\u00a9 2020 IAA. Published by Elsevier Ltd. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

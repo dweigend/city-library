@@ -1,0 +1,35 @@
+{
+  "baseline": "11d697f",
+  "files": 3,
+  "observations": 9,
+  "comparisons": 30,
+  "cases": [
+    {
+      "file": "experiments/language-change/ui.ts",
+      "observations": 3,
+      "monitors": 4,
+      "steps": [
+        "advanced",
+        "advanced"
+      ]
+    },
+    {
+      "file": "experiments/three-doors/ui.ts",
+      "observations": 3,
+      "monitors": 2,
+      "steps": [
+        "advanced",
+        "advanced"
+      ]
+    },
+    {
+      "file": "experiments/wealth-distribution/ui.ts",
+      "observations": 3,
+      "monitors": 4,
+      "steps": [
+        "advanced",
+        "advanced"
+      ]
+    }
+  ]
+}

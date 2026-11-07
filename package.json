@@ -1,15 +1,55 @@
 {
   "name": "city-library",
+  "version": "0.0.0",
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "bun": "./index.ts",
+      "default": "./dist/index.js"
+    }
   },
-  "peerDependencies": {
-    "typescript": "^7"
+  "files": [
+    "index.ts",
+    "src/**/*.ts",
+    "dist"
+  ],
+  "packageManager": "bun@1.4.2",
+  "engines": {
+    "bun": "1.4.2"
+  },
+  "devDependencies": {
+    "@internationalized/date": "3.12.4",
+    "@lucide/svelte": "1.70.0",
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@tailwindcss/vite": "4.3.4",
+    "@types/bun": "1.4.4",
+    "bits-ui": "2.20.6",
+    "clsx": "2.1.1",
+    "cytoscape": "3.34.4",
+    "svelte": "5.57.3",
+    "tailwind-merge": "3.7.0",
+    "tailwind-variants": "3.3.1",
+    "tailwindcss": "4.3.4",
+    "typescript": "7.0.2",
+    "vite": "8.3.6"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
-  }
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json && tsc -p tsconfig.ui-examples.json && tsc -p tsconfig.vite.json && bun run check:ui:svelte",
+    "test": "bun test tests models/agent-lab/model.test.ts",
+    "examples": "bun scripts/examples.ts",
+    "build": "bun build index.ts --target browser --format esm --outdir dist && tsc -p tsconfig.build.json",
+    "consumer": "bun scripts/consumer.ts",
+    "check": "bun run typecheck && bun run test && bun run examples && bun run build && bun run consumer",
+    "dev:ui": "bun scripts/agent-lab.ts",
+    "check:ui:svelte": "bun run --cwd ui/agent-lab check",
+    "dev:ui:svelte": "bun --bun run vite --config vite.config.ts",
+    "build:ui:svelte": "bun --bun run vite build --config vite.config.ts",
+    "preview:ui:svelte": "bun --bun run vite preview --config vite.config.ts"
+  },
+  "workspaces": [
+    "ui/agent-lab"
+  ]
 }

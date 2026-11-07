@@ -1,0 +1,167 @@
+{
+  "status": "PROPOSAL_ONLY_NOT_DISTRIBUTION_RUNTIME_PASS",
+  "syntax": [
+    {
+      "path": "examples/random-exponential-poisson-proposal/01-exponential-transform-and-consumption.ts",
+      "bytes": 1948,
+      "sha256": "55f9e6d4a6077bf759c701912fde413529b54f4d0f85412769b2884ad2764238",
+      "status": "PARSE_PASS"
+    },
+    {
+      "path": "examples/random-exponential-poisson-proposal/02-poisson-product-branch.ts",
+      "bytes": 1865,
+      "sha256": "bc5459ab72e433aa1a82ff4501ca36b8e72a76da6a2702b473277b883da3eb2f",
+      "status": "PARSE_PASS"
+    },
+    {
+      "path": "examples/random-exponential-poisson-proposal/03-poisson-high-mean-and-continuation.ts",
+      "bytes": 1605,
+      "sha256": "ace37ed9714c1c92771b08c65df1254747265730c399b121845513f1a93cb902",
+      "status": "PARSE_PASS"
+    },
+    {
+      "path": "examples/random-exponential-poisson-proposal/04-validation-cache-and-local-stream.ts",
+      "bytes": 2818,
+      "sha256": "1130fbbf31b0f12eb18d4acf1daeccdeeb3e88565058ef1dfdf021bc7a4e604f",
+      "status": "PARSE_PASS"
+    },
+    {
+      "path": "examples/random-exponential-poisson-proposal/05-blood-sugar-parameter-scenario.ts",
+      "bytes": 1870,
+      "sha256": "256a7c6a1e3730ba3a26ca0c74cf46e83819bd55179b356b72052f8330370d06",
+      "status": "PARSE_PASS"
+    }
+  ],
+  "proposalTypes": {
+    "status": "EXPECTED_MISSING_OVERLOADS_ONLY",
+    "code": "TS2769",
+    "count": 31
+  },
+  "currentSourceTypecheck": {
+    "command": "bun run typecheck",
+    "status": "PASS",
+    "output": "source-typecheck.txt"
+  },
+  "oracles": {
+    "syntax": "PASS",
+    "fixtures": [
+      {
+        "mean": 0.01,
+        "value": 0,
+        "draws": 1,
+        "previous": 1,
+        "product": 0.011704753153026104,
+        "threshold": 0.9900498337491681
+      },
+      {
+        "mean": 1,
+        "value": 0,
+        "draws": 1,
+        "previous": 1,
+        "product": 0.011704753153026104,
+        "threshold": 0.36787944117144233
+      },
+      {
+        "mean": 5,
+        "value": 1,
+        "draws": 2,
+        "previous": 0.011704753153026104,
+        "product": 0.0007252061107021631,
+        "threshold": 0.006737946999085467
+      },
+      {
+        "mean": 29.9,
+        "value": 25,
+        "draws": 26,
+        "previous": 2.2871032677152707e-13,
+        "product": 6.654354702288478e-14,
+        "threshold": 1.0341772767478878e-13
+      }
+    ],
+    "currentErrors": [
+      {
+        "distribution": "exponential",
+        "error": "TypeError: Unknown option: mean",
+        "stateUnchanged": true
+      },
+      {
+        "distribution": "poisson",
+        "error": "TypeError: Unknown option: mean",
+        "stateUnchanged": true
+      }
+    ],
+    "overflow": {
+      "seed": 2,
+      "u": 0.7342509443406016,
+      "finiteResult": false
+    },
+    "actualOmittedMeanErrors": [
+      {
+        "distribution": "exponential",
+        "error": "TypeError: This slice supports uniform draws only."
+      },
+      {
+        "distribution": "poisson",
+        "error": "TypeError: This slice supports uniform draws only."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "src/random/random.ts",
+      "bytes": 4770,
+      "sha256": "2fd00212924db909a59440293e7ee34e3de7c4a5177c3ea58f4b4a5f87a77661"
+    },
+    {
+      "path": "src/random/continuation.ts",
+      "bytes": 2368,
+      "sha256": "615ab5f2f00e3401866d7c24bce610bf75ea7f26a0fe56016b00e103213f8391"
+    },
+    {
+      "path": "src/random/normal.ts",
+      "bytes": 1724,
+      "sha256": "dfeb2e6453a681f84b0d8f818d3eba79b9f49f7514d1344c74a62260a659be46"
+    },
+    {
+      "path": "src/random/uniform.ts",
+      "bytes": 1998,
+      "sha256": "d044f4d78ea65bef6428c2236805b73ab183b143de2025aaae62a83ffc3ff192"
+    },
+    {
+      "path": "src/agent/state.ts",
+      "bytes": 6675,
+      "sha256": "c3580bca30c9a6596efc1d0f59419a0b1d8ed25e5bff8ffb036b0cd42f52bd32"
+    },
+    {
+      "path": "docs/agent-loom/api-reference.md",
+      "bytes": 222553,
+      "sha256": "6f885041380d32f40ab95eec1a3e8f9c1f3c94b69c6cf18e67a56cf67a772dd6"
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/docs/development/selected-biology-random-gap.md",
+      "bytes": 2762,
+      "sha256": "3e74cf331a710207e74597e8238a80e9e27162dcd4e5d25ae86fdf0cdcec16de"
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/experiments/blood-sugar-regulation/source.nlogox",
+      "bytes": 64706,
+      "sha256": "75efe0d13e248bbdd0850171f35e54271bb16ad78bdd3ecbe7e0afb8f3f5313f"
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/experiments/blood-sugar-regulation/NOTICE.md",
+      "bytes": 1535,
+      "sha256": "3f33e6ce1bc85d507f8798b9c0f618cc0d5dfefef1c5ed0d9f410034f3ba0149"
+    }
+  ],
+  "primaryCandidate": {
+    "url": "https://statmath.wu.ac.at/papers/92-04-13.wh.ps.gz",
+    "gzipBytes": 47843,
+    "gzipSHA256": "5dc06222f83c17384bc2f8022b30e14c7d4cdc380ce7e1a12dd816d9f43e8dcb",
+    "postScriptBytes": 119021,
+    "postScriptSHA256": "7ae552c669bce030976944142935a6e9bf71ac5df79659bf232e08a1b9aa1549",
+    "inspection": "Printed pages4/5/6/7 rendered with Ghostscript and inspected; temporary images removed; complete paper not retained. WU PDF shell access403, official PS.gz accessible.",
+    "license": "WU repository Unspecified; no implementation copied"
+  },
+  "noFreeze": true,
+  "noIndependentApproval": true
+}

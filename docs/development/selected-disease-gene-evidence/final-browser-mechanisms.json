@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "slug": "disease-solo",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "repressilator-1d",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "hiv",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "virus",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "crispr-bacterium",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "epidem-basic",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "pureRead": true,
+      "invalidStepRejected": true
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "pureRead": true,
+      "invalidStepRejected": true
+    }
+  ],
+  "mechanisms": {
+    "diseaseKeepRun": 2,
+    "repressilatorTFs": [
+      0,
+      0,
+      0
+    ],
+    "hivInfected": 2,
+    "virusEmpty": {
+      "tick": 3,
+      "infectedPercent": 100
+    },
+    "crisprTick": 3,
+    "ecosystemStopped": true,
+    "plotNewVirusPreservesOtherHistory": true,
+    "epidemFinalTick": 2,
+    "travelSourceError": "Source R0 logarithm requires a positive argument.",
+    "genevoEnergy": 1009.8900000000001,
+    "dnaProtein": "-Met-Trp",
+    "dnaDuplicateLength": 13
+  },
+  "buildVersion": "1793972578482"
+}

@@ -1,0 +1,108 @@
+{
+  "slug": "membrane-formation",
+  "name": "Membrane Formation",
+  "catalogPath": "Sample Models/Biology/Membrane Formation",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Membrane%20Formation.nlogox",
+  "deliveryBatch": "B07",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can simple interactions between water and amphiphilic molecules create organized boundaries? NetLogo Membrane Formation represents lipids with connected hydrophilic and hydrophobic parts, plus water particles. Attraction and repulsion can produce collective structures without an imposed membrane template. The Info connects this approach to artificial-chemistry research [1,2]; amphiphile self-assembly theory [3] supplies a physical comparison. The interaction selection and movement rules are computational approximations rather than a molecular force field with calibrated units. Resulting aggregates illustrate how local preferences can organize space. Their appearance alone does not establish thermodynamic equilibrium, realistic bilayer elasticity, or a complete account of biological membrane formation, which also depends on composition and environmental conditions.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Membrane%20Formation.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Membrane%20Formation.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 4f3a41013090830c53ee055eac6625b1d3fcba981df7ab8d67822af037f7733d",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/membrane-formation.nlogox",
+    "infoFile": "evidence/biology/membrane-formation-info.txt",
+    "originalModelCitation": "* Head, B. and Wilensky, U. (2013).  NetLogo Membrane Formation model.  http://ccl.northwestern.edu/netlogo/models/MembraneFormation.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "gazzola",
+      "authors": [
+        "Gianluca Gazzola",
+        "Andrew Buchanan",
+        "Norman Packard",
+        "Mark Bedau"
+      ],
+      "title": "Catalysis by Self-Assembled Structures in Emergent Reaction Networks",
+      "year": 2007,
+      "venue": "Lecture Notes in Computer Science Advances in Artificial Life",
+      "doi": "10.1007/978-3-540-74913-4_88",
+      "url": "https://doi.org/10.1007/978-3-540-74913-4_88",
+      "verification": {
+        "consultedUrl": "https://link.springer.com/chapter/10.1007/978-3-540-74913-4_88",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "publisher-abstract-and-metadata",
+        "access": "Publisher abstract accessible; full chapter subscription required and not consulted.",
+        "notes": "Year checked on the publisher citation because Crossref has no publication date.",
+        "evidenceFile": "evidence/biology/gazzola-publisher.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": "876-885",
+      "relevance": "The Info cites this self-assembled-structure research as part of the model’s scientific lineage."
+    },
+    {
+      "id": "bedau",
+      "authors": [
+        "Mark A. Bedau",
+        "Andrew Buchanan",
+        "Gianluca Gazzola",
+        "Martin Hanczyc",
+        "Thomas Maeke",
+        "John McCaskill",
+        "Irene Poli",
+        "Norman H. Packard"
+      ],
+      "title": "Evolutionary Design of a DDPD Model of Ligation",
+      "year": 2006,
+      "venue": "Lecture Notes in Computer Science Artificial Evolution",
+      "doi": "10.1007/11740698_18",
+      "url": "https://doi.org/10.1007/11740698_18",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Evolutionary+design+of+a+DDPD+model+of+ligation+Bedau+2006&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/bedau-crossref-search.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": "201-212",
+      "relevance": "The Info cites the DDPD ligation-model work underlying this artificial-chemistry approach."
+    },
+    {
+      "id": "israelachvili",
+      "authors": [
+        "Jacob N. Israelachvili",
+        "D. John Mitchell",
+        "Barry W. Ninham"
+      ],
+      "title": "Theory of self-assembly of hydrocarbon amphiphiles into micelles and bilayers",
+      "year": 1976,
+      "venue": "Journal of the Chemical Society, Faraday Transactions 2",
+      "doi": "10.1039/f29767201525",
+      "url": "https://doi.org/10.1039/f29767201525",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Theory+of+self-assembly+of+hydrocarbon+amphiphiles+into+micelles+and+bilayers+Israelachvili+Mitchell+Ninham+1976&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/israelachvili-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "72",
+      "issue": null,
+      "pages": "1525",
+      "relevance": "Provides physical self-assembly theory for comparing simplified hydrophilic and hydrophobic interactions with real amphiphiles."
+    }
+  ],
+  "gaps": []
+}

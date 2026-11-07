@@ -1,0 +1,216 @@
+{
+  "buildVersion": "1793972578482",
+  "appSHA256": "8b9edfed15cc5e07107a18e2d3cf04dfe96d36cb56163e8a8e0aab747cc0debe",
+  "models": [
+    {
+      "slug": "disease-solo",
+      "path": "./chunks/ui-8krk2bjr.js",
+      "sourceMarker": "selected-disease-gene-b09:disease-solo:f3d15df285ed35bcba2a6b3a718acf63de1589c8be099b44c2b6f1743b701a97",
+      "sha256": "47dcc0b4e2cd32c2ac334a5a957664bce837abc56b007002832c205650f8bb7b",
+      "bytes": 8769,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 61,
+        "afterTick": 3,
+        "afterAgents": 61,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "repressilator-1d",
+      "path": "./chunks/ui-9h5yfmw1.js",
+      "sourceMarker": "selected-disease-gene-b09:repressilator-1d:e222752e0f629c0ae1f6df4f6858fcecb5629868ffd6a52ed602e172084f1315",
+      "sha256": "ef87d1d51afed74bee10c3fe86c960b48197c4876e269464f5b036c66aa7a6c8",
+      "bytes": 17626,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 1,
+        "afterTick": 3,
+        "afterAgents": 38,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "hiv",
+      "path": "./chunks/ui-s97z7mmb.js",
+      "sourceMarker": "selected-disease-gene-b09:hiv:ed3e832a9fadd101ff65eb20a313ee0941496db02d6d3cf15371568745f997d5",
+      "sha256": "c8a3f06aa7e3828256f4acf060faa8fcd8e7afaaee1a4a040941178cd363826e",
+      "bytes": 11234,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 300,
+        "afterTick": 3,
+        "afterAgents": 300,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "virus",
+      "path": "./chunks/ui-afs94xzr.js",
+      "sourceMarker": "selected-disease-gene-b09:virus:43e370765de7a5601d5b39e40904372016289974c24c94de32634132c3692683",
+      "sha256": "bf823947ae8e0670d8c6ddf5d166f23fb2b1c0660e68794aab2a30c73fae00a6",
+      "bytes": 8793,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 150,
+        "afterTick": 3,
+        "afterAgents": 152,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "crispr-bacterium",
+      "path": "./chunks/ui-cvnk32yd.js",
+      "sourceMarker": "selected-disease-gene-b09:crispr-bacterium:e87977797048bf809aa58a41d6dc746c59d6d5e0ba94957db2996815725f4813",
+      "sha256": "abc914448abeec2f4b823a97ed50047179fc205023d4d37baa1262f5e5cb3317",
+      "bytes": 17570,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 157,
+        "afterTick": 3,
+        "afterAgents": 157,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "path": "./chunks/ui-2qvbxj3y.js",
+      "sourceMarker": "selected-disease-gene-b09:crispr-ecosystem:9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9",
+      "sha256": "7bafa7cf93e3014adabae55f60b53b8a9abda123d0e4afb13105edad4d77b8e9",
+      "bytes": 15305,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 300,
+        "afterTick": 3,
+        "afterAgents": 287,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "epidem-basic",
+      "path": "./chunks/ui-kykj7aa1.js",
+      "sourceMarker": "selected-disease-gene-b09:epidem-basic:049c5556e76cf22b7ec76e801c09134d02cf29619ea46c8c9578e9862be2c07a",
+      "sha256": "3330717625b492596f550ac4b0bfe84ab877e334850461141871910e06fb37a5",
+      "bytes": 8804,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 100,
+        "afterTick": 3,
+        "afterAgents": 100,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "path": "./chunks/ui-pt9ffxzs.js",
+      "sourceMarker": "selected-disease-gene-b09:epidem-travel-and-control:7bde08421020920d17631b85cbef80c945a6a97857040a079c8aacbc3a35ac07",
+      "sha256": "0875fd421d658f092d55b8f363daab2ba92af9d9554d379705ce8c6fa06c4f79",
+      "bytes": 16197,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 252,
+        "afterTick": 3,
+        "afterAgents": 252,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "path": "./chunks/ui-re5xfdkt.js",
+      "sourceMarker": "selected-disease-gene-b09:genevo-1-genetic-switch:6f46710d78daad311551c2ee934317d98ef52ad92779b8312ba66dcd4c7d330e",
+      "sha256": "bf4a5bbd22b72fa1afa4e2bdfa6ea128985de2b2ebf6fd6bf61e68f601199265",
+      "bytes": 18727,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 50,
+        "afterTick": 3,
+        "afterAgents": 50,
+        "stopped": false
+      }
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "path": "./chunks/ui-xjvqad4y.js",
+      "sourceMarker": "selected-disease-gene-b09:dna-protein-synthesis:189eda6e21a0408e290f1afb5781ddae936f819ed8917788a683dcaf7d661301",
+      "sha256": "c6b1baa38994b796cc6060f5f0b4e8e8b7a552e01c3f598385221b4c49729990",
+      "bytes": 27741,
+      "sharedChunks": [
+        {
+          "path": "/chunks/app-sb7h8whr.js",
+          "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+          "bytes": 1112387
+        }
+      ],
+      "executed": {
+        "setupTick": 0,
+        "setupAgents": 220,
+        "afterTick": 3,
+        "afterAgents": 220,
+        "stopped": false
+      }
+    }
+  ]
+}

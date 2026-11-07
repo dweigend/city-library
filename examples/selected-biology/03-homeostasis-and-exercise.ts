@@ -1,0 +1,31 @@
+import assert from "node:assert/strict";
+import { create as blood } from "../../experiments/blood-sugar-regulation/model.ts";
+import { create as muscle } from "../../experiments/muscle-development/model.ts";
+
+const body = blood({ seed: 1, metabolicRate: 0 });
+assert.equal(body.read().glucoseCount, 4356);
+assert.equal(body.read().insulinCount, 363);
+assert.equal(body.read().glucagonCount, 363);
+assert.equal(body.read().liverCells.length, 792);
+assert.equal(body.read().pancreaticCells.length, 297);
+const total = body.read().totalGlucose;
+body.advance(2);
+assert.equal(body.read().totalGlucose, total);
+body.eat();
+body.eat();
+assert.equal(body.read().eatTime, 34);
+body.advance();
+assert.equal(body.read().eatTime, 33);
+assert.equal(body.read().totalGlucose, total + 412);
+body.setParameters({ metabolicRate: 100 });
+body.advance();
+assert.equal(body.read().totalGlucose, total + 724);
+
+const tissue = muscle({ seed: 4, slowTwitchFibers: 100, lift: false });
+assert.equal(tissue.read().fibers.length, 289);
+assert.ok(tissue.read().fibers.every(fiber => fiber.maxSize === 4 && fiber.fiberSize >= 1 && fiber.fiberSize <= 4));
+tissue.advance(5);
+assert.equal(tissue.read().tick, 5);
+assert.ok(tissue.read().fibers.every(fiber => fiber.fiberSize >= 1 && fiber.fiberSize <= 4));
+assert.ok(tissue.read().cells.every(cell => cell.anabolicHormone >= 50 && cell.anabolicHormone <= 200 && cell.catabolicHormone >= 52 && cell.catabolicHormone <= 250));
+assert.ok(Math.abs(tissue.read().muscleMass - tissue.read().fibers.reduce((sum, fiber) => sum + fiber.fiberSize, 0)) < 1e-9);

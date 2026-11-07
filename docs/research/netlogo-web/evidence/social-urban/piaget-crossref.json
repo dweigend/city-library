@@ -1,0 +1,328 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=The+origins+of+intelligence+in+children+Piaget+1952&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2765892,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T03:28:43Z",
+            "timestamp": 1793849323185,
+            "version": "4.6.1"
+          },
+          "publisher-location": "New York",
+          "reference-count": 0,
+          "publisher": "W W Norton & Co",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1952
+              ]
+            ]
+          },
+          "DOI": "10.1037/11494-000",
+          "type": "book",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                8,
+                15
+              ]
+            ],
+            "date-time": "2007-08-15T12:18:07Z",
+            "timestamp": 1187180287000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 5714,
+          "title": [
+            "The origins of intelligence in children."
+          ],
+          "prefix": "10.1037",
+          "author": [
+            {
+              "given": "Jean",
+              "family": "Piaget",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "15",
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                23
+              ]
+            ],
+            "date-time": "2024-02-23T12:14:31Z",
+            "timestamp": 1708690471000
+          },
+          "score": 47.991085,
+          "resource": {
+            "primary": {
+              "URL": "https://content.apa.org/books/11494-000"
+            }
+          },
+          "translator": [
+            {
+              "given": "Margaret",
+              "family": "Cook",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "translator"
+                }
+              ]
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                1952
+              ]
+            ]
+          },
+          "references-count": 0,
+          "alternative-id": [
+            "2007-10742-000"
+          ],
+          "URL": "https://doi.org/10.1037/11494-000",
+          "published": {
+            "date-parts": [
+              [
+                1952
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                6
+              ]
+            ],
+            "date-time": "2026-10-06T20:24:27Z",
+            "timestamp": 1791318267890,
+            "version": "4.3.1"
+          },
+          "publisher-location": "New York",
+          "reference-count": 0,
+          "publisher": "W W Norton & Co",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.1037/11494-001",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                8,
+                15
+              ]
+            ],
+            "date-time": "2007-08-15T16:18:07Z",
+            "timestamp": 1187194687000
+          },
+          "page": "1-20",
+          "source": "Crossref",
+          "is-referenced-by-count": 8,
+          "title": [
+            "Introduction: The biological problem of intelligence."
+          ],
+          "prefix": "10.1037",
+          "author": [
+            {
+              "given": "Jean",
+              "family": "Piaget",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "15",
+          "container-title": [
+            "The origins of intelligence in children."
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://psycnet.apa.org/books/11494/001.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                23
+              ]
+            ],
+            "date-time": "2024-02-23T17:14:32Z",
+            "timestamp": 1708708472000
+          },
+          "score": 37.405758,
+          "resource": {
+            "primary": {
+              "URL": "https://content.apa.org/books/11494-001"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                null
+              ]
+            ]
+          },
+          "references-count": 0,
+          "alternative-id": [
+            "2007-10742-001",
+            "2007-10742-000"
+          ],
+          "URL": "https://doi.org/10.1037/11494-001"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                4
+              ]
+            ],
+            "date-time": "2024-09-04T22:37:15Z",
+            "timestamp": 1725489435181
+          },
+          "publisher-location": "New York",
+          "reference-count": 0,
+          "publisher": "W W Norton & Co",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.1037/11494-008",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                8,
+                15
+              ]
+            ],
+            "date-time": "2007-08-15T16:18:07Z",
+            "timestamp": 1187194687000
+          },
+          "page": "357-419",
+          "source": "Crossref",
+          "is-referenced-by-count": 3,
+          "title": [
+            "Conclusions: \"Sensorimotor\" or \"practical\" intelligence and the theories of intelligence."
+          ],
+          "prefix": "10.1037",
+          "author": [
+            {
+              "given": "Jean",
+              "family": "Piaget",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "15",
+          "container-title": [
+            "The origins of intelligence in children."
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://psycnet.apa.org/books/11494/008.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                23
+              ]
+            ],
+            "date-time": "2024-02-23T17:14:36Z",
+            "timestamp": 1708708476000
+          },
+          "score": 36.38117,
+          "resource": {
+            "primary": {
+              "URL": "https://content.apa.org/books/11494-008"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                null
+              ]
+            ]
+          },
+          "references-count": 0,
+          "alternative-id": [
+            "2007-10742-008",
+            "2007-10742-000"
+          ],
+          "URL": "https://doi.org/10.1037/11494-008"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

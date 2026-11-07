@@ -1,0 +1,421 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1002%2Fasi.4630270505",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T10:58:11Z",
+        "timestamp": 1793876291033,
+        "version": "4.7.0"
+      },
+      "reference-count": 35,
+      "publisher": "Wiley",
+      "issue": "5",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                22
+              ]
+            ],
+            "date-time": "2007-03-22T00:00:00Z",
+            "timestamp": 1174521600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 11159,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "J. Am. Soc. Inf. Sci."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1976,
+            9
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>A Cumulative Advantage Distribution is proposed which models statistically the situation in which success breeds success. It differs from the Negative Binomial Distribution in that lack of success, being a non\u2010event, is not punished by increased chance of failure. It is shown that such a stochastic law is governed by the Beta Function, containing only one free parameter, and this is approximated by a skew or hyperbolic distribution of the type that is widespread in bibliometrics and diverse social science phenomena. In particular, this is shown to be an appropriate underlying probabilistic theory for the Bradford Law, the Lotka Law, the Pareto and Zipf Distributions, and for all the empirical results of citation frequency analysis. As side results one may derive also the obsolescence factor for literature use. The Beta Function is peculiarly elegant for these manifold purposes because it yields both the actual and the cumulative distributions in simple form, and contains a limiting case of an inverse square law to which many empirical distributions conform.</jats:p>",
+      "DOI": "10.1002/asi.4630270505",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2007,
+            6,
+            28
+          ]
+        ],
+        "date-time": "2007-06-28T01:11:09Z",
+        "timestamp": 1182993069000
+      },
+      "page": "292-306",
+      "source": "Crossref",
+      "is-referenced-by-count": 1432,
+      "title": [
+        "A general theory of bibliometric and other cumulative advantage processes"
+      ],
+      "prefix": "10.1002",
+      "volume": "27",
+      "author": [
+        {
+          "given": "Derek De Solla",
+          "family": "Price",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "311",
+      "published-online": {
+        "date-parts": [
+          [
+            2007,
+            3,
+            22
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_1_2_2",
+          "volume-title": "Models of Man: Social and Rational. Chapter 9: On a Class of Skew Distribution Functions",
+          "author": "Simon H. A.",
+          "year": "1957"
+        },
+        {
+          "key": "e_1_2_1_3_2",
+          "volume-title": "An Introduction to Probability Theory and Its Applications",
+          "author": "Feller W.",
+          "year": "1968"
+        },
+        {
+          "key": "e_1_2_1_4_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3001850"
+        },
+        {
+          "key": "e_1_2_1_5_2",
+          "first-page": "1015",
+          "article-title": "The Analysis of Insect Counts as Negative Binomial Distributions",
+          "volume": "2",
+          "author": "Bliss C. I.",
+          "year": "1956",
+          "journal-title": "Proceedings of the Tenth International Congress of Entomology."
+        },
+        {
+          "key": "e_1_2_1_6_2",
+          "volume-title": "Tables of the Negative Binomial Probability Distribution",
+          "author": "Williamson E.",
+          "year": "1963"
+        },
+        {
+          "key": "e_1_2_1_7_2",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Yule G. U.1924. \u201cA Mathematical Theory of Evolution based on the Conclusions of Dr. J. C. Willis F. R. S.\u201dPhilosophical Transactions of the Royal Society1924B. 213:21\u201387.",
+          "DOI": "10.1098/rstb.1925.0002"
+        },
+        {
+          "issue": "331",
+          "key": "e_1_2_1_8_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "1220",
+          "DOI": "10.1080/01621459.1970.10481157",
+          "article-title": "Zipf's Law and Prior Distributions for the Composition of a Population",
+          "volume": "65",
+          "author": "Hill B.",
+          "year": "1970",
+          "journal-title": "Journal of the American Statistical Association."
+        },
+        {
+          "issue": "348",
+          "key": "e_1_2_1_9_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "1017",
+          "DOI": "10.1080/01621459.1974.10480247",
+          "article-title": "Rank Frequency Forms of Zipf's Law",
+          "volume": "69",
+          "author": "Hill B.",
+          "year": "1974",
+          "journal-title": "Journal of the American Statistical Association."
+        },
+        {
+          "key": "e_1_2_1_10_2",
+          "unstructured": "Crowley C. J.1975. \u201cThe Distribution of Citations to Scientific Papers: A Model.\u201d Presented at Midwest Sociological Society meeting Chicago April1975(unpublished)."
+        },
+        {
+          "issue": "349",
+          "key": "e_1_2_1_11_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "212",
+          "DOI": "10.1080/01621459.1975.10480291",
+          "article-title": "Stronger Forms of Zipf's Law",
+          "volume": "70",
+          "author": "Hill B.",
+          "year": "1975",
+          "journal-title": "Journal of the American Statistical Association."
+        },
+        {
+          "key": "e_1_2_1_12_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3212857"
+        },
+        {
+          "key": "e_1_2_1_13_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2285930"
+        },
+        {
+          "key": "e_1_2_1_14_2",
+          "volume-title": "Social Stratification in Science",
+          "author": "Cole J. R.",
+          "year": "1973"
+        },
+        {
+          "key": "e_1_2_1_15_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1108/eb026481"
+        },
+        {
+          "key": "e_1_2_1_16_2",
+          "volume-title": "Evaluation Bibliometrics: The Use of Publication and Citation Analysis in the Evaluation of Scientific Activity",
+          "author": "Narin F.",
+          "year": "1976"
+        },
+        {
+          "key": "e_1_2_1_17_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/224953a0"
+        },
+        {
+          "key": "e_1_2_1_18_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/227631a0"
+        },
+        {
+          "key": "e_1_2_1_19_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/030631277600600205"
+        },
+        {
+          "key": "e_1_2_1_20_2",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Groos O. V.1967. \u201cBradford's Law and the Keenan\u2010Atherton Data.\u201dAmerican Documentation.1967 18:46.",
+          "DOI": "10.1002/asi.5090180108"
+        },
+        {
+          "key": "e_1_2_1_21_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1108/eb026424"
+        },
+        {
+          "key": "e_1_2_1_22_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/asi.4630220203"
+        },
+        {
+          "key": "e_1_2_1_23_2",
+          "first-page": "279",
+          "article-title": "On the Statistics of Individual Variations of Productivity in Research Laboratories",
+          "volume": "45",
+          "author": "Shockley W.",
+          "year": "1957",
+          "journal-title": "Proceedings of the Institute of Radio Engineers."
+        },
+        {
+          "key": "e_1_2_1_24_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.59.4.1078"
+        },
+        {
+          "issue": "12",
+          "key": "e_1_2_1_25_2",
+          "first-page": "317",
+          "article-title": "The Frequency Distribution of Scientific Productivity",
+          "volume": "16",
+          "author": "Lotka A. J.",
+          "year": "1926",
+          "journal-title": "Journal of the Washington Academy of Sciences."
+        },
+        {
+          "key": "e_1_2_1_26_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.7312/pric91844"
+        },
+        {
+          "issue": "2",
+          "key": "e_1_2_1_27_2",
+          "first-page": "17",
+          "article-title": "Studies in Scientometrics. Part I: Transience and Continuance in Scientific Authorship",
+          "volume": "1",
+          "author": "Price D. de S.",
+          "year": "1976",
+          "journal-title": "International Forum on Information and Documentation. International Federation for Documentation Proceedings"
+        },
+        {
+          "issue": "3683",
+          "key": "e_1_2_1_28_2",
+          "article-title": "Networks of Scientific Papers",
+          "volume": "149",
+          "author": "Price D. de S.",
+          "year": "1965",
+          "journal-title": "Science."
+        },
+        {
+          "key": "e_1_2_1_29_2",
+          "unstructured": "Yermish I.Private communication.1976 March 17."
+        },
+        {
+          "key": "e_1_2_1_30_2",
+          "unstructured": "Crowley C. J.1975. \u201cThe Distribution of Citations to Scientific Papers: A Model.\u201d paper presented at Midwest Sociological Society meeting Chicago. April1975(unpublished)."
+        },
+        {
+          "key": "e_1_2_1_31_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1108/eb026591"
+        },
+        {
+          "key": "e_1_2_1_32_2",
+          "unstructured": "Garfield E.1974. \u201cSelecting the All\u2010Time Citation Classics. Here Are the Fifty Most Cited Papers for 1961\u20131972.\u201dCurrent Contents. Editorial (2):1974January 9."
+        },
+        {
+          "key": "e_1_2_1_33_2",
+          "unstructured": "Garfield E.1976. \u201cIs the Ratio Between Number of Citations & Publications Cited a True Constant.\u201dCurrent Contents Editorial Current Comments (6)1976February 9."
+        },
+        {
+          "issue": "3",
+          "key": "e_1_2_1_34_2",
+          "first-page": "19",
+          "article-title": "The Relation between Source Author and Cited Author Populations",
+          "volume": "1",
+          "author": "Price D. de S.",
+          "year": "1976",
+          "journal-title": "International Forum on Information and Documentation. International Federation for Documentation"
+        },
+        {
+          "key": "e_1_2_1_35_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1108/eb026448"
+        },
+        {
+          "key": "e_1_2_1_36_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/030631277500500106"
+        }
+      ],
+      "container-title": [
+        "Journal of the American Society for Information Science"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fasi.4630270505",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://asistdl.onlinelibrary.wiley.com/doi/pdf/10.1002/asi.4630270505",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            10,
+            8
+          ]
+        ],
+        "date-time": "2025-10-08T13:54:12Z",
+        "timestamp": 1759931652000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.4630270505"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1976,
+            9
+          ]
+        ]
+      },
+      "references-count": 35,
+      "journal-issue": {
+        "issue": "5",
+        "published-print": {
+          "date-parts": [
+            [
+              1976,
+              9
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1002/asi.4630270505"
+      ],
+      "URL": "https://doi.org/10.1002/asi.4630270505",
+      "archive": [
+        "Portico"
+      ],
+      "relation": {},
+      "ISSN": [
+        "0002-8231",
+        "1097-4571"
+      ],
+      "issn-type": [
+        {
+          "value": "0002-8231",
+          "type": "print"
+        },
+        {
+          "value": "1097-4571",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1976,
+            9
+          ]
+        ]
+      }
+    }
+  }
+}

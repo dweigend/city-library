@@ -1,0 +1,618 @@
+{
+  "sourcePath": "docs/research/netlogo-web/evidence/computing/gis-general-examples.nlogox",
+  "sha256": "eb7880d4eff9dca3f1d82fb3122877fb439262e115720663de72f3f74528c1ea",
+  "inventory": {
+    "id": "Code Examples/Extensions Examples/gis/GIS General Examples",
+    "index": 402,
+    "sha256": "eb7880d4eff9dca3f1d82fb3122877fb439262e115720663de72f3f74528c1ea",
+    "bytes": 51392,
+    "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox",
+    "webStatus": "compiling",
+    "galapagos": {
+      "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+      "blobSha1": "47db94f35d0d3941996ef880f6fbe238396e4e58",
+      "matchesServedBytes": true,
+      "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Code%20Examples/Extensions%20Examples/gis/GIS%20General%20Examples.nlogox"
+    },
+    "desktopModels": {
+      "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+      "blobSha1": "6063f318cb2c26721898bebe5482f4077d428fd3",
+      "matchesServedBytes": false
+    },
+    "widgetCounts": {
+      "view": 1,
+      "button": 21,
+      "chooser": 1,
+      "note": 5,
+      "slider": 1,
+      "input": 2
+    }
+  },
+  "procedures": [
+    {
+      "declaration": "to setup",
+      "sourceLine": 19
+    },
+    {
+      "declaration": "to draw-cities",
+      "sourceLine": 38
+    },
+    {
+      "declaration": "to draw-rivers",
+      "sourceLine": 44
+    },
+    {
+      "declaration": "to draw-countries",
+      "sourceLine": 50
+    },
+    {
+      "declaration": "to make-city-turtles",
+      "sourceLine": 62
+    },
+    {
+      "declaration": "to highlight-large-city-turtles",
+      "sourceLine": 76
+    },
+    {
+      "declaration": "to draw/clear-city-turtle-labels",
+      "sourceLine": 85
+    },
+    {
+      "declaration": "to create-citizens-in-countries",
+      "sourceLine": 103
+    },
+    {
+      "declaration": "to draw/clear-country-labels",
+      "sourceLine": 119
+    },
+    {
+      "declaration": "to display-rivers-in-patches",
+      "sourceLine": 144
+    },
+    {
+      "declaration": "to display-population-in-patches",
+      "sourceLine": 152
+    },
+    {
+      "declaration": "to draw-us-rivers-in-green",
+      "sourceLine": 166
+    },
+    {
+      "declaration": "to draw-large-cities",
+      "sourceLine": 178
+    },
+    {
+      "declaration": "to display-elevation",
+      "sourceLine": 189
+    },
+    {
+      "declaration": "to display-elevation-in-patches",
+      "sourceLine": 195
+    },
+    {
+      "declaration": "to sample-elevation-with-patches",
+      "sourceLine": 216
+    },
+    {
+      "declaration": "to display-gradient-in-patches",
+      "sourceLine": 236
+    },
+    {
+      "declaration": "to match-cells-to-patches",
+      "sourceLine": 269
+    },
+    {
+      "declaration": "to download-background-image",
+      "sourceLine": 288
+    },
+    {
+      "declaration": "to create-turtle-at-lat-lon",
+      "sourceLine": 298
+    }
+  ],
+  "activeExtensionPrimitives": [
+    "gis:apply-coverage",
+    "gis:apply-raster",
+    "gis:centroid-of",
+    "gis:convolve",
+    "gis:create-raster",
+    "gis:create-turtles-from-points",
+    "gis:create-turtles-inside-polygon",
+    "gis:draw",
+    "gis:envelope-of",
+    "gis:envelope-union-of",
+    "gis:feature-list-of",
+    "gis:find-greater-than",
+    "gis:find-one-feature",
+    "gis:height-of",
+    "gis:import-wms-drawing",
+    "gis:intersecting",
+    "gis:intersects?",
+    "gis:load-coordinate-system",
+    "gis:load-dataset",
+    "gis:location-of",
+    "gis:maximum-of",
+    "gis:minimum-of",
+    "gis:paint",
+    "gis:project-lat-lon",
+    "gis:property-value",
+    "gis:raster-sample",
+    "gis:raster-value",
+    "gis:raster-world-envelope",
+    "gis:set-drawing-color",
+    "gis:set-raster-value",
+    "gis:set-world-envelope",
+    "gis:width-of"
+  ],
+  "commentOnlyMentions": [
+    "gis:fill",
+    "gis:find-one-of"
+  ],
+  "widgets": [
+    {
+      "type": "view",
+      "attributes": {
+        "x": "185",
+        "wrappingAllowedX": "true",
+        "y": "10",
+        "frameRate": "30.0",
+        "minPycor": "-36",
+        "height": "296",
+        "showTickCounter": "true",
+        "patchSize": "4.0",
+        "fontSize": "8",
+        "wrappingAllowedY": "true",
+        "width": "584",
+        "tickCounterLabel": "ticks",
+        "maxPycor": "36",
+        "updateMode": "0",
+        "maxPxcor": "72",
+        "minPxcor": "-72"
+      },
+      "text": "",
+      "xml": "<view x=\"185\" wrappingAllowedX=\"true\" y=\"10\" frameRate=\"30.0\" minPycor=\"-36\" height=\"296\" showTickCounter=\"true\" patchSize=\"4.0\" fontSize=\"8\" wrappingAllowedY=\"true\" width=\"584\" tickCounterLabel=\"ticks\" maxPycor=\"36\" updateMode=\"0\" maxPxcor=\"72\" minPxcor=\"-72\" />\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "122",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "170"
+      },
+      "text": "draw-cities",
+      "xml": "<button x=\"5\" y=\"122\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"170\">draw-cities</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "216",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "170"
+      },
+      "text": "draw-countries",
+      "xml": "<button x=\"5\" y=\"216\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"170\">draw-countries</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "75",
+        "height": "40",
+        "disableUntilTicks": "false",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "170"
+      },
+      "text": "setup",
+      "xml": "<button x=\"5\" y=\"75\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"170\">setup\n</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "169",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "170"
+      },
+      "text": "draw-rivers",
+      "xml": "<button x=\"5\" y=\"169\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"170\">draw-rivers</button>\n    "
+    },
+    {
+      "type": "chooser",
+      "attributes": {
+        "x": "5",
+        "y": "10",
+        "height": "60",
+        "variable": "projection",
+        "current": "0",
+        "width": "170",
+        "display": "projection"
+      },
+      "text": "",
+      "xml": "<chooser x=\"5\" y=\"10\" height=\"60\" variable=\"projection\" current=\"0\" width=\"170\" display=\"projection\">\n      <choice type=\"string\" value=\"WGS_84_Geographic\" />\n      <choice type=\"string\" value=\"US_Orthographic\" />\n      <choice type=\"string\" value=\"Lambert_Conformal_Conic\" />\n    </chooser>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "313",
+        "height": "40",
+        "disableUntilTicks": "false",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "170"
+      },
+      "text": "clear-drawing",
+      "xml": "<button x=\"5\" y=\"313\" height=\"40\" disableUntilTicks=\"false\" forever=\"false\" kind=\"Observer\" width=\"170\">clear-drawing</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "395",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "180"
+      },
+      "text": "make-city-turtles",
+      "xml": "<button x=\"5\" y=\"395\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"180\">make-city-turtles</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "263",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "170"
+      },
+      "text": "draw/clear-country-labels",
+      "xml": "<button x=\"5\" y=\"263\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"170\">draw/clear-country-labels</button>\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "30",
+        "y": "375",
+        "backgroundDark": "0",
+        "fontSize": "11",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Vector Data -> Turtles",
+      "xml": "<note x=\"30\" y=\"375\" backgroundDark=\"0\" fontSize=\"11\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Vector Data -&gt; Turtles</note>\n    "
+    },
+    {
+      "type": "slider",
+      "attributes": {
+        "x": "5",
+        "step": "1",
+        "y": "583",
+        "max": "100",
+        "width": "180",
+        "display": "num-citizens-to-create",
+        "height": "50",
+        "min": "0",
+        "direction": "Horizontal",
+        "default": "50.0",
+        "variable": "num-citizens-to-create"
+      },
+      "text": "",
+      "xml": "<slider x=\"5\" step=\"1\" y=\"583\" max=\"100\" width=\"180\" display=\"num-citizens-to-create\" height=\"50\" min=\"0\" direction=\"Horizontal\" default=\"50.0\" variable=\"num-citizens-to-create\" />\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "230",
+        "y": "375",
+        "backgroundDark": "0",
+        "fontSize": "11",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Vector Data -> Patches",
+      "xml": "<note x=\"230\" y=\"375\" backgroundDark=\"0\" fontSize=\"11\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Vector Data -&gt; Patches</note>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "605",
+        "y": "525",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "185"
+      },
+      "text": "create-turtle-at-lat-lon",
+      "xml": "<button x=\"605\" y=\"525\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"185\">create-turtle-at-lat-lon</button>\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "680",
+        "y": "375",
+        "backgroundDark": "0",
+        "fontSize": "11",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Misc.",
+      "xml": "<note x=\"680\" y=\"375\" backgroundDark=\"0\" fontSize=\"11\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Misc.</note>\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "465",
+        "y": "375",
+        "backgroundDark": "0",
+        "fontSize": "11",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Raster Data",
+      "xml": "<note x=\"465\" y=\"375\" backgroundDark=\"0\" fontSize=\"11\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Raster Data</note>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "605",
+        "y": "395",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "185"
+      },
+      "text": "download-background-image",
+      "xml": "<button x=\"605\" y=\"395\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"185\">download-background-image</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "405",
+        "y": "583",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "185"
+      },
+      "text": "match-cells-to-patches",
+      "xml": "<button x=\"405\" y=\"583\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"185\">match-cells-to-patches</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "405",
+        "y": "395",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "185"
+      },
+      "text": "display-elevation",
+      "xml": "<button x=\"405\" y=\"395\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"185\">display-elevation</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "200",
+        "y": "442",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "190"
+      },
+      "text": "display-population-in-patches",
+      "xml": "<button x=\"200\" y=\"442\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"190\">display-population-in-patches</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "200",
+        "y": "395",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "190"
+      },
+      "text": "display-rivers-in-patches",
+      "xml": "<button x=\"200\" y=\"395\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"190\">display-rivers-in-patches</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "442",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "180"
+      },
+      "text": "highlight-large-city-turtles",
+      "xml": "<button x=\"5\" y=\"442\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"180\">highlight-large-city-turtles</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "405",
+        "y": "442",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "185"
+      },
+      "text": "display-elevation-in-patches",
+      "xml": "<button x=\"405\" y=\"442\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"185\">display-elevation-in-patches</button>\n    "
+    },
+    {
+      "type": "input",
+      "attributes": {
+        "x": "605",
+        "multiline": "false",
+        "y": "442",
+        "height": "75",
+        "variable": "lat",
+        "type": "number",
+        "width": "100"
+      },
+      "text": "42.055",
+      "xml": "<input x=\"605\" multiline=\"false\" y=\"442\" height=\"75\" variable=\"lat\" type=\"number\" width=\"100\">42.055</input>\n    "
+    },
+    {
+      "type": "input",
+      "attributes": {
+        "x": "720",
+        "multiline": "false",
+        "y": "442",
+        "height": "75",
+        "variable": "lon",
+        "type": "number",
+        "width": "100"
+      },
+      "text": "-87.671",
+      "xml": "<input x=\"720\" multiline=\"false\" y=\"442\" height=\"75\" variable=\"lon\" type=\"number\" width=\"100\">-87.671</input>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "489",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "180"
+      },
+      "text": "draw/clear-city-turtle-labels",
+      "xml": "<button x=\"5\" y=\"489\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"180\">draw/clear-city-turtle-labels</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "405",
+        "y": "489",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "185"
+      },
+      "text": "sample-elevation-with-patches",
+      "xml": "<button x=\"405\" y=\"489\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"185\">sample-elevation-with-patches</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "5",
+        "y": "536",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "180"
+      },
+      "text": "create-citizens-in-countries",
+      "xml": "<button x=\"5\" y=\"536\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"180\">create-citizens-in-countries</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "200",
+        "y": "535",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "190"
+      },
+      "text": "draw-us-rivers-in-green",
+      "xml": "<button x=\"200\" y=\"535\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"190\">draw-us-rivers-in-green</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "405",
+        "y": "535",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "185"
+      },
+      "text": "display-gradient-in-patches",
+      "xml": "<button x=\"405\" y=\"535\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"185\">display-gradient-in-patches</button>\n    "
+    },
+    {
+      "type": "button",
+      "attributes": {
+        "x": "200",
+        "y": "583",
+        "height": "40",
+        "disableUntilTicks": "true",
+        "forever": "false",
+        "kind": "Observer",
+        "width": "190"
+      },
+      "text": "draw-large-cities",
+      "xml": "<button x=\"200\" y=\"583\" height=\"40\" disableUntilTicks=\"true\" forever=\"false\" kind=\"Observer\" width=\"190\">draw-large-cities</button>\n    "
+    },
+    {
+      "type": "note",
+      "attributes": {
+        "x": "230",
+        "y": "515",
+        "backgroundDark": "0",
+        "fontSize": "11",
+        "width": "150",
+        "markdown": "false",
+        "height": "18",
+        "textColorDark": "-1",
+        "textColorLight": "-16777216",
+        "backgroundLight": "0"
+      },
+      "text": "Filtering Vector Datasets",
+      "xml": "<note x=\"230\" y=\"515\" backgroundDark=\"0\" fontSize=\"11\" width=\"150\" markdown=\"false\" height=\"18\" textColorDark=\"-1\" textColorLight=\"-16777216\" backgroundLight=\"0\">Filtering Vector Datasets</note>\n  "
+    }
+  ],
+  "code": "extensions [ gis ]\nglobals [ cities-dataset\n          rivers-dataset\n          countries-dataset\n          elevation-dataset\n          should-draw-country-labels\n          should-draw-city-turtle-labels ]\n\nbreed [ country-labels country-label ]\nbreed [ cities city ]\ncities-own [ name country population ]\nbreed [ citizens citizen ]\ncitizens-own [ cntry_name ]\n\npatches-own [ patch-population country-name elevation ]\n\nto setup\n  clear-all\n  ; Note that setting the coordinate system here is optional, as\n  ; long as all of your datasets use the same coordinate system.\n  gis:load-coordinate-system (word \"data/\" projection \".prj\")\n  ; Load all of our datasets\n  set cities-dataset gis:load-dataset \"data/cities.shp\"\n  set rivers-dataset gis:load-dataset \"data/rivers.shp\"\n  set countries-dataset gis:load-dataset \"data/countries.shp\"\n  set elevation-dataset gis:load-dataset \"data/world-elevation.asc\"\n  ; Set the world envelope to the union of all of our dataset's envelopes\n  gis:set-world-envelope (gis:envelope-union-of (gis:envelope-of cities-dataset)\n                                                (gis:envelope-of rivers-dataset)\n                                                (gis:envelope-of countries-dataset)\n                                                (gis:envelope-of elevation-dataset))\n  reset-ticks\nend\n\n; Draw points for each city on the drawing layer\nto draw-cities\n  gis:set-drawing-color red\n  gis:draw cities-dataset 1\nend\n\n; Draw the polyline rivers dataset to the drawing layer\nto draw-rivers\n  gis:set-drawing-color blue\n  gis:draw rivers-dataset 1\nend\n\n; Draw the multi-polygon countries dataset to the drawing layer\nto draw-countries\n  gis:set-drawing-color white\n  gis:draw countries-dataset 1\n  ; Alternatively, you could use `gis:fill countries-dataset 1` to\n  ; draw the countries with a solid fill\nend\n\n; Use the gis:create-turtles-from-points primitive to create one turtle\n; for each city with the breed city and automatically populate its\n; cities-own variables with values corresponding to the property values\n; of that city. Like the create-turtles primitive, you can optionally\n; add a code block to give commands to the turtles upon creation.\nto make-city-turtles\n  ask cities [ die ]\n  gis:create-turtles-from-points cities-dataset cities [\n    set color scale-color red population 5000000 1000\n    set shape \"circle\"\n  ]\nend\n\n; Highlight all city turtles with a high population. make-city-turtles\n; must have been run first.\n;\n; Once created with the gis:create-turtles-from-points primitive,\n; working with turtles created from GIS data is just the same as\n; working with any other turtles.\nto highlight-large-city-turtles\n  ask cities with [population > 10000000] [\n    set color yellow\n    set size 3\n  ]\nend\n\n; Draw or clear labels for city turtles. make-city-turtles\n; must have been run first for the labels to display.\nto draw/clear-city-turtle-labels\n  if-else should-draw-city-turtle-labels = 1 [\n    set should-draw-city-turtle-labels 0\n    ask cities [ set label \"\" ]\n  ] [\n    set should-draw-city-turtle-labels 1\n    ask cities [ set label name ]\n  ]\nend\n\n; using the gis:create-turtles-inside-polygon primitive, create\n; a number of turtles within the borders of each country.\n;\n; Just like the gis:create-turtles-from-points primitive, the\n; turtles created with this primitive have any turtles-own\n; variables they might have with the same names as GIS\n; property names populated with their corresponding GIS\n; property value.\nto create-citizens-in-countries\n  foreach gis:feature-list-of countries-dataset [ this-country ->\n    gis:create-turtles-inside-polygon this-country citizens num-citizens-to-create [\n      set shape \"person\"\n      ; since we included cntry_name as a citizens-own variable,\n      ; if we wanted to we could give each citizen a label\n      ; with their corresponding cntry_name like so:\n\n      ;; set label cntry_name\n    ]\n  ]\nend\n\n; Create an invisible (size 0) turtle at the centroid of each\n; country and set its label to the name of the given country.\n; If the labels are already drawn, remove them.\nto draw/clear-country-labels\n  if-else should-draw-country-labels = 1 [\n    set should-draw-country-labels 0\n    ask country-labels [ die ]\n  ] [\n    set should-draw-country-labels 1\n    foreach gis:feature-list-of countries-dataset [ this-country-vector-feature ->\n      let centroid gis:location-of gis:centroid-of this-country-vector-feature\n      ; centroid will be an empty list if it lies outside the bounds\n      ; of the current NetLogo world, as defined by our current GIS\n      ; coordinate transformation\n      if not empty? centroid\n      [ create-country-labels 1\n        [ set xcor item 0 centroid\n          set ycor item 1 centroid\n          set size 0\n          set label gis:property-value this-country-vector-feature \"CNTRY_NAME\"\n        ]\n      ]\n    ]\n  ]\nend\n\n; Use gis:intersecting to find the set of patches that intersects\n; a given vector feature (in this case, one of the rivers).\nto display-rivers-in-patches\n  ask patches [ set pcolor black ]\n  ask patches gis:intersecting rivers-dataset\n  [ set pcolor cyan ]\nend\n\n; Using gis:apply-coverage to copy values from a polygon dataset\n; to a patch variable\nto display-population-in-patches\n  gis:apply-coverage countries-dataset \"POP_CNTRY\" patch-population\n  ask patches [\n    ifelse (patch-population > 0) [\n      set pcolor scale-color red patch-population 500000000 100000\n    ] [\n      set pcolor blue\n    ]\n  ]\nend\n\n; Use gis:find-one-of to find a particular VectorFeature, then using\n; gis:intersects?, do something with all the features from another\n; dataset that intersect that feature.\nto draw-us-rivers-in-green\n  let united-states gis:find-one-feature countries-dataset \"CNTRY_NAME\" \"United States\"\n  gis:set-drawing-color green\n  foreach gis:feature-list-of rivers-dataset [ vector-feature ->\n    if gis:intersects? vector-feature united-states [\n      gis:draw vector-feature 1\n    ]\n  ]\nend\n\n; Use gis:find-greater-than to find a list of VectorFeatures by one of their\n; property values.\nto draw-large-cities\n  gis:set-drawing-color yellow\n  foreach gis:find-greater-than cities-dataset \"POPULATION\" 10000000 [ vector-feature ->\n    gis:draw vector-feature 3\n  ]\nend\n\n; Draw a raster dataset to the NetLogo drawing layer, which sits\n; on top of (and obscures) the patches. The second parameter\n; is the opacity of the layer, with 0 representing fully opaque\n; and 255 representing fully transparent.\nto display-elevation\n  gis:paint elevation-dataset 0\nend\n\n; Copy information from the elevation raster layer into the patch variable\n; \"elevation\" and then color each patch based on that value.\nto display-elevation-in-patches\n  ; This is the preferred way of copying values from a raster dataset\n  ; into a patch variable: in one step, using gis:apply-raster.\n  gis:apply-raster elevation-dataset elevation\n  ; Now, just to make sure it worked, we'll color each patch by its\n  ; elevation value.\n  let min-elevation gis:minimum-of elevation-dataset\n  let max-elevation gis:maximum-of elevation-dataset\n  ask patches [\n    ; note the use of the \"<= 0 or >= 0\" technique to filter out\n    ; \"not a number\" values, as discussed in the documentation.\n    if (elevation <= 0) or (elevation >= 0) [\n      set pcolor scale-color black elevation min-elevation max-elevation\n    ]\n  ]\nend\n\n; This is a second way of copying values from a raster dataset into\n; patches, by asking for a rectangular sample of the raster at each\n; patch. This is somewhat slower, but it does produce smoother\n; subsampling, which is desirable for some types of data.\nto sample-elevation-with-patches\n  let min-elevation gis:minimum-of elevation-dataset\n  let max-elevation gis:maximum-of elevation-dataset\n  ask patches [\n    set elevation gis:raster-sample elevation-dataset self\n    if (elevation <= 0) or (elevation >= 0) [\n      set pcolor scale-color black elevation min-elevation max-elevation\n    ]\n  ]\nend\n\n; This command also demonstrates the technique of creating a new, empty\n; raster dataset and filling it with values from a calculation.\n;\n; This command uses the gis:convolve primitive to compute the horizontal\n; and vertical Sobel gradients of the elevation dataset, then combines\n; them using the square root of the sum of their squares to compute an\n; overall \"image gradient\". This is really more of an image-processing\n; technique than a GIS technique, but I've included it here to show how\n; it can be easily done using the GIS extension.\nto display-gradient-in-patches\n  let horizontal-gradient gis:convolve elevation-dataset 3 3 [ 1 0 -1 2 0 -2 1 0 -1 ] 1 1\n  let vertical-gradient gis:convolve elevation-dataset 3 3 [ 1 2 1 0 0 0 -1 -2 -1 ] 1 1\n  let gradient gis:create-raster gis:width-of elevation-dataset gis:height-of elevation-dataset gis:envelope-of elevation-dataset\n  let x 0\n  repeat (gis:width-of gradient) [\n    let y 0\n    repeat (gis:height-of gradient) [\n      let gx gis:raster-value horizontal-gradient x y\n      let gy gis:raster-value vertical-gradient x y\n      if ((gx <= 0) or (gx >= 0)) and ((gy <= 0) or (gy >= 0)) [\n        gis:set-raster-value gradient x y sqrt ((gx * gx) + (gy * gy))\n      ]\n      set y y + 1\n    ]\n    set x x + 1\n  ]\n  let min-g gis:minimum-of gradient\n  let max-g gis:maximum-of gradient\n  gis:apply-raster gradient elevation\n  ask patches [\n    if (elevation <= 0) or (elevation >= 0) [\n      set pcolor scale-color black elevation min-g max-g\n    ]\n  ]\nend\n\n; This is an example of how to select a subset of a raster dataset\n; whose size and shape matches the dimensions of the NetLogo world.\n; It doesn't actually draw anything; it just modifies the coordinate\n; transformation to line up patch boundaries with raster cell\n; boundaries. You need to call one of the other commands after calling\n; this one to see its effect.\nto match-cells-to-patches\n  gis:set-world-envelope gis:raster-world-envelope elevation-dataset 0 0\n  clear-drawing\n  clear-turtles\nend\n\n; WMS stands for web mapping service, and it is a protocol that allows clients to ask\n; a server for image of a section of a larger map image.\n;\n; The `import-wms-drawing` primitive asks a server (in this case one run by\n; terrestris.de, a german GIS company that offers a WMS for the public)\n; for the section of the map within the current world envelope\n; and then draws it to the screen.\n;\n; In addition to the url of the WMS server, you must also supply the EPSG code\n; for the projection you want to use and the name of the layer you want to grab\n; from that server as well as a transparency parameter from 0 to 255.\n; If you do not know what EPSG code to use, 4326, the code for WGS84, should\n; provide good-enough results.\nto download-background-image\n  if-else projection = \"WGS_84_Geographic\" [\n    gis:import-wms-drawing \"https://ows.terrestris.de/osm/service?\" \"EPSG:4326\" \"OSM-WMS\" 0\n  ] [\n    show \"Only WGS_84_Geographic projections are supported. Please Change to WGS_84_Geographic in the top left drop-down.\"\n  ]\nend\n\n; Use gis:project-lat-lon to convert latitude and longitude values\n; into an xcor and a ycor and create a turtle there.\nto create-turtle-at-lat-lon\n  let location gis:project-lat-lon lat lon\n  if not empty? location [\n    let loc-xcor item 0 location\n    let loc-ycor item 1 location\n    create-turtles 1 [\n      set xcor loc-xcor\n      set ycor loc-ycor\n      set shape \"star\"\n      set size 3\n    ]\n  ]\nend\n\n\n; Public Domain:\n; To the extent possible under law, Uri Wilensky has waived all\n; copyright and related or neighboring rights to this model.",
+  "info": "## WHAT IS IT?\n\nThis model was built to test and demonstrate the functionality of the GIS NetLogo extension.\n\n## HOW IT WORKS\n\nThis model loads four different GIS datasets: a point file of world cities, a polyline file of world rivers, a polygon file of countries, and a raster file of surface elevation. It provides a collection of different ways to draw the data to the drawing layer, run queries on it, and transform it into NetLogo Turtles or Patch data.\n\n## HOW TO USE IT\n\nSelect a map projection from the projection menu, then click the setup button. You can then use all other features of the mode. See the code tab for specific information about how the different buttons work.\n\n## THINGS TO TRY\n\nMost of the commands in the Code tab can be easily modified to display slightly different information. For example, you could modify `highlight-large-cities` to highlight small cities instead, by replacing `gis:find-greater-than` with `gis:find-less-than`.\n\n## EXTENDING THE MODEL\n\nThis model doesn't do anything particularly interesting, but you can easily copy some of the code from the Code tab into a new model that uses your own data, or does something interesting with the included data. See the other GIS code example, GIS Gradient Example, for an example of this technique.\n\n## RELATED MODELS\n\nGIS Gradient Example provides another example of how to use the GIS extension.\n\n<!-- 2008 -->",
+  "includes": []
+}

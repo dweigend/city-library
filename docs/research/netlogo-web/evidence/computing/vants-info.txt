@@ -1,0 +1,87 @@
+## WHAT IS IT?
+
+This is a basic virtual ant ("vant") model.  It shows how extremely simple deterministic rule can result in very complex-seeming behavior.  It also demonstrates the concept of time reversibility and shows that time reversibility is not incompatible with complex behavior.
+
+## HOW IT WORKS
+
+The world is a grid of patches.  Each patch can be either black or white.  Initially, they are all white.
+
+The rules the "vants" (virtual ants) follow are very simple.  Each vant faces north, south, east, or west.  At each time step, a vant moves to the next patch.  Then it looks at the new patch:
+
+- If the new patch is white, the vant colors the patch black and turns right 90 degrees.
+
+- If the new patch is black, the vant colors the patch white and turns left 90 degrees.
+
+That's it!
+
+The world wraps, so when a vant moves off one side of the view it reappears at the other side.
+
+## HOW TO USE IT
+
+The SETUP button colors all the patches white and creates a number of vants determined by the the NUM-VANTS slider.
+
+Pressing the FORWARD button makes the vants start to move according to the normal rules.
+
+You can stop the FORWARD button and then press the REVERSE button instead to make the vants move backwards instead of forwards, while still following the same turning rule.
+
+The model runs fairly slowly by default, so you can see every step the vants take.  You may want to use the speed slider to speed the model up so you can see what happens when a lot of time passes.
+
+## THINGS TO NOTICE
+
+To make it easier to see, the vant is shown as larger than a patch.
+
+The resulting patterns sometimes have obvious structure, but sometimes appear random, even though the rules are deterministic.
+
+Call the diagonal paths that form "highways".  Are there different kinds of highways?
+
+## THINGS TO TRY
+
+Compare the results with one vant to those with multiple vants.  Are there any behaviors you get with multiple vants that don't occur with just one?
+
+When there are multiple vants, they are initially given random headings.  That means that you may get different looking behavior even with the same number of vants, depending on the directions they start out facing.
+
+If you press the REVERSE button, the vants turn then move backwards, instead of moving forwards then turning.  The turn rule is the same.  What effect does this have?  Press SETUP, run the model forwards a little, then stop the GO button and press REVERSE instead.
+
+## EXTENDING THE MODEL
+
+Without changing the rules, you could change the visualization by making different vants different colors and color-coding the patches to show which vant touched a patch last.  This should make some additional structure apparent to the eye.
+
+## NETLOGO FEATURES
+
+You can use the `sort` primitive to created a list of turtles sorted by who number.  That is necessary in this model because we need the turtles to execute in the same order at every tick, rather than a different random order every tick as would happen if we just said `ask turtles`.
+
+## RELATED MODELS
+
+Turing Machine 2D -- similar to Vants, but much more general.  This model can be configured to use Vants rules, or to use other rules.
+
+## CREDITS AND REFERENCES
+
+The rules for Vants were originally invented by the artificial life researcher Chris Langton.
+
+A 1991 video of Langton describing and demoing Vants (via screen capture with voice-over) is online at https://www.youtube.com/watch?v=w6XQQhCgq5c (length: 6 minutes)
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (2005).  NetLogo Vants model.  http://ccl.northwestern.edu/netlogo/models/Vants.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2005 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2005 -->

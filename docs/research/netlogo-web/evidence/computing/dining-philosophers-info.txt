@@ -1,0 +1,125 @@
+## WHAT IS IT?
+
+The Dining Philosophers problem is a classic case study in the synchronization of concurrent processes.  It will be familiar to many students of Computer Science, but is applicable to many situations in which several independent processes must coordinate the use of shared resources.
+
+The problem is fairly simple.  Suppose there is a group of philosophers sitting at a round table eating spaghetti.  These are boring philosophers: they do nothing but think, get hungry and eat.  In particular, they do not communicate with one another.
+
+A fork sits on the table in between each pair of philosophers, so there are exactly as many forks as philosophers.  However, the spaghetti is quite messy, so in order to eat, each philosopher needs to be holding two forks, both the fork to her left and the fork to her right.  Clearly, if all the philosophers are to get some spaghetti, they'll have to share the forks.
+
+There are many ways that this can go wrong.  A given philosopher can pick up both forks and begin eating, and never stop.  This guarantees that (at least) her immediate neighbors will never get to eat.  (Though at least SOMEONE gets to eat!)
+
+What would happen if every philosopher immediately picked up the fork to her right, then waited for the fork to her left to become available?  This situation is called "deadlock," and it is the bane of designers of concurrent systems.
+
+The goal of the problem is to come up with a strategy that the philosophers can use to guarantee that:
+1. At least one hungry philosopher can always eat.
+2. On average, all the philosophers get the same amount to eat.
+
+There is one other feature of the system that aids in finding a solution: while a philosopher is holding a fork, she has the ability to place a mark on it or to remove an existing mark.  These marks are visible to any philosopher who inspects the fork.  One random fork will always start out marked, but in order to avoid confusion, marked forks are not visually distinguished unless cooperation is enabled (in which case they are a different color).
+
+Can you think of a way to feed the philosophers?
+
+Remember that the philosophers shouldn't, in principle, communicate (apart from marking forks, though that arguably constitutes a communication channel).  This means that the assignment of global group properties (such as "even/odd-numbered philosophers" or "first philosopher") is not allowed.  The astute reader will note that the initial marking of a single fork violates this rule by assigning a globally unique property to a single philosopher.  In the absence of such an initially distinguished fork, can you think of a way to feed the philosophers?
+
+## HOW IT WORKS
+
+Philosophers know which fork is on their left and which fork is on their right.  They also know what state they're in (thinking, hungry or eating) and how much they've eaten in total.  Forks know who they're currently being held by, if anyone, and whether or not they're marked.
+
+To pick up a fork, a philosopher must first check that the fork isn't already being held by his associate, then set the fork's owner to himself.
+
+To release a fork, a philosopher simply sets the fork's owner to nobody.
+
+All the philosophers are initially thinking (blue).  At each time step, a thinking philosopher may become hungry (red) with probability hungry-chance.  A hungry philosopher will try to acquire both forks, and until she has done so will remain hungry.  A hungry philosopher with both forks immediately begins eating (green).  An eating philosopher may become full with probability full-chance, at which point she will release both forks and resume thinking (blue).
+
+The value of the cooperation? switch determines which strategy is used to acquire and release the forks. With cooperation off, the following naive strategy is used to pick up the forks:
+
+1. If the left fork is available, take it.
+2. If the right fork is available, take it.
+3. If you have both forks, begin eating. Otherwise, try again.
+
+When full, the forks are simply released. Marks are completely ignored.
+
+With cooperation on, a more sophisticated strategy using marks is used. To acquire the forks:
+
+1. If the left fork is available, take it.
+2. If you have the left fork and it is marked and you're not already holding the right fork, release the left fork.
+3. If the right fork is available, take it.
+4. If you have the right fork and it is marked and you're not already holding the left fork, release the right fork.
+5. If you have both forks, begin eating. Otherwise, try again.
+
+Once you are done eating, to release the forks:
+
+1. If either fork is marked, unmark it and mark the other fork.
+2. Release the forks.
+
+## HOW TO USE IT
+
+Initial settings:
+
+- num-philosophers: how many philosophers you'd like to feed.
+
+The setup button will set the initial conditions. The go button will run the simulation, and the "go once" button will run the simulation for just one step, allowing you to watch what happens in more detail.
+
+Other settings:
+
+- hungry-chance: The probability of any thinking philosopher becoming hungry at any step.
+- full-chance: The probability of any eating philosopher becoming full at any step.
+- cooperation?: If off, the philosophers will use a naive strategy to acquire their forks; if on, they'll use a more sophisticated strategy. See HOW IT WORKS above.
+
+Plots:
+
+- Spaghetti consumed: plots the amount of spaghetti each philosopher has consumed (based on how many time steps she has spent in the eating state).
+- Resource allocation: plots the number of philosophers in each state over time.
+
+## THINGS TO NOTICE
+
+Play with different configurations of hungry-chance and full-chance and different numbers of philosophers.  See how different combinations stress the system in different ways.
+
+What settings produce deadlock more often?  (You may want to use the speed slider to fast forward the graphics so you can do longer runs more quickly.)
+
+Notice how, although the system works well under certain circumstances, more stressful circumstances may expose a weakness.  This demonstrates the importance of "stress testing" when assessing the scalability of a system, particularly in the presence of concurrency.
+
+## THINGS TO TRY
+
+Experiment with cooperation in combination with different settings for hungry-chance and full-chance.  See if you can find a situation where there is a striking contrast between the behaviors of the cooperating philosophers and the naive philosophers.
+
+Try running the system for a long time in a variety of different configurations.  Does it ever seem to perform well at first, but eventually degrade (and maybe even deadlock)? What about vice versa?  What do you think this shows about the value of "longevity testing" when assessing the stability and performance of a concurrent system?
+
+## EXTENDING THE MODEL
+
+Try to think of a different strategy for the philosophers, then implement it and see how well it works!  You will probably want to make use of marks, so remember that they are not visible unless cooperation is enabled; you may wish to change this.  Can you come up with a simpler strategy than the one we demonstrate?
+
+Can you think of other configurations of processes and resources that might be interesting to experiment with?  For example, suppose there is one salt shaker on the table where all the philosophers can reach it, and suppose that each time a philosopher has acquired both forks, she must acquire the salt shaker and salt her spaghetti before she begins eating.  She can release the salt shaker after only one time step (i.e., before she finishes eating her pasta and releases the forks), so several philosophers can still eat at once.  Can this modification lead to deadlock? What if there are both salt and pepper?  Test your intuition!
+
+There are many, many other such possibilities, and many are directly analogous to situations that frequently arise in practical resource allocation problems.
+
+## CREDITS AND REFERENCES
+
+Thanks to Matt Hellige for his work on this model.
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (2003).  NetLogo Dining Philosophers model.  http://ccl.northwestern.edu/netlogo/models/DiningPhilosophers.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2003 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+This model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.
+
+<!-- 2003 -->

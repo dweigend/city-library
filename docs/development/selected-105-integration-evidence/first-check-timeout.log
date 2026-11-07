@@ -1,0 +1,635 @@
+$ bun run typecheck && bun run test && bun run examples && bun run build && bun run consumer
+$ tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json && tsc -p tsconfig.ui-examples.json
+$ bun test tests models/agent-lab/model.test.ts
+bun test v1.4.2 (744846f84)
+
+tests/netlogo-reference-models.test.ts:
+(pass) attachment always grows a simple tree and seeded observations remain independent [5.37ms]
+(pass) voting fixed point stops before tick and live rule changes can restart a tied state [1.13ms]
+(pass) wolf source termination and zero-energy boundary retain successful-step clocks [21.75ms]
+(pass) both wolf modes are deterministic per seed and observations are detached [45.87ms]
+(pass) voting validates and commits the same materialized input [0.16ms]
+(pass) grass recording preserves missing samples across mode interventions [9.18ms]
+(pass) wealth equations retain cardinal tie order, fractional sharing floor and class boundaries [0.06ms]
+(pass) wealth rebirth preserves identities and population, with finite headless inequality [106.92ms]
+
+tests/selected-cellular-rules.test.ts:
+(pass) selected B19 cellular source rules > Cyclic palette matches base-colors observed in the original Chromium command center [1.07ms]
+(pass) selected B19 cellular source rules > all 256 elementary rules match their eight independent bits [0.37ms]
+(pass) selected B19 cellular source rules > elementary startup switch vector has effective rule105; rule actions synchronize [0.45ms]
+(pass) selected B19 cellular source rules > elementary wraps horizontally and stops before the bottom continuation tick [0.50ms]
+(pass) selected B19 cellular source rules > elementary rule preview stops execution and reset restores initialization [31.00ms]
+(pass) selected B19 cellular source rules > continuous equation includes self and two parents, precision and fractional part [0.49ms]
+(pass) selected B19 cellular source rules > continuous stopped sweep can continue, preserving ticks and copied row [0.25ms]
+(pass) selected B19 cellular source rules > stochastic probability-zero rules consume no step RNG; 100 consumes one draw per cell [1.14ms]
+(pass) selected B19 cellular source rules > four-cell distribution excludes only last starting x, and entropy uses correlation length4 [0.22ms]
+(pass) selected B19 cellular source rules > stochastic absorbing continuation stops without a tick and manual Continue copies bottom [0.50ms]
+(pass) selected B19 cellular source rules > stochastic source examples and chart flags have explicit actions [0.49ms]
+(pass) selected B19 cellular source rules > Brian's Brain has eight-neighbor toroidal birth and mandatory refractory phase [0.59ms]
+(pass) selected B19 cellular source rules > Brian brush chooses erase or paint at begin, retains stroke intent, and has no tick [0.21ms]
+(pass) selected B19 cellular source rules > cyclic source presets and both radius geometries are distinct [1.16ms]
+(pass) selected B19 cellular source rules > cyclic updates synchronously and impossible threshold freezes source states [0.47ms]
+(pass) selected B19 cellular source rules > invalid live updates and fixtures are atomic, observations leave RNG/time untouched [1.36ms]
+
+tests/selected-urban-feedback-models.test.ts:
+(pass) Feedback smooths the old field before powers and maximum normalization [3.80ms]
+(pass) Feedback preserves alpha-zero powers and reports positive-alpha zero normalization failure [2.33ms]
+(pass) Path repeats every search attempt after certain settlement and retains cardinal cells [3.95ms]
+(pass) Path radius counts include searching/self firms across wrapping edges and refresh at go [4.34ms]
+(pass) Path births one child and errors atomically when no parent exists [1.55ms]
+(pass) Path histogram counts occupied patches rather than firms and exposes all pure ties [1.63ms]
+(pass) Cells composes all five original neighborhoods and closed count rules [375.73ms]
+(pass) Cells probability endpoints consume qualifying trials but no trial for impossible counts [101.88ms]
+(pass) Cells default deterministic growth matches the executed original 42-step invariant [83.12ms]
+(pass) Cells ages against pre-step ticks, retains dead seed markers and ordinary black reactivation [48.07ms]
+(pass) Cells scientific recolor overwrites nonseed cycle colors but retains seed memory [41.88ms]
+(pass) Feedback models reject malformed mutations atomically without invoking data accessors [1236.00ms]
+
+tests/netlogo-color.test.ts:
+(pass) all1400 numeric bins match independently observed official runtime RGB outputs [1.97ms]
+(pass) floor boundaries and cycle wrapping retain source numeric shade distinctions [0.02ms]
+(pass) invalid values fail before lookup and repeated projections remain independent [0.20ms]
+(pass) negative subnormal normalization stays in the final color bin [0.02ms]
+
+tests/affine-map.test.ts:
+(pass) uniform mapping centers translated asymmetric bounds along either padded axis [0.20ms]
+(pass) independent axes map exact corners and invert for translated envelopes and outside points [0.12ms]
+(pass) archived world ASC envelope and Murmansk record give the pinned affine fixtures [0.06ms]
+(pass) canonical Agent/Field positions return detached immutable XY without state or RNG effects [0.45ms]
+(pass) closed affine options reject malformed records and accessors without reading them [0.24ms]
+(pass) bounds require own dense numeric array data and never invoke index getters [0.17ms]
+(pass) nonfinite, degenerate, overflowing and underflowing affine arithmetic rejects [0.35ms]
+
+tests/graph-generators.test.ts:
+(pass) native families obey degree, direction and tree invariants through canonical public edges [5.85ms]
+(pass) lattice matches an independent all-pairs coordinate-neighborhood oracle [1.14ms]
+(pass) preferential prefix selection agrees with exact rational CDF scans and preserves cached Gaussian continuation [3.93ms]
+(pass) small-world rank selection matches explicit eligible-pool rewiring on changing topology [2.21ms]
+(pass) Bernoulli candidate order, explicit stream and endpoint probabilities preserve the public schedule [0.92ms]
+(pass) closed descriptors, domains, membership and induced loops reject before callbacks or draws [0.49ms]
+(pass) batch snapshots, callback exceptions and enclosing guards preserve topology and automatic keys [0.58ms]
+(pass) cloned defaults recheck foreign reference liveness after callbacks and preserve cyclic aliases [0.27ms]
+(pass) geometric capture validates immediately and uses explicit finite topology for Agent/Field positions [0.53ms]
+(pass) known over-cap batches draw nothing; stochastic cap failure stops at first excess and publishes nothing [441.01ms]
+
+tests/selected-social-last.test.ts:
+(pass) minority rewards old actual and virtual choices before shifting history [1.79ms]
+(pass) minority source one-agent zero-mean movement failure retains scored tick [0.28ms]
+(pass) rumor transmits only from pre-tick clique and counts repeated exposures [175.85ms]
+(pass) rumor interventions are atomic and no-source setup is not a terminal state [163.22ms]
+(pass) rumor toroidal corner has four face neighbors [56.28ms]
+(pass) signaling initializes both rectangular urn systems and reinforces matched choices only [15.07ms]
+(pass) signaling prints detached output without a random draw or clock advance [0.25ms]
+(pass) development Piagetian zero-error memory and per-run stop preserve midpoint record [31.13ms]
+(pass) all four development strategies preserve source legal distances and score barriers [256.04ms]
+(pass) heroes source-specific midpoint and extrapolation work with asynchronous target positions [1.05ms]
+(pass) heroes rejects the upper half-open edge and atomic malformed references [1.63ms]
+(pass) last-five observations are detached, validated writes are atomic, and counts reject invalid input [112.92ms]
+(pass) signaling natural learned threshold stops before another round or random draw [9.53ms]
+(pass) rumor all-informed stop is a preflight without time or randomness [71.18ms]
+(pass) heroes blocked short forward retains position while the phase and tick continue [116.73ms]
+
+tests/selected-cellular-original.test.ts:
+(pass) selected cellular executed-original probes > every oracle pins the exact archived original bytes [1.61ms]
+(pass) selected cellular executed-original probes > SmoothLife agrees with original disk/annulus normalizers and integrated uniform value [44.92ms]
+(pass) selected cellular executed-original probes > hex activates the same number of canonical visible cells [1.50ms]
+(pass) selected cellular executed-original probes > Vants agrees with original reversibility without assuming a matching random heading [0.97ms]
+(pass) selected cellular executed-original probes > Turing example1 agrees with original tape write, next state and oriented movement [0.74ms]
+(pass) selected cellular executed-original probes > elementary rule90 has the original two children at the next row [0.65ms]
+(pass) selected cellular executed-original probes > continuous mean/map/precision yields the original center value [0.30ms]
+(pass) selected cellular executed-original probes > Brian birth/refractory totals agree with the executed two-parent original [0.34ms]
+(pass) selected cellular executed-original probes > cyclic single-successor spread agrees with the original synchronous phase [0.34ms]
+(pass) selected cellular executed-original probes > stochastic certain OOO rule agrees with the original all-on row and four-cell distribution [1.41ms]
+
+tests/random-normal.test.ts:
+(pass) normal draws reject the first seed1 pair and cache the second pair's standard companion [0.08ms]
+(pass) polar rejection excludes origin and unit boundary and has a consumed-attempt cap [1.49ms]
+(pass) normal parameters validate fully before touching a pending cache or invoking getters [0.16ms]
+(pass) copy and JSON continuation retain an unscaled companion across uniform and sample draws [0.10ms]
+(pass) nested local scopes use the main cached checkpoint and restore word/cache on every exit [0.14ms]
+(pass) finite output overflow consumes its sample and does not rewind words or companion [0.05ms]
+(pass) a deterministic normal sample has finite values and plausible first two moments [22.54ms]
+
+tests/spatial-probes.test.ts:
+(pass) pure forward vectors agree with existing Agent motion including XYZ roll [0.33ms]
+(pass) forward periodicity and finite huge angles preserve a unit vector [0.06ms]
+(pass) normalization is idempotent and distinguishes hard endpoints from wrap seams [0.26ms]
+(pass) distance matches Agent measurement and toroidal metric properties [0.94ms]
+(pass) canonical field probes are current and do not allocate, move or draw [0.24ms]
+(pass) strict shapes and dimensions reject without invoking input accessors [0.19ms]
+(pass) finite hypot handles large values while actual arithmetic overflow rejects [0.08ms]
+
+tests/graph-connectivity.test.ts:
+(pass) biconnected vertex blocks match cut-definition oracle for all five-node simple graphs plus loops/parallel edges [32.84ms]
+(pass) strong components match independent mutual-reachability oracle on directed and mixed structures [7.27ms]
+(pass) connectivity options reject malformed data without invoking accessors or mutating graphs [0.22ms]
+(pass) canonical query snapshots survive Agent edits and reflect membership lifecycle without clock/RNG effects [0.15ms]
+(pass) iterative connectivity handles a long chain without depending on call-stack depth [48.08ms]
+
+tests/selected-economics-markets.test.ts:
+(pass) selected B03 market and foraging source mechanisms > Fruit traits derive from all four genome partitions and extinction stops before another tick [7.03ms]
+(pass) selected B03 market and foraging source mechanisms > Fruit world wraps and observations do not draw or expose mutable genomes [585.52ms]
+(pass) selected B03 market and foraging source mechanisms > Orderbook equal quotes never cross; strict quotes trade at the lower ask and conserve assets [1.01ms]
+(pass) selected B03 market and foraging source mechanisms > Orderbook utility is deliberately pre-match and source no-trade failure does not tick [174.59ms]
+(pass) selected B03 market and foraging source mechanisms > Bidding odd starting-money uses the native ceil integer bound [2.29ms]
+(pass) selected B03 market and foraging source mechanisms > Bidding first pairing changes quotes without selling; cent rounding cannot freeze a quote [4.24ms]
+(pass) selected B03 market and foraging source mechanisms > Bidding conserves goods and demand under random/concentrated mechanisms [386.90ms]
+(pass) selected B03 market and foraging source mechanisms > Hotelling consumers partition shares and pricing-only leaves all coordinates fixed [403.33ms]
+(pass) selected B03 market and foraging source mechanisms > Braess strict spawn timing, road-type semantics and all three policies execute [414.28ms]
+(pass) selected B03 market and foraging source mechanisms > Braess closing middle road waits for its existing commuters, then prevents further middle routes [166.09ms]
+
+tests/urban-economy-sprawl.test.ts:
+(pass) Urban Suite Sprawl Effect public composition > source patience and phase boundaries retain identity and move half a patch [8.64ms]
+(pass) Urban Suite Sprawl Effect public composition > house degradation is sequential and <= includes the cap [3.98ms]
+(pass) Urban Suite Sprawl Effect public composition > integer attraction0 versus positive fraction consumes different target continuation [11.83ms]
+(pass) Urban Suite Sprawl Effect public composition > equal superior side probes choose left, source turn remains a bounded random angle [6.42ms]
+(pass) Urban Suite Sprawl Effect public composition > live rules preserve cached threshold; invalid fixtures and pure reads are atomic [6.20ms]
+(pass) Urban Suite Economic Disparity public composition > zero candidate helper STOP still runs complete cumulative land impacts [89.14ms]
+(pass) Urban Suite Economic Disparity public composition > job cap removes one oldest even without births and refreshes offset cache [140.40ms]
+(pass) Urban Suite Economic Disparity public composition > strict counter boundary creates only after crossing and resets remainder [115.86ms]
+(pass) Urban Suite Economic Disparity public composition > travel median is Agent weighted actual distance, independent of +.01 cache [59.70ms]
+(pass) Urban Suite Economic Disparity public composition > views preserve scientific land/RNG/time; equal utility range uses native dark bound [68.04ms]
+(pass) Urban Suite Economic Disparity public composition > poor/rich candidate equations preserve factor100 and endpoint priority effects [46.27ms]
+(pass) Urban Suite Economic Disparity public composition > fixture validation is complete before writes and detached reads consume no stream [58.62ms]
+(pass) default source mechanisms stay independent, replayable and conserve Sprawl population [1147.51ms]
+(pass) closed fixture arrays reject extra fields, sparse entries and getters before mutation [60.76ms]
+
+tests/selected-probability-last.test.ts:
+(pass) Partition live target reduction preserves signed draws and rejected trial ticks [0.72ms]
+(pass) Expected Value retains setup's empty run and uses the frozen sample size [24.69ms]
+(pass) Expected Value tile allocation conserves all225 and the walk uses cardinal adjacent tiles [1.43ms]
+(pass) Partition counts rejected overshoots as trials and stops at requested successes [0.48ms]
+(pass) Diminishing partition sample space accepts every draw and no running total overshoots [0.59ms]
+(pass) CLT setup is empty, insufficient sampling does not tick, and presets preserve exact populations [14.18ms]
+(pass) CLT manual population adds one turtle per column click up to ceiling, without reset [7.80ms]
+(pass) Combination guard, edits, ordered versus multiset matches and source zero ticks [1.79ms]
+(pass) Combination single-success preserves source clearing of sample statistics [0.08ms]
+(pass) Mandelbrot only visits occupied patches and preserves c set at setup [606.93ms]
+(pass) All five expose independent deterministic detached snapshots and reject invalid step counts [708.84ms]
+(pass) Canonical Expected Value grid, sampler membership and wrapped movement share one authority [1.45ms]
+(pass) Canonical CLT reset deletes actual Agents and retains the canonical Grid [2.14ms]
+(pass) Canonical Mandelbrot eagerly initializes every Field and shares moving occupancy [318.82ms]
+(pass) Mandelbrot snapshots eligible occupants before shared-patch counter updates [241.86ms]
+(pass) Mandelbrot hard-boundary jump rejects its destination before Agent mutation [230.95ms]
+(pass) Partition and symbolic combination own only a public World clock [0.50ms]
+(pass) Mandelbrot preflight relocates at clipped and exact-positive-edge source endpoints [492.32ms]
+(pass) Mandelbrot preflight rejects a negative epsilon escape without the former distance tolerance [246.57ms]
+(pass) Mandelbrot preflight accepts each exact negative endpoint without relocation draws [569.48ms]
+
+tests/selected-grid-models.test.ts:
+(pass) fixtures reject sparse/accessor values without invoking getters or changing state [0.88ms]
+(pass) Life gesture retains paint/erase latch until release, without time or RNG [0.43ms]
+(pass) Life palette changes affect births/deaths only until explicit recolor [0.49ms]
+(pass) Life wraps Moore neighborhoods and never stops a stable board [16.00ms]
+(pass) Fire hard boundaries, unconditional ignition and complete fade [0.44ms]
+(pass) Percolation sequential retries consume a new draw after a failed parent entry [0.58ms]
+(pass) Percolation empty front stays stopped and invalid setters are atomic [0.20ms]
+
+tests/selected-ecology-collective.test.ts:
+(pass) selected ecology collective source mechanisms > Ants source dimensions, nest and delayed departure [79.33ms]
+(pass) selected ecology collective source mechanisms > Heatbugs conserve diffusion quantity before evaporation and sequential emissions [114.69ms]
+(pass) selected ecology collective source mechanisms > Flocking no perception preserves headings and toroidal population [1.91ms]
+(pass) selected ecology collective source mechanisms > Firefly strategy fields are captured at setup; cycle equality is live [78.77ms]
+(pass) selected ecology collective source mechanisms > Invasion germinates old seeds before generation and blocks edge crossing [18.66ms]
+(pass) selected ecology collective source mechanisms > Invasion plus/circle initialization, runoff, drawing and histogram [12.09ms]
+(pass) selected ecology collective source mechanisms > All five models return detached, pure measurements [83.43ms]
+
+tests/lab-discovery.test.ts:
+(pass) catalog discovers only entry candidates and reports incomplete pairs without invoking factories [2.66ms]
+
+tests/segregation.test.ts:
+(pass) similarity is weighted by neighbor links, and threshold uses occupied neighbors only [1.09ms]
+(pass) Moore neighborhoods wrap across both edges and isolated residents are happy [0.60ms]
+(pass) full unhappy grid reports no-vacancy without moving or consuming RNG [0.48ms]
+(pass) live threshold intervention restarts a stable state and records one sample per tick [0.68ms]
+(pass) random-walk relocation is repeatable and keeps canonical identities and exclusive cells [15.03ms]
+(pass) invalid interventions are atomic and repeated detached observations consume no RNG [0.56ms]
+
+tests/netlogo-catalog.test.ts:
+(pass) catalog counts only direct widgets and retains all code notice blocks [1.30ms]
+(pass) capture refuses to overwrite the accepted snapshot before network access [19.79ms]
+
+tests/a1-boundaries.test.ts:
+(pass) prototype spellings are own model data without prototype assignment [0.24ms]
+(pass) root cycles and aliases are preserved within each supported-data clone [0.08ms]
+(pass) Map Set Date RegExp sparse arrays and scalar identities survive copying [0.15ms]
+(pass) buffer views preserve offsets and shared backing inside fresh clones [0.50ms]
+(pass) symbols and accessors reject without invoking getters [0.18ms]
+(pass) unsupported resources and malformed supported values reject [0.33ms]
+(pass) framework identities remain original and deleted references reject [0.14ms]
+(pass) throwing iterators cannot partially attach or detach [0.18ms]
+(pass) foreign or deleted entries cannot partially change a membership batch [0.16ms]
+(pass) readonly bookkeeping cannot be overwritten through ordinary assignment [0.06ms]
+(pass) async declaration and thenable returns reject at their specified boundaries [0.06ms]
+(pass) active World clock locks do not lock independent Worlds [0.08ms]
+(pass) run validates the full representable clock recurrence before model effects [0.09ms]
+(pass) callable thenables and throwing then getters reject without stranding the run lock [0.19ms]
+(pass) copy validates unsupported values introduced by ordinary later assignments [0.09ms]
+
+tests/selected-materials-b.test.ts:
+(pass) selected materials source mechanisms > heat patch updates are sequential old-temperature writes and clamp strips [1.37ms]
+(pass) selected materials source mechanisms > crystallization freezes below its source color threshold and stops before another tick [4.78ms]
+(pass) selected materials source mechanisms > crystallization cooling sees preceding atom writes within the pass [2.12ms]
+(pass) selected materials source mechanisms > interstitial occupancy exclusion, reservoirs, concentration edits and max-tick barrier [3.46ms]
+(pass) selected materials source mechanisms > interstitial closed random walks conserve atoms, hard x and wrapped y [4.58ms]
+(pass) selected materials source mechanisms > DLA initial birth throttle, continuous radial motion, natural growth and terminal barrier [6.87ms]
+(pass) selected materials source mechanisms > readbacks are pure and detached; invalid fixture inputs fail before writes [1.12ms]
+
+tests/stats-runtime.test.ts:
+(pass) statistics reject accessor schemas without reading them and reject primitive string sources [0.09ms]
+(pass) Gini is scale/permutation invariant, pure, finite for large unequal values [0.05ms]
+(pass) histogram handles final endpoint, outliers and one-pass iterables [0.09ms]
+(pass) statistics reject malformed sources rather than silently treat them as empty [0.04ms]
+
+tests/selected-urban-models.test.ts:
+(pass) Awareness freezes senders but reselects recipients and excludes transient negative awareness [4.90ms]
+(pass) Awareness uses the even-height half-cell torus and moves before changing heading [4.87ms]
+(pass) Awareness center expiry is strict, painting retains age and empty means are explicit [4.91ms]
+(pass) Pollution new people wait until next tick, while newly planted trees immediately clean [33.30ms]
+(pass) Pollution strict exposure and health thresholds preserve whole-person ordering [62.22ms]
+(pass) Pollution deaths still allow planting and final-tick cleanup, then preflight freezes everything [33.10ms]
+(pass) Pollution Moore diffusion wraps an impulse and live plant rates wait for the next plant phase [26.04ms]
+(pass) Recycling quantizes regeneration and preserves the conditional waste draw [8.81ms]
+(pass) Recycling zero regeneration still consumes source trials and empty populations keep ticking [3.20ms]
+(pass) Recycling seeking crosses the torus, harvests origin first and refuses over-cap consumption [4.71ms]
+(pass) Urban models isolate pure detached observations and retain setup plus the latest1000 ticks [142.26ms]
+(pass) Urban fixtures and live updates reject malformed data atomically without running accessors [56.51ms]
+
+tests/selected-probability-first.test.ts:
+(pass) B17 first five source mechanisms > Birthdays sorts 23 people, colors exactly duplicate dates and counts rooms [11.76ms]
+(pass) B17 first five source mechanisms > Galton original pegs include row zero and counter geometry [7.62ms]
+(pass) B17 first five source mechanisms > Galton pile fills and discarded balls do not advance tick forever [32.40ms]
+(pass) B17 first five source mechanisms > Galton live bias affects later bounces and no-pile counters conserve balls [8.92ms]
+(pass) B17 first five source mechanisms > Rabbit deterministic hop, scale and exact equality stop [9.39ms]
+(pass) B17 first five source mechanisms > Rabbit all-zero ratios retain source first-hop behavior [4.08ms]
+(pass) B17 first five source mechanisms > Three Doors never leaves another closed door equal to first guess except after switching [32.75ms]
+(pass) B17 first five source mechanisms > Patchwork extreme probabilities, live change and accumulating histogram [2.11ms]
+(pass) B17 first five source mechanisms > detached reads do not consume RNG and invalid advances preserve canonical state [48.51ms]
+(pass) B17 canonical public Agent/Grid/World composition > Birthdays creates real world members, moves their canonical positions, and deletes the old room [1.33ms]
+(pass) B17 canonical public Agent/Grid/World composition > Galton fields own pegs/counters and indexed occupancy follows public Agent movement/deletion [7.39ms]
+(pass) B17 canonical public Agent/Grid/World composition > Patchwork observation is a detached projection of the sole canonical wrapped grid [28.20ms]
+(pass) B17 canonical public Agent/Grid/World composition > Rabbits use Agent.move wrapping and Grid occupancy while displacement remains unwrapped [32.01ms]
+(pass) B17 canonical public Agent/Grid/World composition > Three Doors racers retain canonical identity, use world movement, and share exactly one Tick [4.49ms]
+(pass) B17 canonical public Agent/Grid/World composition > canonical IDs differ across replay instances while display DTOs remain deterministic [74.35ms]
+
+tests/netlogo-progress.test.ts:
+(pass) all binding selected paths have source identity and evidence-backed milestones [19.99ms]
+(pass) milestones cannot claim browser/runtime or research completion without their required basis [22.90ms]
+
+tests/urban-structure.test.ts:
+(pass) Structure1 stages the old four-face field and preserves total without normalization [245.17ms]
+(pass) Structure1 naturally reaches a zero recolor error after committing activity but before tick [177.35ms]
+(pass) Structure setup/noise consume explicit public choices and pure reads do not [339.40ms]
+(pass) Structure2 distinguishes current strict threshold counts, sticky marks and plot units [263.68ms]
+(pass) Structure2 stages the exact old field before independent signed additions [136.33ms]
+(pass) Structure fixtures/rules reject unknown, sparse, accessor and invalid data atomically [571.87ms]
+(pass) Structure replay is independent, chunking invariant and deeply detached [674.00ms]
+
+tests/selected-materials-a.test.ts:
+(pass) sandpile deterministic open avalanche oracle and pure exploration [0.97ms]
+(pass) Ising exact energy branches and default widgets [1.43ms]
+(pass) Sand snapshots read old colors, spout precedes movement and dump does not tick [0.76ms]
+(pass) Solid diffusion preserves canonical atomic identities, species and exclusion [5.04ms]
+(pass) Sand simultaneous proposals deliberately coalesce competing grains [0.29ms]
+
+tests/network-action-host.test.ts:
+(pass) repetition is tickless and independent of scientific Run/Pause [0.26ms]
+(pass) stop/restart rejects already queued callbacks and never writes to replaced instances [0.04ms]
+(pass) disabled predicates stop repetition and prevent restarting [0.02ms]
+(pass) action and read errors stop related playback without retrying a committed action [0.10ms]
+(pass) invalid cadence fails before a scheduler is installed [0.04ms]
+
+tests/segregation-continuation.test.ts:
+(pass) indexed Segregation preserves complete pre-index states and RNG continuation [215.88ms]
+
+tests/spatial-grid.test.ts:
+(pass) space contexts are normalized snapshots and spatial attachment validates atomically [0.29ms]
+(pass) movement clips complete segments, wraps ties and leaves observations inert [0.17ms]
+(pass) three dimensional orientation preserves local-axis composition and detached copies [0.31ms]
+(pass) grid occupancy preserves one membership owner and detach retains fields [0.22ms]
+(pass) diffusion preserves directional slots on tiny wraps and commits atomically [0.18ms]
+(pass) three dimensional grid neighborhoods and numeric fields stay canonical [0.32ms]
+(pass) World admission retains concrete Grid payload and mixed-batch identities [0.09ms]
+(pass) hard clipping handles limiting-boundary roundoff and rejects an invalid origin [0.13ms]
+(pass) World attachment respects half-open wraps and retains atomic batches [0.07ms]
+(pass) position inputs reject accessors, foreign frameworks and non-data shapes before reads [0.20ms]
+(pass) new spatial and Grid APIs reject argument placeholders, excess arity and string sources [0.26ms]
+
+tests/selected-network-models.test.ts:
+(pass) directed transport splits old value once, retains sinks and conserves quantity [86.76ms]
+(pass) rewire retains edge identity, inactive flow and stale reporters until the next go [1.07ms]
+(pass) no-active and zero-total diffusion keep finite observations and successful clocks [0.44ms]
+(pass) Virus allows newly infected nodes to recover in the same completed tick [1.06ms]
+(pass) Virus freezes spread senders and quantizes fractional recovery with integer draws [4.27ms]
+(pass) Virus extinction is preflight-only; rule changes preserve timers and permanent resistance [0.49ms]
+(pass) network fixtures reject sparse/accessor/malformed data before any mutation or RNG draw [0.83ms]
+
+tests/a1-runtime.test.ts:
+(pass) typed views reject noncanonical numeric-looking extra properties [0.16ms]
+(pass) delivered spatial members reject overriding and future members reject copying [0.21ms]
+(pass) copy preserves both allowed plain-record prototypes [0.09ms]
+(pass) callable iterables support the same atomic membership contract [0.10ms]
+(pass) Mulberry stream has exact revision fixtures and strict no-draw rejection [0.13ms]
+(pass) closed constructor options reject accessors and malformed values [0.11ms]
+(pass) clock operations validate amounts atomically and preserve model data [0.05ms]
+(pass) run preflight rejects before effects and allows nonthenable return values [0.07ms]
+(pass) rounded above-safe-integer tick can progress once but not twice [0.03ms]
+(pass) preflight binade jumps agree with literal recurrence on fractional boundaries [0.16ms]
+(pass) membership preserves returned types and insertion order snapshots [0.06ms]
+(pass) optional standard Float16 views and explicit invalid state remain honest [0.10ms]
+
+tests/selected-computing-spatial.test.ts:
+(pass) B18 Simulated Annealing native rules > native450bright patches, directed anisotropic energy and exact1000 attempts [77.63ms]
+(pass) B18 Simulated Annealing native rules > T0equal switch and rejection rollback; read is detached and RNG-neutral [0.68ms]
+(pass) B18 Simulated Annealing native rules > target seeded replay and no-temperature automatic stop [475.04ms]
+(pass) B18 K-Means native source contract > native per-cluster rounded default140points and seven centroids [16.30ms]
+(pass) B18 K-Means native source contract > assign/update non-ticking, empty clusters retained and strict threshold [0.79ms]
+(pass) B18 K-Means native source contract > rejected scenario is atomic and observations preserve stream [20.77ms]
+(pass) B18 PSO actual landscape and update phases > native201square,50particles,global best remains zero after setup [933.75ms]
+(pass) B18 PSO actual landscape and update phases > velocity axis clipping and wrapped motion; arriving optimum noticed NEXT go [0.70ms]
+(pass) B18 PSO actual landscape and update phases > inertia0 and attraction0 yields no movement; scenario invalid is atomic [0.30ms]
+(pass) B18 Robby full native fitness and intervention actions > ternary sensor weights, action map and source273 display normalization [0.16ms]
+(pass) B18 Robby full native fitness and intervention actions > real20x100 evaluations, same seed replay, defaults and live next-population [347.21ms]
+(pass) B18 Robby full native fitness and intervention actions > native gen0display guard, explicit trial fixture, wall/can actions, non-ticking trial [64.33ms]
+(pass) B18 Robotic Factory canonical source quirks > nine machines, default robots5energy350dock10 and first old-heading motion [2.58ms]
+(pass) B18 Robotic Factory canonical source quirks > finisher queued>1 startup and four/seven countdown; finish called publicly has no tick [1.40ms]
+(pass) B18 Robotic Factory canonical source quirks > invalid destination errors retain partial state and do not tick [1.50ms]
+(pass) B18 Robotic Factory canonical source quirks > read and rejected intervention preserve canonical state/RNG; fullCharge is live [1.50ms]
+
+tests/selected-transport-roads.test.ts:
+(pass) selected transport source rules > Paths building toggles use toroidal radius and do not advance time [21.58ms]
+(pass) selected transport source rules > Paths preserves the original distance-self all-way tie [1387.89ms]
+(pass) selected transport source rules > Basic clamps speed and respects setup-only population [5.34ms]
+(pass) selected transport source rules > Two lanes preserves selected car when shrinking a live population [19.05ms]
+(pass) selected transport source rules > Intersection uses strict elapsed time and yellow completes even in manual mode [11.24ms]
+(pass) selected transport source rules > Intersection brake distance, unit substeps, hard exits and reporter purity [952.12ms]
+
+tests/a2a-runtime.test.ts:
+(pass) uniform validation precedes draws and never invokes options accessors [1.55ms]
+(pass) uniform numeric endpoints remain finite and max exclusive with one draw [0.12ms]
+(pass) uniform integers floor the offset before adding large safe integer bounds [0.08ms]
+(pass) state is deeply frozen detached continuation with atomic closed-schema validation [0.15ms]
+(pass) state accessors and unsupported raw variants reject without drawing [0.09ms]
+(pass) sampling preflight preserves stream on invalid weights and source errors [0.31ms]
+(pass) sampling preserves duplicate positions and tiny positive weights [0.12ms]
+(pass) sampling acquires and invokes a source iterator exactly once [0.11ms]
+(pass) sampling draw schedules distinguish singleton choices from legacy shuffles [0.09ms]
+(pass) source ordering with replacement remains the same draw schedule [0.07ms]
+(pass) nested local state/reseed operations preserve outermost checkpoint and predecessor [0.07ms]
+(pass) local rejects async/thenables at correct boundary and always releases temporary state [0.09ms]
+(pass) continuation writes preserve Random identity retained by World [0.04ms]
+
+tests/a2a-boundaries.test.ts:
+(pass) uniform options are closed data and invalid domains leave continuation unchanged [0.17ms]
+(pass) uniform adjacent representable intervals remain max-exclusive with exactly one draw [0.09ms]
+(pass) state reads are detached frozen observations and replacement updates retained identity [0.09ms]
+(pass) state closed-schema validation rejects atomically without evaluating getters [0.14ms]
+(pass) sample validates counts weights options and iterators before drawing [0.29ms]
+(pass) zero count still preflights every weight exactly once but consumes no draw [0.08ms]
+(pass) sampling treats repeated references as positions and source order is stable [0.10ms]
+(pass) singleton selection and explicit legacy shuffle have distinct schedules [0.10ms]
+(pass) unsupported profiles distributions and raw branches do not draw [0.09ms]
+(pass) nested local state and reseed restore predecessors without changing main checkpoint [0.07ms]
+(pass) local rejects asynchronous boundaries and always restores stream after observable effects [0.08ms]
+
+tests/lab-playback.test.ts:
+(pass) playback owns a single cancellable caller timer and stops at model completion [0.07ms]
+
+tests/indexed-occupancy.test.ts:
+(pass) implicit occupancy preserves World admission order across moves, copies and failed batches [0.28ms]
+(pass) several indexes track 3D mixed-boundary motion and changing cell sizes independently [2.31ms]
+(pass) mismatched dimensions invalidate the entire implicit source and recover on detach [0.21ms]
+(pass) Grid detach releases its prior World observation and later rebuilds current canonical data [0.23ms]
+(pass) failed graph deletion and explicit source side effects leave the implicit index canonical [0.27ms]
+
+tests/selected-cellular-spatial.test.ts:
+(pass) selected B19 SmoothLife source equation > discrete Euclidean disk and annulus have exact normalizers, include self and wrap [1.17ms]
+(pass) selected B19 SmoothLife source equation > unique periodic neighbors on a tiny torus and source's cutoff [0.29ms]
+(pass) selected B19 SmoothLife source equation > paint is periodic, erase preserves ticks and observations do not advance random [1.39ms]
+(pass) selected B19 SmoothLife source equation > live rules are atomic, radii remain setup-only and numerical guards reject invalid equations [1.06ms]
+(pass) selected B19 bounded hex aggregation > six source offset neighbors are reciprocal and bounded [1.31ms]
+(pass) selected B19 bounded hex aggregation > each successful activation adds one cell and counts canonical live neighbors [1.53ms]
+(pass) selected B19 bounded hex aggregation > pending switch edits apply only on read-switches and terminal state can recover [1.16ms]
+(pass) selected B19 Vants > long forward/reverse trajectories exactly recover shared tape and all cardinal orientations [40.34ms]
+(pass) selected B19 Vants > tape toggles after moving and old snapshots remain detached [0.54ms]
+(pass) selected B19 two-dimensional Turing machine > source default differs from example 1, which resets tape and clock [0.74ms]
+(pass) selected B19 two-dimensional Turing machine > all four combinations select their own rule, and writes precede movement [7.52ms]
+(pass) selected B19 two-dimensional Turing machine > multiple heads all read the old tape before source-ordered conflicting writes [4.32ms]
+(pass) selected B19 two-dimensional Turing machine > rule validation, no draws on observation, explicit cardinal conversion [0.51ms]
+
+tests/selected-ecology-population.test.ts:
+(pass) birth source odd-capacity split, empty go and experiment restart [0.45ms]
+(pass) birth mortality is independent sampling rather than exact culling [7.38ms]
+(pass) daisy source setup counts and captured albedo; interventions preserve tick [129.28ms]
+(pass) daisy nonpositive absorbed energy branch and scenario tick timing [343.61ms]
+(pass) termites conserve chips including carried chips on empty/full and default landscapes [1017.70ms]
+(pass) shepherd carries same unique sheep, never deletes populations, samples efficiency at fifty [1142.80ms]
+(pass) rabbits stop before growth when extinct and die only below zero [34.13ms]
+(pass) rabbits use per-thousand growth and grass overwrites new weeds [7.95ms]
+(pass) observations are detached and do not draw RNG; live validation is atomic [398.10ms]
+
+tests/graph-distance-precision.test.ts:
+(pass) single captured costs preserve binary64 bits across exponent and significand boundaries [8.56ms]
+(pass) fractional weighted paths match a fixed-lattice integer oracle in either insertion order [2.54ms]
+(pass) captured fractional binary64 values are summed exactly rather than as decimal rationals [0.17ms]
+(pass) rounding handles both signs, normal exponent carries and ties to even [0.54ms]
+(pass) tiny values survive large signed prefixes and the normal/subnormal boundary [0.23ms]
+(pass) a subnormal negative cycle stays detectable behind enormous prefixes [0.32ms]
+(pass) finite-rounded overflow includes discarded candidates and allows MAX_VALUE plus a tiny tail [0.44ms]
+(pass) summary sums published distances exactly, independent of summand order and before division [0.47ms]
+
+tests/lab-catalog.test.ts:
+(pass) a stale catalog load cannot replace a newer selection [0.24ms]
+(pass) disposing a catalog loader invalidates pending imports [0.09ms]
+
+tests/graph-distances.test.ts:
+(pass) all algorithms agree with independent Floyd–Warshall on mixed multigraphs [56.71ms]
+(pass) signed acyclic distances agree with independent dynamic recurrence [2.66ms]
+(pass) negative cycles reject exactly the affected single sources and every all-pairs query [0.35ms]
+(pass) every query captures costs once in current insertion order and permits nested pure queries [0.35ms]
+(pass) invalid options and endpoints fail before callbacks, without reading accessors [0.33ms]
+(pass) bad callback values reject, exceptions retain identity and guards release after failure [0.17ms]
+(pass) cost callbacks cannot change graph structure, including canonical Agent deletion [0.22ms]
+(pass) distance arithmetic rejects overflow in every weighted algorithm and summaries [0.13ms]
+(pass) pure public observations preserve World/RNG authority and independent instances [0.14ms]
+(pass) iterative breadth and heap Dijkstra handle a long directed chain [66.51ms]
+
+tests/graph-analysis.test.ts:
+(pass) weighted mixed multigraph scores match independent exhaustive vertex-simple path fractions [25.52ms]
+(pass) spectral scores satisfy independent rank-one eigenpair and PageRank balance oracles [1.89ms]
+(pass) all five measures capture once, allow nested observations and preserve canonical lifecycle and RNG authority [1.28ms]
+(pass) measure-specific own-data validation executes before callbacks even on empty graphs [0.75ms]
+(pass) callback exceptions retain identity, malformed values reject and weights recapture after failure [0.66ms]
+(pass) loop incidences, edgeless distinctions and wholly-undirected normalization remain explicit [0.39ms]
+
+tests/selected-computing-network.test.ts:
+(pass) B18 neural source equations and action boundaries > strict signed threshold, all truth functions and single-example update [0.63ms]
+(pass) B18 neural source equations and action boundaries > zero second weight has explicit vertical or degenerate geometry [0.10ms]
+(pass) B18 neural source equations and action boundaries > multilayer hidden deltas use old outgoing weights before all updates [0.49ms]
+(pass) B18 neural source equations and action boundaries > zero learning rate retains weights through real epochs and errors remain defined [0.71ms]
+(pass) B18 neural source equations and action boundaries > invalid neural interventions are atomic and observations detached [0.31ms]
+(pass) B18 philosopher asynchronous resource protocol > defaults, hungry barrier and later consumption [1.05ms]
+(pass) B18 philosopher asynchronous resource protocol > native deadlock continues ticking without hidden reset or repair [0.60ms]
+(pass) B18 philosopher asynchronous resource protocol > one marked fork and adjacent exclusive ownership across cooperative activation [21.35ms]
+(pass) B18 philosopher asynchronous resource protocol > invalid fork ownership and population changes leave state untouched [0.40ms]
+(pass) B18 PageRank canonical directed networks > native network sizes and directed adjacencies [5.49ms]
+(pass) B18 PageRank canonical directed networks > synchronous old ranks and damping preserve rank mass including isolated pages [0.75ms]
+(pass) B18 PageRank canonical directed networks > surfers increment OLD page visits and method changes keep cumulative visits [0.74ms]
+(pass) B18 PageRank canonical directed networks > invalid network fixtures do not mutate live graph or random state [0.31ms]
+(pass) B18 binary-genotype scientific helpers and reproduction > five pinned Hamming cases and strict invalid array contract [0.19ms]
+(pass) B18 binary-genotype scientific helpers and reproduction > source normalized diversity reaches one and no-variation reproduction preserves zeroes [1.60ms]
+(pass) B18 binary-genotype scientific helpers and reproduction > single-point crossover excludes endpoints and preserves combined bit counts [3.28ms]
+(pass) B18 binary-genotype scientific helpers and reproduction > all-ones preflight cannot advance time and invalid genomes are atomic [0.30ms]
+(pass) B18 isolated replay and bounded observations > each public factory replays independently and read never draws [529.69ms]
+(pass) B18 isolated replay and bounded observations > long-running history is bounded while scientific tick keeps advancing [2.87ms]
+
+tests/selected-economics-games-banking.test.ts:
+(pass) selected economics source-specific banks and games > Cash Flow preserves signed negative-availability loans, rather than silently clamping [1.20ms]
+(pass) selected economics source-specific banks and games > partial repayment withdraws then repays the wallet, and report reads do not mutate state [0.52ms]
+(pass) selected economics source-specific banks and games > Bank Reserves phases and sticky colors retain source distinctions [1.18ms]
+(pass) selected economics source-specific banks and games > Cash Flow starts with 0/10 wallets, Bank Reserves with 1..10 and empty initial class counters [28.16ms]
+(pass) selected economics source-specific banks and games > one-shot outcome action always reinitializes choices and uses no native clock [0.26ms]
+(pass) selected economics source-specific banks and games > iterated payoffs and strategy memories preserve delayed retaliation [0.35ms]
+(pass) selected economics source-specific banks and games > El Farol uses unclamped linear predictions and bounded last-tie-wins retrospective selection [0.17ms]
+(pass) selected economics source-specific banks and games > El Farol canonical occupancy, attendance history, immutable strategies and deterministic independent instances [271.72ms]
+
+tests/random-exponential-poisson.test.ts:
+(pass) both closed option branches reject wrong types/ranges/keys before word or normal cache changes [1.45ms]
+(pass) exponential keeps literal log transform, signed zero, finite underflow and post-draw overflow [0.16ms]
+(pass) positive small-mean product is do-first, equality/zero stop, and zero mean never requests a draw [0.06ms]
+(pass) log-factorial agrees with independent finite sums across the table boundary and admitted scales [1.31ms]
+(pass) PTRS consumes U then V, rejects us0/negative/tail proposals, and permits V0 [0.06ms]
+(pass) PTRS uses printed .43 and inclusive squeeze boundaries, not Table1/PTRD .445 [0.03ms]
+(pass) PTRS log acceptance straddles an independently summed Poisson mass boundary [0.04ms]
+(pass) PTRS has no inherited million-attempt retry cap [5.19ms]
+(pass) mixed distributions preserve cached normal, copy/local/state and World ownership [0.17ms]
+(pass) high-mean Poisson samples match independently computed mode masses and analytical moments [109.06ms]
+
+tests/graph-copy.test.ts:
+(pass) source-order filters and all direction transforms preserve every selected labeled edge independently [4.70ms]
+(pass) undirected promotion retains opposite arcs and uses a fresh automatic-key owner [0.31ms]
+(pass) state extraction preserves hidden data, null prototypes and framework backreferences without rebinding [0.21ms]
+(pass) late clone failures create no target Agent participants; recovery registers exactly one owner [0.32ms]
+(pass) final liveness validation catches foreign deletion from a later reflection, including Map/Set and defaults [0.45ms]
+(pass) source reflection rejects structural reentrancy and Agent deletion, permits reads and independent owners [0.31ms]
+(pass) array subclasses, strict own descriptors, complete validation and membership precede state reflection [0.30ms]
+(pass) shared Agent identities retain World positions, continuation and independent graph hooks [0.16ms]
+(pass) a large generated edge batch copies through the owner without public add scans or generator limits [176.95ms]
+
+tests/a5a-boundaries.test.ts:
+(pass) detached graph contracts > closed options and state validation precede duplicate return without getters [0.34ms]
+(pass) detached graph contracts > edge state keeps cyclic aliases, independent defaults and framework identities [0.16ms]
+(pass) detached graph contracts > active collection guards reject both kinds of structural mutation and release [0.12ms]
+(pass) detached graph contracts > Agent deletion preflights every graph before World detach or cleanup [0.16ms]
+(pass) detached graph contracts > node removal unregisters lifecycle participation and leaves other graphs alone [0.10ms]
+(pass) detached graph contracts > direction queries preserve insertion, loops once and frozen snapshots [0.17ms]
+(pass) detached graph contracts > parallel key allocation is monotonic and rejected insertions consume no key [0.08ms]
+
+tests/grid-occupancy-performance.test.ts:
+(pass) occupancy retains field lookup boundary semantics across source contexts [0.55ms]
+(pass) three-dimensional mixed boundaries preserve source order and live queries [0.63ms]
+(pass) occupancy validates every source candidate before returning matches [0.25ms]
+
+tests/selected-transport-city.test.ts:
+(pass) selected B04 city traffic public contracts > grid initial stopped accounting precedes initial speed assignment [6.83ms]
+(pass) selected B04 city traffic public contracts > signal phase uses equality before advancing; power changes have deferred recoloring [5.79ms]
+(pass) selected B04 city traffic public contracts > grid selection accepts an actual intersection; goal selection takes nearest [23.31ms]
+(pass) selected B04 city traffic public contracts > goal work/home references remain distinct and watch cleanup preserves enlarged source car [29.46ms]
+(pass) selected B04 city traffic public contracts > taxi exposes45 independent demand inputs and exact source defaults [106.28ms]
+(pass) selected B04 city traffic public contracts > taxi phase changes at source pre-step period boundary and wraps all five phases [37.09ms]
+(pass) selected B04 city traffic public contracts > source zero-length green control raises an explicit error without completing tick [267.28ms]
+(pass) selected B04 city traffic public contracts > taxi current passenger count and completed-trip samples conserve accounting [1121.79ms]
+(pass) selected B04 city traffic public contracts > read models are detached and observation never changes RNG continuation [116.17ms]
+(pass) selected B04 city traffic public contracts > setup-only controls reject live mutation without changing state [22.71ms]
+(pass) public Grid speed procedures retain overshoot and negative following-speed source boundaries [3.89ms]
+(pass) Taxi U-turn bypasses occupancy while ordinary movement waits, and only movement charges fare [20.79ms]
+(pass) Taxi generated passengers age before pickup and zero patience removes them immediately [19.61ms]
+(pass) Goal faces its local choice before speed lookup while retaining the setup upCar flag [9.27ms]
+(pass) Goal applies both source adjacency checks instead of an else-if destination toggle [6.84ms]
+(pass) explicit Grid and Goal compositions retain separate canonical state and caller-owned clocks [15.92ms]
+
+tests/tijuana.test.ts:
+(pass) Tijuana source boundaries and canonical observations > hard forward reaches a valid unit endpoint and records its deleted source birth [203.48ms]
+(pass) Tijuana source boundaries and canonical observations > failed forward attempt does not clip to the hard endpoint or invent a pen segment [208.99ms]
+(pass) Tijuana source boundaries and canonical observations > signed source random energy creates both hatch births before zero-energy removal [278.80ms]
+(pass) Tijuana source boundaries and canonical observations > new second-to-third breed participates in the later ask, with no recursive same-ask activation [206.00ms]
+(pass) Tijuana source boundaries and canonical observations > lower endpoint is admitted; upper endpoint rejected before replacing an existing scene [317.77ms]
+(pass) Tijuana source boundaries and canonical observations > raw fractional n-of shortage retains preceding tick and Gaussian draw [332.80ms]
+(pass) Tijuana source boundaries and canonical observations > negative topography radius preserves the native self-plus-Moore candidate boundary [454.44ms]
+(pass) Tijuana source boundaries and canonical observations > modulo-zero retains road writes and real preceding public draws [295.74ms]
+(pass) Tijuana source boundaries and canonical observations > field origins resolve to retained canonical Fields and reads remain detached [308.74ms]
+(pass) Tijuana source boundaries and canonical observations > unknown, accessor, sparse, mismatched random and breed-specific fixture values fail atomically [895.92ms]
+(pass) Tijuana source boundaries and canonical observations > GO boundary cleanup deletes a canonical job; later hatch preserves dead references until get-costs uses them [257.50ms]
+(pass) Tijuana source boundaries and canonical observations > GO state is independent between instances and failures survive pure guards/count0 [503.42ms]
+
+tests/selected-biology-b.test.ts:
+(pass) Selected biology B07 source procedures > Autumn setup converts sugar before the first tick; cold water procedure returns only locally [6.24ms]
+(pass) Selected biology B07 source procedures > Autumn transitions living leaves into persistent dead leaves then preflight-stops [6.62ms]
+(pass) Selected biology B07 source procedures > Membrane uses one distinct water partner for each lipid and conserves membership [6.43ms]
+(pass) Selected biology B07 source procedures > Membrane self-inclusive hydrophobic isolation equals one for an isolated one-lipid oil [0.26ms]
+(pass) Selected biology B07 source procedures > Sunflower setup tick is one and live ring distance affects only new placements [0.93ms]
+(pass) Selected biology B07 source procedures > Sunflower counts temporary candidates and stops before the outer ring [3041.45ms]
+(pass) Selected biology B07 source procedures > Tumor hatches have source age zero and are not activated in their birth phase [0.90ms]
+(pass) Selected biology B07 source procedures > Tumor kill actions preserve source cached reporter until the next completed tick [0.17ms]
+(pass) Selected biology B07 source procedures > Muscle all-slow fibers have max four; hormone bounds and mass remain exact [56.30ms]
+(pass) Selected biology B07 source procedures > Detached reads cannot mutate canonical state; invalid live edits fail atomically [7.16ms]
+
+tests/network-diffusion.test.ts:
+(pass) headless network diffusion > ring propagation is synchronous and new adopters wait until the next tick [0.98ms]
+(pass) headless network diffusion > bridges change reachable adoption, and cutting them prevents cross-group spread [1.67ms]
+(pass) headless network diffusion > hub and ring differ after one tick and old active senders transmit before settling [0.42ms]
+(pass) headless network diffusion > same seed reproduces every state and bounded trajectory without shared identities [43.01ms]
+(pass) headless network diffusion > selection, topology observation and bridge edits leave tick, states and stream alone [0.64ms]
+(pass) headless network diffusion > zero transmission draws nothing; explicit activation resumes a completed cascade [0.47ms]
+(pass) headless network diffusion > input and action rejection preserve model observations [0.24ms]
+(pass) headless network diffusion > history keeps the initial sample plus only the latest 240 model ticks [0.79ms]
+(pass) headless network diffusion > multiple active neighbors combine exposure while draws follow unaware-agent insertion order [1.30ms]
+
+tests/selected-social-first.test.ts:
+(pass) consumer utilities combine retained experience and current neighbors only after consumption [1.88ms]
+(pass) Rebellion setup keeps free occupancy distinct; zero legitimacy and no police follows grievance [182.68ms]
+(pass) Rebellion mixed turns preserve population and legal torus cells [161.40ms]
+(pass) language redistribution truncates n-of fractions and retains topology; reset retains spoken output [1.22ms]
+(pass) party stale happiness stops before a changed tolerance is applied; groups are atomic [20.59ms]
+(pass) ethnocentrism full cooperation is directed and PTR remains unclamped [125.98ms]
+(pass) ethnocentrism death includes new immigrants and newborns [25.94ms]
+(pass) all first-five live updates validate atomically and reads detach nested data [220.21ms]
+
+tests/statistical-summary.test.ts:
+(pass) population and sample summaries preserve median, ties and undefined small-sample spread [0.12ms]
+(pass) large common offsets retain centered spread and affine measurement properties [12.92ms]
+(pass) integer multiset permutations retain summaries and satisfy the pairwise variance identity [0.12ms]
+(pass) a one-shot iterable is consumed once and a rejected value closes its iterator [0.24ms]
+(pass) options reject before input iteration without invoking accessors or coercing values [0.19ms]
+(pass) nonfinite values and sum/spread overflow reject without affecting unrelated state [0.12ms]
+
+tests/selected-biology-a.test.ts:
+(pass) selected biology A source mechanisms > Slime deposition, diffusion and evaporation conserve the declared mass [159.73ms]
+(pass) selected biology A source mechanisms > Honeycomb's diffusion cadence starts at preincrement tick zero [61.83ms]
+(pass) selected biology A source mechanisms > Fur preserves the source's uninitialized new-color tie behavior [925.10ms]
+(pass) selected biology A source mechanisms > Chloroplast water inlet is the actual left boundary, with canonical flow ties [163.91ms]
+(fail) selected biology A source mechanisms > Natural photosynthesis creates oxygen and glucose and preserves source counts [5168.83ms]
+  ^ this test timed out after 5000ms.
+(pass) selected biology A source mechanisms > Blood Sugar requires real Poisson/exponential draws and rounds meal creation to 412 [1866.14ms]
+
+models/agent-lab/model.test.ts:
+(pass) HTML application's headless model actions > agent view reads are detached observations of canonical agents [0.29ms]
+(pass) HTML application's headless model actions > selection addresses existing canonical agents and steps only the selection [0.20ms]
+(pass) HTML application's headless model actions > detached and deleted test objects stay inspectable without World membership [0.13ms]
+(pass) HTML application's headless model actions > successful and failed updates share the library clock contract [0.09ms]
+(pass) HTML application's headless model actions > copy selection preserves the original and requires explicit attachment [0.11ms]
+(pass) HTML application's headless model actions > detachment and input rejection preserve valid state [0.11ms]
+(pass) Agend Lab exchange scenario > same setup and seed replay the same conserved population dynamics [2.46ms]
+(pass) Agend Lab exchange scenario > inspection selection and repeated reads leave the exchange stream untouched [0.42ms]
+(pass) Agend Lab exchange scenario > population steps remain valid while a detached or deleted object is inspected [0.26ms]
+
+1 tests failed:
+(fail) selected biology A source mechanisms > Natural photosynthesis creates oxygen and glucose and preserves source counts [5168.83ms]
+  ^ this test timed out after 5000ms.
+
+ 502 pass
+ 1 fail
+ 46330 expect() calls
+Ran 503 tests across 58 files. [42.45s]
+error: script "test" exited with code 1
+error: script "check" exited with code 1

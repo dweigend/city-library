@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-06",
+  "codeCheckpoint": "8781ebd",
+  "command": "bun run check",
+  "exitCode": 0,
+  "tests": 503,
+  "assertions": 46330,
+  "publicScripts": 180,
+  "typeProjects": 4,
+  "build": true,
+  "packedConsumers": [
+    "Bun",
+    "Node ESM",
+    "ambient-free TypeScript"
+  ],
+  "previousAttempt": {
+    "exitCode": 1,
+    "passed": 502,
+    "failed": 1,
+    "cause": "Natural1000-tick photosynthesis regression exceeded default5000ms at5168.83ms; focused earlier4268ms. No functional assertion failed.",
+    "log": "first-check-timeout.log",
+    "fix": "Only that regression timeout made explicit20000ms; assertions,seed,1000steps and model code unchanged."
+  },
+  "unregisteredWholePhases": [
+    "B11:Crystallization counter awaits explicit agreement",
+    "B07:Blood Sugar counter awaits explicit agreement"
+  ],
+  "additionalExecuted": "B07 four immutable scripts/hash5 + exact unchanged Muscle tail; separate source/frozen TS",
+  "logs": [
+    {
+      "file": "docs/development/selected-105-integration-evidence/check.log",
+      "sha256": "c9a75a8f63617dece12e72f8f5fc01d09e47cd23439ec21ce9aa6bf4f3af2401"
+    },
+    {
+      "file": "docs/development/selected-105-integration-evidence/first-check-timeout.log",
+      "sha256": "6e8d605398c524ce73933d3ab2e467d1c384567898648f03808d6cd12d101c54"
+    }
+  ]
+}

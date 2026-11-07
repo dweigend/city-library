@@ -1,0 +1,4508 @@
+{
+  "date": "2026-11-06",
+  "originals": [
+    {
+      "slug": "blood-sugar-regulation",
+      "defaults": "set metabolic-rate 100.0 set glucose-sensitivity 0.75 set insulin-sensitivity 0.75 set glucagon-sensitivity 0.75",
+      "seed": 1,
+      "steps": 10,
+      "setup": {
+        "title": "NetLogo Web: Blood Sugar Regulation",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            4356,
+            363,
+            363,
+            123138,
+            0
+          ]
+        },
+        "sha": "75efe0d13e248bbdd0850171f35e54271bb16ad78bdd3ecbe7e0afb8f3f5313f",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 492,
+            "y": 178.984375,
+            "width": 429,
+            "height": 429
+          }
+        ],
+        "frameRect": {
+          "x": 168.5,
+          "y": 149,
+          "width": 943,
+          "height": 918
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "screenshots": [
+        "blood-sugar-regulation-original-setup.png",
+        "blood-sugar-regulation-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            10,
+            3683,
+            379,
+            594,
+            122138,
+            0
+          ]
+        },
+        "errors": []
+      },
+      "automationErrors": [
+        "Incorrect manual widgetController.redraw() call threw after model progression; no model error. Removed from capture helper."
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 3
+        },
+        "stable": {
+          "success": true,
+          "value": 3
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            4356,
+            363,
+            363,
+            124039,
+            0
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 858,
+          "height": 858,
+          "nonzero": 730921
+        }
+      },
+      "reportExpression": "(list ticks count glucoses count insulins count glucagons total-glucose eat-time)"
+    },
+    {
+      "slug": "chloroplasts-and-food",
+      "defaults": "set waterflow-through-leaf 25.0 set intensity-of-light 50.0 set initial-#-of-chloroplasts 3.0 set initial-carbon-dioxide 100.0 set auto-stop? false set stop-at 2000.0",
+      "seed": 1,
+      "steps": 40,
+      "setup": {
+        "title": "NetLogo Web: Chloroplasts and Food",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            100,
+            0,
+            0,
+            3,
+            18,
+            0
+          ]
+        },
+        "sha": "7c1ca18d90bd70a969ec8722fb056cafeea758c898a39efbaada099aa5e28f66",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 587,
+            "y": 173.984375,
+            "width": 588,
+            "height": 399
+          }
+        ],
+        "frameRect": {
+          "x": 41.5,
+          "y": 149,
+          "width": 1197,
+          "height": 963
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            40,
+            100,
+            0,
+            3,
+            3,
+            18,
+            0
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "chloroplasts-and-food-original-setup.png",
+        "chloroplasts-and-food-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 5
+        },
+        "stable": {
+          "success": true,
+          "value": 5
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            100,
+            0,
+            0,
+            3,
+            18,
+            0
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 1176,
+          "height": 798,
+          "nonzero": 937488
+        }
+      },
+      "reportExpression": "(list ticks count co2s count o2s count h2os count chloroplasts count ADP-ATPs #-glucose-molecules-produced)"
+    },
+    {
+      "slug": "slime",
+      "defaults": "set population 400.0 set sniff-threshold 1.0 set sniff-angle 45.0 set wiggle-angle 40.0 set wiggle-bias 0.0",
+      "seed": 1,
+      "steps": 20,
+      "setup": {
+        "title": "NetLogo Web: Slime",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            400,
+            0
+          ]
+        },
+        "sha": "ede03dc05cc186a9607cb2ef1b11dfde4a1c05eb57edd19e2a577768c04644da",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 242,
+            "y": 173.984375,
+            "width": 405,
+            "height": 405
+          }
+        ],
+        "frameRect": {
+          "x": 235,
+          "y": 149,
+          "width": 810,
+          "height": 824
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            20,
+            400,
+            6324.648086947901
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "slime-original-setup.png",
+        "slime-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 5
+        },
+        "stable": {
+          "success": true,
+          "value": 5
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            400,
+            0
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 810,
+          "height": 810,
+          "nonzero": 47350
+        }
+      },
+      "reportExpression": "(list ticks count turtles sum [chemical] of patches)"
+    },
+    {
+      "slug": "fur",
+      "defaults": "set initial-density 50.0 set inner-radius-x 3.0 set inner-radius-y 3.0 set outer-radius-x 6.0 set outer-radius-y 6.0 set ratio 0.35",
+      "seed": 1,
+      "steps": 20,
+      "setup": {
+        "title": "NetLogo Web: Fur",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            1855
+          ]
+        },
+        "sha": "8f7b57b7df931ec45906251a9421017d438286b5607c20c409f722e6db311bc5",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 341,
+            "y": 173.984375,
+            "width": 305,
+            "height": 305
+          }
+        ],
+        "frameRect": {
+          "x": 235,
+          "y": 149,
+          "width": 810,
+          "height": 814
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            20,
+            1768
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "fur-original-setup.png",
+        "fur-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 26
+        },
+        "stable": {
+          "success": true,
+          "value": 26
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            1863
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 610,
+          "height": 610,
+          "nonzero": 372100
+        }
+      },
+      "reportExpression": "(list ticks count patches with [pcolor = white])"
+    },
+    {
+      "slug": "honeycomb",
+      "defaults": "set num-bees 250.0",
+      "seed": 1,
+      "steps": 30,
+      "setup": {
+        "title": "NetLogo Web: Honeycomb",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            250,
+            0
+          ]
+        },
+        "sha": "812353ef075700900bccf35cc7587137a46fb6c9d3c8a17464790669a72124db",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 231,
+            "y": 173.984375,
+            "width": 405,
+            "height": 405
+          }
+        ],
+        "frameRect": {
+          "x": 235,
+          "y": 149,
+          "width": 810,
+          "height": 824
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            30,
+            250,
+            13414.500000000058
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "honeycomb-original-setup.png",
+        "honeycomb-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 41
+        },
+        "stable": {
+          "success": true,
+          "value": 41
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            250,
+            0
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 810,
+          "height": 810,
+          "nonzero": 9230
+        }
+      },
+      "reportExpression": "(list ticks count turtles sum [chemical] of patches)"
+    },
+    {
+      "slug": "autumn",
+      "defaults": "set number-of-leaves 278.0 set wind-factor 3.0 set temperature 11.0 set rain-intensity 19.0 set sun-intensity 97.0 set start-sugar-mean 50.0 set start-sugar-stddev 25.0 set leaf-display-mode \"attachedness\"",
+      "seed": 1,
+      "steps": 20,
+      "setup": {
+        "title": "NetLogo Web: Autumn",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            278,
+            0,
+            0
+          ]
+        },
+        "sha": "54c2fa97ac3e235b27d603dbaf7a66234ea4ab507c5643a8df95ee5ef89b5087",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 237,
+            "y": 173.984375,
+            "width": 490,
+            "height": 490
+          }
+        ],
+        "frameRect": {
+          "x": 94.5,
+          "y": 149,
+          "width": 1091,
+          "height": 954
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            20,
+            278,
+            0,
+            380
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "autumn-original-setup.png",
+        "autumn-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 26
+        },
+        "stable": {
+          "success": true,
+          "value": 26
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            278,
+            0,
+            0
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 980,
+          "height": 980,
+          "nonzero": 960400
+        }
+      },
+      "reportExpression": "(list ticks count leaves count dead-leaves count raindrops)"
+    },
+    {
+      "slug": "sunflower-emergent",
+      "defaults": "set energy-approximation \"inverse distance\" set particle-size 1.8 set ring-dist 0.2 set fixed-temps? false set show-temps? true set alpha 3.0 set beta 0.6",
+      "seed": 1,
+      "steps": 30,
+      "setup": {
+        "title": "NetLogo Web: Sunflower Emergent",
+        "setup": {
+          "success": true,
+          "value": [
+            1,
+            1,
+            0
+          ]
+        },
+        "sha": "0e0e3d39384a9b2cde33f248f46c0711cf2f7742f39405dc0907485ab1a67cd8",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 178.984375,
+            "width": 483,
+            "height": 483
+          }
+        ],
+        "frameRect": {
+          "x": 231.5,
+          "y": 149,
+          "width": 817,
+          "height": 975
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            31,
+            31,
+            186
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "sunflower-emergent-original-setup.png",
+        "sunflower-emergent-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 36
+        },
+        "stable": {
+          "success": true,
+          "value": 36
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            1,
+            1,
+            0
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 966,
+          "height": 966,
+          "nonzero": 113
+        }
+      },
+      "reportExpression": "(list ticks count particles num-temp-particles)"
+    },
+    {
+      "slug": "tumor",
+      "defaults": "set leave-trail? true",
+      "seed": 1,
+      "steps": 10,
+      "setup": {
+        "title": "NetLogo Web: Tumor",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            2,
+            2
+          ]
+        },
+        "sha": "f47f5edc51141c107582ae5b30d23f613cbef305f6b2cb6bbea13c46298f0630",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 342,
+            "y": 173.984375,
+            "width": 412,
+            "height": 412
+          }
+        ],
+        "frameRect": {
+          "x": 235,
+          "y": 149,
+          "width": 810,
+          "height": 831
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            10,
+            240,
+            240
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "tumor-original-setup.png",
+        "tumor-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 15
+        },
+        "stable": {
+          "success": true,
+          "value": 15
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            2,
+            2
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 824,
+          "height": 824,
+          "nonzero": 678964
+        }
+      },
+      "reportExpression": "(list ticks count turtles cell-count)"
+    },
+    {
+      "slug": "muscle-development",
+      "defaults": "set days-between-workouts 5.0 set hours-of-sleep 8.0 set intensity 95.0 set lift? true set %-slow-twitch-fibers 50.0",
+      "seed": 1,
+      "steps": 20,
+      "setup": {
+        "title": "NetLogo Web: Muscle Development",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            289,
+            1630.2352379109811,
+            50,
+            52
+          ]
+        },
+        "sha": "29c39af0fbaff47c0ecab4d901260f05a5195f807046dd895ddd66eef1163e26",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 361,
+            "y": 174.984375,
+            "width": 391,
+            "height": 391
+          }
+        ],
+        "frameRect": {
+          "x": 235,
+          "y": 149,
+          "width": 810,
+          "height": 992
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          800
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            20,
+            289,
+            1719.6438578016543,
+            84.21524074396656,
+            53.98108906598185
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "muscle-development-original-setup.png",
+        "muscle-development-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 23
+        },
+        "stable": {
+          "success": true,
+          "value": 23
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            289,
+            1620.606204318675,
+            50,
+            52
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 782,
+          "height": 782,
+          "nonzero": 611524
+        }
+      },
+      "reportExpression": "(list ticks count muscle-fibers muscle-mass mean [anabolic-hormone] of patches mean [catabolic-hormone] of patches)"
+    },
+    {
+      "slug": "membrane-formation",
+      "defaults": "set num-water 750.0 set num-lipids 250.0 set water-water-force 0.2 set water-oil-force -0.7 set too-close-force -0.3 set random-force 0.1",
+      "seed": 1,
+      "steps": 1,
+      "setup": {
+        "title": "NetLogo Web: Membrane Formation",
+        "setup": {
+          "success": true,
+          "value": [
+            0,
+            1000,
+            250,
+            250
+          ]
+        },
+        "sha": "4f3a41013090830c53ee055eac6625b1d3fcba981df7ab8d67822af037f7733d",
+        "engine": "2.16.1 (90be9317)",
+        "errors": [],
+        "canvas": [
+          {
+            "x": 297,
+            "y": 173.984375,
+            "width": 561,
+            "height": 561
+          }
+        ],
+        "frameRect": {
+          "x": 200,
+          "y": 149,
+          "width": 880,
+          "height": 980
+        },
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          1000
+        ]
+      },
+      "progress": {
+        "progress": {
+          "success": true,
+          "value": [
+            1,
+            1000,
+            250,
+            250
+          ]
+        },
+        "errors": []
+      },
+      "screenshots": [
+        "membrane-formation-original-setup.png",
+        "membrane-formation-original-progress.png"
+      ],
+      "diagnostics": [
+        [],
+        []
+      ],
+      "controls": {
+        "paused": {
+          "success": true,
+          "value": 7
+        },
+        "stable": {
+          "success": true,
+          "value": 7
+        },
+        "reset": {
+          "success": true,
+          "value": [
+            0,
+            1000,
+            250,
+            250
+          ]
+        },
+        "errors": [],
+        "canvasReadback": {
+          "width": 1122,
+          "height": 1122,
+          "nonzero": 436850
+        }
+      },
+      "reportExpression": "(list ticks count waters count oils count links)"
+    }
+  ],
+  "sourceProbes": [
+    {
+      "slug": "blood-sugar-regulation",
+      "probes": [
+        {
+          "name": "meal-rounding",
+          "cmd": "random-seed 1 setup set metabolic-rate 0 eat eat go",
+          "report": "(list ticks eat-time total-glucose)",
+          "result": {
+            "success": true,
+            "value": [
+              1,
+              33,
+              123550
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "fractional-create",
+          "cmd": "clear-turtles create-glucoses 2.9",
+          "report": "count glucoses",
+          "result": {
+            "success": true,
+            "value": 3
+          },
+          "errors": []
+        },
+        {
+          "name": "fractional-random",
+          "report": "(list n-values 12 [random 0.5] round -2.5)",
+          "result": {
+            "success": true,
+            "value": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              -2
+            ]
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "slug": "chloroplasts-and-food",
+      "probes": [
+        {
+          "name": "water-inlet",
+          "report": "count patches with [region = 3 and pxcor = min-pxcor]",
+          "result": {
+            "success": true,
+            "value": 19
+          },
+          "errors": []
+        },
+        {
+          "name": "auto-stop",
+          "cmd": "setup set auto-stop? true set stop-at 1 repeat 3 [go]",
+          "report": "ticks",
+          "result": {
+            "success": true,
+            "value": 1
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "slug": "slime",
+      "probes": [
+        {
+          "name": "right-tie",
+          "cmd": "clear-turtles create-turtles 1 [set heading 0 turn-toward-chemical]",
+          "report": "[heading] of one-of turtles",
+          "result": {
+            "success": true,
+            "value": 45
+          },
+          "errors": []
+        },
+        {
+          "name": "deposit-mass",
+          "cmd": "setup go",
+          "report": "sum [chemical] of patches",
+          "result": {
+            "success": true,
+            "value": 720.0000000000292
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "slug": "fur",
+      "probes": [
+        {
+          "name": "stored-new-color-tie",
+          "cmd": "ask patches [set pcolor white set new-color 0] ask patch 0 0 [set inner-neighbors no-patches set outer-neighbors no-patches pick-new-color set pcolor new-color]",
+          "report": "[pcolor] of patch 0 0",
+          "result": {
+            "success": true,
+            "value": 0
+          },
+          "errors": []
+        },
+        {
+          "name": "zero-radius",
+          "report": "[ellipse-in 0 3] of patch 0 0",
+          "result": {
+            "success": false,
+            "error": "Runtime error: [object Object]"
+          },
+          "errors": []
+        },
+        {
+          "name": "restart",
+          "cmd": "restart",
+          "report": "ticks",
+          "result": {
+            "success": true,
+            "value": 0
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "slug": "honeycomb",
+      "probes": [
+        {
+          "name": "first-tick-evaporation",
+          "cmd": "setup go",
+          "report": "(list ticks sum [chemical] of patches)",
+          "result": {
+            "success": true,
+            "value": [
+              1,
+              449.9999999999902
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "second-tick-no-evaporation",
+          "cmd": "go",
+          "report": "(list ticks sum [chemical] of patches)",
+          "result": {
+            "success": true,
+            "value": [
+              2,
+              950.0000000000164
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "hide",
+          "cmd": "ask turtles [hide-turtle]",
+          "report": "count turtles with [hidden?]",
+          "result": {
+            "success": true,
+            "value": 250
+          },
+          "errors": []
+        },
+        {
+          "name": "show",
+          "cmd": "ask turtles [show-turtle]",
+          "report": "count turtles with [not hidden?]",
+          "result": {
+            "success": true,
+            "value": 250
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "slug": "autumn",
+      "probes": [
+        {
+          "name": "cold-leaf-phase",
+          "cmd": "clear-turtles create-leaves 1 [set water-level 75 set sugar-level 50 set chlorophyll 60 set attachedness 100] set temperature 5 set sun-intensity 0 ask leaves [change-color adjust-water adjust-chlorophyll adjust-sugar change-color]",
+          "report": "[(list water-level sugar-level chlorophyll anthocyanin)] of one-of leaves",
+          "result": {
+            "success": true,
+            "value": [
+              73,
+              47.5,
+              55,
+              2
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "empty-preflight",
+          "cmd": "ask leaves [set breed dead-leaves] go",
+          "report": "ticks",
+          "result": {
+            "success": true,
+            "value": 0
+          },
+          "errors": []
+        },
+        {
+          "name": "outside-facing",
+          "cmd": "ask dead-leaves [facexy 100 -16]",
+          "report": "[heading] of one-of dead-leaves",
+          "result": {
+            "success": true,
+            "value": 99.0902769208223
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "slug": "membrane-formation",
+      "probes": [
+        {
+          "name": "self-inclusive-isolation",
+          "report": "mean [count oils in-radius interaction-distance / count turtles in-radius interaction-distance with [not (link-neighbor? myself)]] of oils",
+          "result": {
+            "success": true,
+            "value": 0.2413314380780364
+          },
+          "errors": []
+        },
+        {
+          "name": "partners",
+          "report": "(list count links count waters with [any? my-links])",
+          "result": {
+            "success": true,
+            "value": [
+              250,
+              250
+            ]
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "slug": "sunflower-emergent",
+      "probes": [
+        {
+          "name": "edge-preflight",
+          "cmd": "setup ask particles [die] create-particles 399 set ring-dist 0.2 go",
+          "report": "(list ticks count particles)",
+          "result": {
+            "success": true,
+            "value": [
+              1,
+              399
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "beta-zero",
+          "cmd": "setup set energy-approximation \"exponential\" set beta 0 go",
+          "report": "(list ticks count particles count temp-particles)",
+          "result": {
+            "success": true,
+            "value": [
+              1,
+              1,
+              12
+            ]
+          },
+          "errors": [
+            {
+              "message": "Division by zero.\nerror while running /\ncalled by procedure GO",
+              "start": 1544,
+              "end": 1545
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tumor",
+      "probes": [
+        {
+          "name": "birth-age",
+          "cmd": "setup go",
+          "report": "(list ticks count turtles [age] of turtles with [not stem?])",
+          "result": {
+            "success": true,
+            "value": [
+              1,
+              4,
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "kills-and-cached-count",
+          "cmd": "kill-original-stem-cell kill-moving-stem-cell kill-transitory-cells",
+          "report": "(list ticks count turtles cell-count)",
+          "result": {
+            "success": true,
+            "value": [
+              1,
+              0,
+              4
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "empty-completed-tick",
+          "cmd": "go",
+          "report": "(list ticks count turtles cell-count)",
+          "result": {
+            "success": true,
+            "value": [
+              2,
+              0,
+              0
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "partial-forward",
+          "cmd": "create-turtles 1 [setxy 49.8 0 set heading 90 fd 3]",
+          "report": "[xcor] of max-one-of turtles [who]",
+          "result": {
+            "success": true,
+            "value": 50.8
+          },
+          "errors": []
+        },
+        {
+          "name": "unbounded-face",
+          "cmd": "ask max-one-of turtles [who] [facexy 100 0]",
+          "report": "[heading] of max-one-of turtles [who]",
+          "result": {
+            "success": true,
+            "value": 90
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "slug": "muscle-development",
+      "probes": [
+        {
+          "name": "all-slow",
+          "cmd": "set %-slow-twitch-fibers 100 setup",
+          "report": "(list min [max-size] of muscle-fibers max [max-size] of muscle-fibers)",
+          "result": {
+            "success": true,
+            "value": [
+              4,
+              4
+            ]
+          },
+          "errors": []
+        },
+        {
+          "name": "live-no-lift",
+          "cmd": "set lift? false go",
+          "report": "(list ticks muscle-mass min [anabolic-hormone] of patches max [catabolic-hormone] of patches)",
+          "result": {
+            "success": true,
+            "value": [
+              1,
+              460.8926348114128,
+              50,
+              52
+            ]
+          },
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "target": [
+    {
+      "slug": "blood-sugar-regulation",
+      "steps": 10,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "Blood glucose",
+            "4356"
+          ],
+          [
+            "Insulin",
+            "363"
+          ],
+          [
+            "Glucagon",
+            "363"
+          ],
+          [
+            "Stored glucose",
+            "118691"
+          ],
+          [
+            "Meal time",
+            "0"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "live-metabolicRate",
+            "value": "100"
+          },
+          {
+            "name": "live-glucoseSensitivity",
+            "value": "0.75"
+          },
+          {
+            "name": "live-insulinSensitivity",
+            "value": "0.75"
+          },
+          {
+            "name": "live-glucagonSensitivity",
+            "value": "0.75"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Blood glucose",
+            "3978"
+          ],
+          [
+            "Insulin",
+            "389"
+          ],
+          [
+            "Glucagon",
+            "574"
+          ],
+          [
+            "Stored glucose",
+            "118069"
+          ],
+          [
+            "Meal time",
+            "0"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-vnsy43gj.js",
+            "sha256": "9bcda6bf6eefc34c4e94f43c87b353d4609265ed524b71c27b9b0fd5f9639f90",
+            "sourceMarker": "selected-biology-b07:blood-sugar-regulation:75efe0d13e248bbdd0850171f35e54271bb16ad78bdd3ecbe7e0afb8f3f5313f"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1806336
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "blood-sugar-regulation-target-setup.png",
+        "blood-sugar-regulation-target-progress.png",
+        "blood-sugar-regulation-target-desktop-dark.png",
+        "blood-sugar-regulation-target-mobile-light.png",
+        "blood-sugar-regulation-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "12",
+          "4010",
+          "368",
+          "583",
+          "117837",
+          "0"
+        ],
+        "stable": [
+          "12",
+          "4010",
+          "368",
+          "583",
+          "117837",
+          "0"
+        ],
+        "reset": [
+          "0",
+          "4356",
+          "363",
+          "363",
+          "118691",
+          "0"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          },
+          {
+            "label": "Eat",
+            "disabled": false
+          },
+          {
+            "label": "Follow glucose",
+            "disabled": false
+          },
+          {
+            "label": "Follow insulin",
+            "disabled": false
+          },
+          {
+            "label": "Follow glucagon",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-metabolicRate",
+          "live-glucoseSensitivity",
+          "live-insulinSensitivity",
+          "live-glucagonSensitivity"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          354
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 243.1875,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          354
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 243.1875,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "chloroplasts-and-food",
+      "steps": 40,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "CO2",
+            "100"
+          ],
+          [
+            "O2",
+            "0"
+          ],
+          [
+            "Glucose produced",
+            "0"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "initialChloroplasts",
+            "value": "3"
+          },
+          {
+            "name": "initialCarbonDioxide",
+            "value": "100"
+          },
+          {
+            "name": "live-waterflowThroughLeaf",
+            "value": "25"
+          },
+          {
+            "name": "live-intensityOfLight",
+            "value": "50"
+          },
+          {
+            "name": "live-autoStop",
+            "value": false
+          },
+          {
+            "name": "live-stopAt",
+            "value": "2000"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 456
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "40"
+          ],
+          [
+            "CO2",
+            "100"
+          ],
+          [
+            "O2",
+            "0"
+          ],
+          [
+            "Glucose produced",
+            "0"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-f4rvcwjb.js",
+            "sha256": "710778eb7d1d70e5a96ca48ac0fec4de1007fcbfe2c1fe665630a7775f1b716f",
+            "sourceMarker": "selected-biology-b07:chloroplasts-and-food:7c1ca18d90bd70a969ec8722fb056cafeea758c898a39efbaada099aa5e28f66"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 912,
+            "nonzero": 1225728
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "chloroplasts-and-food-target-setup.png",
+        "chloroplasts-and-food-target-progress.png",
+        "chloroplasts-and-food-target-desktop-dark.png",
+        "chloroplasts-and-food-target-mobile-light.png",
+        "chloroplasts-and-food-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "42",
+          "100",
+          "0",
+          "0"
+        ],
+        "stable": [
+          "42",
+          "100",
+          "0",
+          "0"
+        ],
+        "reset": [
+          "0",
+          "100",
+          "0",
+          "0"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-waterflowThroughLeaf",
+          "live-intensityOfLight",
+          "live-autoStop",
+          "live-stopAt"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 456
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          248.5
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 300.578125,
+          "width": 358,
+          "height": 242.921875
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          248.5
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 300.578125,
+          "width": 358,
+          "height": 242.921875
+        }
+      }
+    },
+    {
+      "slug": "slime",
+      "steps": 20,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "Population",
+            "400"
+          ],
+          [
+            "Chemical",
+            "0.00"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "population",
+            "value": "400"
+          },
+          {
+            "name": "live-sniffThreshold",
+            "value": "1"
+          },
+          {
+            "name": "live-sniffAngle",
+            "value": "45"
+          },
+          {
+            "name": "live-wiggleAngle",
+            "value": "40"
+          },
+          {
+            "name": "live-wiggleBias",
+            "value": "0"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "20"
+          ],
+          [
+            "Population",
+            "400"
+          ],
+          [
+            "Chemical",
+            "6324.65"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-3q794nay.js",
+            "sha256": "ed70003addd931e7d0fd36a2ef7370ac5058a9d62dbbcd9836336f41363c6f38",
+            "sourceMarker": "selected-biology-b07:slime:ede03dc05cc186a9607cb2ef1b11dfde4a1c05eb57edd19e2a577768c04644da"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1806336
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "slime-target-setup.png",
+        "slime-target-progress.png",
+        "slime-target-desktop-dark.png",
+        "slime-target-mobile-light.png",
+        "slime-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "22",
+          "400",
+          "6490.96"
+        ],
+        "stable": [
+          "22",
+          "400",
+          "6490.96"
+        ],
+        "reset": [
+          "0",
+          "400",
+          "0.00"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-sniffThreshold",
+          "live-sniffAngle",
+          "live-wiggleAngle",
+          "live-wiggleBias"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          281.5
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 242.984375,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          281.5
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 242.984375,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "fur",
+      "steps": 20,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "White cells",
+            "1855"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "innerRadiusX",
+            "value": "3"
+          },
+          {
+            "name": "innerRadiusY",
+            "value": "3"
+          },
+          {
+            "name": "outerRadiusX",
+            "value": "6"
+          },
+          {
+            "name": "outerRadiusY",
+            "value": "6"
+          },
+          {
+            "name": "live-initialDensity",
+            "value": "50"
+          },
+          {
+            "name": "live-ratio",
+            "value": "0.35"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "20"
+          ],
+          [
+            "White cells",
+            "1812"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-m99k09vq.js",
+            "sha256": "041049a2f719bea6f9da2b553b46056c97f16dcda18c67531ce9dd7fca7bb5e2",
+            "sourceMarker": "selected-biology-b07:fur:8f7b57b7df931ec45906251a9421017d438286b5607c20c409f722e6db311bc5"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 903645
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "fur-target-setup.png",
+        "fur-target-progress.png",
+        "fur-target-desktop-dark.png",
+        "fur-target-mobile-light.png",
+        "fur-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "22",
+          "1812"
+        ],
+        "stable": [
+          "22",
+          "1812"
+        ],
+        "reset": [
+          "0",
+          "1855"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          },
+          {
+            "label": "Restart",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-initialDensity",
+          "live-ratio"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          402
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 242.96875,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          402
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 242.96875,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "honeycomb",
+      "steps": 30,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "Bees",
+            "250"
+          ],
+          [
+            "Chemical",
+            "0.00"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numBees",
+            "value": "250"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "30"
+          ],
+          [
+            "Bees",
+            "250"
+          ],
+          [
+            "Chemical",
+            "13414.50"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-x1y5e6kp.js",
+            "sha256": "764ead0c4d09bce0fde2a330ab243f715417e99640a9ca63e12182005f690ae0",
+            "sourceMarker": "selected-biology-b07:honeycomb:812353ef075700900bccf35cc7587137a46fb6c9d3c8a17464790669a72124db"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1741730
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "honeycomb-target-setup.png",
+        "honeycomb-target-progress.png",
+        "honeycomb-target-desktop-dark.png",
+        "honeycomb-target-mobile-light.png",
+        "honeycomb-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "32",
+          "250",
+          "13023.05"
+        ],
+        "stable": [
+          "32",
+          "250",
+          "13023.05"
+        ],
+        "reset": [
+          "0",
+          "250",
+          "0.00"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          },
+          {
+            "label": "Hide bees",
+            "disabled": false
+          },
+          {
+            "label": "Show bees",
+            "disabled": false
+          }
+        ],
+        "liveNames": []
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          167.5
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 404.984375,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          167.5
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 404.984375,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "autumn",
+      "steps": 20,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "Leaves",
+            "278"
+          ],
+          [
+            "Dead leaves",
+            "0"
+          ],
+          [
+            "Raindrops",
+            "0"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numberOfLeaves",
+            "value": "278"
+          },
+          {
+            "name": "startSugarMean",
+            "value": "50"
+          },
+          {
+            "name": "startSugarStddev",
+            "value": "25"
+          },
+          {
+            "name": "live-windFactor",
+            "value": "3"
+          },
+          {
+            "name": "live-temperature",
+            "value": "11"
+          },
+          {
+            "name": "live-rainIntensity",
+            "value": "19"
+          },
+          {
+            "name": "live-sunIntensity",
+            "value": "97"
+          },
+          {
+            "name": "live-leafDisplayMode",
+            "value": "attachedness"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "20"
+          ],
+          [
+            "Leaves",
+            "278"
+          ],
+          [
+            "Dead leaves",
+            "0"
+          ],
+          [
+            "Raindrops",
+            "380"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-np6tsv4x.js",
+            "sha256": "4aafeebfd306de6a3a0b1391935fd51f70d87050e2a414491865d9cccc675777",
+            "sourceMarker": "selected-biology-b07:autumn:54c2fa97ac3e235b27d603dbaf7a66234ea4ab507c5643a8df95ee5ef89b5087"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1806336
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "autumn-target-setup.png",
+        "autumn-target-progress.png",
+        "autumn-target-desktop-dark.png",
+        "autumn-target-mobile-light.png",
+        "autumn-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "22",
+          "278",
+          "0",
+          "418"
+        ],
+        "stable": [
+          "22",
+          "278",
+          "0",
+          "418"
+        ],
+        "reset": [
+          "0",
+          "278",
+          "0",
+          "0"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-windFactor",
+          "live-temperature",
+          "live-rainIntensity",
+          "live-sunIntensity",
+          "live-leafDisplayMode"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          359
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 242.875,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          359
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 242.875,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "sunflower-emergent",
+      "steps": 30,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "1"
+          ],
+          [
+            "Particles",
+            "1"
+          ],
+          [
+            "Temporary candidates",
+            "0"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "live-ringDist",
+            "value": "0.2"
+          },
+          {
+            "name": "live-particleSize",
+            "value": "1.8"
+          },
+          {
+            "name": "live-fixedTemps",
+            "value": false
+          },
+          {
+            "name": "live-showTemps",
+            "value": true
+          },
+          {
+            "name": "live-energyApproximation",
+            "value": "inverse distance"
+          },
+          {
+            "name": "live-alpha",
+            "value": "3"
+          },
+          {
+            "name": "live-beta",
+            "value": "0.6"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "31"
+          ],
+          [
+            "Particles",
+            "31"
+          ],
+          [
+            "Temporary candidates",
+            "186"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-8rmf8qz2.js",
+            "sha256": "163f395904a60e480b039f7f64c68865c477b78352c0097b3dbda599eccc9ed6",
+            "sourceMarker": "selected-biology-b07:sunflower-emergent:0e0e3d39384a9b2cde33f248f46c0711cf2f7742f39405dc0907485ab1a67cd8"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1806336
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "sunflower-emergent-target-setup.png",
+        "sunflower-emergent-target-progress.png",
+        "sunflower-emergent-target-desktop-dark.png",
+        "sunflower-emergent-target-mobile-light.png",
+        "sunflower-emergent-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "33",
+          "33",
+          "198"
+        ],
+        "stable": [
+          "33",
+          "33",
+          "198"
+        ],
+        "reset": [
+          "1",
+          "1",
+          "0"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-ringDist",
+          "live-particleSize",
+          "live-fixedTemps",
+          "live-showTemps",
+          "live-energyApproximation",
+          "live-alpha",
+          "live-beta"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          228.5
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 243.1875,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          228.5
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 243.1875,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "tumor",
+      "steps": 10,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "Cell count",
+            "2"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "live-leaveTrail",
+            "value": true
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Cell count",
+            "240"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-0e99qvm6.js",
+            "sha256": "fe4f28e21f2c7121cd7a19518f340352b50860272ebb4706a6dd089b473c6d44",
+            "sourceMarker": "selected-biology-b07:tumor:f47f5edc51141c107582ae5b30d23f613cbef305f6b2cb6bbea13c46298f0630"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1806336
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "tumor-target-setup.png",
+        "tumor-target-progress.png",
+        "tumor-target-desktop-dark.png",
+        "tumor-target-mobile-light.png",
+        "tumor-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "12",
+          "304"
+        ],
+        "stable": [
+          "12",
+          "304"
+        ],
+        "reset": [
+          "0",
+          "2"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          },
+          {
+            "label": "Kill transitory cells",
+            "disabled": false
+          },
+          {
+            "label": "Kill original stem cell",
+            "disabled": false
+          },
+          {
+            "label": "Kill moving stem cell",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-leaveTrail"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          295
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 243.1875,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          295
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 243.1875,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "muscle-development",
+      "steps": 20,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "Muscle mass",
+            "1623.25"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "slowTwitchFibers",
+            "value": "50"
+          },
+          {
+            "name": "live-daysBetweenWorkouts",
+            "value": "5"
+          },
+          {
+            "name": "live-hoursOfSleep",
+            "value": "8"
+          },
+          {
+            "name": "live-intensity",
+            "value": "95"
+          },
+          {
+            "name": "live-lift",
+            "value": true
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "20"
+          ],
+          [
+            "Muscle mass",
+            "1711.72"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-erfhrr9h.js",
+            "sha256": "d697c7a793213a8b89a1908a9136eaf066a1bf28e8890dcbdf112b52634c2f0a",
+            "sourceMarker": "selected-biology-b07:muscle-development:29c39af0fbaff47c0ecab4d901260f05a5195f807046dd895ddd66eef1163e26"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1806336
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "muscle-development-target-setup.png",
+        "muscle-development-target-progress.png",
+        "muscle-development-target-desktop-dark.png",
+        "muscle-development-target-mobile-light.png",
+        "muscle-development-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "22",
+          "1722.53"
+        ],
+        "stable": [
+          "22",
+          "1722.53"
+        ],
+        "reset": [
+          "0",
+          "1623.25"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-daysBetweenWorkouts",
+          "live-hoursOfSleep",
+          "live-intensity",
+          "live-lift"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          252
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 242.984375,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          252
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 242.984375,
+          "width": 358,
+          "height": 358
+        }
+      }
+    },
+    {
+      "slug": "membrane-formation",
+      "steps": 1,
+      "setup": {
+        "monitors": [
+          [
+            "Tick",
+            "0"
+          ],
+          [
+            "Molecules",
+            "1250"
+          ],
+          [
+            "Lipids",
+            "250"
+          ],
+          [
+            "Hydrophobic isolation",
+            "0.228"
+          ]
+        ],
+        "status": "Model initialized.",
+        "state": "success",
+        "inputs": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numWater",
+            "value": "750"
+          },
+          {
+            "name": "numLipids",
+            "value": "250"
+          },
+          {
+            "name": "live-waterWaterForce",
+            "value": "0.2"
+          },
+          {
+            "name": "live-waterOilForce",
+            "value": "-0.7"
+          },
+          {
+            "name": "live-tooCloseForce",
+            "value": "-0.3"
+          },
+          {
+            "name": "live-randomForce",
+            "value": "0.1"
+          }
+        ],
+        "canvas": [
+          {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          }
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "viewport": [
+          1280,
+          900
+        ]
+      },
+      "progress": {
+        "monitors": [
+          [
+            "Tick",
+            "1"
+          ],
+          [
+            "Molecules",
+            "1250"
+          ],
+          [
+            "Lipids",
+            "250"
+          ],
+          [
+            "Hydrophobic isolation",
+            "0.231"
+          ]
+        ],
+        "status": "Steps completed.",
+        "state": "success"
+      },
+      "attribution": {
+        "buildVersion": "1793969543383",
+        "chunks": [
+          {
+            "url": "http://localhost:3147/chunks/ui-srzw20s3.js",
+            "sha256": "fc197a7420e8ecd9f5a3beb5204b35aa9fa67656bd5a9e7c7918aa4ecf42b4a3",
+            "sourceMarker": "selected-biology-b07:membrane-formation:4f3a41013090830c53ee055eac6625b1d3fcba981df7ab8d67822af037f7733d"
+          }
+        ],
+        "canvas": [
+          {
+            "width": 1344,
+            "height": 1344,
+            "nonzero": 1806336
+          }
+        ]
+      },
+      "diagnostics": [
+        [],
+        []
+      ],
+      "screenshots": [
+        "membrane-formation-target-setup.png",
+        "membrane-formation-target-progress.png",
+        "membrane-formation-target-desktop-dark.png",
+        "membrane-formation-target-mobile-light.png",
+        "membrane-formation-target-mobile-dark.png"
+      ],
+      "controls": {
+        "paused": [
+          "3",
+          "1250",
+          "250",
+          "0.238"
+        ],
+        "stable": [
+          "3",
+          "1250",
+          "250",
+          "0.238"
+        ],
+        "reset": [
+          "0",
+          "1250",
+          "250",
+          "0.228"
+        ],
+        "status": "Model initialized.",
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false
+          },
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "liveNames": [
+          "live-waterWaterForce",
+          "live-waterOilForce",
+          "live-tooCloseForce",
+          "live-randomForce"
+        ]
+      },
+      "desktop-dark": {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scroll": [
+          0,
+          1
+        ],
+        "scrollWidth": 1280,
+        "theme": "dark",
+        "canvas": {
+          "x": 312,
+          "y": 114,
+          "width": 672,
+          "height": 672
+        }
+      },
+      "mobile-light": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          322.5
+        ],
+        "scrollWidth": 390,
+        "theme": "light",
+        "canvas": {
+          "x": 16,
+          "y": 243.078125,
+          "width": 358,
+          "height": 358
+        }
+      },
+      "mobile-dark": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scroll": [
+          0,
+          322.5
+        ],
+        "scrollWidth": 390,
+        "theme": "dark",
+        "canvas": {
+          "x": 16,
+          "y": 243.078125,
+          "width": 358,
+          "height": 358
+        }
+      }
+    }
+  ],
+  "targetProbes": [
+    {
+      "slug": "chloroplasts-and-food",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "CO2",
+                "100"
+              ],
+              [
+                "O2",
+                "0"
+              ],
+              [
+                "Glucose produced",
+                "0"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "autoStop": true,
+              "stopAt": 100,
+              "intensityOfLight": 0,
+              "waterflowThroughLeaf": 0
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "CO2",
+                "100"
+              ],
+              [
+                "O2",
+                "0"
+              ],
+              [
+                "Glucose produced",
+                "0"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "100 steps"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "100"
+              ],
+              [
+                "CO2",
+                "100"
+              ],
+              [
+                "O2",
+                "0"
+              ],
+              [
+                "Glucose produced",
+                "0"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": [
+              "Run",
+              "1 step",
+              "10 steps",
+              "100 steps"
+            ]
+          }
+        },
+        {
+          "operation": {
+            "click": "1 step"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "100"
+              ],
+              [
+                "CO2",
+                "100"
+              ],
+              [
+                "O2",
+                "0"
+              ],
+              [
+                "Glucose produced",
+                "0"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": [
+              "Run",
+              "1 step",
+              "10 steps",
+              "100 steps"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "slime",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Population",
+                "400"
+              ],
+              [
+                "Chemical",
+                "0.00"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "wiggleAngle": 0,
+              "wiggleBias": 40,
+              "sniffAngle": 0,
+              "sniffThreshold": 5
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Population",
+                "400"
+              ],
+              [
+                "Chemical",
+                "0.00"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "1 step"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "1"
+              ],
+              [
+                "Population",
+                "400"
+              ],
+              [
+                "Chemical",
+                "720.00"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": []
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fur",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "White cells",
+                "1855"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "initialDensity": 100,
+              "ratio": 0
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "White cells",
+                "1855"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "Restart"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "White cells",
+                "3721"
+              ]
+            ],
+            "status": "Action completed.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "1 step"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "1"
+              ],
+              [
+                "White cells",
+                "3721"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "ratio": 2
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "1"
+              ],
+              [
+                "White cells",
+                "3721"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "1 step"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "2"
+              ],
+              [
+                "White cells",
+                "0"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": []
+          }
+        }
+      ]
+    },
+    {
+      "slug": "honeycomb",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Bees",
+                "250"
+              ],
+              [
+                "Chemical",
+                "0.00"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "Hide bees"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Bees",
+                "250"
+              ],
+              [
+                "Chemical",
+                "0.00"
+              ]
+            ],
+            "status": "Action completed.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "Show bees"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Bees",
+                "250"
+              ],
+              [
+                "Chemical",
+                "0.00"
+              ]
+            ],
+            "status": "Action completed.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "1 step"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "1"
+              ],
+              [
+                "Bees",
+                "250"
+              ],
+              [
+                "Chemical",
+                "450.00"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": []
+          }
+        }
+      ]
+    },
+    {
+      "slug": "autumn",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Leaves",
+                "278"
+              ],
+              [
+                "Dead leaves",
+                "0"
+              ],
+              [
+                "Raindrops",
+                "0"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "windFactor": 10,
+              "temperature": 0,
+              "rainIntensity": 0,
+              "sunIntensity": 0,
+              "leafDisplayMode": "water"
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Leaves",
+                "278"
+              ],
+              [
+                "Dead leaves",
+                "0"
+              ],
+              [
+                "Raindrops",
+                "0"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "100 steps"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "26"
+              ],
+              [
+                "Leaves",
+                "0"
+              ],
+              [
+                "Dead leaves",
+                "278"
+              ],
+              [
+                "Raindrops",
+                "0"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": [
+              "Run",
+              "1 step",
+              "10 steps",
+              "100 steps"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "membrane-formation",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Molecules",
+                "18"
+              ],
+              [
+                "Lipids",
+                "4"
+              ],
+              [
+                "Hydrophobic isolation",
+                "0.875"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "waterWaterForce": 0,
+              "waterOilForce": 0,
+              "tooCloseForce": 0,
+              "randomForce": 0
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Molecules",
+                "18"
+              ],
+              [
+                "Lipids",
+                "4"
+              ],
+              [
+                "Hydrophobic isolation",
+                "0.875"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "10 steps"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "10"
+              ],
+              [
+                "Molecules",
+                "18"
+              ],
+              [
+                "Lipids",
+                "4"
+              ],
+              [
+                "Hydrophobic isolation",
+                "0.875"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": []
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sunflower-emergent",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "1"
+              ],
+              [
+                "Particles",
+                "1"
+              ],
+              [
+                "Temporary candidates",
+                "0"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "ringDist": 1,
+              "fixedTemps": true,
+              "showTemps": false,
+              "energyApproximation": "exponential",
+              "beta": 0.6,
+              "alpha": 1,
+              "particleSize": 3
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "1"
+              ],
+              [
+                "Particles",
+                "1"
+              ],
+              [
+                "Temporary candidates",
+                "0"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "100 steps"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "79"
+              ],
+              [
+                "Particles",
+                "79"
+              ],
+              [
+                "Temporary candidates",
+                "360"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": [
+              "Run",
+              "1 step",
+              "10 steps",
+              "100 steps"
+            ]
+          }
+        },
+        {
+          "operation": {
+            "click": "1 step"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "79"
+              ],
+              [
+                "Particles",
+                "79"
+              ],
+              [
+                "Temporary candidates",
+                "360"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": [
+              "Run",
+              "1 step",
+              "10 steps",
+              "100 steps"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tumor",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Cell count",
+                "2"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "leaveTrail": false
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Cell count",
+                "2"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "Kill original stem cell"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Cell count",
+                "2"
+              ]
+            ],
+            "status": "Action completed.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "Kill moving stem cell"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Cell count",
+                "2"
+              ]
+            ],
+            "status": "Action completed.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "Kill transitory cells"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Cell count",
+                "2"
+              ]
+            ],
+            "status": "Action completed.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "1 step"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "1"
+              ],
+              [
+                "Cell count",
+                "0"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": [
+              "Run",
+              "1 step",
+              "10 steps",
+              "100 steps"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "muscle-development",
+      "observations": [
+        {
+          "setup": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Muscle mass",
+                "1623.25"
+              ]
+            ],
+            "status": "Model initialized.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "set": {
+              "lift": false,
+              "intensity": 50,
+              "hoursOfSleep": 0,
+              "daysBetweenWorkouts": 1
+            }
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "0"
+              ],
+              [
+                "Muscle mass",
+                "1623.25"
+              ]
+            ],
+            "status": "Rule updated.",
+            "state": "success",
+            "disabled": []
+          }
+        },
+        {
+          "operation": {
+            "click": "10 steps"
+          },
+          "result": {
+            "monitors": [
+              [
+                "Tick",
+                "10"
+              ],
+              [
+                "Muscle mass",
+                "1622.82"
+              ]
+            ],
+            "status": "Steps completed.",
+            "state": "success",
+            "disabled": []
+          }
+        }
+      ]
+    },
+    {
+      "slug": "blood-sugar-regulation",
+      "observations": {
+        "initial": {
+          "Tick": "0",
+          "Blood glucose": "4356",
+          "Insulin": "363",
+          "Glucagon": "363",
+          "Stored glucose": "118691",
+          "Meal time": "0"
+        },
+        "meals": {
+          "Tick": "0",
+          "Blood glucose": "4356",
+          "Insulin": "363",
+          "Glucagon": "363",
+          "Stored glucose": "118691",
+          "Meal time": "34"
+        },
+        "progressed": {
+          "Tick": "1",
+          "Blood glucose": "4781",
+          "Insulin": "572",
+          "Glucagon": "326",
+          "Stored glucose": "118678",
+          "Meal time": "33"
+        },
+        "follow": [
+          {
+            "label": "Follow glucose",
+            "status": "Action completed.",
+            "monitors": {
+              "Tick": "1",
+              "Blood glucose": "4781",
+              "Insulin": "572",
+              "Glucagon": "326",
+              "Stored glucose": "118678",
+              "Meal time": "33"
+            }
+          },
+          {
+            "label": "Follow insulin",
+            "status": "Action completed.",
+            "monitors": {
+              "Tick": "1",
+              "Blood glucose": "4781",
+              "Insulin": "572",
+              "Glucagon": "326",
+              "Stored glucose": "118678",
+              "Meal time": "33"
+            }
+          },
+          {
+            "label": "Follow glucagon",
+            "status": "Action completed.",
+            "monitors": {
+              "Tick": "1",
+              "Blood glucose": "4781",
+              "Insulin": "572",
+              "Glucagon": "326",
+              "Stored glucose": "118678",
+              "Meal time": "33"
+            }
+          }
+        ],
+        "live": [
+          {
+            "name": "live-metabolicRate",
+            "value": "0"
+          },
+          {
+            "name": "live-glucoseSensitivity",
+            "value": "1"
+          },
+          {
+            "name": "live-insulinSensitivity",
+            "value": "1"
+          },
+          {
+            "name": "live-glucagonSensitivity",
+            "value": "1"
+          }
+        ],
+        "state": "success"
+      }
+    }
+  ],
+  "imageTransportInspection": {
+    "files": [
+      "sunflower-emergent-target-mobile-dark.png",
+      "tumor-target-mobile-dark.png",
+      "membrane-formation-target-mobile-dark.png"
+    ],
+    "result": "Individually reopened with view_image: single sunflower particle, coincident tumor stems and complete membrane visible. Bundled transport appeared blank; no renderer fix warranted."
+  },
+  "parentSync": {
+    "originalRuntime": "428750fe899d2e4a4f94318cd8f20860e3e6c2c3",
+    "localRuntime": "19f98ba",
+    "originalCompanion": "b3db9b4af19b58141119657d6ff620e777ee36ff",
+    "localCompanion": "6dfc324",
+    "ownership": "Parent-owned dependency sync. Exclude both local commits from owned cherry-pick list."
+  },
+  "historicalBloodTargetBlocker": {
+    "status": "Unknown option: mean",
+    "stage": "setup",
+    "screenshot": "blood-sugar-regulation-target-blocked.png",
+    "cause": "Base Random lacks public Poisson/exponential; parent owns dependency phase.",
+    "resolved": "Public dependency synchronized before fresh final target captures; blocked PNG retained as historical diagnostic only."
+  },
+  "historicalTargetAttribution": {
+    "commit": "ff16da0",
+    "buildVersion": "1793968579671",
+    "scope": "nine target records before parent sync; superseded by ten final target records, all refreshed after sync. Historical PNG blobs remain in Git at that commit."
+  }
+}

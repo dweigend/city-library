@@ -1,0 +1,57 @@
+{
+  "time": 3464.199999988079,
+  "url": "http://localhost:3150/?experiment=urban-suite-structure-from-randomness-2",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "dpr": 2,
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "scroll": {
+    "x": 0,
+    "y": 0
+  },
+  "dark": false,
+  "monitors": "Tick\n0\nAbove now\n0\nActivated\n0\nMean potential\n0.00698225\nMax potential\n1.00000",
+  "aside": "Seed\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\nAbove now\n0\nActivated\n0\nMean potential\n0.00698225\nMax potential\n1.00000\nThreshold\n\nModel initialized.\n\nModel info",
+  "inputs": [
+    {
+      "name": "seed",
+      "value": "1",
+      "checked": false
+    },
+    {
+      "name": "",
+      "value": "5",
+      "checked": false
+    },
+    {
+      "name": "live-threshold",
+      "value": "4.5",
+      "checked": false
+    },
+    {
+      "name": "",
+      "value": "on",
+      "checked": false
+    }
+  ],
+  "plots": [
+    "Currently above: 0",
+    "Maximum: 1; Mean × 10: 0.06982248520710059"
+  ],
+  "overflow": false,
+  "canvas": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "aria": "Model view. 16900 cells. Arrow keys select an item.",
+      "rect": {
+        "x": 312,
+        "y": 115,
+        "width": 672,
+        "height": 672
+      }
+    }
+  ]
+}

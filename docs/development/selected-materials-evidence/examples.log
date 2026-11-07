@@ -1,0 +1,21 @@
+$ bun scripts/examples.ts
+B18 neural equations, phase barrier, truth functions and non-ticking tests passed
+B18 marked resource protocol and both PageRank mechanisms passed
+B18 tournament genetics, all-ones stop and actual Robby strategy actions passed
+B18 inertia, best-before-move, Lloyd assignment, SSE and convergence passed
+B18 anisotropic energy, source acceptance/cooling and factory ordering/quirks passed
+energy-model: energy=5, tick=5
+independent-worlds: energies=7/18, ticks=3/1, streams isolated
+membership-lifecycle: atomic ownership, detach preserves, delete invalidates
+copy-and-custom-state: cloned graphs, retained framework references, explicit later sharing
+execution-errors: retained effects, successful ticks only, guard released
+seeded-draws: exact Mulberry fixtures, integer bounds, atomic invalid draws
+population-selection: canonical weighted choices, source order, explicit draw schedules
+stream-continuation: independent copies, in-place restore, explicit reseed
+local-randomness: nested main checkpoints, rollback of stream only, failure cleanup
+resource-exchange: 24 canonical agents, conserved energy, repeatable seeded dynamics
+graph-structure: canonical object nodes, explicit endpoints and stable observation snapshots
+graph-representation: per-edge direction, explicit parallel keys and opt-in loops
+graph-lifecycle: independent edge state, shared identities and canonical deletion cleanup
+synchronous-diffusion: one directed hop per tick, no same-step chain reaction or hidden RNG
+network-effects: bridges change reach from 4/8 to 8/8; hub spreads faster than ring

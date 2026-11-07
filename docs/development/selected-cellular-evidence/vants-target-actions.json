@@ -1,0 +1,183 @@
+{
+  "slug": "vants",
+  "initial": {
+    "url": "http://localhost:3119/?experiment=vants",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nBlack cells\n0",
+      ""
+    ],
+    "status": [
+      "",
+      "Model initialized."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 1 agents. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 325285526,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "241"
+      },
+      {
+        "name": "height",
+        "value": "241"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "numVants",
+        "value": "1"
+      }
+    ]
+  },
+  "forward": {
+    "url": "http://localhost:3119/?experiment=vants",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n1\nBlack cells\n1",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 1 agents. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1406933076,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "241"
+      },
+      {
+        "name": "height",
+        "value": "241"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "numVants",
+        "value": "1"
+      }
+    ]
+  },
+  "reverse": {
+    "url": "http://localhost:3119/?experiment=vants",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n2\nBlack cells\n0",
+      ""
+    ],
+    "status": [
+      "",
+      "Action completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 1 agents. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 325285526,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "241"
+      },
+      {
+        "name": "height",
+        "value": "241"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "numVants",
+        "value": "1"
+      }
+    ]
+  },
+  "repeat": {
+    "url": "http://localhost:3119/?experiment=vants",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n3\nBlack cells\n1",
+      ""
+    ],
+    "status": [
+      "",
+      "Action repeated."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 1 agents. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 982543486,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "241"
+      },
+      {
+        "name": "height",
+        "value": "241"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "numVants",
+        "value": "1"
+      }
+    ]
+  }
+}

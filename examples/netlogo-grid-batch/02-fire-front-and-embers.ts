@@ -1,0 +1,25 @@
+import assert from "node:assert/strict";
+import { create } from "../../experiments/fire/model.ts";
+
+const fire = create({ width: 5, height: 3, density: 0 });
+fire.setForest(fire.read().cells.map(({ x, y }) => y === 0 && (x === -1 || x === 0)));
+assert.equal(fire.read().initialTrees, 2);
+assert.equal(fire.read().burnedTrees, 0);
+assert.deepEqual(fire.read().counts, { trees: 2, fires: 3, embers: 0 });
+fire.advance();
+assert.equal(fire.read().tick, 1);
+assert.equal(fire.read().burnedTrees, 1);
+assert.deepEqual(fire.read().counts, { trees: 1, fires: 1, embers: 3 });
+fire.advance();
+assert.equal(fire.read().burnedTrees, 2);
+assert.deepEqual(fire.read().counts, { trees: 0, fires: 1, embers: 4 });
+fire.advance();
+assert.equal(fire.read().done, false);
+assert.deepEqual(fire.read().counts, { trees: 0, fires: 0, embers: 5 });
+fire.advance(100);
+assert.equal(fire.read().tick, 14);
+assert.equal(fire.read().done, true);
+assert.equal(fire.read().percentBurned, 100);
+const stopped = fire.read();
+fire.advance();
+assert.deepEqual(fire.read(), stopped);

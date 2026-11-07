@@ -1,0 +1,296 @@
+{
+  "state": {
+    "time": 62123.59999996424,
+    "url": "http://localhost:3150/?experiment=urban-suite-structure-from-randomness-1",
+    "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "dpr": 2,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "dark": false,
+    "monitors": "Tick\n11\nTotal activity\n-118.000\nMax |activity|\n0.522664",
+    "aside": "Seed\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n11\nTotal activity\n-118.000\nMax |activity|\n0.522664\nKeep adding randomness\n\nSteps completed.\n\nModel info",
+    "inputs": [
+      {
+        "name": "seed",
+        "value": "1",
+        "checked": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "checked": false
+      },
+      {
+        "name": "live-keepAddingRandomness",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "name": "",
+        "value": "on",
+        "checked": false
+      }
+    ],
+    "plots": [
+      "Activity: -0.44142946303999997"
+    ],
+    "overflow": false,
+    "canvas": [
+      {
+        "width": 716,
+        "height": 716,
+        "aria": "Model view. 16900 cells. Arrow keys select an item.",
+        "rect": {
+          "x": 16,
+          "y": 471.6875,
+          "width": 358,
+          "height": 358
+        }
+      }
+    ]
+  },
+  "canvases": [
+    {
+      "width": 716,
+      "height": 716,
+      "aria": "Model view. 16900 cells. Arrow keys select an item.",
+      "rgbaSha256": "8bd73fb9d9e93257a8a0b930654b46de2919cc60ec5aa0328b936a9554cbdf19",
+      "counts": {
+        "red": 0,
+        "white": 16,
+        "black": 0,
+        "gray": 512656,
+        "nonGray": 0,
+        "transparent": 0
+      },
+      "uniqueColors": 224,
+      "topColors": [
+        [
+          "139,139,139,255",
+          14105
+        ],
+        [
+          "131,131,131,255",
+          13390
+        ],
+        [
+          "134,134,134,255",
+          13274
+        ],
+        [
+          "128,128,128,255",
+          13183
+        ],
+        [
+          "141,141,141,255",
+          12925
+        ],
+        [
+          "137,137,137,255",
+          12660
+        ],
+        [
+          "126,126,126,255",
+          12616
+        ],
+        [
+          "143,143,143,255",
+          12539
+        ],
+        [
+          "145,145,145,255",
+          12360
+        ],
+        [
+          "120,120,120,255",
+          11957
+        ],
+        [
+          "150,150,150,255",
+          11942
+        ],
+        [
+          "148,148,148,255",
+          11854
+        ],
+        [
+          "123,123,123,255",
+          11558
+        ],
+        [
+          "152,152,152,255",
+          11469
+        ],
+        [
+          "117,117,117,255",
+          11242
+        ],
+        [
+          "155,155,155,255",
+          10592
+        ]
+      ],
+      "layers": [
+        {
+          "tag": "CANVAS",
+          "cls": "world",
+          "rect": {
+            "x": 16,
+            "y": 471.6875,
+            "width": 358,
+            "height": 358
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "clip"
+        },
+        {
+          "tag": "FIGURE",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 444.6875,
+            "width": 358,
+            "height": 385
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "hidden"
+        },
+        {
+          "tag": "DIV",
+          "cls": "views",
+          "rect": {
+            "x": 16,
+            "y": 444.6875,
+            "width": 358,
+            "height": 555.6875
+          },
+          "display": "grid",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "DIV",
+          "cls": "workbench",
+          "rect": {
+            "x": 16,
+            "y": 119.5,
+            "width": 358,
+            "height": 1052.8515625
+          },
+          "display": "flex",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "DIV",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 119.5,
+            "width": 358,
+            "height": 1052.8515625
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "SECTION",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 119.5,
+            "width": 358,
+            "height": 1052.8515625
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "MAIN",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 16,
+            "width": 390,
+            "height": 1156.3515625
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "BODY",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 16,
+            "width": 390,
+            "height": 1156.3515625
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "HTML",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 1188.3515625
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "transform": "none",
+          "overflow": "visible"
+        }
+      ]
+    }
+  ]
+}

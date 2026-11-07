@@ -1,0 +1,106 @@
+{
+  "slug": "virus",
+  "name": "Virus",
+  "catalogPath": "Sample Models/Biology/Virus",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Virus.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "What allows an infection to persist when susceptibility, immunity, births, and deaths interact? NetLogo Virus moves people among susceptible, infectious, and immune states, with demographic renewal and disease-related mortality. The Info explicitly cites research on viral perpetuation [1]; classical epidemic theory [2] and community-size evidence [3] provide further context. Contact emerges from random movement rather than a measured social network, and immunity duration and recovery are controlled by stylized parameters. The model illustrates how replenishment of susceptible individuals can change outbreak trajectories compared with a closed epidemic. Persistence or extinction in one run does not establish a population threshold for a real virus, empirical calibration, or a reliable forecast of future outbreaks.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Virus.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Virus.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 43e370765de7a5601d5b39e40904372016289974c24c94de32634132c3692683",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/virus.nlogox",
+    "infoFile": "evidence/biology/virus-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1998).  NetLogo Virus model.  http://ccl.northwestern.edu/netlogo/models/Virus.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "yorke",
+      "authors": [
+        "JAMES A. YORKE",
+        "NEAL NATHANSON",
+        "GIULIO PIANIGIANI",
+        "JOHN MARTIN"
+      ],
+      "title": "SEASONALITY AND THE REQUIREMENTS FOR PERPETUATION AND ERADICATION OF VIRUSES IN POPULATIONS",
+      "year": 1979,
+      "venue": "American Journal of Epidemiology",
+      "doi": "10.1093/oxfordjournals.aje.a112666",
+      "url": "https://doi.org/10.1093/oxfordjournals.aje.a112666",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Seasonality+and+the+requirements+for+perpetuation+and+eradication+of+viruses+in+populations+Yorke+Nathanson+Pianigiani+Martin+1979&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/yorke-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Foxfordjournals.aje.a112666%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/yorke-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "109",
+      "issue": "2",
+      "pages": "103-123",
+      "relevance": "The model explicitly cites this study of viral persistence, seasonality and population requirements."
+    },
+    {
+      "id": "kermack",
+      "authors": [
+        "William Ogilvy Kermack",
+        "A. G. McKendrick"
+      ],
+      "title": "A contribution to the mathematical theory of epidemics",
+      "year": 1927,
+      "venue": "Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character",
+      "doi": "10.1098/rspa.1927.0118",
+      "url": "https://doi.org/10.1098/rspa.1927.0118",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1098%2Frspa.1927.0118",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/kermack-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": "115",
+      "issue": "772",
+      "pages": "700-721",
+      "relevance": "Provides the susceptible–infectious–removed baseline against which demographic replenishment and immunity changes can be compared."
+    },
+    {
+      "id": "bartlett",
+      "authors": [
+        "M. S. Bartlett"
+      ],
+      "title": "Measles Periodicity and Community Size",
+      "year": 1957,
+      "venue": "Journal of the Royal Statistical Society. Series A (General)",
+      "doi": "10.2307/2342553",
+      "url": "https://doi.org/10.2307/2342553",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Measles+periodicity+and+community+size+Bartlett+1957&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/bartlett-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "120",
+      "issue": "1",
+      "pages": "48",
+      "relevance": "Empirical epidemic periodicity and community-size research contextualizes persistence and stochastic fadeout."
+    }
+  ],
+  "gaps": []
+}

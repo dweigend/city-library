@@ -1,0 +1,33 @@
+bun test v1.4.2 (744846f84)
+
+tests/selected-social-last.test.ts:
+(pass) minority rewards old actual and virtual choices before shifting history [6.45ms]
+(pass) minority source one-agent zero-mean movement failure retains scored tick [0.60ms]
+(pass) rumor transmits only from pre-tick clique and counts repeated exposures [255.49ms]
+(pass) rumor interventions are atomic and no-source setup is not a terminal state [184.77ms]
+(pass) rumor toroidal corner has four face neighbors [70.94ms]
+(pass) signaling initializes both rectangular urn systems and reinforces matched choices only [14.96ms]
+(pass) signaling prints detached output without a random draw or clock advance [0.28ms]
+(pass) development Piagetian zero-error memory and per-run stop preserve midpoint record [34.05ms]
+(pass) all four development strategies preserve source legal distances and score barriers [314.42ms]
+(pass) heroes source-specific midpoint and extrapolation work with asynchronous target positions [1.19ms]
+(pass) heroes rejects the upper half-open edge and atomic malformed references [1.76ms]
+(pass) last-five observations are detached, validated writes are atomic, and counts reject invalid input [124.91ms]
+(pass) signaling natural learned threshold stops before another round or random draw [8.69ms]
+(pass) rumor all-informed stop is a preflight without time or randomness [78.21ms]
+(pass) heroes blocked short forward retains position while the phase and tick continue [120.10ms]
+
+tests/selected-social-first.test.ts:
+(pass) consumer utilities combine retained experience and current neighbors only after consumption [2.47ms]
+(pass) Rebellion setup keeps free occupancy distinct; zero legitimacy and no police follows grievance [154.52ms]
+(pass) Rebellion mixed turns preserve population and legal torus cells [126.80ms]
+(pass) language redistribution truncates n-of fractions and retains topology; reset retains spoken output [1.05ms]
+(pass) party stale happiness stops before a changed tolerance is applied; groups are atomic [16.95ms]
+(pass) ethnocentrism full cooperation is directed and PTR remains unclamped [104.47ms]
+(pass) ethnocentrism death includes new immigrants and newborns [39.03ms]
+(pass) all first-five live updates validate atomically and reads detach nested data [180.61ms]
+
+ 23 pass
+ 0 fail
+ 4521 expect() calls
+Ran 23 tests across 2 files. [1.85s]

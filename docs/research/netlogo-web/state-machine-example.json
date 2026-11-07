@@ -1,0 +1,107 @@
+{
+  "slug": "state-machine-example",
+  "name": "State Machine Example",
+  "catalogPath": "Code Examples/State Machine Example",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Code%20Examples/State%20Machine%20Example.nlogox",
+  "deliveryBatch": "B20",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "What changes when an agent's ongoing behavior is represented as explicit states? NetLogo State Machine Example rewrites the Termites model so each agent stores a task and advances through it under an observer-controlled update. Mealy [1] supplies foundational finite-state machine theory, Dijkstra [2] explains why process ordering matters, and Resnick [3] studies decentralized computational microworlds and the interpretation of collective order. The original Info warns that this version is not behaviorally identical to the turtle-forever-button implementation because the unit of an agent's turn differs. The model therefore illustrates both state decomposition and scheduler semantics. Local chip-handling actions can organize piles without a central plan, but changing execution granularity can change transients. A visually similar final configuration is insufficient to establish equivalent trajectories or a scientifically calibrated model of termite construction.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/State%20Machine%20Example.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/State%20Machine%20Example.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 fcd207f3584023fd50a45a304c87aa46fa541ce8a7e3ce339e3308894fc958cc",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/state-machine-example.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "sourceSnapshot": "evidence/computing/state-machine-example.nlogox",
+    "evidenceFile": "evidence/computing/state-machine-example.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1002/j.1538-7305.1955.tb03788.x",
+      "authors": [
+        "George H. Mealy"
+      ],
+      "title": "A method for synthesizing sequential circuits",
+      "year": 1955,
+      "venue": "The Bell System Technical Journal",
+      "doi": "10.1002/j.1538-7305.1955.tb03788.x",
+      "url": "https://doi.org/10.1002/j.1538-7305.1955.tb03788.x",
+      "relevance": "Foundational state-machine formalism supports encoding behavior as states and transitions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1002%2Fj.1538-7305.1955.tb03788.x",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1002_j_1538_7305_1955_tb03788_x.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1002_j_1538_7305_1955_tb03788_x.json"
+      },
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "volume": "34",
+      "issue": "5",
+      "pages": "1045-1079",
+      "verified": true
+    },
+    {
+      "id": "10.1007/bf00289519",
+      "authors": [
+        "E. W. Dijkstra"
+      ],
+      "title": "Hierarchical ordering of sequential processes",
+      "year": 1971,
+      "venue": "Acta Informatica",
+      "doi": "10.1007/bf00289519",
+      "url": "https://doi.org/10.1007/bf00289519",
+      "relevance": "Sequential-process ordering provides the direct methodological context for scheduler and execution-granularity differences.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF00289519",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_bf00289519.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_bf00289519.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "1",
+      "issue": "2",
+      "pages": "115-138",
+      "verified": true
+    },
+    {
+      "id": "10.1207/s15327809jls0501_1",
+      "authors": [
+        "Mitchel Resnick"
+      ],
+      "title": "Beyond the Centralized Mindset",
+      "year": 1996,
+      "venue": "Journal of the Learning Sciences",
+      "doi": "10.1207/s15327809jls0501_1",
+      "url": "https://doi.org/10.1207/s15327809jls0501_1",
+      "relevance": "Original research on decentralized microworlds explains how local rules can produce aggregate organization without centralized direction.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1207%2Fs15327809jls0501_1",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1207_s15327809jls0501_1.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1207_s15327809jls0501_1.json"
+      },
+      "publisher": "Informa UK Limited",
+      "volume": "5",
+      "issue": "1",
+      "pages": "1-22",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

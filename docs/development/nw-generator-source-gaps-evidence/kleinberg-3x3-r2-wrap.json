@@ -1,0 +1,99 @@
+{
+  "id": "kleinberg-3x3-r2-wrap",
+  "command": "setup random-seed 17 set links-to-use \"undirected\" set nb-rows 3 set nb-cols 3 set clustering-exponent 2 set wrap true small-world-lattice",
+  "at": "2026-11-06T12:10:36.226Z",
+  "graph": {
+    "success": true,
+    "value": [
+      0,
+      9,
+      20,
+      0,
+      20,
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          6
+        ]
+      ]
+    ]
+  },
+  "console": "observer> setup random-seed 17 set links-to-use \"undirected\" set nb-rows 3 set nb-cols 3 set clustering-exponent 2 set wrap true small-world-lattice\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear",
+  "bodyHead": " powered by NetLogo\nNW General Examples\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\n \n?\nfor shortcuts\nbetweenness\nClusterers & Cliques\nnb-nodes\nCentrality\npreferential attachment\neigenvector\ncloseness\nweak component clusters\nsave matrix\nload matrix\ncount turtles\n9\ncount links\n20\nbiggest maximal cliques\nring\nstar\nMean path length\n1.444\nhighlight bicomponents\nhighlight maximal cliques\nsave GraphML\nload GraphML\ndetect communities\nlay"
+}

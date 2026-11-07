@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-06",
+  "codeCheckpoint": "de26f60",
+  "modelTests": 16,
+  "modelAssertions": 126,
+  "fiveOriginalHashes": "PASS",
+  "fourFrozenScripts": "01/02/04/05 PASS",
+  "frozen03": "FAIL unchanged411 vs412; exactpatch awaits explicituseragreement",
+  "muscleTail": "Exact unchanged frozen03 Muscle tail executed separately PASS; full03 is not a pass",
+  "typeProjects": 4,
+  "additionalTypeProjects": [
+    "selected-biology-frozen-types.json",
+    "selected-biology-source-types.json"
+  ],
+  "sourceArchiveInventoryNativeHashes": 10,
+  "manifestsVerified": {
+    "runtime-source.sha256": 30,
+    "images.sha256": 78,
+    "artifacts.sha256": 193,
+    "SHA256SUMS": 126
+  },
+  "currentFullIntegration": "PASS503tests46330assertions180scripts/type/build/actualpackedconsumer after one scoped regression timeout adjustment; first failure retained",
+  "browser": "Author all10 originals+targets; post-e1c4ae8 actualstatus/control/error/theme/viewport+loadedmodule proof retained; root inspected Completed desktop PNG",
+  "independentApproval": "PENDING quota8194e842",
+  "completeCheck": "docs/development/selected-105-integration-evidence/checks.json"
+}

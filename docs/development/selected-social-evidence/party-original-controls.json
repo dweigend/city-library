@@ -1,0 +1,75 @@
+{
+  "setupClicked": true,
+  "setupTick": {
+    "success": true,
+    "value": 0
+  },
+  "nativeStepPresent": true,
+  "stepTick": {
+    "success": true,
+    "value": 1
+  },
+  "runTick": {
+    "success": true,
+    "value": 7
+  },
+  "pauseTick": {
+    "success": true,
+    "value": 7
+  },
+  "stableTick": {
+    "success": true,
+    "value": 7
+  },
+  "paused": true,
+  "setupResetClicked": true,
+  "resetTick": {
+    "success": true,
+    "value": 0
+  },
+  "actions": [],
+  "probe": {
+    "command": "set number 0 setup go",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 0
+      },
+      "count turtles": {
+        "success": true,
+        "value": 0
+      },
+      "boring-groups": {
+        "success": true,
+        "value": 0
+      }
+    }
+  },
+  "errors": [
+    [
+      "runtime",
+      "observer",
+      {
+        "message": "the minimum must be less than the maximum, but 0 is greater than or equal to 0",
+        "toString": "[object Object]",
+        "keys": [
+          "message",
+          "stackTrace",
+          "stackTraceMessage",
+          "primitive",
+          "sourceStart",
+          "sourceEnd",
+          "messageKey"
+        ],
+        "details": {
+          "message": "the minimum must be less than the maximum, but 0 is greater than or equal to 0",
+          "stackTraceMessage": "error while running SET-PLOT-Y-RANGE\ncalled by plot Number Happy\ncalled by procedure SETUP",
+          "primitive": "set-plot-y-range"
+        }
+      },
+      "set number 0 setup go",
+      "undefined"
+    ]
+  ],
+  "alertText": []
+}
