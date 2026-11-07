@@ -38,7 +38,7 @@ Availability describes repository contracts rather than historical branches. `B`
 
 ## Views
 
-Every view requires `type` and `label`; labels are currently explicit. All callbacks consume the same typed model observation. `View<S>` is publicly re-exported. Inspector is accepted in `UISpec.views`, although its named type is not re-exported by `ui/index.ts`.
+Every view requires `type` and `label`; labels are currently explicit. All callbacks consume the same typed model observation. `View<S>` is publicly re-exported. Inspector is accepted in `UISpec.views` and its named type is re-exported by both UI entrypoints.
 
 | ID | Discriminant and required data callback | Data contract | Scope | Reference |
 | --- | --- | --- | --- | --- |
@@ -93,4 +93,12 @@ Do not treat internal renderer mounts, Svelte components, theme bridges, catalog
 | UI-074 | Live `group?: string`: flat accessible fieldset; empty labels fail at mount. | F | [Live](api-reference.md#live) |
 | UI-075 | `BarSeries`: categorical or numeric x, grouped categorical series, signed values and explicit invalid-mode handling. | F | [Charts](api-reference.md#charts) |
 | UI-076 | Chart `xAxis?` / `yAxis?`: optional label/unit, no numeric conversion. | F | [Charts](api-reference.md#charts) |
-| UI-077 | Monitor `format?(value: string | number): string`: display only, errors follow host failure handling. | F | [Monitors](api-reference.md#monitors) |
+| UI-077 | Monitor `format`: display only; scalar-specific annotations must match the paired getter, while unannotated callbacks retain the scalar-union context. Errors follow host failure handling. | F | [Monitors](api-reference.md#monitors) |
+
+## Readable observation and formatter extension
+
+| ID | Contract | Availability | Reference |
+| --- | --- | --- | --- |
+| UI-078 | `Observation<T>` infers the detached observation from a definition or model instance; exported by both UI entrypoints. | Public type | [Model](api-reference.md#model) |
+| UI-079 | `Monitor<S, V>` types an extracted monitor with observation `S` and scalar `V`; scalar formatter arguments must accept the paired getter result. | Public type | [Monitors](api-reference.md#monitors) |
+| UI-080 | Selection retains string/null and one semantic presentation ID per entity across views; authors namespace overlapping source IDs. | Authoring contract | [Inspector](api-reference.md#inspector) |

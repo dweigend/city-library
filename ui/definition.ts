@@ -6,6 +6,20 @@ export interface ModelInstance {
   dispose?(): void;
 }
 export type Snapshot<M extends ModelInstance> = ReturnType<M["read"]>;
+
+/** Detached observations inferred from either a model definition or its instance. */
+export type Observation<T extends ModelInstance | { readonly create: (...args: never[]) => ModelInstance }> =
+  T extends ModelInstance ? Snapshot<T>
+    : T extends { readonly create: (...args: never[]) => infer M extends ModelInstance }
+      ? Snapshot<M> : never;
+
+/** A formatter consumes only the scalar produced by its paired getter. */
+export interface Monitor<S, V extends string | number = string | number> {
+  readonly label: string;
+  readonly value: (state: S) => V;
+  readonly format?: (value: V) => string;
+}
+
 export interface NetworkNode {
   readonly id: string;
   readonly label?: string;
@@ -173,11 +187,7 @@ export interface UISpec<P extends object, M extends ModelInstance> {
     readonly repeat?: { readonly label: string; readonly intervalMs: number };
   }[];
   readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M>;
-  readonly monitors?: readonly {
-    readonly label: string;
-    readonly value: (state: Snapshot<M>) => string | number;
-    readonly format?: (value: string | number) => string;
-  }[];
+  readonly monitors?: readonly Monitor<Snapshot<M>>[];
   readonly complete?: (state: Snapshot<M>) => boolean;
   readonly source?: { readonly url: string; readonly label: string };
   readonly views: readonly (View<Snapshot<M>> | Inspector<Snapshot<M>>)[];

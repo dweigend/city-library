@@ -1,9 +1,9 @@
-import { normalizeAuthoring, decodeControl, groupLive } from "../authoring.ts";
+import { normalizeAuthoring, decodeControl, groupLive, type RuntimeSpec } from "../authoring.ts";
 import { flushSync } from "svelte";
 import { writable, type Readable } from "svelte/store";
 import type { Definition } from "../../experiments/definition.ts";
 import type { Descriptor } from "../controls/form.ts";
-import type { DrawingIntent, Inspector, ModelInstance, Snapshot, UISpec, View } from "../definition.ts";
+import type { DrawingIntent, Inspector, ModelInstance, Snapshot, View } from "../definition.ts";
 import { createPlayback } from "../playback.ts";
 import { createRepeatedAction } from "../actions/repeat.ts";
 
@@ -61,7 +61,7 @@ export interface Session extends Readable<SessionState> {
 }
 
 /** One session owns the model reference; stores carry only detached observations and UI state. */
-export function createSession<P extends object, M extends ModelInstance>(definition: Definition<P, M>, sourceSpec: UISpec<P, M>): Session {
+export function createSession<P extends object, M extends ModelInstance>(definition: Definition<P, M>, sourceSpec: RuntimeSpec<P, M>): Session {
   const spec = normalizeAuthoring(definition, sourceSpec);
   const descriptors = new Map(Object.entries(definition.inputs) as [string, Descriptor][]);
   const title = (field: string) => field.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/^./, value => value.toUpperCase());

@@ -33,7 +33,7 @@ assert.equal(observation.edgeCount, 9);
 
 [Its UI file](../../experiments/preferential-attachment/ui.ts) imports `defineUI` from `../../ui/index.ts` and its companion model from `./model.ts`. It declares monitors, a network view, two charts and an inspector. The UI projects observations; the shared host supplies controls, layout and playback. No second network-growth rule is implemented in the UI.
 
-Use the existing `defineUI(model, spec)` contract. Keep short property projections inline and place longer named projections below the declaration. Keep public actions explicit and typed. [The UI reference](../ui/api-reference.md) distinguishes implemented syntax from pending simplification candidates; those candidates are not instructions to invent a new API.
+Use the existing `defineUI(model, spec)` contract. Keep short property projections inline and place longer named projections below the declaration. Use `Observation<typeof model>` from the public UI entrypoint to type a named projection. Keep public actions explicit and typed. Keep numeric measurements in monitor getters and format only the display, for example `format: (value: number) => value.toFixed(3)`. Give unrelated projected entities different IDs; use kind prefixes when source IDs overlap. [The UI reference](../ui/api-reference.md) explains the public contracts and compatibility forms.
 
 ## Add a bounded experiment
 

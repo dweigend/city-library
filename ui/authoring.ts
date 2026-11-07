@@ -3,7 +3,29 @@ import type { LegacyLiveField, ModelInstance, SetupField, Snapshot, UISpec } fro
 import type { Descriptor } from './controls/form.ts';
 
 export type ControlValue = string | number | boolean;
-export type NormalizedSpec<P extends object, M extends ModelInstance> = Omit<UISpec<P, M>, 'setup' | 'live'> & {
+/** Internal erasure of the getter/formatter existential pair. Public Monitor uses strict
+ * function properties; the method signature here accepts every approved scalar case.
+ * Hosts always pass the result of this record's getter to this record's formatter. */
+interface RuntimeMonitor<S> {
+  readonly label: string;
+  readonly value: (state: S) => string | number;
+  format?(value: string | number): string;
+}
+export type RuntimeSpec<P extends object, M extends ModelInstance> = Omit<UISpec<P, M>, 'monitors'> & {
+  readonly monitors?: readonly RuntimeMonitor<Snapshot<M>>[];
+};
+
+/** Check required and optional formatters after contextual typing. Distribution keeps
+ * extracted unions valid without allowing a narrower formatter for a union getter. */
+type CompatibleMonitor<T> = T extends {
+  readonly value: (...args: never[]) => infer V;
+  readonly format?: (value: infer F) => string;
+} ? [V] extends [F] ? T : never : T;
+type CompatibleMonitors<T> = { readonly [K in keyof T]: CompatibleMonitor<T[K]> };
+export type MonitorSpec<P extends object, M extends ModelInstance, T extends readonly RuntimeMonitor<Snapshot<M>>[]> =
+  Omit<UISpec<P, M>, 'monitors'> & { readonly monitors?: T & CompatibleMonitors<T> };
+
+export type NormalizedSpec<P extends object, M extends ModelInstance> = Omit<RuntimeSpec<P, M>, 'setup' | 'live'> & {
   readonly setup: readonly SetupField<P>[];
   readonly live: readonly LegacyLiveField<P, M>[];
 };
@@ -27,7 +49,7 @@ export function decodeControl(descriptor: Descriptor, value: unknown): ControlVa
 }
 
 /** Internal mount-time normalization shared by the DOM and Svelte adapters. No model is created. */
-export function normalizeAuthoring<P extends object, M extends ModelInstance>(definition: Definition<P, M>, spec: UISpec<P, M>): NormalizedSpec<P, M> {
+export function normalizeAuthoring<P extends object, M extends ModelInstance>(definition: Definition<P, M>, spec: RuntimeSpec<P, M>): NormalizedSpec<P, M> {
   const descriptors = new Map(Object.entries(definition.inputs) as [Extract<keyof P, string>, Descriptor][]);
   const descriptorFor = (field: Extract<keyof P, string>) => {
     const descriptor = descriptors.get(field);

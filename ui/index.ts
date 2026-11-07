@@ -1,5 +1,7 @@
 export { defineUI } from "./compose.ts";
 export type {
+  Observation,
+  Monitor,
   BoundEntry,
   UISpec,
   View,

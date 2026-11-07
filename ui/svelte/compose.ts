@@ -1,3 +1,4 @@
+import type { MonitorSpec, RuntimeSpec } from "../authoring.ts";
 import type { LegacyLiveField } from "../definition.ts";
 import { flushSync, mount, unmount } from "svelte";
 import type { Definition } from "../../experiments/definition.ts";
@@ -16,7 +17,25 @@ export function defineUI<P extends object, M>(
   definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
   spec: UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>,
 ): BoundEntry;
-export function defineUI<P extends object, M extends ModelInstance>(definition: Definition<P, M>, spec: UISpec<P, M>): BoundEntry {
+export function defineUI<
+  P extends object,
+  M,
+  const T extends NonNullable<RuntimeSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>['monitors']>,
+>(
+  definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
+  spec: Omit<MonitorSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>, T>, 'live'> & {
+    readonly live?: readonly LegacyLiveField<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>[];
+  },
+): BoundEntry;
+export function defineUI<
+  P extends object,
+  M,
+  const T extends NonNullable<RuntimeSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>['monitors']>,
+>(
+  definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
+  spec: MonitorSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>, T>,
+): BoundEntry;
+export function defineUI<P extends object, M extends ModelInstance>(definition: Definition<P, M>, spec: RuntimeSpec<P, M>): BoundEntry {
   return {
     title: definition.title,
     description: definition.description,

@@ -1,4 +1,5 @@
 const phases = {
+  "ui-authoring-next": ["01-typed-monitor-formatters", "02-readable-observation-projections", "03-namespaced-selection", "04-formatter-errors-and-recovery", "05-independent-mounts-and-legacy"],
   "ui-authoring": ["01-defaults-and-inert-entry", "02-ordered-setup-and-numeric-live", "03-alternate-observation", "04-groups-format-and-categories", "05-independent-actions-and-legacy"],
   "model-authoring": ["01-taxi-reporters", "02-taxi-observation-purity", "03-taxi-intervention-isolation", "04-taxi-replay-accounting"],
   "selected-materials": ["01-sandpile-ising", "02-sand", "03-atomic-diffusion", "04-thermal-phases", "05-dla"],

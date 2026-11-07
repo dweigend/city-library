@@ -37,7 +37,7 @@ export const ui = defineUI(model, {
 
 `Definition<P, M>` supplies `title`, optional `description`, canonical `inputs` and `create(parameters)`. Inputs are descriptors for number, boolean, choice or text, each with `default`; numbers may specify `min`, `max`, `step`, `integer`, and choices specify `options`. This is the experiment definition contract, not the future live-property core `Input` API.
 
-`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred as `ReturnType<M["read"]>`. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
+`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. Both UI entrypoints export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
 
 ## Setup
 
@@ -75,7 +75,20 @@ Experimental `repeat: { label, intervalMs }` adds a host-owned repetition toggle
 
 ## Monitors
 
-`monitors` contains `{ label, value, format? }` records. `value(observation)` returns a string or number. Optional `format(value: string | number): string` changes display text only; default rendering is `String(value)`. Keep measurements in the model. Format errors use the same host error path as other presentation callbacks.
+`monitors` contains `{ label, value, format? }` records. `value(observation)` returns a string or number. A formatter changes display text only; default rendering is `String(value)`. Keep measurements in the model. Format errors use the same host error path as other presentation callbacks.
+
+For a numeric getter, annotate the formatter argument rather than adding a runtime type guard:
+
+```ts
+{ label: "Gini", value: state => state.gini,
+  format: (value: number) => value.toFixed(3) }
+```
+
+A text getter supports `(value: string) => ...`. `defineUI` rejects incompatible getter/formatter pairs, including a numeric-only formatter for a genuinely number-or-text getter. Such a union still needs narrowing. The annotation is explicit: this API does not promise automatic scalar inference across heterogeneous callback arrays. Existing unannotated formatters retain their `string | number` context.
+
+The public `Monitor<S, V>` type describes an extracted record with observation `S` and scalar `V`. For example, use `satisfies Monitor<Observation<typeof model>, number>` on a standalone numeric monitor. Existing `UISpec<P, M>` retains its broad compatibility formatter context; an extracted scalar-specific spec can keep its own annotations and be passed directly to `defineUI` without that broad annotation.
+
+Changing display precision belongs in `format`; it must not round or overwrite scientific values. Preserve existing units, unavailable-value text and trailing-zero behavior when migrating an experiment.
 
 ## Views
 
@@ -112,6 +125,8 @@ Optional `xAxis` and `yAxis` contain `label?` and `unit?`. Together they display
 ### Inspector
 
 `{ type: "inspector", label, value(observation, selected) }` returns a scalar record or `undefined`. Undefined hides the inspector; returning a record displays its entries. Selection is presentation-owned and starts as `null`; setup clears it. Resolve IDs against the current observation and handle stale/missing IDs. Inspectors do not grant write access to the model.
+
+Within a mounted experiment, a projected ID must identify one semantic entity consistently across views. Two views of the same entity reuse its ID; unrelated entities must use different IDs. If source kinds overlap, project namespaced IDs such as `agent:${id}` and `cell:${id}`, then resolve those IDs against the current observation in the inspector and selection-dependent action. Do not change domain IDs or introduce a second allocator. This is an authoring contract: the host cannot infer whether two arbitrary projections represent the same entity. Selection remains `string | null`, and a missing target must not trigger a model action. The [namespaced example](../../examples/ui-authoring-next/03-namespaced-selection.ts) covers collisions, shared selection, disappearance and restart.
 
 ## Drawing
 
