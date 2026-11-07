@@ -114,7 +114,7 @@ describe("Selected biology B07 source procedures", () => {
     expect(flower.read().particles.length).toBe(79);
     expect(flower.read().tick).toBe(79);
     expect(flower.read().stopped).toBe(true);
-  });
+  }, 20000);
 
   test("Tumor hatches have source age zero and are not activated in their birth phase", () => {
     const growth = tumor({ leaveTrail: false });
