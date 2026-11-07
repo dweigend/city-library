@@ -14,6 +14,7 @@ were imported or staged. No push, PR, publication or main merge was performed.
 | `aa824df` | Immutable square/hex/authored topology and provenance comparison. |
 | `49ff219` | Canonical Field factory, accurate layout Grid types and World/occupancy integration. |
 | `c92289a` | Net area, bounded conforming merge and guarded convex split. |
+| `1fda843` | Root exports, registered examples, packed-consumer coverage, integration tests and current documentation. |
 
 The integration commit adds root exports, registered examples, development
 typechecking, packed-consumer coverage, cross-variant conservation tests and
@@ -29,7 +30,7 @@ on a temporarily missing new topology module after the root export was added;
 that interrupted run is not claimed as a clean full baseline or an existing
 product regression. Final integrated checks replace that partial run.
 
-Executed author checks so far:
+Executed author checks:
 
 - `bun run typecheck`: passed, including Svelte with zero errors/warnings.
 - `bun test tests/grid-parcels-geometry.test.ts tests/grid-parcels-topology.test.ts tests/grid-parcels-grid.test.ts tests/spatial-grid.test.ts tests/indexed-occupancy.test.ts tests/grid-occupancy-performance.test.ts`: 38 tests / 1340 expectations passed.
@@ -42,14 +43,15 @@ Executed author checks so far:
 - `bunx tsc -p tsconfig.dev.json`: passed after the added integration tests.
 - `git diff --check`: passed.
 - `bun run build:ui:svelte`: passed with the existing large-chunk warning.
-- Complete `bun run check`: in progress at this checkpoint; its test stage
-  passed 603 tests / 151508 expectations. The two subsequent integration tests
-  above were added after test discovery and checked separately.
+- Complete `bun run check`: passed (exit 0), including all typechecks,
+  603 tests / 151508 expectations, all 234 registered public examples, library build
+  and the actual packed Bun/Node/TypeScript consumer. The two subsequent
+  integration tests above were added after test discovery and checked separately.
 
 The packed consumer now exercises both Bun and Node ESM from a real tarball,
 with ambient-free TypeScript assertions for honest layout capabilities, root
-types, square/hex/import queries, merge/split and live occupancy. Its result is
-recorded once the complete check finishes. No UI behavior changed; no browser
+types, square/hex/import queries, merge/split and live occupancy. All packed
+consumer checks passed. No UI behavior changed; no browser
 check is required or claimed for this headless phase. Existing UI build checks
 are complementary shell evidence.
 
