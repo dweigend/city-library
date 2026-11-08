@@ -1,0 +1,421 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0510457103%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1073/pnas.0510457103\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "16432192",
+          "source": "MED",
+          "pmid": "16432192",
+          "pmcid": "PMC1345713",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC1345713"
+            ]
+          },
+          "doi": "10.1073/pnas.0510457103",
+          "title": "A plausible model of phyllotaxis.",
+          "authorString": "Smith RS, Guyomarc'h S, Mandel T, Reinhardt D, Kuhlemeier C, Prusinkiewicz P.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Smith RS",
+                "lastName": "Smith",
+                "firstName": "Richard S",
+                "initials": "RS",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science, University of Calgary, 2500 University Drive NW, Calgary, Alberta, Canada T2N 1N4."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Guyomarc'h S",
+                "lastName": "Guyomarc'h",
+                "firstName": "Soazig",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9327-4737"
+                }
+              },
+              {
+                "fullName": "Mandel T",
+                "lastName": "Mandel",
+                "firstName": "Therese",
+                "initials": "T"
+              },
+              {
+                "fullName": "Reinhardt D",
+                "lastName": "Reinhardt",
+                "firstName": "Didier",
+                "initials": "D",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3495-6783"
+                }
+              },
+              {
+                "fullName": "Kuhlemeier C",
+                "lastName": "Kuhlemeier",
+                "firstName": "Cris",
+                "initials": "C"
+              },
+              {
+                "fullName": "Prusinkiewicz P",
+                "lastName": "Prusinkiewicz",
+                "firstName": "Przemyslaw",
+                "initials": "P"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9327-4737"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3495-6783"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "5",
+            "volume": "103",
+            "journalIssueId": 1294551,
+            "dateOfPublication": "2006 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2006,
+            "journal": {
+              "medlineAbbreviation": "Proc Natl Acad Sci U S A",
+              "title": "Proceedings of the National Academy of Sciences of the United States of America",
+              "essn": "1091-6490",
+              "issn": "0027-8424",
+              "isoabbreviation": "Proc Natl Acad Sci U S A",
+              "nlmid": "7505876"
+            },
+            "printPublicationDate": "2006-01-01"
+          },
+          "pubYear": "2006",
+          "pageInfo": "1301-1306",
+          "abstractText": "A striking phenomenon unique to the kingdom of plants is the regular arrangement of lateral organs around a central axis, known as phyllotaxis. Recent molecular-genetic experiments indicate that active transport of the plant hormone auxin is the key process regulating phyllotaxis. A conceptual model based on these experiments, introduced by Reinhardt et al. [Reinhardt, D., Pesce, E. R., Stieger, P., Mandel, T., Baltensperger, K., et al. (2003) Nature 426, 255-260], provides an intuitively plausible interpretation of the data, but raises questions of whether the proposed mechanism is, in fact, capable of producing the observed temporal and spatial patterns, is robust, can start de novo, and can account for phyllotactic transitions, such as the frequently observed transition from decussate to spiral phyllotaxis. To answer these questions, we created a computer simulation model based on data described previously or in this paper and reasonable hypotheses. The model reproduces, within the standard error, the divergence angles measured in Arabidopsis seedlings and the effects of selected experimental manipulations. It also reproduces distichous, decussate, and tricussate patterns. The model thus offers a plausible link between molecular mechanisms of morphogenesis and the geometry of phyllotaxis.",
+          "affiliation": "Department of Computer Science, University of Calgary, 2500 University Drive NW, Calgary, Alberta, Canada T2N 1N4.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Swiss National Science Foundation",
+                "grantId": "105807",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Plants",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "AH",
+                      "qualifierName": "anatomy & histology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Arabidopsis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Seeds",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Meristem",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Indoleacetic Acids",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "CH",
+                      "qualifierName": "chemistry"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Peptidylprolyl Isomerase",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "BI",
+                      "qualifierName": "biosynthesis"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Green Fluorescent Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Plant Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Microscopy, Confocal"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Microscopy, Fluorescence"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Statistical"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genetic Techniques"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Gene Expression Regulation, Plant"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Up-Regulation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Transport"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Transport, Active"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Morphogenesis"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mutation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Alleles"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Time Factors"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Computer Simulation"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Plant Physiological Phenomena"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "NIMA-Interacting Peptidylprolyl Isomerase"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Indoleacetic Acids",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Plant Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Peptidylprolyl Isomerase",
+                "registryNumber": "EC 5.2.1.8"
+              },
+              {
+                "name": "Green Fluorescent Proteins",
+                "registryNumber": "147336-22-9"
+              },
+              {
+                "name": "NIMA-interacting peptidylprolyl isomerase",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.0510457103"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC1345713"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC1345713?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.0510457103"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 443,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2006-03-21",
+          "dateOfCreation": "2006-01-25",
+          "dateOfRevision": "2024-01-09",
+          "electronicPublicationDate": "2006-01-23",
+          "firstPublicationDate": "2006-01-23",
+          "firstIndexDate": "2010-09-22",
+          "fullTextReceivedDate": "2025-02-02",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

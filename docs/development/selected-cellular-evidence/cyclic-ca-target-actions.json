@@ -1,0 +1,243 @@
+{
+  "slug": "cyclic-ca",
+  "preset133": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nNeighbors\n8\nStates\n3\nThreshold\n3\nStatus"
+    ],
+    "status": [
+      "",
+      "Model initialized."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1649780262,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "133"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "3"
+      }
+    ]
+  },
+  "threshold2": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nNeighbors\n8\nStates\n3\nThreshold\n2\nStatus"
+    ],
+    "status": [
+      "",
+      "Rule updated."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1649780262,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "133"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "2"
+      }
+    ]
+  },
+  "impossible": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nNeighbors\n8\nStates\n3\nThreshold\n168\nStatus\nThreshold exceeds the number of neighbors."
+    ],
+    "status": [
+      "",
+      "Rule updated."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1649780262,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "133"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "168"
+      }
+    ]
+  },
+  "frozen": {
+    "url": "http://localhost:3119/?experiment=cyclic-ca",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n1\nNeighbors\n8\nStates\n3\nThreshold\n168\nStatus\nThreshold exceeds the number of neighbors."
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 40401 cells. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 1649780262,
+        "nonzero": 1537968
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "201"
+      },
+      {
+        "name": "height",
+        "value": "201"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "preset",
+        "value": "133"
+      },
+      {
+        "name": "neighborhood",
+        "value": "Moore"
+      },
+      {
+        "name": "radius",
+        "value": "3"
+      },
+      {
+        "name": "numStates",
+        "value": "3"
+      },
+      {
+        "name": "live-threshold",
+        "value": "168"
+      }
+    ]
+  }
+}

@@ -1,0 +1,822 @@
+{
+  "checkedAt": "2026-11-06",
+  "vectors": {
+    "cities": {
+      "shpHeader": {
+        "fileCode": 9994,
+        "declaredBytes": 17068,
+        "version": 1000,
+        "shapeType": 1,
+        "bboxXY": [
+          -165.27000427246094,
+          -53.150001525878906,
+          177.13018798828125,
+          78.19999694824219
+        ]
+      },
+      "shxHeader": {
+        "fileCode": 9994,
+        "declaredBytes": 4948,
+        "version": 1000,
+        "shapeType": 1,
+        "bboxXY": [
+          -165.27000427246094,
+          -53.150001525878906,
+          177.13018798828125,
+          78.19999694824219
+        ]
+      },
+      "shapeTypeCounts": {
+        "1": 606
+      },
+      "shapeRecordCount": 606,
+      "shxEntryCount": 606,
+      "allSHXOffsetsAndLengthsMatch": true,
+      "computedPointBBoxXY": [
+        -165.27000427246094,
+        -53.150001525878906,
+        177.13018798828125,
+        78.19999694824219
+      ],
+      "headerBBoxEqualsComputed": true,
+      "totalPoints": 606,
+      "totalParts": 0,
+      "polygonRingDirections": {},
+      "closedPolygonRings": 0,
+      "adjacentDuplicatePolygonVertices": 0,
+      "dbf": {
+        "versionByte": 3,
+        "headerDateBytes": [
+          108,
+          7,
+          20
+        ],
+        "recordCount": 606,
+        "headerBytes": 161,
+        "recordBytes": 51,
+        "codePageByte": 87,
+        "deletedRecordCount": 0,
+        "trailingBytes": 1,
+        "trailingFirst64Hex": "1a",
+        "trailingSHA256": "58f7b0780592032e4d8602a3e8690fb2c701b2e1dd546e703445aabd6469734d",
+        "nonASCIIPayloadBytes": 0,
+        "fields": [
+          {
+            "name": "NAME",
+            "type": "C",
+            "width": 26,
+            "decimals": 0
+          },
+          {
+            "name": "COUNTRY",
+            "type": "C",
+            "width": 13,
+            "decimals": 0
+          },
+          {
+            "name": "POPULATION",
+            "type": "N",
+            "width": 9,
+            "decimals": 0
+          },
+          {
+            "name": "CAPITAL",
+            "type": "C",
+            "width": 2,
+            "decimals": 0
+          }
+        ],
+        "numericSummary": {
+          "POPULATION": {
+            "min": -99,
+            "max": 23620000,
+            "negative99Count": 30,
+            "negative99999Count": 0
+          }
+        },
+        "firstThreeRecords": [
+          {
+            "NAME": "Murmansk",
+            "COUNTRY": "Russia",
+            "POPULATION": 468000,
+            "CAPITAL": "N"
+          },
+          {
+            "NAME": "Arkhangelsk",
+            "COUNTRY": "Russia",
+            "POPULATION": 416000,
+            "CAPITAL": "N"
+          },
+          {
+            "NAME": "Saint Petersburg",
+            "COUNTRY": "Russia",
+            "POPULATION": 5825000,
+            "CAPITAL": "N"
+          }
+        ],
+        "characterDecodeNote": "latin1 is lossless byte-to-codepoint audit display, not an accepted source character encoding"
+      },
+      "validationLimit": "No self-intersection/hole nesting/CRS transformation validation, no coordinate repairs",
+      "populationOver10000000Count": 11
+    },
+    "rivers": {
+      "shpHeader": {
+        "fileCode": 9994,
+        "declaredBytes": 69344,
+        "version": 1000,
+        "shapeType": 3,
+        "bboxXY": [
+          -164.6245574951172,
+          -36.904354095458984,
+          161.06581115722656,
+          72.23417663574219
+        ]
+      },
+      "shxHeader": {
+        "fileCode": 9994,
+        "declaredBytes": 884,
+        "version": 1000,
+        "shapeType": 3,
+        "bboxXY": [
+          -164.6245574951172,
+          -36.904354095458984,
+          161.06581115722656,
+          72.23417663574219
+        ]
+      },
+      "shapeTypeCounts": {
+        "3": 98
+      },
+      "shapeRecordCount": 98,
+      "shxEntryCount": 98,
+      "allSHXOffsetsAndLengthsMatch": true,
+      "computedPointBBoxXY": [
+        -164.6245574951172,
+        -36.904354095458984,
+        161.06582641601562,
+        72.23418426513672
+      ],
+      "headerBBoxEqualsComputed": false,
+      "totalPoints": 3965,
+      "totalParts": 177,
+      "polygonRingDirections": {},
+      "closedPolygonRings": 0,
+      "adjacentDuplicatePolygonVertices": 0,
+      "dbf": {
+        "versionByte": 3,
+        "headerDateBytes": [
+          106,
+          1,
+          20
+        ],
+        "recordCount": 98,
+        "headerBytes": 129,
+        "recordBytes": 55,
+        "codePageByte": 1,
+        "deletedRecordCount": 0,
+        "trailingBytes": 46453,
+        "trailingFirst64Hex": "1a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "trailingSHA256": "42d9c3c415bcb79c655e474950e035c29ea65424b39d1a5c8c58feec1a7b60b4",
+        "nonASCIIPayloadBytes": 0,
+        "fields": [
+          {
+            "name": "LENGTHCOMP",
+            "type": "N",
+            "width": 11,
+            "decimals": 5
+          },
+          {
+            "name": "NAME",
+            "type": "C",
+            "width": 26,
+            "decimals": 0
+          },
+          {
+            "name": "SYSTEM",
+            "type": "C",
+            "width": 17,
+            "decimals": 0
+          }
+        ],
+        "numericSummary": {
+          "LENGTHCOMP": {
+            "min": 161.59749,
+            "max": 6246.75304,
+            "negative99Count": 0,
+            "negative99999Count": 0
+          }
+        },
+        "firstThreeRecords": [
+          {
+            "LENGTHCOMP": 1822.553,
+            "NAME": "Aldan",
+            "SYSTEM": "Lena"
+          },
+          {
+            "LENGTHCOMP": 2944.21869,
+            "NAME": "Amazon",
+            "SYSTEM": "Amazon"
+          },
+          {
+            "LENGTHCOMP": 2076.09487,
+            "NAME": "Amu Darya",
+            "SYSTEM": ""
+          }
+        ],
+        "characterDecodeNote": "latin1 is lossless byte-to-codepoint audit display, not an accepted source character encoding"
+      },
+      "validationLimit": "No self-intersection/hole nesting/CRS transformation validation, no coordinate repairs"
+    },
+    "countries": {
+      "shpHeader": {
+        "fileCode": 9994,
+        "declaredBytes": 400460,
+        "version": 1000,
+        "shapeType": 5,
+        "bboxXY": [
+          -180.0,
+          -90.0,
+          180.0,
+          83.60415649414062
+        ]
+      },
+      "shxHeader": {
+        "fileCode": 9994,
+        "declaredBytes": 2100,
+        "version": 1000,
+        "shapeType": 5,
+        "bboxXY": [
+          -180.0,
+          -90.0,
+          180.0,
+          83.60415649414062
+        ]
+      },
+      "shapeTypeCounts": {
+        "5": 250
+      },
+      "shapeRecordCount": 250,
+      "shxEntryCount": 250,
+      "allSHXOffsetsAndLengthsMatch": true,
+      "computedPointBBoxXY": [
+        -180.0,
+        -90.0,
+        180.0,
+        83.60415649414062
+      ],
+      "headerBBoxEqualsComputed": true,
+      "totalPoints": 23938,
+      "totalParts": 1088,
+      "polygonRingDirections": {
+        "clockwise": 1078,
+        "counterclockwise": 10
+      },
+      "closedPolygonRings": 1088,
+      "adjacentDuplicatePolygonVertices": 0,
+      "dbf": {
+        "versionByte": 3,
+        "headerDateBytes": [
+          107,
+          11,
+          1
+        ],
+        "recordCount": 250,
+        "headerBytes": 481,
+        "recordBytes": 405,
+        "codePageByte": 87,
+        "deletedRecordCount": 0,
+        "trailingBytes": 1,
+        "trailingFirst64Hex": "1a",
+        "trailingSHA256": "58f7b0780592032e4d8602a3e8690fb2c701b2e1dd546e703445aabd6469734d",
+        "nonASCIIPayloadBytes": 0,
+        "fields": [
+          {
+            "name": "FIPS_CNTRY",
+            "type": "C",
+            "width": 2,
+            "decimals": 0
+          },
+          {
+            "name": "GMI_CNTRY",
+            "type": "C",
+            "width": 3,
+            "decimals": 0
+          },
+          {
+            "name": "ISO_2DIGIT",
+            "type": "C",
+            "width": 2,
+            "decimals": 0
+          },
+          {
+            "name": "ISO_3DIGIT",
+            "type": "C",
+            "width": 3,
+            "decimals": 0
+          },
+          {
+            "name": "CNTRY_NAME",
+            "type": "C",
+            "width": 254,
+            "decimals": 0
+          },
+          {
+            "name": "LONG_NAME",
+            "type": "C",
+            "width": 40,
+            "decimals": 0
+          },
+          {
+            "name": "SOVEREIGN",
+            "type": "C",
+            "width": 40,
+            "decimals": 0
+          },
+          {
+            "name": "POP_CNTRY",
+            "type": "N",
+            "width": 10,
+            "decimals": 0
+          },
+          {
+            "name": "CURR_TYPE",
+            "type": "C",
+            "width": 16,
+            "decimals": 0
+          },
+          {
+            "name": "CURR_CODE",
+            "type": "C",
+            "width": 4,
+            "decimals": 0
+          },
+          {
+            "name": "LANDLOCKED",
+            "type": "C",
+            "width": 1,
+            "decimals": 0
+          },
+          {
+            "name": "SQKM",
+            "type": "N",
+            "width": 14,
+            "decimals": 2
+          },
+          {
+            "name": "SQMI",
+            "type": "N",
+            "width": 14,
+            "decimals": 2
+          },
+          {
+            "name": "COLOR_MAP",
+            "type": "C",
+            "width": 1,
+            "decimals": 0
+          }
+        ],
+        "numericSummary": {
+          "POP_CNTRY": {
+            "min": -99999,
+            "max": 1302862775,
+            "negative99Count": 0,
+            "negative99999Count": 16
+          },
+          "SQKM": {
+            "min": 0.25,
+            "max": 16897294.0,
+            "negative99Count": 0,
+            "negative99999Count": 0
+          },
+          "SQMI": {
+            "min": 0.1,
+            "max": 6524043.5,
+            "negative99Count": 0,
+            "negative99999Count": 0
+          }
+        },
+        "firstThreeRecords": [
+          {
+            "FIPS_CNTRY": "AF",
+            "GMI_CNTRY": "AFG",
+            "ISO_2DIGIT": "AF",
+            "ISO_3DIGIT": "AFG",
+            "CNTRY_NAME": "Afghanistan",
+            "LONG_NAME": "Afghanistan",
+            "SOVEREIGN": "Afghanistan",
+            "POP_CNTRY": 17250390,
+            "CURR_TYPE": "Afghani",
+            "CURR_CODE": "AFA",
+            "LANDLOCKED": "Y",
+            "SQKM": 641358.44,
+            "SQMI": 247628.48,
+            "COLOR_MAP": "3"
+          },
+          {
+            "FIPS_CNTRY": "AL",
+            "GMI_CNTRY": "ALB",
+            "ISO_2DIGIT": "AL",
+            "ISO_3DIGIT": "ALB",
+            "CNTRY_NAME": "Albania",
+            "LONG_NAME": "Albania",
+            "SOVEREIGN": "Albania",
+            "POP_CNTRY": 3416945,
+            "CURR_TYPE": "Lek",
+            "CURR_CODE": "ALL",
+            "LANDLOCKED": "N",
+            "SQKM": 28798.0,
+            "SQMI": 11118.91,
+            "COLOR_MAP": "6"
+          },
+          {
+            "FIPS_CNTRY": "AG",
+            "GMI_CNTRY": "DZA",
+            "ISO_2DIGIT": "DZ",
+            "ISO_3DIGIT": "DZA",
+            "CNTRY_NAME": "Algeria",
+            "LONG_NAME": "Algeria",
+            "SOVEREIGN": "Algeria",
+            "POP_CNTRY": 27459230,
+            "CURR_TYPE": "Dinar",
+            "CURR_CODE": "DZD",
+            "LANDLOCKED": "N",
+            "SQKM": 2323510.25,
+            "SQMI": 897107.19,
+            "COLOR_MAP": "3"
+          }
+        ],
+        "characterDecodeNote": "latin1 is lossless byte-to-codepoint audit display, not an accepted source character encoding"
+      },
+      "validationLimit": "No self-intersection/hole nesting/CRS transformation validation, no coordinate repairs",
+      "unitedStatesMatches": [
+        {
+          "FIPS_CNTRY": "US",
+          "GMI_CNTRY": "USA",
+          "ISO_2DIGIT": "US",
+          "ISO_3DIGIT": "USA",
+          "CNTRY_NAME": "United States",
+          "LONG_NAME": "United States",
+          "SOVEREIGN": "United States",
+          "POP_CNTRY": 258833000,
+          "CURR_TYPE": "US Dollar",
+          "CURR_CODE": "USD",
+          "LANDLOCKED": "N",
+          "SQKM": 9426295.0,
+          "SQMI": 3639492.5,
+          "COLOR_MAP": "5"
+        }
+      ]
+    }
+  },
+  "rasters": {
+    "local-elevation": {
+      "headers": {
+        "ncols": 195.0,
+        "nrows": 195.0,
+        "xllcorner": -84.355652,
+        "yllcorner": 39.177963,
+        "cellsize": 9.3e-05,
+        "nodata_value": -9999.0
+      },
+      "valueCount": 38025,
+      "expectedValueCount": 38025,
+      "noDataCount": 0,
+      "validMin": 212.7,
+      "validMax": 265.0,
+      "allStoredValuesFinite": true,
+      "outerExtentXY": [
+        -84.355652,
+        39.177963,
+        -84.337517,
+        39.196098
+      ],
+      "topLeftCellCenterXY": [
+        -84.35560550000001,
+        39.196051499999996
+      ],
+      "bottomRightCellCenterXY": [
+        -84.3375635,
+        39.1780095
+      ],
+      "firstSixValues": [
+        248.9,
+        248.9,
+        248.9,
+        248.9,
+        248.9,
+        248.6
+      ],
+      "lastSixValues": [
+        252.8,
+        252.7,
+        252.4,
+        252.4,
+        252.0,
+        252.1
+      ],
+      "rowInterpretation": "ESRI ASCII row 1 is top/north; stored extent order here is minX,minY,maxX,maxY"
+    },
+    "world-elevation": {
+      "headers": {
+        "ncols": 360.0,
+        "nrows": 180.0,
+        "xllcorner": -180.0,
+        "yllcorner": -90.0,
+        "cellsize": 1.0,
+        "nodata_value": -9999.0
+      },
+      "valueCount": 64800,
+      "expectedValueCount": 64800,
+      "noDataCount": 0,
+      "validMin": -7473.0,
+      "validMax": 5731.0,
+      "allStoredValuesFinite": true,
+      "outerExtentXY": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ],
+      "topLeftCellCenterXY": [
+        -179.5,
+        89.5
+      ],
+      "bottomRightCellCenterXY": [
+        179.5,
+        -89.5
+      ],
+      "firstSixValues": [
+        -3885.0,
+        -3875.0,
+        -3862.0,
+        -3849.0,
+        -3835.0,
+        -3823.0
+      ],
+      "lastSixValues": [
+        2859.0,
+        2859.0,
+        2859.0,
+        2859.0,
+        2859.0,
+        2863.0
+      ],
+      "rowInterpretation": "ESRI ASCII row 1 is top/north; stored extent order here is minX,minY,maxX,maxY"
+    }
+  },
+  "projections": {
+    "Lambert_Conformal_Conic.prj": {
+      "text": "PROJCS[\"Lambert_Conformal_Conic\",\n        GEOGCS[\"GCS_WGS_1984\",\n                DATUM[\"D_WGS_1984\",\n                        SPHEROID[\"WGS_1984\",6378137,298.257223563]],\n                PRIMEM[\"Greenwich\",0],\n                UNIT[\"Degree\",0.017453292519943295]],\n        PROJECTION[\"Lambert_Conformal_Conic_2SP\"],\n        PARAMETER[\"False_Easting\",0],\n        PARAMETER[\"False_Northing\",0],\n        PARAMETER[\"Central_Meridian\",-90],\n        PARAMETER[\"Standard_Parallel_1\",60],\n        PARAMETER[\"Standard_Parallel_2\",60],\n        PARAMETER[\"Latitude_Of_Origin\",0],\n        UNIT[\"Meter\",1]]\n",
+      "kind": "PROJCS",
+      "name": "Lambert_Conformal_Conic",
+      "projection": [
+        "Lambert_Conformal_Conic_2SP"
+      ],
+      "parameters": {
+        "False_Easting": 0.0,
+        "False_Northing": 0.0,
+        "Central_Meridian": -90.0,
+        "Standard_Parallel_1": 60.0,
+        "Standard_Parallel_2": 60.0,
+        "Latitude_Of_Origin": 0.0
+      },
+      "units": [
+        {
+          "name": "Degree",
+          "factor": 0.017453292519943295
+        },
+        {
+          "name": "Meter",
+          "factor": 1.0
+        }
+      ],
+      "spheroid": [
+        [
+          "WGS_1984",
+          "6378137",
+          "298.257223563"
+        ]
+      ],
+      "authorityIdentifiers": []
+    },
+    "US_Orthographic.prj": {
+      "text": "PROJCS[\"US_Orthographic\",\n        GEOGCS[\"GCS_WGS_1984\",\n                DATUM[\"D_WGS_1984\",\n                        SPHEROID[\"WGS_1984\",6378137,298.257223563]],\n                PRIMEM[\"Greenwich\",0],\n                UNIT[\"Degree\",0.017453292519943295]],\n        PROJECTION[\"Orthographic\"],\n        PARAMETER[\"False_Easting\",0],\n        PARAMETER[\"False_Northing\",0],\n        PARAMETER[\"Longitude_Of_Center\",-98],\n        PARAMETER[\"Latitude_Of_Center\",36],\n        UNIT[\"Meter\",1]]\n",
+      "kind": "PROJCS",
+      "name": "US_Orthographic",
+      "projection": [
+        "Orthographic"
+      ],
+      "parameters": {
+        "False_Easting": 0.0,
+        "False_Northing": 0.0,
+        "Longitude_Of_Center": -98.0,
+        "Latitude_Of_Center": 36.0
+      },
+      "units": [
+        {
+          "name": "Degree",
+          "factor": 0.017453292519943295
+        },
+        {
+          "name": "Meter",
+          "factor": 1.0
+        }
+      ],
+      "spheroid": [
+        [
+          "WGS_1984",
+          "6378137",
+          "298.257223563"
+        ]
+      ],
+      "authorityIdentifiers": []
+    },
+    "WGS_84_Geographic.prj": {
+      "text": "GEOGCS[\"WGS_84_Geographic\",\n        DATUM[\"D_WGS_1984\",\n                SPHEROID[\"WGS_1984\",6378137,298.257223563]],\n        PRIMEM[\"Greenwich\",0],\n        UNIT[\"Degree\",0.017453292519943295]]\n",
+      "kind": "GEOGCS",
+      "name": "WGS_84_Geographic",
+      "projection": [],
+      "parameters": {},
+      "units": [
+        {
+          "name": "Degree",
+          "factor": 0.017453292519943295
+        }
+      ],
+      "spheroid": [
+        [
+          "WGS_1984",
+          "6378137",
+          "298.257223563"
+        ]
+      ],
+      "authorityIdentifiers": []
+    },
+    "cities.prj": {
+      "text": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]]\n",
+      "kind": "GEOGCS",
+      "name": "GCS_WGS_1984",
+      "projection": [],
+      "parameters": {},
+      "units": [
+        {
+          "name": "Degree",
+          "factor": 0.017453292519943295
+        }
+      ],
+      "spheroid": [
+        [
+          "WGS_1984",
+          "6378137",
+          "298.257223563"
+        ]
+      ],
+      "authorityIdentifiers": []
+    },
+    "countries.prj": {
+      "text": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]]\n",
+      "kind": "GEOGCS",
+      "name": "GCS_WGS_1984",
+      "projection": [],
+      "parameters": {},
+      "units": [
+        {
+          "name": "Degree",
+          "factor": 0.017453292519943295
+        }
+      ],
+      "spheroid": [
+        [
+          "WGS_1984",
+          "6378137",
+          "298.257223563"
+        ]
+      ],
+      "authorityIdentifiers": []
+    },
+    "local-elevation.prj": {
+      "text": "GEOGCS[\"WGS_84_Geographic\",\n        DATUM[\"D_WGS_1984\",\n                SPHEROID[\"WGS_1984\",6378137,298.257223563]],\n        PRIMEM[\"Greenwich\",0],\n        UNIT[\"Degree\",0.017453292519943295]]\n",
+      "kind": "GEOGCS",
+      "name": "WGS_84_Geographic",
+      "projection": [],
+      "parameters": {},
+      "units": [
+        {
+          "name": "Degree",
+          "factor": 0.017453292519943295
+        }
+      ],
+      "spheroid": [
+        [
+          "WGS_1984",
+          "6378137",
+          "298.257223563"
+        ]
+      ],
+      "authorityIdentifiers": []
+    },
+    "rivers.prj": {
+      "text": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]]\n",
+      "kind": "GEOGCS",
+      "name": "GCS_WGS_1984",
+      "projection": [],
+      "parameters": {},
+      "units": [
+        {
+          "name": "Degree",
+          "factor": 0.017453292519943295
+        }
+      ],
+      "spheroid": [
+        [
+          "WGS_1984",
+          "6378137",
+          "298.257223563"
+        ]
+      ],
+      "authorityIdentifiers": []
+    },
+    "world-elevation.prj": {
+      "text": "GEOGCS[\"WGS_84_Geographic\",\n        DATUM[\"D_WGS_1984\",\n                SPHEROID[\"WGS_1984\",6378137,298.257223563]],\n        PRIMEM[\"Greenwich\",0],\n        UNIT[\"Degree\",0.017453292519943295]]\n",
+      "kind": "GEOGCS",
+      "name": "WGS_84_Geographic",
+      "projection": [],
+      "parameters": {},
+      "units": [
+        {
+          "name": "Degree",
+          "factor": 0.017453292519943295
+        }
+      ],
+      "spheroid": [
+        [
+          "WGS_1984",
+          "6378137",
+          "298.257223563"
+        ]
+      ],
+      "authorityIdentifiers": []
+    }
+  },
+  "countryMetadata": {
+    "title": [
+      "World Countries 2004",
+      "ArcWorld\u2122 Supplement",
+      "Geographic and Global Issues Quarterly",
+      "The World Factbook 2000; 2003",
+      "World Demography Project",
+      "COUNTRIES, DEPENDENCIES, AREAS OF SPECIAL SOVEREIGNTY, AND THEIR PRINCIPAL ADMINISTRATIVE DIVISIONS",
+      "COUNTRIES, DEPENDENCIES, AREAS OF SPECIAL SOVEREIGNTY, AND THEIR PRINCIPAL ADMINISTRATIVE DIVISIONS",
+      "THE TREATY OF JEDDAH, 2000",
+      "Euro Essentials",
+      "<front page>",
+      "Yugoslav partners sign historic deal",
+      "Missions Database"
+    ],
+    "origin": [
+      "ESRI",
+      "ESRI",
+      "United States Department of State, Bureau of Intelligence and Research",
+      "United States Central Intelligence Agency",
+      "National Center for Geographic Information and Analysis",
+      "Executive Secretary for Foreign Names - US Board on Geographic Names",
+      "Executive Secretary for Foreign Names - US Board on Geographic Names",
+      "International Border Treaty between the Republic of Yemen and the Kingdom of Saudi Arabia",
+      "Europa",
+      "International Organization for Standardization",
+      "BBC News",
+      "Global Mapping International"
+    ],
+    "pubdate": [
+      "20040301",
+      "1996",
+      "Winter 1993/1994",
+      "20000101, 2003",
+      "199504",
+      "20000225",
+      "20010128",
+      "20000612",
+      "19991001, 20020201, 20020520, 20021115",
+      "20020314"
+    ],
+    "abstract": [
+      "World Countries 2004 represents the boundaries for the countries of the world, as they existed in January 2004."
+    ],
+    "purpose": [
+      "World Countries 2004 provides political boundaries for the world in 2004. To display World Political Organization Membership attributes or CountryWatch Demographics attributes, join these tables to this attribute table using Fips_cntry or Cntry_name as the common field."
+    ],
+    "accconst": [
+      "Access granted to Licensee only."
+    ],
+    "distliab": [
+      "See use constraints."
+    ],
+    "useconstSourcePath": "experiments/gis-general-examples/data/countries.xml: metadata/idinfo/useconst; retained in original file rather than duplicating full terms here",
+    "populationMeaning": {
+      "sourceElement": "metadata/eainfo/detailed/attr[POP_CNTRY]",
+      "year": 1994,
+      "estimate": true,
+      "missingValue": -99999
+    }
+  }
+}

@@ -1,0 +1,1300 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Toward+an+ecological+synthesis+a+case+for+habitat+selection+Morris+2003&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 5381510,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                31
+              ]
+            ],
+            "date-time": "2026-10-31T09:09:12Z",
+            "timestamp": 1793437752050,
+            "version": "4.5.0"
+          },
+          "reference-count": 0,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2003,
+                    6,
+                    1
+                  ]
+                ],
+                "date-time": "2003-06-01T00:00:00Z",
+                "timestamp": 1054425600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Oecologia"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2003,
+                6,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1007/s00442-003-1241-4",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                11,
+                21
+              ]
+            ],
+            "date-time": "2003-11-21T14:17:33Z",
+            "timestamp": 1069424253000
+          },
+          "page": "1-13",
+          "source": "Crossref",
+          "is-referenced-by-count": 673,
+          "title": [
+            "Toward an ecological synthesis: a case for habitat selection"
+          ],
+          "prefix": "10.1007",
+          "volume": "136",
+          "author": [
+            {
+              "given": "Douglas W.",
+              "family": "Morris",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "container-title": [
+            "Oecologia"
+          ],
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s00442-003-1241-4.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/s00442-003-1241-4/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s00442-003-1241-4",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                5,
+                29
+              ]
+            ],
+            "date-time": "2019-05-29T08:57:26Z",
+            "timestamp": 1559120246000
+          },
+          "score": 38.854202,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/s00442-003-1241-4"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2003,
+                6,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2003,
+                  6,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "VKKHKP0DX923W307"
+          ],
+          "URL": "https://doi.org/10.1007/s00442-003-1241-4",
+          "ISSN": [
+            "0029-8549",
+            "1432-1939"
+          ],
+          "issn-type": [
+            {
+              "value": "0029-8549",
+              "type": "print"
+            },
+            {
+              "value": "1432-1939",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2003,
+                6,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                30
+              ]
+            ],
+            "date-time": "2026-10-30T05:30:26Z",
+            "timestamp": 1793338226108,
+            "version": "4.5.0"
+          },
+          "reference-count": 69,
+          "publisher": "Ursus",
+          "issue": "2",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Ursus"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2014,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.2192/ursus-d-13-00011.1",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2014,
+                12,
+                1
+              ]
+            ],
+            "date-time": "2014-12-01T22:20:26Z",
+            "timestamp": 1417472426000
+          },
+          "page": "148-162",
+          "source": "Crossref",
+          "is-referenced-by-count": 58,
+          "title": [
+            "A synthesis of giant panda habitat selection"
+          ],
+          "prefix": "10.2192",
+          "volume": "25",
+          "author": [
+            {
+              "given": "Vanessa",
+              "family": "Hull",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Gary",
+              "family": "Roloff",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jindong",
+              "family": "Zhang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Wei",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Shiqiang",
+              "family": "Zhou",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jinyan",
+              "family": "Huang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Weihua",
+              "family": "Xu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Zhiyun",
+              "family": "Ouyang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hemin",
+              "family": "Zhang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jianguo",
+              "family": "Liu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1264",
+          "reference": [
+            {
+              "key": "i1537-6176-25-2-148-Bearer1",
+              "volume-title": "The effects of forest harvesting on giant panda habitat use in Wolong Nature Reserve, China",
+              "author": "Bearer S",
+              "year": "2005"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Bearer2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.biocon.2007.10.009"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Durnin1",
+              "doi-asserted-by": "crossref",
+              "first-page": "987",
+              "DOI": "10.2193/0022-541X(2004)068[0987:EOROGP]2.0.CO;2",
+              "volume": "68",
+              "author": "Durnin M.E",
+              "year": "2004",
+              "journal-title": "Journal of Wildlife Management"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Feng1",
+              "doi-asserted-by": "crossref",
+              "first-page": "852",
+              "DOI": "10.2193/2008-186",
+              "volume": "73",
+              "author": "Feng T",
+              "year": "2009",
+              "journal-title": "Journal of Wildlife Management"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Gansu1",
+              "unstructured": "Gansu Provincial Forestry Department of Wildlife Conservation [GPFDWC]. Report of the third giant panda survey in Gansu Province, Lanzhou, Gansu, China. 2004. Gansu Provincial Forestry Department of Wildlife Conservation, Lanzhou, Gansu, China. [In Chinese.]."
+            },
+            {
+              "key": "i1537-6176-25-2-148-Garshelis1",
+              "volume-title": "Delusions in habitat evaluation: Measuring use, selection, and importance. Pages 111\u2013163 in L. Boitani and T.K. Fuller, editors. Research techniques in animal ecology\u2014Controversies and consequences",
+              "author": "Garshelis D.L",
+              "year": "2000"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Garshelis2",
+              "volume-title": "Variation in ursid life histories: Is there an outlier? Pages 53\u201373 in D. Lindburg and K. Baragona, editors. Giant pandas: Biology and conservation",
+              "author": "Garshelis D.L",
+              "year": "2004"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Guo1",
+              "unstructured": "Guo, H. 2003. Impacts of human disturbance on the giant panda (Ailuropoda melanoleuca) and its habitats at the Wanglang Nature Reserve. Thesis, Sichuan University, Chengdu, China. [In Chinese.]."
+            },
+            {
+              "key": "i1537-6176-25-2-148-Hirzel1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2002)083[2027:ENFAHT]2.0.CO;2"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Hu1",
+              "volume-title": "Comparative ecology of giant pandas in the five mountain ranges of their distribution in China. Pages 137\u2013148 in D. Lindburg and K. Baragona, editors. Giant pandas: Biology and conservation",
+              "author": "Hu J",
+              "year": "2004"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Hull1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11258-010-9800-3"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Hull2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.biocon.2011.09.007"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Johnson1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1937156"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Kang1",
+              "first-page": "401",
+              "volume": "31",
+              "author": "Kang D",
+              "year": "2011",
+              "journal-title": "Acta Ecologica Sinica"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Kang2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1810-522X-52-23"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Kang3",
+              "first-page": "519",
+              "volume": "22",
+              "author": "Kang D",
+              "year": "2011",
+              "journal-title": "Chinese Journal of Applied Ecology"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Lechowicz1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00349007"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Linderman1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/1051-0761(2006)016[0452:IEONAH]2.0.CO;2"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Liu1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1144004"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Liu2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5751/ES-05873-180226"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Liu3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0706436105"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Liu4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1058104"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Liu5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1523-1739.1999.98418.x"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Liu6",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.18174/199266",
+              "volume-title": "Mapping and modelling the habitat of giant pandas in Foping Nature Reserve, China",
+              "author": "Liu X",
+              "year": "2001"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Liu7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ecolmodel.2010.10.012"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Liu8",
+              "doi-asserted-by": "crossref",
+              "first-page": "1623",
+              "DOI": "10.2193/0022-541X(2005)69[1623:GPHSIF]2.0.CO;2",
+              "volume": "69",
+              "author": "Liu X",
+              "year": "2005",
+              "journal-title": "Journal of Wildlife Management"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Lu1",
+              "first-page": "137",
+              "volume": "56",
+              "author": "Lu X",
+              "year": "2007",
+              "journal-title": "Folia Zoologica"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Manly1",
+              "volume-title": "Resource selection by animals\u2014Statistical design and analysis for field studies. Second edition",
+              "author": "Manly B.F.J",
+              "year": "2002"
+            },
+            {
+              "key": "i1537-6176-25-2-148-McDonald1",
+              "first-page": "11",
+              "volume-title": "Sampling rare or elusive species",
+              "author": "McDonald L.L",
+              "year": "2004"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Neu1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3800887"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Nielsen1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.biocon.2010.04.007"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Pan1",
+              "volume-title": "A chance for lasting survival",
+              "author": "Pan W",
+              "year": "2001"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Qi1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10531-009-9577-7"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Qi2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-7998.2011.00831.x"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Qi3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/jwmg.347"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Ran1",
+              "first-page": "2253",
+              "volume": "23",
+              "author": "Ran J",
+              "year": "2003",
+              "journal-title": "Acta Ecologica Sinica"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Ran2",
+              "first-page": "277",
+              "volume": "24",
+              "author": "Ran J",
+              "year": "2004",
+              "journal-title": "Acta Theriologica Sinica"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Ran3",
+              "first-page": "8",
+              "volume": "26",
+              "author": "Ran J",
+              "year": "2004",
+              "journal-title": "Journal of Beijing Forestry University"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Reid1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2404127"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Reid2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0006-3207(89)90081-5"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Schaller1",
+              "volume-title": "The giant pandas of Wolong",
+              "author": "Schaller G.B",
+              "year": "1985"
+            },
+            {
+              "key": "i1537-6176-25-2-148-State1",
+              "volume-title": "The third national survey report on the giant panda in China",
+              "author": "State Forestry Administration",
+              "year": "2006"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Tang1",
+              "first-page": "33",
+              "volume-title": "The resources and protection of vertebrates",
+              "author": "Tang P",
+              "year": "1998"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Taylor1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.foreco.2004.07.007"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Tuanmu1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2699.2011.02479.x"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Tuanmu2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nclimate1727"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Vanderploeg1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/f79-055"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Via1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.rse.2007.09.012"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Via2",
+              "doi-asserted-by": "crossref",
+              "first-page": "274",
+              "DOI": "10.1007/s13280-010-0098-0",
+              "volume": "40",
+              "author": "Vi\u00f1a A",
+              "year": "2011",
+              "journal-title": "Ambio"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Via3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.biocon.2010.04.046"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wang1",
+              "first-page": "771",
+              "volume": "25",
+              "author": "Wang J",
+              "year": "2006",
+              "journal-title": "Sichuan Journal of Zoology"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wang2",
+              "volume-title": "Habitat analysis for giant panda in Laoxiancheng Nature Reserve in the Qinling Mountains China",
+              "author": "Wang T",
+              "year": "2003"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wang3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2699.2009.02259.x"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wang4",
+              "volume-title": "The impact of human disturbance on giant panda habitat in the Minshan Mountains",
+              "author": "Wang X",
+              "year": "2008"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wang5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11284-009-0589-2"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wang6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1872-2032(08)60031-1"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wei1",
+              "first-page": "57",
+              "volume": "45",
+              "author": "Wei F",
+              "year": "1999",
+              "journal-title": "Acta Zoologica Sinica"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wei2",
+              "doi-asserted-by": "crossref",
+              "first-page": "448",
+              "DOI": "10.1093/jmammal/81.2.448",
+              "volume": "81",
+              "author": "Wei F",
+              "year": "2000",
+              "journal-title": "Journal of Mammalogy"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wei3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/mec.12096"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Wei4",
+              "first-page": "241",
+              "volume": "16",
+              "author": "Wei F",
+              "year": "1996",
+              "journal-title": "Acta Theriologica Sinica"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Yang1",
+              "first-page": "3442",
+              "volume": "26",
+              "author": "Yang C.-H",
+              "year": "2006",
+              "journal-title": "Acta Ecologica Sinica"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Ye1",
+              "volume-title": "Characterizing the spatial distribution of giant pandas in China using MODIS data and landscape metrics",
+              "author": "Ye X",
+              "year": "2008"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Zeng1",
+              "first-page": "1140",
+              "volume": "39",
+              "author": "Zeng Z",
+              "year": "2002",
+              "journal-title": "Journal of Sichuan University (Natural Science Edition)"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Zhang1",
+              "first-page": "18",
+              "volume": "21",
+              "author": "Zhang Z",
+              "year": "2000",
+              "journal-title": "Journal of Sichuan Teachers College Natural Science Edition"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Zhang2",
+              "doi-asserted-by": "crossref",
+              "first-page": "2694",
+              "DOI": "10.2193/2006-504",
+              "volume": "71",
+              "author": "Zhang Z",
+              "year": "2007",
+              "journal-title": "Journal of Wildlife Management"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Zhang3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsbl.2010.1081"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Zhang4",
+              "doi-asserted-by": "crossref",
+              "first-page": "231",
+              "DOI": "10.2193/0022-541X(2006)70[231:WMSBGA]2.0.CO;2",
+              "volume": "70",
+              "author": "Zhang Z",
+              "year": "2006",
+              "journal-title": "Journal of Wildlife Management"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Zhang5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11356-008-0066-4"
+            },
+            {
+              "key": "i1537-6176-25-2-148-Zhu1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1017956108"
+            }
+          ],
+          "container-title": [
+            "Ursus"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                13
+              ]
+            ],
+            "date-time": "2025-05-13T22:14:07Z",
+            "timestamp": 1747174447000
+          },
+          "score": 21.757236,
+          "resource": {
+            "primary": {
+              "URL": "http://www.bioone.org/doi/10.2192/URSUS-D-13-00011.1"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2014,
+                10
+              ]
+            ]
+          },
+          "references-count": 69,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  2014,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.2192/URSUS-D-13-00011.1"
+          ],
+          "URL": "https://doi.org/10.2192/ursus-d-13-00011.1",
+          "ISSN": [
+            "1537-6176",
+            "1938-5439"
+          ],
+          "issn-type": [
+            {
+              "value": "1537-6176",
+              "type": "print"
+            },
+            {
+              "value": "1938-5439",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                10
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                5
+              ]
+            ],
+            "date-time": "2026-10-05T12:44:00Z",
+            "timestamp": 1791204240437,
+            "version": "4.2.0"
+          },
+          "reference-count": 44,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "The Auk"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1996,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.2307/4088984",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                14
+              ]
+            ],
+            "date-time": "2012-09-14T08:26:28Z",
+            "timestamp": 1347611188000
+          },
+          "page": "636-646",
+          "source": "Crossref",
+          "is-referenced-by-count": 59,
+          "title": [
+            "Habitat Sampling and Habitat Selection by Female Wild Turkeys: Ecological Correlates and Reproductive Consequences"
+          ],
+          "prefix": "10.1093",
+          "volume": "113",
+          "author": [
+            {
+              "given": "Alexander V.",
+              "family": "Badyaev",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Thomas E.",
+              "family": "Martin",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "William J.",
+              "family": "Etges",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "reference": [
+            {
+              "key": "r502",
+              "doi-asserted-by": "crossref",
+              "first-page": "1063",
+              "DOI": "10.1016/S0003-3472(05)80644-X",
+              "volume": "41",
+              "author": "Andr\u00e9n",
+              "year": "1991",
+              "journal-title": "Animal Behaviour"
+            },
+            {
+              "key": "r503",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1368998"
+            },
+            {
+              "key": "r504",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3802050"
+            },
+            {
+              "key": "r505",
+              "doi-asserted-by": "crossref",
+              "first-page": "240",
+              "DOI": "10.2307/4088984",
+              "volume": "113",
+              "author": "Badyaev",
+              "year": "1996",
+              "journal-title": "Auk"
+            },
+            {
+              "key": "r506",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1369571"
+            },
+            {
+              "key": "r507",
+              "doi-asserted-by": "crossref",
+              "first-page": "2275",
+              "DOI": "10.1139/z79-296",
+              "volume": "57",
+              "author": "Boag",
+              "year": "1979",
+              "journal-title": "Canadian Journal of Zoology"
+            },
+            {
+              "key": "r508",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/4097"
+            },
+            {
+              "key": "r509",
+              "volume-title": "Habitat selection in birds",
+              "author": "Cody",
+              "year": "1985"
+            },
+            {
+              "key": "r510",
+              "volume-title": "Populations in seasonal environment",
+              "author": "Fretwell",
+              "year": "1972"
+            },
+            {
+              "key": "r511",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01601953"
+            },
+            {
+              "key": "r512",
+              "doi-asserted-by": "crossref",
+              "unstructured": "GUSTAFSSON, L.1989. Life-history trade-offs and op-timal clutch size in relation to age in the CollaredFlycatcher. Pages 235-246 in Population biologyof passerine birds. An integrated approach (J.Blondel, A. Gosler, J.D. Lebreton, and R. Mc-Cleery, Eds.). NATO ASI Series G: Ecological Sci-ences, vol. 24. Springer-Verlag, Berlin.GustafssonLife-history trade-offs and optimal clutch size in relation to age in the Collared Flycatcher23524Population biology of passerine birds. An integrated approach1989",
+              "DOI": "10.1007/978-3-642-75110-3_20"
+            },
+            {
+              "key": "r513",
+              "first-page": "687",
+              "volume": "99",
+              "author": "Hannon",
+              "year": "1982",
+              "journal-title": "Auk"
+            },
+            {
+              "key": "r514",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/4655"
+            },
+            {
+              "key": "r515",
+              "unstructured": "HEALY, W. M.1992. Behavior. Pages 46-65 in TheWild Turkey: Biology and management (J. G.Dickson, Ed.). Stackpole Books, Harrisburg,Pennsylvania.HealyBehavior46The Wild Turkey: Biology and management1992"
+            },
+            {
+              "key": "r516",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1937652"
+            },
+            {
+              "key": "r517",
+              "volume-title": "The Wild Turkey and its management",
+              "author": "Hewitt",
+              "year": "1967"
+            },
+            {
+              "key": "r518",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1684824"
+            },
+            {
+              "key": "r519",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939574"
+            },
+            {
+              "key": "r520",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2598"
+            },
+            {
+              "key": "r521",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2097033"
+            },
+            {
+              "key": "r522",
+              "volume-title": "Ranges IV. Software for analyzing animal location data",
+              "author": "Kenward",
+              "year": "1990"
+            },
+            {
+              "key": "r523",
+              "unstructured": "MARTIN, T. E.1992. Breeding season productivity:What are the appropriate habitat features formanagement? Pages 455-473 in Ecology and con-servation of Neotropical migrant landbirds (J.M.Hagan III and D.W. Johnston, Eds.). SmithsonianInstitution Press, Washington, D.C.MartinBreeding season productivity: What are the appropriate habitat features for management?455Ecology and conservation of Neotropical migrant landbirds1992"
+            },
+            {
+              "key": "r524",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1311947"
+            },
+            {
+              "key": "r525",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0003-3472(88)80244-6"
+            },
+            {
+              "key": "r526",
+              "volume-title": "Introduction to linear regression analysis",
+              "author": "Montgomery",
+              "year": "1992",
+              "edition": "2"
+            },
+            {
+              "key": "r527",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1934544"
+            },
+            {
+              "key": "r528",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3781453"
+            },
+            {
+              "key": "r529",
+              "doi-asserted-by": "crossref",
+              "first-page": "2624",
+              "DOI": "10.1139/z82-337",
+              "volume": "60",
+              "author": "Nugent",
+              "year": "1982",
+              "journal-title": "Canadian Journal of Zoology"
+            },
+            {
+              "key": "r530",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2462287"
+            },
+            {
+              "key": "r531",
+              "unstructured": "PARKER, G. A.1983. Mate quality and mating deci-sions. Pages 141-166 in Mate choice (P. Bateson,Ed.). Cambridge University Press, Cambridge.ParkerMate quality and mating decisions141Mate choice1983"
+            },
+            {
+              "key": "r532",
+              "doi-asserted-by": "crossref",
+              "first-page": "360",
+              "DOI": "10.1038/336160a0",
+              "volume": "336",
+              "author": "Pettifor",
+              "year": "1988",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "r533",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3808500"
+            },
+            {
+              "key": "r534",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2462288"
+            },
+            {
+              "key": "r535",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2462150"
+            },
+            {
+              "key": "r536",
+              "volume-title": "SAS/STAT user's guide, version 6",
+              "author": "Sas Institute",
+              "year": "1989"
+            },
+            {
+              "key": "r537",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1940802"
+            },
+            {
+              "key": "r538",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1368119"
+            },
+            {
+              "key": "r539",
+              "first-page": "591",
+              "volume": "101",
+              "author": "Schmutz",
+              "year": "1989",
+              "journal-title": "Wilson Bulletin"
+            },
+            {
+              "key": "r540",
+              "first-page": "151",
+              "volume": "10",
+              "author": "Smith",
+              "year": "1989",
+              "journal-title": "Proceedings of the International Biotelemetry Conference"
+            },
+            {
+              "key": "r541",
+              "volume-title": "Foraging theory",
+              "author": "Stephens",
+              "year": "1986"
+            },
+            {
+              "key": "r542",
+              "volume-title": "The Wild Turkey in Florida",
+              "author": "Williams",
+              "year": "1988"
+            },
+            {
+              "key": "r543",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2460478"
+            },
+            {
+              "key": "r544",
+              "volume-title": "Biostatistical analysis",
+              "author": "Zar",
+              "year": "1984"
+            },
+            {
+              "key": "r545",
+              "doi-asserted-by": "crossref",
+              "first-page": "896",
+              "DOI": "10.1139/z80-123",
+              "volume": "58",
+              "author": "Zwickel",
+              "year": "1980",
+              "journal-title": "Canadian Journal of Zoology"
+            }
+          ],
+          "container-title": [
+            "The Auk"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                7,
+                3
+              ]
+            ],
+            "date-time": "2019-07-03T17:34:07Z",
+            "timestamp": 1562175247000
+          },
+          "score": 21.625721,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/auk/article/113/3/636-646/5168247"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1996,
+                7
+              ]
+            ]
+          },
+          "references-count": 44,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1996,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.2307/4088984"
+          ],
+          "URL": "https://doi.org/10.2307/4088984",
+          "ISSN": [
+            "0004-8038",
+            "1938-4254"
+          ],
+          "issn-type": [
+            {
+              "value": "0004-8038",
+              "type": "print"
+            },
+            {
+              "value": "1938-4254",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1996,
+                7
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "case": {
+    "slug": "genevo-1-genetic-switch",
+    "name": "GenEvo 1 Genetic Switch",
+    "path": "Curricular Models/GenEvo/GenEvo 1 Genetic Switch",
+    "setup": "setup",
+    "steps": 20,
+    "reports": [
+      "ticks",
+      "energy",
+      "count LacIs",
+      "count RNAPs",
+      "count LacZs",
+      "division-number"
+    ]
+  },
+  "setup": {
+    "sourceSHA256": "6f46710d78daad311551c2ee934317d98ef52ad92779b8312ba66dcd4c7d330e",
+    "title": "GenEvo 1 Genetic Switch",
+    "bytes": 73160,
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 0
+      },
+      "energy": {
+        "success": true,
+        "value": 1000
+      },
+      "count LacIs": {
+        "success": true,
+        "value": 25
+      },
+      "count RNAPs": {
+        "success": true,
+        "value": 25
+      },
+      "count LacZs": {
+        "success": true,
+        "value": 0
+      },
+      "division-number": {
+        "success": true,
+        "value": 0
+      }
+    },
+    "errors": [],
+    "viewport": [
+      1280,
+      800
+    ],
+    "canvas": [
+      {
+        "width": 1210,
+        "height": 670,
+        "rect": {
+          "x": 362,
+          "y": 173.984375,
+          "width": 605,
+          "height": 335,
+          "top": 173.984375,
+          "right": 967,
+          "bottom": 508.984375,
+          "left": 362
+        }
+      }
+    ]
+  },
+  "progress": {
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 20
+      },
+      "energy": {
+        "success": true,
+        "value": 1190
+      },
+      "count LacIs": {
+        "success": true,
+        "value": 25
+      },
+      "count RNAPs": {
+        "success": true,
+        "value": 25
+      },
+      "count LacZs": {
+        "success": true,
+        "value": 0
+      },
+      "division-number": {
+        "success": true,
+        "value": 0
+      }
+    },
+    "errors": [],
+    "console": [],
+    "text": " powered by NetLogo\nGenEvo 1 Genetic Switch\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 20\n?\nfor shortcuts\nsetup\ngo\nlactose?\nglucose?\nLevelSpace?\nEnergy\n0\n10\n20\n0\n500\n1000\n1200\nsave screenshot\naverage-cell-division-time\nn/a\nTime\nFrequency\nLacZ Number\n0\n10\n20\n0\n5\n10\nTime\nNumber of Ticks\nCell Division Time\n0\n5\n10\n0\n5\n10\nreset\nLacZ-degradation-chance\nLacY-degradation-chance\nLacI-lactose-separation-chance\nLacI-lactose-binding-chance\nLacI-bond-leakage\nRNAP-number\nLacI-number\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+  },
+  "interactions": {
+    "stepPresent": false,
+    "playPressed": "true",
+    "pausePressed": "false",
+    "afterPlay": {
+      "success": true,
+      "value": 26
+    },
+    "afterReset": {
+      "success": true,
+      "value": 0
+    },
+    "errors": []
+  },
+  "screenshots": [
+    "genevo-1-genetic-switch-original-setup.png",
+    "genevo-1-genetic-switch-original-progress.png"
+  ]
+}

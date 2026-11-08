@@ -1,0 +1,352 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1029%2F2009JF001536",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            27
+          ]
+        ],
+        "date-time": "2026-09-27T05:32:55Z",
+        "timestamp": 1790487175502,
+        "version": "4.1.0"
+      },
+      "reference-count": 23,
+      "publisher": "American Geophysical Union (AGU)",
+      "issue": "F4",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2010,
+                10,
+                20
+              ]
+            ],
+            "date-time": "2010-10-20T00:00:00Z",
+            "timestamp": 1287532800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "J. Geophys. Res."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2010,
+            12
+          ]
+        ]
+      },
+      "abstract": "<jats:p>We present a three\u2010dimensional landscape\u2010pedogenesis model, mARM3D (matrices ARMOUR 3D), which simulates soil evolution as a function of erosion and pedogenic processes. The model simulates the discretized soil profile for points on a spatial grid. The approach, using transition matrices, is computationally efficient and allows the simulation of large\u2010scale spatial coupling and long\u2010term soil evolution. We study the effect of the depth\u2010dependent soil\u2010weathering rate (i.e., the rate of soil particle breakdown) and bedrock\u2010lowering rate (i.e., the rate of conversion of bedrock to soil). The difference in depth\u2010dependent weathering functions has a significant effect on the in\u2010profile soil properties through depth, specifically particle size grading. However, the depth dependency has a relatively minor effect on the surface properties of the soil profile, with all weathering functions generating very similar surface properties. The surface properties were a function of the cumulative amount of weathering (i.e., the integral of the weathering function over exhumation) with finer surface grading for higher weathering rates. Soil thickness could be estimated without explicitly modeling soil thickness. Thickness was negatively correlated with surface median grain size. As thickness decreases, the surface grading coarsens. This was driven by surface erosion, where as surface grading coarsens, erosion decreases and the soil deepens. Weathering and erosion interact to spatially organize the surface soil grading with a log\u2010log relationship between surface grading, contributing area, and local slope. This relationship was independent of the weathering function. This relationship might be useful for the spatial description of soil properties in digital soil mapping.</jats:p>",
+      "DOI": "10.1029/2009jf001536",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2010,
+            10,
+            19
+          ]
+        ],
+        "date-time": "2010-10-19T20:01:14Z",
+        "timestamp": 1287518474000
+      },
+      "source": "Crossref",
+      "is-referenced-by-count": 41,
+      "title": [
+        "The mARM3D spatially distributed soil evolution model: Three\u2010dimensional model framework and analysis of hillslope and landform responses"
+      ],
+      "prefix": "10.1029",
+      "volume": "115",
+      "author": [
+        {
+          "given": "Sagy",
+          "family": "Cohen",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "School of Engineering University of Newcastle  Callaghan, New South Wales Australia"
+            },
+            {
+              "name": "School of Environmental and Life Sciences University of Newcastle  Callaghan, New South Wales Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Garry",
+          "family": "Willgoose",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Engineering University of Newcastle  Callaghan, New South Wales Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Greg",
+          "family": "Hancock",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Environmental and Life Sciences University of Newcastle  Callaghan, New South Wales Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "13",
+      "published-online": {
+        "date-parts": [
+          [
+            2010,
+            10,
+            20
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_9_2_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/esp.3290020211"
+        },
+        {
+          "key": "e_1_2_9_3_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/esp.1443"
+        },
+        {
+          "key": "e_1_2_9_4_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2008JF001214"
+        },
+        {
+          "key": "e_1_2_9_5_1",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.5962/bhl.title.51652",
+          "volume-title": "Report of the Henry Mountains (Utah): U.S. Geographical and Geological Survey of Rocky Mountains Region",
+          "author": "Gilbert G. K.",
+          "year": "1877"
+        },
+        {
+          "key": "e_1_2_9_6_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/41056"
+        },
+        {
+          "key": "e_1_2_9_7_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1097/00010694-194111000-00009"
+        },
+        {
+          "key": "e_1_2_9_8_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0016\u20107061(85)90060\u20106"
+        },
+        {
+          "key": "e_1_2_9_9_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0016\u20107061(98)00115\u20103"
+        },
+        {
+          "key": "e_1_2_9_10_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.geoderma.2006.03.042"
+        },
+        {
+          "key": "e_1_2_9_11_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.geoderma.2007.12.013"
+        },
+        {
+          "key": "e_1_2_9_12_1",
+          "volume-title": "Regolith, Soil and Landforms",
+          "author": "Ollier C.",
+          "year": "1996"
+        },
+        {
+          "key": "e_1_2_9_13_1",
+          "volume-title": "Soils: A New Global View",
+          "author": "Paton T. R.",
+          "year": "1995"
+        },
+        {
+          "key": "e_1_2_9_14_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1365\u20102389.2007.00961.x"
+        },
+        {
+          "key": "e_1_2_9_15_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.geoderma.2008.01.016"
+        },
+        {
+          "key": "e_1_2_9_16_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/esp.1397"
+        },
+        {
+          "key": "e_1_2_9_17_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/esp.1149"
+        },
+        {
+          "key": "e_1_2_9_18_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/esp.1248"
+        },
+        {
+          "key": "e_1_2_9_19_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2006JF000714"
+        },
+        {
+          "key": "e_1_2_9_20_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.chemgeo.2003.03.001"
+        },
+        {
+          "key": "e_1_2_9_21_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/(SICI)1096\u20109837(199803)23:3<237::AID\u2010ESP846>3.0.CO;2\u2010X"
+        },
+        {
+          "key": "e_1_2_9_22_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/esp.1398"
+        },
+        {
+          "key": "e_1_2_9_23_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.geoderma.2008.05.029"
+        },
+        {
+          "key": "e_1_2_9_24_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1130/G24285A.1"
+        }
+      ],
+      "container-title": [
+        "Journal of Geophysical Research: Earth Surface"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1029%2F2009JF001536",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2009JF001536",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2023,
+            11,
+            2
+          ]
+        ],
+        "date-time": "2023-11-02T05:57:52Z",
+        "timestamp": 1698904672000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2009JF001536"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2010,
+            10,
+            20
+          ]
+        ]
+      },
+      "references-count": 23,
+      "journal-issue": {
+        "issue": "F4",
+        "published-print": {
+          "date-parts": [
+            [
+              2010,
+              12
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1029/2009JF001536"
+      ],
+      "URL": "https://doi.org/10.1029/2009jf001536",
+      "archive": [
+        "Portico"
+      ],
+      "relation": {},
+      "ISSN": [
+        "0148-0227"
+      ],
+      "issn-type": [
+        {
+          "value": "0148-0227",
+          "type": "print"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2010,
+            10,
+            20
+          ]
+        ]
+      },
+      "article-number": "2009JF001536"
+    }
+  }
+}

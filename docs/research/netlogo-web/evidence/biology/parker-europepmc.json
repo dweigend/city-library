@@ -1,0 +1,199 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2F0022-5193%2872%2990007-0%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1016/0022-5193(72)90007-0\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "5080448",
+          "source": "MED",
+          "pmid": "5080448",
+          "doi": "10.1016/0022-5193(72)90007-0",
+          "title": "The origin and evolution of gamete dimorphism and the male-female phenomenon.",
+          "authorString": "Parker GA, Baker RR, Smith VG.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Parker GA",
+                "lastName": "Parker",
+                "firstName": "G A",
+                "initials": "GA"
+              },
+              {
+                "fullName": "Baker RR",
+                "lastName": "Baker",
+                "firstName": "R R",
+                "initials": "RR"
+              },
+              {
+                "fullName": "Smith VG",
+                "lastName": "Smith",
+                "firstName": "V G",
+                "initials": "VG"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "3",
+            "volume": "36",
+            "journalIssueId": 116327,
+            "dateOfPublication": "1972 Sep",
+            "monthOfPublication": 9,
+            "yearOfPublication": 1972,
+            "journal": {
+              "medlineAbbreviation": "J Theor Biol",
+              "title": "Journal of theoretical biology",
+              "essn": "1095-8541",
+              "issn": "0022-5193",
+              "isoabbreviation": "J Theor Biol",
+              "nlmid": "0376342"
+            },
+            "printPublicationDate": "1972-09-01"
+          },
+          "pubYear": "1972",
+          "pageInfo": "529-553",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Germ Cells"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Ovum"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Spermatozoa"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Sex Ratio"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Adaptation, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cell Division"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Fertilization"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Frequency"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genotype"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Homozygote"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genes, Dominant"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Haploidy"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Female"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genetic Variation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Selection, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Evolution"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/0022-5193(72)90007-0"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 269,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1973-01-02",
+          "dateOfCreation": "1972-09-01",
+          "dateOfRevision": "2024-01-09",
+          "firstPublicationDate": "1972-09-01",
+          "firstIndexDate": "2008-12-23",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

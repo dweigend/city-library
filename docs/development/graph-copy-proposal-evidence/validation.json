@@ -1,0 +1,76 @@
+{
+  "status": "PROPOSAL_VALIDATED_NOT_RUNTIME",
+  "syntax": [
+    {
+      "file": "examples/graph-copy-proposal/01-membership-selection-and-order.ts",
+      "status": "PARSE_PASS",
+      "sha256": "69a42cd826cf4d801e346fa222149eaa5e6d3d721a13a28cc7a4ff21d69a9f08"
+    },
+    {
+      "file": "examples/graph-copy-proposal/02-direction-loops-and-parallel-identity.ts",
+      "status": "PARSE_PASS",
+      "sha256": "c9d62e2106c9568e71febe7e14a528fd9a138d4f47071954857e5dfcda3e96c9"
+    },
+    {
+      "file": "examples/graph-copy-proposal/03-deep-state-defaults-and-framework-references.ts",
+      "status": "PARSE_PASS",
+      "sha256": "cb0a60e80904bea26f4eed225fc3e8a6cc5d8aab35e24028c5bbf1a2e0a93568"
+    },
+    {
+      "file": "examples/graph-copy-proposal/04-agent-lifecycle-and-owner-atomicity.ts",
+      "status": "PARSE_PASS",
+      "sha256": "7d24afe4aca67658ea372a28a6b6428b1ecb338eedcd92e610cb4917a7241727"
+    },
+    {
+      "file": "examples/graph-copy-proposal/05-strict-options-and-independent-current-graph.ts",
+      "status": "PARSE_PASS",
+      "sha256": "f5d74950cea4239a13af1cc71e77328fac2bb6317f4607c2715dda762be51412"
+    }
+  ],
+  "proposalTypes": {
+    "status": "EXPECTED_MISSING_METHOD_ONLY",
+    "code": "TS2339",
+    "count": 33
+  },
+  "currentSourceTypecheck": {
+    "command": "bun run typecheck",
+    "status": "PASS",
+    "output": "source-typecheck.txt"
+  },
+  "sourceOracle": {
+    "status": "PASS",
+    "scope": "Existing public clone primitives, keys, opposite arcs, guards and Agent lifecycle; Graph.copy is not invoked",
+    "graphCopyPresent": false,
+    "assertions": "source behavior only"
+  },
+  "topologyOracle": {
+    "status": "PASS",
+    "scope": "Independent labeled fixture table; not copy runtime",
+    "reverseExpected": [
+      [
+        "b",
+        "a",
+        true,
+        "forward"
+      ],
+      [
+        "a",
+        "b",
+        true,
+        "backward"
+      ],
+      [
+        "a",
+        "a",
+        true,
+        "loop"
+      ]
+    ],
+    "undirectedMultiplicities": {
+      "a-b": 2,
+      "a-a": 1
+    }
+  },
+  "freezes": false,
+  "approval": false
+}

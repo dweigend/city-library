@@ -1,0 +1,273 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0810762106%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1073/pnas.0810762106\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "19332788",
+          "source": "MED",
+          "pmid": "19332788",
+          "pmcid": "PMC2672559",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC2672559"
+            ]
+          },
+          "doi": "10.1073/pnas.0810762106",
+          "title": "The spread of awareness and its impact on epidemic outbreaks.",
+          "authorString": "Funk S, Gilad E, Watkins C, Jansen VA.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Funk S",
+                "lastName": "Funk",
+                "firstName": "Sebastian",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2842-3406"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Biological Sciences, Royal Holloway, University of London, Egham TW20 0EX, United Kingdom. s.funk@rhul.ac.uk"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Gilad E",
+                "lastName": "Gilad",
+                "firstName": "Erez",
+                "initials": "E",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2130-9301"
+                }
+              },
+              {
+                "fullName": "Watkins C",
+                "lastName": "Watkins",
+                "firstName": "Chris",
+                "initials": "C"
+              },
+              {
+                "fullName": "Jansen VA",
+                "lastName": "Jansen",
+                "firstName": "Vincent A A",
+                "initials": "VA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-6518-2090"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2130-9301"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2842-3406"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-6518-2090"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "16",
+            "volume": "106",
+            "journalIssueId": 1620396,
+            "dateOfPublication": "2009 Apr",
+            "monthOfPublication": 4,
+            "yearOfPublication": 2009,
+            "journal": {
+              "medlineAbbreviation": "Proc Natl Acad Sci U S A",
+              "title": "Proceedings of the National Academy of Sciences of the United States of America",
+              "essn": "1091-6490",
+              "issn": "0027-8424",
+              "nlmid": "7505876",
+              "isoabbreviation": "Proc Natl Acad Sci U S A"
+            },
+            "printPublicationDate": "2009-04-01"
+          },
+          "pubYear": "2009",
+          "pageInfo": "6872-6877",
+          "abstractText": "When a disease breaks out in a human population, changes in behavior in response to the outbreak can alter the progression of the infectious agent. In particular, people aware of a disease in their proximity can take measures to reduce their susceptibility. Even if no centralized information is provided about the presence of a disease, such awareness can arise through first-hand observation and word of mouth. To understand the effects this can have on the spread of a disease, we formulate and analyze a mathematical model for the spread of awareness in a host population, and then link this to an epidemiological model by having more informed hosts reduce their susceptibility. We find that, in a well-mixed population, this can result in a lower size of the outbreak, but does not affect the epidemic threshold. If, however, the behavioral response is treated as a local effect arising in the proximity of an outbreak, it can completely stop a disease from spreading, although only if the infection rate is below a threshold. We show that the impact of locally spreading awareness is amplified if the social network of potential infection events and the network over which individuals communicate overlap, especially so if the networks have a high level of clustering. These findings suggest that care needs to be taken both in the interpretation of disease parameters, as well as in the prediction of the fate of future outbreaks.",
+          "affiliation": "School of Biological Sciences, Royal Holloway, University of London, Egham TW20 0EX, United Kingdom. s.funk@rhul.ac.uk",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Engineering and Physical Sciences Research Council",
+                "grantId": "EP/D002249/1",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Communicable Diseases",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Information Dissemination"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Awareness"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Disease Outbreaks"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Time Factors"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Computer Simulation"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free after 6 months",
+                "availabilityCode": "F6",
+                "documentStyle": "abs",
+                "site": "www.pnas.org",
+                "url": "http://www.pnas.org/cgi/content/abstract/106/16/6872"
+              },
+              {
+                "availability": "Free after 6 months",
+                "availabilityCode": "F6",
+                "documentStyle": "pdf",
+                "site": "www.pnas.org",
+                "url": "http://www.pnas.org/cgi/reprint/106/16/6872.pdf"
+              },
+              {
+                "availability": "Free after 6 months",
+                "availabilityCode": "F6",
+                "documentStyle": "html",
+                "site": "www.pnas.org",
+                "url": "http://www.pnas.org/cgi/content/full/106/16/6872"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.0810762106"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2672559"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2672559?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.0810762106"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 453,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2009-05-29",
+          "dateOfCreation": "2009-04-01",
+          "dateOfRevision": "2021-10-20",
+          "electronicPublicationDate": "2009-03-30",
+          "firstPublicationDate": "2009-03-30",
+          "firstIndexDate": "2010-09-24",
+          "fullTextReceivedDate": "2025-02-02",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

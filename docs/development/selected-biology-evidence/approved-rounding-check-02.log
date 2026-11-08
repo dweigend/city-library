@@ -1,0 +1,26 @@
+bun test v1.4.2 (744846f84)
+
+tests/selected-biology-b.test.ts:
+(pass) Selected biology B07 source procedures > Autumn setup converts sugar before the first tick; cold water procedure returns only locally [9.07ms]
+(pass) Selected biology B07 source procedures > Autumn transitions living leaves into persistent dead leaves then preflight-stops [12.24ms]
+(pass) Selected biology B07 source procedures > Membrane uses one distinct water partner for each lipid and conserves membership [9.00ms]
+(pass) Selected biology B07 source procedures > Membrane self-inclusive hydrophobic isolation equals one for an isolated one-lipid oil [0.33ms]
+(pass) Selected biology B07 source procedures > Sunflower setup tick is one and live ring distance affects only new placements [1.06ms]
+(pass) Selected biology B07 source procedures > Sunflower counts temporary candidates and stops before the outer ring [2460.20ms]
+(pass) Selected biology B07 source procedures > Tumor hatches have source age zero and are not activated in their birth phase [0.77ms]
+(pass) Selected biology B07 source procedures > Tumor kill actions preserve source cached reporter until the next completed tick [0.09ms]
+(pass) Selected biology B07 source procedures > Muscle all-slow fibers have max four; hormone bounds and mass remain exact [52.79ms]
+(pass) Selected biology B07 source procedures > Detached reads cannot mutate canonical state; invalid live edits fail atomically [5.09ms]
+
+tests/selected-biology-a.test.ts:
+(pass) selected biology A source mechanisms > Slime deposition, diffusion and evaporation conserve the declared mass [135.03ms]
+(pass) selected biology A source mechanisms > Honeycomb's diffusion cadence starts at preincrement tick zero [49.22ms]
+(pass) selected biology A source mechanisms > Fur preserves the source's uninitialized new-color tie behavior [683.37ms]
+(pass) selected biology A source mechanisms > Chloroplast water inlet is the actual left boundary, with canonical flow ties [98.00ms]
+(pass) selected biology A source mechanisms > Natural photosynthesis creates oxygen and glucose and preserves source counts [4142.82ms]
+(pass) selected biology A source mechanisms > Blood Sugar requires real Poisson/exponential draws and rounds meal creation to 412 [1472.93ms]
+
+ 16 pass
+ 0 fail
+ 126 expect() calls
+Ran 16 tests across 2 files. [9.14s]

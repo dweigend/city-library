@@ -7,7 +7,7 @@ Status: implemented and verified; [acceptance evidence](a5a-evidence.md) disting
 1. Freeze five asserted public scripts under `examples/a5a/` before any new runtime implementation. Record exact contracts, initial failures and SHA-256 fingerprints in the example assignment.
 2. Implement detached Graph/node/edge state and identity through public TypeScript exports. Use focused modules under `src/graph/`; the library has no Cytoscape dependency.
 3. Implement a headless illustrative network-diffusion model from the same public operations, with explicit synchronous update rules and meaningful deterministic network-effect tests.
-4. Extend Agend Lab through its existing application/presentation/projection/renderer boundaries. Display actual persistent contacts, model states and observations; all topology changes and activation rules remain in the model.
+4. Extend Agent Lab through its existing application/presentation/projection/renderer boundaries. Display actual persistent contacts, model states and observations; all topology changes and activation rules remain in the model.
 5. Run earlier/new examples, focused boundary/type tests, packed consumer checks, browser acceptance and independent Antigravity `gemini-4-argon` review. Record findings and coordinator remediation separately.
 
 ## Bounded library contract

@@ -1,0 +1,1122 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+origin+and+evolution+of+gamete+dimorphism+and+the+male+female+phenomenon+Parker+Baker+Smith+1972&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1624549,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                17
+              ]
+            ],
+            "date-time": "2026-10-17T11:45:17Z",
+            "timestamp": 1792237517099,
+            "version": "4.4.0"
+          },
+          "reference-count": 10,
+          "publisher": "Elsevier BV",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1972,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "1972-09-01T00:00:00Z",
+                "timestamp": 84153600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1972,
+                9
+              ]
+            ]
+          },
+          "DOI": "10.1016/0022-5193(72)90007-0",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                12,
+                19
+              ]
+            ],
+            "date-time": "2004-12-19T07:21:58Z",
+            "timestamp": 1103440918000
+          },
+          "page": "529-553",
+          "source": "Crossref",
+          "is-referenced-by-count": 511,
+          "title": [
+            "The origin and evolution of gamete dimorphism and the male-female phenomenon"
+          ],
+          "prefix": "10.1016",
+          "volume": "36",
+          "author": [
+            {
+              "given": "G.A.",
+              "family": "Parker",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "R.R.",
+              "family": "Baker",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "V.G.F.",
+              "family": "Smith",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB1",
+              "unstructured": "Baker, R. R. & Parker, G. A. (in press)."
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB2",
+              "first-page": "23",
+              "volume": "57",
+              "author": "Cohen",
+              "year": "1969",
+              "journal-title": "Sci. Prog., Lond"
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB3",
+              "series-title": "The Genetical Theory of Natural Selection",
+              "author": "Fisher",
+              "year": "1930"
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB4",
+              "doi-asserted-by": "crossref",
+              "first-page": "477",
+              "DOI": "10.1126/science.156.3774.477",
+              "volume": "156",
+              "author": "Hamilton",
+              "year": "1967",
+              "journal-title": "Science, N.Y"
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB5",
+              "first-page": "716",
+              "volume": "52",
+              "author": "Kalmus",
+              "year": "1932",
+              "journal-title": "Biol. Zentral"
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB6",
+              "doi-asserted-by": "crossref",
+              "first-page": "1004",
+              "DOI": "10.1038/1861004a0",
+              "volume": "186",
+              "author": "Kalmus",
+              "year": "1960",
+              "journal-title": "Nature, London"
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB7",
+              "doi-asserted-by": "crossref",
+              "first-page": "525",
+              "DOI": "10.1111/j.1469-185X.1970.tb01176.x",
+              "volume": "45",
+              "author": "Parker",
+              "year": "1970",
+              "journal-title": "Biol. Rev"
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB8",
+              "doi-asserted-by": "crossref",
+              "first-page": "285",
+              "DOI": "10.2307/2406676",
+              "volume": "21",
+              "author": "ScuDo",
+              "year": "1967",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB9",
+              "series-title": "Natural Selection and Heredity",
+              "author": "Sheppard",
+              "year": "1967"
+            },
+            {
+              "key": "10.1016/0022-5193(72)90007-0_BIB10",
+              "series-title": "Sexual Selection and the Descent of Man",
+              "first-page": "1871",
+              "author": "Trivers",
+              "year": "1972"
+            }
+          ],
+          "container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0022519372900070?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0022519372900070?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                1,
+                30
+              ]
+            ],
+            "date-time": "2019-01-30T16:54:22Z",
+            "timestamp": 1548867262000
+          },
+          "score": 52.58151,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0022519372900070"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1972,
+                9
+              ]
+            ]
+          },
+          "references-count": 10,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1972,
+                  9
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0022519372900070"
+          ],
+          "URL": "https://doi.org/10.1016/0022-5193(72)90007-0",
+          "ISSN": [
+            "0022-5193"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-5193",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1972,
+                9
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                15
+              ]
+            ],
+            "date-time": "2026-10-15T13:53:37Z",
+            "timestamp": 1792072417637,
+            "version": "4.4.0"
+          },
+          "reference-count": 49,
+          "publisher": "MDPI AG",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    3,
+                    5
+                  ]
+                ],
+                "date-time": "2021-03-05T00:00:00Z",
+                "timestamp": 1614902400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/501100000923",
+              "name": "Australian Research Council",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "DE180100526"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "DE180100526"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100000923",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Cells"
+          ],
+          "abstract": "<jats:p>The evolution of anisogamy or gamete size dimorphism is a fundamental transition in evolutionary history, and it is the origin of the female and male sexes. Although mathematical models attempting to explain this transition have been published as early as 1932, the 1972 model of Parker, Baker, and Smith is considered to be the first explanation for the evolution of anisogamy that is consistent with modern evolutionary theory. The central idea of the model is ingenious in its simplicity: selection simultaneously favours large gametes for zygote provisioning, and small gametes for numerical competition, and under certain conditions the outcome is anisogamy. In this article, I derive novel analytical solutions to a 2002 game theoretical update of the 1972 anisogamy model, and use these solutions to examine its robustness to variation in its central assumptions. Combining new results with those from earlier papers, I find that the model is quite robust to variation in its central components. This kind of robustness is crucially important in a model for an early evolutionary transition where we may only have an approximate understanding of constraints that the different parts of the model must obey.</jats:p>",
+          "DOI": "10.3390/cells10030573",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                3,
+                5
+              ]
+            ],
+            "date-time": "2021-03-05T11:46:09Z",
+            "timestamp": 1614944769000
+          },
+          "page": "573",
+          "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 14,
+          "title": [
+            "The Legacy of Parker, Baker and Smith 1972: Gamete Competition, the Evolution of Anisogamy, and Model Robustness"
+          ],
+          "prefix": "10.3390",
+          "volume": "10",
+          "author": [
+            {
+              "given": "Jussi",
+              "family": "Lehtonen",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Faculty of Science, School of Life and Environmental Sciences, The University of Sydney, Sydney, NSW 2006, Australia"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1968",
+          "published-online": {
+            "date-parts": [
+              [
+                2021,
+                3,
+                5
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "ref_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "529",
+              "DOI": "10.1016/0022-5193(72)90007-0",
+              "article-title": "The origin and evolution of gamete dimorphism and the male-female phenomenon",
+              "volume": "36",
+              "author": "Parker",
+              "year": "1972",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "a017509",
+              "DOI": "10.1101/cshperspect.a017509",
+              "article-title": "The Sexual Cascade and the Rise of Pre-Ejaculatory (Darwinian) Sexual Selection, Sex Roles, and Sexual Conflict",
+              "volume": "6",
+              "author": "Parker",
+              "year": "2014",
+              "journal-title": "Cold Spring Harb. Perspect. Biol."
+            },
+            {
+              "key": "ref_3",
+              "doi-asserted-by": "crossref",
+              "first-page": "1129",
+              "DOI": "10.1111/evo.12926",
+              "article-title": "Why anisogamy drives ancestral sex roles",
+              "volume": "70",
+              "author": "Lehtonen",
+              "year": "2016",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "ref_4",
+              "doi-asserted-by": "crossref",
+              "first-page": "260",
+              "DOI": "10.1016/j.tree.2011.12.006",
+              "article-title": "Anisogamy, chance and the evolution of sex roles",
+              "volume": "27",
+              "author": "Rowe",
+              "year": "2012",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "ref_5",
+              "doi-asserted-by": "crossref",
+              "first-page": "349",
+              "DOI": "10.1038/hdy.1948.21",
+              "article-title": "Intra-sexual selection in Drosophila",
+              "volume": "2",
+              "author": "Bateman",
+              "year": "1948",
+              "journal-title": "Heredity"
+            },
+            {
+              "key": "ref_6",
+              "doi-asserted-by": "crossref",
+              "first-page": "e1500983",
+              "DOI": "10.1126/sciadv.1500983",
+              "article-title": "Darwinian sex roles confirmed across the animal kingdom",
+              "volume": "2",
+              "author": "Janicke",
+              "year": "2016",
+              "journal-title": "Sci. Adv."
+            },
+            {
+              "key": "ref_7",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Parker, G.A. (2021). How Soon Hath Time\u2026 A History of Two \u201cSeminal\u201d Publications. Cells, 10.",
+              "DOI": "10.3390/cells10020287"
+            },
+            {
+              "key": "ref_8",
+              "doi-asserted-by": "crossref",
+              "first-page": "1161",
+              "DOI": "10.1093/molehr/gau068",
+              "article-title": "Gamete competition, gamete limitation, and the evolution of the two sexes",
+              "volume": "20",
+              "author": "Lehtonen",
+              "year": "2014",
+              "journal-title": "Mol. Hum. Reprod."
+            },
+            {
+              "key": "ref_9",
+              "doi-asserted-by": "crossref",
+              "first-page": "525",
+              "DOI": "10.1111/j.1469-185X.1970.tb01176.x",
+              "article-title": "Sperm competition and its evolutionary consequences in the insects",
+              "volume": "45",
+              "author": "Parker",
+              "year": "1970",
+              "journal-title": "Biol. Rev."
+            },
+            {
+              "key": "ref_10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1016/0022-5193(78)90177-7",
+              "article-title": "Selection on non-random fusion of gametes during evolution of anisogamy",
+              "volume": "73",
+              "author": "Parker",
+              "year": "1978",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref_11",
+              "doi-asserted-by": "crossref",
+              "first-page": "247",
+              "DOI": "10.1016/0022-5193(78)90189-3",
+              "article-title": "The evolution of anisogamy",
+              "volume": "73",
+              "author": "Bell",
+              "year": "1978",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref_12",
+              "doi-asserted-by": "crossref",
+              "first-page": "347",
+              "DOI": "10.1016/0022-5193(78)90195-9",
+              "article-title": "The population genetics of anisogamy",
+              "volume": "73",
+              "author": "Charlesworth",
+              "year": "1978",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref_13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Maynard Smith, J. (1982). Evolution and the Theory of Games, Cambridge University Press.",
+              "DOI": "10.1017/CBO9780511806292"
+            },
+            {
+              "key": "ref_14",
+              "unstructured": "Maynard Smith, J. (1978). The Evolution of Sex, Cambridge University Press."
+            },
+            {
+              "key": "ref_15",
+              "doi-asserted-by": "crossref",
+              "first-page": "2381",
+              "DOI": "10.1098/rspb.2002.2161",
+              "article-title": "The evolution of anisogamy: A game-theoretic approach",
+              "volume": "269",
+              "author": "Bulmer",
+              "year": "2002",
+              "journal-title": "Proc. R. Soc. Lond. Ser. B Biol. Sci."
+            },
+            {
+              "key": "ref_16",
+              "unstructured": "Bulmer, M.G. (1994). Theoretical Evolutionary Ecology, Sinauer Associates."
+            },
+            {
+              "key": "ref_17",
+              "doi-asserted-by": "crossref",
+              "first-page": "702",
+              "DOI": "10.1086/702588",
+              "article-title": "Evolution of the Two Sexes under Internal Fertilization and Alternative Evolutionary Pathways",
+              "volume": "193",
+              "author": "Lehtonen",
+              "year": "2019",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "ref_18",
+              "doi-asserted-by": "crossref",
+              "first-page": "445",
+              "DOI": "10.1007/s00265-010-1116-8",
+              "article-title": "Two roads to two sexes: Unifying gamete competition and gamete limitation in a single model of anisogamy evolution",
+              "volume": "65",
+              "author": "Lehtonen",
+              "year": "2011",
+              "journal-title": "Behav. Ecol. Sociobiol."
+            },
+            {
+              "key": "ref_19",
+              "doi-asserted-by": "crossref",
+              "first-page": "571",
+              "DOI": "10.1016/S0169-5347(01)02270-4",
+              "article-title": "The uncertain evolution of the sexes",
+              "volume": "16",
+              "author": "Randerson",
+              "year": "2001",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "ref_20",
+              "doi-asserted-by": "crossref",
+              "first-page": "358",
+              "DOI": "10.1016/S0169-5347(02)02538-7",
+              "article-title": "Survival and anisogamy\u2014Response",
+              "volume": "17",
+              "author": "Randerson",
+              "year": "2002",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "ref_21",
+              "doi-asserted-by": "crossref",
+              "first-page": "357",
+              "DOI": "10.1016/S0169-5347(02)02537-5",
+              "article-title": "Survival and anisogamy",
+              "volume": "17",
+              "author": "Bulmer",
+              "year": "2002",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "ref_22",
+              "unstructured": "Togashi, T., and Cox, P.A. (2011). The origin and maintenance of two sexes (anisogamy), and their gamete sizes by gamete competition. The Evolution of Anisogamy, Cambridge University Press."
+            },
+            {
+              "key": "ref_23",
+              "doi-asserted-by": "crossref",
+              "first-page": "146",
+              "DOI": "10.1086/694891",
+              "article-title": "The Price Equation, Gradient Dynamics, and Continuous Trait Game Theory",
+              "volume": "191",
+              "author": "Lehtonen",
+              "year": "2018",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "ref_24",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Weisstein, E.W. (2002). CRC Concise Encyclopedia of Mathematics, CRC Press. [2nd ed.].",
+              "DOI": "10.1201/9781420035223"
+            },
+            {
+              "key": "ref_25",
+              "doi-asserted-by": "crossref",
+              "first-page": "207",
+              "DOI": "10.1002/ece3.3656",
+              "article-title": "The evolution of sexes: A specific test of the disruptive selection theory",
+              "volume": "8",
+              "year": "2018",
+              "journal-title": "Ecol. Evol."
+            },
+            {
+              "key": "ref_26",
+              "doi-asserted-by": "crossref",
+              "first-page": "499",
+              "DOI": "10.1086/282929",
+              "article-title": "The optimal balance between size and number of offspring",
+              "volume": "108",
+              "author": "Smith",
+              "year": "1974",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "ref_27",
+              "doi-asserted-by": "crossref",
+              "first-page": "175",
+              "DOI": "10.1086/303376",
+              "article-title": "Optimal Egg Size in Marine Invertebrates: Theory and Phylogenetic Analysis of the Critical Relationship between Egg Size and Development Time in Echinoids",
+              "volume": "156",
+              "author": "Levitan",
+              "year": "2000",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "ref_28",
+              "doi-asserted-by": "crossref",
+              "first-page": "13672",
+              "DOI": "10.1038/srep13672",
+              "article-title": "Evidence for equal size cell divisions during gametogenesis in a marine green alga Monostroma angicava",
+              "volume": "5",
+              "author": "Togashi",
+              "year": "2015",
+              "journal-title": "Sci. Rep."
+            },
+            {
+              "key": "ref_29",
+              "first-page": "716",
+              "article-title": "\u00dcber den Erhaltungswert der ph\u00e4notypischen (morphologischen) Anisogamie und die Entstehung der ersten Geschlechtsunterschiede",
+              "volume": "52",
+              "author": "Kalmus",
+              "year": "1932",
+              "journal-title": "Biol. Zent."
+            },
+            {
+              "key": "ref_30",
+              "doi-asserted-by": "crossref",
+              "first-page": "285",
+              "DOI": "10.2307/2406676",
+              "article-title": "Adaptive value of sexual dimorphism\u2014I, anisogamy",
+              "volume": "21",
+              "author": "Scudo",
+              "year": "1967",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "ref_31",
+              "doi-asserted-by": "crossref",
+              "first-page": "24",
+              "DOI": "10.1016/j.jtbi.2010.01.019",
+              "article-title": "Cooperation and the evolution of anisogamy",
+              "volume": "264",
+              "author": "Yang",
+              "year": "2010",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref_32",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Togashi, T., and Cox, P. (2011). Contact, not conflict, causes the evolution of anisogamy. The Evolution of Anisogamy, Cambridge University Press.",
+              "DOI": "10.1017/CBO9780511975943"
+            },
+            {
+              "key": "ref_33",
+              "doi-asserted-by": "crossref",
+              "first-page": "461",
+              "DOI": "10.1016/j.tpb.2008.02.002",
+              "article-title": "Gametic conflict versus contact in the evolution of anisogamy",
+              "volume": "73",
+              "author": "Iyer",
+              "year": "2008",
+              "journal-title": "Theor. Popul. Biol."
+            },
+            {
+              "key": "ref_34",
+              "doi-asserted-by": "crossref",
+              "first-page": "933",
+              "DOI": "10.1007/s10539-005-9016-4",
+              "article-title": "John Maynard Smith and the importance of consistency in evolutionary game theory",
+              "volume": "20",
+              "author": "Houston",
+              "year": "2005",
+              "journal-title": "Biol. Philos."
+            },
+            {
+              "key": "ref_35",
+              "doi-asserted-by": "crossref",
+              "unstructured": "West, S. (2009). Sex Allocation, Princeton University Press.",
+              "DOI": "10.1515/9781400832019"
+            },
+            {
+              "key": "ref_36",
+              "doi-asserted-by": "crossref",
+              "first-page": "20140836",
+              "DOI": "10.1098/rspb.2014.0836",
+              "article-title": "Gamete evolution and sperm numbers: Sperm competition versus sperm limitation",
+              "volume": "281",
+              "author": "Parker",
+              "year": "2014",
+              "journal-title": "Proc. R. Soc. B Biol. Sci."
+            },
+            {
+              "key": "ref_37",
+              "doi-asserted-by": "crossref",
+              "first-page": "177",
+              "DOI": "10.1086/703633",
+              "article-title": "Mathematical Models of Fertilization\u2014An Eco-Evolutionary Perspective",
+              "volume": "94",
+              "author": "Lehtonen",
+              "year": "2019",
+              "journal-title": "Q. Rev. Biol."
+            },
+            {
+              "key": "ref_38",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Togashi, T., Horinouchi, Y., and Parker, G.A. (2021). A comparative test of the gamete dynamics theory for the evolution of anisogamy in Bryopsidales green algae. R. Soc. Open Sci., in press.",
+              "DOI": "10.1098/rsos.201611"
+            },
+            {
+              "key": "ref_39",
+              "doi-asserted-by": "crossref",
+              "first-page": "228",
+              "DOI": "10.1016/S0169-5347(00)89071-0",
+              "article-title": "Sperm limitation in the sea",
+              "volume": "10",
+              "author": "Levitan",
+              "year": "1995",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "ref_40",
+              "unstructured": "Birkhead, T.R., Hosken, D.J., and Pitnick, S. (2009). The evolutionary origin and maintenance of sperm: Selection for a small, motile gamete mating type. Sperm Biology: An Evolutionary Perspective, Academic Press."
+            },
+            {
+              "key": "ref_41",
+              "doi-asserted-by": "crossref",
+              "first-page": "74",
+              "DOI": "10.1086/284329",
+              "article-title": "Gamete motion, search, and the evolution of anisogamy, oogamy, and chemotaxis",
+              "volume": "125",
+              "author": "Cox",
+              "year": "1985",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "ref_42",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1006/jtbi.1999.1017",
+              "article-title": "Selection for high gamete encounter rates explains the success of male and female mating types",
+              "volume": "202",
+              "author": "Dusenbery",
+              "year": "2000",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref_43",
+              "doi-asserted-by": "crossref",
+              "first-page": "283",
+              "DOI": "10.1016/0022-5193(74)90153-2",
+              "article-title": "A note on the evolution of gamete dimorphism",
+              "volume": "46",
+              "author": "Knowlton",
+              "year": "1974",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref_44",
+              "doi-asserted-by": "crossref",
+              "first-page": "879",
+              "DOI": "10.1098/rspb.2000.1581",
+              "article-title": "A comparative test of a theory for the evolution of anisogamy",
+              "volume": "268",
+              "author": "Randerson",
+              "year": "2001",
+              "journal-title": "Proc. R. Soc. Lond. Ser. B Biol. Sci."
+            },
+            {
+              "key": "ref_45",
+              "doi-asserted-by": "crossref",
+              "first-page": "E93",
+              "DOI": "10.1086/698301",
+              "article-title": "Multicellularity Drives the Evolution of Sexual Traits",
+              "volume": "192",
+              "author": "Hanschen",
+              "year": "2018",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "ref_46",
+              "doi-asserted-by": "crossref",
+              "first-page": "20181954",
+              "DOI": "10.1098/rspb.2018.1954",
+              "article-title": "Isogamy in large and complex volvocine algae is consistent with the gamete competition theory of the evolution of anisogamy",
+              "volume": "285",
+              "author": "Drysdale",
+              "year": "2018",
+              "journal-title": "Proc. R. Soc. B Biol. Sci."
+            },
+            {
+              "key": "ref_47",
+              "doi-asserted-by": "crossref",
+              "first-page": "281",
+              "DOI": "10.1016/0022-5193(82)90225-9",
+              "article-title": "Why are there so many tiny sperm? Sperm competition and the maintenance of two sexes",
+              "volume": "96",
+              "author": "Parker",
+              "year": "1982",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref_48",
+              "doi-asserted-by": "crossref",
+              "first-page": "339",
+              "DOI": "10.1086/282838",
+              "article-title": "Reproductive strategies in marine benthic invertebrates",
+              "volume": "107",
+              "author": "Vance",
+              "year": "1973",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "ref_49",
+              "doi-asserted-by": "crossref",
+              "first-page": "381",
+              "DOI": "10.1086/285995",
+              "article-title": "Von Bertalanffy\u2019s growth equation should not be used to model age and size at maturity",
+              "volume": "149",
+              "author": "Day",
+              "year": "1997",
+              "journal-title": "Am. Nat."
+            }
+          ],
+          "container-title": [
+            "Cells"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.mdpi.com/2073-4409/10/3/573/pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                11
+              ]
+            ],
+            "date-time": "2025-10-11T05:33:44Z",
+            "timestamp": 1760160824000
+          },
+          "score": 44.526455,
+          "resource": {
+            "primary": {
+              "URL": "https://www.mdpi.com/2073-4409/10/3/573"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021,
+                3,
+                5
+              ]
+            ]
+          },
+          "references-count": 49,
+          "journal-issue": {
+            "issue": "3",
+            "published-online": {
+              "date-parts": [
+                [
+                  2021,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "cells10030573"
+          ],
+          "URL": "https://doi.org/10.3390/cells10030573",
+          "ISSN": [
+            "2073-4409"
+          ],
+          "issn-type": [
+            {
+              "value": "2073-4409",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2021,
+                3,
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                17
+              ]
+            ],
+            "date-time": "2026-10-17T15:46:13Z",
+            "timestamp": 1792251973466,
+            "version": "4.4.0"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 0,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "value": "9783319196497",
+              "type": "print"
+            },
+            {
+              "value": "9783319196503",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-319-19650-3_301979",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                5,
+                11
+              ]
+            ],
+            "date-time": "2021-05-11T20:25:38Z",
+            "timestamp": 1620764738000
+          },
+          "page": "3325-3325",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Gamete Dimorphism"
+          ],
+          "prefix": "10.1007",
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2021,
+                4,
+                22
+              ]
+            ]
+          },
+          "container-title": [
+            "Encyclopedia of Evolutionary Psychological Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-319-19650-3_301979",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                17
+              ]
+            ],
+            "date-time": "2026-10-17T15:04:24Z",
+            "timestamp": 1792249464000
+          },
+          "score": 31.231205,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/chapter/10.1007/978-3-319-19650-3_301979"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783319196497",
+            "9783319196503"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1007/978-3-319-19650-3_301979",
+          "published": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "22 April 2021",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

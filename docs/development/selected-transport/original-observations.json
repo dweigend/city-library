@@ -1,0 +1,1267 @@
+{
+  "paths": {
+    "setup": {
+      "sha256": "89f74e30ca5a70a0fc139e99c6e2ea62e9509ce1c8c76bc8cffa154cf3cd75d0",
+      "bytes": 49515,
+      "tick": 0,
+      "count": 250,
+      "settings": [
+        {
+          "type": "slider",
+          "variable": "minimum-route-popularity",
+          "display": "minimum-route-popularity",
+          "value": 80
+        },
+        {
+          "type": "slider",
+          "variable": "walker-count",
+          "display": "walker-count",
+          "value": 250
+        },
+        {
+          "type": "slider",
+          "variable": "walker-vision-dist",
+          "display": "walker-vision-dist",
+          "value": 10
+        },
+        {
+          "type": "slider",
+          "variable": "popularity-decay-rate",
+          "display": "popularity-decay-rate",
+          "value": 4
+        },
+        {
+          "type": "slider",
+          "variable": "popularity-per-step",
+          "display": "popularity-per-step",
+          "value": 20
+        },
+        {
+          "type": "switch",
+          "variable": "show-popularity?",
+          "display": "show-popularity?",
+          "value": false
+        }
+      ],
+      "monitors": [],
+      "errors": [],
+      "canvas": [
+        {
+          "width": 1010,
+          "height": 1010,
+          "box": {
+            "x": 262,
+            "y": 178.984375,
+            "width": 505,
+            "height": 505,
+            "top": 178.984375,
+            "right": 767,
+            "bottom": 683.984375,
+            "left": 262
+          }
+        }
+      ]
+    },
+    "setupPng": "docs/development/selected-transport/paths-original-setup.png",
+    "progress": {
+      "tick": 40,
+      "count": 250,
+      "monitors": [],
+      "errors": [],
+      "reports": {
+        "count walkers": 250,
+        "count patches with [pcolor = gray]": 8,
+        "max [popularity] of patches": 81.93642886126523
+      }
+    },
+    "commands": "repeat 40 [go]",
+    "progressPng": "docs/development/selected-transport/paths-original-progress.png",
+    "playPause": {
+      "before": 40,
+      "after": 43,
+      "goButton": 2,
+      "buttons": [
+        {
+          "id": 1,
+          "source": "setup",
+          "forever": false
+        },
+        {
+          "id": 2,
+          "source": "go",
+          "forever": true
+        }
+      ],
+      "errors": []
+    },
+    "sourceAction": {
+      "tick": 43,
+      "errors": [],
+      "action": "ask patch 0 0 [toggle-building] ask patch 3 0 [toggle-building]"
+    },
+    "distanceSelfProbe": {
+      "reporter": "[ [distance self] of patches in-radius 2 ] of one-of walkers",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "comparisonReporter": "[ [distance myself] of patches in-radius 2 ] of one-of walkers",
+      "comparisonValues": [
+        1.6425626372409563,
+        0.8007808458500061,
+        1.494784805048941,
+        1.5794232625937987,
+        0.6172954997916409,
+        1.5898823398984037,
+        1.4756759668794117,
+        1.524562783188445,
+        0.7645180893219841,
+        1.6697071850291783,
+        0.6616764981792278,
+        1.686619144299559
+      ]
+    }
+  },
+  "traffic-2-lanes": {
+    "setup": {
+      "sha256": "6a3d627581f1a628e42ff2ca13c643824f9a441309d08645e101df13d09f17d9",
+      "bytes": 53272,
+      "tick": 0,
+      "count": 40,
+      "settings": [
+        {
+          "type": "slider",
+          "variable": "number-of-cars",
+          "display": "number-of-cars",
+          "value": 40
+        },
+        {
+          "type": "slider",
+          "variable": "acceleration",
+          "display": "acceleration",
+          "value": 0.005
+        },
+        {
+          "type": "slider",
+          "variable": "deceleration",
+          "display": "deceleration",
+          "value": 0.02
+        },
+        {
+          "type": "slider",
+          "variable": "max-patience",
+          "display": "max-patience",
+          "value": 50
+        }
+      ],
+      "monitors": [
+        {
+          "label": "selected car speed",
+          "source": "[ speed ] of selected-car",
+          "value": 0.5
+        },
+        {
+          "label": "mean speed",
+          "source": "mean [speed] of turtles",
+          "value": 0.5
+        }
+      ],
+      "errors": [],
+      "canvas": [
+        {
+          "width": 1640,
+          "height": 680,
+          "box": {
+            "x": 257,
+            "y": 173.984375,
+            "width": 820,
+            "height": 340,
+            "top": 173.984375,
+            "right": 1077,
+            "bottom": 513.984375,
+            "left": 257
+          }
+        }
+      ]
+    },
+    "setupPng": "docs/development/selected-transport/traffic-2-lanes-original-setup.png",
+    "progress": {
+      "tick": 50,
+      "count": 40,
+      "monitors": [
+        {
+          "label": "selected car speed",
+          "value": 0.39616577898821315
+        },
+        {
+          "label": "mean speed",
+          "value": 0.4973094007307129
+        }
+      ],
+      "errors": [],
+      "reports": {
+        "min [speed] of turtles": 0.27116577898821304,
+        "max [speed] of turtles": 0.7500000000000002,
+        "mean [speed] of turtles": 0.49730940073071306
+      }
+    },
+    "commands": "repeat 50 [go]",
+    "progressPng": "docs/development/selected-transport/traffic-2-lanes-original-progress.png",
+    "playPause": {
+      "before": 50,
+      "after": 53,
+      "goButton": 2,
+      "buttons": [
+        {
+          "id": 1,
+          "source": "setup",
+          "forever": false
+        },
+        {
+          "id": 2,
+          "source": "go",
+          "display": "go",
+          "forever": true
+        },
+        {
+          "id": 3,
+          "source": "go",
+          "display": "go once",
+          "forever": false
+        },
+        {
+          "id": 4,
+          "source": "select-car",
+          "display": "select car",
+          "forever": true
+        },
+        {
+          "id": 12,
+          "source": "reset-perspective",
+          "display": "reset perspective",
+          "forever": false
+        },
+        {
+          "id": 13,
+          "source": "watch selected-car",
+          "display": "watch selected car",
+          "forever": false
+        },
+        {
+          "id": 14,
+          "source": "follow selected-car",
+          "display": "follow selected car",
+          "forever": false
+        }
+      ],
+      "errors": []
+    },
+    "sourceAction": {
+      "tick": 53,
+      "errors": [],
+      "action": "watch selected-car"
+    }
+  },
+  "traffic-grid": {
+    "setup": {
+      "sha256": "ec0cdcff88fbc9d54aa20a922fa3da8087c40318c929bae108f22f16932def3d",
+      "bytes": 56001,
+      "tick": 0,
+      "count": 200,
+      "settings": [
+        {
+          "type": "slider",
+          "variable": "grid-size-x",
+          "display": "grid-size-x",
+          "value": 5
+        },
+        {
+          "type": "slider",
+          "variable": "grid-size-y",
+          "display": "grid-size-y",
+          "value": 5
+        },
+        {
+          "type": "slider",
+          "variable": "speed-limit",
+          "display": "speed-limit",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "num-cars",
+          "display": "num-cars",
+          "value": 200
+        },
+        {
+          "type": "slider",
+          "variable": "ticks-per-cycle",
+          "display": "ticks-per-cycle",
+          "value": 20
+        },
+        {
+          "type": "slider",
+          "variable": "current-phase",
+          "display": "current-phase",
+          "value": 0
+        },
+        {
+          "type": "switch",
+          "variable": "current-auto?",
+          "display": "current-auto?",
+          "value": true
+        },
+        {
+          "type": "switch",
+          "variable": "power?",
+          "display": "power?",
+          "value": true
+        }
+      ],
+      "monitors": [
+        {
+          "label": "Current Phase",
+          "source": "phase",
+          "value": 0
+        }
+      ],
+      "errors": [],
+      "canvas": [
+        {
+          "width": 666,
+          "height": 666,
+          "box": {
+            "x": 373,
+            "y": 176.984375,
+            "width": 333,
+            "height": 333,
+            "top": 176.984375,
+            "right": 706,
+            "bottom": 509.984375,
+            "left": 373
+          }
+        }
+      ]
+    },
+    "setupPng": "docs/development/selected-transport/traffic-grid-original-setup.png",
+    "progress": {
+      "tick": 50,
+      "count": 200,
+      "monitors": [
+        {
+          "label": "Current Phase",
+          "value": 10
+        }
+      ],
+      "errors": [],
+      "reports": {
+        "min [speed] of turtles": -0.09899999999999998,
+        "max [speed] of turtles": 0.9899999999999999,
+        "mean [speed] of turtles": 0.15642000000000006
+      }
+    },
+    "commands": "repeat 50 [go]",
+    "progressPng": "docs/development/selected-transport/traffic-grid-original-progress.png",
+    "playPause": {
+      "before": 50,
+      "after": 53,
+      "goButton": 13,
+      "buttons": [
+        {
+          "id": 8,
+          "source": "choose-current",
+          "display": "Select intersection",
+          "forever": true
+        },
+        {
+          "id": 11,
+          "source": "setup",
+          "display": "Setup",
+          "forever": false
+        },
+        {
+          "id": 12,
+          "source": "change-current",
+          "display": "Change light",
+          "forever": false
+        },
+        {
+          "id": 13,
+          "source": "go",
+          "display": "Go",
+          "forever": true
+        }
+      ],
+      "errors": []
+    },
+    "sourceAction": {
+      "tick": 53,
+      "errors": [],
+      "action": "change-current"
+    }
+  },
+  "taxi-cabs": {
+    "setup": {
+      "sha256": "150f739ec217fbb199d86eca783922a79acceeb6504e44add1921d934d3d4a30",
+      "bytes": 96318,
+      "tick": 0,
+      "count": 25,
+      "settings": [
+        {
+          "type": "slider",
+          "variable": "each-grid-cost",
+          "display": "each-grid-cost",
+          "value": 0.93
+        },
+        {
+          "type": "slider",
+          "variable": "each-additional-passenger-cost",
+          "display": "each-additional-passenger-cost",
+          "value": 0.49
+        },
+        {
+          "type": "slider",
+          "variable": "each-tick-cost",
+          "display": "each-tick-cost",
+          "value": 0.5
+        },
+        {
+          "type": "slider",
+          "variable": "first-passenger-cost",
+          "display": "first-passenger-cost",
+          "value": 0.78
+        },
+        {
+          "type": "slider",
+          "variable": "length-of-green-light",
+          "display": "length-of-green-light",
+          "value": 20
+        },
+        {
+          "type": "slider",
+          "variable": "length-of-time-period",
+          "display": "length-of-time-period",
+          "value": 2000
+        },
+        {
+          "type": "inputBox",
+          "variable": "wait-time-mean",
+          "display": "wait-time-mean",
+          "value": 50
+        },
+        {
+          "type": "inputBox",
+          "variable": "wait-time-sd",
+          "display": "wait-time-sd",
+          "value": 10
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-cbd-am",
+          "display": "prob-cbd-cbd-AM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-com-am",
+          "display": "prob-res-com-AM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-cbd-am",
+          "display": "prob-res-cbd-AM",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-res-am",
+          "display": "prob-res-res-AM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-res-am",
+          "display": "prob-com-res-AM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-cbd-am",
+          "display": "prob-com-cbd-AM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-com-am",
+          "display": "prob-com-com-AM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-res-am",
+          "display": "prob-cbd-res-AM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-com-am",
+          "display": "prob-cbd-com-AM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-cbd-md",
+          "display": "prob-cbd-cbd-MD",
+          "value": 0.97
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-com-md",
+          "display": "prob-cbd-com-MD",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-res-md",
+          "display": "prob-cbd-res-MD",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-com-md",
+          "display": "prob-com-com-MD",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-cbd-md",
+          "display": "prob-com-cbd-MD",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-res-md",
+          "display": "prob-com-res-MD",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-res-md",
+          "display": "prob-res-res-MD",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-cbd-md",
+          "display": "prob-res-cbd-MD",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-com-md",
+          "display": "prob-res-com-MD",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-res-pm",
+          "display": "prob-res-res-PM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-res-pm",
+          "display": "prob-com-res-PM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-cbd-pm",
+          "display": "prob-com-cbd-PM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-com-pm",
+          "display": "prob-com-com-PM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-res-pm",
+          "display": "prob-cbd-res-PM",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-com-pm",
+          "display": "prob-cbd-com-PM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-cbd-pm",
+          "display": "prob-cbd-cbd-PM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-com-pm",
+          "display": "prob-res-com-PM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-cbd-pm",
+          "display": "prob-res-cbd-PM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-cbd-eve",
+          "display": "prob-res-cbd-EVE",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-com-eve",
+          "display": "prob-res-com-EVE",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-cbd-eve",
+          "display": "prob-cbd-cbd-EVE",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-com-eve",
+          "display": "prob-cbd-com-EVE",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-res-eve",
+          "display": "prob-cbd-res-EVE",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-com-eve",
+          "display": "prob-com-com-EVE",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-cbd-eve",
+          "display": "prob-com-cbd-EVE",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-res-eve",
+          "display": "prob-com-res-EVE",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-res-eve",
+          "display": "prob-res-res-EVE",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-cbd-em",
+          "display": "prob-res-cbd-EM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-res-em",
+          "display": "prob-res-res-EM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-res-com-em",
+          "display": "prob-res-com-EM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-cbd-em",
+          "display": "prob-cbd-cbd-EM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-com-em",
+          "display": "prob-cbd-com-EM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-cbd-res-em",
+          "display": "prob-cbd-res-EM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-com-em",
+          "display": "prob-com-com-EM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-cbd-em",
+          "display": "prob-com-cbd-EM",
+          "value": 0
+        },
+        {
+          "type": "slider",
+          "variable": "prob-com-res-em",
+          "display": "prob-com-res-EM",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "num-taxicab",
+          "display": "num-taxicab",
+          "value": 25
+        }
+      ],
+      "monitors": [
+        {
+          "label": "Time of the Day",
+          "source": "current-phase",
+          "value": "AM Peak"
+        },
+        {
+          "label": "AM Peak Marginal",
+          "source": "prob-cbd-com-AM + prob-cbd-res-AM + prob-cbd-cbd-AM +\nprob-com-cbd-AM + prob-com-res-AM + prob-com-com-AM\n+ prob-res-cbd-AM +  prob-res-com-AM + prob-res-res-AM",
+          "value": 1
+        },
+        {
+          "label": "Midday Marginal",
+          "source": "prob-cbd-com-MD + prob-cbd-res-MD + prob-cbd-cbd-MD +\nprob-com-com-MD + prob-com-res-MD + prob-com-com-MD\n+ prob-res-cbd-MD +  prob-res-com-MD + prob-res-res-MD",
+          "value": 0.97
+        },
+        {
+          "label": "PM Peak Marginal",
+          "source": "prob-cbd-com-PM + prob-cbd-res-PM + prob-cbd-cbd-PM +\nprob-com-cbd-PM + prob-com-res-PM + prob-com-com-PM\n+ prob-res-cbd-PM +  prob-res-com-PM + prob-res-res-PM",
+          "value": 1
+        },
+        {
+          "label": "Evening Marginal",
+          "source": "prob-cbd-com-EVE + prob-cbd-res-EVE + prob-cbd-cbd-EVE +\nprob-com-cbd-EVE + prob-com-res-EVE + prob-com-com-EVE\n+ prob-res-cbd-EVE +  prob-res-com-EVE + prob-res-res-EVE",
+          "value": 1
+        },
+        {
+          "label": "Early Morning Marginal",
+          "source": "prob-cbd-com-EM + prob-cbd-res-EM + prob-cbd-cbd-EM +\nprob-com-cbd-EM + prob-com-res-EM + prob-com-com-EM\n+ prob-res-cbd-EM +  prob-res-com-EM + prob-res-res-EM",
+          "value": 1
+        }
+      ],
+      "errors": [],
+      "canvas": [
+        {
+          "width": 1820,
+          "height": 1820,
+          "box": {
+            "x": 332,
+            "y": 173.984375,
+            "width": 910,
+            "height": 910,
+            "top": 173.984375,
+            "right": 1242,
+            "bottom": 1083.984375,
+            "left": 332
+          }
+        }
+      ]
+    },
+    "setupPng": "docs/development/selected-transport/taxi-cabs-original-setup.png",
+    "progress": {
+      "tick": 100,
+      "count": 72,
+      "monitors": [
+        {
+          "label": "Time of the Day",
+          "value": "AM Peak"
+        },
+        {
+          "label": "AM Peak Marginal",
+          "value": 1
+        },
+        {
+          "label": "Midday Marginal",
+          "value": 0.97
+        },
+        {
+          "label": "PM Peak Marginal",
+          "value": 1
+        },
+        {
+          "label": "Evening Marginal",
+          "value": 1
+        },
+        {
+          "label": "Early Morning Marginal",
+          "value": 1
+        }
+      ],
+      "errors": [],
+      "reports": {
+        "count taxicabs": 25,
+        "count passengers": 47,
+        "sum [num-total-miles] of taxicabs": 1217,
+        "sum [num-total-trips] of taxicabs": 7,
+        "sum [total-income] of taxicabs": 68.03000000000002
+      }
+    },
+    "commands": "repeat 100 [go]",
+    "progressPng": "docs/development/selected-transport/taxi-cabs-original-progress.png",
+    "playPause": {
+      "before": 100,
+      "after": 101,
+      "goButton": 11,
+      "buttons": [
+        {
+          "id": 10,
+          "source": "go",
+          "display": "go-once",
+          "forever": false
+        },
+        {
+          "id": 11,
+          "source": "go",
+          "forever": true
+        },
+        {
+          "id": 12,
+          "source": "setup",
+          "forever": false
+        }
+      ],
+      "errors": []
+    },
+    "sourceAction": {
+      "tick": 103,
+      "errors": [],
+      "action": "set length-of-time-period 10 repeat 2 [go]"
+    },
+    "zeroGreenBoundary": {
+      "command": "setup set length-of-green-light 0 go",
+      "tick": 0,
+      "error": "Division by zero.\nerror while running MOD\ncalled by procedure START-TRAFFIC-LIGHT\ncalled by procedure GO"
+    }
+  },
+  "traffic-basic": {
+    "setup": {
+      "sha256": "77495cbc72df4370fe07d37ca59241585fdc63b8fec36a13c70da7ba65a6a7c3",
+      "bytes": 44679,
+      "tick": 0,
+      "count": 20,
+      "settings": [
+        {
+          "type": "slider",
+          "variable": "number-of-cars",
+          "display": "number-of-cars",
+          "value": 20
+        },
+        {
+          "type": "slider",
+          "variable": "acceleration",
+          "display": "acceleration",
+          "value": 0.0045
+        },
+        {
+          "type": "slider",
+          "variable": "deceleration",
+          "display": "deceleration",
+          "value": 0.026
+        }
+      ],
+      "monitors": [
+        {
+          "label": "red car speed",
+          "source": "ifelse-value any? turtles\n  [   [speed] of sample-car  ]\n  [  0 ]",
+          "value": 0.43615991074825133
+        }
+      ],
+      "errors": [],
+      "canvas": [
+        {
+          "width": 1428,
+          "height": 252,
+          "box": {
+            "x": 47,
+            "y": 433.984375,
+            "width": 714,
+            "height": 126,
+            "top": 433.984375,
+            "right": 761,
+            "bottom": 559.984375,
+            "left": 47
+          }
+        }
+      ]
+    },
+    "setupPng": "docs/development/selected-transport/traffic-basic-original-setup.png",
+    "progress": {
+      "tick": 50,
+      "count": 20,
+      "monitors": [
+        {
+          "label": "red car speed",
+          "value": 0.3987220255209711
+        }
+      ],
+      "errors": [],
+      "reports": {
+        "min [speed] of turtles": 0,
+        "max [speed] of turtles": 0.6001599107482503,
+        "mean [speed] of turtles": 0.2194964360933124
+      }
+    },
+    "commands": "repeat 50 [go]",
+    "progressPng": "docs/development/selected-transport/traffic-basic-original-progress.png",
+    "playPause": {
+      "before": 50,
+      "after": 52,
+      "goButton": 6,
+      "buttons": [
+        {
+          "id": 4,
+          "source": "setup",
+          "forever": false
+        },
+        {
+          "id": 6,
+          "source": "go",
+          "forever": true
+        }
+      ],
+      "errors": []
+    },
+    "sourceAction": {
+      "tick": 52,
+      "errors": [],
+      "action": "set acceleration 0"
+    }
+  },
+  "traffic-intersection": {
+    "setup": {
+      "sha256": "231db7a8ab42c4bb097f57fbde6520b6b1c64d6c39d3e96c2c3d57e6aaa4b5c9",
+      "bytes": 50870,
+      "tick": 0,
+      "count": 2,
+      "settings": [
+        {
+          "type": "slider",
+          "variable": "green-length",
+          "display": "green-length",
+          "value": 12
+        },
+        {
+          "type": "slider",
+          "variable": "max-accel",
+          "display": "max-accel",
+          "value": 2
+        },
+        {
+          "type": "slider",
+          "variable": "max-brake",
+          "display": "max-brake",
+          "value": 4
+        },
+        {
+          "type": "slider",
+          "variable": "freq-north",
+          "display": "freq-north",
+          "value": 60
+        },
+        {
+          "type": "slider",
+          "variable": "freq-east",
+          "display": "freq-east",
+          "value": 100
+        },
+        {
+          "type": "switch",
+          "variable": "auto?",
+          "display": "auto?",
+          "value": true
+        },
+        {
+          "type": "slider",
+          "variable": "yellow-length",
+          "display": "yellow-length",
+          "value": 3
+        },
+        {
+          "type": "slider",
+          "variable": "speed-limit",
+          "display": "speed-limit",
+          "value": 5
+        }
+      ],
+      "monitors": [
+        {
+          "label": "waiting overall",
+          "source": "count cars with [ speed = 0 ]",
+          "value": 0
+        },
+        {
+          "label": "waiting-northbound",
+          "source": "count cars with [ heading = 0 and speed = 0 ]",
+          "value": 0
+        },
+        {
+          "label": "waiting-eastbound",
+          "source": "count cars with [ heading = 90 and speed = 0 ]",
+          "value": 0
+        }
+      ],
+      "errors": [],
+      "canvas": [
+        {
+          "width": 770,
+          "height": 770,
+          "box": {
+            "x": 232,
+            "y": 173.984375,
+            "width": 385,
+            "height": 385,
+            "top": 173.984375,
+            "right": 617,
+            "bottom": 558.984375,
+            "left": 232
+          }
+        }
+      ]
+    },
+    "setupPng": "docs/development/selected-transport/traffic-intersection-original-setup.png",
+    "progress": {
+      "tick": 50,
+      "count": 30,
+      "monitors": [
+        {
+          "label": "waiting overall",
+          "value": 21
+        },
+        {
+          "label": "waiting-northbound",
+          "value": 5
+        },
+        {
+          "label": "waiting-eastbound",
+          "value": 16
+        }
+      ],
+      "errors": [],
+      "reports": {
+        "count cars": 28,
+        "count accidents": 0
+      }
+    },
+    "commands": "repeat 50 [go]",
+    "progressPng": "docs/development/selected-transport/traffic-intersection-original-progress.png",
+    "playPause": {
+      "before": 50,
+      "after": 53,
+      "goButton": 2,
+      "buttons": [
+        {
+          "id": 1,
+          "source": "setup",
+          "forever": false
+        },
+        {
+          "id": 2,
+          "source": "go",
+          "forever": true
+        },
+        {
+          "id": 3,
+          "source": "change-to-yellow",
+          "display": "switch",
+          "forever": false
+        },
+        {
+          "id": 11,
+          "source": "go",
+          "display": "go once",
+          "forever": false
+        }
+      ],
+      "errors": []
+    },
+    "sourceAction": {
+      "tick": 53,
+      "errors": [],
+      "action": "change-to-yellow"
+    }
+  },
+  "traffic-grid-goal": {
+    "setup": {
+      "sha256": "7259187f36f97a8c6e9378398a72d927844233c3811151a714eb3aa97807bfa9",
+      "bytes": 61585,
+      "tick": 0,
+      "count": 200,
+      "settings": [
+        {
+          "type": "slider",
+          "variable": "grid-size-y",
+          "display": "grid-size-y",
+          "value": 5
+        },
+        {
+          "type": "slider",
+          "variable": "grid-size-x",
+          "display": "grid-size-x",
+          "value": 5
+        },
+        {
+          "type": "switch",
+          "variable": "power?",
+          "display": "power?",
+          "value": true
+        },
+        {
+          "type": "slider",
+          "variable": "num-cars",
+          "display": "num-cars",
+          "value": 200
+        },
+        {
+          "type": "slider",
+          "variable": "speed-limit",
+          "display": "speed-limit",
+          "value": 1
+        },
+        {
+          "type": "slider",
+          "variable": "ticks-per-cycle",
+          "display": "ticks-per-cycle",
+          "value": 20
+        },
+        {
+          "type": "slider",
+          "variable": "current-phase",
+          "display": "current-phase",
+          "value": 0
+        },
+        {
+          "type": "switch",
+          "variable": "current-auto?",
+          "display": "current-auto?",
+          "value": true
+        }
+      ],
+      "monitors": [
+        {
+          "label": "Current Phase",
+          "source": "phase",
+          "value": 0
+        }
+      ],
+      "errors": [],
+      "canvas": [
+        {
+          "width": 666,
+          "height": 666,
+          "box": {
+            "x": 462,
+            "y": 173.984375,
+            "width": 333,
+            "height": 333,
+            "top": 173.984375,
+            "right": 795,
+            "bottom": 506.984375,
+            "left": 462
+          }
+        }
+      ]
+    },
+    "setupPng": "docs/development/selected-transport/traffic-grid-goal-original-setup.png",
+    "progress": {
+      "tick": 50,
+      "count": 200,
+      "monitors": [
+        {
+          "label": "Current Phase",
+          "value": 10
+        }
+      ],
+      "errors": [],
+      "reports": {
+        "min [speed] of turtles": 0,
+        "max [speed] of turtles": 1.099,
+        "mean [speed] of turtles": 0.3906099999999998
+      }
+    },
+    "commands": "repeat 50 [go]",
+    "progressPng": "docs/development/selected-transport/traffic-grid-goal-original-progress.png",
+    "playPause": {
+      "before": 50,
+      "after": 53,
+      "goButton": 6,
+      "buttons": [
+        {
+          "id": 6,
+          "source": "go",
+          "display": "Go",
+          "forever": true
+        },
+        {
+          "id": 7,
+          "source": "setup",
+          "display": "Setup",
+          "forever": false
+        },
+        {
+          "id": 11,
+          "source": "watch-a-car",
+          "display": "watch a car",
+          "forever": false
+        },
+        {
+          "id": 13,
+          "source": "choose-current",
+          "display": "Select intersection",
+          "forever": true
+        },
+        {
+          "id": 15,
+          "source": "change-light-at-current-intersection",
+          "display": "Change light",
+          "forever": false
+        },
+        {
+          "id": 16,
+          "source": "stop-watching",
+          "display": "stop watching",
+          "forever": false
+        }
+      ],
+      "errors": []
+    },
+    "sourceAction": {
+      "tick": 53,
+      "errors": [],
+      "action": "watch-a-car"
+    }
+  }
+}

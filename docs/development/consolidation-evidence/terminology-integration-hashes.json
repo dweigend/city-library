@@ -1,0 +1,626 @@
+{
+  "base": "2340d8c8cd4a1473f227335b264cf82f7d3977f3",
+  "scope": "User-authorized terminology rename; original source and prior hash manifests remain historical, not relabeled",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "beforeSHA256": "cd11c42557d7d06bed8b7b901ff7a64894ff2ed995a500dd8d0f01593b86957b",
+      "afterSHA256": "4909737c678c76194edc80684edbaf87b40486b74945f21580df9bca64f4f411"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "beforeSHA256": "db640ae6dc9739ec52c81389003b289c53718acf61c17cf3b67ea7754e0d4fda",
+      "afterSHA256": "cb0ca0a3dc28bf816d7ac3914d5a5d05985d888ca114619ce4ab1f77020ad2b4"
+    },
+    {
+      "path": "docs/agent-loom/README.md",
+      "beforeSHA256": "e4c20f888fd87dcd4558f8fb44e8f7b3abdf43be331504d26cc79a18393d971f",
+      "afterSHA256": "70f0a738c8ac0c7a91b69005ae4c4650cbdf468b900359a24d3304c3e5d5458b"
+    },
+    {
+      "path": "docs/decisions/network-visualization.md",
+      "beforeSHA256": "629cfb859db1958c353574773f87d6dd9d7cdb7e68c4ad2dd9d6878ee259609d",
+      "afterSHA256": "f884d6fd990f8c358a81ece63bbb6ce0632a694cc26c265771cd62be7cbafb96"
+    },
+    {
+      "path": "docs/development/a2a-usage.md",
+      "beforeSHA256": "dd35bd8e6deb5ba82560d03077950471d0c5f65427acb148905023245ee3a8fc",
+      "afterSHA256": "ed146f006cd27d4cabe831434e186145d8164485a73aa1a8b7c8040430ad7b49"
+    },
+    {
+      "path": "docs/development/a5a-usage.md",
+      "beforeSHA256": "4803b3b6fa3d494150d09088932884ea9f6b866e35a3d348dbcd5418af708ce7",
+      "afterSHA256": "e4530cf49b8f9faecb14288760509f36458859b8df38e2b087bc8f21a8b4fc70"
+    },
+    {
+      "path": "docs/development/a5a.md",
+      "beforeSHA256": "379eefb8aa25746ead0f581c025d2e6e1fd70beeba77bda2b9d5261514030107",
+      "afterSHA256": "6a75e1c60b6087fabb97299bbfc6a1116b06b6a82a312ab90f64ab60c9e02e24"
+    },
+    {
+      "path": "docs/development/cytoscape.md",
+      "beforeSHA256": "659cbfa8989ba488085fa67df33949beac9250eb0a71fcf43d90a39d50640890",
+      "afterSHA256": "af02dbbd14321087c51cf3feff9421d31b2e770846462166b3b60023b5ba738a"
+    },
+    {
+      "path": "docs/development/selected-network-contracts.md",
+      "beforeSHA256": "cbaa77b5df5d69c1477de4caa2eb6fcac22a0d89abf6c2cce427d81c9c9389a7",
+      "afterSHA256": "9f392db49ec2b3c7fe62a574c4be5c327582275bb0be563e7c4fdb6250ce80f2"
+    },
+    {
+      "path": "docs/development/selected-probability-last-contract.md",
+      "beforeSHA256": "0d6a3db22510c8fd2ac3a7b1964b513539e11f28154bb2214488a60cd628aff4",
+      "afterSHA256": "95d4f4da97d767e436c99eaed6964ae45ec23e9029b5621e9db80d7d0671b1ae"
+    },
+    {
+      "path": "examples/planar-geometry-proposal/03-mapping-and-gis-extents.ts",
+      "beforeSHA256": "d7f235b15f328bdbdb468c9e0b8c3e167b2b54b1f5aef12a7c0010c17308ed18",
+      "afterSHA256": "504ad483c7cb83d390468508df035003f812861e0daeb8c5939669655e8501ae"
+    },
+    {
+      "path": "examples/selected-biology/04-season-and-self-assembly.ts",
+      "beforeSHA256": "e53b0c5075d14a0e8666c65431f57af434a909bd2831fc78ab85a75861091910",
+      "afterSHA256": "ee0d6b1fa553c15331fdb9eb8042419377e0965f82788bdf9fd6be937f351cde"
+    },
+    {
+      "path": "examples/selected-evolution/05-drift-and-inheritance.ts",
+      "beforeSHA256": "feb0b5854a69e77ce14aa9f396bb5d2c313ba65b7aa59c274d0af5e33dd69f8f",
+      "afterSHA256": "e28ea987fc83d2b09df3225645ce34e967305f68d3e240b3893c7805506271bd"
+    },
+    {
+      "path": "examples/selected-materials/01-sandpile-ising.ts",
+      "beforeSHA256": "ce940f0d53c8c15631cfdd31982b8184fbdbb8f42066badbfadb1c6a4fa2d86c",
+      "afterSHA256": "23e5034c0d46f72e93ac2dbef24923d9e0ea308cd6e1a0f5f6a6c5c60d0a5d67"
+    },
+    {
+      "path": "examples/selected-materials/04-thermal-phases.ts",
+      "beforeSHA256": "9d4e26cdc6417c67235ec497432ab7e2e2dc36216ebcee951bce9c8ba05cc5a8",
+      "afterSHA256": "3ef6953657f685065e48e1f321ace7f8e39702b0fb065be44e4bd401b64477c1"
+    },
+    {
+      "path": "examples/selected-materials/05-dla.ts",
+      "beforeSHA256": "385c4631618f328d53e220a9cc793b9818e0033730ba3aebd888e006c84e8d5d",
+      "afterSHA256": "e23f03ce2a3be102913bb06ef43998fe5cf73645eb6028df2dd9a0970471e21d"
+    },
+    {
+      "path": "examples/selected-network/01-directed-staging.ts",
+      "beforeSHA256": "2097aa6a26c6fa98d1b2e88e75673da17384344c2e92d65241b12b093466268d",
+      "afterSHA256": "233e477541ff0be241348b130544295c0088849699493d7f7df93a0b144bac27"
+    },
+    {
+      "path": "examples/selected-network/02-rewire-and-no-links.ts",
+      "beforeSHA256": "9609c01ab623bb687df5da312694decc01b41f49410c9b7d8fce29e866b2f8d4",
+      "afterSHA256": "5be0bc90e8d9845461fc93575d2dcbc4bf4293c364941694086f55caff1f9aa1"
+    },
+    {
+      "path": "examples/selected-network/04-atomic-fixtures.ts",
+      "beforeSHA256": "325e503bcf86ffb417b0b6b6a999e20aed37eb55f28d95c5d46fbf2d853b81a3",
+      "afterSHA256": "42d5cc58c08e5ff585d2149795f6c912d5737c3aa4e63455911c5e416dc6de01"
+    },
+    {
+      "path": "examples/selected-network/05-defaults-and-isolation.ts",
+      "beforeSHA256": "8b62a0045c028617519bb9d20a92492fc04c91bf825a162c29481bd3613ed9a3",
+      "afterSHA256": "121f754570a6cec5cfc4c399f65d8125e11baee44465d31287dcd86a85313169"
+    },
+    {
+      "path": "examples/selected-social/02-language-and-party.ts",
+      "beforeSHA256": "db3a52865405a618e619c597c0d00df00aad9b9480f2c8cc5e540a5c7c8f7f5f",
+      "afterSHA256": "308d0c0a4e84153f8252e8c8c244f4e0c6d932ff0fb40da3d14c047fe4d09704"
+    },
+    {
+      "path": "examples/selected-tijuana/02-final-seed-economics-and-reset.ts",
+      "beforeSHA256": "db0a92fd4902e85adcfd0706946e61e7b5f57db598975bc0de1732ff446d7449",
+      "afterSHA256": "3c817aee7a95ce7a4947cfebcf67eec52fa122360e4ef57e13feaeb9908ea04f"
+    },
+    {
+      "path": "examples/selected-tijuana/03-migration-crossing-and-partial-errors.ts",
+      "beforeSHA256": "4c521bd31c312ab95086a967172dbcc490925f6b42ce9a7ff6dfe747e67370a0",
+      "afterSHA256": "eb8651379078e1985090cc72cf2cec35e0ddde099ff7b1ba57d3344ededd4aba"
+    },
+    {
+      "path": "examples/selected-tijuana/04-domain-display-and-node-intervention.ts",
+      "beforeSHA256": "4775888bd46d5fec0de6f3f9d0ce48d931d728a5748bf23bf6e29d4cc04f76c5",
+      "afterSHA256": "d5839170a5c55686e1b1e94b43c83113e057078b13355d5892a3ebf847ba84f1"
+    },
+    {
+      "path": "examples/selected-tijuana/05-growth-reports-and-delayed-errors.ts",
+      "beforeSHA256": "c0f12a3ff43a9fd1530f071ce3fa6d9511701ed734fb9ffb0bdf4e6a88e70056",
+      "afterSHA256": "169ca5c453e782f7d2e69a589ba3fa6b2505fbb2b6dc230514b38561c5421cfe"
+    },
+    {
+      "path": "examples/selected-tijuana/scenario.ts",
+      "beforeSHA256": "0c238b92a55cc4866e4c65d09bc69c32a254c5fca12cb875a863b302686f2d0a",
+      "afterSHA256": "7437d3f5a2def5c21a19cfc75c0d9de8660539f74c7da5f0f15a6e48ce91044d"
+    },
+    {
+      "path": "experiments/anisogamy/model.ts",
+      "beforeSHA256": "d4fd1cb0af36f3c5d04b74a70d4e8a5508f215a9025bfe8e251f268f0f47b265",
+      "afterSHA256": "a12c76466a37f6c7261c4a234fc60f5d36725252122c26f4acffd6cf4990f128"
+    },
+    {
+      "path": "experiments/artificial-neural-net-multilayer/model.ts",
+      "beforeSHA256": "94d11f87a1ee83bbf8bff5fdd1cf04bd0a177cf11705f41712f36cb1ad6cc787",
+      "afterSHA256": "fb401a9e7059ac815d1b672ebcb535525ad85e5e57d676d801cf7b18ed0583c3"
+    },
+    {
+      "path": "experiments/artificial-neural-net-perceptron/model.ts",
+      "beforeSHA256": "c55d49531ebd4359750a2ab188b01509c11bee9ce2249491d7075d45539c0460",
+      "afterSHA256": "a55215d72e4c18f389a260a7fe41a2db1cafd92e13aabc71e03ce94b8508169f"
+    },
+    {
+      "path": "experiments/bacterial-infection/model.ts",
+      "beforeSHA256": "07178aec004de467dfb3a761c3cb3f60f91a846c698796ea7202c2095ab2569e",
+      "afterSHA256": "c9d24e8729f01639c6006ddd175fd2bc5e50ac0f59a7e064bacfba607defcd9e"
+    },
+    {
+      "path": "experiments/bidding-market/model.ts",
+      "beforeSHA256": "41fbe7ebdc32acdc6005ae001a04551187ddc4ccb4dde3800c04dd3c9cee83b2",
+      "afterSHA256": "f48c18ace6182cddb02a75fb26db3bc2af179e9fb3e91cb5a6fa76843b215b8d"
+    },
+    {
+      "path": "experiments/bidding-market/ui.ts",
+      "beforeSHA256": "a96016da3d37c36f2c919b93cec5c47ecbb3c7ac496675187fd13cdb56322ed5",
+      "afterSHA256": "a75e9366bf5022c9d9519bc8557f2b4d823d89a79b99ce350ee11c0a04f59b65"
+    },
+    {
+      "path": "experiments/binomial-rabbits/model.ts",
+      "beforeSHA256": "1225ab730c4b4145acaf62042b1b048eb473d2b642bbace5ad0b421131dde983",
+      "afterSHA256": "e6f77a547d8912c05dbd0f0ecbdc659aaaa35de62a8975b6ea9cf739ba1a3482"
+    },
+    {
+      "path": "experiments/birthdays/model.ts",
+      "beforeSHA256": "814436195bc1186e467f6b0a25e02ab3748267bf0cafc4b988c1e04368b80e93",
+      "afterSHA256": "e31c72133f2d755ab6b0e8f303540ddda4ac81add7567b0d97bc8a97bf62bd81"
+    },
+    {
+      "path": "experiments/braess-paradox/model.ts",
+      "beforeSHA256": "7f17a08f480d347e2838a6a238debf97a3bcef42e9b1ff9223b68607d7abe466",
+      "afterSHA256": "ec56ccf9c4bf7b1c7aa512785139c4903da27d2a666911e4d22474e5135b47f2"
+    },
+    {
+      "path": "experiments/ca-1d-elementary/model.ts",
+      "beforeSHA256": "3a8f0ca5aa416d9d7a9ae6dc0297c13522b9e0b8745c83ed9a204b51d7ae0cf3",
+      "afterSHA256": "0e401cae6a0591e4269544fa4c833b65763f699b81677a8a17c922084e8f7d3d"
+    },
+    {
+      "path": "experiments/ca-continuous/model.ts",
+      "beforeSHA256": "bc3bb38104a6baefced8e58f4df55da5b683f2e8845ebec466795a6263bc0928",
+      "afterSHA256": "f962cf09b8f9a1f9c11441c240ebb4fcad4d7c6b0b0b53dbd1f0ebfd29d086bf"
+    },
+    {
+      "path": "experiments/ca-stochastic/model.ts",
+      "beforeSHA256": "a77934052db267064b7524185b6b5b47d61a0954cae8e75e7b9661ab6289978f",
+      "afterSHA256": "4963d69df22f018ebe9f50a3d6d887ec8ac591c3714a27588a200248c760d31f"
+    },
+    {
+      "path": "experiments/central-limit-theorem/model.ts",
+      "beforeSHA256": "7f47459b804ba6f07ff6f4d042ac66e06a7bb94ea370fb6fe723aed23e21e30f",
+      "afterSHA256": "495cf76500ebb2f39508ebd358e5abc50bc0e9e86fb0a52df28ef22d8154ca62"
+    },
+    {
+      "path": "experiments/chloroplasts-and-food/model.ts",
+      "beforeSHA256": "b938d90adea285befd3b84a064819bcbc624bf14f594fb75994fed85db96f391",
+      "afterSHA256": "bc23a701de3f81e7e42dcfcdc339d2db1b3845fd4ccd583231564a153494feef"
+    },
+    {
+      "path": "experiments/consumer-choice/model.ts",
+      "beforeSHA256": "714fbd884a9799079903d8df8fdfe4bbba91c05cb487e429e239d68fb37fc7ec",
+      "afterSHA256": "9530c8a16f07c3fade1b116d0b4cad171f5f61918583677d8171cd632d639ae6"
+    },
+    {
+      "path": "experiments/consumer-choice/ui.ts",
+      "beforeSHA256": "f0aa4bbdecaf0d0289add9d872ebd6ab73aa286fe22af79b2da65c94cefed706",
+      "afterSHA256": "4a38bb7f5991d3e5faa9f418f29eae39a191647a3f1b160ea8fabf098b3b41b9"
+    },
+    {
+      "path": "experiments/crispr-bacterium/model.ts",
+      "beforeSHA256": "8f10fa0e5ab00ce202d27f48da9dcfc8e4271d9da1211c3c4bd3dfd95c6e2938",
+      "afterSHA256": "4da61331c86a264514e8254259015263bd143c82bc54e7d1c4dfd5efad96a058"
+    },
+    {
+      "path": "experiments/crystallization-basic/model.ts",
+      "beforeSHA256": "54734d6dbc054704e8beb0071796ce1220abf1ccd6ce8ff23370bdc4e7d33702",
+      "afterSHA256": "a62498fe92a192a0373f7cd621657712d8654231d06d78c31bbfff96f2af03b5"
+    },
+    {
+      "path": "experiments/daisyworld/model.ts",
+      "beforeSHA256": "83dc83e5966559b69fca12f362fa9359471828ad9fb36d297b22586b15ce1f7a",
+      "afterSHA256": "e45e8a381a75342b78555d7d5eeeec59618cd229f7683712637919aab4b468e3"
+    },
+    {
+      "path": "experiments/diffusion-on-a-directed-network/model.ts",
+      "beforeSHA256": "9ec8ac77e12de88710ca692b6267b974742ad297f67e46dc2c68bf622fb07644",
+      "afterSHA256": "04500b221b518615518c514b5c1d8216640e5c65e439265c82cf505a1906d2e7"
+    },
+    {
+      "path": "experiments/diffusion-on-a-directed-network/ui.ts",
+      "beforeSHA256": "a271fdac4fd1987afab06fe93370ebcb4272a4ab78a38adf71bcd1af726be7f5",
+      "afterSHA256": "b8baa4d9d60ab5307b1f75814d04bdc7f923af377c2ba06dc8fd7c463ec2f284"
+    },
+    {
+      "path": "experiments/dining-philosophers/model.ts",
+      "beforeSHA256": "6aec9e113eed5510c810fee120c3251f6440b8183a94d604c56aea76d32ccc1d",
+      "afterSHA256": "2c5723457b07bac0150051f4aff730f17195cac441328f33e8d39c6cce2e4bb5"
+    },
+    {
+      "path": "experiments/dla/model.ts",
+      "beforeSHA256": "39274bf8a4c055d0f62f65e48a77ee65d34bef8183d5b1e615ea4e54b625e7bf",
+      "afterSHA256": "c9d4d5d677fe96f66dba5365b372267c9212ebecdc8fd965100e8cb5b613136c"
+    },
+    {
+      "path": "experiments/dna-protein-synthesis/model.ts",
+      "beforeSHA256": "a516a7fcedb997dfa6b21230e7c29df8ab7bd6c2952b3d3bb73c48cd47b88442",
+      "afterSHA256": "598d714d50bf0dbbcab7f079afedb9b0abbfef36c143d2e0eb050335f3077d2a"
+    },
+    {
+      "path": "experiments/el-farol/model.ts",
+      "beforeSHA256": "677b118f145dd49f8baf7e5bed8bb124438e11c328a73df5bc4570fd599fa184",
+      "afterSHA256": "a74483fc58c726c8864aef3a211f3ed6bd39c76d30119ab4ff55777d40e27844"
+    },
+    {
+      "path": "experiments/epidem-travel-and-control/model.ts",
+      "beforeSHA256": "c83c25081e5f22b420208719b3d27eb4bde9763bf671a49575d8dce25047955d",
+      "afterSHA256": "d1534275ece4f8f68dfbf50348fbeb0046222c017d678f5bb92cf67ad28a9727"
+    },
+    {
+      "path": "experiments/epidem-travel-and-control/ui.ts",
+      "beforeSHA256": "9feeda55f8421a79527fe9262201597d74db92046b3e8419f42db702dd0797cd",
+      "afterSHA256": "4da48e6baecee00a1a0ef58c1539e7816f9cbe9a7c3dda03e8db11dd950def92"
+    },
+    {
+      "path": "experiments/expected-value/model.ts",
+      "beforeSHA256": "49887471eab01422100411d9d281b5eba121205272e0b8cd0a100638995ac242",
+      "afterSHA256": "6f179ce6d6c7e89d52a1f181823231c21162713ca42ce1248b5e60bf43556fd1"
+    },
+    {
+      "path": "experiments/gendrift-t-interact/model.ts",
+      "beforeSHA256": "20036a68a8f57bd92d024b726c5ca266cdaf8fe1fe8b8a0f8cf5e2cd08e7201e",
+      "afterSHA256": "69e919d2c0a51b75c3ad2252049eeea737c9ec7ee5ff53eb8074bcb582abe7e9"
+    },
+    {
+      "path": "experiments/gendrift-t-interact/ui.ts",
+      "beforeSHA256": "4f244533cdc78f91f4dd76610e8a6e839eb7b5a5f6c66588e673b5be6faafdb3",
+      "afterSHA256": "2fcfe4b869a9add240017ff84f7c8f838adefed4a34dd89b4b1548117ea0460c"
+    },
+    {
+      "path": "experiments/genevo-1-genetic-switch/model.ts",
+      "beforeSHA256": "040e282c7d8b76a8c32058ac1e89522d2399624bf29a27bcc5b8529712d13ce9",
+      "afterSHA256": "0a66b1af1ea3c91f9b94080306bbb777b01abc46538bb0b426bfc61d996653c2"
+    },
+    {
+      "path": "experiments/heat-diffusion/model.ts",
+      "beforeSHA256": "539cd2fa899951953f3957f86a34fcb2666f00733b26f98d00e798f2b47b9b88",
+      "afterSHA256": "df456567d0b6598215a078f095d57a261d5e3999af9dae0653809778c64cdb20"
+    },
+    {
+      "path": "experiments/heat-diffusion/ui.ts",
+      "beforeSHA256": "2035798568b1c16536d3d7de69c2873f626b7685f8433a2465da56631e433c51",
+      "afterSHA256": "405481dc5b40f24591006fbaa16da5e8671fcb207e1515249ce3df6a93013fb2"
+    },
+    {
+      "path": "experiments/hex-cell-aggregation/model.ts",
+      "beforeSHA256": "473d2cc3113c76d5ef2ead4c21e5e7e46edfe24eb325d6cf18a47381e9c0dd78",
+      "afterSHA256": "ce9f985218d4383e5927d6540d9d29d59473a2ce03a16f1ea2a2a341f88f1b5c"
+    },
+    {
+      "path": "experiments/hiv/model.ts",
+      "beforeSHA256": "04491aa1d86c4792c2a9a4154c1633564d0f96d3f1148501cc6d6a35a5b38e66",
+      "afterSHA256": "4c2ba3db0a02cd81530490038fe9b6c88665ed7f2998746b790f126a5234c9d9"
+    },
+    {
+      "path": "experiments/invasive-plants/model.ts",
+      "beforeSHA256": "ba927518c5e757dbf6be5be91bc38875d611e9ae28f25017eeafdb2269f8cf50",
+      "afterSHA256": "c881ecd85fd6f1d2d50dc202db2f896526db7780332464dcef60b00628a7c3c2"
+    },
+    {
+      "path": "experiments/invasive-plants/ui.ts",
+      "beforeSHA256": "623ee41fa59d1abd650bd0582b777bc10c5ef693978fb618a09984525738bf9a",
+      "afterSHA256": "a951938d94e75782229e3379a2a72e1ac08192762998fbc759a3af0258d61924"
+    },
+    {
+      "path": "experiments/ising/model.ts",
+      "beforeSHA256": "a7590e3d0718e16250988d8b37520ad022e13447f9d550e024e3cd8bdf3504b4",
+      "afterSHA256": "b56f656260a2fdaa3b3e2e8e69499d0bc632a2cafa6061037df5997e58586972"
+    },
+    {
+      "path": "experiments/k-means-clustering/model.ts",
+      "beforeSHA256": "1425e5e34fdf18c4ae23e6f9fedee8b7b8937014c6ebd271c3b4f2fd6af908ef",
+      "afterSHA256": "a7742a4c78c1c6924b051075101c7d3499252922ac507b0894b4510ccfce5ed8"
+    },
+    {
+      "path": "experiments/language-change/model.ts",
+      "beforeSHA256": "9cf11b69fa1abd4cec37eea634f4b80999d386beefe2f2a2fc49147f0d5f0391",
+      "afterSHA256": "3b0a314687cb25babae2d88f33ad80f8b2f37394a4d1820a8e3ca438cabb7c32"
+    },
+    {
+      "path": "experiments/language-change/ui.ts",
+      "beforeSHA256": "46c21b8a2f1b310721859e2aa877895c81b35614bb16070a88356a06fcac8b7f",
+      "afterSHA256": "e412fd7534834ea373317ad10d1eff164e83b353b72270bd7818953924c0f1ab"
+    },
+    {
+      "path": "experiments/mammoths/model.ts",
+      "beforeSHA256": "366c6f1f784f3c9be964977c9e7011aa6679616c7048e7f0bf5cfe83e4ba58df",
+      "afterSHA256": "40ef15f8b558355d31bbb40c463af4f217e160c57925ba573aab2dd1cf4ef6ae"
+    },
+    {
+      "path": "experiments/mandelbrot/model.ts",
+      "beforeSHA256": "4e8cd67e89c81ddd741d48f48a6065ea72911e04c5b5585b2aa1b804ddfb796f",
+      "afterSHA256": "eb1350d424c45b893fd71c3a394e01a797327684fcacf5b73d509a0129043141"
+    },
+    {
+      "path": "experiments/mandelbrot/ui.ts",
+      "beforeSHA256": "d54e7b35585bc4141148212d9a08e796cdc47688897af0444e97a2f05e79d64c",
+      "afterSHA256": "1b2b442146006fc092639cc5df145ce66c8b57249008e389488cf71028ea3905"
+    },
+    {
+      "path": "experiments/membrane-formation/model.ts",
+      "beforeSHA256": "d918fa6c0593d377c00cb4f41874599be4ef2770b75e36d9f46f5600372abf6b",
+      "afterSHA256": "99222762fd2e66c70c635ff7d481794c0cc95ae3972cee17a7a00a0a615c9905"
+    },
+    {
+      "path": "experiments/membrane-formation/ui.ts",
+      "beforeSHA256": "74380373757aa8039c9bb3538876453bcadcf8f2b74ef5f63cc68616b240ab14",
+      "afterSHA256": "41108ff1ed6a4d0a1dc1e9e81cb53d5ba66ee51456e283057e2938b089d492bc"
+    },
+    {
+      "path": "experiments/mimicry/model.ts",
+      "beforeSHA256": "97ece85ecc30eb208ea71e528c6fffaae389af05c801f8ce91161d4ac5baac09",
+      "afterSHA256": "9df1c4aab4092947be9b85fd401cde1b57a4551c86f4d8250f0b8df52f9091b2"
+    },
+    {
+      "path": "experiments/pagerank/model.ts",
+      "beforeSHA256": "68f9b99be159c862c21efb46136f75faed9933a80ad76f981e6ad7834476ecdd",
+      "afterSHA256": "8eadba0b9a045f6bf2cf8665c3d57d4b97c22fccc548d1fa24b3753a775b5a40"
+    },
+    {
+      "path": "experiments/pagerank/ui.ts",
+      "beforeSHA256": "1a0247a88875204635afe091b710e1872519afbb3b9c38f484cc337ad6148b82",
+      "afterSHA256": "70fabb575150a91d99cc1f8c9b0073aa5f3f07cabf915ff30a9ab17aadf7c866"
+    },
+    {
+      "path": "experiments/particle-swarm-optimization/model.ts",
+      "beforeSHA256": "1dc56229d66b9bf4f1957b3711604589cb86ae3e152fe5a7a9dead733bacac1f",
+      "afterSHA256": "22866e68a0781d8e5e5c7afc67632099b0059a5e401f62110c3becc4f04e1aef"
+    },
+    {
+      "path": "experiments/paths/model.ts",
+      "beforeSHA256": "5c8a4f08c06432b4634790d40016730ebbd3d7d5160632082c9a9f6714472a3a",
+      "afterSHA256": "de34710a6ab9edc798273b919ad9afaa9a3643539134c9f5e5c02bcb09421a09"
+    },
+    {
+      "path": "experiments/paths/ui.ts",
+      "beforeSHA256": "5f4ad560593392f0a371a692fe6379ca4ddd67bcc03ec59189737d5937655009",
+      "afterSHA256": "b54b4673ed0d7883d27c9bd0f47e9586b3916abf7978f71b144212426d6bb744"
+    },
+    {
+      "path": "experiments/rebellion/ui.ts",
+      "beforeSHA256": "2d601ed7a59ffe446210f05299850963b7eb6a0b6121756cbf4060f0c7b58fb7",
+      "afterSHA256": "46d7af014e4c182a8d8a38376e8f94aa9bb8dd79c4b9f9ab318094f2a32f02e3"
+    },
+    {
+      "path": "experiments/repressilator-1d/model.ts",
+      "beforeSHA256": "b7890ad98f996e8ef6322205e21308bef033ea1eda1ab4df8623c10428dadfe4",
+      "afterSHA256": "1abc7550e2d7119b02b9b82c4b892609041bd2c4d60eafddb66be7f1ba8f8f0a"
+    },
+    {
+      "path": "experiments/robby-the-robot/model.ts",
+      "beforeSHA256": "6e3a1677da2bee8c8d79d10f494ced74c23e3ad7bfaaf2cbc0bc71b86607950e",
+      "afterSHA256": "9c3d4391ae886a2136491f945c14e3959d894445a63ad45b6f10be1b9110de0a"
+    },
+    {
+      "path": "experiments/robotic-factory/model.ts",
+      "beforeSHA256": "dfdf95c4804a087d97326650182cdfef79b3f5e0d3f0ea541697cdeb52296f35",
+      "afterSHA256": "aa2d635cdde9561e71e35a44f46eee586aeabd2179a27d05ebfbf240c515272f"
+    },
+    {
+      "path": "experiments/sandpile/model.ts",
+      "beforeSHA256": "587649d359f6d9775f6e82598570c8e01a3036f81eceaef4d233338fd09bde24",
+      "afterSHA256": "6bb6e4765e5c89936b8a5183b7fae790646cb9439e83c1b014c44ed7fcefce99"
+    },
+    {
+      "path": "experiments/sandpile/ui.ts",
+      "beforeSHA256": "aa194693c0db7deef363a3aeec5415fb6cf50dcc683bbf5ba01e502110abf3bb",
+      "afterSHA256": "f9260e147462e8b8f48eec6e5af3b69f033b9e248604fe11a0c5dc599db7c3fa"
+    },
+    {
+      "path": "experiments/simple-birth-rates/model.ts",
+      "beforeSHA256": "b2fe112b6af4261a8c997f44619602a3f55e4c8c45bb4859dc98394af13d6039",
+      "afterSHA256": "6715e585c7cde2f06a0ce51efe0876f4f165ec7dd6c49291f039b36a130af90a"
+    },
+    {
+      "path": "experiments/simple-birth-rates/ui.ts",
+      "beforeSHA256": "c761942157c25782efebf006028985fa2c4510f911239f3fd949eccb02d529a2",
+      "afterSHA256": "e079651c5986aac3f3bc1790c0ce24114be554a79cfa9ff552e1932d5d613a68"
+    },
+    {
+      "path": "experiments/simple-genetic-algorithm/model.ts",
+      "beforeSHA256": "12e4276fc6c7d90bf1ab65d122845b56125e3bc75eaa29c418530daae7be0dc7",
+      "afterSHA256": "27c2f85033a7d0fbd3eb5159f8bc5553c0eab9b87d02e744137f42fc9cc9799d"
+    },
+    {
+      "path": "experiments/simulated-annealing/model.ts",
+      "beforeSHA256": "215547ccdf64729ea10ad6c65c206e4cae3ab9c57dc594a736c22ea2b259c4c1",
+      "afterSHA256": "5801d99e73cbc5f7e6e3d30e5cf5ed88540e3219b07334897bdb5207939d6e86"
+    },
+    {
+      "path": "experiments/smoothlife/model.ts",
+      "beforeSHA256": "77d111717a6aea8080ac47de51f4282441f9ca2595416fae6451849050bb0a22",
+      "afterSHA256": "43ac0789741c3eae88f82202ee8c243419d04a162347688030fe7515dd6f7e44"
+    },
+    {
+      "path": "experiments/solid-diffusion/model.ts",
+      "beforeSHA256": "ab19ab91849cf2e3ec0c1f84e312644da8ab82e751fba852a35ee694f7bb2de8",
+      "afterSHA256": "f6572a5cdb58a997940a2416630beef9dcc82cc8f1b184f4a4561ae3ab682abe"
+    },
+    {
+      "path": "experiments/stochastic-patchwork/model.ts",
+      "beforeSHA256": "1684a2a8906eddfaba76d599c1deb2055ae095b3228c81530a0f48b89c27b015",
+      "afterSHA256": "208bf24ef448f918d138029b7c60af3f6639f757f2fa12149bb0610430c39579"
+    },
+    {
+      "path": "experiments/taxi-cabs/model.ts",
+      "beforeSHA256": "5e7b437d15bbd10f3d8852d0b50f6d86a251426b44a9e7262654081aff440c92",
+      "afterSHA256": "bb2aa1ce1bee763c38848f075d04eeed8a57baa519572b4da4b084ca5cfca8cc"
+    },
+    {
+      "path": "experiments/traffic-2-lanes/model.ts",
+      "beforeSHA256": "42464c6a076e9639ba5ad47702762546d81e1fafa1438efb91be42dabfac0093",
+      "afterSHA256": "0448a952a1bc20a925f0213d54c1ffba498128bd1d7431b3410b455a78ade895"
+    },
+    {
+      "path": "experiments/traffic-grid-goal/model.ts",
+      "beforeSHA256": "21986a0cfb285541b31c07547b96a336fe08ebd36bca537ff2eca72773f78177",
+      "afterSHA256": "df6cfbf880aa4fa3967f5b823d3d565335e11ed1da13a398fabf3dfed20fe69b"
+    },
+    {
+      "path": "experiments/traffic-grid/model.ts",
+      "beforeSHA256": "a1e0b1500f34b8233f2882e194eb098eb4fc8d07a67b67f9f4341d30f18d56de",
+      "afterSHA256": "f7f99671dc1f1c7bee2cd72feccc5b71038d94678a07b429d27a94baba4dce33"
+    },
+    {
+      "path": "experiments/traffic-intersection/model.ts",
+      "beforeSHA256": "d1809da93cf893bf94ff192bfff5e14e1c46d7019efa96afc18ce09e48a3eceb",
+      "afterSHA256": "03b679235a9a532d9ed59aeaf00f5caa32f90fb0b9ace896d9f6a47ba87dbf10"
+    },
+    {
+      "path": "experiments/turing-machine-2d/model.ts",
+      "beforeSHA256": "be0abc61e7e4701d9629bc6866ec910fd35d57c4900ce837fd577c5bf64ae8c2",
+      "afterSHA256": "82a55902aef906028d68eba47b7ea8bbbd7172ef7a406d2a6ea9b174ce8ef788"
+    },
+    {
+      "path": "experiments/urban-suite-path-dependence/model.ts",
+      "beforeSHA256": "c039c0afa46a9f531f82817a3be86fc64eceaa11050552548977857b3a0b4877",
+      "afterSHA256": "b83685f91e68cfaadee7616b139e73e88fbcdc80e6a69995deceb13244a7a067"
+    },
+    {
+      "path": "experiments/urban-suite-path-dependence/ui.ts",
+      "beforeSHA256": "f989d1ab647944d1b1231dc0f4e8d8976b8e180708733a3ea7af6a35656d4a02",
+      "afterSHA256": "6794e081a31db9d4ce0c1bc713f58b0ad6e9d4e29dcea6bcf89040ce7e6f4735"
+    },
+    {
+      "path": "experiments/urban-suite-recycling/model.ts",
+      "beforeSHA256": "dcd7aa3e85bb9b55dfe995422b8f394b386c6b8474a6a00db88ef158b3743ee2",
+      "afterSHA256": "62be19dcf9eabb873dd6667d05fdb190f584d21ec3bc0a8eda85857b09ffec87"
+    },
+    {
+      "path": "experiments/urban-suite-structure-from-randomness-1/model.ts",
+      "beforeSHA256": "6cff3b0cea72b8e35f26071727cfae6e223825184fc767e014a86c7f8a7877a6",
+      "afterSHA256": "640a94ac6519d97a97d9146362cd7b86e19e53b541d47b0fdd394284c6582912"
+    },
+    {
+      "path": "experiments/urban-suite-tijuana-bordertowns/model.ts",
+      "beforeSHA256": "0c1f8231532d2ed18c09202ed198efad99804bee5d00bbd6e0f2ba7858144862",
+      "afterSHA256": "a2ea0c233830246eb8455d15ea55cda3e90a385345f151d06ba573578e6b6c5c"
+    },
+    {
+      "path": "experiments/virus/model.ts",
+      "beforeSHA256": "a9921bfd856cf0cadd2d82d3dd017138d09983fea1e93c4faed71802e434c3f6",
+      "afterSHA256": "9412d360d9101d1b599f3a1773c45b7f0b4efb001ea8b789232e4838fc6c2c4a"
+    },
+    {
+      "path": "experiments/virus/ui.ts",
+      "beforeSHA256": "42195a8356df7065e52171d29627d1c1762fe817c6959ebb1e2b19621df7e28f",
+      "afterSHA256": "cc4b9a24369602bb848fe2c3d4b3e24c385ac24b1080b69c4ba9feb24386c1c8"
+    },
+    {
+      "path": "models/agent-lab/README.md",
+      "beforeSHA256": "e578b5c0433ac3072981c5c2c59e907c2e89fc9f7ab2d019d9ce5a2de3eb070b",
+      "afterSHA256": "261ffb13f8812b4695e4a2e4b015af25183a18ab2915f9d1a7eea6fedde0617f"
+    },
+    {
+      "path": "models/agent-lab/model.test.ts",
+      "beforeSHA256": "95262603b4ec35fed300710bbcd1dd658519ae6679bdc0de25e3093d221c1dfa",
+      "afterSHA256": "db7d91a188a64bde9b58f2c760348727240db2826a6ac63495d7fcf3b8562647"
+    },
+    {
+      "path": "tests/selected-biology-a.test.ts",
+      "beforeSHA256": "a9c4bae628135bde7400113927a1faaa6e4b3d618f22a43e248e0e2452be6d82",
+      "afterSHA256": "baf6a1ada264710dbe62273717e40de23d388455e9963cf4c64e9123fdc92a8e"
+    },
+    {
+      "path": "tests/selected-biology-b.test.ts",
+      "beforeSHA256": "01befd3dcf3c15b8289977fe882618b1c665310ea645fb722d4c1766a5037760",
+      "afterSHA256": "e5593b645ff3c9354d61a89007b6fe4117c7d95338dbfe8c79f0816eeab0f337"
+    },
+    {
+      "path": "tests/selected-computing-spatial.test.ts",
+      "beforeSHA256": "c19527525133e3821f51cde0c054c3256819fd8a6bc08559a9210c03983f8cc2",
+      "afterSHA256": "3922f7fb678c43e9a77fb3b83afa1eafea1b23fcb5130e2ea675c8db6f9bd308"
+    },
+    {
+      "path": "tests/selected-disease-gene-a.test.ts",
+      "beforeSHA256": "a0d185703228e8fad2f9d6f4f4828c7b3bf445a6672782084040f1caf3e43681",
+      "afterSHA256": "fe255401f36a51437e98113112b7bbbd1d1294463a2a4e9ca3aae320373619f0"
+    },
+    {
+      "path": "tests/selected-disease-gene-b.test.ts",
+      "beforeSHA256": "2f4cb9e75708e4e326bdbb94b9b668de9f9f0d7cb41aa86cb8454a61035cb774",
+      "afterSHA256": "28d10d77ed31de283e159a6c61a4a0aaf77be367ba781537626ff74788c4d18e"
+    },
+    {
+      "path": "tests/selected-ecology-collective.test.ts",
+      "beforeSHA256": "447a9cf603d7812f98e5105712c252b3ea6247073e2401830af8d668a51ee10d",
+      "afterSHA256": "e7123557e25967d8791cb6667b92af9c7d6bae9f80f01f97270b5a309610528b"
+    },
+    {
+      "path": "tests/selected-evolution-last.test.ts",
+      "beforeSHA256": "c77c18846618978aa6650ef8bf29c56030aaae6973914b52c711032054c5a5df",
+      "afterSHA256": "b0c1bff46a7d272a1bda2b136e035551a41db873e5e2ca981c6105cd4e70179e"
+    },
+    {
+      "path": "tests/selected-materials-a.test.ts",
+      "beforeSHA256": "76c0712f69f967430bc047e9a4cdff9466ae25288921ea21c0df03f4445fe94a",
+      "afterSHA256": "9d5f00a88c7bd0ecd9096d7504d8f6cd4cc32de847b588df48f002789f90842f"
+    },
+    {
+      "path": "tests/selected-materials-b.test.ts",
+      "beforeSHA256": "3eaa2dbf3da6b4b4819c0f6e0d3028f2cce6a9d0538dd09a5bf08edcd924ae59",
+      "afterSHA256": "72c047823dff24f1cce164345fa4abeca31dd83ec28c9e52299ee1113e3599e0"
+    },
+    {
+      "path": "tests/selected-network-models.test.ts",
+      "beforeSHA256": "4a886e061b6a9de72a79d8a06ae506de59b1f16a8ff60e3f95273e6986be37a8",
+      "afterSHA256": "48d2e540d5a0dffbc36fa7923b7c15c39b1377ddc8165d86dd6e36861238e667"
+    },
+    {
+      "path": "tests/selected-probability-first.test.ts",
+      "beforeSHA256": "0b46a3b119daad4aa4784305b704f87a858f897e6cf8b81b162102ab9bef661a",
+      "afterSHA256": "2a6198078cc644b8d434b23551c44fdecbd14d2d93fc5ffc29d81d0679303171"
+    },
+    {
+      "path": "tests/selected-probability-last.test.ts",
+      "beforeSHA256": "7ea434cd66398a5e13afc67c5fef411148d2b6cacdb248d5ff5833eb9d026415",
+      "afterSHA256": "079b54e25ac09383e0215b1bab00986f01f664f6b88cc8ee36fda9572e4467f7"
+    },
+    {
+      "path": "tests/selected-social-first.test.ts",
+      "beforeSHA256": "1d8f83faf22dcb7b0fd1f736b9589884faf6d6f9db5648c7b35f3f6fa2156037",
+      "afterSHA256": "2adea6df683c98deae4f602ca1f86b464fba37e152081ffdc9bc34f2b34d9641"
+    },
+    {
+      "path": "tests/selected-transport-city.test.ts",
+      "beforeSHA256": "78e92112aa5f239ec2df51a1b9a9402dca8ad76c13b67ce79d7a1a9629432491",
+      "afterSHA256": "208dbc48983ce92d351c5850fd32328dc31a2480054f2b07deffe077ef618a0d"
+    },
+    {
+      "path": "tests/selected-transport-roads.test.ts",
+      "beforeSHA256": "88a5d6501db30e41db4ac25d13b569c97465adb7634c146707da248677df0023",
+      "afterSHA256": "50f4a819c8f1f894b047a7bd133425685ce4a018915d47a207afade83eaecbf9"
+    },
+    {
+      "path": "tests/selected-urban-feedback-models.test.ts",
+      "beforeSHA256": "3753af7e855a72500c686a32cdd65491502bfc59e19c9f79d06d1c464d311497",
+      "afterSHA256": "14d2a3da02cc16a766c19b76633ed83bfb95addfdca823d8175c5c511aa894aa"
+    },
+    {
+      "path": "tests/tijuana.test.ts",
+      "beforeSHA256": "ead11b69b3e0f9fc598b077f708f0edd9a40ec79c9166b3a4dc0a234146a5c3e",
+      "afterSHA256": "e58f4d1cfabe9b1b5af4d56ddb2007bf2384654cc88a3aea14e87d5123a70037"
+    },
+    {
+      "path": "ui/playback.ts",
+      "beforeSHA256": "f0f63e8977693f391b76d1f393aee9e81c2219129997e20a6ee510d13bfe0c34",
+      "afterSHA256": "a750e9c56b120606109e4371cb133f647c055d70536ab215970ccabd2b8daf3e"
+    }
+  ]
+}

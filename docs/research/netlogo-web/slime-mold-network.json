@@ -1,0 +1,125 @@
+{
+  "slug": "slime-mold-network",
+  "name": "Slime Mold Network",
+  "catalogPath": "Sample Models/Biology/Slime Mold Network",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Slime%20Mold%20Network.nlogox",
+  "deliveryBatch": "B10",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can distributed responses to nutrient signals produce a transport-like network? NetLogo Slime Mold Network approximates Physarum exploration through local movement and signal-dependent growth or withdrawal. Its Info describes biological tube flow as motivation, while the implemented approximation belongs to a reduced computational model. Particle-network research [1], signal-propagation studies [2], and adaptive-network experiments [3] frame what is illustrated. The simulation compresses cytoplasmic hydraulics, contractions, and material transport rather than resolving them directly. Network-looking patterns show how local rules can redistribute exploration toward resources. They do not establish that every visible strand is a physical tube, prove network optimality, or validate quantitative flow and growth predictions for an actual organism.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Slime%20Mold%20Network.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Slime%20Mold%20Network.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 93b05eeb698936369e66dd81fba1aaa23ccf21978a5af4b7d081e6dc81ae3e1b",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/slime-mold-network.nlogox",
+    "infoFile": "evidence/biology/slime-mold-network-info.txt",
+    "originalModelCitation": "* Heidacker, N. and Wilensky, U. (2021).  NetLogo Slime Mold Network model.  http://ccl.northwestern.edu/netlogo/models/SlimeMoldNetwork.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "jones",
+      "authors": [
+        "Jeff Jones"
+      ],
+      "title": "Characteristics of Pattern Formation and Evolution in Approximations of Physarum Transport Networks",
+      "year": 2010,
+      "venue": "Artificial Life",
+      "doi": "10.1162/artl.2010.16.2.16202",
+      "url": "https://doi.org/10.1162/artl.2010.16.2.16202",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Characteristics+of+pattern+formation+and+evolution+in+approximations+of+physarum+transport+networks+Jones+2010&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/jones-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1162%2Fartl.2010.16.2.16202%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/jones-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "16",
+      "issue": "2",
+      "pages": "127-153",
+      "relevance": "The particle-pattern approximation is explicitly cited in the model’s scientific lineage."
+    },
+    {
+      "id": "alim",
+      "authors": [
+        "Karen Alim",
+        "Natalie Andrew",
+        "Anne Pringle",
+        "Michael P. Brenner"
+      ],
+      "title": "Mechanism of signal propagation in Physarum polycephalum",
+      "year": 2017,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.1618114114",
+      "url": "https://doi.org/10.1073/pnas.1618114114",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Mechanism+of+signal+propagation+in+Physarum+polycephalum+Alim+Andrew+Pringle+Brenner+2017&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/alim-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.1618114114%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/alim-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "114",
+      "issue": "20",
+      "pages": "5136-5141",
+      "relevance": "Signal-propagation research provides biological context for adaptive transport-network behavior."
+    },
+    {
+      "id": "tero",
+      "authors": [
+        "Atsushi Tero",
+        "Seiji Takagi",
+        "Tetsu Saigusa",
+        "Kentaro Ito",
+        "Dan P. Bebber",
+        "Mark D. Fricker",
+        "Kenji Yumiki",
+        "Ryo Kobayashi",
+        "Toshiyuki Nakagaki"
+      ],
+      "title": "Rules for Biologically Inspired Adaptive Network Design",
+      "year": 2010,
+      "venue": "Science",
+      "doi": "10.1126/science.1177894",
+      "url": "https://doi.org/10.1126/science.1177894",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Rules+for+biologically+inspired+adaptive+network+design+Tero+2010&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/tero-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1177894%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/tero-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "327",
+      "issue": "5964",
+      "pages": "439-442",
+      "relevance": "Empirical biologically inspired network design offers a relevant comparison for efficiency and adaptation."
+    }
+  ],
+  "gaps": []
+}

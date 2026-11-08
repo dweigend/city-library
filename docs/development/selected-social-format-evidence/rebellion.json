@@ -1,0 +1,80 @@
+{
+  "slug": "rebellion",
+  "codeCommit": "c8700ec",
+  "marker": "selected-social-b02:rebellion:859b52417ee69fda8f0f193be666828f9023bef4fce6b84f1d07e09836a53fce",
+  "sourceSHA256": "859b52417ee69fda8f0f193be666828f9023bef4fce6b84f1d07e09836a53fce",
+  "sourceHashBasis": "Unchanged pinned source.nlogox; fresh target chunk marker checked. Native session was not re-run for a formatting-only change.",
+  "buildVersion": "1793962848757",
+  "loadedModelChunk": "http://localhost:3112/chunks/ui-9snhr7fq.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-9snhr7fq.js",
+      "sha256": "e2bac16e1e03353bd89ba2e2cd3d1e6351da09fa7cd3d0389129038c15b29cd8"
+    }
+  ],
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "setup": {
+    "tick": 0,
+    "parameters": {
+      "seed": 1,
+      "initialCopDensity": 4,
+      "initialAgentDensity": 70,
+      "vision": 7,
+      "governmentLegitimacy": 0.82,
+      "maxJailTerm": 30,
+      "movement": true,
+      "visualization": "2D"
+    },
+    "monitors": {
+      "Tick": "0",
+      "Police": "64",
+      "Citizens": "1120",
+      "Quiet": "1120",
+      "Active": "0",
+      "Jailed": "0",
+      "Watched citizen": "—"
+    },
+    "status": "Model initialized.",
+    "raster": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "sampledColors": 248
+      }
+    ]
+  },
+  "errors": [],
+  "step": {
+    "tick": 1,
+    "monitors": {
+      "Tick": "1",
+      "Police": "64",
+      "Citizens": "1120",
+      "Quiet": "1092",
+      "Active": "7",
+      "Jailed": "21",
+      "Watched citizen": "—"
+    },
+    "status": "Steps completed.",
+    "raster": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "sampledColors": 254
+      }
+    ],
+    "errors": []
+  },
+  "images": {
+    "setup": "rebellion-setup.png",
+    "step": "rebellion-step.png"
+  }
+}

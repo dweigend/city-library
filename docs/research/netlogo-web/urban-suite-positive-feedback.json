@@ -1,0 +1,101 @@
+{
+  "slug": "urban-suite-positive-feedback",
+  "name": "Urban Suite - Positive Feedback",
+  "catalogPath": "Curricular Models/Urban Suite/Urban Suite - Positive Feedback",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Positive%20Feedback.nlogox",
+  "deliveryBatch": "B04",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether increasing returns amplify small differences in initial spatial activity. In NetLogo's Urban Suite - Positive Feedback model, patch activity is raised to a tunable exponent, optionally after neighborhood averaging, and normalized relative to the current maximum. The selected literature connects this mechanism to reinforcement and unequal growth: the acknowledged source presents this particular nonlinear activity example [1]; reinforced growth supplies a classical skew-distribution mechanism [2]; cumulative advantage formalizes success-dependent expansion [3]. Normalization changes relative scale, and abstract activity has no fixed population unit; numerical dominance is not evidence for a specific urban economic process. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Positive%20Feedback.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Positive%20Feedback.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/urban-suite-positive-feedback.nlogox",
+    "sha256": "ed8e7de693797f0ebe625d742032dbf95614e0a31c88b41eed83db3a47ff42b6",
+    "citation": "For the model itself: * Wilensky, U. (2007). NetLogo Urban Suite - Positive Feedback model. http://ccl.northwestern.edu/netlogo/models/UrbanSuite-PositiveFeedback. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is based on pages 38-42 of the book \"Cities and Complexity\" by Michael Batty. Thanks to Seth Tisue for his work on this model. The Urban Suite models were developed as part of the Procedural Modeling of Cities project, under the sponsorship of NSF ITR award 0326542, Electronic Arts & Maxis. Please see the project web site (http://ccl.northwestern.edu/cities/ ) for more information.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/urban-suite-positive-feedback.nlogox"
+  },
+  "publications": [
+    {
+      "authors": [
+        "Michael Batty"
+      ],
+      "title": "Cities and Complexity: Understanding Cities with Cellular Automata, Agent-Based Models, and Fractals",
+      "year": 2005,
+      "venue": "The MIT Press",
+      "doi": null,
+      "url": "https://mitpress.mit.edu/9780262524797/cities-and-complexity/",
+      "verification": {
+        "consultedUrl": "https://mitpress.mit.edu/9780262524797/cities-and-complexity/",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public publisher catalog and description; full book not accessed",
+        "notes": "Publisher lists hardcover 9 September 2005 and paperback 24 August 2007. Citation uses the 2005 original edition. Concrete page links to NetLogo variants are verified in their Info, not inferred from the publisher description. No DOI displayed on consulted page. DOI follow-up 2026-11-05: checked the MIT Press original-hardcover catalog (ISBN 9780262025836) and title/author DOI search; no book DOI was identified. Retrieved DOI hits belong to reviews or to The New Science of Cities, a different work, and were not substituted. The Crossref ISBN-filter attempt returned HTTP 429, so registry absence is not asserted. Keep the verified MIT Press URL.",
+        "evidencePath": "evidence/social-urban/web-primary-books-papers.json",
+        "additionalEvidencePaths": [
+          "evidence/social-urban/doi-followup-batty-search.json",
+          "evidence/social-urban/doi-followup-mit-search.json",
+          "evidence/social-urban/batty-isbn-repeat-doi-followup.json"
+        ],
+        "evidenceFile": "evidence/social-urban/web-primary-books-papers.json"
+      },
+      "id": "batty",
+      "relevance": "the acknowledged source presents this particular nonlinear activity example",
+      "verified": true
+    },
+    {
+      "id": "simon",
+      "creatorRole": "author",
+      "authors": [
+        "HERBERT A. SIMON"
+      ],
+      "title": "ON A CLASS OF SKEW DISTRIBUTION FUNCTIONS",
+      "year": 1955,
+      "venue": "Biometrika",
+      "doi": "10.1093/biomet/42.3-4.425",
+      "url": "https://doi.org/10.1093/biomet/42.3-4.425",
+      "relevance": "reinforced growth supplies a classical skew-distribution mechanism",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1093%2Fbiomet%2F42.3-4.425",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/simon-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/simon-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "price",
+      "creatorRole": "author",
+      "authors": [
+        "Derek De Solla Price"
+      ],
+      "title": "A general theory of bibliometric and other cumulative advantage processes",
+      "year": 1976,
+      "venue": "Journal of the American Society for Information Science",
+      "doi": "10.1002/asi.4630270505",
+      "url": "https://doi.org/10.1002/asi.4630270505",
+      "relevance": "cumulative advantage formalizes success-dependent expansion",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1002%2Fasi.4630270505",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/price-crossref.json",
+        "evidenceSummary": "Abstract A Cumulative Advantage Distribution is proposed which models statistically the situation in which success breeds success. It differs from the Negative Binomial Distribution in that lack of success, being a non‐event, is not punished by increased chance of failure. It is shown that such a stochastic law is governed by the Beta Function, containing only one free parameter, and this is approximated by a skew or hyperbolic distribution of the type that is widespread in bibliometrics and diverse social science phenomena. In particular, this is shown to be an appropriate underlying probabilistic theory for the Bradford Law, the Lotka Law, the Pareto and Zipf Distributions, and for all the empirical results of citation frequency analysis. As side results one may derive also the obsolescence factor for literature use. The Beta Function is peculiarly elegant for these manifold purposes b",
+        "evidenceFile": "evidence/social-urban/price-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

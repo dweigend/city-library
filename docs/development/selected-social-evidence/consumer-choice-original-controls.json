@@ -1,0 +1,91 @@
+{
+  "setupClicked": true,
+  "setupTick": {
+    "success": true,
+    "value": 0
+  },
+  "nativeStepPresent": true,
+  "stepTick": {
+    "success": true,
+    "value": 1
+  },
+  "runTick": {
+    "success": true,
+    "value": 7
+  },
+  "pauseTick": {
+    "success": true,
+    "value": 7
+  },
+  "stableTick": {
+    "success": true,
+    "value": 7
+  },
+  "paused": true,
+  "setupResetClicked": true,
+  "resetTick": {
+    "success": true,
+    "value": 0
+  },
+  "actions": [],
+  "probe": {
+    "command": "set num-consumers 10 set avg-connections 0 set initial-%-orange-product 100 set quality-orange 0 set quality-blue 0 set exploration 1 setup go set quality-orange 1 go go",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 3
+      },
+      "count consumers with [choice = 0]": {
+        "success": true,
+        "value": 10
+      },
+      "[satisfaction] of consumers": {
+        "success": true,
+        "value": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    }
+  },
+  "errors": [],
+  "alertText": []
+}

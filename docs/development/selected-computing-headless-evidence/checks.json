@@ -1,0 +1,22 @@
+{
+  "command": "bun run check",
+  "exitCode": 0,
+  "tests": 346,
+  "assertions": 34043,
+  "publicExamples": 130,
+  "typeProjects": 4,
+  "build": "passed",
+  "packedConsumer": [
+    "Bun",
+    "Node ESM",
+    "ambient-free TypeScript"
+  ],
+  "newConsumerCoverage": [
+    "directed distances",
+    "allDistances",
+    "ordered reachable-pair summary",
+    "signed Bellman-Ford"
+  ],
+  "modelUIFilesMatchedAuthor": 20,
+  "browserBaselineStatus": "pending full author report integration"
+}

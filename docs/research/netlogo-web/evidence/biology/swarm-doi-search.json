@@ -1,0 +1,1354 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Minar+Burkhart+Langton+Askenazi+The+Swarm+Simulation+System+A+Toolkit+for+Building+Multi+Agent+Simulations+1996&rows=5",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 391924,
+      "items": [
+        {
+          "institution": [
+            {
+              "name": "Iowa State University"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2022-04-02T07:13:48Z",
+            "timestamp": 1648883628913
+          },
+          "reference-count": 0,
+          "publisher": "Iowa State University",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.31274/rtd-20201107-108",
+          "type": "dissertation",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                11,
+                14
+              ]
+            ],
+            "date-time": "2020-11-14T16:13:33Z",
+            "timestamp": 1605370413000
+          },
+          "approved": {
+            "date-parts": [
+              [
+                2005
+              ]
+            ]
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "A Java Reinforcement Learning Module for the Recursive Porous Agent Simulation Toolkit: facilitating study and experimentation with reinforcement learning in social science multi-agent simulations"
+          ],
+          "prefix": "10.31274",
+          "author": [
+            {
+              "given": "Charles",
+              "family": "Gieseler",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "13687",
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                11,
+                14
+              ]
+            ],
+            "date-time": "2020-11-14T16:13:48Z",
+            "timestamp": 1605370428000
+          },
+          "score": 37.33037,
+          "degree": [
+            "Master of Science"
+          ],
+          "resource": {
+            "primary": {
+              "URL": "https://lib.dr.iastate.edu/rtd/20551"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                null
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.31274/rtd-20201107-108"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                11
+              ]
+            ],
+            "date-time": "2024-05-11T11:53:20Z",
+            "timestamp": 1715428400145
+          },
+          "edition-number": "0",
+          "reference-count": 0,
+          "publisher": "Chapman and Hall/CRC",
+          "isbn-type": [
+            {
+              "value": "9780429100468",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                24
+              ]
+            ]
+          },
+          "DOI": "10.1201/b15024-7",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                7,
+                9
+              ]
+            ],
+            "date-time": "2020-07-09T17:31:15Z",
+            "timestamp": 1594315875000
+          },
+          "page": "65-92",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Multi-Agent Simulation Based on Swarm"
+          ],
+          "prefix": "10.1201",
+          "member": "301",
+          "container-title": [
+            "Agent-Based Modeling and Simulation with Swarm"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2021-04-10T23:16:48Z",
+            "timestamp": 1618096608000
+          },
+          "score": 37.15015,
+          "resource": {
+            "primary": {
+              "URL": "https://www.taylorfrancis.com/books/9781466562400/chapters/10.1201/b15024-7"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                24
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780429100468"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1201/b15024-7",
+          "published": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                24
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                6
+              ]
+            ],
+            "date-time": "2024-09-06T06:50:40Z",
+            "timestamp": 1725605440193
+          },
+          "publisher-location": "Boston, MA",
+          "reference-count": 20,
+          "publisher": "Springer US",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9781461370994"
+            },
+            {
+              "type": "electronic",
+              "value": "9781461546412"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2000
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-1-4615-4641-2_7",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                9,
+                7
+              ]
+            ],
+            "date-time": "2011-09-07T22:32:31Z",
+            "timestamp": 1315434751000
+          },
+          "page": "181-202",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Numerical Modeling, Noise Traders, and the Swarm Simulation System"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Timothy E.",
+              "family": "Jares",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "7_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "529",
+              "DOI": "10.1111/j.1540-6261.1986.tb04513.x",
+              "volume": "41",
+              "author": "F Black",
+              "year": "1986",
+              "unstructured": "Black, Fischer, 1986, Noise, Journal of Finance 41, 529\u2013543.",
+              "journal-title": "Journalof Finance"
+            },
+            {
+              "key": "7_CR2",
+              "volume-title": "Advances in Behavioral Finance",
+              "author": "JB DeLong",
+              "year": "1993",
+              "unstructured": "DeLong, J. Bradford, Andrei Shleifer, Lawrence H. Summers, and Robert J. Waldmann, 1993, Noise Trader Risk in Financial Markets, no. 2, in Richard Thaler, ed.: Advances in Behavioral Finance (Russell Sage Foundation, New York, NY)"
+            },
+            {
+              "key": "7_CR3",
+              "first-page": "13",
+              "volume": "64",
+              "author": "JB DeLong",
+              "year": "1991",
+              "unstructured": "DeLong, J. Bradford, Andrei Shleifer, Lawrence H. Summers, and Robert J. Waldmann, 1991, The Survival of Noise Traders in Financial Markets, Journal of Business 64:13.",
+              "journal-title": "Journalof Business"
+            },
+            {
+              "key": "7_CR4",
+              "series-title": "Journal of Finance",
+              "volume-title": "Positive Feedback Strategies and Destabilizing Rational Speculation",
+              "author": "JB DeLong",
+              "year": "1990",
+              "unstructured": "DeLong, J. Bradford, 1990, Positive Feedback Strategies and Destabilizing Rational Speculation, Journal of Finance 45."
+            },
+            {
+              "issue": "3",
+              "key": "7_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "681",
+              "DOI": "10.1111/j.1540-6261.1989.tb04385.x",
+              "volume": "44",
+              "author": "JB DeLong",
+              "year": "1989",
+              "unstructured": "DeLong, J. Bradford, Andrei Shleifer, Lawrence H. Summers, and Robert J. Waldmann, 1989, The Size and Incidence of the Losses from Noise Trading, Journal of Finance 44:3, 681\u2013696.",
+              "journal-title": "Journal of Finance"
+            },
+            {
+              "key": "7_CR6",
+              "series-title": "Working Paper Series",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.3386/w2395",
+              "volume-title": "The Economic Consequences of Noise Traders",
+              "author": "JB DeLong",
+              "year": "1987",
+              "unstructured": "DeLong, J. Bradford, 1987, The Economic Consequences of Noise Traders, Working Paper Series No. 218, Center for Research in Security Prices, Graduate School of Business, University of Chicago."
+            },
+            {
+              "key": "7_CR7",
+              "series-title": "NBER Working Paper",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.3386/w4858",
+              "volume-title": "Noise Trading, Delegated Portfolio Management, and Economic Welfare",
+              "author": "J Dow",
+              "year": "1994",
+              "unstructured": "Dow, James and Gary Gorton, 1994, Noise Trading, Delegated Portfolio Management, and Economic Welfare, NBER Working Paper No. 4858, National Bureau of Economic Research."
+            },
+            {
+              "key": "7_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "34",
+              "DOI": "10.1086/294743",
+              "volume": "38",
+              "author": "EF Fama",
+              "year": "1965",
+              "unstructured": "Fama, E. F., 1965, The behavior of stock market prices, Journal of Business 38, 34\u2013105.",
+              "journal-title": "Journal of Business"
+            },
+            {
+              "key": "7_CR9",
+              "volume-title": "Essays in Positive Economics",
+              "author": "M Friedman",
+              "year": "1953",
+              "unstructured": "Friedman, Milton, 1953, The case for flexible exchange rates, in Milton Friedman (Ed.) Essays in Positive Economics, University Press of Chicago Press, Chicago, IL."
+            },
+            {
+              "issue": "4",
+              "key": "7_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "581",
+              "DOI": "10.1086/260700",
+              "volume": "86",
+              "author": "S Figlewski",
+              "year": "1978",
+              "unstructured": "Figlewski, Stephen, 1978, Market \u201cEfficiency\u201d in a Market with Hetero-geneous Information, Journal of Political Economy 86:4, 581\u2013597.",
+              "journal-title": "Journal of Political Economy"
+            },
+            {
+              "key": "7_CR11",
+              "volume-title": "The Survival and Consequences of Noise Traders in Financial Markets: A Numerical Modeling Approach",
+              "author": "TE Jares",
+              "year": "1998",
+              "unstructured": "Jares, Timothy E., 1998, The Survival and Consequences of Noise Traders in Financial Markets: A Numerical Modeling Approach, Ph.D. Thesis, University of Nebraska-Lincoln."
+            },
+            {
+              "key": "7_CR12",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1017/CBO9780511809477",
+              "volume-title": "Judgment Under Uncertainty: Heuristics and Biases",
+              "author": "D Kahneman",
+              "year": "1982",
+              "unstructured": "Kahneman, Daniel, Paul Slovic, and Amos Tversky, 1982, Judgment Under Uncertainty: Heuristics and Biases, Cambridge: Cambridge University Press."
+            },
+            {
+              "key": "7_CR13",
+              "volume-title": "University of Michigan Press",
+              "author": "J Kmenta",
+              "year": "1986",
+              "unstructured": "Kmenta, Jan, 1986, Elements of Econometrics, University of Michigan Press, Ann Arbor, Michigan."
+            },
+            {
+              "issue": "3",
+              "key": "7_CR14",
+              "first-page": "483",
+              "volume": "76",
+              "author": "TA Marsh",
+              "year": "1986",
+              "unstructured": "Marsh, Terry A. and Robert C. Merton, 1986, Dividend Variability and Variance Bounds Tests for the Rationality of Stock Market Prices, American Economic Review 76:3, 483\u2013503.",
+              "journal-title": "American Economic Review"
+            },
+            {
+              "key": "7_CR15",
+              "volume-title": "Many-Agent Simulation and Artificial Life",
+              "author": "C Rieck",
+              "year": "1994",
+              "unstructured": "Rieck, Christian, 1994, Evolutionary Simulation of Asset Trading Strategies, in Many-Agent Simulation and Artificial Life, E. Hillebrand and J. Stender (eds.), (IOS Press)"
+            },
+            {
+              "issue": "2",
+              "key": "7_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "19",
+              "DOI": "10.1257/jep.4.2.19",
+              "volume": "4",
+              "author": "A Schleifer",
+              "year": "1990",
+              "unstructured": "Schleifer, Andrei, and Lawrence Summers, 1990, The Noise Trader Approach to Finance, Journal of Economic Perspectives 4:2, 19\u201333.",
+              "journal-title": "Journal of Economic Perspectives"
+            },
+            {
+              "key": "7_CR17",
+              "volume-title": "Advances in Behavioral Finance",
+              "author": "LH Summers",
+              "year": "1993",
+              "unstructured": "Summers, L. H., 1993, Does the Stock Market Rationally Reflect Fundamental Values?, no. 6, in Richard Thaler, ed.: Advances in Behavioral Finance (Russell Sage Foundation, New York, NY)"
+            },
+            {
+              "key": "7_CR18",
+              "volume-title": "Advances in Behavioral Finance",
+              "author": "R Thaler",
+              "year": "1993",
+              "unstructured": "Thaler, Richard, 1993, in Richard Thaler, ed.: Advances in Behavioral Finance (Russell Sage Foundation, New York, NY)"
+            },
+            {
+              "key": "7_CR19",
+              "volume-title": "Quasi rational economics",
+              "author": "R Thaler",
+              "year": "1991",
+              "unstructured": "Thaler, Richard, 1991, Quasi rational economics (Russell Sage Foundation; New York, NY)"
+            },
+            {
+              "issue": "1",
+              "key": "7_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "83",
+              "DOI": "10.1111/j.1540-6261.1988.tb02590.x",
+              "volume": "53",
+              "author": "B Trueman",
+              "year": "1988",
+              "unstructured": "Trueman, Brett, 1988, A Theory of Noise Trading in Securities Markets, Journal of Finance 53:1, 83\u201395.",
+              "journal-title": "Journal of Finance"
+            }
+          ],
+          "container-title": [
+            "Advances in Computational Economics",
+            "Economic Simulations in Swarm: Agent-Based Modelling and Object Oriented Programming"
+          ],
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4615-4641-2_7.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                5,
+                1
+              ]
+            ],
+            "date-time": "2021-05-01T11:20:20Z",
+            "timestamp": 1619868020000
+          },
+          "score": 32.405197,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-1-4615-4641-2_7"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2000
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781461370994",
+            "9781461546412"
+          ],
+          "references-count": 20,
+          "URL": "https://doi.org/10.1007/978-1-4615-4641-2_7",
+          "ISSN": [
+            "0929-130X"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0929-130X"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2000
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                10
+              ]
+            ],
+            "date-time": "2026-06-10T17:00:53Z",
+            "timestamp": 1781110853905,
+            "version": "3.54.1"
+          },
+          "reference-count": 0,
+          "publisher": "IGI Global",
+          "isbn-type": [
+            {
+              "value": "9781605667720",
+              "type": "print"
+            },
+            {
+              "value": "9781605667737",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2010
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Multi-Agent System (MAS) is a suitable programming paradigm for simulating and modeling health care systems and applications, where resources, data, control and services are widely distributed. We have developed a multi-agent software prototype to simulate the activities and roles inside a health care system. The prototype is developed using a framework called Role-based Agent Development Environment (RADE). In this chapter, the authors present an integrated approach for modeling, designing and implementing a multi-agent health care simulation system using RADE. They describe the definition of role classes and agent classes, as well as the automatic agent generation process. The authors illustrate the coordination problem and present a rule-based coordination approach. In the end, they present a runtime scenario of this health care simulation system, which demonstrates that dynamic task allocation can be achieved through the creation of role instances and the mapping from role instances to agents. This scenario also explains how agents coordinate their activities given their local constraints and interdependence among distributed tasks.</jats:p>",
+          "DOI": "10.4018/978-1-60566-772-0.ch006",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                5,
+                21
+              ]
+            ],
+            "date-time": "2010-05-21T08:55:07Z",
+            "timestamp": 1274432107000
+          },
+          "page": "90-111",
+          "source": "Crossref",
+          "is-referenced-by-count": 4,
+          "title": [
+            "Building a Health Care Multi-Agent Simulation Sysmte with Role-Based Modeling"
+          ],
+          "prefix": "10.4018",
+          "author": [
+            {
+              "given": "Xiaoquin",
+              "family": "Zhang",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "University of Massachusetts Dartmouth, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Haiping",
+              "family": "Xu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of Massachusetts Dartmouth, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Bhavesh",
+              "family": "Shrestha",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of Massachusetts Dartmouth, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "2432",
+          "container-title": [
+            "Multi-Agent Systems for Healthcare Simulation and Modeling"
+          ],
+          "link": [
+            {
+              "URL": "https://www.igi-global.com/viewtitle.aspx?TitleId=37012",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                1,
+                14
+              ]
+            ],
+            "date-time": "2019-01-14T13:52:30Z",
+            "timestamp": 1547473950000
+          },
+          "score": 31.843613,
+          "resource": {
+            "primary": {
+              "URL": "http://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/978-1-60566-772-0.ch006"
+            }
+          },
+          "subtitle": [
+            ""
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2010
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781605667720",
+            "9781605667737"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.4018/978-1-60566-772-0.ch006",
+          "published": {
+            "date-parts": [
+              [
+                2010
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                18
+              ]
+            ],
+            "date-time": "2026-06-18T12:43:02Z",
+            "timestamp": 1781786582078,
+            "version": "3.54.5"
+          },
+          "reference-count": 32,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2026-01-01T00:00:00Z",
+                "timestamp": 1767225600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Build. Simul."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1007/s12273-025-1372-1",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                14
+              ]
+            ],
+            "date-time": "2026-02-14T05:32:05Z",
+            "timestamp": 1771047125000
+          },
+          "page": "95-115",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Multi-agent game operation strategy for energy system of building complex considering source-load uncertainty and integrated demand response"
+          ],
+          "prefix": "10.1007",
+          "volume": "19",
+          "author": [
+            {
+              "given": "Mingyuan",
+              "family": "Wang",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ming",
+              "family": "Wang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ruiqi",
+              "family": "Wang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Dongrun",
+              "family": "Yang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yixuan",
+              "family": "Yu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "He",
+              "family": "Gao",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                14
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "1372_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "111618",
+              "DOI": "10.1016/j.jobe.2024.111618",
+              "volume": "99",
+              "author": "C Chen",
+              "year": "2025",
+              "unstructured": "Chen C, Gao Z, Zhou X, et al. (2025a). Dynamic energy consumption quota for public buildings based on multi-level classification and data correction. Journal of Building Engineering, 99: 111618.",
+              "journal-title": "Journal of Building Engineering"
+            },
+            {
+              "key": "1372_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "193",
+              "DOI": "10.1016/j.cherd.2025.01.023",
+              "volume": "215",
+              "author": "H Chen",
+              "year": "2025",
+              "unstructured": "Chen H, Zheng S, Zhan L, et al. (2025b). Predicting energy consumption in desulfurization wastewater bypass evaporation systems using hybrid artificial neural networks. Chemical Engineering Research and Design, 215: 193\u2013199.",
+              "journal-title": "Chemical Engineering Research and Design"
+            },
+            {
+              "key": "1372_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "115776",
+              "DOI": "10.1016/j.rser.2025.115776",
+              "volume": "217",
+              "author": "L Cheng",
+              "year": "2025",
+              "unstructured": "Cheng L, Yu F, Huang P, et al. (2025). Game-theoretic evolution in renewable energy systems: Advancing sustainable energy management and decision optimization in decentralized power markets. Renewable and Sustainable Energy Reviews, 217: 115776.",
+              "journal-title": "Renewable and Sustainable Energy Reviews"
+            },
+            {
+              "key": "1372_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "133689",
+              "DOI": "10.1016/j.energy.2024.133689",
+              "volume": "313",
+              "author": "J Duan",
+              "year": "2024",
+              "unstructured": "Duan J, Tian Q, Liu F, et al. (2024). Optimal scheduling strategy with integrated demand response based on stepped incentive mechanism for integrated electricity-gas energy system. Energy, 313: 133689.",
+              "journal-title": "Energy"
+            },
+            {
+              "key": "1372_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "2478",
+              "DOI": "10.1016/j.proeng.2017.09.976",
+              "volume": "205",
+              "author": "L Hou",
+              "year": "2017",
+              "unstructured": "Hou L, Liu Y, Yang L, et al. (2017). The impacts of energy efficiency design parameters on office buildings energy consumption in different climate zones in China. Procedia Engineering, 205: 2478\u20132484.",
+              "journal-title": "Procedia Engineering"
+            },
+            {
+              "key": "1372_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "110138",
+              "DOI": "10.1016/j.compeleceng.2025.110138",
+              "volume": "123",
+              "author": "S Iranpour Mobarakeh",
+              "year": "2025",
+              "unstructured": "Iranpour Mobarakeh S, Sadeghi R, Saghafi H, et al. (2025). Hierarchical integrated energy system management considering energy market, demand response and uncertainties: A robust optimization approach. Computers and Electrical Engineering, 123: 110138.",
+              "journal-title": "Computers and Electrical Engineering"
+            },
+            {
+              "key": "1372_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "126057",
+              "DOI": "10.1016/j.apenergy.2025.126057",
+              "volume": "393",
+              "author": "K Jiang",
+              "year": "2025",
+              "unstructured": "Jiang K, Tian Z, Wen T, et al. (2025). Collaborative optimization strategy of hydrogen fuel cell train energy and thermal management system based on deep reinforcement learning. Applied Energy, 393: 126057.",
+              "journal-title": "Applied Energy"
+            },
+            {
+              "key": "1372_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "106264",
+              "DOI": "10.1016/j.csite.2025.106264",
+              "volume": "71",
+              "author": "B Lamrani",
+              "year": "2025",
+              "unstructured": "Lamrani B, Alqahtani RT, Ajbar A, et al. (2025). Dynamic performance analysis of sensible and latent cold thermal energy storage systems for building cooling networks. Case Studies in Thermal Engineering, 71: 106264.",
+              "journal-title": "Case Studies in Thermal Engineering"
+            },
+            {
+              "key": "1372_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "116231",
+              "DOI": "10.1016/j.desal.2022.116231",
+              "volume": "548",
+              "author": "DU Lawal",
+              "year": "2023",
+              "unstructured": "Lawal DU, Antar MA, Ismaila KG, et al. (2023). Hybrid multi-stage flash (MSF) and membrane distillation (MD) desalination system for energy saving and brine minimization. Desalination, 548: 116231.",
+              "journal-title": "Desalination"
+            },
+            {
+              "key": "1372_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "125812",
+              "DOI": "10.1016/j.apenergy.2025.125812",
+              "volume": "390",
+              "author": "F L\u00e9d\u00e9e",
+              "year": "2025",
+              "unstructured": "L\u00e9d\u00e9e F, Crawford C, Evins R (2025). Improved surrogate modeling for multi-energy system design: Model architecture, sampling and scaling choices. Applied Energy, 390: 125812.",
+              "journal-title": "Applied Energy"
+            },
+            {
+              "key": "1372_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "109518",
+              "DOI": "10.1016/j.ijepes.2023.109518",
+              "volume": "155",
+              "author": "P Li",
+              "year": "2024",
+              "unstructured": "Li P, Jiang L, Wang J, et al. (2024a). A model-free optimal operation strategy of diversified demands-park integrated energy system considering energy cascade utilization. International Journal of Electrical Power & Energy Systems, 155: 109518.",
+              "journal-title": "International Journal of Electrical Power & Energy Systems"
+            },
+            {
+              "key": "1372_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "132358",
+              "DOI": "10.1016/j.energy.2024.132358",
+              "volume": "305",
+              "author": "S Li",
+              "year": "2024",
+              "unstructured": "Li S, Chen H, Gao Y, et al. (2024b). A novel waste-to-energy system based on sludge hydrothermal treatment and medical waste plasma gasification and integrated with the waste heat recovery of a cement plant. Energy, 305: 132358.",
+              "journal-title": "Energy"
+            },
+            {
+              "key": "1372_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "115660",
+              "DOI": "10.1016/j.enbuild.2025.115660",
+              "volume": "337",
+              "author": "Q Lin",
+              "year": "2025",
+              "unstructured": "Lin Q, Lu S, Yue L, et al. (2025). Research on low-carbon district heating system planning approach based on thermal energy grade and integrated demand response. Energy and Buildings, 337: 115660.",
+              "journal-title": "Energy and Buildings"
+            },
+            {
+              "key": "1372_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "e27615",
+              "DOI": "10.1016/j.heliyon.2024.e27615",
+              "volume": "10",
+              "author": "X Liu",
+              "year": "2024",
+              "unstructured": "Liu X (2024). Distributionally robust optimization scheduling of port energy system considering hydrogen production and ammonia synthesis. Heliyon, 10: e27615.",
+              "journal-title": "Heliyon"
+            },
+            {
+              "key": "1372_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "135421",
+              "DOI": "10.1016/j.energy.2025.135421",
+              "volume": "321",
+              "author": "X Liu",
+              "year": "2025",
+              "unstructured": "Liu X, Lu H, Zhao W, et al. (2025). Research on optimal scheduling and source-network-load correlation matching of integrated energy system considering uncertainty. Energy, 321: 135421.",
+              "journal-title": "Energy"
+            },
+            {
+              "key": "1372_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "119508",
+              "DOI": "10.1016/j.applthermaleng.2022.119508",
+              "volume": "219",
+              "author": "Q Lu",
+              "year": "2023",
+              "unstructured": "Lu Q, Guo Q, Zeng W (2023). Optimal dispatch of community integrated energy system based on Stackelberg game and integrated demand response under carbon trading mechanism. Applied Thermal Engineering, 219: 119508.",
+              "journal-title": "Applied Thermal Engineering"
+            },
+            {
+              "key": "1372_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "135588",
+              "DOI": "10.1016/j.energy.2025.135588",
+              "volume": "322",
+              "author": "K Ma",
+              "year": "2025",
+              "unstructured": "Ma K, Feng Y, Yang J, et al. (2025). Two-stage distributionally robust optimization for port integrated energy system with berth allocation under uncertainties. Energy, 322: 135588.",
+              "journal-title": "Energy"
+            },
+            {
+              "key": "1372_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "104486",
+              "DOI": "10.1016/j.est.2022.104486",
+              "volume": "51",
+              "author": "K \u00d6kten",
+              "year": "2022",
+              "unstructured": "\u00d6kten K, Kur\u015fun B (2022). Thermo-economic assessment of a thermally integrated pumped thermal energy storage (TI-PTES) system combined with an absorption refrigeration cycle driven by low-grade heat source. Journal of Energy Storage, 51: 104486.",
+              "journal-title": "Journal of Energy Storage"
+            },
+            {
+              "key": "1372_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "136553",
+              "DOI": "10.1016/j.energy.2025.136553",
+              "volume": "328",
+              "author": "D Pranckevi\u010dius",
+              "year": "2025",
+              "unstructured": "Pranckevi\u010dius D, Mar\u010diukaitis M, Kairaitis G, et al. (2025). Investigation of hybrid renewable energy system application in the industrial sector. Energy, 328: 136553.",
+              "journal-title": "Energy"
+            },
+            {
+              "key": "1372_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "117269",
+              "DOI": "10.1016/j.apenergy.2021.117269",
+              "volume": "298",
+              "author": "S Qian",
+              "year": "2021",
+              "unstructured": "Qian S, Wang Y, Xu S, et al. (2021). Cascade utilization of low-grade thermal energy by coupled elastocaloric power and cooling cycle. Applied Energy, 298: 117269.",
+              "journal-title": "Applied Energy"
+            },
+            {
+              "key": "1372_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "101658",
+              "DOI": "10.1016/j.segan.2025.101658",
+              "volume": "42",
+              "author": "S Shi",
+              "year": "2025",
+              "unstructured": "Shi S, Gao Q, Ji Y, et al. (2025). A supply\u2013demand optimization strategy for integrated energy system considering integrated demand response and electricity\u2013heat\u2013hydrogen hybrid energy storage. Sustainable Energy, Grids and Networks, 42: 101658.",
+              "journal-title": "Sustainable Energy, Grids and Networks"
+            },
+            {
+              "key": "1372_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "109952",
+              "DOI": "10.1016/j.buildenv.2022.109952",
+              "volume": "229",
+              "author": "J Wang",
+              "year": "2023",
+              "unstructured": "Wang J, Jiang Y, Tang CY, et al. (2023). Analysis of predicted mean vote-based model predictive control for residential HVAC systems. Building and Environment, 229: 109952.",
+              "journal-title": "Building and Environment"
+            },
+            {
+              "key": "1372_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "114423",
+              "DOI": "10.1016/j.enbuild.2024.114423",
+              "volume": "318",
+              "author": "M Wang",
+              "year": "2024",
+              "unstructured": "Wang M, Wang M, Wang R, et al. (2024). Optimization scheduling for low-carbon operation of building integrated energy systems considering source-load uncertainty and user comfort. Energy and Buildings, 318: 114423.",
+              "journal-title": "Energy and Buildings"
+            },
+            {
+              "key": "1372_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "305",
+              "DOI": "10.1016/j.ijhydene.2025.01.435",
+              "volume": "106",
+              "author": "M Wei",
+              "year": "2025",
+              "unstructured": "Wei M, Chen J, Zhang W, et al. (2025). Two-layer multi-timescale rolling optimization of electric-hydrogen hybrid energy storage systems considering renewable energy uncertainties. International Journal of Hydrogen Energy, 106: 305\u2013317.",
+              "journal-title": "International Journal of Hydrogen Energy"
+            },
+            {
+              "key": "1372_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "109755",
+              "DOI": "10.1016/j.ijepes.2023.109755",
+              "volume": "157",
+              "author": "L Yang",
+              "year": "2024",
+              "unstructured": "Yang L, Li H, Zheng D, et al. (2024). Flexible market trading strategy for business integrated energy users considering energy cascade utilization. International Journal of Electrical Power & Energy Systems, 157: 109755.",
+              "journal-title": "International Journal of Electrical Power & Energy Systems"
+            },
+            {
+              "key": "1372_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "175",
+              "DOI": "10.1016/j.gloei.2025.02.002",
+              "volume": "8",
+              "author": "Z Yang",
+              "year": "2025",
+              "unstructured": "Yang Z, Cheng L, Min H, et al. (2025). Distributionally robust optimization-based scheduling for a hydrogen-coupled integrated energy system considering carbon trading and demand response. Global Energy Interconnection, 8: 175\u2013187.",
+              "journal-title": "Global Energy Interconnection"
+            },
+            {
+              "key": "1372_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "3684",
+              "DOI": "10.1016/j.egyr.2024.03.034",
+              "volume": "11",
+              "author": "Z Zhan",
+              "year": "2024",
+              "unstructured": "Zhan Z, Xu J, Zhang T, et al. (2024). Optimal scheduling of integrated wind- photovoltaic-hydrogen energy system considering hydrogen application and waste heat recovery. Energy Reports, 11: 3684\u20133694.",
+              "journal-title": "Energy Reports"
+            },
+            {
+              "key": "1372_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "105088",
+              "DOI": "10.1016/j.scs.2023.105088",
+              "volume": "101",
+              "author": "M Zhang",
+              "year": "2024",
+              "unstructured": "Zhang M, Yang J, Yu P, et al. (2024a). Dual-Stackelberg game-based trading in community integrated energy system considering uncertain demand response and carbon trading. Sustainable Cities and Society, 101: 105088.",
+              "journal-title": "Sustainable Cities and Society"
+            },
+            {
+              "key": "1372_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "115038",
+              "DOI": "10.1016/j.enbuild.2024.115038",
+              "volume": "325",
+              "author": "X Zhang",
+              "year": "2024",
+              "unstructured": "Zhang X, Rhee KN, Jung GJ, et al. (2024b). Exploring energy efficiency and savings potential of a horizontal domestic drain water heat recovery system in high-rise apartment buildings. Energy and Buildings, 325: 115038.",
+              "journal-title": "Energy and Buildings"
+            },
+            {
+              "key": "1372_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "118073",
+              "DOI": "10.1016/j.enconman.2024.118073",
+              "volume": "301",
+              "author": "G Zhou",
+              "year": "2024",
+              "unstructured": "Zhou G, Bai M, Li H, et al. (2024). Multi-objective station-network synergy planning for regional integrated energy system considering energy cascade utilization and uncertainty. Energy Conversion and Management, 301: 118073.",
+              "journal-title": "Energy Conversion and Management"
+            },
+            {
+              "key": "1372_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "117589",
+              "DOI": "10.1016/j.energy.2020.117589",
+              "volume": "201",
+              "author": "X Zhu",
+              "year": "2020",
+              "unstructured": "Zhu X, Yang J, Pan X, et al. (2020). Regional integrated energy system energy management in an industrial park considering energy stepped utilization. Energy, 201: 117589.",
+              "journal-title": "Energy"
+            },
+            {
+              "key": "1372_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "135484",
+              "DOI": "10.1016/j.energy.2025.135484",
+              "volume": "321",
+              "author": "Z Zhu",
+              "year": "2025",
+              "unstructured": "Zhu Z, Qu Z, Gong J, et al. (2025). Robust optimal model for rural integrated energy system incorporating biomass waste utilization and power-to-gas coupling unit considering deep learning-based air conditioning load personalized demand response. Energy, 321: 135484.",
+              "journal-title": "Energy"
+            }
+          ],
+          "container-title": [
+            "Building Simulation"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/s12273-025-1372-1.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://link.springer.com/article/10.1007/s12273-025-1372-1",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/s12273-025-1372-1.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                17
+              ]
+            ],
+            "date-time": "2026-04-17T04:26:27Z",
+            "timestamp": 1776399987000
+          },
+          "score": 31.21018,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/s12273-025-1372-1"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2026,
+                1
+              ]
+            ]
+          },
+          "references-count": 32,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2026,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "1372"
+          ],
+          "URL": "https://doi.org/10.1007/s12273-025-1372-1",
+          "ISSN": [
+            "1996-3599",
+            "1996-8744"
+          ],
+          "issn-type": [
+            {
+              "value": "1996-3599",
+              "type": "print"
+            },
+            {
+              "value": "1996-8744",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                1
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "23 July 2025",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "22 September 2025",
+              "order": 2,
+              "name": "revised",
+              "label": "Revised",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "8 October 2025",
+              "order": 3,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "14 February 2026",
+              "order": 4,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors have no competing interests to declare that are relevant to the content of this article.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Declaration of competing interest"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 5,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

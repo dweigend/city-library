@@ -1,0 +1,28 @@
+bun test v1.4.2 (744846f84)
+
+tests/selected-economics-markets.test.ts:
+(pass) selected B03 market and foraging source mechanisms > Fruit traits derive from all four genome partitions and extinction stops before another tick [13.58ms]
+(pass) selected B03 market and foraging source mechanisms > Fruit world wraps and observations do not draw or expose mutable genomes [557.34ms]
+(pass) selected B03 market and foraging source mechanisms > Orderbook equal quotes never cross; strict quotes trade at the lower ask and conserve assets [0.99ms]
+(pass) selected B03 market and foraging source mechanisms > Orderbook utility is deliberately pre-match and source no-trade failure does not tick [165.40ms]
+(pass) selected B03 market and foraging source mechanisms > Bidding odd starting-money uses the native ceil integer bound [2.23ms]
+(pass) selected B03 market and foraging source mechanisms > Bidding first pairing changes quotes without selling; cent rounding cannot freeze a quote [4.93ms]
+(pass) selected B03 market and foraging source mechanisms > Bidding conserves goods and demand under random/concentrated mechanisms [382.83ms]
+(pass) selected B03 market and foraging source mechanisms > Hotelling consumers partition shares and pricing-only leaves all coordinates fixed [349.17ms]
+(pass) selected B03 market and foraging source mechanisms > Braess strict spawn timing, road-type semantics and all three policies execute [396.79ms]
+(pass) selected B03 market and foraging source mechanisms > Braess closing middle road waits for its existing commuters, then prevents further middle routes [153.39ms]
+
+tests/selected-economics-games-banking.test.ts:
+(pass) selected economics source-specific banks and games > Cash Flow preserves signed negative-availability loans, rather than silently clamping [1.20ms]
+(pass) selected economics source-specific banks and games > partial repayment withdraws then repays the wallet, and report reads do not mutate state [0.54ms]
+(pass) selected economics source-specific banks and games > Bank Reserves phases and sticky colors retain source distinctions [1.40ms]
+(pass) selected economics source-specific banks and games > Cash Flow starts with 0/10 wallets, Bank Reserves with 1..10 and empty initial class counters [27.81ms]
+(pass) selected economics source-specific banks and games > one-shot outcome action always reinitializes choices and uses no native clock [0.26ms]
+(pass) selected economics source-specific banks and games > iterated payoffs and strategy memories preserve delayed retaliation [0.36ms]
+(pass) selected economics source-specific banks and games > El Farol uses unclamped linear predictions and bounded last-tie-wins retrospective selection [0.22ms]
+(pass) selected economics source-specific banks and games > El Farol canonical occupancy, attendance history, immutable strategies and deterministic independent instances [206.70ms]
+
+ 18 pass
+ 0 fail
+ 125 expect() calls
+Ran 18 tests across 2 files. [2.27s]

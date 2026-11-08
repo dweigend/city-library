@@ -1,0 +1,102 @@
+{
+  "slug": "heatbugs",
+  "name": "Heatbugs",
+  "catalogPath": "Sample Models/Biology/Heatbugs",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Heatbugs.nlogox",
+  "deliveryBatch": "B06",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can individual temperature preferences generate collective spatial patterns? NetLogo Heatbugs places heat-producing agents on a grid with heat diffusion and cooling. Uncomfortable bugs seek warmer or cooler unoccupied neighboring cells, with occasional random movement. The scientific context is an artificial-agent platform demonstration [1,2] and the problem of aligning implementations [3], rather than a species-specific biological theory. The Info explicitly says that rigorous equivalence with Swarm and Repast was not established. Heterogeneous preferences, occupancy constraints, and field dynamics can produce clusters or avoidance. These are outcomes of the specified artificial rules; they do not establish biological thermoregulation, physical calibration of heat units, or verified equivalence among toolkit versions.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Heatbugs.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Heatbugs.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 9b439a81d1526f34fe9716a9d2d690d9948ecd119fa6f64502aee3b424c6fa59",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/heatbugs.nlogox",
+    "infoFile": "evidence/biology/heatbugs-info.txt",
+    "originalModelCitation": "* Wilensky, U. (2004).  NetLogo Heatbugs model.  http://ccl.northwestern.edu/netlogo/models/Heatbugs.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "swarm",
+      "authors": [
+        "Nelson Minar",
+        "Roger Burkhart",
+        "Christopher G. Langton",
+        "Manor Askenazi"
+      ],
+      "title": "The Swarm Simulation System: A Toolkit for Building Multi-Agent Simulations",
+      "year": 1996,
+      "venue": "Santa Fe Institute Working Paper 96-06-042",
+      "doi": null,
+      "url": "https://www.santafe.edu/research/results/working-papers/the-swarm-simulation-system-a-toolkit-for-building",
+      "verification": {
+        "consultedUrl": "https://www.santafe.edu/research/results/working-papers/the-swarm-simulation-system-a-toolkit-for-building",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "institutional-abstract-and-metadata",
+        "access": "Institutional abstract and metadata accessible; working paper rather than a peer-reviewed journal article.",
+        "notes": "Author ordering follows the original paper title page, not the institutional page’s alphabetical display. No DOI located in the institutional record. Follow-up DOI search on 2026-11-05: official Swarm documentation recommends SFI Working Paper 96-06-042 without a DOI; Crossref produced no matching original-report DOI. Other toolkit publications were rejected. Retain DOI null without asserting universal absence. See evidence/biology/doi-followup-report.json.",
+        "evidenceFile": "evidence/biology/swarm-institution.html",
+        "doiSearchEvidenceFile": "evidence/biology/doi-followup-report.json"
+      },
+      "verified": true,
+      "relevance": "Documents the Swarm platform named in the model lineage; supports interpretation as an artificial-agent demonstration."
+    },
+    {
+      "id": "repast",
+      "authors": [
+        "Michael J. North",
+        "Nicholson T. Collier",
+        "Jerry R. Vos"
+      ],
+      "title": "Experiences creating three implementations of the repast agent modeling toolkit",
+      "year": 2006,
+      "venue": "ACM Transactions on Modeling and Computer Simulation",
+      "doi": "10.1145/1122012.1122013",
+      "url": "https://doi.org/10.1145/1122012.1122013",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Experiences+creating+three+implementations+of+the+repast+agent+modeling+toolkit+North+Collier+Vos+2006&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/repast-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "16",
+      "issue": "1",
+      "pages": "1-25",
+      "relevance": "Documents another platform explicitly named by NetLogo Heatbugs and the importance of implementation semantics."
+    },
+    {
+      "id": "align",
+      "authors": [
+        "Robert Axtell",
+        "Robert Axelrod",
+        "Joshua M. Epstein",
+        "Michael D. Cohen"
+      ],
+      "title": "Aligning simulation models: A case study and results",
+      "year": 1996,
+      "venue": "Computational and Mathematical Organization Theory",
+      "doi": "10.1007/bf01299065",
+      "url": "https://doi.org/10.1007/bf01299065",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Aligning+simulation+models+a+case+study+and+results+Axtell+Axelrod+Epstein+Cohen+1996&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/align-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "1",
+      "issue": "2",
+      "pages": "123-141",
+      "relevance": "Addresses alignment between independently implemented agent models, directly relevant to the Info caveat about untested cross-toolkit equivalence."
+    }
+  ],
+  "gaps": []
+}

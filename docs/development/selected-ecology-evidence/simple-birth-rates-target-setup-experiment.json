@@ -1,0 +1,175 @@
+{
+  "url": "http://localhost:3126/?experiment=simple-birth-rates",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "dpr": 2
+  },
+  "appearance": "light",
+  "monitors": [
+    "Generation\n0\nReds\n0\nBlues\n1"
+  ],
+  "inputs": [
+    {
+      "name": "",
+      "value": "simple-birth-rates"
+    },
+    {
+      "name": "seed",
+      "value": "1"
+    },
+    {
+      "name": "",
+      "value": "5"
+    },
+    {
+      "name": "live-carryingCapacity",
+      "value": "1"
+    },
+    {
+      "name": "live-redFertility",
+      "value": "0"
+    },
+    {
+      "name": "live-blueFertility",
+      "value": "0"
+    },
+    {
+      "name": "",
+      "value": "on",
+      "checked": false
+    }
+  ],
+  "status": [
+    "",
+    "Action completed."
+  ],
+  "charts": [
+    {
+      "label": "red: 0; blue: 1; total: 1",
+      "rect": {
+        "x": 312,
+        "y": 838,
+        "width": 944,
+        "height": 224
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Setup",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Run",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "1 step",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "10 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "100 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Run experiment",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Repeat experiment",
+      "aria": null,
+      "disabled": false,
+      "pressed": "false"
+    },
+    {
+      "text": "Setup experiment",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    }
+  ],
+  "readback": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "nonblack": 1806336,
+      "rgbaFNV32": 2184945364,
+      "rect": {
+        "x": 312,
+        "y": 115,
+        "width": 672,
+        "height": 672
+      }
+    }
+  ],
+  "overflow": false,
+  "assets": [
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "316cb61042d7e3a42e9dda698aeda771adb55b0717446e43cc7a0198c8dd6321"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-kyvz5sn7.js",
+      "sha256": "cb935b57f411a0690cd27f65a2d3a9d1b822c126d80036e9eeacc6398b92c896"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "316cb61042d7e3a42e9dda698aeda771adb55b0717446e43cc7a0198c8dd6321"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-kyvz5sn7.js",
+      "sha256": "cb935b57f411a0690cd27f65a2d3a9d1b822c126d80036e9eeacc6398b92c896"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "316cb61042d7e3a42e9dda698aeda771adb55b0717446e43cc7a0198c8dd6321"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-kyvz5sn7.js",
+      "sha256": "cb935b57f411a0690cd27f65a2d3a9d1b822c126d80036e9eeacc6398b92c896"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "316cb61042d7e3a42e9dda698aeda771adb55b0717446e43cc7a0198c8dd6321"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-kyvz5sn7.js",
+      "sha256": "cb935b57f411a0690cd27f65a2d3a9d1b822c126d80036e9eeacc6398b92c896"
+    }
+  ],
+  "text": "Skip to experiment\nAgent Lab\nExperiment\nAnts\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nExpected Value\nFire\nFireflies\nFlocking\nGalton Box\nHeatbugs\nHex Cell Aggregation\nInvasive Plants\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRabbits Grass Weeds\nRandom Combinations and Permutations\nSegregation\nShepherds\nSimple Birth Rates\nSmoothLife\nStochastic Patchwork\nTermites\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nRun experiment\nRepeat experiment\nSetup experiment\nGeneration\n0\nReds\n0\nBlues\n1\nCarrying Capacity\nRed Fertility\nBlue Fertility\n\nAction completed.\n\nModel info\nPopulation\nPopulations\n1\n0\n1\nred\nblue\ntotal\nExperiment output\nmessage\nred extinct after 11 generations"
+}

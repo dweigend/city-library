@@ -1,0 +1,237 @@
+{
+  "query": "10.1002/andp.19053220806",
+  "consultedUrl": "https://api.crossref.org/works/10.1002/andp.19053220806",
+  "checkedAt": "2026-11-05",
+  "items": [
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            4
+          ]
+        ],
+        "date-time": "2026-11-04T03:10:15Z",
+        "timestamp": 1793761815510,
+        "version": "4.6.1"
+      },
+      "reference-count": 4,
+      "publisher": "Wiley",
+      "issue": "8",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                10
+              ]
+            ],
+            "date-time": "2006-03-10T00:00:00Z",
+            "timestamp": 1141948800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 36958,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "onlinelibrary.wiley.com"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "Annalen der Physik"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1905,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1002/andp.19053220806",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2007,
+            5,
+            17
+          ]
+        ],
+        "date-time": "2007-05-17T15:24:07Z",
+        "timestamp": 1179415447000
+      },
+      "page": "549-560",
+      "update-policy": "https://doi.org/10.1002/crossmark_policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 7408,
+      "title": [
+        "\u00dcber die von der molekularkinetischen Theorie der W\u00e4rme geforderte Bewegung von in ruhenden Fl\u00fcssigkeiten suspendierten Teilchen"
+      ],
+      "prefix": "10.1002",
+      "volume": "322",
+      "author": [
+        {
+          "given": "A.",
+          "family": "Einstein",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "311",
+      "published-online": {
+        "date-parts": [
+          [
+            2006,
+            3,
+            10
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_1_1_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/andp.19023141007"
+        },
+        {
+          "key": "e_1_2_1_1_3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/andp.19033160510"
+        },
+        {
+          "key": "e_1_2_1_2_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/andp.19033160510"
+        },
+        {
+          "key": "e_1_2_1_3_2",
+          "unstructured": "Vgl. z.B. G.Kirchhoff Vorlesungen \u00fcber Mechanik 26. Vorlesung \u00a7 4."
+        }
+      ],
+      "container-title": [
+        "Annalen der Physik"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fandp.19053220806",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/andp.19053220806",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2023,
+            11,
+            3
+          ]
+        ],
+        "date-time": "2023-11-03T10:16:34Z",
+        "timestamp": 1699006594000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://onlinelibrary.wiley.com/doi/10.1002/andp.19053220806"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1905,
+            1
+          ]
+        ]
+      },
+      "references-count": 4,
+      "journal-issue": {
+        "issue": "8",
+        "published-print": {
+          "date-parts": [
+            [
+              1905,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1002/andp.19053220806"
+      ],
+      "URL": "https://doi.org/10.1002/andp.19053220806",
+      "archive": [
+        "Portico"
+      ],
+      "relation": {},
+      "ISSN": [
+        "0003-3804",
+        "1521-3889"
+      ],
+      "issn-type": [
+        {
+          "value": "0003-3804",
+          "type": "print"
+        },
+        {
+          "value": "1521-3889",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1905,
+            1
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "1905-05-11",
+          "order": 0,
+          "name": "received",
+          "label": "Received",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        },
+        {
+          "value": "2006-03-10",
+          "order": 2,
+          "name": "published",
+          "label": "Published",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        }
+      ]
+    }
+  ]
+}

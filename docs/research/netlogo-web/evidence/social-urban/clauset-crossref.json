@@ -1,0 +1,562 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1137%2F070710111",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T22:20:50Z",
+        "timestamp": 1793917250818,
+        "version": "4.8.0"
+      },
+      "reference-count": 69,
+      "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+      "issue": "4",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "SIAM Rev."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2009,
+            11
+          ]
+        ]
+      },
+      "abstract": "<jats:p>Power-law distributions occur in many situations of scientific interest and have significant consequences for our understanding of natural and man-made phenomena. Unfortunately, the detection and characterization of power laws is complicated by the large fluctuations that occur in the tail of the distribution\u2014the part of the distribution representing large but rare events\u2014and by the difficulty of identifying the range over which power-law behavior holds. Commonly used methods for analyzing power-law data, such as least-squares fitting, can produce substantially inaccurate estimates of parameters for power-law distributions, and even in cases where such methods return accurate answers they are still unsatisfactory because they give no indication of whether the data obey a power law at all. Here we present a principled statistical framework for discerning and quantifying power-law behavior in empirical data. Our approach combines maximum-likelihood fitting methods with goodness-of-fit tests based on the Kolmogorov\u2013Smirnov (KS) statistic and likelihood ratios. We evaluate the effectiveness of the approach with tests on synthetic data and give critical comparisons to previous approaches. We also apply the proposed methods to twenty-four real-world data sets from a range of different disciplines, each of which has been conjectured to follow a power-law distribution. In some cases we find these conjectures to be consistent with the data, while in others the power law is ruled out.</jats:p>",
+      "DOI": "10.1137/070710111",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2009,
+            11,
+            4
+          ]
+        ],
+        "date-time": "2009-11-04T18:08:18Z",
+        "timestamp": 1257358098000
+      },
+      "page": "661-703",
+      "source": "Crossref",
+      "is-referenced-by-count": 7545,
+      "title": [
+        "Power-Law Distributions in Empirical Data"
+      ],
+      "prefix": "10.1137",
+      "volume": "51",
+      "author": [
+        {
+          "given": "Aaron",
+          "family": "Clauset",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Cosma Rohilla",
+          "family": "Shalizi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "M. E. J.",
+          "family": "Newman",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "351",
+      "published-online": {
+        "date-parts": [
+          [
+            2009,
+            11,
+            6
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "R1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00453-001-0088-5"
+        },
+        {
+          "key": "R2",
+          "doi-asserted-by": "crossref",
+          "unstructured": "D. Achlioptas, A. Clauset, D. Kempe, and C. Moore,\n                      On the bias of traceroute sampling: or, power-law degree distributions in regular graphs\n                      , J. ACM, 56 (4) (2009), article 21.",
+          "DOI": "10.1145/1538902.1538905"
+        },
+        {
+          "key": "R3",
+          "first-page": "5",
+          "volume": "1",
+          "author": "Adamic L. A.",
+          "year": "2000",
+          "journal-title": "Quart. J. Electronic Commerce"
+        },
+        {
+          "key": "R4",
+          "doi-asserted-by": "crossref",
+          "unstructured": "R. J. Adler, R. E. Feldman, and M. S. Taqqu, eds.\n                      A Practical Guide to Heavy Tails: Statistical Techniques and Applications\n                      , Birkh\u00e4user, Boston, 1998.",
+          "DOI": "10.21236/ADA336956"
+        },
+        {
+          "key": "R5",
+          "doi-asserted-by": "crossref",
+          "unstructured": "W. Aiello, F. Chung, and L. Lu,\n                      A random graph model for massive graphs\n                      , in Proceedings of the 32nd Annual ACM Symposium on Theory of Computing, ACM, New York, 2000, pp. 171\u2013180.",
+          "DOI": "10.1145/335305.335326"
+        },
+        {
+          "key": "R6",
+          "unstructured": "B. C. Arnold,\n                      Pareto Distributions\n                      , International Cooperative Publishing House, Fairland, MD, 1983."
+        },
+        {
+          "key": "R7",
+          "doi-asserted-by": "crossref",
+          "unstructured": "O. E. Barndorff-Nielsen and D. R. Cox,\n                      Inference and Asymptotics\n                      , Chapman and Hall, London, 1995.",
+          "DOI": "10.1007/978-1-4899-3210-5"
+        },
+        {
+          "key": "R8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1140/epjb/e2007-00219-y"
+        },
+        {
+          "key": "R9",
+          "doi-asserted-by": "crossref",
+          "unstructured": "I. Bhattacharya and L. Getoor,\n                      Collective entity resolution in relational data\n                      , ACM Trans. Knowledge Discovery from Data, 1 (1) (2007), article 5.",
+          "DOI": "10.1145/1217299.1217304"
+        },
+        {
+          "key": "R10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1389-1286(00)00083-9"
+        },
+        {
+          "key": "R11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022002706296157"
+        },
+        {
+          "key": "R12",
+          "doi-asserted-by": "crossref",
+          "unstructured": "H. Cram\u00e9r,\n                      Mathematical Methods of Statistics\n                      , Almqvist and Wiksells, Uppsala, 1945.",
+          "DOI": "10.1515/9781400883868"
+        },
+        {
+          "key": "R13",
+          "unstructured": "R. B. D'Agostino and M. A. Stephens, eds.\n                      Goodness-of-Fit Techniques\n                      , Marcel Dekker, New York, 1986."
+        },
+        {
+          "key": "R14",
+          "doi-asserted-by": "crossref",
+          "unstructured": "L. de Hann and A. Ferreira,\n                      Extreme Value Theory: An Introduction\n                      , Springer-Verlag, New York, 2006.",
+          "DOI": "10.1007/0-387-34471-3"
+        },
+        {
+          "key": "R15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/1198255.1198259"
+        },
+        {
+          "key": "R16",
+          "doi-asserted-by": "crossref",
+          "unstructured": "B. Efron and R. J. Tibshirani,\n                      An Introduction to the Bootstrap\n                      , Chapman and Hall, New York, 1993.",
+          "DOI": "10.1007/978-1-4899-4541-9"
+        },
+        {
+          "key": "R17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697680400008627"
+        },
+        {
+          "key": "R18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rsta.1922.0009"
+        },
+        {
+          "key": "R19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1140/epjb/e2004-00316-5"
+        },
+        {
+          "key": "R20",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P. D. Gr\u00fcnwald,\n                      The Minimum Description Length Principle\n                      , MIT Press, Cambridge, MA, 2007.",
+          "DOI": "10.7551/mitpress/4643.001.0001"
+        },
+        {
+          "key": "R21",
+          "unstructured": "A. P. Hackett,\n                      $70$ Years of Best Sellers\n                      , 1895\u20131965, R. R. Bowker Company, New York, 1967."
+        },
+        {
+          "key": "R22",
+          "doi-asserted-by": "crossref",
+          "first-page": "37",
+          "DOI": "10.1111/j.2517-6161.1982.tb01183.x",
+          "volume": "44",
+          "author": "Hall P.",
+          "year": "1982",
+          "journal-title": "J. Roy. Statist. Soc. Ser. B"
+        },
+        {
+          "key": "R23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.tpb.2003.09.006"
+        },
+        {
+          "key": "R24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1214/aos/1176343247"
+        },
+        {
+          "key": "R25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rspa.2007.1820"
+        },
+        {
+          "key": "R26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1049/iet-syb:20060077"
+        },
+        {
+          "key": "R27",
+          "unstructured": "Y. Ijiri and H. A. Simon,\n                      Skew Distributions and the Sizes of Business Firms\n                      , North-Holland, Amsterdam, 1977."
+        },
+        {
+          "key": "R28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.97.3.1143"
+        },
+        {
+          "key": "R29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S030500410001330X"
+        },
+        {
+          "key": "R30",
+          "unstructured": "N. L. Johnson, S. Kotz, and N. Balakrishnan,\n                      Continuous Univariate Distributions\n                      , John Wiley, New York, 1994."
+        },
+        {
+          "key": "R31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/01621459.1995.10476572"
+        },
+        {
+          "key": "R32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.85.4629"
+        },
+        {
+          "key": "R33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/15326349608807407"
+        },
+        {
+          "key": "R34",
+          "unstructured": "D. J. C. MacKay,\n                      Information Theory, Inference, and Learning Algorithms\n                      , Cambridge University Press, Cambridge, UK, 2003."
+        },
+        {
+          "key": "R35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697680500151343"
+        },
+        {
+          "key": "R36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0166-5316(00)00031-6"
+        },
+        {
+          "key": "R37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1214/aop/1176993783"
+        },
+        {
+          "key": "R38",
+          "doi-asserted-by": "crossref",
+          "unstructured": "D. G. Mayo,\n                      Error and the Growth of Experimental Knowledge\n                      , University of Chicago Press, Chicago, 1996.",
+          "DOI": "10.7208/chicago/9780226511993.001.0001"
+        },
+        {
+          "key": "R39",
+          "doi-asserted-by": "crossref",
+          "unstructured": "D. G. Mayo and D. R. Cox,\n                      Frequentist statistics as a theory of inductive inference\n                      , in Optimality: The Second Erich L. Lehmann Symposium, J. Rojo, ed., Institute of Mathematical Statistics, Bethesda, MD, 2006, pp. 77\u201397.",
+          "DOI": "10.1214/074921706000000400"
+        },
+        {
+          "key": "R40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/15427951.2004.10129088"
+        },
+        {
+          "key": "R41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/15427951.2005.10129112"
+        },
+        {
+          "key": "R42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0008068319570303"
+        },
+        {
+          "key": "R43",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/00107510500052444"
+        },
+        {
+          "key": "R44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.035101"
+        },
+        {
+          "key": "R45",
+          "unstructured": "E. J. G. Pitman,\n                      Some Basic Theory for Statistical Inference\n                      , Chapman and Hall, London, 1979."
+        },
+        {
+          "key": "R46",
+          "unstructured": "W. H. Press, S. A. Teukolsky, W. T. Vetterling, and B. P. Flannery,\n                      Numerical Recipes in C: The Art of Scientific Computing\n                      , 2nd ed., Cambridge University Press, Cambridge, UK, 1992."
+        },
+        {
+          "key": "R47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s100510050359"
+        },
+        {
+          "key": "R48",
+          "doi-asserted-by": "crossref",
+          "unstructured": "S. I. Resnick,\n                      Heavy-Tail Phenomena: Probabilistic and Statistical Modeling\n                      , Springer-Verlag, New York, 2006.",
+          "DOI": "10.1007/978-0-387-45024-7"
+        },
+        {
+          "key": "R49",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1142/S0218348X98000407"
+        },
+        {
+          "key": "R50",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1214/aos/1176344136"
+        },
+        {
+          "key": "R51",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0020268100052501"
+        },
+        {
+          "key": "R52",
+          "doi-asserted-by": "crossref",
+          "unstructured": "C. R. Shalizi,\n                      Dynamics of Bayesian Updating with Dependent Data and Misspecified Models\n                      , Preprint, 2009; available at http://arxiv.org/abs/0901.1342.",
+          "DOI": "10.1214/09-EJS485"
+        },
+        {
+          "key": "R53",
+          "unstructured": "M. Small and J. D. Singer,\n                      Resort to Arms: International and Civil Wars\n                      , 1816\u20131980, Sage Publications, Beverley Hills, CA, 1982."
+        },
+        {
+          "key": "R54",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1890/02-9003"
+        },
+        {
+          "key": "R55",
+          "unstructured": "D. Sornette,\n                      Critical Phenomena in Natural Sciences\n                      , 2nd ed., Springer-Verlag, Berlin, 2006."
+        },
+        {
+          "key": "R56",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0022-2836(03)00239-0"
+        },
+        {
+          "key": "R57",
+          "unstructured": "S. A. Stoev, G. Michailidis, and M. S. Taqqu,\n                      Estimating Heavy-Tail Exponents through Max Self-Similarity\n                      , Preprint, 2006; available at http://arxiv.org/abs/math.ST/0609163."
+        },
+        {
+          "key": "R58",
+          "doi-asserted-by": "crossref",
+          "first-page": "111",
+          "DOI": "10.1111/j.2517-6161.1974.tb00994.x",
+          "volume": "36",
+          "author": "Stone M.",
+          "year": "1974",
+          "journal-title": "J. Roy. Statist. Soc. Ser. B"
+        },
+        {
+          "key": "R59",
+          "first-page": "Prepri",
+          "volume": "207",
+          "author": "Stouffer D. B.",
+          "year": "2005",
+          "journal-title": "435"
+        },
+        {
+          "key": "R60",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/01621459.1989.10478824"
+        },
+        {
+          "key": "R61",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s100510050097"
+        },
+        {
+          "key": "R62",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1912557"
+        },
+        {
+          "key": "R63",
+          "doi-asserted-by": "crossref",
+          "unstructured": "L. Wasserman,\n                      All of Statistics: A Concise Course in Statistical Inference\n                      , Springer-Verlag, Berlin, 2003.",
+          "DOI": "10.1007/978-0-387-21736-9"
+        },
+        {
+          "key": "R64",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1214/06-BA116H"
+        },
+        {
+          "key": "R65",
+          "unstructured": "S. Weisberg,\n                      Applied Linear Regression\n                      , 2nd ed., Wiley, New York, 1985."
+        },
+        {
+          "key": "R66",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/421261"
+        },
+        {
+          "key": "R67",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1214/aoms/1177732360"
+        },
+        {
+          "key": "R68",
+          "first-page": "961",
+          "volume": "45",
+          "author": "Willinger W.",
+          "year": "1998",
+          "journal-title": "Notices Amer. Math. Soc.",
+          "ISSN": "https://id.crossref.org/issn/0002-9920",
+          "issn-type": "print"
+        },
+        {
+          "key": "R69",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/pmic.200300636"
+        }
+      ],
+      "container-title": [
+        "SIAM Review"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://epubs.siam.org/doi/pdf/10.1137/070710111",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            20
+          ]
+        ],
+        "date-time": "2026-08-20T13:24:31Z",
+        "timestamp": 1787232271000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://epubs.siam.org/doi/10.1137/070710111"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2009,
+            11
+          ]
+        ]
+      },
+      "references-count": 69,
+      "journal-issue": {
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2009,
+              11,
+              4
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1137/070710111"
+      ],
+      "URL": "https://doi.org/10.1137/070710111",
+      "relation": {},
+      "ISSN": [
+        "0036-1445",
+        "1095-7200"
+      ],
+      "issn-type": [
+        {
+          "value": "0036-1445",
+          "type": "print"
+        },
+        {
+          "value": "1095-7200",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2009,
+            11
+          ]
+        ]
+      }
+    }
+  }
+}

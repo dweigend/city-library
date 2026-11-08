@@ -2,7 +2,7 @@
 
 Status: five acceptance scripts and the reusable headless example model are written before Random runtime changes. Their initial execution fails against the A1-only Random API. A2a is now implemented; see [usage](a2a-usage.md) and [acceptance evidence](a2a-evidence.md) for executed checks and review status.
 
-Read [PLAN](../../PLAN.md), [DESIGN](../DESIGN.md), the binding [Random reference](../agent-loom/api-reference.md#reference-random) and [operation inventory](../agent-loom/api-table.md#area-random). A2a stages A2; it does not remove deferred phase-one commitments.
+Read [PLAN](../../PLAN.md), [ARCHITECTURE](../ARCHITECTURE.md), the binding [Random reference](../agent-loom/api-reference.md#reference-random) and [operation inventory](../agent-loom/api-table.md#area-random). A2a stages A2; it does not remove deferred phase-one commitments.
 
 ## Task and public API closure
 

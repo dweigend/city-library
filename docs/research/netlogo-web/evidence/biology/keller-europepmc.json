@@ -1,0 +1,154 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2F0022-5193%2870%2990092-5%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1016/0022-5193(70)90092-5\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "5462335",
+          "source": "MED",
+          "pmid": "5462335",
+          "doi": "10.1016/0022-5193(70)90092-5",
+          "title": "Initiation of slime mold aggregation viewed as an instability.",
+          "authorString": "Keller EF, Segel LA.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Keller EF",
+                "lastName": "Keller",
+                "firstName": "E F",
+                "initials": "EF"
+              },
+              {
+                "fullName": "Segel LA",
+                "lastName": "Segel",
+                "firstName": "L A",
+                "initials": "LA"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "3",
+            "volume": "26",
+            "journalIssueId": 385077,
+            "dateOfPublication": "1970 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 1970,
+            "journal": {
+              "medlineAbbreviation": "J Theor Biol",
+              "title": "Journal of theoretical biology",
+              "essn": "1095-8541",
+              "issn": "0022-5193",
+              "nlmid": "0376342",
+              "isoabbreviation": "J Theor Biol"
+            },
+            "printPublicationDate": "1970-03-01"
+          },
+          "pubYear": "1970",
+          "pageInfo": "399-415",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Myxomycetes"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Products"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Cell Aggregation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Chemotaxis"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mathematics"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Biological Products",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/0022-5193(70)90092-5"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 355,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1970-06-05",
+          "dateOfCreation": "1970-03-01",
+          "dateOfRevision": "2019-07-25",
+          "firstPublicationDate": "1970-03-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "slug": "shepherds",
+  "name": "Shepherds",
+  "catalogPath": "Sample Models/Biology/Shepherds",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Shepherds.nlogox",
+  "deliveryBatch": "B06",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Which local transport rules can consolidate moving objects into a group? NetLogo Shepherds extends a termite-style clustering idea: wandering shepherds pick up sheep and release them near other sheep, while the sheep themselves also move. Collective sorting [1] and the StarLogo microworld lineage [2] provide the closest interpretation of these rules. A separate shepherding study [3] offers a useful comparison because actual herding need not involve carrying animals. Relative movement speeds and agent numbers can change whether aggregation persists. This is therefore an abstract experiment in clustering mobile objects, not a validated description of livestock management. A visible herd is evidence of the stated algorithm's behavior under chosen settings only.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Shepherds.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Shepherds.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 e4e4d8447dfcd1b8971ded3dbfd12d9298bf210d43fceb2aec06646998b73100",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/shepherds.nlogox",
+    "infoFile": "evidence/biology/shepherds-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1998).  NetLogo Shepherds model.  http://ccl.northwestern.edu/netlogo/models/Shepherds.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "sorting",
+      "authors": [
+        "J. L. Deneubourg",
+        "S. Goss",
+        "N. Franks",
+        "A. Sendova-Franks",
+        "C. Detrain",
+        "L. Chrétien"
+      ],
+      "title": "The Dynamics of Collective Sorting: Robot-Like Ants and Ant-Like Robots",
+      "year": 1991,
+      "venue": "From Animals to Animats",
+      "doi": "10.7551/mitpress/3115.003.0048",
+      "url": "https://doi.org/10.7551/mitpress/3115.003.0048",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=The+dynamics+of+collective+sorting+robot-like+ants+and+ant-like+robots+Deneubourg+1991&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/sorting-crossref-search.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": "356-364",
+      "relevance": "Supports interpreting pickup and release near existing groups as decentralized clustering."
+    },
+    {
+      "id": "resnick",
+      "authors": [
+        "Mitchel Resnick"
+      ],
+      "title": "Turtles, Termites, and Traffic Jams: Explorations in Massively Parallel Microworlds",
+      "year": 1994,
+      "venue": "The MIT Press",
+      "doi": null,
+      "url": "https://mitpress.mit.edu/9780262680936/turtles-termites-and-traffic-jams/",
+      "verification": {
+        "consultedUrl": "https://mitpress.mit.edu/9780262680936/turtles-termites-and-traffic-jams/",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "publisher-description-and-metadata",
+        "access": "Description and publication metadata accessible; book full text not consulted.",
+        "notes": "Publisher distinguishes 1994 hardcover from 1997 paperback. No DOI was located in the consulted publisher record. Follow-up DOI search on 2026-11-05: candidate 10.7551/mitpress/6930.001.0001 was not verified (Crossref and DOI handle API returned HTTP 404); the MIT Press page displays no DOI. Exact-title Crossref results identify reviews, not the book. Retain DOI null; this is a negative search result, not proof of nonexistence. See evidence/biology/doi-followup-report.json.",
+        "evidenceFile": "evidence/biology/resnick-publisher.json",
+        "doiSearchEvidenceFile": "evidence/biology/doi-followup-report.json"
+      },
+      "verified": true,
+      "relevance": "Provides the termite microworld lineage explicitly referenced by this model."
+    },
+    {
+      "id": "shepherd",
+      "authors": [
+        "Daniel Strömbom",
+        "Richard P. Mann",
+        "Alan M. Wilson",
+        "Stephen Hailes",
+        "A. Jennifer Morton",
+        "David J. T. Sumpter",
+        "Andrew J. King"
+      ],
+      "title": "Solving the shepherding problem: heuristics for herding autonomous, interacting agents",
+      "year": 2014,
+      "venue": "Journal of The Royal Society Interface",
+      "doi": "10.1098/rsif.2014.0719",
+      "url": "https://doi.org/10.1098/rsif.2014.0719",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Solving+the+shepherding+problem+heuristics+for+herding+autonomous+interacting+agents+Strombom+2014&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/shepherd-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frsif.2014.0719%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/shepherd-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "11",
+      "issue": "100",
+      "pages": "20140719",
+      "relevance": "A contrasting scientific shepherding model exposes the difference between pickup-based aggregation and realistic repulsion-based herding."
+    }
+  ],
+  "gaps": []
+}

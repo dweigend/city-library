@@ -1,0 +1,101 @@
+{
+  "slug": "erosion",
+  "name": "Erosion",
+  "catalogPath": "Sample Models/Earth Science/Erosion",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Earth%20Science/Erosion.nlogox",
+  "deliveryBatch": "B05",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether downhill water transport can reorganize terrain into drainage patterns. In NetLogo's Erosion model, rain adds water to patches, flow moves toward lower neighboring water levels and proportional erosion lowers source-cell elevation while boundaries drain material. The selected literature connects this mechanism to coupled runoff and landscape change: detachment-limited drainage modeling connects flow with evolving topography [1]; landscape-evolution research exposes process and scale assumptions [2]; spatial soil-evolution modeling adds depth and hillslope responses absent here [3]. The source calls its flow scheme naive; simplified routing, erosion and sediment treatment omit many hydraulic processes and prevent direct prediction of real catchments. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Earth%20Science/Erosion.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Earth%20Science/Erosion.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/erosion.nlogox",
+    "sha256": "f7aa10a27576e9bf059a64474e38818a388e3c36932c52250bc506c20c733465",
+    "citation": "For the model itself: * Dunham, G., Tisue, S. and Wilensky, U. (2004). NetLogo Erosion model. http://ccl.northwestern.edu/netlogo/models/Erosion. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Here is an eroded volcano in Kamchatka with a strong resemblance to this model: https://www.google.com/maps/@52.544312,157.338467,7882m/data=!3m1!1e3?dg=dbrw&newdg=1 Thanks to Greg Dunham and Seth Tisue for their work on this model.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/erosion.nlogox"
+  },
+  "publications": [
+    {
+      "id": "howard",
+      "creatorRole": "author",
+      "authors": [
+        "Alan D. Howard"
+      ],
+      "title": "A detachment‐limited model of drainage basin evolution",
+      "year": 1994,
+      "venue": "Water Resources Research",
+      "doi": "10.1029/94wr00757",
+      "url": "https://doi.org/10.1029/94wr00757",
+      "relevance": "detachment-limited drainage modeling connects flow with evolving topography",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1029%2F94WR00757",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/howard-crossref.json",
+        "evidenceSummary": "A drainage basin simulation model introduced here incorporates creep and threshold slumping and both detachment‐ and transport‐limited fluvial processes. Fluvial erosion of natural slopes and headwater channels is argued to be dominantly detachment‐limited. Such slopes undergo nearly parallel retreat and replacement with alluvial surfaces under fixed base level, in contrast with gradual slope decline for transport‐limited conditions. The arrangement of divides and valleys is sensitive to initial conditions, although average morphology is insensitive. Dissected, initially flat surfaces in which downstream concavity is slight exhibit nearly parallel drainage, compared to very wandering main valleys when concavity is great. Steady state is reached after a cumulative base level drop approximately 3 times the final relief. Simulated valley systems are similar to those predicted by a previous ",
+        "evidenceFile": "evidence/social-urban/howard-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "tuckerreview",
+      "creatorRole": "author",
+      "authors": [
+        "Gregory E. Tucker",
+        "Gregory R. Hancock"
+      ],
+      "title": "Modelling landscape evolution",
+      "year": 2010,
+      "venue": "Earth Surface Processes and Landforms",
+      "doi": "10.1002/esp.1952",
+      "url": "https://doi.org/10.1002/esp.1952",
+      "relevance": "landscape-evolution research exposes process and scale assumptions",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1002%2Fesp.1952",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/tuckerreview-verified.json",
+        "evidenceSummary": "AbstractGeomorphology is currently in a period of resurgence as we seek to explain the diversity, origins and dynamics of terrain on the Earth and other planets in an era of increased environmental awareness. Yet there is a great deal we still do not know about the physics and chemistry of the processes that weaken rock and transport mass across a planet's surface. Discovering and refining the relevant geomorphic transport functions requires a combination of careful field measurements, lab experiments, and use of longer‐term natural experiments to test current theory and develop new understandings. Landscape evolution models have an important role to play in sharpening our thinking, guiding us toward the right observables, and mapping out the logical consequences of transport laws, both alone and in combination with other salient processes. Improved quantitative characterization of terra",
+        "evidenceFile": "evidence/social-urban/tuckerreview-verified.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "soil",
+      "creatorRole": "author",
+      "authors": [
+        "Sagy Cohen",
+        "Garry Willgoose",
+        "Greg Hancock"
+      ],
+      "title": "The mARM3D spatially distributed soil evolution model: Three‐dimensional model framework and analysis of hillslope and landform responses",
+      "year": 2010,
+      "venue": "Journal of Geophysical Research: Earth Surface",
+      "doi": "10.1029/2009jf001536",
+      "url": "https://doi.org/10.1029/2009jf001536",
+      "relevance": "spatial soil-evolution modeling adds depth and hillslope responses absent here",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1029%2F2009JF001536",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/soil-verified.json",
+        "evidenceSummary": "We present a three‐dimensional landscape‐pedogenesis model, mARM3D (matrices ARMOUR 3D), which simulates soil evolution as a function of erosion and pedogenic processes. The model simulates the discretized soil profile for points on a spatial grid. The approach, using transition matrices, is computationally efficient and allows the simulation of large‐scale spatial coupling and long‐term soil evolution. We study the effect of the depth‐dependent soil‐weathering rate (i.e., the rate of soil particle breakdown) and bedrock‐lowering rate (i.e., the rate of conversion of bedrock to soil). The difference in depth‐dependent weathering functions has a significant effect on the in‐profile soil properties through depth, specifically particle size grading. However, the depth dependency has a relatively minor effect on the surface properties of the soil profile, with all weathering functions genera",
+        "evidenceFile": "evidence/social-urban/soil-verified.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

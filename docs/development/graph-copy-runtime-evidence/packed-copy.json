@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "steps": [
+    {
+      "command": [
+        "bun",
+        "pm",
+        "pack",
+        "--destination",
+        "/tmp/city-library-copy-consumer-6GefM5/archive"
+      ],
+      "exitCode": 0,
+      "stdout": "bun pack v1.4.2 (744846f84)\n\npacked 1.0KB package.json\npacked 5.1KB README.md\npacked 120.16KB dist/index.js\npacked 0.81KB dist/types/index.d.ts\npacked 0.78KB dist/types/src/agent/agent.d.ts\npacked 36B dist/types/src/agent/index.d.ts\npacked 1.26KB dist/types/src/agent/lifecycle.d.ts\npacked 323B dist/types/src/agent/orientation.d.ts\npacked 1.51KB dist/types/src/agent/spatial.d.ts\npacked 0.52KB dist/types/src/agent/state.d.ts\npacked 229B dist/types/src/geometry/direction.d.ts\npacked 274B dist/types/src/geometry/distance.d.ts\npacked 471B dist/types/src/geometry/index.d.ts\npacked 431B dist/types/src/geometry/mapping.d.ts\npacked 299B dist/types/src/geometry/normalization.d.ts\npacked 1.68KB dist/types/src/geometry/space.d.ts\npacked 0.64KB dist/types/src/graph/algorithms/analysis.d.ts\npacked 421B dist/types/src/graph/algorithms/connectivity.d.ts\npacked 1.52KB dist/types/src/graph/algorithms/distances.d.ts\npacked 0.54KB dist/types/src/graph/algorithms/dyadic-costs.d.ts\npacked 0.72KB dist/types/src/graph/algorithms/rational.d.ts\npacked 227B dist/types/src/graph/collections.d.ts\npacked 0.61KB dist/types/src/graph/copy.d.ts\npacked 0.74KB dist/types/src/graph/edge.d.ts\npacked 2.12KB dist/types/src/graph/generators/options.d.ts\npacked 274B dist/types/src/graph/generators/planning.d.ts\npacked 2.38KB dist/types/src/graph/graph.d.ts\npacked 140B dist/types/src/graph/index.d.ts\npacked 432B dist/types/src/graph/queries.d.ts\npacked 1.65KB dist/types/src/grid/grid.d.ts\npacked 74B dist/types/src/grid/index.d.ts\npacked 476B dist/types/src/grid/occupancy.d.ts\npacked 0.59KB dist/types/src/random/continuation.d.ts\npacked 176B dist/types/src/random/distributions/exponential.d.ts\npacked 294B dist/types/src/random/distributions/mean-options.d.ts\npacked 312B dist/types/src/random/distributions/poisson.d.ts\npacked 92B dist/types/src/random/index.d.ts\npacked 450B dist/types/src/random/normal.d.ts\npacked 1.00KB dist/types/src/random/random.d.ts\npacked 284B dist/types/src/random/sampling.d.ts\npacked 208B dist/types/src/random/uniform.d.ts\npacked 0.52KB dist/types/src/stats/describe.d.ts\npacked 145B dist/types/src/stats/gini.d.ts\npacked 358B dist/types/src/stats/histogram.d.ts\npacked 345B dist/types/src/stats/index.d.ts\npacked 107B dist/types/src/world/index.d.ts\npacked 199B dist/types/src/world/run.d.ts\npacked 255B dist/types/src/world/tick.d.ts\npacked 1.0KB dist/types/src/world/world.d.ts\npacked 0.82KB index.ts\npacked 3.38KB src/agent/agent.ts\npacked 36B src/agent/index.ts\npacked 2.31KB src/agent/lifecycle.ts\npacked 2.77KB src/agent/orientation.ts\npacked 8.36KB src/agent/spatial.ts\npacked 6.67KB src/agent/state.ts\npacked 1.0KB src/geometry/direction.ts\npacked 0.99KB src/geometry/distance.ts\npacked 388B src/geometry/index.ts\npacked 2.96KB src/geometry/mapping.ts\npacked 1.15KB src/geometry/normalization.ts\npacked 7.1KB src/geometry/space.ts\npacked 12.55KB src/graph/algorithms/analysis.ts\npacked 5.79KB src/graph/algorithms/connectivity.ts\npacked 8.34KB src/graph/algorithms/distances.ts\npacked 2.36KB src/graph/algorithms/dyadic-costs.ts\npacked 3.24KB src/graph/algorithms/rational.ts\npacked 0.54KB src/graph/collections.ts\npacked 5.68KB src/graph/copy.ts\npacked 1.58KB src/graph/edge.ts\npacked 6.79KB src/graph/generators/options.ts\npacked 6.0KB src/graph/generators/planning.ts\npacked 12.17KB src/graph/graph.ts\npacked 140B src/graph/index.ts\npacked 1.13KB src/graph/queries.ts\npacked 11.30KB src/grid/grid.ts\npacked 74B src/grid/index.ts\npacked 2.71KB src/grid/occupancy.ts\npacked 2.37KB src/random/continuation.ts\npacked 468B src/random/distributions/exponential.ts\npacked 0.84KB src/random/distributions/mean-options.ts\npacked 1.96KB src/random/distributions/poisson.ts\npacked 92B src/random/index.ts\npacked 1.72KB src/random/normal.ts\npacked 5.19KB src/random/random.ts\npacked 4.1KB src/random/sampling.ts\npacked 2.00KB src/random/uniform.ts\npacked 2.78KB src/stats/describe.ts\npacked 1.27KB src/stats/gini.ts\npacked 2.90KB src/stats/histogram.ts\npacked 282B src/stats/index.ts\npacked 107B src/world/index.ts\npacked 2.17KB src/world/run.ts\npacked 0.92KB src/world/tick.ts\npacked 6.89KB src/world/world.ts\n\n/tmp/city-library-copy-consumer-6GefM5/archive/city-library-0.0.0.tgz\n\nTotal files: 95\nShasum: 3d763e9117fbbd8889aac87f07dbcdf5d4588a81\nIntegrity: sha512-/qYVgqoDRIPc2[...]XZfXVTVfZfFRA==\nUnpacked size: 0.31MB\nPacked size: 76.72KB\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bun",
+        "install",
+        "--ignore-scripts"
+      ],
+      "exitCode": 0,
+      "stdout": "bun install v1.4.2 (744846f84)\n\n+ city-library@./archive/city-library-0.0.0.tgz\n\n1 package installed [5.00ms]\n",
+      "stderr": "Resolving dependencies\nResolved, downloaded and extracted [1]\nSaved lockfile\n"
+    },
+    {
+      "command": [
+        "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/node_modules/.bin/tsc",
+        "-p",
+        "tsconfig.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bun",
+        "runtime.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "packed Graph.copy: canonical nodes, fresh edges, state/keys/direction, full receiver and lifecycle PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "runtime.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "packed Graph.copy: canonical nodes, fresh edges, state/keys/direction, full receiver and lifecycle PASS\n",
+      "stderr": ""
+    }
+  ]
+}

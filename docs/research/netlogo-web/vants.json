@@ -1,0 +1,121 @@
+{
+  "slug": "vants",
+  "name": "Vants",
+  "catalogPath": "Sample Models/Computer Science/Vants",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Vants.nlogox",
+  "deliveryBatch": "B19",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can a deterministic rule appear irregular while remaining reversible? NetLogo Vants moves virtual ants across a binary patch field, toggling the visited color and turning right or left according to that color. Langton [1] provides the artificial-life context, Gale and colleagues [2] investigate generalized ant dynamics, and Turing [3] supplies the broader connection between local read-write rules and computation. The original NetLogo rule moves before examining and changing the new patch, so operation order is part of its identity. Its world wraps, and multiple ants share the same writable field. Initial headings, ant count, activation order, and finite boundaries affect the visible trace. The model illustrates how simple deterministic interactions can generate long transients and structured paths; apparent disorder is not evidence of stochasticity, and reversibility requires an explicitly defined inverse update.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Vants.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Vants.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 66ee2a39c0879a05bd850ed5424d7650be59d23741be8126f8b2e7888c0977d7",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/vants.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2005).  NetLogo Vants model.  http://ccl.northwestern.edu/netlogo/models/Vants.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/vants.nlogox",
+    "evidenceFile": "evidence/computing/vants.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1016/0167-2789(86)90237-x",
+      "authors": [
+        "Christopher G Langton"
+      ],
+      "title": "Studying artificial life with cellular automata",
+      "year": 1986,
+      "venue": "Physica D: Nonlinear Phenomena",
+      "doi": "10.1016/0167-2789(86)90237-x",
+      "url": "https://doi.org/10.1016/0167-2789(86)90237-x",
+      "relevance": "Langton’s artificial-life research supplies the original rule-driven computational context credited by the model.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2F0167-2789%2886%2990237-X",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_0167_2789_86_90237_x.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_0167_2789_86_90237_x.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "22",
+      "issue": "1-3",
+      "pages": "120-149",
+      "verified": true
+    },
+    {
+      "id": "10.1007/bf03024370",
+      "authors": [
+        "David Gale",
+        "Jim Propp",
+        "Scott Sutherland",
+        "Serge Troubetzkoy"
+      ],
+      "title": "Mathematical entertainments: Further Travels with My Ant",
+      "year": 1995,
+      "venue": "The Mathematical Intelligencer",
+      "doi": "10.1007/bf03024370",
+      "url": "https://doi.org/10.1007/bf03024370",
+      "relevance": "The original generalized-ant study directly examines turning rules and long-term trajectory organization.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF03024370",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_bf03024370.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_bf03024370.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "17",
+      "issue": "3",
+      "pages": "48-56",
+      "verified": true
+    },
+    {
+      "id": "10.1112/plms/s2-42.1.230",
+      "authors": [
+        "A. M. Turing"
+      ],
+      "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+      "year": 1937,
+      "venue": "Proceedings of the London Mathematical Society",
+      "doi": "10.1112/plms/s2-42.1.230",
+      "url": "https://doi.org/10.1112/plms/s2-42.1.230",
+      "relevance": "Read-write computational machines explain the conceptual relationship between a moving head and a mutable cell field.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1112%2Fplms%2Fs2-42.1.230",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and selected full-text sections",
+        "access": "Open institutional/author repository copy; selected sections read. Full-text access via publisher not established.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Introduction and section 1, pp. 230–231: machine state, scanned symbol, write/erase and tape movement. The original single-head tape formalism is distinct from the finite multihead two-dimensional teaching variant. The manuscript was received/read in 1936; the DOI record dates publication 1937.",
+        "snapshot": "evidence/computing/doi-10_1112_plms_s2_42_1_230.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "fullTextEvidence": {
+          "doi": "10.1112/plms/s2-42.1.230",
+          "consultedUrl": "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf",
+          "checkedAt": "2026-11-05",
+          "evidenceType": "selected full-text sections",
+          "sectionsRead": "Introduction and section 1, pp. 230–231: machine state, scanned symbol, write/erase and tape movement.",
+          "finding": "The original single-head tape formalism is distinct from the finite multihead two-dimensional teaching variant. The manuscript was received/read in 1936; the DOI record dates publication 1937.",
+          "retrievedSha256": "a126650c315e998ba96ea8248a60bde0afe60fec3e810acfc2b6c70d3b0e9f36",
+          "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+        },
+        "evidenceFile": "evidence/computing/doi-10_1112_plms_s2_42_1_230.json"
+      },
+      "publisher": "Wiley",
+      "volume": "s2-42",
+      "issue": "1",
+      "pages": "230-265",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

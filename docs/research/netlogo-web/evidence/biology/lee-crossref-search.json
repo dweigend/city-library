@@ -1,0 +1,1478 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Anthocyanins+in+leaves+and+other+vegetative+organs+an+introduction+Lee+Gould+2002&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1732039,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                27
+              ]
+            ],
+            "date-time": "2026-09-27T17:28:37Z",
+            "timestamp": 1790530117141,
+            "version": "4.1.0"
+          },
+          "reference-count": 93,
+          "publisher": "Elsevier",
+          "isbn-type": [
+            {
+              "value": "9780120059379",
+              "type": "print"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2002
+              ]
+            ]
+          },
+          "DOI": "10.1016/s0065-2296(02)37040-x",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                5,
+                19
+              ]
+            ],
+            "date-time": "2004-05-19T04:26:52Z",
+            "timestamp": 1084940812000
+          },
+          "page": "1-16",
+          "source": "Crossref",
+          "is-referenced-by-count": 57,
+          "title": [
+            "Anthocyanins in leaves and other vegetative organs: An introduction"
+          ],
+          "prefix": "10.1016",
+          "author": [
+            {
+              "given": "David W.",
+              "family": "Lee",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kevin S.",
+              "family": "Gould",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB1",
+              "doi-asserted-by": "crossref",
+              "first-page": "331",
+              "DOI": "10.1016/0891-5849(95)02047-0",
+              "article-title": "Structural aspects of antioxidant activity in flavonoids",
+              "volume": "20",
+              "author": "van Acker",
+              "year": "1996",
+              "journal-title": "Free Radical Biology and Medicine"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB2",
+              "doi-asserted-by": "crossref",
+              "first-page": "625",
+              "DOI": "10.1006/jtbi.2000.2089",
+              "article-title": "The origin of autumn colours by coevolution",
+              "volume": "205",
+              "author": "Archetti",
+              "year": "2000",
+              "journal-title": "Journal of Theoretical Biology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB3",
+              "first-page": "736",
+              "article-title": "Morphological and biochemical comparison of a purple-leafed and a green-leafed pepper cultivar",
+              "volume": "26",
+              "author": "Bahler",
+              "year": "1991",
+              "journal-title": "HortScience"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB4",
+              "series-title": "The Complete Works of Aristotle",
+              "year": "1984"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB5",
+              "series-title": "Photomorphogenesis in Plants",
+              "first-page": "733",
+              "article-title": "Photocontrol of flavonoid biosynthesis",
+              "author": "Beggs",
+              "year": "1994"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB6",
+              "doi-asserted-by": "crossref",
+              "first-page": "420",
+              "DOI": "10.1016/0076-6879(94)34112-5",
+              "article-title": "Flavonoid antioxidants: rate constants for reactions with oxygen radicals",
+              "volume": "234",
+              "author": "Bors",
+              "year": "1994",
+              "journal-title": "Methods in Enzymology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB7",
+              "first-page": "1489",
+              "article-title": "Autumn leaf colours and herbivore defense",
+              "volume": "268",
+              "author": "Brown",
+              "year": "2001"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB8",
+              "doi-asserted-by": "crossref",
+              "first-page": "1373",
+              "DOI": "10.1046/j.1365-3040.2000.00633.x",
+              "article-title": "Contribution of hydroxycinnamates and flavonoids to epidermal shielding of UV-A and UV-B radiation in developing rye primary leaves as assessed by ultraviolet-induced chlorophyll fluorescence measurements",
+              "volume": "23",
+              "author": "Burchard",
+              "year": "2000",
+              "journal-title": "Plant Cell and Environment"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB9",
+              "doi-asserted-by": "crossref",
+              "first-page": "395",
+              "DOI": "10.1093/oxfordjournals.pcp.a028959",
+              "article-title": "Photosynthetic efficiency, and photodamage by UV and visible radiation in red versus green leaf Coleus varieties",
+              "volume": "37",
+              "author": "Burger",
+              "year": "1996",
+              "journal-title": "Plant Cell Physiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1111/j.1751-1097.1999.tb01944.x",
+              "article-title": "Environmental significance of anthocyanins in plant stress responses",
+              "volume": "70",
+              "author": "Chalker-Scott",
+              "year": "1999",
+              "journal-title": "Photochemistry and Photobiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB11",
+              "series-title": "Nature as the Laboratory. Darwinian Plant Ecology in the German Empire, 1880\u20131900",
+              "author": "Cittadino",
+              "year": "1990"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB12",
+              "doi-asserted-by": "crossref",
+              "first-page": "293",
+              "DOI": "10.1017/S0266467400003667",
+              "article-title": "Red colouration of tropical young leaves: a possible antifungal defense?",
+              "volume": "5",
+              "author": "Coley",
+              "year": "1989",
+              "journal-title": "Journal of Tropical Ecology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB13",
+              "doi-asserted-by": "crossref",
+              "first-page": "305",
+              "DOI": "10.1146/annurev.ecolsys.27.1.305",
+              "article-title": "Herbivory and plant defenses in tropical forests",
+              "volume": "27",
+              "author": "Coley",
+              "year": "1996",
+              "journal-title": "Annual Reviews of Ecology and Systematics"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB14",
+              "doi-asserted-by": "crossref",
+              "first-page": "273",
+              "DOI": "10.1023/A:1005676321251",
+              "article-title": "Feeding by the aphid Sipha flava produces a reddish spot on leaves of Sorghum halepense: an induced defence?",
+              "volume": "27",
+              "author": "Costa-Arbul\u00fa",
+              "year": "2001",
+              "journal-title": "Journal of Chemical Ecology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB15",
+              "doi-asserted-by": "crossref",
+              "first-page": "49",
+              "DOI": "10.1007/BF00044265",
+              "article-title": "Accumulation of paeonidin-3-glucoside enhanced by osmotic stress in grape (Vitis vinifera L.) cell suspension",
+              "volume": "24",
+              "author": "Do",
+              "year": "1991",
+              "journal-title": "Plant Cell Tissue and Organ Culture"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB16",
+              "doi-asserted-by": "crossref",
+              "first-page": "439",
+              "DOI": "10.1093/oxfordjournals.aob.a088663",
+              "article-title": "The effects of tropical insolation",
+              "volume": "11",
+              "author": "Ewart",
+              "year": "1897",
+              "journal-title": "Annals of Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB17",
+              "doi-asserted-by": "crossref",
+              "first-page": "566",
+              "DOI": "10.1104/pp.010063",
+              "article-title": "Why leaves turn red in autumn. The role of anthocyanins in senescing leaves of red-osier dogwood",
+              "volume": "127",
+              "author": "Feild",
+              "year": "2001",
+              "journal-title": "Plant Physiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB18",
+              "doi-asserted-by": "crossref",
+              "first-page": "1646",
+              "DOI": "10.1890/0012-9658(1997)078[1646:DFPGAI]2.0.CO;2",
+              "article-title": "Do floral pigmentation genes also influence resistance to enemies? The W locus in Ipomoea purpurea",
+              "volume": "78",
+              "author": "Fineblum",
+              "year": "1997",
+              "journal-title": "Ecology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB19",
+              "doi-asserted-by": "crossref",
+              "first-page": "689",
+              "DOI": "10.1139/b80-088",
+              "article-title": "Natural selection for spotted leaves: parallel morph ratio variation in 3 species of annual plants",
+              "volume": "58",
+              "author": "Ganders",
+              "year": "1980",
+              "journal-title": "Canadian Journal of Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB20",
+              "first-page": "984",
+              "article-title": "Biosynthesis of flavonoid compounds in higher plants",
+              "volume": "1957",
+              "author": "Geismann",
+              "year": "1957",
+              "journal-title": "Chemistry and Industry"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB21",
+              "doi-asserted-by": "crossref",
+              "first-page": "131",
+              "DOI": "10.1111/j.1469-8137.1987.tb04687.x",
+              "article-title": "Comparative studies of leaf form: assessing the relative roles of selective pressures and phylogenetic constraints",
+              "volume": "106",
+              "author": "Givnish",
+              "year": "1987",
+              "journal-title": "New Phytologist"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB22",
+              "doi-asserted-by": "crossref",
+              "first-page": "463",
+              "DOI": "10.2307/2389314",
+              "article-title": "Leaf mottling: relation to growth form and leaf phenology and possible role as camouflage",
+              "volume": "4",
+              "author": "Givnish",
+              "year": "1990",
+              "journal-title": "Functional Ecology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB23",
+              "doi-asserted-by": "crossref",
+              "first-page": "175",
+              "DOI": "10.1080/0028825X.1999.10512176",
+              "article-title": "Do anthocyanins protect leaves of New Zealand native species from UV-B?",
+              "volume": "37",
+              "author": "Gould",
+              "year": "1999",
+              "journal-title": "New Zealand Journal of Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB24",
+              "doi-asserted-by": "crossref",
+              "first-page": "241",
+              "DOI": "10.1038/378241b0",
+              "article-title": "Why leaves are sometimes red",
+              "volume": "378",
+              "author": "Gould",
+              "year": "1995",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB25",
+              "series-title": "The Anatomy of Plants",
+              "author": "Grew",
+              "year": "1682"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB26",
+              "first-page": "227",
+              "article-title": "Zur biogenese des cyanidins 1",
+              "volume": "12B",
+              "author": "Grisebach",
+              "year": "1957",
+              "journal-title": "Zeitschrigi fuer Naturforschung"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB27",
+              "doi-asserted-by": "crossref",
+              "first-page": "645",
+              "DOI": "10.1515/znb-1961-1003",
+              "article-title": "Zur biogenese der Flavonoide. IV. 2\u2032, 4, 4\u2032, 6\u2032-tetrahydroxy-chalkone-2\u2032-glucosid-[b-14C] als Vorstufe fur Quercetin und Cyanidin",
+              "volume": "16B",
+              "author": "Grisebach",
+              "year": "1961",
+              "journal-title": "Zeitschrift,fuerNaturforschung"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB28",
+              "series-title": "Physiological Plant Anatomy",
+              "author": "Haberlandt",
+              "year": "1914"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB29",
+              "doi-asserted-by": "crossref",
+              "first-page": "247",
+              "DOI": "10.1094/Phyto-67-247",
+              "article-title": "Resistance of maize to anthracnose: effect of light intensity on lesion development",
+              "volume": "67",
+              "author": "Hammaerschmidt",
+              "year": "1977",
+              "journal-title": "Phytopathology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB30",
+              "series-title": "Chemistry and Biochemistry of Plant Pigments",
+              "first-page": "736",
+              "article-title": "Functions of flavonoids in plants",
+              "author": "Harborne",
+              "year": "1976"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB31",
+              "series-title": "The Flavonoids",
+              "author": "Harborne",
+              "year": "1988"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB32",
+              "series-title": "Introduction to Ecological Biochemistry",
+              "author": "Harborne",
+              "year": "1997"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB33",
+              "series-title": "The Flavonoids. Advances in Research Since 1980",
+              "first-page": "1",
+              "article-title": "The anthocyanins",
+              "author": "Harborne",
+              "year": "1988"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB34",
+              "series-title": "Plant Resistance to Insects",
+              "first-page": "347",
+              "article-title": "Multiple factors in cotton contributing to resistance to the tobacco budworm, Heliothis virescens F.",
+              "author": "Hedin",
+              "year": "1983"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB35",
+              "doi-asserted-by": "crossref",
+              "first-page": "44",
+              "DOI": "10.1017/S0043174500084137",
+              "article-title": "Pathogenic interactions of Alternaria crassa and phenolic metabolism in jimsonweed (Datura stramonium L.) varieties",
+              "volume": "42",
+              "author": "Hoagland",
+              "year": "1994",
+              "journal-title": "Weed Science"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB36",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1093/treephys/21.1.1",
+              "article-title": "Physiological significance of anthocyanins during autumnal leaf senescence",
+              "volume": "21",
+              "author": "Hoch",
+              "year": "2001",
+              "journal-title": "Tree Physiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB37",
+              "first-page": "49",
+              "article-title": "Flamboyant flushes: a reinterpretation of non-green flush colours in leaves",
+              "author": "Juniper",
+              "year": "1993",
+              "journal-title": "International Dendrological Society Yearbook"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB38",
+              "doi-asserted-by": "crossref",
+              "first-page": "2271",
+              "DOI": "10.1016/0031-9422(91)83628-X",
+              "article-title": "Induction of anthocyanin synthesis and related enzyme activities in cell cultures of Centaurea cyanus by UV-light irradiation",
+              "volume": "30",
+              "author": "Kakegawa",
+              "year": "1991",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB39",
+              "doi-asserted-by": "crossref",
+              "first-page": "59",
+              "DOI": "10.1093/oxfordjournals.aob.a090734",
+              "article-title": "The hanging foliage of certain tropical trees",
+              "volume": "9",
+              "author": "Keeble",
+              "year": "1895",
+              "journal-title": "Annals of Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB40",
+              "series-title": "The Natural History of Plants",
+              "author": "Kerner von Marilaum",
+              "year": "1897"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB41",
+              "first-page": "811",
+              "article-title": "Anthocyanin content and UVB sensitivity in Brassica rapa",
+              "volume": "63",
+              "author": "Klaper",
+              "year": "1996",
+              "journal-title": "Phytochemistry"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB42",
+              "doi-asserted-by": "crossref",
+              "first-page": "1119",
+              "DOI": "10.1139/b95-122",
+              "article-title": "Low-temperature stress and photoperiod affect an increased tolerance to photoinhibition in Pinus banksiana seedlings",
+              "volume": "73",
+              "author": "Krol",
+              "year": "1995",
+              "journal-title": "Canadian Journal of Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB43",
+              "doi-asserted-by": "crossref",
+              "first-page": "411",
+              "DOI": "10.2307/2389279",
+              "article-title": "Delayed development of the photosynthetic apparatus in tropical rain forest species",
+              "volume": "6",
+              "author": "Kursar",
+              "year": "1992",
+              "journal-title": "Functional Ecology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB44",
+              "series-title": "Plant Physiological Ecology",
+              "author": "Lambers",
+              "year": "1998"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB45",
+              "doi-asserted-by": "crossref",
+              "first-page": "1141",
+              "DOI": "10.1086/321926",
+              "article-title": "Phylogenetic and ontogenetic influences on the distribution of anthocyanins and betacyanins in leaves of tropical plants",
+              "volume": "162",
+              "author": "Lee",
+              "year": "2001",
+              "journal-title": "International Journal of Plant Science"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB46",
+              "doi-asserted-by": "crossref",
+              "first-page": "70",
+              "DOI": "10.2307/2388175",
+              "article-title": "Abaxial anthocyanin layer in leaves of tropical rain forest plants: enhancer of light capture in deep shade",
+              "volume": "11",
+              "author": "Lee",
+              "year": "1979",
+              "journal-title": "Biotropica"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB47",
+              "doi-asserted-by": "crossref",
+              "first-page": "40",
+              "DOI": "10.2307/2388458",
+              "article-title": "The selective advantages of anthocyanins in developing leaves of mango and cacao",
+              "volume": "19",
+              "author": "Lee",
+              "year": "1987",
+              "journal-title": "Biotropica"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB48",
+              "series-title": "Pigment dynamics and autumn leaf senescence in a New England deciduous forest",
+              "author": "Lee",
+              "year": "2002"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB49",
+              "doi-asserted-by": "crossref",
+              "first-page": "39",
+              "DOI": "10.1104/pp.108.1.39",
+              "article-title": "Low temperature induces the accumulation of phenylalanine ammonia-lyase and chalcone synthase mRNAs of Arabidopsis thaliana in a light-dependent manner",
+              "volume": "108",
+              "author": "Leyva",
+              "year": "1995",
+              "journal-title": "Plant Physiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB50",
+              "doi-asserted-by": "crossref",
+              "first-page": "171",
+              "DOI": "10.1105/tpc.5.2.171",
+              "article-title": "Arabidopsis flavonoid mutants are hypersensitive to UV-B irradiation",
+              "volume": "5",
+              "author": "Li",
+              "year": "1993",
+              "journal-title": "The Plant Cell"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB51",
+              "doi-asserted-by": "crossref",
+              "first-page": "504",
+              "DOI": "10.1007/BF00714463",
+              "article-title": "Severe sensitivity to ultraviolet radiation in an Arabidopsis mutant deficient in flavonoid accumulation. II. Mechanisms of UVresistance in Arabidopsis",
+              "volume": "194",
+              "author": "Lois",
+              "year": "1994",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB52",
+              "doi-asserted-by": "crossref",
+              "first-page": "107",
+              "DOI": "10.1007/BF02861059",
+              "article-title": "Light dependent anthocyanin synthesis: a model system for the study of plant morphogenesis",
+              "volume": "51",
+              "author": "Mancinelli",
+              "year": "1985",
+              "journal-title": "Botanical Review"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB53",
+              "series-title": "Die Farben der Bl\u00fcthen, Eine chemisch-physiologische Abhandlung",
+              "author": "Marquart",
+              "year": "1835"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB54",
+              "series-title": "The Flavonoids",
+              "first-page": "970",
+              "article-title": "Physiology and function of flavonoids",
+              "author": "McClure",
+              "year": "1975"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB55",
+              "doi-asserted-by": "crossref",
+              "first-page": "1919",
+              "DOI": "10.1093/jxb/47.12.1919",
+              "article-title": "Cold responses of Arabidopsis mutants impaired in freezing tolerance",
+              "volume": "47",
+              "author": "McKown",
+              "year": "1996",
+              "journal-title": "Journal of Experimental Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB56",
+              "doi-asserted-by": "crossref",
+              "first-page": "841",
+              "DOI": "10.1046/j.1365-313X.1997.11040841.x",
+              "article-title": "Mutants of Arabidopsis thaliana with pleiotropic effects on the expression of the gene for beta-amylase and on the accumulation of anthocyanin that are inducible by sugars",
+              "volume": "11",
+              "author": "Mita",
+              "year": "1997",
+              "journal-title": "Plant Journal"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB57",
+              "series-title": "Untersuchungen \u00fcber die winterliche F\u00e4rbung der Bl\u00e4tter. Vermischte Schriften botanischen inhalts",
+              "author": "Mohl",
+              "year": "1837"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB58",
+              "doi-asserted-by": "crossref",
+              "first-page": "525",
+              "DOI": "10.1080/07352689609382369",
+              "article-title": "Signal perception, transduction, and gene expression involved in anthocyanin biosynthesis",
+              "volume": "15",
+              "author": "Mol",
+              "year": "1996",
+              "journal-title": "Critical Reviews in Plant Science"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB59",
+              "doi-asserted-by": "crossref",
+              "first-page": "102",
+              "DOI": "10.1007/BF00201040",
+              "article-title": "Differential dihydroflavonol reductase transcription and anthocyanin pigmentation in the juvenile and mature phases of ivy (Hedera helix L.)",
+              "volume": "194",
+              "author": "Murray",
+              "year": "1994",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB60",
+              "article-title": "The functional role of anthocyanins in leaves",
+              "author": "Neill",
+              "year": "2002"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB61",
+              "doi-asserted-by": "crossref",
+              "first-page": "1777",
+              "DOI": "10.1139/cjb-77-12-1777",
+              "article-title": "Optical properties of leaves in relation to anthocyanin concentration and distribution",
+              "volume": "77",
+              "author": "Neill",
+              "year": "1999",
+              "journal-title": "Canadian Journal of Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB62",
+              "doi-asserted-by": "crossref",
+              "first-page": "537",
+              "DOI": "10.1046/j.1365-3040.2002.00837.x",
+              "article-title": "Antioxidant activities of red versus green leaves in Elatostema rugosum",
+              "volume": "25",
+              "author": "Neill",
+              "year": "2002",
+              "journal-title": "Plant Cell and Environment"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB63",
+              "first-page": "5520",
+              "article-title": "Phytoalexin synthesis by the sorghum mesocotyl in response to infection by pathogenic and non-pathogenic fungi",
+              "volume": "84",
+              "author": "Nicholson",
+              "year": "1987"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB64",
+              "series-title": "The Anthocyanin Pigments of Plants",
+              "year": "1926"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB65",
+              "first-page": "281",
+              "article-title": "Ueber die Bedeutung des rothen Farbstoffes bei den Phanerogamen and die Beziehungen desselben zur St\u00e4rkewanderung",
+              "volume": "116",
+              "author": "Pick",
+              "year": "1883",
+              "journal-title": "Botanisches Centralblatt fuer Deutschland"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB66",
+              "article-title": "Ueber Lichtwirkung and Chlorophyllfunction in der Pflanze",
+              "volume": "Volumes 12/13",
+              "author": "Pringsheim",
+              "year": "1879"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB67",
+              "doi-asserted-by": "crossref",
+              "first-page": "266",
+              "DOI": "10.1093/oxfordjournals.molbev.a026108",
+              "article-title": "Patterns of evolutionary rate variation among genes of the anthocyanin biosynthetic pathway",
+              "volume": "16",
+              "author": "Rausher",
+              "year": "1999",
+              "journal-title": "molecular Biology and Evolution"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB68",
+              "series-title": "Flavonoids in Health and Disease",
+              "year": "1998"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB69",
+              "series-title": "Herbivores: Their Interactions with Secondary Plant Metabolites",
+              "author": "Rosenthal",
+              "year": "1979"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB70",
+              "series-title": "Pigment of the Imagination. A History of Phytochrome Research",
+              "author": "Sage",
+              "year": "1992"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB71",
+              "doi-asserted-by": "crossref",
+              "first-page": "203",
+              "DOI": "10.1023/A:1005801610891",
+              "article-title": "Protection mechanisms against excess light in the resurrection plants Craterostigma wilmsii and Xerophyta viscose",
+              "volume": "24",
+              "author": "Sherwin",
+              "year": "1998",
+              "journal-title": "Plant Growth Regulation"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB72",
+              "first-page": "377",
+              "article-title": "Flavonoid biosynthesis: \u2018new\u2019 functions for an \u2018old\u2019 pathway",
+              "volume": "1",
+              "author": "Shirley",
+              "year": "1996",
+              "journal-title": "Trends in Plant Science"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB73",
+              "doi-asserted-by": "crossref",
+              "first-page": "957",
+              "DOI": "10.2307/2410871",
+              "article-title": "Pleiotropoic effects of flower color intensity on herbivore performance in Ipomoea purpurea",
+              "volume": "50",
+              "author": "Simms",
+              "year": "1996",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB74",
+              "doi-asserted-by": "crossref",
+              "first-page": "451",
+              "DOI": "10.1023/A:1007084321859",
+              "article-title": "Photoabatement by anthocyanin shields photosynthetic systems from light stress",
+              "volume": "36",
+              "author": "Smillie",
+              "year": "1999",
+              "journal-title": "Photosynthetica"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB75",
+              "first-page": "229",
+              "article-title": "On the internal temperature of leaves in tropical insolation, with special reference to the effect of their colour on temperature: also observations on the periodicity of the appearance of young coloured leaves growing in the Peradeniya Gardens",
+              "volume": "4",
+              "author": "Smith",
+              "year": "1909",
+              "journal-title": "Annals of the Royal Botanical Garden, Peradeniya"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB76",
+              "doi-asserted-by": "crossref",
+              "first-page": "283",
+              "DOI": "10.1007/BF00377635",
+              "article-title": "Ecology of a leaf colour polymorphyism in a tropical forest species: habitat segregation and herbivory",
+              "volume": "69",
+              "author": "Smith",
+              "year": "1986",
+              "journal-title": "Oecologia"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB77",
+              "series-title": "Photomorphogenesis in Plants",
+              "first-page": "377",
+              "article-title": "Sensing the light environment: the functions of the phytochrome family",
+              "author": "Smith",
+              "year": "1994"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB78",
+              "series-title": "Flavonoid Metabolism",
+              "author": "Stafford",
+              "year": "1990"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB79",
+              "first-page": "137",
+              "article-title": "Ueber bunte Laubl\u00e4tter",
+              "volume": "13",
+              "author": "Stahl",
+              "year": "1896",
+              "journal-title": "Annals of the Botanical Garden Buitenzorg"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB80",
+              "doi-asserted-by": "crossref",
+              "first-page": "881",
+              "DOI": "10.1104/pp.105.3.881",
+              "article-title": "Flavonoids can protect maize DNA from the induction of ultraviolet radiation damage",
+              "volume": "105",
+              "author": "Stapleton",
+              "year": "1994",
+              "journal-title": "Plant Physiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB81",
+              "doi-asserted-by": "crossref",
+              "first-page": "500",
+              "DOI": "10.1086/284007",
+              "article-title": "Fruit flags: two hypotheses",
+              "volume": "120",
+              "author": "Stiles",
+              "year": "1982",
+              "journal-title": "American Naturalist"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB82",
+              "doi-asserted-by": "crossref",
+              "first-page": "126",
+              "DOI": "10.2307/2387788",
+              "article-title": "Protective colouration of young leaves in certain Malaysian palms",
+              "volume": "11",
+              "author": "Stone",
+              "year": "1979",
+              "journal-title": "Biotropica"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB83",
+              "doi-asserted-by": "crossref",
+              "first-page": "1040",
+              "DOI": "10.2307/2442195",
+              "article-title": "Cone colour polymorphism associated with elevation in white fir, Abies concolor, in southern Colorado",
+              "volume": "67",
+              "author": "Sturgeon",
+              "year": "1980",
+              "journal-title": "American Journal of Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB84",
+              "first-page": "541",
+              "article-title": "Light-induced anthocyanin reduces the extent of damage to DNA in UV-irradiated Centaurea cyanus cells in culture",
+              "volume": "32",
+              "author": "Takahashi",
+              "year": "1991",
+              "journal-title": "Plant Cell Physiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB85",
+              "volume": "Volumes 1 and 2",
+              "author": "Theophrastus",
+              "year": "1918"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB86",
+              "doi-asserted-by": "crossref",
+              "first-page": "489",
+              "DOI": "10.1016/S0176-1617(97)80016-8",
+              "article-title": "Osmotically-stressed poplar cell cultures: anthocyanin accumulation, deaminase activity, and solute composition",
+              "volume": "151",
+              "author": "Tholakalabavi",
+              "year": "1997",
+              "journal-title": "Journal of Plant Physiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB87",
+              "doi-asserted-by": "crossref",
+              "first-page": "219",
+              "DOI": "10.1139/o57-029",
+              "article-title": "Biosynthesis of quercetin in buckwheat I",
+              "volume": "35",
+              "author": "Watkin",
+              "year": "1957",
+              "journal-title": "Canadian Journal of Biochemistry and Physiology"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB88",
+              "series-title": "Molecular Plant Development",
+              "author": "Westhoff",
+              "year": "1998"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB89",
+              "series-title": "The Anthocyanin Pigments of Plants",
+              "author": "Wheldale",
+              "year": "1916"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB90",
+              "first-page": "189",
+              "article-title": "Ueber den Farbstoff der Kornblume",
+              "volume": "101",
+              "author": "Willstatter",
+              "year": "1912",
+              "journal-title": "Liebigs Annalen der Chemie"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB91",
+              "first-page": "769",
+              "article-title": "Ueber die Verwandtschaft der Anthocyane and Flavone",
+              "volume": "34",
+              "author": "Willstatter",
+              "year": "1914",
+              "journal-title": "Sitzung berichte der Deutschen Akademie der Wissenschaften zu Berlin"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB92",
+              "first-page": "1447",
+              "article-title": "Do anthocyanins play a role in UV protection of the red juvenile leaves of Syzygium?",
+              "volume": "325",
+              "author": "Woodall",
+              "year": "1998",
+              "journal-title": "Journal of Experimental Botany"
+            },
+            {
+              "key": "10.1016/S0065-2296(02)37040-X_BIB93",
+              "doi-asserted-by": "crossref",
+              "first-page": "7",
+              "DOI": "10.1016/S1360-1385(97)82730-6",
+              "article-title": "A function of colour",
+              "volume": "2",
+              "author": "Yamasaki",
+              "year": "1997",
+              "journal-title": "Trends in Plant Science"
+            }
+          ],
+          "container-title": [
+            "Advances in Botanical Research"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2020-04-02T05:54:18Z",
+            "timestamp": 1585806858000
+          },
+          "score": 50.440353,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S006522960237040X"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2002
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780120059379"
+          ],
+          "references-count": 93,
+          "URL": "https://doi.org/10.1016/s0065-2296(02)37040-x",
+          "ISSN": [
+            "0065-2296"
+          ],
+          "issn-type": [
+            {
+              "value": "0065-2296",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2002
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                26
+              ]
+            ],
+            "date-time": "2026-08-26T21:51:52Z",
+            "timestamp": 1787781112737,
+            "version": "build-2784847793"
+          },
+          "reference-count": 12,
+          "publisher": "Elsevier BV",
+          "issue": "8",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1972,
+                    8,
+                    1
+                  ]
+                ],
+                "date-time": "1972-08-01T00:00:00Z",
+                "timestamp": 81475200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Phytochemistry"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1972,
+                8
+              ]
+            ]
+          },
+          "DOI": "10.1016/s0031-9422(00)88535-0",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                25
+              ]
+            ],
+            "date-time": "2002-07-25T20:11:08Z",
+            "timestamp": 1027627868000
+          },
+          "page": "2555-2558",
+          "source": "Crossref",
+          "is-referenced-by-count": 29,
+          "title": [
+            "Anthocyanins and other phenolics in autumn leaves"
+          ],
+          "prefix": "10.1016",
+          "volume": "11",
+          "author": [
+            {
+              "given": "N.",
+              "family": "Ishikura",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB1",
+              "doi-asserted-by": "crossref",
+              "first-page": "299",
+              "DOI": "10.15281/jplantres1887.68.299",
+              "volume": "68",
+              "author": "Hayashi",
+              "year": "1955",
+              "journal-title": "Bot. Mag. Tokyo"
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1658",
+              "DOI": "10.1042/bj0321658",
+              "volume": "32",
+              "author": "Price",
+              "year": "1938",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB3",
+              "doi-asserted-by": "crossref",
+              "first-page": "719",
+              "DOI": "10.1016/S0031-9422(00)97138-3",
+              "volume": "10",
+              "author": "Takaishi",
+              "year": "1971",
+              "journal-title": "Phytochem."
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB4",
+              "doi-asserted-by": "crossref",
+              "first-page": "1454",
+              "DOI": "10.1038/1811454a0",
+              "volume": "181",
+              "author": "Roux",
+              "year": "1958",
+              "journal-title": "Nature, Lond."
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1371",
+              "DOI": "10.1038/1821371a0",
+              "volume": "182",
+              "author": "Hillis",
+              "year": "1958",
+              "journal-title": "Nature, Lond."
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB6",
+              "doi-asserted-by": "crossref",
+              "first-page": "535",
+              "DOI": "10.1016/S0031-9422(00)88031-0",
+              "volume": "3",
+              "author": "Troyer",
+              "year": "1964",
+              "journal-title": "Phytochem."
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB7",
+              "doi-asserted-by": "crossref",
+              "first-page": "85",
+              "DOI": "10.1016/0003-9861(52)90164-1",
+              "volume": "37",
+              "author": "Hattori",
+              "year": "1952",
+              "journal-title": "Archs. Biochem. Biophys."
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB8",
+              "doi-asserted-by": "crossref",
+              "first-page": "1353",
+              "DOI": "10.1248/yakushi1947.77.12_1353",
+              "volume": "77",
+              "author": "Mazaki",
+              "year": "1957",
+              "journal-title": "J. Pharm. Soc. Japan"
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB9",
+              "doi-asserted-by": "crossref",
+              "first-page": "737",
+              "DOI": "10.1248/yakushi1947.83.7_737",
+              "volume": "83",
+              "author": "Aritomi",
+              "year": "1963",
+              "journal-title": "J. Pharm. Soc. Japan"
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB10",
+              "doi-asserted-by": "crossref",
+              "first-page": "699",
+              "DOI": "10.1111/j.1095-8339.1957.tb00030.x",
+              "volume": "55",
+              "author": "Bate-Smith",
+              "year": "1957",
+              "journal-title": "J. Linn. Soc. Bot."
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB11",
+              "first-page": "189",
+              "author": "Smith",
+              "year": "1958"
+            },
+            {
+              "key": "10.1016/S0031-9422(00)88535-0_BIB12",
+              "doi-asserted-by": "crossref",
+              "first-page": "200",
+              "DOI": "10.1042/bj0530200",
+              "volume": "53",
+              "author": "Swain",
+              "year": "1953",
+              "journal-title": "Biochem. J."
+            }
+          ],
+          "container-title": [
+            "Phytochemistry"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0031942200885350?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0031942200885350?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                4,
+                21
+              ]
+            ],
+            "date-time": "2019-04-21T20:24:15Z",
+            "timestamp": 1555878255000
+          },
+          "score": 27.478794,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0031942200885350"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1972,
+                8
+              ]
+            ]
+          },
+          "references-count": 12,
+          "journal-issue": {
+            "issue": "8",
+            "published-print": {
+              "date-parts": [
+                [
+                  1972,
+                  8
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0031942200885350"
+          ],
+          "URL": "https://doi.org/10.1016/s0031-9422(00)88535-0",
+          "ISSN": [
+            "0031-9422"
+          ],
+          "issn-type": [
+            {
+              "value": "0031-9422",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1972,
+                8
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                4
+              ]
+            ],
+            "date-time": "2025-04-04T04:23:45Z",
+            "timestamp": 1743740625169,
+            "version": "3.40.3"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 0,
+          "publisher": "Springer Nature Switzerland",
+          "isbn-type": [
+            {
+              "value": "9783031840845",
+              "type": "print"
+            },
+            {
+              "value": "9783031840852",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2025-01-01T00:00:00Z",
+                "timestamp": 1735689600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2025-01-01T00:00:00Z",
+                "timestamp": 1735689600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-031-84085-2_4",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2025-04-03T19:30:10Z",
+            "timestamp": 1743708610000
+          },
+          "page": "65-89",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Vegetative Organs"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0003-4271-3167",
+              "authenticated-orcid": false,
+              "given": "Gy\u00f6rgy",
+              "family": "Kriska",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                4
+              ]
+            ]
+          },
+          "container-title": [
+            "Teaching Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-84085-2_4",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2025-04-03T19:30:10Z",
+            "timestamp": 1743708610000
+          },
+          "score": 26.31778,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/978-3-031-84085-2_4"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783031840845",
+            "9783031840852"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1007/978-3-031-84085-2_4",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "4 April 2025",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

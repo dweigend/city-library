@@ -1,0 +1,498 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1159689%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1126/science.1159689\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "18703739",
+          "source": "MED",
+          "pmid": "18703739",
+          "pmcid": "PMC5898235",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC5898235"
+            ]
+          },
+          "doi": "10.1126/science.1159689",
+          "title": "Small CRISPR RNAs guide antiviral defense in prokaryotes.",
+          "authorString": "Brouns SJ, Jore MM, Lundgren M, Westra ER, Slijkhuis RJ, Snijders AP, Dickman MJ, Makarova KS, Koonin EV, van der Oost J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Brouns SJ",
+                "lastName": "Brouns",
+                "firstName": "Stan J J",
+                "initials": "SJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-9573-1724"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Laboratory of Microbiology, Department of Agrotechnology and Food Sciences, Wageningen University, Dreijenplein 10, 6703 HB Wageningen, Netherlands."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Jore MM",
+                "lastName": "Jore",
+                "firstName": "Matthijs M",
+                "initials": "MM"
+              },
+              {
+                "fullName": "Lundgren M",
+                "lastName": "Lundgren",
+                "firstName": "Magnus",
+                "initials": "M"
+              },
+              {
+                "fullName": "Westra ER",
+                "lastName": "Westra",
+                "firstName": "Edze R",
+                "initials": "ER",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4396-0354"
+                }
+              },
+              {
+                "fullName": "Slijkhuis RJ",
+                "lastName": "Slijkhuis",
+                "firstName": "Rik J H",
+                "initials": "RJ"
+              },
+              {
+                "fullName": "Snijders AP",
+                "lastName": "Snijders",
+                "firstName": "Ambrosius P L",
+                "initials": "AP",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5416-8592"
+                }
+              },
+              {
+                "fullName": "Dickman MJ",
+                "lastName": "Dickman",
+                "firstName": "Mark J",
+                "initials": "MJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-9236-0788"
+                }
+              },
+              {
+                "fullName": "Makarova KS",
+                "lastName": "Makarova",
+                "firstName": "Kira S",
+                "initials": "KS"
+              },
+              {
+                "fullName": "Koonin EV",
+                "lastName": "Koonin",
+                "firstName": "Eugene V",
+                "initials": "EV"
+              },
+              {
+                "fullName": "van der Oost J",
+                "lastName": "van der Oost",
+                "firstName": "John",
+                "initials": "J"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5416-8592"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9236-0788"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9573-1724"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4396-0354"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data",
+              "recommended_reviews",
+              "related_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "5891",
+            "volume": "321",
+            "journalIssueId": 1549273,
+            "dateOfPublication": "2008 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 2008,
+            "journal": {
+              "medlineAbbreviation": "Science",
+              "title": "Science (New York, N.Y.)",
+              "essn": "1095-9203",
+              "issn": "0036-8075",
+              "nlmid": "0404511",
+              "isoabbreviation": "Science"
+            },
+            "printPublicationDate": "2008-08-01"
+          },
+          "pubYear": "2008",
+          "pageInfo": "960-964",
+          "abstractText": "Prokaryotes acquire virus resistance by integrating short fragments of viral nucleic acid into clusters of regularly interspaced short palindromic repeats (CRISPRs). Here we show how virus-derived sequences contained in CRISPRs are used by CRISPR-associated (Cas) proteins from the host to mediate an antiviral response that counteracts infection. After transcription of the CRISPR, a complex of Cas proteins termed Cascade cleaves a CRISPR RNA precursor in each repeat and retains the cleavage products containing the virus-derived sequence. Assisted by the helicase Cas3, these mature CRISPR RNAs then serve as small guide RNAs that enable Cascade to interfere with virus proliferation. Our results demonstrate that the formation of mature guide RNAs by the CRISPR RNA endonuclease subunit of Cascade is a mechanistic requirement for antiviral defense.",
+          "affiliation": "Laboratory of Microbiology, Department of Agrotechnology and Food Sciences, Wageningen University, Dreijenplein 10, 6703 HB Wageningen, Netherlands.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Engineering and Physical Sciences Research Council",
+                "grantId": "EP/D033713/1",
+                "orderIn": 0
+              },
+              {
+                "agency": "Engineering and Physical Sciences Research Council",
+                "grantId": "EP/E036252/1",
+                "orderIn": 0
+              },
+              {
+                "agency": "Intramural NIH HHS",
+                "acronym": "ImNIH",
+                "grantId": "Z01 LM000061",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Escherichia coli",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Escherichia coli K12",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "VI",
+                      "qualifierName": "virology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Bacteriophage lambda",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GD",
+                      "qualifierName": "growth & development"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Escherichia coli Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "CH",
+                      "qualifierName": "chemistry"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "RNA Precursors",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "DNA, Intergenic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "DNA, Viral",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "RNA, Bacterial",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Transcription, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Amino Acid Sequence"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Base Sequence"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Repetitive Sequences, Nucleic Acid"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genes, Bacterial"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Molecular Sequence Data"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "RNA, Small Untranslated"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Viral Plaque Assay"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "DNA, Viral",
+                "registryNumber": "0"
+              },
+              {
+                "name": "RNA, Bacterial",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Escherichia coli Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "RNA Precursors",
+                "registryNumber": "0"
+              },
+              {
+                "name": "DNA, Intergenic",
+                "registryNumber": "0"
+              },
+              {
+                "name": "RNA, Small Untranslated",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "abs",
+                "site": "www.sciencemag.org",
+                "url": "http://www.sciencemag.org/cgi/content/abstract/321/5891/960"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "html",
+                "site": "www.sciencemag.org",
+                "url": "http://www.sciencemag.org/cgi/content/full/321/5891/960"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "pdf",
+                "site": "www.sciencemag.org",
+                "url": "http://www.sciencemag.org/cgi/reprint/321/5891/960.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.1159689"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5898235"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5898235?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.1159689"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "18703730",
+                "reference": "Science. 2008 Aug 15;321(5891):922-3. doi: 10.1126/science.1162910.",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 1964,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "Y",
+          "dbCrossReferenceList": {
+            "dbName": [
+              "EMBL",
+              "INTERPRO",
+              "UNIPROT"
+            ]
+          },
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "Y",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "Y",
+          "manuscriptId": "NIHMS952971",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2008-08-30",
+          "dateOfCreation": "2008-08-16",
+          "dateOfRevision": "2025-05-29",
+          "firstPublicationDate": "2008-08-01",
+          "firstIndexDate": "2008-08-27",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

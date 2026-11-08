@@ -1,0 +1,285 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature02298%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nature02298\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "14973486",
+          "source": "MED",
+          "pmid": "14973486",
+          "doi": "10.1038/nature02298",
+          "title": "Multistability in the lactose utilization network of Escherichia coli.",
+          "authorString": "Ozbudak EM, Thattai M, Lim HN, Shraiman BI, Van Oudenaarden A.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Ozbudak EM",
+                "lastName": "Ozbudak",
+                "firstName": "Ertugrul M",
+                "initials": "EM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2858-4696"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Thattai M",
+                "lastName": "Thattai",
+                "firstName": "Mukund",
+                "initials": "M"
+              },
+              {
+                "fullName": "Lim HN",
+                "lastName": "Lim",
+                "firstName": "Han N",
+                "initials": "HN"
+              },
+              {
+                "fullName": "Shraiman BI",
+                "lastName": "Shraiman",
+                "firstName": "Boris I",
+                "initials": "BI"
+              },
+              {
+                "fullName": "Van Oudenaarden A",
+                "lastName": "Van Oudenaarden",
+                "firstName": "Alexander",
+                "initials": "A"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2858-4696"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "recommended_reviews"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6976",
+            "volume": "427",
+            "journalIssueId": 1122066,
+            "dateOfPublication": "2004 Feb",
+            "monthOfPublication": 2,
+            "yearOfPublication": 2004,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "nlmid": "0410462",
+              "isoabbreviation": "Nature"
+            },
+            "printPublicationDate": "2004-02-01"
+          },
+          "pubYear": "2004",
+          "pageInfo": "737-740",
+          "abstractText": "Multistability, the capacity to achieve multiple internal states in response to a single set of external inputs, is the defining characteristic of a switch. Biological switches are essential for the determination of cell fate in multicellular organisms, the regulation of cell-cycle oscillations during mitosis and the maintenance of epigenetic traits in microbes. The multistability of several natural and synthetic systems has been attributed to positive feedback loops in their regulatory networks. However, feedback alone does not guarantee multistability. The phase diagram of a multistable system, a concise description of internal states as key parameters are varied, reveals the conditions required to produce a functional switch. Here we present the phase diagram of the bistable lactose utilization network of Escherichia coli. We use this phase diagram, coupled with a mathematical model of the network, to quantitatively investigate processes such as sugar uptake and transcriptional regulation in vivo. We then show how the hysteretic response of the wild-type system can be converted to an ultrasensitive graded response. The phase diagram thus serves as a sensitive probe of molecular interactions and as a powerful tool for rational network design.",
+          "affiliation": "Department of Physics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, U.S. Gov't, P.H.S.",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Escherichia coli",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Glucose",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PD",
+                      "qualifierName": "pharmacology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Lactose",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Expression Regulation, Bacterial",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Transport",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Lac Operon",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Feedback, Physiological",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Glucose",
+                "registryNumber": "IY9XDZ35W2"
+              },
+              {
+                "name": "Lactose",
+                "registryNumber": "J2B2A4N98G"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nature02298"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 676,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2004-03-05",
+          "dateOfCreation": "2004-02-20",
+          "dateOfRevision": "2021-01-09",
+          "firstPublicationDate": "2004-02-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

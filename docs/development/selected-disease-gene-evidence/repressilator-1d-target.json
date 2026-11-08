@@ -1,0 +1,121 @@
+{
+  "model": "repressilator-1d",
+  "setup": {
+    "monitors": "Tick\n0\nSignal\nOn\nMean on duration\n0\nMean off duration\n0",
+    "status": "Model initialized.",
+    "errors": [],
+    "console": []
+  },
+  "progress": {
+    "monitors": "Tick\n20\nSignal\nOn\nMean on duration\n6\nMean off duration\n7",
+    "status": "Steps completed.",
+    "statusState": "success",
+    "errors": [],
+    "console": [],
+    "canvas": [
+      {
+        "width": 1344,
+        "height": 448,
+        "rect": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 224,
+          "top": 115,
+          "right": 984,
+          "bottom": 339,
+          "left": 312
+        }
+      }
+    ],
+    "charts": [
+      {
+        "label": "On: x 0, y 6; Off: x 0, y 7",
+        "paths": 1
+      },
+      {
+        "label": "mRNA 0: 1; mRNA 1: 0; mRNA 2: 1; TF 0: 30; TF 1: 23; TF 2: 33; Signal: 1",
+        "paths": 8
+      }
+    ],
+    "overflow": false
+  },
+  "interactions": {
+    "runPause": true,
+    "reset": {
+      "monitors": "Tick\n0\nSignal\nOn\nMean on duration\n0\nMean off duration\n0",
+      "status": "Model initialized.",
+      "errors": [],
+      "console": []
+    }
+  },
+  "immutable": {
+    "buildVersion": "1793972277740",
+    "entryPath": "./chunks/ui-9h5yfmw1.js",
+    "modelChunkSHA256": "ef87d1d51afed74bee10c3fe86c960b48197c4876e269464f5b036c66aa7a6c8",
+    "modelChunkBytes": 17626,
+    "sharedChunks": [
+      {
+        "url": "http://localhost:3149/chunks/app-sb7h8whr.js",
+        "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+        "bytes": 1112387
+      }
+    ],
+    "sourceMarker": "selected-disease-gene-b09:repressilator-1d:e222752e0f629c0ae1f6df4f6858fcecb5629868ffd6a52ed602e172084f1315",
+    "defaultBrowserHeadless": {
+      "tick": 3,
+      "agents": 38,
+      "stopped": false
+    },
+    "appSHA256": "b940b34e8ad4b411cdf542525fe25a49be126707acc89fb427d41d98a4d3bada"
+  },
+  "mobileLayout": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      602
+    ],
+    "documentWidth": 390,
+    "canvas": {
+      "x": 16,
+      "y": -0.125,
+      "width": 358,
+      "height": 119.328125,
+      "top": -0.125,
+      "right": 374,
+      "bottom": 119.203125,
+      "left": 16
+    },
+    "errors": [],
+    "console": []
+  },
+  "settings": {
+    "seed": 1,
+    "progressSteps": 20,
+    "sourceCase": {
+      "slug": "repressilator-1d",
+      "name": "Repressilator 1D",
+      "path": "Sample Models/Biology/Repressilator 1D",
+      "setup": "setup",
+      "steps": 20,
+      "reports": [
+        "ticks",
+        "count mRNAs",
+        "count TFs",
+        "is-signal-on?",
+        "mean-on-duration",
+        "mean-off-duration"
+      ]
+    }
+  },
+  "screenshots": [
+    "repressilator-1d-target-setup.png",
+    "repressilator-1d-target-progress.png",
+    "repressilator-1d-target-desktop-dark.png",
+    "repressilator-1d-target-mobile-light.png",
+    "repressilator-1d-target-mobile-dark.png"
+  ]
+}

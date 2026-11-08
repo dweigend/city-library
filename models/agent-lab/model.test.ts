@@ -102,7 +102,7 @@ describe("HTML application's headless model actions", () => {
 });
 
 
-describe("Agend Lab exchange scenario", () => {
+describe("Agent Lab exchange scenario", () => {
   test("same setup and seed replay the same conserved population dynamics", () => {
     const first = createExchangeModel({ count: 24, initialEnergy: 10, seed: 1 });
     const replay = createExchangeModel({ count: 24, initialEnergy: 10, seed: 1 });

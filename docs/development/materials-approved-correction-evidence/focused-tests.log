@@ -1,0 +1,22 @@
+bun test v1.4.2 (744846f84)
+
+tests/selected-materials-b.test.ts:
+(pass) selected materials source mechanisms > heat patch updates are sequential old-temperature writes and clamp strips [4.35ms]
+(pass) selected materials source mechanisms > crystallization freezes below its source color threshold and stops before another tick [10.95ms]
+(pass) selected materials source mechanisms > crystallization cooling sees preceding atom writes within the pass [5.39ms]
+(pass) selected materials source mechanisms > interstitial occupancy exclusion, reservoirs, concentration edits and max-tick barrier [6.63ms]
+(pass) selected materials source mechanisms > interstitial closed random walks conserve atoms, hard x and wrapped y [7.95ms]
+(pass) selected materials source mechanisms > DLA initial birth throttle, continuous radial motion, natural growth and terminal barrier [11.53ms]
+(pass) selected materials source mechanisms > readbacks are pure and detached; invalid fixture inputs fail before writes [1.47ms]
+
+tests/selected-materials-a.test.ts:
+(pass) sandpile deterministic open avalanche oracle and pure exploration [0.99ms]
+(pass) Ising exact energy branches and default widgets [2.86ms]
+(pass) Sand snapshots read old colors, spout precedes movement and dump does not tick [1.01ms]
+(pass) Solid diffusion preserves canonical atomic identities, species and exclusion [6.77ms]
+(pass) Sand simultaneous proposals deliberately coalesce competing grains [0.49ms]
+
+ 12 pass
+ 0 fail
+ 79 expect() calls
+Ran 12 tests across 2 files. [74.00ms]

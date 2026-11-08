@@ -1,0 +1,826 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Multistability+in+the+lactose+utilization+network+of+Escherichia+coli+Ozbudak+2004&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1693197,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T10:28:36Z",
+            "timestamp": 1793788116171,
+            "version": "4.6.1"
+          },
+          "reference-count": 30,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "6976",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2004,
+                    2,
+                    1
+                  ]
+                ],
+                "date-time": "2004-02-01T00:00:00Z",
+                "timestamp": 1075593600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2004,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature02298",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                2,
+                18
+              ]
+            ],
+            "date-time": "2004-02-18T13:21:25Z",
+            "timestamp": 1077110485000
+          },
+          "page": "737-740",
+          "source": "Crossref",
+          "is-referenced-by-count": 948,
+          "title": [
+            "Multistability in the lactose utilization network of Escherichia coli"
+          ],
+          "prefix": "10.1038",
+          "volume": "427",
+          "author": [
+            {
+              "given": "Ertugrul M.",
+              "family": "Ozbudak",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Mukund",
+              "family": "Thattai",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Han N.",
+              "family": "Lim",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Boris I.",
+              "family": "Shraiman",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Alexander",
+              "family": "van Oudenaarden",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BFnature02298_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "895",
+              "DOI": "10.1126/science.280.5365.895",
+              "volume": "280",
+              "author": "JE Ferrell Jr",
+              "year": "1998",
+              "unstructured": "Ferrell, J. E. Jr & Machleder, E. M. The biochemical basis of an all-or-none cell fate switch in Xenopus oocytes. Science 280, 895\u2013898 (1998)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature02298_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "346",
+              "DOI": "10.1038/ncb954",
+              "volume": "5",
+              "author": "JR Pomerening",
+              "year": "2003",
+              "unstructured": "Pomerening, J. R., Sontag, E. D. & Ferrell, J. E. Jr Building a cell cycle oscillator: hysteresis and bistability in the activation of Cdc2. Nature Cell Biol. 5, 346\u2013351 (2003)",
+              "journal-title": "Nature Cell Biol."
+            },
+            {
+              "key": "BFnature02298_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "975",
+              "DOI": "10.1073/pnas.0235349100",
+              "volume": "100",
+              "author": "W Sha",
+              "year": "2003",
+              "unstructured": "Sha, W. et al. Hysteresis drives cell-cycle transitions in Xenopus laevis egg extracts. Proc. Natl Acad. Sci. USA 100, 975\u2013980 (2003)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature02298_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "947",
+              "DOI": "10.1016/S1097-2765(03)00383-6",
+              "volume": "12",
+              "author": "A Hernday",
+              "year": "2003",
+              "unstructured": "Hernday, A., Braaten, B. A. & Low, D. The mechanism by which DNA adenine methylase and PapI activate the pap epigenetic switch. Mol. Cell 12, 947\u2013957 (2003)",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnature02298_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "203",
+              "DOI": "10.1046/j.1365-2958.2002.03153.x",
+              "volume": "46",
+              "author": "TA Blauwkamp",
+              "year": "2002",
+              "unstructured": "Blauwkamp, T. A. & Ninfa, A. J. Physiological role of the GlnK signal transduction protein of Escherichia coli: survival of nitrogen starvation. Mol. Microbiol. 46, 203\u2013214 (2002)",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnature02298_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "8168",
+              "DOI": "10.1073/pnas.94.15.8168",
+              "volume": "94",
+              "author": "DA Siegele",
+              "year": "1997",
+              "unstructured": "Siegele, D. A. & Hu, J. C. Gene expression from plasmids containing the araBAD promoter at subsaturating inducer concentrations represents mixed populations. Proc. Natl Acad. Sci. USA 94, 8168\u20138172 (1997)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature02298_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "339",
+              "DOI": "10.1038/35002131",
+              "volume": "403",
+              "author": "TS Gardner",
+              "year": "2000",
+              "unstructured": "Gardner, T. S., Cantor, C. R. & Collins, J. J. Construction of a genetic toggle switch in Escherichia coli. Nature 403, 339\u2013342 (2000)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature02298_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "7714",
+              "DOI": "10.1073/pnas.1332628100",
+              "volume": "100",
+              "author": "FJ Isaacs",
+              "year": "2003",
+              "unstructured": "Isaacs, F. J., Hasty, J., Cantor, C. R. & Collins, J. J. Prediction and measurement of an augoregulatory genetic module. Proc. Natl Acad. Sci. USA 100, 7714\u20137719 (2003)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature02298_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "2528",
+              "DOI": "10.1093/emboj/20.10.2528",
+              "volume": "20",
+              "author": "A Becskei",
+              "year": "2001",
+              "unstructured": "Becskei, A., Seraphin, B. & Serrano, L. Positive feedback in eukaryotic gene networks: cell differentiation by graded to binary response conversion. EMBO J. 20, 2528\u20132535 (2001)",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "BFnature02298_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "140",
+              "DOI": "10.1016/S0955-0674(02)00314-9",
+              "volume": "14",
+              "author": "JE Ferrell Jr",
+              "year": "2002",
+              "unstructured": "Ferrell, J. E. Jr Self-perpetuating states in signal transduction: positive feedback, double-negative feedback and bistability. Curr. Opin. Cell Biol. 14, 140\u2013148 (2002)",
+              "journal-title": "Curr. Opin. Cell Biol."
+            },
+            {
+              "key": "BFnature02298_CR11",
+              "volume-title": "Modern Theory of Critical Phenomena",
+              "author": "S-K Ma",
+              "year": "1976",
+              "unstructured": "Ma, S.-K. Modern Theory of Critical Phenomena (Perseus Books, Reading, Massachusetts, 1976)"
+            },
+            {
+              "key": "BFnature02298_CR12",
+              "volume-title": "Nonlinear Dynamics and Chaos",
+              "author": "SH Strogatz",
+              "year": "1994",
+              "unstructured": "Strogatz, S. H. Nonlinear Dynamics and Chaos (Perseus Books, Reading, Massachusetts, 1994)"
+            },
+            {
+              "key": "BFnature02298_CR13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1515/9783110879476",
+              "volume-title": "The Lac Operon: A Short History of a Genetic Paradigm",
+              "author": "B M\u00fcller-Hill",
+              "year": "1996",
+              "unstructured": "M\u00fcller-Hill, B. The Lac Operon: A Short History of a Genetic Paradigm (Walter de Gruyter, Berlin, 1996)"
+            },
+            {
+              "key": "BFnature02298_CR14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Louis, M. & Becskei, A. Binary and graded responses in gene networks. Science STKE [online], 30 July 2002 (doi:10.1126/stke.2002.143.pe33)",
+              "DOI": "10.1126/stke.2002.143.pe33"
+            },
+            {
+              "key": "BFnature02298_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "3167",
+              "DOI": "10.1093/emboj/20.12.3167",
+              "volume": "20",
+              "author": "SR Biggar",
+              "year": "2001",
+              "unstructured": "Biggar, S. R. & Crabtree, G. R. Cell signaling can direct either binary or graded transcriptional responses. EMBO J. 20, 3167\u20133176 (2001)",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "BFnature02298_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "553",
+              "DOI": "10.1073/pnas.43.7.553",
+              "volume": "43",
+              "author": "A Novick",
+              "year": "1957",
+              "unstructured": "Novick, A. & Weiner, M. Enzyme induction as an all-or-none phenomenon. Proc. Natl Acad. Sci. USA. 43, 553\u2013566 (1957)",
+              "journal-title": "Proc. Natl Acad. Sci. USA."
+            },
+            {
+              "key": "BFnature02298_CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "601",
+              "DOI": "10.1128/JB.78.5.601-612.1959",
+              "volume": "78",
+              "author": "M Cohn",
+              "year": "1959",
+              "unstructured": "Cohn, M. & Horibata, K. Inhibition by glucose of the induced synthesis of the \u03b2-galactoside-enzyme system of Escherichia coli: Analysis of maintenance. J. Bacteriol. 78, 601\u2013612 (1959)",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnature02298_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "195",
+              "DOI": "10.1016/S1369-5274(99)80034-4",
+              "volume": "2",
+              "author": "J Stulke",
+              "year": "1999",
+              "unstructured": "Stulke, J. & Hillen, W. Carbon catabolite repression in bacteria. Curr. Opin. Microbiol. 2, 195\u2013201 (1999)",
+              "journal-title": "Curr. Opin. Microbiol."
+            },
+            {
+              "key": "BFnature02298_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "7702",
+              "DOI": "10.1073/pnas.1230759100",
+              "volume": "100",
+              "author": "Y Setty",
+              "year": "2003",
+              "unstructured": "Setty, Y., Mayo, A. E., Surette, M. G. & Alon, U. Detailed map of a cis-regulatory input function. Proc. Natl Acad. Sci. USA 100, 7702\u20137707 (2003)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature02298_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "209",
+              "DOI": "10.1016/0022-5193(68)90190-2",
+              "volume": "20",
+              "author": "JS Griffith",
+              "year": "1968",
+              "unstructured": "Griffith, J. S. Mathematics of cellular control processes II: Positive feedback to one gene. J. Theor. Biol. 20, 209\u2013216 (1968)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFnature02298_CR21",
+              "first-page": "1",
+              "volume": "5",
+              "author": "JJ Tyson",
+              "year": "1978",
+              "unstructured": "Tyson, J. J. & Othmer, H. G. The dynamics of feedback control circuits in biochemical pathways. Prog. Theor. Biol. 5, 1\u201362 (1978)",
+              "journal-title": "Prog. Theor. Biol."
+            },
+            {
+              "key": "BFnature02298_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "6790",
+              "DOI": "10.1128/jb.178.23.6790-6795.1996",
+              "volume": "178",
+              "author": "B Nobelmann",
+              "year": "1996",
+              "unstructured": "Nobelmann, B. & Lengeler, J. W. Molecular analysis of the gat genes from Escherichia coli and of their roles in galactitiol transport and metabolism. J. Bacteriol. 178, 6790\u20136795 (1996)",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnature02298_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "973",
+              "DOI": "10.1002/j.1460-2075.1990.tb08199.x",
+              "volume": "9",
+              "author": "S Oehler",
+              "year": "1990",
+              "unstructured": "Oehler, S., Eismann, E. R., Kramer, H. & M\u00fcller-Hill, B. The three operators of the lac operon cooperate in repression. EMBO J. 9, 973\u2013979 (1990)",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "BFnature02298_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "1509",
+              "DOI": "10.1016/0009-2509(95)00306-1",
+              "volume": "51",
+              "author": "JD Chung",
+              "year": "1996",
+              "unstructured": "Chung, J. D. & Stephanopoulos, G. On physiological multiplicity and population heterogeneity of biological systems. Chem. Eng. Sci. 51, 1509\u20131521 (1996)",
+              "journal-title": "Chem. Eng. Sci."
+            },
+            {
+              "key": "BFnature02298_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "3116",
+              "DOI": "10.1016/S0006-3495(01)75949-8",
+              "volume": "81",
+              "author": "TB Kepler",
+              "year": "2001",
+              "unstructured": "Kepler, T. B. & Elston, T. C. Stochasticity in transcriptional regulation: origins, consequences, and mathematical representations. Biophys. J. 81, 3116\u20133136 (2001)",
+              "journal-title": "Biophys. J."
+            },
+            {
+              "key": "BFnature02298_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "744",
+              "DOI": "10.1016/S0006-3495(03)74517-2",
+              "volume": "85",
+              "author": "M Thattai",
+              "year": "2003",
+              "unstructured": "Thattai, M. & Shraiman, B. I. Metabolic switching in the sugar phosphotransferase system of Escherichia coli. Biophys. J. 85, 744\u2013754 (2003)",
+              "journal-title": "Biophys. J."
+            },
+            {
+              "key": "BFnature02298_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "597",
+              "DOI": "10.1016/S0092-8674(03)00346-5",
+              "volume": "113",
+              "author": "MR Atkinson",
+              "year": "2003",
+              "unstructured": "Atkinson, M. R., Savageau, M. A., Myers, J. T. & Ninfa, A. J. Development of genetic toggle circuitry exhibiting toggle switch or oscillatory behavior in Escherichia coli. Cell 113, 597\u2013607 (2003)",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BFnature02298_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "C531",
+              "DOI": "10.1152/ajpcell.1998.274.2.C531",
+              "volume": "43",
+              "author": "P Smolen",
+              "year": "1998",
+              "unstructured": "Smolen, P., Baxter, D. A. & Byrne, J. H. Frequency selectivity, multistability, and oscillations emerge from models of genetic regulatory systems. Am. J. Physiol. 43, C531 (1998)",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "BFnature02298_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "842",
+              "DOI": "10.1128/JB.182.3.842-847.2000",
+              "volume": "182",
+              "author": "D Boyd",
+              "year": "2000",
+              "unstructured": "Boyd, D., Weiss, D. S., Chen, J. C. & Beckwith, J. Towards single-copy gene expression systems making gene cloning physiologically relevant: lambda InCh, a simple Escherichia coli plasmid-chromosome shuttle system. J. Bacteriol. 182, 842\u2013847 (2000)",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnature02298_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "1203",
+              "DOI": "10.1093/nar/25.6.1203",
+              "volume": "25",
+              "author": "R Lutz",
+              "year": "1997",
+              "unstructured": "Lutz, R. & Bujard, H. Independent and tight regulation of transcriptional units in Escherichia coli via the LacR/O, the TetR/O and AraC/I1-I2 regulatory elements. Nucleic Acids Res. 25, 1203\u20131210 (1997)",
+              "journal-title": "Nucleic Acids Res."
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nature02298.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature02298",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature02298.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T14:20:59Z",
+            "timestamp": 1684419659000
+          },
+          "score": 50.62397,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature02298"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                2
+              ]
+            ]
+          },
+          "references-count": 30,
+          "journal-issue": {
+            "issue": "6976",
+            "published-print": {
+              "date-parts": [
+                [
+                  2004,
+                  2
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature02298"
+          ],
+          "URL": "https://doi.org/10.1038/nature02298",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1017854.206739",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1017854.206456",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1017854.216539",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                14
+              ]
+            ],
+            "date-time": "2025-05-14T10:47:05Z",
+            "timestamp": 1747219625107,
+            "version": "3.40.5"
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2004,
+                6,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.1017854.216539",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                19
+              ]
+            ],
+            "date-time": "2012-09-19T17:51:00Z",
+            "timestamp": 1348077060000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of Multistability in the lactose utilization network of Escherichia coli."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0003-4295-2686",
+              "authenticated-orcid": true,
+              "given": "Simon",
+              "family": "Andrews",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "School of Animal & Microbial Sciences, University of Reading, UK"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2004,
+                5,
+                28
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                17
+              ]
+            ],
+            "date-time": "2020-04-17T08:05:23Z",
+            "timestamp": 1587110723000
+          },
+          "score": 44.38756,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/1017854#eval216539"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                5,
+                28
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.1017854.216539",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/nature02298",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                5,
+                28
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                4
+              ]
+            ],
+            "date-time": "2024-03-04T03:34:24Z",
+            "timestamp": 1709523264437
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.1017854.206739",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                19
+              ]
+            ],
+            "date-time": "2012-09-19T18:47:38Z",
+            "timestamp": 1348080458000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of Multistability in the lactose utilization network of Escherichia coli."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "given": "Jeffrey",
+              "family": "Axelrod",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Pathology,L235, Stanford University School of Medicine, USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                2
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                17
+              ]
+            ],
+            "date-time": "2020-04-17T06:55:15Z",
+            "timestamp": 1587106515000
+          },
+          "score": 44.023407,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/1017854#eval206739"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                2
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.1017854.206739",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/nature02298",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

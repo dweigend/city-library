@@ -1,0 +1,30 @@
+file:///tmp/city-library-consumer-QHE3lc/consumer.mjs:49
+const preciseGraph=Graph.add<object,{weight:number}>({edgeState:{weight:1}});
+                                    ^^^^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in destructuring declaration
+    at compileSourceTextModule (node:internal/modules/esm/utils:355:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:93:18)
+    at #translate (node:internal/modules/esm/loader:441:20)
+    at afterLoad (node:internal/modules/esm/loader:509:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:514:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:567:36)
+    at afterResolve (node:internal/modules/esm/loader:614:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:12)
+    at node:internal/modules/esm/loader:639:32
+    at TracingChannel.tracePromise (node:diagnostics_channel:547:22)
+
+Node.js v26.8.2
+2 | import { tmpdir } from "node:os";
+3 | import { join, resolve } from "node:path";
+4 | const directory = await mkdtemp(join(tmpdir(), "city-library-consumer-"));
+5 | async function command(args: string[], cwd: string) {
+6 |   const process = Bun.spawn(args, { cwd, stdout: "inherit", stderr: "inherit" });
+7 |   if (await process.exited !== 0) throw new Error(`Consumer command failed: ${args.join(" ")}`);
+                                                ^
+error: Consumer command failed: node consumer.mjs
+      at command (/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/scripts/consumer.ts:7:45)
+
+Bun v1.4.2 (Linux x64)
+error: script "consumer" exited with code 1
+error: script "check" exited with code 1

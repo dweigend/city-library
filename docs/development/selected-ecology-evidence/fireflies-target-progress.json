@@ -1,0 +1,147 @@
+{
+  "url": "http://localhost:3126/?experiment=fireflies",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "dpr": 2
+  },
+  "appearance": "light",
+  "monitors": [
+    "Tick\n10\nFlashing\n151\nFireflies\n1500",
+    ""
+  ],
+  "inputs": [
+    {
+      "name": "",
+      "value": "fireflies"
+    },
+    {
+      "name": "seed",
+      "value": "1"
+    },
+    {
+      "name": "number",
+      "value": "1500"
+    },
+    {
+      "name": "",
+      "value": "5"
+    },
+    {
+      "name": "live-strategy",
+      "value": "delay"
+    },
+    {
+      "name": "live-flashLength",
+      "value": "1"
+    },
+    {
+      "name": "live-cycleLength",
+      "value": "10"
+    },
+    {
+      "name": "live-flashesToReset",
+      "value": "1"
+    },
+    {
+      "name": "live-showDarkFireflies",
+      "value": "on",
+      "checked": false
+    },
+    {
+      "name": "",
+      "value": "on",
+      "checked": false
+    }
+  ],
+  "status": [
+    "",
+    "Steps completed."
+  ],
+  "charts": [
+    {
+      "label": "Flashing: 151",
+      "rect": {
+        "x": 312,
+        "y": 838,
+        "width": 944,
+        "height": 224
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Setup",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Run",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "1 step",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "10 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "100 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    }
+  ],
+  "readback": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "nonblack": 1806336,
+      "rgbaFNV32": 1171086326,
+      "rect": {
+        "x": 312,
+        "y": 115,
+        "width": 672,
+        "height": 672
+      }
+    }
+  ],
+  "overflow": false,
+  "assets": [
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "54f9ef0ac3c1908b582cca11eb07ec7cac7ca5fcbe190038b554ab231e1943aa"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-pe498kxb.js",
+      "sha256": "b1d7212d02f7a738cef6f644bd4642148397c7fd1df6401ea95d5375d943545c"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "54f9ef0ac3c1908b582cca11eb07ec7cac7ca5fcbe190038b554ab231e1943aa"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-pe498kxb.js",
+      "sha256": "b1d7212d02f7a738cef6f644bd4642148397c7fd1df6401ea95d5375d943545c"
+    }
+  ],
+  "text": "Skip to experiment\nAgent Lab\nExperiment\nAnts\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nExpected Value\nFire\nFireflies\nFlocking\nGalton Box\nHeatbugs\nHex Cell Aggregation\nInvasive Plants\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRabbits Grass Weeds\nRandom Combinations and Permutations\nSegregation\nShepherds\nSimple Birth Rates\nSmoothLife\nStochastic Patchwork\nTermites\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nNumber\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n10\nFlashing\n151\nFireflies\n1500\nStrategy\ndelay\nadvance\nFlash length\nCycle length\nFlashes to reset\nShow dark fireflies\n\nSteps completed.\n\nModel info\nFireflies\nFlashing fireflies\n158\n0\n10\nFlashing"
+}

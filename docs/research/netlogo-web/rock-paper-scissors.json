@@ -1,0 +1,121 @@
+{
+  "slug": "rock-paper-scissors",
+  "name": "Rock Paper Scissors",
+  "catalogPath": "Sample Models/Biology/Rock Paper Scissors",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Rock%20Paper%20Scissors.nlogox",
+  "deliveryBatch": "B10",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does movement influence coexistence among cyclic competitors? NetLogo Rock Paper Scissors represents three local populations: red defeats green, green defeats blue, and blue defeats red. Reproduction, competition, and exchange of positions generate spatial patterns. The Info connects its event-based formulation to mobility studies [1,2], while bacterial competition experiments [3] provide an empirical comparison. The agents are abstract competitors rather than a calibrated microbial species assemblage; interaction symmetry and movement rates are declared assumptions. Spirals illustrate how local cyclic dominance can organize space and how mobility can change persistence. They do not prove that diversity is always stable, that more movement is always beneficial, or that identical rates describe real ecological interactions.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Rock%20Paper%20Scissors.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Rock%20Paper%20Scissors.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 bed55ae5580b7abf1a17f1d6e8a8624457c98167d206601f1b780f75d3bc15dc",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/rock-paper-scissors.nlogox",
+    "infoFile": "evidence/biology/rock-paper-scissors-info.txt",
+    "originalModelCitation": "* Head, B., Grider, R. and Wilensky, U. (2017).  NetLogo Rock Paper Scissors model.  http://ccl.northwestern.edu/netlogo/models/RockPaperScissors.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "reichenbach",
+      "authors": [
+        "Tobias Reichenbach",
+        "Mauro Mobilia",
+        "Erwin Frey"
+      ],
+      "title": "Mobility promotes and jeopardizes biodiversity in rock–paper–scissors games",
+      "year": 2007,
+      "venue": "Nature",
+      "doi": "10.1038/nature06095",
+      "url": "https://doi.org/10.1038/nature06095",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Mobility+promotes+and+jeopardizes+biodiversity+in+rock-paper-scissors+games+Reichenbach+Mobilia+Frey+2007&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/reichenbach-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature06095%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/reichenbach-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "448",
+      "issue": "7157",
+      "pages": "1046-1049",
+      "relevance": "The model explicitly follows mobility-dependent biodiversity research in cyclic competition."
+    },
+    {
+      "id": "reichenbach2",
+      "authors": [
+        "Tobias Reichenbach",
+        "Mauro Mobilia",
+        "Erwin Frey"
+      ],
+      "title": "Self-organization of mobile populations in cyclic competition",
+      "year": 2008,
+      "venue": "Journal of Theoretical Biology",
+      "doi": "10.1016/j.jtbi.2008.05.014",
+      "url": "https://doi.org/10.1016/j.jtbi.2008.05.014",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Self-organization+of+mobile+populations+in+cyclic+competition+Reichenbach+Mobilia+Frey+2008&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/reichenbach2-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.jtbi.2008.05.014%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/reichenbach2-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "254",
+      "issue": "2",
+      "pages": "368-383",
+      "relevance": "The event-based spatial formulation is directly relevant to the model’s scientific lineage."
+    },
+    {
+      "id": "kerr",
+      "authors": [
+        "Benjamin Kerr",
+        "Margaret A. Riley",
+        "Marcus W. Feldman",
+        "Brendan J. M. Bohannan"
+      ],
+      "title": "Local dispersal promotes biodiversity in a real-life game of rock–paper–scissors",
+      "year": 2002,
+      "venue": "Nature",
+      "doi": "10.1038/nature00823",
+      "url": "https://doi.org/10.1038/nature00823",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Local+dispersal+promotes+biodiversity+in+a+real-life+game+of+rock-paper-scissors+Kerr+Riley+Feldman+Bohannan+2002&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/kerr-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature00823%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/kerr-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "418",
+      "issue": "6894",
+      "pages": "171-174",
+      "relevance": "A bacterial experimental system supplies empirical context for local dispersal and cyclic competition."
+    }
+  ],
+  "gaps": []
+}

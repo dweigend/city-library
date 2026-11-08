@@ -1,0 +1,261 @@
+{
+  "sourceSha256": "835a1a6b3953de5588ce16ba1aebfba30a7ec8c30e6450bf1eae5dcc3d0852c3",
+  "slug": "anisogamy",
+  "setupControl": "native setup DOM click",
+  "settings": [
+    {
+      "variable": "allow-assortative-fusion?",
+      "value": {
+        "success": true,
+        "value": false
+      }
+    },
+    {
+      "variable": "zygote-fitness-threshold",
+      "value": {
+        "success": true,
+        "value": 0.45
+      }
+    },
+    {
+      "variable": "mutation-σ",
+      "value": {
+        "success": true,
+        "value": 0.025
+      }
+    },
+    {
+      "variable": "speed-size-correlation?",
+      "value": {
+        "success": true,
+        "value": false
+      }
+    },
+    {
+      "variable": "gamete-fitness-threshold",
+      "value": {
+        "success": true,
+        "value": 0
+      }
+    },
+    {
+      "variable": "max-adults",
+      "value": {
+        "success": true,
+        "value": 100
+      }
+    },
+    {
+      "variable": "world-size",
+      "value": {
+        "success": true,
+        "value": 65
+      }
+    }
+  ],
+  "setup": {
+    "tick": {
+      "success": true,
+      "value": 0
+    },
+    "turtles": {
+      "success": true,
+      "value": 100
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 32,
+      "maxPycor": 32,
+      "minPxcor": -32,
+      "minPycor": -32,
+      "nextWhoNumber": 100,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 0,
+      "codeGlobals": {
+        "allow-assortative-fusion?": false,
+        "average-adult-lifetime": 500,
+        "gamete-fitness-threshold": 0,
+        "gamete-provisioning-budget": 0.5,
+        "max-adults": 100,
+        "max-gamete-size": 0.7978845608028654,
+        "mutation-σ": 0.025,
+        "spawning-probability": 1.5,
+        "speed-size-correlation?": false,
+        "tick-advance-amount": 1,
+        "whole-tick?": false,
+        "world-size": 65,
+        "zygote-fitness-threshold": 0.45
+      }
+    },
+    "monitors": []
+  },
+  "errors": [],
+  "runPause": {
+    "runningThen": true,
+    "pausedNow": true,
+    "after": {
+      "tick": {
+        "success": true,
+        "value": 5
+      },
+      "turtles": {
+        "success": true,
+        "value": 106
+      },
+      "globals": {
+        "linkDirectedness": "neither",
+        "maxPxcor": 32,
+        "maxPycor": 32,
+        "minPxcor": -32,
+        "minPycor": -32,
+        "nextWhoNumber": 106,
+        "perspective": "observe",
+        "subject": {
+          "referenceType": "nobody"
+        },
+        "ticks": 5,
+        "codeGlobals": {
+          "allow-assortative-fusion?": false,
+          "average-adult-lifetime": 500,
+          "gamete-fitness-threshold": 0,
+          "gamete-provisioning-budget": 0.5,
+          "max-adults": 100,
+          "max-gamete-size": 0.7978845608028654,
+          "mutation-σ": 0.025,
+          "spawning-probability": 1.5,
+          "speed-size-correlation?": false,
+          "tick-advance-amount": 1,
+          "whole-tick?": true,
+          "world-size": 65,
+          "zygote-fitness-threshold": 0.45
+        }
+      },
+      "monitors": []
+    }
+  },
+  "reset": {
+    "command": "random-seed 1 setup",
+    "success": true
+  },
+  "step": {
+    "command": "go",
+    "success": true
+  },
+  "stepState": {
+    "tick": {
+      "success": true,
+      "value": 1
+    },
+    "turtles": {
+      "success": true,
+      "value": 100
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 32,
+      "maxPycor": 32,
+      "minPxcor": -32,
+      "minPycor": -32,
+      "nextWhoNumber": 100,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 1,
+      "codeGlobals": {
+        "allow-assortative-fusion?": false,
+        "average-adult-lifetime": 500,
+        "gamete-fitness-threshold": 0,
+        "gamete-provisioning-budget": 0.5,
+        "max-adults": 100,
+        "max-gamete-size": 0.7978845608028654,
+        "mutation-σ": 0.025,
+        "spawning-probability": 1.5,
+        "speed-size-correlation?": false,
+        "tick-advance-amount": 1,
+        "whole-tick?": true,
+        "world-size": 65,
+        "zygote-fitness-threshold": 0.45
+      }
+    },
+    "monitors": []
+  },
+  "progressCommand": {
+    "command": "repeat 9 [ go ]",
+    "success": true
+  },
+  "progress": {
+    "tick": {
+      "success": true,
+      "value": 10
+    },
+    "turtles": {
+      "success": true,
+      "value": 122
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 32,
+      "maxPycor": 32,
+      "minPxcor": -32,
+      "minPycor": -32,
+      "nextWhoNumber": 122,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 10,
+      "codeGlobals": {
+        "allow-assortative-fusion?": false,
+        "average-adult-lifetime": 500,
+        "gamete-fitness-threshold": 0,
+        "gamete-provisioning-budget": 0.5,
+        "max-adults": 100,
+        "max-gamete-size": 0.7978845608028654,
+        "mutation-σ": 0.025,
+        "spawning-probability": 1.5,
+        "speed-size-correlation?": false,
+        "tick-advance-amount": 1,
+        "whole-tick?": true,
+        "world-size": 65,
+        "zygote-fitness-threshold": 0.45
+      }
+    },
+    "monitors": []
+  },
+  "probes": {
+    "restore": {
+      "command": "restore-default-parameters",
+      "success": true
+    },
+    "restored": {
+      "success": true,
+      "value": [
+        100,
+        65,
+        0.01,
+        0.025
+      ]
+    },
+    "fractional": {
+      "command": "set speed-size-correlation? true ask one-of adults [produce-gametes] calculate-tick-advance-amount",
+      "success": true
+    },
+    "delta": {
+      "success": true,
+      "value": 0.6723025867457328
+    },
+    "extinction": {
+      "command": "clear-turtles go",
+      "success": false,
+      "error": "[object Object]"
+    },
+    "terminalTick": {
+      "success": true,
+      "value": 11
+    }
+  }
+}

@@ -1,0 +1,1569 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Condom+effectiveness+in+reducing+heterosexual+HIV+transmission+Weller+Davis+2002&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1443039,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                26
+              ]
+            ],
+            "date-time": "2026-10-26T22:39:06Z",
+            "timestamp": 1793054346640,
+            "version": "4.5.0"
+          },
+          "reference-count": 76,
+          "publisher": "Wiley",
+          "issue": "3",
+          "content-domain": {
+            "domain": [
+              "wiley.com",
+              "cochranelibrary.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "DOI": "10.1002/14651858.cd003255",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                11,
+                21
+              ]
+            ],
+            "date-time": "2003-11-21T03:18:21Z",
+            "timestamp": 1069384701000
+          },
+          "update-policy": "https://doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 282,
+          "title": [
+            "Condom effectiveness in reducing heterosexual HIV transmission"
+          ],
+          "prefix": "10.1002",
+          "volume": "2012",
+          "author": [
+            {
+              "given": "Susan C",
+              "family": "Weller",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "University of Texas Medical Branch; Department of Preventive Medicine and Community Health; Galveston Texas USA 77555-1153"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Karen",
+              "family": "Davis-Beaty",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of Texas Medical Branch; Department of Preventive Medicine and Community Health; Galveston Texas USA 77555-1153"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2002,
+                1,
+                21
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "10.1002/14651858.CD003255-BIB0001|cit1",
+              "doi-asserted-by": "crossref",
+              "first-page": "1605",
+              "DOI": "10.1136/bmj.304.6842.1605",
+              "article-title": "Effect of serotesting with counselling on condom use and seroconversion among HIV discordant couples in Africa",
+              "volume": "304",
+              "author": "Allen",
+              "year": "1992",
+              "journal-title": "British Medical Journal"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0002|cit2",
+              "doi-asserted-by": "crossref",
+              "first-page": "324",
+              "DOI": "10.7326/0003-4819-125-4-199608150-00011",
+              "article-title": "Heterosexual Transmission of HIV in Haiti",
+              "volume": "125",
+              "author": "Deschamps",
+              "year": "1996",
+              "journal-title": "Annals of Internal Medicine"
+            },
+            {
+              "issue": "6",
+              "key": "10.1002/14651858.CD003255-BIB0003|cit3",
+              "doi-asserted-by": "crossref",
+              "first-page": "341",
+              "DOI": "10.1056/NEJM199408113310601",
+              "article-title": "A Longitudinal Study of Human Immunodeficiency Virus Transmission by Heterosexual Partners",
+              "volume": "331",
+              "author": "Vincenzi",
+              "year": "1994",
+              "journal-title": "The New England Journal of Medicine"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0004|cit4",
+              "doi-asserted-by": "crossref",
+              "first-page": "640",
+              "DOI": "10.1001/jama.1987.03390050066020",
+              "article-title": "Evaluation of Heterosexual Partners, Children, and Household Contacts of Adults with AIDS",
+              "volume": "257",
+              "author": "Fischl",
+              "year": "1987",
+              "journal-title": "Journal of the American Medical Association"
+            },
+            {
+              "issue": "10",
+              "key": "10.1002/14651858.CD003255-BIB0005|cit5",
+              "first-page": "32",
+              "article-title": "Documented male-to-female transmission of HIV-1 after minimal vaginal exposure in the absence of other cofactors for infection",
+              "volume": "74",
+              "author": "Henry",
+              "year": "1991",
+              "journal-title": "Minnesota Medicine"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0006|cit6",
+              "doi-asserted-by": "crossref",
+              "first-page": "243",
+              "DOI": "10.1258/0956462971919994",
+              "article-title": "Condom and Nonoxynol-9 Use and the Incidence of HIV Infection in Serodiscordant Couples in Zambia",
+              "volume": "8",
+              "author": "Hira",
+              "year": "1997",
+              "journal-title": "International Journal of STD & AIDS"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0007|cit7",
+              "doi-asserted-by": "crossref",
+              "first-page": "61",
+              "DOI": "10.1097/00002030-199101000-00009",
+              "article-title": "Evidence of Marked Sexual Behavior Change Associated With HIV-1 Seroconversion in 149 Married Couples With Discordant HIV-1 Serostatus: Experience at an HIV Counselling Center in Zaire",
+              "volume": "5",
+              "author": "Kamenga",
+              "year": "1991",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0008|cit8",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Laurian Y Peynet J Verroust F HIV Infection in Sexual Partners of HIV-Seropositive Patients With Hemophilia The New England Journal of Medicine 1989 183",
+              "DOI": "10.1056/NEJM198901193200313"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0009|cit9",
+              "doi-asserted-by": "crossref",
+              "first-page": "1971",
+              "DOI": "10.1001/archinte.1994.00420170123012",
+              "article-title": "Antiretroviral Treatment of Men Infected With Human Immunodeficiency Virus Type 1 Reduces the Incidence of Heterosexual Transmission",
+              "volume": "154",
+              "author": "Musicco",
+              "year": "1994",
+              "journal-title": "Archives of Internal Medicine"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0010|cit10",
+              "first-page": "705",
+              "article-title": "Heterosexual Transmission of Human Immunodeficiency Virus Type 1 From Transfusion Recipients to Their Sex Partners",
+              "volume": "7",
+              "author": "O'Brien",
+              "year": "1994",
+              "journal-title": "Journal of Acquired Immune Deficiency Syndromes"
+            },
+            {
+              "issue": "1",
+              "key": "10.1002/14651858.CD003255-BIB0011|cit11",
+              "doi-asserted-by": "crossref",
+              "first-page": "55",
+              "DOI": "10.1001/jama.1988.03720010033036",
+              "article-title": "Risk of Human Immunodeficiency Virus Transmission From Heterosexual Adults With Transfusion-Associated Infections",
+              "volume": "259",
+              "author": "Peterman",
+              "year": "1988",
+              "journal-title": "Journal of the American Medical Association"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0012|cit12",
+              "doi-asserted-by": "crossref",
+              "first-page": "497",
+              "DOI": "10.1097/00126334-199305000-00010",
+              "article-title": "Man-To-Woman Sexual Transmission of HIV: Longitudinal Study of 343 Steady Partners of Infected Men",
+              "volume": "6",
+              "author": "Saracco",
+              "year": "1993",
+              "journal-title": "Journal of Acquired Immune Deficiency Syndromes"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0013|cit13",
+              "doi-asserted-by": "crossref",
+              "first-page": "1529",
+              "DOI": "10.1097/00002030-199212000-00017",
+              "article-title": "No Seroconversions Among Steady Sex Partners of Methadone-Maintained HIV-1-Seropositive Injecting Drug Users in New York City",
+              "volume": "6",
+              "author": "Siddiqui",
+              "year": "1992",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0014|cit14",
+              "doi-asserted-by": "crossref",
+              "first-page": "1102",
+              "DOI": "10.1136/bmj.297.6656.1102",
+              "article-title": "Heterosexual Transmission of HIV by Haemophiliacs",
+              "volume": "297",
+              "author": "Ende",
+              "year": "1988",
+              "journal-title": "British Medical Journal"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0015|cit15",
+              "first-page": "293",
+              "article-title": "Horizontal versus vertical transmssion of human immunodeficiency virus type 1. Experience from Southwestern Saudi arabia.",
+              "volume": "47",
+              "author": "al Nozha",
+              "year": "1995",
+              "journal-title": "Tropical and Geographical Medicine"
+            },
+            {
+              "issue": "2",
+              "key": "10.1002/14651858.CD003255-BIB0016|cit16",
+              "doi-asserted-by": "crossref",
+              "first-page": "68",
+              "DOI": "10.1097/00007435-198904000-00005",
+              "article-title": "Exposure of Heterosexuals to Human Immunodeficiency Virus and Viremia: Evidence for Continuing Risks in Spouses of Hemophiliacs",
+              "volume": "16",
+              "author": "Andes",
+              "year": "1989",
+              "journal-title": "Sexually Transmitted Diseases"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0017|cit17",
+              "unstructured": "Cameron DW Kosselm ML Oduor D D'Costa LJ Maitha GM Irungu GM Braddick M Ronadl AR Plummer FA Serologic Concordance and Incidence of HIV in regular sexual partners in Nairobi, Kenya Int Conf AIDS 1989 TAP 91"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0018|cit18",
+              "unstructured": "Feldblum PJ Hira SK Mukololo P Kamanga J Mukelabai G Godwin S Fortney Judith Anti-HIV Efficacy of Barrier Contraceptives in HIV-Discordant Couples Int Conf AIDS 1992 270"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0019|cit19",
+              "unstructured": "Feldblum P Hira S Godwin S Kamanga J Mukelabai G Efficacy of Spermicide Use and Condom Use by HIV-Discordant Couples in Zambia Int Conf AIDS 1992 We 61-24"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0020|cit20",
+              "article-title": "LAV/HTLV-III infections associated with blood transfusions in Switzerland: Report on two cases",
+              "volume": "116",
+              "author": "Flepp",
+              "year": "1986",
+              "journal-title": "Schweizerische Medizinische Wochenschrift/ J Suisse de Medecine"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0021|cit21",
+              "unstructured": "Guimaraes MD Castilho EA Boschi-Pinto C Heterosexual Transmission of HIV-1 in Rio de Janeiro: baseline and prospective assessments among stable couples Int Conf AIDS 341 12"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0022|cit22",
+              "unstructured": "Hira SK Feldblum P Kamanga J Tembo G Anti- HIV efficacy of barrier contraceptives in HIV-discordant couples Int Conf AIDS 1989 51"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0023|cit23",
+              "unstructured": "Jingu M Mbuyi N Ndilu N Assina Y Musungayi L Impact of Prolonged Condom Use in 178 HIV Discordant Couples in Zaire Int Conf AIDS 690 2837"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0024|cit24",
+              "unstructured": "Jingu M Assina Y Mbuyi K Mbu L Mokwa K High condom utilization and low seroconversion rates successfully sustained in 175 married couples in Zaire with discordant HIV serology; observations after 2 years of follow-up Int Conf AIDS 6 262 23"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0025|cit25",
+              "unstructured": "Kamenga M Jungu K Hassig S Ndilu M Behets F Brown C Ryder R Condom Use and Associated HIV Seroconversion Following Intensive HIV Counselling of 122 Married Couples in Zaire With Discordant HIV Serology Int Conf AIDS 1989 TDO 35"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0026|cit26",
+              "unstructured": "Kamps BS Niese D Brackmann HH Euler P van Loo B Kamradt T No more seroconversions among spouses of patients of the Bonn hemophiliac cohort study Int Conf AIDS 1989 TAP107"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0027|cit27",
+              "doi-asserted-by": "crossref",
+              "first-page": "703",
+              "DOI": "10.1182/blood.V66.3.703.703",
+              "article-title": "HTLV-III/ Lav Antibody Status of Spouses and Household Contacts Assisting in Home Infusion of Hemophilia Patients",
+              "volume": "66",
+              "author": "Lawrence",
+              "year": "1985",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0028|cit28",
+              "unstructured": "Laye C Maposhere C McFarland W Mbizvo M Katzenstein D Parsonnet J High Incidence and Prevalence of HIV Infection among Female Partners of Male Factory Workers in Zimbabwe Int Conf AIDS 1998"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0029|cit29",
+              "unstructured": "Lo CS Maggi P Buccolero G De Gennaro M Angarano G Pastore G Efficacy of Counselling on Heterosexual Transmission of HIV in Discordant Stable Couples Int Conf AIDS 1992 C334 24"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0030|cit30",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Mandelbrot L Heard I Henrion-Geant E Henrion R Natural Conception in HIV-Negative Women with HIV-Infected Partners [letter] Lancet 1997 850 851",
+              "DOI": "10.1016/S0140-6736(05)61754-0"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0031|cit31",
+              "unstructured": "Massimo M Angarano G Saracco A Antiretroviral Therapy Reduces the Rate of Sexual Transmission of HIV-1 From Man to Woman. The Italian Partner Study. Int Conf AIDS We61 24"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0032|cit32",
+              "unstructured": "Moss G Clemetson D D'Costa LJ Despite Safer Sex Practices After Counselling, Seroconversion is High Among HIV Serodiscordant Couples in Nairobi, Kenya Int Conf AIDS 325 21"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0033|cit33",
+              "unstructured": "Musicco M Saracco A Nicolosi A Assessment of Incidence and Risk Factors for Male to Female HIV Transmission Int Conf AIDS 1992 20 21"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0034|cit34",
+              "unstructured": "Musicco M Saracco A Nicolosi A Gasparini M Arici C Lazzarin A for the Italian Partner Study The percentage of risk attributable to sexual behavior and to man's infectiousness in man to woman sexual transmission of HIV-1 Abstracts IXth International Conference on AIDS 1993 689 2833"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0035|cit35",
+              "unstructured": "Nagachinta T Duerr A Gargiullo PM HIV Infectivity by Contraceptive Method From a Partner Study in Northern Thailand Int Conf AIDS 42 12"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0036|cit36",
+              "unstructured": "Nastiff VM Beltran M Murano F Dubini M Gil R Sanga N Partner Studies: A First Global Approach Carried Out at Two North Buenos Aires Neighborhood Hospitals Int Conf AIDS 1998"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0037|cit37",
+              "unstructured": "O'Brien TR Busch MP Donegan E Ward JW Wong L Holmberg SD Heterosexual Transmission of HIV-1 From Transfusion Recipients to Their Sex Partners Natl Conf Hum Retroviruses Relat Infect (1st) 1993 105"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0038|cit38",
+              "unstructured": "O'Brien TR Busch MP Donegan E Ward JW Wong L Holmberg SD Heterosexual Transmission of HIV-1 From Transfusion Recipients to Their Sex Partners Int Conf AIDS 1993 648 2589"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0039|cit39",
+              "doi-asserted-by": "crossref",
+              "first-page": "655",
+              "DOI": "10.1093/oxfordjournals.aje.a009331",
+              "article-title": "Role of Viral Load in Heterosexual Transmission of Human Immunodeficiency Virus Type 1 by Blood Transfusion Recipients. Transfusion Safety Study Group",
+              "volume": "146",
+              "author": "Operskalski",
+              "year": "1997",
+              "journal-title": "American Journal of Epidemiology"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0040|cit40",
+              "first-page": "1043",
+              "article-title": "Prevention of Heterosexual Transmission of Human Immunodeficiency Virus Through Couple Counseling",
+              "volume": "6",
+              "author": "Padian",
+              "year": "1993",
+              "journal-title": "Journal of Acquired Immune Deficiency Syndromes"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0041|cit41",
+              "unstructured": "Padian N Shiboski S Heterogeneous Male-to-Female Transmission of Human Immunodeficiency Virus Int Conf AIDS 1989"
+            },
+            {
+              "issue": "4",
+              "key": "10.1002/14651858.CD003255-BIB0042|cit42",
+              "doi-asserted-by": "crossref",
+              "first-page": "350",
+              "DOI": "10.1093/oxfordjournals.aje.a009276",
+              "article-title": "Heterosexual Transmission of Human Immunodeficiency Virus (HIV) in Northern California: Results from a Ten-year Study",
+              "volume": "146",
+              "author": "Padian",
+              "year": "1997",
+              "journal-title": "American Journal of Epidemiology"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0043|cit43",
+              "unstructured": "Papetti C Pesce AM Mezzaroma I HIV-1 transmission inheterosexual couples. Int Conf AIDS 1989"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0044|cit44",
+              "unstructured": "Papetti C Mezzaroma I D'Offizi GP Risk Factors for Heterosexual Transmission of HIV-1 in Stable Couples Int Conf AIDS 323 21"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0045|cit45",
+              "unstructured": "Papetti C Mezzaroma I D'Offizi GP Valdarchi C Pinter E High prevalence of HIV heterosexual transmission in one hundred stable couples Int Conf AIDS 101 123"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0046|cit46",
+              "unstructured": "Saracco A HIV Heterosexual Transmission Int Conf AIDS 1989"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0047|cit47",
+              "doi-asserted-by": "crossref",
+              "first-page": "745",
+              "DOI": "10.1097/00002030-199507000-00012",
+              "article-title": "The Social Dynamics of HIV Transmission as Reflected Through Discordant Couples in Rural Uganda",
+              "volume": "9",
+              "author": "Serwadda",
+              "year": "1995",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0048|cit48",
+              "first-page": "266",
+              "article-title": "Lack of female to male transmission in husbands of HIV infected women",
+              "volume": "6",
+              "author": "Sion",
+              "journal-title": "Int Conf AIDS"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0049|cit49",
+              "unstructured": "Sion FS Signorini DJ Santos EA Absence of Female-to-Male Transmission of HIV in Stable Couples in Rio de Janeiro, Brazil Int Conf AIDS 1992 C273 24"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0050|cit50",
+              "unstructured": "Skurnic JH Bromberg J Kennedy C Sheffet A Louria DB Couples' Practice of Safe Sex After Knowledge of HIV Discordance: A Women's Report From the Heterosexual Transmission Study (HATS) HIV Infect Women Conf 1995 S25"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0051|cit51",
+              "unstructured": "Tice J Allen S Serufilira A Van de PP Ziegler J Hulley S Impact of HIV Testing on Condoms/Spermicide Use Among HIV Discordant Couples in Africa Int Conf AIDS 262 23"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0052|cit52",
+              "unstructured": "Tor J Soriano V Muga R HIV Transmission in Heterosexual Partners of Intravenous Drug Abusers, A Follow-up Study Int Conf AIDS 310 321"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0053|cit53",
+              "first-page": "191",
+              "volume-title": "CRC Handbook of Tables for Probability and Statistics",
+              "author": "Beyer",
+              "year": "1966"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0054|cit54",
+              "first-page": "133",
+              "article-title": "Condoms for prevention of sexually transmitted diseases",
+              "volume": "37",
+              "author": "Centers for Diesease Control",
+              "year": "1988",
+              "journal-title": "MMWR"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0055|cit55",
+              "first-page": "589",
+              "article-title": "Update: Barrier protection against HIV infection and other sexually transmitted diseases",
+              "volume": "42",
+              "author": "Centers for Disease Control",
+              "year": "1993",
+              "journal-title": "MMWR"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0056|cit56",
+              "doi-asserted-by": "crossref",
+              "first-page": "272",
+              "DOI": "10.2307/2991537",
+              "article-title": "The effectiveness of condoms in reducing heterosexual transmission of HIV",
+              "volume": "31",
+              "author": "Davis",
+              "year": "1999",
+              "journal-title": "Family Planning Perspectives"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0057|cit57",
+              "first-page": "14",
+              "volume-title": "Statistical Methods for Rates and Proportions",
+              "author": "Fleiss",
+              "year": "1981"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0058|cit58",
+              "doi-asserted-by": "crossref",
+              "first-page": "591",
+              "DOI": "10.1016/0010-7824(74)90098-5",
+              "article-title": "Use-effectiveness of the condom in a selected family planning clinic population in the United Kingdom",
+              "volume": "10",
+              "author": "Glass",
+              "year": "1974",
+              "journal-title": "Contraaception"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0059|cit59",
+              "first-page": "68",
+              "article-title": "Contraceptive failure in the United States: Estimates from the 1982 National Survey of Family Growth",
+              "volume": "14",
+              "author": "Grady",
+              "year": "1982",
+              "journal-title": "Family Planning Perspectives"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0060|cit60",
+              "volume-title": "Contraceptive Technology",
+              "author": "Hatcher",
+              "year": "1998"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0061|cit61",
+              "doi-asserted-by": "crossref",
+              "first-page": "333",
+              "DOI": "10.1097/00002030-199103000-00016",
+              "article-title": "The relisbility of self-reported sexual behavior",
+              "volume": "5",
+              "author": "James",
+              "year": "1991",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0062|cit62",
+              "doi-asserted-by": "crossref",
+              "first-page": "12",
+              "DOI": "10.2307/2135719",
+              "article-title": "Contraceptive failure rates based on the 1988 NSFG",
+              "volume": "24",
+              "author": "Jones",
+              "year": "1992",
+              "journal-title": "Family Planning Perspectives"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0063|cit63",
+              "doi-asserted-by": "crossref",
+              "first-page": "1493",
+              "DOI": "10.1097/00002030-199311000-00014",
+              "article-title": "Psychological distress, drug and alcohol use as correlates of condom use in HIV-discordant heterosexual couples",
+              "volume": "7",
+              "author": "Kennedy",
+              "year": "1993",
+              "journal-title": "AIDS"
+            },
+            {
+              "issue": "8",
+              "key": "10.1002/14651858.CD003255-BIB0064|cit64",
+              "doi-asserted-by": "crossref",
+              "first-page": "990",
+              "DOI": "10.2105/AJPH.80.8.990",
+              "article-title": "Sexual Histories of Heterosexual Couples with One HIV Infected Partner",
+              "volume": "80",
+              "author": "Padian",
+              "year": "1990",
+              "journal-title": "AJPH"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0065|cit65",
+              "doi-asserted-by": "crossref",
+              "first-page": "350",
+              "DOI": "10.1093/oxfordjournals.aje.a009276",
+              "article-title": "Heterosexual transmission of human immunodeficiency virus (HIV) in Northern California: Results from a ten-year study",
+              "volume": "146",
+              "author": "Padian",
+              "year": "1997",
+              "journal-title": "Amer J Epi"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0066|cit66",
+              "doi-asserted-by": "crossref",
+              "first-page": "713",
+              "DOI": "10.1016/0191-8869(95)00109-J",
+              "article-title": "Decision making and personality factors in sexual risk-taking for HIV/AIDS: A theoretical integration",
+              "volume": "19",
+              "author": "Pinkerton",
+              "year": "1995",
+              "journal-title": "Person Indiv Diff"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0067|cit67",
+              "doi-asserted-by": "crossref",
+              "first-page": "1303",
+              "DOI": "10.1016/S0277-9536(96)00258-4",
+              "article-title": "Effectiveness of condoms in preventing HIV transmission",
+              "volume": "44",
+              "author": "Pinkerton",
+              "year": "1997",
+              "journal-title": "Soc Sci Med"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0068|cit68",
+              "first-page": "626",
+              "article-title": "Personality factors that differentiate homosexual men with positive and negative attitudes toward condom use",
+              "volume": "88",
+              "author": "Ross",
+              "year": "1988",
+              "journal-title": "New York State J of Med"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0069|cit69",
+              "doi-asserted-by": "crossref",
+              "first-page": "68",
+              "DOI": "10.2307/2134816",
+              "article-title": "Contraceptive failure in the United States: The impact of social, economic, and demographic factors",
+              "volume": "14",
+              "author": "Schirm",
+              "year": "1982",
+              "journal-title": "Family Planning Perspectives"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0070|cit70",
+              "first-page": "493",
+              "article-title": "Maintenance of safe sex behavior by HIV-serodiscordant heterosexual couples",
+              "volume": "10",
+              "author": "Skurnick",
+              "year": "1998",
+              "journal-title": "AIDS Educ and Prevention"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0071|cit71",
+              "doi-asserted-by": "crossref",
+              "first-page": "2840",
+              "DOI": "10.1001/jama.1993.03500220024007",
+              "article-title": "Condom use for prevention of sexual transmission of HIV infection",
+              "volume": "269",
+              "author": "Surgeon",
+              "year": "1993",
+              "journal-title": "JAMA"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0072|cit72",
+              "unstructured": "Trussel J The likelihood of pregnancy with or without a condom is actually a probability and must be transformed into a rate. Thus effectiveness is: 1-(-ln - fc)/ (-ln- f0) where fc indicates the likelihood of pregnancy with a condom and f0 is the likelihood without a condom."
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0073|cit73",
+              "doi-asserted-by": "crossref",
+              "first-page": "237",
+              "DOI": "10.2307/1966856",
+              "article-title": "Contraceptive failure in the United States: A critical review of the literature",
+              "volume": "18",
+              "author": "Trussel",
+              "year": "1987",
+              "journal-title": "Studies Fam Plan"
+            },
+            {
+              "issue": "10",
+              "key": "10.1002/14651858.CD003255-BIB0074|cit74",
+              "doi-asserted-by": "crossref",
+              "first-page": "1159",
+              "DOI": "10.1093/oxfordjournals.aje.a116019",
+              "article-title": "Interpartner Reliability of Reporting of Recent Sexual Behaviors",
+              "volume": "134",
+              "author": "Upchurch",
+              "year": "1991",
+              "journal-title": "Amer J of Epidemiology"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0075|cit75",
+              "unstructured": "Vaughan B Contraceptive efficacy among married women aged 15-44 years. Vital and Health Statistics 1981 DHHS Pub No. PHS 80"
+            },
+            {
+              "key": "10.1002/14651858.CD003255-BIB0076|cit76",
+              "doi-asserted-by": "crossref",
+              "first-page": "1635",
+              "DOI": "10.1016/0277-9536(93)90352-5",
+              "article-title": "A meta-analysis of condom effectiveness in reducing sexually transmitted HIV",
+              "volume": "36",
+              "author": "Weller",
+              "year": "1993",
+              "journal-title": "Soc Sci Med"
+            }
+          ],
+          "container-title": [
+            "Cochrane Database of Systematic Reviews"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://onlinelibrary.wiley.com/wol1/doi/10.1002/14651858.CD003255/fullpdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                11
+              ]
+            ],
+            "date-time": "2024-09-11T11:39:47Z",
+            "timestamp": 1726054787000
+          },
+          "score": 54.312485,
+          "resource": {
+            "primary": {
+              "URL": "http://doi.wiley.com/10.1002/14651858.CD003255"
+            }
+          },
+          "editor": [
+            {
+              "name": "Cochrane HIV/AIDS Group",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "editor"
+                }
+              ]
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2002,
+                1,
+                21
+              ]
+            ]
+          },
+          "references-count": 76,
+          "journal-issue": {
+            "issue": "3",
+            "published-online": {
+              "date-parts": [
+                [
+                  2012,
+                  3
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1002/14651858.cd003255",
+          "ISSN": [
+            "1465-1858"
+          ],
+          "issn-type": [
+            {
+              "value": "1465-1858",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2002,
+                1,
+                21
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                20
+              ]
+            ],
+            "date-time": "2026-10-20T06:55:57Z",
+            "timestamp": 1792479357465,
+            "version": "4.5.0"
+          },
+          "reference-count": 70,
+          "publisher": "Informa UK Limited",
+          "issue": "4",
+          "content-domain": {
+            "domain": [
+              "www.tandfonline.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Expert Review of Pharmacoeconomics &amp; Outcomes Research"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                7,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1586/14737167.2016.1102635",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2015,
+                10,
+                21
+              ]
+            ],
+            "date-time": "2015-10-21T19:32:25Z",
+            "timestamp": 1445455945000
+          },
+          "page": "489-499",
+          "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+          "source": "Crossref",
+          "is-referenced-by-count": 62,
+          "title": [
+            "Condom effectiveness in reducing heterosexual HIV transmission: a systematic review and meta-analysis of studies on HIV serodiscordant couples"
+          ],
+          "prefix": "10.1586",
+          "volume": "16",
+          "author": [
+            {
+              "given": "Foteini K",
+              "family": "Giannou",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Chrissa G",
+              "family": "Tsiara",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Georgios K",
+              "family": "Nikolopoulos",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael",
+              "family": "Talias",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Vasiliki",
+              "family": "Benetou",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Maria",
+              "family": "Kantzanou",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Stefanos",
+              "family": "Bonovas",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Angelos",
+              "family": "Hatzakis",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "published-online": {
+            "date-parts": [
+              [
+                2015,
+                10,
+                21
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "CIT0002",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2174/092986712804485854"
+            },
+            {
+              "key": "CIT0003",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1056/NEJMoa0908492"
+            },
+            {
+              "key": "CIT0004",
+              "first-page": "49",
+              "volume": "1",
+              "author": "Van De Perre P",
+              "year": "1987",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "CIT0005",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00007435-199207000-00009"
+            },
+            {
+              "key": "CIT0006",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0010-7824(93)90023-Z"
+            },
+            {
+              "key": "CIT0007",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00007435-199703000-00007"
+            },
+            {
+              "key": "CIT0008",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0277-9536(93)90352-5"
+            },
+            {
+              "key": "CIT0009",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0277-9536(96)00258-4"
+            },
+            {
+              "key": "CIT0010",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1055-3290(98)80012-5"
+            },
+            {
+              "key": "CIT0011",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2991537"
+            },
+            {
+              "key": "CIT0012",
+              "first-page": "CD003255",
+              "volume": "1",
+              "author": "Weller S",
+              "year": "2002",
+              "journal-title": "Cochrane Database Syst Rev"
+            },
+            {
+              "key": "CIT0013",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/infdis/jir747"
+            },
+            {
+              "key": "CIT0014",
+              "doi-asserted-by": "crossref",
+              "first-page": "3694",
+              "DOI": "10.3760/cma.j.issn.0366-6999.20123311",
+              "volume": "126",
+              "author": "Wang L",
+              "year": "2013",
+              "journal-title": "Chin Med J"
+            },
+            {
+              "key": "CIT0015",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1001/jama.283.15.2008"
+            },
+            {
+              "key": "CIT0016",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ijsu.2010.02.007"
+            },
+            {
+              "key": "CIT0017",
+              "unstructured": "Higgins JPT, Green S, editors. Cochrane handbook for systematic reviews of interventions [Internet]. Version 5.1.0. The Cochrane Collaboration; 2011 [revised 2011 Mar; cited 2015 Oct 9]. Available from: http://www.cochrane-handbook.org"
+            },
+            {
+              "key": "CIT0018",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2533446"
+            },
+            {
+              "key": "CIT0019",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1136/bmj.315.7109.629"
+            },
+            {
+              "key": "CIT0020",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1136/bmj.304.6842.1605"
+            },
+            {
+              "key": "CIT0021",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.7326/0003-4819-125-4-199608150-00011"
+            },
+            {
+              "key": "CIT0022",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1056/NEJM199408113310601"
+            },
+            {
+              "key": "CIT0023",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1136/bmj.304.6830.809"
+            },
+            {
+              "key": "CIT0024",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1001/jama.257.5.640"
+            },
+            {
+              "key": "CIT0025",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1258/0956462971919994"
+            },
+            {
+              "key": "CIT0026",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-198906000-00005"
+            },
+            {
+              "key": "CIT0027",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-199101000-00009"
+            },
+            {
+              "key": "CIT0028",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0002-9343(88)80080-9"
+            },
+            {
+              "key": "CIT0029",
+              "first-page": "183",
+              "volume": "320",
+              "author": "Laurian Y",
+              "year": "1989",
+              "journal-title": "N Engl J Med"
+            },
+            {
+              "key": "CIT0030",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/QAI.0b013e3181e9b6b7"
+            },
+            {
+              "key": "CIT0031",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1001/archinte.1994.00420170123012"
+            },
+            {
+              "key": "CIT0032",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-199714000-00014"
+            },
+            {
+              "key": "CIT0033",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00001648-199411000-00003"
+            },
+            {
+              "key": "CIT0034",
+              "first-page": "705",
+              "volume": "7",
+              "author": "O\u2019Brien TR",
+              "year": "1994",
+              "journal-title": "J Acquir Immune Defic Syndr"
+            },
+            {
+              "key": "CIT0035",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1089/aid.1987.3.355"
+            },
+            {
+              "key": "CIT0036",
+              "doi-asserted-by": "crossref",
+              "first-page": "538",
+              "DOI": "10.1093/oxfordjournals.aje.a117672",
+              "volume": "142",
+              "author": "Guimaraes MD",
+              "year": "1995",
+              "journal-title": "Am J Epidemiol"
+            },
+            {
+              "key": "CIT0037",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0090-1229(89)90123-2"
+            },
+            {
+              "key": "CIT0038",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/OLQ.0b013e31817e2491"
+            },
+            {
+              "key": "CIT0039",
+              "first-page": "101",
+              "volume": "6",
+              "author": "Papetti C",
+              "year": "1990",
+              "journal-title": "Int Conf AIDS"
+            },
+            {
+              "key": "CIT0040",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oxfordjournals.aje.a009276"
+            },
+            {
+              "key": "CIT0041",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1001/jama.259.1.55"
+            },
+            {
+              "key": "CIT0042",
+              "first-page": "557",
+              "volume": "2",
+              "author": "Ragni MV",
+              "year": "1989",
+              "journal-title": "J Acquir Immune Defic Syndr"
+            },
+            {
+              "key": "CIT0043",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1089/aid.1988.4.233"
+            },
+            {
+              "key": "CIT0044",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00126334-199305000-00010"
+            },
+            {
+              "key": "CIT0045",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-199309000-00015"
+            },
+            {
+              "key": "CIT0046",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-199212000-00017"
+            },
+            {
+              "key": "CIT0047",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ajh.2830280106"
+            },
+            {
+              "key": "CIT0048",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1136/bmj.297.6656.1102"
+            },
+            {
+              "key": "CIT0049",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/QAD.0000000000000307"
+            },
+            {
+              "key": "CIT0050",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/429411"
+            },
+            {
+              "key": "CIT0051",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11904-012-0113-0"
+            },
+            {
+              "key": "CIT0052",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1473-3099(09)70021-0"
+            },
+            {
+              "key": "CIT0053",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/QAD.0000000000000298"
+            },
+            {
+              "key": "CIT0054",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00042560-200111010-00015"
+            },
+            {
+              "key": "CIT0055",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1056/NEJMoa1108524"
+            },
+            {
+              "key": "CIT0056",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1056/NEJMoa1105243"
+            },
+            {
+              "key": "CIT0057",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/EDE.0b013e318276cad7"
+            },
+            {
+              "key": "CIT0058",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-199403000-00010"
+            },
+            {
+              "key": "CIT0059",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1136/sti.77.2.84"
+            },
+            {
+              "key": "CIT0060",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1037/0033-2909.133.5.859"
+            },
+            {
+              "key": "CIT0061",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1186/1742-4755-7-9",
+              "volume": "7",
+              "author": "Lipovsek V",
+              "year": "2010",
+              "journal-title": "Reprod Health"
+            },
+            {
+              "key": "CIT0062",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1071/SH11036"
+            },
+            {
+              "key": "CIT0063",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1022189801933"
+            },
+            {
+              "key": "CIT0064",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/OLQ.0b013e3181f7d505"
+            },
+            {
+              "key": "CIT0065",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/QAI.0b013e318237b864"
+            },
+            {
+              "key": "CIT0066",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-199311000-00014"
+            },
+            {
+              "key": "CIT0067",
+              "volume": "21",
+              "author": "Bouhnik AD",
+              "year": "2007",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "CIT0068",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1360-0443.2011.03621.x"
+            },
+            {
+              "key": "CIT0069",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/OLQ.0b013e318067b4fd"
+            },
+            {
+              "key": "CIT0070",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1258/ijsa.2008.008394"
+            },
+            {
+              "key": "CIT0071",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0140-6736(11)60877-5"
+            }
+          ],
+          "container-title": [
+            "Expert Review of Pharmacoeconomics &amp; Outcomes Research"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.tandfonline.com/doi/pdf/10.1586/14737167.2016.1102635",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                31
+              ]
+            ],
+            "date-time": "2025-05-31T02:57:17Z",
+            "timestamp": 1748660237000
+          },
+          "score": 38.668762,
+          "resource": {
+            "primary": {
+              "URL": "https://www.tandfonline.com/doi/full/10.1586/14737167.2016.1102635"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2015,
+                10,
+                21
+              ]
+            ]
+          },
+          "references-count": 70,
+          "journal-issue": {
+            "issue": "4",
+            "published-online": {
+              "date-parts": [
+                [
+                  2015,
+                  10,
+                  21
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2016,
+                  7,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1586/14737167.2016.1102635"
+          ],
+          "URL": "https://doi.org/10.1586/14737167.2016.1102635",
+          "ISSN": [
+            "1473-7167",
+            "1744-8379"
+          ],
+          "issn-type": [
+            {
+              "value": "1473-7167",
+              "type": "print"
+            },
+            {
+              "value": "1744-8379",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2015,
+                10,
+                21
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+              "order": 1,
+              "name": "peerreview_statement",
+              "label": "Peer Review Statement"
+            },
+            {
+              "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=ierp20",
+              "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=ierp20",
+              "order": 2,
+              "name": "aims_and_scope_url",
+              "label": "Aim & Scope"
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                1
+              ]
+            ],
+            "date-time": "2026-10-01T16:33:33Z",
+            "timestamp": 1790872413782,
+            "version": "4.1.0"
+          },
+          "reference-count": 0,
+          "publisher": "JSTOR",
+          "issue": "6",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Family Planning Perspectives"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1999,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.2307/2991537",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                26
+              ]
+            ],
+            "date-time": "2006-04-26T20:57:27Z",
+            "timestamp": 1146085047000
+          },
+          "page": "272",
+          "source": "Crossref",
+          "is-referenced-by-count": 266,
+          "title": [
+            "The Effectiveness of Condoms in Reducing Heterosexual Transmission of HIV"
+          ],
+          "prefix": "10.2307",
+          "volume": "31",
+          "author": [
+            {
+              "given": "Karen R.",
+              "family": "Davis",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Susan C.",
+              "family": "Weller",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1121",
+          "container-title": [
+            "Family Planning Perspectives"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                18
+              ]
+            ],
+            "date-time": "2018-04-18T18:46:17Z",
+            "timestamp": 1524077177000
+          },
+          "score": 37.372353,
+          "resource": {
+            "primary": {
+              "URL": "https://www.jstor.org/stable/2991537?origin=crossref"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1999,
+                11
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "6",
+            "published-print": {
+              "date-parts": [
+                [
+                  1999,
+                  11
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2307/2991537",
+          "ISSN": [
+            "0014-7354"
+          ],
+          "issn-type": [
+            {
+              "value": "0014-7354",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1999,
+                11
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

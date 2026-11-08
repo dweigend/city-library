@@ -1,0 +1,180 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-4613-8476-2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T22:16:17Z",
+        "timestamp": 1793916977047,
+        "version": "4.8.0"
+      },
+      "publisher-location": "New York, NY",
+      "reference-count": 0,
+      "publisher": "Springer New York",
+      "isbn-type": [
+        {
+          "value": "9780387946764",
+          "type": "print"
+        },
+        {
+          "value": "9781461384762",
+          "type": "electronic"
+        }
+      ],
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1990,
+                1,
+                1
+              ]
+            ],
+            "date-time": "1990-01-01T00:00:00Z",
+            "timestamp": 631152000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            1990
+          ]
+        ]
+      },
+      "DOI": "10.1007/978-1-4613-8476-2",
+      "type": "book",
+      "created": {
+        "date-parts": [
+          [
+            2011,
+            10,
+            25
+          ]
+        ],
+        "date-time": "2011-10-25T02:45:29Z",
+        "timestamp": 1319510729000
+      },
+      "source": "Crossref",
+      "is-referenced-by-count": 1290,
+      "title": [
+        "The Algorithmic Beauty of Plants"
+      ],
+      "prefix": "10.1007",
+      "author": [
+        {
+          "given": "Przemyslaw",
+          "family": "Prusinkiewicz",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Aristid",
+          "family": "Lindenmayer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "container-title": [
+        "The Virtual Laboratory"
+      ],
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4613-8476-2.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4613-8476-2",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2019,
+            4,
+            6
+          ]
+        ],
+        "date-time": "2019-04-06T12:44:28Z",
+        "timestamp": 1554554668000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://link.springer.com/10.1007/978-1-4613-8476-2"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1990
+          ]
+        ]
+      },
+      "ISBN": [
+        "9780387946764",
+        "9781461384762"
+      ],
+      "references-count": 0,
+      "URL": "https://doi.org/10.1007/978-1-4613-8476-2",
+      "relation": {},
+      "ISSN": [
+        "1431-939X"
+      ],
+      "issn-type": [
+        {
+          "value": "1431-939X",
+          "type": "print"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1990
+          ]
+        ]
+      }
+    }
+  }
+}

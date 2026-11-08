@@ -1,0 +1,301 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1038%2F35022643",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            27
+          ]
+        ],
+        "date-time": "2026-10-27T11:19:24Z",
+        "timestamp": 1793099964534,
+        "version": "4.5.0"
+      },
+      "reference-count": 10,
+      "publisher": "Springer Science and Business Media LLC",
+      "issue": "6798",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2000,
+                8,
+                24
+              ]
+            ],
+            "date-time": "2000-08-24T00:00:00Z",
+            "timestamp": 967075200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2000,
+                8,
+                24
+              ]
+            ],
+            "date-time": "2000-08-24T00:00:00Z",
+            "timestamp": 967075200000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Nature"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2000,
+            8,
+            24
+          ]
+        ]
+      },
+      "DOI": "10.1038/35022643",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            7,
+            26
+          ]
+        ],
+        "date-time": "2002-07-26T08:45:49Z",
+        "timestamp": 1027673149000
+      },
+      "page": "845-845",
+      "source": "Crossref",
+      "is-referenced-by-count": 1306,
+      "title": [
+        "Navigation in a small world"
+      ],
+      "prefix": "10.1038",
+      "volume": "406",
+      "author": [
+        {
+          "given": "Jon M.",
+          "family": "Kleinberg",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "reference": [
+        {
+          "key": "BF35022643_CR1",
+          "first-page": "61",
+          "volume": "1",
+          "author": "S Milgram",
+          "year": "1967",
+          "unstructured": "Milgram, S.  Psychol. Today 1, 61\u201367 (1967).",
+          "journal-title": "Psychol. Today"
+        },
+        {
+          "key": "BF35022643_CR2",
+          "unstructured": "Kochen, M. (ed.)  The Small World (Ablex, Norwood, NJ, 1989)."
+        },
+        {
+          "key": "BF35022643_CR3",
+          "doi-asserted-by": "publisher",
+          "first-page": "440",
+          "DOI": "10.1038/30918",
+          "volume": "393",
+          "author": "D Watts",
+          "year": "1998",
+          "unstructured": "Watts, D. & Strogatz, S. Nature 393, 440\u2013442 (1998).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF35022643_CR4",
+          "doi-asserted-by": "publisher",
+          "first-page": "130",
+          "DOI": "10.1038/43601",
+          "volume": "401",
+          "author": "R Albert",
+          "year": "1999",
+          "unstructured": "Albert, R. et al. Nature 401, 130\u2013131 (1999).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF35022643_CR5",
+          "first-page": "443",
+          "volume-title": "Proc. 3rd European Conference on Digital Libraries",
+          "author": "L Adamic",
+          "year": "1999",
+          "unstructured": "Adamic, L. in  Proc. 3rd European Conference on Digital Libraries (eds Abiteboul, S. & Vercoustre, A.-M) 443\u2013452 (Springer Lecture Notes in Computer Science, Vol. 1696, Berlin, 1999)."
+        },
+        {
+          "key": "BF35022643_CR6",
+          "volume-title": "Introduction to Algorithms",
+          "author": "T Cormen",
+          "year": "1990",
+          "unstructured": "Cormen, T., Leiserson, C. & Rivest, R. Introduction to Algorithms (McGraw-Hill, Boston, 1990)."
+        },
+        {
+          "key": "BF35022643_CR7",
+          "doi-asserted-by": "publisher",
+          "first-page": "510",
+          "DOI": "10.1145/65950.65953",
+          "volume": "36",
+          "author": "D Peleg",
+          "year": "1989",
+          "unstructured": "Peleg, D. & Upfal, E. J. Assoc. Comput. Machinery  36, 510\u2013530 (1989).",
+          "journal-title": "J. Assoc. Comput. Machinery"
+        },
+        {
+          "key": "BF35022643_CR8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-662-02728-8",
+          "volume-title": "Anatomy of the Cortex",
+          "author": "V Braitenberg",
+          "year": "1991",
+          "unstructured": "Braitenberg, V. & Sch\u00fcz, A. Anatomy of the Cortex (Springer, Berlin, 1991)."
+        },
+        {
+          "key": "BF35022643_CR9",
+          "doi-asserted-by": "publisher",
+          "first-page": "159",
+          "DOI": "10.1016/0378-8733(78)90018-7",
+          "volume": "1",
+          "author": "P Killworth",
+          "year": "1978",
+          "unstructured": "Killworth, P. & Bernard, H. Social Networks 1, 159\u2013192 (1978).",
+          "journal-title": "Social Networks"
+        },
+        {
+          "key": "BF35022643_CR10",
+          "doi-asserted-by": "publisher",
+          "first-page": "643",
+          "DOI": "10.1037/0033-295X.106.4.643",
+          "volume": "106",
+          "author": "P Pirolli",
+          "year": "1999",
+          "unstructured": "Pirolli, P. & Card, S. Psychol. Rev. 106, 643\u2013675 (1999).",
+          "journal-title": "Psychol. Rev."
+        }
+      ],
+      "container-title": [
+        "Nature"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.nature.com/articles/35022643.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.nature.com/articles/35022643",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.nature.com/articles/35022643.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            4,
+            4
+          ]
+        ],
+        "date-time": "2025-04-04T09:16:25Z",
+        "timestamp": 1743758185000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.nature.com/articles/35022643"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2000,
+            8,
+            24
+          ]
+        ]
+      },
+      "references-count": 10,
+      "journal-issue": {
+        "issue": "6798",
+        "published-print": {
+          "date-parts": [
+            [
+              2000,
+              8,
+              24
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "BF35022643"
+      ],
+      "URL": "https://doi.org/10.1038/35022643",
+      "relation": {},
+      "ISSN": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issn-type": [
+        {
+          "value": "0028-0836",
+          "type": "print"
+        },
+        {
+          "value": "1476-4687",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2000,
+            8,
+            24
+          ]
+        ]
+      }
+    }
+  }
+}

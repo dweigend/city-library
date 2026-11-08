@@ -1,0 +1,21 @@
+bun test v1.4.2 (744846f84)
+
+tests/planar-geometry-oracles.test.ts:
+(pass) exhaustive ordered distinct triangles and quadrilaterals on a 3x3 integer lattice [689.81ms]
+(pass) deterministic adversarial small-integer polygons and rational query fixtures [77.78ms]
+(pass) hole pairs agree with an independent closed-rectangle interval oracle in both orders [39.56ms]
+
+tests/planar-geometry.test.ts:
+(pass) descriptor-safe geometry-only validation > foreign and unused metadata values are never read [0.13ms]
+(pass) descriptor-safe geometry-only validation > recognized fields and array indices reject accessors without invoking them [0.08ms]
+(pass) descriptor-safe geometry-only validation > strict records, arrays, options and scalar errors [0.31ms]
+(pass) descriptor-safe geometry-only validation > DAGs, cycles, deep collections, and per-call revalidation [12.73ms]
+(pass) exact topology and query policy > every boundary follows include/exclude, winding is irrelevant [0.66ms]
+(pass) exact topology and query policy > outside queries and bounds validate all topology [0.44ms]
+(pass) exact topology and query policy > original binary64 arithmetic at subnormal, cancellation and extreme scales [0.23ms]
+(pass) exact topology and query policy > bounds has no containment/codec budgets and no global overlap ban [149.43ms]
+
+ 11 pass
+ 0 fail
+ 94017 expect() calls
+Ran 11 tests across 2 files. [984.00ms]

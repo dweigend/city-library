@@ -1,0 +1,141 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fgenetics%2F16.2.97%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1093/genetics/16.2.97\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "17246615",
+          "source": "MED",
+          "pmid": "17246615",
+          "pmcid": "PMC1201091",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC1201091"
+            ]
+          },
+          "doi": "10.1093/genetics/16.2.97",
+          "title": "Evolution in Mendelian Populations.",
+          "authorString": "Wright S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Wright S",
+                "lastName": "Wright",
+                "firstName": "S",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "University of Chicago, Chicago, Illinois."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "related_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "16",
+            "journalIssueId": 1374170,
+            "dateOfPublication": "1931 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 1931,
+            "journal": {
+              "medlineAbbreviation": "Genetics",
+              "title": "Genetics",
+              "essn": "1943-2631",
+              "issn": "0016-6731",
+              "isoabbreviation": "Genetics",
+              "nlmid": "0374636"
+            },
+            "printPublicationDate": "1931-03-01"
+          },
+          "pubYear": "1931",
+          "pageInfo": "97-159",
+          "affiliation": "University of Chicago, Chicago, Illinois.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/genetics/16.2.97"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC1201091"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC1201091?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/genetics/16.2.97"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 3679,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2007-02-02",
+          "dateOfCreation": "1931-03-01",
+          "dateOfRevision": "2025-10-30",
+          "firstPublicationDate": "1931-03-01",
+          "firstIndexDate": "2010-09-16",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

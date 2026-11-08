@@ -1,0 +1,113 @@
+{
+  "slug": "anisogamy",
+  "name": "Anisogamy",
+  "catalogPath": "Sample Models/Biology/Evolution/Anisogamy",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Anisogamy.nlogox",
+  "deliveryBatch": "B08",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Under what assumptions can two gamete sizes evolve from an initially less differentiated population? NetLogo Anisogamy explores reproductive investment, gamete encounters, and offspring survival through spatially explicit agents. Foundational gamete-dimorphism theory [1], the model authors' thought-experiment study [2], and a game-theoretic analysis [3] frame the evolutionary question. The Info presents the model as a tool for challenging and comparing explanations, rather than a universal origin story. Discrete time, spatial encounters, and the specified relation between gamete investment and success constrain interpretation. Emerging size differences illustrate one set of evolutionary consequences. They do not establish that every biological lineage followed the same path or that the chosen survival and encounter rules are empirically calibrated.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Anisogamy.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Anisogamy.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 835a1a6b3953de5588ce16ba1aebfba30a7ec8c30e6450bf1eae5dcc3d0852c3",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/anisogamy.nlogox",
+    "infoFile": "evidence/biology/anisogamy-info.txt",
+    "originalModelCitation": "* Aslan, U., Dabholkar, S., Woods, P., Wilensky, U. (2023).  NetLogo Anisogamy model.  http://ccl.northwestern.edu/netlogo/models/Anisogamy.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "parker",
+      "authors": [
+        "G.A. Parker",
+        "R.R. Baker",
+        "V.G.F. Smith"
+      ],
+      "title": "The origin and evolution of gamete dimorphism and the male-female phenomenon",
+      "year": 1972,
+      "venue": "Journal of Theoretical Biology",
+      "doi": "10.1016/0022-5193(72)90007-0",
+      "url": "https://doi.org/10.1016/0022-5193(72)90007-0",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+origin+and+evolution+of+gamete+dimorphism+and+the+male+female+phenomenon+Parker+Baker+Smith+1972&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/parker-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2F0022-5193%2872%2990007-0%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/parker-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "36",
+      "issue": "3",
+      "pages": "529-553",
+      "relevance": "Foundational gamete-dimorphism theory supplies the size–number tradeoff and disruptive-selection context."
+    },
+    {
+      "id": "anisogamymodel",
+      "authors": [
+        "Umit Aslan",
+        "Sugat Dabholkar",
+        "Uri Wilensky"
+      ],
+      "title": "Developing Multi-agent-based Thought Experiments: A Case Study on the Evolution of Gamete Dimorphism",
+      "year": 2017,
+      "venue": "Lecture Notes in Computer Science Autonomous Agents and Multiagent Systems",
+      "doi": "10.1007/978-3-319-71682-4_4",
+      "url": "https://doi.org/10.1007/978-3-319-71682-4_4",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Developing+Multi-agent-based+Thought+Experiments+A+Case+Study+on+the+Evolution+of+Gamete+Dimorphism+Aslan+Dabholkar+Wilensky+2017&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/anisogamymodel-crossref-search.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": "51-65",
+      "relevance": "The publication is directly cited by the served model as its multi-agent thought-experiment lineage."
+    },
+    {
+      "id": "bulmer",
+      "authors": [
+        "M. G. Bulmer",
+        "G. A. Parker"
+      ],
+      "title": "The evolution of anisogamy: a game-theoretic approach",
+      "year": 2002,
+      "venue": "Proceedings of the Royal Society of London. Series B: Biological Sciences",
+      "doi": "10.1098/rspb.2002.2161",
+      "url": "https://doi.org/10.1098/rspb.2002.2161",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+evolution+of+anisogamy+a+game-theoretic+approach+Bulmer+Parker+2002&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/bulmer-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frspb.2002.2161%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/bulmer-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "269",
+      "issue": "1507",
+      "pages": "2381-2388",
+      "relevance": "A game-theoretic development examines the assumptions underlying anisogamy evolution."
+    }
+  ],
+  "gaps": []
+}

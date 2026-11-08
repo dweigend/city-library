@@ -1,0 +1,935 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Quorum+sensing+communication+and+the+election+of+a+new+nest+site+by+a+honey+bee+swarm+Seeley+Visscher+2004&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 4887109,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                18
+              ]
+            ],
+            "date-time": "2026-06-18T01:32:41Z",
+            "timestamp": 1781746361845,
+            "version": "3.54.5"
+          },
+          "reference-count": 76,
+          "publisher": "Wiley",
+          "issue": "6",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    7,
+                    5
+                  ]
+                ],
+                "date-time": "2024-07-05T00:00:00Z",
+                "timestamp": 1720137600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "resjournals.onlinelibrary.wiley.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Ecological Entomology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                12
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    <jats:list>\n                      <jats:list-item>\n                        <jats:p>\n                          Nest sites are often considered to limit wild honey bee,\n                          <jats:italic>Apis mellifera</jats:italic>\n                          , colonies in Europe where wild colony densities are low (mean 0.26/km\n                          <jats:sup>2</jats:sup>\n                          ). Nest site availability can be challenging to quantify directly, especially in urban areas and farmland where colonies nest in different substrates.\n                        </jats:p>\n                      </jats:list-item>\n                      <jats:list-item>\n                        <jats:p>\n                          Here we assess nest site availability indirectly across large areas (78.5\u2009km\n                          <jats:sup>2</jats:sup>\n                          ) of mixed habitat (67% farmland, 25% urban and 8% woodland) by decoding 3310 waggle dances produced by scouts on swarms. During summers of 2021 and 2022, 14 artificial swarms were set up in two study areas in East Sussex, England.\n                        </jats:p>\n                      </jats:list-item>\n                      <jats:list-item>\n                        <jats:p>\n                          Swarms advertised three to nine nest locations (mean of 5.5) at distances of 0.1\u201311.2\u2009km (median 1.2\u2009km) all within 0.4\u201315.2 daylight hours after dancing commenced (median 2.7). We estimated the total number of nest locations, including those not advertised, by quantifying the overlap in locations advertised by two swarms (a form of mark\u2013recapture), which gave a mean density of approximately three nest sites per km\n                          <jats:sup>2</jats:sup>\n                          .\n                        </jats:p>\n                      </jats:list-item>\n                      <jats:list-item>\n                        <jats:p>\n                          The probability of swarms advertising nest sites per km\n                          <jats:sup>2</jats:sup>\n                          , calculated using simulations of dance variation, was an average of 42% higher in urban areas (0.018/km\n                          <jats:sup>2</jats:sup>\n                          ), 78% higher in woodland (0.023/km\n                          <jats:sup>2</jats:sup>\n                          ) and 12% lower in farmland (0.011/km\n                          <jats:sup>2</jats:sup>\n                          ) than random expectation. After controlling for distance, swarms were still more likely than expected to advertise nest sites in woodland but only in one study area.\n                        </jats:p>\n                      </jats:list-item>\n                      <jats:list-item>\n                        <jats:p>\n                          Our results indicate that nest sites do not limit wild colonies in the study areas given that our conservative estimate of nest site density (3/km\n                          <jats:sup>2</jats:sup>\n                          ) exceeds the density of wild colonies on nearby landed estates (2/km\n                          <jats:sup>2</jats:sup>\n                          ) and other locations in Europe (0.26/km\n                          <jats:sup>2</jats:sup>\n                          ).\n                        </jats:p>\n                      </jats:list-item>\n                    </jats:list>\n                  </jats:p>",
+          "DOI": "10.1111/een.13361",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                5
+              ]
+            ],
+            "date-time": "2024-07-05T23:48:51Z",
+            "timestamp": 1720223331000
+          },
+          "page": "869-880",
+          "update-policy": "https://doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 3,
+          "title": [
+            "Do nest sites limit wild honey bee colonies? Decoding swarm waggle dances to assess nest site availability"
+          ],
+          "prefix": "10.1111",
+          "volume": "49",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0001-8980-0482",
+              "authenticated-orcid": false,
+              "given": "Oliver D.",
+              "family": "Visick",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Laboratory of Apiculture and Social Insects (LASI), Department of Ecology and Evolution, School of Life Sciences University of Sussex  Brighton UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0009-0006-6696-2722",
+              "authenticated-orcid": false,
+              "given": "Idris",
+              "family": "Adams",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Laboratory of Apiculture and Social Insects (LASI), Department of Ecology and Evolution, School of Life Sciences University of Sussex  Brighton UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Phoebe",
+              "family": "Ney",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Laboratory of Apiculture and Social Insects (LASI), Department of Ecology and Evolution, School of Life Sciences University of Sussex  Brighton UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Francesco S.",
+              "family": "Marzano",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Laboratory of Apiculture and Social Insects (LASI), Department of Ecology and Evolution, School of Life Sciences University of Sussex  Brighton UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Francis L. W.",
+              "family": "Ratnieks",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Laboratory of Apiculture and Social Insects (LASI), Department of Ecology and Evolution, School of Life Sciences University of Sussex  Brighton UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                5
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_10_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.agee.2015.08.007"
+            },
+            {
+              "key": "e_1_2_10_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/afe.12204"
+            },
+            {
+              "key": "e_1_2_10_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.agee.2019.106792"
+            },
+            {
+              "key": "e_1_2_10_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1603/0046-225X-34.3.610"
+            },
+            {
+              "key": "e_1_2_10_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.landurbplan.2007.10.005"
+            },
+            {
+              "key": "e_1_2_10_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2435.2000.00443.x"
+            },
+            {
+              "key": "e_1_2_10_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3390/insects12121127"
+            },
+            {
+              "key": "e_1_2_10_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/besa/33.1.34"
+            },
+            {
+              "key": "e_1_2_10_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00063657.2015.1046811"
+            },
+            {
+              "key": "e_1_2_10_11_1",
+              "volume-title": "Tracks & signs of the birds of Britain & Europe \u2013 an identification guide",
+              "author": "Brown R.",
+              "year": "1999"
+            },
+            {
+              "key": "e_1_2_10_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00218839.2008.11101482"
+            },
+            {
+              "key": "e_1_2_10_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0228169"
+            },
+            {
+              "key": "e_1_2_10_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.anbehav.2020.12.006"
+            },
+            {
+              "key": "e_1_2_10_15_1",
+              "volume-title": "Some properties of the hypergeometric distribution with applications to zoological sample censuses. UC publications in statistics",
+              "author": "Chapman D.G.",
+              "year": "1951"
+            },
+            {
+              "key": "e_1_2_10_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3389/fevo.2015.00044"
+            },
+            {
+              "key": "e_1_2_10_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s13592-014-0302-5"
+            },
+            {
+              "key": "e_1_2_10_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/bio.20121099"
+            },
+            {
+              "key": "e_1_2_10_19_1",
+              "first-page": "540",
+              "article-title": "Too much noise on the dance floor: intra\u2010and inter\u2010dance angular error in honey bee waggle dances",
+              "volume": "6",
+              "author": "Couvillon M.J.",
+              "year": "2012",
+              "journal-title": "Communicative & Integrative Biology"
+            },
+            {
+              "key": "e_1_2_10_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0093495"
+            },
+            {
+              "key": "e_1_2_10_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cub.2014.03.072"
+            },
+            {
+              "key": "e_1_2_10_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/15-1840.1"
+            },
+            {
+              "key": "e_1_2_10_23_1",
+              "first-page": "257",
+              "article-title": "The flight range of the honeybee",
+              "volume": "47",
+              "author": "Eckert J.E.",
+              "year": "1933",
+              "journal-title": "Journal of Agricultural Research"
+            },
+            {
+              "key": "e_1_2_10_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00218839.1977.11099883"
+            },
+            {
+              "key": "e_1_2_10_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1051/apido:19900105"
+            },
+            {
+              "key": "e_1_2_10_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.agee.2014.12.009"
+            },
+            {
+              "key": "e_1_2_10_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11252-014-0403-y"
+            },
+            {
+              "key": "e_1_2_10_28_1",
+              "first-page": "253",
+              "article-title": "Comparative nesting ecology of the three British breeding woodpeckers",
+              "volume": "87",
+              "author": "Glue D.E.",
+              "year": "1994",
+              "journal-title": "British Birds"
+            },
+            {
+              "key": "e_1_2_10_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1744-7429.2006.00126.x"
+            },
+            {
+              "key": "e_1_2_10_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/2688-8319.12264"
+            },
+            {
+              "key": "e_1_2_10_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.7717/peerj.4602"
+            },
+            {
+              "key": "e_1_2_10_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.7717/peerj.11187"
+            },
+            {
+              "key": "e_1_2_10_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsos.220565"
+            },
+            {
+              "key": "e_1_2_10_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10336-018-1585-5"
+            },
+            {
+              "key": "e_1_2_10_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00303153"
+            },
+            {
+              "key": "e_1_2_10_36_1",
+              "volume-title": "Land cover map 2021 (land parcels, GB)",
+              "author": "Marston C.",
+              "year": "2022"
+            },
+            {
+              "key": "e_1_2_10_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10336-015-1169-6"
+            },
+            {
+              "key": "e_1_2_10_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/ee/25.3.643"
+            },
+            {
+              "key": "e_1_2_10_39_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/aesa/64.6.1414"
+            },
+            {
+              "key": "e_1_2_10_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jee/83.1.81"
+            },
+            {
+              "key": "e_1_2_10_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.13102/sociobiology.v59i4.486"
+            },
+            {
+              "key": "e_1_2_10_42_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0006-3207(94)90172-4"
+            },
+            {
+              "key": "e_1_2_10_43_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10841-023-00541-4"
+            },
+            {
+              "key": "e_1_2_10_44_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.agee.2023.108722"
+            },
+            {
+              "key": "e_1_2_10_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsbl.2022.0155"
+            },
+            {
+              "key": "e_1_2_10_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1442-9993.1994.tb00510.x"
+            },
+            {
+              "key": "e_1_2_10_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10841-012-9528-6"
+            },
+            {
+              "key": "e_1_2_10_48_1",
+              "volume-title": "R: a language and environment for statistical computing",
+              "author": "R Core Team",
+              "year": "2023"
+            },
+            {
+              "key": "e_1_2_10_49_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4039/Ent123353-2"
+            },
+            {
+              "key": "e_1_2_10_50_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.foreco.2011.04.028"
+            },
+            {
+              "key": "e_1_2_10_51_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.foreco.2005.10.015"
+            },
+            {
+              "key": "e_1_2_10_52_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/conl.12693"
+            },
+            {
+              "key": "e_1_2_10_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1577/1548-8659(1964)93[215:SSIPME]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_10_54_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/1365-2664.14389"
+            },
+            {
+              "key": "e_1_2_10_55_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/1365-2664.14011"
+            },
+            {
+              "key": "e_1_2_10_56_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/fee.2347"
+            },
+            {
+              "key": "e_1_2_10_57_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1051/apido:19950505"
+            },
+            {
+              "key": "e_1_2_10_58_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00359-013-0860-4"
+            },
+            {
+              "key": "e_1_2_10_59_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.anbehav.2019.01.016"
+            },
+            {
+              "key": "e_1_2_10_60_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00361902"
+            },
+            {
+              "key": "e_1_2_10_61_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1051/apido:2006055"
+            },
+            {
+              "key": "e_1_2_10_62_1",
+              "volume-title": "Honey bee democracy",
+              "author": "Seeley T.D.",
+              "year": "2010"
+            },
+            {
+              "key": "e_1_2_10_63_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002650050536"
+            },
+            {
+              "key": "e_1_2_10_64_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02223477"
+            },
+            {
+              "key": "e_1_2_10_65_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1155/1977/37918"
+            },
+            {
+              "key": "e_1_2_10_66_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ece3.8979"
+            },
+            {
+              "key": "e_1_2_10_67_1",
+              "volume-title": "Rothamsted Experimental Station report for 1961",
+              "author": "Simpson J.",
+              "year": "1962"
+            },
+            {
+              "key": "e_1_2_10_68_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ecs2.4228"
+            },
+            {
+              "key": "e_1_2_10_69_1",
+              "first-page": "842",
+              "article-title": "A population of feral honey bee colonies",
+              "volume": "119",
+              "author": "Taber S.",
+              "year": "1979",
+              "journal-title": "American Bee Journal"
+            },
+            {
+              "key": "e_1_2_10_70_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ece3.10609"
+            },
+            {
+              "key": "e_1_2_10_71_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10841-023-00530-7"
+            },
+            {
+              "key": "e_1_2_10_72_1",
+              "volume-title": "The dance language and orientation of bees",
+              "author": "Frisch K.",
+              "year": "1967"
+            },
+            {
+              "key": "e_1_2_10_73_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.en.01.010156.000401"
+            },
+            {
+              "key": "e_1_2_10_74_1",
+              "first-page": "155",
+              "article-title": "Natural nest sites of the collared flycatcher Ficedula albicollis in lime\u2010hornbeam\u2010oak stands of a primeval forest",
+              "volume": "84",
+              "author": "Walankiewicz W.",
+              "year": "2007",
+              "journal-title": "Ornis Fennica"
+            },
+            {
+              "key": "e_1_2_10_75_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1557-9263.2011.00327.x"
+            },
+            {
+              "key": "e_1_2_10_76_1",
+              "first-page": "808",
+              "article-title": "Bee\u2010lining\u201d and ecological research on Santa Cruz Island",
+              "volume": "129",
+              "author": "Wenner A.M.",
+              "year": "1989",
+              "journal-title": "American Bee Journal"
+            },
+            {
+              "key": "e_1_2_10_77_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-319-24277-4"
+            }
+          ],
+          "container-title": [
+            "Ecological Entomology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://resjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/een.13361",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                30
+              ]
+            ],
+            "date-time": "2025-10-30T23:33:00Z",
+            "timestamp": 1761867180000
+          },
+          "score": 37.14604,
+          "resource": {
+            "primary": {
+              "URL": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/een.13361"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                5
+              ]
+            ]
+          },
+          "references-count": 76,
+          "journal-issue": {
+            "issue": "6",
+            "published-print": {
+              "date-parts": [
+                [
+                  2024,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/een.13361"
+          ],
+          "URL": "https://doi.org/10.1111/een.13361",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0307-6946",
+            "1365-2311"
+          ],
+          "issn-type": [
+            {
+              "value": "0307-6946",
+              "type": "print"
+            },
+            {
+              "value": "1365-2311",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                5
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2024-02-09",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2024-06-19",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2024-07-05",
+              "order": 3,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                12,
+                11
+              ]
+            ],
+            "date-time": "2024-12-11T00:54:46Z",
+            "timestamp": 1733878486859,
+            "version": "3.30.1"
+          },
+          "reference-count": 0,
+          "publisher": "Entomological Society of America",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          },
+          "DOI": "10.1603/ice.2016.111152",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                8,
+                2
+              ]
+            ],
+            "date-time": "2016-08-02T12:41:37Z",
+            "timestamp": 1470141697000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Honey bee sociometry: Tracking honey bee colonies and their nest contents from swarm until death"
+          ],
+          "prefix": "10.1603",
+          "author": [
+            {
+              "given": "Michael L",
+              "family": "Smith",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "597",
+          "event": {
+            "acronym": "ice2016",
+            "name": "2016 International Congress of Entomology"
+          },
+          "container-title": [
+            "2016 International Congress of Entomology"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2016,
+                8,
+                2
+              ]
+            ],
+            "date-time": "2016-08-02T12:43:37Z",
+            "timestamp": 1470141817000
+          },
+          "score": 36.466595,
+          "resource": {
+            "primary": {
+              "URL": "https://esa.confex.com/esa/ice2016/meetingapp.cgi/Paper/111152"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1603/ice.2016.111152",
+          "published": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                28
+              ]
+            ],
+            "date-time": "2026-04-28T10:10:42Z",
+            "timestamp": 1777371042177,
+            "version": "3.51.4"
+          },
+          "reference-count": 0,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Apidologie"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1998
+              ]
+            ]
+          },
+          "DOI": "10.1051/apido:19980303",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                9,
+                28
+              ]
+            ],
+            "date-time": "2007-09-28T10:29:22Z",
+            "timestamp": 1190975362000
+          },
+          "page": "229-240",
+          "source": "Crossref",
+          "is-referenced-by-count": 21,
+          "title": [
+            "The identity of nest-site scouts in honey bee swarms"
+          ],
+          "prefix": "10.1007",
+          "volume": "29",
+          "author": [
+            {
+              "given": "David C.",
+              "family": "Gilley",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "container-title": [
+            "Apidologie"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2011,
+                4,
+                24
+              ]
+            ],
+            "date-time": "2011-04-24T16:38:51Z",
+            "timestamp": 1303663131000
+          },
+          "score": 34.011627,
+          "resource": {
+            "primary": {
+              "URL": "http://www.apidologie.org/10.1051/apido:19980303"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1998
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3"
+          },
+          "alternative-id": [
+            "Apidologie_0044-8435_1998_29_3_ART0003"
+          ],
+          "URL": "https://doi.org/10.1051/apido:19980303",
+          "ISSN": [
+            "0044-8435"
+          ],
+          "issn-type": [
+            {
+              "value": "0044-8435",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1998
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

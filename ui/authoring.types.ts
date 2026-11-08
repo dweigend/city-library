@@ -84,3 +84,25 @@ function authorContract(definition: Definition<Parameters, Instance>) {
   });
 }
 void authorContract;
+
+/** Selected-grid author tasks, frozen before the shared renderer implementation. */
+function drawingAuthorContracts(definition: Definition<Parameters, Instance>) {
+  // 1. Existing authors opt out without any changes.
+  defineUI(definition, { views: [{ type: "grid", label: "Read only", data: () => ({ width: 3, height: 3, cells: [] }) }] });
+  // 2. Neutral cell intents dispatch typed public actions; no rendering policy.
+  defineUI(definition, {
+    drawing: { enabled: () => true, intent: (model, intent) => { if (intent.phase === "begin") model.setRate(intent.position!.x); } },
+    views: [{ type: "grid", label: "Draw", data: () => ({ width: 3, height: 3, cells: [] }) }],
+  });
+  // 3. Color widgets remain typed live bindings to declared parameters.
+  defineUI(definition, { live: [{ field: "mode", widget: "color", value: () => "#ffffff", set: (model) => model.setRate(1) }], views: [] });
+  // 4. Invalid gesture phases and model writes fail author compilation.
+  defineUI(definition, { drawing: { enabled: () => true, intent(model, intent) {
+    // @ts-expect-error Only neutral begin/move/end phases exist.
+    const phase: "paint" = intent.phase;
+    // @ts-expect-error Typed model actions cannot accept arbitrary renderer data.
+    model.setRate(intent);
+    void phase;
+  } }, views: [] });
+}
+void drawingAuthorContracts;

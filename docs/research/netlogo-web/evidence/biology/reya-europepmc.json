@@ -1,0 +1,218 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F35102167%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/35102167\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "11689955",
+          "source": "MED",
+          "pmid": "11689955",
+          "doi": "10.1038/35102167",
+          "title": "Stem cells, cancer, and cancer stem cells.",
+          "authorString": "Reya T, Morrison SJ, Clarke MF, Weissman IL.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Reya T",
+                "lastName": "Reya",
+                "firstName": "T",
+                "initials": "T",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Departments of Pathology and Developmental Biology, Stanford University School of Medicine, Palo Alto, California 94305, USA. irv@stanford.edu"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Morrison SJ",
+                "lastName": "Morrison",
+                "firstName": "S J",
+                "initials": "SJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1587-8329"
+                }
+              },
+              {
+                "fullName": "Clarke MF",
+                "lastName": "Clarke",
+                "firstName": "M F",
+                "initials": "MF"
+              },
+              {
+                "fullName": "Weissman IL",
+                "lastName": "Weissman",
+                "firstName": "I L",
+                "initials": "IL"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1587-8329"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6859",
+            "volume": "414",
+            "journalIssueId": 1026188,
+            "dateOfPublication": "2001 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2001,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "isoabbreviation": "Nature",
+              "nlmid": "0410462"
+            },
+            "printPublicationDate": "2001-11-01"
+          },
+          "pubYear": "2001",
+          "pageInfo": "105-111",
+          "abstractText": "Stem cell biology has come of age. Unequivocal proof that stem cells exist in the haematopoietic system has given way to the prospective isolation of several tissue-specific stem and progenitor cells, the initial delineation of their properties and expressed genetic programmes, and the beginnings of their utility in regenerative medicine. Perhaps the most important and useful property of stem cells is that of self-renewal. Through this property, striking parallels can be found between stem cells and cancer cells: tumours may often originate from the transformation of normal stem cells, similar signalling pathways may regulate self-renewal in stem cells and cancer cells, and cancer cells may include 'cancer stem cells' - rare cells with indefinite potential for self-renewal that drive tumorigenesis.",
+          "affiliation": "Departments of Pathology and Developmental Biology, Stanford University School of Medicine, Palo Alto, California 94305, USA. irv@stanford.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Hematopoietic Stem Cells"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Stem Cells"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Neoplasms",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Leukemia",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cell Transformation, Neoplastic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Regeneration"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Signal Transduction"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cell Division"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mutation"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/35102167"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 6824,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2001-12-07",
+          "dateOfCreation": "2001-11-02",
+          "dateOfRevision": "2023-11-20",
+          "firstPublicationDate": "2001-11-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

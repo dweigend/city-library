@@ -1,0 +1,1165 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Bates+1862+Contributions+to+an+insect+fauna+of+the+Amazon+Valley+Heliconidae&rows=8",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 730335,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                10
+              ]
+            ],
+            "date-time": "2026-08-10T07:29:43Z",
+            "timestamp": 1786346983549,
+            "version": "build-2736575974"
+          },
+          "publisher-location": "[s.l",
+          "reference-count": 0,
+          "publisher": "s.n.]",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1861
+              ]
+            ]
+          },
+          "DOI": "10.5962/bhl.title.9486",
+          "type": "monograph",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                18
+              ]
+            ],
+            "date-time": "2011-11-18T16:03:47Z",
+            "timestamp": 1321632227000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Contributions to an insect fauna of the Amazon Valley : Lepidoptera : Heliconidae"
+          ],
+          "prefix": "10.5962",
+          "author": [
+            {
+              "given": "Henry Walter",
+              "family": "Bates",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "33859",
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                10
+              ]
+            ],
+            "date-time": "2026-08-10T07:00:34Z",
+            "timestamp": 1786345234000
+          },
+          "score": 79.37043,
+          "resource": {
+            "primary": {
+              "URL": "https://www.biodiversitylibrary.org/bibliography/9486"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1861
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.5962/bhl.title.9486",
+          "published": {
+            "date-parts": [
+              [
+                1861
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T22:33:33Z",
+            "timestamp": 1793918013692,
+            "version": "4.8.0"
+          },
+          "reference-count": 0,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "2015-09-01T00:00:00Z",
+                "timestamp": 1441065600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 55821,
+              "URL": "http://doi.wiley.com/10.1002/tdm_license_1"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1862,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1111/j.1096-3642.1860.tb00146.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                4,
+                9
+              ]
+            ],
+            "date-time": "2009-04-09T12:26:26Z",
+            "timestamp": 1239279986000
+          },
+          "page": "495-566",
+          "source": "Crossref",
+          "is-referenced-by-count": 766,
+          "title": [
+            "XXXII. Contributions to an Insect Fauna of the Amazon Valley. Lepidoptera: Heliconidae."
+          ],
+          "prefix": "10.1093",
+          "volume": "23",
+          "author": [
+            {
+              "given": "Henry Walter",
+              "family": "Bates",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "published-online": {
+            "date-parts": [
+              [
+                2008,
+                7,
+                22
+              ]
+            ]
+          },
+          "container-title": [
+            "Transactions of the Linnean Society of London"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1096-3642.1860.tb00146.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                2,
+                7
+              ]
+            ],
+            "date-time": "2020-02-07T17:22:47Z",
+            "timestamp": 1581096167000
+          },
+          "score": 73.66986,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/transactionslinnean/article/os-23/3/495-566/2374801"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1862,
+                11
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1862,
+                  11
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1111/j.1096-3642.1860.tb00146.x",
+          "ISSN": [
+            "1945-9432"
+          ],
+          "issn-type": [
+            {
+              "value": "1945-9432",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1862,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                27
+              ]
+            ],
+            "date-time": "2026-09-27T21:14:42Z",
+            "timestamp": 1790543682412,
+            "version": "4.1.0"
+          },
+          "reference-count": 0,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "2015-09-01T00:00:00Z",
+                "timestamp": 1441065600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 12449,
+              "URL": "http://doi.wiley.com/10.1002/tdm_license_1"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1981,
+                8
+              ]
+            ]
+          },
+          "DOI": "10.1111/j.1095-8312.1981.tb01842.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                14
+              ]
+            ],
+            "date-time": "2008-01-14T17:24:23Z",
+            "timestamp": 1200331463000
+          },
+          "page": "41-54",
+          "source": "Crossref",
+          "is-referenced-by-count": 38,
+          "title": [
+            "Contributions to an insect fauna of the Amazon valley (Lepidoptera: Heliconidae)"
+          ],
+          "prefix": "10.1093",
+          "volume": "16",
+          "author": [
+            {
+              "given": "HENRY WALTER",
+              "family": "BATES",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "published-online": {
+            "date-parts": [
+              [
+                2008,
+                6,
+                28
+              ]
+            ]
+          },
+          "container-title": [
+            "Biological Journal of the Linnean Society"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1095-8312.1981.tb01842.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://academic.oup.com/biolinnean/article-pdf/16/1/41/14075415/j.1095-8312.1981.tb01842.x.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                25
+              ]
+            ],
+            "date-time": "2017-08-25T04:43:17Z",
+            "timestamp": 1503636197000
+          },
+          "score": 65.67285,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/biolinnean/article-lookup/doi/10.1111/j.1095-8312.1981.tb01842.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1981,
+                8
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1981,
+                  8
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1111/j.1095-8312.1981.tb01842.x",
+          "ISSN": [
+            "0024-4066"
+          ],
+          "issn-type": [
+            {
+              "value": "0024-4066",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1981,
+                8
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                10
+              ]
+            ],
+            "date-time": "2026-08-10T07:29:39Z",
+            "timestamp": 1786346979858,
+            "version": "build-2736575974"
+          },
+          "publisher-location": "London",
+          "reference-count": 0,
+          "publisher": "Taylor and Francis",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1861
+              ]
+            ]
+          },
+          "DOI": "10.5962/bhl.title.110205",
+          "type": "monograph",
+          "created": {
+            "date-parts": [
+              [
+                2015,
+                12,
+                27
+              ]
+            ],
+            "date-time": "2015-12-27T02:01:10Z",
+            "timestamp": 1451181670000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Contributions to an insect fauna of the Amazon Valley : Coleoptera--Longicornes : Part I. Lamiares"
+          ],
+          "prefix": "10.5962",
+          "author": [
+            {
+              "given": "Henry Walter",
+              "family": "Bates",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "33859",
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                10
+              ]
+            ],
+            "date-time": "2026-08-10T07:00:19Z",
+            "timestamp": 1786345219000
+          },
+          "score": 57.483295,
+          "resource": {
+            "primary": {
+              "URL": "https://www.biodiversitylibrary.org/bibliography/110205"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1861
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.5962/bhl.title.110205",
+          "published": {
+            "date-parts": [
+              [
+                1861
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                14
+              ]
+            ],
+            "date-time": "2026-09-14T02:21:39Z",
+            "timestamp": 1789352499846,
+            "version": "build-2803163510"
+          },
+          "reference-count": 0,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "22",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "2015-09-01T00:00:00Z",
+                "timestamp": 1441065600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 56066,
+              "URL": "http://doi.wiley.com/10.1002/tdm_license_1"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1862,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1111/j.1096-3642.1862.tb00932.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                1,
+                6
+              ]
+            ],
+            "date-time": "2009-01-06T09:11:05Z",
+            "timestamp": 1231233065000
+          },
+          "page": "73-77",
+          "source": "Crossref",
+          "is-referenced-by-count": 10,
+          "title": [
+            "Contributions to an Insect Fauna of the Amazon Valley.-Lepidoptera:-Heliconinae."
+          ],
+          "prefix": "10.1093",
+          "volume": "6",
+          "author": [
+            {
+              "given": "H. W.",
+              "family": "Bates",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "published-online": {
+            "date-parts": [
+              [
+                2009,
+                1,
+                6
+              ]
+            ]
+          },
+          "container-title": [
+            "Journal of the Proceedings of the Linnean Society of London. Zoology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1096-3642.1862.tb00932.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://academic.oup.com/zoolinnean/article-pdf/6/22/73/16610126/j.1096-3642.1862.tb00932.x.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                25
+              ]
+            ],
+            "date-time": "2017-08-25T00:44:24Z",
+            "timestamp": 1503621864000
+          },
+          "score": 56.591133,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/zoolinnean/article-lookup/doi/10.1111/j.1096-3642.1862.tb00932.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1862,
+                3
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "22",
+            "published-print": {
+              "date-parts": [
+                [
+                  1862,
+                  3
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1111/j.1096-3642.1862.tb00932.x",
+          "ISSN": [
+            "1945-9475"
+          ],
+          "issn-type": [
+            {
+              "value": "1945-9475",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1862,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                15
+              ]
+            ],
+            "date-time": "2024-07-15T14:34:36Z",
+            "timestamp": 1721054076242
+          },
+          "reference-count": 0,
+          "publisher": "Informa UK Limited",
+          "issue": "50",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Annals and Magazine of Natural History"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1862,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.1080/00222936208681194",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                9
+              ]
+            ],
+            "date-time": "2018-03-09T09:18:30Z",
+            "timestamp": 1520587110000
+          },
+          "page": "117-124",
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "XIV.\u2014<i>Contributions to an insect fauna of the Amazon Valley</i> C<scp>oleoptera</scp>: L<scp>ongicornes</scp>"
+          ],
+          "prefix": "10.1080",
+          "volume": "9",
+          "author": [
+            {
+              "given": "H.W.",
+              "family": "Bates",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "published-online": {
+            "date-parts": [
+              [
+                2011,
+                1,
+                2
+              ]
+            ]
+          },
+          "container-title": [
+            "Annals and Magazine of Natural History"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.tandfonline.com/doi/pdf/10.1080/00222936208681194",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                9
+              ]
+            ],
+            "date-time": "2018-03-09T09:19:31Z",
+            "timestamp": 1520587171000
+          },
+          "score": 51.24623,
+          "resource": {
+            "primary": {
+              "URL": "https://www.tandfonline.com/doi/full/10.1080/00222936208681194"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1862,
+                2
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "50",
+            "published-online": {
+              "date-parts": [
+                [
+                  2011,
+                  1,
+                  2
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  1862,
+                  2
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1080/00222936208681194"
+          ],
+          "URL": "https://doi.org/10.1080/00222936208681194",
+          "ISSN": [
+            "0374-5481"
+          ],
+          "issn-type": [
+            {
+              "value": "0374-5481",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1862,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T21:28:57Z",
+            "timestamp": 1793222937857,
+            "version": "4.5.0"
+          },
+          "reference-count": 0,
+          "publisher": "Informa UK Limited",
+          "issue": "54",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Annals and Magazine of Natural History"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1862,
+                6
+              ]
+            ]
+          },
+          "DOI": "10.1080/00222936208681261",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                9
+              ]
+            ],
+            "date-time": "2018-03-09T09:18:28Z",
+            "timestamp": 1520587108000
+          },
+          "page": "446-458",
+          "source": "Crossref",
+          "is-referenced-by-count": 9,
+          "title": [
+            "XLVIII.\u2014<i>Contributions to an insect fauna of the Amazon valley</i> C<scp>oleoptera</scp>: L<scp>ongicornes</scp>"
+          ],
+          "prefix": "10.1080",
+          "volume": "9",
+          "author": [
+            {
+              "given": "H.W.",
+              "family": "Bates",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "published-online": {
+            "date-parts": [
+              [
+                2011,
+                1,
+                2
+              ]
+            ]
+          },
+          "container-title": [
+            "Annals and Magazine of Natural History"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.tandfonline.com/doi/pdf/10.1080/00222936208681261",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                9
+              ]
+            ],
+            "date-time": "2018-03-09T09:18:46Z",
+            "timestamp": 1520587126000
+          },
+          "score": 51.209534,
+          "resource": {
+            "primary": {
+              "URL": "https://www.tandfonline.com/doi/full/10.1080/00222936208681261"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1862,
+                6
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "54",
+            "published-online": {
+              "date-parts": [
+                [
+                  2011,
+                  1,
+                  2
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  1862,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1080/00222936208681261"
+          ],
+          "URL": "https://doi.org/10.1080/00222936208681261",
+          "ISSN": [
+            "0374-5481"
+          ],
+          "issn-type": [
+            {
+              "value": "0374-5481",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1862,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                4
+              ]
+            ],
+            "date-time": "2022-04-04T19:06:14Z",
+            "timestamp": 1649099174809
+          },
+          "reference-count": 0,
+          "publisher": "Informa UK Limited",
+          "issue": "53",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Annals and Magazine of Natural History"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1862,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.1080/00222936208681251",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                9
+              ]
+            ],
+            "date-time": "2018-03-09T04:16:36Z",
+            "timestamp": 1520568996000
+          },
+          "page": "396-405",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "XLIII.\u2014<i>Contributions to an insect fauna of the Amazon Valley</i>. C<scp>oleoptera</scp>: L<scp>ongicornes</scp>"
+          ],
+          "prefix": "10.1080",
+          "volume": "9",
+          "author": [
+            {
+              "given": "H.W.",
+              "family": "Bates",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "published-online": {
+            "date-parts": [
+              [
+                2011,
+                1,
+                3
+              ]
+            ]
+          },
+          "container-title": [
+            "Annals and Magazine of Natural History"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.tandfonline.com/doi/pdf/10.1080/00222936208681251",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                9
+              ]
+            ],
+            "date-time": "2018-03-09T04:16:39Z",
+            "timestamp": 1520568999000
+          },
+          "score": 51.080738,
+          "resource": {
+            "primary": {
+              "URL": "https://www.tandfonline.com/doi/full/10.1080/00222936208681251"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1862,
+                5
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "53",
+            "published-online": {
+              "date-parts": [
+                [
+                  2011,
+                  1,
+                  3
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  1862,
+                  5
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1080/00222936208681251"
+          ],
+          "URL": "https://doi.org/10.1080/00222936208681251",
+          "ISSN": [
+            "0374-5481"
+          ],
+          "issn-type": [
+            {
+              "value": "0374-5481",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1862,
+                5
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 8,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

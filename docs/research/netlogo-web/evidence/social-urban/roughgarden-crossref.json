@@ -1,0 +1,653 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1145%2F506147.506153",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            27
+          ]
+        ],
+        "date-time": "2026-10-27T03:19:29Z",
+        "timestamp": 1793071169296,
+        "version": "4.5.0"
+      },
+      "reference-count": 52,
+      "publisher": "Association for Computing Machinery (ACM)",
+      "issue": "2",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2002,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2002-03-01T00:00:00Z",
+            "timestamp": 1014940800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "dl.acm.org"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "J. ACM"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2002,
+            3
+          ]
+        ]
+      },
+      "abstract": "<jats:p>We consider the problem of routing traffic to optimize the performance of a congested network. We are given a network, a rate of traffic between each pair of nodes, and a latency function for each edge specifying the time needed to traverse the edge given its congestion; the objective is to route traffic such that the sum of all travel times---the total latency---is minimized.In many settings, it may be expensive or impossible to regulate network traffic so as to implement an optimal assignment of routes. In the absence of regulation by some central authority, we assume that each network user routes its traffic on the minimum-latency path available to it, given the network congestion caused by the other users. In general such a \"selfishly motivated\" assignment of traffic to paths will not minimize the total latency; hence, this lack of regulation carries the cost of decreased network performance.In this article, we quantify the degradation in network performance due to unregulated traffic. We prove that if the latency of each edge is a linear function of its congestion, then the total latency of the routes chosen by selfish network users is at most 4/3 times the minimum possible total latency (subject to the condition that all traffic must be routed). We also consider the more general setting in which edge latency functions are assumed only to be continuous and nondecreasing in the edge congestion. Here, the total latency of the routes chosen by unregulated selfish network users may be arbitrarily larger than the minimum possible total latency; however, we prove that it is no more than the total latency incurred by optimally routing<jats:italic>twice</jats:italic>as much traffic.</jats:p>",
+      "DOI": "10.1145/506147.506153",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            7,
+            28
+          ]
+        ],
+        "date-time": "2002-07-28T23:12:23Z",
+        "timestamp": 1027897943000
+      },
+      "page": "236-259",
+      "update-policy": "https://doi.org/10.1145/crossmark-policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 1301,
+      "title": [
+        "How bad is selfish routing?"
+      ],
+      "prefix": "10.1145",
+      "volume": "49",
+      "author": [
+        {
+          "given": "Tim",
+          "family": "Roughgarden",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Cornell University, Ithaca, New York"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "\u00c9va",
+          "family": "Tardos",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Cornell University, Ithaca, New York"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "320",
+      "published-online": {
+        "date-parts": [
+          [
+            2002,
+            3
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_1_1_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "213",
+          "DOI": "10.1137/0602024",
+          "article-title": "Equilibria on a congested transportation network",
+          "volume": "2",
+          "author": "Aashtiani H. Z.",
+          "year": "1981",
+          "journal-title": "SIAM J. Alg. Disc. Meth."
+        },
+        {
+          "key": "e_1_2_1_2_1",
+          "first-page": "56",
+          "article-title": "Road to ruin",
+          "volume": "13",
+          "author": "Bass T.",
+          "year": "1992",
+          "journal-title": "Discover"
+        },
+        {
+          "key": "e_1_2_1_3_1",
+          "unstructured": "Beckmann M. McGuire C. B. and Winsten C. B. 1956. Studies in the Economics of Transportation. Yale University Press. Beckmann M. McGuire C. B. and Winsten C. B. 1956. Studies in the Economics of Transportation. Yale University Press."
+        },
+        {
+          "key": "e_1_2_1_4_1",
+          "unstructured": "Bertsekas D. P. and Gallager R. 1992. Data Networks 2nd ed. Prentice-Hall Englewood Cliffs N.J. Bertsekas D. P. and Gallager R. 1992. Data Networks 2nd ed. Prentice-Hall Englewood Cliffs N.J."
+        },
+        {
+          "key": "e_1_2_1_5_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "99",
+          "DOI": "10.1090/S0002-9947-1953-0056573-X",
+          "article-title": "On the algebra of networks",
+          "volume": "74",
+          "author": "Bott R.",
+          "year": "1953",
+          "journal-title": "Trans. AMS"
+        },
+        {
+          "key": "e_1_2_1_6_1",
+          "first-page": "258",
+          "article-title": "Uber ein paradoxon der verkehrsplanung",
+          "volume": "12",
+          "author": "Braess D.",
+          "year": "1968",
+          "journal-title": "Unternehmensforschung"
+        },
+        {
+          "key": "e_1_2_1_7_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "699",
+          "DOI": "10.1038/352699a0",
+          "article-title": "Paradoxical behavior of mechanical and electrical networks",
+          "volume": "352",
+          "author": "Cohen J. E.",
+          "year": "1991",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "e_1_2_1_8_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "730",
+          "DOI": "10.2307/3214558",
+          "article-title": "A paradox of congestion in a queuing network",
+          "volume": "27",
+          "author": "Cohen J. E.",
+          "year": "1990",
+          "journal-title": "J. Appl. Prob."
+        },
+        {
+          "key": "e_1_2_1_9_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "316",
+          "DOI": "10.1090/S0002-9939-1950-0036696-4",
+          "article-title": "The resistance of an electrical network",
+          "volume": "1",
+          "author": "Cohn R. M.",
+          "year": "1950",
+          "journal-title": "Proc. AMS"
+        },
+        {
+          "key": "e_1_2_1_10_1",
+          "first-page": "413",
+          "volume-title": "Proceedings of the 13th Annual Symposium on Discrete Algorithms. SIAM",
+          "author": "Czumaj A."
+        },
+        {
+          "key": "e_1_2_1_11_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "42",
+          "DOI": "10.1287/trsc.14.1.42",
+          "article-title": "Traffic equilibrium and variational inequalities",
+          "volume": "14",
+          "author": "Dafermos S.",
+          "year": "1980",
+          "journal-title": "Transport. Sci."
+        },
+        {
+          "key": "e_1_2_1_12_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "101",
+          "DOI": "10.1016/0191-2615(84)90023-7",
+          "article-title": "On some traffic equilibrium theory paradoxes",
+          "volume": "18",
+          "author": "Dafermos S. C.",
+          "year": "1984",
+          "journal-title": "Transport. Res. Ser. B"
+        },
+        {
+          "key": "e_1_2_1_13_1",
+          "first-page": "91",
+          "article-title": "The traffic assignment problem for a general network",
+          "volume": "73",
+          "author": "Dafermos S. C.",
+          "year": "1969",
+          "journal-title": "J. Res. NBS. Ser. B"
+        },
+        {
+          "key": "e_1_2_1_14_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/moor.11.1.1"
+        },
+        {
+          "key": "e_1_2_1_15_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "305",
+          "DOI": "10.1016/0191-2615(79)90023-7",
+          "article-title": "More paradoxes in the equilibrium assignment problem",
+          "volume": "13",
+          "author": "Fisk C.",
+          "year": "1979",
+          "journal-title": "Transport. Res."
+        },
+        {
+          "key": "e_1_2_1_16_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "167",
+          "DOI": "10.1007/BFb0121092",
+          "article-title": "Nonlinear cost network models in transportation analysis",
+          "volume": "26",
+          "author": "Florian M.",
+          "year": "1986",
+          "journal-title": "Math. Prog. Study"
+        },
+        {
+          "key": "e_1_2_1_17_1",
+          "first-page": "485",
+          "article-title": "Network equilibrium models and algorithms. In Network Routing. M. O. Ball, T. Magnanti, C. Monma, and G. Nemhauser, Eds. Elsevier Science, Amsterdam, The Netherlands",
+          "volume": "6",
+          "author": "Florian M.",
+          "year": "1995",
+          "journal-title": "Chapter"
+        },
+        {
+          "key": "e_1_2_1_18_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "283",
+          "DOI": "10.1007/BF01589354",
+          "article-title": "The Braess Paradox",
+          "volume": "20",
+          "author": "Frank M.",
+          "year": "1981",
+          "journal-title": "Math. Prog."
+        },
+        {
+          "key": "e_1_2_1_19_1",
+          "unstructured": "Friedman E. J. 2001. A generic analysis of selfish routing. Working paper. Friedman E. J. 2001. A generic analysis of selfish routing. Working paper."
+        },
+        {
+          "key": "e_1_2_1_20_1",
+          "first-page": "837",
+          "volume-title": "Proceedings of the IEEE Conference on Intelligent Transportation Systems. IEEE Computer Society Press, Los Alamitos, Calif.",
+          "author": "Hagstrom J. N."
+        },
+        {
+          "key": "e_1_2_1_21_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "208",
+          "DOI": "10.1287/trsc.12.3.208",
+          "article-title": "Properties of the equilibrium state in transportation networks",
+          "volume": "12",
+          "author": "Hall M. A.",
+          "year": "1978",
+          "journal-title": "Transport. Sci."
+        },
+        {
+          "key": "e_1_2_1_22_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "295",
+          "DOI": "10.1002/net.3230150303",
+          "article-title": "On the relationship between Nash--Cournot and Wardrop equilibria",
+          "volume": "15",
+          "author": "Haurie A.",
+          "year": "1985",
+          "journal-title": "Networks"
+        },
+        {
+          "key": "e_1_2_1_23_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/347476.347479"
+        },
+        {
+          "key": "e_1_2_1_24_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "582",
+          "DOI": "10.2307/1884592",
+          "article-title": "Some fallacies in the interpretation of social cost",
+          "volume": "38",
+          "author": "Knight F. H.",
+          "year": "1924",
+          "journal-title": "Quart. J. Econ."
+        },
+        {
+          "key": "e_1_2_1_25_1",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Kn\u00f6del W. 1969. Graphentheoretische Methoden und ihre Anwendungen. Springer-Verlag New York. Kn\u00f6del W. 1969. Graphentheoretische Methoden und ihre Anwendungen. Springer-Verlag New York.",
+          "DOI": "10.1007/978-3-642-95121-3"
+        },
+        {
+          "key": "e_1_2_1_26_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "309",
+          "DOI": "10.1109/9.557575",
+          "article-title": "Capacity allocation under noncooperative routing",
+          "volume": "42",
+          "author": "Korilis Y. A.",
+          "year": "1997",
+          "journal-title": "IEEE Trans. Automat. Cont."
+        },
+        {
+          "key": "e_1_2_1_27_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "211",
+          "DOI": "10.1239/jap/1032374242",
+          "article-title": "Avoiding the Braess paradox in noncooperative networks",
+          "volume": "36",
+          "author": "Korilis Y. A.",
+          "year": "1999",
+          "journal-title": "Journal of Applied Probability"
+        },
+        {
+          "key": "e_1_2_1_28_1",
+          "first-page": "404",
+          "volume-title": "Proceedings of the 16th Annual Symposium on Theoretical Aspects of Computer Science.",
+          "author": "Koutsoupias E."
+        },
+        {
+          "key": "e_1_2_1_29_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/90.650145"
+        },
+        {
+          "key": "e_1_2_1_30_1",
+          "first-page": "510",
+          "volume-title": "Proceedings of the 33rd Annual ACM Symposium on the Theory of Computing. ACM",
+          "author": "Mavronicolas M."
+        },
+        {
+          "key": "e_1_2_1_31_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "391",
+          "DOI": "10.1016/0041-1647(70)90196-6",
+          "article-title": "Braess's paradox of traffic flow",
+          "volume": "4",
+          "author": "Murchland J. D.",
+          "year": "1970",
+          "journal-title": "Transport. Res."
+        },
+        {
+          "key": "e_1_2_1_32_1",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Nagurney A. 2000. Sustainable Transportation Networks. Edward Elgar Cheltenham England. Nagurney A. 2000. Sustainable Transportation Networks. Edward Elgar Cheltenham England.",
+          "DOI": "10.4337/9781035352418"
+        },
+        {
+          "key": "e_1_2_1_33_1",
+          "unstructured": "Nesterov Y. 1999. Stable flows in transportation networks. CORE Discussion Paper 9907. Nesterov Y. 1999. Stable flows in transportation networks. CORE Discussion Paper 9907."
+        },
+        {
+          "key": "e_1_2_1_34_1",
+          "unstructured": "Nesterov Y. and De. Palma A. 2000. Stable dynamics in transportation systems. CORE Discussion Paper 00/27. Nesterov Y. and De. Palma A. 2000. Stable dynamics in transportation systems. CORE Discussion Paper 00/27."
+        },
+        {
+          "key": "e_1_2_1_35_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/90.251910"
+        },
+        {
+          "key": "e_1_2_1_36_1",
+          "unstructured": "Owen G. 1995. Game Theory. 3rd ed. Academic Press. Orlando Fla. Owen G. 1995. Game Theory. 3rd ed. Academic Press. Orlando Fla."
+        },
+        {
+          "key": "e_1_2_1_37_1",
+          "first-page": "749",
+          "volume-title": "Proceedings of the 33rd Annual ACM Symposium on the Theory of Computing. ACM",
+          "author": "Papadimitriou C.",
+          "year": "2001"
+        },
+        {
+          "key": "e_1_2_1_38_1",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Peressini A. L. Sullivan F. E. and Uhl J. J. 1988. The Mathematics of Nonlinear Programming. Springer-Verlag New York. Peressini A. L. Sullivan F. E. and Uhl J. J. 1988. The Mathematics of Nonlinear Programming. Springer-Verlag New York.",
+          "DOI": "10.1007/978-1-4612-1025-2"
+        },
+        {
+          "key": "e_1_2_1_39_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "163",
+          "DOI": "10.1007/s00453-001-0068-9",
+          "article-title": "Optimal time-critical scheduling via resource augmentation",
+          "volume": "32",
+          "author": "Phillips C. A.",
+          "year": "2002",
+          "journal-title": "Algorithmica"
+        },
+        {
+          "key": "e_1_2_1_40_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "520",
+          "DOI": "10.2307/1911749",
+          "article-title": "Existence and uniqueness of equilibrium points for concave N-person games",
+          "volume": "33",
+          "author": "Rosen J. B.",
+          "year": "1965",
+          "journal-title": "Econometrica"
+        },
+        {
+          "key": "e_1_2_1_41_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "65",
+          "DOI": "10.1007/BF01737559",
+          "article-title": "A class of games possessing pure-strategy Nash equilibria",
+          "volume": "2",
+          "author": "Rosenthal R. W.",
+          "year": "1973",
+          "journal-title": "Int. J. Game Theory"
+        },
+        {
+          "key": "e_1_2_1_42_1",
+          "first-page": "472",
+          "volume-title": "Proceedings of the 42nd Annual Symposium on Foundations of Computer Science. IEEE Computer Society Press, Los Alamitos, Calif.",
+          "author": "Roughgarden T.",
+          "year": "2001"
+        },
+        {
+          "key": "e_1_2_1_43_1",
+          "first-page": "104",
+          "volume-title": "Proceedings of the 33rd Annual ACM Symposium on the Theory of Computing. ACM",
+          "author": "Roughgarden T.",
+          "year": "2001"
+        },
+        {
+          "key": "e_1_2_1_44_1",
+          "volume-title": "Proceedings of the 34th Annual ACM Symposium on Theory of Computing. ACM",
+          "author": "Roughgarden T.",
+          "year": "2002"
+        },
+        {
+          "key": "e_1_2_1_45_1",
+          "first-page": "93",
+          "volume-title": "Proceedings of the 41st Annual Symposium on Foundations of Computer Science. IEEE Computer Society Press, Los Alamitos, Calif.",
+          "author": "Roughgarden T.",
+          "year": "2000"
+        },
+        {
+          "key": "e_1_2_1_46_1",
+          "unstructured": "Roughgarden T. and Tardos &Eaccute;. 2002. Bounding the inefficiency of Nash equilibria in nonatomic congestion games. In preparation. Roughgarden T. and Tardos &Eaccute;. 2002. Bounding the inefficiency of Nash equilibria in nonatomic congestion games. In preparation."
+        },
+        {
+          "key": "e_1_2_1_47_1",
+          "unstructured": "Sheffi Y. 1985. Urban Transportation Networks: Equilibrium Analysis with Mathematical Programming Methods. Prentice-Hall Englewood Cliffs N.J. Sheffi Y. 1985. Urban Transportation Networks: Equilibrium Analysis with Mathematical Programming Methods. Prentice-Hall Englewood Cliffs N.J."
+        },
+        {
+          "key": "e_1_2_1_48_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "419",
+          "DOI": "10.1016/0041-1647(78)90030-8",
+          "article-title": "In a road network, increasing delay locally can reduce delay globally",
+          "volume": "12",
+          "author": "Smith M. J.",
+          "year": "1978",
+          "journal-title": "Transport. Res."
+        },
+        {
+          "key": "e_1_2_1_49_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "295",
+          "DOI": "10.1016/0191-2615(79)90022-5",
+          "article-title": "The existence, uniqueness and stability of traffic equilibria",
+          "volume": "13",
+          "author": "Smith M. J.",
+          "year": "1979",
+          "journal-title": "Transport. Res."
+        },
+        {
+          "key": "e_1_2_1_50_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "231",
+          "DOI": "10.1287/trsc.22.4.231",
+          "article-title": "The prevalence of paradoxes in transportation equilibrium problems",
+          "volume": "22",
+          "author": "Steinberg R.",
+          "year": "1988",
+          "journal-title": "Transport. Sci."
+        },
+        {
+          "key": "e_1_2_1_51_1",
+          "doi-asserted-by": "crossref",
+          "first-page": "301",
+          "DOI": "10.1287/trsc.17.3.301",
+          "article-title": "The prevalence of Braess' paradox",
+          "volume": "17",
+          "author": "Steinberg R.",
+          "year": "1983",
+          "journal-title": "Transport. Sci."
+        },
+        {
+          "key": "e_1_2_1_52_1",
+          "first-page": "325",
+          "article-title": "Some theoretical aspects of road traffic research. In Proceedings of the Institute of Civil Engineers",
+          "volume": "1",
+          "author": "Wardrop J. G.",
+          "year": "1952",
+          "journal-title": "Pt. II."
+        }
+      ],
+      "container-title": [
+        "Journal of the ACM"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://dl.acm.org/doi/10.1145/506147.506153",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://dl.acm.org/doi/pdf/10.1145/506147.506153",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            18
+          ]
+        ],
+        "date-time": "2025-06-18T19:05:18Z",
+        "timestamp": 1750273518000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://dl.acm.org/doi/10.1145/506147.506153"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2002,
+            3
+          ]
+        ]
+      },
+      "references-count": 52,
+      "journal-issue": {
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2002,
+              3
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1145/506147.506153"
+      ],
+      "URL": "https://doi.org/10.1145/506147.506153",
+      "relation": {},
+      "ISSN": [
+        "0004-5411",
+        "1557-735X"
+      ],
+      "issn-type": [
+        {
+          "value": "0004-5411",
+          "type": "print"
+        },
+        {
+          "value": "1557-735X",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2002,
+            3
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "2002-03-01",
+          "order": 2,
+          "name": "published",
+          "label": "Published",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        }
+      ]
+    }
+  }
+}

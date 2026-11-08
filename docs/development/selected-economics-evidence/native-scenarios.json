@@ -1,0 +1,125 @@
+[
+  {
+    "slug": "fruit-wars",
+    "command": "set initial-foragers 1 set initial-fruit-bushes 0 set bush-growth-chance 0 set max-age 1 setup repeat 3 [go]",
+    "reporter": "(list ticks count foragers age-death-count)",
+    "read": {
+      "success": true,
+      "value": [
+        2,
+        0,
+        1
+      ]
+    },
+    "runtime": [
+      {
+        "message": "Can't find the mean of a list with no numbers: [].\nerror while running MEAN\ncalled by plot Traits over Time\ncalled by procedure GO",
+        "start": 5,
+        "end": 9
+      }
+    ],
+    "console": ""
+  },
+  {
+    "slug": "limited-order-book",
+    "command": "set honest-traders 1 set cunning-traders 0 setup go",
+    "reporter": "(list ticks total-amount)",
+    "read": {
+      "success": true,
+      "value": [
+        0,
+        0
+      ]
+    },
+    "runtime": [
+      {
+        "message": "Division by zero.\nerror while running /\ncalled by procedure CALCULATE-INFO\ncalled by procedure GO",
+        "start": 4236,
+        "end": 4237
+      }
+    ],
+    "console": ""
+  },
+  {
+    "slug": "cash-flow",
+    "command": "set people 0 setup",
+    "reporter": "(list ticks count turtles money-total)",
+    "read": {
+      "success": true,
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "runtime": [],
+    "console": ""
+  },
+  {
+    "slug": "bank-reserves",
+    "command": "set people 0 setup repeat 3 [go]",
+    "reporter": "(list ticks count turtles money-total)",
+    "read": {
+      "success": true,
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "runtime": [],
+    "console": ""
+  },
+  {
+    "slug": "braess-paradox"
+  },
+  {
+    "slug": "cash-flow",
+    "command": "set people 0 setup",
+    "reporter": "(list ticks count turtles money-total)",
+    "read": {
+      "success": true,
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "runtime": [],
+    "console": "",
+    "visibleText": "Error\nthe minimum must be less than the maximum, but 0 is greater than or equal to 0 error while running SET-PLOT-Y-RANGE\ncalled by plot Wealth Dist Hist\ncalled by command SETUP\n\n powered by NetLogo\nCash Flow\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks:\n?\nfor shortcuts\npeople\nreserves\ngo\nsetup\nSavings total\n0\nWallets total\n0\nLoans total\n0\nMoney total\n0\nIncome Distribution\npoor\n0\nmiddle class\n0\nrich\n0\nWealth\nPeople\nWealth Dist Hist\n-50\n0\n50\n0\n50\n100\nTime\nPeople\nIncome Dist\nrich\nmiddle\n0\n100\n200\n300\n0\n100\nTime\nMny + Lns\nMoney & Loans\nmoney\n0\n100\n200\n300\n-50\n0\n1k\n1.1k\nTime\nSvngs + Wllts\nSavings & Wallets\nsavings\n0\n100\n200\n300\n-50\n0\n1k\n1.1k\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+  },
+  {
+    "slug": "bank-reserves",
+    "command": "set people 0 setup",
+    "reporter": "(list ticks count turtles money-total)",
+    "read": {
+      "success": true,
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    "runtime": [],
+    "console": "",
+    "visibleText": "Error\nthe minimum must be less than the maximum, but 0 is greater than or equal to 0 error while running SET-PLOT-Y-RANGE\ncalled by plot Income Dist\ncalled by command SETUP\n\n powered by NetLogo\nBank Reserves\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks:\n?\nfor shortcuts\nTime\nPeople\nIncome Dist\nrich\nmiddle\n0\n200\n0\n50\n57\nTime\nSvngs + Wllts\nSavings & Wallets\nsavings\n0\n200\n-50\n0\n500\n600\nTime\nMny + Lns\nMoney & Loans\nmoney\n0\n200\n-50\n0\n500\n600\npoor <--------> rich\nPeople\nWealth Distribution Histogram\n0\n50\n100\n0\n25\n50\n57\nsetup\nLoans Total\n0\nBank Reserves\n0\nWallets Total\n0\nBank to Loan\n0\nSavings Total\n0\nMoney Total\n0\ngo\npeople\nreserves\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+  },
+  {
+    "slug": "braess-paradox",
+    "command": "set mode \"Best Known /w Random Deviation\" setup repeat 100 [go]",
+    "reporter": "(list ticks cars-spawned count commuters mode)",
+    "read": {
+      "success": true,
+      "value": [
+        100,
+        3,
+        3,
+        "Best Known /w Random Deviation"
+      ]
+    },
+    "runtime": [],
+    "console": "",
+    "visibleText": " powered by NetLogo\nBraess Paradox\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks:\n?\nfor shortcuts\nsetup\ngo\nspawn-rate\nTicks\nTravel Time\nActual Time\nTop\nBottom\nMiddle\n0\n2\n4\n6\n8\n10\n0\n1\n2\nmiddle-on?\nsmoothing\nmode\nBest Known /w Random Deviation\nEmpirical Analytical\nProbabilistic Greedy\nrandomness\nNumber of​Cars\nRoutes Taken\nTop\nBottom\n0\n2\n0\n10\nProbabilities\nTop\nBottom\n0\n2\n0\n1\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+]

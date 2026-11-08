@@ -3,6 +3,12 @@ import { validateOptions } from "../agent/state.ts";
 import { collectionGuard } from "./collections.ts";
 import { cloneEdgeState, createEdge, type Edge } from "./edge.ts";
 import { connects, direction, opposite, type Direction } from "./queries.ts";
+import { components, type ComponentMode } from "./algorithms/connectivity.ts";
+import { distances, allDistances, distanceSummary, type DistanceOptions, type DistanceSummary, type SummaryOptions } from "./algorithms/distances.ts";
+import { analyze, type AnalysisOptions } from "./algorithms/analysis.ts";
+import { validateGenerator, type GeneratorOptions } from "./generators/options.ts";
+import { planGenerator } from "./generators/planning.ts";
+import { prepareCopy, type PreparedCopy } from "./copy.ts";
 
 interface EdgeOptions<N extends object, E extends object> {
   from: N; to: N; directed?: boolean; key?: string; state?: E;
@@ -20,6 +26,14 @@ export interface Graph<N extends object = object, E extends object = {}> {
   hasNode(node: N): boolean;
   hasEdge(from: N, to: N): boolean;
   neighbors(node: N, options?: { direction?: Direction }): readonly N[];
+  components(options?: { mode?: "weak" | "strong" | "biconnected" }): readonly (readonly N[])[];
+  connected(options?: { mode?: "weak" | "strong" }): boolean;
+  distances(options: DistanceOptions<N, E> & { from: N }): ReadonlyMap<N, number>;
+  allDistances(options?: DistanceOptions<N, E>): ReadonlyMap<N, ReadonlyMap<N, number>>;
+  distanceSummary(options?: SummaryOptions<N, E>): DistanceSummary<N>;
+  analyze(options: AnalysisOptions<N, E>): ReadonlyMap<N, number>;
+  generate(options: GeneratorOptions<N>): readonly Edge<N, E>[];
+  copy(options?: { nodes?: readonly N[]; edges?: readonly Edge<N, E>[]; direction?: "original" | "reverse" | "undirected" }): Graph<N, E>;
   delete(options?: { edgesOnly?: boolean }): void;
 }
 interface GraphOptions<E extends object> { edgeState?: E; parallel?: boolean; selfLoops?: boolean }
@@ -35,6 +49,10 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
   const parallel = flag(settings.parallel);
   const selfLoops = flag(settings.selfLoops);
   const defaults = cloneEdgeState((Object.hasOwn(settings, "edgeState") ? settings.edgeState : {}) as E);
+  return owner<N, E>(parallel, selfLoops, defaults);
+}
+/** One topology/lifecycle owner, also used for fully prepared independent copies. */
+function owner<N extends object, E extends object>(parallel: boolean, selfLoops: boolean, defaults: E, initial?: PreparedCopy<N, E>): Graph<N, E> {
   const members = new Set<N>();
   const edges = new Set<Edge<N, E>>();
   const keys = new Map<string, Edge<N, E>>();
@@ -61,6 +79,13 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
   function between(from: N, to: N, options?: { direction?: Direction }): readonly Edge<N, E>[] {
     const mode = direction(options);
     return Object.freeze([...edges].filter((edge) => connects(edge, from, to, mode)));
+  }
+  function connectivityMode(options: unknown, biconnected: boolean): ComponentMode {
+    const supplied = validateOptions(options, ["mode"]).mode;
+    const mode = supplied === undefined ? "weak" : supplied;
+    if (mode !== "weak" && mode !== "strong" && !(biconnected && mode === "biconnected"))
+      throw new TypeError("Invalid graph connectivity mode.");
+    return mode as ComponentMode;
   }
   const graph: Graph<N, E> = {
     parallel, selfLoops,
@@ -134,6 +159,59 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
       }
       return Object.freeze([...result]);
     },
+    components(options = {}) {
+      const mode = connectivityMode(options, true);
+      return components([...members], [...edges], mode);
+    },
+    connected(options = {}) {
+      const mode = connectivityMode(options, false);
+      const nodes = [...members];
+      const links = [...edges];
+      return nodes.length <= 1 || components(nodes, links, mode).length === 1;
+    },
+    distances(options) { return distances([...members], graph.edges, options); },
+    allDistances(options = {}) { return allDistances([...members], graph.edges, options); },
+    distanceSummary(options = {}) { return distanceSummary([...members], graph.edges, options); },
+    analyze(options) { return analyze([...members], graph.edges, options); },
+    copy(options = {}) {
+      return guard.read(() => {
+        const prepared = prepareCopy([...members], [...edges], defaults, parallel, selfLoops, options);
+        return owner(prepared.parallel, prepared.selfLoops, prepared.defaults, prepared);
+      });
+    },
+    generate(options) {
+      // Reject enclosing readers before any planning callback or draw.
+      guard.validate();
+      const config = validateGenerator(options);
+      const selected = new Set(config.nodes);
+      for (const node of config.nodes) if (!members.has(node)) throw new TypeError("Generator nodes must be current graph members.");
+      for (const edge of edges) if (selected.has(edge.from) && selected.has(edge.to)) throw new TypeError("Selected induced subgraph must be edgeless.");
+      cloneEdgeState(defaults);
+      const prepared = guard.read(() => {
+        const connections = planGenerator(config);
+        // A callback may have deleted a referenced component outside this graph.
+        const first = cloneEdgeState(defaults);
+        const states = connections.map((_, index) => index === 0 ? first : cloneEdgeState(defaults));
+        return { connections, states };
+      });
+      guard.validate();
+      let cursor = nextKey;
+      const created = prepared.connections.map(([from, to], index) => {
+        let key: string | undefined;
+        if (parallel) {
+          while (keys.has(String(cursor))) cursor++;
+          key = String(cursor++);
+        }
+        return createEdge(graph, config.nodes[from]!, config.nodes[to]!, config.directed, key, prepared.states[index]!, removeEdge);
+      });
+      // No caller code runs between complete materialization and publication.
+      for (const edge of created) {
+        edges.add(edge);
+        if (edge.key !== undefined) keys.set(edge.key, edge);
+      }
+      nextKey = cursor;
+      return Object.freeze(created);
+    },
     delete(options = {}) {
       const edgesOnly = flag(validateOptions(options, ["edgesOnly"]).edgesOnly);
       if (edges.size === 0 && (edgesOnly || members.size === 0)) return;
@@ -143,6 +221,17 @@ function add<N extends object, E extends object>(options: GraphOptions<E> = {}):
     },
   };
   registerFramework(graph, "graph");
+  if (initial) {
+    // Preparation already completed every caller-controlled reflection and
+    // liveness check. Materialize before registering ANY Agent membership hook.
+    const created = initial.edges.map(edge => createEdge(graph, edge.from, edge.to, edge.directed, edge.key, edge.state, removeEdge));
+    for (const node of initial.nodes) graph.nodes.add(node);
+    for (const edge of created) {
+      edges.add(edge);
+      if (edge.key !== undefined) keys.set(edge.key, edge);
+    }
+    // Fresh cursor intentionally remains zero; future allocation skips live keys.
+  }
   return Object.freeze(graph);
 }
 export const Graph = Object.freeze({ add });

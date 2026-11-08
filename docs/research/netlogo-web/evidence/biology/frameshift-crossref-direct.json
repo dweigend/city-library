@@ -1,0 +1,370 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1038%2F1921227a0",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            3
+          ]
+        ],
+        "date-time": "2026-11-03T07:40:18Z",
+        "timestamp": 1793691618391,
+        "version": "4.5.1"
+      },
+      "reference-count": 18,
+      "publisher": "Springer Science and Business Media LLC",
+      "issue": "4809",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1961,
+                12,
+                1
+              ]
+            ],
+            "date-time": "1961-12-01T00:00:00Z",
+            "timestamp": -255139200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Nature"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1961,
+            12
+          ]
+        ]
+      },
+      "DOI": "10.1038/1921227a0",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2006,
+            7,
+            5
+          ]
+        ],
+        "date-time": "2006-07-05T09:36:35Z",
+        "timestamp": 1152092195000
+      },
+      "page": "1227-1232",
+      "source": "Crossref",
+      "is-referenced-by-count": 1115,
+      "title": [
+        "General Nature of the Genetic Code for Proteins"
+      ],
+      "prefix": "10.1038",
+      "volume": "192",
+      "author": [
+        {
+          "given": "F. H. C.",
+          "family": "CRICK",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "LESLIE",
+          "family": "BARNETT",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "S.",
+          "family": "BRENNER",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "R. J.",
+          "family": "WATTS-TOBIN",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "reference": [
+        {
+          "key": "BF1921227a0_CR1",
+          "unstructured": "Wittman, H. G., Symp. 1, Fifth Intern. Cong. Biochem., 1961, for refs. (in the press)."
+        },
+        {
+          "key": "BF1921227a0_CR2",
+          "doi-asserted-by": "publisher",
+          "first-page": "636",
+          "DOI": "10.1073/pnas.46.5.636",
+          "volume": "46",
+          "author": "A Tsugita",
+          "year": "1960",
+          "unstructured": "Tsugita, A., and Fraenkel-Conrat, H., Proc. U.S. Nat. Acad. Sci., 46, 636 (1960); J. Mol. Biol. (in the press).",
+          "journal-title": "Proc. U.S. Nat. Acad. Sci."
+        },
+        {
+          "key": "BF1921227a0_CR3",
+          "doi-asserted-by": "publisher",
+          "first-page": "687",
+          "DOI": "10.1073/pnas.43.8.687",
+          "volume": "43",
+          "author": "S Brenner",
+          "year": "1957",
+          "unstructured": "Brenner, S., Proc. U.S. Nat. Acad. Sci., 43, 687 (1957).",
+          "journal-title": "Proc. U.S. Nat. Acad. Sci."
+        },
+        {
+          "key": "BF1921227a0_CR4",
+          "doi-asserted-by": "publisher",
+          "first-page": "670",
+          "DOI": "10.1038/190670a0",
+          "volume": "190",
+          "author": "HC Watson",
+          "year": "1961",
+          "unstructured": "For refs. see Watson, H. C., and Kendrew, J. C., Nature, 190, 670 (1961).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF1921227a0_CR5",
+          "doi-asserted-by": "publisher",
+          "first-page": "416",
+          "DOI": "10.1073/pnas.43.5.416",
+          "volume": "43",
+          "author": "FHC Crick",
+          "year": "1957",
+          "unstructured": "Crick, F. H. C., Griffith, J. S., and Orgel, L. E., Proc. U.S. Nat. Acad. Sci., 43, 416 (1957).",
+          "journal-title": "Proc. U.S. Nat. Acad. Sci."
+        },
+        {
+          "key": "BF1921227a0_CR6",
+          "doi-asserted-by": "publisher",
+          "first-page": "1607",
+          "DOI": "10.1073/pnas.45.11.1607",
+          "volume": "45",
+          "author": "S Benzer",
+          "year": "1959",
+          "unstructured": "Benzer, S., Proc. U.S. Nat. Acad. Sci., 45, 1607 (1959), for refs. to earlier papers.",
+          "journal-title": "Proc. U.S. Nat. Acad. Sci."
+        },
+        {
+          "key": "BF1921227a0_CR7",
+          "doi-asserted-by": "publisher",
+          "first-page": "403",
+          "DOI": "10.1073/pnas.47.3.403",
+          "volume": "47",
+          "author": "S Benzer",
+          "year": "1961",
+          "unstructured": "Benzer, S., Proc. U.S. Nat. Acad. Sci., 47, 403 (1961); see his Fig. 3.",
+          "journal-title": "Proc. U.S. Nat. Acad. Sci."
+        },
+        {
+          "key": "BF1921227a0_CR8",
+          "doi-asserted-by": "publisher",
+          "first-page": "983",
+          "DOI": "10.1038/182983a0",
+          "volume": "182",
+          "author": "S Brenner",
+          "year": "1958",
+          "unstructured": "Brenner, S., Benzer, S., and Barnett, L., Nature, 182, 983 (1958).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF1921227a0_CR9",
+          "doi-asserted-by": "publisher",
+          "first-page": "121",
+          "DOI": "10.1016/S0022-2836(61)80015-6",
+          "volume": "3",
+          "author": "S Brenner",
+          "year": "1961",
+          "unstructured": "Brenner, S., Barnett, L., Crick, F. H. C., and Orgel, A., J. Mol. Biol., 3, 121 (1961).",
+          "journal-title": "J. Mol. Biol."
+        },
+        {
+          "key": "BF1921227a0_CR10",
+          "unstructured": "Streisinger, G. (personal communication and in the press)."
+        },
+        {
+          "key": "BF1921227a0_CR11",
+          "unstructured": "Feynman, R. P. ; Benzer, S. ; Freese, E. (all personal communications)."
+        },
+        {
+          "key": "BF1921227a0_CR12",
+          "doi-asserted-by": "publisher",
+          "first-page": "153",
+          "DOI": "10.1038/hdy.1961.18",
+          "volume": "16",
+          "author": "JL Jinks",
+          "year": "1961",
+          "unstructured": "Jinks, J. L., Heredity, 16, 153, 241 (1961).",
+          "journal-title": "Heredity"
+        },
+        {
+          "key": "BF1921227a0_CR13",
+          "unstructured": "Champe, S., and Benzer, S. (personal communication and in preparatton)."
+        },
+        {
+          "key": "BF1921227a0_CR14",
+          "volume-title": "Sexuality and the Genetic of Bacteria",
+          "author": "F Jacob",
+          "year": "1961",
+          "unstructured": "Jacob, F., and Wollman, E. L., Sexuality and the Genetic of Bacteria (Academic Press, New York, 1961). Levinthal, C. (personal communication)."
+        },
+        {
+          "key": "BF1921227a0_CR15",
+          "unstructured": "Orgel, A., and Brenner, S. (in preparation)."
+        },
+        {
+          "key": "BF1921227a0_CR16",
+          "unstructured": "Sueoka, N., Cold Spring Harb. Symp. Quant. Biol. (in the prees)."
+        },
+        {
+          "key": "BF1921227a0_CR17",
+          "unstructured": "Dreyer, W. J., Symp. 1, Fifth Intern. Cong. Biochem., 1961 (in the press)."
+        },
+        {
+          "key": "BF1921227a0_CR18",
+          "doi-asserted-by": "publisher",
+          "first-page": "1588",
+          "DOI": "10.1073/pnas.47.10.1588",
+          "volume": "47",
+          "author": "MW Nirenberg",
+          "year": "1961",
+          "unstructured": "Nirenberg, M. W., and Matthaei, J. H., Proc. U.S. Nat. Acad. Sci., 47, 1588 (1961).",
+          "journal-title": "Proc. U.S. Nat. Acad. Sci."
+        }
+      ],
+      "container-title": [
+        "Nature"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://www.nature.com/articles/1921227a0",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://www.nature.com/articles/1921227a0.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://www.nature.com/articles/1921227a0.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2021,
+            12,
+            1
+          ]
+        ],
+        "date-time": "2021-12-01T18:25:06Z",
+        "timestamp": 1638383106000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.nature.com/articles/1921227a0"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1961,
+            12
+          ]
+        ]
+      },
+      "references-count": 18,
+      "journal-issue": {
+        "issue": "4809",
+        "published-print": {
+          "date-parts": [
+            [
+              1961,
+              12
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "BF1921227a0"
+      ],
+      "URL": "https://doi.org/10.1038/1921227a0",
+      "relation": {},
+      "ISSN": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issn-type": [
+        {
+          "value": "0028-0836",
+          "type": "print"
+        },
+        {
+          "value": "1476-4687",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1961,
+            12
+          ]
+        ]
+      }
+    }
+  }
+}

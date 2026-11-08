@@ -1,0 +1,217 @@
+{
+  "sourceSha256": "150d47b9fc00fcf8545030d8c14e6b579584dba4e0a9e0773e11b9771232af17",
+  "slug": "gendrift-t-interact",
+  "setupControl": "native setup DOM click",
+  "settings": [
+    {
+      "variable": "colors",
+      "value": {
+        "success": true,
+        "value": 5
+      }
+    },
+    {
+      "variable": "number",
+      "value": {
+        "success": true,
+        "value": 300
+      }
+    }
+  ],
+  "setup": {
+    "tick": {
+      "success": true,
+      "value": 0
+    },
+    "turtles": {
+      "success": true,
+      "value": 300
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 17,
+      "maxPycor": 17,
+      "minPxcor": -17,
+      "minPycor": -17,
+      "nextWhoNumber": 300,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 0,
+      "codeGlobals": {
+        "colors": 5,
+        "max-percent": 0,
+        "number": 300
+      }
+    },
+    "monitors": [
+      {
+        "label": "% most populous",
+        "source": "max-percent",
+        "value": {
+          "success": true,
+          "value": 0
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "runPause": {
+    "runningThen": true,
+    "pausedNow": true,
+    "after": {
+      "tick": {
+        "success": true,
+        "value": 4
+      },
+      "turtles": {
+        "success": true,
+        "value": 300
+      },
+      "globals": {
+        "linkDirectedness": "neither",
+        "maxPxcor": 17,
+        "maxPycor": 17,
+        "minPxcor": -17,
+        "minPycor": -17,
+        "nextWhoNumber": 300,
+        "perspective": "observe",
+        "subject": {
+          "referenceType": "nobody"
+        },
+        "ticks": 4,
+        "codeGlobals": {
+          "colors": 5,
+          "max-percent": 24.666666666666668,
+          "number": 300
+        }
+      },
+      "monitors": [
+        {
+          "label": "% most populous",
+          "source": "max-percent",
+          "value": {
+            "success": true,
+            "value": 24.666666666666668
+          }
+        }
+      ]
+    }
+  },
+  "reset": {
+    "command": "random-seed 1 setup",
+    "success": true
+  },
+  "step": {
+    "command": "go",
+    "success": true
+  },
+  "stepState": {
+    "tick": {
+      "success": true,
+      "value": 1
+    },
+    "turtles": {
+      "success": true,
+      "value": 300
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 17,
+      "maxPycor": 17,
+      "minPxcor": -17,
+      "minPycor": -17,
+      "nextWhoNumber": 300,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 1,
+      "codeGlobals": {
+        "colors": 5,
+        "max-percent": 25,
+        "number": 300
+      }
+    },
+    "monitors": [
+      {
+        "label": "% most populous",
+        "source": "max-percent",
+        "value": {
+          "success": true,
+          "value": 25
+        }
+      }
+    ]
+  },
+  "progressCommand": {
+    "command": "repeat 9 [ go ]",
+    "success": true
+  },
+  "progress": {
+    "tick": {
+      "success": true,
+      "value": 10
+    },
+    "turtles": {
+      "success": true,
+      "value": 300
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 17,
+      "maxPycor": 17,
+      "minPxcor": -17,
+      "minPycor": -17,
+      "nextWhoNumber": 300,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 10,
+      "codeGlobals": {
+        "colors": 5,
+        "max-percent": 23.666666666666668,
+        "number": 300
+      }
+    },
+    "monitors": [
+      {
+        "label": "% most populous",
+        "source": "max-percent",
+        "value": {
+          "success": true,
+          "value": 23.666666666666668
+        }
+      }
+    ]
+  },
+  "probes": {
+    "walls": {
+      "command": "ask patches with [pycor = 0 or abs pycor = max-pycor] [set pcolor white] setup",
+      "success": true
+    },
+    "preservedWalls": {
+      "success": true,
+      "value": 105
+    },
+    "remove": {
+      "command": "remove-all-walls",
+      "success": true
+    },
+    "noWalls": {
+      "success": true,
+      "value": 0
+    },
+    "single": {
+      "command": "set number 1 setup go",
+      "success": false,
+      "error": "[object Object]"
+    },
+    "singleTick": {
+      "success": true,
+      "value": 0
+    }
+  }
+}

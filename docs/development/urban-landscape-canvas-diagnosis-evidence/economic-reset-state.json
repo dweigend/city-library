@@ -1,0 +1,91 @@
+{
+  "time": 3092.099999964237,
+  "url": "http://localhost:3150/?experiment=urban-suite-economic-disparity",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "dpr": 2,
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "scroll": {
+    "x": 0,
+    "y": 0
+  },
+  "dark": false,
+  "monitors": "Tick\n0\nRich\n5\nPoor\n5\nJobs\n1\nCounter\n0\nRich median\n3.73676\nPoor median\n3.58924\nView\nquality",
+  "aside": "Seed\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nQuality\nPrice\nDistance\nPoor utility\nRich utility\nTick\n0\nRich\n5\nPoor\n5\nJobs\n1\nCounter\n0\nRich median\n3.73676\nPoor median\n3.58924\nView\nquality\nLocation tests\nResidents per job\nPoor births per step\nRich births per step\nPoor price priority\nRich quality priority\nMaximum jobs\nOldest residents removed\n\nModel initialized.\n\nModel info",
+  "inputs": [
+    {
+      "name": "seed",
+      "value": "1",
+      "checked": false
+    },
+    {
+      "name": "",
+      "value": "5",
+      "checked": false
+    },
+    {
+      "name": "live-numberOfTests",
+      "value": "15",
+      "checked": false
+    },
+    {
+      "name": "live-residentsPerJob",
+      "value": "100",
+      "checked": false
+    },
+    {
+      "name": "live-poorPerStep",
+      "value": "5",
+      "checked": false
+    },
+    {
+      "name": "live-richPerStep",
+      "value": "5",
+      "checked": false
+    },
+    {
+      "name": "live-poorPricePriority",
+      "value": "0",
+      "checked": false
+    },
+    {
+      "name": "live-richQualityPriority",
+      "value": "0",
+      "checked": false
+    },
+    {
+      "name": "live-maxJobs",
+      "value": "10",
+      "checked": false
+    },
+    {
+      "name": "live-deathRate",
+      "value": "4",
+      "checked": false
+    },
+    {
+      "name": "",
+      "value": "on",
+      "checked": false
+    }
+  ],
+  "plots": [
+    "Rich: 3.736763672575891; Poor: 3.589239702865448"
+  ],
+  "overflow": false,
+  "canvas": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "aria": "Model view. 11 agents. Arrow keys select an item.",
+      "rect": {
+        "x": 312,
+        "y": 115,
+        "width": 672,
+        "height": 672
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "syntaxSource": "1f48e05",
+  "exampleFreeze": "2dacc27",
+  "globalBeforeTimeoutAdjustment": {
+    "command": "bun run check",
+    "exitCode": 0,
+    "tests": 584,
+    "expectCalls": 150791,
+    "testFiles": 68,
+    "publicScripts": 229,
+    "includes": [
+      "TypeScript projects",
+      "Svelte check: 0 errors, 0 warnings",
+      "library build",
+      "packed Bun/Node ESM/ambient-free TypeScript consumer"
+    ]
+  },
+  "svelteBuild": {
+    "command": "bun run build:ui:svelte",
+    "exitCode": 0,
+    "warnings": "Existing chunk-size warnings"
+  },
+  "ciFinding": {
+    "source": "1f48e05",
+    "run": 42367448226,
+    "failure": "Existing Sunflower scenario exceeded the default five-second timeout at 5475ms",
+    "correction": "944773a",
+    "change": "Only this scenario timeout changed to 20000ms; no assertions or scientific steps changed",
+    "targetedTest": {
+      "command": "bun test tests/selected-biology-b.test.ts",
+      "exitCode": 0,
+      "tests": 10,
+      "expectCalls": 74
+    }
+  },
+  "globalAfterTimeoutAdjustment": {
+    "source": "944773a",
+    "command": "bun run check",
+    "exitCode": 0,
+    "tests": 584,
+    "expectCalls": 150791,
+    "testFiles": 68,
+    "publicScripts": 229,
+    "includes": [
+      "all TypeScript projects and Svelte check",
+      "library build",
+      "packed Bun/Node ESM/ambient-free TypeScript consumer"
+    ]
+  },
+  "remoteCI": "Latest source pushes run on GitHub; the final documentation push will be verified separately. No final remote success claimed in this local record."
+}

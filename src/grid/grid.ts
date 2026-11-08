@@ -1,4 +1,5 @@
 import type { Agent } from "../agent/agent.ts";
+import { createOccupancyIndex } from "./occupancy.ts";
 import {
   frameworkRecord,
   issueId,
@@ -8,11 +9,10 @@ import {
 import { cloneModelState, validateOptions } from "../agent/state.ts";
 import {
   axes,
-  dimension,
   finite,
-  normalizePosition,
   normalizeSpace,
   position,
+  wrap,
   type NormalizedSpace,
   type Position,
   type Space,
@@ -90,6 +90,7 @@ function add<F extends object>(
   cloneModelState(initial, reserved, "Field");
   const fields: Field<F>[] = [];
   const indices = new Map<Field<F>, number>();
+  let occupancy: ReturnType<typeof createOccupancyIndex<Field<F>>> | undefined;
   function checkArguments(args: IArguments, min: number, max: number) {
     if (
       args.length < min ||
@@ -127,6 +128,24 @@ function add<F extends object>(
       actual[0]! + counts[0]! * (actual[1]! + (actual[2] ?? 0) * counts[1]!)
     ];
   }
+  // Inputs have already been checked by position() or are canonical Agent
+  // coordinates. Avoid allocating position/index arrays for every occupancy
+  // candidate; the Grid still queries current positions and owns no index/cache.
+  function cellIndex(value: number, axis: 0 | 1 | 2): number | undefined {
+    const name = axes[axis];
+    const extent = space[name]!;
+    if (space.boundary[name] === "wrap") value = wrap(value, extent);
+    else if (value < -extent / 2 || value > extent / 2) return undefined;
+    return Math.min(counts[axis]! - 1, Math.floor((value + extent / 2) / cellSize));
+  }
+  function fieldAtCoordinates(x: number, y: number, z?: number): Field<F> | undefined {
+    const ix = cellIndex(x, 0);
+    const iy = cellIndex(y, 1);
+    if (ix === undefined || iy === undefined) return undefined;
+    if (space.dimensions === 2) return fields[ix + counts[0]! * iy];
+    const iz = cellIndex(z!, 2);
+    return iz === undefined ? undefined : fields[ix + counts[0]! * (iy + counts[1]! * iz)];
+  }
   // Diffusion uses directional slots, including repeated/self targets on tiny wraps.
   // Neighbor queries separately deduplicate canonical identities.
   function slots(neighborhood: "faces" | "moore"): number[][] {
@@ -163,21 +182,8 @@ function add<F extends object>(
     },
     fieldAt(value) {
       checkArguments(arguments, 1, 1);
-      const normalized = normalizePosition(
-        position(value, space.dimensions),
-        space,
-        false,
-      );
-      if (!normalized) return undefined;
-      const index = axes
-        .slice(0, space.dimensions)
-        .map((axis, i) =>
-          Math.min(
-            counts[i]! - 1,
-            Math.floor((normalized[axis]! + space[axis]! / 2) / cellSize),
-          ),
-        );
-      return at(index);
+      const coordinates = position(value, space.dimensions);
+      return fieldAtCoordinates(coordinates.x, coordinates.y, coordinates.z);
     },
     neighbors(field, options = {}) {
       checkArguments(arguments, 1, 2);
@@ -195,16 +201,19 @@ function add<F extends object>(
       options?: { source: Iterable<Agent> },
     ) {
       checkArguments(arguments, 1, 2);
-      requireField(field);
+      const target = coordinates(requireField(field));
       const opts = validateOptions(arguments.length === 1 ? {} : options, [
         "source",
       ]);
-      const source =
-        opts.source === undefined
-          ? frameworkRecord(grid)?.world?.agents
-          : opts.source;
-      if (source === undefined)
-        throw new TypeError("Detached Grid requires an explicit source.");
+      if (opts.source === undefined) {
+        const world = frameworkRecord(grid)?.world;
+        if (!world) throw new TypeError("Detached Grid requires an explicit source.");
+        if (!occupancy?.matches(world))
+          occupancy = createOccupancyIndex(world, grid, space.dimensions,
+            (agent) => fieldAtCoordinates(agent.x, agent.y, agent.z));
+        return occupancy.query(field);
+      }
+      const source = opts.source;
       if (
         (typeof source !== "object" && typeof source !== "function") ||
         source === null ||
@@ -214,12 +223,15 @@ function add<F extends object>(
       const candidates = [...new Set(source as Iterable<Agent>)];
       for (const agent of candidates) {
         requireAgent(agent);
-        if (dimension(agent) !== space.dimensions)
+        if ((agent.z === undefined ? 2 : 3) !== space.dimensions)
           throw new TypeError("Agent dimensions disagree with Grid.");
       }
       return Object.freeze(
         candidates.filter(
-          (agent) => agent.alive && grid.fieldAt(agent) === field,
+          (agent) => agent.alive &&
+            cellIndex(agent.x, 0) === target[0] &&
+            cellIndex(agent.y, 1) === target[1] &&
+            (space.dimensions === 2 || cellIndex(agent.z!, 2) === target[2]),
         ),
       );
     } as Grid<F>["agentsAt"],

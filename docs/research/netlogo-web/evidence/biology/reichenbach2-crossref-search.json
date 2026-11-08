@@ -1,0 +1,1874 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Self-organization+of+mobile+populations+in+cyclic+competition+Reichenbach+Mobilia+Frey+2008&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2347486,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                4
+              ]
+            ],
+            "date-time": "2026-06-04T20:12:52Z",
+            "timestamp": 1780603972198,
+            "version": "3.54.1"
+          },
+          "reference-count": 69,
+          "publisher": "Elsevier BV",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2008,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "2008-09-01T00:00:00Z",
+                "timestamp": 1220227200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2008,
+                9
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.jtbi.2008.05.014",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                5,
+                24
+              ]
+            ],
+            "date-time": "2008-05-24T04:52:26Z",
+            "timestamp": 1211604746000
+          },
+          "page": "368-383",
+          "source": "Crossref",
+          "is-referenced-by-count": 158,
+          "title": [
+            "Self-organization of mobile populations in cyclic competition"
+          ],
+          "prefix": "10.1016",
+          "volume": "254",
+          "author": [
+            {
+              "given": "Tobias",
+              "family": "Reichenbach",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Mauro",
+              "family": "Mobilia",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Erwin",
+              "family": "Frey",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib1",
+              "doi-asserted-by": "crossref",
+              "first-page": "913",
+              "DOI": "10.1006/bulm.2002.0307",
+              "article-title": "Extinction dynamics in mainland-island metapopulations: an n-patch stochastic model",
+              "volume": "64",
+              "author": "Alonso",
+              "year": "2002",
+              "journal-title": "Bull. Math. Biol."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib2",
+              "doi-asserted-by": "crossref",
+              "first-page": "99",
+              "DOI": "10.1103/RevModPhys.74.99",
+              "article-title": "The world of the complex Ginzburg\u2013Landau equation",
+              "volume": "74",
+              "author": "Aranson",
+              "year": "2002",
+              "journal-title": "Rev. Mod. Phys."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "354",
+              "DOI": "10.1038/20676",
+              "article-title": "Complex dynamics and phase synchronization in spatially extended ecological systems",
+              "volume": "399",
+              "author": "Blasius",
+              "year": "1999",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib4",
+              "series-title": "Lectures on Gas Theory (translation from German)",
+              "author": "Boltzmann",
+              "year": "1964"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "3915",
+              "DOI": "10.1242/jcs.03223",
+              "article-title": "Calcium signalling during excitation\u2013contraction coupling in mammalian atrial myocytes",
+              "volume": "119",
+              "author": "Bootmann",
+              "year": "2006",
+              "journal-title": "J. Cell Sci."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "219",
+              "DOI": "10.1016/S0010-4655(01)00309-5",
+              "article-title": "Xmds: eXtensible multi-dimensional simulator",
+              "volume": "142",
+              "author": "Collecutt",
+              "year": "2001",
+              "journal-title": "Comput. Phys. Commun."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "851",
+              "DOI": "10.1103/RevModPhys.65.851",
+              "article-title": "Pattern formation outside of equilibrium",
+              "volume": "65",
+              "author": "Cross",
+              "year": "1993",
+              "journal-title": "Rev. Mod. Phys."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "344",
+              "DOI": "10.1038/nature02225",
+              "article-title": "Travelling waves in the occurrence of dengue haemorrhagic fever in Thailand",
+              "volume": "427",
+              "author": "Cummings",
+              "year": "2004",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "786",
+              "DOI": "10.1073/pnas.012399899",
+              "article-title": "Chemical warfare between microbes promotes biodiversity",
+              "volume": "99",
+              "author": "Cz\u00e1r\u00e1n",
+              "year": "2002",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "363",
+              "DOI": "10.1006/tpbi.1994.1032",
+              "article-title": "The importance of being discrete (and spatial)",
+              "volume": "46",
+              "author": "Durrett",
+              "year": "1994",
+              "journal-title": "Theor. Popul. Biol."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "165",
+              "DOI": "10.1006/jtbi.1996.0292",
+              "article-title": "Allelopathy in spatially distributed populations",
+              "volume": "185",
+              "author": "Durrett",
+              "year": "1997",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "30",
+              "DOI": "10.1006/tpbi.1997.1338",
+              "article-title": "Spatial aspects of interspecific competition",
+              "volume": "53",
+              "author": "Durrett",
+              "year": "1998",
+              "journal-title": "Theor. Popul. Biol."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib13",
+              "doi-asserted-by": "crossref",
+              "first-page": "255",
+              "DOI": "10.1080/00018730410001703159",
+              "article-title": "Reading the patterns in living cells\u2014the physics of signaling Ca2+ signalling",
+              "volume": "53",
+              "author": "Falcke",
+              "year": "2004",
+              "journal-title": "Adv. Phys."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib14",
+              "unstructured": "Feller, W., 1968. An Introduction to Probability Theory and its Application, vol. 1. third ed. Wiley, New York."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib15",
+              "series-title": "Handbook of Stochastic Methods",
+              "author": "Gardiner",
+              "year": "1983"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib16",
+              "series-title": "Elementary Principles in Statistical Mechanics",
+              "author": "Gibbs",
+              "year": "1902"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib17",
+              "doi-asserted-by": "crossref",
+              "first-page": "866",
+              "DOI": "10.1126/science.1087509",
+              "article-title": "Cyclic dynamics in a simple vertebrate predator\u2013prey-community",
+              "volume": "302",
+              "author": "Gilg",
+              "year": "2001",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib18",
+              "doi-asserted-by": "crossref",
+              "first-page": "403",
+              "DOI": "10.1016/0021-9991(76)90041-3",
+              "article-title": "A general method for numerically simulating the stochastic time evolution of coupled chemical reactions",
+              "volume": "22",
+              "author": "Gillespie",
+              "year": "1976",
+              "journal-title": "J. Comput. Phys."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib19",
+              "doi-asserted-by": "crossref",
+              "first-page": "2340",
+              "DOI": "10.1021/j100540a008",
+              "article-title": "Exact simulations of coupled chemical reactions",
+              "volume": "81",
+              "author": "Gillespie",
+              "year": "1977",
+              "journal-title": "J. Phys. Chem."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "716",
+              "DOI": "10.1038/414716a",
+              "article-title": "Travelling waves and spatial hierarchies in measles epidemics",
+              "volume": "414",
+              "author": "Grenfell",
+              "year": "2001",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "255",
+              "DOI": "10.1038/353255a0",
+              "article-title": "Spatial structure and chaos in insect population dynamics",
+              "volume": "353",
+              "author": "Hassell",
+              "year": "1991",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib22",
+              "doi-asserted-by": "crossref",
+              "first-page": "290",
+              "DOI": "10.1038/370290a0",
+              "article-title": "Species coexistence and self-organizing spatial dynamics",
+              "volume": "370",
+              "author": "Hassell",
+              "year": "1994",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib23",
+              "doi-asserted-by": "crossref",
+              "first-page": "39",
+              "DOI": "10.1016/j.tree.2003.09.007",
+              "article-title": "Transients: the key to long-term ecological understanding?",
+              "volume": "19",
+              "author": "Hastings",
+              "year": "2004",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib24",
+              "doi-asserted-by": "crossref",
+              "first-page": "643",
+              "DOI": "10.1038/nature02360",
+              "article-title": "Spatial structure often inhibits the evolution of cooperation in the snowdrift game",
+              "volume": "428",
+              "author": "Hauert",
+              "year": "2004",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib25",
+              "doi-asserted-by": "crossref",
+              "first-page": "1129",
+              "DOI": "10.1126/science.1070582",
+              "article-title": "Volunteering as red queen mechanism for cooperation in public goods games",
+              "volume": "296",
+              "author": "Hauert",
+              "year": "2002",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib26",
+              "series-title": "Evolutionary Games and Population Dynamics",
+              "author": "Hofbauer",
+              "year": "1998"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib27",
+              "doi-asserted-by": "crossref",
+              "first-page": "4256",
+              "DOI": "10.1073/pnas.0400704101",
+              "article-title": "Waves and aggregation patterns in myxobacteria",
+              "volume": "101",
+              "author": "Igoshin",
+              "year": "2004",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib28",
+              "doi-asserted-by": "crossref",
+              "first-page": "5160",
+              "DOI": "10.1073/pnas.72.12.5160",
+              "article-title": "Allelopathy and spatial competition among coral reef invertebrates",
+              "volume": "72",
+              "author": "Jackson",
+              "year": "1975",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib29",
+              "doi-asserted-by": "crossref",
+              "first-page": "801",
+              "DOI": "10.1023/A:1010300703724",
+              "article-title": "Directed percolation with colors and flavors",
+              "volume": "103",
+              "author": "Janssen",
+              "year": "2001",
+              "journal-title": "J. Stat. Phys."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib30",
+              "series-title": "Chemical Waves and Patterns, Part One",
+              "year": "1995"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "213",
+              "DOI": "10.1038/nature06111",
+              "article-title": "Spatial vegetation patterns and imminent desertification in mediterranean arid ecosystems",
+              "volume": "449",
+              "author": "Kefi",
+              "year": "2007",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib32",
+              "doi-asserted-by": "crossref",
+              "first-page": "171",
+              "DOI": "10.1038/nature00823",
+              "article-title": "Local dispersal promotes biodiversity in a real-life game of rock-paper-scissors",
+              "volume": "418",
+              "author": "Kerr",
+              "year": "2002",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib33",
+              "doi-asserted-by": "crossref",
+              "first-page": "431",
+              "DOI": "10.1016/S0040-5809(03)00100-X",
+              "article-title": "Spatial mechanism for coexistence of species sharing a common natural enemy",
+              "volume": "64",
+              "author": "King",
+              "year": "2003",
+              "journal-title": "Theor. Popul. Biol."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib34",
+              "doi-asserted-by": "crossref",
+              "first-page": "412",
+              "DOI": "10.1038/nature02429",
+              "article-title": "Antibiotic-mediated antagonism leads to a bacterial game of rock-paper-scissors in vivo",
+              "volume": "428",
+              "author": "Kirkup",
+              "year": "2004",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib35",
+              "doi-asserted-by": "crossref",
+              "first-page": "123",
+              "DOI": "10.1126/science.2011747",
+              "article-title": "Spiral calcium wave propagation and annihilation in Xenopus laevis oocytes",
+              "volume": "252",
+              "author": "Lechleiter",
+              "year": "1991",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib36",
+              "doi-asserted-by": "crossref",
+              "first-page": "207",
+              "DOI": "10.1086/282900",
+              "article-title": "Dispersion and population interactions",
+              "volume": "108",
+              "author": "Levin",
+              "year": "1974",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib37",
+              "doi-asserted-by": "crossref",
+              "first-page": "312",
+              "DOI": "10.1038/nature03204",
+              "article-title": "Evolutionary dynamics on graphs",
+              "volume": "433",
+              "author": "Liebermann",
+              "year": "2005",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib38",
+              "series-title": "Stability and Complexity in Model Ecosystems",
+              "author": "May",
+              "year": "1974"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib39",
+              "doi-asserted-by": "crossref",
+              "first-page": "243",
+              "DOI": "10.1137/0129022",
+              "article-title": "Nonlinear aspects of competition between species",
+              "volume": "29",
+              "author": "May",
+              "year": "1975",
+              "journal-title": "SIAM J. Appl. Math"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib40",
+              "series-title": "Evolution and the Theory of Games",
+              "author": "Maynard Smith",
+              "year": "1982"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib41",
+              "doi-asserted-by": "crossref",
+              "first-page": "040903(R)",
+              "DOI": "10.1103/PhysRevE.73.040903",
+              "article-title": "Fluctuations and correlations in lattice models for predator\u2013prey interaction",
+              "volume": "73",
+              "author": "Mobilia",
+              "year": "2006",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib42",
+              "doi-asserted-by": "crossref",
+              "first-page": "447",
+              "DOI": "10.1007/s10955-006-9146-3",
+              "article-title": "Phase transitions and spatio-temporal fluctuations in stochastic lattice Lotka\u2013Volterra models",
+              "volume": "128",
+              "author": "Mobilia",
+              "year": "2007",
+              "journal-title": "J. Stat. Phys."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib43",
+              "doi-asserted-by": "crossref",
+              "first-page": "60",
+              "DOI": "10.1017/S0305004100033193",
+              "article-title": "Random processes in genetics",
+              "volume": "54",
+              "author": "Moran",
+              "year": "1958",
+              "journal-title": "Proc. Camb. Philos. Soc."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib44",
+              "doi-asserted-by": "crossref",
+              "first-page": "702",
+              "DOI": "10.1073/pnas.0607433104",
+              "article-title": "Noise can play an organizing role for the recurrent dynamics in excitable media",
+              "volume": "104",
+              "author": "Muratov",
+              "year": "2007",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib45",
+              "series-title": "Mathematical Biology",
+              "author": "Murray",
+              "year": "2002"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib46",
+              "doi-asserted-by": "crossref",
+              "first-page": "1319",
+              "DOI": "10.1016/j.physa.2007.10.032",
+              "article-title": "Vortex generation in the RSP game on the triangular lattice",
+              "volume": "387",
+              "author": "Nishiuchi",
+              "year": "2008",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib47",
+              "series-title": "Evolutionary Dynamics",
+              "author": "Nowak",
+              "year": "2006"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib48",
+              "doi-asserted-by": "crossref",
+              "first-page": "826",
+              "DOI": "10.1038/359826a0",
+              "article-title": "Evolutionary games and spatial chaos",
+              "volume": "359",
+              "author": "Nowak",
+              "year": "1992",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib49",
+              "doi-asserted-by": "crossref",
+              "first-page": "052102",
+              "DOI": "10.1103/PhysRevE.75.052102",
+              "article-title": "Cyclical interactions with alliance-specific heterogeneous invasion rates",
+              "volume": "75",
+              "author": "Perc",
+              "year": "2007",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib50",
+              "doi-asserted-by": "crossref",
+              "first-page": "051907",
+              "DOI": "10.1103/PhysRevE.74.051907",
+              "article-title": "Coexistence versus extinction in the stochastic cyclic Lotka\u2013Volterra model",
+              "volume": "74",
+              "author": "Reichenbach",
+              "year": "2006",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib51",
+              "doi-asserted-by": "crossref",
+              "first-page": "1046",
+              "DOI": "10.1038/nature06095",
+              "article-title": "Mobility promotes and jeopardizes biodiversity in rock-paper-scissors games",
+              "volume": "448",
+              "author": "Reichenbach",
+              "year": "2007",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib52",
+              "doi-asserted-by": "crossref",
+              "first-page": "238105",
+              "DOI": "10.1103/PhysRevLett.99.238105",
+              "article-title": "Noise and correlations in a spatial population model with cyclic competition",
+              "volume": "99",
+              "author": "Reichenbach",
+              "year": "2007",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib53",
+              "first-page": "109",
+              "article-title": "Paper-scissors-stone game on trees",
+              "volume": "47",
+              "author": "Sato",
+              "year": "1997",
+              "journal-title": "Mem. Muroran Inst. Tech."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib54",
+              "doi-asserted-by": "crossref",
+              "first-page": "09",
+              "DOI": "10.1038/nature06060",
+              "article-title": "Positive feedbacks promote power-law clustering of Kalahari vegetation",
+              "volume": "449",
+              "author": "Scanlon",
+              "year": "2007",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib55",
+              "doi-asserted-by": "crossref",
+              "first-page": "10757",
+              "DOI": "10.1073/pnas.161155698",
+              "article-title": "Reward and punishment",
+              "volume": "98",
+              "author": "Sigmund",
+              "year": "2001",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib56",
+              "doi-asserted-by": "crossref",
+              "first-page": "240",
+              "DOI": "10.1038/380240a0",
+              "article-title": "The rock-scissors-paper game and the evolution of alternative male strategies",
+              "volume": "380",
+              "author": "Sinervo",
+              "year": "1996",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib57",
+              "doi-asserted-by": "crossref",
+              "first-page": "97",
+              "DOI": "10.1016/j.physrep.2007.04.004",
+              "article-title": "Evolutionary games on graphs",
+              "volume": "446",
+              "author": "Szab\u00f3",
+              "year": "2007",
+              "journal-title": "Phys. Rep."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib58",
+              "doi-asserted-by": "crossref",
+              "first-page": "036115",
+              "DOI": "10.1103/PhysRevE.65.036115",
+              "article-title": "A three-state cyclic voter model extended with potts energy",
+              "volume": "65",
+              "author": "Szab\u00f3",
+              "year": "2002",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib59",
+              "doi-asserted-by": "crossref",
+              "first-page": "2599",
+              "DOI": "10.1088/0305-4470/37/7/006",
+              "article-title": "Rock-scissors-paper game on regular small-world networks",
+              "volume": "37",
+              "author": "Szab\u00f3",
+              "year": "2004",
+              "journal-title": "J. Phys. A: Math. Gen."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib60",
+              "doi-asserted-by": "crossref",
+              "first-page": "3401",
+              "DOI": "10.1103/PhysRevE.50.3401",
+              "article-title": "Vortices and strings in a model ecosystem",
+              "volume": "50",
+              "author": "Tainaka",
+              "year": "1994",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib61",
+              "unstructured": "T\u00e4uber, U.C., 2008. Graduate Textbook (work in progress): Critical Dynamics \u3008http://www.phys.vt.edu/~tauber\u3009."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib62",
+              "doi-asserted-by": "crossref",
+              "first-page": "238701",
+              "DOI": "10.1103/PhysRevLett.95.238701",
+              "article-title": "Coevolutionary dynamics: from finite to infinite populations",
+              "volume": "95",
+              "author": "Traulsen",
+              "year": "2005",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib63",
+              "doi-asserted-by": "crossref",
+              "first-page": "011901",
+              "DOI": "10.1103/PhysRevE.74.011901",
+              "article-title": "Coevolutionary dynamics in large, but finite populations",
+              "volume": "74",
+              "author": "Traulsen",
+              "year": "2006",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib64",
+              "doi-asserted-by": "crossref",
+              "first-page": "37",
+              "DOI": "10.1098/rstb.1952.0012",
+              "article-title": "The chemical basis of morphogenesis",
+              "volume": "237",
+              "author": "Turing",
+              "year": "1952",
+              "journal-title": "Philos. Trans. R. Soc. London Ser. B"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib65",
+              "series-title": "Stochastic Processes in Physics and Chemistry",
+              "author": "van Kampen",
+              "year": "1981"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib66",
+              "doi-asserted-by": "crossref",
+              "first-page": "29",
+              "DOI": "10.1016/j.physrep.2003.08.001",
+              "article-title": "Front propagation into unstable states",
+              "volume": "386",
+              "author": "van Saarloos",
+              "year": "2003",
+              "journal-title": "Phys. Rep."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib67",
+              "series-title": "Introduction to Applied Nonlinear Dynamical Systems and Chaos",
+              "author": "Wiggins",
+              "year": "1990"
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib68",
+              "unstructured": "XmdS \u3008http://www.xmds.org\u3009."
+            },
+            {
+              "key": "10.1016/j.jtbi.2008.05.014_bib69",
+              "doi-asserted-by": "crossref",
+              "first-page": "535",
+              "DOI": "10.1038/225535b0",
+              "article-title": "Concentration wave propagation in two-dimensional liquid-phase self-oscillating system",
+              "volume": "225",
+              "author": "Zaikin",
+              "year": "1970",
+              "journal-title": "Nature"
+            }
+          ],
+          "container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0022519308002464?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0022519308002464?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                12,
+                28
+              ]
+            ],
+            "date-time": "2018-12-28T05:25:45Z",
+            "timestamp": 1545974745000
+          },
+          "score": 44.288147,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0022519308002464"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2008,
+                9
+              ]
+            ]
+          },
+          "references-count": 69,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  2008,
+                  9
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0022519308002464"
+          ],
+          "URL": "https://doi.org/10.1016/j.jtbi.2008.05.014",
+          "ISSN": [
+            "0022-5193"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-5193",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2008,
+                9
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                14
+              ]
+            ],
+            "date-time": "2025-05-14T08:09:05Z",
+            "timestamp": 1747210145568,
+            "version": "3.40.5"
+          },
+          "reference-count": 54,
+          "publisher": "Association of European Schools of Planning (AESOP)",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    6,
+                    1
+                  ]
+                ],
+                "date-time": "2020-06-01T00:00:00Z",
+                "timestamp": 1590969600000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "TrAESOP"
+          ],
+          "abstract": "<jats:p>Since 2012, and particularly since 2014, instability and wars in North African countries and the Middle East have brought a wave of refugees, trying to flee from violence in their countries, to Europe. They usually go north, crossing the Mediterranean towards Italy, or the Aegean, going west to the Greek islands. In their quest for a safe refuge, a significant number drown or disappear. The rest reach in Europe carrying their traumatic experiences with them, and face immediate humanitarian needs. A major task for host cities is to provide shelter for the refugees, taking into consideration the influence of their psychological trauma on local societies. This complex task, which combines technical, economic, social, psychological, and political dimensions \u2013 simultaneously targeted on two social groups \u2013 constitutes the \u2018post-traumatic urbanism\u2019 which intervenes in the recreating of the refugees\u2019 spatial and social networks in the host city. This paper discusses how the complex issue of post-traumatic housing triggers spatial self-organization by the refugees, in contrast to the \u2018official\u2019 provisions from host states, through the lens of complex adaptive theory (resilience). This article examines the features of refugee housing in Athens and Thessaloniki through qualitative research, quantitative methods and participatory observation. Through this study, it is highlighted that the post-trauma self-organization of mobile populations is a process of gaining dignity and self-respect in a new and often hostile environment, and a tool for spatial and social resilience.</jats:p>",
+          "DOI": "10.24306/traesop.2020.01.004",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                7,
+                19
+              ]
+            ],
+            "date-time": "2020-07-19T09:16:00Z",
+            "timestamp": 1595150160000
+          },
+          "page": "33-45",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Post-traumatic spatial self-organization of mobile populations"
+          ],
+          "prefix": "10.24306",
+          "volume": "4",
+          "author": [
+            {
+              "given": "Balk\u0131z",
+              "family": "Yap\u0131c\u0131o\u011flu",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-9129-8161",
+              "authenticated-orcid": false,
+              "given": "Konstantinos",
+              "family": "Lalenis",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-8026-8418",
+              "authenticated-orcid": false,
+              "given": "Charalampos",
+              "family": "Tsavdaroglou",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "10409",
+          "published-online": {
+            "date-parts": [
+              [
+                2020,
+                6,
+                1
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "1303",
+              "unstructured": "Al Jazeera (2017) Violent gangs threaten refugees in Greece. [Online] Available from: https://www.youtube.com/watch?v=KJyAKTKvHcU [Accessed 8 June 2018]."
+            },
+            {
+              "key": "1304",
+              "unstructured": "Amagoh, Francis (2008) Perspectives on organizational change: Systems and complexity theories. The Innovation Journal: The Public Sector Innovation Journal, 13 (3), pp.1-13."
+            },
+            {
+              "key": "1305",
+              "unstructured": "Amnesty International (2016) Trapped in Greece: Refugees stranded in dire conditions as Europe drags its heels. [Online] Available from: www.amnesty.org/en/latest/news/2016/07/trapped-in-greece-48000-stranded-in-dire-conditions/ [Accessed 12 February 2018]."
+            },
+            {
+              "key": "1306",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Arampatzi, Athina (2017) The spatiality of counter-austerity politics in Athens, Greece: Emergent \u201curban solidarity spaces\u201d. Urban Studies, 54 (9), pp.2155-2171.",
+              "DOI": "10.1177/0042098016629311"
+            },
+            {
+              "key": "1307",
+              "unstructured": "Athanasiou, Evaggelia (2013) Sustainable cities in Greece of economic crisis. In Kanarellis, Theoklis, K. Manolidis, I. Stylidis (eds) Trasformations and re-definitions of space in Greece of crisis, conference proceedings. Volos, University of Thessaly, Department of Architecture, pp.1-8 [in Greek]."
+            },
+            {
+              "key": "1308",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Burke, Anthony (2010) The urban complex: Scalar probabilities and urban computation. Architectural Design, 80 (5), pp.86-91.",
+              "DOI": "10.1002/ad.1139"
+            },
+            {
+              "key": "1309",
+              "unstructured": "De Toni, Alberto F. and Luca Comello (2010) Journey into Complexity. Venice: Marsilio Editori."
+            },
+            {
+              "key": "1310",
+              "unstructured": "Digidiki, Vasileia and Jacqueline Bhabha (2017) Emergency within an emergency. The growing epidemic of sexual exploitation and abuse of migrant children in Greece. FXB Center for Health and Human Rights, Harvard University."
+            },
+            {
+              "key": "1311",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Dooley, Kevin J. and Andrew H. Van de Ven (1999) Explaining complex organizational Dynamics. Organization Science, 10 (3), pp.358-372.",
+              "DOI": "10.1287/orsc.10.3.358"
+            },
+            {
+              "key": "1312",
+              "unstructured": "ECRE (2007) ECRE Policy Briefing on Housing for Refugees and Migrants in Europe. [Online] Available from: http://www. epim.info/wp-content/uploads/2011/02/ECRE-Policy-Briefing_Housing.pdf [Accessed 9 February 2018]."
+            },
+            {
+              "key": "1313",
+              "unstructured": "European Commission (2016) First report on the progress made in the implementation of the EU-Turkey Statement, COM (2016) 231, Final Report, Brussels 20.4.2016."
+            },
+            {
+              "key": "1314",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Gemmill, Gary and Charles Smith (1985) A dissipative structure model of organization transformation. Human Relations, 38 (8), pp.751-766.",
+              "DOI": "10.1177/001872678503800804"
+            },
+            {
+              "key": "1315",
+              "unstructured": "Gunderson Lance H. and Crawford S. Holling (eds) (2002) Panarchy: Understanding transformations in human and natural systems. Washington DC: Island Press."
+            },
+            {
+              "key": "1316",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hadjimichalis, Costis (2011) Uneven geographical development and socio-spatial justice and solidarity: European regions after the 2009 financial crisis. European Urban and Regional Studies, 18 (3), pp.254-74.",
+              "DOI": "10.1177/0969776411404873"
+            },
+            {
+              "key": "1317",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Holland, John H. (1992) Adaptation in natural and artificial systems: An introductory analysis with applications to biology, control, and artificial intelligence. The MIT Press, Cambridge Massachusetts.",
+              "DOI": "10.7551/mitpress/1090.001.0001"
+            },
+            {
+              "key": "1318",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Holling, Crawford S. (1973) Resilience and stability of ecological systems. Annual Review of Ecology and Systematics, 4, pp.1-23.",
+              "DOI": "10.1146/annurev.es.04.110173.000245"
+            },
+            {
+              "key": "1319",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Holling, Crawford S. (2001) Understanding the complexity of economic, ecological, and social systems. Ecosystems, 4 (5), pp.390-405.",
+              "DOI": "10.1007/s10021-001-0101-5"
+            },
+            {
+              "key": "1320",
+              "unstructured": "Holling, Crawford S., Lance H. Gunderson and Donald Ludwig (2002) Quest of a theory of adaptive change. In Gunderson, Lance H. and Crawford S. Holling (eds) Panarchy: Understanding transformations in human and natural systems. Washington DC: Island Press, pp.3-24."
+            },
+            {
+              "key": "1321",
+              "unstructured": "Housing Squat for Refugees and Immigrants Notara 26 (2016) Let\u2019s make the refugees\u2019 Odyssey of survival a journey of humanity towards freedom, in www.cnet.com/features/road-trip-greece-refugee-crisis/"
+            },
+            {
+              "key": "1322",
+              "unstructured": "International Rescue Committee (2016) IRC deeply concerned over poor humanitarian standards at refugee transit sites in Greece. [Online] Available from: http://www.rescue.org/blog/refugee-crisis-latest-updates-storify. [Accessed 9 February 2018]."
+            },
+            {
+              "key": "1323",
+              "unstructured": "Kapsali, Matina and Charalampos Tsavdaroglou (2016) The battle for the common space, from the neoliberal creative city to the rebel city and vice versa: The cases of Athens, Istanbul, Thessaloniki and Izmir. In White, Richard J., Simon Springer and Marcelo Lopes de Souza (eds) The practice of freedom: Anarchism, geography, and the spirit of revolt. London-New York: Rowman & Littlefield, pp.151-182."
+            },
+            {
+              "key": "1324",
+              "unstructured": "KEELPNO (Hellenic Centre for Disease Control and Prevention) (2016) Report concerning the reception centres of refugees from the point of view of public health. 21.7.2016 no. 011/12568 [in Greek]."
+            },
+            {
+              "key": "1325",
+              "unstructured": "Law 4277/31-7-2014 (FEK 156/A/1-8-2014) New regulatory plan for Athens - Attica Region and other provisions [in Greek]."
+            },
+            {
+              "key": "1326",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Leifer, Richard (1989) Understanding organizational transformation using a dissipative structure model. Human Relations, 42 (10), pp.899-916.",
+              "DOI": "10.1177/001872678904201003"
+            },
+            {
+              "key": "1327",
+              "unstructured": "Liapi, Maria, E. Haridi and Thanasis Tyrovolas (2016) Investigation of the needs of women refugees residing in temporary reception shelters, Athens. Research sector of women issues (DIOTIMA), Research Centre of Equality Issues [in Greek]."
+            },
+            {
+              "key": "1328",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Limnios, Elena, Alexandra Mamouni, Tim Mazzarol, Anas Ghadouani and Steven GM Schilizzi (2014) The resilience architecture framework: Four organizational archetypes. European Management Journal, 32 (1), pp.104-116.",
+              "DOI": "10.1016/j.emj.2012.11.007"
+            },
+            {
+              "key": "1329",
+              "doi-asserted-by": "crossref",
+              "unstructured": "MacIntosh, Robert and Donald MacLean (1999) Conditioned emergence: A dissipative structures approach to transformation. Strategic Management Journal, 20 (4), pp.297-316.",
+              "DOI": "10.1002/(SICI)1097-0266(199904)20:4<297::AID-SMJ25>3.0.CO;2-Q"
+            },
+            {
+              "key": "1330",
+              "doi-asserted-by": "crossref",
+              "unstructured": "McKelvey, Bill (1999) Self-organization, complexity catastrophe, and microstate models at the edge of chaos. In Baum, Joel A.C and Bill McKelvey (eds) Variations in organization science: In honour of Donald T. Campbell. Thousand Oaks: Sage Publication, pp.279-307.",
+              "DOI": "10.4135/9781452204703.n15"
+            },
+            {
+              "key": "1331",
+              "unstructured": "M\u00e9decins Sans Fronti\u00e8res (2016) Greece: Involuntary eviction from Idomeni creates further hardship for refugees. [Online] Available from: http://www.msf.org/en/article/greece-involuntary-eviction-idomeni-creates-further-hardship-refugees [Accessed 20 June 2018]"
+            },
+            {
+              "key": "1332",
+              "unstructured": "Ministerial Decision (2004) (MD) 10788/05-03-2004 (FEK 285D/05.03.2004) Approval of urban planning standards and maximum values of densities in the implementation of General Development Plans, Plans of Spatial Development of Open Cities and Urban Plans [in Greek]."
+            },
+            {
+              "key": "1333",
+              "unstructured": "Ministerial Decision (2011) (MD) 45363/07-11-2011 (FEK 304/AAP/07-11-2011) Approval of Revision of General Development Plan of Municipal Department of Ehedoros of the Municipality of Delta [in Greek]."
+            },
+            {
+              "key": "1334",
+              "unstructured": "Moving Europe (2016) Refugee-squats in Athens. [Online] Available from: http://movingeurope.org/24-06-2016-refugee-squats-in-athens/ [Accessed 20 June 2018]."
+            },
+            {
+              "key": "1335",
+              "unstructured": "Presidential Decree (2007) (PD) 220/13-11-2007 (FEK 251/A/13-11-2007) Adaptation of Greek Legislation to the Directive 2003/9/EK of the European Council of 27-1-2003, regarding the minimum requirements for the reception of subjects applying for asylum in EC member states (EEL 31/6.2.2003) [in Greek]."
+            },
+            {
+              "key": "1336",
+              "unstructured": "Prigogine, Ilya (1997) The end of certainty: Time, chaos, and the new laws of nature. New York: Free Press."
+            },
+            {
+              "key": "1337",
+              "unstructured": "Prigogine, Ilya and Isabella Stengers (1984) Order out of chaos. Toronto and Ontario: Bantam."
+            },
+            {
+              "key": "1338",
+              "unstructured": "Refugee Accommodation Center City Plaza Hotel (2016) What is City Plaza? [Online] Available from: http://solidarity2refugees.gr/city-plaza-leaflet/ [Accessed 16 January 2018]."
+            },
+            {
+              "key": "1339",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Simich, Laura and Lisa Andermann (eds) (2014) Refuge and resilience: Promoting resilience and mental health among resettled refugees and forced migrants (Vol. 7). Springer.",
+              "DOI": "10.1007/978-94-007-7923-5"
+            },
+            {
+              "key": "1340",
+              "unstructured": "Tsavdaroglou, Charalampos and Konstantinos Lalenis (2019) The rights of the refugees to housing. Housing commons and location policies for reception camps in Athens and Thessaloniki. In Proceedings of 5th Panhellenic Conference in Planning and Regional Development, DPRD, University of Thessaly, Volos, Greece, 27-30 September 2018, pp.1745-1756 [in Greek]."
+            },
+            {
+              "key": "1341",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Tsavdaroglou, Charalampos and Konstantinos Lalenis (2020) The refugees\u2019 right to the city. Housing commons vs. state spatial policies of refugee camps in Athens and Thessaloniki. COGITATIO Press, Urban Planning, 5 (3), DOI:10.17645/up.v5i3. 2924, London (in print).",
+              "DOI": "10.17645/up.v5i3.2924"
+            },
+            {
+              "key": "1342",
+              "unstructured": "The Guardian (2016) Refugees sexual assaults on children at Greek refugee camps. [Online] Available from: https://www. theguardian.com/world/2016/aug/13/child-refugees-sexually-assaulted-at-official-greek-camps [Accessed 5 March 2017]."
+            },
+            {
+              "key": "1343",
+              "unstructured": "The Observer (2016) Refugees in Greek camps targeted by mafia gangs. [Online] Available from: https://www. theguardian.com/world/2016/aug/20/refugees-greek-camps-targeted-mafia-gangs. [Accessed 5 March 2017]."
+            },
+            {
+              "key": "1344",
+              "unstructured": "TRT World (2017) Lack of security leaves refugees at mercy of gangs in Greek camps. [Online] Available from: https://www.trtworld.com/europe/lack-of-security-at-greek-camps-leaves-vulnerable-at-mercy-of-gangs-295809 [Accessed 5 March 2017]."
+            },
+            {
+              "key": "1345",
+              "unstructured": "UN (1948) The Universal Declaration of Human Rights. United Nations General Assembly in Paris on 10 December 1948. [Online] Available from: http://www.un.org/en/universal-declaration-human-rights/ [Accessed 14 September 2015]."
+            },
+            {
+              "key": "1346",
+              "unstructured": "UN (1951) General Assembly Convention Relating to the Status of Refugees. 28 July 1951, United Nations. [Online] Available from: www.unhcr.org/3b66c2aa10.pdf [Accessed 12 September 2017]"
+            },
+            {
+              "key": "1347",
+              "unstructured": "UN (1991) The Right to Adequate Housing. Committee on Economic, Social and Cultural Rights (CESCR) (Art. 11 (1) of the Covenant), Office of the United Nations High Commissioner for Human Rights (General Comment No. 4)."
+            },
+            {
+              "key": "1348",
+              "unstructured": "UN (2009) The Right to Adequate Housing. Office of the United Nations High Commissioner for Human Rights & UN Habitat. [Online] Available from: https://www.un.org/ruleoflaw/files/FactSheet21en.pdf (Fact Sheet No 21) [Accessed 22 January 2018]."
+            },
+            {
+              "key": "1349",
+              "unstructured": "UNHCR (2007) Handbook for emergencies. Geneva. [Online] Available from: https://www.ifrc.org/PageFiles/95884/D.01.03.%20Handbook%20for%20Emergencies_UNHCR.pdf [Accessed 7 February 2018]"
+            },
+            {
+              "key": "1350",
+              "unstructured": "UNHCR (2016) GREECE: UNHCR concerned at conditions in new refugee sites and urges that alternatives be found. Report from UN High Commissioner for Refugees. [Online] Available from http://www.unhcr.org/news/briefing/2016/5/57480cb89/greece-unhcr-concerned-conditions-new-refugee-sites-urges-alternatives.html [Accessed 25 April 2018]."
+            },
+            {
+              "key": "1351",
+              "unstructured": "UNHCR (2017) Resilience and self-reliance from a protection and solutions perspective. EC/68/SC/CRP.4. [Online] Available from: https://www.unhcr.org/en-my/58ca4f827.pdf [Accessed 8 January 2019]."
+            },
+            {
+              "key": "1352",
+              "unstructured": "UNHCR (2018a) Comprehensive protection and solutions strategey: Protection threseholds and parameter for refugee return to Syria. [Online] Available from: https://data2.unhcr.org/ar/documents/download/63223 [Accessed 8 January 2019]."
+            },
+            {
+              "key": "1353",
+              "unstructured": "UNHCR (2018b) Refugee women and children face heightened risk of sexual violence amid tensions and overcrowding at reception facilities on Greek islands, UNHCR spokesperson C\u00e9cile Pouilly. [Online] Available from: http://www.unhcr. org/news/briefing/2018/2/5a7d67c4b/refugee-women-children-face-heightened-risk-sexual-violence-amid-tensions. html [Accessed 25 April 2018]."
+            },
+            {
+              "key": "1354",
+              "unstructured": "Vatavali, Fereniki and Dimitra Siatitsa (2011) Housing crisis and the need of a new housing policy encounter Athens. [Online] Available from: https://encounterathens.files.wordpress.com/20/11/05/politikes-gia-thn-katoikia-11mai11.pdf [in Greek]. [Accessed 25 April 2018]."
+            },
+            {
+              "key": "1355",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Volkan, Vamik D. (1999) Psychoanalysis and diplomacy: Part I. Individual and large group identity. Journal of Applied Psychoanalytic Studies, 1 (1), pp.29-55.",
+              "DOI": "10.1023/A:1023252314892"
+            },
+            {
+              "key": "1356",
+              "unstructured": "\u017di\u017eek, Slavoj (2009) First as tragedy, then as farce. Verso, London, New York."
+            }
+          ],
+          "container-title": [
+            "Transactions of the Association of European Schools of Planning"
+          ],
+          "link": [
+            {
+              "URL": "https://transactions-journal.aesop-planning.eu/index.php/TrAESOP/article/download/38/34",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://transactions-journal.aesop-planning.eu/index.php/TrAESOP/article/download/38/34",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                7,
+                13
+              ]
+            ],
+            "date-time": "2023-07-13T11:49:23Z",
+            "timestamp": 1689248963000
+          },
+          "score": 28.217897,
+          "resource": {
+            "primary": {
+              "URL": "https://transactions-journal.aesop-planning.eu/index.php/TrAESOP/article/view/38"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                6,
+                1
+              ]
+            ]
+          },
+          "references-count": 54,
+          "journal-issue": {
+            "issue": "1",
+            "published-online": {
+              "date-parts": [
+                [
+                  2020,
+                  6,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.24306/traesop.2020.01.004",
+          "ISSN": [
+            "2566-2147"
+          ],
+          "issn-type": [
+            {
+              "type": "electronic",
+              "value": "2566-2147"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                6,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                10
+              ]
+            ],
+            "date-time": "2026-03-10T05:20:20Z",
+            "timestamp": 1773120020484,
+            "version": "3.50.1"
+          },
+          "reference-count": 34,
+          "publisher": "Elsevier BV",
+          "issue": "19",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2013,
+                    10,
+                    1
+                  ]
+                ],
+                "date-time": "2013-10-01T00:00:00Z",
+                "timestamp": 1380585600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2013,
+                    7,
+                    16
+                  ]
+                ],
+                "date-time": "2013-07-16T00:00:00Z",
+                "timestamp": 1373932800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by-nc-sa/3.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "elsevier.com",
+              "sciencedirect.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Physica A: Statistical Mechanics and its Applications"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2013,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.physa.2013.05.033",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                5,
+                25
+              ]
+            ],
+            "date-time": "2013-05-25T02:47:20Z",
+            "timestamp": 1369450040000
+          },
+          "page": "4675-4682",
+          "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 17,
+          "title": [
+            "Self-organization of five species in a cyclic competition game"
+          ],
+          "prefix": "10.1016",
+          "volume": "392",
+          "author": [
+            {
+              "given": "Sha-Sha",
+              "family": "Feng",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Cheng-Cang",
+              "family": "Qiang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000005",
+              "series-title": "Evolutionary Games and Population Dynamics",
+              "author": "Hofbauer",
+              "year": "1998"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000010",
+              "series-title": "A Course in Game Theory",
+              "author": "Osborn",
+              "year": "1994"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000015",
+              "article-title": "Evolutionary games on graphs",
+              "volume": "446",
+              "author": "Szab\u00f3a",
+              "year": "2007",
+              "journal-title": "Physics Reports"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000020",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1086/282900",
+              "article-title": "Dispersion and population interactions",
+              "volume": "108",
+              "author": "Levin",
+              "year": "1974",
+              "journal-title": "The American Naturalist"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000025",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/20676",
+              "article-title": "Complex dynamics and phase synchronization in spatially extended ecological systems",
+              "volume": "399",
+              "author": "Blasius",
+              "year": "1999",
+              "journal-title": "Nature (London)"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000030",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/380240a0",
+              "article-title": "The rock\u2013paper\u2013scissors game and the evolution of alternative male strategies",
+              "volume": "380",
+              "author": "Sinervo",
+              "year": "1996",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000035",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/nature00823",
+              "article-title": "Local dispersal promotes biodiversity in a real-life game of rock\u2013paper\u2013scissors",
+              "volume": "418",
+              "author": "Kerr",
+              "year": "2002",
+              "journal-title": "Nature (London)"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000040",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1073/pnas.012399899",
+              "article-title": "Chemical warfare between microbes promotes biodiversity",
+              "volume": "99",
+              "author": "Cz\u00e1r\u00e1n",
+              "year": "2002",
+              "journal-title": "Proceedings of the National Academy of Sciences"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000045",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevLett.94.038102",
+              "article-title": "Noise promotes species diversity in nature",
+              "volume": "94",
+              "author": "Lai",
+              "year": "2005",
+              "journal-title": "Physical Review Letters"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000050",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevLett.95.238701",
+              "article-title": "Coevolutionary dynamics: from finite to infinite populations",
+              "volume": "95",
+              "author": "Traulsen",
+              "year": "2005",
+              "journal-title": "Physical Review Letters"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000055",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevLett.100.058104",
+              "article-title": "Cyclic dominance and biodiversity in well-mixed populations",
+              "volume": "100",
+              "author": "Claussen",
+              "year": "2008",
+              "journal-title": "Physical Review Letters"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000060",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/nature06095",
+              "article-title": "Mobility promotes and jeopardizes biodiversity in rock\u2013paper\u2013scissors games",
+              "volume": "448",
+              "author": "Reichenbach",
+              "year": "2007",
+              "journal-title": "Nature (London)"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000065",
+              "doi-asserted-by": "crossref",
+              "first-page": "238105",
+              "DOI": "10.1103/PhysRevLett.99.238105",
+              "article-title": "Noise and correlations in a spatial population model with cyclic competition",
+              "volume": "99",
+              "author": "Reichenbach",
+              "year": "2007",
+              "journal-title": "Physical Review Letters"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000070",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.jtbi.2008.05.014",
+              "article-title": "Self-organization of mobile population in cyclic competition",
+              "volume": "254",
+              "author": "Reichenbach",
+              "year": "2008",
+              "journal-title": "Journal of Theoretical Biology"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000075",
+              "article-title": "Three-fold way to extinction in populations of cyclically competing species",
+              "volume": "L01003",
+              "author": "Rulands",
+              "year": "2011",
+              "journal-title": "Journal of Statistical Mechanics: Theory and Experiment"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000080",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1063/1.3431629",
+              "article-title": "Role of intraspecific competition in the coexistence of mobile populations in spatially extended ecosystems",
+              "volume": "20",
+              "author": "Yang",
+              "year": "2010",
+              "journal-title": "Chaos"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000085",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevE.81.046113",
+              "article-title": "Effect of epidemic spreading on species coexistence in spatial rock\u2013paper\u2013scissors games",
+              "volume": "81",
+              "author": "Wang",
+              "year": "2010",
+              "journal-title": "Physical Review E"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000090",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevE.81.030901",
+              "article-title": "Basins of attraction for species extinction and coexistence in spatial rock\u2013paper\u2013scissors games",
+              "volume": "81",
+              "author": "Shi",
+              "year": "2010",
+              "journal-title": "Physical Review E"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000095",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevE.84.021912",
+              "article-title": "Effects of competition on pattern formation in the rock\u2013paper\u2013scissors game",
+              "volume": "84",
+              "author": "Jiang",
+              "year": "2011",
+              "journal-title": "Physical Review E"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000100",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/296424a0",
+              "article-title": "Multi-armed vortices in an active chemical medium",
+              "volume": "296",
+              "author": "Agladze",
+              "year": "1982",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000105",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1126/science.1064167",
+              "article-title": "Inwardly rotating spiral wave in a reaction\u2013diffusion system",
+              "volume": "294",
+              "author": "Vanag",
+              "year": "2001",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000110",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1073/pnas.0400984101",
+              "article-title": "Multiarm spirals in a two-dimensional cardiac substrate",
+              "volume": "101",
+              "author": "Bursac",
+              "year": "2004",
+              "journal-title": "Proceedings of the National Academy of Sciences"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000115",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevLett.78.2489",
+              "article-title": "Multiarmed spirals in excitable media",
+              "volume": "78",
+              "author": "Vasiev",
+              "year": "1997",
+              "journal-title": "Physical Review Letters"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000120",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevE.83.011917",
+              "article-title": "Pattern formation, synchronization, and outbreak of biodiversity in cyclically competing games",
+              "volume": "83",
+              "author": "Wang",
+              "year": "2011",
+              "journal-title": "Physical Review E"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000125",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1088/1367-2630/11/10/103001",
+              "article-title": "Emergence of target waves in paced populations of cyclically competing species",
+              "volume": "11",
+              "author": "Jiang",
+              "year": "2009",
+              "journal-title": "New Journal of Physics"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000130",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.physleta.2012.05.056",
+              "article-title": "Multi-armed spirals and multi-pairs antispirals in spatial rock\u2013paper\u2013scissors games",
+              "volume": "376",
+              "author": "Jiang",
+              "year": "2012",
+              "journal-title": "Physics Letters A"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000135",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1103/PhysRevE.77.041919",
+              "article-title": "Self-organizing patterns maintained by competing associations in a six species predator\u2013prey model",
+              "volume": "77",
+              "author": "Szab\u00f3",
+              "year": "2008",
+              "journal-title": "Physical Review E"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000140",
+              "article-title": "Spatial organization in cyclic Lotka\u2013Volterra systems",
+              "volume": "77",
+              "author": "Frachebourg",
+              "year": "1996",
+              "journal-title": "Physical Review E"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000145",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1088/1742-5468/2012/06/P06014",
+              "article-title": "Stochastic evolution of four species in cyclic competition",
+              "author": "Durney",
+              "year": "2012",
+              "journal-title": "Journal of Statistical Mechanics: Theory and Experiment"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000150",
+              "article-title": "Parity law for population dynamics of N-species with cyclic advantage competitions",
+              "volume": "255",
+              "author": "Sato",
+              "year": "2002",
+              "journal-title": "Applied Mathematics and Computation"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000155",
+              "doi-asserted-by": "crossref",
+              "first-page": "168106",
+              "DOI": "10.1103/PhysRevLett.110.168106",
+              "article-title": "Coexistence and survival in conservative Lotka\u2013Volterra networks",
+              "volume": "110",
+              "author": "Knebel",
+              "year": "2013",
+              "journal-title": "Physical Review Letters"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000160",
+              "series-title": "A Guide to First-Passage Processes",
+              "author": "Sidney",
+              "year": "2001"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000165",
+              "article-title": "Nonlinear aspects of competition between three species",
+              "volume": "243",
+              "author": "May",
+              "year": "1975",
+              "journal-title": "SIAM Journal of Applied Mathematics"
+            },
+            {
+              "key": "10.1016/j.physa.2013.05.033_br000170",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.cpc.2012.08.016",
+              "article-title": "XMDS2: fast, scalable simulation of couple stochastic partial differential equations",
+              "volume": "184",
+              "author": "Dennis",
+              "year": "2013",
+              "journal-title": "Computer Physics Communications"
+            }
+          ],
+          "container-title": [
+            "Physica A: Statistical Mechanics and its Applications"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0378437113004561?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0378437113004561?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                10,
+                15
+              ]
+            ],
+            "date-time": "2018-10-15T15:51:20Z",
+            "timestamp": 1539618680000
+          },
+          "score": 27.27602,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0378437113004561"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2013,
+                10
+              ]
+            ]
+          },
+          "references-count": 34,
+          "journal-issue": {
+            "issue": "19",
+            "published-print": {
+              "date-parts": [
+                [
+                  2013,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0378437113004561"
+          ],
+          "URL": "https://doi.org/10.1016/j.physa.2013.05.033",
+          "ISSN": [
+            "0378-4371"
+          ],
+          "issn-type": [
+            {
+              "value": "0378-4371",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2013,
+                10
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "Elsevier",
+              "name": "publisher",
+              "label": "This article is maintained by"
+            },
+            {
+              "value": "Self-organization of five species in a cyclic competition game",
+              "name": "articletitle",
+              "label": "Article Title"
+            },
+            {
+              "value": "Physica A: Statistical Mechanics and its Applications",
+              "name": "journaltitle",
+              "label": "Journal Title"
+            },
+            {
+              "value": "https://doi.org/10.1016/j.physa.2013.05.033",
+              "name": "articlelink",
+              "label": "CrossRef DOI link to publisher maintained version"
+            },
+            {
+              "value": "article",
+              "name": "content_type",
+              "label": "Content Type"
+            },
+            {
+              "value": "Copyright \u00a9 2013 The Authors. Published by Elsevier B.V.",
+              "name": "copyright",
+              "label": "Copyright"
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

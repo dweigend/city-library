@@ -1,7 +1,7 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "width" }, { field: "height" }, { field: "seed" }],
+  setup: ["width", "height", "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Voting",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
@@ -12,22 +12,16 @@ export const ui = defineUI(model, {
     { label: "Blue", value: (state) => state.counts.one },
     { label: "Green", value: (state) => state.counts.zero },
   ],
-  live: [
-    {
-      field: "changeVote",
+  live: {
+    changeVote: {
       label: "Change vote if tied",
-      value: (state) => state.parameters.changeVote,
-      set: (instance, value) =>
-        instance.setRules({ changeVote: Boolean(value) }),
+      set: (instance, value) => instance.setRules({ changeVote: value }),
     },
-    {
-      field: "awardCloseCallsToLoser",
-      label: "Award close calls to loser",
-      value: (state) => state.parameters.awardCloseCallsToLoser,
+    awardCloseCallsToLoser: {
       set: (instance, value) =>
-        instance.setRules({ awardCloseCallsToLoser: Boolean(value) }),
+        instance.setRules({ awardCloseCallsToLoser: value }),
     },
-  ],
+  },
   views: [
     {
       type: "inspector",

@@ -1,0 +1,814 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Inductive+Reasoning+and+Bounded+Rationality+Arthur+1994&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1783225,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                12,
+                14
+              ]
+            ],
+            "date-time": "2024-12-14T05:07:21Z",
+            "timestamp": 1734152841324,
+            "version": "3.30.2"
+          },
+          "reference-count": 29,
+          "publisher": "Elsevier BV",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1994,
+                    11,
+                    1
+                  ]
+                ],
+                "date-time": "1994-11-01T00:00:00Z",
+                "timestamp": 783648000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2013,
+                    7,
+                    17
+                  ]
+                ],
+                "date-time": "2013-07-17T00:00:00Z",
+                "timestamp": 1374019200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 6833,
+              "URL": "https://www.elsevier.com/open-access/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "International Journal of Approximate Reasoning"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1994,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1016/0888-613x(94)90023-x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                6,
+                30
+              ]
+            ],
+            "date-time": "2003-06-30T17:29:01Z",
+            "timestamp": 1056994141000
+          },
+          "page": "361-384",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Bounded rationality and search over small-world models"
+          ],
+          "prefix": "10.1016",
+          "volume": "11",
+          "author": [
+            {
+              "given": "Kathryn Blackmond",
+              "family": "Laskey",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "year": "1988",
+              "series-title": "Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference",
+              "author": "Pearl",
+              "key": "10.1016/0888-613X(94)90023-X_BIB1"
+            },
+            {
+              "year": "1989",
+              "series-title": "Scientific Reasoning: The Bayesian Approach",
+              "author": "Howsen",
+              "key": "10.1016/0888-613X(94)90023-X_BIB2"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB3",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1002/net.3230200508",
+              "article-title": "Probabilistic similarity networks",
+              "author": "Heckerman",
+              "year": "1990"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB4",
+              "series-title": "Proceedings of the Tenth International Joint Conference on Artificial Intelligence",
+              "first-page": "366",
+              "article-title": "munin: A causal probabilistic network for interpretation of electromyographic findings",
+              "author": "Andreassen",
+              "year": "1987"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB5",
+              "series-title": "Proceedings of the Sixth Conference on Unvertainty in Artificial Intelligence",
+              "first-page": "90",
+              "article-title": "Dynamic construction of belief networks",
+              "author": "Goldman",
+              "year": "1990"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB6",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1111/j.1467-8640.1992.tb00382.x",
+              "article-title": "Construction of belief and decision networks",
+              "author": "Breese",
+              "year": "1990"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB7",
+              "unstructured": "Laskey, Kathryn B., and Lehner, Paul E., Metareasoning and the problem of small worlds, IEEE Trans. Systems, Man Cybernet., to appear."
+            },
+            {
+              "article-title": "Some maxims for small worlds",
+              "year": "1991",
+              "author": "Laskey",
+              "key": "10.1016/0888-613X(94)90023-X_BIB8"
+            },
+            {
+              "issue": "1",
+              "key": "10.1016/0888-613X(94)90023-X_BIB9",
+              "doi-asserted-by": "crossref",
+              "first-page": "35",
+              "DOI": "10.1017/S0269888900006147",
+              "article-title": "From knowledge bases to decision models",
+              "volume": "7",
+              "author": "Wellman",
+              "year": "1992",
+              "journal-title": "Knowledge Engrg. Rev."
+            },
+            {
+              "year": "1990",
+              "series-title": "Representing and Reasoning with Probabilistic Knowledge: A Logical Approach to Probabilities",
+              "author": "Bacchus",
+              "key": "10.1016/0888-613X(94)90023-X_BIB10"
+            },
+            {
+              "article-title": "A Probabilistic approach to language understanding",
+              "year": "1990",
+              "author": "Goldman",
+              "key": "10.1016/0888-613X(94)90023-X_BIB11"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB12",
+              "series-title": "Principles of Knowledge Representation and Reasoning: Proceedings of the Second International Conference",
+              "first-page": "313",
+              "article-title": "A temporal probability logic for representing actions",
+              "author": "Haddawy",
+              "year": "1991"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB13",
+              "doi-asserted-by": "crossref",
+              "first-page": "605",
+              "DOI": "10.1080/01621459.1982.10477856",
+              "article-title": "The well-calibrated Bayesian (with discussion)",
+              "volume": "77",
+              "author": "Dawid",
+              "year": "1982",
+              "journal-title": "J. Amer. Statist. Assoc."
+            },
+            {
+              "year": "1954",
+              "series-title": "The Foundations of Statistics",
+              "author": "Savage",
+              "key": "10.1016/0888-613X(94)90023-X_BIB14"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB15",
+              "series-title": "Artificial Intelligence: Proceedings of the Seventh Conference",
+              "article-title": "Theory refinement on Bayesian networks",
+              "author": "Buntine",
+              "year": "1991"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB16",
+              "doi-asserted-by": "crossref",
+              "first-page": "309",
+              "DOI": "10.1007/BF00994110",
+              "article-title": "A Bayesian method for the induction of probabilistic networks from data",
+              "volume": "9",
+              "author": "Cooper",
+              "year": "1992",
+              "journal-title": "Machine Learning"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB17",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.2307/1403615",
+              "article-title": "Bayesian graphical models for discrete data",
+              "author": "Madigan",
+              "year": "1993"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB18",
+              "series-title": "Proceedings of the National Conference on Artificill Intelligence",
+              "first-page": "111",
+              "article-title": "Reasoning under varying and uncertain resource constraints",
+              "author": "Horvitz",
+              "year": "1988"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB19",
+              "doi-asserted-by": "crossref",
+              "first-page": "361",
+              "DOI": "10.1016/0004-3702(91)90015-C",
+              "article-title": "Principles of Metareasoning",
+              "volume": "49",
+              "author": "Russell",
+              "year": "1991",
+              "journal-title": "Artif. Intell."
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB20",
+              "doi-asserted-by": "crossref",
+              "first-page": "279",
+              "DOI": "10.1007/BF00992698",
+              "article-title": "Q-Learning",
+              "volume": "8",
+              "author": "Watkins",
+              "year": "1992",
+              "journal-title": "Machine Learning"
+            },
+            {
+              "article-title": "Assessment and propagation of model uncertainty",
+              "year": "1993",
+              "author": "Draper",
+              "key": "10.1016/0888-613X(94)90023-X_BIB21"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB22",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1080/01621459.1995.10476572",
+              "article-title": "Bayes factors and model uncertainty",
+              "author": "Kass",
+              "year": "1993"
+            },
+            {
+              "year": "1970",
+              "series-title": "Optimal Statistical Decisions",
+              "author": "DeGroot",
+              "key": "10.1016/0888-613X(94)90023-X_BIB23"
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB24",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1111/j.2517-6161.1983.tb01251.x",
+              "article-title": "Approximating priors by mixtures of natural conjugate priors",
+              "volume": "45",
+              "author": "Dalal",
+              "year": "1983",
+              "journal-title": "J. Roy. Statist. Soc. Ser. B"
+            },
+            {
+              "year": "1962",
+              "series-title": "The Structure of Scientific Revolutions",
+              "author": "Kuhn",
+              "key": "10.1016/0888-613X(94)90023-X_BIB25"
+            },
+            {
+              "article-title": "Computer-based probabilistic-network construction",
+              "year": "1991",
+              "author": "Herskovits",
+              "key": "10.1016/0888-613X(94)90023-X_BIB26"
+            },
+            {
+              "issue": "6",
+              "key": "10.1016/0888-613X(94)90023-X_BIB27",
+              "doi-asserted-by": "crossref",
+              "first-page": "721",
+              "DOI": "10.1109/TPAMI.1984.4767596",
+              "article-title": "Stochastic relaxation. Gibbs distributions and the Bayesian restoration of images",
+              "volume": "PAMI-6",
+              "author": "Geman",
+              "year": "1984",
+              "journal-title": "IEEE Trans. Pattern Analy. and Machine Intell."
+            },
+            {
+              "key": "10.1016/0888-613X(94)90023-X_BIB28",
+              "series-title": "Uncertainty in Artificial Intelligence: Proceedings of the Seventh Conference (1991)",
+              "article-title": "Conflict and surprise: Heuristics for model revision",
+              "author": "Laskey",
+              "year": "1991"
+            },
+            {
+              "year": "1979",
+              "series-title": "Probability and Measure",
+              "author": "Billingsley",
+              "key": "10.1016/0888-613X(94)90023-X_BIB29"
+            }
+          ],
+          "container-title": [
+            "International Journal of Approximate Reasoning"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0888613X9490023X?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0888613X9490023X?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                12,
+                13
+              ]
+            ],
+            "date-time": "2024-12-13T03:14:09Z",
+            "timestamp": 1734059649000
+          },
+          "score": 35.79381,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0888613X9490023X"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1994,
+                11
+              ]
+            ]
+          },
+          "references-count": 29,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  1994,
+                  11
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0888613X9490023X"
+          ],
+          "URL": "https://doi.org/10.1016/0888-613x(94)90023-x",
+          "ISSN": [
+            "0888-613X"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0888-613X"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1994,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                25
+              ]
+            ],
+            "date-time": "2026-03-25T13:28:13Z",
+            "timestamp": 1774445293735,
+            "version": "3.50.1"
+          },
+          "edition-number": "1",
+          "reference-count": 1,
+          "publisher": "Routledge",
+          "isbn-type": [
+            {
+              "value": "9781315658353",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2020,
+                12,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.4324/9781315658353-11",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                10,
+                30
+              ]
+            ],
+            "date-time": "2020-10-30T01:28:37Z",
+            "timestamp": 1604021317000
+          },
+          "page": "185-195",
+          "source": "Crossref",
+          "is-referenced-by-count": 4,
+          "title": [
+            "Bounded rationality, reasoning and dual processing"
+          ],
+          "prefix": "10.4324",
+          "author": [
+            {
+              "given": "Jonathan St. B. T.",
+              "family": "Evans",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "reference": [
+            {
+              "key": "ref10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Ackerman, R. (2014). The diminishing criterion role for metacognitive regulation of time investment. Journal of Experimental Psychology General, 143, 1349\u2013 1368.",
+              "DOI": "10.1037/a0035098"
+            }
+          ],
+          "container-title": [
+            "Routledge Handbook of Bounded Rationality"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2021-04-03T00:19:53Z",
+            "timestamp": 1617409193000
+          },
+          "score": 35.69683,
+          "resource": {
+            "primary": {
+              "URL": "https://www.taylorfrancis.com/books/9781317330806/chapters/10.4324/9781315658353-11"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                12,
+                2
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781315658353"
+          ],
+          "references-count": 1,
+          "URL": "https://doi.org/10.4324/9781315658353-11",
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                12,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                22
+              ]
+            ],
+            "date-time": "2026-09-22T20:42:22Z",
+            "timestamp": 1790109742789,
+            "version": "4.0.1"
+          },
+          "reference-count": 14,
+          "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1999,
+                    7,
+                    1
+                  ]
+                ],
+                "date-time": "1999-07-01T00:00:00Z",
+                "timestamp": 930787200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "IEEE Trans. Evol. Computat."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1999,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.1109/4235.771167",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                8,
+                24
+              ]
+            ],
+            "date-time": "2002-08-24T19:45:59Z",
+            "timestamp": 1030218359000
+          },
+          "page": "142-146",
+          "source": "Crossref",
+          "is-referenced-by-count": 48,
+          "title": [
+            "Inductive reasoning and bounded rationality reconsidered"
+          ],
+          "prefix": "10.1109",
+          "volume": "3",
+          "author": [
+            {
+              "given": "D.B.",
+              "family": "Fogel",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "K.",
+              "family": "Chellapilla",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "P.J.",
+              "family": "Angeline",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "263",
+          "reference": [
+            {
+              "key": "ref10",
+              "author": "fogel",
+              "year": "1966",
+              "journal-title": "Artificial Intelligence Through Simulated Evolution"
+            },
+            {
+              "key": "ref11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/72.265964"
+            },
+            {
+              "key": "ref12",
+              "author": "dawkins",
+              "year": "1989",
+              "journal-title": "The Selfish Gene"
+            },
+            {
+              "key": "ref13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0303-2647(97)00050-6"
+            },
+            {
+              "key": "ref14",
+              "first-page": "115",
+              "author": "hofstadter",
+              "year": "1995",
+              "journal-title": "Fluid Concepts and Creative Analogies"
+            },
+            {
+              "key": "ref4",
+              "first-page": "45",
+              "article-title": "an evolutionary trade network game with preferential partner selection",
+              "author": "tesfatsion",
+              "year": "1996",
+              "journal-title": "Evolutionary Programming V"
+            },
+            {
+              "key": "ref3",
+              "author": "casti",
+              "year": "1997",
+              "journal-title": "Would-Be Worlds"
+            },
+            {
+              "key": "ref6",
+              "author": "simon",
+              "year": "1982",
+              "journal-title": "Models of Bounded Rationality"
+            },
+            {
+              "key": "ref5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01298460"
+            },
+            {
+              "key": "ref8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9780511806292"
+            },
+            {
+              "key": "ref7",
+              "first-page": "406",
+              "article-title": "inductive reasoning and bounded rationality",
+              "volume": "84",
+              "author": "arthur",
+              "year": "1994",
+              "journal-title": "Amer Econ Assn Papers Proc"
+            },
+            {
+              "key": "ref2",
+              "first-page": "387",
+              "article-title": "computer simulation of dispersal by <emph>anopehles gambiae s.l.</emph> in west africa",
+              "author": "carnahan",
+              "year": "1997",
+              "journal-title": "Artificial Life V"
+            },
+            {
+              "key": "ref1",
+              "first-page": "1",
+              "article-title": "artificial life as a tool for biological inquiry",
+              "author": "taylor",
+              "year": "1995",
+              "journal-title": "Artificial Life An Overview"
+            },
+            {
+              "key": "ref9",
+              "doi-asserted-by": "crossref",
+              "first-page": "48",
+              "DOI": "10.1073/pnas.36.1.48",
+              "article-title": "equilibrium points in <formula><tex>$n$</tex></formula>-person games",
+              "volume": "36",
+              "author": "nash",
+              "year": "1950",
+              "journal-title": "Proc Nat Acad Sci"
+            }
+          ],
+          "container-title": [
+            "IEEE Transactions on Evolutionary Computation"
+          ],
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx5/4235/16702/00771167.pdf?arnumber=771167",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                11,
+                29
+              ]
+            ],
+            "date-time": "2021-11-29T20:10:28Z",
+            "timestamp": 1638216628000
+          },
+          "score": 35.398304,
+          "resource": {
+            "primary": {
+              "URL": "http://ieeexplore.ieee.org/document/771167/"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1999,
+                7
+              ]
+            ]
+          },
+          "references-count": 14,
+          "journal-issue": {
+            "issue": "2"
+          },
+          "URL": "https://doi.org/10.1109/4235.771167",
+          "ISSN": [
+            "1089-778X"
+          ],
+          "issn-type": [
+            {
+              "value": "1089-778X",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1999,
+                7
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

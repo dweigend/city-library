@@ -1,0 +1,23 @@
+{
+  "url": "http://localhost:3150/?experiment=urban-suite-structure-from-randomness-1",
+  "build": "1793974956602",
+  "modules": [
+    {
+      "url": "http://localhost:3150/app.js",
+      "bytes": 45768,
+      "sha256": "c4594797ba50fe0b6cf528e5cb618cdc2b98cd2c51d8ad282a9d770c7f40fc28"
+    },
+    {
+      "url": "http://localhost:3150/chunks/app-x1tsm02m.js",
+      "bytes": 1128766,
+      "sha256": "99b952cf53e9c69767577eff97cfa3202aabe4f4de3399e6b747074ec83ff3cc"
+    },
+    {
+      "url": "http://localhost:3150/chunks/ui-1krqd4x0.js",
+      "bytes": 6157,
+      "sha256": "cc8f9907cff62b38125f0559a3db745f11fbb8a3bd57e106db9a2343e24b1962"
+    }
+  ],
+  "sourceMarker": null,
+  "sourceMarkerNote": "These existing four model.ts files contain no exported sourceMarker; exact model/UI/source hashes identify them."
+}

@@ -1,0 +1,103 @@
+{
+  "slug": "plant-growth",
+  "name": "Plant Growth",
+  "catalogPath": "Sample Models/Biology/Unverified/Plant Growth",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Unverified/Plant%20Growth.nlogox",
+  "deliveryBatch": "B10",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can a growing structure concentrate effort where resources are available? NetLogo Plant Growth creates leaf-like and root-like cells that collect different resources but require both to survive. Directionally biased exchange of sugar and water helps sustain productive branches while unproductive regions can fail. Root–shoot allocation theory [1], algorithmic plant architecture [2], and root-plasticity research [3] provide scientific comparisons. The Info explicitly says the model is not intended to be biologically realistic. Its resource flows and cell addition rules are exploratory abstractions rather than plant vascular physiology. Adaptive-looking growth illustrates consequences of these rules; it does not establish optimal allocation, realistic developmental signaling, or a quantitative prediction of yield in a particular environment.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Unverified/Plant%20Growth.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Unverified/Plant%20Growth.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 7e5f7b905fc47ab9901dd857e8ff1e021d6dc1f67ef5f450200cd67219ee43d5",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/plant-growth.nlogox",
+    "infoFile": "evidence/biology/plant-growth-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1998).  NetLogo Plant Growth model.  http://ccl.northwestern.edu/netlogo/models/PlantGrowth.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "thornley",
+      "authors": [
+        "J. H. M. THORNLEY"
+      ],
+      "title": "A Balanced Quantitative Model for Root: Shoot Ratios in Vegetative Plants",
+      "year": 1972,
+      "venue": "Annals of Botany",
+      "doi": "10.1093/oxfordjournals.aob.a084602",
+      "url": "https://doi.org/10.1093/oxfordjournals.aob.a084602",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=A+balanced+quantitative+model+for+root+shoot+ratios+in+vegetative+plants+Thornley+1972&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/thornley-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "36",
+      "issue": "2",
+      "pages": "431-441",
+      "relevance": "A quantitative root–shoot allocation model provides a scientific comparison for sharing resources between functional compartments."
+    },
+    {
+      "id": "prusinkiewicz",
+      "authors": [
+        "Przemyslaw Prusinkiewicz",
+        "Aristid Lindenmayer"
+      ],
+      "title": "The Algorithmic Beauty of Plants",
+      "year": 1990,
+      "venue": "Springer New York",
+      "doi": "10.1007/978-1-4613-8476-2",
+      "url": "https://doi.org/10.1007/978-1-4613-8476-2",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-4613-8476-2",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/prusinkiewicz-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "relevance": "A scientific monograph on algorithmic plant form contextualizes local growth rules and their architectural consequences."
+    },
+    {
+      "id": "hodge",
+      "authors": [
+        "Angela Hodge"
+      ],
+      "title": "The plastic plant: root responses to heterogeneous supplies of nutrients",
+      "year": 2004,
+      "venue": "New Phytologist",
+      "doi": "10.1111/j.1469-8137.2004.01015.x",
+      "url": "https://doi.org/10.1111/j.1469-8137.2004.01015.x",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+plastic+plant+root+responses+to+heterogeneous+supplies+of+nutrients+Hodge+2004&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/hodge-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fj.1469-8137.2004.01015.x%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/hodge-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "162",
+      "issue": "1",
+      "pages": "9-24",
+      "relevance": "Research on root plasticity in heterogeneous nutrients grounds the ecological question of resource-directed development."
+    }
+  ],
+  "gaps": []
+}

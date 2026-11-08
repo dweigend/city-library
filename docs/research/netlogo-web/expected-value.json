@@ -1,0 +1,110 @@
+{
+  "slug": "expected-value",
+  "name": "Expected Value",
+  "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Expected Value",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Expected%20Value.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can uncertain individual outcomes yield a predictable average value? NetLogo Expected Value assigns numerical values to patches according to chosen ratios, calculates a probability-weighted expectation, and lets a moving sampler collect values into repeated totals. Jaynes [1] supplies the weighted-expectation interpretation, Durrett [2] formalizes means and dependence, and Wilensky [3] provides relevant research on learning statistical regularities through simulation. The original Procedures use a local walk for the sampler; successive observations need not be independent draws from the whole patch population. Consequently, finite-run agreement depends on spatial arrangement and movement as well as assigned proportions. The simulation illustrates the distinction between an outcome's probability and its numerical worth. It does not make the expected value a guaranteed payoff, nor does a matching long-run mean alone establish unbiased or independent sampling.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Expected%20Value.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Expected%20Value.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 84883dc6b6538fd5d9e04e61cc68a01cec5c11a528aaab5a84250908425b98eb",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/expected-value.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Abrahamson, D. and Wilensky, U. (2004).  NetLogo Expected Value model.  http://ccl.northwestern.edu/netlogo/models/ExpectedValue.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/expected-value.nlogox",
+    "evidenceFile": "evidence/computing/expected-value.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1017/cbo9780511790423",
+      "authors": [
+        "E. T. Jaynes"
+      ],
+      "title": "Probability Theory: The Logic of Science",
+      "year": 2003,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/cbo9780511790423",
+      "url": "https://doi.org/10.1017/cbo9780511790423",
+      "relevance": "Probability-weighted values provide the direct meaning of expectation.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2FCBO9780511790423",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_cbo9780511790423.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_cbo9780511790423.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9780521592710",
+        "9780511790423"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Dependence and averaging are essential because the original sampler follows a local walk.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1023/a:1002935313957",
+      "authors": [
+        "Uri Wilensky"
+      ],
+      "title": "What is Normal Anyway? Therapy for Epistemological Anxiety",
+      "year": 1997,
+      "venue": "Educational Studies in Mathematics",
+      "doi": "10.1023/a:1002935313957",
+      "url": "https://doi.org/10.1023/a:1002935313957",
+      "relevance": "Research on constructive statistical reasoning supports comparison of local outcomes and aggregate distributions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1023%2FA%3A1002935313957",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1023_a_1002935313957.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1023_a_1002935313957.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "33",
+      "issue": "2",
+      "pages": "171-202",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

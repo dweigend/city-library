@@ -1,0 +1,520 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+eyes+of+advanced+insects&rows=4",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 588078,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                29
+              ]
+            ],
+            "date-time": "2022-03-29T22:15:36Z",
+            "timestamp": 1648592136702
+          },
+          "reference-count": 0,
+          "publisher": "University of Chicago Press",
+          "issue": "485",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "The American Naturalist"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1907,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.1086/278780",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                26
+              ]
+            ],
+            "date-time": "2002-07-26T13:19:42Z",
+            "timestamp": 1027689582000
+          },
+          "page": "343-344",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Divided Eyes of Insects"
+          ],
+          "prefix": "10.1086",
+          "volume": "41",
+          "member": "200",
+          "container-title": [
+            "The American Naturalist"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.journals.uchicago.edu/doi/pdf/10.1086/278780",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                7
+              ]
+            ],
+            "date-time": "2018-04-07T03:19:40Z",
+            "timestamp": 1523071180000
+          },
+          "score": 22.677929,
+          "resource": {
+            "primary": {
+              "URL": "https://www.journals.uchicago.edu/doi/10.1086/278780"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1907,
+                5
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "485",
+            "published-print": {
+              "date-parts": [
+                [
+                  1907,
+                  5
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1086/278780"
+          ],
+          "URL": "https://doi.org/10.1086/278780",
+          "ISSN": [
+            "0003-0147",
+            "1537-5323"
+          ],
+          "issn-type": [
+            {
+              "value": "0003-0147",
+              "type": "print"
+            },
+            {
+              "value": "1537-5323",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1907,
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                31
+              ]
+            ],
+            "date-time": "2022-03-31T17:53:12Z",
+            "timestamp": 1648749192342
+          },
+          "reference-count": 0,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "6",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Sci Am"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1926,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.1038/scientificamerican1226-407",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2011-04-29T16:19:26Z",
+            "timestamp": 1304093966000
+          },
+          "page": "407-408",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "The Multiple Eyes of Insects"
+          ],
+          "prefix": "10.1038",
+          "volume": "135",
+          "author": [
+            {
+              "given": "H.",
+              "family": "Eltringham",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "container-title": [
+            "Scientific American"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                1,
+                12
+              ]
+            ],
+            "date-time": "2021-01-12T07:49:48Z",
+            "timestamp": 1610437788000
+          },
+          "score": 21.654613,
+          "resource": {
+            "primary": {
+              "URL": "https://www.scientificamerican.com/article/the-multiple-eyes-of-insects"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1926,
+                12
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "6",
+            "published-print": {
+              "date-parts": [
+                [
+                  1926,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "scientificamerican1226-407"
+          ],
+          "URL": "https://doi.org/10.1038/scientificamerican1226-407",
+          "ISSN": [
+            "0036-8733"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8733",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1926,
+                12
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                11
+              ]
+            ],
+            "date-time": "2022-06-11T16:15:29Z",
+            "timestamp": 1654964129972
+          },
+          "edition-number": "1",
+          "reference-count": 0,
+          "publisher": "Cambridge University Press",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2016,
+                    6,
+                    5
+                  ]
+                ],
+                "date-time": "2016-06-05T00:00:00Z",
+                "timestamp": 1465084800000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 339,
+              "URL": "https://www.cambridge.org/core/terms"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2015,
+                7,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.1017/cbo9781316146545.011",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                5
+              ]
+            ],
+            "date-time": "2016-06-05T08:38:11Z",
+            "timestamp": 1465115891000
+          },
+          "page": "192-206",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "INSECTS : THEIR EARS AND EYES"
+          ],
+          "prefix": "10.1017",
+          "member": "56",
+          "container-title": [
+            "Evenings at the Microscope"
+          ],
+          "link": [
+            {
+              "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5E1A802CC897E9189B9E884D31724FB9",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                11
+              ]
+            ],
+            "date-time": "2022-06-11T15:48:00Z",
+            "timestamp": 1654962480000
+          },
+          "score": 21.642168,
+          "resource": {
+            "primary": {
+              "URL": "https://www.cambridge.org/core/product/identifier/CBO9781316146545A015/type/book_part"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2015,
+                7,
+                2
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1017/cbo9781316146545.011",
+          "published": {
+            "date-parts": [
+              [
+                2015,
+                7,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2022-04-02T04:34:28Z",
+            "timestamp": 1648874068840
+          },
+          "reference-count": 0,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Sci Am"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1925,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1038/scientificamerican0125-32",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2011-04-29T16:06:35Z",
+            "timestamp": 1304093195000
+          },
+          "page": "32-33",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Jewels in the Eyes of Insects"
+          ],
+          "prefix": "10.1038",
+          "volume": "132",
+          "author": [
+            {
+              "given": "S. F.",
+              "family": "Aaron",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "container-title": [
+            "Scientific American"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                1,
+                12
+              ]
+            ],
+            "date-time": "2021-01-12T19:33:44Z",
+            "timestamp": 1610480024000
+          },
+          "score": 20.782211,
+          "resource": {
+            "primary": {
+              "URL": "https://www.scientificamerican.com/article/jewels-in-the-eyes-of-insects"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1925,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1925,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "scientificamerican0125-32"
+          ],
+          "URL": "https://doi.org/10.1038/scientificamerican0125-32",
+          "ISSN": [
+            "0036-8733"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8733",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1925,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 4,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

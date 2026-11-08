@@ -1,0 +1,483 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=On+protein+synthesis+Crick+1958&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2873976,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                12
+              ]
+            ],
+            "date-time": "2026-02-12T11:23:57Z",
+            "timestamp": 1770895437376,
+            "version": "3.50.1"
+          },
+          "reference-count": 0,
+          "publisher": "American Psychological Association (APA)",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "American Psychologist"
+          ],
+          "DOI": "10.1037/a0032144",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                4,
+                15
+              ]
+            ],
+            "date-time": "2013-04-15T16:05:44Z",
+            "timestamp": 1366041944000
+          },
+          "page": "184-184",
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "Nicki Rae Crick (1958\u20132012)."
+          ],
+          "prefix": "10.1037",
+          "volume": "68",
+          "author": [
+            {
+              "given": "Dianna",
+              "family": "Murray-Close",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Jamie M.",
+              "family": "Ostrov",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Dante",
+              "family": "Cicchetti",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "15",
+          "published-online": {
+            "date-parts": [
+              [
+                2013,
+                4
+              ]
+            ]
+          },
+          "container-title": [
+            "American Psychologist"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://psycnet.apa.org/journals/amp/68/3/184.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                6
+              ]
+            ],
+            "date-time": "2024-02-06T00:30:07Z",
+            "timestamp": 1707179407000
+          },
+          "score": 26.939754,
+          "resource": {
+            "primary": {
+              "URL": "https://doi.apa.org/doi/10.1037/a0032144"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2013,
+                4
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-online": {
+              "date-parts": [
+                [
+                  2013,
+                  4
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "2013-12501-006"
+          ],
+          "URL": "https://doi.org/10.1037/a0032144",
+          "ISSN": [
+            "1935-990X",
+            "0003-066X"
+          ],
+          "issn-type": [
+            {
+              "value": "1935-990X",
+              "type": "electronic"
+            },
+            {
+              "value": "0003-066X",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2013,
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                26
+              ]
+            ],
+            "date-time": "2025-03-26T23:35:38Z",
+            "timestamp": 1743032138018,
+            "version": "3.40.3"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 0,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9783031239250"
+            },
+            {
+              "type": "electronic",
+              "value": "9783031239267"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2023-01-01T00:00:00Z",
+                "timestamp": 1672531200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2023-01-01T00:00:00Z",
+                "timestamp": 1672531200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2023
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-031-23926-7_14",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2023,
+                1,
+                13
+              ]
+            ],
+            "date-time": "2023-01-13T03:02:57Z",
+            "timestamp": 1673578977000
+          },
+          "page": "153-164",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Rosalind Franklin (1920\u20131958): The Woman Next to Watson and Crick"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Lars",
+              "family": "Jaeger",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2023,
+                1,
+                14
+              ]
+            ]
+          },
+          "container-title": [
+            "Women of Genius in Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-23926-7_14",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                1,
+                13
+              ]
+            ],
+            "date-time": "2023-01-13T03:24:10Z",
+            "timestamp": 1673580250000
+          },
+          "score": 21.394447,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/978-3-031-23926-7_14"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783031239250",
+            "9783031239267"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1007/978-3-031-23926-7_14",
+          "published": {
+            "date-parts": [
+              [
+                2023
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "14 January 2023",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                8
+              ]
+            ],
+            "date-time": "2024-09-08T13:45:45Z",
+            "timestamp": 1725803145679
+          },
+          "publisher-location": "Berlin, Heidelberg",
+          "reference-count": 0,
+          "publisher": "Springer Berlin Heidelberg",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9783642417139"
+            },
+            {
+              "type": "electronic",
+              "value": "9783642417146"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2014
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-642-41714-6_35426",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2015,
+                3,
+                25
+              ]
+            ],
+            "date-time": "2015-03-25T00:19:47Z",
+            "timestamp": 1427242787000
+          },
+          "page": "306-306",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "crick"
+          ],
+          "prefix": "10.1007",
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2014,
+                8,
+                24
+              ]
+            ]
+          },
+          "container-title": [
+            "Dictionary Geotechnical Engineering/W\u00f6rterbuch GeoTechnik"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-3-642-41714-6_35426",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2015,
+                3,
+                25
+              ]
+            ],
+            "date-time": "2015-03-25T01:36:28Z",
+            "timestamp": 1427247388000
+          },
+          "score": 18.81839,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-3-642-41714-6_35426"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2014
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783642417139",
+            "9783642417146"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1007/978-3-642-41714-6_35426",
+          "published": {
+            "date-parts": [
+              [
+                2014
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

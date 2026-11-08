@@ -1,0 +1,820 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+model+of+a+spreading+plant+population+Auld+Coote+1980&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 4363139,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                25
+              ]
+            ],
+            "date-time": "2026-01-25T22:17:51Z",
+            "timestamp": 1769379471306,
+            "version": "3.49.0"
+          },
+          "reference-count": 0,
+          "publisher": "JSTOR",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Oikos"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1980,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.2307/3544288",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                11,
+                16
+              ]
+            ],
+            "date-time": "2006-11-16T17:43:52Z",
+            "timestamp": 1163699032000
+          },
+          "page": "287",
+          "source": "Crossref",
+          "is-referenced-by-count": 56,
+          "title": [
+            "A Model of a Spreading Plant Population"
+          ],
+          "prefix": "10.2307",
+          "volume": "34",
+          "author": [
+            {
+              "given": "B. A.",
+              "family": "Auld",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "B. G.",
+              "family": "Coote",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1121",
+          "container-title": [
+            "Oikos"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                5,
+                8
+              ]
+            ],
+            "date-time": "2018-05-08T16:08:10Z",
+            "timestamp": 1525795690000
+          },
+          "score": 28.182901,
+          "resource": {
+            "primary": {
+              "URL": "https://www.jstor.org/stable/3544288?origin=crossref"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1980,
+                5
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1980,
+                  5
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2307/3544288",
+          "ISSN": [
+            "0030-1299"
+          ],
+          "issn-type": [
+            {
+              "value": "0030-1299",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1980,
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                30
+              ]
+            ],
+            "date-time": "2026-09-30T20:47:28Z",
+            "timestamp": 1790801248698,
+            "version": "4.1.0"
+          },
+          "reference-count": 64,
+          "publisher": "Wiley",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2001,
+                    12,
+                    21
+                  ]
+                ],
+                "date-time": "2001-12-21T00:00:00Z",
+                "timestamp": 1008892800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 203,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Applied Ecology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2001,
+                6
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Summary</jats:title><jats:p><jats:list list-type=\"explicit-label\"><jats:list-item><jats:p>\u2002Process\u2010based models, and spatially explicit models in particular, will play an important role in predicting the impacts of future environmental change. Enthusiasm for the rich potential of these models, however, is tempered by the realization that their parameterization is often challenging and time consuming. Moreover, these models are seldom validated; this makes their predictive value in applied contexts uncertain.</jats:p></jats:list-item><jats:list-item><jats:p>In this paper we describe the process of parameterizing and validating a spatial demographic model of a spreading alien plant population. The model, a spatially explicit individual\u2010based simulation, has modest data requirements (for a spatial simulation model) in that it concentrates on simulating recruitment, dispersal, mortality and disturbance and ignores the environmental and biotic heterogeneity of the receiving environment.</jats:p></jats:list-item><jats:list-item><jats:p>We tested the model using the invasion of<jats:italic>Acacia cyclops</jats:italic>and<jats:italic>Pinus pinaster</jats:italic>into fynbos, the mediterranean shrublands of South Africa, as a case study. Dispersal, recruitment and mortality data were collected for each species at six different sites. Aerial photographs from six independent sites (two sites for<jats:italic>A. cyclops</jats:italic>and four sites for<jats:italic>P. pinaster)</jats:italic>were used to reconstruct the invasion histories of the two species between 1938 and 1989. Demographic data were used to parameterize the model, and the 1938 distribution of alien plants, derived from aerial photography, was used to initialize the model.</jats:p></jats:list-item><jats:list-item><jats:p>The empirically estimated indices of rate and pattern of invasion fell within the range of model predictions made at all six sites studied. The indices of rate and pattern of invasion predicted by the model did not differ significantly from the empirically estimated indices for 76% of the model data comparisons made. These analyses suggested that the model predictions are good, given the variance in parameter estimates.</jats:p></jats:list-item><jats:list-item><jats:p>The proportion of grid locations where the model correctly predicted alien plant distribution was typically above 0\u00b775 and always above 0\u00b75 for both species. A permutation test showed that locations of invasive plants predicted by the model were significantly better than random for<jats:italic>P. pinaster</jats:italic>, but not always for<jats:italic>A. cyclops;</jats:italic>this may be because<jats:italic>A. cyclops</jats:italic>is bird dispersed, and its dispersal may be biased towards perch sites, whereas<jats:italic>P. pinaster</jats:italic>is wind dispersed.</jats:p></jats:list-item><jats:list-item><jats:p>We conclude that, although spatial simulation models are often more difficult to parameterize and validate than statistical or analytical models, there are situations where such effort is warranted. In this case the validation process provides confidence to use the model as a tool for planning the control of invasive plants. In a more general sense we believe that the approach outlined here could be used for model parameterization and validation in situations where spatial simulation models seem appropriate.</jats:p></jats:list-item></jats:list></jats:p>",
+          "DOI": "10.1046/j.1365-2664.2001.00616.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                3,
+                12
+              ]
+            ],
+            "date-time": "2003-03-12T08:22:50Z",
+            "timestamp": 1047457370000
+          },
+          "page": "571-584",
+          "source": "Crossref",
+          "is-referenced-by-count": 92,
+          "title": [
+            "Validation of a spatial simulation model of a spreading alien plant population"
+          ],
+          "prefix": "10.1111",
+          "volume": "38",
+          "author": [
+            {
+              "given": "Steven I.",
+              "family": "Higgins",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "David M.",
+              "family": "Richardson",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Richard M.",
+              "family": "Cowling",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2001,
+                12,
+                21
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_6_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0006-3207(92)91114-8"
+            },
+            {
+              "key": "e_1_2_6_3_1",
+              "volume-title": "Arc/Info, Version 7.0.3",
+              "author": "Arc/Info",
+              "year": "1995"
+            },
+            {
+              "key": "e_1_2_6_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0167-8809(90)90189-K"
+            },
+            {
+              "key": "e_1_2_6_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2845208"
+            },
+            {
+              "key": "e_1_2_6_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1523-1739.1995.09061587.x"
+            },
+            {
+              "key": "e_1_2_6_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9615(1998)068[0325:SDATHM]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_6_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1311089"
+            },
+            {
+              "key": "e_1_2_6_9_1",
+              "first-page": "1",
+              "article-title": "A classification of the mountain vegetation of the fynbos biome",
+              "volume": "50",
+              "author": "Campbell B.M.",
+              "year": "1986",
+              "journal-title": "Memoirs of the Botanical Survey of South Africa"
+            },
+            {
+              "key": "e_1_2_6_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/286162"
+            },
+            {
+              "key": "e_1_2_6_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1313224"
+            },
+            {
+              "key": "e_1_2_6_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3236461"
+            },
+            {
+              "key": "e_1_2_6_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0304-3800(89)90001-X"
+            },
+            {
+              "key": "e_1_2_6_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3235578"
+            },
+            {
+              "key": "e_1_2_6_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0254-6299(16)31329-1"
+            },
+            {
+              "key": "e_1_2_6_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00137608"
+            },
+            {
+              "key": "e_1_2_6_17_1",
+              "first-page": "333",
+              "article-title": "Species diversity; functional diversity and functional redundancy in fynbos communities",
+              "volume": "90",
+              "author": "Cowling R.M.",
+              "year": "1994",
+              "journal-title": "South African Journal of Science"
+            },
+            {
+              "key": "e_1_2_6_18_1",
+              "first-page": "373",
+              "volume-title": "Colonisation, Succession and Stability",
+              "author": "Davis M.B.",
+              "year": "1987"
+            },
+            {
+              "key": "e_1_2_6_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-1-4612-4740-1"
+            },
+            {
+              "key": "e_1_2_6_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1941720"
+            },
+            {
+              "key": "e_1_2_6_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3180.1985.tb00634.x"
+            },
+            {
+              "key": "e_1_2_6_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00382167.1983.9628867"
+            },
+            {
+              "key": "e_1_2_6_23_1",
+              "first-page": "76",
+              "volume-title": "Ecotones \u2013 The Role of Landscape Boundaries in the Management and Restoration of Changing Environments",
+              "author": "Gardner R.H.",
+              "year": "1991"
+            },
+            {
+              "key": "e_1_2_6_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0304-3800(81)90012-0"
+            },
+            {
+              "key": "e_1_2_6_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00347002"
+            },
+            {
+              "key": "e_1_2_6_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0304-3800(95)00022-4"
+            },
+            {
+              "key": "e_1_2_6_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1009760512895"
+            },
+            {
+              "key": "e_1_2_6_28_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/303193"
+            },
+            {
+              "key": "e_1_2_6_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0921-8009(97)00574-0"
+            },
+            {
+              "key": "e_1_2_6_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2265699"
+            },
+            {
+              "key": "e_1_2_6_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/1051-0761(2000)010[1833:UADLMF]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_6_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1523-1739.1999.013002303.x"
+            },
+            {
+              "key": "e_1_2_6_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0921-8009(97)00575-2"
+            },
+            {
+              "key": "e_1_2_6_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0254-6299(16)31179-6"
+            },
+            {
+              "key": "e_1_2_6_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1442-9993.1992.tb00812.x"
+            },
+            {
+              "key": "e_1_2_6_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0304-3800(87)90072-X"
+            },
+            {
+              "key": "e_1_2_6_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0304-3800(96)01900-X"
+            },
+            {
+              "key": "e_1_2_6_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261529"
+            },
+            {
+              "key": "e_1_2_6_39_1",
+              "first-page": "300",
+              "volume-title": "Vegetation of South Africa",
+              "author": "Lubke R.A.",
+              "year": "1997"
+            },
+            {
+              "key": "e_1_2_6_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0304-3746(81)90027-5"
+            },
+            {
+              "key": "e_1_2_6_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-1-4899-2995-2"
+            },
+            {
+              "key": "e_1_2_6_42_1",
+              "volume-title": "Geographical population analysis: Tools for the analysis of biodiversity",
+              "author": "Maurer B.A.",
+              "year": "1994"
+            },
+            {
+              "key": "e_1_2_6_43_1",
+              "first-page": "69",
+              "volume-title": "Proceedings of the Third National Weeds Conference of South Africa",
+              "author": "Milton S.J.",
+              "year": "1980"
+            },
+            {
+              "key": "e_1_2_6_44_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3545980"
+            },
+            {
+              "key": "e_1_2_6_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2963479"
+            },
+            {
+              "key": "e_1_2_6_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2845737"
+            },
+            {
+              "key": "e_1_2_6_47_1",
+              "volume-title": "A Critique for Ecology",
+              "author": "Peters R.H.",
+              "year": "1992"
+            },
+            {
+              "key": "e_1_2_6_48_1",
+              "first-page": "464",
+              "article-title": "Plant migration and climate change",
+              "volume": "85",
+              "author": "Pitelka L.F.",
+              "year": "1997",
+              "journal-title": "American Scientist"
+            },
+            {
+              "key": "e_1_2_6_49_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/336207"
+            },
+            {
+              "key": "e_1_2_6_50_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02912779"
+            },
+            {
+              "key": "e_1_2_6_51_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939638"
+            },
+            {
+              "key": "e_1_2_6_52_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0254-6299(16)31486-7"
+            },
+            {
+              "key": "e_1_2_6_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-642-76174-4_9"
+            },
+            {
+              "key": "e_1_2_6_54_1",
+              "first-page": "271",
+              "volume-title": "The Ecology of Fynbos",
+              "author": "Richardson D.M.",
+              "year": "1992"
+            },
+            {
+              "key": "e_1_2_6_55_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1523-1739.1997.96151.x"
+            },
+            {
+              "key": "e_1_2_6_56_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0304-3800(95)00152-2"
+            },
+            {
+              "key": "e_1_2_6_57_1",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/oso/9780198548522.001.0001",
+              "volume-title": "Biological Invasions: Theory and Practice",
+              "author": "Shigesada N.",
+              "year": "1997"
+            },
+            {
+              "key": "e_1_2_6_58_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00137609"
+            },
+            {
+              "key": "e_1_2_6_59_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/biomet/38.1-2.196"
+            },
+            {
+              "key": "e_1_2_6_60_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1997)078[0081:CIRLAG]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_6_61_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2664.2000.00551.x"
+            },
+            {
+              "key": "e_1_2_6_62_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3545979"
+            },
+            {
+              "key": "e_1_2_6_63_1",
+              "first-page": "6",
+              "volume-title": "Disturbance and the Dynamics of Fynbos Biome Communities",
+              "author": "Van Wilgen B.W.",
+              "year": "1987"
+            },
+            {
+              "key": "e_1_2_6_64_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00377580"
+            },
+            {
+              "key": "e_1_2_6_65_1",
+              "volume-title": "Biological Invasions",
+              "author": "Williamson M.",
+              "year": "1996"
+            }
+          ],
+          "container-title": [
+            "Journal of Applied Ecology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1046%2Fj.1365-2664.2001.00616.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1046%2Fj.1365-2664.2001.00616.x",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1046/j.1365-2664.2001.00616.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                3
+              ]
+            ],
+            "date-time": "2024-01-03T19:40:25Z",
+            "timestamp": 1704310825000
+          },
+          "score": 23.312628,
+          "resource": {
+            "primary": {
+              "URL": "https://besjournals.onlinelibrary.wiley.com/doi/10.1046/j.1365-2664.2001.00616.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2001,
+                6
+              ]
+            ]
+          },
+          "references-count": 64,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  2001,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1046/j.1365-2664.2001.00616.x"
+          ],
+          "URL": "https://doi.org/10.1046/j.1365-2664.2001.00616.x",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0021-8901",
+            "1365-2664"
+          ],
+          "issn-type": [
+            {
+              "value": "0021-8901",
+              "type": "print"
+            },
+            {
+              "value": "1365-2664",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2001,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                4
+              ]
+            ],
+            "date-time": "2022-04-04T05:04:35Z",
+            "timestamp": 1649048675616
+          },
+          "reference-count": 0,
+          "publisher": "Little William Bourke",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "VR"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1952
+              ]
+            ]
+          },
+          "DOI": "10.25291/vr/1952-vlr-455",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                9,
+                7
+              ]
+            ],
+            "date-time": "2017-09-07T20:34:06Z",
+            "timestamp": 1504816446000
+          },
+          "page": "455-458",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "AULD v. AULD"
+          ],
+          "prefix": "10.25291",
+          "volume": "[1952] VLR",
+          "member": "10925",
+          "container-title": [
+            "Victorian Reports"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                19
+              ]
+            ],
+            "date-time": "2018-04-19T11:43:20Z",
+            "timestamp": 1524138200000
+          },
+          "score": 22.501026,
+          "resource": {
+            "primary": {
+              "URL": "https://victorianreports.com.au/judgment/1952-VLR-455"
+            }
+          },
+          "subtitle": [
+            "[1952] VLR 455"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                1952
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.25291/vr/1952-vlr-455",
+          "ISSN": [
+            "2208-4886"
+          ],
+          "issn-type": [
+            {
+              "value": "2208-4886",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1952
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

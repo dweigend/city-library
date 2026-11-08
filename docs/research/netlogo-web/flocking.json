@@ -1,0 +1,123 @@
+{
+  "slug": "flocking",
+  "name": "Flocking",
+  "catalogPath": "Sample Models/Biology/Flocking",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Flocking.nlogox",
+  "deliveryBatch": "B06",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can coordinated motion arise without a leader? NetLogo Flocking applies separation, alignment, and cohesion using locally visible neighbors. These rules correspond to the distributed flocking tradition introduced by Reynolds [1], while minimal alignment models [2] and empirical work on neighbor selection [3] clarify which assumptions matter. The simulation illustrates moving groups that form and reorganize through repeated local updates. Its bounded turns, chosen vision distance, and stylized motion do not explicitly model flight energetics, sensory uncertainty, or aerodynamic interactions. A coherent flock demonstrates an emergent property of these rules. It does not establish that a particular bird species uses the same metric neighborhood or that every parameter setting maintains cohesion.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Flocking.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Flocking.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 0ce9a6b0ee385898dfcacc7ed06699286cd51e5302a80c90b32687e13cefa143",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/flocking.nlogox",
+    "infoFile": "evidence/biology/flocking-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1998).  NetLogo Flocking model.  http://ccl.northwestern.edu/netlogo/models/Flocking.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "reynolds",
+      "authors": [
+        "Craig W. Reynolds"
+      ],
+      "title": "Flocks, herds and schools: A distributed behavioral model",
+      "year": 1987,
+      "venue": "Proceedings of the 14th annual conference on Computer graphics and interactive techniques",
+      "doi": "10.1145/37401.37406",
+      "url": "https://doi.org/10.1145/37401.37406",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Flocks+herds+and+schools+a+distributed+behavioral+model+Reynolds+1987&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/reynolds-crossref-search.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": "25-34",
+      "relevance": "Introduces the separation, alignment and cohesion mechanism underlying the model lineage."
+    },
+    {
+      "id": "vicsek",
+      "authors": [
+        "Tamás Vicsek",
+        "András Czirók",
+        "Eshel Ben-Jacob",
+        "Inon Cohen",
+        "Ofer Shochet"
+      ],
+      "title": "Novel Type of Phase Transition in a System of Self-Driven Particles",
+      "year": 1995,
+      "venue": "Physical Review Letters",
+      "doi": "10.1103/physrevlett.75.1226",
+      "url": "https://doi.org/10.1103/physrevlett.75.1226",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Novel+type+of+phase+transition+in+a+system+of+self-driven+particles+Vicsek+1995&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/vicsek-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1103%2Fphysrevlett.75.1226%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/vicsek-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "75",
+      "issue": "6",
+      "pages": "1226-1229",
+      "relevance": "Offers a minimal local-alignment model for comparison with multi-rule flocking."
+    },
+    {
+      "id": "ballerini",
+      "authors": [
+        "M. Ballerini",
+        "N. Cabibbo",
+        "R. Candelier",
+        "A. Cavagna",
+        "E. Cisbani",
+        "I. Giardina",
+        "V. Lecomte",
+        "A. Orlandi",
+        "G. Parisi",
+        "A. Procaccini",
+        "M. Viale",
+        "V. Zdravkovic"
+      ],
+      "title": "Interaction ruling animal collective behavior depends on topological rather than metric distance: Evidence from a field study",
+      "year": 2008,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.0711437105",
+      "url": "https://doi.org/10.1073/pnas.0711437105",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Interaction+ruling+animal+collective+behavior+depends+on+topological+rather+than+metric+distance+evidence+from+a+field+study+2008&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/ballerini-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0711437105%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/ballerini-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "105",
+      "issue": "4",
+      "pages": "1232-1237",
+      "relevance": "Empirical flock research tests assumptions about which neighbors determine collective motion."
+    }
+  ],
+  "gaps": []
+}

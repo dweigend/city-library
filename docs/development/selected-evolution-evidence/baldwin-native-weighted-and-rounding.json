@@ -1,0 +1,64 @@
+{
+  "positiveWho": {
+    "success": true,
+    "value": 4
+  },
+  "singlePositiveResults": [
+    {
+      "success": true,
+      "value": [
+        4,
+        275
+      ]
+    },
+    {
+      "success": true,
+      "value": [
+        4,
+        971
+      ]
+    },
+    {
+      "success": true,
+      "value": [
+        4,
+        1565
+      ]
+    },
+    {
+      "success": true,
+      "value": [
+        4,
+        1539
+      ]
+    },
+    {
+      "success": true,
+      "value": [
+        4,
+        39
+      ]
+    }
+  ],
+  "repeat": {
+    "success": true,
+    "value": [
+      2,
+      2
+    ]
+  },
+  "repeatCommand": {
+    "command": "let a 0 let b 0 repeat 2.4 [set a a + 1] repeat 2.6 [set b b + 1] print (list a b)",
+    "success": true
+  },
+  "nOf": {
+    "success": true,
+    "value": [
+      2,
+      2,
+      3,
+      3
+    ]
+  },
+  "output": ""
+}

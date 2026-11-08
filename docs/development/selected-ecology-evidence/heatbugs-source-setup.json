@@ -1,0 +1,266 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Heatbugs.nlogox",
+  "title": "NetLogo Web: Heatbugs",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "dpr": 2
+  },
+  "sha256": "9b439a81d1526f34fe9716a9d2d690d9948ecd119fa6f64502aee3b424c6fa59",
+  "version": "NetLogo 7.0.4",
+  "tick": 0,
+  "count": 100,
+  "globals": {
+    "bug-count": 100,
+    "evaporation-rate": 0.01,
+    "diffusion-rate": 0.9,
+    "random-move-chance": 0,
+    "min-ideal-temp": 10,
+    "max-output-heat": 25,
+    "min-output-heat": 5,
+    "max-ideal-temp": 40,
+    "color-by-unhappiness?": false
+  },
+  "widgets": [
+    {
+      "type": "view",
+      "dimensions": {
+        "minPxcor": 0,
+        "maxPxcor": 99,
+        "minPycor": 0,
+        "maxPycor": 99,
+        "patchSize": 4,
+        "wrappingAllowedInX": true,
+        "wrappingAllowedInY": true
+      }
+    },
+    {
+      "type": "slider",
+      "variable": "bug-count",
+      "display": "bug-count",
+      "currentValue": 100
+    },
+    {
+      "type": "button",
+      "source": "setup"
+    },
+    {
+      "type": "button",
+      "source": "go",
+      "running": false
+    },
+    {
+      "type": "slider",
+      "variable": "evaporation-rate",
+      "display": "evaporation-rate",
+      "currentValue": 0.01
+    },
+    {
+      "type": "slider",
+      "variable": "diffusion-rate",
+      "display": "diffusion-rate",
+      "currentValue": 0.9
+    },
+    {
+      "type": "slider",
+      "variable": "random-move-chance",
+      "display": "random-move-chance",
+      "currentValue": 0
+    },
+    {
+      "type": "slider",
+      "variable": "min-ideal-temp",
+      "display": "min-ideal-temp",
+      "currentValue": 10
+    },
+    {
+      "type": "slider",
+      "variable": "max-output-heat",
+      "display": "max-output-heat",
+      "currentValue": 25
+    },
+    {
+      "type": "slider",
+      "variable": "min-output-heat",
+      "display": "min-output-heat",
+      "currentValue": 5
+    },
+    {
+      "type": "button",
+      "source": "deep-freeze"
+    },
+    {
+      "type": "button",
+      "source": "heat-up"
+    },
+    {
+      "type": "textBox",
+      "display": "Initial settings for bugs"
+    },
+    {
+      "type": "textBox",
+      "display": "Other parameters"
+    },
+    {
+      "type": "textBox",
+      "display": "Actions"
+    },
+    {
+      "type": "textBox",
+      "display": "(OK to change\nduring run)"
+    },
+    {
+      "type": "textBox",
+      "display": "Color bug by:"
+    },
+    {
+      "type": "button",
+      "source": "reset-perspective"
+    },
+    {
+      "type": "button",
+      "source": "watch min-one-of turtles [ unhappiness ]",
+      "display": "watch happiest"
+    },
+    {
+      "type": "button",
+      "source": "watch max-one-of turtles [ unhappiness ]",
+      "display": "watch saddest"
+    },
+    {
+      "type": "button",
+      "source": "set color-by-unhappiness? true",
+      "display": "happiness"
+    },
+    {
+      "type": "button",
+      "source": "set color-by-unhappiness? false\nask turtles [ color-by-ideal-temp ]",
+      "display": "ideal-temp"
+    },
+    {
+      "type": "plot",
+      "display": "Avg. Bug Unhappiness"
+    },
+    {
+      "type": "slider",
+      "variable": "max-ideal-temp",
+      "display": "max-ideal-temp",
+      "currentValue": 40
+    }
+  ],
+  "turtles": [
+    {
+      "id": 0,
+      "x": 14,
+      "y": 4,
+      "color": 64.83333333333333,
+      "heading": 45,
+      "ideal-temp": 24,
+      "output-heat": 20,
+      "unhappiness": 24,
+      "hidden?": false
+    },
+    {
+      "id": 1,
+      "x": 52,
+      "y": 63,
+      "color": 67.16666666666667,
+      "heading": 270,
+      "ideal-temp": 38,
+      "output-heat": 12,
+      "unhappiness": 38,
+      "hidden?": false
+    },
+    {
+      "id": 2,
+      "x": 71,
+      "y": 53,
+      "color": 62.666666666666664,
+      "heading": 225,
+      "ideal-temp": 11,
+      "output-heat": 7,
+      "unhappiness": 11,
+      "hidden?": false
+    },
+    {
+      "id": 3,
+      "x": 60,
+      "y": 83,
+      "color": 65.33333333333333,
+      "heading": 135,
+      "ideal-temp": 27,
+      "output-heat": 19,
+      "unhappiness": 27,
+      "hidden?": false
+    },
+    {
+      "id": 4,
+      "x": 98,
+      "y": 24,
+      "color": 63.666666666666664,
+      "heading": 90,
+      "ideal-temp": 17,
+      "output-heat": 5,
+      "unhappiness": 17,
+      "hidden?": false
+    },
+    {
+      "id": 5,
+      "x": 45,
+      "y": 30,
+      "color": 65.33333333333333,
+      "heading": 135,
+      "ideal-temp": 27,
+      "output-heat": 8,
+      "unhappiness": 27,
+      "hidden?": false
+    }
+  ],
+  "patchTotals": {
+    "temp": 0
+  },
+  "patchColors": {
+    "0": 10000
+  },
+  "colors": {
+    "63": 5,
+    "64": 2,
+    "65": 3,
+    "66": 3,
+    "67": 5,
+    "64.83333333333333": 4,
+    "67.16666666666667": 4,
+    "62.666666666666664": 6,
+    "65.33333333333333": 8,
+    "63.666666666666664": 3,
+    "64.66666666666667": 2,
+    "63.333333333333336": 4,
+    "67.33333333333333": 3,
+    "66.16666666666667": 4,
+    "63.5": 2,
+    "65.5": 3,
+    "63.833333333333336": 3,
+    "66.5": 4,
+    "63.166666666666664": 1,
+    "65.16666666666667": 3,
+    "62.5": 3,
+    "66.83333333333333": 3,
+    "66.66666666666667": 1,
+    "65.83333333333333": 4,
+    "66.33333333333333": 3,
+    "64.5": 5,
+    "62.833333333333336": 3,
+    "64.16666666666667": 3,
+    "65.66666666666667": 2,
+    "64.33333333333333": 1
+  },
+  "readback": [
+    {
+      "width": 800,
+      "height": 800,
+      "nonblack": 8405
+    }
+  ],
+  "text": " powered by NetLogo\nHeatbugs\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 0\n?\nfor shortcuts\nbug-count\n bugs\nsetup\ngo\nevaporation-rate\ndiffusion-rate\nrandom-move-chance\n %\nmin-ideal-temp\nmax-output-heat\nmin-output-heat\ndeep-freeze\nheat-up\nInitial settings for bugs\nOther parameters\nActions\n(OK to change\nduring run)\nColor bug by:\nreset-perspective\nwatch happiest\nwatch saddest\nhappiness\nideal-temp\ntime\nunhappiness\nAvg. Bug Unhappiness\n0\n25\n50\n75\n100\n0\n10\n20\n26\nmax-ideal-temp\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+}

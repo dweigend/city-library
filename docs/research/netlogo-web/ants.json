@@ -1,0 +1,110 @@
+{
+  "slug": "ants",
+  "name": "Ants",
+  "catalogPath": "Sample Models/Biology/Ants",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Ants.nlogox",
+  "deliveryBatch": "B06",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can a colony exploit food sources using only local chemical information? NetLogo Ants combines wandering search with pheromone deposition by ants carrying food home. Other ants follow the chemical field, while diffusion and evaporation continually modify it. Research on ant shortcuts [1], exploratory patterns [2], and trail-dependent path choice [3] provides mechanism-specific context. The served model emphasizes reinforcement and depletion rather than individual route maps or centralized allocation. Its chemical grid, movement rules, and simplified food piles omit species-specific sensing and recruitment details. Efficient-looking paths illustrate a possible collective effect of local feedback. They do not prove global optimality or establish that the model quantitatively reproduces a real colony.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Ants.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Ants.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 a7c54ba49c1a492efff67522e894cce469284783a3f3d87e91acc8692cc78ce6",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/ants.nlogox",
+    "infoFile": "evidence/biology/ants-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1997).  NetLogo Ants model.  http://ccl.northwestern.edu/netlogo/models/Ants.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "goss",
+      "authors": [
+        "S. Goss",
+        "S. Aron",
+        "J. L. Deneubourg",
+        "J. M. Pasteels"
+      ],
+      "title": "Self-organized shortcuts in the Argentine ant",
+      "year": 1989,
+      "venue": "Naturwissenschaften",
+      "doi": "10.1007/bf00462870",
+      "url": "https://doi.org/10.1007/bf00462870",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Self-organized+shortcuts+in+the+Argentine+ant+Goss+1989&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/goss-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "76",
+      "issue": "12",
+      "pages": "579-581",
+      "relevance": "Shows how reinforcing chemical trails can select shorter routes without global optimization."
+    },
+    {
+      "id": "antforage",
+      "authors": [
+        "J. -L. Deneubourg",
+        "S. Aron",
+        "S. Goss",
+        "J. M. Pasteels"
+      ],
+      "title": "The self-organizing exploratory pattern of the argentine ant",
+      "year": 1990,
+      "venue": "Journal of Insect Behavior",
+      "doi": "10.1007/bf01417909",
+      "url": "https://doi.org/10.1007/bf01417909",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+self-organizing+exploratory+pattern+of+the+Argentine+ant+Deneubourg+1990&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/antforage-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1007%2Fbf01417909%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/antforage-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "3",
+      "issue": "2",
+      "pages": "159-168",
+      "relevance": "Studies self-organized exploratory paths in ants, directly relevant to foraging and recruitment."
+    },
+    {
+      "id": "anttrail",
+      "authors": [
+        "R. Beckers",
+        "J.L. Deneubourg",
+        "S. Goss"
+      ],
+      "title": "Trails and U-turns in the selection of a path by the ant Lasius niger",
+      "year": 1992,
+      "venue": "Journal of Theoretical Biology",
+      "doi": "10.1016/s0022-5193(05)80686-1",
+      "url": "https://doi.org/10.1016/s0022-5193(05)80686-1",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Trails+and+U-turns+in+the+selection+of+a+path+by+the+ant+Lasius+niger+Beckers+1992&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/anttrail-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "159",
+      "issue": "4",
+      "pages": "397-415",
+      "relevance": "Connects trail deposition and path choice to experimentally studied ant behavior."
+    }
+  ],
+  "gaps": []
+}

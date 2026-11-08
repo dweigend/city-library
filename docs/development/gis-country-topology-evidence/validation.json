@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "scope": "Offline source-data audit only",
+  "executed": [
+    "audit.py: exact synthetic predicates and full source segment sweep/grouping",
+    "verify.py: source/fixture hashes, counts, grouping conservation, contact aggregation"
+  ],
+  "checks": {
+    "sourceAndFixtureIdentities": "passed",
+    "all23938PositionsConserved": true,
+    "all1078PolygonsWithin2048": true,
+    "completeSelfAndSameRecordContactSweep": true,
+    "crossRecordContactCountsConsistent": true
+  },
+  "notClaimed": [
+    "full interior-disjointness of 302 contact pairs",
+    "runtime or browser acceptance",
+    "scientific/geographic/CRS correctness",
+    "rights clearance",
+    "independent approval"
+  ]
+}

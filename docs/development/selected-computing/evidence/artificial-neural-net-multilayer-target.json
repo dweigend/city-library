@@ -1,0 +1,698 @@
+{
+  "actions": [
+    "Setup",
+    "1 step",
+    "Run",
+    "Pause",
+    "100 steps × 1",
+    "Show weights on",
+    "Test",
+    "Setup resets model"
+  ],
+  "setup-desktop-light": {
+    "at": "2026-11-06T09:08:31.442Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-multilayer",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-rr63tyt3.js",
+        "bytes": 9565,
+        "sha256": "18c15e71cf339b9c913155c0a8af0c8a42c087f7a3e87463ed72ec0252444035",
+        "modelMarkers": [
+          "artificial-neural-net-multilayer"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Epoch": "0",
+      "Epoch error": "0.00000",
+      "Output activation": "0.500",
+      "Test": "—"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Mean squared error: no samples"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Neural network",
+      "Error vs. epochs",
+      "Weights"
+    ]
+  },
+  "step": {
+    "at": "2026-11-06T09:08:31.831Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-multilayer",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-rr63tyt3.js",
+        "bytes": 9565,
+        "sha256": "18c15e71cf339b9c913155c0a8af0c8a42c087f7a3e87463ed72ec0252444035",
+        "modelMarkers": [
+          "artificial-neural-net-multilayer"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Epoch": "1",
+      "Epoch error": "0.25594",
+      "Output activation": "0.536",
+      "Test": "—"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Mean squared error: 0.2559422051735007"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Neural network",
+      "Error vs. epochs",
+      "Weights"
+    ]
+  },
+  "progress-desktop-light": {
+    "at": "2026-11-06T09:08:32.350Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-multilayer",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-rr63tyt3.js",
+        "bytes": 9565,
+        "sha256": "18c15e71cf339b9c913155c0a8af0c8a42c087f7a3e87463ed72ec0252444035",
+        "modelMarkers": [
+          "artificial-neural-net-multilayer"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Epoch": "103",
+      "Epoch error": "0.00026",
+      "Output activation": "0.019",
+      "Test": "—"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Mean squared error: 0.0002563471409850253"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Neural network",
+      "Error vs. epochs",
+      "Weights"
+    ]
+  },
+  "desktop-dark": {
+    "at": "2026-11-06T09:08:51.752Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-multilayer",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-rr63tyt3.js",
+        "bytes": 9565,
+        "sha256": "18c15e71cf339b9c913155c0a8af0c8a42c087f7a3e87463ed72ec0252444035",
+        "modelMarkers": [
+          "artificial-neural-net-multilayer"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Epoch": "103",
+      "Epoch error": "0.00026",
+      "Output activation": "0.985",
+      "Test": "1 / expected 1 · correct"
+    },
+    "status": "Action completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Mean squared error: 0.0002563471409850253"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Neural network",
+      "Error vs. epochs",
+      "Weights"
+    ]
+  },
+  "mobile-light": {
+    "at": "2026-11-06T09:08:52.165Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-multilayer",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-rr63tyt3.js",
+        "bytes": 9565,
+        "sha256": "18c15e71cf339b9c913155c0a8af0c8a42c087f7a3e87463ed72ec0252444035",
+        "modelMarkers": [
+          "artificial-neural-net-multilayer"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Epoch": "103",
+      "Epoch error": "0.00026",
+      "Output activation": "0.985",
+      "Test": "1 / expected 1 · correct"
+    },
+    "status": "Action completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Mean squared error: 0.0002563471409850253"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Neural network",
+      "Error vs. epochs",
+      "Weights"
+    ]
+  },
+  "mobile-dark": {
+    "at": "2026-11-06T09:08:52.352Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-multilayer",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-rr63tyt3.js",
+        "bytes": 9565,
+        "sha256": "18c15e71cf339b9c913155c0a8af0c8a42c087f7a3e87463ed72ec0252444035",
+        "modelMarkers": [
+          "artificial-neural-net-multilayer"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Epoch": "103",
+      "Epoch error": "0.00026",
+      "Output activation": "0.985",
+      "Test": "1 / expected 1 · correct"
+    },
+    "status": "Action completed.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Mean squared error: 0.0002563471409850253"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Neural network",
+      "Error vs. epochs",
+      "Weights"
+    ]
+  },
+  "reset": {
+    "at": "2026-11-06T09:08:52.575Z",
+    "url": "http://localhost:3188/?experiment=artificial-neural-net-multilayer",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-rr63tyt3.js",
+        "bytes": 9565,
+        "sha256": "18c15e71cf339b9c913155c0a8af0c8a42c087f7a3e87463ed72ec0252444035",
+        "modelMarkers": [
+          "artificial-neural-net-multilayer"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Epoch": "0",
+      "Epoch error": "0.00000",
+      "Output activation": "0.500",
+      "Test": "—"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-learningRate",
+        "value": "0.5",
+        "disabled": false
+      },
+      {
+        "name": "live-examplesPerEpoch",
+        "value": "500",
+        "disabled": false
+      },
+      {
+        "name": "live-targetFunction",
+        "value": "xor",
+        "disabled": false
+      },
+      {
+        "name": "live-input1",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-input2",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-showWeights",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Mean squared error: no samples"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Neural network",
+      "Error vs. epochs",
+      "Weights"
+    ]
+  },
+  "diagnostics": {
+    "console": [
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.090Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.095Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.101Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.817Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.821Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.826Z"
+      }
+    ],
+    "failedRequests": []
+  }
+}

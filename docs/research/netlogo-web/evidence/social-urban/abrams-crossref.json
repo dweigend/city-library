@@ -1,0 +1,315 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1038%2F424900a",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2026-11-01T08:29:46Z",
+        "timestamp": 1793521786454,
+        "version": "4.5.0"
+      },
+      "reference-count": 11,
+      "publisher": "Springer Science and Business Media LLC",
+      "issue": "6951",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2003,
+                8,
+                21
+              ]
+            ],
+            "date-time": "2003-08-21T00:00:00Z",
+            "timestamp": 1061424000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2003,
+                8,
+                21
+              ]
+            ],
+            "date-time": "2003-08-21T00:00:00Z",
+            "timestamp": 1061424000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Nature"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2003,
+            8,
+            21
+          ]
+        ]
+      },
+      "DOI": "10.1038/424900a",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2003,
+            8,
+            20
+          ]
+        ],
+        "date-time": "2003-08-20T18:01:08Z",
+        "timestamp": 1061402468000
+      },
+      "page": "900-900",
+      "source": "Crossref",
+      "is-referenced-by-count": 369,
+      "title": [
+        "Modelling the dynamics of language death"
+      ],
+      "prefix": "10.1038",
+      "volume": "424",
+      "author": [
+        {
+          "given": "Daniel M.",
+          "family": "Abrams",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Steven H.",
+          "family": "Strogatz",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "reference": [
+        {
+          "key": "BF424900a_CR1",
+          "doi-asserted-by": "publisher",
+          "first-page": "4",
+          "DOI": "10.1353/lan.1992.0075",
+          "volume": "68",
+          "author": "M Krauss",
+          "year": "1992",
+          "unstructured": "Krauss, M. Language 68, 4\u201310 (1992).",
+          "journal-title": "Language"
+        },
+        {
+          "key": "BF424900a_CR2",
+          "doi-asserted-by": "publisher",
+          "first-page": "611",
+          "DOI": "10.1038/nature00771",
+          "volume": "417",
+          "author": "MA Nowak",
+          "year": "2002",
+          "unstructured": "Nowak, M. A., Komarova, N. L. & Niyogi, P. Nature 417, 611\u2013617 (2002).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF424900a_CR3",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1515/9783112316009",
+          "volume-title": "Syntactic Structures",
+          "author": "NA Chomsky",
+          "year": "1957",
+          "unstructured": "Chomsky, N. A. Syntactic Structures (Mouton, New York, 1957)."
+        },
+        {
+          "key": "BF424900a_CR4",
+          "doi-asserted-by": "publisher",
+          "first-page": "199",
+          "DOI": "10.1017/S0954394500000168",
+          "volume": "1",
+          "author": "A Kroch",
+          "year": "1989",
+          "unstructured": "Kroch, A. Lang. Variat. Change 1, 199\u2013244 (1989).",
+          "journal-title": "Lang. Variat. Change"
+        },
+        {
+          "key": "BF424900a_CR5",
+          "volume-title": "The Evolution of Human Languages",
+          "author": "JA Hawkins",
+          "year": "1992",
+          "unstructured": "Hawkins, J. A. & Gell-Mann, M. The Evolution of Human Languages (Addison-Wesley, Reading, Massachusetts, 1992)."
+        },
+        {
+          "key": "BF424900a_CR6",
+          "doi-asserted-by": "publisher",
+          "first-page": "697",
+          "DOI": "10.1023/A:1005319718167",
+          "volume": "20",
+          "author": "P Niyogi",
+          "year": "1997",
+          "unstructured": "Niyogi, P. & Berwick, R. C. Ling. Phil. 20, 697\u2013719 (1997).",
+          "journal-title": "Ling. Phil."
+        },
+        {
+          "key": "BF424900a_CR7",
+          "volume-title": "The Development of Language: Acquisition, Changes and Evolution",
+          "author": "D Lightfoot",
+          "year": "1999",
+          "unstructured": "Lightfoot, D. The Development of Language: Acquisition, Changes and Evolution (Blackwell, Oxford, 1999)."
+        },
+        {
+          "key": "BF424900a_CR8",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.21832/9781800418097",
+          "volume-title": "Reversing Language Shift",
+          "author": "JA Fishman",
+          "year": "1991",
+          "unstructured": "Fishman, J. A. Reversing Language Shift (Multilingual Matters, Philadelphia, 1991)."
+        },
+        {
+          "key": "BF424900a_CR9",
+          "volume-title": "Gaelic in Scotland 1698\u20131981: The Geographical History of a Language",
+          "author": "CWJ Withers",
+          "year": "1984",
+          "unstructured": "Withers, C. W. J. Gaelic in Scotland 1698\u20131981: The Geographical History of a Language (Donald, Edinburgh, 1984)."
+        },
+        {
+          "key": "BF424900a_CR10",
+          "volume-title": "A Geography of the Welsh Language",
+          "author": "J Aitchison",
+          "year": "1994",
+          "unstructured": "Aitchison, J. & Carter, H. A Geography of the Welsh Language (Univ. Wales Press, Cardiff, 1994)."
+        },
+        {
+          "key": "BF424900a_CR11",
+          "unstructured": "UK Office of Population Censuses and Surveys. 1991 Census: Report for Wales, 1 (HMSO, London, 1993)."
+        }
+      ],
+      "container-title": [
+        "Nature"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.nature.com/articles/424900a.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.nature.com/articles/424900a",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.nature.com/articles/424900a.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            4,
+            3
+          ]
+        ],
+        "date-time": "2025-04-03T22:58:06Z",
+        "timestamp": 1743721086000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.nature.com/articles/424900a"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2003,
+            8,
+            21
+          ]
+        ]
+      },
+      "references-count": 11,
+      "journal-issue": {
+        "issue": "6951",
+        "published-print": {
+          "date-parts": [
+            [
+              2003,
+              8,
+              21
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "BF424900a"
+      ],
+      "URL": "https://doi.org/10.1038/424900a",
+      "relation": {},
+      "ISSN": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issn-type": [
+        {
+          "value": "0028-0836",
+          "type": "print"
+        },
+        {
+          "value": "1476-4687",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2003,
+            8,
+            21
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "slug": "rebellion",
+  "name": "Rebellion",
+  "catalogPath": "Sample Models/Social Science/Rebellion",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Rebellion.nlogox",
+  "deliveryBatch": "B02",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether local risk perceptions and grievances generate bursts of overt protest. In NetLogo's Rebellion model, citizens compare hardship-based grievance with perceived arrest risk while moving police arrest active rebels. The selected literature connects this mechanism to threshold participation and repression: the explicitly acknowledged civil-violence model supplies citizen-police dynamics [1]; participation thresholds connect individual incentives to collective mobilization [2]; informational cascades provide a historically grounded alternative protest mechanism [3]. Legitimacy, risk aversion and visibility are stylized inputs; the model cannot forecast protest from a grievance slider alone. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Rebellion.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Rebellion.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/rebellion.nlogox",
+    "sha256": "859b52417ee69fda8f0f193be666828f9023bef4fce6b84f1d07e09836a53fce",
+    "citation": "For the model itself: * Wilensky, U. (2004). NetLogo Rebellion model. http://ccl.northwestern.edu/netlogo/models/Rebellion. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model, and the preceding explanation, is adapted from Joshua M. Epstein, \"Modeling civil violence: An agent-based computational approach\", Proceedings of the National Academy of Sciences, Vol. 99, Suppl. 3, May 14, 2002, and is available at https://www.ncbi.nlm.nih.gov/pmc/articles/PMC128592/.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/rebellion.nlogox"
+  },
+  "publications": [
+    {
+      "id": "epstein",
+      "creatorRole": "author",
+      "authors": [
+        "Joshua M. Epstein"
+      ],
+      "title": "Modeling civil violence: An agent-based computational approach",
+      "year": 2002,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.092080199",
+      "url": "https://doi.org/10.1073/pnas.092080199",
+      "relevance": "the explicitly acknowledged civil-violence model supplies citizen-police dynamics",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.092080199",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/epstein-crossref.json",
+        "evidenceSummary": "This article presents an agent-based computational model of civil violence. Two variants of the civil violence model are presented. In the first a central authority seeks to suppress decentralized rebellion. In the second a central authority seeks to suppress communal violence between two warring ethnic groups.",
+        "evidenceFile": "evidence/social-urban/epstein-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "granovetter",
+      "creatorRole": "author",
+      "authors": [
+        "Mark Granovetter"
+      ],
+      "title": "Threshold Models of Collective Behavior",
+      "year": 1978,
+      "venue": "American Journal of Sociology",
+      "doi": "10.1086/226707",
+      "url": "https://doi.org/10.1086/226707",
+      "relevance": "participation thresholds connect individual incentives to collective mobilization",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1086%2F226707",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/granovetter-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/granovetter-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "lohmann",
+      "creatorRole": "author",
+      "authors": [
+        "Susanne Lohmann"
+      ],
+      "title": "The Dynamics of Informational Cascades: The Monday Demonstrations in Leipzig, East Germany, 1989–91",
+      "year": 1994,
+      "venue": "World Politics",
+      "doi": "10.2307/2950679",
+      "url": "https://doi.org/10.2307/2950679",
+      "relevance": "informational cascades provide a historically grounded alternative protest mechanism",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.2307%2F2950679",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/lohmann-crossref.json",
+        "evidenceSummary": "This article analyzes the dynamics of turnout and the political impact of five cycles of protest, consisting of forty-two mass demonstrations that occurred on Mondays in Leipzig over the period 1989–91. These demonstrations are interpreted as an informational cascade that publicly revealed some of the previously hidden information about the malign nature of the East German communist regime. Once this information became publicly available, the viability of the regime was undermined. The Monday demonstrations subsequently died a slow death as their informational role declined.",
+        "evidenceFile": "evidence/social-urban/lohmann-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

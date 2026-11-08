@@ -1,0 +1,105 @@
+{
+  "slug": "ant-lines",
+  "name": "Ant Lines",
+  "catalogPath": "Sample Models/Biology/Ant Lines",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Ant%20Lines.nlogox",
+  "deliveryBatch": "B10",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Why can a chain of followers trace a smoother route than its leader? NetLogo Ant Lines sends a leader toward food along a wandering path; each later ant heads toward the position of the ant ahead. Bruckstein's mathematical study [1] is the explicit model inspiration. Pursuit dynamics [2] and experimental tandem running [3] provide complementary comparisons. The served Info itself says biological accuracy is uncertain. Delays, turning, and repeated local following generate a geometric filtering effect without a chemical trail or global route plan. The simulation illustrates a mathematical mechanism for path smoothing, not a validated account of ant navigation, evidence of teaching by its agents, or a proof of optimal foraging routes.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Ant%20Lines.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Ant%20Lines.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 5ce75557bb75b27e3076b414cf663bd88422eb10e6ca98719e87b45891dcbf64",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/ant-lines.nlogox",
+    "infoFile": "evidence/biology/ant-lines-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1997).  NetLogo Ant Lines model.  http://ccl.northwestern.edu/netlogo/models/AntLines.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "bruckstein",
+      "authors": [
+        "Alfred M. Bruckstein"
+      ],
+      "title": "Why the ant trails look so straight and nice",
+      "year": 1993,
+      "venue": "The Mathematical Intelligencer",
+      "doi": "10.1007/bf03024195",
+      "url": "https://doi.org/10.1007/bf03024195",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Why+the+ant+trails+look+so+straight+and+nice+Bruckstein+1993&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/bruckstein-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "15",
+      "issue": "2",
+      "pages": "59-62",
+      "relevance": "The mathematical ant-trail paper is explicitly identified by the Info as the model’s inspiration."
+    },
+    {
+      "id": "pursuit",
+      "authors": [
+        "J.A. Marshall",
+        "M.E. Broucke",
+        "B.A. Francis"
+      ],
+      "title": "Formations of Vehicles in Cyclic Pursuit",
+      "year": 2004,
+      "venue": "IEEE Transactions on Automatic Control",
+      "doi": "10.1109/tac.2004.837589",
+      "url": "https://doi.org/10.1109/tac.2004.837589",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Formations+of+vehicles+in+cyclic+pursuit&rows=4",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/pursuit-crossref-refined.json"
+      },
+      "verified": true,
+      "volume": "49",
+      "issue": "11",
+      "pages": "1963-1974",
+      "relevance": "Cyclic-pursuit control theory provides a mathematical comparison for agents steering toward predecessors."
+    },
+    {
+      "id": "tandem",
+      "authors": [
+        "Nigel R. Franks",
+        "Tom Richardson"
+      ],
+      "title": "Teaching in tandem-running ants",
+      "year": 2006,
+      "venue": "Nature",
+      "doi": "10.1038/439153a",
+      "url": "https://doi.org/10.1038/439153a",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Teaching+in+tandem-running+ants+Franks+Richardson+2006&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/tandem-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F439153a%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/tandem-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "439",
+      "issue": "7073",
+      "pages": "153-153",
+      "relevance": "Experimental tandem-running research distinguishes real ant following and teaching from the geometric pursuit illustration."
+    }
+  ],
+  "gaps": []
+}

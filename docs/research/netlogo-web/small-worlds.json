@@ -1,0 +1,100 @@
+{
+  "slug": "small-worlds",
+  "name": "Small Worlds",
+  "catalogPath": "Sample Models/Networks/Small Worlds",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Small%20Worlds.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether a few nonlocal connections shorten routes while retaining clustered neighborhoods. In NetLogo's Small Worlds model, a regular network is rewired and its path lengths and clustering are compared across rewiring probabilities. The selected literature connects this mechanism to short paths and local clustering: the acknowledged Watts-Strogatz mechanism combines local order and shortcuts [1]; short routes do not automatically imply decentralized navigability [2]; experimental chain tracing supplies a distinct empirical small-world comparison [3]. Graph construction, disconnection handling and finite size matter; a topological demonstration does not establish how particular social ties are formed. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Small%20Worlds.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Small%20Worlds.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/small-worlds.nlogox",
+    "sha256": "5b492620e111cddc81844ba2a2bb0d72464e3e41e32ed391b08f38a6fea2ee3b",
+    "citation": "For the model itself: * Wilensky, U. (2015). NetLogo Small Worlds model. http://ccl.northwestern.edu/netlogo/models/SmallWorlds. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is adapted from: Duncan J. Watts, Six Degrees: The Science of a Connected Age (W.W. Norton & Company, New York, 2003), pages 83-100. The work described here was originally published in: DJ Watts and SH Strogatz. Collective dynamics of 'small-world' networks, Nature, 393:440-442 (1998). The small worlds idea was first made popular by Stanley Milgram's famous experiment (1967) which found that two random US citizens where on average connected by six acquaintances (giving rise to the popular \"six degrees of separation\" expression): Stanley Milgram. The Small World Problem, Psychology Today, 2: 60-67 (1967). This experiment was popularized into a game called \"six degrees of Kevin Bacon\" which you can find more information about here: https://oracleofbacon.org Thanks to Connor Bain for updating this model in 2020.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/small-worlds.nlogox"
+  },
+  "publications": [
+    {
+      "id": "ws",
+      "creatorRole": "author",
+      "authors": [
+        "Duncan J. Watts",
+        "Steven H. Strogatz"
+      ],
+      "title": "Collective dynamics of ‘small-world’ networks",
+      "year": 1998,
+      "venue": "Nature",
+      "doi": "10.1038/30918",
+      "url": "https://doi.org/10.1038/30918",
+      "relevance": "the acknowledged Watts-Strogatz mechanism combines local order and shortcuts",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2F30918",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/ws-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/ws-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "kleinberg",
+      "creatorRole": "author",
+      "authors": [
+        "Jon M. Kleinberg"
+      ],
+      "title": "Navigation in a small world",
+      "year": 2000,
+      "venue": "Nature",
+      "doi": "10.1038/35022643",
+      "url": "https://doi.org/10.1038/35022643",
+      "relevance": "short routes do not automatically imply decentralized navigability",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2F35022643",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/kleinberg-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/kleinberg-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "smallworld",
+      "creatorRole": "author",
+      "authors": [
+        "Jeffrey Travers",
+        "Stanley Milgram"
+      ],
+      "title": "An Experimental Study of the Small World Problem",
+      "year": 1969,
+      "venue": "Sociometry",
+      "doi": "10.2307/2786545",
+      "url": "https://doi.org/10.2307/2786545",
+      "relevance": "experimental chain tracing supplies a distinct empirical small-world comparison",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.2307%2F2786545",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/smallworld-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/smallworld-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

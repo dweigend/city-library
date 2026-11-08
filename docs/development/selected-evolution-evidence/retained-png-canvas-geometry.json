@@ -1,0 +1,405 @@
+[
+  {
+    "slug": "mimicry",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 672
+        },
+        "monitors": {
+          "Tick": "10",
+          "Monarchs": "188",
+          "Viceroys": "157",
+          "Monarch color min": "15",
+          "Monarch color mean": "15",
+          "Monarch color max": "15",
+          "Viceroy color min": "75",
+          "Viceroy color mean": "104.809",
+          "Viceroy color max": "105"
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 609.6875,
+          "width": 358,
+          "height": 358
+        },
+        "monitors": {
+          "Tick": "10",
+          "Monarchs": "188",
+          "Viceroys": "157",
+          "Monarch color min": "15",
+          "Monarch color mean": "15",
+          "Monarch color max": "15",
+          "Viceroy color min": "75",
+          "Viceroy color mean": "104.809",
+          "Viceroy color max": "105"
+        },
+        "dpr": 2
+      }
+    ]
+  },
+  {
+    "slug": "anisogamy",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 672
+        },
+        "monitors": {
+          "Tick": "10",
+          "Adults": "100",
+          "Gametes": "25",
+          "Zygotes": "1",
+          "Tick advance": "1"
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 549.1875,
+          "width": 358,
+          "height": 358
+        },
+        "monitors": {
+          "Tick": "10",
+          "Adults": "100",
+          "Gametes": "25",
+          "Zygotes": "1",
+          "Tick advance": "1"
+        },
+        "dpr": 2
+      }
+    ]
+  },
+  {
+    "slug": "peppered-moths",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 834.90625
+        },
+        "monitors": {
+          "Tick": "10",
+          "Light": "194",
+          "Medium": "52",
+          "Dark": "3",
+          "Pollution (%)": "0"
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 549.1875,
+          "width": 358,
+          "height": 444.78125
+        },
+        "monitors": {
+          "Tick": "10",
+          "Light": "194",
+          "Medium": "52",
+          "Dark": "3",
+          "Pollution (%)": "0"
+        },
+        "dpr": 2
+      }
+    ]
+  },
+  {
+    "slug": "baldwin-effect",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 920.8828125
+        },
+        "monitors": {
+          "Generation": "10"
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 442.1875,
+          "width": 358,
+          "height": 490.5859375
+        },
+        "monitors": {
+          "Generation": "10"
+        },
+        "dpr": 2
+      }
+    ]
+  },
+  {
+    "slug": "sex-ratio-equilibrium",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 427.6328125
+        },
+        "monitors": {
+          "Tick": "10",
+          "Adult sex ratio (%)": "36.35",
+          "Male-child chance": "0.401",
+          "Running average": "NA",
+          "Running SD": "NA",
+          "Male mating success": "0.44",
+          "Female mating success": "0.25"
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 693.875,
+          "width": 358,
+          "height": 227.8125
+        },
+        "monitors": {
+          "Tick": "10",
+          "Adult sex ratio (%)": "36.35",
+          "Male-child chance": "0.401",
+          "Running average": "NA",
+          "Running SD": "NA",
+          "Male mating success": "0.44",
+          "Female mating success": "0.25"
+        },
+        "dpr": 2
+      }
+    ]
+  },
+  {
+    "slug": "bacterial-infection",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 288
+        },
+        "monitors": {
+          "Minutes": "10",
+          "Hours": "0",
+          "Days": "0",
+          "Doses A": "1",
+          "Doses B": "1"
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 858.75,
+          "width": 358,
+          "height": 153.421875
+        },
+        "monitors": {
+          "Minutes": "10",
+          "Hours": "0",
+          "Days": "0",
+          "Doses A": "1",
+          "Doses B": "1"
+        },
+        "dpr": 2
+      }
+    ]
+  },
+  {
+    "slug": "vision-evolution",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 672
+        },
+        "monitors": {
+          "Tick": "10",
+          "Fish": "51",
+          "Food": "63"
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 549.078125,
+          "width": 358,
+          "height": 358
+        },
+        "monitors": {
+          "Tick": "10",
+          "Fish": "51",
+          "Food": "63"
+        },
+        "dpr": 2
+      }
+    ]
+  },
+  {
+    "slug": "gendrift-t-interact",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 672
+        },
+        "monitors": {
+          "Tick": "10",
+          "Most populous (%)": "25.67"
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 663.578125,
+          "width": 358,
+          "height": 358
+        },
+        "monitors": {
+          "Tick": "10",
+          "Most populous (%)": "25.67"
+        },
+        "dpr": 2
+      }
+    ]
+  },
+  {
+    "slug": "mendelian-inheritance",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          1050
+        ],
+        "canvasDoc": {
+          "x": 328,
+          "y": 161.3828125,
+          "width": 672,
+          "height": 672
+        },
+        "monitors": {
+          "Trial": "2",
+          "Dark offspring": "10",
+          "Light offspring": "2",
+          "Dark ratio": "5",
+          "Light ratio": "1",
+          "Genotype": "Select a mouse",
+          "Message": ""
+        },
+        "dpr": 2
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "canvasDoc": {
+          "x": 16,
+          "y": 769.4609375,
+          "width": 358,
+          "height": 358
+        },
+        "monitors": {
+          "Trial": "2",
+          "Dark offspring": "10",
+          "Light offspring": "2",
+          "Dark ratio": "5",
+          "Light ratio": "1",
+          "Genotype": "Select a mouse",
+          "Message": ""
+        },
+        "dpr": 2
+      }
+    ]
+  }
+]

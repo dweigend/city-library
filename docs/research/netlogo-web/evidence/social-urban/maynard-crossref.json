@@ -1,0 +1,366 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1038%2F246015a0",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T03:02:52Z",
+        "timestamp": 1793847772170,
+        "version": "4.6.1"
+      },
+      "reference-count": 18,
+      "publisher": "Springer Science and Business Media LLC",
+      "issue": "5427",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1973,
+                11,
+                1
+              ]
+            ],
+            "date-time": "1973-11-01T00:00:00Z",
+            "timestamp": 120960000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Nature"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1973,
+            11
+          ]
+        ]
+      },
+      "DOI": "10.1038/246015a0",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2005,
+            8,
+            2
+          ]
+        ],
+        "date-time": "2005-08-02T08:34:42Z",
+        "timestamp": 1122971682000
+      },
+      "page": "15-18",
+      "source": "Crossref",
+      "is-referenced-by-count": 5084,
+      "title": [
+        "The Logic of Animal Conflict"
+      ],
+      "prefix": "10.1038",
+      "volume": "246",
+      "author": [
+        {
+          "given": "J. MAYNARD",
+          "family": "SMITH",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "G. R.",
+          "family": "PRICE",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "reference": [
+        {
+          "key": "BF246015a0_CR1",
+          "first-page": "137",
+          "volume": "4",
+          "author": "CE Shaw",
+          "year": "1948",
+          "unstructured": "Shaw, C. E., Herpetologica, 4, 137 (1948).",
+          "journal-title": "Herpetologica"
+        },
+        {
+          "key": "BF246015a0_CR2",
+          "first-page": "149",
+          "volume": "7",
+          "author": "CE Shaw",
+          "year": "1951",
+          "unstructured": "Shaw, C. E., Herpetologica, 7, 149 (1951).",
+          "journal-title": "Herpetologica"
+        },
+        {
+          "key": "BF246015a0_CR3",
+          "unstructured": "Linsdale, J. M., and Tomich, P. Q., A Herd of Mule Deer, 511f (Univ. of California Press, Berkeley and Los Angeles, 1953)."
+        },
+        {
+          "key": "BF246015a0_CR4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5962/bhl.title.107131",
+          "volume-title": "The Descent of Man and Selection in Relation to Sex",
+          "author": "C Darwin",
+          "year": "1882",
+          "unstructured": "Darwin, C., The Descent of Man and Selection in Relation to Sex, chap. 17 (Murray, London, 1882)."
+        },
+        {
+          "key": "BF246015a0_CR5",
+          "doi-asserted-by": "publisher",
+          "first-page": "83",
+          "DOI": "10.1086/physzool.17.1.30151832",
+          "volume": "17",
+          "author": "NE Collins",
+          "year": "1944",
+          "unstructured": "Collins, N. E., Physiol. Zool., 17, 83 (1944).",
+          "journal-title": "Physiol. Zool."
+        },
+        {
+          "key": "BF246015a0_CR6",
+          "doi-asserted-by": "publisher",
+          "first-page": "3",
+          "DOI": "10.1111/j.1467-6494.1933.tb02078.x",
+          "volume": "2",
+          "author": "RWG Hingston",
+          "year": "1933",
+          "unstructured": "Hingston, R. W. G., Character Person., 2, 3 (1933).",
+          "journal-title": "Character Person."
+        },
+        {
+          "key": "BF246015a0_CR7",
+          "first-page": "249",
+          "volume": "251",
+          "author": "JS Huxley",
+          "year": "1956",
+          "unstructured": "Huxley, J. S., Phil. Trans. R. Soc., 251 B, 249 (1956).",
+          "journal-title": "Phil. Trans. R. Soc."
+        },
+        {
+          "key": "BF246015a0_CR8",
+          "volume-title": "On Aggression",
+          "author": "K Lorenz",
+          "year": "1966",
+          "unstructured": "Lorenz, K., On Aggression (Methuen, London, 1966)."
+        },
+        {
+          "key": "BF246015a0_CR9",
+          "volume-title": "Animal Dispersion in Relation to Social Behaviour",
+          "author": "VC Wynne-Edwards",
+          "year": "1962",
+          "unstructured": "Wynne-Edwards, V. C., Animal Dispersion in Relation to Social Behaviour, chap. 8 (Oliver and Boyd, Edinburgh and London, 1962)."
+        },
+        {
+          "key": "BF246015a0_CR10",
+          "doi-asserted-by": "publisher",
+          "first-page": "1145",
+          "DOI": "10.1038/2011145a0",
+          "volume": "201",
+          "author": "J Maynard Smith",
+          "year": "1964",
+          "unstructured": "Maynard Smith, J., Nature, 201, 1145 (1964).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF246015a0_CR11",
+          "volume-title": "Some Mathematical Questions in Biology",
+          "author": "R Levins",
+          "year": "1970",
+          "unstructured": "Levins, R., in Some Mathematical Questions in Biology (American Mathematical Society, 1970)."
+        },
+        {
+          "key": "BF246015a0_CR12",
+          "doi-asserted-by": "publisher",
+          "first-page": "485",
+          "DOI": "10.1111/j.1469-1809.1957.tb01874.x",
+          "volume": "35",
+          "author": "GR Price",
+          "year": "1972",
+          "unstructured": "Price, G. R., Ann. hum. Genet., 35, 485 (1972).",
+          "journal-title": "Ann. hum. Genet."
+        },
+        {
+          "key": "BF246015a0_CR13",
+          "volume-title": "Theoretical and Mathematical Biology",
+          "author": "RH MacArthur",
+          "year": "1965",
+          "unstructured": "MacArthur, R. H., in Theoretical and Mathematical Biology (edit. by Waterman, T., and Horowitz, H.) (Blaisdell, New York, 1965)."
+        },
+        {
+          "key": "BF246015a0_CR14",
+          "doi-asserted-by": "publisher",
+          "first-page": "477",
+          "DOI": "10.1126/science.156.3774.477",
+          "volume": "156",
+          "author": "WD Hamilton",
+          "year": "1967",
+          "unstructured": "Hamilton, W. D., Science, N.Y., 156, 477 (1967).",
+          "journal-title": "Science, N.Y."
+        },
+        {
+          "key": "BF246015a0_CR15",
+          "doi-asserted-by": "publisher",
+          "first-page": "561",
+          "DOI": "10.1016/0003-3472(69)90165-1",
+          "volume": "17",
+          "author": "H Dingle",
+          "year": "1969",
+          "unstructured": "Dingle, H., Anim. Behav., 17, 561 (1969).",
+          "journal-title": "Anim. Behav."
+        },
+        {
+          "key": "BF246015a0_CR16",
+          "doi-asserted-by": "publisher",
+          "first-page": "1100",
+          "DOI": "10.1126/science.138.3545.1100",
+          "volume": "138",
+          "author": "LJ West",
+          "year": "1962",
+          "unstructured": "West, L. J., Pierce, C. M., and Thomas, W. D., Science, N.Y., 138, 1100 (1962).",
+          "journal-title": "Science, N.Y."
+        },
+        {
+          "key": "BF246015a0_CR17",
+          "doi-asserted-by": "publisher",
+          "first-page": "193",
+          "DOI": "10.1163/156853971X00087",
+          "volume": "38",
+          "author": "JF Eisenberg",
+          "year": "1971",
+          "unstructured": "Eisenberg, J. F., McKay, G. M., and Jainudeen, M. R., Behaviour, 38, 193 (1971).",
+          "journal-title": "Behaviour"
+        },
+        {
+          "key": "BF246015a0_CR18",
+          "first-page": "1107",
+          "volume": "62",
+          "author": "JS Price",
+          "year": "1969",
+          "unstructured": "Price, J. S., Proc. R. Soc. Med., 62, 1107 (1969).",
+          "journal-title": "Proc. R. Soc. Med."
+        }
+      ],
+      "container-title": [
+        "Nature"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://www.nature.com/articles/246015a0",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://www.nature.com/articles/246015a0.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://www.nature.com/articles/246015a0.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2021,
+            12,
+            1
+          ]
+        ],
+        "date-time": "2021-12-01T18:40:35Z",
+        "timestamp": 1638384035000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.nature.com/articles/246015a0"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1973,
+            11
+          ]
+        ]
+      },
+      "references-count": 18,
+      "journal-issue": {
+        "issue": "5427",
+        "published-print": {
+          "date-parts": [
+            [
+              1973,
+              11
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "BF246015a0"
+      ],
+      "URL": "https://doi.org/10.1038/246015a0",
+      "relation": {},
+      "ISSN": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issn-type": [
+        {
+          "value": "0028-0836",
+          "type": "print"
+        },
+        {
+          "value": "1476-4687",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1973,
+            11
+          ]
+        ]
+      }
+    }
+  }
+}

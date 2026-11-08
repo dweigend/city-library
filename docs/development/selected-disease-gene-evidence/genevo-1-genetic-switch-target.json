@@ -1,0 +1,117 @@
+{
+  "model": "genevo-1-genetic-switch",
+  "setup": {
+    "monitors": "Tick\n0\nEnergy\n1000\nLacZ\n0\nLacY\n0\nMessage\nDivisions\n0",
+    "status": "Model initialized.",
+    "errors": [],
+    "console": []
+  },
+  "progress": {
+    "monitors": "Tick\n20\nEnergy\n1190\nLacZ\n0\nLacY\n0\nMessage\nDivisions\n0",
+    "status": "Steps completed.",
+    "statusState": "success",
+    "errors": [],
+    "console": [],
+    "canvas": [
+      {
+        "width": 1344,
+        "height": 744,
+        "rect": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 372.09375,
+          "top": 115,
+          "right": 984,
+          "bottom": 487.09375,
+          "left": 312
+        }
+      }
+    ],
+    "charts": [
+      {
+        "label": "Energy: 1190; LacZ: 0",
+        "paths": 3
+      }
+    ],
+    "overflow": false
+  },
+  "interactions": {
+    "runPause": true,
+    "reset": {
+      "monitors": "Tick\n0\nEnergy\n1000\nLacZ\n0\nLacY\n0\nMessage\nDivisions\n0",
+      "status": "Model initialized.",
+      "errors": [],
+      "console": []
+    }
+  },
+  "immutable": {
+    "buildVersion": "1793972277740",
+    "entryPath": "./chunks/ui-re5xfdkt.js",
+    "modelChunkSHA256": "bf4a5bbd22b72fa1afa4e2bdfa6ea128985de2b2ebf6fd6bf61e68f601199265",
+    "modelChunkBytes": 18727,
+    "sharedChunks": [
+      {
+        "url": "http://localhost:3149/chunks/app-sb7h8whr.js",
+        "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+        "bytes": 1112387
+      }
+    ],
+    "sourceMarker": "selected-disease-gene-b09:genevo-1-genetic-switch:6f46710d78daad311551c2ee934317d98ef52ad92779b8312ba66dcd4c7d330e",
+    "defaultBrowserHeadless": {
+      "tick": 3,
+      "agents": 50,
+      "stopped": false
+    },
+    "appSHA256": "b940b34e8ad4b411cdf542525fe25a49be126707acc89fb427d41d98a4d3bada"
+  },
+  "mobileLayout": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      626.5
+    ],
+    "documentWidth": 390,
+    "canvas": {
+      "x": 16,
+      "y": 0.078125,
+      "width": 358,
+      "height": 198.2265625,
+      "top": 0.078125,
+      "right": 374,
+      "bottom": 198.3046875,
+      "left": 16
+    },
+    "errors": [],
+    "console": []
+  },
+  "settings": {
+    "seed": 1,
+    "progressSteps": 20,
+    "sourceCase": {
+      "slug": "genevo-1-genetic-switch",
+      "name": "GenEvo 1 Genetic Switch",
+      "path": "Curricular Models/GenEvo/GenEvo 1 Genetic Switch",
+      "setup": "setup",
+      "steps": 20,
+      "reports": [
+        "ticks",
+        "energy",
+        "count LacIs",
+        "count RNAPs",
+        "count LacZs",
+        "division-number"
+      ]
+    }
+  },
+  "screenshots": [
+    "genevo-1-genetic-switch-target-setup.png",
+    "genevo-1-genetic-switch-target-progress.png",
+    "genevo-1-genetic-switch-target-desktop-dark.png",
+    "genevo-1-genetic-switch-target-mobile-light.png",
+    "genevo-1-genetic-switch-target-mobile-dark.png"
+  ]
+}

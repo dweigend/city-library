@@ -1,0 +1,101 @@
+{
+  "slug": "preferential-attachment",
+  "name": "Preferential Attachment",
+  "catalogPath": "Sample Models/Networks/Preferential Attachment",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Preferential%20Attachment.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether growth with degree-biased attachment can produce a network dominated by hubs. In NetLogo's Preferential Attachment model, one new node attaches to one existing node with probability proportional to its degree, beginning with a connected pair. The selected literature connects this mechanism to cumulative advantage and its statistical assessment: growth and preferential attachment generate heterogeneous degrees [1]; cumulative advantage provides an earlier reinforcement mechanism [2]; likelihood-based testing challenges visual power-law identification [3]. Finite networks, one-edge arrivals and the absence of deletion restrict the comparison; a straight line on a logarithmic plot is insufficient evidence for a power law. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Preferential%20Attachment.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Preferential%20Attachment.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/preferential-attachment.nlogox",
+    "sha256": "2648b17e0c01c3b1a65c7abd5d5f2cb1880e14ff62dfb60b6fafffbcb25267cc",
+    "citation": "For the model itself: * Wilensky, U. (2005). NetLogo Preferential Attachment model. http://ccl.northwestern.edu/netlogo/models/PreferentialAttachment. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is based on: Albert-László Barabási. Linked: The New Science of Networks, Perseus Publishing, Cambridge, Massachusetts, pages 79-92. For a more technical treatment, see: Albert-László Barabási & Reka Albert. Emergence of Scaling in Random Networks, Science, Vol 286, Issue 5439, 15 October 1999, pages 509-512. The layout algorithm is based on the Fruchterman-Reingold layout algorithm. More information about this algorithm can be obtained at: http://cs.brown.edu/people/rtamassi/gdhandbook/chapters/force-directed.pdf. For a model similar to the one described in the first suggested extension, please consult: W. Brian Arthur, \"Urban Systems and Historical Path-Dependence\", Chapt. 4 in Urban systems and Infrastructure, J. Ausubel and R. Herman (eds.), National Academy of Sciences, Washington, D.C., 1988.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/preferential-attachment.nlogox"
+  },
+  "publications": [
+    {
+      "id": "ba",
+      "creatorRole": "author",
+      "authors": [
+        "Albert-László Barabási",
+        "Réka Albert"
+      ],
+      "title": "Emergence of Scaling in Random Networks",
+      "year": 1999,
+      "venue": "Science",
+      "doi": "10.1126/science.286.5439.509",
+      "url": "https://doi.org/10.1126/science.286.5439.509",
+      "relevance": "growth and preferential attachment generate heterogeneous degrees",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1126%2Fscience.286.5439.509",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/ba-crossref.json",
+        "evidenceSummary": "Systems as diverse as genetic networks or the World Wide Web are best described as networks with complex topology. A common property of many large networks is that the vertex connectivities follow a scale-free power-law distribution. This feature was found to be a consequence of two generic mechanisms: (i) networks expand continuously by the addition of new vertices, and (ii) new vertices attach preferentially to sites that are already well connected. A model based on these two ingredients reproduces the observed stationary scale-free distributions, which indicates that the development of large networks is governed by robust self-organizing phenomena that go beyond the particulars of the individual systems.",
+        "evidenceFile": "evidence/social-urban/ba-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "price",
+      "creatorRole": "author",
+      "authors": [
+        "Derek De Solla Price"
+      ],
+      "title": "A general theory of bibliometric and other cumulative advantage processes",
+      "year": 1976,
+      "venue": "Journal of the American Society for Information Science",
+      "doi": "10.1002/asi.4630270505",
+      "url": "https://doi.org/10.1002/asi.4630270505",
+      "relevance": "cumulative advantage provides an earlier reinforcement mechanism",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1002%2Fasi.4630270505",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/price-crossref.json",
+        "evidenceSummary": "Abstract A Cumulative Advantage Distribution is proposed which models statistically the situation in which success breeds success. It differs from the Negative Binomial Distribution in that lack of success, being a non‐event, is not punished by increased chance of failure. It is shown that such a stochastic law is governed by the Beta Function, containing only one free parameter, and this is approximated by a skew or hyperbolic distribution of the type that is widespread in bibliometrics and diverse social science phenomena. In particular, this is shown to be an appropriate underlying probabilistic theory for the Bradford Law, the Lotka Law, the Pareto and Zipf Distributions, and for all the empirical results of citation frequency analysis. As side results one may derive also the obsolescence factor for literature use. The Beta Function is peculiarly elegant for these manifold purposes b",
+        "evidenceFile": "evidence/social-urban/price-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "clauset",
+      "creatorRole": "author",
+      "authors": [
+        "Aaron Clauset",
+        "Cosma Rohilla Shalizi",
+        "M. E. J. Newman"
+      ],
+      "title": "Power-Law Distributions in Empirical Data",
+      "year": 2009,
+      "venue": "SIAM Review",
+      "doi": "10.1137/070710111",
+      "url": "https://doi.org/10.1137/070710111",
+      "relevance": "likelihood-based testing challenges visual power-law identification",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1137%2F070710111",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/clauset-crossref.json",
+        "evidenceSummary": "Power-law distributions occur in many situations of scientific interest and have significant consequences for our understanding of natural and man-made phenomena. Unfortunately, the detection and characterization of power laws is complicated by the large fluctuations that occur in the tail of the distribution—the part of the distribution representing large but rare events—and by the difficulty of identifying the range over which power-law behavior holds. Commonly used methods for analyzing power-law data, such as least-squares fitting, can produce substantially inaccurate estimates of parameters for power-law distributions, and even in cases where such methods return accurate answers they are still unsatisfactory because they give no indication of whether the data obey a power law at all. Here we present a principled statistical framework for discerning and quantifying power-law behavior",
+        "evidenceFile": "evidence/social-urban/clauset-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,109 @@
+{
+  "slug": "galton-box",
+  "name": "Galton Box",
+  "catalogPath": "Sample Models/Mathematics/Probability/Galton Box",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Galton%20Box.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do repeated binary choices build a bell-shaped histogram? NetLogo Galton Box drops balls through rows of pegs, choosing left or right with a controllable probability and accumulating destination counts. Durrett [1] supplies binomial and limit-theorem foundations; Berry [2] quantifies approximation of sums by a Gaussian distribution; Wilensky [3] examines learning about normality through constructive simulation. The baseline illustrates how many paths can reach the same final position and how bias shifts the resulting distribution. Its decisions are probabilistic rules rather than simulated impacts with friction or elasticity. A finite number of rows gives a discrete distribution, while finite ball counts create sampling noise. Pile-up and display capacity also affect what remains visible. A normal approximation is conditional on the sum structure and parameter regime, rather than a universal property of random movement.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Galton%20Box.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Galton%20Box.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 39df3f1d9edd12a141f62c3cd36ae1ae5c62d5dab72750c55ad66e2374229fd4",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/galton-box.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2002).  NetLogo Galton Box model.  http://ccl.northwestern.edu/netlogo/models/GaltonBox.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/galton-box.nlogox",
+    "evidenceFile": "evidence/computing/galton-box.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Independent Bernoulli sums explain the discrete destination distribution.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1090/s0002-9947-1941-0003498-3",
+      "authors": [
+        "Andrew C. Berry"
+      ],
+      "title": "The accuracy of the Gaussian approximation to the sum of independent variates",
+      "year": 1941,
+      "venue": "Transactions of the American Mathematical Society",
+      "doi": "10.1090/s0002-9947-1941-0003498-3",
+      "url": "https://doi.org/10.1090/s0002-9947-1941-0003498-3",
+      "relevance": "Gaussian approximation error is directly relevant to interpreting a finite-row histogram.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1090%2FS0002-9947-1941-0003498-3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1090_s0002_9947_1941_0003498_3.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1090_s0002_9947_1941_0003498_3.json"
+      },
+      "publisher": "American Mathematical Society (AMS)",
+      "volume": "49",
+      "issue": "1",
+      "pages": "122-136",
+      "verified": true
+    },
+    {
+      "id": "10.1023/a:1002935313957",
+      "authors": [
+        "Uri Wilensky"
+      ],
+      "title": "What is Normal Anyway? Therapy for Epistemological Anxiety",
+      "year": 1997,
+      "venue": "Educational Studies in Mathematics",
+      "doi": "10.1023/a:1002935313957",
+      "url": "https://doi.org/10.1023/a:1002935313957",
+      "relevance": "Research on constructive explanations of normal distributions connects the simulation to its educational mechanism.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1023%2FA%3A1002935313957",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1023_a_1002935313957.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1023_a_1002935313957.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "33",
+      "issue": "2",
+      "pages": "171-202",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

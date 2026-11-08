@@ -1,0 +1,761 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          30
+        ]
+      ],
+      "date-time": "2026-10-30T04:12:35Z",
+      "timestamp": 1793333555279,
+      "version": "4.5.0"
+    },
+    "reference-count": 100,
+    "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+    "issue": "2",
+    "content-domain": {
+      "domain": [
+        "arc.aiaa.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Journal of Guidance, Control, and Dynamics"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1998,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.2514/2.4231",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2008,
+          8,
+          13
+        ]
+      ],
+      "date-time": "2008-08-13T07:52:56Z",
+      "timestamp": 1218613976000
+    },
+    "page": "193-207",
+    "update-policy": "https://doi.org/10.2514/aiaa_crossmarkpolicy",
+    "source": "Crossref",
+    "is-referenced-by-count": 2139,
+    "title": [
+      "Survey of Numerical Methods for Trajectory Optimization"
+    ],
+    "prefix": "10.2514",
+    "volume": "21",
+    "author": [
+      {
+        "given": "John T.",
+        "family": "Betts",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Boeing Information and Support Services, Seattle, Washington 98124-2207"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "1387",
+    "reference": [
+      {
+        "key": "p_1",
+        "volume-title": "CA",
+        "author": "Hallman W. P.",
+        "year": "1982"
+      },
+      {
+        "key": "p_2",
+        "volume-title": "Holt",
+        "author": "Citron S. J.",
+        "year": "1969"
+      },
+      {
+        "key": "p_3",
+        "volume-title": "Practical Methods of Optimization",
+        "volume": "2",
+        "author": "Fletcher R.",
+        "year": "1985"
+      },
+      {
+        "key": "p_4",
+        "volume-title": "Practical Optimization",
+        "author": "Gill P. E.",
+        "year": "1981"
+      },
+      {
+        "key": "p_5",
+        "volume-title": "Numerical Methods for Unconstrained Optimization and Nonlinear Equations",
+        "author": "Dennis J. E., Jr.",
+        "year": "1983"
+      },
+      {
+        "key": "p_6",
+        "volume-title": "CA",
+        "author": "Gill P. E.",
+        "year": "1986"
+      },
+      {
+        "key": "p_7",
+        "volume-title": "CA",
+        "author": "Gill P. E.",
+        "year": "1986"
+      },
+      {
+        "key": "p_8",
+        "volume-title": "NLP2 Optimization Algorithm Documentation",
+        "author": "Betts J. T.",
+        "year": "1997"
+      },
+      {
+        "key": "p_9",
+        "first-page": "297",
+        "volume-title": "Numerical Methods for Non-LinearOptimization",
+        "author": "Rosen J. B.",
+        "year": "1972"
+      },
+      {
+        "key": "p_10",
+        "first-page": "335",
+        "volume-title": "Design and Implementation of Optimization Software",
+        "author": "Lasdon L. S.",
+        "year": "1978"
+      },
+      {
+        "key": "p_11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF02192216"
+      },
+      {
+        "key": "p_12",
+        "volume-title": "The Boeing Co.",
+        "author": "Betts J. T.",
+        "year": "1997"
+      },
+      {
+        "key": "p_13",
+        "author": "Ashcraft C. C.",
+        "journal-title": "SIAM Journal of Matrix Analysis (submitted for publication)."
+      },
+      {
+        "key": "p_14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/6.1993-3751"
+      },
+      {
+        "key": "p_15",
+        "volume-title": "Boeing Computer Services, BCS Technology TR BCSTECH-93-047",
+        "author": "Betts J. T.",
+        "year": "1993"
+      },
+      {
+        "key": "p_16",
+        "volume-title": "CA",
+        "author": "Gill P. E.",
+        "year": "1987"
+      },
+      {
+        "key": "p_17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.25352"
+      },
+      {
+        "key": "p_18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/0720013"
+      },
+      {
+        "key": "p_19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/imamat/13.1.117"
+      },
+      {
+        "key": "p_20",
+        "volume-title": "Dept. of Operations Research, Stanford Univ., TR SOL 96-0",
+        "author": "Gill P. E.",
+        "year": "1996"
+      },
+      {
+        "key": "p_21",
+        "volume-title": "Lectures on the Calculus of Variations",
+        "author": "Bliss G. A.",
+        "year": "1946"
+      },
+      {
+        "key": "p_22",
+        "volume-title": "The Mathematical Theory of Optimal Processes",
+        "author": "Pontryagin L. S.",
+        "year": "1962"
+      },
+      {
+        "key": "p_23",
+        "volume-title": "Applied Optimal Control",
+        "author": "Bryson A. E., Jr.",
+        "year": "1975"
+      },
+      {
+        "key": "p_24",
+        "volume-title": "Numerical Solution of Boundary Value Problems in Ordinary Differential Equations",
+        "author": "Ascher U. M.",
+        "year": "1988"
+      },
+      {
+        "key": "p_25",
+        "volume-title": "North-Holland",
+        "author": "Brenan K. E.",
+        "year": "1989"
+      },
+      {
+        "key": "p_26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/8.4372"
+      },
+      {
+        "key": "p_27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.21695"
+      },
+      {
+        "key": "p_28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.21084"
+      },
+      {
+        "key": "p_29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF02192298"
+      },
+      {
+        "key": "p_30",
+        "first-page": "7",
+        "volume": "23",
+        "author": "Pesch H. J.",
+        "year": "1994",
+        "journal-title": "Control and Cybernetics"
+      },
+      {
+        "key": "p_31",
+        "volume-title": "Theory of Optimal Control and Mathematical Programming",
+        "author": "Canon M. D.",
+        "year": "1970"
+      },
+      {
+        "key": "p_32",
+        "volume-title": "Computational Methods in Optimization",
+        "author": "Polak E.",
+        "year": "1971"
+      },
+      {
+        "key": "p_33",
+        "volume-title": "Optimal Control by Mathematical Programming",
+        "author": "Tabak D.",
+        "year": "1971"
+      },
+      {
+        "key": "p_34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.20934"
+      },
+      {
+        "key": "p_35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.21662"
+      },
+      {
+        "key": "p_36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF02071065"
+      },
+      {
+        "key": "p_37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-0348-7539-4_10"
+      },
+      {
+        "key": "p_38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.56092"
+      },
+      {
+        "key": "p_39",
+        "volume-title": "NASA CR3597",
+        "author": "Calise A. J.",
+        "year": "1982"
+      },
+      {
+        "key": "p_40",
+        "volume-title": "Theories of Capillary Action",
+        "author": "Bashforth F.",
+        "year": "1883"
+      },
+      {
+        "key": "p_41",
+        "volume-title": "New Methods in Exterior Ballistics",
+        "author": "Moulton F. R.",
+        "year": "1926"
+      },
+      {
+        "key": "p_42",
+        "volume-title": "Numerical Methods",
+        "author": "Dahlquist G.",
+        "year": "1974"
+      },
+      {
+        "key": "p_43",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1007/978-1-4757-5592-3",
+        "volume-title": "Introductionto Numerical Analysis",
+        "author": "Stoer J.",
+        "year": "1980"
+      },
+      {
+        "key": "p_44",
+        "first-page": "55",
+        "volume-title": "North-Holland",
+        "author": "Hindmarsh A. C.",
+        "year": "1983"
+      },
+      {
+        "key": "p_45",
+        "volume-title": "Computer Solution of Ordinary Differential Equations: The Initial Value Problem",
+        "author": "Shampine L. F.",
+        "year": "1975"
+      },
+      {
+        "key": "p_46",
+        "volume-title": "Numerical Initial Value Problems in Ordinary Differential Equations",
+        "author": "Gear C. W.",
+        "year": "1971"
+      },
+      {
+        "key": "p_47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.21224"
+      },
+      {
+        "key": "p_48",
+        "first-page": "T-18",
+        "author": "Gear C. W.",
+        "year": "1971",
+        "journal-title": "IEEE Transactions on Circuit Theory"
+      },
+      {
+        "key": "p_49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/0903023"
+      },
+      {
+        "key": "p_50",
+        "first-page": "65",
+        "volume-title": "North-Holland",
+        "author": "Petzold L. R.",
+        "year": "1983"
+      },
+      {
+        "key": "p_51",
+        "first-page": "5",
+        "volume": "85",
+        "author": "Hallman W. P.",
+        "year": "1985",
+        "journal-title": "The Aerospace Corp., Interoffice Correspondence IOC A"
+      },
+      {
+        "key": "p_52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/6.1989-3446"
+      },
+      {
+        "key": "p_53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4612-6333-3"
+      },
+      {
+        "key": "p_54",
+        "volume-title": "Proceedings of the AIAA/AHS/ASEE Aircraft Design, Systems and Operations Conference, AIAA",
+        "author": "Ferguson D. R.",
+        "year": "1989"
+      },
+      {
+        "key": "p_55",
+        "volume-title": "AIAA Paper",
+        "author": "Ferguson D. R.",
+        "year": "1989"
+      },
+      {
+        "key": "p_56",
+        "first-page": "15",
+        "volume-title": "CAD",
+        "volume": "18",
+        "author": "Ferguson D. R.",
+        "year": "1986"
+      },
+      {
+        "key": "p_57",
+        "first-page": "81",
+        "volume-title": "Optimal Design and Control, Proceedings of the Workshop on Optimal Design and Control, edited by J. Borggaard, J. Burkardt, M. Gunzburger, and J. Peterson",
+        "volume": "19",
+        "author": "Betts J. T.",
+        "year": "1994"
+      },
+      {
+        "key": "p_58",
+        "volume-title": "NASA CR-2770",
+        "author": "Brauer G. L.",
+        "year": "1977"
+      },
+      {
+        "key": "p_59",
+        "volume-title": "CA",
+        "author": "Meder D. S.",
+        "year": "1975"
+      },
+      {
+        "key": "p_60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.7373"
+      },
+      {
+        "key": "p_61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.55862"
+      },
+      {
+        "key": "p_62",
+        "volume-title": "Proceedings of the AIAA/AAS Astrodynamics Conference, AIAA",
+        "author": "Bauer T. P.",
+        "year": "1984"
+      },
+      {
+        "issue": "9975",
+        "key": "p_63",
+        "first-page": "52",
+        "volume": "88",
+        "author": "Brenan K. E.",
+        "year": "1988",
+        "journal-title": "The Aerospace Corp., ATM"
+      },
+      {
+        "key": "p_64",
+        "volume-title": "Proceedings of the Workshop on Numerical Treatment of Inverse Problems for Differential and Integral Equations",
+        "author": "Gear C. W.",
+        "year": "1982"
+      },
+      {
+        "key": "p_65",
+        "volume-title": "Dept. of Computer Science, Univ. of Illinois, TR UIUCDCS-R-83-1130",
+        "author": "Van Vu T.",
+        "year": "1983"
+      },
+      {
+        "key": "p_66",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1115/1.3258500"
+      },
+      {
+        "key": "p_67",
+        "volume-title": "Proceedings of the AIAA/AHS/ASEE Aerospace Design Conference, AIAA",
+        "author": "Balkanyi L. R.",
+        "year": "1993"
+      },
+      {
+        "key": "p_68",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/6.1973-1074"
+      },
+      {
+        "key": "p_69",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1155/1992/717832"
+      },
+      {
+        "key": "p_70",
+        "volume-title": "Control Applications of Optimization",
+        "author": "Sch\u00f6pf R.",
+        "year": "1993"
+      },
+      {
+        "key": "p_71",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/10556789408805589"
+      },
+      {
+        "key": "p_72",
+        "volume-title": "Carl-Cranz Gesellschaft",
+        "author": "Bulirsch R.",
+        "year": "1971"
+      },
+      {
+        "key": "p_73",
+        "volume-title": "Blaisdell",
+        "author": "Keller H. B.",
+        "year": "1968"
+      },
+      {
+        "key": "p_74",
+        "first-page": "22",
+        "volume": "515",
+        "author": "Oberle H. J.",
+        "year": "1989",
+        "journal-title": "DLR IB/"
+      },
+      {
+        "key": "p_75",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-0348-7539-4_25"
+      },
+      {
+        "key": "p_76",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/(SICI)1099-1514(199601/03)17:1<45::AID-OCA564>3.0.CO;2-X"
+      },
+      {
+        "key": "p_77",
+        "first-page": "242",
+        "volume-title": "Proceedings of the 9th IFAC World Congress",
+        "author": "Bock H. G.",
+        "year": "1984"
+      },
+      {
+        "key": "p_78",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.20656"
+      },
+      {
+        "key": "p_79",
+        "volume-title": "Proceedings of the 6th Technical Conference on Optimization Techniques",
+        "volume": "7",
+        "author": "Dickmanns E. D.",
+        "year": "1975"
+      },
+      {
+        "key": "p_80",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01395926"
+      },
+      {
+        "key": "p_81",
+        "volume-title": "2nd IFAC Workshop on Optimisation",
+        "author": "Dickmanns E. D.",
+        "year": "1980"
+      },
+      {
+        "key": "p_82",
+        "volume-title": "Nelson",
+        "volume": "76",
+        "author": "Ascher U. M.",
+        "year": "1979"
+      },
+      {
+        "key": "p_83",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/2.4033"
+      },
+      {
+        "key": "p_84",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.20223"
+      },
+      {
+        "key": "p_85",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.20819"
+      },
+      {
+        "key": "p_86",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.11428"
+      },
+      {
+        "key": "p_87",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-0348-8497-6_1"
+      },
+      {
+        "key": "p_88",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-0348-7539-4_9"
+      },
+      {
+        "key": "p_89",
+        "volume-title": "The Boeing Co.",
+        "author": "Betts J. T.",
+        "year": "1997"
+      },
+      {
+        "key": "p_91",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF03256529"
+      },
+      {
+        "key": "p_92",
+        "first-page": "247",
+        "volume": "42",
+        "author": "Betts J. T.",
+        "year": "1994",
+        "journal-title": "Journal of the Astronautical Sciences"
+      },
+      {
+        "key": "p_93",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.56670"
+      },
+      {
+        "key": "p_94",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/3.20739"
+      },
+      {
+        "key": "p_95",
+        "volume-title": "Advanced Launch and Reentry Trajectory Optimization Software Documentation (ALTOS)",
+        "author": "Roenneke A. J.",
+        "year": "1995"
+      },
+      {
+        "key": "p_96",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-82450-0_9"
+      },
+      {
+        "key": "p_97",
+        "first-page": "117",
+        "volume-title": "Proceedings of the Workshop on Optimal Design and Control, edited by J. Borggaard, J. Burkardt, M. Gunzburger, and J. Peterson",
+        "volume": "19",
+        "author": "Brenan K. E.",
+        "year": "1994"
+      },
+      {
+        "key": "p_98",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-0348-8497-6_17"
+      },
+      {
+        "key": "p_99",
+        "volume-title": "AAS/AIAA Astrodynamics Specialist Conf., AAS Paper 91-443",
+        "author": "Downey J. R.",
+        "year": "1991"
+      },
+      {
+        "key": "p_100",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1021/ie00095a010"
+      },
+      {
+        "key": "p_101",
+        "volume-title": "Dynamic Programming",
+        "author": "Bellman R.",
+        "year": "1957"
+      }
+    ],
+    "container-title": [
+      "Journal of Guidance, Control, and Dynamics"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://arc.aiaa.org/doi/pdf/10.2514/2.4231",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          2,
+          28
+        ]
+      ],
+      "date-time": "2021-02-28T20:28:10Z",
+      "timestamp": 1614544090000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://arc.aiaa.org/doi/10.2514/2.4231"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1998,
+          3
+        ]
+      ]
+    },
+    "references-count": 100,
+    "journal-issue": {
+      "issue": "2",
+      "published-print": {
+        "date-parts": [
+          [
+            1998,
+            3
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.2514/2.4231"
+    ],
+    "URL": "https://doi.org/10.2514/2.4231",
+    "relation": {},
+    "ISSN": [
+      "0731-5090",
+      "1533-3884"
+    ],
+    "issn-type": [
+      {
+        "value": "0731-5090",
+        "type": "print"
+      },
+      {
+        "value": "1533-3884",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1998,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2012-05-23",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

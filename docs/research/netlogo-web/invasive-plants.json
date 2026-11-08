@@ -1,0 +1,110 @@
+{
+  "slug": "invasive-plants",
+  "name": "Invasive Plants",
+  "catalogPath": "Sample Models/Biology/Invasive Plants",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Invasive%20Plants.nlogox",
+  "deliveryBatch": "B06",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do local spread and treatment interact across neighboring farms? NetLogo Invasive Plants assigns each patch an infestation level, permits spread, and applies weed-killer treatment with effects extending to nearby patches. The Info identifies Auld and Coote as a loose source [1]; dispersal theory [2] and invasion research [3] provide broader scientific context. The model makes spatial externalities and repeated intervention visible without representing individual seeds, crop economics, or chemical transport in detail. Its bounded infestation scale is an abstraction rather than a measured density. Comparing interventions illustrates consequences of the chosen spread and treatment rules, not demonstrated field effectiveness, pesticide safety, or a forecast for a named invasive species.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Invasive%20Plants.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Invasive%20Plants.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 657443adb46050bced1887759c92f23321227607bc28aceebb2bdcd4b0a5dd9e",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/invasive-plants.nlogox",
+    "infoFile": "evidence/biology/invasive-plants-info.txt",
+    "originalModelCitation": "* Mongkhonvanit, K. and Wilensky, U. (2025).  NetLogo Invasive Plants model.  http://ccl.northwestern.edu/netlogo/models/InvasivePlants.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "auld",
+      "authors": [
+        "B. A. Auld",
+        "B. G. Coote"
+      ],
+      "title": "A Model of a Spreading Plant Population",
+      "year": 1980,
+      "venue": "Oikos",
+      "doi": "10.2307/3544288",
+      "url": "https://doi.org/10.2307/3544288",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=A+model+of+a+spreading+plant+population+Auld+Coote+1980&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/auld-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "34",
+      "issue": "3",
+      "pages": "287",
+      "relevance": "The served Info explicitly names this spreading-plant model as a loose inspiration."
+    },
+    {
+      "id": "skellam",
+      "authors": [
+        "J. G. Skellam"
+      ],
+      "title": "Random Dispersal in Theoretical Populations",
+      "year": 1951,
+      "venue": "Biometrika",
+      "doi": "10.2307/2332328",
+      "url": "https://doi.org/10.2307/2332328",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Random+dispersal+in+theoretical+populations+Skellam+1951&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/skellam-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "38",
+      "issue": "1/2",
+      "pages": "196",
+      "relevance": "Provides foundational dispersal theory for relating local spread to population expansion."
+    },
+    {
+      "id": "invasions",
+      "authors": [
+        "Alan Hastings",
+        "Kim Cuddington",
+        "Kendi F. Davies",
+        "Christopher J. Dugaw",
+        "Sarah Elmendorf",
+        "Amy Freestone",
+        "Susan Harrison",
+        "Matthew Holland",
+        "John Lambrinos",
+        "Urmila Malvadkar",
+        "Brett A. Melbourne",
+        "Kara Moore",
+        "Caz Taylor",
+        "Diane Thomson"
+      ],
+      "title": "The spatial spread of invasions: new developments in theory and evidence",
+      "year": 2005,
+      "venue": "Ecology Letters",
+      "doi": "10.1111/j.1461-0248.2004.00687.x",
+      "url": "https://doi.org/10.1111/j.1461-0248.2004.00687.x",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+spatial+spread+of+invasions+new+developments+in+theory+and+evidence+Hastings+2005&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/invasions-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "8",
+      "issue": "1",
+      "pages": "91-101",
+      "relevance": "Reviews mechanisms and limitations in spatial invasion predictions and management."
+    }
+  ],
+  "gaps": []
+}

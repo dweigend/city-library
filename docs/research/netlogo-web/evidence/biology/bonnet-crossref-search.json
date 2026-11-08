@@ -1,0 +1,1384 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Human+acute+myeloid+leukemia+is+organized+as+a+hierarchy+that+originates+from+a+primitive+hematopoietic+cell+Bonnet+Dick+1997&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 12914159,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                3
+              ]
+            ],
+            "date-time": "2026-11-03T19:28:54Z",
+            "timestamp": 1793734134846,
+            "version": "4.6.1"
+          },
+          "reference-count": 39,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1997,
+                    7,
+                    1
+                  ]
+                ],
+                "date-time": "1997-07-01T00:00:00Z",
+                "timestamp": 867715200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nat Med"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1997,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.1038/nm0797-730",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                8,
+                18
+              ]
+            ],
+            "date-time": "2004-08-18T22:09:35Z",
+            "timestamp": 1092866975000
+          },
+          "page": "730-737",
+          "source": "Crossref",
+          "is-referenced-by-count": 5863,
+          "title": [
+            "Human acute myeloid leukemia is organized as a hierarchy that originates from a primitive hematopoietic cell"
+          ],
+          "prefix": "10.1038",
+          "volume": "3",
+          "author": [
+            {
+              "given": "Dominique",
+              "family": "Bonnet",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "John E.",
+              "family": "Dick",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BFnm0797730_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "468",
+              "DOI": "10.1056/NEJM198708203170802",
+              "volume": "317",
+              "author": "P Fialkow",
+              "year": "1987",
+              "unstructured": "Fialkow, P. et al. Clonal development, stem-cell differentiation, and clinical remission in acute nonlymphocytic leukemia. N. Engl. J. Med. 317, 468\u2013473 (1987).",
+              "journal-title": "N. Engl. J. Med."
+            },
+            {
+              "key": "BFnm0797730_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1182/blood.V62.1.1.1",
+              "volume": "62",
+              "author": "E McCulloch",
+              "year": "1983",
+              "unstructured": "McCulloch, E. Stem cells in normal and leukemic hemopoiesis (Henry StrattonLecture). Blood 62, 1\u201313 (1983).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "1185",
+              "DOI": "10.1182/blood.V68.6.1185.1185",
+              "volume": "68",
+              "author": "J Griffin",
+              "year": "1986",
+              "unstructured": "Griffin, J. & L\u00f6wenberg, B. Clonogenic cells in acute myeloblastic leukemia. Blood 68, 1185\u20131195 (1986).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "328",
+              "DOI": "10.1056/NEJM199402033300507",
+              "volume": "330",
+              "author": "MJ Cline",
+              "year": "1994",
+              "unstructured": "Cline, M.J. The molecular basis of leukemia. N. Engl. J. Med. 330, 328\u2013336 (1994).",
+              "journal-title": "N. Engl. J. Med."
+            },
+            {
+              "key": "BFnm0797730_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "9",
+              "DOI": "10.1016/0165-4608(87)90026-4",
+              "volume": "29",
+              "author": "R Berger",
+              "year": "1987",
+              "unstructured": "Berger, R. et al. Cytogenetic studies on 519 consecutive de novo acute nonlympho cytic leukemias. Cancer Genet. Cytogenet. 29, 9\u201321 (1987).",
+              "journal-title": "Cancer Genet. Cytogenet."
+            },
+            {
+              "key": "BFnm0797730_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "451",
+              "DOI": "10.1111/j.1365-2141.1976.tb03563.x",
+              "volume": "33",
+              "author": "J Bennett",
+              "year": "1976",
+              "unstructured": "Bennett, J. et al. Proposals for the classification of the acute leukemias. Br. J. Haematol. 33, 451\u2013458 (1976).",
+              "journal-title": "Br. J. Haematol."
+            },
+            {
+              "key": "BFnm0797730_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "1068",
+              "DOI": "10.1182/blood.V57.6.1068.bloodjournal5761068",
+              "volume": "57",
+              "author": "PJ Fialkow",
+              "year": "1981",
+              "unstructured": "Fialkow, P.J. et al. Acute nonlymphocytic leukemia: Heterogeneity of stem cell origin. Blood 57, 1068\u20131073 (1981).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR8",
+              "first-page": "247",
+              "volume": "3",
+              "author": "CR Bartram",
+              "year": "1989",
+              "unstructured": "Bartram, C.R. et al. Acute myeloid leukemia: Analysis of ras gene mutations and clonality defined by polymorphic X-linked loci. Leukemia 3, 247\u2013256 (1989).",
+              "journal-title": "Leukemia"
+            },
+            {
+              "key": "BFnm0797730_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "884",
+              "DOI": "10.1182/blood.V82.3.884.884",
+              "volume": "82",
+              "author": "K van Lorn",
+              "year": "1993",
+              "unstructured": "van Lorn, K., Hagemeijer, A., Smit, E.M. & Lowenberg, B. In situ hybridization on May-Gr\u00fcnwald Giemsa-stained bone marrow and blood smears of patients with hematologic disorders allows detection of cell-lineage-specific cytogenetic abnormalities. Blood 82, 884\u2013888 (1993).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "15",
+              "DOI": "10.1056/NEJM198607033150103",
+              "volume": "315",
+              "author": "E Fearon",
+              "year": "1986",
+              "unstructured": "Fearon, E., Burke, P., Schiffer, C., Zehnbauer, B. & Vogelstein, B. Differentiation of leukemia cells to polymorphonuclear leukocytes in patients with acute nonlymphoblastic leukemia. N. Engl. J. Med. 315, 15\u201324 (1986).",
+              "journal-title": "N. Engl. J. Med."
+            },
+            {
+              "key": "BFnm0797730_CR11",
+              "first-page": "1318",
+              "volume": "9",
+              "author": "M Feuring-Buske",
+              "year": "1995",
+              "unstructured": "Feuring-Buske, M. et al. Trisomy 4 in \u2018stem cell-like\u2019 leukemic cells of a patient with AML. Leukemia 9, 1318\u20131320 (1995).",
+              "journal-title": "Leukemia"
+            },
+            {
+              "key": "BFnm0797730_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "413",
+              "DOI": "10.1038/bjc.1993.81",
+              "volume": "67",
+              "author": "MF Greaves",
+              "year": "1993",
+              "unstructured": "Greaves, M.F. Stem cell origins of leukaemia and curability. Br. J. Cancer 67, 413\u2013423 (1993).",
+              "journal-title": "Br. J. Cancer"
+            },
+            {
+              "key": "BFnm0797730_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "1153",
+              "DOI": "10.1056/NEJM198805053181803",
+              "volume": "318",
+              "author": "M Kein\u00e4nen",
+              "year": "1988",
+              "unstructured": "Kein\u00e4nen, M., Griffin, J., Bloomfield, C., Machnrcki, J. & de la Chapelle, A. Clonalchromosomal abnormalities showing multiple-cell-lineage involvement in acute myeloid leukemia. N. Engl.J. Med. 318, 1153\u20131158 (1988).",
+              "journal-title": "N. Engl.J. Med."
+            },
+            {
+              "key": "BFnm0797730_CR14",
+              "first-page": "38S",
+              "volume": "2",
+              "author": "EA McCulloch",
+              "year": "1988",
+              "unstructured": "McCulloch, E.A. et al. Heterogeneity in acute myeloblastic leukemia. Leukemia 2, 38S\u201349S (1988).",
+              "journal-title": "Leukemia"
+            },
+            {
+              "key": "BFnm0797730_CR15",
+              "doi-asserted-by": "crossref",
+              "first-page": "2906",
+              "DOI": "10.1182/blood.V86.8.2906.2906",
+              "volume": "86",
+              "author": "D Haase",
+              "year": "1995",
+              "unstructured": "Haase, D. et al. Evidence for malignant transformation in acute myeloid leukemia at the level of early hematopoietic stem cells by cytogenetic analysis of CD34+sub-populations. Blood 86, 2906\u20132912 (1995).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR16",
+              "first-page": "1139",
+              "volume": "86",
+              "author": "B Mehrotra",
+              "year": "1995",
+              "unstructured": "Mehrotra, B. et al. Cytogenetically aberrant cells in the stem cell compartment (CD34+1in\u2212) in acute myeloid leukemia. Blood 86, 1139\u20131147 (1995).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "1329",
+              "DOI": "10.1038/nm1296-1329",
+              "volume": "2",
+              "author": "A Larochelle",
+              "year": "1996",
+              "unstructured": "Larochelle, A. et al. Identification of primitive hematopoietic cells capable of repopulating NOD/SCID mouse bone marrow: Implications for gene therapy. Nature Med. 2, 1329\u20131337 (1996).",
+              "journal-title": "Nature Med."
+            },
+            {
+              "key": "BFnm0797730_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "197",
+              "DOI": "10.1006/smim.1996.0025",
+              "volume": "8",
+              "author": "JE Dick",
+              "year": "1996",
+              "unstructured": "Dick, J.E. Normal and leukemic stem cells assayed in SCID mice. Semin. Immunol. 8, 197\u2013206 (1996).",
+              "journal-title": "Semin. Immunol."
+            },
+            {
+              "key": "BFnm0797730_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "5320",
+              "DOI": "10.1073/pnas.94.10.5320",
+              "volume": "94",
+              "author": "M Bhatia",
+              "year": "1997",
+              "unstructured": "Bhatia, M., Wang, J., Kapp, U., Bonnet, D. & Dick, J. Purification of primitive human hematopoietic cells capable of repopulating NOD/SCID mice. Proc. Natl.Acad. Sci.USA 94, 5320\u20135325 (1997).",
+              "journal-title": "Proc. Natl.Acad. Sci.USA"
+            },
+            {
+              "key": "BFnm0797730_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "645",
+              "DOI": "10.1038/367645a0",
+              "volume": "367",
+              "author": "T Lapidot",
+              "year": "1994",
+              "unstructured": "Lapidot, T. et al. A cell initiating human acute myeloid leukaemia after transplantation into SCID mice. Nature 367, 645\u2013648 (1994).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnm0797730_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "163",
+              "DOI": "10.1093/hmg/4.2.163",
+              "volume": "4",
+              "author": "A Larochelle",
+              "year": "1995",
+              "unstructured": "Larochelle, A. et al. Engraftment of immune-deficient mice with primitivehematopoietic cells from beta-thalassemia and sickle cell anemia patients:Implications for evaluating human gene therapy protocols. Hum. Mol. Genet. 4, 163\u2013172 (1995).",
+              "journal-title": "Hum. Mol. Genet."
+            },
+            {
+              "key": "BFnm0797730_CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "3919",
+              "DOI": "10.1182/blood.V89.11.3919",
+              "volume": "89",
+              "author": "J Wang",
+              "year": "1997",
+              "unstructured": "Wang, J., Doedens, M. & Dick, J. Primitive human hematopoietic cells are enrichedin cord blood compared to adult bone marrow or mobilized peripheral blood as measured by the quantitative in vivo SCID-repopulating cell (SRC) assay. Blood 89, 3919\u20133924 (1997).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "583",
+              "DOI": "10.1038/bjc.1963.78",
+              "volume": "17",
+              "author": "E Porter",
+              "year": "1964",
+              "unstructured": "Porter, E. & Berry, R. The efficient design of transplantable tumor assays. Br. J. Cancer 17, 583\u2013595 (1964).",
+              "journal-title": "Br. J. Cancer"
+            },
+            {
+              "key": "BFnm0797730_CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "1614",
+              "DOI": "10.4049/jimmunol.126.4.1614",
+              "volume": "126",
+              "author": "C Taswell",
+              "year": "1981",
+              "unstructured": "Taswell, C. Limiting dilution assays for the determination of immunocompetent cell frequencies. I. Data analysis. J. Immunol. 126, 1614\u20131619 (1981).",
+              "journal-title": "J. Immunol."
+            },
+            {
+              "key": "BFnm0797730_CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "157",
+              "DOI": "10.4049/jimmunol.133.1.157",
+              "volume": "133",
+              "author": "C Civin",
+              "year": "1984",
+              "unstructured": "Civin, C. et al. Antigenic analysis of hematopoiesis. III. A hematopoietic progenitor cell surface antigen defined by a monoclonal antibody raised against KG-1 a cells. J. Immunol. 133, 157\u2013165 (1984).",
+              "journal-title": "J. Immunol."
+            },
+            {
+              "key": "BFnm0797730_CR26",
+              "doi-asserted-by": "crossref",
+              "first-page": "1218",
+              "DOI": "10.1182/blood.V77.6.1218.1218",
+              "volume": "77",
+              "author": "LWWM Terstappen",
+              "year": "1991",
+              "unstructured": "Terstappen, L.W.W.M., Huang, S., Safford, M., Lansdorp, P.M. & Loken, M.R. Sequential generations of hematopoietic colonies derived from single nonlineagecommitted CD34+CD38 progenitor cells. Blood 77, 1218\u20131227 (1991).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR27",
+              "first-page": "993",
+              "volume": "6",
+              "author": "L Terstappen",
+              "year": "1992",
+              "unstructured": "Terstappen, L. et al. Flow cytometry characterization of acute myeloid leukemia: IV. Comparison to the differentiation pathway of normal hematopoietic cells. Leukemia 6, 993\u20131000 (1992).",
+              "journal-title": "Leukemia"
+            },
+            {
+              "key": "BFnm0797730_CR28",
+              "unstructured": "Cashman, J. et al. Kinetic evidence of the regeneration of multilineage hematopoiesis from primitive cells in normal human bone marrow transplanted into immunodeficient mice. Stood (in the press)."
+            },
+            {
+              "key": "BFnm0797730_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "603",
+              "DOI": "10.1093/jnci/50.3.603",
+              "volume": "50",
+              "author": "M Moore",
+              "year": "1974",
+              "unstructured": "Moore, M., Williams, N. & Metcalfe, D. In vitro colony formation by normal and leukemic human hematopoietic cells: Characterization of the colony-forming cells. J. Natl. Cancer Inst. 50, 603 (1974).",
+              "journal-title": "J. Natl. Cancer Inst."
+            },
+            {
+              "key": "BFnm0797730_CR30",
+              "doi-asserted-by": "crossref",
+              "first-page": "4754",
+              "DOI": "10.1182/blood.V87.11.4754.bloodjournal87114754",
+              "volume": "87",
+              "author": "H Sutherland",
+              "year": "1996",
+              "unstructured": "Sutherland, H., Blair, A. & Zapf, R.W. Characterization of a hierarchy in human acute myeloid leukemia progenitor cells. Blood 87, 4754\u20134761 (1996).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "1331",
+              "DOI": "10.1084/jem.177.5.1331",
+              "volume": "177",
+              "author": "W Craig",
+              "year": "1993",
+              "unstructured": "Craig, W., Kay, R., Cutler, R.B. & Lansdorp, P.M. Expression of Thy-1 on human hematopoietic progenitor cells. J. Exp. Med. 177, 1331\u20131342 (1993).",
+              "journal-title": "J. Exp. Med."
+            },
+            {
+              "key": "BFnm0797730_CR32",
+              "first-page": "2187",
+              "volume": "87",
+              "author": "W Terpstra",
+              "year": "1996",
+              "unstructured": "Terpstra, W. et al. Long-term leukemia-initiating capacity of a CD34\u2212 subpopulation of acute myeloid leukemia. Stood 87, 2187\u20132194 (1996).",
+              "journal-title": "Stood"
+            },
+            {
+              "key": "BFnm0797730_CR33",
+              "doi-asserted-by": "crossref",
+              "first-page": "2089",
+              "DOI": "10.1182/blood.V79.8.2089.2089",
+              "volume": "79",
+              "author": "C Sawyers",
+              "year": "1992",
+              "unstructured": "Sawyers, C., Gishizky, M., Quan, S., Golde, D. & Witte, O. Propagation of human blastic myeloid leukemias in the SCID mouse. Blood 79, 2089\u20132098 (1992).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFnm0797730_CR34",
+              "first-page": "827",
+              "volume": "7",
+              "author": "A Cesano",
+              "year": "1992",
+              "unstructured": "Cesano, A. et al. The severe combined immunodeficient (SCID) mouse as a model for myeloid leukemias. Oncogene 7, 827\u2013836 (1992).",
+              "journal-title": "Oncogene"
+            },
+            {
+              "key": "BFnm0797730_CR35",
+              "first-page": "2154",
+              "volume": "85",
+              "author": "AG Turhan",
+              "year": "1995",
+              "unstructured": "Turhan, A.G. et al. Highly purified primitive hematopoietic stem cells are PML-RARA negative and generate nonclonal progenitors in acute promyelocytic leukemia. Stood 85, 2154\u20132161 (1995).",
+              "journal-title": "Stood"
+            },
+            {
+              "key": "BFnm0797730_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "1137",
+              "DOI": "10.1126/science.1372131",
+              "volume": "255",
+              "author": "T Lapidot",
+              "year": "1992",
+              "unstructured": "Lapidot, T. et al. Cytokine stimulation of multilineage hematopoiesis from immature human cells engrafted in SCID mice. Science 255, 1137\u20131141 (1992).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnm0797730_CR37",
+              "first-page": "2489",
+              "volume": "83",
+              "author": "J Vormoor",
+              "year": "1994",
+              "unstructured": "Vormoor, J. et al. Immature human cord blood progenitors engraft and proliferate to high levels in immune-deficient SCID mice. Stood 83, 2489\u20132497 (1994).",
+              "journal-title": "Stood"
+            },
+            {
+              "key": "BFnm0797730_CR38",
+              "first-page": "1539",
+              "volume": "87",
+              "author": "C Sirard",
+              "year": "1996",
+              "unstructured": "Sirard, C. et al. Normal and leukemic SCID-repopulating cells (SRC) co-exist in the bone marrow and peripheral blood from CML patients in chronic phase while leukemic SRC are detected in blast crisis. Stood 87, 1539\u20131548 (1996).",
+              "journal-title": "Stood"
+            },
+            {
+              "key": "BFnm0797730_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "3156",
+              "DOI": "10.1128/MCB.6.9.3156",
+              "volume": "6",
+              "author": "JS Waye",
+              "year": "1986",
+              "unstructured": "Waye, J.S. & Willard, H.F. Structure, organization and sequence of alpha satellite DNA from human chromosome 17: Evidence for evolution by unequal crossing-over and ancestral pentamer repeat shared with the human X chromosome. Mol. Cell. Biol. 6, 3156\u20133165 (1986).",
+              "journal-title": "Mol. Cell. Biol."
+            }
+          ],
+          "container-title": [
+            "Nature Medicine"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nm0797-730",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nm0797-730.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nm0797-730.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T19:26:15Z",
+            "timestamp": 1684437975000
+          },
+          "score": 66.622925,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nm0797-730"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1997,
+                7
+              ]
+            ]
+          },
+          "references-count": 39,
+          "journal-issue": {
+            "issue": "7",
+            "published-print": {
+              "date-parts": [
+                [
+                  1997,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnm0797730"
+          ],
+          "URL": "https://doi.org/10.1038/nm0797-730",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.13371101.14741245",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "1078-8956",
+            "1546-170X"
+          ],
+          "issn-type": [
+            {
+              "value": "1078-8956",
+              "type": "print"
+            },
+            {
+              "value": "1546-170X",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1997,
+                7
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                4
+              ]
+            ],
+            "date-time": "2024-03-04T04:50:38Z",
+            "timestamp": 1709527838323
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                18
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.13371101.14741245",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                8,
+                20
+              ]
+            ],
+            "date-time": "2012-08-20T11:01:24Z",
+            "timestamp": 1345460484000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of Human acute myeloid leukemia is organized as a hierarchy that originates from a primitive hematopoietic cell."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "given": "Saghi",
+              "family": "Ghaffari",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Gene and Cell Medicine, Mount Sinai School of Medicine, USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                18
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                20
+              ]
+            ],
+            "date-time": "2020-04-20T14:30:59Z",
+            "timestamp": 1587393059000
+          },
+          "score": 59.87564,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/13371101#eval14741245"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                18
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.13371101.14741245",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/nm0797-730",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                18
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T13:36:41Z",
+            "timestamp": 1793885801772,
+            "version": "4.8.0"
+          },
+          "reference-count": 39,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2004,
+                    5,
+                    30
+                  ]
+                ],
+                "date-time": "2004-05-30T00:00:00Z",
+                "timestamp": 1085875200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nat Immunol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2004,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.1038/ni1080",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                5,
+                30
+              ]
+            ],
+            "date-time": "2004-05-30T13:11:52Z",
+            "timestamp": 1085922712000
+          },
+          "page": "738-743",
+          "source": "Crossref",
+          "is-referenced-by-count": 815,
+          "title": [
+            "Acute myeloid leukemia originates from a hierarchy of leukemic stem cell classes that differ in self-renewal capacity"
+          ],
+          "prefix": "10.1038",
+          "volume": "5",
+          "author": [
+            {
+              "given": "Kristin J",
+              "family": "Hope",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Liqing",
+              "family": "Jin",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "John E",
+              "family": "Dick",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2004,
+                5,
+                30
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFni1080_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "3547",
+              "DOI": "10.1073/pnas.0830967100",
+              "volume": "100",
+              "author": "JE Dick",
+              "year": "2003",
+              "unstructured": "Dick, J.E. Breast cancer stem cells revealed. Proc. Natl. Acad. Sci. USA 100, 3547\u20133549 (2003).",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "BFni1080_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1182/blood.V62.1.1.1",
+              "volume": "62",
+              "author": "E McCulloch",
+              "year": "1983",
+              "unstructured": "McCulloch, E. Stem cells in normal and leukemic hemopoiesis (Henry Stratton Lecture). Blood 62, 1\u201313 (1983).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "1185",
+              "DOI": "10.1182/blood.V68.6.1185.1185",
+              "volume": "68",
+              "author": "J Griffin",
+              "year": "1986",
+              "unstructured": "Griffin, J. & L\u00f6wenberg, B. Clonogenic cells in acute myeloblastic leukemia. Blood 68, 1185\u20131195 (1986).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "1329",
+              "DOI": "10.1038/nm1296-1329",
+              "volume": "2",
+              "author": "A Larochelle",
+              "year": "1996",
+              "unstructured": "Larochelle, A. et al. Identification of primitive human hematopoietic cells capable of repopulating NOD/SCID mouse bone marrow: implications for gene therapy. Nat. Med. 2, 1329\u20131337 (1996).",
+              "journal-title": "Nat. Med."
+            },
+            {
+              "key": "BFni1080_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "1706",
+              "DOI": "10.1126/science.2904703",
+              "volume": "242",
+              "author": "S Kamel-Reid",
+              "year": "1988",
+              "unstructured": "Kamel-Reid, S. & Dick, J.E. Engraftment of immune-deficient mice with human hematopoietic stem cells. Science 242, 1706\u20131709 (1988).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFni1080_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "1597",
+              "DOI": "10.1126/science.2595371",
+              "volume": "246",
+              "author": "S Kamel-Reid",
+              "year": "1989",
+              "unstructured": "Kamel-Reid, S. et al. A model of human acute lymphoblastic leukemia in immune-deficient SCID mice. Science 246, 1597\u20131600 (1989).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFni1080_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "1137",
+              "DOI": "10.1126/science.1372131",
+              "volume": "255",
+              "author": "T Lapidot",
+              "year": "1992",
+              "unstructured": "Lapidot, T. et al. Cytokine stimulation of multilineage hematopoiesis from immature human cells engrafted in scid mice. Science 255, 1137\u20131141 (1992).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFni1080_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "645",
+              "DOI": "10.1038/367645a0",
+              "volume": "367",
+              "author": "T Lapidot",
+              "year": "1994",
+              "unstructured": "Lapidot, T. et al. A cell initiating human acute myeloid leukaemia after transplantation into SCID mice. Nature 367, 645\u2013648 (1994).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFni1080_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "1761",
+              "DOI": "10.1182/blood.V94.5.1761",
+              "volume": "94",
+              "author": "LE Ailles",
+              "year": "1999",
+              "unstructured": "Ailles, L.E., Gerhard, B., Kawagoe, H. & Hogge, D.E. Growth characteristics of acute myelogenous leukemia progenitors that initiate malignant hematopoiesis in nonobese diabetic/severe combined immunodeficient mice. Blood 94, 1761\u20131772 (1999).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "889",
+              "DOI": "10.1038/sj.leu.2401777",
+              "volume": "14",
+              "author": "WJ Rombouts",
+              "year": "2000",
+              "unstructured": "Rombouts, W.J., Martens, A.C. & Ploemacher, R.E. Identification of variables determining the engraftment potential of human acute myeloid leukemia in the immunodeficient NOD/SCID human chimera model. Leukemia 14, 889\u2013897 (2000).",
+              "journal-title": "Leukemia"
+            },
+            {
+              "key": "BFni1080_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "5320",
+              "DOI": "10.1073/pnas.94.10.5320",
+              "volume": "94",
+              "author": "M Bhatia",
+              "year": "1997",
+              "unstructured": "Bhatia, M., Wang, J.C.Y., Kapp, U., Bonnet, D. & Dick, J.E. Purification of primitive human hematopoietic cells capable of repopulating immune-deficient mice. Proc. Natl. Acad. Sci. USA 94, 5320\u20135325 (1997).",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "BFni1080_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "9836",
+              "DOI": "10.1073/pnas.94.18.9836",
+              "volume": "94",
+              "author": "E Conneally",
+              "year": "1997",
+              "unstructured": "Conneally, E., Cashman, J., Petzer, A. & Eaves, C. Expansion in vitro of transplantable human cord blood stem cells demonstrated using a quantitative assay of their lympho-myeloid repopulating activity in nonobese diabetic-scid/scid mice. Proc. Natl. Acad. Sci. USA 94, 9836\u20139841 (1997).",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "BFni1080_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "730",
+              "DOI": "10.1038/nm0797-730",
+              "volume": "3",
+              "author": "D Bonnet",
+              "year": "1997",
+              "unstructured": "Bonnet, D. & Dick, J.E. Human acute myeloid leukemia is organized as a hierarchy that originates from a primitive hematopoietic cell. Nat. Med. 3, 730\u2013737 (1997).",
+              "journal-title": "Nat. Med."
+            },
+            {
+              "key": "BFni1080_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "3104",
+              "DOI": "10.1182/blood.V89.9.3104",
+              "volume": "89",
+              "author": "A Blair",
+              "year": "1997",
+              "unstructured": "Blair, A., Hogge, D.E., Ailles, L.E., Lansdorp, P.M. & Sutherland, H.J. Lack of expression of Thy-1 (CD90) on acute myeloid leukemia cells with long-term proliferative ability in vitro and in vivo. Blood 89, 3104\u20133112 (1997).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "1777",
+              "DOI": "10.1038/sj.leu.2401903",
+              "volume": "14",
+              "author": "CT Jordan",
+              "year": "2000",
+              "unstructured": "Jordan, C.T. et al. The interleukin-3 receptor \u03b1 chain is a unique marker for human acute myelogenous leukemia stem cells. Leukemia 14, 1777\u20131784 (2000).",
+              "journal-title": "Leukemia"
+            },
+            {
+              "key": "BFni1080_CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "4325",
+              "DOI": "10.1182/blood.V92.11.4325",
+              "volume": "92",
+              "author": "A Blair",
+              "year": "1998",
+              "unstructured": "Blair, A., Hogge, D.E. & Sutherland, H.J. Most acute myeloid leukemia progenitor cells with long-term proliferative ability in vitro and in vivo have the phenotype CD34+/CD71\u2212/HLA-DR. Blood 92, 4325\u20134335 (1998).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "1770",
+              "DOI": "10.1038/sj.leu.2401543",
+              "volume": "13",
+              "author": "C Brendel",
+              "year": "1999",
+              "unstructured": "Brendel, C. et al. Detection of cytogenetic aberrations both in CD90 (Thy-1)-positive and (Thy-1)-negative stem cell (CD34) subfractions of patients with acute and chronic myeloid leukemias. Leukemia 13, 1770\u20131775 (1999).",
+              "journal-title": "Leukemia"
+            },
+            {
+              "key": "BFni1080_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "231",
+              "DOI": "10.1038/423231a",
+              "volume": "423",
+              "author": "JE Dick",
+              "year": "2003",
+              "unstructured": "Dick, J.E. Stem cells: Self-renewal writ in blood. Nature 423, 231\u2013233 (2003).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFni1080_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "75",
+              "DOI": "10.1038/83199",
+              "volume": "2",
+              "author": "G Guenechea",
+              "year": "2001",
+              "unstructured": "Guenechea, G., Gan, O.I., Dorrell, C. & Dick, J.E. Distinct classes of human stem cells that differ in proliferative and self-renewal potential. Nat. Immunol. 2, 75\u201382 (2001).",
+              "journal-title": "Nat. Immunol."
+            },
+            {
+              "key": "BFni1080_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "1609",
+              "DOI": "10.1016/S0301-472X(99)00099-5",
+              "volume": "27",
+              "author": "LE Ailles",
+              "year": "1999",
+              "unstructured": "Ailles, L.E., Humphries, R.K., Thomas, T.E. & Hogge, D.E. Retroviral marking of acute myelogenous leukemia progenitors that initiate long-term culture and growth in immunodeficient mice. Exp. Hematol. 27, 1609\u20131620 (1999).",
+              "journal-title": "Exp. Hematol."
+            },
+            {
+              "key": "BFni1080_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "2301",
+              "DOI": "10.1182/blood.V98.8.2301",
+              "volume": "98",
+              "author": "ML Guzman",
+              "year": "2001",
+              "unstructured": "Guzman, M.L. et al. Nuclear factor-\u03baB is constitutively activated in primitive human acute myelogenous leukemia cells. Blood 98, 2301\u20132307 (2001).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "1944",
+              "DOI": "10.1182/blood.V88.6.1944.bloodjournal8861944",
+              "volume": "88",
+              "author": "W Terpstra",
+              "year": "1996",
+              "unstructured": "Terpstra, W. et al. Fluorouracil selectively spares acute myeloid leukemia cells with long-term growth abilities in immunodeficient mice and in culture. Blood 88, 1944\u20131950 (1996).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "545",
+              "DOI": "10.1182/blood-2003-05-1558",
+              "volume": "103",
+              "author": "F Mazurier",
+              "year": "2004",
+              "unstructured": "Mazurier, F., Gan, O., McKenzie, J., Doedens, M. & Dick, J. Lentivector-mediated clonal tracking reveals intrinsic heterogeneity in the human hematopoietic stem cell compartment and culture-induced stem cell impairment. Blood 103, 545\u2013552 (2004).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "682",
+              "DOI": "10.1126/science.283.5402.682",
+              "volume": "283",
+              "author": "H Miyoshi",
+              "year": "1999",
+              "unstructured": "Miyoshi, H., Smith, K.A., Mosier, D.E., Verma, I.M. & Torbett, B.E. Transduction of human CD34+ cells that mediate long-term engraftment of NOD/SCID mice by HIV vectors. Science 283, 682\u2013686 (1999).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFni1080_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "566",
+              "DOI": "10.1006/mthe.2000.0077",
+              "volume": "1",
+              "author": "G Guenechea",
+              "year": "2000",
+              "unstructured": "Guenechea, G. et al. Transduction of human CD34+ CD38\u2212 bone marrow and cord blood-derived SCID-repopulating cells with third-generation lentiviral vectors. Mol. Ther. 1, 566\u2013573 (2000).",
+              "journal-title": "Mol. Ther."
+            },
+            {
+              "key": "BFni1080_CR26",
+              "first-page": "1573",
+              "volume": "9",
+              "author": "W Terpstra",
+              "year": "1995",
+              "unstructured": "Terpstra, W. et al. Conditions for engraftment of human acute myeloid leukemia (AML) in SCID mice. Leukemia 9, 1573\u20131577 (1995).",
+              "journal-title": "Leukemia"
+            },
+            {
+              "key": "BFni1080_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "3142",
+              "DOI": "10.1182/blood-2002-10-3062",
+              "volume": "101",
+              "author": "Y Guan",
+              "year": "2003",
+              "unstructured": "Guan, Y., Gerhard, B. & Hogge, D.E. Detection, isolation, and stimulation of quiescent primitive leukemic progenitor cells from patients with acute myeloid leukemia (AML). Blood 101, 3142\u20133149 (2003).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR28",
+              "first-page": "431",
+              "volume": "605",
+              "author": "JE Till",
+              "year": "1980",
+              "unstructured": "Till, J.E. & McCulloch, E.A. Hemopoietic stem cell differentiation. Biochim. Biophys. Acta 605, 431\u2013459 (1980).",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "BFni1080_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "455",
+              "DOI": "10.1038/nature01572",
+              "volume": "423",
+              "author": "J Lessard",
+              "year": "2003",
+              "unstructured": "Lessard, J. & Sauvageau, G. Bmi-1 determines the proliferative capacity of normal and leukemic stem cells. Nature 423, 455\u2013460 (2003).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFni1080_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "697",
+              "DOI": "10.1126/science.3535067",
+              "volume": "234",
+              "author": "M Greaves",
+              "year": "1986",
+              "unstructured": "Greaves, M. Differentiation-linked leukemogenesis in lymphocytes. Science 234, 697\u2013704 (1986).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFni1080_CR31",
+              "doi-asserted-by": "crossref",
+              "first-page": "2973",
+              "DOI": "10.1182/blood.V78.11.2973.2973",
+              "volume": "78",
+              "author": "S Kamel-Reid",
+              "year": "1991",
+              "unstructured": "Kamel-Reid, S. et al. Bone marrow from children in relapse with pre-B acute lymphoblastic leukemia proliferates and disseminates rapidly in scid mice. Blood 78, 2973\u20132981 (1991).",
+              "journal-title": "Blood"
+            },
+            {
+              "key": "BFni1080_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "16220",
+              "DOI": "10.1073/pnas.252462599",
+              "volume": "99",
+              "author": "ML Guzman",
+              "year": "2002",
+              "unstructured": "Guzman, M.L. et al. Preferential induction of apoptosis for primary human leukemic stem cells. Proc. Natl. Acad. Sci. USA 99, 16220\u201316225 (2002).",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "BFni1080_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "3983",
+              "DOI": "10.1073/pnas.0530291100",
+              "volume": "100",
+              "author": "M Al-Hajj",
+              "year": "2003",
+              "unstructured": "Al-Hajj, M., Wicha, M., Morrison, S.J. & Clarke, M.F. Prospective identification of tumorigenic breast cancer cells. Proc. Natl. Acad. Sci. USA 100, 3983\u20133988 (2003).",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "BFni1080_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "105",
+              "DOI": "10.1038/35102167",
+              "volume": "414",
+              "author": "T Reya",
+              "year": "2001",
+              "unstructured": "Reya, T., Morrison, S.J., Clarke, M.F. & Weissman, I.L. Stem cells, cancer, and cancer stem cells. Nature 414, 105\u2013111 (2001).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFni1080_CR35",
+              "first-page": "5281",
+              "volume": "63",
+              "author": "S Singh",
+              "year": "2003",
+              "unstructured": "Singh, S. et al. Identification of a cancer stem cell in human brain tumours. Cancer Res. 63, 5281\u20135288 (2003).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "BFni1080_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "1308",
+              "DOI": "10.1126/science.301.5638.1308",
+              "volume": "301",
+              "author": "J Marx",
+              "year": "2003",
+              "unstructured": "Marx, J. Cancer research. Mutant stem cells may seed cancer. Science 301, 1308\u20131310 (2003).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFni1080_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "823",
+              "DOI": "10.1038/418823a",
+              "volume": "418",
+              "author": "R Bernards",
+              "year": "2002",
+              "unstructured": "Bernards, R. & Weinberg, R.A. A progression puzzle. Nature 418, 823 (2002).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFni1080_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "217",
+              "DOI": "10.1038/76095",
+              "volume": "25",
+              "author": "A Follenzi",
+              "year": "2000",
+              "unstructured": "Follenzi, A., Ailles, L.E., Bakovic, S., Geuna, M. & Naldini, L. Gene transfer by lentiviral vectors is limited by nuclear translocation and rescued by HIV-1 pol sequences. Nat. Genet. 25, 217\u2013222 (2000).",
+              "journal-title": "Nat. Genet."
+            },
+            {
+              "key": "BFni1080_CR39",
+              "doi-asserted-by": "crossref",
+              "first-page": "1097",
+              "DOI": "10.1182/blood.V93.3.1097",
+              "volume": "93",
+              "author": "G Guenechea",
+              "year": "1999",
+              "unstructured": "Guenechea, G. et al. Delayed engraftment of nonobese diabetic/severe combined immunodeficient mice transplanted with ex vivo-expanded human CD34+ cord blood cells. Blood 93, 1097\u20131105 (1999).",
+              "journal-title": "Blood"
+            }
+          ],
+          "container-title": [
+            "Nature Immunology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/ni1080.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/ni1080",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/ni1080.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T18:38:04Z",
+            "timestamp": 1684435084000
+          },
+          "score": 38.573505,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/ni1080"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                5,
+                30
+              ]
+            ]
+          },
+          "references-count": 39,
+          "journal-issue": {
+            "issue": "7",
+            "published-print": {
+              "date-parts": [
+                [
+                  2004,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFni1080"
+          ],
+          "URL": "https://doi.org/10.1038/ni1080",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1019877.231455",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "1529-2908",
+            "1529-2916"
+          ],
+          "issn-type": [
+            {
+              "value": "1529-2908",
+              "type": "print"
+            },
+            {
+              "value": "1529-2916",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                5,
+                30
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

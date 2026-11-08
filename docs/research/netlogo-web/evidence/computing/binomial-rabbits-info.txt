@@ -1,0 +1,104 @@
+## WHAT IS IT?
+
+This model simulates a binomial probability distribution or (in the limit) normal distribution.  It works by analogizing height variations to rabbit hops.
+
+This model was created by a student in an effort to make sense of normal distributions.  In particular, he sought to understand  why height is distributed normally in human populations. For a detailed account of this case, see: Wilensky, U. (1997). What is Normal Anyway? Therapy for Epistemological Anxiety.  Educational Studies in Mathematics. Volume 33, No. 2. pp. 171-202. http://ccl.northwestern.edu/papers/normal/.
+
+The procedures for this model have been kept largely intact from the original code written by the student. With advances in the language, this code is no longer at all an optimal way of writing this model. We have kept the original code for research purposes --- please do not use it as an example of good NetLogo coding.
+
+## HOW IT WORKS
+
+A number of rabbits are placed at the center of the bottom of the world.  A move pattern determines the way a rabbit moves.  Each rabbit can choose to hop right or left a certain hop-size. The likelihood of a rabbit following each move pattern is given in terms of ratios.  Each rabbit may have up to five different move patterns.
+
+## HOW TO USE IT
+
+### Setup
+
+Method one (sliders setup): Press SETUP button. This creates the number of rabbits from the NUMBER slider and up to three hops and associated probability ratios from the six sliders above the NUMBER slider.  Each time a rabbit hops, it chooses one of the three moves -- hop-1, hop-2, or hop-3 -- with a likelihood in the ratio of ratio-1, ratio-2, and ratio-3 to each other.  For example, if ratio-1 = 2, ratio-2 = 4, and ratio-3 = 6, the rabbit has a 2-in-12 chance of making the hop-1 move, a 4-in-12 chance of making the hop-2 move, and a 6-in-12 chance of making the hop-3 move.
+
+Method two (manual setup): In the Command Center, type "setup [number] [list of hops [list of probability ratios]" to initialize the rabbits (e.g. "setup 4000 [1 -1] [1 2]" will set up 4000 rabbits hopping either one unit to the right(1) or one unit to the left (-1) with a chance of hopping to the left being twice as much as that to the right.)  Up to five steps and corresponding probability ratios can be used.
+
+### Running
+
+The GO-ONE-HOP button makes each rabbit hop once.
+
+The GO button tells the rabbits to hop the number of times set by the HOPS slider. For example, if HOPS is set to 10, the GO button makes each rabbit hop 10 times.  To stop the rabbits from hopping once they've started, press the GO button again.
+
+There are two scale monitors and one scale slider in the Interface Window.  X-SCALING is used to magnify the width of the world to facilitate more hops. It is manually set by users with the X-SCALING slider. The setting can be changed as the model runs.  Y-SCALE is used to regulate the vertical scale -- to ensure that the highest yellow distribution bar is always 80% of the height of the world. This is done at each hop.
+
+The figure inside the "y-scale" monitor is the number of rabbits a yellow line the height of the world represents.  The figure inside the "x-scale" monitor is the number of steps represented by a full view. (The rabbits wrap around the left and right edges, so if they get to the edge, you should increase the x-scale.)
+
+The following formulae can be used to evaluate the actual numbers of rabbits or steps hopped:
+
+Actual Number of Rabbits for a Yellow Line = height of line * ( y-scale / 100 )
+
+Cumulative Number of Steps Hopped so far = X-coordinate of a line * ( x-scale / 100 )
+
+To find out exactly how many rabbits are represented by a line, control-click (Mac) or right-click (other) anywhere on the line and choose inspect patch from the menu that appears.  The inspector will have a variable "turtle-bottom" which will tell you how many turtles (rabbits) are at the bottom of the line.)
+
+## THINGS TO NOTICE
+
+The purple average line shows where an average rabbit would be. Observe the movement of this line -- both its position and velocity -- and try to relate these to the settings.
+
+Play with the NUMBER slider to see if what you predict is what you see when the number of rabbits is small. For what numbers of rabbits are your predictions the most accurate?
+
+## THINGS TO TRY
+
+Try different values for list of steps. What happens to the distribution?
+
+Try different values for probability ratios.  What happens to the distribution?
+
+Is the distribution always symmetric? What would you expect?
+
+## EXTENDING THE MODEL
+
+Create a plot for 'hopping'. First decide what to plot, and then implement the proper NetLogo plot functions.
+Rewrite the model so rabbits take list variables. Are there now new capabilities you can give the rabbits?
+
+## NETLOGO FEATURES
+
+The limitation on the number of turtles constrains the limits of the "number" slider. You can make the corresponding change to the `number` slider --- select the slider by clicking and dragging the mouse button over it.  Then click on the edit button and change 'Maximum' to the new number. Having more rabbits to jump can be useful for certain statistical simulations.
+
+You can also change the settings to have a bigger world to fit more hops or show very fine distribution diagrams.
+
+Note that since turtles could not have list variables in earlier versions of the language, the global lists steps and ratios are used to hold the movement patterns and ratios. The turtles access these globals to know how to move. (if we were writing this model now, we would not code it this way as turtles in NetLogo can have list variables). The procedures `define-steps` and 'define-ratios' use the primitives `first` and `butfirst`. Both of these are list operators --- that is, they operate on lists of things. The `first` of a list is simply its first element. Likewise, the `butfirst` of a list is a list of all elements except for the first.
+
+## RELATED MODELS
+
+Galton Box, Random Walk Left Right
+
+## CREDITS AND REFERENCES
+
+See: Wilensky, U. (1997). What is Normal Anyway? Therapy for Epistemological Anxiety.  Educational Studies in Mathematics. Volume 33, No. 2. pp. 171-202. https://ccl.northwestern.edu/papers/normal/
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (1997).  NetLogo Binomial Rabbits model.  http://ccl.northwestern.edu/netlogo/models/BinomialRabbits.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 1997 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+This model was created as part of the project: CONNECTED MATHEMATICS: MAKING SENSE OF COMPLEX PHENOMENA THROUGH BUILDING OBJECT-BASED PARALLEL MODELS (OBPML).  The project gratefully acknowledges the support of the National Science Foundation (Applications of Advanced Technologies Program) -- grant numbers RED #9552950 and REC #9632612.
+
+This model was developed at the MIT Media Lab using CM StarLogo.  See Wilensky, U. (1993). Thesis - Connected Mathematics: Building Concrete Relationships with Mathematical Knowledge. Adapted to StarLogoT, 1997, as part of the Connected Mathematics Project.  Adapted to NetLogo, 2001, as part of the Participatory Simulations Project.
+
+This model was converted to NetLogo as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227. Converted from StarLogoT to NetLogo, 2001.
+
+<!-- 1997 2001 Wilensky -->

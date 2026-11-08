@@ -1,0 +1,11 @@
+{
+  "command": "ask patch 14 0 [ sprout-seeds 1 [ set heading 90 fd 4 ] ]",
+  "observed": [
+    {
+      "id": 1089,
+      "x": 16,
+      "y": 0
+    }
+  ],
+  "conclusion": "NetLogo forward commits unit steps until blocked. End position is x16, not whole-endpoint rejection at x14."
+}

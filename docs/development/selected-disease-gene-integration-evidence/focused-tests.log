@@ -1,0 +1,34 @@
+bun test v1.4.2 (744846f84)
+
+tests/selected-disease-gene-b.test.ts:
+(pass) B09 source mechanisms and exact public boundaries > epiDEM Basic excludes same patch, uses neighbor patches, and recovers the infected snapshot only [8.35ms]
+(pass) B09 source mechanisms and exact public boundaries > epiDEM controlled recovery terminates before future ticks and snapshots are detached [80.78ms]
+(pass) B09 source mechanisms and exact public boundaries > travel source all-inoculated logarithm error retains phase state and zero tick [11.87ms]
+(pass) B09 source mechanisms and exact public boundaries > travel static contacts use canonical people and ambulances join afterward [15.58ms]
+(pass) B09 source mechanisms and exact public boundaries > CRISPR extinction stops without food or clock mutations; active food stays bounded [23.74ms]
+(pass) B09 source mechanisms and exact public boundaries > CRISPR replication kills canonical host and creates nineteen children plus parent [5.00ms]
+(pass) B09 source mechanisms and exact public boundaries > GenEvo energy accounting, synthesis cost and division follow explicit source thresholds [132.01ms]
+(pass) B09 source mechanisms and exact public boundaries > GenEvo natural glucose growth divides and dead-energy stop does not tick [557.75ms]
+(pass) B09 source mechanisms and exact public boundaries > DNA source complement, overlapping starts and stop exclusion remain explicit [10.38ms]
+(pass) B09 source mechanisms and exact public boundaries > DNA event gates, complete translation and unique protein retention across replication [7.35ms]
+(pass) B09 source mechanisms and exact public boundaries > DNA no-gene instructions and source mutation bounds remain observable [2.16ms]
+
+tests/selected-disease-gene-a.test.ts:
+(pass) B09 native contact and molecular compositions > Disease Solo caches sickness only in GO and keeps distinct run histories [3.60ms]
+(pass) B09 native contact and molecular compositions > Disease user movement takes native unit substeps at the hard edge [0.61ms]
+(pass) B09 native contact and molecular compositions > Disease delay has fifty completed tail steps and a preflight stop [1.94ms]
+(pass) B09 native contact and molecular compositions > HIV has ceiling-style source initial infections and no coupling at zero tendency [13.60ms]
+(pass) B09 native contact and molecular compositions > HIV partnership references remain symmetric and traits use the source forty draws [88.11ms]
+(pass) B09 native contact and molecular compositions > Virus source recovery threshold is strict and deaths precede spreading [9.33ms]
+(pass) B09 native contact and molecular compositions > Virus immunity and mortality remain separate from presentation shape [3.06ms]
+(pass) B09 native contact and molecular compositions > Repressilator complete source phases remove initial TFs without translation [2.14ms]
+(pass) B09 native contact and molecular compositions > Repressilator exposes source arithmetic failures instead of silently replacing synergy [0.19ms]
+(pass) B09 native contact and molecular compositions > CRISPR zero function suppresses setup products and infection is an action without time [5.70ms]
+(pass) B09 native contact and molecular compositions > CRISPR canonical molecular bonds keep the partners co-located [46.59ms]
+(pass) B09 native contact and molecular compositions > CRISPR common infection preserves empty-prefix and duplicate-sublist source errors [3.74ms]
+(pass) B09 native contact and molecular compositions > all five reads detach observations, do not advance time, and reject invalid step counts [73.50ms]
+
+ 24 pass
+ 0 fail
+ 538 expect() calls
+Ran 24 tests across 2 files. [1123.00ms]

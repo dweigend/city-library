@@ -1,0 +1,115 @@
+{
+  "slug": "3d-solids",
+  "name": "3D Solids",
+  "catalogPath": "Sample Models/Mathematics/3D Solids",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/3D%20Solids.nlogox",
+  "deliveryBatch": "B16",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can a two-dimensional display communicate three-dimensional shape? NetLogo 3D Solids samples points on selected solid surfaces, stores spherical coordinates, rotates them by changing an angle, and projects their positions into the view. Brightness supplies an additional depth cue. The graphics methods in [1], differential geometry in [2], and computational geometry in [3] provide complementary foundations for separating a surface, its parameterization, and its displayed approximation. The model illustrates coordinate conversion and rotation rather than physical motion of a rigid material. Its random point cloud is finite, the display omits a full optical rendering pipeline, and visual smoothness depends on sampling. Recognizing a convincing sphere or cube therefore demonstrates a useful representation, without proving uniform surface sampling or geometric accuracy of every generated point.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/3D%20Solids.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/3D%20Solids.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 78d4274c446271d1eda3964b30c82cc7c3ffcab6463998249d770c6f2a182fb5",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/3d-solids.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (1998).  NetLogo 3D Solids model.  http://ccl.northwestern.edu/netlogo/models/3DSolids.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/3d-solids.nlogox",
+    "evidenceFile": "evidence/computing/3d-solids.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1201/9781439865521",
+      "authors": [
+        "Peter Shirley",
+        "Michael Ashikhmin",
+        "Steve Marschner"
+      ],
+      "title": "Fundamentals of Computer Graphics",
+      "year": 2009,
+      "venue": "A K Peters/CRC Press",
+      "doi": "10.1201/9781439865521",
+      "url": "https://doi.org/10.1201/9781439865521",
+      "relevance": "Coordinate transformations, projection and depth cues explain the point-cloud representation.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1201%2F9781439865521",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1201_9781439865521.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1201_9781439865521.json"
+      },
+      "publisher": "A K Peters/CRC Press",
+      "isbn": [
+        "9781439865521"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-1-84882-891-9",
+      "authors": [
+        "Andrew Pressley"
+      ],
+      "title": "Elementary Differential Geometry",
+      "year": 2010,
+      "venue": "Springer Undergraduate Mathematics Series",
+      "doi": "10.1007/978-1-84882-891-9",
+      "url": "https://doi.org/10.1007/978-1-84882-891-9",
+      "relevance": "Surface parameterizations distinguish spherical coordinates from the underlying geometric surface.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-84882-891-9",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_84882_891_9.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_84882_891_9.json"
+      },
+      "publisher": "Springer London",
+      "isbn": [
+        "9781848828902",
+        "9781848828919"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-3-540-77974-2",
+      "authors": [
+        "Mark de Berg",
+        "Otfried Cheong",
+        "Marc van Kreveld",
+        "Mark Overmars"
+      ],
+      "title": "Computational Geometry: Algorithms and Applications",
+      "year": 2008,
+      "venue": "Springer Berlin Heidelberg",
+      "doi": "10.1007/978-3-540-77974-2",
+      "url": "https://doi.org/10.1007/978-3-540-77974-2",
+      "relevance": "Geometric representations and spatial computations frame the distinction between sampled points and exact solids.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-3-540-77974-2",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_3_540_77974_2.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_3_540_77974_2.json"
+      },
+      "publisher": "Springer Berlin Heidelberg",
+      "isbn": [
+        "9783540779735",
+        "9783540779742"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

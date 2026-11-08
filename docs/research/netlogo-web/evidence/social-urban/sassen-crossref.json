@@ -1,0 +1,421 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=The+Global+City+New+York+London+Tokyo+Sassen+1991&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 8473627,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                28
+              ]
+            ],
+            "date-time": "2026-02-28T01:18:33Z",
+            "timestamp": 1772241513681,
+            "version": "3.50.1"
+          },
+          "reference-count": 0,
+          "publisher": "Princeton University Press",
+          "isbn-type": [
+            {
+              "value": "9780691264738",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                9
+              ]
+            ]
+          },
+          "DOI": "10.2307/jj.27939766",
+          "type": "monograph",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                9
+              ]
+            ],
+            "date-time": "2025-09-09T20:26:31Z",
+            "timestamp": 1757449591000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 5,
+          "title": [
+            "The Global City"
+          ],
+          "prefix": "10.2307",
+          "author": [
+            {
+              "given": "Saskia",
+              "family": "Sassen",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1121",
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                25
+              ]
+            ],
+            "date-time": "2025-10-25T11:16:20Z",
+            "timestamp": 1761390980000
+          },
+          "score": 63.449955,
+          "resource": {
+            "primary": {
+              "URL": "http://www.jstor.org/stable/10.2307/jj.27939766"
+            }
+          },
+          "subtitle": [
+            "New York, London, Tokyo"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                9
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780691264738"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.2307/jj.27939766",
+          "relation": {
+            "is-identical-to": [
+              {
+                "id-type": "doi",
+                "id": "10.1515/9780691264738",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                9
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T23:25:19Z",
+            "timestamp": 1793834719837,
+            "version": "4.6.1"
+          },
+          "reference-count": 0,
+          "publisher": "Princeton University Press",
+          "isbn-type": [
+            {
+              "value": "9781400847488",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2001,
+                12,
+                31
+              ]
+            ]
+          },
+          "DOI": "10.1515/9781400847488",
+          "type": "edited-book",
+          "created": {
+            "date-parts": [
+              [
+                2015,
+                4,
+                24
+              ]
+            ],
+            "date-time": "2015-04-24T13:01:47Z",
+            "timestamp": 1429880507000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 2728,
+          "title": [
+            "The Global City"
+          ],
+          "prefix": "10.1515",
+          "author": [
+            {
+              "given": "Saskia",
+              "family": "Sassen",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "374",
+          "published-online": {
+            "date-parts": [
+              [
+                2001,
+                12,
+                31
+              ]
+            ]
+          },
+          "link": [
+            {
+              "URL": "http://www.degruyter.com/view/books/9781400847488/9781400847488/9781400847488.xml",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.degruyter.com/document/doi/10.1515/9781400847488/pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                7,
+                1
+              ]
+            ],
+            "date-time": "2025-07-01T08:15:39Z",
+            "timestamp": 1751357739000
+          },
+          "score": 62.369816,
+          "resource": {
+            "primary": {
+              "URL": "https://www.degruyterbrill.com/document/doi/10.1515/9781400847488/html"
+            }
+          },
+          "subtitle": [
+            "New York, London, Tokyo"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2001,
+                12,
+                31
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781400847488"
+          ],
+          "references-count": 0,
+          "alternative-id": [
+            "10.1515/9781400847488"
+          ],
+          "URL": "https://doi.org/10.1515/9781400847488",
+          "relation": {
+            "is-identical-to": [
+              {
+                "id-type": "doi",
+                "id": "10.2307/j.ctt2jc93q",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2001,
+                12,
+                31
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2026-11-02T22:25:25Z",
+            "timestamp": 1793658325308,
+            "version": "4.5.1"
+          },
+          "reference-count": 0,
+          "publisher": "Princeton University Press",
+          "isbn-type": [
+            {
+              "value": "9780691264738",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                31
+              ]
+            ]
+          },
+          "DOI": "10.1515/9780691264738",
+          "type": "edited-book",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                4
+              ]
+            ],
+            "date-time": "2025-12-04T12:29:37Z",
+            "timestamp": 1764851377000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 16,
+          "title": [
+            "The Global City"
+          ],
+          "prefix": "10.1515",
+          "author": [
+            {
+              "given": "Saskia",
+              "family": "Sassen",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "374",
+          "published-online": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                9
+              ]
+            ]
+          },
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                7
+              ]
+            ],
+            "date-time": "2026-09-07T13:59:12Z",
+            "timestamp": 1788789552000
+          },
+          "score": 62.175797,
+          "resource": {
+            "primary": {
+              "URL": "https://www.degruyterbrill.com/document/doi/10.1515/9780691264738/html"
+            }
+          },
+          "subtitle": [
+            "New York, London, Tokyo"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                9
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780691264738"
+          ],
+          "references-count": 0,
+          "alternative-id": [
+            "10.1515/9780691264738"
+          ],
+          "URL": "https://doi.org/10.1515/9780691264738",
+          "relation": {
+            "is-identical-to": [
+              {
+                "id-type": "doi",
+                "id": "10.2307/jj.27939766",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                9,
+                9
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

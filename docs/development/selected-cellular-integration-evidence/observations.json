@@ -1,0 +1,179 @@
+{
+  "date": "2026-11-06",
+  "runtime": "99dcd5e",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "observations": [
+    {
+      "slug": "smoothlife",
+      "result": {
+        "monitors": [
+          "Tick\n1\nDisk cells\n29\nAnnulus cells\n224"
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 716,
+          "bytes": 2050624
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    },
+    {
+      "slug": "hex-cell-aggregation",
+      "result": {
+        "monitors": [
+          "Tick\n1\nAlive\n2\nEligible\n8\nApplied neighbors\n1, 2, 3, 4, 5, 6",
+          ""
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 723,
+          "bytes": 2070672
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    },
+    {
+      "slug": "vants",
+      "result": {
+        "monitors": [
+          "Tick\n1\nBlack cells\n1",
+          ""
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 716,
+          "bytes": 2050624
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    },
+    {
+      "slug": "turing-machine-2d",
+      "result": {
+        "monitors": [
+          "Tick\n1\nOn cells\n32",
+          ""
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 716,
+          "bytes": 2050624
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    },
+    {
+      "slug": "ca-1d-elementary",
+      "result": {
+        "monitors": [
+          "Tick\n1\nRow\n63"
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 359,
+          "bytes": 1028176
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    },
+    {
+      "slug": "ca-continuous",
+      "result": {
+        "monitors": [
+          "Tick\n1\nRow\n99"
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 716,
+          "bytes": 2050624
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    },
+    {
+      "slug": "brians-brain",
+      "result": {
+        "monitors": [
+          "Tick\n1\nFiring\n2135\nRefractory\n3008"
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 946,
+          "bytes": 2709344
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    },
+    {
+      "slug": "cyclic-ca",
+      "result": {
+        "monitors": [
+          "Tick\n1\nNeighbors\n48\nStates\n3\nThreshold\n3\nStatus"
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 716,
+          "bytes": 2050624
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    },
+    {
+      "slug": "ca-stochastic",
+      "result": {
+        "monitors": [
+          "Tick\n1\nRow\n79\nMetric entropy\n0.86707\nTopological entropy\n0.97672"
+        ],
+        "overflow": false,
+        "canvas": {
+          "width": 716,
+          "height": 716,
+          "bytes": 2050624
+        },
+        "status": [
+          "",
+          "Steps completed."
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "console": [],
+    "failed": []
+  }
+}

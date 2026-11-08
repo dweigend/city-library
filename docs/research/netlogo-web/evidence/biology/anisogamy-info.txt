@@ -1,0 +1,112 @@
+## WHAT IS IT?
+
+Anisogamy, or gamete dimorphism, is a reproductive strategy involving one group of adults producing numerous small gametes (i.e., sperm, pollen) while the other group produces a few large gametes (i.e., egg, ovum). The former group is commonly called males, and the latter is called females. When two gametes from opposite sexes fuse, they form a _zygote_ that inherits genetic material for the development and biomaterial for the survival of the zygote from both gametes. However, although both parents contribute an equal amount of genetic material (n+n chromosomes) to their offspring, the females exclusively provide the biomaterial.
+
+Anisogamy is equally fascinating and important in evolutionary biology because all animals and plants are anisogamous except a few algal and fungal species. Even species that exhibit hermaphroditism (e.g., roses, snails) reproduce via many small gametes and a handful of large gametes. Moreover, such hermaphroditic species often have secondary adaptations that suppress fusion between the gametes produced by the same individual. Thus, scientists agree that anisogamy must have preceded many biological traits such as oogamy, internal fertilization, sex roles, parental caring, and competition for mating partners.
+
+Unfortunately, we may never know precisely how anisogamy evolved in the first place and how it became so prevalent because there is no fossil record. However, we can develop robust models to test various theoretical ideas and map out plausible evolutionary pathways from no sexual differentiation between mating types (isogamy) to gamete dimorphism (anisogamy). This model attempts to realistically simulate the conditions that may have given rise to the emergence of anisogamy as an evolutionarily stable strategy (ESS) within an initially isogamous population. It also allows testing the impact of various factors on the evolutionary process.
+
+## HOW IT WORKS
+
+**NOTE**: This model has been updated since it was originally published in the models library.
+
+This model has three kinds of agents: adults, gametes, and zygotes.
+
+Adults move around randomly and release gametes to the environment at random intervals. Although each adult has an inherited gamete-size trait, every time they produce new gametes, there is a chance of a small mutation in size. In addition, all adults have the same amount of biomaterial (gamete production budget) to produce gametes. So, there is an inversely proportional relationship between gamete size and quantity. An adult with a small gamete-size trait can produce more gametes and vice versa. In addition, every adult has a limited lifetime. When an adult reaches its lifetime, it dies.
+
+Each gamete carries simple genetic information that includes two phenotypical traits for reproductive strategy: _mating-type_ and _gamete-size_. Once released to the environment, gametes start moving around randomly. When two gametes physically contact each other, they initiate a fusion process to form a zygote. If a gamete reaches its lifetime without being able to fuse with another gamete, it dies.
+
+A zygote inherits the total size of the two gametes that form it as a proxy for the sum of the genetic material it needs to develop and the biomaterial it needs to survive during development. If a zygote inherits biomaterial less than the survival threshold, it dies immediately (for simplicity). If it inherits enough biomaterial, it incubates without moving for a while and becomes an adult.
+
+Each new adult randomly inherits its reproductive strategy traits (gamete size and mating type) from either parent with equal likelihood. In other words, it inherits these traits as a bundle without intermixing. For example, if a _small+_ gamete and a _large-_ gamete fuse, the resulting zygote either inherits the _small+_ or _large-_ strategy; it cannot inherit the _large+_ or _small-_ strategies.
+
+When we run the model, the population lives in perpetuity until we stop it again. Adults produce new gametes, gametes fuse zygotes, zygotes turn into new adults, and some agents die while others continue living.
+
+## HOW TO USE IT
+
+The SETUP button creates the initial adult population randomly dispersed within the two-dimensional world of the model. Each adult is randomly assigned one of the mating types (+ or -), but all have the same gamete size trait at the beginning.
+
+The GO button runs the model. If the model is already running, clicking the GO button again pauses it.
+
+The ZYGOTE-FITNESS-THRESHOLD slider controls the minimum size (i.e., biomaterial) a zygote must have to survive into adulthood and start producing gametes. Zygotes that are smaller than this value cannot grow into reproductive adults.
+
+The GAMETE-FITNESS-THRESHOLD slider controls the minimum size (i.e., biomaterial) a gamete needs. If an adult's instantaneous gamete size trait happens to be below this slider's value, its gametes are considered _stillborn_.
+
+Each adult has a fixed value for their gamete-size trait that never changes. However, every time an adult attempts to produce new gametes, an instantaneous gamete size is randomly picked over a normal distribution with the expected value as the gamete-size trait of the parent and the standard deviation as the value of the MUTATION-σ slider. Therefore, this slider allows changing the nature of mutations in the model.
+
+The ALLOW-ASSORTATIVE-FUSION? switch controls whether any two gametes can fuse. If this switch is off, a `+` gamete can only fuse with a `-` gamete and vice versa.
+
+The SPEED-SIZE-CORRELATION? switch manipulates the speed of gametes. If this switch is on, a gamete's speed is inversely proportional to its size, so smaller gametes move faster. Otherwise, all gametes move one unit per tick.
+
+## THINGS TO NOTICE
+
+Evolution is a gradual and lengthy process in this model. It may initially seem like the population is not changing much, but continue running the model for a few thousand ticks so that you can see meaningful changes.
+
+Even if the gamete size traits of the `+` and `-` adults evolve to be dramatically different, the overall sex ratio remains roughly 1:1. There are no underlying interventions in the model's code to fix the sex ratio. Hence, maintenance of the sex ratio is an emergent property of this model.
+
+Anisogamy always emerges as the _evolutionary stable strategy_ (ESS) (assuming default parameter values). Once it emerges, it quickly stabilizes and is never destabilized, no matter how long we run the model.
+
+Two selective pressures in this model emerge from micro-level agent behavior. The first selective pressure emerges due to the zygotes' need for sufficient biomaterial, giving an advantage to the mutants with larger and larger gamete size traits. The second selective pressure emerges due to the advantage of producing more gametes, giving an advantage to the mutants with smaller and smaller gamete size traits. However, the latter only emerges after the first selective pressure leads to the emergence of very large gametes that can almost singlehandedly provide all the biomaterial needed for a zygote to survive.
+
+## THINGS TO TRY
+
+Try allowing all zygotes to survive into adulthood by changing the ZYGOTE-FITNESS-THRESHOLD. How does this change impact the evolutionary process?
+
+Try allowing any two gametes to fuse by turning on the ALLOW-ASSORTATIVE-FUSION? switch. How does this change impact the evolutionary process?
+
+Try giving smaller gametes a speed advantage by turning on the SPEED-SIZE-CORRELATION? switch. How does this change impact the evolutionary process?
+
+## EXTENDING THE MODEL
+
+This model considers an initial condition with only two mating types. However, some isogamous species have more than two mating types. For example, _Schizophyllum commune_  has some 20,000+ mating types. Try modifying the model's code to answer these questions: How would the outcome change if there were 3+ mating types?
+
+The trait inheritance mechanism is very simple in this model. However, there are various more realistic mechanisms in nature. For example, some _haploid_ organisms may release _haploid_ gametes into their environment, but _diploid_ zygotes formed by the fusion of two _haploid_ gametes may split into two adults at the end of the incubation process. On the other hand, if we assume adults to be diploid, we would need to introduce a more accurate Mendelian mechanism with dominant and recessive alleles. Try to change the model's code to implement these modifications to see if the outcome would change.
+
+## NETLOGO FEATURES
+
+This model uses the RANDOM-NORMAL primitive to introduce plausible variation to agent traits such as gamete size, adult lifetime, and zygote incubation time.
+
+This model uses the DISTANCE primitive to calculate the distance between the centers of two agents to determine whether or not two agents are colliding (touching).
+
+This model uses the DIFFUSE primitive to create a smoothly-transitioning background with tones of cyan to represent a marine environment.
+
+## RELATED MODELS
+
+* Genetic drift models
+* BEAGLE Evolution curricular models
+* EACH curricular models
+* GenEvo curricular models
+
+## CREDITS AND REFERENCES
+
+Aslan, U., & Wilensky, U. (2016). Restructuration in Practice: Challenging a Pop-Culture Evolutionary Theory through Agent Based Modeling. In Proceedings of the Constructionism, 2016 Conference. Bangkok, Thailand.
+
+Aslan, U., Dabholkar, S., & Wilensky, U. (2017). Developing Multi-agent-based Thought Experiments: A Case Study on the Evolution of Gamete Dimorphism. In: Sukthankar, G., Rodriguez-Aguilar, J. (eds) Autonomous Agents and Multiagent Systems. AAMAS 2017. Lecture Notes in Computer Science(), vol 10642. Springer, Cham. https://doi.org/10.1007/978-3-319-71682-4_4
+
+Aslan, U., Dabholkar, S., Woods, P., Noel, I. & Wilensky, U. (2017). A spatially-explicit multi-agent-based model of anisogamy with discrete time steps. Unpublished manuscript.
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Aslan, U., Dabholkar, S., Woods, P., Wilensky, U. (2023).  NetLogo Anisogamy model.  http://ccl.northwestern.edu/netlogo/models/Anisogamy.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2023 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2023 Cite: Aslan, U., Dabholkar, S., Woods, P., Wilensky, U. -->

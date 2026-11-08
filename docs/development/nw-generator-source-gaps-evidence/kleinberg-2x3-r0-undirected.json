@@ -1,0 +1,63 @@
+{
+  "id": "kleinberg-2x3-r0-undirected",
+  "command": "setup random-seed 17 set links-to-use \"undirected\" set nb-rows 2 set nb-cols 3 set clustering-exponent 0 set wrap false small-world-lattice",
+  "at": "2026-11-06T12:10:35.657Z",
+  "graph": {
+    "success": true,
+    "value": [
+      0,
+      6,
+      11,
+      0,
+      11,
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ]
+      ]
+    ]
+  },
+  "console": "observer> setup random-seed 17 set links-to-use \"undirected\" set nb-rows 2 set nb-cols 3 set clustering-exponent 0 set wrap false small-world-lattice\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear",
+  "bodyHead": " powered by NetLogo\nNW General Examples\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\n \n?\nfor shortcuts\nbetweenness\nClusterers & Cliques\nnb-nodes\nCentrality\npreferential attachment\neigenvector\ncloseness\nweak component clusters\nsave matrix\nload matrix\ncount turtles\n6\ncount links\n11\nbiggest maximal cliques\nring\nstar\nMean path length\n1.267\nhighlight bicomponents\nhighlight maximal cliques\nsave GraphML\nload GraphML\ndetect communities\nlay"
+}

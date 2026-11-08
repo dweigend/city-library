@@ -1,0 +1,261 @@
+{
+  "setup": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robotic%20Factory.nlogox",
+    "title": "NetLogo Web: Robotic Factory",
+    "at": "2026-11-06T09:03:50.349Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "d7e79d6b2647227ce73799b2b94c0f9dbdbfeb3d42e825ed96e270549194c9fd",
+    "tick": 0,
+    "metrics": {
+      "count robots": {
+        "success": true,
+        "value": 5
+      },
+      "sum [supply] of storages": {
+        "success": true,
+        "value": 0
+      },
+      "sum [supply] of loading-docks": {
+        "success": true,
+        "value": 10
+      },
+      "count orders": {
+        "success": true,
+        "value": 0
+      },
+      "sum [idleness] of robots": {
+        "success": true,
+        "value": 0
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "full-charge",
+        "value": 350
+      },
+      {
+        "type": "slider",
+        "variable": "just-in-time-supply-robot",
+        "value": 150
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-robots",
+        "value": 5
+      },
+      {
+        "type": "switch",
+        "variable": "show-agent-name?",
+        "value": true
+      },
+      {
+        "type": "switch",
+        "variable": "make-trails?",
+        "value": true
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "actions": [
+    "setup",
+    "go start",
+    "go pause",
+    "Command Center go (single native cycle)",
+    "setup reset"
+  ],
+  "progress": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robotic%20Factory.nlogox",
+    "title": "NetLogo Web: Robotic Factory",
+    "at": "2026-11-06T09:04:33.425Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "d7e79d6b2647227ce73799b2b94c0f9dbdbfeb3d42e825ed96e270549194c9fd",
+    "tick": 946,
+    "metrics": {
+      "count robots": {
+        "success": true,
+        "value": 5
+      },
+      "sum [supply] of storages": {
+        "success": true,
+        "value": 10
+      },
+      "sum [supply] of loading-docks": {
+        "success": true,
+        "value": 3
+      },
+      "count orders": {
+        "success": true,
+        "value": 1
+      },
+      "sum [idleness] of robots": {
+        "success": true,
+        "value": 2899
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "full-charge",
+        "value": 350
+      },
+      {
+        "type": "slider",
+        "variable": "just-in-time-supply-robot",
+        "value": 150
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-robots",
+        "value": 5
+      },
+      {
+        "type": "switch",
+        "variable": "show-agent-name?",
+        "value": true
+      },
+      {
+        "type": "switch",
+        "variable": "make-trails?",
+        "value": true
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "singleStep": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robotic%20Factory.nlogox",
+    "title": "NetLogo Web: Robotic Factory",
+    "at": "2026-11-06T09:05:21.205Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "d7e79d6b2647227ce73799b2b94c0f9dbdbfeb3d42e825ed96e270549194c9fd",
+    "tick": 947,
+    "metrics": {
+      "count robots": {
+        "success": true,
+        "value": 5
+      },
+      "sum [supply] of storages": {
+        "success": true,
+        "value": 10
+      },
+      "sum [supply] of loading-docks": {
+        "success": true,
+        "value": 3
+      },
+      "count orders": {
+        "success": true,
+        "value": 1
+      },
+      "sum [idleness] of robots": {
+        "success": true,
+        "value": 2901
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "full-charge",
+        "value": 350
+      },
+      {
+        "type": "slider",
+        "variable": "just-in-time-supply-robot",
+        "value": 150
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-robots",
+        "value": 5
+      },
+      {
+        "type": "switch",
+        "variable": "show-agent-name?",
+        "value": true
+      },
+      {
+        "type": "switch",
+        "variable": "make-trails?",
+        "value": true
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "reset": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Robotic%20Factory.nlogox",
+    "title": "NetLogo Web: Robotic Factory",
+    "at": "2026-11-06T09:05:21.408Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "d7e79d6b2647227ce73799b2b94c0f9dbdbfeb3d42e825ed96e270549194c9fd",
+    "tick": 0,
+    "metrics": {
+      "count robots": {
+        "success": true,
+        "value": 5
+      },
+      "sum [supply] of storages": {
+        "success": true,
+        "value": 0
+      },
+      "sum [supply] of loading-docks": {
+        "success": true,
+        "value": 10
+      },
+      "count orders": {
+        "success": true,
+        "value": 0
+      },
+      "sum [idleness] of robots": {
+        "success": true,
+        "value": 0
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "full-charge",
+        "value": 350
+      },
+      {
+        "type": "slider",
+        "variable": "just-in-time-supply-robot",
+        "value": 150
+      },
+      {
+        "type": "slider",
+        "variable": "number-of-robots",
+        "value": 5
+      },
+      {
+        "type": "switch",
+        "variable": "show-agent-name?",
+        "value": true
+      },
+      {
+        "type": "switch",
+        "variable": "make-trails?",
+        "value": true
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "slug": "urban-suite-economic-disparity",
+  "name": "Urban Suite - Economic Disparity",
+  "catalogPath": "Curricular Models/Urban Suite/Urban Suite - Economic Disparity",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Economic%20Disparity.nlogox",
+  "deliveryBatch": "B05",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether income-dependent location preferences reinforce residential and service inequality. In NetLogo's Urban Suite - Economic Disparity model, rich and poor entrants sample sites with different utility priorities, influence local price and quality, and attract jobs toward higher-value areas. The selected literature connects this mechanism to economic sorting and reinforcing land-use change: the acknowledged SOME ancestry confronts empirical requirements for residential development [1]; economic segregation models connect relocation choices with spatial inequality [2]; social context cautions against explaining observed separation from abstract preferences alone [3]. The source itself questions the assumption that jobs seek expensive land; binary income groups and directional neighborhood effects are propositions rather than established causal laws. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Economic%20Disparity.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Economic%20Disparity.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/urban-suite-economic-disparity.nlogox",
+    "sha256": "2ac2e2cf4385c7431daa57b81bc8280c62b40e305cd3acb4208df92a9783e940",
+    "citation": "For the model itself: * Felsen, M. and Wilensky, U. (2007). NetLogo Urban Suite - Economic Disparity model. http://ccl.northwestern.edu/netlogo/models/UrbanSuite-EconomicDisparity. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model was loosely based on a model originally written by William Rand and Derek Robinson as part of the Sluce Project at the University of Michigan. For more about the original model (SOME) that was the basis for this model, please see: Brown D.G., Robinson D.T., Nassauer J.I., An L., Page S.E., Low B., Rand W., Zellner M., and R. Riolo (In Press) \"Exurbia from the Bottom-Up: Agent-Based Modeling and Empirical Requirements.\" Geoforum. This model was developed during the Sprawl/Swarm Class at Illinois Institute of Technology in Fall 2006 under the supervision of Sarah Dunn and Martin Felsen, by the following group of students: Danil Nagy and Bridget Dodd. See http://www.sprawlcity.us/ for more details. Further modifications and refinements were made by members of the Center for Connected Learning and Computer-Based Modeling before releasing it as an Urban Suite model. The Urban Suite models were developed as part of the Procedural Modeling of Cities project, under the sponsorship of NSF ITR award 0326542, Electronic Arts & Maxis. Please see the project web site ([http://ccl.northwestern.edu/cities/](http://ccl.northwestern.edu/cities/)) for more information.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/urban-suite-economic-disparity.nlogox"
+  },
+  "publications": [
+    {
+      "id": "exurbia",
+      "creatorRole": "author",
+      "authors": [
+        "Daniel G. Brown",
+        "Derek T. Robinson",
+        "Li An",
+        "Joan I. Nassauer",
+        "Moira Zellner",
+        "William Rand",
+        "Rick Riolo",
+        "Scott E. Page",
+        "Bobbi Low",
+        "Zhifang Wang"
+      ],
+      "title": "Exurbia from the bottom-up: Confronting empirical challenges to characterizing a complex system",
+      "year": 2008,
+      "venue": "Geoforum",
+      "doi": "10.1016/j.geoforum.2007.02.010",
+      "url": "https://doi.org/10.1016/j.geoforum.2007.02.010",
+      "relevance": "the acknowledged SOME ancestry confronts empirical requirements for residential development",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.geoforum.2007.02.010",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/exurbia-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/exurbia-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "zhang",
+      "creatorRole": "author",
+      "authors": [
+        "Junfu Zhang"
+      ],
+      "title": "A DYNAMIC MODEL OF RESIDENTIAL SEGREGATION",
+      "year": 2004,
+      "venue": "The Journal of Mathematical Sociology",
+      "doi": "10.1080/00222500490480202",
+      "url": "https://doi.org/10.1080/00222500490480202",
+      "relevance": "economic segregation models connect relocation choices with spatial inequality",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1080%2F00222500490480202",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/zhang-verified.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/zhang-verified.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "clark",
+      "creatorRole": "author",
+      "authors": [
+        "William A. V. Clark",
+        "Mark Fossett"
+      ],
+      "title": "Understanding the social context of the Schelling segregation model",
+      "year": 2008,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.0708155105",
+      "url": "https://doi.org/10.1073/pnas.0708155105",
+      "relevance": "social context cautions against explaining observed separation from abstract preferences alone",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.0708155105",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/clark-verified.json",
+        "evidenceSummary": "A recent article [Vinkovic D, Kirman A (2006) Proc Natl Acad Sci USA 103:19261–19265] showing that the Schelling model has a physical analogue extends our understanding of the model. However, prior research has already outlined a mathematical basis for the Schelling model and simulations based on it have already enhanced our understanding of the social dynamics that underlie the model, something that the physical analogue does not address. Research in social science has provided a formal basis for the segregative outcomes resulting from the residential selection process and simulations have replicated relevant spatial outcomes under different specifications of the residential dynamics. New and increasingly detailed survey data on preferences demonstrates the embeddedness of the Schelling selection process in the social behaviors of choosing alternative residential compositions. It also d",
+        "evidenceFile": "evidence/social-urban/clark-verified.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

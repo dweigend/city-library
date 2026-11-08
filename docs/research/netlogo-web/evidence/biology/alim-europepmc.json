@@ -1,0 +1,296 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.1618114114%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1073/pnas.1618114114\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "28465441",
+          "source": "MED",
+          "pmid": "28465441",
+          "pmcid": "PMC5441820",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC5441820"
+            ]
+          },
+          "doi": "10.1073/pnas.1618114114",
+          "title": "Mechanism of signal propagation in <i>Physarum polycephalum</i>.",
+          "authorString": "Alim K, Andrew N, Pringle A, Brenner MP.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Alim K",
+                "lastName": "Alim",
+                "firstName": "Karen",
+                "initials": "K",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2527-5831"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "The Kavli Institute for Bionano Science and Technology, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA 02138; karen.alim@ds.mpg.de."
+                    },
+                    {
+                      "affiliation": "Max Planck Institute for Dynamics and Self-Organization, 37077 Goettingen, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Andrew N",
+                "lastName": "Andrew",
+                "firstName": "Natalie",
+                "initials": "N",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0007-9560-8228"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "The Kavli Institute for Bionano Science and Technology, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA 02138."
+                    },
+                    {
+                      "affiliation": "Max Planck Institute for Dynamics and Self-Organization, 37077 Goettingen, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Pringle A",
+                "lastName": "Pringle",
+                "firstName": "Anne",
+                "initials": "A",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Botany, University of Wisconsin-Madison, Madison, WI 53706."
+                    },
+                    {
+                      "affiliation": "Department of Bacteriology, University of Wisconsin-Madison, Madison, WI 53706."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Brenner MP",
+                "lastName": "Brenner",
+                "firstName": "Michael P",
+                "initials": "MP",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5673-7947"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "The Kavli Institute for Bionano Science and Technology, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA 02138."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2527-5831"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5673-7947"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0007-9560-8228"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "20",
+            "volume": "114",
+            "journalIssueId": 2558233,
+            "dateOfPublication": "2017 May",
+            "monthOfPublication": 5,
+            "yearOfPublication": 2017,
+            "journal": {
+              "medlineAbbreviation": "Proc Natl Acad Sci U S A",
+              "title": "Proceedings of the National Academy of Sciences of the United States of America",
+              "essn": "1091-6490",
+              "issn": "0027-8424",
+              "nlmid": "7505876",
+              "isoabbreviation": "Proc Natl Acad Sci U S A"
+            },
+            "printPublicationDate": "2017-05-01"
+          },
+          "pubYear": "2017",
+          "pageInfo": "5136-5141",
+          "abstractText": "Complex behaviors are typically associated with animals, but the capacity to integrate information and function as a coordinated individual is also a ubiquitous but poorly understood feature of organisms such as slime molds and fungi. Plasmodial slime molds grow as networks and use flexible, undifferentiated body plans to forage for food. How an individual communicates across its network remains a puzzle, but <i>Physarum polycephalum</i> has emerged as a novel model used to explore emergent dynamics. Within <i>P. polycephalum</i>, cytoplasm is shuttled in a peristaltic wave driven by cross-sectional contractions of tubes. We first track <i>P. polycephalum</i>'s response to a localized nutrient stimulus and observe a front of increased contraction. The front propagates with a velocity comparable to the flow-driven dispersion of particles. We build a mathematical model based on these data and in the aggregate experiments and model identify the mechanism of signal propagation across a body: The nutrient stimulus triggers the release of a signaling molecule. The molecule is advected by fluid flows but simultaneously hijacks flow generation by causing local increases in contraction amplitude as it travels. The molecule is initiating a feedback loop to enable its own movement. This mechanism explains previously puzzling phenomena, including the adaptation of the peristaltic wave to organism size and <i>P. polycephalum</i>'s ability to find the shortest route between food sources. A simple feedback seems to give rise to <i>P. polycephalum</i>'s complex behaviors, and the same mechanism is likely to function in the thousands of additional species with similar behaviors.",
+          "affiliation": "The Kavli Institute for Bionano Science and Technology, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA 02138; karen.alim@ds.mpg.de.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Simons Foundation",
+                "grantId": "Investigator",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Science Foundation",
+                "grantId": "DMS-1411694",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Science Foundation",
+                "grantId": "DMR1420570",
+                "orderIn": 0
+              },
+              {
+                "agency": "Human Frontier Science Program",
+                "grantId": "Pringle",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Physarum polycephalum",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Signal Transduction",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Behavior",
+              "Transport Network",
+              "Taylor Dispersion",
+              "Acellular Slime Mold"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.1618114114"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5441820"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5441820?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.1618114114"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 41,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2018-04-23",
+          "dateOfCreation": "2017-05-04",
+          "dateOfRevision": "2018-11-13",
+          "electronicPublicationDate": "2017-05-02",
+          "firstPublicationDate": "2017-05-02",
+          "firstIndexDate": "2017-05-03",
+          "fullTextReceivedDate": "2025-02-03",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

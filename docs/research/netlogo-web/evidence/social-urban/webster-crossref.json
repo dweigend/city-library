@@ -1,0 +1,700 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Traffic+signal+settings+Webster+1958&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1457124,
+      "items": [
+        {
+          "institution": [
+            {
+              "name": "The University of Queensland",
+              "department": [
+                "School of Economics"
+              ]
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                2
+              ]
+            ],
+            "date-time": "2024-01-02T01:40:31Z",
+            "timestamp": 1704159631534
+          },
+          "reference-count": 0,
+          "publisher": "University of Queensland Library",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.14264/223241",
+          "type": "dissertation",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                2
+              ]
+            ],
+            "date-time": "2024-01-02T01:03:31Z",
+            "timestamp": 1704157411000
+          },
+          "approved": {
+            "date-parts": [
+              [
+                1974,
+                1,
+                1
+              ]
+            ]
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Optimization of traffic signal settings : a linear programming formulation"
+          ],
+          "prefix": "10.14264",
+          "author": [
+            {
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "R. J.",
+              "family": "Hogan",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "5387",
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                2
+              ]
+            ],
+            "date-time": "2024-01-02T01:03:33Z",
+            "timestamp": 1704157413000
+          },
+          "score": 26.637657,
+          "degree": [
+            "Honours Thesis"
+          ],
+          "resource": {
+            "primary": {
+              "URL": "https://espace.library.uq.edu.au/view/UQ:223241"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                null
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.14264/223241"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                11
+              ]
+            ],
+            "date-time": "2024-09-11T16:16:06Z",
+            "timestamp": 1726071366479
+          },
+          "edition-number": "0",
+          "reference-count": 1,
+          "publisher": "CRC Press",
+          "isbn-type": [
+            {
+              "type": "electronic",
+              "value": "9780429069697"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2014,
+                11,
+                20
+              ]
+            ]
+          },
+          "DOI": "10.1201/b17697-14",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                7,
+                9
+              ]
+            ],
+            "date-time": "2020-07-09T11:50:38Z",
+            "timestamp": 1594295438000
+          },
+          "page": "173-184",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Traffic Signal Optimization: Challenges, Models, and Applications"
+          ],
+          "prefix": "10.1201",
+          "member": "301",
+          "reference": [
+            {
+              "key": "ref10",
+              "unstructured": "Abbas, M.M., H.A. Rakha, and P. Li. 2007. Multi-objective strategies for timing signal systems under oversaturated conditions. Proceedings of the 18th IASTED International Conference, Montreal, Quebec, C anada, pp. 580\u2013585."
+            }
+          ],
+          "container-title": [
+            "Industrial Engineering Non-Traditional Applications in International Settings"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                7,
+                9
+              ]
+            ],
+            "date-time": "2020-07-09T11:50:57Z",
+            "timestamp": 1594295457000
+          },
+          "score": 23.90562,
+          "resource": {
+            "primary": {
+              "URL": "https://www.taylorfrancis.com/books/9781482226881/chapters/10.1201/b17697-14"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2014,
+                11,
+                20
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780429069697"
+          ],
+          "references-count": 1,
+          "URL": "https://doi.org/10.1201/b17697-14",
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                11,
+                20
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                26
+              ]
+            ],
+            "date-time": "2026-09-26T23:59:17Z",
+            "timestamp": 1790467157840,
+            "version": "4.1.0"
+          },
+          "reference-count": 46,
+          "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "IEEE Access"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "DOI": "10.1109/access.2021.3094270",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                2
+              ]
+            ],
+            "date-time": "2021-07-02T19:59:58Z",
+            "timestamp": 1625255998000
+          },
+          "page": "102985-102997",
+          "source": "Crossref",
+          "is-referenced-by-count": 58,
+          "title": [
+            "An Adaptive Method for Traffic Signal Control Based on Fuzzy Logic With Webster and Modified Webster Formula Using SUMO Traffic Simulator"
+          ],
+          "prefix": "10.1109",
+          "volume": "9",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0003-1760-5949",
+              "authenticated-orcid": false,
+              "given": "Muzamil Eltejani Mohammed",
+              "family": "Ali",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-5611-2322",
+              "authenticated-orcid": false,
+              "given": "Akif",
+              "family": "Durdu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-7097-2521",
+              "authenticated-orcid": false,
+              "given": "Seyit Alperen",
+              "family": "Celtek",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Alper",
+              "family": "Yilmaz",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "263",
+          "reference": [
+            {
+              "key": "ref39",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1051/matecconf/20168105002"
+            },
+            {
+              "key": "ref38",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1088/1757-899X/1012/1/012037",
+              "article-title": "Python implementation of fuzzy logic for artificial intelligence modelling and analysis of important parameters in drilling of hybrid fiber composite (HFC)",
+              "volume": "1012",
+              "author": "samsingh",
+              "year": "2021",
+              "journal-title": "IOP Conf Ser Mater Sci Eng"
+            },
+            {
+              "key": "ref33",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.eswa.2015.02.011"
+            },
+            {
+              "key": "ref32",
+              "author": "yager",
+              "year": "2012",
+              "journal-title": "An Introduction to Fuzzy Logic Applications in Intelligent Systems"
+            },
+            {
+              "key": "ref31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1142/AFSAT"
+            },
+            {
+              "key": "ref30",
+              "author": "yen",
+              "year": "1999",
+              "journal-title": "Fuzzy Logic Intelligence Control and Information"
+            },
+            {
+              "key": "ref37",
+              "first-page": "1",
+              "article-title": "Modification of Webster&#x2019;s minimum delay cycle length equation based on HCM 2000",
+              "author": "cheng",
+              "year": "2003",
+              "journal-title": "Proc Transp Res Board Presentation Publication Annu Meeting"
+            },
+            {
+              "key": "ref36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.renene.2011.11.019"
+            },
+            {
+              "key": "ref35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/ECAI.2016.7861077"
+            },
+            {
+              "key": "ref34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1386-5056(01)00160-5"
+            },
+            {
+              "key": "ref10",
+              "first-page": "1715",
+              "article-title": "A fuzzy traffic signal control method for a single intersection under mixed traffic conditions",
+              "volume": "11",
+              "author": "van",
+              "year": "2020",
+              "journal-title": "Technology"
+            },
+            {
+              "key": "ref40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10846-005-3808-2"
+            },
+            {
+              "key": "ref11",
+              "first-page": "924",
+              "article-title": "MATLAB simulation of fuzzy traffic controller for multilane isolated intersection",
+              "volume": "2",
+              "author": "soh",
+              "year": "2010",
+              "journal-title": "Int J Comput Sci Eng"
+            },
+            {
+              "key": "ref12",
+              "first-page": "1",
+              "article-title": "Traffic lights control system for Indian cities using WSN and fuzzy control",
+              "volume": "4",
+              "author": "garg",
+              "year": "2017",
+              "journal-title": "Traffic"
+            },
+            {
+              "key": "ref13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s40815-016-0143-7"
+            },
+            {
+              "key": "ref14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4172/2165-7866.1000162"
+            },
+            {
+              "key": "ref15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.31142/ijtsrd23873"
+            },
+            {
+              "key": "ref16",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1155/2021/9941148",
+              "article-title": "Urban traffic signals timing at four-phase signalized intersection based on optimized two-stage fuzzy control scheme",
+              "volume": "2021",
+              "author": "jiang",
+              "year": "2021",
+              "journal-title": "Math Problems Eng"
+            },
+            {
+              "key": "ref17",
+              "first-page": "21",
+              "article-title": "Dynamic traffic signal phase sequencing for an isolated intersection using ANFIS",
+              "volume": "2",
+              "author": "udofia",
+              "year": "2014",
+              "journal-title": "Automation Control and Intel Sys"
+            },
+            {
+              "key": "ref18",
+              "first-page": "87",
+              "article-title": "Traffic signal control for isolated intersections based on fuzzy neural network and genetic algorithm",
+              "author": "royani",
+              "year": "2010",
+              "journal-title": "Proc 10th WSEAS Int Conf Signal Process Comput Geometry Artif Vis"
+            },
+            {
+              "key": "ref19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/TITS.2015.2478602"
+            },
+            {
+              "key": "ref4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.eswa.2011.01.130"
+            },
+            {
+              "key": "ref28",
+              "author": "h\u00e1jek",
+              "year": "2013",
+              "journal-title": "Metamathematics of Fuzzy Logic"
+            },
+            {
+              "key": "ref3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/TITS.2016.2582920"
+            },
+            {
+              "key": "ref27",
+              "author": "kandel",
+              "year": "1993",
+              "journal-title": "Fuzzy Control Systems"
+            },
+            {
+              "key": "ref6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3141/2558-08"
+            },
+            {
+              "key": "ref5",
+              "article-title": "Traffic signal settings",
+              "author": "webster",
+              "year": "1958"
+            },
+            {
+              "key": "ref29",
+              "author": "ross",
+              "year": "2005",
+              "journal-title": "Fuzzy Logic with Engineering Applications"
+            },
+            {
+              "key": "ref8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0019-9958(65)90241-X"
+            },
+            {
+              "key": "ref7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.aej.2016.07.029"
+            },
+            {
+              "key": "ref2",
+              "first-page": "1",
+              "article-title": "An evaluation of adaptive traffic control system in Istanbul, Turkey",
+              "volume": "2",
+              "author": "g\u00fcndo?an",
+              "year": "2014",
+              "journal-title": "J Traffic Logistics Eng"
+            },
+            {
+              "key": "ref1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.18356/f43aec5d-en"
+            },
+            {
+              "key": "ref9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.trc.2007.11.003"
+            },
+            {
+              "key": "ref46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.sbspro.2011.04.471"
+            },
+            {
+              "key": "ref20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.trc.2017.02.006"
+            },
+            {
+              "key": "ref45",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/B978-0-12-815302-4.00004-2"
+            },
+            {
+              "key": "ref22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/MITS.2016.2605318"
+            },
+            {
+              "key": "ref21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.engappai.2017.04.021"
+            },
+            {
+              "key": "ref42",
+              "first-page": "1",
+              "article-title": "Recent development and applications of SUMO-simulation of urban mobility",
+              "volume": "5",
+              "author": "krajzewicz",
+              "year": "2012",
+              "journal-title": "Int J Adv Syst Meas"
+            },
+            {
+              "key": "ref24",
+              "article-title": "Adaptive traffic signal control: Deep reinforcement learning algorithm with experience replay and target network",
+              "author": "gao",
+              "year": "2017",
+              "journal-title": "arXiv 1705 02755"
+            },
+            {
+              "key": "ref41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.sbspro.2014.01.059"
+            },
+            {
+              "key": "ref23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1061/9780784482292.270"
+            },
+            {
+              "key": "ref44",
+              "article-title": "KilisData",
+              "author": "celtek",
+              "year": "2021"
+            },
+            {
+              "key": "ref26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5120/17737-8910"
+            },
+            {
+              "key": "ref43",
+              "first-page": "121",
+              "article-title": "A comparative analysis of currently used microscopic and macroscopic traffic simulation software",
+              "volume": "34",
+              "author": "ratrout",
+              "year": "2009",
+              "journal-title": "Arabian J Sci Eng"
+            },
+            {
+              "key": "ref25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3390/app10051622"
+            }
+          ],
+          "container-title": [
+            "IEEE Access"
+          ],
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx7/6287639/9312710/09471840.pdf?arnumber=9471840",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                12,
+                17
+              ]
+            ],
+            "date-time": "2021-12-17T19:56:52Z",
+            "timestamp": 1639771012000
+          },
+          "score": 23.849354,
+          "resource": {
+            "primary": {
+              "URL": "https://ieeexplore.ieee.org/document/9471840/"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "references-count": 46,
+          "URL": "https://doi.org/10.1109/access.2021.3094270",
+          "ISSN": [
+            "2169-3536"
+          ],
+          "issn-type": [
+            {
+              "value": "2169-3536",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

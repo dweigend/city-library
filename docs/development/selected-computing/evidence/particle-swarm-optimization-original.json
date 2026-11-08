@@ -1,0 +1,305 @@
+{
+  "setup": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Particle%20Swarm%20Optimization.nlogox",
+    "title": "NetLogo Web: Particle Swarm Optimization",
+    "at": "2026-11-06T09:01:30.338Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "d03ded09553798a66fa7c70ee9aef25d5852dba403cdf388c4bcd2dd7a3b6d0e",
+    "tick": 0,
+    "metrics": {
+      "count turtles": {
+        "success": true,
+        "value": 50
+      },
+      "global-best-val": {
+        "success": true,
+        "value": 0
+      },
+      "max [personal-best-val] of turtles": {
+        "success": true,
+        "value": 0.9850782618606598
+      },
+      "max [val] of patches": {
+        "success": true,
+        "value": 1
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "landscape-smoothness",
+        "value": 20
+      },
+      {
+        "type": "slider",
+        "variable": "population-size",
+        "value": 50
+      },
+      {
+        "type": "slider",
+        "variable": "particle-inertia",
+        "value": 0.98
+      },
+      {
+        "type": "slider",
+        "variable": "particle-speed-limit",
+        "value": 10
+      },
+      {
+        "type": "slider",
+        "variable": "attraction-to-personal-best",
+        "value": 2
+      },
+      {
+        "type": "slider",
+        "variable": "attraction-to-global-best",
+        "value": 1
+      },
+      {
+        "type": "chooser",
+        "variable": "highlight-mode",
+        "value": "None"
+      },
+      {
+        "type": "chooser",
+        "variable": "trails-mode",
+        "value": "None"
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "actions": [
+    "setup",
+    "step",
+    "go start",
+    "go pause",
+    "setup reset"
+  ],
+  "step": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Particle%20Swarm%20Optimization.nlogox",
+    "title": "NetLogo Web: Particle Swarm Optimization",
+    "at": "2026-11-06T09:01:30.725Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "d03ded09553798a66fa7c70ee9aef25d5852dba403cdf388c4bcd2dd7a3b6d0e",
+    "tick": 1,
+    "metrics": {
+      "count turtles": {
+        "success": true,
+        "value": 50
+      },
+      "global-best-val": {
+        "success": true,
+        "value": 0.9850782618606598
+      },
+      "max [personal-best-val] of turtles": {
+        "success": true,
+        "value": 0.9850782618606598
+      },
+      "max [val] of patches": {
+        "success": true,
+        "value": 1
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "landscape-smoothness",
+        "value": 20
+      },
+      {
+        "type": "slider",
+        "variable": "population-size",
+        "value": 50
+      },
+      {
+        "type": "slider",
+        "variable": "particle-inertia",
+        "value": 0.98
+      },
+      {
+        "type": "slider",
+        "variable": "particle-speed-limit",
+        "value": 10
+      },
+      {
+        "type": "slider",
+        "variable": "attraction-to-personal-best",
+        "value": 2
+      },
+      {
+        "type": "slider",
+        "variable": "attraction-to-global-best",
+        "value": 1
+      },
+      {
+        "type": "chooser",
+        "variable": "highlight-mode",
+        "value": "None"
+      },
+      {
+        "type": "chooser",
+        "variable": "trails-mode",
+        "value": "None"
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "progress": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Particle%20Swarm%20Optimization.nlogox",
+    "title": "NetLogo Web: Particle Swarm Optimization",
+    "at": "2026-11-06T09:01:51.011Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "d03ded09553798a66fa7c70ee9aef25d5852dba403cdf388c4bcd2dd7a3b6d0e",
+    "tick": 19,
+    "metrics": {
+      "count turtles": {
+        "success": true,
+        "value": 50
+      },
+      "global-best-val": {
+        "success": true,
+        "value": 1
+      },
+      "max [personal-best-val] of turtles": {
+        "success": true,
+        "value": 1
+      },
+      "max [val] of patches": {
+        "success": true,
+        "value": 1
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "landscape-smoothness",
+        "value": 20
+      },
+      {
+        "type": "slider",
+        "variable": "population-size",
+        "value": 50
+      },
+      {
+        "type": "slider",
+        "variable": "particle-inertia",
+        "value": 0.98
+      },
+      {
+        "type": "slider",
+        "variable": "particle-speed-limit",
+        "value": 10
+      },
+      {
+        "type": "slider",
+        "variable": "attraction-to-personal-best",
+        "value": 2
+      },
+      {
+        "type": "slider",
+        "variable": "attraction-to-global-best",
+        "value": 1
+      },
+      {
+        "type": "chooser",
+        "variable": "highlight-mode",
+        "value": "None"
+      },
+      {
+        "type": "chooser",
+        "variable": "trails-mode",
+        "value": "None"
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  },
+  "reset": {
+    "url": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Particle%20Swarm%20Optimization.nlogox",
+    "title": "NetLogo Web: Particle Swarm Optimization",
+    "at": "2026-11-06T09:01:52.196Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "sourceSha256": "d03ded09553798a66fa7c70ee9aef25d5852dba403cdf388c4bcd2dd7a3b6d0e",
+    "tick": 0,
+    "metrics": {
+      "count turtles": {
+        "success": true,
+        "value": 50
+      },
+      "global-best-val": {
+        "success": true,
+        "value": 0
+      },
+      "max [personal-best-val] of turtles": {
+        "success": true,
+        "value": 0.8048434632468358
+      },
+      "max [val] of patches": {
+        "success": true,
+        "value": 1
+      }
+    },
+    "widgets": [
+      {
+        "type": "slider",
+        "variable": "landscape-smoothness",
+        "value": 20
+      },
+      {
+        "type": "slider",
+        "variable": "population-size",
+        "value": 50
+      },
+      {
+        "type": "slider",
+        "variable": "particle-inertia",
+        "value": 0.98
+      },
+      {
+        "type": "slider",
+        "variable": "particle-speed-limit",
+        "value": 10
+      },
+      {
+        "type": "slider",
+        "variable": "attraction-to-personal-best",
+        "value": 2
+      },
+      {
+        "type": "slider",
+        "variable": "attraction-to-global-best",
+        "value": 1
+      },
+      {
+        "type": "chooser",
+        "variable": "highlight-mode",
+        "value": "None"
+      },
+      {
+        "type": "chooser",
+        "variable": "trails-mode",
+        "value": "None"
+      }
+    ],
+    "runtimeErrors": [],
+    "compilerErrors": []
+  }
+}

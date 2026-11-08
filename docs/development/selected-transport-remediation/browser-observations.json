@@ -1,0 +1,460 @@
+{
+  "traffic-grid": {
+    "runtimeCommit": "64ef20d",
+    "setup": {
+      "buildVersion": "1793965678447",
+      "sourceMarker": "selected-transport-b04:traffic-grid:ec0cdcff88fbc9d54aa20a922fa3da8087c40318c929bae108f22f16932def3d",
+      "chunks": [
+        {
+          "url": "http://localhost:3144/app.js",
+          "sha256": "15b1624b4807408422ca58c2989daaaa2987e26ecb79c00738f7cdcbc500c895",
+          "bytes": 34229
+        },
+        {
+          "url": "http://localhost:3144/chunks/ui-65eztz92.js",
+          "sha256": "ef97541c6a466e636a7e4c8fdf21a5b44f4b47b855c5e35b55a60c18cba3436f",
+          "bytes": 12607
+        },
+        {
+          "url": "http://localhost:3144/chunks/app-67pte75e.js",
+          "sha256": "2164b26907dea112fd5cfd3580815be3f7d8234c776ae98149fea595e1e04f31",
+          "bytes": 1077817
+        }
+      ],
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "settings": [
+        {
+          "name": "seed",
+          "value": "1"
+        },
+        {
+          "name": "gridSizeX",
+          "value": "5"
+        },
+        {
+          "name": "gridSizeY",
+          "value": "5"
+        },
+        {
+          "name": "numCars",
+          "value": "200"
+        },
+        {
+          "name": "live-power",
+          "value": true
+        },
+        {
+          "name": "live-speedLimit",
+          "value": "1"
+        },
+        {
+          "name": "live-ticksPerCycle",
+          "value": "20"
+        },
+        {
+          "name": "live-currentPhase",
+          "value": "0"
+        },
+        {
+          "name": "live-currentAuto",
+          "value": true
+        }
+      ],
+      "monitors": "Tick\n0\nPhase\n0\nStopped cars\n200",
+      "status": "Model initialized."
+    },
+    "setupPng": "docs/development/selected-transport-remediation/traffic-grid-setup-light.png",
+    "progress": {
+      "monitors": "Tick\n50\nPhase\n10\nStopped cars\n131",
+      "status": "Steps completed.",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "canvas": {
+        "x": 328,
+        "y": 115,
+        "width": 672,
+        "height": 672,
+        "top": 115,
+        "right": 1000,
+        "bottom": 787,
+        "left": 328
+      }
+    },
+    "progressPng": "docs/development/selected-transport-remediation/traffic-grid-progress-light.png",
+    "playPause": {
+      "before": "50",
+      "running": "Pause",
+      "paused": "52",
+      "afterWait": "52",
+      "button": "Run",
+      "pressed": "false"
+    },
+    "selection": {
+      "point": {
+        "x": -12,
+        "y": -18,
+        "id": "-12,-18"
+      },
+      "currentPhase": "0",
+      "status": "Drawing updated.",
+      "tick": "52"
+    },
+    "controlsPng": "docs/development/selected-transport-remediation/traffic-grid-controls-light.png",
+    "reset": {
+      "cycle": "3",
+      "monitors": "Tick\n0\nPhase\n0\nStopped cars\n200",
+      "status": "Model initialized."
+    },
+    "step": {
+      "monitors": "Tick\n1\nPhase\n1\nStopped cars\n105",
+      "status": "Steps completed."
+    },
+    "appearance": [
+      {
+        "name": "desktop-dark",
+        "png": "docs/development/selected-transport-remediation/traffic-grid-desktop-dark.png",
+        "readback": {
+          "viewport": {
+            "width": 1440,
+            "height": 1100
+          },
+          "scrollY": 0,
+          "scrollWidth": 1440,
+          "dark": true,
+          "background": "rgb(24, 24, 24)",
+          "canvas": {
+            "x": 328,
+            "y": 115,
+            "width": 672,
+            "height": 672,
+            "top": 115,
+            "right": 1000,
+            "bottom": 787,
+            "left": 328
+          },
+          "monitors": "Tick\n1\nPhase\n1\nStopped cars\n105"
+        }
+      },
+      {
+        "name": "mobile-light-controls",
+        "png": "docs/development/selected-transport-remediation/traffic-grid-mobile-light-controls.png",
+        "readback": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "dark": false,
+          "background": "rgb(255, 255, 255)",
+          "canvas": {
+            "x": 16,
+            "y": 649.875,
+            "width": 358,
+            "height": 358,
+            "top": 649.875,
+            "right": 374,
+            "bottom": 1007.875,
+            "left": 16
+          },
+          "monitors": "Tick\n1\nPhase\n1\nStopped cars\n105"
+        }
+      },
+      {
+        "name": "mobile-light-scene",
+        "png": "docs/development/selected-transport-remediation/traffic-grid-mobile-light-scene.png",
+        "readback": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 650,
+          "scrollWidth": 390,
+          "dark": false,
+          "background": "rgb(255, 255, 255)",
+          "canvas": {
+            "x": 16,
+            "y": -0.125,
+            "width": 358,
+            "height": 358,
+            "top": -0.125,
+            "right": 374,
+            "bottom": 357.875,
+            "left": 16
+          },
+          "monitors": "Tick\n1\nPhase\n1\nStopped cars\n105"
+        }
+      },
+      {
+        "name": "mobile-dark-scene",
+        "png": "docs/development/selected-transport-remediation/traffic-grid-mobile-dark-scene.png",
+        "readback": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 650,
+          "scrollWidth": 390,
+          "dark": true,
+          "background": "rgb(24, 24, 24)",
+          "canvas": {
+            "x": 16,
+            "y": -0.125,
+            "width": 358,
+            "height": 358,
+            "top": -0.125,
+            "right": 374,
+            "bottom": 357.875,
+            "left": 16
+          },
+          "monitors": "Tick\n1\nPhase\n1\nStopped cars\n105"
+        }
+      }
+    ],
+    "keyboard": {
+      "name": "gridSizeX",
+      "visible": true,
+      "outline": "solid",
+      "width": "2px"
+    },
+    "diagnostics": {
+      "consoleEntries": [],
+      "failedRequests": [],
+      "omitted": [
+        "33 older network entries",
+        "15 of 19 actionTimeline"
+      ]
+    }
+  },
+  "traffic-grid-goal": {
+    "runtimeCommit": "64ef20d",
+    "setup": {
+      "buildVersion": "1793965678447",
+      "sourceMarker": "selected-transport-b04:traffic-grid-goal:7259187f36f97a8c6e9378398a72d927844233c3811151a714eb3aa97807bfa9",
+      "chunks": [
+        {
+          "url": "http://localhost:3144/app.js",
+          "sha256": "15b1624b4807408422ca58c2989daaaa2987e26ecb79c00738f7cdcbc500c895",
+          "bytes": 34229
+        },
+        {
+          "url": "http://localhost:3144/chunks/app-67pte75e.js",
+          "sha256": "2164b26907dea112fd5cfd3580815be3f7d8234c776ae98149fea595e1e04f31",
+          "bytes": 1077817
+        },
+        {
+          "url": "http://localhost:3144/chunks/ui-3gt6e2qy.js",
+          "sha256": "d2429a9370d88b628bc5ae632882a43da93c652aed9752a01966cba7541b7d77",
+          "bytes": 15210
+        }
+      ],
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+      "settings": [
+        {
+          "name": "seed",
+          "value": "1"
+        },
+        {
+          "name": "gridSizeX",
+          "value": "5"
+        },
+        {
+          "name": "gridSizeY",
+          "value": "5"
+        },
+        {
+          "name": "numCars",
+          "value": "200"
+        },
+        {
+          "name": "live-power",
+          "value": true
+        },
+        {
+          "name": "live-speedLimit",
+          "value": "1"
+        },
+        {
+          "name": "live-ticksPerCycle",
+          "value": "20"
+        },
+        {
+          "name": "live-currentPhase",
+          "value": "0"
+        },
+        {
+          "name": "live-currentAuto",
+          "value": true
+        }
+      ],
+      "monitors": "Tick\n0\nPhase\n0\nStopped cars\n200",
+      "status": "Model initialized."
+    },
+    "setupPng": "docs/development/selected-transport-remediation/traffic-grid-goal-setup-light.png",
+    "progress": {
+      "monitors": "Tick\n50\nPhase\n10\nStopped cars\n72",
+      "status": "Steps completed.",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "canvas": {
+        "x": 328,
+        "y": 115,
+        "width": 672,
+        "height": 672,
+        "top": 115,
+        "right": 1000,
+        "bottom": 787,
+        "left": 328
+      }
+    },
+    "progressPng": "docs/development/selected-transport-remediation/traffic-grid-goal-progress-light.png",
+    "playPause": {
+      "before": "50",
+      "running": "Pause",
+      "paused": "52",
+      "afterWait": "52",
+      "button": "Run",
+      "pressed": "false"
+    },
+    "selection": {
+      "point": {
+        "x": -12,
+        "y": -18,
+        "id": "-12,-18"
+      },
+      "currentPhase": "0",
+      "status": "Drawing updated.",
+      "tick": "52"
+    },
+    "controlsPng": "docs/development/selected-transport-remediation/traffic-grid-goal-controls-light.png",
+    "reset": {
+      "cycle": "3",
+      "monitors": "Tick\n0\nPhase\n0\nStopped cars\n200",
+      "status": "Model initialized."
+    },
+    "step": {
+      "monitors": "Tick\n1\nPhase\n1\nStopped cars\n102",
+      "status": "Steps completed."
+    },
+    "appearance": [
+      {
+        "name": "desktop-dark",
+        "png": "docs/development/selected-transport-remediation/traffic-grid-goal-desktop-dark.png",
+        "readback": {
+          "viewport": {
+            "width": 1440,
+            "height": 1100
+          },
+          "scrollY": 0,
+          "scrollWidth": 1440,
+          "dark": true,
+          "background": "rgb(24, 24, 24)",
+          "canvas": {
+            "x": 328,
+            "y": 115,
+            "width": 672,
+            "height": 672,
+            "top": 115,
+            "right": 1000,
+            "bottom": 787,
+            "left": 328
+          },
+          "monitors": "Tick\n1\nPhase\n1\nStopped cars\n102"
+        }
+      },
+      {
+        "name": "mobile-light-controls",
+        "png": "docs/development/selected-transport-remediation/traffic-grid-goal-mobile-light-controls.png",
+        "readback": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "dark": false,
+          "background": "rgb(255, 255, 255)",
+          "canvas": {
+            "x": 16,
+            "y": 697.875,
+            "width": 358,
+            "height": 358,
+            "top": 697.875,
+            "right": 374,
+            "bottom": 1055.875,
+            "left": 16
+          },
+          "monitors": "Tick\n1\nPhase\n1\nStopped cars\n102"
+        }
+      },
+      {
+        "name": "mobile-light-scene",
+        "png": "docs/development/selected-transport-remediation/traffic-grid-goal-mobile-light-scene.png",
+        "readback": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 698,
+          "scrollWidth": 390,
+          "dark": false,
+          "background": "rgb(255, 255, 255)",
+          "canvas": {
+            "x": 16,
+            "y": -0.125,
+            "width": 358,
+            "height": 358,
+            "top": -0.125,
+            "right": 374,
+            "bottom": 357.875,
+            "left": 16
+          },
+          "monitors": "Tick\n1\nPhase\n1\nStopped cars\n102"
+        }
+      },
+      {
+        "name": "mobile-dark-scene",
+        "png": "docs/development/selected-transport-remediation/traffic-grid-goal-mobile-dark-scene.png",
+        "readback": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 698,
+          "scrollWidth": 390,
+          "dark": true,
+          "background": "rgb(24, 24, 24)",
+          "canvas": {
+            "x": 16,
+            "y": -0.125,
+            "width": 358,
+            "height": 358,
+            "top": -0.125,
+            "right": 374,
+            "bottom": 357.875,
+            "left": 16
+          },
+          "monitors": "Tick\n1\nPhase\n1\nStopped cars\n102"
+        }
+      }
+    ],
+    "keyboard": {
+      "name": "gridSizeX",
+      "visible": true,
+      "outline": "solid",
+      "width": "2px"
+    },
+    "diagnostics": {
+      "consoleEntries": [],
+      "failedRequests": [],
+      "omitted": [
+        "34 older network entries",
+        "16 of 21 actionTimeline"
+      ]
+    }
+  }
+}
