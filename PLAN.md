@@ -10,11 +10,11 @@ The core includes Agent/World lifecycle and execution, seeded Random streams, sp
 
 Both UI hosts support `defineUI`, keyed live controls, flat groups, monitor formatting and labelled charts. All 125 entries use the shared contract without a model-specific fallback. The Svelte runtime remains a work in progress; the legacy host is available. See [Lab usage](ui/agent-lab/README.md) and the [UI API](docs/ui/README.md).
 
-The [catalog ledger](experiments/catalog/progress.json) tracks model-level acceptance. Its summary needs reconciliation with the present entries before it can serve as a current completion total. A working setup or passing test does not establish scientific equivalence or complete accessibility.
+The [catalog ledger](experiments/catalog/progress.json) tracks model-level acceptance. It records 125 implemented entries, including 20 whose remaining acceptance stages still need evidence reconciliation. Research is recorded for 200 selected models; independent review and full acceptance are recorded for one. These counts describe distinct stages, not a completed catalog. A working setup or passing test does not establish scientific equivalence or complete accessibility.
 
 ## Next steps
 
-1. Reconcile the row-level catalog ledger and summary with the present implementations and required evidence.
+1. Reconcile the remaining model-level acceptance stages with their required evidence; implementation alone does not complete a model.
 2. Finish remaining Svelte controls, lifecycle and model-switching acceptance, including desktop/narrow light/dark screenshots and independent inspection.
 3. Complete the selected 200 models and their headless, source, browser and independent review gates. Follow the [model acceptance rules](docs/development/netlogo-model-acceptance.md).
 4. Reconcile the operation-level API inventory with current exports. Review longer model scripts for readable public actions and observations.
