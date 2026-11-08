@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "types": ["bun"] },
+  "include": [
+    "index.ts",
+    "src/**/*.ts",
+    "examples/townscaper-grid/**/*.ts",
+    "tests/townscaper-grid-types.ts"
+  ]
+}

@@ -127,6 +127,25 @@ if(packedLayoutGrid.agentsAt(packedLayoutGrid.fields[0]!)[0]!==packedWalker)thro
 packedWalker.move({to:{x:1.5,y:0.5}});
 if(packedLayoutGrid.agentsAt(packedLayoutGrid.fields[0]!).length!==0||packedLayoutGrid.agentsAt(packedLayoutGrid.fields[1]!)[0]!==packedWalker)throw Error('packed layout movement mismatch');
 
+const quadRandom=Random.add({seed:7});
+const rawQuads=topology.quadrilaterals({rings:3,random:quadRandom});
+const quadContinuation=JSON.stringify(quadRandom.state);
+if(rawQuads.cells.length!==122)throw Error('packed finite quad count mismatch');
+const quadArea=rawQuads.cells.reduce((sum,cell)=>sum+geometry.area({shape:rawQuads.polygon({cell})}),0);
+if(Math.abs(quadArea-27*Math.sqrt(3)/2)>1e-10)throw Error('packed hex area mismatch');
+const revisedQuads=topology.relax({layout:rawQuads,method:'squareTarget',iterations:4});
+const zeroQuads=topology.relax({layout:rawQuads,method:'squareTarget',iterations:0});
+if(revisedQuads===rawQuads||zeroQuads===rawQuads||zeroQuads.polygon({cell:0})===rawQuads.polygon({cell:0}))throw Error('packed quad revision identity mismatch');
+if(JSON.stringify(quadRandom.state)!==quadContinuation)throw Error('packed relaxation consumed random stream');
+for(const cell of rawQuads.cells){
+if(JSON.stringify(revisedQuads.neighbors({cell}))!==JSON.stringify(rawQuads.neighbors({cell})))throw Error('packed quad incidence mismatch');
+}
+const quadBefore=Grid.add({layout:rawQuads,state:{population:0}});
+quadBefore.fields[0]!.population=12;
+const quadAfter=Grid.add({layout:revisedQuads,state:{population:0}});
+for(const cell of rawQuads.cells)quadAfter.fields[cell]!.population=quadBefore.fields[cell]!.population;
+if(quadAfter.fields[0]===quadBefore.fields[0]||quadAfter.fields[0]!.population!==12)throw Error('packed explicit quad Field copy mismatch');
+
 
 
 `, { flag: "a" });
@@ -137,7 +156,7 @@ summary.sum=0;
 return median;}
 void summaryTypeContract;
 `);
-  await writeFile(join(directory, "grid-parcel-types.ts"), `import {Grid,World,topology,type Layout,type LayoutGrid,type LayoutField,type PlanarGeometry} from 'city-library';
+  await writeFile(join(directory, "grid-parcel-types.ts"), `import {Grid,World,Random,topology,type Layout,type LayoutGrid,type LayoutField,type PlanarGeometry} from 'city-library';
 function layoutTypeContract(){
 const layout:Layout=topology.hex({columns:2,rows:2});
 const grid:LayoutGrid<{temperature:number}>=Grid.add({layout,state:{temperature:1}});
@@ -145,6 +164,15 @@ const field:LayoutField<{temperature:number}>=World.add().add(grid).fields[0]!;
 field.temperature=2;
 const owner:LayoutGrid<{temperature:number}>=field.grid;
 const shape:PlanarGeometry=layout.polygon({cell:0});
+const quads:Layout=topology.quadrilaterals({rings:1,random:Random.add({seed:7})});
+const revised:Layout=topology.relax({layout:quads,method:'squareTarget',iterations:0});
+const mixedFinite={rings:1,boundary:shape,random:Random.add({seed:7})};
+// @ts-expect-error Finite and arbitrary-boundary options cannot be mixed through a variable.
+topology.quadrilaterals(mixedFinite);
+// @ts-expect-error The finite method requires an explicit canonical stream.
+topology.quadrilaterals({rings:1});
+// @ts-expect-error Lloyd remains a research contract.
+topology.relax({layout:revised,method:'lloyd',iterations:1});
 // @ts-expect-error Layout Grids do not have a uniform cell size.
 grid.cellSize;
 // @ts-expect-error Layout Grids do not have regular diffusion.
