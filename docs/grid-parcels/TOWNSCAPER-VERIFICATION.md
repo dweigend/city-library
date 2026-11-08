@@ -79,3 +79,13 @@ rights limits. No browser-facing flow is added by this headless slice; no browse
 or original-Townscaper fidelity acceptance is claimed. Hosted CI, PR linkage and
 remote-head verification remain publication-time checks, separate from these
 local results. Merge is not authorized.
+
+## Subsequent client-model checkpoint
+
+The reviewed `04ac06e` model/plan checkpoint was integrated as `e016814` without
+changing E3 runtime, root exports or UI. The [target integration record](../development/example-first/TARGET-INTEGRATION.md)
+records the additional two ready city scripts and the new complete check:
+619 tests / 183339 expectations, 243 registered scripts, build and packed
+consumers passed. The earlier 241-script result above remains its original
+checkpoint evidence. All original/E3/foundation/archive hashes remain unchanged;
+the quarter is still a red E1/E2 target.

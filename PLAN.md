@@ -6,6 +6,10 @@ The user accepted three flat city-simulation scripts as authoring references: ho
 
 The same example-first plan now incorporates cross-domain research through two model-local integration probes: one scarce unit and a shared machine lifecycle. They use existing public APIs and explicit priorities/transitions, not a new resource framework. Geometry remains an independent track. Original three script contracts are unchanged; new probes and research alignment have their own verification/review record.
 
+The [target integration record](docs/development/example-first/TARGET-INTEGRATION.md)
+tracks checkpoint `04ac06e` on this finite-topology branch. It preserves the
+separately reviewed E3 runtime and keeps the quarter in its red target gates.
+
 ## Finite quad topology — independent E3 track
 
 The [integrated source receipt](docs/grid-parcels/TOWNSCAPER-RECEIPT.md) preserves
