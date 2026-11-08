@@ -1,0 +1,16 @@
+18 | }
+19 | export function validateOptions(value: unknown, keys: readonly string[]): Record<string, unknown> {
+20 |   if (!plainRecord(value)) throw new TypeError("Expected a plain options record.");
+21 |   const result = Object.create(null) as Record<string, unknown>;
+22 |   for (const [key, descriptor] of dataEntries(value)) {
+23 |     if (!keys.includes(key)) throw new TypeError(`Unknown option: ${key}`);
+                                            ^
+TypeError: Unknown option: mean
+      at validateOptions (/home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/src/agent/state.ts:23:40)
+      at uniformDraw (/home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/src/random/uniform.ts:19:18)
+      at makeLiver (/home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/experiments/blood-sugar-regulation/model.ts:113:35)
+      at setup (/home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/experiments/blood-sugar-regulation/model.ts:140:5)
+      at create (/home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/experiments/blood-sugar-regulation/model.ts:348:3)
+      at /home/david/.t3/worktrees/city-library/experiment-selected-biology-b07/examples/selected-biology/03-homeostasis-and-exercise.ts:5:14
+
+Bun v1.4.2 (Linux x64)

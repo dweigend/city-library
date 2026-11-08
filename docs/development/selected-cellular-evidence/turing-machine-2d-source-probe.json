@@ -1,0 +1,33 @@
+{
+  "slug": "turing-machine-2d",
+  "command": "set heads 1 setup-example go",
+  "execution": "Original NetLogo Command Center, editor population followed by native Enter",
+  "observed": {
+    "file": "Turing Machine 2D.nlogox",
+    "sha": "a267a617dd79a3d90b3ee88ea573ade860949c740fbd7b7543f211b551f169be",
+    "tick": 1,
+    "patches": 22801,
+    "values": {
+      "on?": {
+        "unique": [
+          false,
+          true
+        ],
+        "trueCount": 1
+      }
+    },
+    "rowOn": [],
+    "rowOnCount": 0,
+    "turtles": 1,
+    "visibleTurtles": 1,
+    "heads": [
+      {
+        "x": 0,
+        "y": -1,
+        "heading": 180,
+        "state": 1
+      }
+    ],
+    "console": " powered by NetLogo\nTuring Machine 2D\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 1\n?\nfor shortcuts\nexample\ncolor-paths?\nheads\ngo\nsetup\nsetup example\nstep\noff-0-turn\n--\nRight\nBackwards\nLeft\noff-1-turn\n--\nRight\nBackwards\nLeft\noff-1-state\non-0-turn\n--\nRight\nBackwards\nLeft\non-0-state\non-1-turn\n--\nRight\nBackwards\nLeft\non-1-state\noff-0-on?\noff-1-on?\non-0-on?\non-1-on?\noff-0-state\nIf cell is off and\nhead is in state 0:\nIf cell is off and\nhead is in state 1:\nIf cell is on and\nhead is in state 0:\nIf cell is on and\nhead is in state 1:\nTurn\nNew Head State\nNew Cell State\nCommand Center\nobserver> set heads 1 setup-example go\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+}

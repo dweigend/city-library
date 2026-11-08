@@ -1,0 +1,1568 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Quorum+sensing+during+nest-site+selection+by+honeybee+swarms&rows=4",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3109656,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                17
+              ]
+            ],
+            "date-time": "2026-10-17T20:41:28Z",
+            "timestamp": 1792269688607,
+            "version": "4.4.0"
+          },
+          "reference-count": 28,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "6",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2004,
+                    7,
+                    22
+                  ]
+                ],
+                "date-time": "2004-07-22T00:00:00Z",
+                "timestamp": 1090454400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Behav Ecol Sociobiol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2004,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.1007/s00265-004-0814-5",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                7,
+                23
+              ]
+            ],
+            "date-time": "2004-07-23T20:14:17Z",
+            "timestamp": 1090613657000
+          },
+          "page": "594-601",
+          "source": "Crossref",
+          "is-referenced-by-count": 163,
+          "title": [
+            "Quorum sensing during nest-site selection by honeybee swarms"
+          ],
+          "prefix": "10.1007",
+          "volume": "56",
+          "author": [
+            {
+              "given": "Thomas D.",
+              "family": "Seeley",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "P. Kirk",
+              "family": "Visscher",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2004,
+                7,
+                22
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "388",
+              "DOI": "10.1038/424388a",
+              "volume": "424",
+              "author": "Chittka",
+              "year": "2003",
+              "unstructured": "Chittka L, Dyer AG, Bock F, Dornhaus A (2003) Bees trade-off foraging speed for accuracy. Nature 424:388",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "121",
+              "DOI": "10.1080/00218839.1972.11099711",
+              "volume": "11",
+              "author": "Combs",
+              "year": "1972",
+              "unstructured": "Combs GF (1972) The engorgement of swarming worker honeybees. J Apic Res 11:121?128",
+              "journal-title": "J Apic Res"
+            },
+            {
+              "key": "CR3",
+              "unstructured": "Dyer FC (2000) Group movement and individual cognition: lessons from social insects. In: Boinski S, Garber PA (eds) On the move: how and why animals travel in groups. University of Chicago Press, Chicago, pp 127?164"
+            },
+            {
+              "key": "CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "408",
+              "DOI": "10.1007/BF00298058",
+              "volume": "56",
+              "author": "Esch",
+              "year": "1967",
+              "unstructured": "Esch H (1967) The sounds produced by swarming honey bees. Z Vergl Physiol 56:408?411",
+              "journal-title": "Z Vergl Physiol"
+            },
+            {
+              "key": "CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "264",
+              "DOI": "10.1007/BF00663608",
+              "volume": "109",
+              "author": "Esch",
+              "year": "1976",
+              "unstructured": "Esch H (1976) Body temperature and flight performance of honey bees in a servomechanically controlled wind tunnel. J Comp Physiol 109:264?277",
+              "journal-title": "J Comp Physiol"
+            },
+            {
+              "key": "CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "325",
+              "DOI": "10.1007/BF01221422",
+              "volume": "78",
+              "author": "Esch",
+              "year": "1991",
+              "unstructured": "Esch H, Goller F, Heinrich B (1991) How do bees shiver? Naturwissenschaften 78:325?328",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "1567",
+              "DOI": "10.1098/rstb.2002.1066",
+              "volume": "337",
+              "author": "Franks",
+              "year": "2002",
+              "unstructured": "Franks NR, Pratt SC, Mallon EB, Britton NF, Sumpter DJT (2002) Information flow, opinion polling and collective intelligence in house-hunting social insects. Philos Trans R Soc Lond B 337:1567?1583",
+              "journal-title": "Philos Trans R Soc Lond B"
+            },
+            {
+              "key": "CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "2457",
+              "DOI": "10.1098/rspb.2003.2527",
+              "volume": "270",
+              "author": "Franks",
+              "year": "2003",
+              "unstructured": "Franks NR, Dornhaus A, Fitzsimmons JP, Stevens M (2003) Speed versus accuracy in collective decision making. Proc R Soc Lond B 270:2457?2463",
+              "journal-title": "Proc R Soc Lond B"
+            },
+            {
+              "key": "CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "217",
+              "DOI": "10.1242/jeb.80.1.217",
+              "volume": "80",
+              "author": "Heinrich",
+              "year": "1979",
+              "unstructured": "Heinrich B (1979) Thermoregulation of African and European honeybees during foraging, attack, and hive exits and returns. J Exp Biol 80:217?229",
+              "journal-title": "J Exp Biol"
+            },
+            {
+              "key": "CR10",
+              "doi-asserted-by": "crossref",
+              "first-page": "25",
+              "DOI": "10.1242/jeb.91.1.25",
+              "volume": "91",
+              "author": "Heinrich",
+              "year": "1981",
+              "unstructured": "Heinrich B (1981) The mechanisms and energetics of honeybee swarm temperature regulation. J Exp Biol 91:25?55",
+              "journal-title": "J Exp Biol"
+            },
+            {
+              "key": "CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "263",
+              "DOI": "10.1007/BF00303153",
+              "volume": "37",
+              "author": "Lindauer",
+              "year": "1955",
+              "unstructured": "Lindauer M (1955) Schwarmbienen auf Wohnungssuche. Z Vergl Physiol 37:263?324",
+              "journal-title": "Z Vergl Physiol"
+            },
+            {
+              "key": "CR12",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Lindauer M (1971) Communication among social bees. Harvard University Press, Cambridge, Mass.",
+              "DOI": "10.4159/harvard.9780674424531"
+            },
+            {
+              "key": "CR13",
+              "doi-asserted-by": "crossref",
+              "first-page": "352",
+              "DOI": "10.1007/s002650100377",
+              "volume": "50",
+              "author": "Mallon",
+              "year": "2001",
+              "unstructured": "Mallon EB, Pratt SC, Franks NR (2001) Individual and collective decision-making during nest site selection by the ant Leptothorax albipennis. Behav Ecol Sociobiol 50:352?359",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "13",
+              "DOI": "10.1007/BF02223520",
+              "volume": "10",
+              "author": "Martin",
+              "year": "1963",
+              "unstructured": "Martin P (1963) Die Steuerung der Volksteilung beim Schw\u00e4rmen der Bienen. Zugleich ein Beitrag zum Problem der Wanderschw\u00e4rme. Insectes Soc 10:13?42",
+              "journal-title": "Insectes Soc"
+            },
+            {
+              "key": "CR15",
+              "first-page": "468",
+              "volume": "110",
+              "author": "Mitchell",
+              "year": "1970",
+              "unstructured": "Mitchell C (1970) Weights of workers and drones. Am Bee J 110:468?469",
+              "journal-title": "Am Bee J"
+            },
+            {
+              "key": "CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "173",
+              "DOI": "10.1016/S0301-0511(99)00045-9",
+              "volume": "51",
+              "author": "Osman",
+              "year": "2000",
+              "unstructured": "Osman A, Lou LG, Muller-Gethman H, Rinkenauer G, Mattes S, Ulrich R (2000) Mechanisms of speed?accuracy trade-off: evidence from covert motor processes. Biol Psychol 51:173?199",
+              "journal-title": "Biol Psychol"
+            },
+            {
+              "key": "CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1007/s00265-002-0487-x",
+              "volume": "52",
+              "author": "Pratt",
+              "year": "2002",
+              "unstructured": "Pratt SC, Mallon EB, Sumpter DJT, Franks NR (2002) Quorum sensing, recruitment, and collective decision-making during colony emigration by the ant Leptothorax albipennis. Behav Ecol Sociobiol 52:117?127",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "CR18",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1051/apido:2004006",
+              "volume": "35",
+              "author": "Schneider",
+              "year": "2004",
+              "unstructured": "Schneider SS, Lewis LA (2004) The vibrational signal, modulatory communication and organization of labor in honey bees, Apis mellifera. Apidologie 35:117?131",
+              "journal-title": "Apidologie"
+            },
+            {
+              "key": "CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "201",
+              "DOI": "10.1007/BF00361902",
+              "volume": "2",
+              "author": "Seeley",
+              "year": "1977",
+              "unstructured": "Seeley TD (1977) Measurement of nest cavity volume by the honeybee (Apis mellifera). Behav Ecol Sociobiol 2:201?227",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "CR20",
+              "doi-asserted-by": "crossref",
+              "first-page": "19",
+              "DOI": "10.1007/s002650050536",
+              "volume": "45",
+              "author": "Seeley",
+              "year": "1999",
+              "unstructured": "Seeley TD, Buhrman SC (1999) Group decision making in swarms of honey bees. Behav Ecol Sociobiol 45:19?31",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "CR21",
+              "doi-asserted-by": "crossref",
+              "first-page": "416",
+              "DOI": "10.1007/s002650000299",
+              "volume": "49",
+              "author": "Seeley",
+              "year": "2001",
+              "unstructured": "Seeley TD, Buhrman SC (2001) Nest-site selection in honey bees: how well do swarms implement the ?best-of-N? decision rule? Behav Ecol Sociobiol 49:416?427",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "667",
+              "DOI": "10.1007/s00359-001-0243-0",
+              "volume": "187",
+              "author": "Seeley",
+              "year": "2001",
+              "unstructured": "Seeley TD, Tautz J (2001) Worker piping in honey bee swarms and its role in preparing for liftoff. J Comp Physiol A 187:667?676",
+              "journal-title": "J Comp Physiol A"
+            },
+            {
+              "key": "CR23",
+              "doi-asserted-by": "crossref",
+              "first-page": "511",
+              "DOI": "10.1007/s00265-003-0664-6",
+              "volume": "54",
+              "author": "Seeley",
+              "year": "2003",
+              "unstructured": "Seeley TD, Visscher PK (2003) Choosing a home: how the scouts in a honey bee swarm perceive the completion of their group decision making. Behav Ecol Sociobiol 54:511?520",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1051/apido:2004004",
+              "volume": "35",
+              "author": "Seeley",
+              "year": "2004",
+              "unstructured": "Seeley TD, Visscher PK (2004) Group decision making in nest-site selection by honey bees. Apidologie 35:1?16",
+              "journal-title": "Apidologie"
+            },
+            {
+              "key": "CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "103",
+              "DOI": "10.1155/1979/80869",
+              "volume": "86",
+              "author": "Seeley",
+              "year": "1979",
+              "unstructured": "Seeley TD, Morse RA, Visscher PK (1979) The natural history of the flight of honey bee swarms. Psyche 86:103?113",
+              "journal-title": "Psyche"
+            },
+            {
+              "key": "CR26",
+              "doi-asserted-by": "crossref",
+              "first-page": "256",
+              "DOI": "10.1007/s00114-003-0425-4",
+              "volume": "90",
+              "author": "Seeley",
+              "year": "2003",
+              "unstructured": "Seeley TD, Kleinhenz M, Bujok B, Tautz J (2003) Thorough warm-up before take-off in honey bee swarms. Naturwissenschaften 90:256?260",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "CR27",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Visscher PK, Camazine S (1999) The mystery of swarming honeybees: from individual behaviors to collective decisions. In: Detrain C, Deneubourg J-L, Pasteels JM (eds) Information processing in social insects. Birkh\u00e4user, Basel, pp 355?378",
+              "DOI": "10.1007/978-3-0348-8739-7_19"
+            },
+            {
+              "key": "CR28",
+              "doi-asserted-by": "crossref",
+              "first-page": "190",
+              "DOI": "10.1007/s002650050609",
+              "volume": "46",
+              "author": "Weidenm",
+              "year": "1999",
+              "unstructured": "Weidenm\u00fcller A, Seeley TD (1999) Imprecision in waggle dances of the honeybee (Apis mellifera) for nearby food sources: error or adaptation? Behav Ecol Sociobiol 46:190?199",
+              "journal-title": "Behav Ecol Sociobiol"
+            }
+          ],
+          "container-title": [
+            "Behavioral Ecology and Sociobiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s00265-004-0814-5.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/s00265-004-0814-5/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s00265-004-0814-5",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                6,
+                24
+              ]
+            ],
+            "date-time": "2021-06-24T14:38:34Z",
+            "timestamp": 1624545514000
+          },
+          "score": 67.33491,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/s00265-004-0814-5"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                7,
+                22
+              ]
+            ]
+          },
+          "references-count": 28,
+          "journal-issue": {
+            "issue": "6",
+            "published-print": {
+              "date-parts": [
+                [
+                  2004,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "814"
+          ],
+          "URL": "https://doi.org/10.1007/s00265-004-0814-5",
+          "ISSN": [
+            "0340-5443",
+            "1432-0762"
+          ],
+          "issn-type": [
+            {
+              "value": "0340-5443",
+              "type": "print"
+            },
+            {
+              "value": "1432-0762",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                7,
+                22
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                8
+              ]
+            ],
+            "date-time": "2026-09-08T05:12:27Z",
+            "timestamp": 1788844347190,
+            "version": "build-2803163510"
+          },
+          "reference-count": 27,
+          "publisher": "The Company of Biologists",
+          "issue": "23",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2008,
+                12,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:title>SUMMARY</jats:title>\n               <jats:p>This study investigates the first stage of the decision-making process of a honeybee swarm as it chooses a nest site: how a scout bee codes the value of a potential nest site in the waggle dances she produces to represent this site. We presented honeybee swarms with a two-alternative choice between a high-value site and a medium-value site and recorded the behavior of individually identifiable scout bees as they reported on these two alternatives. We found that bees performed equally lengthy inspections at the two sites, but that, on the swarm cluster, they performed more dance circuits per bee for the high-value site. We also found that there was much individual-level noise in the coding of site value, but that there were clear population-level differences in total dance circuits produced for the two sites. The first bee to find a site had a high probability of reporting the site with a waggle dance, regardless of its value. This discoverer-should-dance phenomenon may help ensure that a swarm gives attention to all discovered sites. There was rapid decay in the dance response; the number of dance circuits produced by a bee after visiting a site decreased linearly over sequential visits, and eventually each bee ceased visiting her site. This decay, or `leakage', in the accumulation of bees at a site improves a swarm's decision-making ability by helping a swarm avoid making fast-decision errors.</jats:p>",
+          "DOI": "10.1242/jeb.021071",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                11,
+                14
+              ]
+            ],
+            "date-time": "2008-11-14T21:37:58Z",
+            "timestamp": 1226698678000
+          },
+          "page": "3691-3697",
+          "source": "Crossref",
+          "is-referenced-by-count": 34,
+          "title": [
+            "Sensory coding of nest-site value in honeybee swarms"
+          ],
+          "prefix": "10.1242",
+          "volume": "211",
+          "author": [
+            {
+              "given": "Thomas D.",
+              "family": "Seeley",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Neurobiology and Behavior, Cornell University, Ithaca, NY 14853,USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "P. Kirk",
+              "family": "Visscher",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Entomology, University of California, Riverside, CA 92521,USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "237",
+          "reference": [
+            {
+              "key": "2021042511410832600_REF1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Franks, N. R., Pratt, S. C., Mallon, E. B., Britton, N. F. and Sumpter, D. J. T. (2002). Information polling, opinion polling, and collective intelligence in house-hunting social insects. Proc. R. Soc. Lond., B, Biol. Sci.357,1567-1583.",
+              "DOI": "10.1098/rstb.2002.1066"
+            },
+            {
+              "key": "2021042511410832600_REF2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Glimcher, P. W. (2003). The neurobiology of visual-saccadic decision making. Annu. Rev. Neurosci.26,133-179.",
+              "DOI": "10.1146/annurev.neuro.26.010302.081134"
+            },
+            {
+              "key": "2021042511410832600_REF3",
+              "unstructured": "Green, D. M. and Swets, J. A. (1966). Signal Detection Theory and Psychophysics. New York:Wiley and Sons."
+            },
+            {
+              "key": "2021042511410832600_REF4",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Lindauer, M. (1955). Schwarmbienen auf Wohnungssuche. Z. Vergl. Physiol.37,263-324.",
+              "DOI": "10.1007/BF00303153"
+            },
+            {
+              "key": "2021042511410832600_REF5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Newsome, W. T., Britten, K. H. and Movshon, J. A.(1989). Neuronal correlates of a perceptual decision. Nature341,52-54.",
+              "DOI": "10.1038/341052a0"
+            },
+            {
+              "key": "2021042511410832600_REF6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Passino, K. M. and Seeley, T. D. (2006). Modeling and analysis of nest-site selection by honeybee swarms: the speed and accuracy trade-off. Behav. Ecol. Sociobiol.59,427-442.",
+              "DOI": "10.1007/s00265-005-0067-y"
+            },
+            {
+              "key": "2021042511410832600_REF7",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Passino, K. M., Seeley, T. D. and Visscher, P. K.(2008). Swarm cognition in honey bees. Behav. Ecol. Sociobiol.62,401-414.",
+              "DOI": "10.1007/s00265-007-0468-1"
+            },
+            {
+              "key": "2021042511410832600_REF8",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Pratt, S. C., Mallon, E. B., Sumpter, D. J. T. and Franks, N. R. (2002). Quorum sensing, recruitment, and collective decision-making during colony emigration by the ant Leptothorax albipennis.Behav. Ecol. Sociobiol.52,117-127.",
+              "DOI": "10.1007/s00265-002-0487-x"
+            },
+            {
+              "key": "2021042511410832600_REF9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Schall, J. D. (2001). Neural basis of deciding,choosing and acting. Nat. Rev. Neurosci.2, 33-42.",
+              "DOI": "10.1038/35049054"
+            },
+            {
+              "key": "2021042511410832600_REF10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Schall, J. D. (2003). Neural correlates of decision processes: neural and mental chronometry. Curr. Opin. Neurobiol.13,182-186.",
+              "DOI": "10.1016/S0959-4388(03)00039-4"
+            },
+            {
+              "key": "2021042511410832600_REF11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seeley, T. D. (2003). Consensus building during nest-site selection in honey bee swarms: the expiration of dissent. Behav. Ecol. Sociobiol.53,417-424.",
+              "DOI": "10.1007/s00265-003-0598-z"
+            },
+            {
+              "key": "2021042511410832600_REF12",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seeley, T. D. and Buhrman, S. C. (1999). Group decision making in swarms of honey bees. Behav. Ecol. Sociobiol.45,19-31.",
+              "DOI": "10.1007/s002650050536"
+            },
+            {
+              "key": "2021042511410832600_REF13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seeley, T. D. and Buhrman, S. C. (2001). Nest-site selection in honey bees: how well do swarms implement the`best-of-N' decision rule? Behav. Ecol. Sociobiol.49,416-427.",
+              "DOI": "10.1007/s002650000299"
+            },
+            {
+              "key": "2021042511410832600_REF14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seeley, T. D. and Towne, W. F. (1992). Tactics of dance choice in honey bees: do foragers compare dances? Behav. Ecol. Sociobiol.30,59-69.",
+              "DOI": "10.1007/BF00168595"
+            },
+            {
+              "key": "2021042511410832600_REF15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seeley, T. D. and Visscher, P. K. (2004). Quorum sensing during nest-site selection by honeybee swarms. Behav. Ecol. Sociobiol.56,594-601.",
+              "DOI": "10.1007/s00265-004-0814-5"
+            },
+            {
+              "key": "2021042511410832600_REF16",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seeley, T. D., Mikheyev, A. S. and Pagano, G. J.(2000). Dancing bees tune both duration and rate of waggle-run production in relation to nectar-source profitability. J. Comp. Physiol. A186,813-819.",
+              "DOI": "10.1007/s003590000134"
+            },
+            {
+              "key": "2021042511410832600_REF17",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Seeley, T. D., Visscher, P. K. and Passino, K. M.(2006). Group decision making in honey bee swarms. Am. Sci.94,220-229.",
+              "DOI": "10.1511/2006.59.220"
+            },
+            {
+              "key": "2021042511410832600_REF18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Shadlen, M. N., Britten, K. H., Newsome, W. T. and Movshon, J. A. (1996). A computational analysis of the relationship between neuronal and behavioral responses to visual motion. J. Neurosci.16,1486-1510.",
+              "DOI": "10.1523/JNEUROSCI.16-04-01486.1996"
+            },
+            {
+              "key": "2021042511410832600_REF19",
+              "unstructured": "Shepherd, G. M. (1988).Neuroscience. 2nd edn. New York: Oxford University Press."
+            },
+            {
+              "key": "2021042511410832600_REF20",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Smith, P. L. and Ratcliff, R. (2004). Psychology and neurobiology of simple decisions. Trends Neurosci.27,161-168.",
+              "DOI": "10.1016/j.tins.2004.01.006"
+            },
+            {
+              "key": "2021042511410832600_REF21",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sugrue, L. P., Corrado, G. S. and Newsome, W. T.(2005). Choosing the greater of two goods: neural currencies for valuation and decision making. Nat. Rev. Neurosci.6, 363-375.",
+              "DOI": "10.1038/nrn1666"
+            },
+            {
+              "key": "2021042511410832600_REF22",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Usher, M. and McClelland, J. (2001). The time course of perceptual choice: the leaky, competing accumulator model. Psychol. Rev.108,550-592.",
+              "DOI": "10.1037/0033-295X.108.3.550"
+            },
+            {
+              "key": "2021042511410832600_REF23",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Visscher, P. K. (2003). How self-organization evolves. Nature421,799-800.",
+              "DOI": "10.1038/421799a"
+            },
+            {
+              "key": "2021042511410832600_REF24",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Visscher, P. K. (2007). Group decision making in nest site selection among social insects. Ann. Rev. Entomol.52,255-295.",
+              "DOI": "10.1146/annurev.ento.51.110104.151025"
+            },
+            {
+              "key": "2021042511410832600_REF25",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Visscher, P. K. and Camazine, S. (1999). Collective decisions and cognition in bees. Nature397, 400.",
+              "DOI": "10.1038/17047"
+            },
+            {
+              "key": "2021042511410832600_REF26",
+              "unstructured": "von Frisch, K. (1967). The Dance Language and Orientation of Bees. Cambridge, MA: Harvard University Press."
+            },
+            {
+              "key": "2021042511410832600_REF27",
+              "unstructured": "Young, D. (1989). Nerve Cells and Animal Behaviour. Cambridge: Cambridge University Press."
+            }
+          ],
+          "container-title": [
+            "Journal of Experimental Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://journals.biologists.com/jeb/article-pdf/211/23/3691/1264762/3691.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "http://journals.biologists.com/jeb/article-pdf/211/23/3691/1264762/3691.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                4,
+                25
+              ]
+            ],
+            "date-time": "2021-04-25T13:21:03Z",
+            "timestamp": 1619356863000
+          },
+          "score": 38.816734,
+          "resource": {
+            "primary": {
+              "URL": "https://journals.biologists.com/jeb/article/211/23/3691/17956/Sensory-coding-of-nest-site-value-in-honeybee"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2008,
+                12,
+                1
+              ]
+            ]
+          },
+          "references-count": 27,
+          "journal-issue": {
+            "issue": "23",
+            "published-print": {
+              "date-parts": [
+                [
+                  2008,
+                  12,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1242/jeb.021071",
+          "ISSN": [
+            "1477-9145",
+            "0022-0949"
+          ],
+          "issn-type": [
+            {
+              "value": "1477-9145",
+              "type": "electronic"
+            },
+            {
+              "value": "0022-0949",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2008,
+                12,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                7
+              ]
+            ],
+            "date-time": "2024-09-07T03:06:35Z",
+            "timestamp": 1725678395682
+          },
+          "reference-count": 0,
+          "publisher": "SCITEPRESS - Science and Technology Publications",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2020
+              ]
+            ]
+          },
+          "DOI": "10.5220/0008957801930198",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                3,
+                13
+              ]
+            ],
+            "date-time": "2020-03-13T10:20:06Z",
+            "timestamp": 1584094806000
+          },
+          "page": "193-198",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Quorum Sensing Re-evaluation Algorithm for N-Site Selection in Autonomous Swarms"
+          ],
+          "prefix": "10.5220",
+          "author": [
+            {
+              "given": "Shreeya",
+              "family": "Khurana",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Montgomery Blair High School, 51 University Blvd. East, Silver Spring, Maryland, U.S.A., --- Select a Country ---"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Donald",
+              "family": "Sofge",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Distributed Autonomous Systems Group, Navy Center for Applied Research in Artificial Intelligence, Naval Research Laboratory, Washington DC, U.S.A., --- Select a Country ---"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "3171",
+          "event": {
+            "name": "12th International Conference on Agents and Artificial Intelligence",
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  2,
+                  22
+                ]
+              ]
+            },
+            "location": "Valletta, Malta",
+            "end": {
+              "date-parts": [
+                [
+                  2020,
+                  2,
+                  24
+                ]
+              ]
+            }
+          },
+          "container-title": [
+            "Proceedings of the 12th International Conference on Agents and Artificial Intelligence"
+          ],
+          "original-title": [
+            "Quorum Sensing Re-evaluation Algorithm for N-Site Selection in Autonomous Swarms"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                3,
+                18
+              ]
+            ],
+            "date-time": "2020-03-18T13:28:40Z",
+            "timestamp": 1584538120000
+          },
+          "score": 37.197636,
+          "resource": {
+            "primary": {
+              "URL": "http://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0008957801930198"
+            }
+          },
+          "subtitle": [
+            ""
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2020
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.5220/0008957801930198",
+          "published": {
+            "date-parts": [
+              [
+                2020
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                17
+              ]
+            ],
+            "date-time": "2026-10-17T20:41:25Z",
+            "timestamp": 1792269685764,
+            "version": "4.4.0"
+          },
+          "reference-count": 39,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2005,
+                    10,
+                    11
+                  ]
+                ],
+                "date-time": "2005-10-11T00:00:00Z",
+                "timestamp": 1128988800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Behav Ecol Sociobiol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1007/s00265-005-0067-y",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2005,
+                10,
+                10
+              ]
+            ],
+            "date-time": "2005-10-10T06:37:10Z",
+            "timestamp": 1128926230000
+          },
+          "page": "427-442",
+          "source": "Crossref",
+          "is-referenced-by-count": 119,
+          "title": [
+            "Modeling and analysis of nest-site selection by honeybee swarms: the speed and accuracy trade-off"
+          ],
+          "prefix": "10.1007",
+          "volume": "59",
+          "author": [
+            {
+              "given": "Kevin M.",
+              "family": "Passino",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Thomas D.",
+              "family": "Seeley",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2005,
+                10,
+                11
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "67_CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "23",
+              "DOI": "10.1006/jtbi.1993.1002",
+              "volume": "160",
+              "author": "JJ Bartholdi",
+              "year": "1993",
+              "unstructured": "Bartholdi JJ, Seeley TD, Tovey CA, VandeVate JH (1993) The pattern and effectiveness of forager allocation among flower patches by honeybee colonies. J Theor Biol 160:23\u201340",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "67_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "258",
+              "DOI": "10.1007/BF02224053",
+              "volume": "37",
+              "author": "R Beckers",
+              "year": "1990",
+              "unstructured": "Beckers R, Deneubourg J-L, Goss S, Pasteels JM (1990) Collective decision making through food recruitment. Insectes Soc 37:258\u2013367",
+              "journal-title": "Insectes Soc"
+            },
+            {
+              "key": "67_CR3",
+              "unstructured": "Beering ML (2001) A comparison of the patterns of the dance language behavior in house-hunting and nectar-foraging honeybees (Apis mellifera L.). M. Sc. thesis, University of California, Riverside"
+            },
+            {
+              "key": "67_CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "89",
+              "DOI": "10.1007/s002650000289",
+              "volume": "49",
+              "author": "JC Biesmeijer",
+              "year": "2001",
+              "unstructured": "Biesmeijer JC, de Vries H (2001) Exploration and exploitation of food sources by social insect colonies: a revision of the scout-recruit concept. Behav Ecol Sociobiol 49:89\u201399",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1383",
+              "DOI": "10.1098/rspb.2002.2001",
+              "volume": "269",
+              "author": "NF Britton",
+              "year": "2002",
+              "unstructured": "Britton NF, Franks NR, Pratt SC, Seeley TD (2002) Deciding on a new home: how do honeybees agree? Proc R Soc Lond B Biol Sci 269:1383\u20131388",
+              "journal-title": "Proc R Soc Lond B Biol Sci"
+            },
+            {
+              "key": "67_CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "61",
+              "DOI": "10.1007/BF00172140",
+              "volume": "28",
+              "author": "S Camazine",
+              "year": "1991",
+              "unstructured": "Camazine S (1991) Self-organizing pattern formation on the combs of honeybee colonies. Behav Ecol Sociobiol 28:61\u201376",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "547",
+              "DOI": "10.1016/S0022-5193(05)80098-0",
+              "volume": "149",
+              "author": "S Camazine",
+              "year": "1991",
+              "unstructured": "Camazine S, Sneyd J (1991) A model of collective nectar source selection by honeybees: self-organization through simple rules. J Theor Biol 149:547\u2013571",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "67_CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "553",
+              "DOI": "10.1016/S0022-5193(05)80264-4",
+              "volume": "147",
+              "author": "S Camazine",
+              "year": "1990",
+              "unstructured": "Camazine S, Sneyd J, Jenkins MJ, Murray JD (1990) A mathematical model of self-organizing pattern formation on the combs of honeybee colonies. J Theor Biol 147:553\u2013571",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "67_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "348",
+              "DOI": "10.1007/s000400050156",
+              "volume": "46",
+              "author": "S Camazine",
+              "year": "1999",
+              "unstructured": "Camazine S, Visscher PK, Finley J, Vetter RS (1999) House-hunting by honeybee swarms: collective decisions and individual behaviors. Insectes Soc 46:348\u2013360",
+              "journal-title": "Insectes Soc"
+            },
+            {
+              "key": "67_CR10",
+              "volume-title": "Self-organization in biological systems",
+              "author": "S Camazine",
+              "year": "2001",
+              "unstructured": "Camazine S, Deneubourg J-L, Franks NR, Sneyd J, Theraulaz G, Bonabeau E (2001) Self-organization in biological systems. Princeton University Press, Princeton, NJ"
+            },
+            {
+              "key": "67_CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "388",
+              "DOI": "10.1038/424388a",
+              "volume": "24",
+              "author": "L Chittka",
+              "year": "2003",
+              "unstructured": "Chittka L, Dyer AG, Bock F, Dornhaus A (2003) Bees trade-off foraging speed for accuracy. Nature 24:388",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "67_CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "179",
+              "DOI": "10.1016/S0022-5193(03)00085-7",
+              "volume": "223",
+              "author": "M Cox",
+              "year": "2003",
+              "unstructured": "Cox M, Myerscough M (2003) A flexible model of foraging by a honeybee colony: the effects of individual behavior on foraging success. J Theor Biol 223:179\u2013197",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "67_CR13",
+              "doi-asserted-by": "crossref",
+              "first-page": "109",
+              "DOI": "10.1007/s002650050522",
+              "volume": "44",
+              "author": "H de Vries",
+              "year": "1998",
+              "unstructured": "de Vries H, Biesmeijer JC (1998) Modeling collective foraging by means of individual behavior rules in honey-bees. Behav Ecol Sociobiol 44:109\u2013124",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "295",
+              "DOI": "10.1080/08927014.1989.9525500",
+              "volume": "1",
+              "author": "J-L Deneubourg",
+              "year": "1989",
+              "unstructured": "Deneubourg J-L, Goss S (1989) Collective patterns and decision-making. Ethol Ecol Evol 1:295\u2013311",
+              "journal-title": "Ethol Ecol Evol"
+            },
+            {
+              "key": "67_CR15",
+              "unstructured": "Dornhaus A, Franks NR (2003) Rules of decision-making: trade-offs in collective house-hunting. In: Proceedings of the 2nd International Workshop on the Mathematics and Algorithms of Social Insects. Atlanta, GA, pp 47\u201352"
+            },
+            {
+              "key": "67_CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "1567",
+              "DOI": "10.1098/rstb.2002.1066",
+              "volume": "357",
+              "author": "NR Franks",
+              "year": "2002",
+              "unstructured": "Franks NR, Pratt SC, Mallon EB, Britton NF, Sumpter DJT (2002) Information flow, opinion polling, and collective intelligence in house-hunting social insects. Proc R Soc Lond B Biol Sci 357:1567\u20131583",
+              "journal-title": "Proc R Soc Lond B Biol Sci"
+            },
+            {
+              "key": "67_CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "2457",
+              "DOI": "10.1098/rspb.2003.2527",
+              "volume": "270",
+              "author": "NR Franks",
+              "year": "2003",
+              "unstructured": "Franks NR, Dornhaus A, Fitzsimmons JP, Stevens M (2003) Speed versus accuracy in collective decision making. Proc R Soc Lond B Biol Sci 270:2457\u20132463",
+              "journal-title": "Proc R Soc Lond B Biol Sci"
+            },
+            {
+              "key": "67_CR18",
+              "doi-asserted-by": "crossref",
+              "first-page": "229",
+              "DOI": "10.1051/apido:19980303",
+              "volume": "29",
+              "author": "DC Gilley",
+              "year": "1998",
+              "unstructured": "Gilley DC (1998) The identity of nest-site scouts in honeybee swarms. Apidologie 29:229\u2013240",
+              "journal-title": "Apidologie"
+            },
+            {
+              "key": "67_CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "281",
+              "DOI": "10.1007/BF00176152",
+              "volume": "30",
+              "author": "M Jenkins",
+              "year": "1992",
+              "unstructured": "Jenkins M, Sneyd J, Camazine S, Murray JD (1992) On a simplified model for pattern formation in honeybee colonies. J Math Biol 30:281\u2013306",
+              "journal-title": "J Math Biol"
+            },
+            {
+              "key": "67_CR20",
+              "doi-asserted-by": "crossref",
+              "first-page": "263",
+              "DOI": "10.1007/BF00303153",
+              "volume": "37",
+              "author": "M Lindauer",
+              "year": "1955",
+              "unstructured": "Lindauer M (1955) Schwarmbienen auf Wohnungssuche. Z Vgl Physiol 37:263\u2013324",
+              "journal-title": "Z Vgl Physiol"
+            },
+            {
+              "key": "67_CR21",
+              "volume-title": "Communication among social bees",
+              "author": "M Lindauer",
+              "year": "1961",
+              "unstructured": "Lindauer M (1961) Communication among social bees. Harvard University Press, Cambridge, MA"
+            },
+            {
+              "key": "67_CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "352",
+              "DOI": "10.1007/s002650100377",
+              "volume": "50",
+              "author": "EB Mallon",
+              "year": "2001",
+              "unstructured": "Mallon EB, Pratt SC, Franks NR (2001) Individual and collective decision-making during nest site selection by the ant Leptothorax albipennis. Behav Ecol Sociobiol 50:352\u2013359",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR23",
+              "doi-asserted-by": "crossref",
+              "first-page": "577",
+              "DOI": "10.1098/rspb.2002.2293",
+              "volume": "270",
+              "author": "M Myerscough",
+              "year": "2003",
+              "unstructured": "Myerscough M (2003) Dancing for a decision: a matrix model for nest-site choice by honeybees. Proc R Soc Lond B Biol Sci 270:577\u2013582",
+              "journal-title": "Proc R Soc Lond B Biol Sci"
+            },
+            {
+              "key": "67_CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "173",
+              "DOI": "10.1016/S0301-0511(99)00045-9",
+              "volume": "51",
+              "author": "A Osman",
+              "year": "2000",
+              "unstructured": "Osman A, Lou LG, Muller-Gethman H, Rinkenauer G, Mattes S, Ulrich R (2000) Mechanisms of speed-accuracy trade-off: evidence from covert motor processes. Biol Psychol 51:173\u2013199",
+              "journal-title": "Biol Psychol"
+            },
+            {
+              "key": "67_CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1007/s00265-002-0487-x",
+              "volume": "52",
+              "author": "SC Pratt",
+              "year": "2002",
+              "unstructured": "Pratt SC, Mallon EB, Sumpter DJT, Franks NR (2002) Quorum sensing, recruitment, and collective decision-making during colony emigration by the ant Leptothorax albipennis. Behav Ecol Sociobiol 52:117\u2013127",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR26",
+              "unstructured": "Schmickl T, Crailsheim K (2003) Costs of environmental fluctuations and benefits of dynamic decentralized foraging decisions in honeybees. In: Proceedings of the 2nd International Workshop on the Mathematics and Algorithms of Social Insects. Atlanta, GA, pp 145\u2013152"
+            },
+            {
+              "key": "67_CR27",
+              "doi-asserted-by": "crossref",
+              "first-page": "158",
+              "DOI": "10.1038/scientificamerican1082-158",
+              "volume": "247",
+              "author": "TD Seeley",
+              "year": "1982",
+              "unstructured": "Seeley TD (1982) How honeybees find a home. Sci Am 247:158\u2013168",
+              "journal-title": "Sci Am"
+            },
+            {
+              "key": "67_CR28",
+              "doi-asserted-by": "crossref",
+              "first-page": "253",
+              "DOI": "10.1007/BF00290778",
+              "volume": "12",
+              "author": "TD Seeley",
+              "year": "1983",
+              "unstructured": "Seeley TD (1983) Division of labor between scouts and recruits in honeybee foraging. Behav Ecol Sociobiol 12:253\u2013259",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR29",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.4159/9780674043404",
+              "volume-title": "The wisdom of the hive",
+              "author": "TD Seeley",
+              "year": "1995",
+              "unstructured": "Seeley TD (1995) The wisdom of the hive. Harvard University Press, Cambridge, MA"
+            },
+            {
+              "key": "67_CR30",
+              "doi-asserted-by": "crossref",
+              "first-page": "417",
+              "DOI": "10.1007/s00265-003-0598-z",
+              "volume": "53",
+              "author": "TD Seeley",
+              "year": "2003",
+              "unstructured": "Seeley TD (2003) Consensus building during nest-site selection in honeybee swarms: the expiration of dissent. Behav Ecol Sociobiol 53:417\u2013424",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR31",
+              "doi-asserted-by": "crossref",
+              "first-page": "19",
+              "DOI": "10.1007/s002650050536",
+              "volume": "45",
+              "author": "TD Seeley",
+              "year": "1999",
+              "unstructured": "Seeley TD, Buhrman SC (1999) Group decision making in swarms of honeybees. Behav Ecol Sociobiol 45:19\u201331",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR32",
+              "doi-asserted-by": "crossref",
+              "first-page": "416",
+              "DOI": "10.1007/s002650000299",
+              "volume": "49",
+              "author": "TD Seeley",
+              "year": "2001",
+              "unstructured": "Seeley TD, Buhrman SC (2001) Nest-site selection in honeybees: how well do swarms implement the \u201cbest-of-n\u201d decision rule? Behav Ecol Sociobiol 49:416\u2013427",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR33",
+              "doi-asserted-by": "crossref",
+              "first-page": "667",
+              "DOI": "10.1007/s00359-001-0243-0",
+              "volume": "187",
+              "author": "TD Seeley",
+              "year": "2001",
+              "unstructured": "Seeley TD, Tautz J (2001) Worker piping in honeybee swarms and its role in preparing for liftoff. J Comp Physiol 187:667\u2013676",
+              "journal-title": "J Comp Physiol"
+            },
+            {
+              "key": "67_CR34",
+              "doi-asserted-by": "crossref",
+              "first-page": "511",
+              "DOI": "10.1007/s00265-003-0664-6",
+              "volume": "54",
+              "author": "TD Seeley",
+              "year": "2003",
+              "unstructured": "Seeley TD, Visscher PK (2003) Choosing a home: how the scouts in a honeybee swarm perceive the completion of their group decision making. Behav Ecol Sociobiol 54:511\u2013520",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR35",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1051/apido:2004004",
+              "volume": "35",
+              "author": "TD Seeley",
+              "year": "2004",
+              "unstructured": "Seeley TD, Visscher PK (2004a) Group decision making in nest-site selection by honeybees. Apidologie 35:1\u201316",
+              "journal-title": "Apidologie"
+            },
+            {
+              "key": "67_CR36",
+              "doi-asserted-by": "crossref",
+              "first-page": "594",
+              "DOI": "10.1007/s00265-004-0814-5",
+              "volume": "56",
+              "author": "TD Seeley",
+              "year": "2004",
+              "unstructured": "Seeley TD, Visscher PK (2004b) Quorum sensing during nest-site selection by honeybee swarms. Behav Ecol Sociobiol 56:594\u2013601",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "67_CR37",
+              "doi-asserted-by": "crossref",
+              "first-page": "209",
+              "DOI": "10.1007/s10071-002-0146-7",
+              "volume": "5",
+              "author": "TA Waite",
+              "year": "2002",
+              "unstructured": "Waite TA (2002) Interruptions improve choice performance in gray jays: prolonged information processing versus minimization of costly errors. Anim Cogn 5:209\u2013214",
+              "journal-title": "Anim Cogn"
+            },
+            {
+              "key": "67_CR38",
+              "doi-asserted-by": "crossref",
+              "first-page": "127",
+              "DOI": "10.1007/s100710000073",
+              "volume": "3",
+              "author": "TA Waite",
+              "year": "2000",
+              "unstructured": "Waite TA, Field KL (2000) Erroneous choice and foregone gains in hoarding gray jays (Perisoreus candensis). Anim Cogn 3:127\u2013134",
+              "journal-title": "Anim Cogn"
+            },
+            {
+              "key": "67_CR39",
+              "volume-title": "The biology of the honeybee",
+              "author": "ML Winston",
+              "year": "1987",
+              "unstructured": "Winston ML (1987) The biology of the honeybee. Harvard University Press, Cambridge, MA"
+            }
+          ],
+          "container-title": [
+            "Behavioral Ecology and Sociobiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s00265-005-0067-y.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/s00265-005-0067-y/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s00265-005-0067-y",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                5
+              ]
+            ],
+            "date-time": "2023-05-05T01:34:26Z",
+            "timestamp": 1683250466000
+          },
+          "score": 35.873234,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/s00265-005-0067-y"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2005,
+                10,
+                11
+              ]
+            ]
+          },
+          "references-count": 39,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  2006,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "67"
+          ],
+          "URL": "https://doi.org/10.1007/s00265-005-0067-y",
+          "ISSN": [
+            "0340-5443",
+            "1432-0762"
+          ],
+          "issn-type": [
+            {
+              "value": "0340-5443",
+              "type": "print"
+            },
+            {
+              "value": "1432-0762",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2005,
+                10,
+                11
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 4,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

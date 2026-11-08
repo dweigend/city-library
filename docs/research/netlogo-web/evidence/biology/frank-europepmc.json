@@ -1,0 +1,193 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fece3.4557%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1002/ece3.4557\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "30519447",
+          "source": "MED",
+          "pmid": "30519447",
+          "pmcid": "PMC6262936",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC6262936"
+            ]
+          },
+          "doi": "10.1002/ece3.4557",
+          "title": "The impact of artificial light at night on nocturnal insects: A review and synthesis.",
+          "authorString": "Owens ACS, Lewis SM.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Owens ACS",
+                "lastName": "Owens",
+                "firstName": "Avalon C S",
+                "initials": "ACS",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7212-2275"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biology Tufts University Medford Massachusetts."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lewis SM",
+                "lastName": "Lewis",
+                "firstName": "Sara M",
+                "initials": "SM",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biology Tufts University Medford Massachusetts."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7212-2275"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data",
+              "related_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "22",
+            "volume": "8",
+            "journalIssueId": 2757798,
+            "dateOfPublication": "2018 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2018,
+            "journal": {
+              "medlineAbbreviation": "Ecol Evol",
+              "title": "Ecology and evolution",
+              "essn": "2045-7758",
+              "issn": "2045-7758",
+              "isoabbreviation": "Ecol Evol",
+              "nlmid": "101566408"
+            },
+            "printPublicationDate": "2018-11-01"
+          },
+          "pubYear": "2018",
+          "pageInfo": "11337-11358",
+          "abstractText": "In recent decades, advances in lighting technology have precipitated exponential increases in night sky brightness worldwide, raising concerns in the scientific community about the impact of artificial light at night (ALAN) on crepuscular and nocturnal biodiversity. Long-term records show that insect abundance has declined significantly over this time, with worrying implications for terrestrial ecosystems. The majority of investigations into the vulnerability of nocturnal insects to artificial light have focused on the flight-to-light behavior exhibited by select insect families. However, ALAN can affect insects in other ways as well. This review proposes five categories of ALAN impact on nocturnal insects, highlighting past research and identifying key knowledge gaps. We conclude with a summary of relevant literature on bioluminescent fireflies, which emphasizes the unique vulnerability of terrestrial light-based communication systems to artificial illumination. Comprehensive understanding of the ecological impacts of ALAN on diverse nocturnal insect taxa will enable researchers to seek out methods whereby fireflies, moths, and other essential members of the nocturnal ecosystem can coexist with humans on an increasingly urbanized planet.",
+          "affiliation": "Department of Biology Tufts University Medford Massachusetts.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic-eCollection",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Tufts University",
+                "orderIn": 0
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Bioluminescence",
+              "fireflies",
+              "Light Pollution",
+              "Visual Ecology",
+              "Artificial Light At Night",
+              "Nocturnal Insects"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ece3.4557"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1002/ece3.4557"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC6262936"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC6262936?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 160,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCreation": "2018-12-07",
+          "dateOfRevision": "2023-10-04",
+          "electronicPublicationDate": "2018-10-23",
+          "firstPublicationDate": "2018-10-23",
+          "firstIndexDate": "2018-12-08",
+          "fullTextReceivedDate": "2025-02-03",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

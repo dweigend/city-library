@@ -1,0 +1,123 @@
+{
+  "slug": "tumor",
+  "name": "Tumor",
+  "catalogPath": "Sample Models/Biology/Tumor",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Tumor.nlogox",
+  "deliveryBatch": "B07",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can cell hierarchies affect tumor persistence after treatment? NetLogo Tumor distinguishes self-renewing stem cells from transitory cells with limited proliferation and eventual death. Its rules include asymmetric or symmetric division and a stylized secondary colony. Cancer hierarchy research [1,2] frames the contrast between persistent and short-lived populations, while spatial tumor modeling [3] highlights constraints on growth. The Info credits an original StarLogoT contribution by Gershom Zajicek. This is a qualitative demonstration with selected cell types and simplified movement, aging, and treatment rules. It illustrates how targeting one compartment can leave another intact, but does not validate clinical resistance mechanisms, estimate a patient's prognosis, or recommend cancer therapy.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Tumor.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Tumor.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 f47f5edc51141c107582ae5b30d23f613cbef305f6b2cb6bbea13c46298f0630",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/tumor.nlogox",
+    "infoFile": "evidence/biology/tumor-info.txt",
+    "originalModelCitation": "* Zacijek, G. and Wilensky, U. (1998).  NetLogo Tumor model.  http://ccl.northwestern.edu/netlogo/models/Tumor.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "bonnet",
+      "authors": [
+        "Dominique Bonnet",
+        "John E. Dick"
+      ],
+      "title": "Human acute myeloid leukemia is organized as a hierarchy that originates from a primitive hematopoietic cell",
+      "year": 1997,
+      "venue": "Nature Medicine",
+      "doi": "10.1038/nm0797-730",
+      "url": "https://doi.org/10.1038/nm0797-730",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Human+acute+myeloid+leukemia+is+organized+as+a+hierarchy+that+originates+from+a+primitive+hematopoietic+cell+Bonnet+Dick+1997&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/bonnet-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnm0797-730%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/bonnet-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "3",
+      "issue": "7",
+      "pages": "730-737",
+      "relevance": "Original leukemia hierarchy research gives empirical context for distinguishing stem-like and more limited progenitor populations."
+    },
+    {
+      "id": "reya",
+      "authors": [
+        "Tannishtha Reya",
+        "Sean J. Morrison",
+        "Michael F. Clarke",
+        "Irving L. Weissman"
+      ],
+      "title": "Stem cells, cancer, and cancer stem cells",
+      "year": 2001,
+      "venue": "Nature",
+      "doi": "10.1038/35102167",
+      "url": "https://doi.org/10.1038/35102167",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Stem+cells+cancer+and+cancer+stem+cells+Reya+2001&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/reya-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F35102167%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/reya-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "414",
+      "issue": "6859",
+      "pages": "105-111",
+      "relevance": "Explains the cancer stem-cell framework relevant to persistent self-renewing cells."
+    },
+    {
+      "id": "enderling",
+      "authors": [
+        "Heiko Enderling",
+        "Alexander R.A. Anderson",
+        "Mark A.J. Chaplain",
+        "Afshin Beheshti",
+        "Lynn Hlatky",
+        "Philip Hahnfeldt"
+      ],
+      "title": "Paradoxical Dependencies of Tumor Dormancy and Progression on Basic Cell Kinetics",
+      "year": 2009,
+      "venue": "Cancer Research",
+      "doi": "10.1158/0008-5472.can-09-2115",
+      "url": "https://doi.org/10.1158/0008-5472.can-09-2115",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Paradoxical+dependencies+of+tumor+dormancy+and+progression+on+basic+cell+kinetics&rows=4",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/enderling-crossref-refined.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1158%2F0008-5472.can-09-2115%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/enderling-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "69",
+      "issue": "22",
+      "pages": "8814-8821",
+      "relevance": "Shows why spatial growth constraints matter when interpreting cell-based tumor simulations."
+    }
+  ],
+  "gaps": []
+}

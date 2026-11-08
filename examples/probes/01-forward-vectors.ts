@@ -1,0 +1,10 @@
+import { strict as assert } from "node:assert";
+import { geometry } from "city-library";
+const close = (a: number, b: number) => assert.ok(Math.abs(a - b) < 1e-12);
+const east = geometry.direction({ heading: 90 });
+close(east.x, 1); close(east.y, 0); assert.equal(east.z, undefined);
+const up = geometry.direction({ heading: 15, pitch: 90, roll: 75 });
+close(up.x, 0); close(up.y, 0); close(up.z!, 1);
+assert.ok(Object.isFrozen(up));
+const flat = geometry.direction({ heading: 0, pitch: 0, roll: 20 });
+close(flat.x, 0); close(flat.y, 1); close(flat.z!, 0);

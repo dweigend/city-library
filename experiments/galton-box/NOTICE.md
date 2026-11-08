@@ -1,0 +1,84 @@
+# Original model notices
+
+The unchanged source.nlogox retains the complete original Procedures, Widgets and Info, including all notices. The following is the full original Info text.
+
+## WHAT IS IT?
+
+A Galton box is a triangular board that contains several rows of staggered but equally spaced pegs.  Balls are dropped from the top, bounce off the pegs and stack up at the bottom of the triangle.  The resulting stacks of balls have a characteristic shape.
+
+The model enables you to observe how nature produces the binomial coefficients from Pascal's Triangle and their relation to a Gaussian bell-shaped normal curve. The model can also simulate coin tossing experiments with biased coins which result in skewed distributions
+
+There are many applications for the concepts encompassed in a Galton box.  People employed in a wide variety of fields use binomial and normal distributions to make precise calculations about the likelihood of events or groups of events occurring.
+
+## HOW IT WORKS
+
+With the default settings, the model reproduces a traditional Galton box.  But you can also adjust the probability of the balls bouncing right or left when it hits a peg to be something other than 50-50.
+
+## HOW TO USE IT
+
+Click the SETUP to set up the rows of the triangle, the number of balls, and other parameters.  Click to GO button to begin the simulation.
+
+The PILE-UP? button controls if the balls create piles or simply disappear when they reach the bottom of the triangle.  If PILE-UP? is on and the pile of balls reaches the bottom of the triangle, the model will stop.  Note: if you are running a trial with a large number of balls you might want to turn PILE-UP? off.
+
+## THINGS TO NOTICE
+
+With a small number of balls it is hard to notice any consistent patterns in the results.
+
+As you increase the number of balls, clear patterns and distributions start to form.  By adjusting the CHANCE-OF-BOUNCING-RIGHT you can see how different factors can change the distribution of balls.  What types of distributions form when the CHANCE-OF-BOUNCING-RIGHT is set at 20, 50, or 100?
+
+This model is a good example of an independent trials process.  Each ball has a probability of falling one way, and its decision is unrelated to that of any of the other balls.  The number of rows the balls must fall through affects the amount of variation present in a run of the model.
+
+## THINGS TO TRY
+
+Change the NUMBER-OF-BALLS and NUMBER-OF-ROWS sliders.  How does varying numbers alter how balls stack up?
+
+Change the CHANCE-OF-BOUNCING-RIGHT slider as balls have begun to fall.  What kinds of ball distributions can you produce?
+
+Change the NUMBER-OF-BALLS slider.  What is the best way to produce a standard binomial distribution (or approximate a bell curve)?
+
+Set a CHANCE-OF-BOUNCING-RIGHT then try to predict the resulting stacks of balls.  How would you calculate the mean and variances of a given stack for a given setting?
+
+## EXTENDING THE MODEL
+
+Make the balls shade the patches as they fall, so the more balls pass a patch the lighter it gets.  This will let the user how frequently different paths are traveled.
+
+Modify the program to allow independent adjustment of each peg, so that they can adjust their own orientation, rather than having all the pegs synchronized.
+
+Change the shape of the board.  Maybe flip the triangle upside down.  How does this effect how the balls get distributed?
+
+In addition to changing the shape of the board, change the direction balls can go.  Maybe allow balls to go in all directions.
+
+Make it so you can select a specific peg.  If a ball bounces off that peg, stop the ball.  Keep track of how many balls are stopped.  What specific insight does this provide about the independent trials process and ball distributions?.
+
+## RELATED MODELS
+
+ * Random Walk Left Right
+ * Binomial Rabbits
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (2002).  NetLogo Galton Box model.  http://ccl.northwestern.edu/netlogo/models/GaltonBox.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2002 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+This model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227.
+
+<!-- 2002 -->

@@ -1,0 +1,116 @@
+{
+  "slug": "epidem-travel-and-control",
+  "name": "epiDEM Travel and Control",
+  "catalogPath": "Curricular Models/epiDEM/epiDEM Travel and Control",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Travel%20and%20Control.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do mobility and control measures change the spread of infection? NetLogo epiDEM Travel and Control extends the basic epidemic with travel, isolation, quarantine, inoculation, and individual links. Classical epidemic theory [1], transport-linked epidemic modeling [2], and intervention analysis [3] frame these mechanisms. The served Info assumes no viral mutation and perfect immunity after recovery, which limits the diseases and time scales the example can represent. Its contact and control rules are illustrative abstractions, not fitted estimates of compliance, vaccine protection, or real travel flows. Comparing scenarios exposes consequences of these assumptions. It does not establish policy effectiveness for an actual outbreak or replace empirical evaluation of interventions and uncertainty.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Travel%20and%20Control.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Travel%20and%20Control.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 7bde08421020920d17631b85cbef80c945a6a97857040a079c8aacbc3a35ac07",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/epidem-travel-and-control.nlogox",
+    "infoFile": "evidence/biology/epidem-travel-and-control-info.txt",
+    "originalModelCitation": "* Yang, C. and Wilensky, U. (2011).  NetLogo epiDEM Travel and Control model.  http://ccl.northwestern.edu/netlogo/models/epiDEMTravelandControl.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "kermack",
+      "authors": [
+        "William Ogilvy Kermack",
+        "A. G. McKendrick"
+      ],
+      "title": "A contribution to the mathematical theory of epidemics",
+      "year": 1927,
+      "venue": "Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character",
+      "doi": "10.1098/rspa.1927.0118",
+      "url": "https://doi.org/10.1098/rspa.1927.0118",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1098%2Frspa.1927.0118",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/kermack-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": "115",
+      "issue": "772",
+      "pages": "700-721",
+      "relevance": "Supplies the epidemic baseline extended by movement and intervention rules."
+    },
+    {
+      "id": "hufnagel",
+      "authors": [
+        "L. Hufnagel",
+        "D. Brockmann",
+        "T. Geisel"
+      ],
+      "title": "Forecast and control of epidemics in a globalized world",
+      "year": 2004,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.0308344101",
+      "url": "https://doi.org/10.1073/pnas.0308344101",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Forecast+and+control+of+epidemics+in+a+globalized+world+Hufnagel+Brockmann+Geisel+2004&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/hufnagel-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0308344101%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/hufnagel-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "101",
+      "issue": "42",
+      "pages": "15124-15129",
+      "relevance": "Connects travel structure to epidemic propagation and containment."
+    },
+    {
+      "id": "ferguson",
+      "authors": [
+        "Neil M. Ferguson",
+        "Derek A. T. Cummings",
+        "Christophe Fraser",
+        "James C. Cajka",
+        "Philip C. Cooley",
+        "Donald S. Burke"
+      ],
+      "title": "Strategies for mitigating an influenza pandemic",
+      "year": 2006,
+      "venue": "Nature",
+      "doi": "10.1038/nature04795",
+      "url": "https://doi.org/10.1038/nature04795",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Strategies+for+mitigating+an+influenza+pandemic+Ferguson+2006&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/ferguson-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature04795%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/ferguson-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "442",
+      "issue": "7101",
+      "pages": "448-452",
+      "relevance": "A scientific intervention-modeling study provides context for isolation, travel restrictions and vaccination assumptions."
+    }
+  ],
+  "gaps": []
+}

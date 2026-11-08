@@ -1,0 +1,438 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          16
+        ]
+      ],
+      "date-time": "2026-03-16T21:52:18Z",
+      "timestamp": 1773697938845,
+      "version": "3.50.1"
+    },
+    "reference-count": 39,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "3",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2014,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2014-09-01T00:00:00Z",
+          "timestamp": 1409529600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/OAPA.html"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Maastricht Research Based Learning (MARBLE)"
+      },
+      {
+        "name": "Netherlands Organisation for Scientific Research (NWO)",
+        "award": [
+          "612.000.938"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "612.000.938"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Comput. Intell. AI Games"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2014,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1109/tciaig.2013.2291577",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2014,
+          2,
+          4
+        ]
+      ],
+      "date-time": "2014-02-04T19:03:23Z",
+      "timestamp": 1391540603000
+    },
+    "page": "245-257",
+    "source": "Crossref",
+    "is-referenced-by-count": 49,
+    "title": [
+      "Real-Time Monte Carlo Tree Search in Ms Pac-Man"
+    ],
+    "prefix": "10.1109",
+    "volume": "6",
+    "author": [
+      {
+        "given": "Tom",
+        "family": "Pepels",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Mark H. M.",
+        "family": "Winands",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Marc",
+        "family": "Lanctot",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CIG.2013.6633639"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CIG.2012.6374163"
+      },
+      {
+        "key": "ref33",
+        "author": "sutton",
+        "year": "1998",
+        "journal-title": "Reinforcement Learning An Introduction"
+      },
+      {
+        "key": "ref32",
+        "author": "bertsekas",
+        "year": "2012",
+        "journal-title": "Dynamic Programming and Optimal Control Approximate Dynamic Programming"
+      },
+      {
+        "key": "ref31",
+        "article-title": "Simple regret optimization in online planning for Markov decision processes",
+        "volume": "abs 1206 3382",
+        "author": "feldman",
+        "year": "2012",
+        "journal-title": "CoRR"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-31866-5_1"
+      },
+      {
+        "key": "ref37",
+        "year": "2013",
+        "journal-title": "?ICEP-FEAT-SPOOKS (Controller Report) ?"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "crossref",
+        "first-page": "37",
+        "DOI": "10.1007/978-3-540-87608-3_4",
+        "volume": "5131",
+        "author": "sturtevant",
+        "year": "2008",
+        "journal-title": "Computers and Games"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1013689704352"
+      },
+      {
+        "key": "ref34",
+        "first-page": "22",
+        "article-title": "Decaying simulation strategies",
+        "author": "tak",
+        "year": "2013",
+        "journal-title": "Proc Workshop General Intell Game Playing Agents"
+      },
+      {
+        "key": "ref10",
+        "first-page": "203",
+        "article-title": "Evolving a neural network location evaluator to play Ms. Pac-Man",
+        "author": "lucas",
+        "year": "2005",
+        "journal-title": "Proc IEEE Conf Comput Intell Games"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CIG.2009.5286469"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCIAIG.2011.2144597"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICEGIC.2010.5716879"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CIG.2011.6031983"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CIG.2011.6031987"
+      },
+      {
+        "key": "ref16",
+        "first-page": "235",
+        "article-title": "Evolution strategy for optimizing parameters in Ms Pac-Man controller ICE Pambush 3",
+        "author": "thawonmas",
+        "year": "2010",
+        "journal-title": "Proc IEEE Conf Comput Intell Games"
+      },
+      {
+        "key": "ref17",
+        "year": "2012",
+        "journal-title": "?ICE gUCT (nqkien) Simulation Based Ghost Team Controller Report ?"
+      },
+      {
+        "key": "ref18",
+        "year": "2012",
+        "journal-title": "?ICEgUCT_CIG11 Simulation Based Ghost Team Controller Report ?"
+      },
+      {
+        "key": "ref19",
+        "year": "2012",
+        "journal-title": "?ICEpAmbush_CIG11 Simulation Based Ms Pac-Man Controller Report ?"
+      },
+      {
+        "key": "ref28",
+        "article-title": "Discounted UCB",
+        "author": "kocsis",
+        "year": "2006",
+        "journal-title": "Lectures of PASCAL Second Challenges Workshop"
+      },
+      {
+        "key": "ref4",
+        "first-page": "40",
+        "article-title": "UCT for tactical assault planning in real-time strategy games",
+        "author": "balla",
+        "year": "2009",
+        "journal-title": "Proc 21st Int Joint Conf Artif Intell"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCIAIG.2011.2134097"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCIAIG.2012.2186810"
+      },
+      {
+        "key": "ref6",
+        "author": "zhu",
+        "year": "2013",
+        "journal-title": "Real-time elective admissions planning for health care providers"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "crossref",
+        "first-page": "174",
+        "DOI": "10.1007/978-3-642-24412-4_16",
+        "volume": "6925",
+        "author": "garivier",
+        "year": "2011",
+        "journal-title": "Algorithmic Learning Theory"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CIG.2012.6374161"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CEC.2011.5949599"
+      },
+      {
+        "key": "ref7",
+        "year": "2012",
+        "journal-title": "?Ms Pac-Man Competition Screen-Capture ?"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "crossref",
+        "first-page": "72",
+        "DOI": "10.1007/978-3-540-75538-8_7",
+        "volume": "4630",
+        "author": "coulom",
+        "year": "2007",
+        "journal-title": "Computers and Games (CG 2006)"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/UKCI.2010.5625586"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "crossref",
+        "first-page": "282",
+        "DOI": "10.1007/11871842_29",
+        "volume": "4212",
+        "author": "kocsis",
+        "year": "2006",
+        "journal-title": "Machine Learning ECML 2006"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGIC.2011.6114952"
+      },
+      {
+        "key": "ref22",
+        "year": "2012",
+        "journal-title": "?CEC11 Ms Pac-Man vs Ghosts Competition Rankings ?"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCIAIG.2012.2214776"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S1793005708001094"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CIG.2012.6374165"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCIAIG.2010.2067212"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCIAIG.2010.2098876"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Computational Intelligence and AI in Games"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/4804728/6895339/06731713.pdf?arnumber=6731713",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T16:28:53Z",
+      "timestamp": 1642004933000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/6731713/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          9
+        ]
+      ]
+    },
+    "references-count": 39,
+    "journal-issue": {
+      "issue": "3"
+    },
+    "URL": "https://doi.org/10.1109/tciaig.2013.2291577",
+    "relation": {},
+    "ISSN": [
+      "1943-068X",
+      "1943-0698"
+    ],
+    "issn-type": [
+      {
+        "value": "1943-068X",
+        "type": "print"
+      },
+      {
+        "value": "1943-0698",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2014,
+          9
+        ]
+      ]
+    }
+  }
+}

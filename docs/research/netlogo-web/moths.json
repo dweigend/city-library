@@ -1,0 +1,119 @@
+{
+  "slug": "moths",
+  "name": "Moths",
+  "catalogPath": "Sample Models/Biology/Moths",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Moths.nlogox",
+  "deliveryBatch": "B10",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Which local orientation rule could make insects circle a light? NetLogo Moths produces curved flight around a source by combining simple movement and orientation rules. The scientific question remains distinct from the visual resemblance: recent flight research [1], nocturnal-vision analysis [2], and light-pollution synthesis [3] constrain interpretation. The served Info explicitly discusses competing explanations and cites modern evidence. Its agents do not reconstruct full three-dimensional flight control, body orientation, or species-specific sensory processing. Circling therefore demonstrates what the implemented rule can produce. It does not establish that real insects navigate by that rule, resolve all attraction-to-light mechanisms, or quantify the ecological effects of a particular lighting installation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Moths.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Moths.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 00f669acfa11ea8a7ce93f0d3ae87078b99be77d46cb30543ae6e120cbca9005",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/moths.nlogox",
+    "infoFile": "evidence/biology/moths-info.txt",
+    "originalModelCitation": "* Wilensky, U. (2005).  NetLogo Moths model.  http://ccl.northwestern.edu/netlogo/models/Moths.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "fabian",
+      "authors": [
+        "Samuel T. Fabian",
+        "Yash Sondhi",
+        "Pablo E. Allen",
+        "Jamie C. Theobald",
+        "Huai-Ti Lin"
+      ],
+      "title": "Why flying insects gather at artificial light",
+      "year": 2024,
+      "venue": "Nature Communications",
+      "doi": "10.1038/s41467-024-44785-3",
+      "url": "https://doi.org/10.1038/s41467-024-44785-3",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Why+flying+insects+gather+at+artificial+light+Fabian+Sondhi+Allen+2024&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/fabian-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-024-44785-3%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/fabian-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "15",
+      "issue": "1",
+      "pages": null,
+      "relevance": "Recent experimental work directly challenges simple light-seeking or celestial-compass explanations and is cited in the served Info."
+    },
+    {
+      "id": "warrant",
+      "authors": [
+        "Eric J. Warrant"
+      ],
+      "title": "The remarkable visual capacities of nocturnal insects: vision at the limits with small eyes and tiny brains",
+      "year": 2017,
+      "venue": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+      "doi": "10.1098/rstb.2016.0063",
+      "url": "https://doi.org/10.1098/rstb.2016.0063",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+remarkable+visual+capacities+of+nocturnal+insects+vision+at+the+limits+with+small+eyes+and+tiny+brains+Warrant+Dacke+2011&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/warrant-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frstb.2016.0063%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/warrant-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "372",
+      "issue": "1717",
+      "pages": "20160063",
+      "relevance": "Explains constraints of nocturnal insect vision that the model simplifies."
+    },
+    {
+      "id": "frank",
+      "authors": [
+        "Avalon C. S. Owens",
+        "Sara M. Lewis"
+      ],
+      "title": "The impact of artificial light at night on nocturnal insects: A review and synthesis",
+      "year": 2018,
+      "venue": "Ecology and Evolution",
+      "doi": "10.1002/ece3.4557",
+      "url": "https://doi.org/10.1002/ece3.4557",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+impact+of+artificial+light+at+night+on+nocturnal+insects+a+review+and+synthesis+of+available+research+Owens+Lewis+2018&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/frank-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Fece3.4557%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/frank-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "8",
+      "issue": "22",
+      "pages": "11337-11358",
+      "relevance": "Reviews ecological impacts of artificial light, separating an illustrative flight mechanism from consequences for populations."
+    }
+  ],
+  "gaps": []
+}

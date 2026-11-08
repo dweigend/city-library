@@ -1,0 +1,99 @@
+{
+  "slug": "prisoners-dilemma-two-person-iterated",
+  "name": "Prisoner's Dilemma Two Person Iterated",
+  "catalogPath": "Sample Models/Social Science/Prisoner's Dilemma/Prisoner's Dilemma Two Person Iterated",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Two%20Person%20Iterated.nlogox",
+  "deliveryBatch": "B03",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether repeated encounters allow contingent strategies to sustain cooperation. In NetLogo's Prisoner's Dilemma Two Person Iterated model, two players repeatedly choose cooperation or defection, score outcomes and respond using rules based on previous interaction. The selected literature connects this mechanism to reciprocity and repeated strategic interaction: computer tournaments compare contingent prisoner-dilemma strategies [1]; reciprocity supplies a mechanism for the persistence of cooperation [2]; other evolutionary mechanisms qualify explanations based solely on direct reciprocity [3]. Strategy choices, noise and horizon assumptions strongly affect outcomes; a winning simulated strategy is not a universal prescription for social cooperation. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Two%20Person%20Iterated.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Two%20Person%20Iterated.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/prisoners-dilemma-two-person-iterated.nlogox",
+    "sha256": "32461d17a6a52c10378a3f907a699260d9d07972a728647baa45894f05999978",
+    "citation": "For the model itself: * Wilensky, U. (2002). NetLogo Prisoner's Dilemma Two Person Iterated model. http://ccl.northwestern.edu/netlogo/models/Prisoner'sDilemmaTwoPersonIterated. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Info does not identify a scientific original; related publications below are contextual comparisons, not asserted source derivations.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/prisoners-dilemma-two-person-iterated.nlogox"
+  },
+  "publications": [
+    {
+      "id": "axelrodeff",
+      "creatorRole": "author",
+      "authors": [
+        "Robert Axelrod"
+      ],
+      "title": "Effective Choice in the Prisoner's Dilemma",
+      "year": 1980,
+      "venue": "Journal of Conflict Resolution",
+      "doi": "10.1177/002200278002400101",
+      "url": "https://doi.org/10.1177/002200278002400101",
+      "relevance": "computer tournaments compare contingent prisoner-dilemma strategies",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1177%2F002200278002400101",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/axelrodeff-crossref.json",
+        "evidenceSummary": "This is a “primer” on how to play the iterated Prisoner's Dilemma game effectively. Existing research approaches offer the participant limited help in understanding how to cope effectively with such interactions. To gain a deeper understanding of how to be effective in such a partially competitive and partially cooperative environment, a computer tournament was conducted for the iterated Prisoner's Dilemma. Decision rules were submitted by entrants who were recruited primarily from experts in game theory from a variety of disciplines: psychology, political science, economics, sociology, and mathematics. The results of the tournament demonstrate that there are subtle reasons for an individualistic pragmatist to cooperate as long as the other side does, to be somewhat for-giving, and to be optimistic about the other side's responsiveness.",
+        "evidenceFile": "evidence/social-urban/axelrodeff-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "axelrodcoop",
+      "creatorRole": "author",
+      "authors": [
+        "Robert Axelrod",
+        "William D. Hamilton"
+      ],
+      "title": "The Evolution of Cooperation",
+      "year": 1981,
+      "venue": "Science",
+      "doi": "10.1126/science.7466396",
+      "url": "https://doi.org/10.1126/science.7466396",
+      "relevance": "reciprocity supplies a mechanism for the persistence of cooperation",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1126%2Fscience.7466396",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/axelrodcoop-crossref.json",
+        "evidenceSummary": "Cooperation in organisms, whether bacteria or primates, has been a difficulty for evolutionary theory since Darwin. On the assumption that interactions between pairs of individuals occur on a probabilistic basis, a model is developed based on the concept of an evolutionarily stable strategy in the context of the Prisoner's Dilemma game. Deductions from the model, and the results of a computer tournament show how cooperation based on reciprocity can get started in an asocial world, can thrive while interacting with a wide range of other strategies, and can resist invasion once fully established. Potential applications include specific aspects of territoriality, mating, and disease.",
+        "evidenceFile": "evidence/social-urban/axelrodcoop-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "nowak",
+      "creatorRole": "author",
+      "authors": [
+        "Martin A. Nowak"
+      ],
+      "title": "Five Rules for the Evolution of Cooperation",
+      "year": 2006,
+      "venue": "Science",
+      "doi": "10.1126/science.1133755",
+      "url": "https://doi.org/10.1126/science.1133755",
+      "relevance": "other evolutionary mechanisms qualify explanations based solely on direct reciprocity",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1126%2Fscience.1133755",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/nowak-crossref.json",
+        "evidenceSummary": "Cooperation is needed for evolution to construct new levels of organization. Genomes, cells, multicellular organisms, social insects, and human society are all based on cooperation. Cooperation means that selfish replicators forgo some of their reproductive potential to help one another. But natural selection implies competition and therefore opposes cooperation unless a specific mechanism is at work. Here I discuss five mechanisms for the evolution of cooperation: kin selection, direct reciprocity, indirect reciprocity, network reciprocity, and group selection. For each mechanism, a simple rule is derived that specifies whether natural selection can lead to cooperation.",
+        "evidenceFile": "evidence/social-urban/nowak-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

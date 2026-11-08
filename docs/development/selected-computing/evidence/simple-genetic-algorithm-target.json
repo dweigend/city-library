@@ -1,0 +1,716 @@
+{
+  "actions": [
+    "Setup",
+    "1 step",
+    "Run",
+    "Pause",
+    "100 steps × 1",
+    "Mutation rate1percent live",
+    "1 step",
+    "Setup resets model"
+  ],
+  "setup-desktop-light": {
+    "at": "2026-11-06T09:10:52.395Z",
+    "url": "http://localhost:3188/?experiment=simple-genetic-algorithm",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-jrjm0cr1.js",
+        "bytes": 8705,
+        "sha256": "09d31258f6958dd2f341ca33c2ef362e5b085b768e3a12aef35463f00b9fad1f",
+        "modelMarkers": [
+          "simple-genetic-algorithm"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Generation": "0",
+      "Best fitness": "62",
+      "Mean fitness": "49.900",
+      "Worst fitness": "41",
+      "Diversity": "0.99015"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-populationSize",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "live-crossoverRate",
+        "value": "70",
+        "disabled": false
+      },
+      {
+        "name": "live-mutationRate",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-plotDiversity",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best: 62; Average: 49.9; Worst: 41"
+      },
+      {
+        "label": "Normalized Hamming diversity: 0.9901520000000008"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Best genome",
+      "Fitness",
+      "Diversity"
+    ]
+  },
+  "step": {
+    "at": "2026-11-06T09:10:52.856Z",
+    "url": "http://localhost:3188/?experiment=simple-genetic-algorithm",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-jrjm0cr1.js",
+        "bytes": 8705,
+        "sha256": "09d31258f6958dd2f341ca33c2ef362e5b085b768e3a12aef35463f00b9fad1f",
+        "modelMarkers": [
+          "simple-genetic-algorithm"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Generation": "1",
+      "Best fitness": "67",
+      "Mean fitness": "54.700",
+      "Worst fitness": "43",
+      "Diversity": "0.95214"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-populationSize",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "live-crossoverRate",
+        "value": "70",
+        "disabled": false
+      },
+      {
+        "name": "live-mutationRate",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-plotDiversity",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best: 67; Average: 54.7; Worst: 43"
+      },
+      {
+        "label": "Normalized Hamming diversity: 0.9521440000000024"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Best genome",
+      "Fitness",
+      "Diversity"
+    ]
+  },
+  "progress-desktop-light": {
+    "at": "2026-11-06T09:11:00.911Z",
+    "url": "http://localhost:3188/?experiment=simple-genetic-algorithm",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-jrjm0cr1.js",
+        "bytes": 8705,
+        "sha256": "09d31258f6958dd2f341ca33c2ef362e5b085b768e3a12aef35463f00b9fad1f",
+        "modelMarkers": [
+          "simple-genetic-algorithm"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Generation": "132",
+      "Best fitness": "84",
+      "Mean fitness": "84.000",
+      "Worst fitness": "84",
+      "Diversity": "0.00000"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-populationSize",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "live-crossoverRate",
+        "value": "70",
+        "disabled": false
+      },
+      {
+        "name": "live-mutationRate",
+        "value": "0",
+        "disabled": false
+      },
+      {
+        "name": "live-plotDiversity",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best: 84; Average: 84; Worst: 84"
+      },
+      {
+        "label": "Normalized Hamming diversity: 0"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Best genome",
+      "Fitness",
+      "Diversity"
+    ]
+  },
+  "desktop-dark": {
+    "at": "2026-11-06T09:11:14.761Z",
+    "url": "http://localhost:3188/?experiment=simple-genetic-algorithm",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-jrjm0cr1.js",
+        "bytes": 8705,
+        "sha256": "09d31258f6958dd2f341ca33c2ef362e5b085b768e3a12aef35463f00b9fad1f",
+        "modelMarkers": [
+          "simple-genetic-algorithm"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Generation": "133",
+      "Best fitness": "85",
+      "Mean fitness": "83.140",
+      "Worst fitness": "80",
+      "Diversity": "0.04071"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-populationSize",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "live-crossoverRate",
+        "value": "70",
+        "disabled": false
+      },
+      {
+        "name": "live-mutationRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-plotDiversity",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best: 85; Average: 83.14; Worst: 80"
+      },
+      {
+        "label": "Normalized Hamming diversity: 0.04071200000000119"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Best genome",
+      "Fitness",
+      "Diversity"
+    ]
+  },
+  "mobile-light": {
+    "at": "2026-11-06T09:11:15.077Z",
+    "url": "http://localhost:3188/?experiment=simple-genetic-algorithm",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "light",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-jrjm0cr1.js",
+        "bytes": 8705,
+        "sha256": "09d31258f6958dd2f341ca33c2ef362e5b085b768e3a12aef35463f00b9fad1f",
+        "modelMarkers": [
+          "simple-genetic-algorithm"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Generation": "133",
+      "Best fitness": "85",
+      "Mean fitness": "83.140",
+      "Worst fitness": "80",
+      "Diversity": "0.04071"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-populationSize",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "live-crossoverRate",
+        "value": "70",
+        "disabled": false
+      },
+      {
+        "name": "live-mutationRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-plotDiversity",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best: 85; Average: 83.14; Worst: 80"
+      },
+      {
+        "label": "Normalized Hamming diversity: 0.04071200000000119"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Best genome",
+      "Fitness",
+      "Diversity"
+    ]
+  },
+  "mobile-dark": {
+    "at": "2026-11-06T09:11:15.261Z",
+    "url": "http://localhost:3188/?experiment=simple-genetic-algorithm",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-jrjm0cr1.js",
+        "bytes": 8705,
+        "sha256": "09d31258f6958dd2f341ca33c2ef362e5b085b768e3a12aef35463f00b9fad1f",
+        "modelMarkers": [
+          "simple-genetic-algorithm"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Generation": "133",
+      "Best fitness": "85",
+      "Mean fitness": "83.140",
+      "Worst fitness": "80",
+      "Diversity": "0.04071"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-populationSize",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "live-crossoverRate",
+        "value": "70",
+        "disabled": false
+      },
+      {
+        "name": "live-mutationRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-plotDiversity",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best: 85; Average: 83.14; Worst: 80"
+      },
+      {
+        "label": "Normalized Hamming diversity: 0.04071200000000119"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Best genome",
+      "Fitness",
+      "Diversity"
+    ]
+  },
+  "reset": {
+    "at": "2026-11-06T09:11:15.573Z",
+    "url": "http://localhost:3188/?experiment=simple-genetic-algorithm",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793955978007",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "0eccf868e98c20ff81e02257e12549d2dcc0d1d754e2044c527039bf0ad46c89",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-jrjm0cr1.js",
+        "bytes": 8705,
+        "sha256": "09d31258f6958dd2f341ca33c2ef362e5b085b768e3a12aef35463f00b9fad1f",
+        "modelMarkers": [
+          "simple-genetic-algorithm"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Generation": "0",
+      "Best fitness": "62",
+      "Mean fitness": "49.900",
+      "Worst fitness": "41",
+      "Diversity": "0.99015"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-populationSize",
+        "value": "100",
+        "disabled": false
+      },
+      {
+        "name": "live-crossoverRate",
+        "value": "70",
+        "disabled": false
+      },
+      {
+        "name": "live-mutationRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-plotDiversity",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Best: 62; Average: 49.9; Worst: 41"
+      },
+      {
+        "label": "Normalized Hamming diversity: 0.9901520000000008"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Best genome",
+      "Fitness",
+      "Diversity"
+    ]
+  },
+  "diagnostics": {
+    "console": [
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.090Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.095Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.101Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.817Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.821Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.826Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:09:03.093Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.722Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.723Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.727Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:52.856Z"
+      }
+    ],
+    "failedRequests": []
+  }
+}

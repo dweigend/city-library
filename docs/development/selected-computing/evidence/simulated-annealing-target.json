@@ -1,0 +1,814 @@
+{
+  "actions": [
+    "Setup",
+    "1 step",
+    "Run",
+    "Pause",
+    "100 steps \u00d7 1",
+    "569 additional cycles; observed672 after one extra Run cycle before Pause",
+    "Accept equal changes on live",
+    "Setup resets model"
+  ],
+  "setup-desktop-light": {
+    "at": "2026-11-06T09:22:35.539Z",
+    "url": "http://localhost:3188/?experiment=simulated-annealing",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793956718283",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "9463ecf1c8ac5626094454b96afc4036ae999f35c5e239c55e88b5c5c83c3e51",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-wts9w3eg.js",
+        "bytes": 7839,
+        "sha256": "a304e961d6fecdbe190e25678723da02e0acbe22447c5e4942da86b22291fc1a",
+        "modelMarkers": [
+          "simulated-annealing"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Tick": "0",
+      "Temperature": "1.00000",
+      "Global energy": "1796",
+      "Accepted / attempted": "0 / 0"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-coolingRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-swapRadius",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-acceptEqualChanges",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Energy: 1796"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Brightness",
+      "Global energy"
+    ]
+  },
+  "step": {
+    "at": "2026-11-06T09:22:35.896Z",
+    "url": "http://localhost:3188/?experiment=simulated-annealing",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793956718283",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "9463ecf1c8ac5626094454b96afc4036ae999f35c5e239c55e88b5c5c83c3e51",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-wts9w3eg.js",
+        "bytes": 7839,
+        "sha256": "a304e961d6fecdbe190e25678723da02e0acbe22447c5e4942da86b22291fc1a",
+        "modelMarkers": [
+          "simulated-annealing"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Tick": "1",
+      "Temperature": "0.990000",
+      "Global energy": "1772",
+      "Accepted / attempted": "417 / 1000"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-coolingRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-swapRadius",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-acceptEqualChanges",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Energy: 1772"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Brightness",
+      "Global energy"
+    ]
+  },
+  "progress-desktop-light": {
+    "at": "2026-11-06T09:22:50.034Z",
+    "url": "http://localhost:3188/?experiment=simulated-annealing",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793956718283",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "9463ecf1c8ac5626094454b96afc4036ae999f35c5e239c55e88b5c5c83c3e51",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-wts9w3eg.js",
+        "bytes": 7839,
+        "sha256": "a304e961d6fecdbe190e25678723da02e0acbe22447c5e4942da86b22291fc1a",
+        "modelMarkers": [
+          "simulated-annealing"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Tick": "672",
+      "Temperature": "0.00116641",
+      "Global energy": "356",
+      "Accepted / attempted": "53077 / 672000"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-coolingRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-swapRadius",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-acceptEqualChanges",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Energy: 356"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Brightness",
+      "Global energy"
+    ]
+  },
+  "earlierProgress": {
+    "at": "2026-11-06T09:22:38.236Z",
+    "url": "http://localhost:3188/?experiment=simulated-annealing",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "buildVersion": "1793956718283",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "9463ecf1c8ac5626094454b96afc4036ae999f35c5e239c55e88b5c5c83c3e51",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-wts9w3eg.js",
+        "bytes": 7839,
+        "sha256": "a304e961d6fecdbe190e25678723da02e0acbe22447c5e4942da86b22291fc1a",
+        "modelMarkers": [
+          "simulated-annealing"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Tick": "103",
+      "Temperature": "0.355161",
+      "Global energy": "1564",
+      "Accepted / attempted": "29607 / 103000"
+    },
+    "status": "Steps completed.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-coolingRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-swapRadius",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-acceptEqualChanges",
+        "value": false,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Energy: 1564"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Brightness",
+      "Global energy"
+    ]
+  },
+  "sampleAlignment": "Reference tick671; target progressed to672 because Run completed one extra native cycle before Pause. Observed values are reported as executed.",
+  "desktop-dark": {
+    "at": "2026-11-06T09:23:27.330Z",
+    "url": "http://localhost:3188/?experiment=simulated-annealing",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "dark",
+    "buildVersion": "1793956718283",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "9463ecf1c8ac5626094454b96afc4036ae999f35c5e239c55e88b5c5c83c3e51",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-wts9w3eg.js",
+        "bytes": 7839,
+        "sha256": "a304e961d6fecdbe190e25678723da02e0acbe22447c5e4942da86b22291fc1a",
+        "modelMarkers": [
+          "simulated-annealing"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Tick": "672",
+      "Temperature": "0.00116641",
+      "Global energy": "356",
+      "Accepted / attempted": "53077 / 672000"
+    },
+    "status": "Rule updated.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-coolingRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-swapRadius",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-acceptEqualChanges",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Energy: 356"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Brightness",
+      "Global energy"
+    ]
+  },
+  "mobile-light": {
+    "at": "2026-11-06T09:23:27.755Z",
+    "url": "http://localhost:3188/?experiment=simulated-annealing",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "light",
+    "buildVersion": "1793956718283",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "9463ecf1c8ac5626094454b96afc4036ae999f35c5e239c55e88b5c5c83c3e51",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-wts9w3eg.js",
+        "bytes": 7839,
+        "sha256": "a304e961d6fecdbe190e25678723da02e0acbe22447c5e4942da86b22291fc1a",
+        "modelMarkers": [
+          "simulated-annealing"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Tick": "672",
+      "Temperature": "0.00116641",
+      "Global energy": "356",
+      "Accepted / attempted": "53077 / 672000"
+    },
+    "status": "Rule updated.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-coolingRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-swapRadius",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-acceptEqualChanges",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Energy: 356"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Brightness",
+      "Global energy"
+    ]
+  },
+  "mobile-dark": {
+    "at": "2026-11-06T09:23:27.956Z",
+    "url": "http://localhost:3188/?experiment=simulated-annealing",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793956718283",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "9463ecf1c8ac5626094454b96afc4036ae999f35c5e239c55e88b5c5c83c3e51",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-wts9w3eg.js",
+        "bytes": 7839,
+        "sha256": "a304e961d6fecdbe190e25678723da02e0acbe22447c5e4942da86b22291fc1a",
+        "modelMarkers": [
+          "simulated-annealing"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Tick": "672",
+      "Temperature": "0.00116641",
+      "Global energy": "356",
+      "Accepted / attempted": "53077 / 672000"
+    },
+    "status": "Rule updated.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-coolingRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-swapRadius",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-acceptEqualChanges",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Energy: 356"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Brightness",
+      "Global energy"
+    ]
+  },
+  "reset": {
+    "at": "2026-11-06T09:23:28.148Z",
+    "url": "http://localhost:3188/?experiment=simulated-annealing",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "buildVersion": "1793956718283",
+    "loadedJavaScript": [
+      {
+        "url": "http://localhost:3188/app.js",
+        "bytes": 22545,
+        "sha256": "9463ecf1c8ac5626094454b96afc4036ae999f35c5e239c55e88b5c5c83c3e51",
+        "modelMarkers": []
+      },
+      {
+        "url": "http://localhost:3188/chunks/ui-wts9w3eg.js",
+        "bytes": 7839,
+        "sha256": "a304e961d6fecdbe190e25678723da02e0acbe22447c5e4942da86b22291fc1a",
+        "modelMarkers": [
+          "simulated-annealing"
+        ]
+      },
+      {
+        "url": "http://localhost:3188/chunks/app-wc4xr54a.js",
+        "bytes": 1066854,
+        "sha256": "9004ebb654d488a0510078bd851732bdd216e5b76371d51ff62992dab8a20f88",
+        "modelMarkers": []
+      }
+    ],
+    "monitors": {
+      "Tick": "0",
+      "Temperature": "1.00000",
+      "Global energy": "1796",
+      "Accepted / attempted": "0 / 0"
+    },
+    "status": "Model initialized.",
+    "controls": [
+      {
+        "name": "width",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "height",
+        "value": "30",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "disabled": false
+      },
+      {
+        "name": "live-coolingRate",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-swapRadius",
+        "value": "1",
+        "disabled": false
+      },
+      {
+        "name": "live-acceptEqualChanges",
+        "value": true,
+        "disabled": false
+      }
+    ],
+    "chartReadback": [
+      {
+        "label": "Energy: 1796"
+      }
+    ],
+    "overflow": false,
+    "figures": [
+      "Brightness",
+      "Global energy"
+    ]
+  },
+  "diagnostics": {
+    "console": [
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.090Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.095Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:06:50.101Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.817Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.821Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:08:31.826Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:09:03.093Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.722Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.723Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:11.727Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:10:52.856Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:11:26.662Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:12:40.985Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:14:45.952Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:15:12.422Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:15:54.800Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:16:36.947Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:19:14.111Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:20:20.738Z"
+      },
+      {
+        "level": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "timestamp": "2026-11-06T09:22:35.893Z"
+      }
+    ],
+    "failedRequests": []
+  }
+}

@@ -1,0 +1,981 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Adopting+a+spatially+explicit+perspective+to+study+the+mysterious+fairy+circles+of+Namibia+Getzin+2015&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 7072183,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                30
+              ]
+            ],
+            "date-time": "2026-06-30T04:11:37Z",
+            "timestamp": 1782792697719,
+            "version": "3.54.5"
+          },
+          "reference-count": 53,
+          "publisher": "Wiley",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2014,
+                    5,
+                    20
+                  ]
+                ],
+                "date-time": "2014-05-20T00:00:00Z",
+                "timestamp": 1400544000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "nsojournals.onlinelibrary.wiley.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Ecography"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2015,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:p>The mysterious \u2018fairy circles\u2019 are vegetation\u2010free discs that cover vast areas along the pro\u2010Namib Desert. Despite 30 yr of research their origin remains unknown. Here we adopt a novel approach that focuses on analysis of the spatial patterns of fairy circles obtained from representative 25\u2010ha aerial images of north\u2010west Namibia. We use spatial point pattern analysis to quantify different features of their spatial structures and then critically inspect existing hypotheses with respect to their ability to generate the observed circle patterns. Our working hypothesis is that fairy circles are a self\u2010organized vegetation pattern. Finally, we test if an existing partial\u2010differential\u2010equation model, that was designed to describe vegetation pattern formation, is able to reproduce the characteristic features of the observed fairy circle patterns. The model is based on key\u2010processes in arid areas such as plant competition for water and local resource\u2010biomass feedbacks.</jats:p>\n                  <jats:p>The fairy circles showed at all three study areas the same regular spatial distribution patterns, characterized by Voronoi cells with mostly six corners, negative correlations in their size up to a distance of 13 m, and remarkable homogeneity over large spatial scales. These results cast doubts on abiotic gas\u2010leakage along geological lines or social insects as causal agents of their origin. However, our mathematical model was able to generate spatial patterns that agreed quantitatively in all of these features with the observed patterns. This supports the hypothesis that fairy circles are self\u2010organized vegetation patterns that emerge from positive biomass\u2010water feedbacks involving water transport by extended root systems and soil\u2010water diffusion. Future research should search for mechanisms that explain how the different hypotheses can generate the patterns observed here and test the ability of self\u2010organization to match the birth\u2010 and death dynamics of fairy circles and their regional patterns in the density and size with respect to environmental gradients.</jats:p>",
+          "DOI": "10.1111/ecog.00911",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2014,
+                5,
+                20
+              ]
+            ],
+            "date-time": "2014-05-20T03:54:56Z",
+            "timestamp": 1400558096000
+          },
+          "page": "1-11",
+          "update-policy": "https://doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 144,
+          "title": [
+            "Adopting a spatially explicit perspective to study the mysterious fairy circles of Namibia"
+          ],
+          "prefix": "10.1111",
+          "volume": "38",
+          "author": [
+            {
+              "given": "Stephan",
+              "family": "Getzin",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Dept of Ecological Modelling Helmholtz Centre for Environmental Research \u2013 UFZ Permoser Str. 15 DE\u201004318 Leipzig Germany"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kerstin",
+              "family": "Wiegand",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Dept of Ecosystem Modelling, Faculty of Forest Sciences and Forest Ecology Univ. of Goettingen Buesgenweg 4 DE\u201037077 Goettingen Germany"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Thorsten",
+              "family": "Wiegand",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Dept of Ecological Modelling Helmholtz Centre for Environmental Research \u2013 UFZ Permoser Str. 15 DE\u201004318 Leipzig Germany"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hezi",
+              "family": "Yizhaq",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Dept of Solar Energy and Environmental Physics Blaustein Inst. for Desert Research, Ben\u2010Gurion Univ., Sede Boker campus Beer Sheva IL\u201084990 Israel"
+                },
+                {
+                  "name": "The Dead Sea and Arava Science Center Tamar Regional Council Israel"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jost",
+              "family": "von Hardenberg",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "ISAC\u2010CNR Corso Fiume 4 IT\u201010133 Torino Italy"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ehud",
+              "family": "Meron",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Dept of Solar Energy and Environmental Physics Blaustein Inst. for Desert Research, Ben\u2010Gurion Univ., Sede Boker campus Beer Sheva IL\u201084990 Israel"
+                },
+                {
+                  "name": "Physics Dept Ben\u2010Gurion Univ. Beer Sheva IL\u201084105 Israel"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2014,
+                5,
+                20
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_6_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00442-008-1068-0"
+            },
+            {
+              "key": "e_1_2_6_3_1",
+              "first-page": "23",
+              "article-title": "Origin of the enigmatic, circular, barren patches (\u2018fairy rings\u2019) of the pro\u2010Namib",
+              "volume": "97",
+              "author": "Albrecht C.",
+              "year": "2001",
+              "journal-title": "S. Afr. J. Sci."
+            },
+            {
+              "key": "e_1_2_6_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/01431160210137695"
+            },
+            {
+              "key": "e_1_2_6_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/07-0365.1"
+            },
+            {
+              "key": "e_1_2_6_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1078/1439-1791-00021"
+            },
+            {
+              "key": "e_1_2_6_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00040-014-0339-5"
+            },
+            {
+              "key": "e_1_2_6_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2311.2011.01328.x"
+            },
+            {
+              "key": "e_1_2_6_9_1",
+              "first-page": "715",
+              "article-title": "Reflectance spectroscopic mapping of diagenetic heterogeneities and fluid\u2010flow pathways in the Jurassic Navajo Sandstone",
+              "volume": "90",
+              "author": "Bowen B. B.",
+              "year": "2007",
+              "journal-title": "AAPG Bull."
+            },
+            {
+              "key": "e_1_2_6_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0070876"
+            },
+            {
+              "key": "e_1_2_6_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-642-85794-2"
+            },
+            {
+              "key": "e_1_2_6_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3546202"
+            },
+            {
+              "key": "e_1_2_6_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/RevModPhys.65.851"
+            },
+            {
+              "key": "e_1_2_6_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0140-1963(05)80005-9"
+            },
+            {
+              "key": "e_1_2_6_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/ecog.00532"
+            },
+            {
+              "key": "e_1_2_6_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1466-8238.2008.00413.x"
+            },
+            {
+              "key": "e_1_2_6_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2008.01377.x"
+            },
+            {
+              "key": "e_1_2_6_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.2041-210X.2011.00158.x"
+            },
+            {
+              "key": "e_1_2_6_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.93.098105"
+            },
+            {
+              "key": "e_1_2_6_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2006.08.006"
+            },
+            {
+              "key": "e_1_2_6_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1116681"
+            },
+            {
+              "key": "e_1_2_6_22_1",
+              "first-page": "173",
+              "article-title": "Analysis of light hydrocarbons in soil gases, Lost River region, West Virginia: relation to stratigraphy and geological structures",
+              "volume": "91",
+              "author": "Harbert W.",
+              "year": "2006",
+              "journal-title": "AAPG Bull."
+            },
+            {
+              "key": "e_1_2_6_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/9780470725160"
+            },
+            {
+              "key": "e_1_2_6_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.sajb.2007.10.010"
+            },
+            {
+              "key": "e_1_2_6_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1222999"
+            },
+            {
+              "key": "e_1_2_6_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/194008291200500202"
+            },
+            {
+              "key": "e_1_2_6_27_1",
+              "first-page": "1195",
+              "article-title": "Characterization of hydrocarbon microseepages in the Tucano Basin, (Brazil) through hyperspectral classification and neural network analysis of advanced spaceborne thermal emission and reflection radiometer (ASTER) data",
+              "volume": "37",
+              "author": "Lammoglia T.",
+              "year": "2008",
+              "journal-title": "Int. Arch. Photogr. Remote Sens. Spatial Inform. Sci."
+            },
+            {
+              "key": "e_1_2_6_28_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1146-609X(99)80030-7"
+            },
+            {
+              "key": "e_1_2_6_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev-ento-120710-100708"
+            },
+            {
+              "key": "e_1_2_6_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/07-2096.1"
+            },
+            {
+              "key": "e_1_2_6_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ecolmodel.2011.05.035"
+            },
+            {
+              "key": "e_1_2_6_32_1",
+              "unstructured": "MollE. J.1994.The origin and distribution of fairy rings in Namibia. \u2013 In:SeyaniJ. H.andChikuniA. C.(eds) Proceedings of the 13th Plenary Meeting AETFAT. Malawi pp.1203\u20131209."
+            },
+            {
+              "key": "e_1_2_6_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jaridenv.2010.12.018"
+            },
+            {
+              "key": "e_1_2_6_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1603/EN09166"
+            },
+            {
+              "key": "e_1_2_6_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2311.2011.01332.x"
+            },
+            {
+              "key": "e_1_2_6_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.146.3642.347"
+            },
+            {
+              "key": "e_1_2_6_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/342078"
+            },
+            {
+              "key": "e_1_2_6_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/ele.12027"
+            },
+            {
+              "key": "e_1_2_6_39_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.0022-0477.2005.00989.x"
+            },
+            {
+              "key": "e_1_2_6_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.2005.1733"
+            },
+            {
+              "key": "e_1_2_6_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsta.2003.1198"
+            },
+            {
+              "key": "e_1_2_6_42_1",
+              "first-page": "43",
+              "article-title": "Die verskynsel van kaal kolle in Kaokoland, SuidWes\u2010Afrika",
+              "volume": "20",
+              "author": "Theron G. K",
+              "year": "1979",
+              "journal-title": "J. S. Afr. Biol. Soc."
+            },
+            {
+              "key": "e_1_2_6_43_1",
+              "first-page": "1",
+              "article-title": "Etosha and the Kaokoveld",
+              "volume": "25",
+              "author": "Tinley K. L",
+              "year": "1971",
+              "journal-title": "Afr. Wild Life"
+            },
+            {
+              "key": "e_1_2_6_44_1",
+              "first-page": "381",
+              "article-title": "On vegetation clustering, localized bare soil spots and fairy circles",
+              "volume": "751",
+              "author": "Tlidi M.",
+              "year": "2008",
+              "journal-title": "Lect. Not. Phys."
+            },
+            {
+              "key": "e_1_2_6_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0038056"
+            },
+            {
+              "key": "e_1_2_6_46_1",
+              "first-page": "9",
+              "article-title": "Comments by other fairy circle researchers",
+              "volume": "14",
+              "author": "Tschinkel W. R",
+              "year": "2013",
+              "journal-title": "Newslett. NamibRand Nat. Reserve"
+            },
+            {
+              "key": "e_1_2_6_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00332-012-9139-0"
+            },
+            {
+              "key": "e_1_2_6_48_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0140-1963(03)00111-3"
+            },
+            {
+              "key": "e_1_2_6_49_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.87.198101"
+            },
+            {
+              "key": "e_1_2_6_50_1",
+              "volume-title": "Handbook of spatial point pattern analysis",
+              "author": "Wiegand T.",
+              "year": "2014"
+            },
+            {
+              "key": "e_1_2_6_51_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1034/j.1600-0706.2003.12027.x"
+            },
+            {
+              "key": "e_1_2_6_52_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1600-0587.2012.07361.x"
+            },
+            {
+              "key": "e_1_2_6_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/5654"
+            },
+            {
+              "key": "e_1_2_6_54_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/01431161.2010.512940"
+            }
+          ],
+          "container-title": [
+            "Ecography"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fecog.00911",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://nsojournals.onlinelibrary.wiley.com/doi/pdf/10.1111/ecog.00911",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                31
+              ]
+            ],
+            "date-time": "2025-10-31T00:34:33Z",
+            "timestamp": 1761870873000
+          },
+          "score": 71.61932,
+          "resource": {
+            "primary": {
+              "URL": "https://nsojournals.onlinelibrary.wiley.com/doi/10.1111/ecog.00911"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2014,
+                5,
+                20
+              ]
+            ]
+          },
+          "references-count": 53,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2015,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/ecog.00911"
+          ],
+          "URL": "https://doi.org/10.1111/ecog.00911",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0906-7590",
+            "1600-0587"
+          ],
+          "issn-type": [
+            {
+              "value": "0906-7590",
+              "type": "print"
+            },
+            {
+              "value": "1600-0587",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                5,
+                20
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2014-04-09",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2014-05-20",
+              "order": 3,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2022-04-02T05:29:19Z",
+            "timestamp": 1648877359768
+          },
+          "reference-count": 0,
+          "publisher": "American Association for the Advancement of Science (AAAS)",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2015,
+                9,
+                15
+              ]
+            ]
+          },
+          "DOI": "10.1126/science.aad1755",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2015,
+                9,
+                16
+              ]
+            ],
+            "date-time": "2015-09-16T05:09:50Z",
+            "timestamp": 1442380190000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Mysterious fairy circles killed by water"
+          ],
+          "prefix": "10.1126",
+          "author": [
+            {
+              "given": "Rachel",
+              "family": "Nuwer",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "221",
+          "container-title": [
+            "Science"
+          ],
+          "link": [
+            {
+              "URL": "https://syndication.highwire.org/content/doi/10.1126/science.aad1755",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                30
+              ]
+            ],
+            "date-time": "2017-03-30T22:10:56Z",
+            "timestamp": 1490911856000
+          },
+          "score": 37.542088,
+          "resource": {
+            "primary": {
+              "URL": "http://news.sciencemag.org/plants-animals/2015/09/mysterious-fairy-circles-killed-water"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2015,
+                9,
+                15
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1126/science.aad1755",
+          "ISSN": [
+            "0036-8075",
+            "1095-9203"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8075",
+              "type": "print"
+            },
+            {
+              "value": "1095-9203",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2015,
+                9,
+                15
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                11
+              ]
+            ],
+            "date-time": "2024-07-11T00:28:56Z",
+            "timestamp": 1720657736665
+          },
+          "reference-count": 0,
+          "publisher": "Elsevier BV",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2017-03-01T00:00:00Z",
+                "timestamp": 1488326400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2019,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2019-03-01T00:00:00Z",
+                "timestamp": 1551398400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 730,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "South African Journal of Botany"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2017,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.sajb.2017.01.114",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2017-04-10T22:24:57Z",
+            "timestamp": 1491863097000
+          },
+          "page": "351",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "special_numbering": "C",
+          "title": [
+            "The chemical \u2018footprints\u2019 of Euphorbia species found in the mysterious fairy circles of Namibia"
+          ],
+          "prefix": "10.1016",
+          "volume": "109",
+          "author": [
+            {
+              "given": "J.J.M.",
+              "family": "Meyer",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "H.M.",
+              "family": "Heyman",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "F.",
+              "family": "Senejoux",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "P.",
+              "family": "Degashu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "N.",
+              "family": "Galt",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "D.",
+              "family": "Nxumalo",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "N.",
+              "family": "Labuschagne",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "container-title": [
+            "South African Journal of Botany"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0254629917302168?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0254629917302168?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                3,
+                2
+              ]
+            ],
+            "date-time": "2019-03-02T09:00:11Z",
+            "timestamp": 1551517211000
+          },
+          "score": 36.98594,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0254629917302168"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017,
+                3
+              ]
+            ]
+          },
+          "references-count": 0,
+          "alternative-id": [
+            "S0254629917302168"
+          ],
+          "URL": "https://doi.org/10.1016/j.sajb.2017.01.114",
+          "ISSN": [
+            "0254-6299"
+          ],
+          "issn-type": [
+            {
+              "value": "0254-6299",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                3
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

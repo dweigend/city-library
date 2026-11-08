@@ -1,5 +1,6 @@
 import type { Definition } from "../../experiments/definition.ts";
-import type { ModelInstance, UISpec } from "../definition.ts";
+import type { ModelInstance } from "../definition.ts";
+import { decodeControl, type NormalizedSpec } from "../authoring.ts";
 
 export interface Descriptor {
   kind: "number" | "boolean" | "choice" | "text";
@@ -12,7 +13,7 @@ export interface Descriptor {
 }
 export function createForm<P extends object, M extends ModelInstance>(
   definition: Definition<P, M>,
-  spec: UISpec<P, M>,
+  spec: NormalizedSpec<P, M>,
 ) {
   const form = document.createElement("form");
   form.className = "setup";
@@ -69,7 +70,7 @@ export function createForm<P extends object, M extends ModelInstance>(
       descriptor.kind === "boolean"
         ? (control as HTMLInputElement).checked
         : descriptor.kind === "number"
-          ? Number(control.value)
+          ? (control as HTMLInputElement).valueAsNumber
           : control.value,
     );
   }
@@ -87,7 +88,10 @@ export function createForm<P extends object, M extends ModelInstance>(
     read(): Partial<P> {
       const result: Record<string, string | number | boolean> =
         Object.fromEntries(inputs.map(([key, value]) => [key, value.default]));
-      for (const [key, read] of readers) result[key] = read();
+      for (const [key, read] of readers) {
+        const descriptor = inputs.find(([field]) => field === key)![1];
+        result[key] = decodeControl(descriptor, read());
+      }
       return result as Partial<P>;
     },
   };

@@ -1,0 +1,63 @@
+{
+  "setupClicked": true,
+  "setupTick": {
+    "success": true,
+    "value": 0
+  },
+  "nativeStepPresent": false,
+  "commandStepTick": {
+    "success": true,
+    "value": 1
+  },
+  "runTick": {
+    "success": true,
+    "value": 7
+  },
+  "pauseTick": {
+    "success": true,
+    "value": 7
+  },
+  "stableTick": {
+    "success": true,
+    "value": 7
+  },
+  "paused": true,
+  "setupResetClicked": true,
+  "resetTick": {
+    "success": true,
+    "value": 0
+  },
+  "actions": [
+    {
+      "label": "watch one",
+      "clicked": true,
+      "tick": {
+        "success": true,
+        "value": 0
+      }
+    }
+  ],
+  "probe": {
+    "command": "set initial-cop-density 0 set initial-agent-density 1 set movement? false set government-legitimacy 0 setup go set government-legitimacy 1 go",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 2
+      },
+      "count agents with [active?]": {
+        "success": true,
+        "value": 0
+      },
+      "visualization": {
+        "success": true,
+        "value": "3D"
+      },
+      "random 0": {
+        "success": true,
+        "value": 0
+      }
+    }
+  },
+  "errors": [],
+  "alertText": []
+}

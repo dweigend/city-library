@@ -1,0 +1,25 @@
+{
+  "model": "virus",
+  "command": "random-seed 123 set number-people 10 set duration 0 set chance-recover 0 setup repeat 3 [go]",
+  "title": "Virus",
+  "reports": {
+    "ticks": {
+      "success": true,
+      "value": 3
+    },
+    "count turtles": {
+      "success": true,
+      "value": 0
+    },
+    "%infected": {
+      "success": true,
+      "value": 100
+    },
+    "%immune": {
+      "success": true,
+      "value": 0
+    }
+  },
+  "errors": [],
+  "text": " powered by NetLogo\nVirus\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks:\n?\nfor shortcuts\nsetup\ngo\nnumber-people\nturtle-shape\nperson\ncircle\nchance-recover\n %\nduration\n weeks\ninfectiousness\n %\n%infected\n0\n%immune\n0\nyears\nN/A\nweeks\npeople\nPopulations\nsick\nimmune\nhealthy\n0\n25\n50\n0\n100\n200\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+}

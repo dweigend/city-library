@@ -1,0 +1,722 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=CRISPR+provides+acquired+resistance+against+viruses+in+prokaryotes+Barrangou+2007&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1700922,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T04:06:52Z",
+            "timestamp": 1793851612133,
+            "version": "4.6.1"
+          },
+          "reference-count": 22,
+          "publisher": "American Association for the Advancement of Science (AAAS)",
+          "issue": "5819",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                23
+              ]
+            ]
+          },
+          "abstract": "<jats:p>\n                    Clustered regularly interspaced short palindromic repeats (CRISPR) are a distinctive feature of the genomes of most Bacteria and Archaea and are thought to be involved in resistance to bacteriophages. We found that, after viral challenge, bacteria integrated new spacers derived from phage genomic sequences. Removal or addition of particular spacers modified the phage-resistance phenotype of the cell. Thus, CRISPR, together with associated\n                    <jats:italic>cas</jats:italic>\n                    genes, provided resistance against phages, and resistance specificity is determined by spacer-phage sequence similarity.\n                  </jats:p>",
+          "DOI": "10.1126/science.1138140",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                22
+              ]
+            ],
+            "date-time": "2007-03-22T16:23:20Z",
+            "timestamp": 1174580600000
+          },
+          "page": "1709-1712",
+          "source": "Crossref",
+          "is-referenced-by-count": 5946,
+          "title": [
+            "CRISPR Provides Acquired Resistance Against Viruses in Prokaryotes"
+          ],
+          "prefix": "10.1126",
+          "volume": "315",
+          "author": [
+            {
+              "given": "Rodolphe",
+              "family": "Barrangou",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                },
+                {
+                  "name": "Danisco France SAS, Boi\u0302te Postale 10, F-86220 Dange\u0301-Saint-Romain, France."
+                },
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en Ecologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, G1K 7P4 Que\u0301bec, Canada."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Christophe",
+              "family": "Fremaux",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                },
+                {
+                  "name": "Danisco France SAS, Boi\u0302te Postale 10, F-86220 Dange\u0301-Saint-Romain, France."
+                },
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en Ecologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, G1K 7P4 Que\u0301bec, Canada."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "He\u0301le\u0300ne",
+              "family": "Deveau",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                },
+                {
+                  "name": "Danisco France SAS, Boi\u0302te Postale 10, F-86220 Dange\u0301-Saint-Romain, France."
+                },
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en Ecologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, G1K 7P4 Que\u0301bec, Canada."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Melissa",
+              "family": "Richards",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                },
+                {
+                  "name": "Danisco France SAS, Boi\u0302te Postale 10, F-86220 Dange\u0301-Saint-Romain, France."
+                },
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en Ecologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, G1K 7P4 Que\u0301bec, Canada."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Patrick",
+              "family": "Boyaval",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                },
+                {
+                  "name": "Danisco France SAS, Boi\u0302te Postale 10, F-86220 Dange\u0301-Saint-Romain, France."
+                },
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en Ecologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, G1K 7P4 Que\u0301bec, Canada."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Sylvain",
+              "family": "Moineau",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                },
+                {
+                  "name": "Danisco France SAS, Boi\u0302te Postale 10, F-86220 Dange\u0301-Saint-Romain, France."
+                },
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en Ecologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, G1K 7P4 Que\u0301bec, Canada."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Dennis A.",
+              "family": "Romero",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                },
+                {
+                  "name": "Danisco France SAS, Boi\u0302te Postale 10, F-86220 Dange\u0301-Saint-Romain, France."
+                },
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en Ecologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, G1K 7P4 Que\u0301bec, Canada."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Philippe",
+              "family": "Horvath",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco USA Inc., 3329 Agriculture Drive, Madison, WI 53716, USA."
+                },
+                {
+                  "name": "Danisco France SAS, Boi\u0302te Postale 10, F-86220 Dange\u0301-Saint-Romain, France."
+                },
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en Ecologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, G1K 7P4 Que\u0301bec, Canada."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "221",
+          "reference": [
+            {
+              "key": "e_1_3_1_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tim.2005.04.003"
+            },
+            {
+              "key": "e_1_3_1_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.186.12.3677-3686.2004"
+            },
+            {
+              "key": "e_1_3_1_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrmicro1393"
+            },
+            {
+              "key": "e_1_3_1_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.micro.55.1.283"
+            },
+            {
+              "key": "e_1_3_1_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2958.2002.02839.x"
+            },
+            {
+              "key": "e_1_3_1_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt1034"
+            },
+            {
+              "key": "e_1_3_1_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1099/mic.0.28048-0"
+            },
+            {
+              "key": "e_1_3_1_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00239-004-0046-3"
+            },
+            {
+              "key": "e_1_3_1_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1099/mic.0.27437-0"
+            },
+            {
+              "key": "e_1_3_1_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1745-6150-1-7"
+            },
+            {
+              "key": "e_1_3_1_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.71.7.4057-4068.2005"
+            },
+            {
+              "key": "e_1_3_1_13_2",
+              "unstructured": "Information on materials and methods for the generation of phage-resistant mutants engineering of CRISPR spacers (Figs. S4 and S5) and inactivation of cas genes is available on Science Online."
+            },
+            {
+              "key": "e_1_3_1_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1155/2006/542818"
+            },
+            {
+              "key": "e_1_3_1_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.67.9.4361-4364.2001"
+            },
+            {
+              "key": "e_1_3_1_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/30.2.482"
+            },
+            {
+              "key": "e_1_3_1_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pcbi.0010060"
+            },
+            {
+              "key": "e_1_3_1_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2958.1993.tb00976.x"
+            },
+            {
+              "key": "e_1_3_1_19_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.187.14.4935-4944.2005"
+            },
+            {
+              "key": "e_1_3_1_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.188.7.2364-2374.2006"
+            },
+            {
+              "key": "e_1_3_1_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.96.5.2192"
+            },
+            {
+              "key": "e_1_3_1_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00239-005-0223-z"
+            },
+            {
+              "key": "e_1_3_1_23_2",
+              "unstructured": "We thank L. Bayer C. Vos and A.-C. Co\u00fbt\u00e9-Monvoisin of Danisco Innovation as well as J. Labont\u00e9 and D. Tremblay of Universit\u00e9 Laval for technical support and E. Bech Hansen for discussions and critical review of the manuscript. Also we thank T. R. Klaenhammer for providing the integration system. This work was supported by funding from Danisco A/S. Also S. M. would like to acknowledge support from the Natural Sciences and Engineering Research Council of Canada (NSERC) Discovery Program. Sequences were deposited in GenBank accession numbers EF434458 to EF434504."
+            }
+          ],
+          "container-title": [
+            "Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.science.org/doi/pdf/10.1126/science.1138140",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                10
+              ]
+            ],
+            "date-time": "2024-01-10T02:58:56Z",
+            "timestamp": 1704855536000
+          },
+          "score": 61.265533,
+          "resource": {
+            "primary": {
+              "URL": "https://www.science.org/doi/10.1126/science.1138140"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                23
+              ]
+            ]
+          },
+          "references-count": 22,
+          "journal-issue": {
+            "issue": "5819",
+            "published-print": {
+              "date-parts": [
+                [
+                  2007,
+                  3,
+                  23
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1126/science.1138140"
+          ],
+          "URL": "https://doi.org/10.1126/science.1138140",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1071962.793488698",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1071962.525048",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1071962.524912",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1071962.793485587",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1071962.542345",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "0036-8075",
+            "1095-9203"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8075",
+              "type": "print"
+            },
+            {
+              "value": "1095-9203",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                23
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                4
+              ]
+            ],
+            "date-time": "2024-03-04T03:54:39Z",
+            "timestamp": 1709524479212
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2007,
+                4,
+                4
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.1071962.525048",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                18
+              ]
+            ],
+            "date-time": "2012-09-18T17:55:59Z",
+            "timestamp": 1347990959000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of CRISPR provides acquired resistance against viruses in prokaryotes."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "given": "Julian",
+              "family": "Parkhill",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Pathogen Genomics Group, Wellcome Trust Sanger Institute, UK"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                29
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                18
+              ]
+            ],
+            "date-time": "2020-04-18T08:20:50Z",
+            "timestamp": 1587198050000
+          },
+          "score": 53.04336,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/1071962#eval525048"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                29
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.1071962.525048",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1126/science.1138140",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                29
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                14
+              ]
+            ],
+            "date-time": "2025-05-14T10:48:45Z",
+            "timestamp": 1747219725556,
+            "version": "3.40.5"
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                27
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.1071962.524912",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                18
+              ]
+            ],
+            "date-time": "2012-09-18T18:05:40Z",
+            "timestamp": 1347991540000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of CRISPR provides acquired resistance against viruses in prokaryotes."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-7258-459X",
+              "authenticated-orcid": true,
+              "given": "Joachim",
+              "family": "Kurtz",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Institute for Evolution and Biodiversity, Westf\u00e4lische Wilhelms-Universit\u00e4t M\u00fcnster, Germany"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                23
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                18
+              ]
+            ],
+            "date-time": "2020-04-18T08:16:03Z",
+            "timestamp": 1587197763000
+          },
+          "score": 52.85457,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/1071962#eval524912"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                23
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.1071962.524912",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1126/science.1138140",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                23
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

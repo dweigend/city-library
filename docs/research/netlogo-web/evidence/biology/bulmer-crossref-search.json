@@ -1,0 +1,858 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+evolution+of+anisogamy+a+game-theoretic+approach+Bulmer+Parker+2002&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2775881,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                8,
+                5
+              ]
+            ],
+            "date-time": "2024-08-05T13:13:48Z",
+            "timestamp": 1722863628912
+          },
+          "reference-count": 0,
+          "publisher": "The Royal Society",
+          "issue": "1509",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Proc. R. Soc. Lond. B"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2002,
+                12,
+                22
+              ]
+            ]
+          },
+          "DOI": "10.1098/rspb.2002.3002",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                10,
+                23
+              ]
+            ],
+            "date-time": "2009-10-23T21:31:23Z",
+            "timestamp": 1256333483000
+          },
+          "page": "2603-2603",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Correction for Bulmer and Parker, The evolution of anisogamy: a game-theoretic approach"
+          ],
+          "prefix": "10.1098",
+          "volume": "269",
+          "author": [
+            {
+              "given": "M. G.",
+              "family": "Bulmer",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "G. A.",
+              "family": "Parker",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "175",
+          "published-online": {
+            "date-parts": [
+              [
+                2002,
+                12,
+                22
+              ]
+            ]
+          },
+          "container-title": [
+            "Proceedings of the Royal Society of London. Series B: Biological Sciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2002.3002",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                7,
+                19
+              ]
+            ],
+            "date-time": "2019-07-19T08:07:32Z",
+            "timestamp": 1563523652000
+          },
+          "score": 61.079838,
+          "resource": {
+            "primary": {
+              "URL": "https://royalsocietypublishing.org/doi/10.1098/rspb.2002.3002"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2002,
+                12,
+                22
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1509",
+            "published-online": {
+              "date-parts": [
+                [
+                  2002,
+                  12,
+                  22
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2002,
+                  12,
+                  22
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1098/rspb.2002.3002"
+          ],
+          "URL": "https://doi.org/10.1098/rspb.2002.3002",
+          "ISSN": [
+            "0962-8452",
+            "1471-2954"
+          ],
+          "issn-type": [
+            {
+              "value": "0962-8452",
+              "type": "print"
+            },
+            {
+              "value": "1471-2954",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2002,
+                12,
+                22
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                2
+              ]
+            ],
+            "date-time": "2026-10-02T07:37:14Z",
+            "timestamp": 1790926634531,
+            "version": "4.1.0"
+          },
+          "reference-count": 30,
+          "publisher": "The Royal Society",
+          "issue": "1507",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Proc. R. Soc. Lond. B"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2002,
+                11,
+                22
+              ]
+            ]
+          },
+          "DOI": "10.1098/rspb.2002.2161",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                11,
+                14
+              ]
+            ],
+            "date-time": "2002-11-14T00:46:05Z",
+            "timestamp": 1037234765000
+          },
+          "page": "2381-2388",
+          "source": "Crossref",
+          "is-referenced-by-count": 119,
+          "title": [
+            "The evolution of anisogamy: a game-theoretic approach"
+          ],
+          "prefix": "10.1098",
+          "volume": "269",
+          "author": [
+            {
+              "given": "M. G.",
+              "family": "Bulmer",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "The Old Vicarage, Chittlehampton, Umberleigh, Devon EX37 9RQ, UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "G. A.",
+              "family": "Parker",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Population and Evolutionary Biology Research Group, School of Biological Sciences, University of Liverpool, Liverpool L69 3GS, UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "175",
+          "published-online": {
+            "date-parts": [
+              [
+                2002,
+                11,
+                22
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "p_1",
+              "unstructured": "Alexopoulos C. J. 1962 Introductory mycology. New York: Wiley."
+            },
+            {
+              "key": "p_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1996.0090"
+            },
+            {
+              "key": "p_3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.2000.2142"
+            },
+            {
+              "key": "p_4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(78)90189-3"
+            },
+            {
+              "key": "p_5",
+              "unstructured": "Bell G. 1982 The masterpiece of nature. London: Croom Helm."
+            },
+            {
+              "key": "p_6",
+              "unstructured": "Bell G. 1985 The origin and evolution of germ cells as illustrated by the volvocales. In Orgin and evolution of sex (ed. H. O. Halvorson & A. Monroy) pp. 221-256. New York: Allan R. Liss."
+            },
+            {
+              "key": "p_7",
+              "unstructured": "Bulmer M. 1994 Theoretical evolutionary ecology. Sunderland MA: Sinauer."
+            },
+            {
+              "key": "p_8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0169-5347(02)02537-5"
+            },
+            {
+              "key": "p_9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(78)90195-9"
+            },
+            {
+              "key": "p_10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(83)90201-1"
+            },
+            {
+              "key": "p_11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hoekstra R. F. 1987 The evolution of sexes. In The evolution of sex and its consequences (ed. S. C. Stearns) pp. 59-91. Basel: Birkh\u00e4user.",
+              "DOI": "10.1007/978-3-0348-6273-8_3"
+            },
+            {
+              "key": "p_12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(74)90153-2"
+            },
+            {
+              "key": "p_13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285489"
+            },
+            {
+              "key": "p_14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/303376"
+            },
+            {
+              "key": "p_15",
+              "doi-asserted-by": "crossref",
+              "unstructured": "McNamara J. M. Houston A. I. Barta Z. & Osorno J.-L. 2003 Should young ever be better off with one parent? Behav. Ecol. (In the press.)",
+              "DOI": "10.1093/beheco/14.3.301"
+            },
+            {
+              "key": "p_16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/284073"
+            },
+            {
+              "key": "p_17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/283092"
+            },
+            {
+              "key": "p_18",
+              "unstructured": "Maynard Smith J. 1978 The evolution of sex. Cambridge University Press."
+            },
+            {
+              "key": "p_19",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Maynard Smith J. 1982 Evolution and the theory of games. Cambridge University Press.",
+              "DOI": "10.1017/CBO9780511806292"
+            },
+            {
+              "key": "p_20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(78)90177-7"
+            },
+            {
+              "key": "p_21",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Parker G. A. 1979 Sexual selection and sexual conflict. In Sexual selection and reproductive competition in insects (ed. M. S. Blum & N. A. Blum) pp. 123-166. New York: Academic.",
+              "DOI": "10.1016/B978-0-12-108750-0.50010-0"
+            },
+            {
+              "key": "p_22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(82)90225-9"
+            },
+            {
+              "key": "p_23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0003-3472(85)80075-0"
+            },
+            {
+              "key": "p_24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(72)90007-0"
+            },
+            {
+              "key": "p_25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0169-5347(01)02270-4"
+            },
+            {
+              "key": "p_26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2000.1581"
+            },
+            {
+              "key": "p_27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0169-5347(02)02538-7"
+            },
+            {
+              "key": "p_28",
+              "unstructured": "Sandefur J. T. 1990 Discrete dynamical systems: theory and applications. Oxford: Clarendon."
+            },
+            {
+              "key": "p_29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/282929"
+            },
+            {
+              "key": "p_30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/282838"
+            }
+          ],
+          "container-title": [
+            "Proceedings of the Royal Society of London. Series B: Biological Sciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2002.2161",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                7,
+                19
+              ]
+            ],
+            "date-time": "2019-07-19T12:14:08Z",
+            "timestamp": 1563538448000
+          },
+          "score": 45.084217,
+          "resource": {
+            "primary": {
+              "URL": "https://royalsocietypublishing.org/doi/10.1098/rspb.2002.2161"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2002,
+                11,
+                22
+              ]
+            ]
+          },
+          "references-count": 30,
+          "journal-issue": {
+            "issue": "1507",
+            "published-online": {
+              "date-parts": [
+                [
+                  2002,
+                  11,
+                  22
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2002,
+                  11,
+                  22
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1098/rspb.2002.2161"
+          ],
+          "URL": "https://doi.org/10.1098/rspb.2002.2161",
+          "ISSN": [
+            "0962-8452",
+            "1471-2954"
+          ],
+          "issn-type": [
+            {
+              "value": "0962-8452",
+              "type": "print"
+            },
+            {
+              "value": "1471-2954",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2002,
+                11,
+                22
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                9
+              ]
+            ],
+            "date-time": "2024-09-09T05:04:34Z",
+            "timestamp": 1725858274651
+          },
+          "publisher-location": "Cham",
+          "reference-count": 16,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9783319337708"
+            },
+            {
+              "type": "electronic",
+              "value": "9783319337715"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2016,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2016-01-01T00:00:00Z",
+                "timestamp": 1451606400000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-319-33771-5_3",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                20
+              ]
+            ],
+            "date-time": "2016-06-20T08:16:41Z",
+            "timestamp": 1466410601000
+          },
+          "page": "15-28",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Cooperative Game Theoretic Approach"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Youngsub",
+              "family": "Chun",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                21
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "3_CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "195",
+              "DOI": "10.1016/0022-0531(85)90102-4",
+              "volume": "36",
+              "author": "R. Aumann",
+              "year": "1985",
+              "unstructured": "Aumann, R., & Maschler, M. (1985). Game theoretic analysis of a bankruptcy problem from the Talmud. Journal of Economic Theory, 36, 195\u2013213.",
+              "journal-title": "Journal of Economic Theory"
+            },
+            {
+              "key": "3_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "171",
+              "DOI": "10.1016/j.mathsocsci.2005.08.002",
+              "volume": "51",
+              "author": "Y. Chun",
+              "year": "2006",
+              "unstructured": "Chun, Y. (2006). A pessimistic approach to the queueing problem. Mathematical Social Sciences, 51, 171\u2013181.",
+              "journal-title": "Mathematical Social Sciences"
+            },
+            {
+              "issue": "2",
+              "key": "3_CR3",
+              "first-page": "223",
+              "volume": "20",
+              "author": "Y. Chun",
+              "year": "2007",
+              "unstructured": "Chun, Y., & Hokari, T. (2007). On the coincidence of the Shapley value and the nucleolus in queueing problems. Seoul Journal of Economics, 20(2), 223\u2013237.",
+              "journal-title": "Seoul Journal of Economics"
+            },
+            {
+              "key": "3_CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "245",
+              "DOI": "10.1006/jeth.1998.2393",
+              "volume": "79",
+              "author": "M. A. Frutos de",
+              "year": "1998",
+              "unstructured": "de Frutos, M. A. (1998). Decreasing serial cost sharing under economies of scale. Journal of Economic Theory, 79, 245\u2013275.",
+              "journal-title": "Journal of Economic Theory"
+            },
+            {
+              "key": "3_CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "257",
+              "DOI": "10.1287/moor.19.2.257",
+              "volume": "19",
+              "author": "X. Deng",
+              "year": "1994",
+              "unstructured": "Deng, X., & Papadimitriou, C. H. (1994). On the complexity of cooperative solution concepts. Mathematics of Operations Research, 19, 257\u2013266.",
+              "journal-title": "Mathematics of Operations Research"
+            },
+            {
+              "key": "3_CR6",
+              "volume-title": "Game theory and applications IV",
+              "author": "T. Driessen",
+              "year": "1998",
+              "unstructured": "Driessen, T. (1998). The greedy bankruptcy game: An alternative game theoretic analysis of a bankruptcy problem. In L. A. Petrosjan & V. V. Mazalov (Eds.), Game theory and applications IV. New York: Nova Science Publishers Inc."
+            },
+            {
+              "key": "3_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "16",
+              "DOI": "10.1016/j.mathsocsci.2008.08.004",
+              "volume": "57",
+              "author": "A. Kar",
+              "year": "2009",
+              "unstructured": "Kar, A., Mitra. M., & Mutuswami, S. (2009). On the coincidence of the prenucleolus and the Shapley value. Mathematical Social Sciences, 57, 16\u201325.",
+              "journal-title": "Mathematical Social Sciences"
+            },
+            {
+              "key": "3_CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "62",
+              "DOI": "10.1137/0120009",
+              "volume": "20",
+              "author": "E. Kohlberg",
+              "year": "1971",
+              "unstructured": "Kohlberg, E. (1971). On the nucleolus of a characteristic function game. SIAM Journal on Applied Mathematics, 20, 62\u201366.",
+              "journal-title": "SIAM Journal on Applied Mathematics"
+            },
+            {
+              "key": "3_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "90",
+              "DOI": "10.1016/S0022-0531(02)00036-4",
+              "volume": "109",
+              "author": "F. Maniquet",
+              "year": "2003",
+              "unstructured": "Maniquet, F. (2003). A characterization of the Shapley value in queueing problems. Journal of Economic Theory, 109, 90\u2013103.",
+              "journal-title": "Journal of Economic Theory"
+            },
+            {
+              "key": "3_CR10",
+              "doi-asserted-by": "crossref",
+              "first-page": "266",
+              "DOI": "10.1287/moor.1060.0239",
+              "volume": "32",
+              "author": "H. Moulin",
+              "year": "2007",
+              "unstructured": "Moulin, H. (2007). On scheduling fees to prevent merging, splitting, and transferring of jobs. Mathematics of Operations Research, 32, 266\u2013283.",
+              "journal-title": "Mathematics of Operations Research"
+            },
+            {
+              "issue": "5",
+              "key": "3_CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "1009",
+              "DOI": "10.2307/2951537",
+              "volume": "50",
+              "author": "H. Moulin",
+              "year": "1992",
+              "unstructured": "Moulin, H., & Shenker, S. (1992). Serial cost sharing. Econometrica, 50(5), 1009\u20131039.",
+              "journal-title": "Econometrica"
+            },
+            {
+              "key": "3_CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "1163",
+              "DOI": "10.1137/0117107",
+              "volume": "17",
+              "author": "D. Schmeidler",
+              "year": "1969",
+              "unstructured": "Schmeidler, D. (1969). The nucleolus of a characteristic function game. SIAM Journal on Applied Mathematics, 17, 1163\u20131170.",
+              "journal-title": "SIAM Journal on Applied Mathematics"
+            },
+            {
+              "key": "3_CR13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Shapley, L. S. (1953). A value for n-person games. In H. W. Kuhn & A. W. Tucker (Eds.), Contributions to the theory of games II. Annals of mathematics studies (Vol. 28, pp. 307\u2013317). Princeton: Princeton University Press.",
+              "DOI": "10.1515/9781400881970-018"
+            },
+            {
+              "key": "3_CR14",
+              "volume-title": "How to divide when there isn\u2019t enough: From the Talmud to game theory",
+              "author": "W. Thomson",
+              "year": "2003",
+              "unstructured": "Thomson, W. (2003). How to divide when there isn\u2019t enough: From the Talmud to game theory. University of Rochester, Book Manuscript."
+            },
+            {
+              "key": "3_CR15",
+              "doi-asserted-by": "crossref",
+              "first-page": "177",
+              "DOI": "10.1016/0165-4896(87)90054-0",
+              "volume": "13",
+              "author": "S. H. Tijs",
+              "year": "1987",
+              "unstructured": "Tijs, S. H. (1987). An axiomatization of the \u03c4-value. Mathematical Social Sciences, 13, 177\u2013181.",
+              "journal-title": "Mathematical Social Sciences"
+            },
+            {
+              "key": "3_CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "294",
+              "DOI": "10.1287/mnsc.42.2.294",
+              "volume": "42",
+              "author": "A. Nouweland van den",
+              "year": "1996",
+              "unstructured": "van den Nouweland, A., Borm, P., van Golstein Brouwers, W., Groot Bruinderink, R., & Tijs, S. H. (1996). A game theoretic approach to problems in telecommunication. Management Science, 42, 294\u2013303.",
+              "journal-title": "Management Science"
+            }
+          ],
+          "container-title": [
+            "Studies in Choice and Welfare",
+            "Fair Queueing"
+          ],
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-3-319-33771-5_3",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                6,
+                24
+              ]
+            ],
+            "date-time": "2017-06-24T16:42:55Z",
+            "timestamp": 1498322575000
+          },
+          "score": 27.533745,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-3-319-33771-5_3"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783319337708",
+            "9783319337715"
+          ],
+          "references-count": 16,
+          "URL": "https://doi.org/10.1007/978-3-319-33771-5_3",
+          "ISSN": [
+            "1614-0311",
+            "2197-8530"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "1614-0311"
+            },
+            {
+              "type": "electronic",
+              "value": "2197-8530"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

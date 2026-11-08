@@ -1,12 +1,14 @@
+import type { RendererOptions } from "./appearance.ts";
 import cytoscape from "cytoscape";
 import type { NetworkEdge, NetworkNode } from "../definition.ts";
 
 export function mountNetwork(
   container: HTMLElement,
   select: (id: string) => void,
+  options: RendererOptions = {},
 ) {
   const canvas = document.createElement("div");
-  canvas.className = "network";
+  canvas.className = options.theme ? "model-network" : "network";
   container.append(canvas);
   const cy = cytoscape({
     container: canvas,
@@ -17,10 +19,12 @@ export function mountNetwork(
     autounselectify: true,
   });
   function labelTheme() {
+    if (options.theme) return options.theme().muted;
     return (
       getComputedStyle(canvas).getPropertyValue("--muted").trim() || "#626262"
     );
   }
+  function edgeTheme() { return labelTheme(); }
   cy.style([
     {
       selector: "node",
@@ -29,7 +33,8 @@ export function mountNetwork(
         height: "data(size)",
         "background-color": "data(color)",
         label: "data(label)",
-        "font-size": 11,
+        "font-size": options.theme ? parseFloat(getComputedStyle(container).fontSize) : 11,
+        ...(options.theme ? { "font-family": getComputedStyle(container).fontFamily } : {}),
         "text-valign": "bottom",
         "text-margin-y": 5,
         color: labelTheme(),
@@ -37,11 +42,15 @@ export function mountNetwork(
     },
     {
       selector: ".selected",
-      style: { "border-width": 3, "border-color": "#b45309" },
+      style: { "border-width": 3, "border-color": options.theme?.().selected ?? "#b45309" },
     },
     {
       selector: "edge",
-      style: { width: 1, "line-color": "#969696", opacity: 0.65 },
+      style: { width: "data(width)", "line-color": "data(color)", "target-arrow-color": "data(color)", "curve-style": "bezier", opacity: 0.65 },
+    },
+    {
+      selector: "edge[directed = 1]",
+      style: { "target-arrow-shape": "triangle", "arrow-scale": 1 },
     },
   ]);
   let first = true;
@@ -49,11 +58,23 @@ export function mountNetwork(
   let adjusting = false;
   let disposed = false;
   const appearance = window.matchMedia("(prefers-color-scheme: dark)");
+  let appliedTheme: string | undefined;
   function updateTheme() {
-    if (!disposed)
-      cy.style().selector("node").style({ color: labelTheme() }).update();
+    if (disposed) return;
+    const label = labelTheme();
+    const selected = options.theme?.().selected ?? "#b45309";
+    const key = `${label}\n${selected}`;
+    if (key === appliedTheme) return;
+    cy.style().selector("node").style({ color: label }).selector(".selected").style({ "border-color": selected }).update();
+    cy.edges().filter(edge => edge.data("defaultColor")).data("color", label);
+    appliedTheme = key;
   }
-  appearance.addEventListener("change", updateTheme);
+  function appearanceChanged() {
+    // A host refresh may run in a later media-listener task; update() also reapplies tokens.
+    if (options.theme) queueMicrotask(updateTheme);
+    else updateTheme();
+  }
+  appearance.addEventListener("change", appearanceChanged);
   cy.on("tap", "node", (event) => select(event.target.id()));
   function fit() {
     if (!disposed) {
@@ -97,7 +118,7 @@ export function mountNetwork(
     button.addEventListener("click", action);
     actions.append(button);
   }
-  container.insertBefore(actions, canvas);
+  if (options.controls !== false) container.insertBefore(actions, canvas);
   const chooser = document.createElement("select");
   chooser.setAttribute("aria-label", "Select network node");
   actions.append(chooser);
@@ -123,7 +144,30 @@ export function mountNetwork(
       edges: readonly NetworkEdge[],
       selected: string | null,
     ) {
-      const ids = new Set(nodes.map((node) => node.id));
+      // Validate the complete projection before touching the currently displayed graph.
+      const ids = new Set<string>();
+      for (const node of nodes) {
+        if (!node.id || ids.has(node.id)) throw new Error("Network node IDs must be nonempty and unique.");
+        ids.add(node.id);
+        if (node.size !== undefined && (!Number.isFinite(node.size) || node.size <= 0))
+          throw new Error("Network node size must be positive and finite.");
+        if (node.position && (!Number.isFinite(node.position.x) || !Number.isFinite(node.position.y)))
+          throw new Error("Network presentation coordinates must be finite.");
+        if (node.color !== undefined && !CSS.supports("color", node.color)) throw new Error("Invalid network node color.");
+      }
+      const edgeIds = new Set<string>();
+      for (const edge of edges) {
+        if (!edge.id || ids.has(edge.id) || edgeIds.has(edge.id)) throw new Error("Network edge IDs must be nonempty and unique.");
+        edgeIds.add(edge.id);
+        if (!ids.has(edge.from) || !ids.has(edge.to)) throw new Error("Network edge endpoints must exist.");
+        if (edge.width !== undefined && (!Number.isFinite(edge.width) || edge.width <= 0))
+          throw new Error("Network edge width must be positive and finite.");
+        if (edge.color !== undefined && !CSS.supports("color", edge.color)) throw new Error("Invalid network edge color.");
+      }
+      // The host resolves theme tokens before updating the projection. Media listeners
+      // can run in separate tasks, so their earlier microtask may still see old tokens.
+      updateTheme();
+      const defaultEdgeColor = edgeTheme();
       cy.batch(() => {
         cy.nodes()
           .filter((node) => !ids.has(node.id()))
@@ -135,7 +179,7 @@ export function mountNetwork(
             element = cy.add({
               group: "nodes",
               data: { id: node.id },
-              position: {
+              position: node.position ?? {
                 x: Math.cos(angle) * Math.sqrt(index + 1) * 34,
                 y: Math.sin(angle) * Math.sqrt(index + 1) * 34,
               },
@@ -143,21 +187,23 @@ export function mountNetwork(
           }
           element.data({
             label: nodes.length <= 80 ? (node.label ?? "") : "",
-            color: node.color ?? "#48778a",
+            color: node.color ?? options.theme?.().node ?? "#48778a",
             size: node.size ?? 16,
           });
           element.toggleClass("selected", selected === node.id);
         }
-        const edgeIds = new Set(edges.map((edge) => edge.id));
         cy.edges()
           .filter((edge) => !edgeIds.has(edge.id()))
           .remove();
-        for (const edge of edges)
-          if (cy.getElementById(edge.id).empty())
-            cy.add({
-              group: "edges",
-              data: { id: edge.id, source: edge.from, target: edge.to },
-            });
+        for (const edge of edges) {
+          let element = cy.getElementById(edge.id);
+          if (element.nonempty() && (element.source().id() !== edge.from || element.target().id() !== edge.to)) {
+            element.remove();
+            element = cy.getElementById(edge.id);
+          }
+          if (element.empty()) element = cy.add({ group: "edges", data: { id: edge.id, source: edge.from, target: edge.to } });
+          element.data({ directed: edge.directed ? 1 : 0, color: edge.color ?? defaultEdgeColor, defaultColor: edge.color === undefined, width: edge.width ?? 1 });
+        }
       });
       const nextIds = nodes.map((node) => node.id).join("\n");
       if (nextIds !== nodeIds) {
@@ -176,9 +222,12 @@ export function mountNetwork(
         `${nodes.length} nodes and ${edges.length} connections`,
       );
     },
+    fit,
+    layout,
     dispose() {
+      if (disposed) return;
       disposed = true;
-      appearance.removeEventListener("change", updateTheme);
+      appearance.removeEventListener("change", appearanceChanged);
       resize.disconnect();
       cy.destroy();
       actions.remove();

@@ -1,0 +1,188 @@
+# Selected B06 ecology: executed source–target comparison
+
+Date: 6 November 2026. Issue [#17](https://github.com/dweigend/city-library/issues/17), draft [PR #18](https://github.com/dweigend/city-library/pull/18), part of [Epic #1](https://github.com/dweigend/city-library/issues/1). Runtime base `44989d5`; final headless code `b4e7a51`, including UI-reader correction `2263a5d`. All ten immutable selections have working headless compositions and thin UI adapters, executed shell checks and actual original/target Chromium evidence. **Independent Argon/high approval remains pending**, under the user-reported quota-blocked task8194e842. No retry, substitution, global ledger/count update, merge or publication occurred here. Parent integration and its current-renderer checks remain separate work.
+
+## Contracts, reuse and provenance
+
+Plan `488d030` and source/five-example freeze `078c2da` preceded runtime delegation. Exactly two native workers had disjoint five-model ownership and returned their completed results before integration. The five public scripts remain byte-identical to their frozen SHA256SUMS; no equations, assertions, defaults or selection paths were weakened. No shared API expansion was needed. Model entrypoints export inert definitions/factories, public typed actions and detached pure observations. World owns membership/time; Agent owns agent properties and movement; Grid owns fields/topology. Sheep carrying retains the same canonical sheep, and occupancy queries inspect canonical agents. UI changes state only through headless actions. Model-specific source procedures are readable TypeScript, without a NetLogo runtime/transpiler, copied RNG, private grid/geometry kernel, shadow occupancy registry or generic substitute model.
+
+Existing public Agent/World/Grid, Random sampling/normal draws, geometry direction/distance/half-open normalization, Grid diffusion and occupancy, and statistics histogram/summary are reused. Source-specific bounded loops compose these operations. Full source/widget/procedure/default/plot audits, archive hashes and complete retained notices are in [source audit](selected-ecology-source-audit.md) and [source manifest](selected-ecology-sources.json). Each served XML was freshly fetched, reconciled against the immutable served inventory, then archived unchanged. All ten inventory rows match Galapagos90be931773fcf499049247a8aaa1aecbe003654c. Desktop Models membership was not used as Web-catalog evidence. The original XML is NetLogo7.0.4; CC BY-NC-SA3.0 and full attribution remain beside every model. All200 scientific dossiers already existed; none was duplicated or edited.
+
+The [population report](selected-ecology-population.md) and [collective report](selected-ecology-collective.md) detail all source phases, parameters, actions/reporters, state ownership and author checks. Their earlier statements that browser work remained with the coordinator are superseded only by the executed evidence here. Author remediation and tests do not constitute independent approval.
+
+## Browser method and limits
+
+T3 preview status was checked first. Fresh owned tabs ran **actual server Chromium156 on Linux**, using canonical selected URLs and then the official standalone `/web?url=<same served URL>` surface to keep the native widgets/command center visible. The SHA-256 of the **actual loaded `session.nlogoSource.nlogo` string** matches the archive/inventory for every model. Every primary original setup/progress record includes that hash, version, complete actual input values, topology, observed tick/count, selected agent properties, field totals, readback and URL. Source seeds were left at native initialization; no cross-engine seeded trajectory identity is claimed.
+
+Primary original screenshots use1440×1100 CSS pixels at DPR2; earlier playback/intervention probes use1280×800 (the JSON records each actual viewport). Target desktop uses1280×1000, target mobile390×844, DPR2. Mobile means a real Chromium resized CSS viewport, **without mobile user-agent or touch emulation**. Target setup seed1 is explicit. Original and target RNGs/call order differ: comparisons establish audited mechanisms, exact deterministic rules and observed outcomes; they are not a distributional validation study or proof of matching stochastic trajectories. Different progressed populations/fields remain visible and are not relabeled as matching.
+
+An owned target server ran `CITY_LIBRARY_UI_PORT=3126 bun run dev:ui`. The only shared files copied locally were the two explicitly user-authorized exact bytes from parent5bc6b16: [shared-version record](selected-ecology-shared-version.md). They are **not part of any owned commit**; parent supplies them independently. No other shared file changed. Root's later Graph distances are not required by B06.
+
+All model changes used native widgets/visible native Command Center commands, or target public UI controls. Page evaluation read hashes, state, geometry, accessibility and pixels; it did not call domain procedures or change domain state. Source drawing additionally used browser mouse events; final Invasive resistance proof uses a native drag, and Daisy's held-mouse proof uses explicitly synthetic DOM events. Short exploratory source clicks sometimes did not outlast a draw frame; those no-op attempts do not establish drawing success. Native source command-center `go` supplies a single step where only a forever Go button exists; Termites uses `ask turtles [go]` and has no observer tick.
+
+Canvas2D `getImageData` was read before primary saved captures, recording nonblack pixels and target RGBA fingerprints. This is the documented Chromium capture-artifact workaround, **not a renderer fix**. The isolated Termites error-overlay screenshot was captured directly to preserve the error and is not a canvas-rendering proof. Final primary setup/progress, desktop-dark and both mobile-theme images were visually inspected, using contact sheets plus full-size spot checks. All ten progressed desktop light/dark canvas fingerprints agree at the same dimensions; both mobile-theme fingerprints agree. No inspected primary view was blank or horizontally overflowing. These fingerprints compare theme captures of the same target state, never original-versus-target scientific equivalence.
+
+For **each target**, desktop and mobile UI checks executed Setup →1 step → Run → Pause → Setup/reset, verifying clocks/work counters1, increased paused values, then0. Default progressed target captures are tick10, tick50 for Ants/Shepherds, and100 **work sweeps** for Termites. Per-model mobile-control JSON retains the actual transitions. Original native Setup, step/Go, forever Run/Pause and Setup reset were exercised for all ten; their playback traces retain stopped native button state. No universal browser milestone is inferred from a sampled subset.
+
+## Per-model paired observations
+
+The links in each table are matched setup/progress pairs. Read the source/target JSON next to each image for exact settings and observations. Source defaults apply unless a separately named intervention trace says otherwise.
+
+## Simple Birth Rates
+
+Canonical selected path: `Sample Models/Biology/Simple Birth Rates`; experiment `simple-birth-rates`. [Existing scientific dossier](../research/netlogo-web/simple-birth-rates.md).
+
+Setup is exactly500 red/500 blue on both sides. At tick10 the original has497 red/499 blue, target596 red/462 blue. These distinct stochastic realizations are not claimed equal; independent excess-population mortality targets capacity in expectation rather than enforcing exactly1000. The capacity1/zero-fertility intervention retains one blue through generations; experiment mode logs red extinction and resets to generation0. Native experiment reset and target Run experiment/Repeat experiment/Setup experiment were exercised; repeating is paused by toggling the same Repeat experiment control. Public headless tests also cover odd capacity, parent survival and independent mortality.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/simple-birth-rates-source-setup.png) · [Actual state](selected-ecology-evidence/simple-birth-rates-source-setup.json) | [Image](selected-ecology-evidence/simple-birth-rates-target-setup.png) · [Actual state](selected-ecology-evidence/simple-birth-rates-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/simple-birth-rates-source-progress.png) · [Actual state](selected-ecology-evidence/simple-birth-rates-source-progress.json) | [Image](selected-ecology-evidence/simple-birth-rates-target-progress.png) · [Actual state](selected-ecology-evidence/simple-birth-rates-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/simple-birth-rates-target-desktop-dark.png), [mobile light](selected-ecology-evidence/simple-birth-rates-target-mobile-light.png), [mobile dark](selected-ecology-evidence/simple-birth-rates-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/simple-birth-rates-target-playback-paused.json), [mobile controls](selected-ecology-evidence/simple-birth-rates-target-mobile-controls.json).
+
+## Daisyworld
+
+Canonical selected path: `Sample Models/Biology/Daisyworld`; experiment `daisyworld`. [Existing scientific dossier](../research/netlogo-web/daisyworld.md).
+
+Both setups have168 black and168 white daisies and mean temperature8.8859530679°C (target monitor rounds8.886). At tick10 original717 black/114 white, mean31.274643°C; target726/112, mean31.767°C. Empty-world thermal relaxation gives the exact source oracle `0.75*(72*ln(0.48)+80)=20.3656645457` after one step. Original held drawing changes an occupied flower to black after its explicit removal and leaves the plot-owned count globals stale until plotting; remove-all deletes actual flowers without ticking. Target paint/remove updates detached population reporters immediately. Target mouse and Home/Enter/ArrowRight/Space drawing produced three black flowers at tick0 with visible keyboard focus. Fixed-scenario luminosity applies after the completed step, and changing albedo affects future flowers, preserving captured existing albedo. Glyphs and immediate reporter refresh are explicit presentation adaptations.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/daisyworld-source-setup.png) · [Actual state](selected-ecology-evidence/daisyworld-source-setup.json) | [Image](selected-ecology-evidence/daisyworld-target-setup.png) · [Actual state](selected-ecology-evidence/daisyworld-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/daisyworld-source-progress.png) · [Actual state](selected-ecology-evidence/daisyworld-source-progress.json) | [Image](selected-ecology-evidence/daisyworld-target-progress.png) · [Actual state](selected-ecology-evidence/daisyworld-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/daisyworld-target-desktop-dark.png), [mobile light](selected-ecology-evidence/daisyworld-target-mobile-light.png), [mobile dark](selected-ecology-evidence/daisyworld-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/daisyworld-target-playback-paused.json), [mobile controls](selected-ecology-evidence/daisyworld-target-mobile-controls.json).
+
+## Termites
+
+Canonical selected path: `Sample Models/Biology/Termites`; experiment `termites`. [Existing scientific dossier](../research/netlogo-web/termites.md).
+
+The original setup has8197 ground chips and400 white termites. `ask turtles [go]` completes **one full recursive source go per turtle**: search-for-chip →pickup/forward20 →find-new-pile →put-down-chip →get-away. Every turtle finishes unladen; ground chips remain8197. Native wiggle moves1 **before** right-random50 and left-random50; pickup moves20 without a new turn; blocked drop turns-random360 then moves1; after dropping, escape turns-random360 and moves20, recursively repeating while on wood. These explicit orders remain in the headless source composition.
+
+Target setup has8127 ground chips. After100 bounded work sweeps it has7925 ground+202 carried=8127 conserved chips. **One target `advance` is not one complete native `go`:** each sweep activates one resumable procedure phase per shuffled termite, and phase transitions may yield before the next recursive procedure. Interleaving and scientifically meaningful cadence therefore differ. `tick` is publicly `null`; work/cycle diagnostics are separate, never invented NetLogo ticks. The source turtle forever button has no tick initialization or increment.
+
+An isolated actual native `number=1,density=0` Setup/Go produced **Maximum call stack size exceeded** and stopped Go; [error image](selected-ecology-evidence/termites-source-empty-recursion-error.png) and [observation](selected-ecology-evidence/termites-source-empty-recursion-error.json) retain it. This is an observed stack failure, not an inferred hang. At the same settings, target100 work sweeps remain responsive with0 ground/0 carried chips, and Run/Pause/Reset work. This deliberate resumable scheduling repair preserves search/drop/turn order and chip conservation, but does not establish complete-call, trajectory or aggregate timing equivalence. A future alternative activation contract would require separate acceptance.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/termites-source-setup.png) · [Actual state](selected-ecology-evidence/termites-source-setup.json) | [Image](selected-ecology-evidence/termites-target-setup.png) · [Actual state](selected-ecology-evidence/termites-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/termites-source-progress.png) · [Actual state](selected-ecology-evidence/termites-source-progress.json) | [Image](selected-ecology-evidence/termites-target-progress.png) · [Actual state](selected-ecology-evidence/termites-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/termites-target-desktop-dark.png), [mobile light](selected-ecology-evidence/termites-target-mobile-light.png), [mobile dark](selected-ecology-evidence/termites-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/termites-target-playback-paused.json), [mobile controls](selected-ecology-evidence/termites-target-mobile-controls.json).
+
+## Shepherds
+
+Canonical selected path: `Sample Models/Biology/Shepherds`; experiment `shepherds`. [Existing scientific dossier](../research/netlogo-web/shepherds.md).
+
+Both sides retain150 sheep and30 shepherds. Original setup efficiency66.2597%, then69.2590% at tick50; target67.6%, then69.1%, with18 carried sheep at tick50. The metric samples only at setup and ticks divisible by50; both monitors hold their last sample between updates, including the recorded tick51/52 playback state. Hidden carried sheep remain canonical and count in patch/neighborhood occupancy. Native live speed0 and target setup speed0 followed by live0.2 were exercised; target population remains conserved and carried ownership is unique. Counts and exact source phase order are checked headlessly; differing herd configurations are stochastic outcomes.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/shepherds-source-setup.png) · [Actual state](selected-ecology-evidence/shepherds-source-setup.json) | [Image](selected-ecology-evidence/shepherds-target-setup.png) · [Actual state](selected-ecology-evidence/shepherds-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/shepherds-source-progress.png) · [Actual state](selected-ecology-evidence/shepherds-source-progress.json) | [Image](selected-ecology-evidence/shepherds-target-progress.png) · [Actual state](selected-ecology-evidence/shepherds-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/shepherds-target-desktop-dark.png), [mobile light](selected-ecology-evidence/shepherds-target-mobile-light.png), [mobile dark](selected-ecology-evidence/shepherds-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/shepherds-target-playback-paused.json), [mobile controls](selected-ecology-evidence/shepherds-target-mobile-controls.json).
+
+## Rabbits Grass Weeds
+
+Canonical selected path: `Sample Models/Biology/Rabbits Grass Weeds`; experiment `rabbits-grass-weeds`. [Existing scientific dossier](../research/netlogo-web/rabbits-grass-weeds.md).
+
+Both setups contain150 rabbits; both observed tick10 populations happen to be97, which is not a seeded-trajectory claim. Source growth is per1000, tries weeds before grass on originally empty fields, and grass may overwrite a just-grown weed. Headless tests cover strict reproduction/death boundaries and extinction preflight. Native and target live weed growth20/grass growth0/weed energy10 were exercised, with target154 rabbits at tick10. Native `number=0` Setup exposes the upstream `SET-PLOT-Y-RANGE`0..0 error; [error image](selected-ecology-evidence/rabbits-grass-weeds-source-zero-plot-error.png) is retained. A separate subsequent native `repeat5[go]` remains at tick0, proving the source extinction preflight independently of that failed Setup command chain. Target supports safe empty charts, keeps tick0, and disables normal progress at extinction. This is an explicit chart/setup robustness repair, not exact functional parity with the native error.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/rabbits-grass-weeds-source-setup.png) · [Actual state](selected-ecology-evidence/rabbits-grass-weeds-source-setup.json) | [Image](selected-ecology-evidence/rabbits-grass-weeds-target-setup.png) · [Actual state](selected-ecology-evidence/rabbits-grass-weeds-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/rabbits-grass-weeds-source-progress.png) · [Actual state](selected-ecology-evidence/rabbits-grass-weeds-source-progress.json) | [Image](selected-ecology-evidence/rabbits-grass-weeds-target-progress.png) · [Actual state](selected-ecology-evidence/rabbits-grass-weeds-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/rabbits-grass-weeds-target-desktop-dark.png), [mobile light](selected-ecology-evidence/rabbits-grass-weeds-target-mobile-light.png), [mobile dark](selected-ecology-evidence/rabbits-grass-weeds-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/rabbits-grass-weeds-target-playback-paused.json), [mobile controls](selected-ecology-evidence/rabbits-grass-weeds-target-mobile-controls.json).
+
+## Invasive Plants
+
+Canonical selected path: `Sample Models/Biology/Invasive Plants`; experiment `invasive-plants`. [Existing scientific dossier](../research/netlogo-web/invasive-plants.md).
+
+Both use the33×33 hard world and default plus pattern with total resistance30500. Original setup infestation1200, target700 reflect different random initial patches; at tick10 original aggregate454.425 with81 seeds, target103.58 with17. This is a qualified mechanism comparison, not statistical equivalence. Source probes establish sprout0.6→1,1.6→2 and partial forward from x14,heading90,fd4→x16, while x16,fd2 stays16. Target normal draws, integer rounding, old-seed germination, herbicide/runoff, new-seed generation and spread preserve that source order. Public half-open geometry normalization governs patch endpoints; no private boundary kernel was added.
+
+Native resistance drawing clears80 infestation and installs100 resistance at the selected patch; target pointer infestation then resistance gives100→0 aggregate and resistance100, with one explicit draw tick per gesture. Native drawing's forever clock advances even without painting (recorded resistance state at year293); target exposes a separate repeatable Draw clock plus Drawing tick instead of silently equating gesture cadence to native frame cadence. Clear patches removes resistance-block membership while preserving seeds; Clear plots affects history only. Both actions were exercised. Neutral circle resistance glyphs replace source square glyphs because the existing spatial adapter supports circles/triangles; square-root sizing and domain resistance remain unchanged.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/invasive-plants-source-setup.png) · [Actual state](selected-ecology-evidence/invasive-plants-source-setup.json) | [Image](selected-ecology-evidence/invasive-plants-target-setup.png) · [Actual state](selected-ecology-evidence/invasive-plants-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/invasive-plants-source-progress.png) · [Actual state](selected-ecology-evidence/invasive-plants-source-progress.json) | [Image](selected-ecology-evidence/invasive-plants-target-progress.png) · [Actual state](selected-ecology-evidence/invasive-plants-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/invasive-plants-target-desktop-dark.png), [mobile light](selected-ecology-evidence/invasive-plants-target-mobile-light.png), [mobile dark](selected-ecology-evidence/invasive-plants-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/invasive-plants-target-playback-paused.json), [mobile controls](selected-ecology-evidence/invasive-plants-target-mobile-controls.json).
+
+## Ants
+
+Canonical selected path: `Sample Models/Biology/Ants`; experiment `ants`. [Existing scientific dossier](../research/netlogo-web/ants.md).
+
+Both setups contain125 ants at the origin, zero chemical and three source-radius-five food piles; original total food304, target313. First native/target go reaches tick1 without departure (`who>=ticks`); at tick50 original food300/chemical840.617678 and four carrying ants, target food309/three carrying. Different random realization and RNG calls are explicit. Strict scent comparisons, pickup-return versus caller continuation, hard-edge bounce, source departure delay and diffusion-then-evaporation are tested. Live diffusion0/evaporation99 were changed through target controls; the native rates were also set to0/99 after50 steps, then a separate go reached tick51. Pile reporters exclude nest patches and preserve all three histories.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/ants-source-setup.png) · [Actual state](selected-ecology-evidence/ants-source-setup.json) | [Image](selected-ecology-evidence/ants-target-setup.png) · [Actual state](selected-ecology-evidence/ants-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/ants-source-progress.png) · [Actual state](selected-ecology-evidence/ants-source-progress.json) | [Image](selected-ecology-evidence/ants-target-progress.png) · [Actual state](selected-ecology-evidence/ants-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/ants-target-desktop-dark.png), [mobile light](selected-ecology-evidence/ants-target-mobile-light.png), [mobile dark](selected-ecology-evidence/ants-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/ants-target-playback-paused.json), [mobile controls](selected-ecology-evidence/ants-target-mobile-controls.json).
+
+## Heatbugs
+
+Canonical selected path: `Sample Models/Biology/Heatbugs`; experiment `heatbugs`. [Existing scientific dossier](../research/netlogo-web/heatbugs.md).
+
+Both setups use100 unique occupied cells, zero heat, ideal temperatures10..39 and heat outputs5..24. Original total heat after10 steps is14792.092996; target mean pre-move unhappiness is15.586 at tick10 (original plot is separately retained, not falsely equated to this field total). Exact heat balance before evaporation/emission and unique occupancy are headless invariants. Native Heat up adds25 to all10000 fields (total250000), Deep freeze restores0, both at tick0. Target Freeze/Heat up, Happiness/Ideal temperature, Watch happiest/saddest and Reset perspective were clicked; changing live max-output to30 changes Heat up while existing bug output stays captured. Target watch highlights/exposes an identity instead of moving NetLogo's camera; field/color display refreshes immediately. Source0..99 coordinates translate by49.5 into centered canonical coordinates without changing adjacency or dynamics.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/heatbugs-source-setup.png) · [Actual state](selected-ecology-evidence/heatbugs-source-setup.json) | [Image](selected-ecology-evidence/heatbugs-target-setup.png) · [Actual state](selected-ecology-evidence/heatbugs-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/heatbugs-source-progress.png) · [Actual state](selected-ecology-evidence/heatbugs-source-progress.json) | [Image](selected-ecology-evidence/heatbugs-target-progress.png) · [Actual state](selected-ecology-evidence/heatbugs-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/heatbugs-target-desktop-dark.png), [mobile light](selected-ecology-evidence/heatbugs-target-mobile-light.png), [mobile dark](selected-ecology-evidence/heatbugs-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/heatbugs-target-playback-paused.json), [mobile controls](selected-ecology-evidence/heatbugs-target-mobile-controls.json).
+
+## Flocking
+
+Canonical selected path: `Sample Models/Biology/Flocking`; experiment `flocking`. [Existing scientific dossier](../research/netlogo-web/flocking.md).
+
+Both sides retain300 birds at tick10. No source plot exists. Native `vision=0` before/after samples preserve headings; target selected bird stays352.99999999999994° over10 ticks while its wrapped position changes. Native `subtract-headings` returns[180,180] for both opposite-heading probes, fixing the clockwise tie. Coincident `towards` produces the retained native error; the public source cohesion reporter throws RangeError accordingly rather than omitting that mate. Cardinal trigonometry was also probed and retains the native floating residuals, not an invented exact-zero cleanup. Sequential heading reads and five0.2 movement subpasses are source procedures; intermediate source display calls are omitted inside the headless tick.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/flocking-source-setup.png) · [Actual state](selected-ecology-evidence/flocking-source-setup.json) | [Image](selected-ecology-evidence/flocking-target-setup.png) · [Actual state](selected-ecology-evidence/flocking-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/flocking-source-progress.png) · [Actual state](selected-ecology-evidence/flocking-source-progress.json) | [Image](selected-ecology-evidence/flocking-target-progress.png) · [Actual state](selected-ecology-evidence/flocking-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/flocking-target-desktop-dark.png), [mobile light](selected-ecology-evidence/flocking-target-mobile-light.png), [mobile dark](selected-ecology-evidence/flocking-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/flocking-target-playback-paused.json), [mobile controls](selected-ecology-evidence/flocking-target-mobile-controls.json).
+
+## Fireflies
+
+Canonical selected path: `Sample Models/Biology/Fireflies`; experiment `fireflies`. [Existing scientific dossier](../research/netlogo-web/fireflies.md).
+
+Both setups contain1500 agents with threshold1, delay reset1/window-1, cycle10, dark agents hidden. Native flashes151 at setup/141 at tick10; target155/151. Old-color sensing, self-inclusion, captured reset fields, sequential motion/clock updates and the separate recolor phase are preserved. Native and target live strategy=advance/flash-length3 leave current agents' threshold1/reset1/window-1 unchanged, as retained inspector/probe records show. Visibility changes immediately in the target, while source recolors on its next display phase.
+
+Native `number=0` Setup fails at `SET-PLOT-Y-RANGE`0..0; [error image](selected-ecology-evidence/fireflies-source-empty-ticking.png) is retained. A separate native `repeat3[go]` then reaches tick3 with no agents. Target zero-population Setup safely renders an empty chart and reaches tick3 through three UI steps. Thus empty-world time semantics match the executable source go, while the upstream setup-chart failure is deliberately repaired and explicitly not reproduced.
+
+| Checkpoint | Executed original | Executed target |
+| --- | --- | --- |
+| Setup | [Image](selected-ecology-evidence/fireflies-source-setup.png) · [Actual state](selected-ecology-evidence/fireflies-source-setup.json) | [Image](selected-ecology-evidence/fireflies-target-setup.png) · [Actual state](selected-ecology-evidence/fireflies-target-setup.json) |
+| Progress | [Image](selected-ecology-evidence/fireflies-source-progress.png) · [Actual state](selected-ecology-evidence/fireflies-source-progress.json) | [Image](selected-ecology-evidence/fireflies-target-progress.png) · [Actual state](selected-ecology-evidence/fireflies-target-progress.json) |
+
+Target [desktop dark](selected-ecology-evidence/fireflies-target-desktop-dark.png), [mobile light](selected-ecology-evidence/fireflies-target-mobile-light.png), [mobile dark](selected-ecology-evidence/fireflies-target-mobile-dark.png), [desktop playback](selected-ecology-evidence/fireflies-target-playback-paused.json), [mobile controls](selected-ecology-evidence/fireflies-target-mobile-controls.json).
+
+## UI review, diagnostics and resolved findings
+
+`frontend-design` guided the adapters; current Vercel Web Interface Guidelines were fetched from their primary raw URL on6November and reviewed after implementation. Existing compact controls, semantic labels, keyboard actions, focus, monochrome chrome, purposeful simulation colors and shared accessible chart summaries are reused. No new framework, icons, DOM/model state owner or shared stylesheet was added. All ten actual desktop/mobile responsive flows and light/dark captures were inspected. Daisyworld keyboard drawing produced three flowers at tick0 and a solid visible canvas focus outline; Flocking/Fireflies keyboard Home selection exposed their source state through inspectors. No horizontal overflow appeared in recorded checkpoints.
+
+Author UI review found duplicate setup/live input readers in four adapters: the shared host's registered live reader would override the duplicate setup value. Commit2263a5d removes those duplicate fields, retaining one live control that the same Setup action also reads. Actual pre-Setup live changes, successful initialization, default baselines, playback/reset and all four viewport/theme captures were repeated. No frozen headless contract changed. The source hard-edge review was resolved through existing public `geometry.normalize` in b4e7a51; affected Ants/Invasive focused and browser checks were repeated. Findings and author responses are recorded here separately from independent approval.
+
+[Target diagnostics](selected-ecology-evidence/target-final-diagnostics.json) contain Canvas2D readback-performance warnings and no unexpected target model error in the retained bounded entries. [Source diagnostics](selected-ecology-evidence/source-final-diagnostics.json) include Ractive debug output, unsupported locale de→en_us warnings, readback warnings and `display` not-yet-implemented warnings from the upstream Web engine. The compact upstream console errors rendered as `a` correspond to the deliberately exercised plot-range/coincident-point failures; their actual native error text is separately retained. The isolated Termites stack error has its own record. Browser snapshot histories are bounded and explicitly report omitted older console/network/action entries; this is not a complete HAR or an exhaustive absence-of-errors guarantee. An initial selector timeout for Command Center and mistaken `Stop` label for a repeat toggle were corrected; affected actions were rerun. Neither exploratory automation failure is counted as a model pass.
+
+## Executed shell evidence
+
+- `bun run check` on final headless/runtime code b4e7a51: all four TypeScript projects, **317 tests /16090 assertions**, the120 registered pre-existing public examples, browser-target library build, and isolated packed Bun/Node ESM/ambient-free TypeScript consumers passed. The consumer's temporary package install is outside the repository; no project dependency or lockfile changed.
+- `bun test tests/selected-ecology*.test.ts`: **16 passed /154 assertions**, after final endpoint composition. Tests include exact thermal recurrence, source phase boundaries, canonical carrying/unique occupancy, heat balance, old-seed ordering/runoff, source movement/angle errors, observation purity and atomic validation.
+- All five `bun examples/selected-ecology/*.ts` scripts executed individually after final changes; all assertions passed. They are intentionally not registered globally by this branch. A temporary TypeScript config extending the project and explicitly including these five scripts passed. `sha256sum -c examples/selected-ecology/SHA256SUMS` passed all five.
+- `python docs/development/selected-ecology-verify.py` verifies retained immutable selection/source/code hashes, all five frozen scripts,70 primary image files, actual source/target browser records, theme readbacks, all-ten mobile control transitions and named deterministic original observations. This checks the recorded evidence; it does not rerun Chromium or confer independent acceptance.
+
+[Runtime hashes](selected-ecology-evidence/runtime-SHA256SUMS), [evidence hashes](selected-ecology-evidence/SHA256SUMS) and [environment](selected-ecology-evidence/environment.json) pin the delivered files and build/browser settings. Every primary target trace retains loaded JS resource URLs with fetched SHA-256. The two exact shared renderer copies are separately pinned; they remain parent-owned, uncommitted local changes and are excluded from the owned cherry-pick list.
+
+## Remaining acceptance and integration boundary
+
+All ten model/UI deliveries, scoped tests, frozen examples, source/browser comparisons and important images are present. Native source failure cases and the material Termites/drawing/watch/empty-chart adaptations remain explicit. No implementation is inferred from the200 completed scientific dossiers or from assignment. Global registration, shared-file integration, current parent-renderer checks and ledger/Epic/README updates belong to the parent. Final independent approval remains pending for all ten under quota task8194e842, with no retry/substitute review; this report does not close that gate.

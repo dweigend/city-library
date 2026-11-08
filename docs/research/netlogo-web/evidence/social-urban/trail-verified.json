@@ -1,0 +1,461 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1038%2F40353",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            26
+          ]
+        ],
+        "date-time": "2026-10-26T08:50:43Z",
+        "timestamp": 1793004643842,
+        "version": "4.5.0"
+      },
+      "reference-count": 23,
+      "publisher": "Springer Science and Business Media LLC",
+      "issue": "6637",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1997,
+                7,
+                3
+              ]
+            ],
+            "date-time": "1997-07-03T00:00:00Z",
+            "timestamp": 867888000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                1997,
+                7,
+                3
+              ]
+            ],
+            "date-time": "1997-07-03T00:00:00Z",
+            "timestamp": 867888000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Nature"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1997,
+            7,
+            3
+          ]
+        ]
+      },
+      "DOI": "10.1038/40353",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            7,
+            26
+          ]
+        ],
+        "date-time": "2002-07-26T08:37:10Z",
+        "timestamp": 1027672630000
+      },
+      "page": "47-50",
+      "source": "Crossref",
+      "is-referenced-by-count": 301,
+      "title": [
+        "Modelling the evolution of human trail systems"
+      ],
+      "prefix": "10.1038",
+      "volume": "388",
+      "author": [
+        {
+          "given": "Dirk",
+          "family": "Helbing",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Joachim",
+          "family": "Keltsch",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "P\u00e9ter",
+          "family": "Moln\u00e1r",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "reference": [
+        {
+          "key": "BF40353_CR1",
+          "doi-asserted-by": "publisher",
+          "first-page": "1385",
+          "DOI": "10.1126/science.242.4884.1385",
+          "volume": "242",
+          "author": "R Axelrod",
+          "year": "1988",
+          "unstructured": "Axelrod, R. & Dion, D. The further evolution of cooperation. Science 242, 1385\u20131390 (1988).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BF40353_CR2",
+          "doi-asserted-by": "publisher",
+          "first-page": "1181",
+          "DOI": "10.1126/science.254.5035.1181",
+          "volume": "254",
+          "author": "SH Clearwater",
+          "year": "1991",
+          "unstructured": "Clearwater, S. H., Huberman, B. A. & Hogg, T. Cooperative solution of constraint satisfaction problems. Science 254, 1181\u20131183 (1991).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BF40353_CR3",
+          "volume-title": "Quantitative Sociodynamics Stochastic Methods and Models of Social Interaction Processes",
+          "author": "D Helbing",
+          "year": "1995",
+          "unstructured": "Helbing, D. Quantitative Sociodynamics Stochastic Methods and Models of Social Interaction Processes(Kluwer Academic, Dordrecht, (1995))."
+        },
+        {
+          "key": "BF40353_CR4",
+          "doi-asserted-by": "publisher",
+          "first-page": "608",
+          "DOI": "10.1038/377608a0",
+          "volume": "377",
+          "author": "HA Makse",
+          "year": "1995",
+          "unstructured": "Makse, H. A., Havlin, S. & Stanley, H. E. Modelling urban growth patterns. Nature 377, 608\u2013612 (1995).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF40353_CR5",
+          "doi-asserted-by": "publisher",
+          "first-page": "918",
+          "DOI": "10.1126/science.179.4076.918",
+          "volume": "179",
+          "author": "R Herman",
+          "year": "1973",
+          "unstructured": "Herman, R., Lam, T. & Prigogine, I. Multilane vehicular traffic and adaptive human behavior. Science 179, 918\u2013920 (1973).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BF40353_CR6",
+          "doi-asserted-by": "publisher",
+          "first-page": "148",
+          "DOI": "10.1126/science.204.4389.148",
+          "volume": "204",
+          "author": "R Herman",
+          "year": "1979",
+          "unstructured": "Herman, R. & Prigogine, I. Atwo-fluid approach to town traffic. Science 204, 148\u2013151 (1979).",
+          "journal-title": "Science"
+        },
+        {
+          "key": "BF40353_CR7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-59063-4",
+          "volume-title": "Verkehrsdynamik. Neue physikalische Modellierungskonzepte",
+          "author": "D Helbing",
+          "year": "1997",
+          "unstructured": "Helbing, D. Verkehrsdynamik. Neue physikalische Modellierungskonzepte(Springer, Berlin, (1997))."
+        },
+        {
+          "key": "BF40353_CR8",
+          "doi-asserted-by": "publisher",
+          "first-page": "381",
+          "DOI": "10.1038/229381a0",
+          "volume": "229",
+          "author": "LF Henderson",
+          "year": "1971",
+          "unstructured": "Henderson, L. F. The statistics of crowd fluids. Nature 229, 381\u2013383 (1971).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF40353_CR9",
+          "doi-asserted-by": "publisher",
+          "first-page": "353",
+          "DOI": "10.1038/240353a0",
+          "volume": "240",
+          "author": "LF Henderson",
+          "year": "1972",
+          "unstructured": "Henderson, L. F. Sexual differences in human crowd motion. Nature 240, 353\u2013355 (1972).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF40353_CR10",
+          "doi-asserted-by": "publisher",
+          "first-page": "4282",
+          "DOI": "10.1103/PhysRevE.51.4282",
+          "volume": "51",
+          "author": "D Helbing",
+          "year": "1995",
+          "unstructured": "Helbing, D. & Moln\u00e1r, P. Social force model for pedestrian dynamics. Phys. Rev. E 51, 4282\u20134286 (1995).",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "BF40353_CR11",
+          "volume-title": "Advanced Synergetics 2nd edn",
+          "author": "H Haken",
+          "year": "1987",
+          "unstructured": "Haken, H. Advanced Synergetics 2nd edn(Springer, Berlin, (1987))."
+        },
+        {
+          "key": "BF40353_CR12",
+          "volume-title": "Self-Organization in Nonequilibrium Systems. From Dissipative Structures to Order through Fluctuations",
+          "author": "G Nicolis",
+          "year": "1977",
+          "unstructured": "Nicolis, G. & Prigogine, I. Self-Organization in Nonequilibrium Systems. From Dissipative Structures to Order through Fluctuations(Wiley, New York, (1977))."
+        },
+        {
+          "key": "BF40353_CR13",
+          "volume-title": "Untersuchungen zum Fu\u00dfg\u00e4ngerverhalten",
+          "author": "M Schenk",
+          "year": "1995",
+          "unstructured": "Schenk, M. Untersuchungen zum Fu\u00dfg\u00e4ngerverhalten Thesis, Univ. Stuttgart((1995))."
+        },
+        {
+          "key": "BF40353_CR14",
+          "doi-asserted-by": "publisher",
+          "first-page": "17",
+          "DOI": "10.1016/0378-4371(92)90499-G",
+          "volume": "191",
+          "author": "DR Kayser",
+          "year": "1992",
+          "unstructured": "Kayser, D. R., Aberle, L. K., Pochy, R. D. & Lam, L. Active walker models: tracks and landscapes. Physica A 191, 17\u201324 (1992).",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "BF40353_CR15",
+          "doi-asserted-by": "publisher",
+          "first-page": "267",
+          "DOI": "10.1016/0960-0779(95)80033-D",
+          "volume": "6",
+          "author": "L Lam",
+          "year": "1995",
+          "unstructured": "Lam, L. Active walker models for complex systems. Chaos Solitons Fractals 6, 267\u2013285 (1995).",
+          "journal-title": "Chaos Solitons Fractals"
+        },
+        {
+          "key": "BF40353_CR16",
+          "doi-asserted-by": "publisher",
+          "first-page": "359",
+          "DOI": "10.1016/0378-4371(94)90312-3",
+          "volume": "206",
+          "author": "F Schweitzer",
+          "year": "1994",
+          "unstructured": "Schweitzer, F. & Schimansky-GGeier, L. Clustering of \u201cactive\u201d walkers in a two-component system. Physica A 206, 359\u2013379 (1994).",
+          "journal-title": "Physica A"
+        },
+        {
+          "key": "BF40353_CR17",
+          "doi-asserted-by": "publisher",
+          "first-page": "140",
+          "DOI": "10.1016/0375-9601(95)00700-D",
+          "volume": "207",
+          "author": "L Schimansky-Geier",
+          "year": "1995",
+          "unstructured": "Schimansky-Geier, L., Mieth, M., Ros\u00e9, H. & Malchow, H. Structure formation by active Brownian particles. Phys. Lett. A 207, 140\u2013146 (1995).",
+          "journal-title": "Phys. Lett. A"
+        },
+        {
+          "key": "BF40353_CR18",
+          "doi-asserted-by": "publisher",
+          "first-page": "46",
+          "DOI": "10.1038/368046a0",
+          "volume": "368",
+          "author": "E Ben-Jacob",
+          "year": "1994",
+          "unstructured": "Ben-Jacob, E. et al. Generic modelling of cooperative growth patterns in bacterial colonies. Nature 368, 46\u201349 (1994).",
+          "journal-title": "Nature"
+        },
+        {
+          "key": "BF40353_CR19",
+          "first-page": "183",
+          "volume-title": "Mechanisms of Cell and Tissue Motion",
+          "author": "A Stevens",
+          "year": "1997",
+          "unstructured": "Stevens, A. & Schweitzer, F. in Mechanisms of Cell and Tissue Motion(eds Alt, W., Deutsch, A. & Dunn, G.) 183\u2013192 (Birkh\u00e4user, Basel, (1997))."
+        },
+        {
+          "key": "BF40353_CR20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-67247-7",
+          "volume-title": "The Hypercycle",
+          "author": "M Eigen",
+          "year": "1979",
+          "unstructured": "Eigen, M. & Schuster, P.The Hypercycle(Springer, Berlin, (1979))."
+        },
+        {
+          "key": "BF40353_CR21",
+          "volume-title": "Evolution of Complex Systems. Self-Organization, Entropy and Development",
+          "author": "R Feistel",
+          "year": "1989",
+          "unstructured": "Feistel, R. & Ebeling, W. Evolution of Complex Systems. Self-Organization, Entropy and Development(Kluwer, Dordrecht, (1989))."
+        },
+        {
+          "key": "BF40353_CR22",
+          "doi-asserted-by": "publisher",
+          "first-page": "45",
+          "DOI": "10.1016/0191-2615(92)90019-S",
+          "volume": "26",
+          "author": "H Timmermans",
+          "year": "1992",
+          "unstructured": "Timmermans, H., van der Hagen, X. & Borgers, A. Transportation systems, retail environments and pedestrian trip chaining behaviour: Modelling issues and applications. Transportation Res. B 26, 45\u201359 (1992).",
+          "journal-title": "Transportation Res. B"
+        },
+        {
+          "key": "BF40353_CR23",
+          "volume-title": "Space is a Machine: A Configurational Theory of Architecture",
+          "author": "B Hillier",
+          "year": "1996",
+          "unstructured": "Hillier, B. Space is a Machine: A Configurational Theory of Architecture(Cambridge Univ. Press, (1996))."
+        }
+      ],
+      "container-title": [
+        "Nature"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.nature.com/articles/40353.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.nature.com/articles/40353",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "http://www.nature.com/doifinder/10.1038/40353",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        },
+        {
+          "URL": "https://www.nature.com/articles/40353.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2024,
+            2,
+            26
+          ]
+        ],
+        "date-time": "2024-02-26T18:16:38Z",
+        "timestamp": 1708971398000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.nature.com/articles/40353"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1997,
+            7,
+            3
+          ]
+        ]
+      },
+      "references-count": 23,
+      "journal-issue": {
+        "issue": "6637",
+        "published-print": {
+          "date-parts": [
+            [
+              1997,
+              7,
+              3
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "BF40353"
+      ],
+      "URL": "https://doi.org/10.1038/40353",
+      "relation": {},
+      "ISSN": [
+        "0028-0836",
+        "1476-4687"
+      ],
+      "issn-type": [
+        {
+          "value": "0028-0836",
+          "type": "print"
+        },
+        {
+          "value": "1476-4687",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1997,
+            7,
+            3
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Termites.nlogox",
+  "title": "NetLogo Web: Termites",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "dpr": 2
+  },
+  "sha256": "c32e26a6d79055375f817571670b2d644cabc932a1d912f7b9063b1cc30dc8a6",
+  "version": "NetLogo 7.0.4",
+  "tick": null,
+  "count": 400,
+  "globals": {
+    "number": 400,
+    "density": 20
+  },
+  "widgets": [
+    {
+      "type": "view",
+      "dimensions": {
+        "minPxcor": -100,
+        "maxPxcor": 100,
+        "minPycor": -100,
+        "maxPycor": 100,
+        "patchSize": 2,
+        "wrappingAllowedInX": true,
+        "wrappingAllowedInY": true
+      }
+    },
+    {
+      "type": "button",
+      "source": "go",
+      "display": "go",
+      "running": false
+    },
+    {
+      "type": "button",
+      "source": "setup",
+      "display": "setup"
+    },
+    {
+      "type": "slider",
+      "variable": "number",
+      "display": "number",
+      "currentValue": 400
+    },
+    {
+      "type": "slider",
+      "variable": "density",
+      "display": "density",
+      "currentValue": 20
+    }
+  ],
+  "turtles": [
+    {
+      "id": 0,
+      "x": -94.33147540450057,
+      "y": 10.305927060766734,
+      "color": 9.9,
+      "heading": 103,
+      "hidden?": false
+    },
+    {
+      "id": 1,
+      "x": -82.91929759043268,
+      "y": -83.12161433211442,
+      "color": 9.9,
+      "heading": 54,
+      "hidden?": false
+    },
+    {
+      "id": 2,
+      "x": -37.19029728935795,
+      "y": -39.25642008205583,
+      "color": 9.9,
+      "heading": 83,
+      "hidden?": false
+    },
+    {
+      "id": 3,
+      "x": -8.822035063694173,
+      "y": 93.60600287568093,
+      "color": 9.9,
+      "heading": 39,
+      "hidden?": false
+    },
+    {
+      "id": 4,
+      "x": 72.09480441342163,
+      "y": 98.59226513926077,
+      "color": 9.9,
+      "heading": 60,
+      "hidden?": false
+    },
+    {
+      "id": 5,
+      "x": -37.190114717629335,
+      "y": -98.45930981518333,
+      "color": 9.9,
+      "heading": 279,
+      "hidden?": false
+    }
+  ],
+  "patchTotals": {},
+  "patchColors": {
+    "0": 32204,
+    "45": 8197
+  },
+  "colors": {
+    "9.9": 400
+  },
+  "readback": [
+    {
+      "width": 804,
+      "height": 804,
+      "nonblack": 646416
+    }
+  ],
+  "text": " powered by NetLogo\nTermites\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\n \n?\nfor shortcuts\nT\ngo\nsetup\nnumber\ndensity\n %\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+}

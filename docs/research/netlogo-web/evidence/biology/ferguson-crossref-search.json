@@ -1,0 +1,1387 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Strategies+for+mitigating+an+influenza+pandemic+Ferguson+2006&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1176898,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2026-11-02T20:38:05Z",
+            "timestamp": 1793651885652,
+            "version": "4.5.1"
+          },
+          "reference-count": 24,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7101",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    4,
+                    26
+                  ]
+                ],
+                "date-time": "2006-04-26T00:00:00Z",
+                "timestamp": 1146009600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    4,
+                    26
+                  ]
+                ],
+                "date-time": "2006-04-26T00:00:00Z",
+                "timestamp": 1146009600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                7,
+                27
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature04795",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                27
+              ]
+            ],
+            "date-time": "2006-04-27T04:08:48Z",
+            "timestamp": 1146110928000
+          },
+          "page": "448-452",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 1790,
+          "title": [
+            "Strategies for mitigating an influenza pandemic"
+          ],
+          "prefix": "10.1038",
+          "volume": "442",
+          "author": [
+            {
+              "given": "Neil M.",
+              "family": "Ferguson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Derek A. T.",
+              "family": "Cummings",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Christophe",
+              "family": "Fraser",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "James C.",
+              "family": "Cajka",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Philip C.",
+              "family": "Cooley",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Donald S.",
+              "family": "Burke",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                26
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFnature04795_CR1",
+              "unstructured": "World Health Organisation. WHO global influenza preparedness plan. http://www.who.int/csr/resources/publications/influenza/GIP_2005_5Eweb.pdf (2005)."
+            },
+            {
+              "key": "BFnature04795_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "542",
+              "DOI": "10.1038/35097116",
+              "volume": "413",
+              "author": "NM Ferguson",
+              "year": "2001",
+              "unstructured": "Ferguson, N. M., Donnelly, C. A. & Anderson, R. M. Transmission intensity and impact of control policies on the foot and mouth epidemic in Great Britain. Nature 413, 542\u2013548 (2001)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature04795_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "813",
+              "DOI": "10.1126/science.1065973",
+              "volume": "294",
+              "author": "MJ Keeling",
+              "year": "2001",
+              "unstructured": "Keeling, M. J. et al. Dynamics of the 2001 UK foot and mouth epidemic: stochastic dispersal in a heterogeneous landscape. Science 294, 813\u2013817 (2001)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature04795_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "1961",
+              "DOI": "10.1126/science.1086478",
+              "volume": "300",
+              "author": "S Riley",
+              "year": "2003",
+              "unstructured": "Riley, S. et al. Transmission dynamics of the etiological agent of SARS in Hong Kong: Impact of public health interventions. Science 300, 1961\u20131966 (2003)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature04795_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "1966",
+              "DOI": "10.1126/science.1086616",
+              "volume": "300",
+              "author": "M Lipsitch",
+              "year": "2003",
+              "unstructured": "Lipsitch, M. et al. Transmission dynamics and control of severe acute respiratory syndrome. Science 300, 1966\u20131970 (2003)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature04795_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "209",
+              "DOI": "10.1038/nature04017",
+              "volume": "437",
+              "author": "NM Ferguson",
+              "year": "2005",
+              "unstructured": "Ferguson, N. M. et al. Strategies for containing an emerging influenza pandemic in Southeast Asia. Nature 437, 209\u2013214 (2005)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature04795_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "1083",
+              "DOI": "10.1126/science.1115717",
+              "volume": "309",
+              "author": "IM Longini Jr",
+              "year": "2005",
+              "unstructured": "Longini, I. M. Jr et al. Containing pandemic influenza at the source. Science 309, 1083\u20131087 (2005)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature04795_CR8",
+              "unstructured": "Oakridge National Laboratory. Landscan global population data. http://www.ornl.gov/sci/gist/landscan (2003)."
+            },
+            {
+              "key": "BFnature04795_CR9",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/oso/9780198545996.001.0001",
+              "volume-title": "Infectious Diseases of Humans; Dynamics and Control",
+              "author": "RM Anderson",
+              "year": "1991",
+              "unstructured": "Anderson, R. M. & May, R. M. Infectious Diseases of Humans; Dynamics and Control (Oxford Univ. Press, Oxford, 1991)"
+            },
+            {
+              "key": "BFnature04795_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "201",
+              "DOI": "10.3201/eid1102.041061",
+              "volume": "11",
+              "author": "T Chotpitayasunondh",
+              "year": "2005",
+              "unstructured": "Chotpitayasunondh, T. et al. Human disease from influenza A (H5N1), Thailand, 2004. Emerg. Infect. Dis. 11, 201\u2013209 (2005)",
+              "journal-title": "Emerg. Infect. Dis."
+            },
+            {
+              "key": "BFnature04795_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "1374",
+              "DOI": "10.1056/NEJMra052211",
+              "volume": "353",
+              "author": "The Writing Committee of the WHO Consultation on Human Influenza A/H5N1",
+              "year": "2005",
+              "unstructured": "The Writing Committee of the WHO Consultation on Human Influenza A/H5N1. Current concepts\u2014Avian influenza A (H5N1) infection in humans. N. Engl. J. Med. 353, 1374\u20131385 (2005)",
+              "journal-title": "N. Engl. J. Med."
+            },
+            {
+              "key": "BFnature04795_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "88",
+              "DOI": "10.3201/eid1201.051371",
+              "volume": "12",
+              "author": "World Health Organisation Writing Group",
+              "year": "2006",
+              "unstructured": "World Health Organisation Writing Group. Non-pharmaceutical interventions for pandemic influenza, national and community measures. Emerg. Infect. Dis. 12, 88\u201394 (2006)",
+              "journal-title": "Emerg. Infect. Dis."
+            },
+            {
+              "key": "BFnature04795_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "1738",
+              "DOI": "10.3201/eid1111.050729",
+              "volume": "11",
+              "author": "JY Lo",
+              "year": "2005",
+              "unstructured": "Lo, J. Y. et al. Respiratory infections during SARS outbreak, Hong Kong, 2003. Emerg. Infect. Dis. 11, 1738\u20131741 (2005)",
+              "journal-title": "Emerg. Infect. Dis."
+            },
+            {
+              "key": "BFnature04795_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "1900",
+              "DOI": "10.3201/eid1011.040729",
+              "volume": "10",
+              "author": "DM Bell",
+              "year": "2004",
+              "unstructured": "Bell, D. M. Public health interventions and SARS spread, 2003. Emerg. Infect. Dis. 10, 1900\u20131906 (2004)",
+              "journal-title": "Emerg. Infect. Dis."
+            },
+            {
+              "key": "BFnature04795_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "15124",
+              "DOI": "10.1073/pnas.0308344101",
+              "volume": "101",
+              "author": "L Hufnagel",
+              "year": "2004",
+              "unstructured": "Hufnagel, L., Brockmann, D. & Geisel, T. Forecast and control of epidemics in a globalized world. Proc. Natl Acad. Sci. USA 101, 15124\u201315129 (2004)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature04795_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "81",
+              "DOI": "10.3201/eid1201.051370",
+              "volume": "12",
+              "author": "World Health Organisation Writing Group",
+              "year": "2006",
+              "unstructured": "World Health Organisation Writing Group, Non-pharmaceutical interventions for pandemic influenza, international measures. Emerg. Infect. Dis. 12, 81\u201387 (2006)",
+              "journal-title": "Emerg. Infect. Dis."
+            },
+            {
+              "key": "BFnature04795_CR17",
+              "unstructured": "Hong Kong International Airport. http://www.hongkongairport.com/eng/aboutus/statistics.html (2003)."
+            },
+            {
+              "key": "BFnature04795_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1355",
+              "DOI": "10.3201/eid1209.041344",
+              "volume": "11",
+              "author": "R Gani",
+              "year": "2005",
+              "unstructured": "Gani, R. et al. Potential impact of antiviral drug use during influenza pandemic. Emerg. Infect. Dis. 11, 1355\u20131362 (2005)",
+              "journal-title": "Emerg. Infect. Dis."
+            },
+            {
+              "key": "BFnature04795_CR19",
+              "first-page": "495",
+              "volume": "330",
+              "author": "R Coombes",
+              "year": "2005",
+              "unstructured": "Coombes, R. UK stocks up on antiviral drug to tackle flu outbreak. Br. Med. J. 330, 495 (2005)",
+              "journal-title": "Br. Med. J."
+            },
+            {
+              "key": "BFnature04795_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "977",
+              "DOI": "10.1093/jac/dkg136",
+              "volume": "51",
+              "author": "NM Ferguson",
+              "year": "2003",
+              "unstructured": "Ferguson, N. M., Mallett, S., Jackson, H., Roberts, N. & Ward, P. A population-dynamic model for evaluating the potential spread of drug-resistant influenza virus infections during community-based use of antivirals. J. Antimicrob. Chemother. 51, 977\u2013990 (2003)",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "BFnature04795_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "736",
+              "DOI": "10.1093/oxfordjournals.aje.a113356",
+              "volume": "115",
+              "author": "IMJ Longini",
+              "year": "1982",
+              "unstructured": "Longini, I. M. J., Koopman, J. S., Monto, A. S. & Fox, J. P. Estimating household and community transmission parameters for influenza. Am. J. Epidemiol. 115, 736\u2013751 (1982)",
+              "journal-title": "Am. J. Epidemiol."
+            },
+            {
+              "key": "BFnature04795_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "3469",
+              "DOI": "10.1002/sim.1912",
+              "volume": "23",
+              "author": "S Cauchemez",
+              "year": "2004",
+              "unstructured": "Cauchemez, S., Carrat, F., Viboud, C., Valleron, A. J. & Boelle, P. Y. A. Bayesian MCMC approach to study transmission of influenza: application to household longitudinal data. Stat. Med. 23, 3469\u20133487 (2004)",
+              "journal-title": "Stat. Med."
+            },
+            {
+              "key": "BFnature04795_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "681",
+              "DOI": "10.1038/nature02007",
+              "volume": "425",
+              "author": "NM Ferguson",
+              "year": "2003",
+              "unstructured": "Ferguson, N. M. et al. Planning for smallpox outbreaks. Nature 425, 681\u2013685 (2003)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature04795_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "968",
+              "DOI": "10.1126/science.1096898",
+              "volume": "304",
+              "author": "NM Ferguson",
+              "year": "2004",
+              "unstructured": "Ferguson, N. M., Fraser, C., Donnelly, C. A., Ghani, A. C. & Anderson, R. M. Public health risk from the avian H5N1 influenza epidemic. Science 304, 968\u2013969 (2004)",
+              "journal-title": "Science"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.nature.com/articles/nature04795.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/nature04795",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/nature04795.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2025-04-10T08:42:00Z",
+            "timestamp": 1744274520000
+          },
+          "score": 34.373238,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature04795"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                26
+              ]
+            ]
+          },
+          "references-count": 24,
+          "journal-issue": {
+            "issue": "7101",
+            "published-print": {
+              "date-parts": [
+                [
+                  2006,
+                  7,
+                  27
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature04795"
+          ],
+          "URL": "https://doi.org/10.1038/nature04795",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                26
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "25 January 2006",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "11 April 2006",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "26 April 2006",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "Reprints and permissions information is available at\n                      \n                      . The authors declare no competing financial interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                3
+              ]
+            ],
+            "date-time": "2026-08-03T06:55:26Z",
+            "timestamp": 1785740126503,
+            "version": "3.56.0"
+          },
+          "reference-count": 19,
+          "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+          "issue": "4",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2008,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.1097/01.phh.0000324566.72533.0b",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                8,
+                29
+              ]
+            ],
+            "date-time": "2013-08-29T13:28:20Z",
+            "timestamp": 1377782900000
+          },
+          "page": "372-378",
+          "source": "Crossref",
+          "is-referenced-by-count": 49,
+          "title": [
+            "Mitigating Pandemic Influenza"
+          ],
+          "prefix": "10.1097",
+          "volume": "14",
+          "author": [
+            {
+              "given": "Benjamin E.",
+              "family": "Berkman",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "276",
+          "reference": [
+            {
+              "issue": "9",
+              "key": "R1-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1414",
+              "DOI": "10.3201/eid1209.060369",
+              "article-title": "State plans for containment of pandemic influenza.",
+              "volume": "12",
+              "author": "Holmberg",
+              "year": "2006",
+              "journal-title": "Emerg Infect Dis"
+            },
+            {
+              "issue": "2",
+              "key": "R3-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "170",
+              "DOI": "10.1111/j.1748-720X.2002.tb00384.x",
+              "article-title": "Public health ethics: mapping the terrain.",
+              "volume": "30",
+              "author": "Childress",
+              "year": "2002",
+              "journal-title": "J Law Med Ethics"
+            },
+            {
+              "issue": "11",
+              "key": "R4-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1776",
+              "DOI": "10.2105/AJPH.91.11.1776",
+              "article-title": "An ethics framework for public health.",
+              "volume": "91",
+              "author": "Kass",
+              "year": "2001",
+              "journal-title": "Am J Public Health"
+            },
+            {
+              "key": "R5-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "854",
+              "DOI": "10.1126/science.1125347",
+              "article-title": "Who should get influenza vaccine when not all can?",
+              "volume": "312",
+              "author": "Emanuel",
+              "year": "2006",
+              "journal-title": "Science"
+            },
+            {
+              "key": "R8-11-20210210",
+              "first-page": "121",
+              "article-title": "Pandemic influenza: ethics, law, and the publics health.",
+              "volume": "59",
+              "author": "Gostin",
+              "year": "2007",
+              "journal-title": "Adm Law Rev"
+            },
+            {
+              "issue": "4",
+              "key": "R9-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "323",
+              "DOI": "10.1056/NEJMp048343",
+              "article-title": "The threat of an avian influenza pandemic.",
+              "volume": "352",
+              "author": "Monto",
+              "year": "2005",
+              "journal-title": "N Engl J Med"
+            },
+            {
+              "issue": "1",
+              "key": "R10-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "15",
+              "DOI": "10.3201/eid1209.05-0979",
+              "article-title": "1918 Influenza: the mother of all pandemics.",
+              "volume": "12",
+              "author": "Taubenberger",
+              "year": "2006",
+              "journal-title": "Emerg Infect Dis"
+            },
+            {
+              "issue": "1",
+              "key": "R13-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "40",
+              "DOI": "10.3201/eid1201.051132",
+              "article-title": "The swine flu episode and the fog of epidemics.",
+              "volume": "12",
+              "author": "Krause",
+              "year": "2006",
+              "journal-title": "Emerg Infect Dis"
+            },
+            {
+              "issue": "1",
+              "key": "R15-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "92",
+              "DOI": "10.1086/499924",
+              "article-title": "Working group on pandemic influenza preparedness: joint statement in response to Department of Health and Human Services pandemic influenza plan.",
+              "volume": "42",
+              "author": "Levi",
+              "year": "2006",
+              "journal-title": "Clin Infect Dis"
+            },
+            {
+              "issue": "8",
+              "key": "R16-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "785",
+              "DOI": "10.1056/NEJMp068030",
+              "article-title": "Antiviral resistance in influenza viruses--implications for management and pandemic response.",
+              "volume": "354",
+              "author": "Hayden",
+              "year": "2006",
+              "journal-title": "N Engl J Med"
+            },
+            {
+              "issue": "12",
+              "key": "R18-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1961",
+              "DOI": "10.3201/eid1212.060506",
+              "article-title": "Nonpharmaceutical influenza mitigation strategies, US communities, 1918-1920 pandemic.",
+              "volume": "12",
+              "author": "Markel",
+              "year": "2006",
+              "journal-title": "Emerg Infect Dis"
+            },
+            {
+              "key": "R19-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1053",
+              "DOI": "10.1377/hlthaff.25.4.1053",
+              "article-title": "What does social justice require for the publics health?: public health ethics and policy imperatives.",
+              "volume": "25",
+              "author": "Gostin",
+              "year": "2006",
+              "journal-title": "Health Aff"
+            },
+            {
+              "issue": "5",
+              "key": "R22-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "781",
+              "DOI": "10.2105/AJPH.91.5.781",
+              "article-title": "Food insufficiency, family income, and health in US preschool and school-aged children.",
+              "volume": "91",
+              "author": "Alaimo",
+              "year": "2001",
+              "journal-title": "Am J Public Health"
+            },
+            {
+              "issue": "2",
+              "key": "R25-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "285",
+              "DOI": "10.1353/dem.2004.0013",
+              "article-title": "Self-care: why do parents leave their children unsupervised?",
+              "volume": "41",
+              "author": "Casper",
+              "year": "2004",
+              "journal-title": "Demography"
+            },
+            {
+              "issue": "2",
+              "key": "R27-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "151",
+              "DOI": "10.2307/1602715",
+              "article-title": "Children in self-care.",
+              "volume": "9",
+              "author": "Kerrebrock",
+              "year": "1999",
+              "journal-title": "Future Child"
+            },
+            {
+              "issue": "1",
+              "key": "R28-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "36",
+              "DOI": "10.1207/s15374424jccp1801_5",
+              "article-title": "Latchkey childrens preparation for self-care: overestimated, underrehearsed, and unsafe.",
+              "volume": "18",
+              "author": "Peterson",
+              "year": "1989",
+              "journal-title": "J Clin Child Psychol"
+            },
+            {
+              "issue": "5",
+              "key": "R29-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "613",
+              "DOI": "10.1177/000312240406900501",
+              "article-title": "Are schools the great equalizer? Cognitive inequality during the summer months and the school year.",
+              "volume": "69",
+              "author": "Downey",
+              "year": "2004",
+              "journal-title": "Am Sociol Rev"
+            },
+            {
+              "issue": "1",
+              "key": "R30-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "72",
+              "DOI": "10.2307/2096145",
+              "article-title": "Summer setback: race, poverty, school composition, and mathematics achievement in the first two years of school.",
+              "volume": "57",
+              "author": "Entwisle",
+              "year": "1992",
+              "journal-title": "Am Sociol Rev"
+            },
+            {
+              "issue": "suppl 1",
+              "key": "R32-11-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "S49",
+              "DOI": "10.2105/AJPH.2006.097303",
+              "article-title": "Encouraging compliance with quarantine: a proposal to provide job security and income replacement.",
+              "volume": "97",
+              "author": "Rothstein",
+              "year": "2007",
+              "journal-title": "Am J Public Health"
+            }
+          ],
+          "container-title": [
+            "Journal of Public Health Management and Practice"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://journals.lww.com/10.1097/01.PHH.0000324566.72533.0b",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                5,
+                13
+              ]
+            ],
+            "date-time": "2021-05-13T19:40:00Z",
+            "timestamp": 1620934800000
+          },
+          "score": 31.433737,
+          "resource": {
+            "primary": {
+              "URL": "https://journals.lww.com/00124784-200807000-00011"
+            }
+          },
+          "subtitle": [
+            "The Ethics of Implementing a School Closure Policy"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2008,
+                7
+              ]
+            ]
+          },
+          "references-count": 19,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2008
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1097/01.phh.0000324566.72533.0b",
+          "ISSN": [
+            "1078-4659"
+          ],
+          "issn-type": [
+            {
+              "value": "1078-4659",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2008,
+                7
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                12
+              ]
+            ],
+            "date-time": "2026-05-12T22:11:13Z",
+            "timestamp": 1778623873690,
+            "version": "3.51.4"
+          },
+          "reference-count": 37,
+          "publisher": "The Royal Society",
+          "issue": "45",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2009,
+                    9,
+                    15
+                  ]
+                ],
+                "date-time": "2009-09-15T00:00:00Z",
+                "timestamp": 1252972800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://royalsociety.org/journals/ethics-policies/data-sharing-mining/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "royalsocietypublishing.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "J. R. Soc. Interface."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2010,
+                4,
+                6
+              ]
+            ]
+          },
+          "abstract": "<jats:p>The recent worldwide spread of the swine-origin H1N1 2009 influenza outbreak has resulted in its designation as a pandemic by the World Health Organization. While it appears to result in mild symptoms, concern still exists that a more severe influenza pandemic with a high case fatality ratio might arise by reassortment or mutation of the currently circulating avian influenza (H5N1) virus. Given that recently developed candidate pre-pandemic H5N1 vaccines have shown potential for cross-strain protection, we investigated alternative vaccination strategies that exploit such vaccines using an agent-based simulation model of an actual community of approximately 30 000 people in a developed country. Assuming that a two-dose vaccination regimen would be required, we examined three vaccination strategies: pre-emptive, with vaccination applied prior to emergence of human-transmissible H5N1 influenza; reactive, where vaccination was initiated immediately after the first cases in the community were diagnosed; and a \u2018split\u2019 strategy where the first dose was administered pre-emptively during the pre-pandemic phase, with the second dose administered reactively. We showed that by effectively moving the delay between first and second doses into the pre-pandemic period, the split vaccination strategy achieved a substantially better attack rate reduction than the reactive strategy. Our results for an influenza strain with a reproduction number of 1.5 suggest reactive vaccination strategies that may be applicable to the current H1N1 2009 pandemic.</jats:p>",
+          "DOI": "10.1098/rsif.2009.0312",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                9,
+                15
+              ]
+            ],
+            "date-time": "2009-09-15T23:28:56Z",
+            "timestamp": 1253057336000
+          },
+          "page": "573-586",
+          "update-policy": "https://doi.org/10.1098/crossmark-policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 28,
+          "title": [
+            "Strategies for mitigating an influenza pandemic with pre-pandemic H5N1 vaccines"
+          ],
+          "prefix": "10.1098",
+          "volume": "7",
+          "author": [
+            {
+              "given": "George",
+              "family": "Milne",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "School of Computer Science and Software Engineering, The University of Western Australia, Perth, Western Australia, Australia"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Joel",
+              "family": "Kelso",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Computer Science and Software Engineering, The University of Western Australia, Perth, Western Australia, Australia"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Heath",
+              "family": "Kelly",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Computer Science and Software Engineering, The University of Western Australia, Perth, Western Australia, Australia"
+                },
+                {
+                  "name": "School of Population Health, University of Melbourne, Melbourne, Victoria, Australia"
+                },
+                {
+                  "name": "Epidemiology Unit, Victorian Infectious Diseases Reference Laboratory, Carlton, Victoria, Australia"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "175",
+          "published-online": {
+            "date-parts": [
+              [
+                2009,
+                9,
+                15
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_2_2_1",
+              "unstructured": "Australian Bureau of Statistics. 2004 The 2004 Australian Census. See http://www.abs.gov.au. (Retrieved 10 November 2008)."
+            },
+            {
+              "key": "e_1_3_2_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pmed.0030387"
+            },
+            {
+              "key": "e_1_3_2_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0140-6736(06)68656-X"
+            },
+            {
+              "key": "e_1_3_2_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oxfordjournals.aje.a121203"
+            },
+            {
+              "key": "e_1_3_2_6_1",
+              "first-page": "CD001269",
+              "article-title": "Vaccines for preventing influenza in healthy adults",
+              "volume": "2",
+              "author": "Demicheli V.",
+              "year": "2007",
+              "journal-title": "Cochrane Database Syst. Rev."
+            },
+            {
+              "key": "e_1_3_2_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1056/NEJMoa054512"
+            },
+            {
+              "key": "e_1_3_2_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature04017"
+            },
+            {
+              "key": "e_1_3_2_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature04795"
+            },
+            {
+              "key": "e_1_3_2_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1176062"
+            },
+            {
+              "key": "e_1_3_2_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0601266103"
+            },
+            {
+              "key": "e_1_3_2_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3201/eid1211.060255"
+            },
+            {
+              "key": "e_1_3_2_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oxfordjournals.epirev.a017917"
+            },
+            {
+              "key": "e_1_3_2_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.vaccine.2009.04.059"
+            },
+            {
+              "key": "e_1_3_2_15_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "35",
+              "DOI": "10.5694/j.1326-5377.2006.tb00704.x",
+              "article-title": "The Australian response: pandemic influenza preparedness",
+              "volume": "185",
+              "author": "Horvath J.",
+              "year": "2006",
+              "journal-title": "Med. J. Aust."
+            },
+            {
+              "key": "e_1_3_2_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1473-3099(08)70232-9"
+            },
+            {
+              "key": "e_1_3_2_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1471-2458-9-117"
+            },
+            {
+              "key": "e_1_3_2_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.vaccine.2006.07.021"
+            },
+            {
+              "key": "e_1_3_2_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/4371108a"
+            },
+            {
+              "key": "e_1_3_2_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0140-6736(07)61297-5"
+            },
+            {
+              "key": "e_1_3_2_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0001665"
+            },
+            {
+              "key": "e_1_3_2_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0140-6736(06)69294-5"
+            },
+            {
+              "key": "e_1_3_2_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pmed.0040015"
+            },
+            {
+              "key": "e_1_3_2_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1115717"
+            },
+            {
+              "key": "e_1_3_2_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0004005"
+            },
+            {
+              "key": "e_1_3_2_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0140-6736(06)68511-5"
+            },
+            {
+              "key": "e_1_3_2_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.vaccine.2008.04.043"
+            },
+            {
+              "key": "e_1_3_2_28_1",
+              "first-page": "1",
+              "article-title": "Transmission potential of the new influenza A (H1N1) virus and its age-specificity in Japan",
+              "volume": "14",
+              "author": "Nishiura H.",
+              "year": "2009",
+              "journal-title": "Eur. Commun. Dis. Bull."
+            },
+            {
+              "key": "e_1_3_2_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.vaccine.2007.05.033"
+            },
+            {
+              "key": "e_1_3_2_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pmed.0040218"
+            },
+            {
+              "key": "e_1_3_2_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1056/NEJMc0805274"
+            },
+            {
+              "key": "e_1_3_2_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1056/NEJMoa055778"
+            },
+            {
+              "key": "e_1_3_2_33_1",
+              "unstructured": "UK Department of Health. 2007 Pandemic flu: a national framework for responding to an influenza pandemic. See http://www.dh.gov.uk/en/Publicationsandstatistics/Publications/PublicationsPolicyAndGuidance/DH_080734 (22 November 2007)."
+            },
+            {
+              "key": "e_1_3_2_34_1",
+              "unstructured": "US Department of Health and Human Services. 2006 Pandemic influenza plan. See http://www.hhs.gov/pandemicflu/plan/ (November 2006)."
+            },
+            {
+              "key": "e_1_3_2_35_1",
+              "unstructured": "WHO. 2007 Options for the use of human H5N1 influenza vaccines and the WHO H5N1 vaccine stockpile (WHO/HSE/EPR/GIP/2008.1). Geneva Switzerland: World Health Organization."
+            },
+            {
+              "key": "e_1_3_2_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pmed.0030361"
+            },
+            {
+              "key": "e_1_3_2_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pmed.1000085"
+            },
+            {
+              "key": "e_1_3_2_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/01.inf.0000116292.46143.d6"
+            }
+          ],
+          "container-title": [
+            "Journal of The Royal Society Interface"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2009.0312",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://royalsocietypublishing.org/doi/full-xml/10.1098/rsif.2009.0312",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2009.0312",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                12
+              ]
+            ],
+            "date-time": "2026-05-12T21:19:57Z",
+            "timestamp": 1778620797000
+          },
+          "score": 30.561424,
+          "resource": {
+            "primary": {
+              "URL": "http://royalsocietypublishing.org/rsif/article/7/45/573-586/65584"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                9,
+                15
+              ]
+            ]
+          },
+          "references-count": 37,
+          "journal-issue": {
+            "issue": "45",
+            "published-print": {
+              "date-parts": [
+                [
+                  2010,
+                  4,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1098/rsif.2009.0312"
+          ],
+          "URL": "https://doi.org/10.1098/rsif.2009.0312",
+          "ISSN": [
+            "1742-5689",
+            "1742-5662"
+          ],
+          "issn-type": [
+            {
+              "value": "1742-5689",
+              "type": "print"
+            },
+            {
+              "value": "1742-5662",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                9,
+                15
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2009-07-24",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2009-08-18",
+              "order": 1,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2009-09-15",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

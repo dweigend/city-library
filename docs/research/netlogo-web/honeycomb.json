@@ -1,0 +1,104 @@
+{
+  "slug": "honeycomb",
+  "name": "Honeycomb",
+  "catalogPath": "Sample Models/Biology/Honeycomb",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogox",
+  "deliveryBatch": "B07",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can local movement feedback generate a honeycomb-like lattice? NetLogo Honeycomb has bees move in circles while leaving a diffusing, evaporating chemical; the chemical changes movement speed and turning radius. Its Info attributes these artificial rules to David Little and explicitly avoids claiming that real bees follow them. Scientific studies of comb organization [1] and physical cell transformation [2] provide biological comparisons, while the honeycomb theorem [3] addresses geometric efficiency. These are distinct explanations and should not be conflated. The simulation illustrates regular pattern formation from a chosen feedback loop. Hexagonal-looking output neither identifies the actual construction behavior of bees nor proves that this chemical mechanism optimizes real wax use.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Honeycomb.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 812353ef075700900bccf35cc7587137a46fb6c9d3c8a17464790669a72124db",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/honeycomb.nlogox",
+    "infoFile": "evidence/biology/honeycomb-info.txt",
+    "originalModelCitation": "* Wilensky, U. (2003).  NetLogo Honeycomb model.  http://ccl.northwestern.edu/netlogo/models/Honeycomb.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "camazine",
+      "authors": [
+        "Scott Camazine"
+      ],
+      "title": "Self-organizing pattern formation on the combs of honey bee colonies",
+      "year": 1991,
+      "venue": "Behavioral Ecology and Sociobiology",
+      "doi": "10.1007/bf00172140",
+      "url": "https://doi.org/10.1007/bf00172140",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Self-organizing+pattern+formation+on+the+combs+of+honey+bee+colonies+Camazine+1991&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/camazine-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "28",
+      "issue": "1",
+      "pages": null,
+      "relevance": "Examines self-organized comb patterning, providing biological context for emergent organization."
+    },
+    {
+      "id": "karihaloo",
+      "authors": [
+        "B. L. Karihaloo",
+        "K. Zhang",
+        "J. Wang"
+      ],
+      "title": "Honeybee combs: how the circular cells transform into rounded hexagons",
+      "year": 2013,
+      "venue": "Journal of The Royal Society Interface",
+      "doi": "10.1098/rsif.2013.0299",
+      "url": "https://doi.org/10.1098/rsif.2013.0299",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Honeybee+combs+how+the+circular+cells+transform+into+rounded+hexagons+Karihaloo+Zhang+Wang+2013&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/karihaloo-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frsif.2013.0299%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/karihaloo-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "10",
+      "issue": "86",
+      "pages": "20130299",
+      "relevance": "Studies a physical mechanism of circular-to-hexagonal cell transformation, an alternative to this model’s pheromone rules."
+    },
+    {
+      "id": "hales",
+      "authors": [
+        "T. C. Hales"
+      ],
+      "title": "The Honeycomb Conjecture",
+      "year": 2001,
+      "venue": "Discrete & Computational Geometry",
+      "doi": "10.1007/s004540010071",
+      "url": "https://doi.org/10.1007/s004540010071",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=The+honeycomb+conjecture+Hales+2001&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/hales-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "25",
+      "issue": "1",
+      "pages": "1-22",
+      "relevance": "Establishes the mathematical honeycomb problem, distinguishing geometric efficiency from a construction mechanism."
+    }
+  ],
+  "gaps": []
+}

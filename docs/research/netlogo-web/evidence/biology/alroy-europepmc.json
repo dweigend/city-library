@@ -1,0 +1,199 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1059342%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1126/science.1059342\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "11397940",
+          "source": "MED",
+          "pmid": "11397940",
+          "doi": "10.1126/science.1059342",
+          "title": "A multispecies overkill simulation of the end-Pleistocene megafaunal mass extinction.",
+          "authorString": "Alroy J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Alroy J",
+                "lastName": "Alroy",
+                "firstName": "J",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Center for Ecological Analysis and Synthesis, University of California, 735 State Street, Suite 300, Santa Barbara, CA 93101, USA. alroy@nceas.ucsb.edu"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "5523",
+            "volume": "292",
+            "journalIssueId": 981015,
+            "dateOfPublication": "2001 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 2001,
+            "journal": {
+              "medlineAbbreviation": "Science",
+              "title": "Science (New York, N.Y.)",
+              "essn": "1095-9203",
+              "issn": "0036-8075",
+              "nlmid": "0404511",
+              "isoabbreviation": "Science"
+            },
+            "printPublicationDate": "2001-06-01"
+          },
+          "pubYear": "2001",
+          "pageInfo": "1893-1896",
+          "abstractText": "A computer simulation of North American end-Pleistocene human and large herbivore population dynamics correctly predicts the extinction or survival of 32 out of 41 prey species. Slow human population growth rates, random hunting, and low maximum hunting effort are assumed; additional parameters are based on published values. Predictions are close to observed values for overall extinction rates, human population densities, game consumption rates, and the temporal overlap of humans and extinct species. Results are robust to variation in unconstrained parameters. This fully mechanistic model accounts for megafaunal extinction without invoking climate change and secondary ecological effects.",
+          "affiliation": "National Center for Ecological Analysis and Synthesis, University of California, 735 State Street, Suite 300, Santa Barbara, CA 93101, USA. alroy@nceas.ucsb.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Mammals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Body Constitution"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Ecosystem"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Climate"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Population Density"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Population Dynamics"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Population Growth"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Time"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Paleontology"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Human Activities"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computer Simulation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "North America"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.1059342"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "reference": "Science 2001 Sep 21;293(5538):2205",
+                "type": "Erratum in",
+                "orderIn": 1
+              },
+              {
+                "source": "MED",
+                "id": "11713777",
+                "reference": "Science. 2001 Nov 16;294(5546):1459-62. doi: 10.1126/science.294.5546.1459c",
+                "type": "Comment in",
+                "orderIn": 2
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 131,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2001-06-21",
+          "dateOfCreation": "2001-06-09",
+          "dateOfRevision": "2024-01-09",
+          "firstPublicationDate": "2001-06-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,650 @@
+{
+  "checkpoint": "1b0eb18 plus active authoring runtime/catalog WIP on 6 November 2026",
+  "startedAt": "2026-11-06T22:09:22.957Z",
+  "method": "Separate real Chromium context, DPR1, frozen browser harness plus public defineUI fixtures; no mock DOM/model",
+  "hosts": [
+    {
+      "host": "legacy",
+      "harness": {
+        "host": "legacy",
+        "examples": 5,
+        "overlapAndPrecedence": true
+      },
+      "fixtures": [
+        {
+          "kind": "running-render-error",
+          "stoppedTick": 1,
+          "recoveredTick": 0,
+          "primaryError": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n1\n\nA bar chart cannot mix numeric and categorical x values.\n\nModel info\nRunning renderer\n1\n0\nActual tick\nGood"
+        },
+        {
+          "kind": "running-format-error",
+          "stoppedTick": 1,
+          "recoveredTick": 0,
+          "primaryError": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\n\nRunning formatter failure\n\nModel info"
+        },
+        {
+          "kind": "grouped",
+          "tick": 0,
+          "bars": [
+            {
+              "x": 92.1,
+              "y": 84,
+              "width": 112.4,
+              "height": 0
+            },
+            {
+              "x": 373.1,
+              "y": 84,
+              "width": 112.4,
+              "height": 70
+            },
+            {
+              "x": 204.5,
+              "y": 84,
+              "width": 112.4,
+              "height": 0
+            }
+          ],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\n\nModel initialized.\n\nModel info\nActual field coordinates\n1\n-1\nOrigin\nWest\nSample field\nCoordinate (world units)\nX\nY",
+          "errors": [],
+          "accessible": "x axis: Sample field; y axis: Coordinate (world units); X: x Origin, y 0; x West, y -1; Y: x Origin, y 0"
+        },
+        {
+          "kind": "grouped-nonzero",
+          "tick": 0,
+          "bars": [
+            {
+              "x": 92.1,
+              "y": 84,
+              "width": 112.4,
+              "height": 70
+            },
+            {
+              "x": 373.1,
+              "y": 14,
+              "width": 112.4,
+              "height": 70
+            },
+            {
+              "x": 204.5,
+              "y": 84,
+              "width": 112.4,
+              "height": 70
+            },
+            {
+              "x": 485.5,
+              "y": 14,
+              "width": 112.4,
+              "height": 70
+            }
+          ],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\n\nModel initialized.\n\nModel info\ngrouped-nonzero\n1\n-1\nSouthwest\nNortheast\nSample field\nCoordinate (world units)\nX\nY",
+          "errors": [],
+          "accessible": "x axis: Sample field; y axis: Coordinate (world units); X: x Southwest, y -1; x Northeast, y 1; Y: x Southwest, y -1; x Northeast, y 1"
+        },
+        {
+          "kind": "empty",
+          "tick": 0,
+          "bars": [],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\n\nModel initialized.\n\nModel info\nempty\n1\n0\n1\nSample field\nCoordinate (world units)\nEmpty",
+          "errors": [],
+          "accessible": "x axis: Sample field; y axis: Coordinate (world units); Empty: no samples"
+        },
+        {
+          "kind": "numeric-negative",
+          "tick": 0,
+          "bars": [
+            {
+              "x": 40,
+              "y": 84,
+              "width": 48,
+              "height": 70
+            },
+            {
+              "x": 321,
+              "y": 84,
+              "width": 48,
+              "height": 0
+            }
+          ],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\n\nModel initialized.\n\nModel info\nnumeric-negative\n1\n-1\n1\nSample field\nCoordinate (world units)\nNumeric coordinates",
+          "errors": [],
+          "accessible": "x axis: Sample field; y axis: Coordinate (world units); Numeric coordinates: x -1, y -1; x 0, y 0"
+        },
+        {
+          "kind": "mixed",
+          "tick": 0,
+          "bars": [],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\n\nA bar chart cannot mix numeric and categorical x values.\n\nModel info",
+          "errors": [
+            "A bar chart cannot mix numeric and categorical x values."
+          ]
+        },
+        {
+          "kind": "duplicate",
+          "tick": 0,
+          "bars": [],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n0\n\nDuplicate category within a bar series.\n\nModel info",
+          "errors": [
+            "Duplicate category within a bar series."
+          ]
+        },
+        {
+          "kind": "format-error",
+          "tick": 0,
+          "bars": [],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\n\nIntentional formatter failure\n\nModel info",
+          "errors": [
+            "Intentional formatter failure"
+          ]
+        }
+      ],
+      "screenshots": [
+        {
+          "kind": "grouped",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-grouped-1366-light.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-grouped-1366-dark.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-grouped-390-light.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-grouped-390-dark.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped-nonzero",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-grouped-nonzero-1366-light.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped-nonzero",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-grouped-nonzero-1366-dark.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped-nonzero",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-grouped-nonzero-390-light.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped-nonzero",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-grouped-nonzero-390-dark.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "format-error",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-format-error-1366-light.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "format-error",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-format-error-1366-dark.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "format-error",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-format-error-390-light.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "format-error",
+          "path": "/tmp/city-library-authoring-acceptance-legacy-format-error-390-dark.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        }
+      ]
+    },
+    {
+      "host": "svelte",
+      "harness": {
+        "host": "svelte",
+        "examples": 5,
+        "overlapAndPrecedence": true
+      },
+      "fixtures": [
+        {
+          "kind": "running-render-error",
+          "stoppedTick": 1,
+          "recoveredTick": 0,
+          "primaryError": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\n\nA bar chart cannot mix numeric and categorical x values.\n\nTick\n1\nPaused\nRunning renderer\n1\n0\nActual tick\nGood"
+        },
+        {
+          "kind": "running-format-error",
+          "stoppedTick": 1,
+          "recoveredTick": 0,
+          "primaryError": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\n\nRunning formatter failure\n\nTick\n0\nPaused"
+        },
+        {
+          "kind": "grouped",
+          "tick": 0,
+          "bars": [
+            {
+              "x": 92.1,
+              "y": 84,
+              "width": 112.4,
+              "height": 0
+            },
+            {
+              "x": 373.1,
+              "y": 84,
+              "width": 112.4,
+              "height": 70
+            },
+            {
+              "x": 204.5,
+              "y": 84,
+              "width": 112.4,
+              "height": 0
+            }
+          ],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nTick\n0\nPaused\nActual field coordinates\n1\n-1\nOrigin\nWest\nSample field\nCoordinate (world units)\nX\nY",
+          "errors": [],
+          "accessible": "x axis: Sample field; y axis: Coordinate (world units); X: x Origin, y 0; x West, y -1; Y: x Origin, y 0"
+        },
+        {
+          "kind": "grouped-nonzero",
+          "tick": 0,
+          "bars": [
+            {
+              "x": 92.1,
+              "y": 84,
+              "width": 112.4,
+              "height": 70
+            },
+            {
+              "x": 373.1,
+              "y": 14,
+              "width": 112.4,
+              "height": 70
+            },
+            {
+              "x": 204.5,
+              "y": 84,
+              "width": 112.4,
+              "height": 70
+            },
+            {
+              "x": 485.5,
+              "y": 14,
+              "width": 112.4,
+              "height": 70
+            }
+          ],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nTick\n0\nPaused\ngrouped-nonzero\n1\n-1\nSouthwest\nNortheast\nSample field\nCoordinate (world units)\nX\nY",
+          "errors": [],
+          "accessible": "x axis: Sample field; y axis: Coordinate (world units); X: x Southwest, y -1; x Northeast, y 1; Y: x Southwest, y -1; x Northeast, y 1"
+        },
+        {
+          "kind": "empty",
+          "tick": 0,
+          "bars": [],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nTick\n0\nPaused\nempty\n1\n0\n1\nSample field\nCoordinate (world units)\nEmpty",
+          "errors": [],
+          "accessible": "x axis: Sample field; y axis: Coordinate (world units); Empty: no samples"
+        },
+        {
+          "kind": "numeric-negative",
+          "tick": 0,
+          "bars": [
+            {
+              "x": 40,
+              "y": 84,
+              "width": 48,
+              "height": 70
+            },
+            {
+              "x": 321,
+              "y": 84,
+              "width": 48,
+              "height": 0
+            }
+          ],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nTick\n0\nPaused\nnumeric-negative\n1\n-1\n1\nSample field\nCoordinate (world units)\nNumeric coordinates",
+          "errors": [],
+          "accessible": "x axis: Sample field; y axis: Coordinate (world units); Numeric coordinates: x -1, y -1; x 0, y 0"
+        },
+        {
+          "kind": "mixed",
+          "tick": 0,
+          "bars": [],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\n\nA bar chart cannot mix numeric and categorical x values.\n\nTick\n0\nPaused\nmixed",
+          "errors": [
+            "A bar chart cannot mix numeric and categorical x values."
+          ],
+          "accessible": null
+        },
+        {
+          "kind": "duplicate",
+          "tick": 0,
+          "bars": [],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\n\nDuplicate category within a bar series.\n\nTick\n0\nPaused\nduplicate",
+          "errors": [
+            "Duplicate category within a bar series."
+          ],
+          "accessible": null
+        },
+        {
+          "kind": "format-error",
+          "tick": 0,
+          "bars": [],
+          "text": "Setup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\n\nIntentional formatter failure\n\nSetup to begin.",
+          "errors": [
+            "Intentional formatter failure"
+          ]
+        }
+      ],
+      "screenshots": [
+        {
+          "kind": "grouped",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-grouped-1366-light.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-grouped-1366-dark.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-grouped-390-light.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-grouped-390-dark.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped-nonzero",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-grouped-nonzero-1366-light.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped-nonzero",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-grouped-nonzero-1366-dark.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped-nonzero",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-grouped-nonzero-390-light.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "grouped-nonzero",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-grouped-nonzero-390-dark.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "format-error",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-format-error-1366-light.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "light",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "format-error",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-format-error-1366-dark.png",
+          "width": 1366,
+          "height": 768,
+          "colorScheme": "dark",
+          "pngWidth": 1366,
+          "pngHeight": 768,
+          "metrics": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "format-error",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-format-error-390-light.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "light",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        },
+        {
+          "kind": "format-error",
+          "path": "/tmp/city-library-authoring-acceptance-svelte-format-error-390-dark.png",
+          "width": 390,
+          "height": 844,
+          "colorScheme": "dark",
+          "pngWidth": 390,
+          "pngHeight": 844,
+          "metrics": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "scrollY": 0
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

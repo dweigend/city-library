@@ -1,0 +1,96 @@
+{
+  "slug": "signaling-game",
+  "sessionSourceSHA256": "399be72f527afb3d0e9ba27969d1a25e8a94364358aca2e707f0b01f24009bf5",
+  "source": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Philosophy/Signaling Game.nlogox",
+  "setupViaButton": true,
+  "setup": {
+    "ticks": {
+      "success": true,
+      "value": 0
+    },
+    "count states": {
+      "success": true,
+      "value": 2
+    },
+    "count signals": {
+      "success": true,
+      "value": 2
+    },
+    "probability-of-success": {
+      "success": true,
+      "value": 0.5
+    },
+    "times-correct": {
+      "success": true,
+      "value": 0
+    },
+    "times-wrong": {
+      "success": true,
+      "value": 0
+    }
+  },
+  "errors": [],
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "progress": {
+    "ticks": {
+      "success": true,
+      "value": 10
+    },
+    "count states": {
+      "success": true,
+      "value": 2
+    },
+    "count signals": {
+      "success": true,
+      "value": 2
+    },
+    "probability-of-success": {
+      "success": true,
+      "value": 0.7159183673469388
+    },
+    "times-correct": {
+      "success": true,
+      "value": 8
+    },
+    "times-wrong": {
+      "success": true,
+      "value": 2
+    }
+  },
+  "intervention": {
+    "command": "set number-of-states 2 set number-of-signals 3 set print-probabilities? false setup repeat 20 [go]",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 20
+      },
+      "probability-of-success": {
+        "success": true,
+        "value": 0.5682539682539682
+      },
+      "times-correct": {
+        "success": true,
+        "value": 11
+      },
+      "[length balls] of urns": {
+        "success": true,
+        "value": [
+          6,
+          9,
+          7,
+          2,
+          10
+        ]
+      }
+    },
+    "errors": []
+  },
+  "images": {
+    "setup": "signaling-game-original-setup.png",
+    "progress": "signaling-game-original-progress.png"
+  }
+}

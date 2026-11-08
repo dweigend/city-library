@@ -1,0 +1,331 @@
+{
+  "state": {
+    "time": 2426.599999964237,
+    "url": "http://localhost:3150/?experiment=urban-suite-economic-disparity",
+    "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "dpr": 2,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "dark": false,
+    "monitors": "Tick\n11\nRich\n24\nPoor\n24\nJobs\n2\nCounter\n0\nRich median\n10.9753\nPoor median\n10.1699\nView\nquality",
+    "aside": "Seed\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nQuality\nPrice\nDistance\nPoor utility\nRich utility\nTick\n11\nRich\n24\nPoor\n24\nJobs\n2\nCounter\n0\nRich median\n10.9753\nPoor median\n10.1699\nView\nquality\nLocation tests\nResidents per job\nPoor births per step\nRich births per step\nPoor price priority\nRich quality priority\nMaximum jobs\nOldest residents removed\n\nSteps completed.\n\nModel info",
+    "inputs": [
+      {
+        "name": "seed",
+        "value": "1",
+        "checked": false
+      },
+      {
+        "name": "",
+        "value": "5",
+        "checked": false
+      },
+      {
+        "name": "live-numberOfTests",
+        "value": "15",
+        "checked": false
+      },
+      {
+        "name": "live-residentsPerJob",
+        "value": "100",
+        "checked": false
+      },
+      {
+        "name": "live-poorPerStep",
+        "value": "5",
+        "checked": false
+      },
+      {
+        "name": "live-richPerStep",
+        "value": "5",
+        "checked": false
+      },
+      {
+        "name": "live-poorPricePriority",
+        "value": "0",
+        "checked": false
+      },
+      {
+        "name": "live-richQualityPriority",
+        "value": "0",
+        "checked": false
+      },
+      {
+        "name": "live-maxJobs",
+        "value": "10",
+        "checked": false
+      },
+      {
+        "name": "live-deathRate",
+        "value": "4",
+        "checked": false
+      },
+      {
+        "name": "",
+        "value": "on",
+        "checked": false
+      }
+    ],
+    "plots": [
+      "Rich: 10.975334750883977; Poor: 10.169900722761108"
+    ],
+    "overflow": false,
+    "canvas": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "aria": "Model view. 50 agents. Arrow keys select an item.",
+        "rect": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 672
+        }
+      }
+    ]
+  },
+  "canvases": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "aria": "Model view. 50 agents. Arrow keys select an item.",
+      "rgbaSha256": "064cd96c0a9dfd3cf0d02ebc2c549b7a8c7b481c7675c1b064d6845b3ca0f361",
+      "counts": {
+        "red": 424,
+        "white": 2130,
+        "black": 2170,
+        "gray": 4300,
+        "nonGray": 1802036,
+        "transparent": 0
+      },
+      "uniqueColors": 1514,
+      "topColors": [
+        [
+          "70,140,47,255",
+          1324947
+        ],
+        [
+          "68,137,45,255",
+          76765
+        ],
+        [
+          "71,144,48,255",
+          36208
+        ],
+        [
+          "69,139,46,255",
+          35547
+        ],
+        [
+          "66,133,44,255",
+          32731
+        ],
+        [
+          "73,147,49,255",
+          25269
+        ],
+        [
+          "69,140,46,255",
+          22889
+        ],
+        [
+          "70,140,46,255",
+          19427
+        ],
+        [
+          "64,130,43,255",
+          17096
+        ],
+        [
+          "63,126,42,255",
+          14381
+        ],
+        [
+          "66,132,44,255",
+          12381
+        ],
+        [
+          "75,151,50,255",
+          11894
+        ],
+        [
+          "67,135,45,255",
+          11863
+        ],
+        [
+          "76,154,51,255",
+          10434
+        ],
+        [
+          "67,134,45,255",
+          9138
+        ],
+        [
+          "66,132,45,255",
+          8875
+        ]
+      ],
+      "layers": [
+        {
+          "tag": "CANVAS",
+          "cls": "world",
+          "rect": {
+            "x": 312,
+            "y": 115,
+            "width": 672,
+            "height": 672
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "clip"
+        },
+        {
+          "tag": "FIGURE",
+          "cls": "",
+          "rect": {
+            "x": 312,
+            "y": 88,
+            "width": 944,
+            "height": 699
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "hidden"
+        },
+        {
+          "tag": "DIV",
+          "cls": "views",
+          "rect": {
+            "x": 312,
+            "y": 88,
+            "width": 944,
+            "height": 993
+          },
+          "display": "grid",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "DIV",
+          "cls": "workbench",
+          "rect": {
+            "x": 24,
+            "y": 88,
+            "width": 1232,
+            "height": 1358.2578125
+          },
+          "display": "grid",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "DIV",
+          "cls": "",
+          "rect": {
+            "x": 24,
+            "y": 88,
+            "width": 1232,
+            "height": 1358.2578125
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "SECTION",
+          "cls": "",
+          "rect": {
+            "x": 24,
+            "y": 88,
+            "width": 1232,
+            "height": 1358.2578125
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "MAIN",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 24,
+            "width": 1280,
+            "height": 1422.2578125
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "BODY",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 24,
+            "width": 1280,
+            "height": 1422.2578125
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(34, 34, 34)",
+          "transform": "none",
+          "overflow": "visible"
+        },
+        {
+          "tag": "HTML",
+          "cls": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 1470.2578125
+          },
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "transform": "none",
+          "overflow": "visible"
+        }
+      ]
+    }
+  ]
+}

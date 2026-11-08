@@ -1,0 +1,78 @@
+{
+  "scope": "Math.pow/Number CDF only for four tiny proposal fixtures; no graph generation or native parity",
+  "checks": [
+    {
+      "shape": [
+        3,
+        2
+      ],
+      "exponent": 0,
+      "wrap": false,
+      "seed": 1,
+      "targets": [
+        4,
+        0,
+        3,
+        5,
+        5,
+        1
+      ],
+      "status": "passed"
+    },
+    {
+      "shape": [
+        3,
+        2
+      ],
+      "exponent": 2,
+      "wrap": false,
+      "seed": 1,
+      "targets": [
+        3,
+        0,
+        4,
+        5,
+        5,
+        2
+      ],
+      "status": "passed"
+    },
+    {
+      "shape": [
+        3,
+        3
+      ],
+      "exponent": 2,
+      "wrap": true,
+      "seed": 7,
+      "targets": [
+        1,
+        0,
+        8,
+        5,
+        5,
+        3,
+        3,
+        1,
+        5
+      ],
+      "status": "passed"
+    },
+    {
+      "shape": [
+        2,
+        2
+      ],
+      "exponent": 0,
+      "wrap": false,
+      "seed": 1,
+      "targets": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "status": "passed"
+    }
+  ]
+}

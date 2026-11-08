@@ -1,0 +1,1236 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Climate+change+humans+and+the+extinction+of+the+woolly+mammoth+Nogues-Bravo+2008&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1317678,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                8
+              ]
+            ],
+            "date-time": "2026-10-08T06:24:51Z",
+            "timestamp": 1791440691486,
+            "version": "4.3.3"
+          },
+          "reference-count": 59,
+          "publisher": "Public Library of Science (PLoS)",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2008,
+                    4,
+                    1
+                  ]
+                ],
+                "date-time": "2008-04-01T00:00:00Z",
+                "timestamp": 1207008000000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "www.plosbiology.org"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "PLoS Biol"
+          ],
+          "DOI": "10.1371/journal.pbio.0060079",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                3,
+                28
+              ]
+            ],
+            "date-time": "2008-03-28T19:34:55Z",
+            "timestamp": 1206732895000
+          },
+          "page": "e79",
+          "update-policy": "https://doi.org/10.1371/journal.pbio.corrections_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 263,
+          "title": [
+            "Climate Change, Humans, and the Extinction of the Woolly Mammoth"
+          ],
+          "prefix": "10.1371",
+          "volume": "6",
+          "author": [
+            {
+              "given": "David",
+              "family": "Nogu\u00e9s-Bravo",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jes\u00fas",
+              "family": "Rodr\u00edguez",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Joaqu\u00edn",
+              "family": "Hortal",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Persaram",
+              "family": "Batra",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Miguel B",
+              "family": "Ara\u00fajo",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "340",
+          "published-online": {
+            "date-parts": [
+              [
+                2008,
+                4,
+                1
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "pbio-0060079-b001",
+              "doi-asserted-by": "crossref",
+              "first-page": "1094",
+              "DOI": "10.1126/science.1056370",
+              "article-title": "The origin and evolution of the woolly mammoth.",
+              "volume": "294",
+              "year": "2001",
+              "journal-title": "Science"
+            },
+            {
+              "key": "pbio-0060079-b002",
+              "doi-asserted-by": "crossref",
+              "first-page": "337",
+              "DOI": "10.1038/362337a0",
+              "article-title": "Holocene Dwarf mammoths from Wrangel-Island in the Siberian Arctic.",
+              "volume": "362",
+              "year": "1993",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "pbio-0060079-b003",
+              "doi-asserted-by": "crossref",
+              "first-page": "773",
+              "DOI": "10.2307/40035874",
+              "article-title": "Dates are not just data: Paleolithic settlement patterns in Siberia derived from radiocarbon records.",
+              "volume": "70",
+              "year": "2005",
+              "journal-title": "Am Antiq"
+            },
+            {
+              "key": "pbio-0060079-b004",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1023/A:1022431307503",
+              "article-title": "Radiocarbon chronology of the Siberian Paleolithic.",
+              "volume": "12",
+              "year": "1998",
+              "journal-title": "J World Prehist"
+            },
+            {
+              "key": "pbio-0060079-b005",
+              "doi-asserted-by": "crossref",
+              "first-page": "133",
+              "DOI": "10.1016/j.earscirev.2004.04.002",
+              "article-title": "Radiocarbon chronology and environment of wooly mammoth (Mammuthus primigenius Blum.) in northern Asia: results and perspectives.",
+              "volume": "68",
+              "year": "2004",
+              "journal-title": "Earth Sci Rev"
+            },
+            {
+              "key": "pbio-0060079-b006",
+              "first-page": "4",
+              "article-title": "Individual development, biology and evolution of the woolly mammoth.",
+              "volume": "19",
+              "year": "2002",
+              "journal-title": "Cranium"
+            },
+            {
+              "key": "pbio-0060079-b007",
+              "doi-asserted-by": "crossref",
+              "first-page": "128",
+              "DOI": "10.1016/0033-5894(86)90049-9",
+              "article-title": "Big game extinction caused by Late Pleistocene climatic-change - Irish Elk (Megaloceros-Giganteus) in Ireland.",
+              "volume": "25",
+              "year": "1986",
+              "journal-title": "Quaternary Res"
+            },
+            {
+              "key": "pbio-0060079-b008",
+              "doi-asserted-by": "crossref",
+              "first-page": "235",
+              "DOI": "10.1034/j.1600-0706.2003.12557.x",
+              "article-title": "Self-organised instability and megafaunal extinctions in Australia.",
+              "volume": "103",
+              "year": "2003",
+              "journal-title": "Oikos"
+            },
+            {
+              "key": "pbio-0060079-b009",
+              "first-page": "969",
+              "article-title": "Discovery of America.",
+              "volume": "179",
+              "year": "1973",
+              "journal-title": "Science"
+            },
+            {
+              "key": "pbio-0060079-b010",
+              "doi-asserted-by": "crossref",
+              "first-page": "23",
+              "DOI": "10.1038/378023a0",
+              "article-title": "Ice cores and mammoth extinction.",
+              "volume": "378",
+              "year": "1995",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "pbio-0060079-b011",
+              "doi-asserted-by": "crossref",
+              "unstructured": "MartinPSSteadmanDW 1999 Prehistoric extinctions on islands and continents. In: MacPheeRDE Extinctions in near time; causes, contexts and consequences Tucson University of Arizona Press 17 55",
+              "DOI": "10.1007/978-1-4757-5202-1_2"
+            },
+            {
+              "key": "pbio-0060079-b012",
+              "doi-asserted-by": "crossref",
+              "first-page": "351",
+              "DOI": "10.1017/S0094837300008927",
+              "article-title": "Pleistocene extinctions; the pivotal role of megaherbivores.",
+              "volume": "13",
+              "year": "1987",
+              "journal-title": "Paleobiology"
+            },
+            {
+              "key": "pbio-0060079-b013",
+              "doi-asserted-by": "crossref",
+              "first-page": "1893",
+              "DOI": "10.1126/science.1059342",
+              "article-title": "A multispecies overkill simulation of the End-Pleistocene megafaunal mass extinction.",
+              "volume": "292",
+              "year": "2001",
+              "journal-title": "Science"
+            },
+            {
+              "key": "pbio-0060079-b014",
+              "doi-asserted-by": "crossref",
+              "unstructured": "MithenS 1993 Simulating Mammoth hunting and extinction: implications for the Late Pleistocene of the Central Russian Plain. In: PeterkinGLBricherHMMellarsP Hunting and animal explotation in the late Paleolithic and Mesolithic of Eurasia The American Anthropological Association USA 163 178",
+              "DOI": "10.1525/ap3a.1993.4.1.163"
+            },
+            {
+              "key": "pbio-0060079-b015",
+              "doi-asserted-by": "crossref",
+              "first-page": "1559",
+              "DOI": "10.1016/S0277-3791(02)00026-4",
+              "article-title": "The latest woolly mammoths (Mammuthus primigenius Blumenbach) in Europe and Asia: a review of the current evidence.",
+              "volume": "21",
+              "year": "2002",
+              "journal-title": "Quaternary Sci Rev"
+            },
+            {
+              "key": "pbio-0060079-b016",
+              "doi-asserted-by": "crossref",
+              "first-page": "684",
+              "DOI": "10.1038/nature02890",
+              "article-title": "Pleistocene to Holocene extinction dynamics in giant deer and woolly mammoth.",
+              "volume": "431",
+              "year": "2004",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "pbio-0060079-b017",
+              "first-page": "171",
+              "article-title": "The extinction of woolly mammoth (Mammuthus primigenius) and straight-tusked elephant (Palaeoloxodon antiquus) in Europe.",
+              "volume": "126\u201328",
+              "year": "2005",
+              "journal-title": "Quaternary Int"
+            },
+            {
+              "key": "pbio-0060079-b018",
+              "doi-asserted-by": "crossref",
+              "first-page": "215",
+              "DOI": "10.1146/annurev.ecolsys.34.011802.132415",
+              "article-title": "Late Quaternary extinctions: state of the debate.",
+              "volume": "37",
+              "year": "2006",
+              "journal-title": "Annu Rev Ecol Evol Syst"
+            },
+            {
+              "issue": "2\u20133",
+              "key": "pbio-0060079-b019",
+              "first-page": "147",
+              "article-title": "Predictive habitat distribution models in ecology.",
+              "volume": "135",
+              "year": "2000",
+              "journal-title": "Ecol Model"
+            },
+            {
+              "key": "pbio-0060079-b020",
+              "doi-asserted-by": "crossref",
+              "first-page": "1677",
+              "DOI": "10.1111/j.1365-2699.2006.01584.x",
+              "article-title": "Five (or so) challenges for species distribution modelling.",
+              "volume": "33",
+              "year": "2006",
+              "journal-title": "J Biogeogr"
+            },
+            {
+              "key": "pbio-0060079-b021",
+              "doi-asserted-by": "crossref",
+              "first-page": "1947",
+              "DOI": "10.1098/rspb.2000.1234",
+              "article-title": "Predicting extinction risk in declining species.",
+              "volume": "267",
+              "year": "2000",
+              "journal-title": "Proc R Soc Lond B"
+            },
+            {
+              "key": "pbio-0060079-b022",
+              "first-page": "21",
+              "article-title": "Age and period of Mammoth fauna Asiatic Artic region distribution.",
+              "volume": "1",
+              "year": "1997",
+              "journal-title": "Cryo Earth"
+            },
+            {
+              "key": "pbio-0060079-b023",
+              "doi-asserted-by": "crossref",
+              "first-page": "302",
+              "DOI": "10.1006/qres.1999.2123",
+              "article-title": "Holocene treeline history and climate change across northern Eurasia.",
+              "volume": "53",
+              "year": "2000",
+              "journal-title": "Quaternary Res"
+            },
+            {
+              "key": "pbio-0060079-b024",
+              "doi-asserted-by": "crossref",
+              "first-page": "1504",
+              "DOI": "10.1111/j.1365-2486.2005.01000.x",
+              "article-title": "Validation of species-climate impact models under climate change.",
+              "volume": "11",
+              "year": "2005",
+              "journal-title": "Glob Change Biol"
+            },
+            {
+              "key": "pbio-0060079-b025",
+              "doi-asserted-by": "crossref",
+              "first-page": "215",
+              "DOI": "10.2307/5542",
+              "article-title": "Directions in Conservation Biology.",
+              "volume": "63",
+              "year": "1994",
+              "journal-title": "J Anim Ecol"
+            },
+            {
+              "key": "pbio-0060079-b026",
+              "doi-asserted-by": "crossref",
+              "unstructured": "SimberloffD 1986 The proximate causes of extinction. In: RaupDMJablonskiD Patterns and processes in the history of life Berlin Springer 259 76",
+              "DOI": "10.1007/978-3-642-70831-2_14"
+            },
+            {
+              "key": "pbio-0060079-b027",
+              "unstructured": "DiamondJ 1989 Overview of recent extinctions. In: WesternDPearlM Conservation for the Twenty-first Century Oxford Oxford University Press 37 41"
+            },
+            {
+              "key": "pbio-0060079-b028",
+              "unstructured": "Soul\u00e9MEWilcoxBA 1980 Conservation biology, an evolutionary-ecological perspective Sunderland Sinauer Associates"
+            },
+            {
+              "key": "pbio-0060079-b029",
+              "doi-asserted-by": "crossref",
+              "unstructured": "MartinPS 1984 Prehistoric overkill: a global model. In: MartinPSKleinRG Quaternary extinctions, a prehistoric revolution Tucson University of Arizona Press 354 404",
+              "DOI": "10.2307/j.ctv264f91j.24"
+            },
+            {
+              "key": "pbio-0060079-b030",
+              "doi-asserted-by": "crossref",
+              "first-page": "395",
+              "DOI": "10.1016/j.tree.2005.04.022",
+              "article-title": "Fifty millennia of catastrophic extinctions after human contact.",
+              "volume": "20",
+              "year": "2005",
+              "journal-title": "Trends Ecol Evol"
+            },
+            {
+              "key": "pbio-0060079-b031",
+              "doi-asserted-by": "crossref",
+              "unstructured": "HanskiI 1999 Metapopulation ecology Oxford Oxford University Press 324",
+              "DOI": "10.1093/oso/9780198540663.001.0001"
+            },
+            {
+              "key": "pbio-0060079-b032",
+              "unstructured": "WeningerBJ\u00f6risODanzeglockeU 2002 Cologne Radiocarbon Calibration Palaeoclimate Research Package Calpal_A (Advanced) Available: http://www.calpal.de/. Accessed 27 February 2008."
+            },
+            {
+              "key": "pbio-0060079-b033",
+              "doi-asserted-by": "crossref",
+              "first-page": "871",
+              "DOI": "10.1175/1520-0442(1997)010<0871:GAAMBF>2.0.CO;2",
+              "article-title": "Greenland and Antarctic mass balances for present and doubled atomospheric CO2 from the GENESIS version-2 global model.",
+              "volume": "10",
+              "year": "1997",
+              "journal-title": "J Climate"
+            },
+            {
+              "key": "pbio-0060079-b034",
+              "unstructured": "VavrusS 2001 A comparison of feedback processes in the Arctic during past and future warm climates. Preprints, 6th Conference on Polar Meteorology and Oceanography San Diego, CA American Meteorological Society 5 8"
+            },
+            {
+              "key": "pbio-0060079-b035",
+              "doi-asserted-by": "crossref",
+              "first-page": "210",
+              "DOI": "10.1126/science.269.5221.210",
+              "article-title": "Climate records covering the last deglaciation.",
+              "volume": "269",
+              "year": "1995",
+              "journal-title": "Science"
+            },
+            {
+              "key": "pbio-0060079-b036",
+              "unstructured": "BonfilsCJLewdenDTaylorKE 1998 Summary documentation of the PMIP models Available: http://pmip.lsce.ipsl.fr/docs/. Accessed 27 February 2008."
+            },
+            {
+              "key": "pbio-0060079-b037",
+              "unstructured": "CLIMAP Project Members 1981 Seasonal reconstructions of the Earth's surface at the Last Glacial Maximum. In: Map Series, Technical Report MC-36 Boulder (Colorado) Geological Society of America"
+            },
+            {
+              "key": "pbio-0060079-b038",
+              "doi-asserted-by": "crossref",
+              "first-page": "296",
+              "DOI": "10.1006/qres.2002.2374",
+              "article-title": "High-resolution climate simulations of Oxygen Isotope Stage 3 in Europe.",
+              "volume": "58",
+              "year": "2002",
+              "journal-title": "Quaternary Res"
+            },
+            {
+              "key": "pbio-0060079-b039",
+              "first-page": "183",
+              "article-title": "Climate simulations for 10000 and 6000 years BP using the GENESIS global climate model.",
+              "volume": "2",
+              "year": "1998",
+              "journal-title": "Palaeoclimates- Data and Model"
+            },
+            {
+              "key": "pbio-0060079-b040",
+              "doi-asserted-by": "crossref",
+              "first-page": "195",
+              "DOI": "10.1126/science.265.5169.195",
+              "article-title": "Ice age paleotopography.",
+              "volume": "265",
+              "year": "1994",
+              "journal-title": "Science"
+            },
+            {
+              "key": "pbio-0060079-b041",
+              "doi-asserted-by": "crossref",
+              "first-page": "38",
+              "DOI": "10.1006/qres.2001.2298",
+              "article-title": "Extent and dynamics of the Scandinavian ice sheet during Oxygen Isotope Stage 3 (65000\u201325000 yr B.P.).",
+              "volume": "57",
+              "year": "2002",
+              "journal-title": "Quaternary Res"
+            },
+            {
+              "key": "pbio-0060079-b042",
+              "doi-asserted-by": "crossref",
+              "first-page": "L11703",
+              "DOI": "10.1029/2005GL022456",
+              "article-title": "A model-data comparison of European temperatures in the Eemian interglacial.",
+              "volume": "32",
+              "year": "2005",
+              "journal-title": "Geophys Res Lett"
+            },
+            {
+              "key": "pbio-0060079-b043",
+              "doi-asserted-by": "crossref",
+              "first-page": "2362",
+              "DOI": "10.1175/1520-0469(1978)035<2362:LTVODI>2.0.CO;2",
+              "article-title": "Long-term variations of daily insolation and Quaternary climatic changes.",
+              "volume": "35",
+              "year": "1978",
+              "journal-title": "J Atmos Sci"
+            },
+            {
+              "key": "pbio-0060079-b044",
+              "doi-asserted-by": "crossref",
+              "first-page": "297",
+              "DOI": "10.1016/0277-3791(91)90033-Q",
+              "article-title": "Insolation values for the climate of the last 10 million years.",
+              "volume": "10",
+              "year": "1991",
+              "journal-title": "Quaternary Sci Rev"
+            },
+            {
+              "key": "pbio-0060079-b045",
+              "unstructured": "KaplanJO 2001 Geophysical applications of vegetation modeling PhD Thesis. Department of Ecology, Lund University 132"
+            },
+            {
+              "key": "pbio-0060079-b046",
+              "doi-asserted-by": "crossref",
+              "first-page": "31",
+              "DOI": "10.1023/A:1010609620103",
+              "article-title": "Modeling global climate-vegetation interactions in a doubled CO2 world.",
+              "volume": "50",
+              "year": "2001",
+              "journal-title": "Climatic Change"
+            },
+            {
+              "key": "pbio-0060079-b047",
+              "doi-asserted-by": "crossref",
+              "first-page": "115",
+              "DOI": "10.1016/S0304-3800(02)00327-7",
+              "article-title": "Assessment of alternative approaches for bioclimatic modeling with special emphasis on the Mahalanobis distance.",
+              "volume": "160",
+              "year": "2003",
+              "journal-title": "Ecol Model"
+            },
+            {
+              "key": "pbio-0060079-b048",
+              "doi-asserted-by": "crossref",
+              "first-page": "475",
+              "DOI": "10.1111/j.1366-9516.2004.00118.x",
+              "article-title": "Mapping the potential ranges of major plant invaders in South Africa, Lesotho and Swaziland using climatic suitability.",
+              "volume": "10",
+              "year": "2004",
+              "journal-title": "Divers Distrib"
+            },
+            {
+              "key": "pbio-0060079-b049",
+              "unstructured": "HaynesG 1993 Mammoths, mastodons and elephants. biology, behaviour and the fossil record Cambridge Cambridge University Press"
+            },
+            {
+              "key": "pbio-0060079-b050",
+              "doi-asserted-by": "crossref",
+              "first-page": "193",
+              "DOI": "10.1111/j.1095-8312.1987.tb01990.x",
+              "article-title": "Interspecific allometry of population density in mammals and other animals: the independence of body mass and population energy-use.",
+              "volume": "31",
+              "year": "1987",
+              "journal-title": "Biol J Linnean Soc"
+            },
+            {
+              "key": "pbio-0060079-b051",
+              "unstructured": "NowakRM 1999 Walker's mammals of the world Baltimore and London The Johns Hopkins University Press 1936"
+            },
+            {
+              "key": "pbio-0060079-b052",
+              "first-page": "1",
+              "article-title": "Elephas maximus.",
+              "volume": "182",
+              "year": "1982",
+              "journal-title": "Mamm Sp"
+            },
+            {
+              "key": "pbio-0060079-b053",
+              "doi-asserted-by": "crossref",
+              "first-page": "268",
+              "DOI": "10.1038/351268a0",
+              "article-title": "Of size and abundance.",
+              "volume": "351",
+              "year": "1991",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "pbio-0060079-b054",
+              "doi-asserted-by": "crossref",
+              "first-page": "469",
+              "DOI": "10.1046/j.1466-822x.2001.00261.x",
+              "article-title": "Effects of body mass, climate, geography, and census area on population density of terrestrial mammals.",
+              "volume": "10",
+              "year": "2001",
+              "journal-title": "Glob Ecol Biogeog"
+            },
+            {
+              "key": "pbio-0060079-b055",
+              "doi-asserted-by": "crossref",
+              "first-page": "498",
+              "DOI": "10.1086/284290",
+              "article-title": "Relations between individual size and mammalian population density.",
+              "volume": "124",
+              "year": "1984",
+              "journal-title": "Am Nat"
+            },
+            {
+              "key": "pbio-0060079-b056",
+              "doi-asserted-by": "crossref",
+              "first-page": "1656",
+              "DOI": "10.1016/j.jas.2005.05.006",
+              "article-title": "Estimates of Upper Paleolithic meta-population size in Europe from archaeological data.",
+              "volume": "32",
+              "year": "2005",
+              "journal-title": "J Archaeolog Sci"
+            },
+            {
+              "key": "pbio-0060079-b057",
+              "doi-asserted-by": "crossref",
+              "first-page": "593",
+              "DOI": "10.1006/jasc.2001.0753",
+              "article-title": "Colonization of Northern Eurasia by modern humans: radiocarbon chronology and environment.",
+              "volume": "29",
+              "year": "2002",
+              "journal-title": "J Archaeolog Sci"
+            },
+            {
+              "key": "pbio-0060079-b058",
+              "doi-asserted-by": "crossref",
+              "first-page": "305",
+              "DOI": "10.1111/j.1466-822X.2004.00107.x",
+              "article-title": "Ecological niches as stable distributional constraints on mammal species, with implications for Pleistocene extinctions and climate change projections for biodiversity.",
+              "volume": "13",
+              "year": "2004",
+              "journal-title": "Glob Ecol Biogeog"
+            },
+            {
+              "key": "pbio-0060079-b059",
+              "unstructured": "DaviesSWGollopP 2003 The human presence in europe during the Last Glacial Period II. Climate tolerance and climate preferences of Mid- and Late Glacial hominids. In: van AndelTHDaviesW Neanderthals and modern humans in the European landscape of the last glaciation. Chapter 8 Cambridge The McDonald Institute for Archaeological Research 131 146"
+            }
+          ],
+          "container-title": [
+            "PLoS Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://dx.plos.org/10.1371/journal.pbio.0060079",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                1,
+                29
+              ]
+            ],
+            "date-time": "2025-01-29T04:14:08Z",
+            "timestamp": 1738124048000
+          },
+          "score": 52.56746,
+          "resource": {
+            "primary": {
+              "URL": "https://dx.plos.org/10.1371/journal.pbio.0060079"
+            }
+          },
+          "editor": [
+            {
+              "given": "Anthony",
+              "family": "Barnosky",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "editor"
+                }
+              ]
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2008,
+                4,
+                1
+              ]
+            ]
+          },
+          "references-count": 59,
+          "journal-issue": {
+            "issue": "4",
+            "published-online": {
+              "date-parts": [
+                [
+                  2008,
+                  4,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1371/journal.pbio.0060079",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1147302.604456",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "1545-7885"
+          ],
+          "issn-type": [
+            {
+              "value": "1545-7885",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2008,
+                4,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                14
+              ]
+            ],
+            "date-time": "2025-05-14T10:49:56Z",
+            "timestamp": 1747219796026,
+            "version": "3.40.5"
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2009,
+                2,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.1147302.604456",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                17
+              ]
+            ],
+            "date-time": "2012-09-17T21:41:11Z",
+            "timestamp": 1347918071000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of Climate change, humans, and the extinction of the woolly mammoth."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-2491-1517",
+              "authenticated-orcid": true,
+              "given": "Barry",
+              "family": "Brook",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Faculty of Sciences, Engineering & Technology, University of Tasmania, Australia"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Lochran",
+              "family": "Traill",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Ecology Centre, University of Queensland, Australia"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2009,
+                1,
+                30
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                19
+              ]
+            ],
+            "date-time": "2020-04-19T04:05:35Z",
+            "timestamp": 1587269135000
+          },
+          "score": 45.52186,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/1147302#eval604456"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                1,
+                30
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.1147302.604456",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1371/journal.pbio.0060079",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                1,
+                30
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                18
+              ]
+            ],
+            "date-time": "2026-10-18T02:40:22Z",
+            "timestamp": 1792291222361,
+            "version": "4.4.0"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 16,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "value": "9783319550640",
+              "type": "print"
+            },
+            {
+              "value": "9783319550657",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2022,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2022-01-01T00:00:00Z",
+                "timestamp": 1640995200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2022,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2022-01-01T00:00:00Z",
+                "timestamp": 1640995200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-319-55065-7_1420",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                5,
+                19
+              ]
+            ],
+            "date-time": "2022-05-19T11:16:56Z",
+            "timestamp": 1652959016000
+          },
+          "page": "7313-7319",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Woolly Mammoth"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Joy",
+              "family": "Vincent",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2022,
+                5,
+                20
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "1420_CR23313",
+              "doi-asserted-by": "publisher",
+              "first-page": "8327",
+              "DOI": "10.1073/pnas.0802315105",
+              "volume": "105",
+              "author": "MTP Gilbert",
+              "year": "2008",
+              "unstructured": "Gilbert, M. T. P., et al. (2008). Intraspecific phylogenetic analysis of Siberian woolly mammoths using complete mitochondrial genomes. Proc Natl Acad Sci USA, 105, 8327\u20138332.",
+              "journal-title": "Proc Natl Acad Sci USA"
+            },
+            {
+              "key": "1420_CR23314",
+              "unstructured": "Guthrie, R. D. (2001). Reconstructions of woolly mammoth life history. The World of Elephants-International Congress, 276-179."
+            },
+            {
+              "key": "1420_CR23315",
+              "volume-title": "Mammoths, mastodons, and elephants: Biology, behavior, and the fossil record",
+              "author": "G Haynes",
+              "year": "1991",
+              "unstructured": "Haynes, G. (1991). Mammoths, mastodons, and elephants: Biology, behavior, and the fossil record. Cambridge: Cambridge University Press."
+            },
+            {
+              "issue": "10",
+              "key": "1420_CR23316",
+              "doi-asserted-by": "publisher",
+              "first-page": "R348",
+              "DOI": "10.1016/j.cub.2006.04.020",
+              "volume": "16",
+              "author": "M Hofreiter",
+              "year": "2006",
+              "unstructured": "Hofreiter, M., & Lister, A. (2006). Mammoths. Current Biology, 16(10), R348.",
+              "journal-title": "Current Biology"
+            },
+            {
+              "key": "1420_CR23317",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Kuzmin, Y. V. (2009). Extinction of the woolly mammoth (Mammuthus primigenius) and woolly rhinoceros (Coelodonta antiquitatis) in Eurasia: Review of chronological and environmental issues. Boreas, 247\u2013261.",
+              "DOI": "10.1111/j.1502-3885.2009.00122.x"
+            },
+            {
+              "key": "1420_CR23318",
+              "doi-asserted-by": "publisher",
+              "first-page": "1094",
+              "DOI": "10.1126/science.1056370",
+              "volume": "294",
+              "author": "AM Lister",
+              "year": "2001",
+              "unstructured": "Lister, A. M., & Sher, A. V. (2001). The origin and evolution of the woolly mammoth. Science, 294, 1094\u20131097.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "1420_CR23319",
+              "doi-asserted-by": "publisher",
+              "first-page": "615",
+              "DOI": "10.1016/j.crte.2008.04.001",
+              "volume": "340",
+              "author": "AM Lister",
+              "year": "2008",
+              "unstructured": "Lister, A. M., & Stuart, A. J. (2008). The impact of climate change on large mammal distribution and extinction: Evidence from the last glacial/interglacial transition. Comptes Rendus Geoscience, 340, 615\u2013620.",
+              "journal-title": "Comptes Rendus Geoscience"
+            },
+            {
+              "key": "1420_CR23320",
+              "doi-asserted-by": "publisher",
+              "first-page": "217",
+              "DOI": "10.1016/j.celrep.2015.06.027",
+              "volume": "12",
+              "author": "VJ Lynch",
+              "year": "2015",
+              "unstructured": "Lynch, V. J., et al. (2015). Elephantid genomes reveal the molecular bases of woolly mammoth adaptations to the Arctic. Cell Reports, 12, 217\u2013228.",
+              "journal-title": "Cell Reports"
+            },
+            {
+              "issue": "1",
+              "key": "1420_CR23321",
+              "first-page": "4",
+              "volume": "19",
+              "author": "EN Maschenko",
+              "year": "2002",
+              "unstructured": "Maschenko, E. N. (2002). Individual development, biology and evolution of the woolly mammoth. Cranium, 19(1), 4\u2013120.",
+              "journal-title": "Cranium"
+            },
+            {
+              "issue": "4",
+              "key": "1420_CR23322",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pbio.0060079",
+              "volume": "6",
+              "author": "D Nogues-Bravo",
+              "year": "2008",
+              "unstructured": "Nogues-Bravo, D., Rodriguez, J., Hortal, J., Batra, P., & Araujo, M. B. (2008). Climate change, humans, and the extinction of the woolly mammoth. PLoS Biology, 6(4), e79.",
+              "journal-title": "PLoS Biology"
+            },
+            {
+              "key": "1420_CR23323",
+              "doi-asserted-by": "publisher",
+              "first-page": "1395",
+              "DOI": "10.1016/j.cub.2015.04.007",
+              "volume": "25",
+              "author": "E Palkopoulou",
+              "year": "2015",
+              "unstructured": "Palkopoulou, E., et al. (2015). Complete genomes reveal signatures of demographic and genetic declines in the woolly mammoth. Current Biology, 25, 1395\u20131400.",
+              "journal-title": "Current Biology"
+            },
+            {
+              "key": "1420_CR23324",
+              "doi-asserted-by": "publisher",
+              "first-page": "3505",
+              "DOI": "10.1016/j.cub.2017.09.064",
+              "volume": "27",
+              "author": "P Pecnerova",
+              "year": "2017",
+              "unstructured": "Pecnerova, P., et al. (2017). Genome-based sexing provides clues about behavior and social structure in the woolly mammoth. Current Biology, 27, 3505\u20133510.",
+              "journal-title": "Current Biology"
+            },
+            {
+              "issue": "1",
+              "key": "1420_CR23325",
+              "doi-asserted-by": "publisher",
+              "first-page": "21",
+              "DOI": "10.1080/00438243.2012.647574",
+              "volume": "44",
+              "author": "VV Pitulko",
+              "year": "2012",
+              "unstructured": "Pitulko, V. V., & Nikolskiy, P. A. (2012). The extinction of the woolly mammoth and the archaeological record in Northeaster Asia. World Archaeology, 44(1), 21\u201342.",
+              "journal-title": "World Archaeology"
+            },
+            {
+              "issue": "12",
+              "key": "1420_CR23326",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pbio.1000564",
+              "volume": "8",
+              "author": "N Rohland",
+              "year": "2010",
+              "unstructured": "Rohland, N., et al. (2010). Genomic DNA sequences from Mastadon and woolly mammoth reveal deep speciation of forest and savanna elephants. PLoS Biology, 8(12), e1000564.",
+              "journal-title": "PLoS Biology"
+            },
+            {
+              "key": "1420_CR23327",
+              "doi-asserted-by": "publisher",
+              "first-page": "166",
+              "DOI": "10.1016/j.quaint.2006.08.002",
+              "volume": "169",
+              "author": "AN Rountrey",
+              "year": "2007",
+              "unstructured": "Rountrey, A. N., Fisher, D. C., Vartanyan, S., & Fox, D. L. (2007). Carbon and nitrogen isotope analyses of a juvenile woolly mammoth tusk: Evidence of weaning. Quaternary International, 169, 166\u2013173.",
+              "journal-title": "Quaternary International"
+            },
+            {
+              "key": "1420_CR23328",
+              "doi-asserted-by": "publisher",
+              "first-page": "337",
+              "DOI": "10.1038/362337a0",
+              "volume": "362",
+              "author": "SL Vartanyan",
+              "year": "1993",
+              "unstructured": "Vartanyan, S. L., Garutt, V. E., & Sher, A. V. (1993). Holocene dwarf mammoths from Wrangel Island in the Siberian Arctic. Nature, 362, 337\u2013340.",
+              "journal-title": "Nature"
+            }
+          ],
+          "container-title": [
+            "Encyclopedia of Animal Cognition and Behavior"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-319-55065-7_1420",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                18
+              ]
+            ],
+            "date-time": "2026-10-18T01:42:59Z",
+            "timestamp": 1792287779000
+          },
+          "score": 34.480408,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/chapter/10.1007/978-3-319-55065-7_1420"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783319550640",
+            "9783319550657"
+          ],
+          "references-count": 16,
+          "URL": "https://doi.org/10.1007/978-3-319-55065-7_1420",
+          "published": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "20 May 2022",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

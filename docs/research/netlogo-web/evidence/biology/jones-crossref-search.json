@@ -1,0 +1,2119 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Characteristics+of+pattern+formation+and+evolution+in+approximations+of+physarum+transport+networks+Jones+2010&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 4555626,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                10
+              ]
+            ],
+            "date-time": "2026-10-10T18:57:05Z",
+            "timestamp": 1791658625050,
+            "version": "4.3.4"
+          },
+          "reference-count": 48,
+          "publisher": "MIT Press - Journals",
+          "issue": "2",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Artificial Life"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2010,
+                4
+              ]
+            ]
+          },
+          "abstract": "<jats:p> Most studies of pattern formation place particular emphasis on its role in the development of complex multicellular body plans. In simpler organisms, however, pattern formation is intrinsic to growth and behavior. Inspired by one such organism, the true slime mold Physarum polycephalum, we present examples of complex emergent pattern formation and evolution formed by a population of simple particle-like agents. Using simple local behaviors based on chemotaxis, the mobile agent population spontaneously forms complex and dynamic transport networks. By adjusting simple model parameters, maps of characteristic patterning are obtained. Certain areas of the parameter mapping yield particularly complex long term behaviors, including the circular contraction of network lacunae and bifurcation of network paths to maintain network connectivity. We demonstrate the formation of irregular spots and labyrinthine and reticulated patterns by chemoattraction. Other Turing-like patterning schemes were obtained by using chemorepulsion behaviors, including the self-organization of regular periodic arrays of spots, and striped patterns. We show that complex pattern types can be produced without resorting to the hierarchical coupling of reaction-diffusion mechanisms. We also present network behaviors arising from simple pre-patterning cues, giving simple examples of how the emergent pattern formation processes evolve into networks with functional and quasi-physical properties including tensionlike effects, network minimization behavior, and repair to network damage. The results are interpreted in relation to classical theories of biological pattern formation in natural systems, and we suggest mechanisms by which emergent pattern formation processes may be used as a method for spatially represented unconventional computation. </jats:p>",
+          "DOI": "10.1162/artl.2010.16.2.16202",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                1,
+                12
+              ]
+            ],
+            "date-time": "2010-01-12T19:18:50Z",
+            "timestamp": 1263323930000
+          },
+          "page": "127-153",
+          "source": "Crossref",
+          "is-referenced-by-count": 97,
+          "title": [
+            "Characteristics of Pattern Formation and Evolution in Approximations of <i>Physarum</i> Transport Networks"
+          ],
+          "prefix": "10.1162",
+          "volume": "16",
+          "author": [
+            {
+              "given": "Jeff",
+              "family": "Jones",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Centre for Unconventional Computing, University of the West of England, Coldharbour Lane, Bristol, BS16 1QY, UK."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "281",
+          "reference": [
+            {
+              "key": "p_1",
+              "first-page": "335",
+              "volume": "6",
+              "author": "Adamatzky A.",
+              "year": "1991",
+              "journal-title": "Neural Networks World"
+            },
+            {
+              "key": "p_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1142/S0129626407003150"
+            },
+            {
+              "key": "p_3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1108/03684920810851168"
+            },
+            {
+              "key": "p_4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1672-6529(08)60180-8"
+            },
+            {
+              "key": "p_5",
+              "unstructured": "Adamatzky, A. & Jones, J. (2009). Programmable reconfiguration of Physarum machines. Natural Computing, DOI: 10.1007/s11047-009-9146-8.10.1007/s11047-009-9146-8"
+            },
+            {
+              "key": "p_7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2007.0459"
+            },
+            {
+              "key": "p_8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsta.2003.1199"
+            },
+            {
+              "key": "p_9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.80.57"
+            },
+            {
+              "key": "p_10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1162/artl.1997.3.3.191"
+            },
+            {
+              "key": "p_11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1998.0310"
+            },
+            {
+              "key": "p_12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.082080899"
+            },
+            {
+              "key": "p_14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/j100380a004"
+            },
+            {
+              "key": "p_15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01417909"
+            },
+            {
+              "key": "p_16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0167-739X(00)00042-X"
+            },
+            {
+              "key": "p_17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0303-2647(97)01708-5"
+            },
+            {
+              "issue": "1",
+              "key": "p_18",
+              "first-page": "30",
+              "volume": "12",
+              "author": "Gierer A.",
+              "year": "1972",
+              "journal-title": "Biological Cybernetics"
+            },
+            {
+              "key": "p_19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2008.04.017"
+            },
+            {
+              "key": "p_20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/RevModPhys.73.1067"
+            },
+            {
+              "key": "p_21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1504/IJMIC.2008.021475"
+            },
+            {
+              "key": "p_22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.robot.2006.02.011"
+            },
+            {
+              "key": "p_23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.74.026116"
+            },
+            {
+              "issue": "2",
+              "key": "p_24",
+              "first-page": "125",
+              "volume": "6",
+              "author": "Jones J.",
+              "year": "2010",
+              "journal-title": "International Journal of Unconventional Computing"
+            },
+            {
+              "issue": "4",
+              "key": "p_25",
+              "first-page": "1",
+              "volume": "4",
+              "author": "Jones J.",
+              "year": "2008",
+              "journal-title": "International Journal of Unconventional Computing"
+            },
+            {
+              "key": "p_26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4018/jnmc.2009070104"
+            },
+            {
+              "key": "p_27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1077309"
+            },
+            {
+              "key": "p_28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/RevModPhys.66.1481"
+            },
+            {
+              "key": "p_29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.64.041909"
+            },
+            {
+              "key": "p_30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.74.011914"
+            },
+            {
+              "key": "p_31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1140/epje/i2007-10325-x"
+            },
+            {
+              "key": "p_32",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1051/m2an:2003046"
+            },
+            {
+              "key": "p_33",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1088/0951-7715/19/1/000"
+            },
+            {
+              "key": "p_34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1096/fasebj.10.9.8801178"
+            },
+            {
+              "key": "p_35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/scientificamerican0388-80"
+            },
+            {
+              "key": "p_36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00277099"
+            },
+            {
+              "key": "p_37",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0301-4622(03)00189-3"
+            },
+            {
+              "key": "p_38",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35035159"
+            },
+            {
+              "key": "p_39",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0025-5564(88)90070-3"
+            },
+            {
+              "key": "p_40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/352610a0"
+            },
+            {
+              "key": "p_41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/37402.37406"
+            },
+            {
+              "key": "p_42",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/emboj/cdg176"
+            },
+            {
+              "key": "p_44",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.physd.2007.09.012"
+            },
+            {
+              "key": "p_45",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.physd.2006.09.001"
+            },
+            {
+              "key": "p_46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2008.09.010"
+            },
+            {
+              "key": "p_47",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2006.07.015"
+            },
+            {
+              "key": "p_48",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11538-006-9071-2"
+            },
+            {
+              "key": "p_49",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.biosystems.2003.08.001"
+            },
+            {
+              "key": "p_50",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.biosystems.2006.09.016"
+            },
+            {
+              "key": "p_53",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0167-2789(89)90234-0"
+            }
+          ],
+          "container-title": [
+            "Artificial Life"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.mitpressjournals.org/doi/pdf/10.1162/artl.2010.16.2.16202",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                3,
+                12
+              ]
+            ],
+            "date-time": "2021-03-12T21:46:13Z",
+            "timestamp": 1615585573000
+          },
+          "score": 49.58817,
+          "resource": {
+            "primary": {
+              "URL": "https://direct.mit.edu/artl/article/16/2/127-153/2650"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2010,
+                4
+              ]
+            ]
+          },
+          "references-count": 48,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  2010,
+                  4
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1162/artl.2010.16.2.16202"
+          ],
+          "URL": "https://doi.org/10.1162/artl.2010.16.2.16202",
+          "ISSN": [
+            "1064-5462",
+            "1530-9185"
+          ],
+          "issn-type": [
+            {
+              "value": "1064-5462",
+              "type": "print"
+            },
+            {
+              "value": "1530-9185",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2010,
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                30
+              ]
+            ],
+            "date-time": "2026-09-30T04:52:29Z",
+            "timestamp": 1790743949375,
+            "version": "4.1.0"
+          },
+          "reference-count": 83,
+          "publisher": "MIT Press - Journals",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    12,
+                    14
+                  ]
+                ],
+                "date-time": "2021-12-14T00:00:00Z",
+                "timestamp": 1639440000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "direct.mit.edu"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                9
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>We present Monte Carlo Physarum Machine (MCPM): a computational model suitable for reconstructing continuous transport networks from sparse 2D and 3D data. MCPM is a probabilistic generalization of Jones\u2019s (2010) agent-based model for simulating the growth of Physarum polycephalum (slime mold). We compare MCPM to Jones\u2019s work on theoretical grounds, and describe a task-specific variant designed for reconstructing the large-scale distribution of gas and dark matter in the Universe known as the cosmic web. To analyze the new model, we first explore MCPM\u2019s self-patterning behavior, showing a wide range of continuous network-like morphologies\u2014called polyphorms\u2014that the model produces from geometrically intuitive parameters. Applying MCPM to both simulated and observational cosmological data sets, we then evaluate its ability to produce consistent 3D density maps of the cosmic web. Finally, we examine other possible tasks where MCPM could be useful, along with several examples of fitting to domain-specific data as proofs of concept.</jats:p>",
+          "DOI": "10.1162/artl_a_00351",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                12,
+                14
+              ]
+            ],
+            "date-time": "2021-12-14T20:06:34Z",
+            "timestamp": 1639512394000
+          },
+          "page": "22-57",
+          "update-policy": "https://doi.org/10.1162/mitpressjournals.corrections.policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 20,
+          "title": [
+            "Monte Carlo Physarum Machine: Characteristics of Pattern Formation in Continuous Stochastic Transport Networks"
+          ],
+          "prefix": "10.1162",
+          "volume": "28",
+          "author": [
+            {
+              "given": "Oskar",
+              "family": "Elek",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "University of California, Santa Cruz, Computational Media, Creative Coding Lab. oelek@ucsc.edu"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Joseph N.",
+              "family": "Burchett",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "New Mexico State University, Department of Astronomy. jnb@nmsu.edu"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J. Xavier",
+              "family": "Prochaska",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of California, Santa Cruz, Astronomy and Astrophysics"
+                },
+                {
+                  "name": "The University of Tokyo, Kavli Institute for the Physics and Mathematics of the Universe. jxp@ucsc.edu"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Angus G.",
+              "family": "Forbes",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of California, Santa Cruz, Computational Media, Creative Coding Lab. angus@ucsc.edu"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "281",
+          "published-online": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                9
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "2022061013475423500_bib1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1142/7968",
+              "volume-title": "Physarum machines: Computers from slime mould",
+              "author": "Adamatzky",
+              "year": "2010"
+            },
+            {
+              "key": "2022061013475423500_bib2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-319-26662-6",
+              "volume-title": "Advances in Physarum machines",
+              "author": "Adamatzky",
+              "year": "2016"
+            },
+            {
+              "issue": "2",
+              "key": "2022061013475423500_bib3",
+              "doi-asserted-by": "publisher",
+              "first-page": "364",
+              "DOI": "10.1177/0265813515626924",
+              "article-title": "Evaluation of French motorway network in relation to slime mould transport networks",
+              "volume": "44",
+              "author": "Adamatzky",
+              "year": "2017",
+              "journal-title": "Environment and Planning B: Urban Analytics and City Science"
+            },
+            {
+              "issue": "5",
+              "key": "2022061013475423500_bib4",
+              "doi-asserted-by": "publisher",
+              "first-page": "441",
+              "DOI": "10.1080/03081079.2013.776206",
+              "article-title": "On creativity of slime mould",
+              "volume": "42",
+              "author": "Adamatzky",
+              "year": "2013",
+              "journal-title": "International Journal of General Systems"
+            },
+            {
+              "issue": "6",
+              "key": "2022061013475423500_bib5",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 247",
+              "DOI": "10.1145/2980179.2980218",
+              "article-title": "Low-discrepancy blue noise sampling",
+              "volume": "35",
+              "author": "Ahmed",
+              "year": "2016",
+              "journal-title": "ACM Transactions on Graphics"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib6",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 12",
+              "DOI": "10.1088/0067-0049/219/1/12",
+              "article-title": "The eleventh and twelfth data releases of the Sloan Digital Sky Survey: Final data from SDSS-III",
+              "volume": "219",
+              "author": "Alam",
+              "year": "2015",
+              "journal-title": "The Astrophysical Journal"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib7",
+              "doi-asserted-by": "publisher",
+              "first-page": "364",
+              "DOI": "10.1088/0004-637X/723/1/364",
+              "article-title": "The spine of the cosmic web",
+              "volume": "723",
+              "author": "Arag\u00f3n-Calvo",
+              "year": "2010",
+              "journal-title": "The Astrophysical Journal"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib8",
+              "doi-asserted-by": "publisher",
+              "first-page": "541",
+              "DOI": "10.1109/TVCG.2016.2598958",
+              "article-title": "Towards unambiguous edge bundling: Investigating confluent drawings for network visualization",
+              "volume": "23",
+              "author": "Bach",
+              "year": "2017",
+              "journal-title": "IEEE Transactions on Visualization and Computer Graphics"
+            },
+            {
+              "issue": "2",
+              "key": "2022061013475423500_bib9",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 109",
+              "DOI": "10.1088/0004-637X/762/2/109",
+              "article-title": "The Rockstar phase-space temporal halo finder and the velocity offsets of cluster cores",
+              "volume": "762",
+              "author": "Behroozi",
+              "year": "2012",
+              "journal-title": "The Astrophysical Journal"
+            },
+            {
+              "issue": "8",
+              "key": "2022061013475423500_bib10",
+              "doi-asserted-by": "publisher",
+              "first-page": "13",
+              "DOI": "10.1111/cgf.12605",
+              "article-title": "State-of-the-art in GPU-based large-scale volume visualization",
+              "volume": "34",
+              "author": "Beyer",
+              "year": "2015",
+              "journal-title": "Computer Graphics Forum"
+            },
+            {
+              "key": "2022061013475423500_bib11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1515/9781400833283",
+              "volume-title": "The social amoebae: The biology of cellular slime molds",
+              "author": "Bonner",
+              "year": "2009"
+            },
+            {
+              "key": "2022061013475423500_bib12",
+              "volume-title": "Language models are few-shot learners",
+              "author": "Brown",
+              "year": "2020"
+            },
+            {
+              "issue": "2",
+              "key": "2022061013475423500_bib13",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article L35",
+              "DOI": "10.3847/2041-8213/ab700c",
+              "article-title": "Revealing the dark threads of the cosmic web",
+              "volume": "891",
+              "author": "Burchett",
+              "year": "2020",
+              "journal-title": "The Astrophysical Journal Letters"
+            },
+            {
+              "key": "2022061013475423500_bib14",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article L9",
+              "DOI": "10.1086/187670",
+              "article-title": "Gravitational collapse of small-scale structure as the origin of the Lyman-alpha forest",
+              "volume": "437",
+              "author": "Cen",
+              "year": "1994",
+              "journal-title": "The Astrophysical Journal Letters"
+            },
+            {
+              "issue": "4",
+              "key": "2022061013475423500_bib15",
+              "doi-asserted-by": "publisher",
+              "first-page": "3896",
+              "DOI": "10.1093/mnras/stw1554",
+              "article-title": "Cosmic web reconstruction through density ridges: Catalogue",
+              "volume": "461",
+              "author": "Chen",
+              "year": "2016",
+              "journal-title": "Monthly Notices of the Royal Astronomical Society"
+            },
+            {
+              "issue": "2",
+              "key": "2022061013475423500_bib16",
+              "doi-asserted-by": "publisher",
+              "first-page": "103",
+              "DOI": "10.1561/0600000073",
+              "article-title": "The path to path-traced movies",
+              "volume": "10",
+              "author": "Christensen",
+              "year": "2016",
+              "journal-title": "Foundations and Trends in Computer Graphics and Vision"
+            },
+            {
+              "key": "2022061013475423500_bib17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/9781118033142",
+              "volume-title": "Combinatorial optimization",
+              "author": "Cook",
+              "year": "1997"
+            },
+            {
+              "issue": "6109",
+              "key": "2022061013475423500_bib18",
+              "doi-asserted-by": "publisher",
+              "first-page": "921",
+              "DOI": "10.1126/science.1226340",
+              "article-title": "Printing and prototyping of tissues and scaffolds",
+              "volume": "338",
+              "author": "Derby",
+              "year": "2012",
+              "journal-title": "Science"
+            },
+            {
+              "issue": "4",
+              "key": "2022061013475423500_bib19",
+              "doi-asserted-by": "publisher",
+              "first-page": "320",
+              "DOI": "10.1007/BF01001625",
+              "article-title": "Spatial structure of perturbations and origin of galactic rotation in fluctuation theory",
+              "volume": "6",
+              "author": "Doroshkevich",
+              "year": "1970",
+              "journal-title": "Astrophysics"
+            },
+            {
+              "key": "2022061013475423500_bib20",
+              "doi-asserted-by": "publisher",
+              "first-page": "98306",
+              "DOI": "10.1109/ACCESS.2019.2927815",
+              "article-title": "Parallel accelerated virtual physarum lab based on cellular automata agents",
+              "volume": "7",
+              "author": "Dourvas",
+              "year": "2019",
+              "journal-title": "IEEE Access"
+            },
+            {
+              "issue": "2",
+              "key": "2022061013475423500_bib21",
+              "doi-asserted-by": "publisher",
+              "first-page": "806",
+              "DOI": "10.1109/TVCG.2020.3030407",
+              "article-title": "Polyphorm: Structural analysis of cosmological datasets via interactive Physarum polycephalum visualization",
+              "volume": "27",
+              "author": "Elek",
+              "year": "2021",
+              "journal-title": "Transactions of Visualization and Computer Graphics"
+            },
+            {
+              "key": "2022061013475423500_bib22",
+              "article-title": "Polyform",
+              "author": "Elek",
+              "year": "2021"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib23",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 7010",
+              "DOI": "10.1038/s41598-017-06961-y",
+              "article-title": "Physarum machines imitating a Roman road network: The 3D approach",
+              "volume": "7",
+              "author": "Evangelidis",
+              "year": "2017",
+              "journal-title": "Scientific Reports"
+            },
+            {
+              "issue": "7",
+              "key": "2022061013475423500_bib24",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 154",
+              "DOI": "10.5220/0006626901320143",
+              "article-title": "An evolutionary algorithm for an optimization model of edge bundling",
+              "volume": "9",
+              "author": "Ferreira",
+              "year": "2018",
+              "journal-title": "Information"
+            },
+            {
+              "issue": "1130",
+              "key": "2022061013475423500_bib25",
+              "doi-asserted-by": "publisher",
+              "first-page": "295",
+              "DOI": "10.1098/rspa.1953.0064",
+              "article-title": "Dispersion on a sphere",
+              "volume": "217",
+              "author": "Fisher",
+              "year": "1953",
+              "journal-title": "Proceedings of the Royal Society of London A"
+            },
+            {
+              "key": "2022061013475423500_bib26",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1145/3084873.3084907",
+              "article-title": "Production volume rendering",
+              "volume-title": "SIGGRAPH \u201917: Special interest group on computer graphics and interactive techniques conference",
+              "author": "Fong",
+              "year": "2017"
+            },
+            {
+              "key": "2022061013475423500_bib27",
+              "first-page": "625",
+              "article-title": "A growing neural gas network learns topologies",
+              "volume-title": "NIPS\u201994: Proceedings of the 7th international conference on neural information processing systems",
+              "author": "Fritzke",
+              "year": "1994"
+            },
+            {
+              "issue": "2",
+              "key": "2022061013475423500_bib28",
+              "doi-asserted-by": "publisher",
+              "first-page": "518",
+              "DOI": "10.1086/306025",
+              "article-title": "The cosmic baryon budget",
+              "volume": "503",
+              "author": "Fukugita",
+              "year": "1998",
+              "journal-title": "The Astrophysical Journal"
+            },
+            {
+              "key": "2022061013475423500_bib29",
+              "volume-title": "Genetic algorithms in search, optimization and machine learning",
+              "author": "Goldberg",
+              "year": "1989"
+            },
+            {
+              "key": "2022061013475423500_bib30",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1109/VISUAL.2019.8933682",
+              "article-title": "Graph-assisted visualization of microvascular networks",
+              "volume-title": "2019 IEEE Visualization conference (VIS)",
+              "author": "Govyadinov",
+              "year": "2019"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib31",
+              "doi-asserted-by": "publisher",
+              "first-page": "97",
+              "DOI": "10.1093/biomet/57.1.97",
+              "article-title": "Monte Carlo sampling methods using Markov chains and their applications",
+              "volume": "57",
+              "author": "Hastings",
+              "year": "1970",
+              "journal-title": "Biometrika"
+            },
+            {
+              "key": "2022061013475423500_bib32",
+              "doi-asserted-by": "publisher",
+              "first-page": "70",
+              "DOI": "10.1086/144246",
+              "article-title": "Diffuse radiation in the galaxy",
+              "volume": "93",
+              "author": "Henyey",
+              "year": "1941",
+              "journal-title": "Astrophysical Journal"
+            },
+            {
+              "key": "2022061013475423500_bib33",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.13140/RG.2.2.29888.74244",
+              "volume-title": "Standard Maxwell-Boltzmann distribution: Definition and properties",
+              "author": "Hernandez",
+              "year": "2017"
+            },
+            {
+              "key": "2022061013475423500_bib34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-540-74111-4",
+              "volume-title": "Design by evolution: Advances in evolutionary design",
+              "author": "Hingston",
+              "year": "2008"
+            },
+            {
+              "issue": "3",
+              "key": "2022061013475423500_bib35",
+              "doi-asserted-by": "publisher",
+              "first-page": "983",
+              "DOI": "10.1111/j.1467-8659.2009.01450.x",
+              "article-title": "Force-directed edge bundling for graph visualization",
+              "volume": "28",
+              "author": "Holten",
+              "year": "2009",
+              "journal-title": "Computer Graphics Forum"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib36",
+              "first-page": "1",
+              "article-title": "Formation of galaxies inside clusters",
+              "volume": "27",
+              "author": "Icke",
+              "year": "1973",
+              "journal-title": "Astronomy and Astrophysics"
+            },
+            {
+              "key": "2022061013475423500_bib37",
+              "first-page": "125",
+              "article-title": "Exploratory modelling with speculative complex biological systems",
+              "volume-title": "xCoAx 2020: Proceedings of the eighth conference on computation, communication, aesthetics & X",
+              "author": "Jenson",
+              "year": "2020"
+            },
+            {
+              "issue": "2",
+              "key": "2022061013475423500_bib38",
+              "doi-asserted-by": "publisher",
+              "first-page": "127",
+              "DOI": "10.1162/artl.2010.16.2.16202",
+              "article-title": "Characteristics of pattern formation and evolution in approximations of physarum transport networks",
+              "volume": "16",
+              "author": "Jones",
+              "year": "2010",
+              "journal-title": "Artificial Life"
+            },
+            {
+              "issue": "3",
+              "key": "2022061013475423500_bib39",
+              "doi-asserted-by": "publisher",
+              "first-page": "279",
+              "DOI": "10.1080/03081079.2014.997526",
+              "article-title": "A morphological adaptation approach to path planning inspired by slime mould",
+              "volume": "44",
+              "author": "Jones",
+              "year": "2015",
+              "journal-title": "International Journal of General Systems"
+            },
+            {
+              "key": "2022061013475423500_bib40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-319-16823-4_3",
+              "volume-title": "Multi-agent modelling of Physarum Polycephalum",
+              "author": "Jones",
+              "year": "2015"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib41",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1007/s11047-013-9401-x",
+              "article-title": "Computation of the travelling salesman problem by a shrinking blob",
+              "volume": "13",
+              "author": "Jones",
+              "year": "2014",
+              "journal-title": "Natural Computing"
+            },
+            {
+              "issue": "3",
+              "key": "2022061013475423500_bib42",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 036016",
+              "DOI": "10.1088/1748-3182/9/3/036016",
+              "article-title": "Material approximation of data smoothing and spline curves inspired by slime mould",
+              "volume": "9",
+              "author": "Jones",
+              "year": "2014",
+              "journal-title": "Bioinspiration and Biomimetics"
+            },
+            {
+              "key": "2022061013475423500_bib43",
+              "article-title": "Slime mould inspired generalised voronoi diagrams with repulsive fields",
+              "author": "Jones",
+              "year": "2015"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib44",
+              "doi-asserted-by": "publisher",
+              "first-page": "105",
+              "DOI": "10.3233/MGS-2007-3108",
+              "article-title": "Image enhancement: An emergent pattern formation approach via decentralised multi-agent systems",
+              "volume": "3",
+              "author": "Jones",
+              "year": "2007",
+              "journal-title": "Multiagent and Grid Systems"
+            },
+            {
+              "issue": "4",
+              "key": "2022061013475423500_bib45",
+              "doi-asserted-by": "publisher",
+              "first-page": "143",
+              "DOI": "10.1145/15886.15902",
+              "article-title": "The rendering equation",
+              "volume": "20",
+              "author": "Kajiya",
+              "year": "1986",
+              "journal-title": "ACM SIGGRAPH Computer Graphics"
+            },
+            {
+              "issue": "3",
+              "key": "2022061013475423500_bib46",
+              "doi-asserted-by": "publisher",
+              "first-page": "354",
+              "DOI": "10.1080/03081079.2014.997527",
+              "article-title": "Cellular automaton model of crowd evacuation inspired by slime mould",
+              "volume": "44",
+              "author": "Kalogeiton",
+              "year": "1986",
+              "journal-title": "International Journal of General Systems"
+            },
+            {
+              "key": "2022061013475423500_bib47",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/9783527626212",
+              "volume-title": "Monte Carlo methods",
+              "author": "Kalos",
+              "year": "2008",
+              "edition": "2nd ed."
+            },
+            {
+              "issue": "4",
+              "key": "2022061013475423500_bib48",
+              "doi-asserted-by": "publisher",
+              "first-page": "4340",
+              "DOI": "10.1093/mnras/stw248",
+              "article-title": "MultiDark simulations: The story of dark matter halo concentrations and density profiles",
+              "volume": "457",
+              "author": "Klypin",
+              "year": "2016",
+              "journal-title": "Monthly Notices of the Royal Astronomical Society"
+            },
+            {
+              "key": "2022061013475423500_bib49",
+              "doi-asserted-by": "publisher",
+              "first-page": "59",
+              "DOI": "10.1007/BF00337288",
+              "article-title": "Self-organized formation of topologically correct feature maps",
+              "volume": "43",
+              "author": "Kohonen",
+              "year": "1982",
+              "journal-title": "Biological Cybernetics"
+            },
+            {
+              "key": "2022061013475423500_bib50",
+              "doi-asserted-by": "publisher",
+              "first-page": "538",
+              "DOI": "10.1086/175459",
+              "article-title": "The gaseous extent of galaxies and the origin of Lyman-alpha absorption systems: A survey of galaxies in the fields of Hubble Space Telescope spectroscopic target",
+              "volume": "442",
+              "author": "Lanzetta",
+              "year": "1995",
+              "journal-title": "Astrophysical Journal Letters"
+            },
+            {
+              "issue": "5",
+              "key": "2022061013475423500_bib51",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1371/journal.pone.0002093",
+              "article-title": "Persistent cell motion in the absence of external signals: A search strategy for eukaryotic cells",
+              "volume": "3",
+              "author": "Li",
+              "year": "2008",
+              "journal-title": "PLOS ONE"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib52",
+              "doi-asserted-by": "publisher",
+              "first-page": "1195",
+              "DOI": "10.1093/mnras/stx1976",
+              "article-title": "Tracing the cosmic web",
+              "volume": "473",
+              "author": "Libeskind",
+              "year": "2018",
+              "journal-title": "Monthly Notices of the Royal Astronomical Society"
+            },
+            {
+              "issue": "7809",
+              "key": "2022061013475423500_bib53",
+              "doi-asserted-by": "publisher",
+              "first-page": "391",
+              "DOI": "10.1038/s41586-020-2300-2",
+              "article-title": "A census of baryons in the universe from localized fast radio bursts",
+              "volume": "581",
+              "author": "Macquart",
+              "year": "2020",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2022061013475423500_bib54",
+              "volume-title": "Statistical physics",
+              "author": "Mandl",
+              "year": "1988"
+            },
+            {
+              "key": "2022061013475423500_bib55",
+              "first-page": "397",
+              "article-title": "A \u201cneural gas\u201d network learns topologies",
+              "volume-title": "Artificial Neural Networks",
+              "author": "Martinetz",
+              "year": "1991"
+            },
+            {
+              "key": "2022061013475423500_bib56",
+              "doi-asserted-by": "publisher",
+              "first-page": "1087",
+              "DOI": "10.1063/1.1699114",
+              "article-title": "Equation of state calculations by fast computing machines",
+              "volume": "21",
+              "author": "Metropolis",
+              "year": "1953",
+              "journal-title": "Journal of Chemical Physics"
+            },
+            {
+              "key": "2022061013475423500_bib57",
+              "first-page": "3111",
+              "article-title": "Distributed representations of words and phrases and their compositionality",
+              "volume-title": "Advances in Neural Information Processing Systems",
+              "author": "Mikolov",
+              "year": "2013"
+            },
+            {
+              "key": "2022061013475423500_bib58",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-030-12127-3",
+              "volume-title": "Nature-inspired optimizers: Theories, literature reviews and applications",
+              "author": "Mirjalili",
+              "year": "2020"
+            },
+            {
+              "issue": "6803",
+              "key": "2022061013475423500_bib59",
+              "doi-asserted-by": "publisher",
+              "first-page": "470",
+              "DOI": "10.1038/35035159",
+              "article-title": "Maze-solving by an amoeboid organism",
+              "volume": "407",
+              "author": "Nakagaki",
+              "year": "2000",
+              "journal-title": "Nature"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib60",
+              "doi-asserted-by": "publisher",
+              "first-page": "47",
+              "DOI": "10.1016/S0301-4622(01)00179-X",
+              "article-title": "Path finding by tube morphogenesis in an amoeboid organism",
+              "volume": "92",
+              "author": "Nakagaki",
+              "year": "2001",
+              "journal-title": "Biophysical Chemistry"
+            },
+            {
+              "issue": "3",
+              "key": "2022061013475423500_bib61",
+              "doi-asserted-by": "publisher",
+              "first-page": "401",
+              "DOI": "10.1109/TAC.2005.864190",
+              "article-title": "Flocking for multi-agent dynamic systems: Algorithms and theory",
+              "volume": "51",
+              "author": "Olfati-Saber",
+              "year": "2006",
+              "journal-title": "IEEE Transactions on Automatic Control"
+            },
+            {
+              "key": "2022061013475423500_bib62",
+              "volume-title": "Combinatorial optimization: Algorithms and complexity",
+              "author": "Papadimitriou",
+              "year": "1998"
+            },
+            {
+              "key": "2022061013475423500_bib63",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-319-26641-1",
+              "volume-title": "Dynamical systems on networks: A tutorial",
+              "author": "Porter",
+              "year": "2016"
+            },
+            {
+              "issue": "4",
+              "key": "2022061013475423500_bib64",
+              "doi-asserted-by": "publisher",
+              "first-page": "25",
+              "DOI": "10.1145/37402.37406",
+              "article-title": "Flocks, herds and schools: A distributed behavioral model",
+              "volume": "21",
+              "author": "Reynolds",
+              "year": "1987",
+              "journal-title": "SIGGRAPH Computer Graphics"
+            },
+            {
+              "issue": "5",
+              "key": "2022061013475423500_bib65",
+              "doi-asserted-by": "publisher",
+              "first-page": "448",
+              "DOI": "10.1080/17445760.2016.1221073",
+              "article-title": "Physarum computing and topology optimisation",
+              "volume": "32",
+              "author": "Safonov",
+              "year": "2017",
+              "journal-title": "International Journal of Parallel, Emergent and Distributed Systems"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib66",
+              "doi-asserted-by": "publisher",
+              "first-page": "521",
+              "DOI": "10.1093/mnras/stu2058",
+              "article-title": "The EAGLE project: Simulating the evolution and assembly of galaxies and their environments",
+              "volume": "446",
+              "author": "Schaye",
+              "year": "2015",
+              "journal-title": "Monthly Notices of the Royal Astronomical Society"
+            },
+            {
+              "key": "2022061013475423500_bib67",
+              "volume-title": "Physarum machines: Selected works",
+              "author": "Schumann",
+              "year": "2016"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib68",
+              "doi-asserted-by": "publisher",
+              "first-page": "116",
+              "DOI": "10.1111/j.1365-2966.2012.21402.x",
+              "article-title": "The WiggleZ Dark Energy Survey: The transition to large-scale cosmic homogeneity",
+              "volume": "425",
+              "author": "Scrimgeour",
+              "year": "2012",
+              "journal-title": "Monthly Notices of the Royal Astronomical Society"
+            },
+            {
+              "issue": "2",
+              "key": "2022061013475423500_bib69",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 134",
+              "DOI": "10.3847/1538-4357/abafc3",
+              "article-title": "Disentangling the cosmic web toward FRB 190608",
+              "volume": "901",
+              "author": "Simha",
+              "year": "2020",
+              "journal-title": "The Astrophysical Journal"
+            },
+            {
+              "issue": "7042",
+              "key": "2022061013475423500_bib70",
+              "doi-asserted-by": "publisher",
+              "first-page": "629",
+              "DOI": "10.1038/nature03597",
+              "article-title": "Simulations of the formation, evolution and clustering of galaxies and quasars",
+              "volume": "435",
+              "author": "Springel",
+              "year": "2005",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2022061013475423500_bib71",
+              "volume-title": "Physarum-inspired network optimization: A review",
+              "author": "Sun",
+              "year": "2017"
+            },
+            {
+              "issue": "4",
+              "key": "2022061013475423500_bib72",
+              "doi-asserted-by": "publisher",
+              "first-page": "3465",
+              "DOI": "10.1093/mnras/stt2454",
+              "article-title": "Detecting filamentary pattern in the cosmic web: A catalogue of filaments for the SDSS",
+              "volume": "438",
+              "author": "Tempel",
+              "year": "2014",
+              "journal-title": "Monthly Notices of the Royal Astronomical Society"
+            },
+            {
+              "issue": "5964",
+              "key": "2022061013475423500_bib73",
+              "doi-asserted-by": "publisher",
+              "first-page": "439",
+              "DOI": "10.1126/science.1177894",
+              "article-title": "Rules for biologically inspired adaptive network design",
+              "volume": "327",
+              "author": "Tero",
+              "year": "2010",
+              "journal-title": "Science"
+            },
+            {
+              "issue": "1",
+              "key": "2022061013475423500_bib74",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 3520",
+              "DOI": "10.1038/s41467-019-11455-8",
+              "article-title": "Rapid fabrication of vascularized and innervated cell-laden bone models with biomimetic intrafibrillar collagen mineralization",
+              "volume": "10",
+              "author": "Thrivikraman",
+              "year": "2019",
+              "journal-title": "Nature Communications"
+            },
+            {
+              "key": "2022061013475423500_bib75",
+              "first-page": "5998",
+              "article-title": "Attention is all you need",
+              "volume-title": "Advances in neural information processing systems 30: 31st Annual conference on neural information processing systems (NIPS 2017)",
+              "author": "Vaswani",
+              "year": "2017"
+            },
+            {
+              "key": "2022061013475423500_bib76",
+              "unstructured": "Veach, E.\n           (1997). Robust Monte Carlo methods for light transport simulation[Doctoral dissertation, Stanford University]. ACM Digital Library."
+            },
+            {
+              "key": "2022061013475423500_bib77",
+              "doi-asserted-by": "publisher",
+              "first-page": "65",
+              "DOI": "10.1145/258734.258775",
+              "article-title": "Metropolis light transport",
+              "volume-title": "SIGGRAPH \u201997: Proceedings of the 24th annual conference on computer graphics and interactive techniques",
+              "author": "Veach",
+              "year": "1997"
+            },
+            {
+              "issue": "A",
+              "key": "2022061013475423500_bib78",
+              "doi-asserted-by": "publisher",
+              "first-page": "265",
+              "DOI": "10.1017/S0021900200034628",
+              "article-title": "Distributions on the circle and sphere",
+              "volume": "19",
+              "author": "Watson",
+              "year": "1982",
+              "journal-title": "Journal of Applied Probability"
+            },
+            {
+              "key": "2022061013475423500_bib79",
+              "doi-asserted-by": "publisher",
+              "first-page": "Article 19948",
+              "DOI": "10.1038/srep19948",
+              "article-title": "Towards a Physarum learning chip",
+              "volume": "6",
+              "author": "Whiting",
+              "year": "2016",
+              "journal-title": "Nature Scientific Reports"
+            },
+            {
+              "issue": "29",
+              "key": "2022061013475423500_bib80",
+              "doi-asserted-by": "publisher",
+              "first-page": "8200",
+              "DOI": "10.1073/pnas.1603351113",
+              "article-title": "Stochastic cycle selection in active flow networks",
+              "volume": "113",
+              "author": "Woodhouse",
+              "year": "2016",
+              "journal-title": "Proceedings of the National Academy of Sciences"
+            },
+            {
+              "key": "2022061013475423500_bib81",
+              "doi-asserted-by": "publisher",
+              "first-page": "186",
+              "DOI": "10.1109/VISUAL.2019.8933544",
+              "article-title": "Tempocave: Visualizing dynamic connectome datasets to support cognitive behavioral therapy",
+              "volume-title": "2019 IEEE Visualization conference: VIS 2019",
+              "author": "Xu",
+              "year": "2019"
+            },
+            {
+              "key": "2022061013475423500_bib82",
+              "first-page": "84",
+              "article-title": "Gravitational instability: An approximate theory for large density perturbations",
+              "volume": "5",
+              "author": "Zeldovich",
+              "year": "1970",
+              "journal-title": "Astronomy and Astrophysics"
+            },
+            {
+              "key": "2022061013475423500_bib83",
+              "doi-asserted-by": "publisher",
+              "first-page": "7",
+              "DOI": "10.1109/VIS4DH51463.2020.00006",
+              "article-title": "Bio-inspired structure identification in language embeddings",
+              "volume-title": "2020 IEEE 5th Workshop on visualization for the digital humanities: VIS4DH",
+              "author": "Zhou",
+              "year": "2020"
+            }
+          ],
+          "container-title": [
+            "Artificial Life"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://direct.mit.edu/artl/article-pdf/28/1/22/2028932/artl_a_00351.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://direct.mit.edu/artl/article-pdf/28/1/22/2028932/artl_a_00351.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                10
+              ]
+            ],
+            "date-time": "2022-06-10T13:49:02Z",
+            "timestamp": 1654868942000
+          },
+          "score": 37.407166,
+          "resource": {
+            "primary": {
+              "URL": "https://direct.mit.edu/artl/article/28/1/22/108680/Monte-Carlo-Physarum-Machine-Characteristics-of"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "references-count": 83,
+          "journal-issue": {
+            "issue": "1",
+            "published-online": {
+              "date-parts": [
+                [
+                  2022,
+                  6,
+                  9
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2022,
+                  6,
+                  9
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1162/artl_a_00351",
+          "ISSN": [
+            "1064-5462",
+            "1530-9185"
+          ],
+          "issn-type": [
+            {
+              "value": "1064-5462",
+              "type": "print"
+            },
+            {
+              "value": "1530-9185",
+              "type": "electronic"
+            }
+          ],
+          "published-other": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                29
+              ]
+            ],
+            "date-time": "2026-09-29T00:33:06Z",
+            "timestamp": 1790641986939,
+            "version": "4.1.0"
+          },
+          "reference-count": 37,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2010,
+                    10,
+                    30
+                  ]
+                ],
+                "date-time": "2010-10-30T00:00:00Z",
+                "timestamp": 1288396800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nat Comput"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2011,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.1007/s11047-010-9223-z",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                11,
+                3
+              ]
+            ],
+            "date-time": "2010-11-03T06:46:41Z",
+            "timestamp": 1288766801000
+          },
+          "page": "1345-1369",
+          "source": "Crossref",
+          "is-referenced-by-count": 35,
+          "title": [
+            "Influences on the formation and evolution of Physarum polycephalum inspired emergent transport networks"
+          ],
+          "prefix": "10.1007",
+          "volume": "10",
+          "author": [
+            {
+              "given": "Jeff",
+              "family": "Jones",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2010,
+                10,
+                30
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "9223_CR1",
+              "first-page": "335",
+              "volume": "6",
+              "author": "A Adamatzky",
+              "year": "1991",
+              "unstructured": "Adamatzky A (1991) Neural algorithm for constructing minimum spanning tree of a finite planar set. Neural Netw World 6:335\u2013339",
+              "journal-title": "Neural Netw World"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "455",
+              "DOI": "10.1142/S0129626407003150",
+              "volume": "17",
+              "author": "A Adamatzky",
+              "year": "2007",
+              "unstructured": "Adamatzky A (2007) Physarum machine: implementation of a Kolmogorov-Uspensky machine on a biological substrate. Parallel Process Lett 17(4):455\u2013467",
+              "journal-title": "Parallel Process Lett"
+            },
+            {
+              "issue": "1",
+              "key": "9223_CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "105",
+              "DOI": "10.1142/S0129626409000109",
+              "volume": "19",
+              "author": "A Adamatzky",
+              "year": "2008",
+              "unstructured": "Adamatzky A (2008a) Developing proximity graphs by Physarum Polycephalum: does the plasmodium follow Toussaint hierarchy? Parallel Process Lett 19(1):105\u2013127",
+              "journal-title": "Parallel Process Lett"
+            },
+            {
+              "issue": "2",
+              "key": "9223_CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "258",
+              "DOI": "10.1108/03684920810851168",
+              "volume": "37",
+              "author": "A Adamatzky",
+              "year": "2008",
+              "unstructured": "Adamatzky A (2008b) Growing spanning trees in plasmodium machines. Kybernetes 37(2):258\u2013264",
+              "journal-title": "Kybernetes"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "348",
+              "DOI": "10.1016/S1672-6529(08)60180-8",
+              "volume": "5",
+              "author": "A Adamatzky",
+              "year": "2008",
+              "unstructured": "Adamatzky A, Jones J (2008) Towards Physarum robots: computing and manipulating on water surface. J Bionic Eng 5(4):348\u2013357",
+              "journal-title": "J Bionic Eng"
+            },
+            {
+              "issue": "8",
+              "key": "9223_CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "2373",
+              "DOI": "10.1142/S0218127408021750",
+              "volume": "18",
+              "author": "A Adamatzky",
+              "year": "2008",
+              "unstructured": "Adamatzky A, De Lacy Costello B et al (2008) Universal computation with limited resources: Belousov-Zhabotinsky and Physarum computers. Int J Bifurc Chaos 18(8):2373\u20132389",
+              "journal-title": "Int J Bifurc Chaos"
+            },
+            {
+              "key": "9223_CR7",
+              "first-page": "41",
+              "volume-title": "Amoeba-based nonequilibrium neurocomputer utilizing fluctuations and instability. Lecture notes in computer science, vol 4618",
+              "author": "M Aono",
+              "year": "2007",
+              "unstructured": "Aono M, Hara M (2007) Amoeba-based nonequilibrium neurocomputer utilizing fluctuations and instability. Lecture notes in computer science, vol 4618. Springer, Berlin, pp 41\u201354"
+            },
+            {
+              "issue": "10",
+              "key": "9223_CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "3224",
+              "DOI": "10.1016/j.patcog.2008.03.023",
+              "volume": "41",
+              "author": "M Duckham",
+              "year": "2008",
+              "unstructured": "Duckham M, Kulik L et al (2008) Efficient generation of simple polygons for characterizing the shape of a set of points in the plane. Pattern Recognit 41(10):3224\u20133236",
+              "journal-title": "Pattern Recognit"
+            },
+            {
+              "key": "9223_CR9",
+              "unstructured": "Dutta P, Khastgir SP et al (2008) Steiner trees and spanning trees in six-pin soap films. Arxiv: http://arxiv.org/abs/0806.1340"
+            },
+            {
+              "key": "9223_CR10",
+              "first-page": "81",
+              "volume-title": "What is the region occupied by a set of points? Lecture notes in computer science, vol 4197",
+              "author": "A Galton",
+              "year": "2006",
+              "unstructured": "Galton A, Duckham M (2006) What is the region occupied by a set of points? Lecture notes in computer science, vol 4197. Springer, Berlin, pp 81\u201398"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "659",
+              "DOI": "10.1016/j.jtbi.2008.04.017",
+              "volume": "253",
+              "author": "YP Gunji",
+              "year": "2008",
+              "unstructured": "Gunji YP, Shirakawa T et al (2008) Minimal model of a cell connecting amoebic motion and adaptive transport networks. J Theor Biol 253(4):659\u2013667",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "issue": "1",
+              "key": "9223_CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1007/s004540010071",
+              "volume": "25",
+              "author": "T Hales",
+              "year": "2001",
+              "unstructured": "Hales T (2001) The honeycomb conjecture. Discrete Comput Geom 25(1):1\u201322",
+              "journal-title": "Discrete Comput Geom"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR13",
+              "doi-asserted-by": "crossref",
+              "first-page": "348",
+              "DOI": "10.1504/IJMIC.2008.021475",
+              "volume": "4",
+              "author": "D Hickey",
+              "year": "2008",
+              "unstructured": "Hickey D, Noriega L (2008) Relationship between structure and information processing in Physarum polycephalum. Int J Model Identif Control 4(4):348\u2013356",
+              "journal-title": "Int J Model Identif Control"
+            },
+            {
+              "key": "9223_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "641",
+              "DOI": "10.1016/j.robot.2006.02.011",
+              "volume": "54",
+              "author": "A Ishiguro",
+              "year": "2006",
+              "unstructured": "Ishiguro A, Shimizu M et al (2006) A modular robot that exhibits amoebic locomotion. Robot Auton Syst 54:641\u2013650",
+              "journal-title": "Robot Auton Syst"
+            },
+            {
+              "issue": "9",
+              "key": "9223_CR15",
+              "doi-asserted-by": "crossref",
+              "first-page": "1502",
+              "DOI": "10.1109/5.163414",
+              "volume": "80",
+              "author": "JW Jaromczyk",
+              "year": "1992",
+              "unstructured": "Jaromczyk JW, Toussaint GT (1992) Relative neighborhood graphs and their relatives. Proc IEEE 80(9):1502\u20131517",
+              "journal-title": "Proc IEEE"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR16",
+              "first-page": "1",
+              "volume": "4",
+              "author": "J Jones",
+              "year": "2008",
+              "unstructured": "Jones J (2008) An emergent pattern formation approach to dynamic spatial problems via quantitative front propagation and particle chemotaxis. Int J Unconv Comput 4(4):1\u201334",
+              "journal-title": "Int J Unconv Comput"
+            },
+            {
+              "issue": "3",
+              "key": "9223_CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "37",
+              "DOI": "10.4018/jnmc.2009070104",
+              "volume": "1",
+              "author": "J Jones",
+              "year": "2009",
+              "unstructured": "Jones J (2009) Passive vs active approaches in particle approximations of reaction-diffusion computing. Int J Nanotechnol Mol Comput 1(3):37\u201363",
+              "journal-title": "Int J Nanotechnol Mol Comput"
+            },
+            {
+              "issue": "2",
+              "key": "9223_CR18",
+              "doi-asserted-by": "crossref",
+              "first-page": "127",
+              "DOI": "10.1162/artl.2010.16.2.16202",
+              "volume": "16",
+              "author": "J Jones",
+              "year": "2010",
+              "unstructured": "Jones J (2010a) Characteristics of pattern formation and evolution in approximations of physarum transport networks. Artif Life 16(2):127\u2013153",
+              "journal-title": "Artif Life"
+            },
+            {
+              "issue": "2",
+              "key": "9223_CR19",
+              "first-page": "125",
+              "volume": "6",
+              "author": "J Jones",
+              "year": "2010",
+              "unstructured": "Jones J (2010b) The emergence and dynamical evolution of complex transport networks from simple low-level behaviours. Int J Unconv Comput 6(2):125\u2013144",
+              "journal-title": "Int J Unconv Comput"
+            },
+            {
+              "issue": "2",
+              "key": "9223_CR20",
+              "doi-asserted-by": "crossref",
+              "first-page": "273",
+              "DOI": "10.1007/s00285-006-0007-0",
+              "volume": "53",
+              "author": "R Kobayashi",
+              "year": "2006",
+              "unstructured": "Kobayashi R, Tero A et al (2006) Mathematical model for rhythmic protoplasmic movement in the true slime mold. J Math Biol 53(2):273\u2013286",
+              "journal-title": "J Math Biol"
+            },
+            {
+              "issue": "6",
+              "key": "9223_CR21",
+              "doi-asserted-by": "crossref",
+              "first-page": "1160",
+              "DOI": "10.1093/beheco/arp111",
+              "volume": "20",
+              "author": "T Latty",
+              "year": "2009",
+              "unstructured": "Latty T, Beekman M (2009) Food quality affects search strategy in the acellular slime mould, Physarum polycephalum. Behav Ecol 20(6):1160\u20131167. doi: 10.1093/beheco/arp111",
+              "journal-title": "Behav Ecol"
+            },
+            {
+              "issue": "3",
+              "key": "9223_CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "295",
+              "DOI": "10.1140/epje/i2007-10325-x",
+              "volume": "26",
+              "author": "T Lobovkina",
+              "year": "2008",
+              "unstructured": "Lobovkina T, Dommersnes PG et al (2008) Shape optimization in lipid nanotube networks. The European Phys J E-Soft Matter 26(3):295\u2013300",
+              "journal-title": "The European Phys J E-Soft Matter"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR23",
+              "first-page": "10",
+              "volume": "11",
+              "author": "M Lysenko",
+              "year": "2008",
+              "unstructured": "Lysenko M, D\u2019Souza RM (2008) A framework for mega scale agent based model simulations on graphics processing units. J Artif Soc Soc Simul 11(4):10",
+              "journal-title": "J Artif Soc Soc Simul"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "497",
+              "DOI": "10.1006/jtbi.1998.0890",
+              "volume": "197",
+              "author": "T Nakagaki",
+              "year": "1999",
+              "unstructured": "Nakagaki T, Yamada H et al (1999) Reaction\u2013diffusion\u2013advection model for pattern formation of rhythmic contraction in a giant amoeboid cell of the Physarum plasmodium. J Theor Biol 197(4):497\u2013506",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "9223_CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "470",
+              "DOI": "10.1038/35035159",
+              "volume": "407",
+              "author": "T Nakagaki",
+              "year": "2000",
+              "unstructured": "Nakagaki T, Yamada H et al (2000) Maze-solving by an amoeboid organism. Nature 407:470",
+              "journal-title": "Nature"
+            },
+            {
+              "issue": "1554",
+              "key": "9223_CR26",
+              "doi-asserted-by": "crossref",
+              "first-page": "2305",
+              "DOI": "10.1098/rspb.2004.2856",
+              "volume": "271",
+              "author": "T Nakagaki",
+              "year": "2004",
+              "unstructured": "Nakagaki T, Kobayashi R et al (2004a) Obtaining multiple separate food sources: behavioural intelligence in the Physarum plasmodium. Proc R Soc B Biol Sci 271(1554):2305\u20132310",
+              "journal-title": "Proc R Soc B Biol Sci"
+            },
+            {
+              "issue": "1",
+              "key": "9223_CR27",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1016/S0301-4622(03)00189-3",
+              "volume": "107",
+              "author": "T Nakagaki",
+              "year": "2004",
+              "unstructured": "Nakagaki T, Yamada H et al (2004b) Smart network solutions in an amoeboid organism. Biophys Chem 107(1):1\u20135",
+              "journal-title": "Biophys Chem"
+            },
+            {
+              "key": "9223_CR28",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Nakagaki T, Saigusa T, Tero A, Kobayashi R (2007) Effects of amount of food on path selection in the transport network of an amoeboid organism. In: Proceedings of the international symposium: topological aspects of critical systems and networks, 13\u201314 February 2006. World Scientific Publishing, Sapporo, Japan, pp 94\u2013100",
+              "DOI": "10.1142/9789812708687_0012"
+            },
+            {
+              "key": "9223_CR29",
+              "unstructured": "Richmond P, Coakley S, Romano DM (2009) A high performance agent based modelling framework on graphics card hardware with CUDA. In: Proceedings of the 8th international conference on autonomous agents and multiagent systems-volume 2. International Foundation for Autonomous Agents and Multiagent Systems, Budapest, Hungary, pp 1125\u20131126"
+            },
+            {
+              "issue": "9",
+              "key": "9223_CR30",
+              "doi-asserted-by": "crossref",
+              "first-page": "3109",
+              "DOI": "10.1142/S0218127409024682",
+              "volume": "19",
+              "author": "T Shirakawa",
+              "year": "2009",
+              "unstructured": "Shirakawa T, Adamatzky A, Gunji YP, Miyake Y (2009) On simultaneous construction of Voronoi diagram and Delaunay triangulation by Physarum polycephalum. Int J Bifurc Chaos 19(9):3109\u20133117",
+              "journal-title": "Int J Bifurc Chaos"
+            },
+            {
+              "issue": "3",
+              "key": "9223_CR31",
+              "doi-asserted-by": "crossref",
+              "first-page": "420",
+              "DOI": "10.1016/j.physd.2007.09.012",
+              "volume": "237",
+              "author": "S Takagi",
+              "year": "2007",
+              "unstructured": "Takagi S, Ueda T (2007) Emergence and transitions of dynamic patterns of thickness oscillation of the plasmodium of the true slime mold Physarum polycephalum. Phys D Nonlinear Phenom 237(3):420\u2013427",
+              "journal-title": "Phys D Nonlinear Phenom"
+            },
+            {
+              "issue": "2",
+              "key": "9223_CR32",
+              "doi-asserted-by": "crossref",
+              "first-page": "180",
+              "DOI": "10.1016/j.physd.2006.09.001",
+              "volume": "223",
+              "author": "A Takamatsu",
+              "year": "2006",
+              "unstructured": "Takamatsu A (2006) Spontaneous switching among multiple spatio-temporal patterns in three-oscillator systems constructed with oscillatory cells of true slime mold. Phys D Nonlinear Phenom 223(2):180\u2013188",
+              "journal-title": "Phys D Nonlinear Phenom"
+            },
+            {
+              "issue": "1",
+              "key": "9223_CR33",
+              "doi-asserted-by": "crossref",
+              "first-page": "29",
+              "DOI": "10.1016/j.jtbi.2008.09.010",
+              "volume": "256",
+              "author": "A Takamatsu",
+              "year": "2009",
+              "unstructured": "Takamatsu A, Takaba E et al (2009) Environment-dependent morphology in plasmodium of true slime mold Physarum polycephalum and a network growth model. J Theor Biol 256(1):29\u201344",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR34",
+              "doi-asserted-by": "crossref",
+              "first-page": "553",
+              "DOI": "10.1016/j.jtbi.2006.07.015",
+              "volume": "244",
+              "author": "A Tero",
+              "year": "2007",
+              "unstructured": "Tero A, Kobayashi R et al (2007) A mathematical model for adaptive transport network in path finding by true slime mold. J Theor Biol 244(4):553\u2013564",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "issue": "4",
+              "key": "9223_CR35",
+              "doi-asserted-by": "crossref",
+              "first-page": "261",
+              "DOI": "10.1016/0031-3203(80)90066-7",
+              "volume": "12",
+              "author": "GT Toussaint",
+              "year": "1980",
+              "unstructured": "Toussaint GT (1980) The relative neighbourhood graph of a finite planar set. Pattern Recognit 12(4):261\u2013268",
+              "journal-title": "Pattern Recognit"
+            },
+            {
+              "issue": "1",
+              "key": "9223_CR36",
+              "doi-asserted-by": "crossref",
+              "first-page": "45",
+              "DOI": "10.1016/j.biosystems.2003.08.001",
+              "volume": "73",
+              "author": "S Tsuda",
+              "year": "2004",
+              "unstructured": "Tsuda S, Aono M et al (2004) Robust and emergent Physarum logical-computing. BioSystems 73(1):45\u201355",
+              "journal-title": "BioSystems"
+            },
+            {
+              "issue": "2\u20133",
+              "key": "9223_CR37",
+              "doi-asserted-by": "crossref",
+              "first-page": "215",
+              "DOI": "10.1016/j.biosystems.2006.09.016",
+              "volume": "87",
+              "author": "S Tsuda",
+              "year": "2007",
+              "unstructured": "Tsuda S, Zauner K et al (2007) Robot control with biological cells. BioSystems 87(2\u20133):215\u2013223",
+              "journal-title": "BioSystems"
+            }
+          ],
+          "container-title": [
+            "Natural Computing"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s11047-010-9223-z.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/s11047-010-9223-z/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s11047-010-9223-z",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                6,
+                5
+              ]
+            ],
+            "date-time": "2019-06-05T22:01:48Z",
+            "timestamp": 1559772108000
+          },
+          "score": 31.47289,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/s11047-010-9223-z"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2010,
+                10,
+                30
+              ]
+            ]
+          },
+          "references-count": 37,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2011,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "9223"
+          ],
+          "URL": "https://doi.org/10.1007/s11047-010-9223-z",
+          "ISSN": [
+            "1567-7818",
+            "1572-9796"
+          ],
+          "issn-type": [
+            {
+              "value": "1567-7818",
+              "type": "print"
+            },
+            {
+              "value": "1572-9796",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2010,
+                10,
+                30
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

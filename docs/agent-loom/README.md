@@ -8,7 +8,7 @@ Agent Loom defines City Library's general modeling core: agents, worlds, spatial
 
 - [API inventory](api-table.md): all 309 operation/type entries in 16 areas, with exact signatures and compact contracts.
 - [API reference](api-reference.md): detailed behavior, defaults, validation, errors and examples.
-- [Architecture](../DESIGN.md): state ownership, dependencies, domain layout and extension rules.
+- [Architecture](../ARCHITECTURE.md): state ownership, dependencies, domain layout and extension rules.
 - [Work plan](../../PLAN.md): delivery order and acceptance criteria.
 
 - [Binding terminology](terminology.md): shared names and semantic distinctions across the system.

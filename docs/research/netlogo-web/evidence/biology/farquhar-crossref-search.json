@@ -1,0 +1,1312 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+biochemical+model+of+photosynthetic+CO2+assimilation+in+leaves+of+C3+species+Farquhar+von+Caemmerer+Berry+1980&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 5461953,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T04:10:21Z",
+            "timestamp": 1793851821798,
+            "version": "4.6.1"
+          },
+          "reference-count": 29,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1980,
+                    6,
+                    1
+                  ]
+                ],
+                "date-time": "1980-06-01T00:00:00Z",
+                "timestamp": 328665600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Planta"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1980,
+                6
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf00386231",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                11,
+                7
+              ]
+            ],
+            "date-time": "2004-11-07T12:30:21Z",
+            "timestamp": 1099830621000
+          },
+          "page": "78-90",
+          "source": "Crossref",
+          "is-referenced-by-count": 7552,
+          "title": [
+            "A biochemical model of photosynthetic CO2 assimilation in leaves of C3 species"
+          ],
+          "prefix": "10.1007",
+          "volume": "149",
+          "author": [
+            {
+              "given": "G. D.",
+              "family": "Farquhar",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "S.",
+              "family": "von Caemmerer",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J. A.",
+              "family": "Berry",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "411",
+              "DOI": "10.1104/pp.61.3.411",
+              "volume": "61",
+              "author": "P.A. Armand",
+              "year": "1978",
+              "unstructured": "Armand, P.A., Schreiber, U., Bj\u00f6rkman, O. (1978) Photosynthetic acclimatization in the desert shrub Larrea divaricata. II. Light harvesting efficiency and electron transport. Plant Physiol. 61, 411?415",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "204",
+              "DOI": "10.1016/0006-291X(74)90192-2",
+              "volume": "60",
+              "author": "M.R. Badger",
+              "year": "1974",
+              "unstructured": "Badger, M.R., Andrews, T.J. (1974) Effects of CO2, O2 and temperature on a high-affinity form of ribulose diphosphate carboxylase-oxygenase from spinach. Biochem. Biophys. Res. Commun. 60, 204?210",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "CR3",
+              "first-page": "355",
+              "volume": "76",
+              "author": "M.R. Badgar",
+              "year": "1977",
+              "unstructured": "Badgar, M.R., Collatz, G.J. (1977) Studies on the kinetic mechanism of ribulose-1,5-bisphosphate carboxylase and oxygenase reactions, with particular reference to the effect of temperature on kinetic parameters. Carnegic Inst Wash. Year Book 76, 355?61",
+              "journal-title": "Carnegic Inst Wash. Year Book"
+            },
+            {
+              "key": "CR4",
+              "first-page": "119",
+              "volume-title": "Proc. of the 4th International Congress on Photosynthesis, Reading, England, 1977",
+              "author": "J. Berry",
+              "year": "1978",
+              "unstructured": "Berry, J., Farquhar, G. (1978) The CO2 concentrating function of C4 photosynthesis. A biochemical model. In: Proc. of the 4th International Congress on Photosynthesis, Reading, England, 1977, pp. 119?131, Hall, D., Coombs, J., Goodwin, T., eds. London. The Biochemical Soc."
+            },
+            {
+              "key": "CR5",
+              "first-page": "115",
+              "volume": "71",
+              "author": "O. Bj\u00f6rkman",
+              "year": "1972",
+              "unstructured": "Bj\u00f6rkman, O., Boardman, N.K., Anderson, J.M., Thorne, S.W., Goodchild, D.J., Pyliotis, N.A. (1972) Effect of light intensity during growth of Atriplex patula on the capacity of photosynthetic reactions, chloroplast components and structure. Carnegie Inst. Wash. Year Book 71, 115?135",
+              "journal-title": "Carnegie Inst. Wash. Year Book"
+            },
+            {
+              "key": "CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "111",
+              "DOI": "10.1007/978-94-009-9625-0_11",
+              "volume-title": "Photosynthesis and plant development",
+              "author": "D.A. Charles-Edwards",
+              "year": "1979",
+              "unstructured": "Charles-Edwards, D.A. (1979) Photosynthesis and crop growth. In: Photosynthesis and plant development, pp. 111?124, Marcelle, R., ed. The Hague, Junk"
+            },
+            {
+              "key": "CR7",
+              "first-page": "248",
+              "volume": "77",
+              "author": "G.J. Collatz",
+              "year": "1978",
+              "unstructured": "Collatz, G.J. (1978) The interaction between photosynthesis and ribulose-P 2 concentration-effects of light, CO2 and O2. Carnegie Inst. Wash. Year Book 77, 248?251",
+              "journal-title": "Carnegie Inst. Wash. Year Book"
+            },
+            {
+              "key": "CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "86",
+              "DOI": "10.1104/pp.59.1.86",
+              "volume": "59",
+              "author": "J. Ehleringer",
+              "year": "1977",
+              "unstructured": "Ehleringer, J., Bj\u00f6rkman, O. (1977) Quantum yields for CO2 uptake in C3 and C4 plants. Dependence on temperature, CO2 and O2 concentrations. Plant Physiol. 59, 86?90",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "456",
+              "DOI": "10.1016/0003-9861(79)90052-3",
+              "volume": "193",
+              "author": "G.D. Farquhar",
+              "year": "1979",
+              "unstructured": "Farquhar, G.D. (1979) Models describing the kinetics of ribulose biphosphate carboxylase-oxygenase. Arch. Biochem. Biophys. 193, 456?468",
+              "journal-title": "Arch. Biochem. Biophys."
+            },
+            {
+              "key": "CR10",
+              "unstructured": "Graham, D. (in press) Effects of light on ?dark? respiration. In: Biochemistry of plants. A comprehensive treatise, II, General metabolism and respiration. Davies, D.D., ed."
+            },
+            {
+              "key": "CR11",
+              "volume-title": "Ecological studies 12",
+              "author": "A.E. Hall",
+              "year": "1975",
+              "unstructured": "Hall, A.E., Bj\u00f6rkman, O. (1975) Model of leaf photosynthesis and respiration. In: Ecological studies 12. Gates, D.M., Schmerl, R.B., eds. Springer, Berlin Heidelberg New York"
+            },
+            {
+              "key": "CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "157",
+              "DOI": "10.1007/BF00748961",
+              "volume": "8",
+              "author": "U. Heber",
+              "year": "1976",
+              "unstructured": "Heber, U. (1976) Energy coupling in chloroplasts. J. Bioenerg. Biomembr. 8, 157?172",
+              "journal-title": "J. Bioenerg. Biomembr."
+            },
+            {
+              "key": "CR13",
+              "first-page": "137",
+              "volume-title": "Transport in plants III. Intracellular interactions and transport processes",
+              "author": "H.W. Heldt",
+              "year": "1976",
+              "unstructured": "Heldt, H.W. (1976) Metabolite carriers of chloroplasts. In: Transport in plants III. Intracellular interactions and transport processes, pp. 137?143. Stocking, C.R., Heber, C., eds. Springer, Berlin Heidelberg New York"
+            },
+            {
+              "key": "CR14",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Jensen, R.G., Bahr, J.T. (1977) Ribulose-1,5-bisphosphate carboxylase oxygenase. Annu. Rev. Plant Physiol. 377?400",
+              "DOI": "10.1146/annurev.pp.28.060177.002115"
+            },
+            {
+              "key": "CR15",
+              "doi-asserted-by": "crossref",
+              "first-page": "741",
+              "DOI": "10.1038/275741a0",
+              "volume": "275",
+              "author": "A.J. Keys",
+              "year": "1978",
+              "unstructured": "Keys, A.J., Bird, I.F., Cornelius, M.J., Lea, P.J., Wallsgrove, R.M., Miflin, B.J. (1978) Photorespiratory nitrogen cycle. Nature (London) 275, 741?43",
+              "journal-title": "Nature (London)"
+            },
+            {
+              "key": "CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "986",
+              "DOI": "10.1104/pp.59.5.986",
+              "volume": "59",
+              "author": "S.-B. Ku",
+              "year": "1977",
+              "unstructured": "Ku, S.-B., Edwards, G.E. (1977) Oxygen inhibition of photosynthesis. I. Temperature dependence and relation to O2/CO2 solubility ratio. Plant Physiol. 59, 986?990",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "678",
+              "DOI": "10.1104/pp.54.5.678",
+              "volume": "55",
+              "author": "W.A. Laing",
+              "year": "1974",
+              "unstructured": "Laing, W.A., Ogren, W.L., Hageman, R.H. (1974) Regulation of soybean net photosynthetic CO2 fixation by the interaction of CO2, O2 and ribulose-1,5-diphosphate carboxylase. Plant Physiol. 55, 678?685",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "CR18",
+              "doi-asserted-by": "crossref",
+              "first-page": "1087",
+              "DOI": "10.1104/pp.55.6.1087",
+              "volume": "55",
+              "author": "R. McC. Lilley",
+              "year": "1975",
+              "unstructured": "Lilley, R. McC., Walker, D.A. (1975) Carbon dioxide assimilation by leaves, isolated chloroplasts and ribulose bisphosphate carboxylase from spinach. Plant Physiol. 55, 1087?1092",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "1067",
+              "DOI": "10.1104/pp.55.6.1067",
+              "volume": "55",
+              "author": "P.S. Nobel",
+              "year": "1975",
+              "unstructured": "Nobel, P.S., Zaragoza, L.J., Smith, W.K. (1975) Relation between mesophyll surface area, photosynthetic rate, and illumination level during development for leaves of Plectranthus parviflorus Henckel. Plant Physiol. 55, 1067?1070",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "CR20",
+              "doi-asserted-by": "crossref",
+              "first-page": "461",
+              "DOI": "10.1016/0005-2728(76)90034-7",
+              "volume": "440",
+              "author": "W.G. Nolan",
+              "year": "1976",
+              "unstructured": "Nolan, W.G., Smillie, R.M. (1976) Multi temperature effects on Hill reaction activity of barley chloroplasts. Biochim. Biophys. Acta 440, 461?475",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "CR21",
+              "first-page": "47",
+              "volume": "8",
+              "author": "M. Peisker",
+              "year": "1974",
+              "unstructured": "Peisker, M. (1974) A model describing the influence of oxygen on photosynthetic carboxylation. Photosynthetica 8, 47?50",
+              "journal-title": "Photosynthetica"
+            },
+            {
+              "key": "CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "221",
+              "DOI": "10.1007/BF02070324",
+              "volume": "24",
+              "author": "M. Peisker",
+              "year": "1976",
+              "unstructured": "Peisker, M. (1976) Ein Modell der Sauerstoffabh\u00e4ngigkeit des Photosynthetischen CO2-Gaswechsels von C3-Pflanzen. Kulturpflanzen 24, 221?235",
+              "journal-title": "Kulturpflanzen"
+            },
+            {
+              "key": "CR23",
+              "first-page": "29",
+              "volume": "11",
+              "author": "M. Peisker",
+              "year": "1977",
+              "unstructured": "Peisker, M., Apel, P. (1977) Influence of oxygen on photosynthesis and photorespiration in leaves of Triticum aestivum L. 3. Response of CO2 gas exchange to oxygen at various temperatures. Photosynthetica 11, 29?37",
+              "journal-title": "Photosynthetica"
+            },
+            {
+              "key": "CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "649",
+              "DOI": "10.1016/0022-5193(77)90265-X",
+              "volume": "64",
+              "author": "P.S.H. Sharpe",
+              "year": "1977",
+              "unstructured": "Sharpe, P.S.H., De Michelle, D.W. (1977) Reaction kinetics of poikilothermic development. J. Theor. Biol. 64, 649?70",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "563",
+              "DOI": "10.2135/cropsci1974.0011183X001400040021x",
+              "volume": "14",
+              "author": "M. Singh",
+              "year": "1974",
+              "unstructured": "Singh, M., Ogren, W.L., Widholm, J.M. (1974) Photosynthetic characteristics of several C3 and C4 plant species grown under different light intensities. Crop Sci. 14, 563?566",
+              "journal-title": "Crop Sci."
+            },
+            {
+              "key": "CR26",
+              "doi-asserted-by": "crossref",
+              "first-page": "916",
+              "DOI": "10.1104/pp.63.5.916",
+              "volume": "63",
+              "author": "J.D. Tenhunen",
+              "year": "1979",
+              "unstructured": "Tenhunen, J.D., Weber, J.A., Yocum, C.S., Gates, D.M. (1979) Solubility of gases and the temperature dependency of whole leaf affinities for carbon dioxide and oxygen. Plant Physiol. 63, 916?923",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "CR27",
+              "doi-asserted-by": "crossref",
+              "first-page": "527",
+              "DOI": "10.1042/bj1090527",
+              "volume": "109",
+              "author": "K.R. West",
+              "year": "1968",
+              "unstructured": "West, K.R., Wiskich, J.T. (1968) Photosynthetic control by isolated pea chloroplasts. Biochem J. 109, 527?32",
+              "journal-title": "Biochem J."
+            },
+            {
+              "key": "CR28",
+              "unstructured": "Wong, S.C. (1979) Stomatal behaviour in relation to photosynthesis. Ph. D. Thesis A.N.U."
+            },
+            {
+              "key": "CR29",
+              "first-page": "240",
+              "volume": "77",
+              "author": "K.C. Woo",
+              "year": "1978",
+              "unstructured": "Woo, K.C., Berry, J.A., Turner, G.L. (1978) Release and refixation of ammonia during photorespiration. Carnegie Inst. Wash. Year Book 77, 240?245",
+              "journal-title": "Carnegie Inst. Wash. Year Book"
+            }
+          ],
+          "container-title": [
+            "Planta"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF00386231.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF00386231/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF00386231",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2019-04-03T17:36:58Z",
+            "timestamp": 1554313018000
+          },
+          "score": 55.847733,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF00386231"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1980,
+                6
+              ]
+            ]
+          },
+          "references-count": 29,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1980,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF00386231"
+          ],
+          "URL": "https://doi.org/10.1007/bf00386231",
+          "ISSN": [
+            "0032-0935",
+            "1432-2048"
+          ],
+          "issn-type": [
+            {
+              "value": "0032-0935",
+              "type": "print"
+            },
+            {
+              "value": "1432-2048",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1980,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                27
+              ]
+            ],
+            "date-time": "2026-09-27T19:32:30Z",
+            "timestamp": 1790537550533,
+            "version": "4.1.0"
+          },
+          "reference-count": 34,
+          "publisher": "MDPI AG",
+          "issue": "7",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    7,
+                    24
+                  ]
+                ],
+                "date-time": "2017-07-24T00:00:00Z",
+                "timestamp": 1500854400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Sustainability"
+          ],
+          "abstract": "<jats:p>The Farquhar\u2014von Caemmerer\u2014Berry (FvCB) biochemical model of photosynthesis, commonly used to estimate CO2 assimilation at various spatial scales from leaf to global, has been used to assess the impacts of climate change on crop and ecosystem productivities. However, it is widely known that the parameters in the FvCB model are difficult to accurately estimate. The objective of this study was to assess the methods of Sharkey et al. and Gu et al., which are often used to estimate the parameters of the FvCB model. We generated An/Ci datasets with different data accuracies, numbers of data points, and data point distributions. The results showed that neither method accurately estimated the parameters; however, Gu et al.\u2019s approach provided slightly better estimates. Using Gu et al.\u2019s approach and datasets with measurement errors and the same accuracy as a typical open gas exchange system (i.e., Li-6400), the majority of the estimated parameters\u2014Vcmax (maximal Rubisco carboxylation rate), Kco (effective Michaelis-Menten coefficient for CO2), gm (internal (mesophyll) conductance to CO2 transport) and \u0393* (chloroplastic CO2 photocompensation point)\u2014were underestimated, while the majority of Rd (day respiration) and \u03b1 (the non-returned fraction of the glycolate carbon recycled in the photorespiratory cycle) were overestimated. The distributions of Tp (the rate of triose phosphate export from the chloroplast) were evenly dispersed around the 1:1 line using both approaches. This study revealed that a high accuracy of leaf gas exchange measurements and sufficient data points are required to correctly estimate the parameters for the biochemical model. The accurate estimation of these parameters can contribute to the enhancement of food security under climate change through accurate predictions of crop and ecosystem productivities. A further study is recommended to address the question of how the measurement accuracies can be improved.</jats:p>",
+          "DOI": "10.3390/su9071288",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                7,
+                24
+              ]
+            ],
+            "date-time": "2017-07-24T10:04:13Z",
+            "timestamp": 1500890653000
+          },
+          "page": "1288",
+          "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 14,
+          "title": [
+            "Parameter Estimation of the Farquhar\u2014von Caemmerer\u2014Berry Biochemical Model from Photosynthetic Carbon Dioxide Response Curves"
+          ],
+          "prefix": "10.3390",
+          "volume": "9",
+          "author": [
+            {
+              "given": "Qingguo",
+              "family": "Wang",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Wye Research and Education Center, University of Maryland, Queenstown, MD 21658, USA"
+                },
+                {
+                  "name": "APEC Climate Center, 12 Centum 7-ro, Haeundae-gu, Busan 48058, Korea"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jong",
+              "family": "Chun",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "APEC Climate Center, 12 Centum 7-ro, Haeundae-gu, Busan 48058, Korea"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "David",
+              "family": "Fleisher",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "USDA-ARS Crop Systems and Global Change Lab, Beltsville, MD 20705, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Vangimalla",
+              "family": "Reddy",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "USDA-ARS Crop Systems and Global Change Lab, Beltsville, MD 20705, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Dennis",
+              "family": "Timlin",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "USDA-ARS Crop Systems and Global Change Lab, Beltsville, MD 20705, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-9534-2518",
+              "authenticated-orcid": false,
+              "given": "Jonathan",
+              "family": "Resop",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Geographical Sciences, University of Maryland, College Park, MD 20742, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1968",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                7,
+                24
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "ref_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "78",
+              "DOI": "10.1007/BF00386231",
+              "article-title": "A biochemical model of photosynthetic CO2 assimilation in leaves of C3 species",
+              "volume": "149",
+              "author": "Farquhar",
+              "year": "1980",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "ref_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1852",
+              "DOI": "10.1111/j.1365-3040.2010.02192.x",
+              "article-title": "Reliable estimation of biochemical parameters from C3 leaf photosynthesis-intercellular carbon dioxide response curves",
+              "volume": "33",
+              "author": "Gu",
+              "year": "2010",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_3",
+              "doi-asserted-by": "crossref",
+              "first-page": "729",
+              "DOI": "10.1111/j.1365-3040.1991.tb01439.x",
+              "article-title": "Modification of the response of photosynthetic productivity to rising temperature by atmospheric CO2 concentrations: Has its importance been underestimated?",
+              "volume": "14",
+              "author": "Long",
+              "year": "1991",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_4",
+              "doi-asserted-by": "crossref",
+              "first-page": "321",
+              "DOI": "10.1007/BF00014590",
+              "article-title": "Scaling CO2-photosynthesis relationships from the leaf to the canopy",
+              "volume": "39",
+              "author": "Amthor",
+              "year": "1994",
+              "journal-title": "Photosynth. Res."
+            },
+            {
+              "key": "ref_5",
+              "doi-asserted-by": "crossref",
+              "first-page": "459",
+              "DOI": "10.1046/j.1365-2486.1998.00011.x",
+              "article-title": "Bidirectional interactions between the biosphere and the atmosphere\u2014Introduction",
+              "volume": "4",
+              "author": "Field",
+              "year": "1998",
+              "journal-title": "Glob. Chang. Biol."
+            },
+            {
+              "key": "ref_6",
+              "doi-asserted-by": "crossref",
+              "first-page": "235",
+              "DOI": "10.1016/S1161-0301(02)00107-7",
+              "article-title": "The DSSAT Cropping System Model",
+              "volume": "18",
+              "author": "Jones",
+              "year": "2003",
+              "journal-title": "Eur. J. Agron."
+            },
+            {
+              "key": "ref_7",
+              "doi-asserted-by": "crossref",
+              "first-page": "537",
+              "DOI": "10.1111/j.1365-3040.1997.00094.x",
+              "article-title": "Simple scaling of photosynthesis from leaves to canopy without the errors of bigleaf models",
+              "volume": "20",
+              "author": "Farquhar",
+              "year": "1997",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_8",
+              "doi-asserted-by": "crossref",
+              "first-page": "1402",
+              "DOI": "10.1126/science.271.5254.1402",
+              "article-title": "Comparison of radiative and physiological effects of doubled atmospheric CO2 on climate",
+              "volume": "271",
+              "author": "Sellers",
+              "year": "1996",
+              "journal-title": "Science"
+            },
+            {
+              "key": "ref_9",
+              "doi-asserted-by": "crossref",
+              "first-page": "502",
+              "DOI": "10.1126/science.275.5299.502",
+              "article-title": "Modeling the exchanges of energy, water, and carbon between continents and the atmosphere",
+              "volume": "275",
+              "author": "Sellers",
+              "year": "1997",
+              "journal-title": "Science"
+            },
+            {
+              "key": "ref_10",
+              "doi-asserted-by": "crossref",
+              "first-page": "89",
+              "DOI": "10.1016/S0168-1923(98)00061-6",
+              "article-title": "A two-leaf model for canopy conductance, photosynthesis and portioning of available energy I: Model description and comparison with a multi-layered model",
+              "volume": "91",
+              "author": "Wang",
+              "year": "1998",
+              "journal-title": "Agric. For. Meteorol."
+            },
+            {
+              "key": "ref_11",
+              "doi-asserted-by": "crossref",
+              "first-page": "644",
+              "DOI": "10.1111/j.1365-2486.2005.00934.x",
+              "article-title": "Gross primary production is stimulated for three Populus species grown under free-air CO2 enrichment from planting through canopy closure",
+              "volume": "11",
+              "author": "Wittig",
+              "year": "2005",
+              "journal-title": "Glob. Chang. Biol."
+            },
+            {
+              "key": "ref_12",
+              "doi-asserted-by": "crossref",
+              "first-page": "137",
+              "DOI": "10.1111/j.1365-3040.2004.01140.x",
+              "article-title": "On the need to incorporate sensitivity to CO2 transfer conductance into the Farquhar-von Caemmerer-Berry leaf photosynthesis model",
+              "volume": "27",
+              "author": "Ethier",
+              "year": "2004",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_13",
+              "doi-asserted-by": "crossref",
+              "first-page": "59",
+              "DOI": "10.1023/A:1006325724086",
+              "article-title": "Acclimation of photosynthesis to temperature in eight cool and warm climate herbaceous C3 species: Temperature dependence of parameters of a biochemical photosynthesis model",
+              "volume": "63",
+              "author": "Bunce",
+              "year": "2000",
+              "journal-title": "Photosynth. Res."
+            },
+            {
+              "key": "ref_14",
+              "doi-asserted-by": "crossref",
+              "first-page": "1429",
+              "DOI": "10.1104/pp.98.4.1429",
+              "article-title": "Theoretical consideration when estimating the mesophyll conductance to CO2 flux by analysis of the response of Photosynthesis to CO2",
+              "volume": "98",
+              "author": "Harley",
+              "year": "1992",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "ref_15",
+              "doi-asserted-by": "crossref",
+              "first-page": "271",
+              "DOI": "10.1111/j.1365-3040.1992.tb00974.x",
+              "article-title": "Modelling photosynthesis of cotton grown in elevated CO2",
+              "volume": "15",
+              "author": "Harley",
+              "year": "1992",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_16",
+              "doi-asserted-by": "crossref",
+              "first-page": "291",
+              "DOI": "10.1093/jxb/erj049",
+              "article-title": "Temperature acclimation of photosynthesis: Mechanisms involved in the changes in temperature dependence of photosynthetic rate",
+              "volume": "57",
+              "author": "Hikosaka",
+              "year": "2006",
+              "journal-title": "J. Exp. Bot."
+            },
+            {
+              "key": "ref_17",
+              "doi-asserted-by": "crossref",
+              "first-page": "837",
+              "DOI": "10.1007/s00425-008-0883-1",
+              "article-title": "Gas exchange and photosynthetic performance of the tropical tree Acacia nigrescens when grown in different CO2 concentrations",
+              "volume": "229",
+              "author": "Possell",
+              "year": "2009",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "ref_18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Laisk, A., and NedbalGovindjee, L. (2009). Biochemical model of C3 photosynthesis. Photosynthesis in Silico: Understanding Complexity from Molecules to Ecosystems, Springer Science + Business Media, B.V.",
+              "DOI": "10.1007/978-1-4020-9237-4"
+            },
+            {
+              "key": "ref_19",
+              "doi-asserted-by": "crossref",
+              "first-page": "1641",
+              "DOI": "10.1111/pce.12118",
+              "article-title": "Modelling C3 photosynthesis from the chloroplast to the ecosystem",
+              "volume": "36",
+              "author": "Bernacchi",
+              "year": "2013",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_20",
+              "first-page": "550",
+              "article-title": "Modelling of photosynthetic responses to environmental conditions",
+              "volume": "Volume 12B",
+              "author": "Lange",
+              "year": "1982",
+              "journal-title": "Physiological Plant Ecology II. Encyclopedia of Plant Physiology"
+            },
+            {
+              "key": "ref_21",
+              "doi-asserted-by": "crossref",
+              "first-page": "617",
+              "DOI": "10.1104/pp.77.3.617",
+              "article-title": "Starch and sucrose synthesis in Phaseolus vulgaris as affected by light, CO2, and abscisic acid",
+              "volume": "77",
+              "author": "Sharkey",
+              "year": "1985",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "ref_22",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Von Caemmerer, S. (2000). Biochemical Models of Leaf Photosynthesis, CSIRO Publishing. Techniques in Plant Sciences No. 2.",
+              "DOI": "10.1071/9780643103405"
+            },
+            {
+              "key": "ref_23",
+              "doi-asserted-by": "crossref",
+              "first-page": "376",
+              "DOI": "10.1007/BF00384257",
+              "article-title": "Some relationships between the biochemistry of photosynthesis and the gas exchange of leaves",
+              "volume": "153",
+              "author": "Farquhar",
+              "year": "1981",
+              "journal-title": "Planta"
+            },
+            {
+              "key": "ref_24",
+              "doi-asserted-by": "crossref",
+              "first-page": "402",
+              "DOI": "10.1111/j.1469-8137.2007.02182.x",
+              "article-title": "Optimizing the statistical estimation of the parameters of the Farquhar-von Caemmerer-Berry model of photosynthesis",
+              "volume": "176",
+              "author": "Dubois",
+              "year": "2007",
+              "journal-title": "New Phytol."
+            },
+            {
+              "key": "ref_25",
+              "doi-asserted-by": "crossref",
+              "first-page": "2581",
+              "DOI": "10.1093/jxb/erh260",
+              "article-title": "A/Ci curve analysis across a range of woody plant species: Influence of regression analysis parameters andmesophyll conductance",
+              "volume": "55",
+              "author": "Manter",
+              "year": "2004",
+              "journal-title": "J. Exp. Bot."
+            },
+            {
+              "key": "ref_26",
+              "doi-asserted-by": "crossref",
+              "first-page": "109",
+              "DOI": "10.1111/j.1365-3040.2008.01900.x",
+              "article-title": "Comparison of the A-Cc curve fitting methods in determining maximum ribulose 1.5-bisphosphate carboxylase/oxygenase carboxylation rate, potential light saturated electron transport rate and leaf dark respiration",
+              "volume": "32",
+              "author": "Miao",
+              "year": "2009",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_27",
+              "doi-asserted-by": "crossref",
+              "first-page": "1035",
+              "DOI": "10.1111/j.1365-3040.2007.01710.x",
+              "article-title": "Fitting photosynthetic carbon dioxide response curves for C-3 leaves",
+              "volume": "30",
+              "author": "Sharkey",
+              "year": "2007",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_28",
+              "doi-asserted-by": "crossref",
+              "first-page": "1710",
+              "DOI": "10.1111/j.1365-3040.2009.02036.x",
+              "article-title": "Estimation of parameters of a biochemically based model of photosynthesis using a genetic algorithm",
+              "volume": "32",
+              "author": "Su",
+              "year": "2009",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_29",
+              "doi-asserted-by": "crossref",
+              "first-page": "1513",
+              "DOI": "10.1111/j.1365-3040.2009.02016.x",
+              "article-title": "Theoretical reconsiderations when estimating the mesophyll conductance to CO2 diffusion in leaves of C3 plants by analysis of combined gas exchange and chlorophyll fluorescence measurements",
+              "volume": "32",
+              "author": "Yin",
+              "year": "2009",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_30",
+              "unstructured": "(2008). Using the Li-6400/Li-6400XT Portable Photosynthesis System, Li-Cor, Inc.. version 6."
+            },
+            {
+              "key": "ref_31",
+              "doi-asserted-by": "crossref",
+              "first-page": "602",
+              "DOI": "10.1111/j.1365-3040.2007.01757.x",
+              "article-title": "Mesophyll conductance to CO2: Current knowledge and future prospects",
+              "volume": "31",
+              "author": "Flexas",
+              "year": "2008",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_32",
+              "doi-asserted-by": "crossref",
+              "first-page": "443",
+              "DOI": "10.1890/03-4049",
+              "article-title": "Oak forest carbon and water simulations: Model intercomparisons and evaluations against independent data",
+              "volume": "74",
+              "author": "Hanson",
+              "year": "2004",
+              "journal-title": "Ecol. Monogr."
+            },
+            {
+              "key": "ref_33",
+              "doi-asserted-by": "crossref",
+              "first-page": "1146",
+              "DOI": "10.1111/j.1365-3040.1995.tb00625.x",
+              "article-title": "Scaling carbon dioxide and water vapour exchange from leaf to canopy in a deciduous forest. I. leaf model parameterization",
+              "volume": "18",
+              "author": "Harley",
+              "year": "1995",
+              "journal-title": "Plant Cell Environ."
+            },
+            {
+              "key": "ref_34",
+              "doi-asserted-by": "crossref",
+              "first-page": "22",
+              "DOI": "10.1007/s11099-012-0012-z",
+              "article-title": "Quantifying the Measurement Errors in a Potable Open Gas Exchange System and Their Effects on the Parameterization of Farquhar et al. model for C3 Leaves",
+              "volume": "50",
+              "author": "Wang",
+              "year": "2012",
+              "journal-title": "Photosynthetica"
+            }
+          ],
+          "container-title": [
+            "Sustainability"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.mdpi.com/2071-1050/9/7/1288/pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                11
+              ]
+            ],
+            "date-time": "2025-10-11T18:43:47Z",
+            "timestamp": 1760208227000
+          },
+          "score": 53.905422,
+          "resource": {
+            "primary": {
+              "URL": "https://www.mdpi.com/2071-1050/9/7/1288"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017,
+                7,
+                24
+              ]
+            ]
+          },
+          "references-count": 34,
+          "journal-issue": {
+            "issue": "7",
+            "published-online": {
+              "date-parts": [
+                [
+                  2017,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "su9071288"
+          ],
+          "URL": "https://doi.org/10.3390/su9071288",
+          "ISSN": [
+            "2071-1050"
+          ],
+          "issn-type": [
+            {
+              "value": "2071-1050",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                7,
+                24
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                9
+              ]
+            ],
+            "date-time": "2025-12-09T13:08:46Z",
+            "timestamp": 1765285726766,
+            "version": "3.46.0"
+          },
+          "reference-count": 0,
+          "publisher": "Natural and Engineering Sciences",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "NES"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                12
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Photosynthesis is vital to life on Earth, as it promotes plant growth and sustains the environment. For C3 plants in particular, understanding photosynthetic rate is a prerequisite for more accurate yield estimates and for understanding their responses to environmental changes. The Farquhar-von Caemmerer-Berry (FvCB) is one of the most common biochemical models of carbon assimilation in photosynthesis, based on leaf-level gas exchange. We estimate photosynthesis in C3 plants using the FvCB model, which relates Rubisco carboxylation (vcmax) to electron transport (J) and TPU. We attempt to improve the model's estimates of accuracy across varied combinations of stimuli, as a function of environmental measures of light, CO2, temperature, and stomatal conductance. The model was then evaluated using a set of selected representative C3 plant species, and the simulations were also compared with real-time gas exchange measurements. The model output shows that it performs well at estimating photosynthesis responses to changing climate conditions. Moreover, Vc\u2098\u2090\u2093, J, and overall assimilation rates exhibited exceptional interspecific variability, further quantifying the sensitivity analysis and indicating the need for species-specific parameterization. Our study contributes to developing more robust photosynthetic models for crops and ecosystems that estimate climate change impacts and support agricultural management strategies that rely on them.</jats:p>",
+          "DOI": "10.28978/nesciences.1811151",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                9
+              ]
+            ],
+            "date-time": "2025-12-09T13:04:57Z",
+            "timestamp": 1765285497000
+          },
+          "page": "661-675",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Photosynthesis Rate Estimation in C3 Plants Using the Farquhar-von Caemmerer-Berry (FvCB) Model"
+          ],
+          "prefix": "10.28978",
+          "volume": "10",
+          "author": [
+            {
+              "given": "Jakhangir",
+              "family": "Nakhalbayev",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Ahmed Remthan",
+              "family": "Hussein",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Otabek",
+              "family": "Bobojonov",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Zayd",
+              "family": "Balassem",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Mustafa",
+              "family": "Tursunov",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Dr. Pokhraj",
+              "family": "Sahu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "54636",
+          "published-online": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                12
+              ]
+            ]
+          },
+          "container-title": [
+            "Natural and Engineering Sciences"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                9
+              ]
+            ],
+            "date-time": "2025-12-09T13:05:05Z",
+            "timestamp": 1765285505000
+          },
+          "score": 51.36592,
+          "resource": {
+            "primary": {
+              "URL": "https://nesciences.com/article/72781/"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                12
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-online": {
+              "date-parts": [
+                [
+                  2025,
+                  12,
+                  12
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2025,
+                  12,
+                  12
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.28978/nesciences.1811151",
+          "ISSN": [
+            "2458-8989"
+          ],
+          "issn-type": [
+            {
+              "value": "2458-8989",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                12
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

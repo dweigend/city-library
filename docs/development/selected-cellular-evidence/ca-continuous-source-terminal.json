@@ -1,0 +1,15 @@
+{
+  "slug": "ca-continuous",
+  "command": "set auto-continue? false setup-single repeat (world-height - 1) [ go ] go",
+  "resume": "go",
+  "bottom": {
+    "tick": 200,
+    "row": -100,
+    "console": " powered by NetLogo\nCA Continuous\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 200\n?\nfor shortcuts\nSetup Random\nGo\nauto-continue?\nSetup Single\nprecision-level\n decimal places\nadd-constant\nmax-value\nCommand Center\nobserver> set auto-continue? false setup-single repeat (world-height - 1) [ go ] go\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  },
+  "resumed": {
+    "tick": 201,
+    "row": 99,
+    "console": " powered by NetLogo\nCA Continuous\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 201\n?\nfor shortcuts\nSetup Random\nGo\nauto-continue?\nSetup Single\nprecision-level\n decimal places\nadd-constant\nmax-value\nCommand Center\nobserver> set auto-continue? false setup-single repeat (world-height - 1) [ go ] go\nobserver> go\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+}

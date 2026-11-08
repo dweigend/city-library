@@ -1,0 +1,384 @@
+{
+  "url": "http://localhost:3120/?experiment=wolf-sheep-predation",
+  "title": "Agent Lab",
+  "loading": false,
+  "visibleText": "Skip to experiment\nAgent Lab\nExperiment\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDiffusion on a Directed Network\nExpected Value\nFire\nGalton Box\nHex Cell Aggregation\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRandom Combinations and Permutations\nSegregation\nSmoothLife\nStochastic Patchwork\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nMode\nsheep-wolves\nsheep-wolves-grass\nInitial Sheep\nInitial Wolves\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSheep food gain\nWolf food gain\nSheep reproduction (%)\nWolf reproduction (%)\nGrass regrowth\nTick\n0\nSheep\n100\nWolves\n50\nGrass / 4\n—\n\nModel initialized.\n\nModel info\nSelected\nid\ncl_1lwyfwsyypbcedya\nspecies\nsheep\nx\n-15.581840224564075\ny\n2.5977717514615506\nheading\n13\nenergy\n3\nAnimals and grass\nLabels\nPopulations\n100\n0\n1\nSheep\nWolves",
+  "interactiveElements": [],
+  "consoleEntries": [
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:25:49.746Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:25:49.746Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:25:49.746Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:27:24.550Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:28:35.531Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:28:59.295Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:29:30.531Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:30:32.072Z"
+    },
+    {
+      "level": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "timestamp": "2026-11-06T08:33:41.092Z"
+    }
+  ],
+  "networkEntries": [
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:38.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:40.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:42.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:44.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:46.353Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:48.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:50.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:52.352Z"
+    },
+    {
+      "url": "http://localhost:3120/chunks/ui-2cnasry2.js",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:53.783Z"
+    },
+    {
+      "url": "http://localhost:3120/chunks/ui-s40jh0tg.js",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:54.319Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:54.370Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:56.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:33:58.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:00.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:02.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:04.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:06.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:08.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:10.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:12.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:14.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:16.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:18.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:20.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:22.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:24.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:26.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:28.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:30.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:32.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:34.352Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:36.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:38.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:40.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:42.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:44.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:46.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:48.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:50.351Z"
+    },
+    {
+      "url": "http://localhost:3120/build-version",
+      "method": "GET",
+      "status": 200,
+      "failed": false,
+      "timestamp": "2026-11-06T08:34:52.351Z"
+    }
+  ],
+  "actionTimeline": [
+    {
+      "id": "c3613923-5cf0-4c68-9b8f-087b509b0f37",
+      "action": "press",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T08:33:54.115Z",
+      "completedAt": "2026-11-06T08:33:54.130Z"
+    },
+    {
+      "id": "a8076713-9f02-4426-a0f8-b30b410fdbb2",
+      "action": "select",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T08:33:54.310Z",
+      "completedAt": "2026-11-06T08:33:54.316Z"
+    },
+    {
+      "id": "12a6d718-bdeb-40ff-a7c3-466859d3bfec",
+      "action": "click",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T08:33:54.332Z",
+      "completedAt": "2026-11-06T08:33:54.420Z"
+    },
+    {
+      "id": "535ac48b-ba84-43e8-a8ee-73c08d95b30e",
+      "action": "click",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T08:33:54.437Z",
+      "completedAt": "2026-11-06T08:33:54.484Z"
+    },
+    {
+      "id": "dbb7df3b-810e-4b98-86bc-ab7e0b79cced",
+      "action": "press",
+      "status": "succeeded",
+      "startedAt": "2026-11-06T08:33:54.497Z",
+      "completedAt": "2026-11-06T08:33:54.501Z"
+    }
+  ],
+  "screenshot": {
+    "mimeType": "image/png",
+    "width": 780,
+    "height": 1688
+  },
+  "accessibilityTree": "- generic [ref=t3-8ebdcace-9b-e1] [box=0,-146,390,1850]:\n  - link \"Skip to experiment\" [ref=t3-8ebdcace-9b-e2] [cursor=pointer] [box=16,-242,157,38]:\n    - /url: \"#experiment-content\"\n  - main [ref=t3-8ebdcace-9b-e3] [box=0,-146,390,1850]:\n    - generic [ref=t3-8ebdcace-9b-e4] [box=16,-146,358,80]:\n      - heading \"Agent Lab\" [level=1] [ref=t3-8ebdcace-9b-e5] [box=16,-146,101,28]\n      - generic [ref=t3-8ebdcace-9b-e6] [box=15,-107,1,1]: Experiment\n      - combobox \"Experiment\" [ref=t3-8ebdcace-9b-e7] [box=16,-107,358,40]:\n        - option \"Binomial Rabbits\" [box=0,0,0,0]\n        - option \"Birthdays\" [box=0,0,0,0]\n        - option \"Brian's Brain\" [box=0,0,0,0]\n        - option \"CA 1D Elementary\" [box=0,0,0,0]\n        - option \"CA Continuous\" [box=0,0,0,0]\n        - option \"CA Stochastic\" [box=0,0,0,0]\n        - option \"Central Limit Theorem\" [box=0,0,0,0]\n        - option \"Cyclic CA\" [box=0,0,0,0]\n        - option \"Diffusion on a Directed Network\" [box=0,0,0,0]\n        - option \"Expected Value\" [box=0,0,0,0]\n        - option \"Fire\" [box=0,0,0,0]\n        - option \"Galton Box\" [box=0,0,0,0]\n        - option \"Hex Cell Aggregation\" [box=0,0,0,0]\n        - option \"Life\" [box=0,0,0,0]\n        - option \"Mandelbrot\" [box=0,0,0,0]\n        - option \"Partition Permutation Distribution\" [box=0,0,0,0]\n        - option \"Percolation\" [box=0,0,0,0]\n        - option \"Preferential Attachment\" [box=0,0,0,0]\n        - option \"Random Combinations and Permutations\" [box=0,0,0,0]\n        - option \"Segregation\" [box=0,0,0,0]\n        - option \"SmoothLife\" [box=0,0,0,0]\n        - option \"Stochastic Patchwork\" [box=0,0,0,0]\n        - option \"Three Doors\" [box=0,0,0,0]\n        - option \"Turing Machine 2D\" [box=0,0,0,0]\n        - option \"Urban Suite - Awareness\" [box=0,0,0,0]\n        - option \"Urban Suite - Cells\" [box=0,0,0,0]\n        - option \"Urban Suite - Economic Disparity\" [box=0,0,0,0]\n        - option \"Urban Suite - Path Dependence\" [box=0,0,0,0]\n        - option \"Urban Suite - Pollution\" [box=0,0,0,0]\n        - option \"Urban Suite - Positive Feedback\" [box=0,0,0,0]\n        - option \"Urban Suite - Recycling\" [box=0,0,0,0]\n        - option \"Urban Suite - Sprawl Effect\" [box=0,0,0,0]\n        - option \"Urban Suite - Structure from Randomness 1\" [box=0,0,0,0]\n        - option \"Urban Suite - Structure from Randomness 2\" [box=0,0,0,0]\n        - option \"Urban Suite - Tijuana Bordertowns\" [box=0,0,0,0]\n        - option \"Vants\" [box=0,0,0,0]\n        - option \"Virus on a Network\" [box=0,0,0,0]\n        - option \"Voting\" [box=0,0,0,0]\n        - option \"Wealth Distribution\" [box=0,0,0,0]\n        - option \"Wolf Sheep Predation\" [selected] [box=0,0,0,0]\n    - region \"Experiment workbench\" [ref=t3-8ebdcace-9b-e8] [box=16,-43,358,1746]:\n      - generic [ref=t3-8ebdcace-9b-e490] [box=16,-43,358,1746]:\n        - complementary [ref=t3-8ebdcace-9b-e491] [box=0,0,0,0]:\n          - form \"Model setup\" [ref=t3-8ebdcace-9b-e492] [box=16,-43,358,195]:\n            - generic [ref=t3-8ebdcace-9b-e493] [box=16,-43,174,65]:\n              - text: Seed\n              - spinbutton \"Seed\" [ref=t3-8ebdcace-9b-e494] [box=16,-18,174,40]: \"1\"\n            - generic [ref=t3-8ebdcace-9b-e495] [box=200,-43,174,65]:\n              - text: Mode\n              - combobox \"Mode\" [ref=t3-8ebdcace-9b-e496] [box=200,-18,174,40]:\n                - option \"sheep-wolves\" [selected] [box=0,0,0,0]\n                - option \"sheep-wolves-grass\" [box=0,0,0,0]\n            - generic [ref=t3-8ebdcace-9b-e497] [box=16,34,174,65]:\n              - text: Initial Sheep\n              - spinbutton \"Initial Sheep\" [ref=t3-8ebdcace-9b-e498] [box=16,59,174,40]: \"100\"\n            - generic [ref=t3-8ebdcace-9b-e499] [box=200,34,174,65]:\n              - text: Initial Wolves\n              - spinbutton \"Initial Wolves\" [ref=t3-8ebdcace-9b-e500] [box=200,59,174,40]: \"50\"\n            - button \"Setup\" [ref=t3-8ebdcace-9b-e501] [cursor=pointer] [box=16,112,174,40]\n          - generic [ref=t3-8ebdcace-9b-e502] [box=16,380,358,117]:\n            - button \"Run\" [ref=t3-8ebdcace-9b-e503] [cursor=pointer] [box=16,380,51,40]\n            - button \"1 step\" [ref=t3-8ebdcace-9b-e504] [cursor=pointer] [box=75,380,67,40]\n            - button \"10 steps\" [ref=t3-8ebdcace-9b-e505] [cursor=pointer] [box=150,380,84,40]\n            - button \"100 steps\" [ref=t3-8ebdcace-9b-e506] [cursor=pointer] [box=241,380,93,40]\n            - generic [ref=t3-8ebdcace-9b-e507] [box=16,428,358,69]:\n              - text: Speed\n              - slider \"Speed\" [ref=t3-8ebdcace-9b-e508] [box=18,454,358,40]: \"5\"\n          - generic [ref=t3-8ebdcace-9b-e509] [box=16,1254,358,368]:\n            - generic [ref=t3-8ebdcace-9b-e510] [box=16,1254,358,65]:\n              - text: Sheep food gain\n              - spinbutton \"Sheep food gain\" [ref=t3-8ebdcace-9b-e511] [box=16,1279,358,40]: \"4\"\n            - generic [ref=t3-8ebdcace-9b-e512] [box=16,1330,358,65]:\n              - text: Wolf food gain\n              - spinbutton \"Wolf food gain\" [ref=t3-8ebdcace-9b-e513] [box=16,1355,358,40]: \"20\"\n            - generic [ref=t3-8ebdcace-9b-e514] [box=16,1406,358,65]:\n              - text: Sheep reproduction (%)\n              - spinbutton \"Sheep reproduction (%)\" [ref=t3-8ebdcace-9b-e515] [box=16,1431,358,40]: \"4\"\n            - generic [ref=t3-8ebdcace-9b-e516] [box=16,1482,358,65]:\n              - text: Wolf reproduction (%)\n              - spinbutton \"Wolf reproduction (%)\" [ref=t3-8ebdcace-9b-e517] [box=16,1506,358,40]: \"5\"\n            - generic [ref=t3-8ebdcace-9b-e518] [box=16,1558,358,65]:\n              - text: Grass regrowth\n              - spinbutton \"Grass regrowth\" [disabled] [ref=t3-8ebdcace-9b-e519] [box=16,1582,358,40]: \"30\"\n          - generic [ref=t3-8ebdcace-9b-e520] [box=16,516,358,51]:\n            - term [ref=t3-8ebdcace-9b-e521] [box=16,516,144,22]: Tick\n            - definition [ref=t3-8ebdcace-9b-e522] [box=168,516,18,22]: \"0\"\n            - term [ref=t3-8ebdcace-9b-e523] [box=194,516,144,22]: Sheep\n            - definition [ref=t3-8ebdcace-9b-e524] [box=347,516,27,22]: \"100\"\n            - term [ref=t3-8ebdcace-9b-e525] [box=16,546,144,22]: Wolves\n            - definition [ref=t3-8ebdcace-9b-e526] [box=168,546,18,22]: \"50\"\n            - term [ref=t3-8ebdcace-9b-e527] [box=194,546,144,22]: Grass / 4\n            - definition [ref=t3-8ebdcace-9b-e528] [box=347,546,27,22]: —\n          - status [ref=t3-8ebdcace-9b-e529] [box=16,587,111,21]: Model initialized.\n          - group [ref=t3-8ebdcace-9b-e530] [box=16,1666,83,21]:\n            - generic \"Model info\" [ref=t3-8ebdcace-9b-e531] [cursor=pointer] [box=16,1666,83,21]\n          - figure \"Selected\" [ref=t3-8ebdcace-9b-e532] [box=16,164,256,200]:\n            - generic [ref=t3-8ebdcace-9b-e533] [box=16,164,256,19]: Selected\n            - generic [ref=t3-8ebdcace-9b-e534] [box=16,191,256,169]:\n              - term [ref=t3-8ebdcace-9b-e535] [box=16,191,83,22]: id\n              - definition [ref=t3-8ebdcace-9b-e536] [box=107,191,165,22]: cl_1lwyfwsyypbcedya\n              - term [ref=t3-8ebdcace-9b-e537] [box=16,220,83,22]: species\n              - definition [ref=t3-8ebdcace-9b-e538] [box=107,220,165,22]: sheep\n              - term [ref=t3-8ebdcace-9b-e539] [box=16,250,83,22]: x\n              - definition [ref=t3-8ebdcace-9b-e540] [box=107,250,165,22]: \"-15.581840224564075\"\n              - term [ref=t3-8ebdcace-9b-e541] [box=16,279,83,22]: \"y\"\n              - definition [ref=t3-8ebdcace-9b-e542] [box=107,279,165,22]: \"2.5977717514615506\"\n              - term [ref=t3-8ebdcace-9b-e543] [box=16,309,83,22]: heading\n              - definition [ref=t3-8ebdcace-9b-e544] [box=107,309,165,22]: \"13\"\n              - term [ref=t3-8ebdcace-9b-e545] [box=16,338,83,22]: energy\n              - definition [ref=t3-8ebdcace-9b-e546] [box=107,338,165,22]: \"3\"\n        - generic [ref=t3-8ebdcace-9b-e547] [box=16,624,358,602]:\n          - figure \"Animals and grass\" [ref=t3-8ebdcace-9b-e548] [box=16,624,358,431]:\n            - generic [ref=t3-8ebdcace-9b-e549] [box=16,624,358,19]: Animals and grass\n            - generic [ref=t3-8ebdcace-9b-e550] [box=16,651,358,38]:\n              - checkbox \"Labels\" [ref=t3-8ebdcace-9b-e551] [box=16,661,19,19]\n              - text: Labels\n            - group \"Model view. 150 agents. Arrow keys select an item. Selected cl_1lwyfwsyypbcedya\" [active] [ref=t3-8ebdcace-9b-e552] [box=16,698,358,358]\n          - figure \"Populations\" [ref=t3-8ebdcace-9b-e553] [box=16,1080,358,147]:\n            - generic [ref=t3-8ebdcace-9b-e554] [box=16,1080,358,19]: Populations\n            - 'img \"Sheep: 100; Wolves: 50\" [ref=t3-8ebdcace-9b-e555] [box=16,1107,358,101]':\n              - generic [ref=t3-8ebdcace-9b-e557] [box=17,1109,12,9]: \"100\"\n              - generic [ref=t3-8ebdcace-9b-e558] [box=17,1188,4,9]: \"0\"\n              - generic [ref=t3-8ebdcace-9b-e559] [box=351,1199,4,9]: \"1\"\n            - generic [ref=t3-8ebdcace-9b-e560] [box=16,1207,358,19]:\n              - generic [ref=t3-8ebdcace-9b-e561] [box=16,1207,49,19]: Sheep\n              - generic [ref=t3-8ebdcace-9b-e562] [box=81,1207,55,19]: Wolves",
+  "omitted": [
+    "160 older network entries",
+    "10 older action timeline entries",
+    "35 of 40 actionTimeline"
+  ]
+}

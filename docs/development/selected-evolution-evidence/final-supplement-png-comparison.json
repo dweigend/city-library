@@ -1,0 +1,186 @@
+{
+  "scope": "Per-image visibility only; palette pixel counts are not population counts. Actual measured canvas rects already use viewport coordinates. PNGs remain unchanged.",
+  "decoder": "Pillow 13.0.0",
+  "results": [
+    {
+      "slug": "mammoths",
+      "proof": "mammoths-direction-final-browser.json",
+      "rows": [
+        {
+          "variant": "desktop-light",
+          "file": "mammoths-direction-final-progress.png",
+          "pngSha256": "39c682861e64e23ea1609b157ff1922e16e188e1e47ea6c45886001a65d25cb5",
+          "imageDimensions": [
+            1280,
+            933
+          ],
+          "canvasCrop": [
+            292,
+            103,
+            888,
+            698
+          ],
+          "rgbSha256": "c002c2fc3432d4fea670e6b1c5adbe5c84328b4763424ccd3864f3762ec4c51a",
+          "declaredPalettePixels": {
+            "8c541f": 3324,
+            "ffdf00": 145
+          }
+        },
+        {
+          "variant": "desktop-dark",
+          "file": "mammoths-direction-final-desktop-dark.png",
+          "pngSha256": "9d8da6c87d7be17c091d89d920f85ed536c64231b42ef24d1ebd2a5625c2f9fb",
+          "imageDimensions": [
+            1280,
+            933
+          ],
+          "canvasCrop": [
+            292,
+            103,
+            888,
+            698
+          ],
+          "rgbSha256": "c002c2fc3432d4fea670e6b1c5adbe5c84328b4763424ccd3864f3762ec4c51a",
+          "declaredPalettePixels": {
+            "8c541f": 3324,
+            "ffdf00": 145
+          }
+        },
+        {
+          "variant": "mobile-dark",
+          "file": "mammoths-direction-final-mobile-dark.png",
+          "pngSha256": "9f33c42b81f7ba84011300e7278beeaab237f335582b43c0ea410e7c3997fd45",
+          "imageDimensions": [
+            780,
+            1688
+          ],
+          "canvasCrop": [
+            34,
+            488,
+            746,
+            1200
+          ],
+          "rgbSha256": "bb52a728875b834de5b9e8deff786fa0303b91f3af286a8314efea3c8e830b6a",
+          "declaredPalettePixels": {
+            "8c541f": 35047,
+            "ffdf00": 1779
+          }
+        },
+        {
+          "variant": "mobile-light",
+          "file": "mammoths-direction-final-mobile-light.png",
+          "pngSha256": "dc0cbf481b5ca1ad9c2536ff8a945e06a8ab72608d6f02024ad2c214ef86fd3d",
+          "imageDimensions": [
+            780,
+            1688
+          ],
+          "canvasCrop": [
+            34,
+            488,
+            746,
+            1200
+          ],
+          "rgbSha256": "bb52a728875b834de5b9e8deff786fa0303b91f3af286a8314efea3c8e830b6a",
+          "declaredPalettePixels": {
+            "8c541f": 35047,
+            "ffdf00": 1779
+          }
+        }
+      ],
+      "sameViewportThemeRgbIdentical": {
+        "desktop": true,
+        "mobile": true
+      }
+    },
+    {
+      "slug": "vision-evolution",
+      "proof": "vision-overlay-final-browser.json",
+      "rows": [
+        {
+          "variant": "desktop-light",
+          "file": "vision-overlay-final-progress.png",
+          "pngSha256": "bbd03367205cd26e610c3513c805448fe1b86dceb991691c9e8d82ee4f66ff95",
+          "imageDimensions": [
+            1280,
+            933
+          ],
+          "canvasCrop": [
+            292,
+            103,
+            888,
+            698
+          ],
+          "rgbSha256": "f221880ad2f0fe1295de9ec9d3cecd5f2aafae746e29126046bda3dc8c3e3dd6",
+          "declaredPalettePixels": {
+            "981b1b": 631,
+            "000000": 127
+          }
+        },
+        {
+          "variant": "desktop-dark",
+          "file": "vision-overlay-final-desktop-dark.png",
+          "pngSha256": "09b0a5f4c481f16dd437dafa8951123088a90aa5ec5127274405861c81bb883b",
+          "imageDimensions": [
+            1280,
+            933
+          ],
+          "canvasCrop": [
+            292,
+            103,
+            888,
+            698
+          ],
+          "rgbSha256": "f221880ad2f0fe1295de9ec9d3cecd5f2aafae746e29126046bda3dc8c3e3dd6",
+          "declaredPalettePixels": {
+            "981b1b": 631,
+            "000000": 127
+          }
+        },
+        {
+          "variant": "mobile-dark",
+          "file": "vision-overlay-final-mobile-dark.png",
+          "pngSha256": "43a2123294d27424c7fd52b7d192a177acf78be82f68333cd26f43b75ea3f012",
+          "imageDimensions": [
+            780,
+            1688
+          ],
+          "canvasCrop": [
+            34,
+            488,
+            746,
+            1200
+          ],
+          "rgbSha256": "3c53023338695edb9802ccc3a39337f9828856bf03df90c43baa37e6065cb65a",
+          "declaredPalettePixels": {
+            "981b1b": 6112,
+            "000000": 2330
+          }
+        },
+        {
+          "variant": "mobile-light",
+          "file": "vision-overlay-final-mobile-light.png",
+          "pngSha256": "e42d331b04902941cf5b8d9ed93abf988d540efcade3b23c1d36cf38ec456727",
+          "imageDimensions": [
+            780,
+            1688
+          ],
+          "canvasCrop": [
+            34,
+            488,
+            746,
+            1200
+          ],
+          "rgbSha256": "3c53023338695edb9802ccc3a39337f9828856bf03df90c43baa37e6065cb65a",
+          "declaredPalettePixels": {
+            "981b1b": 6112,
+            "000000": 2330
+          }
+        }
+      ],
+      "sameViewportThemeRgbIdentical": {
+        "desktop": true,
+        "mobile": true
+      }
+    }
+  ]
+}

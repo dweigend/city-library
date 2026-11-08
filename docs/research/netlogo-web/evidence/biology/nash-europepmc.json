@@ -1,0 +1,309 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bbapap.2008.11.005%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1016/j.bbapap.2008.11.005\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "19100346",
+          "source": "MED",
+          "pmid": "19100346",
+          "pmcid": "PMC2696358",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC2696358"
+            ]
+          },
+          "doi": "10.1016/j.bbapap.2008.11.005",
+          "title": "Outer membrane permeability and antibiotic resistance.",
+          "authorString": "Delcour AH.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Delcour AH",
+                "lastName": "Delcour",
+                "firstName": "Anne H",
+                "initials": "AH",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biology, University of Houston, 369 Science and Research Building II, Houston, TX 77204-5001, USA. adelcour@uh.edu"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "5",
+            "volume": "1794",
+            "journalIssueId": 1617104,
+            "dateOfPublication": "2009 May",
+            "monthOfPublication": 5,
+            "yearOfPublication": 2009,
+            "journal": {
+              "medlineAbbreviation": "Biochim Biophys Acta",
+              "title": "Biochimica et biophysica acta",
+              "essn": "1878-2434",
+              "issn": "0006-3002",
+              "isoabbreviation": "Biochim Biophys Acta",
+              "nlmid": "0217513"
+            },
+            "printPublicationDate": "2009-05-01"
+          },
+          "pubYear": "2009",
+          "pageInfo": "808-816",
+          "abstractText": "To date most antibiotics are targeted at intracellular processes, and must be able to penetrate the bacterial cell envelope. In particular, the outer membrane of gram-negative bacteria provides a formidable barrier that must be overcome. There are essentially two pathways that antibiotics can take through the outer membrane: a lipid-mediated pathway for hydrophobic antibiotics, and general diffusion porins for hydrophilic antibiotics. The lipid and protein compositions of the outer membrane have a strong impact on the sensitivity of bacteria to many types of antibiotics, and drug resistance involving modifications of these macromolecules is common. This review will describe the molecular mechanisms for permeation of antibiotics through the outer membrane, and the strategies that bacteria have deployed to resist antibiotics by modifications of these pathways.",
+          "affiliation": "Department of Biology, University of Houston, 369 Science and Research Building II, Houston, TX 77204-5001, USA. adelcour@uh.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Review",
+              "Journal Article",
+              "Research Support, N.I.H., Extramural"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "AI34905",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "R01 AI034905",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gram-Negative Bacteria",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Lipopolysaccharides",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacterial Outer Membrane Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Porins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "CH",
+                      "qualifierName": "chemistry"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Anti-Bacterial Agents",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Drug Resistance, Microbial",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cell Membrane Permeability",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "OmpF protein",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Anti-Bacterial Agents",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Lipopolysaccharides",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Bacterial Outer Membrane Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Porins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Kdo2-lipid A",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/j.bbapap.2008.11.005"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2696358"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2696358?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/j.bbapap.2008.11.005"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 1203,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "Y",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "Y",
+          "manuscriptId": "NIHMS114274",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2009-06-25",
+          "dateOfCreation": "2008-12-23",
+          "dateOfRevision": "2025-05-29",
+          "electronicPublicationDate": "2008-11-27",
+          "firstPublicationDate": "2008-11-27",
+          "firstIndexDate": "2010-09-23",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

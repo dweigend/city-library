@@ -1,0 +1,49 @@
+{
+  "reporter": "(map [n -> length (filter [v -> v = n] (n-values 26000 [random 12.5]))] (range 0 13))",
+  "read": {
+    "success": true,
+    "value": [
+      1990,
+      2069,
+      1987,
+      1998,
+      2003,
+      2002,
+      2013,
+      1983,
+      1976,
+      1975,
+      1972,
+      2015,
+      2005
+    ]
+  },
+  "compiled": {
+    "success": true,
+    "result": "PrimChecks.math.random(0, 6, 12.5)"
+  },
+  "checkLong": "checkLong(t,e,n,r){return(r>9007199254740992||r<-9007199254740992)&&this.error(t,e,n,\"_ is too large to be represented exactly as an integer in NetLogo\",o(r)),r}",
+  "random": "random(t){var e;return 0===(e=t>=0?i.ceil(t):i.floor(t))?0:e>0?this._rng.nextLong(e):-this._rng.nextLong(-e)}",
+  "boundary": [
+    [
+      12.4,
+      12.4
+    ],
+    [
+      12.5,
+      12.5
+    ],
+    [
+      12.6,
+      12.6
+    ],
+    [
+      0.5,
+      0.5
+    ],
+    [
+      1.5,
+      1.5
+    ]
+  ]
+}

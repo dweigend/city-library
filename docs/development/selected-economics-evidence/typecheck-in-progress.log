@@ -1,0 +1,17 @@
+$ tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json && tsc -p tsconfig.ui-examples.json
+experiments/bidding-market/model.ts(14,20): error TS2352: Conversion of type 'AgentMembers<{}>[]' to type 'readonly Seller[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'AgentMembers<{}>' is not comparable to type 'Seller'.
+    Type 'AgentMembers<{}>' is missing the following properties from type '{ kind: "seller"; index: number; money: number; itemsForSale: number; startingSupply: number; askingPrice: number; sold: number; behavior: "desperate" | "normal" | "random"; }': kind, index, money, itemsForSale, and 4 more.
+experiments/bidding-market/model.ts(14,112): error TS2352: Conversion of type 'AgentMembers<{}>[]' to type 'readonly Buyer[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'AgentMembers<{}>' is not comparable to type 'Buyer'.
+    Type 'AgentMembers<{}>' is missing the following properties from type '{ kind: "buyer"; index: number; money: number; wantToBuy: number; startingDemand: number; willingToPay: number; bought: number; behavior: "desperate" | "normal" | "random"; }': kind, index, money, wantToBuy, and 4 more.
+experiments/fruit-wars/model.ts(13,21): error TS2352: Conversion of type 'AgentMembers<{}>[]' to type 'readonly Forager[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'AgentMembers<{}>' is not comparable to type 'Forager'.
+    Type 'AgentMembers<{}>' is missing the following properties from type '{ intelligence: number; speed: number; strength: number; reactiveAggression: number; proactiveAggression: number; }': intelligence, speed, strength, reactiveAggression, proactiveAggression
+experiments/fruit-wars/model.ts(13,121): error TS2352: Conversion of type 'AgentMembers<{}>[]' to type 'readonly Bush[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'AgentMembers<{}>' is not comparable to type 'Bush'.
+    Type 'AgentMembers<{}>' is missing the following properties from type '{ kind: "bush"; amount: number; color: number; }': kind, amount, color
+experiments/fruit-wars/model.ts(13,215): error TS2352: Conversion of type 'AgentMembers<{}>[]' to type 'readonly Death[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'AgentMembers<{}>' is not comparable to type 'Death'.
+    Type 'AgentMembers<{}>' is missing the following properties from type '{ kind: "death"; age: number; }': kind, age
+error: script "typecheck" exited with code 1

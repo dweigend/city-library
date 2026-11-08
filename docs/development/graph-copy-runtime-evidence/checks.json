@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "scope": "Author Graph.copy implementation checks; not independent approval or a complete integration result for concurrent work",
+  "checkpointCommit": "d1286e3348012122835d0617a6f17a0d6f3a9003",
+  "sourceInputs": [
+    {
+      "path": "src/graph/graph.ts",
+      "sha256": "8423261b3663e5d2a61fdab913c2c6affed3a5f2bfce862d53aeff7f1b566785"
+    },
+    {
+      "path": "src/graph/copy.ts",
+      "sha256": "c84351ff4339cbc5672cfaddc0442a35ad46e663d6aef58798886611655c43cd"
+    },
+    {
+      "path": "tests/graph-copy.test.ts",
+      "sha256": "0314cce8186121e6f56eb2a1397d1f7fbf129edd647367e171cce4b1d680daa0"
+    },
+    {
+      "path": "src/agent/state.ts",
+      "sha256": "c3580bca30c9a6596efc1d0f59419a0b1d8ed25e5bff8ffb036b0cd42f52bd32"
+    },
+    {
+      "path": "src/agent/lifecycle.ts",
+      "sha256": "27fb32f2f021b2eaebe386e7416260f63f33729fb4ed41125323b4cc41a007e0"
+    },
+    {
+      "path": "src/graph/edge.ts",
+      "sha256": "e973141cb8b830cf12ded010024c25f9771c0e84f7c64cccb4a89bb8604539f4"
+    },
+    {
+      "path": "src/graph/collections.ts",
+      "sha256": "9ebaa1f828076fe4e28167d1631ab5735a0ebd1f88716f0b9db1da0fac7a0c71"
+    },
+    {
+      "path": "src/random/random.ts",
+      "sha256": "2c75064f808b7b3fe664429420bf31a34aaa69ddf7a5b940f8364f624234f062"
+    }
+  ],
+  "commands": [
+    {
+      "command": "bun test tests/graph-copy.test.ts tests/graph-generators.test.ts tests/graph-analysis.test.ts tests/graph-distance-precision.test.ts tests/graph-distances.test.ts tests/a5a-boundaries.test.ts tests/graph-connectivity.test.ts",
+      "exitCode": 0,
+      "passed": 55,
+      "failed": 0,
+      "assertions": 20845,
+      "log": "focused-tests.log"
+    },
+    {
+      "command": "bun run typecheck",
+      "exitCode": 0,
+      "projects": 4,
+      "log": "typecheck.log"
+    },
+    {
+      "command": "real tsc -p /dev/stdin; stdin extends tsconfig.dev.json with absolute typeRoots and includes all five examples/graph-copy-proposal/*.ts",
+      "exitCode": 0,
+      "log": "frozen-types.log"
+    },
+    {
+      "command": "for script in examples/graph-copy-proposal/*.ts examples/graph-generators-proposal/*.ts examples/network-analysis-proposal/*.ts examples/graph-distances/*.ts examples/graph-distance-precision/*.ts; do bun \"$script\" || exit; done",
+      "exitCode": 0,
+      "scripts": 25,
+      "log": "frozen-examples.log"
+    },
+    {
+      "command": "all five frozen hash manifests checked",
+      "exitCode": 0,
+      "scripts": 25,
+      "log": "frozen-hashes.json"
+    },
+    {
+      "command": "bun run build",
+      "exitCode": 0,
+      "log": "build.log"
+    },
+    {
+      "command": "bun run consumer",
+      "exitCode": 0,
+      "log": "existing-consumer.log"
+    },
+    {
+      "command": "bun docs/development/graph-copy-runtime-evidence/verify-packed-copy.ts",
+      "exitCode": 0,
+      "log": "packed-copy.json"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "earlierAttempts": "Initial typecheck reported the parallel Random phase stale negative exponential fixture and two new-test non-null annotations. Own annotations were fixed; coordinator separately fixed Random fixture. Final logged typecheck passes.",
+  "pathCoverage": "All currently constructible paths are undefined; no spatial path cloning/reversal claim.",
+  "notClaimed": [
+    "independent approval",
+    "browser/NetLogo parity",
+    "model acceptance",
+    "final integrated check of concurrent Random/planar work"
+  ]
+}

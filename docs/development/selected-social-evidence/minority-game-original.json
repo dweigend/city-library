@@ -1,0 +1,114 @@
+{
+  "slug": "minority-game",
+  "sessionSourceSHA256": "5da641101e48d2ca325cfffa3f1bdaf27708152b628ab5504a95a2798a53e1a1",
+  "source": "https://www.netlogoweb.org/assets/modelslib/Sample Models/Social Science/Minority Game.nlogox",
+  "setupViaButton": true,
+  "setup": {
+    "ticks": {
+      "success": true,
+      "value": 0
+    },
+    "count turtles": {
+      "success": true,
+      "value": 501
+    },
+    "history": {
+      "success": true,
+      "value": 23
+    },
+    "minority": {
+      "success": true,
+      "value": 0
+    },
+    "avg-score": {
+      "success": true,
+      "value": 0
+    },
+    "stdev-score": {
+      "success": true,
+      "value": 0
+    },
+    "count turtles with [choice = 0]": {
+      "success": true,
+      "value": 245
+    }
+  },
+  "errors": [],
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "progress": {
+    "ticks": {
+      "success": true,
+      "value": 10
+    },
+    "count turtles": {
+      "success": true,
+      "value": 501
+    },
+    "history": {
+      "success": true,
+      "value": 37
+    },
+    "minority": {
+      "success": true,
+      "value": 1
+    },
+    "avg-score": {
+      "success": true,
+      "value": 4.568862275449102
+    },
+    "stdev-score": {
+      "success": true,
+      "value": 1.4757196559624761
+    },
+    "count turtles with [choice = 0]": {
+      "success": true,
+      "value": 264
+    }
+  },
+  "intervention": {
+    "command": "set number 11 set memory 2 set strategies-per-agent 3 setup go",
+    "reporters": {
+      "ticks": {
+        "success": true,
+        "value": 1
+      },
+      "avg-score": {
+        "success": true,
+        "value": 0.36363636363636365
+      },
+      "history": {
+        "success": true,
+        "value": 1
+      },
+      "minority": {
+        "success": true,
+        "value": 0
+      },
+      "[score] of turtles": {
+        "success": true,
+        "value": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    "errors": []
+  },
+  "images": {
+    "setup": "minority-game-original-setup.png",
+    "progress": "minority-game-original-progress.png"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1103%2Fphysrevlett.68.2098%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1103/physrevlett.68.2098\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "10045303",
+          "source": "MED",
+          "pmid": "10045303",
+          "doi": "10.1103/physrevlett.68.2098",
+          "title": "Phyllotaxis as a physical self-organized growth process.",
+          "authorString": "Douady S, Couder Y.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Douady S",
+                "lastName": "Douady",
+                "initials": "S"
+              },
+              {
+                "fullName": "Couder Y",
+                "lastName": "Couder",
+                "initials": "Y"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "13",
+            "volume": "68",
+            "journalIssueId": 1247944,
+            "dateOfPublication": "1992 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 1992,
+            "journal": {
+              "medlineAbbreviation": "Phys Rev Lett",
+              "title": "Physical review letters",
+              "essn": "1079-7114",
+              "issn": "0031-9007",
+              "isoabbreviation": "Phys Rev Lett",
+              "nlmid": "0401141"
+            },
+            "printPublicationDate": "1992-03-01"
+          },
+          "pubYear": "1992",
+          "pageInfo": "2098-2101",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1103/PhysRevLett.68.2098"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 93,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "1992-03-30",
+          "dateOfRevision": "2019-11-20",
+          "firstPublicationDate": "1992-03-01",
+          "firstIndexDate": "2009-12-22",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

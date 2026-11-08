@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": [
+    "../../experiments/chloroplasts-and-food/model.ts",
+    "../../experiments/slime/model.ts",
+    "../../experiments/fur/model.ts",
+    "../../experiments/blood-sugar-regulation/model.ts",
+    "../../experiments/honeycomb/model.ts",
+    "../../experiments/autumn/model.ts",
+    "../../experiments/membrane-formation/model.ts",
+    "../../experiments/sunflower-emergent/model.ts",
+    "../../experiments/tumor/model.ts",
+    "../../experiments/muscle-development/model.ts"
+  ]
+}

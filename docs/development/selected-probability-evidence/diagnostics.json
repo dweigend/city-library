@@ -1,0 +1,18 @@
+{
+  "capturedAt": "2026-11-06",
+  "method": "T3 preview_snapshot diagnostics after executed flows; console collection spans the owned tabs. Saved-image-only snapshots do not supply console data.",
+  "source": {
+    "consoleEntries": [],
+    "networkFailures": [],
+    "note": "Source snapshot at final Partition live-target recheck; earlier source mechanisms executed in this same owned tab."
+  },
+  "target": {
+    "consoleEntries": [],
+    "note": "Snapshot after Three Doors terminal check; all ten model flows executed in this same owned tab."
+  },
+  "toolingFailures": [
+    "An early source introspection attempted .slice on an object; corrected to nlogoSource.nlogo. A broad object return exceeded CDP object depth; replaced by detached scalar reporters. Neither was a NetLogo procedure/runtime failure.",
+    "Initial shell typecheck could not find Bun typings before frozen dependency installation. All final checks passed.",
+    "Pillow contact-sheet generation was unavailable; ImageMagick generated contact sheets for inspection. Contact sheets are not committed."
+  ]
+}

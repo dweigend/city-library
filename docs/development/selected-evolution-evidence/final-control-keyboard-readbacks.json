@@ -1,0 +1,2356 @@
+[
+  {
+    "slug": "mimicry",
+    "before": {
+      "monitors": {
+        "Tick": "0",
+        "Monarchs": "225",
+        "Viceroys": "225",
+        "Monarch color min": "15",
+        "Monarch color mean": "15",
+        "Monarch color max": "15",
+        "Viceroy color min": "105",
+        "Viceroy color mean": "105",
+        "Viceroy color max": "105"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-memoryDuration",
+          "type": "number",
+          "value": "30",
+          "checked": false,
+          "label": "Memory Duration"
+        },
+        {
+          "id": "",
+          "name": "live-mutationRate",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Mutation Rate"
+        },
+        {
+          "id": "",
+          "name": "live-memorySize",
+          "type": "number",
+          "value": "3",
+          "checked": false,
+          "label": "Memory Size"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Bird memory",
+        "Birds and butterflies",
+        "Butterfly populations",
+        "Mean butterfly colors"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "live-memoryDuration",
+        "value": "30",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-mutationRate",
+        "value": "5",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-memorySize",
+        "value": "3",
+        "checked": false,
+        "status": "Rule updated."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Tick": "0",
+        "Monarchs": "225",
+        "Viceroys": "225",
+        "Monarch color min": "15",
+        "Monarch color mean": "15",
+        "Monarch color max": "15",
+        "Viceroy color min": "105",
+        "Viceroy color mean": "105",
+        "Viceroy color max": "105"
+      },
+      "status": "Rule updated.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-memoryDuration",
+          "type": "number",
+          "value": "30",
+          "checked": false,
+          "label": "Memory Duration"
+        },
+        {
+          "id": "",
+          "name": "live-mutationRate",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Mutation Rate"
+        },
+        {
+          "id": "",
+          "name": "live-memorySize",
+          "type": "number",
+          "value": "3",
+          "checked": false,
+          "label": "Memory Size"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Bird memory",
+        "Birds and butterflies",
+        "Butterfly populations",
+        "Mean butterfly colors"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        440.5
+      ]
+    },
+    "inspector": "breed\nmonarch\ncolor\n15\nmemory\n[]",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  },
+  {
+    "slug": "anisogamy",
+    "before": {
+      "monitors": {
+        "Tick": "0",
+        "Adults": "100",
+        "Gametes": "0",
+        "Zygotes": "0",
+        "Tick advance": "1"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-worldSize",
+          "type": "number",
+          "value": "65",
+          "checked": false,
+          "label": "World Size"
+        },
+        {
+          "id": "",
+          "name": "live-maxAdults",
+          "type": "number",
+          "value": "100",
+          "checked": false,
+          "label": "Max Adults"
+        },
+        {
+          "id": "",
+          "name": "live-zygoteFitnessThreshold",
+          "type": "number",
+          "value": "0.45",
+          "checked": false,
+          "label": "Zygote Fitness Threshold"
+        },
+        {
+          "id": "",
+          "name": "live-gameteFitnessThreshold",
+          "type": "number",
+          "value": "0",
+          "checked": false,
+          "label": "Gamete Fitness Threshold"
+        },
+        {
+          "id": "",
+          "name": "live-mutationSigma",
+          "type": "number",
+          "value": "0.025",
+          "checked": false,
+          "label": "Mutation Sigma"
+        },
+        {
+          "id": "",
+          "name": "live-speedSizeCorrelation",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Speed Size Correlation"
+        },
+        {
+          "id": "",
+          "name": "live-allowAssortativeFusion",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Allow Assortative Fusion"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Inherited strategy",
+        "Adults, gametes and zygotes",
+        "Adult mating types",
+        "Gamete mating types",
+        "Mean gamete mass trait",
+        "Adult gamete mass traits"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "live-worldSize",
+        "value": "65",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-maxAdults",
+        "value": "100",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-zygoteFitnessThreshold",
+        "value": "0.45",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-gameteFitnessThreshold",
+        "value": "0",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-mutationSigma",
+        "value": "0.025",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-speedSizeCorrelation",
+        "value": "on",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-allowAssortativeFusion",
+        "value": "on",
+        "checked": false,
+        "status": "Rule updated."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Tick": "0",
+        "Adults": "100",
+        "Gametes": "0",
+        "Zygotes": "0",
+        "Tick advance": "1"
+      },
+      "status": "Rule updated.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-worldSize",
+          "type": "number",
+          "value": "65",
+          "checked": false,
+          "label": "World Size"
+        },
+        {
+          "id": "",
+          "name": "live-maxAdults",
+          "type": "number",
+          "value": "100",
+          "checked": false,
+          "label": "Max Adults"
+        },
+        {
+          "id": "",
+          "name": "live-zygoteFitnessThreshold",
+          "type": "number",
+          "value": "0.45",
+          "checked": false,
+          "label": "Zygote Fitness Threshold"
+        },
+        {
+          "id": "",
+          "name": "live-gameteFitnessThreshold",
+          "type": "number",
+          "value": "0",
+          "checked": false,
+          "label": "Gamete Fitness Threshold"
+        },
+        {
+          "id": "",
+          "name": "live-mutationSigma",
+          "type": "number",
+          "value": "0.025",
+          "checked": false,
+          "label": "Mutation Sigma"
+        },
+        {
+          "id": "",
+          "name": "live-speedSizeCorrelation",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Speed Size Correlation"
+        },
+        {
+          "id": "",
+          "name": "live-allowAssortativeFusion",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Allow Assortative Fusion"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Inherited strategy",
+        "Adults, gametes and zygotes",
+        "Adult mating types",
+        "Gamete mating types",
+        "Mean gamete mass trait",
+        "Adult gamete mass traits"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        488.5
+      ]
+    },
+    "inspector": "breed\nadult\nmatingType\n15\nmassTrait\n0.25\nlife\n562.4728706274257\nincubationTime\n0",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  },
+  {
+    "slug": "peppered-moths",
+    "before": {
+      "monitors": {
+        "Tick": "0",
+        "Light": "27",
+        "Medium": "38",
+        "Dark": "35",
+        "Pollution (%)": "0"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-numMoths",
+          "type": "number",
+          "value": "100",
+          "checked": false,
+          "label": "Num Moths"
+        },
+        {
+          "id": "",
+          "name": "live-speed",
+          "type": "number",
+          "value": "41",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-mutation",
+          "type": "number",
+          "value": "15",
+          "checked": false,
+          "label": "Mutation"
+        },
+        {
+          "id": "",
+          "name": "live-selection",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "label": "Selection"
+        },
+        {
+          "id": "",
+          "name": "live-cyclePollution",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Cycle Pollution"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Moth",
+        "Moths and pollution",
+        "Color populations"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "live-numMoths",
+        "value": "100",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-speed",
+        "value": "41",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-mutation",
+        "value": "15",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-selection",
+        "value": "50",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-cyclePollution",
+        "value": "on",
+        "checked": false,
+        "status": "Rule updated."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Tick": "0",
+        "Light": "27",
+        "Medium": "38",
+        "Dark": "35",
+        "Pollution (%)": "0"
+      },
+      "status": "Rule updated.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-numMoths",
+          "type": "number",
+          "value": "100",
+          "checked": false,
+          "label": "Num Moths"
+        },
+        {
+          "id": "",
+          "name": "live-speed",
+          "type": "number",
+          "value": "41",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-mutation",
+          "type": "number",
+          "value": "15",
+          "checked": false,
+          "label": "Mutation"
+        },
+        {
+          "id": "",
+          "name": "live-selection",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "label": "Selection"
+        },
+        {
+          "id": "",
+          "name": "live-cyclePollution",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Cycle Pollution"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Moth",
+        "Moths and pollution",
+        "Color populations"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        443.5
+      ]
+    },
+    "inspector": "age\n0\ncolor\n6",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  },
+  {
+    "slug": "baldwin-effect",
+    "before": {
+      "monitors": {
+        "Generation": "0"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-numPop",
+          "type": "number",
+          "value": "200",
+          "checked": false,
+          "label": "Num Pop"
+        },
+        {
+          "id": "",
+          "name": "live-geneLength",
+          "type": "number",
+          "value": "30",
+          "checked": false,
+          "label": "Gene Length"
+        },
+        {
+          "id": "",
+          "name": "live-plasticity",
+          "type": "number",
+          "value": "0.5",
+          "checked": false,
+          "label": "Plasticity"
+        },
+        {
+          "id": "",
+          "name": "live-numTrials",
+          "type": "number",
+          "value": "20",
+          "checked": false,
+          "label": "Num Trials"
+        },
+        {
+          "id": "",
+          "name": "live-mutationRate",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Mutation Rate"
+        },
+        {
+          "id": "",
+          "name": "live-smoothness",
+          "type": "number",
+          "value": "0.15",
+          "checked": false,
+          "label": "Smoothness"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Genotype and learned phenotype",
+        "Fitness and inherited matches",
+        "Plastic alleles (%)",
+        "Correct inherited alleles (%)",
+        "Mean fitness"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "live-numPop",
+        "value": "200",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-geneLength",
+        "value": "30",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-plasticity",
+        "value": "0.5",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-numTrials",
+        "value": "20",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-mutationRate",
+        "value": "5",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-smoothness",
+        "value": "0.15",
+        "checked": false,
+        "status": "Rule updated."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Generation": "0"
+      },
+      "status": "Rule updated.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-numPop",
+          "type": "number",
+          "value": "200",
+          "checked": false,
+          "label": "Num Pop"
+        },
+        {
+          "id": "",
+          "name": "live-geneLength",
+          "type": "number",
+          "value": "30",
+          "checked": false,
+          "label": "Gene Length"
+        },
+        {
+          "id": "",
+          "name": "live-plasticity",
+          "type": "number",
+          "value": "0.5",
+          "checked": false,
+          "label": "Plasticity"
+        },
+        {
+          "id": "",
+          "name": "live-numTrials",
+          "type": "number",
+          "value": "20",
+          "checked": false,
+          "label": "Num Trials"
+        },
+        {
+          "id": "",
+          "name": "live-mutationRate",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Mutation Rate"
+        },
+        {
+          "id": "",
+          "name": "live-smoothness",
+          "type": "number",
+          "value": "0.15",
+          "checked": false,
+          "label": "Smoothness"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Genotype and learned phenotype",
+        "Fitness and inherited matches",
+        "Plastic alleles (%)",
+        "Correct inherited alleles (%)",
+        "Mean fitness"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        491
+      ]
+    },
+    "inspector": "genotype\n111100001010111111110000100101\nphenotype\n111100001010111111110000100101\nfitness\n0\nplasticity\n0\ncorrectAlleles\n0.43333333333333335",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  },
+  {
+    "slug": "sex-ratio-equilibrium",
+    "before": {
+      "monitors": {
+        "Tick": "0",
+        "Adult sex ratio (%)": "35",
+        "Male-child chance": "0.402",
+        "Running average": "NA",
+        "Running SD": "NA",
+        "Male mating success": "0",
+        "Female mating success": "0"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-initialPopulationSize",
+          "name": "initialPopulationSize",
+          "type": "number",
+          "value": "500",
+          "checked": false,
+          "label": "Initial population"
+        },
+        {
+          "id": "setup-initialAdultSexRatio",
+          "name": "initialAdultSexRatio",
+          "type": "number",
+          "value": "35",
+          "checked": false,
+          "label": "Initial male percentage"
+        },
+        {
+          "id": "setup-initialAverageMaleChildChance",
+          "name": "initialAverageMaleChildChance",
+          "type": "number",
+          "value": "0.4",
+          "checked": false,
+          "label": "Initial male-child chance"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-meanLongevity",
+          "type": "number",
+          "value": "60",
+          "checked": false,
+          "label": "Mean Longevity"
+        },
+        {
+          "id": "",
+          "name": "live-gestationPeriod",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Gestation Period"
+        },
+        {
+          "id": "",
+          "name": "live-maximumLitterSize",
+          "type": "number",
+          "value": "6",
+          "checked": false,
+          "label": "Maximum Litter Size"
+        },
+        {
+          "id": "",
+          "name": "live-matingChance",
+          "type": "number",
+          "value": "0.85",
+          "checked": false,
+          "label": "Mating Chance"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Selected individual",
+        "Population",
+        "Population by sex",
+        "Mating success ratio (male to female)",
+        "Adult sex ratio",
+        "Average male-child chance"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "initialPopulationSize",
+        "value": "500",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "initialAdultSexRatio",
+        "value": "35",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "initialAverageMaleChildChance",
+        "value": "0.4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "live-meanLongevity",
+        "value": "60",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-gestationPeriod",
+        "value": "5",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-maximumLitterSize",
+        "value": "6",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-matingChance",
+        "value": "0.85",
+        "checked": false,
+        "status": "Rule updated."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Tick": "0",
+        "Adult sex ratio (%)": "35",
+        "Male-child chance": "0.402",
+        "Running average": "NA",
+        "Running SD": "NA",
+        "Male mating success": "0",
+        "Female mating success": "0"
+      },
+      "status": "Rule updated.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-initialPopulationSize",
+          "name": "initialPopulationSize",
+          "type": "number",
+          "value": "500",
+          "checked": false,
+          "label": "Initial population"
+        },
+        {
+          "id": "setup-initialAdultSexRatio",
+          "name": "initialAdultSexRatio",
+          "type": "number",
+          "value": "35",
+          "checked": false,
+          "label": "Initial male percentage"
+        },
+        {
+          "id": "setup-initialAverageMaleChildChance",
+          "name": "initialAverageMaleChildChance",
+          "type": "number",
+          "value": "0.4",
+          "checked": false,
+          "label": "Initial male-child chance"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-meanLongevity",
+          "type": "number",
+          "value": "60",
+          "checked": false,
+          "label": "Mean Longevity"
+        },
+        {
+          "id": "",
+          "name": "live-gestationPeriod",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Gestation Period"
+        },
+        {
+          "id": "",
+          "name": "live-maximumLitterSize",
+          "type": "number",
+          "value": "6",
+          "checked": false,
+          "label": "Maximum Litter Size"
+        },
+        {
+          "id": "",
+          "name": "live-matingChance",
+          "type": "number",
+          "value": "0.85",
+          "checked": false,
+          "label": "Mating Chance"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Selected individual",
+        "Population",
+        "Population by sex",
+        "Mating success ratio (male to female)",
+        "Adult sex ratio",
+        "Average male-child chance"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        686.5
+      ]
+    },
+    "inspector": "sex\nmale\nage\n32\nlongevity\n64\nadult\ntrue\nmaleChildChance\n0.4010958649261363\ncarrying\nfalse\ngestation\n0\npartners\n0\nchildren\n0",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  },
+  {
+    "slug": "bacterial-infection",
+    "before": {
+      "monitors": {
+        "Minutes": "0",
+        "Hours": "0",
+        "Days": "0",
+        "Doses A": "0",
+        "Doses B": "0"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-init3PoresA",
+          "name": "init3PoresA",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init3Pores A"
+        },
+        {
+          "id": "setup-init4PoresA",
+          "name": "init4PoresA",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init4Pores A"
+        },
+        {
+          "id": "setup-init5PoresA",
+          "name": "init5PoresA",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init5Pores A"
+        },
+        {
+          "id": "setup-init6PoresA",
+          "name": "init6PoresA",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init6Pores A"
+        },
+        {
+          "id": "setup-init3PoresB",
+          "name": "init3PoresB",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init3Pores B"
+        },
+        {
+          "id": "setup-init4PoresB",
+          "name": "init4PoresB",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init4Pores B"
+        },
+        {
+          "id": "setup-init5PoresB",
+          "name": "init5PoresB",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init5Pores B"
+        },
+        {
+          "id": "setup-init6PoresB",
+          "name": "init6PoresB",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init6Pores B"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-reproduce",
+          "type": "checkbox",
+          "value": "on",
+          "checked": true,
+          "label": "Reproduce"
+        },
+        {
+          "id": "",
+          "name": "live-reproduceEvery",
+          "type": "number",
+          "value": "2",
+          "checked": false,
+          "label": "Reproduce Every"
+        },
+        {
+          "id": "",
+          "name": "live-autoDoseA",
+          "type": "select-one",
+          "value": "yes, but skip dose 4",
+          "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+        },
+        {
+          "id": "",
+          "name": "live-autoDoseB",
+          "type": "select-one",
+          "value": "yes, but skip dose 4",
+          "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+        },
+        {
+          "id": "",
+          "name": "live-aDosage",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "label": "A Dosage"
+        },
+        {
+          "id": "",
+          "name": "live-bDosage",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "label": "B Dosage"
+        },
+        {
+          "id": "",
+          "name": "live-doseAEvery",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Dose AEvery"
+        },
+        {
+          "id": "",
+          "name": "live-doseBEvery",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Dose BEvery"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Selected bacterium",
+        "Patients A and B",
+        "Patient A pore counts",
+        "Patient B pore counts",
+        "Population in A",
+        "Population in B"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "init3PoresA",
+        "value": "4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "init4PoresA",
+        "value": "4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "init5PoresA",
+        "value": "4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "init6PoresA",
+        "value": "4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "init3PoresB",
+        "value": "4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "init4PoresB",
+        "value": "4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "init5PoresB",
+        "value": "4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "init6PoresB",
+        "value": "4",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "live-reproduce",
+        "value": "on",
+        "checked": true,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-reproduceEvery",
+        "value": "2",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-autoDoseA",
+        "value": "yes, but skip dose 4",
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-autoDoseB",
+        "value": "yes, but skip dose 4",
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-aDosage",
+        "value": "50",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-bDosage",
+        "value": "50",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-doseAEvery",
+        "value": "4",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-doseBEvery",
+        "value": "4",
+        "checked": false,
+        "status": "Rule updated."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Minutes": "0",
+        "Hours": "0",
+        "Days": "0",
+        "Doses A": "0",
+        "Doses B": "0"
+      },
+      "status": "Rule updated.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-init3PoresA",
+          "name": "init3PoresA",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init3Pores A"
+        },
+        {
+          "id": "setup-init4PoresA",
+          "name": "init4PoresA",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init4Pores A"
+        },
+        {
+          "id": "setup-init5PoresA",
+          "name": "init5PoresA",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init5Pores A"
+        },
+        {
+          "id": "setup-init6PoresA",
+          "name": "init6PoresA",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init6Pores A"
+        },
+        {
+          "id": "setup-init3PoresB",
+          "name": "init3PoresB",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init3Pores B"
+        },
+        {
+          "id": "setup-init4PoresB",
+          "name": "init4PoresB",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init4Pores B"
+        },
+        {
+          "id": "setup-init5PoresB",
+          "name": "init5PoresB",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init5Pores B"
+        },
+        {
+          "id": "setup-init6PoresB",
+          "name": "init6PoresB",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Init6Pores B"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-reproduce",
+          "type": "checkbox",
+          "value": "on",
+          "checked": true,
+          "label": "Reproduce"
+        },
+        {
+          "id": "",
+          "name": "live-reproduceEvery",
+          "type": "number",
+          "value": "2",
+          "checked": false,
+          "label": "Reproduce Every"
+        },
+        {
+          "id": "",
+          "name": "live-autoDoseA",
+          "type": "select-one",
+          "value": "yes, but skip dose 4",
+          "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+        },
+        {
+          "id": "",
+          "name": "live-autoDoseB",
+          "type": "select-one",
+          "value": "yes, but skip dose 4",
+          "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+        },
+        {
+          "id": "",
+          "name": "live-aDosage",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "label": "A Dosage"
+        },
+        {
+          "id": "",
+          "name": "live-bDosage",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "label": "B Dosage"
+        },
+        {
+          "id": "",
+          "name": "live-doseAEvery",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Dose AEvery"
+        },
+        {
+          "id": "",
+          "name": "live-doseBEvery",
+          "type": "number",
+          "value": "4",
+          "checked": false,
+          "label": "Dose BEvery"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Selected bacterium",
+        "Patients A and B",
+        "Patient A pore counts",
+        "Patient B pore counts",
+        "Population in A",
+        "Population in B"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        696
+      ]
+    },
+    "inspector": "variation\n3\nage\n120\nregion\nA\ntargetX\n-20\ntargetY\n3",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  },
+  {
+    "slug": "vision-evolution",
+    "before": {
+      "monitors": {
+        "Tick": "0",
+        "Fish": "50",
+        "Food": "80"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-initialNumberFish",
+          "name": "initialNumberFish",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "label": "Initial Number Fish"
+        },
+        {
+          "id": "setup-initialNumberFood",
+          "name": "initialNumberFood",
+          "type": "number",
+          "value": "80",
+          "checked": false,
+          "label": "Initial Number Food"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-energyGainFromFood",
+          "type": "number",
+          "value": "100",
+          "checked": false,
+          "label": "Energy Gain From Food"
+        },
+        {
+          "id": "",
+          "name": "live-foodReplenishRate",
+          "type": "number",
+          "value": "65",
+          "checked": false,
+          "label": "Food Replenish Rate"
+        },
+        {
+          "id": "",
+          "name": "live-mutationRate",
+          "type": "number",
+          "value": "0.1",
+          "checked": false,
+          "label": "Mutation Rate"
+        },
+        {
+          "id": "",
+          "name": "live-reproductionRate",
+          "type": "number",
+          "value": "35",
+          "checked": false,
+          "label": "Reproduction Rate"
+        },
+        {
+          "id": "",
+          "name": "live-eyeCost",
+          "type": "number",
+          "value": "9",
+          "checked": false,
+          "label": "Eye Cost"
+        },
+        {
+          "id": "",
+          "name": "live-maxEyeSize",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Max Eye Size"
+        },
+        {
+          "id": "",
+          "name": "live-showVision",
+          "type": "checkbox",
+          "value": "on",
+          "checked": true,
+          "label": "Show Vision"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Selected fish",
+        "Water, land and vision",
+        "Population size",
+        "Average eye size",
+        "Eye size histogram",
+        "Land mobility histogram",
+        "Food preference histogram"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "initialNumberFish",
+        "value": "50",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "initialNumberFood",
+        "value": "80",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "live-energyGainFromFood",
+        "value": "100",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-foodReplenishRate",
+        "value": "65",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-mutationRate",
+        "value": "0.1",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-reproductionRate",
+        "value": "35",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-eyeCost",
+        "value": "9",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-maxEyeSize",
+        "value": "5",
+        "checked": false,
+        "status": "Rule updated."
+      },
+      {
+        "id": "live-showVision",
+        "value": "on",
+        "checked": true,
+        "status": "Rule updated."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Tick": "0",
+        "Fish": "50",
+        "Food": "80"
+      },
+      "status": "Rule updated.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-initialNumberFish",
+          "name": "initialNumberFish",
+          "type": "number",
+          "value": "50",
+          "checked": false,
+          "label": "Initial Number Fish"
+        },
+        {
+          "id": "setup-initialNumberFood",
+          "name": "initialNumberFood",
+          "type": "number",
+          "value": "80",
+          "checked": false,
+          "label": "Initial Number Food"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-energyGainFromFood",
+          "type": "number",
+          "value": "100",
+          "checked": false,
+          "label": "Energy Gain From Food"
+        },
+        {
+          "id": "",
+          "name": "live-foodReplenishRate",
+          "type": "number",
+          "value": "65",
+          "checked": false,
+          "label": "Food Replenish Rate"
+        },
+        {
+          "id": "",
+          "name": "live-mutationRate",
+          "type": "number",
+          "value": "0.1",
+          "checked": false,
+          "label": "Mutation Rate"
+        },
+        {
+          "id": "",
+          "name": "live-reproductionRate",
+          "type": "number",
+          "value": "35",
+          "checked": false,
+          "label": "Reproduction Rate"
+        },
+        {
+          "id": "",
+          "name": "live-eyeCost",
+          "type": "number",
+          "value": "9",
+          "checked": false,
+          "label": "Eye Cost"
+        },
+        {
+          "id": "",
+          "name": "live-maxEyeSize",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Max Eye Size"
+        },
+        {
+          "id": "",
+          "name": "live-showVision",
+          "type": "checkbox",
+          "value": "on",
+          "checked": true,
+          "label": "Show Vision"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Selected fish",
+        "Water, land and vision",
+        "Population size",
+        "Average eye size",
+        "Eye size histogram",
+        "Land mobility histogram",
+        "Food preference histogram"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        306
+      ]
+    },
+    "inspector": "",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  },
+  {
+    "slug": "gendrift-t-interact",
+    "before": {
+      "monitors": {
+        "Tick": "0",
+        "Most populous (%)": "0"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-number",
+          "name": "number",
+          "type": "number",
+          "value": "300",
+          "checked": false,
+          "label": "Number"
+        },
+        {
+          "id": "setup-colors",
+          "name": "colors",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Colors"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Selected turtle",
+        "Genetic drift and walls",
+        "Turtle populations"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "number",
+        "value": "300",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "colors",
+        "value": "5",
+        "checked": false,
+        "status": "Model initialized."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Tick": "0",
+        "Most populous (%)": "0"
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-number",
+          "name": "number",
+          "type": "number",
+          "value": "300",
+          "checked": false,
+          "label": "Number"
+        },
+        {
+          "id": "setup-colors",
+          "name": "colors",
+          "type": "number",
+          "value": "5",
+          "checked": false,
+          "label": "Colors"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Selected turtle",
+        "Genetic drift and walls",
+        "Turtle populations"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        603
+      ]
+    },
+    "inspector": "id\ncl_29wk4tq25coy101\nx\n-17.40424975869246\ny\n0.9606463985983282\nheading\n352.99999999999994\ncolorNumber\n35",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  },
+  {
+    "slug": "mendelian-inheritance",
+    "before": {
+      "monitors": {
+        "Trial": "0",
+        "Dark offspring": "0",
+        "Light offspring": "0",
+        "Dark ratio": "N/A",
+        "Light ratio": "N/A",
+        "Genotype": "Select a mouse",
+        "Message": ""
+      },
+      "status": "Model initialized.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-maleGenotype",
+          "name": "maleGenotype",
+          "type": "select-one",
+          "value": "Aa",
+          "label": "Male parent genotypeAAAaaa"
+        },
+        {
+          "id": "setup-femaleGenotype",
+          "name": "femaleGenotype",
+          "type": "select-one",
+          "value": "Aa",
+          "label": "Female parent genotypeAAAaaa"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-numberOfOffspring",
+          "type": "number",
+          "value": "6",
+          "checked": false,
+          "label": "Offspring per trial"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Mouse genotype",
+        "Parents and F1 offspring"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        0
+      ]
+    },
+    "parameterReadbacks": [
+      {
+        "id": "seed",
+        "value": "1",
+        "checked": false,
+        "status": "Model initialized."
+      },
+      {
+        "id": "maleGenotype",
+        "value": "Aa",
+        "status": "Model initialized."
+      },
+      {
+        "id": "femaleGenotype",
+        "value": "Aa",
+        "status": "Model initialized."
+      },
+      {
+        "id": "live-numberOfOffspring",
+        "value": "6",
+        "checked": false,
+        "status": "Rule updated."
+      }
+    ],
+    "focusCanvas": true,
+    "after": {
+      "monitors": {
+        "Trial": "0",
+        "Dark offspring": "0",
+        "Light offspring": "0",
+        "Dark ratio": "N/A",
+        "Light ratio": "N/A",
+        "Genotype": "Aa",
+        "Message": ""
+      },
+      "status": "Action completed.",
+      "statusState": "success",
+      "controls": [
+        {
+          "id": "setup-seed",
+          "name": "seed",
+          "type": "number",
+          "value": "1",
+          "checked": false,
+          "label": "Seed"
+        },
+        {
+          "id": "setup-maleGenotype",
+          "name": "maleGenotype",
+          "type": "select-one",
+          "value": "Aa",
+          "label": "Male parent genotypeAAAaaa"
+        },
+        {
+          "id": "setup-femaleGenotype",
+          "name": "femaleGenotype",
+          "type": "select-one",
+          "value": "Aa",
+          "label": "Female parent genotypeAAAaaa"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "range",
+          "value": "5",
+          "checked": false,
+          "label": "Speed"
+        },
+        {
+          "id": "",
+          "name": "live-numberOfOffspring",
+          "type": "number",
+          "value": "6",
+          "checked": false,
+          "label": "Offspring per trial"
+        },
+        {
+          "id": "",
+          "name": "",
+          "type": "checkbox",
+          "value": "on",
+          "checked": false,
+          "label": "Labels"
+        }
+      ],
+      "figures": [
+        "Mouse genotype",
+        "Parents and F1 offspring"
+      ],
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        0,
+        575
+      ]
+    },
+    "inspector": "genotype\nAa\ngeneration\nparent\nphenotype\ndark",
+    "focusedRole": "group",
+    "errors": [],
+    "unlabelled": []
+  }
+]

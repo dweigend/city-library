@@ -1,0 +1,440 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1161427%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1126/science.1161427\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "18927393",
+          "source": "MED",
+          "pmid": "18927393",
+          "pmcid": "PMC2819113",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC2819113"
+            ]
+          },
+          "doi": "10.1126/science.1161427",
+          "title": "A stochastic single-molecule event triggers phenotype switching of a bacterial cell.",
+          "authorString": "Choi PJ, Cai L, Frieda K, Xie XS.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Choi PJ",
+                "lastName": "Choi",
+                "firstName": "Paul J",
+                "initials": "PJ",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Chemistry and Chemical Biology, Harvard University, Cambridge, MA 02138, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Cai L",
+                "lastName": "Cai",
+                "firstName": "Long",
+                "initials": "L"
+              },
+              {
+                "fullName": "Frieda K",
+                "lastName": "Frieda",
+                "firstName": "Kirsten",
+                "initials": "K"
+              },
+              {
+                "fullName": "Xie XS",
+                "lastName": "Xie",
+                "firstName": "X Sunney",
+                "initials": "XS"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data",
+              "recommended_reviews",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "5900",
+            "volume": "322",
+            "journalIssueId": 1569535,
+            "dateOfPublication": "2008 Oct",
+            "monthOfPublication": 10,
+            "yearOfPublication": 2008,
+            "journal": {
+              "medlineAbbreviation": "Science",
+              "title": "Science (New York, N.Y.)",
+              "essn": "1095-9203",
+              "issn": "0036-8075",
+              "isoabbreviation": "Science",
+              "nlmid": "0404511"
+            },
+            "printPublicationDate": "2008-10-01"
+          },
+          "pubYear": "2008",
+          "pageInfo": "442-446",
+          "abstractText": "By monitoring fluorescently labeled lactose permease with single-molecule sensitivity, we investigated the molecular mechanism of how an Escherichia coli cell with the lac operon switches from one phenotype to another. At intermediate inducer concentrations, a population of genetically identical cells exhibits two phenotypes: induced cells with highly fluorescent membranes and uninduced cells with a small number of membrane-bound permeases. We found that this basal-level expression results from partial dissociation of the tetrameric lactose repressor from one of its operators on looped DNA. In contrast, infrequent events of complete dissociation of the repressor from DNA result in large bursts of permease expression that trigger induction of the lac operon. Hence, a stochastic single-molecule event determines a cell's phenotype.",
+          "affiliation": "Department of Chemistry and Chemical Biology, Harvard University, Cambridge, MA 02138, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article",
+              "Research Support, N.I.H., Extramural"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NIH HHS",
+                "acronym": "OD",
+                "grantId": "DP1 OD000277",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIBIB NIH HHS",
+                "acronym": "EB",
+                "grantId": "R01 EB010244",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Escherichia coli",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Lactose",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacterial Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Escherichia coli Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Symporters",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Monosaccharide Transport Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Recombinant Fusion Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Repressor Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "RNA, Messenger",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Microscopy, Fluorescence"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Stochastic Processes"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Expression Regulation, Bacterial"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Phenotype"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Lac Operon"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Operator Regions, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Feedback, Physiological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Lac Repressors"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "LacY protein, E coli",
+                "registryNumber": "0"
+              },
+              {
+                "name": "RNA, Messenger",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Bacterial Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Repressor Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Escherichia coli Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Monosaccharide Transport Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Symporters",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Recombinant Fusion Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Lac Repressors",
+                "registryNumber": "0"
+              },
+              {
+                "name": "LacI protein, E coli",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Lactose",
+                "registryNumber": "J2B2A4N98G"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "html",
+                "site": "www.sciencemag.org",
+                "url": "http://www.sciencemag.org/cgi/content/full/322/5900/442"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "pdf",
+                "site": "www.sciencemag.org",
+                "url": "http://www.sciencemag.org/cgi/reprint/322/5900/442.pdf"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "abs",
+                "site": "www.sciencemag.org",
+                "url": "http://www.sciencemag.org/cgi/content/abstract/322/5900/442"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.1161427"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2819113"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2819113?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.1161427"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 318,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "Y",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "Y",
+          "manuscriptId": "NIHMS170467",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2008-11-03",
+          "dateOfCreation": "2008-10-18",
+          "dateOfRevision": "2025-05-29",
+          "firstPublicationDate": "2008-10-01",
+          "firstIndexDate": "2010-09-22",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

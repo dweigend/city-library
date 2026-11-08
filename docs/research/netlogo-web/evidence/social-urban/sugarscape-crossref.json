@@ -1,0 +1,439 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Growing+Artificial+Societies+Epstein+Axtell+1996&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3100438,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                3
+              ]
+            ],
+            "date-time": "2026-11-03T20:44:53Z",
+            "timestamp": 1793738693350,
+            "version": "4.6.1"
+          },
+          "reference-count": 0,
+          "publisher": "The MIT Press",
+          "isbn-type": [
+            {
+              "value": "9780262272360",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1996,
+                10,
+                11
+              ]
+            ]
+          },
+          "abstract": "<jats:p>How do social structures and group behaviors arise from the interaction of individuals? Growing Artificial Societies approaches this question with cutting-edge computer simulation techniques. Fundamental collective behaviors such as group formation, cultural transmission, combat, and trade are seen to \"emerge\" from the interaction of individual agents following a few simple rules.</jats:p>\n                  <jats:p>In their program, named Sugarscape, Epstein and Axtell begin the development of a \"bottom up\" social science that is capturing the attention of researchers and commentators alike.</jats:p>\n                  <jats:p>The study is part of the 2050 Project, a joint venture of the Santa Fe Institute, the World Resources Institute, and the Brookings Institution. The project is an international effort to identify conditions for a sustainable global system in the next century and to design policies to help achieve such a system.</jats:p>\n                  <jats:p>Copublished with the Brookings Institution</jats:p>\n                  <jats:p>Bradford Books imprint</jats:p>",
+          "DOI": "10.7551/mitpress/3374.001.0001",
+          "type": "monograph",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                12,
+                13
+              ]
+            ],
+            "date-time": "2018-12-13T22:13:09Z",
+            "timestamp": 1544739189000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 2439,
+          "title": [
+            "Growing Artificial Societies"
+          ],
+          "prefix": "10.7551",
+          "author": [
+            {
+              "given": "Joshua M.",
+              "family": "Epstein",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Robert L.",
+              "family": "Axtell",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "281",
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                26
+              ]
+            ],
+            "date-time": "2024-06-26T15:31:29Z",
+            "timestamp": 1719415889000
+          },
+          "score": 55.936146,
+          "resource": {
+            "primary": {
+              "URL": "https://direct.mit.edu/books/book/2503/Growing-Artificial-SocietiesSocial-Science-from"
+            }
+          },
+          "subtitle": [
+            "Social Science from the Bottom Up"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                1996,
+                10,
+                11
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780262272360"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.7551/mitpress/3374.001.0001",
+          "published": {
+            "date-parts": [
+              [
+                1996,
+                10,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                21
+              ]
+            ],
+            "date-time": "2024-06-21T09:26:48Z",
+            "timestamp": 1718962008719
+          },
+          "reference-count": 0,
+          "publisher": "JSTOR",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1997
+              ]
+            ]
+          },
+          "DOI": "10.2307/20048043",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                11,
+                8
+              ]
+            ],
+            "date-time": "2010-11-08T17:25:37Z",
+            "timestamp": 1289237137000
+          },
+          "page": "124",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Growing Artificial Societies: Social Science from the Bottom Up"
+          ],
+          "prefix": "10.2307",
+          "volume": "76",
+          "author": [
+            {
+              "given": "Francis",
+              "family": "Fukuyama",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Joshua M.",
+              "family": "Epstein",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Robert",
+              "family": "Axtell",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1121",
+          "container-title": [
+            "Foreign Affairs"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                5,
+                8
+              ]
+            ],
+            "date-time": "2018-05-08T14:47:15Z",
+            "timestamp": 1525790835000
+          },
+          "score": 43.68609,
+          "resource": {
+            "primary": {
+              "URL": "https://www.jstor.org/stable/10.2307/20048043?origin=crossref"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1997
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1997
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2307/20048043",
+          "ISSN": [
+            "0015-7120"
+          ],
+          "issn-type": [
+            {
+              "value": "0015-7120",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1997
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                23
+              ]
+            ],
+            "date-time": "2026-08-23T04:47:00Z",
+            "timestamp": 1787460420831,
+            "version": "build-2736575974"
+          },
+          "reference-count": 0,
+          "publisher": "JSTOR",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Southern Economic Journal"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1998,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.2307/1060800",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                22
+              ]
+            ],
+            "date-time": "2006-04-22T09:25:43Z",
+            "timestamp": 1145697943000
+          },
+          "page": "791",
+          "source": "Crossref",
+          "is-referenced-by-count": 4,
+          "title": [
+            "Growing Artificial Societies: Social Science from the Bottom Up"
+          ],
+          "prefix": "10.2307",
+          "volume": "64",
+          "author": [
+            {
+              "given": "John",
+              "family": "Duffy",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Joshua M.",
+              "family": "Epstein",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Robert",
+              "family": "Axtell",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1121",
+          "container-title": [
+            "Southern Economic Journal"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                18
+              ]
+            ],
+            "date-time": "2018-04-18T06:03:25Z",
+            "timestamp": 1524031405000
+          },
+          "score": 41.707397,
+          "resource": {
+            "primary": {
+              "URL": "https://www.jstor.org/stable/1060800?origin=crossref"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1998,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1998,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2307/1060800",
+          "ISSN": [
+            "0038-4038"
+          ],
+          "issn-type": [
+            {
+              "value": "0038-4038",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1998,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

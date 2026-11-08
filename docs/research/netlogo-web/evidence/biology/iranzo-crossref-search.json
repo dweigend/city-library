@@ -1,0 +1,3383 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Evolutionary+dynamics+of+the+prokaryotic+adaptive+immunity+system+CRISPR-Cas+in+an+explicit+ecological+context+Iranzo+2013&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 5657217,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                6
+              ]
+            ],
+            "date-time": "2026-10-06T16:03:15Z",
+            "timestamp": 1791302595265,
+            "version": "4.1.0"
+          },
+          "reference-count": 88,
+          "publisher": "American Society for Microbiology",
+          "issue": "17",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2013,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "2013-09-01T00:00:00Z",
+                "timestamp": 1377993600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://journals.asm.org/non-commercial-tdm-license"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "journals.asm.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "J Bacteriol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2013,
+                9
+              ]
+            ]
+          },
+          "abstract": "<jats:title>ABSTRACT</jats:title>\n          <jats:p>A stochastic, agent-based mathematical model of the coevolution of the archaeal and bacterial adaptive immunity system, CRISPR-Cas, and lytic viruses shows that CRISPR-Cas immunity can stabilize the virus-host coexistence rather than leading to the extinction of the virus. In the model, CRISPR-Cas immunity does not specifically promote viral diversity, presumably because the selection pressure on each single proto-spacer is too weak. However, the overall virus diversity in the presence of CRISPR-Cas grows due to the increase of the host and, accordingly, the virus population size. Above a threshold value of total viral diversity, which is proportional to the viral mutation rate and population size, the CRISPR-Cas system becomes ineffective and is lost due to the associated fitness cost. Our previous modeling study has suggested that the ubiquity of CRISPR-Cas in hyperthermophiles, which contrasts its comparative low prevalence in mesophiles, is due to lower rates of mutation fixation in thermal habitats. The present findings offer a complementary, simpler perspective on this contrast through the larger population sizes of mesophiles compared to hyperthermophiles, because of which CRISPR-Cas can become ineffective in mesophiles. The efficacy of CRISPR-Cas sharply increases with the number of proto-spacers per viral genome, potentially explaining the low information content of the proto-spacer-associated motif (PAM) that is required for spacer acquisition by CRISPR-Cas because a higher specificity would restrict the number of spacers available to CRISPR-Cas, thus hampering immunity. The very existence of the PAM might reflect the tradeoff between the requirement of diverse spacers for efficient immunity and avoidance of autoimmunity.</jats:p>",
+          "DOI": "10.1128/jb.00412-13",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                22
+              ]
+            ],
+            "date-time": "2013-06-22T01:55:56Z",
+            "timestamp": 1371866156000
+          },
+          "page": "3834-3844",
+          "update-policy": "https://doi.org/10.1128/asmj-crossmark-policy-page",
+          "source": "Crossref",
+          "is-referenced-by-count": 101,
+          "title": [
+            "Evolutionary Dynamics of the Prokaryotic Adaptive Immunity System CRISPR-Cas in an Explicit Ecological Context"
+          ],
+          "prefix": "10.1128",
+          "volume": "195",
+          "author": [
+            {
+              "given": "Jaime",
+              "family": "Iranzo",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Centro de Astrobiolog\u00eda, INTA-CSIC, Madrid, Spain"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Alexander E.",
+              "family": "Lobkovsky",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health, Bethesda, Maryland, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yuri I.",
+              "family": "Wolf",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health, Bethesda, Maryland, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Eugene V.",
+              "family": "Koonin",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health, Bethesda, Maryland, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "235",
+          "reference": [
+            {
+              "key": "e_1_3_3_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/bies.201000071"
+            },
+            {
+              "key": "e_1_3_3_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3389/fcimb.2012.00119"
+            },
+            {
+              "key": "e_1_3_3_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1749-6632.2009.04993.x"
+            },
+            {
+              "key": "e_1_3_3_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.00093-10"
+            },
+            {
+              "key": "e_1_3_3_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.05535-11"
+            },
+            {
+              "key": "e_1_3_3_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkt157"
+            },
+            {
+              "key": "e_1_3_3_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.sbi.2010.10.009"
+            },
+            {
+              "key": "e_1_3_3_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pgen.1003023"
+            },
+            {
+              "key": "e_1_3_3_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkr131"
+            },
+            {
+              "key": "e_1_3_3_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/MMBR.00044-12"
+            },
+            {
+              "key": "e_1_3_3_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4161/rna.24022"
+            },
+            {
+              "key": "e_1_3_3_13_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev-genet-110410-132430"
+            },
+            {
+              "key": "e_1_3_3_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.micro.112408.134123"
+            },
+            {
+              "key": "e_1_3_3_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrg2749"
+            },
+            {
+              "key": "e_1_3_3_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature10886"
+            },
+            {
+              "key": "e_1_3_3_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pcbi.0010060"
+            },
+            {
+              "key": "e_1_3_3_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2958.2002.02839.x"
+            },
+            {
+              "key": "e_1_3_3_19_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3410/B1-95"
+            },
+            {
+              "key": "e_1_3_3_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1745-6150-1-7"
+            },
+            {
+              "key": "e_1_3_3_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00239-004-0046-3"
+            },
+            {
+              "key": "e_1_3_3_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4161/rna.20177"
+            },
+            {
+              "key": "e_1_3_3_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1745-6150-4-42"
+            },
+            {
+              "key": "e_1_3_3_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1138140"
+            },
+            {
+              "key": "e_1_3_3_25_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0036995"
+            },
+            {
+              "key": "e_1_3_3_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.chom.2012.06.003"
+            },
+            {
+              "key": "e_1_3_3_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/mt.2012.171"
+            },
+            {
+              "key": "e_1_3_3_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2355"
+            },
+            {
+              "key": "e_1_3_3_29_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1232033"
+            },
+            {
+              "key": "e_1_3_3_30_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1231143"
+            },
+            {
+              "key": "e_1_3_3_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrmicro2997"
+            },
+            {
+              "key": "e_1_3_3_32_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1745-6150-6-38"
+            },
+            {
+              "key": "e_1_3_3_33_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrmicro2577"
+            },
+            {
+              "key": "e_1_3_3_34_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tibs.2009.05.002"
+            },
+            {
+              "key": "e_1_3_3_35_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.01412-07"
+            },
+            {
+              "key": "e_1_3_3_36_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1157358"
+            },
+            {
+              "key": "e_1_3_3_37_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1104144108"
+            },
+            {
+              "key": "e_1_3_3_38_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0004169"
+            },
+            {
+              "key": "e_1_3_3_39_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.01415-07"
+            },
+            {
+              "key": "e_1_3_3_40_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature11927"
+            },
+            {
+              "key": "e_1_3_3_41_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/mBio.00456-12"
+            },
+            {
+              "key": "e_1_3_3_42_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/mBio.00309-12"
+            },
+            {
+              "key": "e_1_3_3_43_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/mBio.00309-12"
+            },
+            {
+              "key": "e_1_3_3_44_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ijfoodmicro.2008.05.030"
+            },
+            {
+              "key": "e_1_3_3_45_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ympev.2010.05.020"
+            },
+            {
+              "key": "e_1_3_3_46_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.chom.2012.07.007"
+            },
+            {
+              "key": "e_1_3_3_47_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/mBio.00227-10"
+            },
+            {
+              "key": "e_1_3_3_48_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2958.2012.08171.x"
+            },
+            {
+              "key": "e_1_3_3_49_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2958.2012.08172.x"
+            },
+            {
+              "key": "e_1_3_3_50_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev-genet-110711-155447"
+            },
+            {
+              "key": "e_1_3_3_51_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tig.2010.05.008"
+            },
+            {
+              "key": "e_1_3_3_52_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/ncomms2440"
+            },
+            {
+              "key": "e_1_3_3_53_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1088/1478-3975/10/2/025004"
+            },
+            {
+              "key": "e_1_3_3_54_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1471-2148-13-54"
+            },
+            {
+              "key": "e_1_3_3_55_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.105.128102"
+            },
+            {
+              "key": "e_1_3_3_56_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1558-5646.2012.01595.x"
+            },
+            {
+              "key": "e_1_3_3_57_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/mBio.00126-12"
+            },
+            {
+              "key": "e_1_3_3_58_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JVI.05222-11"
+            },
+            {
+              "key": "e_1_3_3_59_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pgen.1001171"
+            },
+            {
+              "key": "e_1_3_3_60_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pgen.1003312"
+            },
+            {
+              "key": "e_1_3_3_61_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pcbi.1002475"
+            },
+            {
+              "key": "e_1_3_3_62_2",
+              "unstructured": "HofbauerJSigmundK. 1998. Evolutionary games and population dynamics. Cambridge University Press Cambridge United Kingdom."
+            },
+            {
+              "key": "e_1_3_3_63_2",
+              "unstructured": "GrimmVRailsbackSF. 2005. Individual-based modeling and ecology. Princeton University Press Princeton NJ."
+            },
+            {
+              "key": "e_1_3_3_64_2",
+              "unstructured": "MayRM. 2001. Stability and complexity in model ecosystems. Princeton University Press Princeton NJ."
+            },
+            {
+              "key": "e_1_3_3_65_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/j100540a008"
+            },
+            {
+              "key": "e_1_3_3_66_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tim.2005.04.003"
+            },
+            {
+              "key": "e_1_3_3_67_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrmicro1750"
+            },
+            {
+              "key": "e_1_3_3_68_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature08060"
+            },
+            {
+              "key": "e_1_3_3_69_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[2492:PDASSE]2.0.CO;2"
+            },
+            {
+              "key": "e_1_3_3_70_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pcbi.0030005"
+            },
+            {
+              "key": "e_1_3_3_71_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pgen.1000520"
+            },
+            {
+              "key": "e_1_3_3_72_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1020513506777"
+            },
+            {
+              "key": "e_1_3_3_73_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.69.6.3580-3592.2003"
+            },
+            {
+              "key": "e_1_3_3_74_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tree.2006.07.001"
+            },
+            {
+              "key": "e_1_3_3_75_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1574-6976.2008.00144.x"
+            },
+            {
+              "key": "e_1_3_3_76_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/aem.61.5.1931-1937.1995"
+            },
+            {
+              "key": "e_1_3_3_77_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.67.8.3618-3629.2001"
+            },
+            {
+              "key": "e_1_3_3_78_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.femsec.2005.03.007"
+            },
+            {
+              "key": "e_1_3_3_79_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s12275-008-0311-z"
+            },
+            {
+              "key": "e_1_3_3_80_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3389/fmicb.2012.00047"
+            },
+            {
+              "key": "e_1_3_3_81_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.64.7.2691-2696.1998"
+            },
+            {
+              "key": "e_1_3_3_82_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1462-2920.1999.00007.x"
+            },
+            {
+              "key": "e_1_3_3_83_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1462-2920.2000.00123.x"
+            },
+            {
+              "key": "e_1_3_3_84_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1574-6941.2003.tb01093.x"
+            },
+            {
+              "key": "e_1_3_3_85_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1462-2920.2005.00708.x"
+            },
+            {
+              "key": "e_1_3_3_86_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.syapm.2005.12.006"
+            },
+            {
+              "key": "e_1_3_3_87_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/gbi.12042"
+            },
+            {
+              "key": "e_1_3_3_88_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1099/mic.0.023960-0"
+            },
+            {
+              "key": "e_1_3_3_89_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1074/jbc.M112.377002"
+            }
+          ],
+          "container-title": [
+            "Journal of Bacteriology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://journals.asm.org/doi/pdf/10.1128/JB.00412-13",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://journals.asm.org/doi/pdf/10.1128/JB.00412-13",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                29
+              ]
+            ],
+            "date-time": "2021-07-29T17:33:04Z",
+            "timestamp": 1627579984000
+          },
+          "score": 67.87613,
+          "resource": {
+            "primary": {
+              "URL": "https://journals.asm.org/doi/10.1128/JB.00412-13"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2013,
+                9
+              ]
+            ]
+          },
+          "references-count": 88,
+          "journal-issue": {
+            "issue": "17",
+            "published-print": {
+              "date-parts": [
+                [
+                  2013,
+                  9
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1128/JB.00412-13"
+          ],
+          "URL": "https://doi.org/10.1128/jb.00412-13",
+          "ISSN": [
+            "0021-9193",
+            "1098-5530"
+          ],
+          "issn-type": [
+            {
+              "value": "0021-9193",
+              "type": "print"
+            },
+            {
+              "value": "1098-5530",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2013,
+                9
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2013-04-09",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2013-06-13",
+              "order": 1,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2013-08-12",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                29
+              ]
+            ],
+            "date-time": "2025-10-29T07:01:15Z",
+            "timestamp": 1761721275775,
+            "version": "build-2065373602"
+          },
+          "reference-count": 0,
+          "publisher": "Wiley",
+          "issue": "S1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2016,
+                    4,
+                    1
+                  ]
+                ],
+                "date-time": "2016-04-01T00:00:00Z",
+                "timestamp": 1459468800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "faseb.onlinelibrary.wiley.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "The FASEB Journal"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                4
+              ]
+            ]
+          },
+          "DOI": "10.1096/fasebj.30.1_supplement.107.1",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2023,
+                11,
+                26
+              ]
+            ],
+            "date-time": "2023-11-26T11:30:36Z",
+            "timestamp": 1700998236000
+          },
+          "update-policy": "https://doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "Crispr\u2010Cas, The Prokaryotic Adaptive Immune System"
+          ],
+          "prefix": "10.1096",
+          "volume": "30",
+          "author": [
+            {
+              "given": "Luciano",
+              "family": "Marraffini",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "The Rockefeller University New York NY"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                4
+              ]
+            ]
+          },
+          "container-title": [
+            "The FASEB Journal"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                29
+              ]
+            ],
+            "date-time": "2025-10-29T00:28:17Z",
+            "timestamp": 1761697697000
+          },
+          "score": 42.422592,
+          "resource": {
+            "primary": {
+              "URL": "https://faseb.onlinelibrary.wiley.com/doi/10.1096/fasebj.30.1_supplement.107.1"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                4
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "S1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2016,
+                  4
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1096/fasebj.30.1_supplement.107.1"
+          ],
+          "URL": "https://doi.org/10.1096/fasebj.30.1_supplement.107.1",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0892-6638",
+            "1530-6860"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0892-6638"
+            },
+            {
+              "type": "electronic",
+              "value": "1530-6860"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                4
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2016-04-01",
+              "order": 3,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                3
+              ]
+            ],
+            "date-time": "2026-06-03T02:46:54Z",
+            "timestamp": 1780454814491,
+            "version": "3.54.1"
+          },
+          "reference-count": 211,
+          "publisher": "Elsevier",
+          "isbn-type": [
+            {
+              "value": "9780128220405",
+              "type": "print"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/legal/tdmrep-license"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-017"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-037"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-012"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-029"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-004"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/100000001",
+              "name": "National Science Foundation",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "MCB-1413534"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "MCB-1413534"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000001",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "DOI": "10.1016/b978-0-12-819460-7.00026-8",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                8,
+                21
+              ]
+            ],
+            "date-time": "2020-08-21T17:56:48Z",
+            "timestamp": 1598032608000
+          },
+          "page": "717-741",
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "Methods | CRISPR-Cas, A Prokaryotic Adaptive Immune System"
+          ],
+          "prefix": "10.1016",
+          "author": [
+            {
+              "given": "Alexander A.",
+              "family": "Charbonneau",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Colin C.",
+              "family": "Gauvin",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "C. Martin",
+              "family": "Lawrence",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib1",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1126/science.aaf5573",
+              "article-title": "C2c2 is a single-component programmable RNA-guided RNA-targeting CRISPR effector",
+              "volume": "353",
+              "author": "Abudayyeh",
+              "year": "2016",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib2",
+              "doi-asserted-by": "crossref",
+              "first-page": "15",
+              "DOI": "10.1186/1745-6150-8-15",
+              "article-title": "Comprehensive analysis of the HEPN superfamily: Identification of novel roles in intra-genomic conflicts, defense, pathogenesis and RNA processing",
+              "volume": "8",
+              "author": "Anantharaman",
+              "year": "2013",
+              "journal-title": "Biol. Direct"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "569",
+              "DOI": "10.1038/nature13579",
+              "article-title": "Structural basis of PAM-dependent target DNA recognition by the Cas9 endonuclease",
+              "volume": "513",
+              "author": "Anders",
+              "year": "2014",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib4",
+              "doi-asserted-by": "crossref",
+              "first-page": "7884",
+              "DOI": "10.1093/nar/gku510",
+              "article-title": "Detection and characterization of spacer integration intermediates in type I-E CRISPR-Cas system",
+              "volume": "42",
+              "author": "Arslan",
+              "year": "2014",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.7554/eLife.55852",
+              "article-title": "The dynamic interplay of host and viral enzymes in type III CRISPR-mediated cyclic nucleotide signalling",
+              "volume": "9",
+              "author": "Athukoralage",
+              "year": "2020",
+              "journal-title": "eLife"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "572",
+              "DOI": "10.1038/s41586-019-1909-5",
+              "article-title": "An anti-CRISPR viral ring nuclease subverts type III CRISPR immunity",
+              "volume": "577",
+              "author": "Athukoralage",
+              "year": "2020",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "277",
+              "DOI": "10.1038/s41586-018-0557-5",
+              "article-title": "Ring nucleases deactivate type III CRISPR ribonucleases by degrading cyclic oligoadenylate",
+              "volume": "562",
+              "author": "Athukoralage",
+              "year": "2018",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "2894",
+              "DOI": "10.1016/j.jmb.2019.04.041",
+              "article-title": "A type III CRISPR ancillary ribonuclease degrades its cyclic oligoadenylate activator",
+              "volume": "431",
+              "author": "Athukoralage",
+              "year": "2019",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib9",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/nmicrobiol.2017.92",
+              "article-title": "A decade of discovery: CRISPR functions and applications",
+              "volume": "2",
+              "author": "Barrangou",
+              "year": "2017",
+              "journal-title": "Nat. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1709",
+              "DOI": "10.1126/science.1138140",
+              "article-title": "CRISPR provides acquired resistance against viruses in prokaryotes",
+              "volume": "315",
+              "author": "Barrangou",
+              "year": "2007",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "2551",
+              "DOI": "10.1099/mic.0.28048-0",
+              "article-title": "Clustered regularly interspaced short palindrome repeats (CRISPRs) have spacers of extrachromosomal origin",
+              "volume": "151",
+              "author": "Bolotin",
+              "year": "2005",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "136",
+              "DOI": "10.1038/nature15254",
+              "article-title": "Multiple mechanisms for CRISPR-Cas inhibition by anti-CRISPR proteins",
+              "volume": "526",
+              "author": "Bondy-Denomy",
+              "year": "2015",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib13",
+              "doi-asserted-by": "crossref",
+              "first-page": "304",
+              "DOI": "10.1089/crispr.2018.0043",
+              "article-title": "A unified resource for tracking anti-CRISPR names",
+              "volume": "1",
+              "author": "Bondy-Denomy",
+              "year": "2018",
+              "journal-title": "CRISPR J."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "429",
+              "DOI": "10.1038/nature11723",
+              "article-title": "Bacteriophage genes that inactivate the CRISPR/Cas bacterial immune system",
+              "volume": "493",
+              "author": "Bondy-Denomy",
+              "year": "2013",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib15",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1126/science.1159689",
+              "article-title": "Small CRISPR RNAs guide antiviral defense in prokaryotes",
+              "volume": "321",
+              "author": "Brouns",
+              "year": "2008",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib16",
+              "doi-asserted-by": "crossref",
+              "first-page": "237",
+              "DOI": "10.1038/nature21059",
+              "article-title": "New CRISPR-Cas systems from uncultivated microbes",
+              "volume": "542",
+              "author": "Burstein",
+              "year": "2017",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib17",
+              "doi-asserted-by": "crossref",
+              "first-page": "3489",
+              "DOI": "10.1101/gad.1742908",
+              "article-title": "Cas6 is an endoribonuclease that generates guide RNAs for invader defense in prokaryotes",
+              "volume": "22",
+              "author": "Carte",
+              "year": "2008",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib18",
+              "doi-asserted-by": "crossref",
+              "first-page": "2181",
+              "DOI": "10.1261/rna.2230110",
+              "article-title": "Binding and cleavage of CRISPR RNA by Cas6",
+              "volume": "16",
+              "author": "Carte",
+              "year": "2010",
+              "journal-title": "RNA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib19",
+              "doi-asserted-by": "crossref",
+              "first-page": "428",
+              "DOI": "10.1093/femsre/fuv023",
+              "article-title": "Biogenesis pathways of RNA guides in archaeal and bacterial CRISPR-Cas adaptive immunity",
+              "volume": "39",
+              "author": "Charpentier",
+              "year": "2015",
+              "journal-title": "FEMS Microbiol. Rev."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "47",
+              "DOI": "10.1016/j.cell.2017.03.012",
+              "article-title": "Structure reveals mechanisms of viral suppressors that intercept a CRISPR RNA-guided surveillance complex",
+              "volume": "169",
+              "author": "Chowdhury",
+              "year": "2017",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "545",
+              "DOI": "10.1016/j.str.2012.01.018",
+              "article-title": "Structure of the Cmr2 subunit of the CRISPR-Cas RNA silencing complex",
+              "volume": "20",
+              "author": "Cocozaki",
+              "year": "2012",
+              "journal-title": "Structure"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib22",
+              "doi-asserted-by": "crossref",
+              "first-page": "819",
+              "DOI": "10.1126/science.1231143",
+              "article-title": "Multiplex genome engineering using CRISPR/Cas systems",
+              "volume": "339",
+              "author": "Cong",
+              "year": "2013",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib23",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/ncomms1937",
+              "article-title": "Molecular memory of prior infections activates the CRISPR/Cas adaptive bacterial immunity system",
+              "volume": "3",
+              "author": "Datsenko",
+              "year": "2012",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib24",
+              "doi-asserted-by": "crossref",
+              "first-page": "602",
+              "DOI": "10.1038/nature09886",
+              "article-title": "CRISPR RNA maturation by trans-encoded small RNA and host factor RNase III",
+              "volume": "471",
+              "author": "Deltcheva",
+              "year": "2011",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib25",
+              "doi-asserted-by": "crossref",
+              "first-page": "1088",
+              "DOI": "10.1111/mmi.12152",
+              "article-title": "A novel interference mechanism by a type IIIB CRISPR-Cmr module in sulfolobus",
+              "volume": "87",
+              "author": "Deng",
+              "year": "2013",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib26",
+              "doi-asserted-by": "crossref",
+              "first-page": "1390",
+              "DOI": "10.1128/JB.01412-07",
+              "article-title": "Phage response to CRISPR-encoded resistance in streptococcus thermophilus",
+              "volume": "190",
+              "author": "Deveau",
+              "year": "2008",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib27",
+              "first-page": "522",
+              "article-title": "The crystal structure of Cpf1 in complex with CRISPR RNA",
+              "volume": "532",
+              "author": "Dong",
+              "year": "2016"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib28",
+              "doi-asserted-by": "crossref",
+              "first-page": "270",
+              "DOI": "10.1038/nature19802",
+              "article-title": "Two distinct RNase activities of CRISPR-C2c2 enable guide-RNA processing and RNA detection",
+              "volume": "538",
+              "author": "East-Seletsky",
+              "year": "2016",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib29",
+              "doi-asserted-by": "crossref",
+              "first-page": "373",
+              "DOI": "10.1016/j.molcel.2017.04.008",
+              "article-title": "RNA targeting by functionally orthogonal Type VI-A CRISPR-Cas enzymes",
+              "volume": "66",
+              "author": "East-Seletsky",
+              "year": "2017",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib30",
+              "doi-asserted-by": "crossref",
+              "first-page": "447",
+              "DOI": "10.1101/gad.272153.115",
+              "article-title": "Bipartite recognition of target RNAs activates DNA cleavage by the Type III-B CRISPR-Cas system",
+              "volume": "30",
+              "author": "Elmore",
+              "year": "2016",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "460",
+              "DOI": "10.1101/gad.273722.115",
+              "article-title": "RNA-activated DNA cleavage by the Type III-B CRISPR-Cas effector complex",
+              "volume": "30",
+              "author": "Estrella",
+              "year": "2016",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib32",
+              "doi-asserted-by": "crossref",
+              "first-page": "E5122",
+              "DOI": "10.1073/pnas.1618421114",
+              "article-title": "Spacer capture and integration by a type I-F Cas1-Cas2-3 CRISPR adaptation complex",
+              "volume": "114",
+              "author": "Fagerlund",
+              "year": "2017",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib33",
+              "doi-asserted-by": "crossref",
+              "first-page": "E1629",
+              "DOI": "10.1073/pnas.1400071111",
+              "article-title": "Degenerate target sites mediate rapid primed CRISPR adaptation",
+              "volume": "111",
+              "author": "Fineran",
+              "year": "2014",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib34",
+              "doi-asserted-by": "crossref",
+              "first-page": "2577",
+              "DOI": "10.1093/nar/gkt1074",
+              "article-title": "Phylogeny of Cas9 determines functional exchangeability of dual-RNA and Cas9 among orthologous type II CRISPR-Cas systems",
+              "volume": "42",
+              "author": "Fonfara",
+              "year": "2014",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib35",
+              "doi-asserted-by": "crossref",
+              "first-page": "517",
+              "DOI": "10.1038/nature17945",
+              "article-title": "The CRISPR-associated DNA-cleaving enzyme Cpf1 also processes precursor CRISPR RNA",
+              "volume": "532",
+              "author": "Fonfara",
+              "year": "2016",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib36",
+              "doi-asserted-by": "crossref",
+              "first-page": "901",
+              "DOI": "10.1038/cr.2016.88",
+              "article-title": "Type V CRISPR-Cas Cpf1 endonuclease employs a unique mechanism for crRNA-mediated target DNA recognition",
+              "volume": "26",
+              "author": "Gao",
+              "year": "2016",
+              "journal-title": "Cell Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib37",
+              "doi-asserted-by": "crossref",
+              "first-page": "2020",
+              "DOI": "10.1261/rna.033100.112",
+              "article-title": "Cas5d processes pre-crRNA and is a member of a larger family of CRISPR RNA endonucleases",
+              "volume": "18",
+              "author": "Garside",
+              "year": "2012",
+              "journal-title": "RNA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib38",
+              "doi-asserted-by": "crossref",
+              "first-page": "E2579",
+              "DOI": "10.1073/pnas.1208507109",
+              "article-title": "Cas9-crRNA ribonucleoprotein complex mediates specific DNA cleavage for adaptive immunity in bacteria",
+              "volume": "109",
+              "author": "Gasiunas",
+              "year": "2012",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib39",
+              "doi-asserted-by": "crossref",
+              "first-page": "688",
+              "DOI": "10.1038/nsmb.2042",
+              "article-title": "Recognition and maturation of effector RNAs in a CRISPR interference pathway",
+              "volume": "18",
+              "author": "Gesner",
+              "year": "2011",
+              "journal-title": "Nat. Struct. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib41",
+              "doi-asserted-by": "crossref",
+              "first-page": "633",
+              "DOI": "10.1038/nature13637",
+              "article-title": "Conditional tolerance of temperate phages via transcription-dependent CRISPR-Cas targeting",
+              "volume": "514",
+              "author": "Goldberg",
+              "year": "2014",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib42",
+              "doi-asserted-by": "crossref",
+              "first-page": "1057",
+              "DOI": "10.1111/j.1365-2958.1993.tb00976.x",
+              "article-title": "Nature of DNA polymorphism in the direct repeat cluster of Mycobacterium tuberculosis; application for strain differentiation by a novel typing method",
+              "volume": "10",
+              "author": "Groenen",
+              "year": "1993",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib43",
+              "doi-asserted-by": "crossref",
+              "first-page": "305",
+              "DOI": "10.1038/s41422-019-0151-x",
+              "article-title": "Coupling of ssRNA cleavage with DNase activity in type III-A CRISPR-Csm revealed by cryo-EM and biochemistry",
+              "volume": "29",
+              "author": "Guo",
+              "year": "2019",
+              "journal-title": "Cell Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib44",
+              "doi-asserted-by": "crossref",
+              "first-page": "414",
+              "DOI": "10.1016/j.cell.2017.09.006",
+              "article-title": "Cryo-EM structures reveal mechanism and inhibition of DNA targeting by a CRISPR-Cas surveillance complex",
+              "volume": "171",
+              "author": "Guo",
+              "year": "2017",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib45",
+              "doi-asserted-by": "crossref",
+              "first-page": "474",
+              "DOI": "10.1371/journal.pcbi.0010060",
+              "article-title": "A guild of 45 CRISPR-associated (Cas) protein families and multiple CRISPR/Cas subtypes exist in prokaryotic genomes",
+              "volume": "1",
+              "author": "Haft",
+              "year": "2005",
+              "journal-title": "PLoS Comput. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib46",
+              "doi-asserted-by": "crossref",
+              "first-page": "945",
+              "DOI": "10.1016/j.cell.2009.07.040",
+              "article-title": "RNA-guided RNA cleavage by a CRISPR RNA-Cas protein complex",
+              "volume": "139",
+              "author": "Hale",
+              "year": "2009",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib47",
+              "doi-asserted-by": "crossref",
+              "first-page": "2432",
+              "DOI": "10.1101/gad.250712.114",
+              "article-title": "Target RNA capture and cleavage by the Cmr type III-B CRISPR-Cas effector complex",
+              "volume": "28",
+              "author": "Hale",
+              "year": "2014",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib48",
+              "doi-asserted-by": "crossref",
+              "first-page": "10740",
+              "DOI": "10.1093/nar/gkx726",
+              "article-title": "Allosteric regulation of Csx1, a type IIIB-associated CARF domain ribonuclease by RNAs carrying a tetraadenylate tail",
+              "volume": "45",
+              "author": "Han",
+              "year": "2017",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib49",
+              "doi-asserted-by": "crossref",
+              "first-page": "839",
+              "DOI": "10.1126/science.aav4294",
+              "article-title": "Programmed DNA destruction by miniature CRISPR-Cas14 enzymes",
+              "volume": "362",
+              "author": "Harrington",
+              "year": "2018",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib50",
+              "doi-asserted-by": "crossref",
+              "first-page": "21218",
+              "DOI": "10.1073/pnas.1112832108",
+              "article-title": "Mature clustered, regularly interspaced, short palindromic repeats RNA (crRNA) length is measured by a ruler mechanism anchored at the precursor processing site",
+              "volume": "108",
+              "author": "Hatoum-Aslan",
+              "year": "2011",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib51",
+              "doi-asserted-by": "crossref",
+              "first-page": "1355",
+              "DOI": "10.1126/science.1192272",
+              "article-title": "Sequence- and structure-specific RNA processing by a CRISPR endonuclease",
+              "volume": "329",
+              "author": "Haurwitz",
+              "year": "2010",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib52",
+              "doi-asserted-by": "crossref",
+              "first-page": "499",
+              "DOI": "10.1038/nature16995",
+              "article-title": "Structural basis for promiscuous PAM recognition in type I-E Cascade from E. coli",
+              "volume": "530",
+              "author": "Hayes",
+              "year": "2016",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib53",
+              "doi-asserted-by": "crossref",
+              "first-page": "199",
+              "DOI": "10.1038/nature14245",
+              "article-title": "Cas9 specifies functional viral targets during CRISPR-Cas adaptation",
+              "volume": "519",
+              "author": "Heler",
+              "year": "2015",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib54",
+              "doi-asserted-by": "crossref",
+              "first-page": "1239",
+              "DOI": "10.1016/j.cell.2017.11.032",
+              "article-title": "The Biology of CRISPR-Cas: Backward and forward",
+              "volume": "172",
+              "author": "Hille",
+              "year": "2018",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib55",
+              "doi-asserted-by": "crossref",
+              "first-page": "950",
+              "DOI": "10.1016/j.cell.2016.01.039",
+              "article-title": "Structure and engineering of francisella novicida Cas9",
+              "volume": "164",
+              "author": "Hirano",
+              "year": "2016",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib56",
+              "doi-asserted-by": "crossref",
+              "first-page": "886",
+              "DOI": "10.1016/j.molcel.2016.02.018",
+              "article-title": "Structural Basis for the Altered PAM Specificities of Engineered CRISPR-Cas9",
+              "volume": "61",
+              "author": "Hirano",
+              "year": "2016",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib57",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/s41467-019-09741-6",
+              "article-title": "Structural basis for the promiscuous PAM recognition by Corynebacterium diphtheriae Cas9",
+              "volume": "10",
+              "author": "Hirano",
+              "year": "2019",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib58",
+              "doi-asserted-by": "crossref",
+              "first-page": "6618",
+              "DOI": "10.1073/pnas.1405079111",
+              "article-title": "CasA mediates Cas3-catalyzed target degradation during CRISPR RNA-guided interference",
+              "volume": "111",
+              "author": "Hochstrasser",
+              "year": "2014",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib59",
+              "doi-asserted-by": "crossref",
+              "first-page": "1401",
+              "DOI": "10.1128/JB.01415-07",
+              "article-title": "Diversity, activity, and evolution of CRISPR Loci in streptococcus thermophilus",
+              "volume": "190",
+              "author": "Horvath",
+              "year": "2008",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib60",
+              "doi-asserted-by": "crossref",
+              "first-page": "771",
+              "DOI": "10.1038/nsmb.2875",
+              "article-title": "Structures of CRISPR Cas3 offer mechanistic insights into Cascade-activated DNA unwinding and degradation",
+              "volume": "21",
+              "author": "Huo",
+              "year": "2014",
+              "journal-title": "Nat. Struct. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib61",
+              "doi-asserted-by": "crossref",
+              "first-page": "5429",
+              "DOI": "10.1128/jb.169.12.5429-5433.1987",
+              "article-title": "Nucleotide sequence of the lap gene, responsible for alkaline phosphatase isozyme conversion in Escherichia coli, and identification of the gene product",
+              "volume": "169",
+              "author": "Ishino",
+              "year": "1987",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib62",
+              "doi-asserted-by": "crossref",
+              "first-page": "1473",
+              "DOI": "10.1126/science.1256328",
+              "article-title": "Crystal structure of the CRISPR RNA-guided surveillance complex from Escherichia coli",
+              "volume": "345",
+              "author": "Jackson",
+              "year": "2014",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib63",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1126/science.aal5056",
+              "article-title": "CRISPR-Cas: Adapting to change",
+              "author": "Jackson",
+              "year": "2017",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib64",
+              "doi-asserted-by": "crossref",
+              "first-page": "1565",
+              "DOI": "10.1046/j.1365-2958.2002.02839.x",
+              "article-title": "Identification of genes that are associated with DNA repeats in prokaryotes",
+              "volume": "43",
+              "author": "Jansen",
+              "year": "2002",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib65",
+              "doi-asserted-by": "crossref",
+              "first-page": "944",
+              "DOI": "10.1016/j.molcel.2019.06.014",
+              "article-title": "CRISPR-Cas III-A Csm6 CARF domain is a ring nuclease triggering stepwise cA4 cleavage with ApA>p formation terminating RNase activity",
+              "volume": "75",
+              "author": "Jia",
+              "year": "2019",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib66",
+              "doi-asserted-by": "crossref",
+              "first-page": "264",
+              "DOI": "10.1016/j.molcel.2018.11.007",
+              "article-title": "Type III-A CRISPR-Cas Csm Complexes: Assembly, periodic RNA cleavage, DNase activity regulation, and autoimmunity",
+              "volume": "73",
+              "author": "Jia",
+              "year": "2019",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib67",
+              "doi-asserted-by": "crossref",
+              "first-page": "505",
+              "DOI": "10.1146/annurev-biophys-062215-010822",
+              "article-title": "CRISPR-Cas9 structures and mechanisms",
+              "volume": "46",
+              "author": "Jiang",
+              "year": "2017",
+              "journal-title": "Annu. Rev. Biophys."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib68",
+              "doi-asserted-by": "crossref",
+              "first-page": "867",
+              "DOI": "10.1126/science.aad8282",
+              "article-title": "Structures of a CRISPR-Cas9 R-loop complex primed for DNA cleavage",
+              "volume": "351",
+              "author": "Jiang",
+              "year": "2016",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib69",
+              "doi-asserted-by": "crossref",
+              "first-page": "710",
+              "DOI": "10.1016/j.cell.2015.12.053",
+              "article-title": "Degradation of phage transcripts by CRISPR-associated RNases enables type III CRISPR-Cas immunity",
+              "volume": "164",
+              "author": "Jiang",
+              "year": "2016",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib70",
+              "doi-asserted-by": "crossref",
+              "first-page": "1477",
+              "DOI": "10.1126/science.aab1452",
+              "article-title": "A Cas9-guide RNA complex preorganized for target DNA recognition",
+              "volume": "348",
+              "author": "Jiang",
+              "year": "2015",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib71",
+              "doi-asserted-by": "crossref",
+              "first-page": "816",
+              "DOI": "10.1126/science.1225829",
+              "article-title": "A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity",
+              "volume": "337",
+              "author": "Jinek",
+              "year": "2012",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib72",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.7554/eLife.00471",
+              "article-title": "RNA-programmed genome editing in human cells",
+              "volume": "2",
+              "author": "Jinek",
+              "year": "2013",
+              "journal-title": "eLife"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib73",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1126/science.1247997",
+              "article-title": "Structures of Cas9 endonucleases reveal RNA-mediated conformational activation",
+              "volume": "343",
+              "author": "Jinek",
+              "year": "2014",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib74",
+              "doi-asserted-by": "crossref",
+              "first-page": "529",
+              "DOI": "10.1038/nsmb.2019",
+              "article-title": "Structural basis for CRISPR RNA-guided DNA recognition by Cascade",
+              "volume": "18",
+              "author": "Jore",
+              "year": "2011",
+              "journal-title": "Nat. Struct. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib75",
+              "doi-asserted-by": "crossref",
+              "first-page": "70",
+              "DOI": "10.1016/j.str.2015.10.019",
+              "article-title": "Crystal structure of streptococcus pyogenes Cas1 and its interaction with Csn2 in the type II CRISPR-Cas system",
+              "volume": "24",
+              "author": "Ka",
+              "year": "2016",
+              "journal-title": "Structure"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib76",
+              "doi-asserted-by": "crossref",
+              "first-page": "5016",
+              "DOI": "10.1093/nar/gkaa208",
+              "article-title": "PAM recognition by miniature CRISPR-Cas12f nucleases triggers programmable double-stranded DNA target cleavage",
+              "volume": "48",
+              "author": "Karvelis",
+              "year": "2020",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib77",
+              "doi-asserted-by": "crossref",
+              "first-page": "295",
+              "DOI": "10.1016/j.molcel.2016.03.024",
+              "article-title": "Spatiotemporal control of Type III-A CRISPR-Cas immunity: Coupling DNA degradation with the target RNA recognition",
+              "volume": "62",
+              "author": "Kazlauskiene",
+              "year": "2016",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib78",
+              "doi-asserted-by": "crossref",
+              "first-page": "605",
+              "DOI": "10.1126/science.aao0100",
+              "article-title": "A cyclic oligonucleotide signaling pathway in type III CRISPR-Cas systems",
+              "volume": "357",
+              "author": "Kazlauskiene",
+              "year": "2017",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib79",
+              "doi-asserted-by": "crossref",
+              "first-page": "3377",
+              "DOI": "10.1016/j.celrep.2018.02.103",
+              "article-title": "Cas4 Facilitates PAM-compatible spacer selection during CRISPR adaptation",
+              "volume": "22",
+              "author": "Kieper",
+              "year": "2018",
+              "journal-title": "Cell Rep."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib80",
+              "doi-asserted-by": "crossref",
+              "first-page": "863",
+              "DOI": "10.1038/nbt.3609",
+              "article-title": "Genome-wide analysis reveals specificities of Cpf1 endonucleases in human cells",
+              "volume": "34",
+              "author": "Kim",
+              "year": "2016",
+              "journal-title": "Nat. Biotechnol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib81",
+              "doi-asserted-by": "crossref",
+              "first-page": "153",
+              "DOI": "10.1038/nmeth.4104",
+              "article-title": "In vivo high-throughput profiling of CRISPR-Cpf1 activity",
+              "volume": "14",
+              "author": "Kim",
+              "year": "2017",
+              "journal-title": "Nat. Methods"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib82",
+              "doi-asserted-by": "crossref",
+              "first-page": "869",
+              "DOI": "10.1038/nbt.3620",
+              "article-title": "Genome-wide specificities of CRISPR-Cas Cpf1 nucleases in human cells",
+              "volume": "34",
+              "author": "Kleinstiver",
+              "year": "2016",
+              "journal-title": "Nat. Biotechnol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib83",
+              "doi-asserted-by": "crossref",
+              "first-page": "825",
+              "DOI": "10.1038/nsmb.3466",
+              "article-title": "Guide-bound structures of an RNA-targeting A-cleaving CRISPR-Cas13a enzyme",
+              "volume": "24",
+              "author": "Knott",
+              "year": "2017",
+              "journal-title": "Nat. Struct. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib84",
+              "doi-asserted-by": "crossref",
+              "first-page": "20",
+              "DOI": "10.1016/j.cell.2016.10.044",
+              "article-title": "CRISPR-based technologies for the manipulation of eukaryotic genomes",
+              "volume": "168",
+              "author": "Komor",
+              "year": "2017",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib85",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1098/rstb.2018.0087",
+              "article-title": "Origins and evolution of CRISPR-Cas systems",
+              "volume": "374",
+              "author": "Koonin",
+              "year": "2019",
+              "journal-title": "Philos. Trans. R. Soc. Lond. B Biol. Sci."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib86",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1186/gb-2007-8-4-r61",
+              "article-title": "Evolutionary conservation of sequence and secondary structures in CRISPR repeats",
+              "volume": "8",
+              "author": "Kunin",
+              "year": "2007",
+              "journal-title": "Genome Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib87",
+              "doi-asserted-by": "crossref",
+              "first-page": "852",
+              "DOI": "10.1016/j.molcel.2016.07.011",
+              "article-title": "Cas3-derived target DNA degradation fragments fuel primed CRISPR adaptation",
+              "volume": "63",
+              "author": "Kunne",
+              "year": "2016",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib88",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.7554/eLife.44248",
+              "article-title": "The Cas4-Cas1-Cas2 complex mediates precise prespacer processing during CRISPR adaptation",
+              "volume": "8",
+              "author": "Lee",
+              "year": "2019",
+              "journal-title": "eLife"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib89",
+              "doi-asserted-by": "crossref",
+              "first-page": "48",
+              "DOI": "10.1016/j.molcel.2018.03.003",
+              "article-title": "Cas4-dependent prespacer processing ensures high-fidelity programming of CRISPR arrays",
+              "volume": "70",
+              "author": "Lee",
+              "year": "2018",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib90",
+              "doi-asserted-by": "crossref",
+              "first-page": "505",
+              "DOI": "10.1038/nature14302",
+              "article-title": "CRISPR adaptation biases explain preference for acquisition of foreign DNA",
+              "volume": "520",
+              "author": "Levy",
+              "year": "2015",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib91",
+              "doi-asserted-by": "crossref",
+              "first-page": "2483",
+              "DOI": "10.1093/nar/gkt1154",
+              "article-title": "Adaptation of the Haloarcula hispanica CRISPR-Cas system to a purified virus strictly requires a priming process",
+              "volume": "42",
+              "author": "Li",
+              "year": "2014",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib92",
+              "doi-asserted-by": "crossref",
+              "first-page": "259",
+              "DOI": "10.1111/j.1365-2958.2009.06641.x",
+              "article-title": "CRISPR families of the crenarchaeal genus Sulfolobus: Bidirectional transcription and dynamic properties",
+              "volume": "72",
+              "author": "Lillestol",
+              "year": "2009",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib93",
+              "doi-asserted-by": "crossref",
+              "first-page": "939",
+              "DOI": "10.1016/j.jmb.2010.11.019",
+              "article-title": "The structure of the CRISPR-associated protein Csa3 provides insight into the regulation of the CRISPR/Cas system",
+              "volume": "405",
+              "author": "Lintner",
+              "year": "2011",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib94",
+              "doi-asserted-by": "crossref",
+              "first-page": "21643",
+              "DOI": "10.1074/jbc.M111.238485",
+              "article-title": "Structural and functional characterization of an archaeal clustered regularly interspaced short palindromic repeat (CRISPR)-associated complex for antiviral defense (CASCADE)",
+              "volume": "286",
+              "author": "Lintner",
+              "year": "2011",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib95",
+              "doi-asserted-by": "crossref",
+              "first-page": "310",
+              "DOI": "10.1016/j.molcel.2016.11.040",
+              "article-title": "C2c1-sgRNA complex structure reveals RNA-guided DNA cleavage mechanism",
+              "volume": "65",
+              "author": "Liu",
+              "year": "2017",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib96",
+              "doi-asserted-by": "crossref",
+              "first-page": "714",
+              "DOI": "10.1016/j.cell.2017.06.050",
+              "article-title": "The molecular architecture for RNA-guided RNA cleavage by Cas13a",
+              "volume": "170",
+              "author": "Liu",
+              "year": "2017",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib97",
+              "doi-asserted-by": "crossref",
+              "first-page": "121",
+              "DOI": "10.1016/j.cell.2016.12.031",
+              "article-title": "Two distant catalytic sites are responsible for C2c2 RNase activities",
+              "volume": "168",
+              "author": "Liu",
+              "year": "2017",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib98",
+              "doi-asserted-by": "crossref",
+              "first-page": "8978",
+              "DOI": "10.1093/nar/gkx612",
+              "article-title": "Coupling transcriptional activation of CRISPR-Cas system and DNA repair genes by Csa3a in sulfolobus islandicus",
+              "volume": "45",
+              "author": "Liu",
+              "year": "2017",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib99",
+              "article-title": "Target preference of Type III-A CRISPR-Cas complexes at the transcription bubble",
+              "volume": "10",
+              "author": "Liu",
+              "year": "2019",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib100",
+              "doi-asserted-by": "crossref",
+              "first-page": "467",
+              "DOI": "10.1038/nrmicro2577",
+              "article-title": "Evolution and classification of the CRISPR-Cas systems",
+              "volume": "9",
+              "author": "Makarova",
+              "year": "2011",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib101",
+              "doi-asserted-by": "crossref",
+              "first-page": "722",
+              "DOI": "10.1038/nrmicro3569",
+              "article-title": "An updated evolutionary classification of CRISPR-Cas systems",
+              "volume": "13",
+              "author": "Makarova",
+              "year": "2015",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib102",
+              "doi-asserted-by": "crossref",
+              "first-page": "67",
+              "DOI": "10.1038/s41579-019-0299-x",
+              "article-title": "Evolutionary classification of CRISPR-Cas systems: A burst of class 2 and derived variants",
+              "volume": "18",
+              "author": "Makarova",
+              "year": "2020",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib103",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1186/1745-6150-7-40",
+              "article-title": "Live virus-free or die: Coupling of antivirus immunity and programmed suicide or dormancy in prokaryotes",
+              "volume": "7",
+              "author": "Makarova",
+              "year": "2012",
+              "journal-title": "Biol. Direct"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib104",
+              "doi-asserted-by": "crossref",
+              "first-page": "482",
+              "DOI": "10.1093/nar/30.2.482",
+              "article-title": "A DNA repair system specific for thermophilic Archaea and bacteria predicted by genomic context analysis",
+              "volume": "30",
+              "author": "Makarova",
+              "year": "2002",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib105",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1186/1745-6150-1-7",
+              "article-title": "A putative RNA-interference-based immune system in prokaryotes: computational analysis of the predicted enzymatic machinery, functional analogies with eukaryotic RNAi, and hypothetical mechanisms of action",
+              "volume": "1",
+              "author": "Makarova",
+              "year": "2006",
+              "journal-title": "Biol. Direct"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib106",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.3389/fgene.2014.00102",
+              "article-title": "CARF and WYL domains: Ligand-binding regulators of prokaryotic defense systems",
+              "volume": "5",
+              "author": "Makarova",
+              "year": "2014",
+              "journal-title": "Front. Genet."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib107",
+              "doi-asserted-by": "crossref",
+              "first-page": "957",
+              "DOI": "10.1038/nmeth.2649",
+              "article-title": "Cas9 as a versatile tool for engineering biology",
+              "volume": "10",
+              "author": "Mali",
+              "year": "2013",
+              "journal-title": "Nat. Methods"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib108",
+              "doi-asserted-by": "crossref",
+              "first-page": "823",
+              "DOI": "10.1126/science.1232033",
+              "article-title": "RNA-guided human genome engineering via Cas9",
+              "volume": "339",
+              "author": "Mali",
+              "year": "2013",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib109",
+              "doi-asserted-by": "crossref",
+              "first-page": "471",
+              "DOI": "10.1038/s41592-020-0771-6",
+              "article-title": "Anti-CRISPR protein applications: Natural brakes for CRISPR-Cas technologies",
+              "volume": "17",
+              "author": "Marino",
+              "year": "2020",
+              "journal-title": "Nat. Methods"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib110",
+              "doi-asserted-by": "crossref",
+              "first-page": "1843",
+              "DOI": "10.1126/science.1165771",
+              "article-title": "CRISPR interference limits horizontal gene transfer in staphylococci by targeting DNA",
+              "volume": "322",
+              "author": "Marraffini",
+              "year": "2008",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib111",
+              "doi-asserted-by": "crossref",
+              "first-page": "181",
+              "DOI": "10.1038/nrg2749",
+              "article-title": "CRISPR interference: RNA-directed adaptive immunity in bacteria and archaea",
+              "volume": "11",
+              "author": "Marraffini",
+              "year": "2010",
+              "journal-title": "Nat. Rev. Genet."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib112",
+              "doi-asserted-by": "crossref",
+              "first-page": "7",
+              "DOI": "10.1038/s41579-018-0071-7",
+              "article-title": "Molecular mechanisms of CRISPR-Cas spacer acquisition",
+              "volume": "17",
+              "author": "McGinn",
+              "year": "2019",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib113",
+              "doi-asserted-by": "crossref",
+              "first-page": "2396",
+              "DOI": "10.1128/JB.01480-10",
+              "article-title": "The CRISPR/Cas immune system is an operon regulated by LeuO, H-NS, and leucine-responsive regulatory protein in Salmonella enterica serovar Typhi",
+              "volume": "193",
+              "author": "Medina-Aparicio",
+              "year": "2011",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib114",
+              "doi-asserted-by": "crossref",
+              "first-page": "101",
+              "DOI": "10.1038/nature21719",
+              "article-title": "CRISPR-Cas systems exploit viral DNA injection to establish and maintain adaptive immunity",
+              "volume": "544",
+              "author": "Modell",
+              "year": "2017",
+              "journal-title": "Nature"
+            },
+            {
+              "issue": "6299",
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib115",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1126/science.aad5147",
+              "article-title": "Diverse evolutionary roots and mechanistic variations of the CRISPR-Cas systems",
+              "volume": "353",
+              "author": "Mohanraju",
+              "year": "2016",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib116",
+              "doi-asserted-by": "crossref",
+              "first-page": "244",
+              "DOI": "10.1046/j.1365-2958.2000.01838.x",
+              "article-title": "Biological significance of a family of regularly spaced repeats in the genomes of Archaea, bacteria and mitochondria",
+              "volume": "36",
+              "author": "Mojica",
+              "year": "2000",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib117",
+              "doi-asserted-by": "crossref",
+              "first-page": "174",
+              "DOI": "10.1007/s00239-004-0046-3",
+              "article-title": "Intervening sequences of regularly spaced prokaryotic repeats derive from foreign genetic elements",
+              "volume": "60",
+              "author": "Mojica",
+              "year": "2005",
+              "journal-title": "J. Mol. Evol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib118",
+              "doi-asserted-by": "crossref",
+              "first-page": "733",
+              "DOI": "10.1099/mic.0.023960-0",
+              "article-title": "Short motif sequences determine the targets of the prokaryotic CRISPR defence system",
+              "volume": "155",
+              "author": "Mojica",
+              "year": "2009",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib119",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/s41467-019-12244-z",
+              "article-title": "Structure of Csx1-cOA4 complex reveals the basis of RNA decay in Type III-B CRISPR-Cas",
+              "volume": "10",
+              "author": "Molina",
+              "year": "2019",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib120",
+              "doi-asserted-by": "crossref",
+              "first-page": "22184",
+              "DOI": "10.1074/jbc.M113.472233",
+              "article-title": "In vitro reconstitution of an Escherichia coli RNA-guided immune system reveals unidirectional, ATP-dependent degradation of DNA target",
+              "volume": "288",
+              "author": "Mulepati",
+              "year": "2013",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib121",
+              "doi-asserted-by": "crossref",
+              "first-page": "1479",
+              "DOI": "10.1126/science.1256996",
+              "article-title": "Crystal structure of a CRISPR RNA-guided surveillance complex bound to a ssDNA target",
+              "volume": "345",
+              "author": "Mulepati",
+              "year": "2014",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib122",
+              "doi-asserted-by": "crossref",
+              "first-page": "1574",
+              "DOI": "10.1016/j.str.2012.06.016",
+              "article-title": "Cas5d protein processes pre-crRNA and assembles into a cascade-like interference complex in subtype I-C/Dvulg CRISPR-Cas system",
+              "volume": "20",
+              "author": "Nam",
+              "year": "2012",
+              "journal-title": "Structure"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib123",
+              "doi-asserted-by": "crossref",
+              "first-page": "318",
+              "DOI": "10.1261/rna.054098.115",
+              "article-title": "Structural basis for the endoribonuclease activity of the type III-A CRISPR-associated protein Csm6",
+              "volume": "22",
+              "author": "Niewoehner",
+              "year": "2016",
+              "journal-title": "RNA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib124",
+              "doi-asserted-by": "crossref",
+              "first-page": "543",
+              "DOI": "10.1038/nature23467",
+              "article-title": "Type III CRISPR-Cas systems produce cyclic oligoadenylate second messengers",
+              "volume": "548",
+              "author": "Niewoehner",
+              "year": "2017",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib125",
+              "doi-asserted-by": "crossref",
+              "first-page": "935",
+              "DOI": "10.1016/j.cell.2014.02.001",
+              "article-title": "Crystal structure of Cas9 in complex with guide RNA and target DNA",
+              "volume": "156",
+              "author": "Nishimasu",
+              "year": "2014",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib126",
+              "doi-asserted-by": "crossref",
+              "first-page": "1113",
+              "DOI": "10.1016/j.cell.2015.08.007",
+              "article-title": "Crystal structure of staphylococcus aureus Cas9",
+              "volume": "162",
+              "author": "Nishimasu",
+              "year": "2015",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib127",
+              "doi-asserted-by": "crossref",
+              "first-page": "528",
+              "DOI": "10.1038/nsmb.2820",
+              "article-title": "Cas1-Cas2 complex formation mediates spacer acquisition during CRISPR-Cas adaptive immunity",
+              "volume": "21",
+              "author": "Nunez",
+              "year": "2014",
+              "journal-title": "Nat. Struct. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib128",
+              "doi-asserted-by": "crossref",
+              "first-page": "193",
+              "DOI": "10.1038/nature14237",
+              "article-title": "Integrase-mediated spacer acquisition during CRISPR-Cas adaptive immunity",
+              "volume": "519",
+              "author": "Nunez",
+              "year": "2015",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib129",
+              "doi-asserted-by": "crossref",
+              "first-page": "824",
+              "DOI": "10.1016/j.molcel.2016.04.027",
+              "article-title": "CRISPR immunological memory requires a host factor for specificity",
+              "volume": "62",
+              "author": "Nunez",
+              "year": "2016",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib130",
+              "doi-asserted-by": "crossref",
+              "first-page": "418",
+              "DOI": "10.1016/j.molcel.2015.03.018",
+              "article-title": "Crystal structure of the CRISPR-Cas RNA silencing Cmr complex bound to a target analog",
+              "volume": "58",
+              "author": "Osawa",
+              "year": "2015",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib131",
+              "doi-asserted-by": "crossref",
+              "first-page": "1829",
+              "DOI": "10.1016/j.cell.2016.11.017",
+              "article-title": "Naturally occurring off-switches for CRISPR-Cas9",
+              "volume": "167",
+              "author": "Pawluk",
+              "year": "2016",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib132",
+              "doi-asserted-by": "crossref",
+              "first-page": "490",
+              "DOI": "10.1038/s41580-019-0131-5",
+              "article-title": "The next generation of CRISPR-Cas technologies and applications",
+              "volume": "20",
+              "author": "Pickar-Oliver",
+              "year": "2019",
+              "journal-title": "Nat. Rev. Mol. Cell Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib133",
+              "doi-asserted-by": "crossref",
+              "first-page": "5125",
+              "DOI": "10.1093/nar/gku120",
+              "article-title": "In vitro assembly and activity of an archaeal CRISPR-Cas type I-A Cascade interference complex",
+              "volume": "42",
+              "author": "Plagens",
+              "year": "2014",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib134",
+              "doi-asserted-by": "crossref",
+              "first-page": "2491",
+              "DOI": "10.1128/JB.00206-12",
+              "article-title": "Characterization of the CRISPR/Cas subtype I-A system of the hyperthermophilic crenarchaeon Thermoproteus tenax",
+              "volume": "194",
+              "author": "Plagens",
+              "year": "2012",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib136",
+              "doi-asserted-by": "crossref",
+              "first-page": "1367",
+              "DOI": "10.1111/j.1365-2958.2010.07265.x",
+              "article-title": "Transcription, processing and function of CRISPR cassettes in Escherichia coli",
+              "volume": "77",
+              "author": "Pougach",
+              "year": "2010",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib137",
+              "doi-asserted-by": "crossref",
+              "first-page": "653",
+              "DOI": "10.1099/mic.0.27437-0",
+              "article-title": "CRISPR elements in Yersinia pestis acquire new repeats by preferential uptake of bacteriophage DNA, and provide additional tools for evolutionary studies",
+              "volume": "151",
+              "author": "Pourcel",
+              "year": "2005",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib138",
+              "doi-asserted-by": "crossref",
+              "first-page": "3403",
+              "DOI": "10.1074/jbc.RA119.012196",
+              "article-title": "Processing and integration of functionally oriented prespacers in the Escherichia coli CRISPR system depends on bacterial host exonucleases",
+              "volume": "295",
+              "author": "Ramachandran",
+              "year": "2020",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib1004",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Ran, F.A., Hsu, P.D., Wright, J., et al., 2013. Genome engineering using the CRISPR-Cas9 system. Nat Protoc. 8, 2281\u20132308.",
+              "DOI": "10.1038/nprot.2013.143"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib139",
+              "doi-asserted-by": "crossref",
+              "first-page": "854",
+              "DOI": "10.1016/j.cell.2015.10.003",
+              "article-title": "Surveillance and processing of foreign DNA by the escherichia coli CRISPR-Cas system",
+              "volume": "163",
+              "author": "Redding",
+              "year": "2015",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib140",
+              "doi-asserted-by": "crossref",
+              "first-page": "223",
+              "DOI": "10.1042/BJ20130269",
+              "article-title": "Structure of a dimeric crenarchaeal Cas6 enzyme with an atypical active site for CRISPR RNA processing",
+              "volume": "452",
+              "author": "Reeks",
+              "year": "2013",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib141",
+              "doi-asserted-by": "crossref",
+              "first-page": "2291",
+              "DOI": "10.3390/v4102291",
+              "article-title": "Function and regulation of clustered regularly interspaced short palindromic repeats (CRISPR) / CRISPR associated (Cas) systems",
+              "volume": "4",
+              "author": "Richter",
+              "year": "2012",
+              "journal-title": "Viruses"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib142",
+              "doi-asserted-by": "crossref",
+              "first-page": "9887",
+              "DOI": "10.1093/nar/gks737",
+              "article-title": "Characterization of CRISPR RNA processing in Clostridium thermocellum and Methanococcus maripaludis",
+              "volume": "40",
+              "author": "Richter",
+              "year": "2012",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib143",
+              "doi-asserted-by": "crossref",
+              "first-page": "8516",
+              "DOI": "10.1093/nar/gku527",
+              "article-title": "Priming in the Type I-F CRISPR-Cas system triggers strand-independent spacer acquisition, bi-directionally from the primed protospacer",
+              "volume": "42",
+              "author": "Richter",
+              "year": "2014",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib144",
+              "doi-asserted-by": "crossref",
+              "first-page": "1007",
+              "DOI": "10.1093/nar/gkx1232",
+              "article-title": "Prespacer processing and specific integration in a Type I-A CRISPR system",
+              "volume": "46",
+              "author": "Rollie",
+              "year": "2018",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib145",
+              "doi-asserted-by": "crossref",
+              "first-page": "E5113",
+              "DOI": "10.1073/pnas.1616395114",
+              "article-title": "Cas1 and the Csy complex are opposing regulators of Cas2/3 nuclease activity",
+              "volume": "114",
+              "author": "Rollins",
+              "year": "2017",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib146",
+              "doi-asserted-by": "crossref",
+              "first-page": "132",
+              "DOI": "10.1016/j.molcel.2019.02.001",
+              "article-title": "Structure reveals a mechanism of CRISPR-RNA-guided nuclease recruitment and Anti-CRISPR viral mimicry",
+              "volume": "74",
+              "author": "Rollins",
+              "year": "2019",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib147",
+              "doi-asserted-by": "crossref",
+              "first-page": "1164",
+              "DOI": "10.1016/j.cell.2015.04.027",
+              "article-title": "Co-transcriptional DNA and RNA cleavage during type III CRISPR-Cas immunity",
+              "volume": "161",
+              "author": "Samai",
+              "year": "2015",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib148",
+              "doi-asserted-by": "crossref",
+              "first-page": "9275",
+              "DOI": "10.1093/nar/gkr606",
+              "article-title": "The streptococcus thermophilus CRISPR/Cas system provides immunity in Escherichia coli",
+              "volume": "39",
+              "author": "Sapranauskas",
+              "year": "2011",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib149",
+              "doi-asserted-by": "crossref",
+              "first-page": "680",
+              "DOI": "10.1038/nsmb.2043",
+              "article-title": "An RNA-induced conformational change required for CRISPR RNA cleavage by the endoribonuclease Cse3",
+              "volume": "18",
+              "author": "Sashital",
+              "year": "2011",
+              "journal-title": "Nat. Struct. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib150",
+              "doi-asserted-by": "crossref",
+              "first-page": "716",
+              "DOI": "10.4161/rna.24325",
+              "article-title": "High-throughput analysis of type I-E CRISPR/Cas spacer acquisition in E. coli",
+              "volume": "10",
+              "author": "Savitskaya",
+              "year": "2013",
+              "journal-title": "RNA Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib151",
+              "doi-asserted-by": "crossref",
+              "first-page": "10098",
+              "DOI": "10.1073/pnas.1104144108",
+              "article-title": "Interference by clustered regularly interspaced short palindromic repeat (CRISPR) RNA is governed by a seed sequence",
+              "volume": "108",
+              "author": "Semenova",
+              "year": "2011",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib152",
+              "doi-asserted-by": "crossref",
+              "first-page": "530",
+              "DOI": "10.1080/15476286.2018.1483685",
+              "article-title": "Comprehensive search for accessory proteins encoded with archaeal and bacterial type III CRISPR-cas gene cassettes reveals 39 new cas gene families",
+              "volume": "16",
+              "author": "Shah",
+              "year": "2019",
+              "journal-title": "RNA Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib153",
+              "doi-asserted-by": "crossref",
+              "first-page": "891",
+              "DOI": "10.4161/rna.23764",
+              "article-title": "Protospacer recognition motifs: Mixed identities and functional diversity",
+              "volume": "10",
+              "author": "Shah",
+              "year": "2013",
+              "journal-title": "RNA Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib154",
+              "doi-asserted-by": "crossref",
+              "first-page": "385",
+              "DOI": "10.1016/j.str.2013.01.010",
+              "article-title": "Recognition and cleavage of a nonstructured CRISPR RNA by its processing endoribonuclease Cas6",
+              "volume": "21",
+              "author": "Shao",
+              "year": "2013",
+              "journal-title": "Structure"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib155",
+              "doi-asserted-by": "crossref",
+              "first-page": "814",
+              "DOI": "10.1016/j.molcel.2018.05.002",
+              "article-title": "Cas4 nucleases define the PAM, length, and orientation of DNA fragments integrated at CRISPR Loci",
+              "volume": "70",
+              "author": "Shiimori",
+              "year": "2018",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib156",
+              "doi-asserted-by": "crossref",
+              "first-page": "385",
+              "DOI": "10.1016/j.molcel.2015.10.008",
+              "article-title": "Discovery and functional characterization of diverse class 2 CRISPR-Cas systems",
+              "volume": "60",
+              "author": "Shmakov",
+              "year": "2015",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib157",
+              "doi-asserted-by": "crossref",
+              "first-page": "169",
+              "DOI": "10.1038/nrmicro.2016.184",
+              "article-title": "Diversity and evolution of class 2 CRISPR-Cas systems",
+              "volume": "15",
+              "author": "Shmakov",
+              "year": "2017",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib158",
+              "doi-asserted-by": "crossref",
+              "first-page": "3013",
+              "DOI": "10.1038/s41596-019-0211-1",
+              "article-title": "Systematic prediction of functionally linked genes in bacterial and archaeal genomes",
+              "volume": "14",
+              "author": "Shmakov",
+              "year": "2019",
+              "journal-title": "Nat. Protoc."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib159",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1126/science.aad4234",
+              "article-title": "Direct CRISPR spacer acquisition from RNA by a natural reverse transcriptase-Cas1 fusion protein",
+              "volume": "351",
+              "author": "Silas",
+              "year": "2016",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib160",
+              "doi-asserted-by": "crossref",
+              "first-page": "1335",
+              "DOI": "10.1038/emboj.2011.41",
+              "article-title": "Cas3 is a single-stranded DNA nuclease and ATP-dependent helicase in the CRISPR/Cas immune system",
+              "volume": "30",
+              "author": "Sinkunas",
+              "year": "2011",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib161",
+              "doi-asserted-by": "crossref",
+              "first-page": "385",
+              "DOI": "10.1038/emboj.2012.352",
+              "article-title": "In vitro reconstitution of cascade-mediated CRISPR immunity in streptococcus thermophilus",
+              "volume": "32",
+              "author": "Sinkunas",
+              "year": "2013",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib162",
+              "doi-asserted-by": "crossref",
+              "first-page": "618",
+              "DOI": "10.1016/j.molcel.2016.12.023",
+              "article-title": "Cas13b Is a Type VI-B CRISPR-associated RNA-guided RNase differentially regulated by accessory proteins Csx27 and Csx28",
+              "volume": "65",
+              "author": "Smargon",
+              "year": "2017",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib163",
+              "doi-asserted-by": "crossref",
+              "first-page": "237",
+              "DOI": "10.1146/annurev-biochem-072911-172315",
+              "article-title": "CRISPR-mediated adaptive immune systems in bacteria and archaea",
+              "volume": "82",
+              "author": "Sorek",
+              "year": "2013",
+              "journal-title": "Annu. Rev. Biochem."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib164",
+              "doi-asserted-by": "crossref",
+              "first-page": "518",
+              "DOI": "10.1016/j.molcel.2014.10.005",
+              "article-title": "RNA targeting by the type III-A CRISPR-Cas Csm complex of Thermus thermophilus",
+              "volume": "56",
+              "author": "Staals",
+              "year": "2014",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib165",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/ncomms12853",
+              "article-title": "Interference-driven spacer acquisition is dominant over naive and primed adaptation in a native CRISPR-Cas system",
+              "volume": "7",
+              "author": "Staals",
+              "year": "2016",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib166",
+              "doi-asserted-by": "crossref",
+              "first-page": "559",
+              "DOI": "10.1038/nature22398",
+              "article-title": "Structure of the Cpf1 endonuclease R-loop complex after target DNA cleavage",
+              "volume": "546",
+              "author": "Stella",
+              "year": "2017",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib167",
+              "doi-asserted-by": "crossref",
+              "first-page": "62",
+              "DOI": "10.1038/nature13011",
+              "article-title": "DNA interrogation by the CRISPR RNA-guided endonuclease Cas9",
+              "volume": "507",
+              "author": "Sternberg",
+              "year": "2014",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib168",
+              "doi-asserted-by": "crossref",
+              "first-page": "258",
+              "DOI": "10.1038/nature12971",
+              "article-title": "DNA-guided DNA interference by a prokaryotic Argonaute",
+              "volume": "507",
+              "author": "Swarts",
+              "year": "2014",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib169",
+              "doi-asserted-by": "crossref",
+              "first-page": "221",
+              "DOI": "10.1016/j.molcel.2017.03.016",
+              "article-title": "Structural basis for guide RNA processing and seed-dependent DNA targeting by CRISPR-Cas12a",
+              "volume": "66",
+              "author": "Swarts",
+              "year": "2017",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib170",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1371/journal.pone.0035888",
+              "article-title": "CRISPR interference directs strand specific spacer acquisition",
+              "volume": "7",
+              "author": "Swarts",
+              "year": "2012",
+              "journal-title": "PLoS One"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib171",
+              "doi-asserted-by": "crossref",
+              "first-page": "506",
+              "DOI": "10.1016/j.molcel.2014.09.027",
+              "article-title": "Programmable RNA shredding by the type III-A CRISPR-Cas system of streptococcus thermophilus",
+              "volume": "56",
+              "author": "Tamulaitis",
+              "year": "2014",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib172",
+              "doi-asserted-by": "crossref",
+              "first-page": "581",
+              "DOI": "10.1126/science.aaa4535",
+              "article-title": "Structures of the CRISPR-Cmr complex reveal mode of RNA target positioning",
+              "volume": "348",
+              "author": "Taylor",
+              "year": "2015",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib173",
+              "doi-asserted-by": "crossref",
+              "first-page": "254",
+              "DOI": "10.1080/15476286.2015.1130209",
+              "article-title": "Recognition of a pseudo-symmetric RNA tetranucleotide by Csx3, a new member of the CRISPR associated Rossmann fold superfamily",
+              "volume": "13",
+              "author": "Topuzlu",
+              "year": "2016",
+              "journal-title": "RNA Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib135",
+              "doi-asserted-by": "crossref",
+              "first-page": "1966",
+              "DOI": "10.1099/mic.0.027508-0",
+              "article-title": "Analysis of CRISPR in streptococcus mutans suggests frequent occurrence of acquired immunity against infection by M102-like bacteriophages",
+              "volume": "155",
+              "author": "van der Ploeg",
+              "year": "2009",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib174",
+              "doi-asserted-by": "crossref",
+              "first-page": "1987",
+              "DOI": "10.1128/jcm.31.8.1987-1995.1993",
+              "article-title": "Comparison of various repetitive DNA elements as genetic markers for strain differentiation and epidemiology of mycobacterium tuberculosis",
+              "volume": "31",
+              "author": "van Soolingen",
+              "year": "1993",
+              "journal-title": "J. Clin. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib175",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.cell.2015.10.008",
+              "article-title": "Structural and mechanistic basis of PAM-dependent spacer acquisition in CRISPR-Cas systems",
+              "author": "Wang",
+              "year": "2015",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib176",
+              "doi-asserted-by": "crossref",
+              "first-page": "278",
+              "DOI": "10.1016/j.molcel.2018.11.008",
+              "article-title": "Dynamics of Cas10 govern discrimination between self and non-self in Type III CRISPR-Cas immunity",
+              "volume": "73",
+              "author": "Wang",
+              "year": "2019",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib177",
+              "doi-asserted-by": "crossref",
+              "first-page": "356",
+              "DOI": "10.1101/gad.257550.114",
+              "article-title": "Cas9 function and host genome sampling in Type II-A CRISPR-Cas adaptation",
+              "volume": "29",
+              "author": "Wei",
+              "year": "2015",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib178",
+              "doi-asserted-by": "crossref",
+              "first-page": "1380",
+              "DOI": "10.1111/j.1365-2958.2010.07315.x",
+              "article-title": "H-NS-mediated repression of CRISPR-based immunity in Escherichia coli K12 can be relieved by the transcription activator LeuO",
+              "volume": "77",
+              "author": "Westra",
+              "year": "2010",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib179",
+              "doi-asserted-by": "crossref",
+              "first-page": "595",
+              "DOI": "10.1016/j.molcel.2012.03.018",
+              "article-title": "CRISPR immunity relies on the consecutive binding and degradation of negatively supercoiled invader DNA by Cascade and Cas3",
+              "volume": "46",
+              "author": "Westra",
+              "year": "2012",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib180",
+              "doi-asserted-by": "crossref",
+              "first-page": "486",
+              "DOI": "10.1038/nature10402",
+              "article-title": "Structures of the RNA-guided surveillance complex from a bacterial immune system",
+              "volume": "477",
+              "author": "Wiedenheft",
+              "year": "2011",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib181",
+              "doi-asserted-by": "crossref",
+              "first-page": "10092",
+              "DOI": "10.1073/pnas.1102716108",
+              "article-title": "RNA-guided complex from a bacterial immune system enhances target recognition through seed sequence interactions",
+              "volume": "108",
+              "author": "Wiedenheft",
+              "year": "2011",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "issue": "90\u2013101",
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib182",
+              "first-page": "e5",
+              "article-title": "Structure of the DNA-bound spacer capture complex of a Type II CRISPR-Cas system",
+              "volume": "75",
+              "author": "Wilkinson",
+              "year": "2019",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib183",
+              "doi-asserted-by": "crossref",
+              "first-page": "1113",
+              "DOI": "10.1126/science.aao0679",
+              "article-title": "Structures of the CRISPR genome integration complex",
+              "volume": "357",
+              "author": "Wright",
+              "year": "2017",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib184",
+              "doi-asserted-by": "crossref",
+              "first-page": "48",
+              "DOI": "10.1016/j.cell.2017.06.012",
+              "article-title": "Structure basis for directional R-loop formation and substrate handover mechanisms in Type I CRISPR-Cas system",
+              "volume": "170",
+              "author": "Xiao",
+              "year": "2017",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib185",
+              "doi-asserted-by": "crossref",
+              "first-page": "1109",
+              "DOI": "10.1016/j.molcel.2017.02.007",
+              "article-title": "Crystal structure of the minimal Cas9 from campylobacter jejuni reveals the molecular diversity in the CRISPR-Cas9 systems",
+              "volume": "65",
+              "author": "Yamada",
+              "year": "2017",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib186",
+              "doi-asserted-by": "crossref",
+              "first-page": "949",
+              "DOI": "10.1016/j.cell.2016.04.003",
+              "article-title": "Crystal structure of Cpf1 in complex with guide RNA and Target DNA",
+              "volume": "165",
+              "author": "Yamano",
+              "year": "2016",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib187",
+              "doi-asserted-by": "crossref",
+              "first-page": "88",
+              "DOI": "10.1126/science.aav7271",
+              "article-title": "Functionally diverse type V CRISPR-Cas systems",
+              "volume": "363",
+              "author": "Yan",
+              "year": "2019",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib188",
+              "doi-asserted-by": "crossref",
+              "first-page": "1814",
+              "DOI": "10.1016/j.cell.2016.11.053",
+              "article-title": "PAM-dependent target DNA recognition and cleavage by C2c1 CRISPR-Cas endonuclease",
+              "volume": "167",
+              "author": "Yang",
+              "year": "2016",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib189",
+              "doi-asserted-by": "crossref",
+              "first-page": "367",
+              "DOI": "10.1093/nar/gkw1151",
+              "article-title": "Asymmetric positioning of Cas1-2 complex and Integration Host Factor induced DNA bending guide the unidirectional homing of protospacer in CRISPR-Cas type I-E system",
+              "volume": "45",
+              "author": "Yoganand",
+              "year": "2017",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib190",
+              "doi-asserted-by": "crossref",
+              "first-page": "5569",
+              "DOI": "10.1093/nar/gks216",
+              "article-title": "Proteins and DNA elements essential for the CRISPR adaptation process in Escherichia coli",
+              "volume": "40",
+              "author": "Yosef",
+              "year": "2012",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib191",
+              "doi-asserted-by": "crossref",
+              "first-page": "239",
+              "DOI": "10.1016/j.cell.2018.10.052",
+              "article-title": "Structure studies of the CRISPR-Csm complex reveal mechanism of co-transcriptional interference",
+              "volume": "176",
+              "author": "You",
+              "year": "2019",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib192",
+              "doi-asserted-by": "crossref",
+              "first-page": "759",
+              "DOI": "10.1016/j.cell.2015.09.038",
+              "article-title": "Cpf1 is a single RNA-guided endonuclease of a class 2 CRISPR-Cas system",
+              "volume": "163",
+              "author": "Zetsche",
+              "year": "2015",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib193",
+              "article-title": "The CRISPR associated protein Cas4 Is a 5\u05f3 to 3\u05f3 DNA exonuclease with an iron-sulfur cluster",
+              "volume": "7",
+              "author": "Zhang",
+              "year": "2012",
+              "journal-title": "PLoS One"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib194",
+              "doi-asserted-by": "crossref",
+              "first-page": "303",
+              "DOI": "10.1016/j.molcel.2011.12.013",
+              "article-title": "Structure and mechanism of the CMR complex for CRISPR-mediated antiviral immunity",
+              "volume": "45",
+              "author": "Zhang",
+              "year": "2012",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib195",
+              "doi-asserted-by": "crossref",
+              "first-page": "488",
+              "DOI": "10.1016/j.molcel.2013.05.001",
+              "article-title": "Processing-independent CRISPR RNAs limit natural transformation in Neisseria meningitidis",
+              "volume": "50",
+              "author": "Zhang",
+              "year": "2013",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib196",
+              "doi-asserted-by": "crossref",
+              "first-page": "147",
+              "DOI": "10.1038/nature13733",
+              "article-title": "Crystal structure of the RNA-guided immune surveillance Cascade complex in Escherichia coli",
+              "volume": "515",
+              "author": "Zhao",
+              "year": "2014",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib197",
+              "doi-asserted-by": "crossref",
+              "first-page": "939",
+              "DOI": "10.1016/j.febslet.2012.02.036",
+              "article-title": "Crystal structure of Cmr2 suggests a nucleotide cyclase-related enzyme in type III CRISPR-Cas systems",
+              "volume": "586",
+              "author": "Zhu",
+              "year": "2012",
+              "journal-title": "FEBS Lett."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_bib198",
+              "doi-asserted-by": "crossref",
+              "first-page": "679",
+              "DOI": "10.1038/s41594-019-0258-2",
+              "article-title": "Cryo-EM structures reveal coordinated domain motions that govern DNA cleavage by Cas9",
+              "volume": "26",
+              "author": "Zhu",
+              "year": "2019",
+              "journal-title": "Nat. Struct. Mol. Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur40",
+              "doi-asserted-by": "crossref",
+              "first-page": "504",
+              "DOI": "10.1080/15476286.2018.1504546",
+              "article-title": "PAM identification by CRISPR-Cas effector complexes: Diversified mechanisms and structures",
+              "volume": "16",
+              "author": "Gleditzsch",
+              "year": "2019",
+              "journal-title": "RNA Biol."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur1",
+              "unstructured": "https://crisprcas.i2bc.paris-saclay.fr/\u2013CRISPR-CAS++."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur2",
+              "unstructured": "https://crisprcas.i2bc.paris-saclay.fr/CrisprCasFinder/Index\u2013CRISPRCasFinder."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur3",
+              "unstructured": "https://crisprcas.i2bc.paris-saclay.fr/MainDb/StrainList\u2013CRISPRCasdb metrics."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur4",
+              "unstructured": "https://www.ebi.ac.uk/pdbe/emdb/\u2013Electron Microscopy Data Bank."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur5",
+              "unstructured": "https://www.rcsb.org/3d-view/5VVK/1\u20135VVK."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur6",
+              "unstructured": "https://www.rcsb.org/3d-view/5H9E/1\u20135H9E."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur7",
+              "unstructured": "https://www.rcsb.org/3d-view/4OO8/1\u20134OO8."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur8",
+              "unstructured": "https://www.rcsb.org/3d-view/5B43/1\u20135B43."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur9",
+              "unstructured": "https://www.rcsb.org/3d-view/5XWP/1\u20135XWP."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur10",
+              "unstructured": "https://www.rcsb.org/3d-view/3X1L/1\u20133X1L."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur11",
+              "unstructured": "https://www.rcsb.org/3d-view/6IFU/1\u20136IFU."
+            },
+            {
+              "key": "10.1016/B978-0-12-819460-7.00026-8_fur12",
+              "unstructured": "https://www.rcsb.org/\u2013RCSB PDB."
+            }
+          ],
+          "container-title": [
+            "Encyclopedia of Biological Chemistry III"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780128194607000268?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780128194607000268?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                26
+              ]
+            ],
+            "date-time": "2025-10-26T01:16:42Z",
+            "timestamp": 1761441402000
+          },
+          "score": 40.742107,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/B9780128194607000268"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780128220405"
+          ],
+          "references-count": 211,
+          "URL": "https://doi.org/10.1016/b978-0-12-819460-7.00026-8",
+          "published": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

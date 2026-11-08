@@ -1,0 +1,336 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnm0797-730%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nm0797-730\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "9212098",
+          "source": "MED",
+          "pmid": "9212098",
+          "doi": "10.1038/nm0797-730",
+          "title": "Human acute myeloid leukemia is organized as a hierarchy that originates from a primitive hematopoietic cell.",
+          "authorString": "Bonnet D, Dick JE.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Bonnet D",
+                "lastName": "Bonnet",
+                "firstName": "D",
+                "initials": "D",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Genetics, Research Institute, Hospital for Sick Children, University of Toronto, Ontario, Canada."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Dick JE",
+                "lastName": "Dick",
+                "firstName": "J E",
+                "initials": "JE",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-9527-8317"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9527-8317"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "recommended_reviews",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "7",
+            "volume": "3",
+            "journalIssueId": 1057989,
+            "dateOfPublication": "1997 Jul",
+            "monthOfPublication": 7,
+            "yearOfPublication": 1997,
+            "journal": {
+              "medlineAbbreviation": "Nat Med",
+              "title": "Nature medicine",
+              "essn": "1546-170X",
+              "issn": "1078-8956",
+              "nlmid": "9502015",
+              "isoabbreviation": "Nat Med"
+            },
+            "printPublicationDate": "1997-07-01"
+          },
+          "pubYear": "1997",
+          "pageInfo": "730-737",
+          "abstractText": "On the subject of acute myeloid leukemia (AML), there is little consensus about the target cell within the hematopoietic stem cell hierarchy that is susceptible to leukemic transformation, or about the mechanism that underlies the phenotypic, genotypic and clinical heterogeneity. Here we demonstrate that the cell capable of initiating human AML in non-obese diabetic mice with severe combined immunodeficiency disease (NOD/SCID mice) - termed the SCID leukemia-initiating cell, or SL-IC - possesses the differentiative and proliferative capacities and the potential for self-renewal expected of a leukemic stem cell. The SL-ICs from all subtypes of AML analyzed, regardless of the heterogeneity in maturation characteristics of the leukemic blasts, were exclusively CD34++ CD38-, similar to the cell-surface phenotype of normal SCID-repopulating cells, suggesting that normal primitive cells, rather than committed progenitor cells, are the target for leukemic transformation. The SL-ICs were able to differentiate in vivo into leukemic blasts, indicating that the leukemic clone is organized as a hierarchy.",
+          "affiliation": "Department of Genetics, Research Institute, Hospital for Sick Children, University of Toronto, Ontario, Canada.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Hematopoietic Stem Cells",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Clone Cells"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice, Inbred NOD"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice, SCID"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Leukemia, Monocytic, Acute",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Leukemia, Myelomonocytic, Acute",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Cell Transformation, Neoplastic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Disease Models, Animal"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Acute Disease"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "N-Glycosyl Hydrolases"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "ADP-ribosyl Cyclase"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Membrane Glycoproteins"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Antigens, Differentiation"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Antigens, CD"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Antigens, CD34"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Hematopoietic Stem Cell Transplantation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Immunophenotyping"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Neoplasm Transplantation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cell Division"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cell Differentiation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Aged"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Middle Aged"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Female"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Leukemia, Myeloid, Acute",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "ADP-ribosyl Cyclase 1"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "N-Glycosyl Hydrolases",
+                "registryNumber": "EC 3.2.2.-"
+              },
+              {
+                "name": "Membrane Glycoproteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Antigens, CD",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Antigens, Differentiation",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Antigens, CD34",
+                "registryNumber": "0"
+              },
+              {
+                "name": "ADP-ribosyl Cyclase",
+                "registryNumber": "EC 3.2.2.5"
+              },
+              {
+                "name": "CD38 protein, human",
+                "registryNumber": "EC 3.2.2.5"
+              },
+              {
+                "name": "Cd38 protein, mouse",
+                "registryNumber": "EC 3.2.2.5"
+              },
+              {
+                "name": "ADP-ribosyl Cyclase 1",
+                "registryNumber": "EC 3.2.2.6"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nm0797-730"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 4877,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1997-08-04",
+          "dateOfCreation": "1997-07-01",
+          "dateOfRevision": "2025-02-14",
+          "firstPublicationDate": "1997-07-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

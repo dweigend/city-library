@@ -2,9 +2,7 @@
 
 ## Status
 
-This reference and the [API table](api-table.md) jointly define the binding UI authoring contract. **Readability is the highest priority; defaults come before customization.** Binding does not mean implemented: the design candidates below are not frozen contracts or availability claims.
-
-Source baseline: `ui/index.ts`, `ui/definition.ts`, `ui/compose.ts`, `ui/controls/form.ts` and `ui/views/` in `main`; experimental additions are identified separately against the `experiment/netlogo-web-catalog` checkout. That checkout also contains an evolving Svelte host. Its components, renderer bridges and DOM structure are implementation details, not experiment authoring APIs. This document records source inspection, not new browser acceptance. Availability must be checked against the branch being consumed.
+This reference and the [API table](api-table.md) define the repository UI contract. The [readable-authoring slice](../development/ui-authoring-syntax.md) is implemented in both the legacy and Svelte adapters, with passing public examples and real-browser checks. Final review scope and remaining tasks are in [PLAN](../../PLAN.md). Existing array declarations remain compatibility syntax. The forms below describe the accepted target for this slice, not a package release.
 
 ## Principles
 
@@ -20,14 +18,14 @@ The five [binding UI authoring rules](../DESIGN.md#binding-ui-authoring-rules) g
 
 `defineUI<P, M>(definition, spec): BoundEntry` is exported by `ui/index.ts`. It binds a plain headless `Definition<P, M>` to a `UISpec<P, M>` while preserving the concrete instance and observation types inside callbacks. It returns title, optional description and a mounted-session contract. Creating the definition must not initialize a model, create timers, perform I/O or touch the DOM at module import.
 
-Current syntax:
+Readable authoring form:
 
 ```ts
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }],
+  setup: ["seed"],
   monitors: [{ label: "Tick", value: state => state.tick }],
   views: [],
 });
@@ -39,23 +37,35 @@ export const ui = defineUI(model, {
 
 `Definition<P, M>` supplies `title`, optional `description`, canonical `inputs` and `create(parameters)`. Inputs are descriptors for number, boolean, choice or text, each with `default`; numbers may specify `min`, `max`, `step`, `integer`, and choices specify `options`. This is the experiment definition contract, not the future live-property core `Input` API.
 
-`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred as `ReturnType<M["read"]>`. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
+`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. Both UI entrypoints export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
 
 ## Setup
 
-Current `setup` is an ordered array of `{ field, label?, widget? }`. `field` is a string key of `P`. Omission currently displays every declared input in descriptor order, including inputs also bound live. `[]` hides ordinary setup fields. Hidden fields retain model descriptor defaults unless a live control supplies their setup value.
+`setup` is an ordered readonly array of parameter-key strings or `{ field, label?, widget? }` overrides. Use strings for ordinary fields and an override only where needed. Explicit `[]` hides setup controls. With keyed live bindings, omission lists descriptor fields in declaration order except live fields; with legacy arrays or no live declaration, omission retains the historical all-input behavior. Hidden values retain descriptor defaults unless a live control supplies them.
 
-Labels default to a camel-case split with the initial letter capitalized. Descriptor kind chooses checkbox, select, number or text. `widget: "range"` selects a numeric range; the wider declared widget union does not promise arbitrary coercion between descriptor kinds. Numbers inherit `min`, `max` and `step`; absent step uses `1` for integer inputs and `any` otherwise. Choice values come from descriptor options. Setup reads numbers as numbers, booleans as booleans and other controls as strings.
+The descriptor chooses checkbox, select, number or text and supplies bounds and choices. A range override changes numeric presentation, not the field's meaning. Numeric step defaults to 1 for integers and `any` otherwise. Labels split camel case and capitalize the initial letter.
 
-Editing setup values does not change the running model. Submitting Setup stops playback, validates the form and calls the factory with current values. An unknown input key throws. The [design candidates](#target-syntax) propose changing the default overlap rule and introducing a readable string-list form; neither is frozen or delivered by the current baseline.
+Setup edits remain pending until Setup/Restart. Where a field explicitly appears in setup and live, each control has its own presentation draft. A setup edit changes neither the live display nor the active model. The live draft wins when the next model is created, regardless of edit order. No second scientific state owner is introduced.
 
 ## Live
 
-Current `live` is an ordered array of `{ field, label?, value, set, enabled? }`. `value(observation)` reads the displayed value; `set(instance, value)` invokes an explicit model action. Its current value type is `string | number | boolean`, so a consumer may need a narrow conversion. Do not claim current field-specific inference.
+The normal form is a field-keyed object:
 
-The host derives control kind, bounds and label from the same descriptor as setup. Before initialization, changing a live control contributes its value to the next setup. After initialization, a valid change stops playback and calls `set`; rendering rereads the canonical observation. `enabled` defaults to true after setup. A live reader takes precedence over a duplicate setup reader for that field in the current form.
+```ts
+live: {
+  growthAmount: {
+    set: (instance, value) => instance.setRules({ growthAmount: value }),
+  },
+}
+```
 
-Experimental addition: `widget: "color"` selects a native color input. The model uses a string color representation and validates it; this option does not convert NetLogo numeric colors automatically.
+Each key names a declared model input. The required setter receives that field's TypeScript value type and explicitly invokes a model action. Optional `value`, `label`, `enabled`, `widget: "color"` and `group` customize the binding. An explicit getter takes precedence. Without one, every possible observation must have a required compatible `parameters[field]`; otherwise the type contract requires a getter. There is no guessed setter or direct assignment to model state.
+
+At the DOM boundary, the host checks descriptor primitive types, finite numeric values and known choice options. Descriptors cannot prove arbitrary branded, literal-number or refined-text TypeScript types; model factories/actions still validate those semantics and cross-field constraints.
+
+Before initialization, live edits supply values for setup. After initialization, a valid edit stops playback and invokes its setter; the host then reads canonical observations. Optional enabled predicates control availability. Legacy arrays retain required scalar-union `value`/`set` callbacks and existing reader precedence.
+
+A nonempty `group` label creates a flat accessible fieldset/legend. A group appears at its first occurrence and collects its fields in declaration order. Equal labels share the group; whitespace-only labels fail at mount. This is a shared control feature, not permission for author scripts to inspect DOM or construct layouts.
 
 ## Actions
 
@@ -65,7 +75,20 @@ Experimental `repeat: { label, intervalMs }` adds a host-owned repetition toggle
 
 ## Monitors
 
-`monitors` is an ordered array of `{ label, value(observation) }`. Values are strings or numbers, rendered as text after initialization and subsequent successful interactions. Format presentation here; compute scientific measurements in the model or its public functions. Omission means no monitors.
+`monitors` contains `{ label, value, format? }` records. `value(observation)` returns a string or number. A formatter changes display text only; default rendering is `String(value)`. Keep measurements in the model. Format errors use the same host error path as other presentation callbacks.
+
+For a numeric getter, annotate the formatter argument rather than adding a runtime type guard:
+
+```ts
+{ label: "Gini", value: state => state.gini,
+  format: (value: number) => value.toFixed(3) }
+```
+
+A text getter supports `(value: string) => ...`. `defineUI` rejects incompatible getter/formatter pairs, including a numeric-only formatter for a genuinely number-or-text getter. Such a union still needs narrowing. The annotation is explicit: this API does not promise automatic scalar inference across heterogeneous callback arrays. Existing unannotated formatters retain their `string | number` context.
+
+The public `Monitor<S, V>` type describes an extracted record with observation `S` and scalar `V`. For example, use `satisfies Monitor<Observation<typeof model>, number>` on a standalone numeric monitor. Existing `UISpec<P, M>` retains its broad compatibility formatter context; an extracted scalar-specific spec can keep its own annotations and be passed directly to `defineUI` without that broad annotation.
+
+Changing display precision belongs in `format`; it must not round or overwrite scientific values. Preserve existing units, unavailable-value text and trailing-zero behavior when migrating an experiment.
 
 ## Views
 
@@ -89,7 +112,11 @@ Experimental additions: `showLabels` controls label visibility when supplied; om
 
 ### Charts
 
-`{ type: "line" | "bar" | "scatter", label, series }` projects `Series[]`. Each series contains `label`, optional `color` and `points: readonly { x: number; y: number }[]`. Omitted colors use the shared renderer palette. Chart projections do not record history: the model or an explicit observation owner supplies the points. No generic axis-configuration or chart-library escape hatch is part of this contract.
+Line and scatter views project numeric `Series[]`: each series has `label`, optional `color` and numeric `{ x, y }` points. Bar views project `BarSeries[]`, whose x values may instead be categories. A bar view uses one x mode across all series; mixed string/number modes fail. Scientific history remains model-owned.
+
+Categorical bars use first-seen category order and place series side by side. A repeated category within one series fails; missing categories leave empty slots rather than invented zero measurements. Signed finite values use a zero baseline, zero values remain in accessible text, and empty data invents no categories. Existing numeric bar positions retain their compatibility semantics.
+
+Optional `xAxis` and `yAxis` contain `label?` and `unit?`. Together they display as `label (unit)`; a unit alone displays as the unit. Names, units and categories are included in accessible chart text. Units are labels, not numerical conversions. Omitted colors use the shared palette.
 
 ### Table
 
@@ -98,6 +125,8 @@ Experimental additions: `showLabels` controls label visibility when supplied; om
 ### Inspector
 
 `{ type: "inspector", label, value(observation, selected) }` returns a scalar record or `undefined`. Undefined hides the inspector; returning a record displays its entries. Selection is presentation-owned and starts as `null`; setup clears it. Resolve IDs against the current observation and handle stale/missing IDs. Inspectors do not grant write access to the model.
+
+Within a mounted experiment, a projected ID must identify one semantic entity consistently across views. Two views of the same entity reuse its ID; unrelated entities must use different IDs. If source kinds overlap, project namespaced IDs such as `agent:${id}` and `cell:${id}`, then resolve those IDs against the current observation in the inspector and selection-dependent action. Do not change domain IDs or introduce a second allocator. This is an authoring contract: the host cannot infer whether two arbitrary projections represent the same entity. Selection remains `string | null`, and a missing target must not trigger a model action. The [namespaced example](../../examples/ui-authoring-next/03-namespaced-selection.ts) covers collisions, shared selection, disappearance and restart.
 
 ## Drawing
 
@@ -127,39 +156,14 @@ The host reports caught model-action and rendering errors and stops playback; ea
 
 <a id="target-syntax"></a>
 
-**Design candidates: not frozen, not currently available.** Preserve `defineUI(model, spec)` and normal TypeScript. A proposed ordinary setup selection is `setup: ["seed", "population"]`; an explicit override record may be used only where label/widget customization is required. A proposed live form is a field-keyed object. Omitted setup lists declared inputs in model order except fields bound live; explicit setup determines selection/order. Descriptor defaults remain the sole source of default parameter values.
-
-A live binding derives its current value from typed `observation.parameters[field]` when that field is available with a compatible type. Otherwise an explicit `value` projection is required. The proposed setter receives the declared field value type and remains mandatory: no guessed setter names and no automatic model-property assignments. Ordinary labels are derived; explicit labels supply units or better wording. Shared UI defaults supply design and renderer choices.
-
-Illustrative candidate authoring, deliberately not executable evidence:
-
-```ts
-export const ui = defineUI(model, {
-  setup: ["seed", "population"],
-  live: {
-    rate: { set: (instance, value) => instance.setRate(value) },
-  },
-  monitors: [{ label: "Tick", value: state => state.tick }],
-  views: [{ type: "spatial", label: "World", data: spatial }],
-});
-```
-
-Exact override syntax, migration compatibility and optional view-label derivation must be settled and frozen in asserted public examples before runtime delivery. This target does not authorize a second DSL, builder hierarchy or universal plugin framework. Any unresolved contract must be recorded rather than implemented by guessing.
+The ordinary setup-string and keyed-live forms above are now frozen authoring contracts, with legacy arrays preserved for compatibility. The [slice specification](../development/ui-authoring-syntax.md) owns exact ordering, decoding, grouping and chart edge cases. This does not authorize builder chains, custom mount hooks or arbitrary layout configuration.
 
 ## Author examples
 
-If these candidates are accepted for implementation, first settle their open contracts and freeze five asserted public scripts covering:
-
-1. Minimal defaults: omitted setup derives controls in model order, excludes live fields and passes canonical defaults to the factory without creating a model at import.
-2. Explicit setup: string selection preserves order; a local label/widget override changes presentation while preserving descriptor values and validation.
-3. Typed live action: a numeric field infers a numeric setter, reads `parameters[field]`, rejects a wrong value type and changes state only through the declared public action.
-4. Alternate observation: explicit `value` supports a model without `parameters[field]`; missing implicit observation binding is a type error rather than an undefined display.
-5. Lifecycle: setup, action, selection, pause, completion and disposal preserve one model owner and reject stale callbacks; a second mounted entry remains independent.
-
-These are proposed author tasks, not frozen examples, executed scripts or approval evidence. Browser interaction/visual checks complement the scripts for runtime delivery.
+The [five public author examples](../../examples/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises both adapters and waits for settled rendering.
 
 ## Extensions
 
 Use short inline callbacks for obvious bindings; extract longer projections into named local functions below the description. Explain units, assumptions, unusual transforms and compatibility decisions in comments. Do not narrate obvious property access, repeat types or leave obsolete alternatives in comments. Keep scientific calculations in public headless model functions.
 
-A custom UI element may eventually be local to `ui.ts` or promoted into a reusable UI library element when a concrete second consumer justifies it. **No custom-element authoring signature is currently frozen here.** Direct queries into host DOM, private Svelte components and monkey-patching renderer internals are not public extension contracts. A future extension must define typed observations/actions, ownership, accessibility, cleanup and defaults through its own example-first slice.
+A custom UI element may eventually be local to `ui.ts` or promoted into a reusable UI library element when a concrete second consumer justifies it. Flat live-control groups are part of the authoring slice; no custom-element authoring signature is frozen. Direct queries into host DOM, private Svelte components and monkey-patching renderer internals are not public extension contracts. A future extension must define typed observations/actions, ownership, accessibility, cleanup and defaults through its own example-first slice.

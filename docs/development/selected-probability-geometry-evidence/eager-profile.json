@@ -1,0 +1,52 @@
+{
+  "runtime": "7c474a8",
+  "seed": 17,
+  "gridFields": 90601,
+  "agents": 1500,
+  "setupMs": 391.69179099999997,
+  "tenStepsMs": 416.57909500000005,
+  "readMs": 73.32255999999995,
+  "tick": 10,
+  "computedPatches": 13403,
+  "iterations": 14896,
+  "randomState": {
+    "algorithm": "mulberry32",
+    "seed": 17,
+    "continuation": {
+      "algorithm": "mulberry32",
+      "revision": "agent-loom-random/1",
+      "word": 1939892523,
+      "gaussian": null
+    }
+  },
+  "turtles": [
+    {
+      "id": "0",
+      "x": -102.78957165785819,
+      "y": 3.4067738808333874,
+      "heading": 53.99999999999994,
+      "previousCount": 0,
+      "color": "#2563eb",
+      "hidden": false
+    },
+    {
+      "id": "1",
+      "x": -27.31715044594324,
+      "y": 130.68658154103107,
+      "heading": 63,
+      "previousCount": 0,
+      "color": "#eab308",
+      "hidden": false
+    },
+    {
+      "id": "2",
+      "x": 46.1815603929203,
+      "y": -80.11537978196877,
+      "heading": 300,
+      "previousCount": 0,
+      "color": "#2563eb",
+      "hidden": false
+    }
+  ],
+  "rss": 187756544
+}

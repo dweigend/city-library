@@ -1,0 +1,1485 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-11-06",
+  "purpose": "Fresh browser evidence for four existing reference models; no independent approval or acceptance.",
+  "browser": "T3 owned Chromium 156, Linux; CSS desktop1280x800, target mobile390x844 (DPR2 screenshot780x1688).",
+  "tabs": [
+    "tab_9_903760d6-5433-46c2-8790-7b134aa6c724",
+    "tab_a_903760d6-5433-46c2-8790-7b134aa6c724"
+  ],
+  "resourcesClosed": true,
+  "sourceSeedPolicy": "No random-seed command issued; exact source RNG exportState retained per successful read checkpoint.",
+  "targetSeedPolicy": "Visible seed1 throughout; Mulberry, no cross-engine trajectory equality.",
+  "supersededEvidence": {
+    "preferential-attachment-source-setup": "Screenshot valid; early metadata serialization failed; source-setup-readback is the complete record.",
+    "preferential-attachment-source-initial": "Initial screenshot only; early metadata serialization failed.",
+    "voting-source-step": "Tick0 after failed first type attempt; NOT step evidence. Use voting-source-default-step-corrected tick1.",
+    "voting-source-step-command": "Failed first type attempt; NOT step evidence.",
+    "preferential-attachment-target-layout-selection": "Layout/Fit only, first selector attempts failed; selection proven by target-desktop-dark-selection."
+  },
+  "upstream": {
+    "galapagos": "90be931773fcf499049247a8aaa1aecbe003654c",
+    "models": "bf0626a89358b48494066862843a91f36f2556cf"
+  },
+  "sources": [
+    {
+      "slug": "preferential-attachment",
+      "catalogPath": "Sample Models/Networks/Preferential Attachment",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Preferential%20Attachment.nlogox",
+      "servedSha256": "2648b17e0c01c3b1a65c7abd5d5f2cb1880e14ff62dfb60b6fafffbcb25267cc",
+      "archivePath": "docs/research/netlogo-web/evidence/social-urban/preferential-attachment.nlogox",
+      "archiveSha256": "2648b17e0c01c3b1a65c7abd5d5f2cb1880e14ff62dfb60b6fafffbcb25267cc",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "6b3e5833f6932356252a48515b307bc361322c21",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Networks/Preferential%20Attachment.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "98e4ac00df120b441e769df5cc5892b6b447da0b",
+        "matchesServedBytes": false
+      },
+      "targetFiles": [
+        {
+          "path": "experiments/preferential-attachment/model.ts",
+          "sha256": "cfdc732e9086b2629f4d47676bb5fa4864abf60a7428d6d299d001db6ec0303d"
+        },
+        {
+          "path": "experiments/preferential-attachment/ui.ts",
+          "sha256": "1133c968d5bfb0668f847fc891e4afd43973ebcd50b9079fc6c1b9a69a39748b"
+        }
+      ]
+    },
+    {
+      "slug": "wolf-sheep-predation",
+      "catalogPath": "Sample Models/Biology/Wolf Sheep Predation",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Wolf%20Sheep%20Predation.nlogox",
+      "servedSha256": "83bccf3161787b775b4dda7bdadbedde84c73c318926786b796d519cc4dbe15c",
+      "archivePath": "docs/research/netlogo-web/evidence/social-urban/wolf-sheep-predation.nlogox",
+      "archiveSha256": "83bccf3161787b775b4dda7bdadbedde84c73c318926786b796d519cc4dbe15c",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "55a78fb2e671d3f70e9e51b82b261c103a11e115",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Biology/Wolf%20Sheep%20Predation.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "bf22148f5bbce27ca2188338cc4fc6fe93b96e43",
+        "matchesServedBytes": false
+      },
+      "targetFiles": [
+        {
+          "path": "experiments/wolf-sheep-predation/model.ts",
+          "sha256": "b494a86c55161fb67b8419783db52144cc694f852c97822122c7f8b6cd236263"
+        },
+        {
+          "path": "experiments/wolf-sheep-predation/ui.ts",
+          "sha256": "d22c1c34aae0f94c94bcc1960623f3692008faf7bb3f1da4b1a358c463bc1c68"
+        }
+      ]
+    },
+    {
+      "slug": "voting",
+      "catalogPath": "Sample Models/Social Science/Voting",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Voting.nlogox",
+      "servedSha256": "cbdd809b8d0185877f2e8e6ecd5463a9f0d0949130bb989fd454ec1d7e28a3b0",
+      "archivePath": "docs/research/netlogo-web/evidence/social-urban/voting.nlogox",
+      "archiveSha256": "cbdd809b8d0185877f2e8e6ecd5463a9f0d0949130bb989fd454ec1d7e28a3b0",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "2428835420efeb8ae4da3e19d536fca1a2101e49",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Social%20Science/Voting.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "1a4bc4c75fe6c4157c5d3634924678aef9d85e1e",
+        "matchesServedBytes": false
+      },
+      "targetFiles": [
+        {
+          "path": "experiments/voting/model.ts",
+          "sha256": "29155ca966960eccc231fdd57f52089cbe627e6629283344c3b6f3a781e05937"
+        },
+        {
+          "path": "experiments/voting/ui.ts",
+          "sha256": "4519fabe6ff02b396bbec8a0031a9a77dbcf52494c8a9af20b1d70d7318212cd"
+        }
+      ]
+    },
+    {
+      "slug": "wealth-distribution",
+      "catalogPath": "Sample Models/Social Science/Economics/Wealth Distribution",
+      "sourceUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Wealth%20Distribution.nlogox",
+      "servedSha256": "494d5eb5e323f2c88eabd726fecbf88a1e8e6eed3e3bcd6e6ec8f623c8b346fa",
+      "archivePath": "docs/research/netlogo-web/evidence/social-urban/wealth-distribution.nlogox",
+      "archiveSha256": "494d5eb5e323f2c88eabd726fecbf88a1e8e6eed3e3bcd6e6ec8f623c8b346fa",
+      "galapagos": {
+        "revision": "90be931773fcf499049247a8aaa1aecbe003654c",
+        "blobSha1": "64962dfec609a088ee6b1a2393f8132e5ecac94f",
+        "matchesServedBytes": true,
+        "url": "https://raw.githubusercontent.com/NetLogo/Galapagos/90be931773fcf499049247a8aaa1aecbe003654c/public/modelslib/Sample%20Models/Social%20Science/Economics/Wealth%20Distribution.nlogox"
+      },
+      "desktopModels": {
+        "revision": "bf0626a89358b48494066862843a91f36f2556cf",
+        "blobSha1": "e0b847612610470a620eec1674ee17c1fa55bf44",
+        "matchesServedBytes": false
+      },
+      "targetFiles": [
+        {
+          "path": "experiments/wealth-distribution/model.ts",
+          "sha256": "68dd406523911c716f725cd6c991df2a93517ec1db98b2f5eb38928285291844"
+        },
+        {
+          "path": "experiments/wealth-distribution/ui.ts",
+          "sha256": "7afa939e835b30f3ef1d7b89a236aec6eee58caf804f74e3dac4ee46779b58b7"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "preferential-attachment-source-initial.json",
+      "bytes": 353,
+      "sha256": "b4ca55646b9e0d05f15975ec6bd237c75e8bbfcca8508cfec865eaf37c66b3f3"
+    },
+    {
+      "file": "preferential-attachment-source-initial.png",
+      "bytes": 94314,
+      "sha256": "08538217bcb507a8327a1f68f978ecfcbc7776bdb88b3657c98123d1104382b5",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-source-progress.json",
+      "bytes": 11892,
+      "sha256": "ffdf93ecba4ff1d0cc18d909367226686cd2eed20819e44d0c946fb5bb713314"
+    },
+    {
+      "file": "preferential-attachment-source-progress.png",
+      "bytes": 100162,
+      "sha256": "de8003b31ff8add40d747c8c527240c4ede2c41c00c32e1ca6855e9d1dbdae61",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-source-reset.json",
+      "bytes": 11885,
+      "sha256": "87a4a751cb357ba19a9acec2f1a8b5592c2d26adb03b040d3b0de5da53a7bfa1"
+    },
+    {
+      "file": "preferential-attachment-source-reset.png",
+      "bytes": 94946,
+      "sha256": "77f3669c7eacfdb08ef0754867236504c4481575d4e77c767e842c12e6b6ada4",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-source-resize.json",
+      "bytes": 11890,
+      "sha256": "459372d9ab6faeaa467b44e2377c888e4177bb125a203686a4ee5feb947214fc"
+    },
+    {
+      "file": "preferential-attachment-source-resize.png",
+      "bytes": 100507,
+      "sha256": "075628c9e015d5f3256daca4df7965df65cf0fa3aa41a1b96657cef30155ad50",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-source-setup-readback.json",
+      "bytes": 11923,
+      "sha256": "7394e1544423f386f7c2cd445b9e9915461f8ac0b5a4050c0610213605a8fecd"
+    },
+    {
+      "file": "preferential-attachment-source-setup-readback.png",
+      "bytes": 95077,
+      "sha256": "0546740369ee0fff859ca04c92f5469c178fc7402fb895a173062cfe217e1bb7",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-source-setup.json",
+      "bytes": 351,
+      "sha256": "1b1e283f70d9a090dfda350ee7c81f0cd64c8f296ad52b46e7d030b8fb536837"
+    },
+    {
+      "file": "preferential-attachment-source-setup.png",
+      "bytes": 95077,
+      "sha256": "0546740369ee0fff859ca04c92f5469c178fc7402fb895a173062cfe217e1bb7",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-source-step.json",
+      "bytes": 11917,
+      "sha256": "e50c7af9c0b0984a02c78406059189cecc95901e82b6ef8fb1c2c1240e78db83"
+    },
+    {
+      "file": "preferential-attachment-source-step.png",
+      "bytes": 95357,
+      "sha256": "bda14040049d8d0a7e45fb759f1f34da265049b4a4f859052e118cfa466b3dbf",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-desktop-dark-selection.json",
+      "bytes": 3925,
+      "sha256": "30209c9ccaaa6d438fc5b35a72eb18590e19785cdc837ead851d62141cc688bc"
+    },
+    {
+      "file": "preferential-attachment-target-desktop-dark-selection.png",
+      "bytes": 89727,
+      "sha256": "dcd520dadbf3170d5974ff364521af861cf9827de6befe9744cb9b9eb9cc879b",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-initial.json",
+      "bytes": 3711,
+      "sha256": "50ce503f2462b684fa6edbf12e4e41fcae0f2bb802926cef75d27c6fa8f6f41e"
+    },
+    {
+      "file": "preferential-attachment-target-initial.png",
+      "bytes": 56735,
+      "sha256": "eb94093ecefe9a8afe0909c6083139b7daa6251d5d8687d30ea6d6039470b81e",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-layout-selection.json",
+      "bytes": 3845,
+      "sha256": "b6a350cc85e49dc30925b5a662054aa4af2a272331c71ccf6950888bee7daedc"
+    },
+    {
+      "file": "preferential-attachment-target-layout-selection.png",
+      "bytes": 80751,
+      "sha256": "ca17453843a62f6816abc6c43ab1f5fdc2fba18bfe833e87159670c3600222d6",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-mobile-dark.json",
+      "bytes": 3832,
+      "sha256": "fc464e0c4838d026fe5f01928790409b4217ecda0326c8eed46f5a6565c8193f"
+    },
+    {
+      "file": "preferential-attachment-target-mobile-dark.png",
+      "bytes": 85323,
+      "sha256": "f859eda8c985b962b60a8adb4b4d6ff33baf3b490630981a189704180146993a",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-mobile-light.json",
+      "bytes": 3833,
+      "sha256": "bbb87c4cd21596f9dec4155a840b2d5ae49ace006e7d590c67242e79c57eca80"
+    },
+    {
+      "file": "preferential-attachment-target-mobile-light.png",
+      "bytes": 83314,
+      "sha256": "9693d999292c292d9acb476d635313fbbfffcecf0f4d4d65076e7d5d8e5d7ec8",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-mobile-network.json",
+      "bytes": 3835,
+      "sha256": "475c9704a88ff2d4d951939abb529fd38306a0b4123f4eba3bab9c110855ab07"
+    },
+    {
+      "file": "preferential-attachment-target-mobile-network.png",
+      "bytes": 69434,
+      "sha256": "a39f91faa0e1f11d517a9b9aeedb98ada65332461bf088b0cba0c35f7b159015",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-plots.json",
+      "bytes": 3834,
+      "sha256": "2948edbb1abc4bd3d77eac612b0353785289cfca3531977170c3fc686005e008"
+    },
+    {
+      "file": "preferential-attachment-target-plots.png",
+      "bytes": 46668,
+      "sha256": "7cc8464dfd4616b67b3ae6d8a60195c1c9243b1669f89348a109c384bbc24ee5",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-progress.json",
+      "bytes": 3837,
+      "sha256": "4cb084c55052bfe02dae316498957526607b3b722d12fd165594b8b925fdb2e8"
+    },
+    {
+      "file": "preferential-attachment-target-progress.png",
+      "bytes": 85168,
+      "sha256": "4f643fdf79aba67f6e8f088d254ca64ddf00f7071c9be8e177b5581ff38a456a",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-reset.json",
+      "bytes": 3797,
+      "sha256": "74de53a3ca05bed0ad3e35ec55dc05fa7cb8fe385110acee05c80726430efad6"
+    },
+    {
+      "file": "preferential-attachment-target-reset.png",
+      "bytes": 66765,
+      "sha256": "475b4cfdd5b39c0096f99b7268b62c3ff71802f5045b722e82520d2dd4674a7c",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-setup.json",
+      "bytes": 3794,
+      "sha256": "4e080ce617749201fd42135c98924d0f89c3598453a1763f8b7839e239ebaad2"
+    },
+    {
+      "file": "preferential-attachment-target-setup.png",
+      "bytes": 66232,
+      "sha256": "15c6821be38286e905763c47c99cb37ee18189c023ba947c41afce831ee36efa",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "preferential-attachment-target-step.json",
+      "bytes": 3799,
+      "sha256": "f22eded9d28aea8942b0fab901959b57bcccdce9f86592d32f6263a2d15c073c"
+    },
+    {
+      "file": "preferential-attachment-target-step.png",
+      "bytes": 69696,
+      "sha256": "08fa39ee8d7fa11e83c36642a1f4a3c1a0ea0717e243fb02fa55abfca52e6a61",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "s-diagnostics-bounded.json",
+      "bytes": 11185,
+      "sha256": "72edbdf33a410a423f7588bd96470277be1c55067c47139de78d943bf4298454"
+    },
+    {
+      "file": "source-direct-diagnostics.json",
+      "bytes": 20066,
+      "sha256": "b73e1225748ccfcb2f29d129cf17b3851da8e5bed00c10c308784cf53b570d46"
+    },
+    {
+      "file": "t-diagnostics-bounded.json",
+      "bytes": 22309,
+      "sha256": "b2025eb2459f06ac0ed91e3452acb72fdc8bb4a27a71413400e5d36c63b1090f"
+    },
+    {
+      "file": "target-final-diagnostics.json",
+      "bytes": 22274,
+      "sha256": "4a7f6796bee0da797cc036350846c85b436f2b4f9409d11635f0e8391d4e20da"
+    },
+    {
+      "file": "voting-source-default-step-corrected.json",
+      "bytes": 11513,
+      "sha256": "ef5b5463cb5b114af0131c20086f407e1cd8b22c3ebd9103300f2b003c745083"
+    },
+    {
+      "file": "voting-source-default-step-corrected.png",
+      "bytes": 111006,
+      "sha256": "204cb260be1375a1381587ed738d212c230bffefd2e2eb3edc79bd74db2a7019",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-fixed-point-fixture.json",
+      "bytes": 11656,
+      "sha256": "20a2f244bc422f772dd35841b4670426d8ca093b5784684d467d76b522090e8d"
+    },
+    {
+      "file": "voting-source-fixed-point-fixture.png",
+      "bytes": 77381,
+      "sha256": "f62e2806c29e34d622de9c3d710f6d918cb55e94c3606e6f89fe998c12c5f24d",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-initial.json",
+      "bytes": 11152,
+      "sha256": "34070d17bbbb58ba8e49c477848444c43d79009d4995ed6f2bc275e2e42e44f6"
+    },
+    {
+      "file": "voting-source-initial.png",
+      "bytes": 79291,
+      "sha256": "ccf087976428c156e763b60a4ae015403862235328d7d7788fb5c815591f9733",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-progress.json",
+      "bytes": 11473,
+      "sha256": "dd72d13956fac8600ffb25a183612e4a3b4ce31260e2c49eba2b0bc130b28105"
+    },
+    {
+      "file": "voting-source-progress.png",
+      "bytes": 89765,
+      "sha256": "0fc68b79a86b18094960fc49e522bb348353fdafaa97878d6428cb3b18da232a",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-reset.json",
+      "bytes": 11661,
+      "sha256": "fda76b8577c893550b5f983d4d40aaeb2d857085e9d94a17d3d10cc91660572a"
+    },
+    {
+      "file": "voting-source-reset.png",
+      "bytes": 103250,
+      "sha256": "54547bc1187d475aeba94aff45d6142ddda0f7abf68f265c862109375cc08926",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-rules-after-step.json",
+      "bytes": 11505,
+      "sha256": "e4e40d7b088139776758725081446e37a81119082c04a9c68cd8175f8bc46b7c"
+    },
+    {
+      "file": "voting-source-rules-after-step.png",
+      "bytes": 74103,
+      "sha256": "15eb17d3d7da70db18e5c8c0be194544246e01399c00a3c8409b19c35b21a263",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-rules-before-step.json",
+      "bytes": 11478,
+      "sha256": "b058bc46c9a4f7265791f03fbb08c3270b1a71358ed0641ed95fdcb8f7bfa244"
+    },
+    {
+      "file": "voting-source-rules-before-step.png",
+      "bytes": 89712,
+      "sha256": "9c78e97c15f95f5d7acec8a96af47be2c5c193727497ca1851765dac80da479c",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-setup.json",
+      "bytes": 11147,
+      "sha256": "c72b9c5fc9c315b7564272cbceecaa61f353c87694a1ea3319f02a6d53b2ae29"
+    },
+    {
+      "file": "voting-source-setup.png",
+      "bytes": 103367,
+      "sha256": "f5c3f51edf5521a65fa7701933c8df0f9edf1b8e5c0a8d73b312706ad2290eed",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-step-command.json",
+      "bytes": 11459,
+      "sha256": "9a1045efd73fe09c2329397ff8c84c50527f5a2d8c360b880b1b9424a5170b47"
+    },
+    {
+      "file": "voting-source-step-command.png",
+      "bytes": 87884,
+      "sha256": "154df317f3640bc643383af64143c746d618346f71b7f9acac6e9c129c67aa2c",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-source-step.json",
+      "bytes": 11451,
+      "sha256": "03dabf2e57e54081e1aaa1e97850ee5d7cf2c0642de7f969d132132eaa7a5492"
+    },
+    {
+      "file": "voting-source-step.png",
+      "bytes": 103536,
+      "sha256": "c98c8f934925d1ed897bcaea379f533b10a69c625d25c12c21e6b925cf522303",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-target-degenerate-fixture.json",
+      "bytes": 3892,
+      "sha256": "ca52cb95077e7843910dd646e958553b3634ec4b02ad7b2ac5fb9dfe04adcfd3"
+    },
+    {
+      "file": "voting-target-degenerate-fixture.png",
+      "bytes": 41516,
+      "sha256": "e547c1db28e0a16826e93d6c72142da59246781fb90270b28731de853bc28b7c",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "voting-target-desktop-dark.json",
+      "bytes": 3902,
+      "sha256": "f4462adfbfaf6287a6b69fef1ae7cf5fef2c15fea4aa271c26397f3a8955e570"
+    },
+    {
+      "file": "voting-target-desktop-dark.png",
+      "bytes": 271001,
+      "sha256": "02f5a827742cb39f4754c4ed4ce4992162b06822df60aa6947dbecf881182c29",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-target-fixed-point-fixture.json",
+      "bytes": 3889,
+      "sha256": "86aed79a2192b5725b16942487f26bdb192d30d7789b86a58b7d60685ed91431"
+    },
+    {
+      "file": "voting-target-fixed-point-fixture.png",
+      "bytes": 41054,
+      "sha256": "dd2d025059347a2748c0b533db46ea97d1aeb8281e00841420d98f957b8486ca",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "voting-target-initial.json",
+      "bytes": 3866,
+      "sha256": "945dfad7730d6b3db7626c9a3d7a00827339cf259d3e29b385f79646d145a0f7"
+    },
+    {
+      "file": "voting-target-initial.png",
+      "bytes": 63238,
+      "sha256": "12ad8a2cdb422241ac4eaa3524317e21c892e19c28571b76e8487e7b24ffa34a",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-target-keyboard-inspector.json",
+      "bytes": 3798,
+      "sha256": "1afc818123fe461fc8617349d0167797fa92b1364ac3a72413df5595ab2dea70"
+    },
+    {
+      "file": "voting-target-keyboard-inspector.png",
+      "bytes": 211332,
+      "sha256": "86eabc35aee61d9283c70857ba39cf8885e58aec81b66990fbdea55ee0c69bad",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "voting-target-mobile-dark-grid.json",
+      "bytes": 3902,
+      "sha256": "a4656057d48c0ea8830af187a129d2cac6dc1eea00a72e9b37cf1fc25dda767b"
+    },
+    {
+      "file": "voting-target-mobile-dark-grid.png",
+      "bytes": 252777,
+      "sha256": "3d1ede0a1c47fd60b29480e3c16d3ed07d7cc6fc893fd81ab46ea7e93adad9da",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "voting-target-mobile-dark.json",
+      "bytes": 3897,
+      "sha256": "0bcf8d0e61486f621f68640c2a64238f8508d8a42bb7fd99588d58e58f5f0885"
+    },
+    {
+      "file": "voting-target-mobile-dark.png",
+      "bytes": 202062,
+      "sha256": "e42d98f35a7a4f395153b4d72059d580fdbd32478f4d805ea37c2570db3fc535",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "voting-target-mobile-light-grid.json",
+      "bytes": 3903,
+      "sha256": "b02b3b772c2398f1159aa655300edbdfe455769ea2a048c1a2b5ae8b1dd78024"
+    },
+    {
+      "file": "voting-target-mobile-light-grid.png",
+      "bytes": 251385,
+      "sha256": "7fb02091eec6013eafca741eef42b855b1c5c0f418bdd03ee0d29d6f716715d1",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "voting-target-progress.json",
+      "bytes": 3891,
+      "sha256": "9495aef4305d19fe1856f5fbdda073e174a3bf7be1a29636fe7f285d22cbbe0b"
+    },
+    {
+      "file": "voting-target-progress.png",
+      "bytes": 246804,
+      "sha256": "a9e04044092d141cdacdeba1146d9f22fcaaf6e378e511eb48700c3aa0f688a4",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-target-reset.json",
+      "bytes": 3894,
+      "sha256": "4363fef16e2b039624eba0de7af37ec5f55035e68e1e8528e155cff3cb313845"
+    },
+    {
+      "file": "voting-target-reset.png",
+      "bytes": 307768,
+      "sha256": "1f27d1c8273e71c1b06fee80c8d5e8c8bae14be268ca293d695b483aa47d94f5",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "voting-target-rules-after-step.json",
+      "bytes": 3906,
+      "sha256": "006d1d145f6ae1eb8c7be69996c00db58d66c4aef0cf5c74d1c814e4cc477a03"
+    },
+    {
+      "file": "voting-target-rules-after-step.png",
+      "bytes": 270351,
+      "sha256": "b25899c66841e487dc3ebb0e1c3e71c9df9e792908340cf4fcab7b87108a02a5",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-target-rules-before-step.json",
+      "bytes": 3904,
+      "sha256": "dc387b9f282f1b2b5833ba035f5a7484a3868f69fa86246df99686c8a80868dc"
+    },
+    {
+      "file": "voting-target-rules-before-step.png",
+      "bytes": 248193,
+      "sha256": "0b353ffa214c9e5421fba9378a9e8eb219cb8c61b9b8b2fb835c04870325c89a",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-target-setup.json",
+      "bytes": 3896,
+      "sha256": "a9cab2a72b2a83aa15d7c71110d28b056c1355351c3d2894cc3077a3da71a6b5"
+    },
+    {
+      "file": "voting-target-setup.png",
+      "bytes": 306379,
+      "sha256": "0aa5b306f37babcb5b6ad849bf8a0877d564d4452f5a7d209f8718b52fe4a4dd",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-target-step.json",
+      "bytes": 3893,
+      "sha256": "4f78ee2d7dd9dbe1c879651b0be45affa23ba264ec51b5128e0e4448639e6d86"
+    },
+    {
+      "file": "voting-target-step.png",
+      "bytes": 277302,
+      "sha256": "28135966831f2c250e29dd8002e7d98f48c08197c10e985dba4783d9f2abfc4f",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "voting-target-terminal-rule-intervention.json",
+      "bytes": 3898,
+      "sha256": "3f0c1762f63260a941f67a3fb51a639e548d3212d54917296639b557855e178b"
+    },
+    {
+      "file": "voting-target-terminal-rule-intervention.png",
+      "bytes": 39438,
+      "sha256": "3d8330ae39cff1215a03d0e282da33da5a7eab3ac02e8e3b97258fbc55323796",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wealth-distribution-source-initial.json",
+      "bytes": 13280,
+      "sha256": "f4ce4b6f8336510c751deb24d2b4be5e63d67a2e319a38b9bb0f62f8f9b667c0"
+    },
+    {
+      "file": "wealth-distribution-source-initial.png",
+      "bytes": 102716,
+      "sha256": "de885770cf922b6ffe729760fedb2ad89bff3b33c4b88918be90735645fccb94",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-source-plots.json",
+      "bytes": 13724,
+      "sha256": "253101b21cef43a43496bd37ecf0419a72c002b5f3f917efecd82d00dc742d4c"
+    },
+    {
+      "file": "wealth-distribution-source-plots.png",
+      "bytes": 108388,
+      "sha256": "20318f5d55f34c194b030f7a4aea20d00ea72705c73c9e52d7efd45a8cbe0e40",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-source-progress.json",
+      "bytes": 13727,
+      "sha256": "9ceb3e46166aece6aa65557544cb1c54df6b062ae28ae541f9968d0d73d2b2dc"
+    },
+    {
+      "file": "wealth-distribution-source-progress.png",
+      "bytes": 173728,
+      "sha256": "dc3910620fc9f904a9abb2c97b9388f0569813554309de2ec933eb122709222b",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-source-reset.json",
+      "bytes": 13892,
+      "sha256": "ced7ae198120c02a06698ef70dcffccd06099bf93c33c112d5a9f13d94bc69bc"
+    },
+    {
+      "file": "wealth-distribution-source-reset.png",
+      "bytes": 195286,
+      "sha256": "6808e8e87739a1f8f28e9e0ead93845dddebd3d02c53fef3de7b938f9c18d396",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-source-rules-after-step.json",
+      "bytes": 13817,
+      "sha256": "09b0e91563c2cae8edfb1f1b11ec359ccd83d5887d701a06be1e0ba24b384e6d"
+    },
+    {
+      "file": "wealth-distribution-source-rules-after-step.png",
+      "bytes": 116965,
+      "sha256": "0b31abfc74f02aff1a57c5c8f0eddd2b29caeb8230330cc838fb9925d634ca9d",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-source-setup.json",
+      "bytes": 13386,
+      "sha256": "e5aa81dfea88084b121933ed095ea835de5e9f23b343a40520717c579d571367"
+    },
+    {
+      "file": "wealth-distribution-source-setup.png",
+      "bytes": 179160,
+      "sha256": "d29eaa1cd0447811a1fc3b091d5f228e5e844c9b63d70430b960468fe932bdcb",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-source-step.json",
+      "bytes": 13690,
+      "sha256": "d21b54479d4d781eafdb9745871f961ec5c1f3f90ebf2e5d47fa3881178e4a16"
+    },
+    {
+      "file": "wealth-distribution-source-step.png",
+      "bytes": 193769,
+      "sha256": "a11b6dd4ade7e3949b449d3a88813e29bab3610f25815e7b22799b0d562e48e5",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-desktop-dark.json",
+      "bytes": 4864,
+      "sha256": "67f504265ea8c3ed7a3c1b9702071c67a8cdbfc44183b35ecb218f4b2c2726f8"
+    },
+    {
+      "file": "wealth-distribution-target-desktop-dark.png",
+      "bytes": 117279,
+      "sha256": "34b3032c95f73c90adf224edecc5102394363c2813b102c808b2feae2a954d19",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-info-long-content.json",
+      "bytes": 4869,
+      "sha256": "1991dab734812d0b2763dc7c60851aaa13d98f09a73b13d27b0de0f9920ddf33"
+    },
+    {
+      "file": "wealth-distribution-target-info-long-content.png",
+      "bytes": 129917,
+      "sha256": "6dc3c1cb586fc90022ef07228b8b17f280b6cc84bf1fdb19e76fa703af11917f",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-initial.json",
+      "bytes": 4507,
+      "sha256": "4976b2925e11245d629e8f2e63c4076f2aba677ba493eee1b08a093a2ea80940"
+    },
+    {
+      "file": "wealth-distribution-target-initial.png",
+      "bytes": 66101,
+      "sha256": "af8963df170cca08b852a95e19121944166bbeb8e6f4f30a9d715feaeffbd5a5",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-invalid-life.json",
+      "bytes": 4705,
+      "sha256": "7f47d55bb9720865c96a1647aae7bc8449c58d53028b923ad83fc47c1cd6951e"
+    },
+    {
+      "file": "wealth-distribution-target-invalid-life.png",
+      "bytes": 110775,
+      "sha256": "0c6f7008e52c4a268190ca6d6f56642f78ef75c6391e5a438dd7250709436230",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-keyboard-inspector.json",
+      "bytes": 4975,
+      "sha256": "2a108f0c4807d65e7b38691a770bc3e6875ce7cb3121acaae3c4a77aa9789ad4"
+    },
+    {
+      "file": "wealth-distribution-target-keyboard-inspector.png",
+      "bytes": 92946,
+      "sha256": "46f8f4cacd857d3895a714028158d893be738ef7a1f56fdec7a4204aaa83adaf",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-mobile-dark-lower.json",
+      "bytes": 4865,
+      "sha256": "2d855a913bdd7a239b1462347c9e76bf5edd65034180a985ede0a846d60deb16"
+    },
+    {
+      "file": "wealth-distribution-target-mobile-dark-lower.png",
+      "bytes": 78537,
+      "sha256": "746affc86058c3844db7c492464c41fc737d275f452655de4b76f12614ccd176",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-mobile-dark-middle.json",
+      "bytes": 4866,
+      "sha256": "e0234dfc623f39279ec06b69efc68cf13ba6eaf0ea50a10c5cb30fb8e742cc35"
+    },
+    {
+      "file": "wealth-distribution-target-mobile-dark-middle.png",
+      "bytes": 71464,
+      "sha256": "fb45abe1cdaea385c9c4bfd90d6becdf79c13cbba322a97b06e50f39c2d7da25",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-mobile-dark.json",
+      "bytes": 4859,
+      "sha256": "7b09aae9c2ad77198532124daf0b4a25d0d89fd4e8c8aa2f778e230776dcd338"
+    },
+    {
+      "file": "wealth-distribution-target-mobile-dark.png",
+      "bytes": 119864,
+      "sha256": "223edad6127d4fdd29df54ffd856ee2ff40017188c48024e067ed6c7581790e1",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-mobile-light-lower.json",
+      "bytes": 4866,
+      "sha256": "92e3eca3335543a1c6e8f96b685df3b91969cce9a2089464cc25c12f945bb260"
+    },
+    {
+      "file": "wealth-distribution-target-mobile-light-lower.png",
+      "bytes": 73860,
+      "sha256": "c6b17a43b7e5edd79ffd6c7fc7cdf207abbd99066f644ead9380fee33799f432",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-mobile-light.json",
+      "bytes": 4860,
+      "sha256": "797b216194389aadbc07c8e05d0a41bcf64b91b6c882959a1132ce9083c104cc"
+    },
+    {
+      "file": "wealth-distribution-target-mobile-light.png",
+      "bytes": 117708,
+      "sha256": "f81738060781f909ab234ddd7c2f758b4ebb55d492e530ea299e58c28d7d2433",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-pending-population.json",
+      "bytes": 4678,
+      "sha256": "fc979c77dc881fc190cde83f91b54dd4b4196d8e1db6b92b333aa3940ac93bab"
+    },
+    {
+      "file": "wealth-distribution-target-pending-population.png",
+      "bytes": 104140,
+      "sha256": "e80454da21560edb3d9e10fd6ec6ac644c31c027ab57c5a48830d22edd7418a1",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-plots-lower.json",
+      "bytes": 4671,
+      "sha256": "e436bf61f539943c95e76b340ef47c8ba77e582ab4242f1c83eedeef2db9f918"
+    },
+    {
+      "file": "wealth-distribution-target-plots-lower.png",
+      "bytes": 91625,
+      "sha256": "6b46e885db01b0abf6e378807e6c931bb6d6d8048be9b6bfd70968f6ef6cb7bc",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-plots-middle.json",
+      "bytes": 4672,
+      "sha256": "270603f87e012ae0bfacc9b39ec5ac07f486a7060d23767b75ba27e489a78a04"
+    },
+    {
+      "file": "wealth-distribution-target-plots-middle.png",
+      "bytes": 108555,
+      "sha256": "8bed6d480c84cd3dec4b07030231bf59fa15ea99cd1daecc27e5a58fbd783a17",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-progress.json",
+      "bytes": 4668,
+      "sha256": "1d81f03a7e4e874f01a028629993ddd395c3e2825dedd6db8a75bc21bb8f48c9"
+    },
+    {
+      "file": "wealth-distribution-target-progress.png",
+      "bytes": 115666,
+      "sha256": "ff0d8db9c8d7842d4b786879f754de36b12a27ca58a726fffa5d8048452a41dd",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-reset.json",
+      "bytes": 4828,
+      "sha256": "63c0639ee84c45b674102a0a8565ca4339eb96092f52318c6f06c92d21d5aee7"
+    },
+    {
+      "file": "wealth-distribution-target-reset.png",
+      "bytes": 122784,
+      "sha256": "5663ec57e96e0cdf7bf9eb7bed2d917295c555b2e027631e4484a69c668bf256",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-rules-after-step.json",
+      "bytes": 4685,
+      "sha256": "8f6f5b021c475a151c2664adc2bd0543731ed052035402af2e5e9e9148b831b4"
+    },
+    {
+      "file": "wealth-distribution-target-rules-after-step.png",
+      "bytes": 110070,
+      "sha256": "aa5cee17a8504db6693514ddc87323372ef5c98821d24ff4ed5e130143a1e2b9",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-rules-before-step.json",
+      "bytes": 4683,
+      "sha256": "361c23af23635c188edef12525aa8ad3cdee1cf820e298f913941df2a9738148"
+    },
+    {
+      "file": "wealth-distribution-target-rules-before-step.png",
+      "bytes": 110093,
+      "sha256": "97e6b707acf51fc195e309ce6f30c427ba709006798e3aa54dacb6b035a9991b",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-setup.json",
+      "bytes": 4670,
+      "sha256": "3a6d1ac0d458076d7faf77d18d55930112e657cc309d780948f59a2ca62f43b6"
+    },
+    {
+      "file": "wealth-distribution-target-setup.png",
+      "bytes": 120457,
+      "sha256": "9f4e336292f1937a10fa24967122de731cf4a89b4394688fa2c24b7726822142",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-distribution-target-step.json",
+      "bytes": 4669,
+      "sha256": "6c959f19d0647a3864887da1af9f66299889f6ee078cf1e2310dd7f27d6bee87"
+    },
+    {
+      "file": "wealth-distribution-target-step.png",
+      "bytes": 122324,
+      "sha256": "be306c59772fffa77c68d51c8d0d50e8f21116063ab9cd3ee758896e6938261f",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wealth-source-live-population-read.json",
+      "bytes": 954,
+      "sha256": "633b16d7dd5abdce49162c439e3ffd75774bce28d9b6f30fdb3889d1120e6bb6"
+    },
+    {
+      "file": "wolf-sheep-predation-source-extinction-fixture.json",
+      "bytes": 13784,
+      "sha256": "d2e9233d58e9ca4084da82365d6fc5d2486d231292e2cdb53e65f647e0f35470"
+    },
+    {
+      "file": "wolf-sheep-predation-source-extinction-fixture.png",
+      "bytes": 101253,
+      "sha256": "6f98741cee20e2e1653264d68fdc323c68d53f5d636da81763622209e49ce19d",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-grass-plots.json",
+      "bytes": 13625,
+      "sha256": "1b2c2bcd6753d9fc25bf767a8618a0d60a4f41b7d36443c823155df2798f8660"
+    },
+    {
+      "file": "wolf-sheep-predation-source-grass-plots.png",
+      "bytes": 178223,
+      "sha256": "eca249b646700606fa0997938f8f7ba1cd089222ebd784701144e10723391d84",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-grass-progress-labels.json",
+      "bytes": 13635,
+      "sha256": "5f9591bf5d2bcd43fc87088553823fd51853a797f685bc6d700d5fd4a2bba75d"
+    },
+    {
+      "file": "wolf-sheep-predation-source-grass-progress-labels.png",
+      "bytes": 222455,
+      "sha256": "504ff93ccea48f3c66351fefdfda586b99d8da13fd2c30ca2c54e6ecefdb8ada",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-grass-setup-labels.json",
+      "bytes": 13644,
+      "sha256": "c68659341f4a2f59ac5093abfb5ebc441bf4c49c0947a91397fe13480ccb1a91"
+    },
+    {
+      "file": "wolf-sheep-predation-source-grass-setup-labels.png",
+      "bytes": 184438,
+      "sha256": "feda098381b31d2c2da86cb426f7d4ece0af84d3d3185773bf8c978531241839",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-initial.json",
+      "bytes": 13264,
+      "sha256": "68c3d7e619d627a2c699234df144f83c7461f5835582fb941b32ff2aa995738c"
+    },
+    {
+      "file": "wolf-sheep-predation-source-initial.png",
+      "bytes": 109423,
+      "sha256": "3d1e84be0294df787eec2c3f81c941cecff32bb434a8d6a9d84375a86f922cdb",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-progress.json",
+      "bytes": 13629,
+      "sha256": "06b388007df4f4e988128fa07c0ae614e4d35cba7dabf6d59fa1a2f9b506471f"
+    },
+    {
+      "file": "wolf-sheep-predation-source-progress.png",
+      "bytes": 193020,
+      "sha256": "9904f53c6f535c90321929ff08b72bce502843ee595e4a056b4bfce8f6ea768a",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-regrowth-zero.json",
+      "bytes": 13683,
+      "sha256": "0997352a0211cb4a1c8405f7eddbb8d7521d5128325d46f3538b04dd68434cfb"
+    },
+    {
+      "file": "wolf-sheep-predation-source-regrowth-zero.png",
+      "bytes": 182507,
+      "sha256": "eab6dab2721c1a53661ae4e7e96b0eee4cc0a50841a7992b00ccdfb65b6f626d",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-reset.json",
+      "bytes": 13885,
+      "sha256": "fef17b43d6e35f3db6f33681c456045394eee58b3b204ef181f8a93642bbf9c4"
+    },
+    {
+      "file": "wolf-sheep-predation-source-reset.png",
+      "bytes": 202572,
+      "sha256": "9b1fd3800caf3b32adffb193858407c43815e7e93c9d9ebc43ef7f83e983c684",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-setup.json",
+      "bytes": 13317,
+      "sha256": "2347d4ecbd9a55bcdbe7c3102147c74d549ee872682547b950d86a8476a331eb"
+    },
+    {
+      "file": "wolf-sheep-predation-source-setup.png",
+      "bytes": 173629,
+      "sha256": "ea475163998af53d4d87d4a0e62090312ea58617ede52e4b9c878b4e39e307fe",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-source-step.json",
+      "bytes": 13582,
+      "sha256": "0465c5da7c2d22e0711d190e778ba85a995206d27abc7a67cc063af05f31e320"
+    },
+    {
+      "file": "wolf-sheep-predation-source-step.png",
+      "bytes": 175123,
+      "sha256": "d4fc172e8771078ec381f499e728a9f89e023787ef115dc651d5d2d44175e973",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-desktop-dark.json",
+      "bytes": 4604,
+      "sha256": "c237b9d7a29ddfabd935f09034c778581ab645ba503d607f112841e09563688f"
+    },
+    {
+      "file": "wolf-sheep-predation-target-desktop-dark.png",
+      "bytes": 196652,
+      "sha256": "0c59bdce56cd064c25fe26ca4c3db2951d2681c7d9529b8beb54437cb0f93842",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-extinction-fixture.json",
+      "bytes": 4588,
+      "sha256": "41578623d5e6e0df321929665ef18a1ed4f45f8f07edf512885b44fc98939088"
+    },
+    {
+      "file": "wolf-sheep-predation-target-extinction-fixture.png",
+      "bytes": 80914,
+      "sha256": "54fe0376e0e3af055c34cba0ed18e5821f97e7aff66a1fb245f31248773fd3df",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-grass-plots.json",
+      "bytes": 4595,
+      "sha256": "604d8f5bea91daf1368bfa15774304c70768426a1f9ccad71962ded1eb9c559e"
+    },
+    {
+      "file": "wolf-sheep-predation-target-grass-plots.png",
+      "bytes": 180535,
+      "sha256": "0be27f9521b87d586869ffcdd0c2aa5d51d5028bf1f6ba57c9f90c790514b93d",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-grass-progress-labels.json",
+      "bytes": 4605,
+      "sha256": "821065db6b1e0a9d38b020214f676fe2dcff422895ac154dd583c2e95a1f7509"
+    },
+    {
+      "file": "wolf-sheep-predation-target-grass-progress-labels.png",
+      "bytes": 192615,
+      "sha256": "fb1b832139e7aedd636213e0dd06b45e3f3f5ccff62d34961df36be03ef77cca",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-grass-setup-labels.json",
+      "bytes": 4613,
+      "sha256": "be90cf73d0e21f3d8ffe5f57ba640ce5b993d1bb1320bff4ef7acef720447e6c"
+    },
+    {
+      "file": "wolf-sheep-predation-target-grass-setup-labels.png",
+      "bytes": 185419,
+      "sha256": "8164aa0fa22af30dc8fcdebe324dcc3734669788756b4d4d44e55a8422e12e81",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-initial.json",
+      "bytes": 4504,
+      "sha256": "601c44f6945f9b90210510292b2cacdc444df5a1db0387b2bdab6fbb5887d378"
+    },
+    {
+      "file": "wolf-sheep-predation-target-initial.png",
+      "bytes": 72899,
+      "sha256": "d96fe4b62ef2dd3bccf6b5d8398e4b8ff5472781e61bf570b31a5bd816a4ec32",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-keyboard-inspector.json",
+      "bytes": 4711,
+      "sha256": "637bf0cddc068780b0c4cb48a578099748a1e32d04b714551e3f916507f2eb4a"
+    },
+    {
+      "file": "wolf-sheep-predation-target-keyboard-inspector.png",
+      "bytes": 114180,
+      "sha256": "e819940df7dc9638b994625f16c2da1caf94b6874a2e8285aa891aa50d6ba951",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-mobile-dark-view.json",
+      "bytes": 4604,
+      "sha256": "1c6c36c06a61d8ee6d459b0eb0569f0bb95e8ea57405050703cde16319dae6da"
+    },
+    {
+      "file": "wolf-sheep-predation-target-mobile-dark-view.png",
+      "bytes": 150114,
+      "sha256": "1bed7be12064fbd3fb45df0ef7605d5a74187e7f6f6018604012871ed3e10f2f",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-mobile-dark.json",
+      "bytes": 4599,
+      "sha256": "4f508ebf19d4d739efaa3ad71ba3692b41a7173c1ea4dfd4f871dd9480085ceb"
+    },
+    {
+      "file": "wolf-sheep-predation-target-mobile-dark.png",
+      "bytes": 182504,
+      "sha256": "c376a96db5c0363dd663ba6d1646b848cec0b92b22033067a37d39cca20553c0",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-mobile-light-view.json",
+      "bytes": 4605,
+      "sha256": "1b774a9418292db70b4153361564b1097e4dafbfea66a1b2344971f02ff70c84"
+    },
+    {
+      "file": "wolf-sheep-predation-target-mobile-light-view.png",
+      "bytes": 146928,
+      "sha256": "aae43756ad67b31ffef04af2fa32738a213a0042218474dba9eb119081439823",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-progress.json",
+      "bytes": 4575,
+      "sha256": "28c1e615045aa865dd1533211ef74be1cf9a2066aa2cdecbc16a5a60ccd1a445"
+    },
+    {
+      "file": "wolf-sheep-predation-target-progress.png",
+      "bytes": 136145,
+      "sha256": "ab2d2e7830138ae10afe0797c16c22f11fe6583e07dd19066c08638db267b126",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-regrowth-zero.json",
+      "bytes": 4605,
+      "sha256": "f6755264897a29f15daf4db075c7bc8a7613b9aa3546e118e3aeded52d3c51d1"
+    },
+    {
+      "file": "wolf-sheep-predation-target-regrowth-zero.png",
+      "bytes": 195705,
+      "sha256": "8fe64a1baaba90264a4a084d5c9bb751a5132e69d9273c2bc48e7f46fcb50201",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-reset.json",
+      "bytes": 4598,
+      "sha256": "0978f302508dd7eadf2e75fdb574a180315a9b512cccbda1890053a4fbea312c"
+    },
+    {
+      "file": "wolf-sheep-predation-target-reset.png",
+      "bytes": 122323,
+      "sha256": "66fe0e292730336dd4389adbc2b4bbe1c6db7f322d961af192c0cbb438abfdca",
+      "pixels": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-setup.json",
+      "bytes": 4580,
+      "sha256": "95dc10c9b4af11cc4a116ed53d371390f84f2807798a8ce04c3659094325714f"
+    },
+    {
+      "file": "wolf-sheep-predation-target-setup.png",
+      "bytes": 126613,
+      "sha256": "9081f564aa72b3d6ccc22f9380126012bea55854a53b4943fcf95dc71015881f",
+      "pixels": [
+        1280,
+        800
+      ]
+    },
+    {
+      "file": "wolf-sheep-predation-target-step.json",
+      "bytes": 4577,
+      "sha256": "0184310cdaffcfba6a41fd5d37bf314ec3203046b038aafd9ec6acb50cc4ac84"
+    },
+    {
+      "file": "wolf-sheep-predation-target-step.png",
+      "bytes": 127059,
+      "sha256": "e478fe6729bd0a382ee86f2e71f3acb552d42284647ff70278b7ecbbeb4c9b85",
+      "pixels": [
+        1280,
+        800
+      ]
+    }
+  ]
+}

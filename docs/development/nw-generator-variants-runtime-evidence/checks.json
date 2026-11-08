@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "scope": "Author headless explicit topology profile checks; not independent approval or final combined model integration",
+  "profile": "nw-web-topology/1",
+  "checkpointCommit": "0dcf105e30b8a0b5eeb3e5dcbc6849414c31616f",
+  "sourceInputs": [
+    {
+      "path": "src/graph/generators/options.ts",
+      "sha256": "28552b8f0cb78601b529b9d78a1920d517ce72f9e0c1d80a60a3a86f01cd1b24"
+    },
+    {
+      "path": "src/graph/generators/planning.ts",
+      "sha256": "c7d1b8c69dbb2f0ed75b06812ba91f6ef40b5a71ba39fb09ff2ce39bf8912811"
+    },
+    {
+      "path": "src/graph/generators/nw-options.ts",
+      "sha256": "8da3a88f7ec6856cee5d3f2d219a18388db89649902b107f3182a619c5b8adb0"
+    },
+    {
+      "path": "src/graph/generators/nw-planning.ts",
+      "sha256": "a156f155ddffe0b4a59f6f04c64378df226363319260596d9908ac97ce312184"
+    },
+    {
+      "path": "src/graph/generators/validation.ts",
+      "sha256": "7d86cd46d473d561633f092deb1f3ee007603525dfa8b633aed93ea978c02244"
+    },
+    {
+      "path": "tests/graph-nw-variants.test.ts",
+      "sha256": "da3cd41271c7b780f9581f03a89b32eae8e30398a0d02d224a7be3ec9914478c"
+    },
+    {
+      "path": "src/graph/graph.ts",
+      "sha256": "8423261b3663e5d2a61fdab913c2c6affed3a5f2bfce862d53aeff7f1b566785"
+    },
+    {
+      "path": "docs/development/nw-generator-variants-contract.md",
+      "sha256": "ad1f4a46fb5eadbe102aeabf3b815812d2cadb110b73dd0dc4bd353df6f85a85"
+    }
+  ],
+  "preRuntimeCorrection": {
+    "frozenCommit": "08544d1",
+    "editorialCorrectionCommit": "0f26695",
+    "finding": "Root Remaining-Tail description disagreed with primary Front-Cursor source and frozen traces. Reported before source/test changes.",
+    "response": "Root corrected the accepted closure before runtime; all frozen scripts and expectations unchanged.",
+    "notIndependentApproval": true
+  },
+  "commands": [
+    {
+      "command": "bun test tests/graph-nw-variants.test.ts tests/graph-copy.test.ts tests/graph-generators.test.ts tests/graph-analysis.test.ts tests/graph-distance-precision.test.ts tests/graph-distances.test.ts tests/a5a-boundaries.test.ts tests/graph-connectivity.test.ts",
+      "exitCode": 0,
+      "passed": 65,
+      "failed": 0,
+      "assertions": 21122,
+      "log": "focused-tests.log"
+    },
+    {
+      "command": "bun run typecheck",
+      "exitCode": 0,
+      "projects": 4,
+      "log": "typecheck.log"
+    },
+    {
+      "command": "tsc -p /dev/stdin with existing strict development settings, absolute typeRoots and all five NW proposal scripts",
+      "exitCode": 0,
+      "log": "frozen-types.log"
+    },
+    {
+      "command": "for all five new and 25 prior frozen Graph scripts: bun script, exit on any failure",
+      "exitCode": 0,
+      "scripts": 30,
+      "log": "frozen-examples.log"
+    },
+    {
+      "command": "verify six frozen hash manifests",
+      "status": "passed",
+      "files": 30,
+      "artifact": "frozen-hashes.json"
+    },
+    {
+      "command": "bun run build",
+      "exitCode": 0,
+      "log": "build.log"
+    },
+    {
+      "command": "bun run consumer",
+      "exitCode": 0,
+      "log": "existing-consumer.log"
+    },
+    {
+      "command": "bun docs/development/nw-generator-variants-runtime-evidence/verify-packed-profile.ts",
+      "exitCode": 0,
+      "log": "packed-profile.json"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "typeBridge": "Default-tree no-branching shape is included in common native kinds to preserve the old broad kind variable under TS7 profile union overlap; explicit branching and kind-tree narrowing are compile-tested in source and fresh packed declarations. Runtime closed-field checks unchanged.",
+  "earlierAuthorChecks": "A new-test non-null annotation and a composite-invalid shape/member assertion were corrected only in the new test file; legacy tests/frozen values stayed unchanged.",
+  "notClaimed": [
+    "native RNG/birth/block/layout parity",
+    "model acceptance or browser comparison",
+    "distribution/scientific equivalence",
+    "independent approval",
+    "pending B07/B11 examples pass",
+    "final combined repository integration"
+  ]
+}

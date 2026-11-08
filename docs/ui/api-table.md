@@ -4,7 +4,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 
 ## Status and notation
 
-Source audit: 6 November 2026. `B` means present in both root `main` (base `dfd0584`) and `experiment/netlogo-web-catalog` (base `2340d8c`, including concurrent working changes); `E` means experimental source only; `T` means binding design principle with runtime delivery still open; `C` means an unfrozen design candidate, not an accepted syntax contract. These are source observations, not executed behavior or independent approval. Commits identify checkout bases, not immutable snapshots of uncommitted changes.
+Availability describes repository contracts rather than historical branches. `B` means an existing baseline contract, `E` an existing extension, `F` the readable-authoring slice implemented and exercised in both hosts, with remaining independent-review scope tracked in PLAN, `T` a binding design rule and `C` an unfrozen future candidate. See [PLAN](../../PLAN.md) for current executed checks. Source presence alone is not independent acceptance.
 
 `P` is the model parameter object; `K = Extract<keyof P, string>`; `M` is its concrete instance; `S = ReturnType<M["read"]>`; `Scalar = string \| number \| boolean`; `Row = Readonly<Record<string, Scalar>>`. `?` marks optional properties. All declaration arrays and observation data are readonly. IDs below remain stable when delivery status changes. Each row links to its detailed contract.
 
@@ -23,11 +23,11 @@ Source audit: 6 November 2026. `B` means present in both root `main` (base `dfd0
 
 | ID | Property / signature | Requirement and omission behavior | Scope | Reference |
 | --- | --- | --- | --- | --- |
-| UI-010 | `setup?: readonly SetupField[]` | Current omission renders all declared inputs in declaration order, including inputs also live-bound. Explicit `[]` renders none; omitted inputs retain model defaults. Automatic exclusion is an unfrozen candidate (UI-071). | B | [Setup](api-reference.md#setup) |
+| UI-010 | `setup?: readonly SetupField[]` | String keys or local override records. Keyed-live omission excludes live fields; legacy omission keeps all inputs. Explicit `[]` renders none; descriptors supply defaults. | B | [Setup](api-reference.md#setup) |
 | UI-011 | Setup field `{ field: K; label?: string; widget?: "number" \| "range" \| "select" \| "checkbox" \| "text" }` | `field` required. Humanize field name when label omitted. Descriptor chooses control; current renderer recognizes `range` override, not arbitrary conversions between descriptor kinds. | B | [Setup](api-reference.md#setup) |
 | UI-012 | Numeric control constraints | Descriptor `min/max` copied when supplied; `step` defaults to `1` for integer, otherwise `"any"`. Default value comes from descriptor. UI validity complements factory validation. | B | [Setup](api-reference.md#setup) |
-| UI-013 | `live?: readonly LiveField[]` | Omission gives no live controls. Current syntax is an array, not an object keyed by field. | B | [Live](api-reference.md#live) |
-| UI-014 | Live field `{ field: K; label?: string; value: (state: S) => Scalar; set: (model: M, value: Scalar) => void; enabled?: (state: S) => boolean }` | `field/value/set` required; enabled defaults true after setup. `set` explicitly calls model actions. Current setter receives a scalar union, not a field-correlated type. | B | [Live](api-reference.md#live) |
+| UI-013 | `live?: field-keyed object or legacy array` | Normal form is a field-keyed object; legacy arrays remain compatible. Omission gives no live controls. | B | [Live](api-reference.md#live) |
+| UI-014 | Legacy live-array field `{ field: K; label?: string; value: (state: S) => Scalar; set: (model: M, value: Scalar) => void; enabled?: (state: S) => boolean }` | `field/value/set` required; enabled defaults true after setup. `set` explicitly calls model actions. Current setter receives a scalar union, not a field-correlated type. | B | [Live](api-reference.md#live) |
 | UI-015 | Live field `widget?: "color"` | Optional text-input presentation override; no implicit model mutation. | E | [Live](api-reference.md#live) |
 | UI-016 | `actions?: readonly Action[]` | Omission gives no model-specific action buttons. Host setup/playback controls are separate. | B | [Actions](api-reference.md#actions) |
 | UI-017 | Action `{ label: string; run: (model: M, selected: string \| null) => void; enabled?: (state: S, selected: string \| null) => boolean; pressed?: (state: S) => boolean }` | `label/run` required; enabled defaults true after setup. Omitted `pressed` means ordinary action, not a toggle binding. Selection is presentation-owned. | B | [Actions](api-reference.md#actions) |
@@ -38,7 +38,7 @@ Source audit: 6 November 2026. `B` means present in both root `main` (base `dfd0
 
 ## Views
 
-Every view requires `type` and `label`; labels are currently explicit. All callbacks consume the same typed model observation. `View<S>` is publicly re-exported. Inspector is accepted in `UISpec.views`, although its named type is not re-exported by `ui/index.ts`.
+Every view requires `type` and `label`; labels are currently explicit. All callbacks consume the same typed model observation. `View<S>` is publicly re-exported. Inspector is accepted in `UISpec.views` and its named type is re-exported by both UI entrypoints.
 
 | ID | Discriminant and required data callback | Data contract | Scope | Reference |
 | --- | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | UI-031 | `type: "network"`; `nodes(state): readonly NetworkNode[]`; `edges(state): readonly NetworkEdge[]` | Detached graph presentation; no World or renderer objects required. | B | [Network](api-reference.md#network) |
 | UI-032 | `type: "grid"`; `data(state): GridData` | Rectangular rendered cells. | B | [Grid](api-reference.md#grid) |
 | UI-033 | `type: "spatial"`; `data(state): SpatialData` | Spatial agent presentation, optional cell backdrop. | B | [Spatial](api-reference.md#spatial) |
-| UI-034 | `type: "line" \| "bar" \| "scatter"`; `series(state): readonly Series[]` | Same series record for three chart views; host supplies styling. | B | [Charts](api-reference.md#charts) |
+| UI-034 | `type: "line" \| "bar" \| "scatter"`; `series(state): readonly Series[]` | Line/scatter use numeric Series; bar supports numeric/categorical BarSeries in the frozen slice. | B | [Charts](api-reference.md#charts) |
 | UI-035 | `type: "table"`; `rows(state): readonly Row[]` | Column keys from first row; empty rows give no columns; absent later-row values display empty. | B | [Table](api-reference.md#table) |
 | UI-036 | `type: "inspector"`; `value(state, selected: string \| null): Row \| undefined` | `undefined` means nothing to inspect. No direct domain-object mutation. | B | [Inspector](api-reference.md#inspector) |
 
@@ -58,9 +58,9 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | UI-041 | `NetworkNode.position?: { x: number; y: number }` | Initial view coordinates; later layout/dragging remains presentation-owned. Omission uses host placement. | E | [Network](api-reference.md#network) |
 | UI-042 | `NetworkEdge`: `id: string`, `from: string`, `to: string` | Stable edge ID and node IDs. | B | [Network](api-reference.md#network) |
 | UI-043 | Edge `directed?: boolean`, `color?: string`, `width?: number` | Undirected when omitted; host color; positive finite CSS-pixel width, default 1. | E | [Network](api-reference.md#network) |
-| UI-044 | `Cell`: `id: string`, `x: number`, `y: number`, `color: string` | Rendered cell record, not domain `Field`. Named type is not re-exported by UI entry. | B | [Grid](api-reference.md#grid) |
+| UI-044 | `Cell`: `id: string`, `x: number`, `y: number`, `color: string` | Rendered cell record, not domain `Field`. Named type is exported by the UI entry in the frozen slice. | B | [Grid](api-reference.md#grid) |
 | UI-045 | `GridData`: `width: number`, `height: number`, `cells: readonly Cell[]` | All required; dimensions and coordinates describe presentation extent. | B | [Grid](api-reference.md#grid) |
-| UI-046 | `SpatialAgent extends NetworkNode`: `x: number`, `y: number`, `heading?: number`, `shape?: "circle" \| "triangle"` | Required position; heading defaults 0 degrees; shape defaults circle. Named type is not re-exported by UI entry. | B | [Spatial](api-reference.md#spatial) |
+| UI-046 | `SpatialAgent extends NetworkNode`: `x: number`, `y: number`, `heading?: number`, `shape?: "circle" \| "triangle"` | Required position; heading defaults 0 degrees; shape defaults circle. Named type is exported by the UI entry in the frozen slice. | B | [Spatial](api-reference.md#spatial) |
 | UI-047 | `SpatialData`: `width: number`, `height: number`, `agents: readonly SpatialAgent[]`, `cells?: readonly Cell[]` | Required extent/agents; omission gives no cell backdrop. | B | [Spatial](api-reference.md#spatial) |
 | UI-048 | `SpatialData.showLabels?: boolean` | Controlled label visibility when supplied; omission retains host Labels control. | E | [Spatial](api-reference.md#spatial) |
 | UI-049 | `SpatialData.segments?: readonly SpatialSegment[]` | Ordered strokes above cells and below agents/selection/labels; omitted means no strokes. | E | [Spatial](api-reference.md#spatial) |
@@ -80,8 +80,25 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | ID | Target | Current distinction | Scope | Reference |
 | --- | --- | --- | --- | --- |
 | UI-070 | One flat, readable `defineUI(model, spec)` description | One normal spelling, no DSL, builder chains, styling boilerplate or duplicated scientific rules. Customize at the relevant binding only when required. Keep short projections inline; name longer functions for readability. | T | [Principles](api-reference.md#principles) |
-| UI-071 | Candidate: setup excludes live-bound fields by default | Current omission renders all inputs. Exclusion and concise string selections need an explicit runtime slice and frozen examples. | C | [Target syntax](api-reference.md#target-syntax) |
-| UI-072 | Candidate: field-correlated live value types and optional conventional observation access | Current `value` is required and setter type is scalar union. Keyed `live` and inferred `state.parameters[field]` remain unimplemented design work. | C | [Target syntax](api-reference.md#target-syntax) |
-| UI-073 | Shared design defaults; extension only for concrete need | Custom-element mounting/lifecycle, grouping and arbitrary layout are not an accepted public extension API. Taxi Cabs host/DOM access does not establish one. | T | [Extensions](api-reference.md#extensions) |
+| UI-071 | Frozen: concise setup and live-aware defaults | String fields, local overrides and keyed-live exclusion are frozen; legacy defaults remain compatible. | F | [Target syntax](api-reference.md#target-syntax) |
+| UI-072 | Frozen: field-correlated keyed live bindings | Keyed setters receive P[K]; required compatible observation.parameters enables implicit getters, otherwise explicit getters are required. Legacy scalar arrays remain. | F | [Target syntax](api-reference.md#target-syntax) |
+| UI-073 | Shared design defaults; extension only for concrete need | Flat group labels are frozen for real consumers. Arbitrary layout and custom mount hooks remain outside the authoring contract. | T | [Extensions](api-reference.md#extensions) |
 
 Do not treat internal renderer mounts, Svelte components, theme bridges, catalog discovery, playback helpers or private `Snapshot`/`EntryDefinition` aliases as additional authoring exports. An API addition must update this inventory and the reference together, distinguish target from delivery, and satisfy the project's example-first gate before runtime expansion.
+
+## Frozen authoring additions
+
+| ID | Contract | Scope | Reference |
+| --- | --- | --- | --- |
+| UI-074 | Live `group?: string`: flat accessible fieldset; empty labels fail at mount. | F | [Live](api-reference.md#live) |
+| UI-075 | `BarSeries`: categorical or numeric x, grouped categorical series, signed values and explicit invalid-mode handling. | F | [Charts](api-reference.md#charts) |
+| UI-076 | Chart `xAxis?` / `yAxis?`: optional label/unit, no numeric conversion. | F | [Charts](api-reference.md#charts) |
+| UI-077 | Monitor `format`: display only; scalar-specific annotations must match the paired getter, while unannotated callbacks retain the scalar-union context. Errors follow host failure handling. | F | [Monitors](api-reference.md#monitors) |
+
+## Readable observation and formatter extension
+
+| ID | Contract | Availability | Reference |
+| --- | --- | --- | --- |
+| UI-078 | `Observation<T>` infers the detached observation from a definition or model instance; exported by both UI entrypoints. | Public type | [Model](api-reference.md#model) |
+| UI-079 | `Monitor<S, V>` types an extracted monitor with observation `S` and scalar `V`; scalar formatter arguments must accept the paired getter result. | Public type | [Monitors](api-reference.md#monitors) |
+| UI-080 | Selection retains string/null and one semantic presentation ID per entity across views; authors namespace overlapping source IDs. | Authoring contract | [Inspector](api-reference.md#inspector) |

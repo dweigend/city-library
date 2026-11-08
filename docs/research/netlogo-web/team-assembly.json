@@ -1,0 +1,102 @@
+{
+  "slug": "team-assembly",
+  "name": "Team Assembly",
+  "catalogPath": "Sample Models/Networks/Team Assembly",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Team%20Assembly.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether newcomer recruitment and repeated collaboration generate different network structures. In NetLogo's Team Assembly model, new project teams combine newcomers and incumbents, with a tunable preference for past collaborators and removal of inactive participants. The selected literature connects this mechanism to collaboration-network assembly: the explicitly acknowledged team-assembly model supplies the core mechanism [1]; Broadway collaboration relates network structure to creative performance [2]; scientific coauthorship provides an empirical collaboration-network comparison [3]. Team-size and turnover rules simplify institutions; structural resemblance alone cannot establish that a particular team will be creative. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Team%20Assembly.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Team%20Assembly.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/team-assembly.nlogox",
+    "sha256": "b2a2c4f1a936f7c4a625dd9e53d14c8f628dc581d382d22d425787827a5e752f",
+    "citation": "For the model itself: * Bakshy, E. and Wilensky, U. (2007). NetLogo Team Assembly model. http://ccl.northwestern.edu/netlogo/models/TeamAssembly. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is based on: R Guimera, B Uzzi, J Spiro, L Amaral. Team Assembly Mechanisms Determine Collaboration Network Structure and Team Performance. Science 2005, V308, N5722, p697-702 https://amaral.northwestern.edu/media/publication_pdfs/Guimera-2005-Science-308-697.pdf",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/team-assembly.nlogox"
+  },
+  "publications": [
+    {
+      "id": "team",
+      "creatorRole": "author",
+      "authors": [
+        "Roger Guimerà",
+        "Brian Uzzi",
+        "Jarrett Spiro",
+        "Luís A. Nunes Amaral"
+      ],
+      "title": "Team Assembly Mechanisms Determine Collaboration Network Structure and Team Performance",
+      "year": 2005,
+      "venue": "Science",
+      "doi": "10.1126/science.1106340",
+      "url": "https://doi.org/10.1126/science.1106340",
+      "relevance": "the explicitly acknowledged team-assembly model supplies the core mechanism",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1126%2Fscience.1106340",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/team-crossref.json",
+        "evidenceSummary": "Agents in creative enterprises are embedded in networks that inspire, support, and evaluate their work. Here, we investigate how the mechanisms by which creative teams self-assemble determine the structure of these collaboration networks. We propose a model for the self-assembly of creative teams that has its basis in three parameters: team size, the fraction of newcomers in new productions, and the tendency of incumbents to repeat previous collaborations. The model suggests that the emergence of a large connected community of practitioners can be described as a phase transition. We find that team assembly mechanisms determine both the structure of the collaboration network and team performance for teams derived from both artistic and scientific fields.",
+        "evidenceFile": "evidence/social-urban/team-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "uzzipiro",
+      "creatorRole": "author",
+      "authors": [
+        "Brian Uzzi",
+        "Jarrett Spiro"
+      ],
+      "title": "Collaboration and Creativity: The Small World Problem",
+      "year": 2005,
+      "venue": "American Journal of Sociology",
+      "doi": "10.1086/432782",
+      "url": "https://doi.org/10.1086/432782",
+      "relevance": "Broadway collaboration relates network structure to creative performance",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1086%2F432782",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/uzzipiro-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/uzzipiro-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "newmancollab",
+      "creatorRole": "author",
+      "authors": [
+        "M. E. J. Newman"
+      ],
+      "title": "The structure of scientific collaboration networks",
+      "year": 2001,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.98.2.404",
+      "url": "https://doi.org/10.1073/pnas.98.2.404",
+      "relevance": "scientific coauthorship provides an empirical collaboration-network comparison",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.98.2.404",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/newmancollab-crossref.json",
+        "evidenceSummary": "The structure of scientific collaboration networks is investigated. Two scientists are considered connected if they have authored a paper together and explicit networks of such connections are constructed by using data drawn from a number of databases, including MEDLINE (biomedical research), the Los Alamos e-Print Archive (physics), and NCSTRL (computer science). I show that these collaboration networks form “small worlds,” in which randomly chosen pairs of scientists are typically separated by only a short path of intermediate acquaintances. I further give results for mean and distribution of numbers of collaborators of authors, demonstrate the presence of clustering in the networks, and highlight a number of apparent differences in the patterns of collaboration between the fields studied.",
+        "evidenceFile": "evidence/social-urban/newmancollab-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,158 @@
+{
+  "url": "http://localhost:3126/?experiment=ants",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "dpr": 2
+  },
+  "appearance": "light",
+  "monitors": [
+    "Tick\n50\nCarrying food\n3\nFood remaining\n309",
+    ""
+  ],
+  "inputs": [
+    {
+      "name": "",
+      "value": "ants"
+    },
+    {
+      "name": "seed",
+      "value": "1"
+    },
+    {
+      "name": "population",
+      "value": "125"
+    },
+    {
+      "name": "",
+      "value": "5"
+    },
+    {
+      "name": "live-diffusionRate",
+      "value": "50"
+    },
+    {
+      "name": "live-evaporationRate",
+      "value": "10"
+    },
+    {
+      "name": "",
+      "value": "on",
+      "checked": false
+    }
+  ],
+  "status": [
+    "",
+    "Steps completed."
+  ],
+  "charts": [
+    {
+      "label": "Pile 1: 105; Pile 2: 99; Pile 3: 105",
+      "rect": {
+        "x": 16,
+        "y": 651.984375,
+        "width": 358,
+        "height": 100.6875
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Setup",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Run",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "1 step",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "10 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "100 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    }
+  ],
+  "readback": [
+    {
+      "width": 716,
+      "height": 716,
+      "nonblack": 77514,
+      "rgbaFNV32": 546564818,
+      "rect": {
+        "x": 16,
+        "y": 242.984375,
+        "width": 358,
+        "height": 358
+      }
+    }
+  ],
+  "overflow": false,
+  "assets": [
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "357e125d79b7bb5a9d904c687b3fcfe78266665f4b84564f5211943d442fb2fb"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-whn4jxsk.js",
+      "sha256": "c93ec3ececb9f6456e3243a3d0bbe3849af45cb7fd390788ce3f56c334665700"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "357e125d79b7bb5a9d904c687b3fcfe78266665f4b84564f5211943d442fb2fb"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-whn4jxsk.js",
+      "sha256": "c93ec3ececb9f6456e3243a3d0bbe3849af45cb7fd390788ce3f56c334665700"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "357e125d79b7bb5a9d904c687b3fcfe78266665f4b84564f5211943d442fb2fb"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-whn4jxsk.js",
+      "sha256": "c93ec3ececb9f6456e3243a3d0bbe3849af45cb7fd390788ce3f56c334665700"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "357e125d79b7bb5a9d904c687b3fcfe78266665f4b84564f5211943d442fb2fb"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-whn4jxsk.js",
+      "sha256": "c93ec3ececb9f6456e3243a3d0bbe3849af45cb7fd390788ce3f56c334665700"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    }
+  ],
+  "text": "Skip to experiment\nAgent Lab\nExperiment\nAnts\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nExpected Value\nFire\nFireflies\nFlocking\nGalton Box\nHeatbugs\nHex Cell Aggregation\nInvasive Plants\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRabbits Grass Weeds\nRandom Combinations and Permutations\nSegregation\nShepherds\nSimple Birth Rates\nSmoothLife\nStochastic Patchwork\nTermites\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nPopulation\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTick\n50\nCarrying food\n3\nFood remaining\n309\nDiffusion rate (%)\nEvaporation rate (%)\n\nSteps completed.\n\nModel info\nNest, food and pheromone\nFood in each pile\n107\n0\n50\nPile 1\nPile 2\nPile 3"
+}

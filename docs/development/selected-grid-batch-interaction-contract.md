@@ -1,0 +1,11 @@
+# Selected grid batch: minimal interaction contract
+
+Frozen before shared UI runtime edits, 2026-11-05. This implements the coordinator brief's explicit neutral-intent / headless brush contract. No core API expansion, dependency or new domain owner is needed.
+
+- Preserve existing layout, controls, selection and all non-drawing consumers. Grid views may opt into neutral `begin`, `move`, `end` intents carrying canonical cell coordinates; renderer never decides paint/erase. Touch uses the same pointer path with pointer capture. Cancellation and lost capture end gestures.
+- Life's public `setDrawing`, `beginBrush`, `moveBrush`, `endBrush` actions own gesture policy. First cell chooses the opposite of its living state, retained until release. Disabled drawing preserves selection and page scrolling. Keyboard arrows select; Space/Enter applies one begin/end gesture to the selected cell (first cell if none). Existing selected-cell actions remain available as an explicit keyboard/touch alternative.
+- A shared optional color widget reuses typed live parameter bindings; input values are six-digit CSS hex colors. Life stores cell presentation color on canonical fields. Changing foreground/background only changes future birth/death colors; Recolor explicitly updates all existing cells. A two-neighbor survivor retains its previous color, as in source procedures. CSS colors replace NetLogo's numeric color input, an explicit representation adaptation.
+- Keep essential labels, native accessible controls, visible focus and current responsive/theme styles. No new icons, decorative chrome or explanatory product text.
+- Four compile-only public author tasks in `ui/authoring.types.ts` freeze opt-in drawing, typed model actions, color widget and backwards compatibility before renderer/compose implementation. Runtime browser acceptance must exercise pointer latch, erase, release, keyboard, touch, recolor timing, reset and play/pause.
+
+Browser inspection established the source defaults foreground=123 / background=79 as CSS #660f40 / #d2ece4; these are now the target defaults. Arbitrary numeric NetLogo palette interpolation is replaced by native CSS color selection. State equations, density and history do not depend on palette. No source trajectory seed identity is claimed.

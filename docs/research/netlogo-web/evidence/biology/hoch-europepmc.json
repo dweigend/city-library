@@ -1,0 +1,208 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Ftreephys%2F21.1.1%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1093/treephys/21.1.1\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "11260818",
+          "source": "MED",
+          "pmid": "11260818",
+          "doi": "10.1093/treephys/21.1.1",
+          "title": "Physiological significance of anthocyanins during autumnal leaf senescence.",
+          "authorString": "Hoch WA, Zeldin EL, McCown BH.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Hoch WA",
+                "lastName": "Hoch",
+                "firstName": "W A",
+                "initials": "WA",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Horticulture, University of Wisconsin-Madison, 53706, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zeldin EL",
+                "lastName": "Zeldin",
+                "firstName": "E L",
+                "initials": "EL"
+              },
+              {
+                "fullName": "McCown BH",
+                "lastName": "McCown",
+                "firstName": "B H",
+                "initials": "BH"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "21",
+            "journalIssueId": 964206,
+            "dateOfPublication": "2001 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2001,
+            "journal": {
+              "medlineAbbreviation": "Tree Physiol",
+              "title": "Tree physiology",
+              "essn": "1758-4469",
+              "issn": "0829-318X",
+              "nlmid": "100955338",
+              "isoabbreviation": "Tree Physiol"
+            },
+            "printPublicationDate": "2001-01-01"
+          },
+          "pubYear": "2001",
+          "pageInfo": "1-8",
+          "abstractText": "The light screen hypothesis states that foliar anthocyanins shade the photosynthetic apparatus from excess light. In this paper we extend the light screen hypothesis, postulating that plant species at risk of photoinhibitory conditions during autumnal leaf senescence often utilize anthocyanins to protect the photosynthetic apparatus during the period of nutrient resorption. When senescence-related photosynthetic instabilities are compounded by other environmental stresses, particularly low temperature, severe photoinhibition may result in reduced resorption of critical foliar nutrients, which can significantly affect plant fitness. There is evidence that environments where low and often freezing temperatures are common in autumn selectively favor the production of anthocyanins in senescing foliage. The stimuli for, and the timing and location of, autumnal anthocyanin production are all consistent with a photoprotective role for these pigments in senescing leaves. Furthermore, differences in nitrogen allocation strategies between early and late successional species appear to affect photosynthetic stability during leaf senescence, resulting in a reduced need for foliar autumnal anthocyanins in many early successional plants. The ecological and physiological evidence presented in this paper suggest that, for many deciduous species, the production of anthocyanins provides effective photoprotection during the critical period of foliar nutrient resorption.",
+          "affiliation": "Department of Horticulture, University of Wisconsin-Madison, 53706, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Plant Leaves",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Trees",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Anthocyanins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Seasons"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Light"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Anthocyanins",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://academic.oup.com/treephys/article-pdf/21/1/1/4632378/21-1-1.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/treephys/21.1.1"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 137,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2001-08-09",
+          "dateOfCreation": "2001-03-22",
+          "dateOfRevision": "2019-05-13",
+          "firstPublicationDate": "2001-01-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

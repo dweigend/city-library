@@ -1,0 +1,251 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2Fjb.00412-13%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1128/jb.00412-13\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "23794616",
+          "source": "MED",
+          "pmid": "23794616",
+          "pmcid": "PMC3754601",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC3754601"
+            ]
+          },
+          "doi": "10.1128/jb.00412-13",
+          "title": "Evolutionary dynamics of the prokaryotic adaptive immunity system CRISPR-Cas in an explicit ecological context.",
+          "authorString": "Iranzo J, Lobkovsky AE, Wolf YI, Koonin EV.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Iranzo J",
+                "lastName": "Iranzo",
+                "firstName": "Jaime",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-4538-7726"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Centro de Astrobiolog\u00eda, INTA-CSIC, Madrid, Spain."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lobkovsky AE",
+                "lastName": "Lobkovsky",
+                "firstName": "Alexander E",
+                "initials": "AE"
+              },
+              {
+                "fullName": "Wolf YI",
+                "lastName": "Wolf",
+                "firstName": "Yuri I",
+                "initials": "YI",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0247-8708"
+                }
+              },
+              {
+                "fullName": "Koonin EV",
+                "lastName": "Koonin",
+                "firstName": "Eugene V",
+                "initials": "EV"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0247-8708"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-4538-7726"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "17",
+            "volume": "195",
+            "journalIssueId": 2065931,
+            "dateOfPublication": "2013 Sep",
+            "monthOfPublication": 9,
+            "yearOfPublication": 2013,
+            "journal": {
+              "medlineAbbreviation": "J Bacteriol",
+              "title": "Journal of bacteriology",
+              "essn": "1098-5530",
+              "issn": "0021-9193",
+              "isoabbreviation": "J Bacteriol",
+              "nlmid": "2985120R"
+            },
+            "printPublicationDate": "2013-09-01"
+          },
+          "pubYear": "2013",
+          "pageInfo": "3834-3844",
+          "abstractText": "A stochastic, agent-based mathematical model of the coevolution of the archaeal and bacterial adaptive immunity system, CRISPR-Cas, and lytic viruses shows that CRISPR-Cas immunity can stabilize the virus-host coexistence rather than leading to the extinction of the virus. In the model, CRISPR-Cas immunity does not specifically promote viral diversity, presumably because the selection pressure on each single proto-spacer is too weak. However, the overall virus diversity in the presence of CRISPR-Cas grows due to the increase of the host and, accordingly, the virus population size. Above a threshold value of total viral diversity, which is proportional to the viral mutation rate and population size, the CRISPR-Cas system becomes ineffective and is lost due to the associated fitness cost. Our previous modeling study has suggested that the ubiquity of CRISPR-Cas in hyperthermophiles, which contrasts its comparative low prevalence in mesophiles, is due to lower rates of mutation fixation in thermal habitats. The present findings offer a complementary, simpler perspective on this contrast through the larger population sizes of mesophiles compared to hyperthermophiles, because of which CRISPR-Cas can become ineffective in mesophiles. The efficacy of CRISPR-Cas sharply increases with the number of proto-spacers per viral genome, potentially explaining the low information content of the proto-spacer-associated motif (PAM) that is required for spacer acquisition by CRISPR-Cas because a higher specificity would restrict the number of spacers available to CRISPR-Cas, thus hampering immunity. The very existence of the PAM might reflect the tradeoff between the requirement of diverse spacers for efficient immunity and avoidance of autoimmunity.",
+          "affiliation": "Centro de Astrobiolog\u00eda, INTA-CSIC, Madrid, Spain.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, N.I.H., Intramural",
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Intramural NIH HHS",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacteria",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "VI",
+                      "qualifierName": "virology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Archaea",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "VI",
+                      "qualifierName": "virology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Adaptation, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Evolution, Molecular"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Theoretical"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1128/JB.00412-13"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC3754601"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC3754601?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1128/jb.00412-13"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 78,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2013-11-04",
+          "dateOfCreation": "2013-06-25",
+          "dateOfRevision": "2022-09-20",
+          "electronicPublicationDate": "2013-06-21",
+          "firstPublicationDate": "2013-06-21",
+          "firstIndexDate": "2013-06-26",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

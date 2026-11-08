@@ -1,0 +1,31 @@
+{
+  "mainHead": "dfd0584d6c72fd63dc7f68ba3f737559d57c0fab",
+  "mainWipUnchanged": true,
+  "mainWipPathsVerified": 16,
+  "sourceRuntimeCommit": "21e94cd",
+  "globalCheckStartedAtHead": "8504b1f",
+  "globalCheckExitCode": 0,
+  "tests": 565,
+  "assertions": 150683,
+  "testFiles": 65,
+  "registeredExamples": 215,
+  "globalCheck": "bun run check: typecheck (five TS projects and Svelte check), tests, 215 examples, build and packed Bun/NodeESM/ambient-free TypeScript consumer",
+  "followupToolingCommit": "fe54778",
+  "followupChecks": [
+    {
+      "command": "bun run typecheck",
+      "result": "pass; svelte-check 0errors/0warnings"
+    },
+    {
+      "command": "bun run consumer",
+      "result": "pass; current transpilation code executed in actual packed Bun/NodeESM/ambient-freeTS consumer"
+    },
+    {
+      "command": "bun run build:ui:svelte",
+      "result": "pass; chunk size warnings retained"
+    }
+  ],
+  "browser": "Two-target actualChromium156 smoke; exact actions/states/7PNGs in browser-smoke.json. No independent visual approval, full modelmigration or fresh original baseline claim.",
+  "whitespace": "Source staged diff checks pass. Raw historical Vite logs intentionally retain emitted whitespace; no evidence bytes normalized.",
+  "exampleCountVerification": "43 registered phases of five scripts, including the five UI migration scripts; all execute in the successful global runner"
+}

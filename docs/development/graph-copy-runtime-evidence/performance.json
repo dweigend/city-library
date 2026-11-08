@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "nodes": 100001,
+  "edges": 99999,
+  "direction": "reverse",
+  "copyOnlyMilliseconds": 501.767294,
+  "sourceConstruction": "existing public path generator on first 100000 nodes",
+  "checks": [
+    "no inherited generator node cap",
+    "canonical node endpoints",
+    "fresh edge identities",
+    "reverse traversal",
+    "retained isolated node"
+  ],
+  "timingScope": "single local observation; no universal performance bound"
+}

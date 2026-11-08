@@ -1,0 +1,111 @@
+{
+  "slug": "mendelian-inheritance",
+  "name": "Mendelian Inheritance",
+  "catalogPath": "Curricular Models/CT-STEM/Mendelian Inheritance",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/CT-STEM/Mendelian%20Inheritance.nlogox",
+  "deliveryBatch": "B08",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do parental genotypes produce predictable offspring ratios while individual births remain uncertain? NetLogo Mendelian Inheritance lets users breed a male and female mouse with homozygous or heterozygous states and observe offspring coat colors. Mendel's experiments, available in a scholarly translation [1], ground segregation; mouse coat-color genetics [2] and molecular agouti research [3] show the biological detail behind the example. The simulation reduces inheritance to the chosen dominant–recessive trait and simplified reproduction. Expected ratios describe repeated sampling, not a requirement that every small litter has exact proportions. The model illustrates allele transmission and genotype–phenotype distinctions, while omitting much of the multi-locus regulation and developmental biology underlying real coat colors.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/CT-STEM/Mendelian%20Inheritance.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/CT-STEM/Mendelian%20Inheritance.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 da736100e78f5f6e8e75731cc8d0bfb1e6950310f48b79e41938f94cea61c38c",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/mendelian-inheritance.nlogox",
+    "infoFile": "evidence/biology/mendelian-inheritance-info.txt",
+    "originalModelCitation": "* Dabholkar, S. and Wilensky, U. (2020).  NetLogo Mendelian Inheritance model.  http://ccl.northwestern.edu/netlogo/models/MendelianInheritance.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "mendel",
+      "authors": [
+        "Scott Abbott",
+        "Daniel J Fairbanks"
+      ],
+      "title": "Experiments on Plant Hybrids by Gregor Mendel",
+      "year": 2016,
+      "venue": "Genetics",
+      "doi": "10.1534/genetics.116.195198",
+      "url": "https://doi.org/10.1534/genetics.116.195198",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1534%2Fgenetics.116.195198",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/mendel-crossref-direct.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1534%2Fgenetics.116.195198%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/mendel-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "204",
+      "issue": "2",
+      "pages": "407-422",
+      "relevance": "A scholarly translation of Mendel’s original paper supplies the segregation foundation, with translators credited as published."
+    },
+    {
+      "id": "castle",
+      "authors": [
+        "Willys K. Silvers"
+      ],
+      "title": "The Coat Colors of Mice",
+      "year": 1979,
+      "venue": "Springer New York",
+      "doi": "10.1007/978-1-4612-6164-3",
+      "url": "https://doi.org/10.1007/978-1-4612-6164-3",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=The+Coat+Colors+of+Mice&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/silvers-crossref-refined.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "relevance": "A scientific monograph on mouse coat-color genetics gives organism-specific context and exposes multi-locus complexity."
+    },
+    {
+      "id": "bultman",
+      "authors": [
+        "Scott J. Bultman",
+        "Edward J. Michaud",
+        "Richard P. Woychik"
+      ],
+      "title": "Molecular characterization of the mouse agouti locus",
+      "year": 1992,
+      "venue": "Cell",
+      "doi": "10.1016/s0092-8674(05)80067-4",
+      "url": "https://doi.org/10.1016/s0092-8674(05)80067-4",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Molecular+analysis+of+the+mouse+agouti+gene+predicts+a+secreted+protein+Bultman+Michaud+Woychik+1992&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/bultman-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0092-8674%2805%2980067-4%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/bultman-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "71",
+      "issue": "7",
+      "pages": "1195-1204",
+      "relevance": "Molecular analysis of the mouse agouti locus provides a concrete example beyond the model’s one-trait abstraction."
+    }
+  ],
+  "gaps": []
+}

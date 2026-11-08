@@ -1,0 +1,81 @@
+{
+  "hosts": [
+    {
+      "host": "legacy",
+      "harness": {
+        "host": "legacy",
+        "examples": 5,
+        "overlapAndPrecedence": true
+      },
+      "fixtures": [
+        {
+          "kind": "running-render-error"
+        },
+        {
+          "kind": "running-format-error"
+        },
+        {
+          "kind": "grouped"
+        },
+        {
+          "kind": "grouped-nonzero"
+        },
+        {
+          "kind": "empty"
+        },
+        {
+          "kind": "numeric-negative"
+        },
+        {
+          "kind": "mixed"
+        },
+        {
+          "kind": "duplicate"
+        },
+        {
+          "kind": "format-error"
+        }
+      ],
+      "screenshots": 12
+    },
+    {
+      "host": "svelte",
+      "harness": {
+        "host": "svelte",
+        "examples": 5,
+        "overlapAndPrecedence": true
+      },
+      "fixtures": [
+        {
+          "kind": "running-render-error"
+        },
+        {
+          "kind": "running-format-error"
+        },
+        {
+          "kind": "grouped"
+        },
+        {
+          "kind": "grouped-nonzero"
+        },
+        {
+          "kind": "empty"
+        },
+        {
+          "kind": "numeric-negative"
+        },
+        {
+          "kind": "mixed"
+        },
+        {
+          "kind": "duplicate"
+        },
+        {
+          "kind": "format-error"
+        }
+      ],
+      "screenshots": 12
+    }
+  ],
+  "pageErrors": []
+}

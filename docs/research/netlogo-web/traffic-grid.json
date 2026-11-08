@@ -1,0 +1,102 @@
+{
+  "slug": "traffic-grid",
+  "name": "Traffic Grid",
+  "catalogPath": "Sample Models/Social Science/Traffic Grid",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%20Grid.nlogox",
+  "deliveryBatch": "B04",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether signal timing and vehicle density jointly determine urban-grid congestion. In NetLogo's Traffic Grid model, cars accelerate and follow other vehicles while stopping at red lights, whose phases can be controlled locally or automatically. The selected literature connects this mechanism to network congestion and signal coordination: grid interactions can generate a transition to collective blockage [1]; self-organizing traffic lights provide a contrasting control strategy [2]; microscopic traffic-state comparisons caution against uncalibrated travel predictions [3]. Regular roads, simplified car following and limited route choice omit heterogeneous trips and intersections; waiting counts and throughput measure different objectives. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%20Grid.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%20Grid.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/traffic-grid.nlogox",
+    "sha256": "ec0cdcff88fbc9d54aa20a922fa3da8087c40318c929bae108f22f16932def3d",
+    "citation": "For the model itself: * Wilensky, U. (2003). NetLogo Traffic Grid model. http://ccl.northwestern.edu/netlogo/models/TrafficGrid. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Info does not identify a scientific original; related publications below are contextual comparisons, not asserted source derivations.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/traffic-grid.nlogox"
+  },
+  "publications": [
+    {
+      "id": "bml",
+      "creatorRole": "author",
+      "authors": [
+        "Ofer Biham",
+        "A. Alan Middleton",
+        "Dov Levine"
+      ],
+      "title": "Self-organization and a dynamical transition in traffic-flow models",
+      "year": 1992,
+      "venue": "Physical Review A",
+      "doi": "10.1103/physreva.46.r6124",
+      "url": "https://doi.org/10.1103/physreva.46.r6124",
+      "relevance": "grid interactions can generate a transition to collective blockage",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevA.46.R6124",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/bml-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/bml-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "gershenson",
+      "creatorRole": "author",
+      "authors": [
+        "Carlos Gershenson"
+      ],
+      "title": "Self-organizing Traffic Lights",
+      "year": 2005,
+      "venue": "Complex Systems",
+      "doi": "10.25088/complexsystems.16.1.29",
+      "url": "https://doi.org/10.25088/complexsystems.16.1.29",
+      "relevance": "self-organizing traffic lights provide a contrasting control strategy",
+      "verification": {
+        "consultedUrl": "https://www.complex-systems.com/abstracts/v16_i01_a02/",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public publisher abstract; full text not claimed",
+        "notes": "Publisher author line confirms Carlos Gershenson as sole author; Crossref incorrectly parses email and affiliation as additional authors. Title and DOI confirmed on publisher page; year 2005 in registered metadata.",
+        "evidencePath": "evidence/social-urban/web-primary-qc.json",
+        "evidenceSummary": "Steering traffic in cities is a very complex task, since improving efficiency involves the coordination of many actors. Traditional approaches attempt to optimize traffic lights for a particular density and configuration of traffic. The disadvantage of this lies in the fact that traffic densities and configurations change constantly. Traffic seems to be an adaptation problem rather than an optimization problem. We propose a simple and feasible alternative, in which traffic lights self-organize to improve traffic flow. We use a multi-agent simulation to study three self-organizing methods, which are able to outperform traditional rigid and adaptive methods. Using simple rules and no direct communication, traffic lights are able to self-organize and adapt to changing traffic conditions, reducing waiting times, number of stopped cars, and increasing average speeds.",
+        "evidenceFile": "evidence/social-urban/web-primary-qc.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "treiber",
+      "creatorRole": "author",
+      "authors": [
+        "Martin Treiber",
+        "Ansgar Hennecke",
+        "Dirk Helbing"
+      ],
+      "title": "Congested traffic states in empirical observations and microscopic simulations",
+      "year": 2000,
+      "venue": "Physical Review E",
+      "doi": "10.1103/physreve.62.1805",
+      "url": "https://doi.org/10.1103/physreve.62.1805",
+      "relevance": "microscopic traffic-state comparisons caution against uncalibrated travel predictions",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevE.62.1805",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/treiber-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/treiber-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

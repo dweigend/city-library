@@ -1,0 +1,104 @@
+{
+  "slug": "fireflies",
+  "name": "Fireflies",
+  "catalogPath": "Sample Models/Biology/Fireflies",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Fireflies.nlogox",
+  "deliveryBatch": "B06",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "When can locally interacting flashers synchronize their rhythms? NetLogo Fireflies represents individuals with internal flash timing and rules that advance or delay their cycle after observing neighbors. Biological accounts of synchronized flashing [1] and communication [2] motivate the example, while pulse-coupled oscillator theory [3] supplies a mathematical comparison. The simulation makes the effect of population density, timing rules, and interaction range visible. Its discrete counters and simplified perception omit species-specific signal recognition, sex differences, and measured response curves. Synchrony in a run illustrates coordination without a central clock. It does not imply that every firefly species synchronizes or that the assumptions of a continuous oscillator theorem hold exactly in this NetLogo implementation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Fireflies.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Fireflies.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 3e27054691236c9aadca9d425a1c4b66cc0452e4195c2266e09ba3729f5e7cb2",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/fireflies.nlogox",
+    "infoFile": "evidence/biology/fireflies-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1997).  NetLogo Fireflies model.  http://ccl.northwestern.edu/netlogo/models/Fireflies.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "buck",
+      "authors": [
+        "John Buck"
+      ],
+      "title": "Synchronous Rhythmic Flashing of Fireflies. II.",
+      "year": 1988,
+      "venue": "The Quarterly Review of Biology",
+      "doi": "10.1086/415929",
+      "url": "https://doi.org/10.1086/415929",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Synchronous+rhythmic+flashing+of+fireflies+II+Buck+1988&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/buck-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1086%2F415929%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/buck-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "63",
+      "issue": "3",
+      "pages": "265-289",
+      "relevance": "Reviews observed synchronous firefly flashing and its biological diversity."
+    },
+    {
+      "id": "carlson",
+      "authors": [
+        "Albert D. Carlson",
+        "Jonathan Copeland"
+      ],
+      "title": "Flash Communication in Fireflies",
+      "year": 1985,
+      "venue": "The Quarterly Review of Biology",
+      "doi": "10.1086/414564",
+      "url": "https://doi.org/10.1086/414564",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Flash+Communication+in+Fireflies+Carlson+Copeland+1985&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/carlson-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "60",
+      "issue": "4",
+      "pages": "415-436",
+      "relevance": "Provides biological context for flash communication rather than treating all flashes as generic oscillations."
+    },
+    {
+      "id": "mirollo",
+      "authors": [
+        "Renato E. Mirollo",
+        "Steven H. Strogatz"
+      ],
+      "title": "Synchronization of Pulse-Coupled Biological Oscillators",
+      "year": 1990,
+      "venue": "SIAM Journal on Applied Mathematics",
+      "doi": "10.1137/0150098",
+      "url": "https://doi.org/10.1137/0150098",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Synchronization+of+pulse-coupled+biological+oscillators+Mirollo+Strogatz+1990&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/mirollo-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "50",
+      "issue": "6",
+      "pages": "1645-1662",
+      "relevance": "Supplies a mathematical pulse-coupled synchronization comparison with explicit assumptions."
+    }
+  ],
+  "gaps": []
+}

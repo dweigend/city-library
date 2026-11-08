@@ -1,0 +1,926 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1080%2F14697688.2013.803148",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            14
+          ]
+        ],
+        "date-time": "2026-10-14T19:45:26Z",
+        "timestamp": 1792007126456,
+        "version": "4.4.0"
+      },
+      "reference-count": 135,
+      "publisher": "Informa UK Limited",
+      "issue": "11",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Quantitative Finance"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2013,
+            11
+          ]
+        ]
+      },
+      "DOI": "10.1080/14697688.2013.803148",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2013,
+            8,
+            22
+          ]
+        ],
+        "date-time": "2013-08-22T19:44:12Z",
+        "timestamp": 1377200652000
+      },
+      "page": "1709-1742",
+      "source": "Crossref",
+      "is-referenced-by-count": 266,
+      "title": [
+        "Limit order books"
+      ],
+      "prefix": "10.1080",
+      "volume": "13",
+      "author": [
+        {
+          "given": "Martin D.",
+          "family": "Gould",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mason A.",
+          "family": "Porter",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Stacy",
+          "family": "Williams",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mark",
+          "family": "McDonald",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Daniel J.",
+          "family": "Fenn",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Sam D.",
+          "family": "Howison",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "301",
+      "reference": [
+        {
+          "key": "CIT0001",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Abergel, F. and Jedidi, A., A mathematical approach to order book modelling. InProceedings of Econophys-Kolkata V, edited by F. Abergel, B.K. Chakrabarti, A. Chakraborti and M. Mitra, pp. 93\u2013107, 2011 (Springer: Milan).",
+          "DOI": "10.1007/978-88-470-1766-5_7"
+        },
+        {
+          "key": "CIT0002",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jeconom.2010.03.028"
+        },
+        {
+          "key": "CIT0003",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697680802595700"
+        },
+        {
+          "key": "CIT0004",
+          "doi-asserted-by": "crossref",
+          "first-page": "5",
+          "DOI": "10.21314/JOR.2001.041",
+          "volume": "3",
+          "author": "Almgren R.",
+          "year": "2001",
+          "journal-title": "J. Risk"
+        },
+        {
+          "key": "CIT0005",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.finmar.2005.03.001"
+        },
+        {
+          "key": "CIT0006",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Andersen, T.G. and Todorov, V., Realized volatility and multipower variation. InEncyclopedia of Quantitative Finance, edited by R. Cont, pp. 1494\u20131500, 2010 (Wiley: West Sussex).",
+          "DOI": "10.1002/9780470061602.eqf19020"
+        },
+        {
+          "key": "CIT0007",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jempfin.2011.01.002"
+        },
+        {
+          "key": "CIT0008",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(97)00401-9"
+        },
+        {
+          "key": "CIT0009",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jfineco.2005.01.005"
+        },
+        {
+          "key": "CIT0010",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Barndorff-Nielsen, O.E. and Shephard, N., Volatility. InEncyclopedia of Quantitative Finance, edited by R. Cont, pp. 1898\u20131901, 2010 (Wiley: West Sussex).",
+          "DOI": "10.1002/9780470061602.eqf19019"
+        },
+        {
+          "key": "CIT0012",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Bauwens, L. and Hautsch, N., Modelling financial high frequency data using point processes. InHandbook of Financial Time Series, edited by T.G. Andersen, R.A. Davis, J.P. Kreiss and T. Mikosch, pp. 953\u2013979, 2009 (Springer: Berlin).",
+          "DOI": "10.1007/978-3-540-71297-8_41"
+        },
+        {
+          "key": "CIT0013",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.finmar.2005.12.001"
+        },
+        {
+          "key": "CIT0014",
+          "unstructured": "Beran, J.Statistics for Long-Memory Processes, Vol. 61, 1994 (Chapman & Hall: New York, NY)."
+        },
+        {
+          "key": "CIT0015",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1386-4181(97)00012-8"
+        },
+        {
+          "key": "CIT0017",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2329330"
+        },
+        {
+          "key": "CIT0018",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/250095"
+        },
+        {
+          "key": "CIT0019",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-6261.2005.00746.x"
+        },
+        {
+          "key": "CIT0020",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/fut.20236"
+        },
+        {
+          "key": "CIT0021",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Bouchaud, J.P., Farmer, J.D. and Lillo, F., How markets slowly digest changes in supply and demand. InHandbook of Financial Markets: Dynamics and Evolution, edited by T. Hens and K.R. Schenk-Hopp\u00e9, pp. 57\u2013160, 2009 (Elsevier: Amsterdam).",
+          "DOI": "10.1016/B978-012374258-2.50006-3"
+        },
+        {
+          "key": "CIT0022",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697680400000022"
+        },
+        {
+          "key": "CIT0023",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1469-7688/2/4/301"
+        },
+        {
+          "key": "CIT0024",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Bouchaud, J.P. and Potters, M.Theory of Financial Risk and Derivative Pricing: From Statistical Physics to Risk Management, 2003 (Cambridge University Press: Cambridge).",
+          "DOI": "10.1017/CBO9780511753893"
+        },
+        {
+          "key": "CIT0026",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/nphys1443"
+        },
+        {
+          "key": "CIT0028",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1475-6803.2008.00234.x"
+        },
+        {
+          "key": "CIT0029",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.physa.2004.06.130"
+        },
+        {
+          "key": "CIT0032",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697688.2010.539249"
+        },
+        {
+          "key": "CIT0033",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697688.2010.539248"
+        },
+        {
+          "key": "CIT0034",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1006/jfin.1995.1010"
+        },
+        {
+          "key": "CIT0035",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(01)00335-1"
+        },
+        {
+          "key": "CIT0036",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1469-7688/3/3/301"
+        },
+        {
+          "key": "CIT0038",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0269888912000136"
+        },
+        {
+          "key": "CIT0039",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1469-7688/2/5/303"
+        },
+        {
+          "key": "CIT0040",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1137/070710111"
+        },
+        {
+          "key": "CIT0041",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/713665670"
+        },
+        {
+          "key": "CIT0042",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Cont, R., Long-range dependence in financial markets. InFractals in Engineering, edited by J. L\u00e9vy-V\u00e9hel and E. Lutton, 2005 (Springer: London).",
+          "DOI": "10.1007/1-84628-048-6_11"
+        },
+        {
+          "key": "CIT0043",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S1365100500015029"
+        },
+        {
+          "key": "CIT0046",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Cont, R., Potters, M. and Bouchaud, J.P., Scaling in stock market data: Stable laws and beyond. InProceedings of the Les Houches Workshop, March 10\u201314, 1997, edited by B. Dubrulle, F. Graner and D. Sornette, 1997 (Springer: Berlin).",
+          "DOI": "10.1007/978-3-662-09799-1_5"
+        },
+        {
+          "key": "CIT0047",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/opre.1090.0780"
+        },
+        {
+          "key": "CIT0048",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2327580"
+        },
+        {
+          "key": "CIT0049",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.90.108102"
+        },
+        {
+          "key": "CIT0050",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.physa.2007.04.130"
+        },
+        {
+          "key": "CIT0051",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/0022-1082.00297"
+        },
+        {
+          "key": "CIT0053",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697688.2010.528444"
+        },
+        {
+          "key": "CIT0057",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1386-4181(03)00018-1"
+        },
+        {
+          "key": "CIT0058",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/324391"
+        },
+        {
+          "key": "CIT0059",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/460685a"
+        },
+        {
+          "key": "CIT0060",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1469-7688/4/1/C01"
+        },
+        {
+          "key": "CIT0061",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.0409157102"
+        },
+        {
+          "key": "CIT0063",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1386-4181(98)00012-3"
+        },
+        {
+          "key": "CIT0064",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/hhi029"
+        },
+        {
+          "key": "CIT0065",
+          "unstructured": "Friedman, D., The double auction market institution: A survey. InThe Double Auction Market: Institutions, Theories, and Evidence, edited by D. Friedman and J. Rust, 2005 (Addison-Wesley: Reading, MA)."
+        },
+        {
+          "key": "CIT0066",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/qjec.2006.121.2.461"
+        },
+        {
+          "key": "CIT0067",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/5.2.199"
+        },
+        {
+          "key": "CIT0068",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697680903373692"
+        },
+        {
+          "key": "CIT0069",
+          "first-page": "21",
+          "volume": "1",
+          "author": "Gereben \u00c1.",
+          "year": "2010",
+          "journal-title": "Magyar Nemzeti Bank Bull."
+        },
+        {
+          "key": "CIT0070",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1467-9892.1983.tb00371.x"
+        },
+        {
+          "key": "CIT0071",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Gilbert, N.Agent-Based Models, 2007 (Sage: London).",
+          "DOI": "10.4135/9781412983259"
+        },
+        {
+          "key": "CIT0072",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2329182"
+        },
+        {
+          "key": "CIT0073",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0304-405X(85)90044-3"
+        },
+        {
+          "key": "CIT0074",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/261868"
+        },
+        {
+          "key": "CIT0076",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s100510050292"
+        },
+        {
+          "key": "CIT0077",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.60.5305"
+        },
+        {
+          "key": "CIT0078",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.62.R4493"
+        },
+        {
+          "key": "CIT0082",
+          "first-page": "393",
+          "volume": "70",
+          "author": "Grossman S.J.",
+          "year": "1980",
+          "journal-title": "Am. Econ. Rev."
+        },
+        {
+          "key": "CIT0083",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.physa.2007.10.012"
+        },
+        {
+          "key": "CIT0084",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.physa.2008.01.114"
+        },
+        {
+          "key": "CIT0085",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.physa.2008.05.008"
+        },
+        {
+          "key": "CIT0086",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/0295-5075/86/48002"
+        },
+        {
+          "key": "CIT0087",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1140/epjb/e2009-00052-4"
+        },
+        {
+          "key": "CIT0088",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s007800050018"
+        },
+        {
+          "key": "CIT0089",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00181-005-0008-7"
+        },
+        {
+          "key": "CIT0090",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Harris, L.Trading and Exchanges: Market Microstructure for Practitioners, 2002 (Oxford University Press: Oxford).",
+          "DOI": "10.1093/oso/9780195144703.001.0001"
+        },
+        {
+          "key": "CIT0091",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Harris, L.Trading and Exchanges: Market Microstructure for Practitioners, 2003 (Oxford University Press: Oxford).",
+          "DOI": "10.1093/oso/9780195144703.001.0001"
+        },
+        {
+          "key": "CIT0092",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2331180"
+        },
+        {
+          "key": "CIT0093",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2328693"
+        },
+        {
+          "key": "CIT0095",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jedc.2011.09.012"
+        },
+        {
+          "key": "CIT0096",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/hhi013"
+        },
+        {
+          "key": "CIT0099",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/0034-6527.00313"
+        },
+        {
+          "key": "CIT0100",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-6261.2006.01004.x"
+        },
+        {
+          "key": "CIT0102",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Huang, R. and Polak, T.LOBSTER: Limit Order Book Reconstruction System, 2011, Technical report, Humboldt-Universit\u00e4t zu Berlin.",
+          "DOI": "10.2139/ssrn.1977207"
+        },
+        {
+          "key": "CIT0103",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/7.4.631"
+        },
+        {
+          "key": "CIT0104",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Kahneman, D. and Tversky, A.Choices, Values, and Frames, 2000 (Cambridge University Press: Cambridge).",
+          "DOI": "10.1017/CBO9780511803475"
+        },
+        {
+          "key": "CIT0105",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(01)00144-3"
+        },
+        {
+          "key": "CIT0106",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1386-4181(98)00007-X"
+        },
+        {
+          "key": "CIT0109",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1913210"
+        },
+        {
+          "key": "CIT0111",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1140/epjb/e2007-00067-9"
+        },
+        {
+          "key": "CIT0112",
+          "first-page": "1",
+          "volume": "8",
+          "author": "Lillo F.",
+          "year": "2004",
+          "journal-title": "Stud. Nonlinear Dyn. Econometrics"
+        },
+        {
+          "key": "CIT0113",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/421129a"
+        },
+        {
+          "key": "CIT0114",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.71.066122"
+        },
+        {
+          "key": "CIT0115",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(97)00368-3"
+        },
+        {
+          "key": "CIT0116",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.60.1390"
+        },
+        {
+          "key": "CIT0118",
+          "unstructured": "Lo, A.W. and MacKinlay, A.C.Non-Random Walk down Wall Street, 2001 (Princeton University Press: Princeton, NJ)."
+        },
+        {
+          "key": "CIT0119",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.intfin.2010.03.001"
+        },
+        {
+          "key": "CIT0121",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1469-7688/3/5/305"
+        },
+        {
+          "key": "CIT0122",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/nphys1163"
+        },
+        {
+          "key": "CIT0123",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.finmar.2005.05.001"
+        },
+        {
+          "key": "CIT0124",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Mantegna, R.N. and Stanley, H.E.An Introduction to Econophysics: Correlations and Complexity in Finance, 1999 (Cambridge University Press: Cambridge).",
+          "DOI": "10.1017/CBO9780511755767"
+        },
+        {
+          "key": "CIT0125",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.physa.2007.04.091"
+        },
+        {
+          "key": "CIT0126",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(00)00067-4"
+        },
+        {
+          "key": "CIT0127",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(01)00301-6"
+        },
+        {
+          "key": "CIT0128",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jedc.2007.01.025"
+        },
+        {
+          "key": "CIT0129",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Mitchell, M.Complexity: A Guided Tour, 2009 (Oxford University Press: Oxford).",
+          "DOI": "10.1093/oso/9780195124415.001.0001"
+        },
+        {
+          "key": "CIT0130",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3905/jot.2008.708833"
+        },
+        {
+          "key": "CIT0131",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697680701297457"
+        },
+        {
+          "key": "CIT0132",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1140/epjb/e2009-00059-9"
+        },
+        {
+          "key": "CIT0133",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.82.066103"
+        },
+        {
+          "key": "CIT0135",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.finmar.2012.09.001"
+        },
+        {
+          "key": "CIT0136",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/11.4.789"
+        },
+        {
+          "key": "CIT0137",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Parlour, C. and Seppi, D.J., Limit order markets: A survey. InHandbook of Financial Intermediation and Banking, edited by A. Thakor and A. Boot, 2008 (Elsevier: Amsterdam).",
+          "DOI": "10.1016/B978-044451558-2.50007-6"
+        },
+        {
+          "key": "CIT0138",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.49.1685"
+        },
+        {
+          "key": "CIT0139",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.66.027104"
+        },
+        {
+          "key": "CIT0140",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.77.037101"
+        },
+        {
+          "key": "CIT0141",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(02)01896-4"
+        },
+        {
+          "key": "CIT0142",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1209/epl/i2006-10139-0"
+        },
+        {
+          "key": "CIT0143",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.76.016108"
+        },
+        {
+          "key": "CIT0144",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1386-4181(02)00069-1"
+        },
+        {
+          "key": "CIT0146",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Rebonato, R.Volatility and Correlation: The Perfect Hedger and the Fox, 2004 (Wiley: West Sussex).",
+          "DOI": "10.1002/9781118673539"
+        },
+        {
+          "key": "CIT0147",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Robinson, P.M. (Ed.),Time Series with Long Memory, 2003 (Oxford University Press: Oxford).",
+          "DOI": "10.1093/oso/9780199257294.001.0001"
+        },
+        {
+          "key": "CIT0148",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/hhp011"
+        },
+        {
+          "key": "CIT0153",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Shephard, N. (Ed.),Stochastic Volatility, 2005 (Oxford University Press: Oxford).",
+          "DOI": "10.1093/oso/9780199257195.001.0001"
+        },
+        {
+          "key": "CIT0155",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1469-7688/3/6/307"
+        },
+        {
+          "key": "CIT0156",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.physa.2008.01.093"
+        },
+        {
+          "key": "CIT0157",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1216142"
+        },
+        {
+          "key": "CIT0158",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-4371(98)00549-4"
+        },
+        {
+          "key": "CIT0159",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1142/S0218348X95000692"
+        },
+        {
+          "key": "CIT0160",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Taylor, S.J.Modelling Financial Time Series, 2008 (World Scientific Publishing: Singapore).",
+          "DOI": "10.1142/9789812770851"
+        },
+        {
+          "key": "CIT0161",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0378-3758(98)00250-X"
+        },
+        {
+          "key": "CIT0163",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Toke, I.M. \u2018Market making\u2019 in an order book model and its impact on the spread. InProceedings of Econophys-Kolkata V, edited by F. Abergel, B.K. Chakrabarti, A. Chakraborti and M. Mitra, pp. 49\u201364, 2011 (Springer: Milan).",
+          "DOI": "10.1007/978-88-470-1766-5_4"
+        },
+        {
+          "key": "CIT0164",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevX.1.021006"
+        },
+        {
+          "key": "CIT0165",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697680701344515"
+        },
+        {
+          "key": "CIT0166",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevE.71.051101"
+        },
+        {
+          "key": "CIT0168",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/07350015.1996.10524628"
+        },
+        {
+          "key": "CIT0169",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697688.2010.504733"
+        },
+        {
+          "key": "CIT0170",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1469-7688/2/5/308"
+        },
+        {
+          "key": "CIT0171",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14697680400008619"
+        }
+      ],
+      "container-title": [
+        "Quantitative Finance"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://www.tandfonline.com/doi/pdf/10.1080/14697688.2013.803148",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            17
+          ]
+        ],
+        "date-time": "2024-05-17T01:19:12Z",
+        "timestamp": 1715908752000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://www.tandfonline.com/doi/abs/10.1080/14697688.2013.803148"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2013,
+            11
+          ]
+        ]
+      },
+      "references-count": 135,
+      "journal-issue": {
+        "issue": "11",
+        "published-print": {
+          "date-parts": [
+            [
+              2013,
+              11
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1080/14697688.2013.803148"
+      ],
+      "URL": "https://doi.org/10.1080/14697688.2013.803148",
+      "relation": {},
+      "ISSN": [
+        "1469-7688",
+        "1469-7696"
+      ],
+      "issn-type": [
+        {
+          "value": "1469-7688",
+          "type": "print"
+        },
+        {
+          "value": "1469-7696",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2013,
+            11
+          ]
+        ]
+      }
+    }
+  }
+}

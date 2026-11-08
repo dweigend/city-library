@@ -1,0 +1,539 @@
+{
+  "head": "ab7199dad4af71a0b1cbe7039c9bcdfdb8226b03",
+  "slug": "turing-machine-2d",
+  "setup": {
+    "url": "http://localhost:3119/?experiment=turing-machine-2d",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n0\nOn cells\n0",
+      ""
+    ],
+    "status": [
+      "",
+      "Model initialized."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 32 agents. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 2256611836,
+        "nonzero": 198381
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "151"
+      },
+      {
+        "name": "height",
+        "value": "151"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "heads",
+        "value": "32"
+      },
+      {
+        "name": "colorPaths",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-example",
+        "value": "1"
+      },
+      {
+        "name": "live-off0Turn",
+        "value": "Backwards"
+      },
+      {
+        "name": "live-off0State",
+        "value": "1"
+      },
+      {
+        "name": "live-off0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-off1Turn",
+        "value": "Right"
+      },
+      {
+        "name": "live-off1State",
+        "value": "0"
+      },
+      {
+        "name": "live-off1On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on0Turn",
+        "value": "--"
+      },
+      {
+        "name": "live-on0State",
+        "value": "0"
+      },
+      {
+        "name": "live-on0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on1Turn",
+        "value": "Left"
+      },
+      {
+        "name": "live-on1State",
+        "value": "1"
+      },
+      {
+        "name": "live-on1On",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  },
+  "progress": {
+    "url": "http://localhost:3119/?experiment=turing-machine-2d",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n1\nOn cells\n32",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 32 agents. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 3259775589,
+        "nonzero": 200634
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "151"
+      },
+      {
+        "name": "height",
+        "value": "151"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "heads",
+        "value": "32"
+      },
+      {
+        "name": "colorPaths",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-example",
+        "value": "1"
+      },
+      {
+        "name": "live-off0Turn",
+        "value": "Backwards"
+      },
+      {
+        "name": "live-off0State",
+        "value": "1"
+      },
+      {
+        "name": "live-off0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-off1Turn",
+        "value": "Right"
+      },
+      {
+        "name": "live-off1State",
+        "value": "0"
+      },
+      {
+        "name": "live-off1On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on0Turn",
+        "value": "--"
+      },
+      {
+        "name": "live-on0State",
+        "value": "0"
+      },
+      {
+        "name": "live-on0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on1Turn",
+        "value": "Left"
+      },
+      {
+        "name": "live-on1State",
+        "value": "1"
+      },
+      {
+        "name": "live-on1On",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  },
+  "desktop-dark": {
+    "url": "http://localhost:3119/?experiment=turing-machine-2d",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n1\nOn cells\n32",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 32 agents. Arrow keys select an item.",
+        "width": 1344,
+        "height": 1344,
+        "rgbaHash": 3259775589,
+        "nonzero": 200634
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "151"
+      },
+      {
+        "name": "height",
+        "value": "151"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "heads",
+        "value": "32"
+      },
+      {
+        "name": "colorPaths",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-example",
+        "value": "1"
+      },
+      {
+        "name": "live-off0Turn",
+        "value": "Backwards"
+      },
+      {
+        "name": "live-off0State",
+        "value": "1"
+      },
+      {
+        "name": "live-off0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-off1Turn",
+        "value": "Right"
+      },
+      {
+        "name": "live-off1State",
+        "value": "0"
+      },
+      {
+        "name": "live-off1On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on0Turn",
+        "value": "--"
+      },
+      {
+        "name": "live-on0State",
+        "value": "0"
+      },
+      {
+        "name": "live-on0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on1Turn",
+        "value": "Left"
+      },
+      {
+        "name": "live-on1State",
+        "value": "1"
+      },
+      {
+        "name": "live-on1On",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  },
+  "mobile-dark": {
+    "url": "http://localhost:3119/?experiment=turing-machine-2d",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": true,
+    "monitors": [
+      "Tick\n1\nOn cells\n32",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 32 agents. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 3586002371,
+        "nonzero": 88902
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "151"
+      },
+      {
+        "name": "height",
+        "value": "151"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "heads",
+        "value": "32"
+      },
+      {
+        "name": "colorPaths",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-example",
+        "value": "1"
+      },
+      {
+        "name": "live-off0Turn",
+        "value": "Backwards"
+      },
+      {
+        "name": "live-off0State",
+        "value": "1"
+      },
+      {
+        "name": "live-off0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-off1Turn",
+        "value": "Right"
+      },
+      {
+        "name": "live-off1State",
+        "value": "0"
+      },
+      {
+        "name": "live-off1On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on0Turn",
+        "value": "--"
+      },
+      {
+        "name": "live-on0State",
+        "value": "0"
+      },
+      {
+        "name": "live-on0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on1Turn",
+        "value": "Left"
+      },
+      {
+        "name": "live-on1State",
+        "value": "1"
+      },
+      {
+        "name": "live-on1On",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  },
+  "mobile-light": {
+    "url": "http://localhost:3119/?experiment=turing-machine-2d",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "dark": false,
+    "monitors": [
+      "Tick\n1\nOn cells\n32",
+      ""
+    ],
+    "status": [
+      "",
+      "Steps completed."
+    ],
+    "canvas": [
+      {
+        "label": "Model view. 32 agents. Arrow keys select an item.",
+        "width": 716,
+        "height": 716,
+        "rgbaHash": 3586002371,
+        "nonzero": 88902
+      }
+    ],
+    "overflow": false,
+    "invalid": [],
+    "inputs": [
+      {
+        "name": "width",
+        "value": "151"
+      },
+      {
+        "name": "height",
+        "value": "151"
+      },
+      {
+        "name": "seed",
+        "value": "1"
+      },
+      {
+        "name": "heads",
+        "value": "32"
+      },
+      {
+        "name": "colorPaths",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-example",
+        "value": "1"
+      },
+      {
+        "name": "live-off0Turn",
+        "value": "Backwards"
+      },
+      {
+        "name": "live-off0State",
+        "value": "1"
+      },
+      {
+        "name": "live-off0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-off1Turn",
+        "value": "Right"
+      },
+      {
+        "name": "live-off1State",
+        "value": "0"
+      },
+      {
+        "name": "live-off1On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on0Turn",
+        "value": "--"
+      },
+      {
+        "name": "live-on0State",
+        "value": "0"
+      },
+      {
+        "name": "live-on0On",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "name": "live-on1Turn",
+        "value": "Left"
+      },
+      {
+        "name": "live-on1State",
+        "value": "1"
+      },
+      {
+        "name": "live-on1On",
+        "value": "on",
+        "checked": true
+      }
+    ],
+    "diagnostics": {}
+  }
+}

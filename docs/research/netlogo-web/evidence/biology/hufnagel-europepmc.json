@@ -1,0 +1,300 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0308344101%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1073/pnas.0308344101\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "15477600",
+          "source": "MED",
+          "pmid": "15477600",
+          "pmcid": "PMC524041",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC524041"
+            ]
+          },
+          "doi": "10.1073/pnas.0308344101",
+          "title": "Forecast and control of epidemics in a globalized world.",
+          "authorString": "Hufnagel L, Brockmann D, Geisel T.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Hufnagel L",
+                "lastName": "Hufnagel",
+                "firstName": "L",
+                "initials": "L",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Max-Planck-Institut f\u00fcr Str\u00f6mungsforschung, Bunsenstrasse 10, 37073 G\u00f6ttingen, Germany. lars@chaos.gwdg.de"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Brockmann D",
+                "lastName": "Brockmann",
+                "firstName": "D",
+                "initials": "D"
+              },
+              {
+                "fullName": "Geisel T",
+                "lastName": "Geisel",
+                "firstName": "T",
+                "initials": "T",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5681-2708"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5681-2708"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data",
+              "recommended_reviews",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "42",
+            "volume": "101",
+            "journalIssueId": 1205396,
+            "dateOfPublication": "2004 Oct",
+            "monthOfPublication": 10,
+            "yearOfPublication": 2004,
+            "journal": {
+              "medlineAbbreviation": "Proc Natl Acad Sci U S A",
+              "title": "Proceedings of the National Academy of Sciences of the United States of America",
+              "essn": "1091-6490",
+              "issn": "0027-8424",
+              "nlmid": "7505876",
+              "isoabbreviation": "Proc Natl Acad Sci U S A"
+            },
+            "printPublicationDate": "2004-10-01"
+          },
+          "pubYear": "2004",
+          "pageInfo": "15124-15129",
+          "abstractText": "The rapid worldwide spread of severe acute respiratory syndrome demonstrated the potential threat an infectious disease poses in a closely interconnected and interdependent world. Here we introduce a probabilistic model that describes the worldwide spread of infectious diseases and demonstrate that a forecast of the geographical spread of epidemics is indeed possible. This model combines a stochastic local infection dynamics among individuals with stochastic transport in a worldwide network, taking into account national and international civil aviation traffic. Our simulations of the severe acute respiratory syndrome outbreak are in surprisingly good agreement with published case reports. We show that the high degree of predictability is caused by the strong heterogeneity of the network. Our model can be used to predict the worldwide spread of future infectious diseases and to identify endangered regions in advance. The performance of different control strategies is analyzed, and our simulations show that a quick and focused reaction is essential to inhibiting the global spread of epidemics.",
+          "affiliation": "Max-Planck-Institut f\u00fcr Str\u00f6mungsforschung, Bunsenstrasse 10, 37073 G\u00f6ttingen, Germany. lars@chaos.gwdg.de",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Communicable Diseases",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TM",
+                      "qualifierName": "transmission"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Communicable Diseases, Emerging",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TM",
+                      "qualifierName": "transmission"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Severe Acute Respiratory Syndrome",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TM",
+                      "qualifierName": "transmission"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Statistical"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Stochastic Processes"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Aerospace Medicine"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Disease Outbreaks",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "SN",
+                      "qualifierName": "statistics & numerical data"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biometry"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Communicable Disease Control"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Forecasting"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Travel"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.0308344101"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC524041"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC524041?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1073/pnas.0308344101"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 460,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2004-11-22",
+          "dateOfCreation": "2004-10-13",
+          "dateOfRevision": "2023-11-03",
+          "electronicPublicationDate": "2004-10-11",
+          "firstPublicationDate": "2004-10-11",
+          "firstIndexDate": "2009-12-23",
+          "fullTextReceivedDate": "2025-02-02",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

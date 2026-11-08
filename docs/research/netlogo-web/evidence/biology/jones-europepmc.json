@@ -1,0 +1,160 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1162%2Fartl.2010.16.2.16202%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1162/artl.2010.16.2.16202\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "20067403",
+          "source": "MED",
+          "pmid": "20067403",
+          "doi": "10.1162/artl.2010.16.2.16202",
+          "title": "Characteristics of pattern formation and evolution in approximations of Physarum transport networks.",
+          "authorString": "Jones J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Jones J",
+                "lastName": "Jones",
+                "firstName": "Jeff",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Centre for Unconventional Computing, University of the West of England, Bristol, BS16 1QY, UK. jeff.jones@uwe.ac.uk"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "16",
+            "journalIssueId": 1704988,
+            "dateOfPublication": "2010 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2010,
+            "journal": {
+              "medlineAbbreviation": "Artif Life",
+              "title": "Artificial life",
+              "essn": "1530-9185",
+              "issn": "1064-5462",
+              "nlmid": "9433814",
+              "isoabbreviation": "Artif Life"
+            },
+            "printPublicationDate": "2010-01-01"
+          },
+          "pubYear": "2010",
+          "pageInfo": "127-153",
+          "abstractText": "Most studies of pattern formation place particular emphasis on its role in the development of complex multicellular body plans. In simpler organisms, however, pattern formation is intrinsic to growth and behavior. Inspired by one such organism, the true slime mold Physarum polycephalum, we present examples of complex emergent pattern formation and evolution formed by a population of simple particle-like agents. Using simple local behaviors based on chemotaxis, the mobile agent population spontaneously forms complex and dynamic transport networks. By adjusting simple model parameters, maps of characteristic patterning are obtained. Certain areas of the parameter mapping yield particularly complex long term behaviors, including the circular contraction of network lacunae and bifurcation of network paths to maintain network connectivity. We demonstrate the formation of irregular spots and labyrinthine and reticulated patterns by chemoattraction. Other Turing-like patterning schemes were obtained by using chemorepulsion behaviors, including the self-organization of regular periodic arrays of spots, and striped patterns. We show that complex pattern types can be produced without resorting to the hierarchical coupling of reaction-diffusion mechanisms. We also present network behaviors arising from simple pre-patterning cues, giving simple examples of how the emergent pattern formation processes evolve into networks with functional and quasi-physical properties including tensionlike effects, network minimization behavior, and repair to network damage. The results are interpreted in relation to classical theories of biological pattern formation in natural systems, and we suggest mechanisms by which emergent pattern formation processes may be used as a method for spatially represented unconventional computation.",
+          "affiliation": "Centre for Unconventional Computing, University of the West of England, Bristol, BS16 1QY, UK. jeff.jones@uwe.ac.uk",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Physarum polycephalum",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Chemotaxis"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Diffusion"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "http://eprints.uwe.ac.uk/15260/1/artl.2010.16.2.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "abs",
+                "site": "ingentaconnect",
+                "url": "http://openurl.ingenta.com/content?genre=article&issn=1064-5462&volume=16&issue=2&spage=127"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1162/artl.2010.16.2.16202"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 17,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2010-06-01",
+          "dateOfCreation": "2010-01-14",
+          "dateOfRevision": "2010-03-09",
+          "firstPublicationDate": "2010-01-01",
+          "firstIndexDate": "2010-06-02",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

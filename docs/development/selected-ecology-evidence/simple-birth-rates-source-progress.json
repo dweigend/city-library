@@ -1,0 +1,155 @@
+{
+  "url": "https://www.netlogoweb.org/web?url=https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Simple%20Birth%20Rates.nlogox",
+  "title": "NetLogo Web: Simple Birth Rates",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "dpr": 2
+  },
+  "sha256": "028b5c737080e0ba2165f46705999d3f1eb9c298d348f338895c923cf2bf083a",
+  "version": "NetLogo 7.0.4",
+  "tick": 10,
+  "count": 996,
+  "globals": {
+    "blue-fertility": 2,
+    "red-fertility": 2,
+    "carrying-capacity": 1000,
+    "red-count": 497,
+    "blue-count": 499
+  },
+  "widgets": [
+    {
+      "type": "view",
+      "dimensions": {
+        "minPxcor": -50,
+        "maxPxcor": 50,
+        "minPycor": -50,
+        "maxPycor": 50,
+        "patchSize": 4,
+        "wrappingAllowedInX": true,
+        "wrappingAllowedInY": true
+      }
+    },
+    {
+      "type": "slider",
+      "variable": "blue-fertility",
+      "display": "blue-fertility",
+      "currentValue": 2
+    },
+    {
+      "type": "slider",
+      "variable": "red-fertility",
+      "display": "red-fertility",
+      "currentValue": 2
+    },
+    {
+      "type": "button",
+      "source": "go",
+      "display": "go",
+      "running": false
+    },
+    {
+      "type": "button",
+      "source": "setup",
+      "display": "setup"
+    },
+    {
+      "type": "slider",
+      "variable": "carrying-capacity",
+      "display": "carrying-capacity",
+      "currentValue": 1000
+    },
+    {
+      "type": "button",
+      "source": "go-experiment",
+      "display": "run-experiment",
+      "running": false
+    },
+    {
+      "type": "output"
+    },
+    {
+      "type": "plot",
+      "display": "Populations"
+    },
+    {
+      "type": "monitor",
+      "source": "red-count",
+      "display": "# reds",
+      "currentValue": 497
+    },
+    {
+      "type": "monitor",
+      "source": "blue-count",
+      "display": "# blues",
+      "currentValue": 499
+    }
+  ],
+  "turtles": [
+    {
+      "id": 10834,
+      "x": -20.97006083808926,
+      "y": 9.16016261196137,
+      "color": 15,
+      "heading": 93.08525851358084,
+      "hidden?": false
+    },
+    {
+      "id": 11087,
+      "x": -40.937285514721445,
+      "y": -3.196763146558849,
+      "color": 105,
+      "heading": 212.99453217679212,
+      "hidden?": false
+    },
+    {
+      "id": 11446,
+      "x": -16.924822397446544,
+      "y": -33.54762664915507,
+      "color": 15,
+      "heading": 113.68066219350798,
+      "hidden?": false
+    },
+    {
+      "id": 12287,
+      "x": 4.350068929536176,
+      "y": -32.237294973899076,
+      "color": 15,
+      "heading": 72.49917980676918,
+      "hidden?": false
+    },
+    {
+      "id": 12407,
+      "x": -8.66275812848407,
+      "y": 6.89146087099176,
+      "color": 15,
+      "heading": 272.175590845244,
+      "hidden?": false
+    },
+    {
+      "id": 13074,
+      "x": -37.756817017566,
+      "y": -17.677112368620776,
+      "color": 15,
+      "heading": 124.37955851652707,
+      "hidden?": false
+    }
+  ],
+  "patchTotals": {},
+  "patchColors": {
+    "0": 10201
+  },
+  "colors": {
+    "15": 497,
+    "105": 499
+  },
+  "readback": [
+    {
+      "width": 808,
+      "height": 808,
+      "nonblack": 55861
+    }
+  ],
+  "text": " powered by NetLogo\nSimple Birth Rates\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 10\n?\nfor shortcuts\nblue-fertility\n children\nred-fertility\n children\ngo\nsetup\ncarrying-capacity\n turtles\nrun-experiment\nGenerations\nPopulation\nPopulations\nReds\nBlues\nTotal\n0\n25\n50\n0\n1k\n1.2k\n# reds\n497\n# blues\n499\nCommand Center\nobserver> repeat 10 [ go ]\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+}

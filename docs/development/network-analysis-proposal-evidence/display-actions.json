@@ -1,0 +1,39 @@
+{
+  "status": "Native original UI actions; source code unchanged",
+  "actions": [
+    {
+      "fixture": "Star5",
+      "button": "closeness",
+      "screenshot": "nw-star5-closeness.png"
+    },
+    {
+      "fixture": "undirected path0-1-2 plus isolate3",
+      "button": "eigenvector",
+      "screenshot": "nw-disconnected-eigenvector.png"
+    },
+    {
+      "fixture": "directed cycle0->1->2->0",
+      "button": "betweenness",
+      "observedWhoLabelSize": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "screenshot": "nw-directed-cycle-display.png"
+    }
+  ],
+  "screenshotLimit": "1280x800 viewport scrolled toward native Command Center after keyboard submission; images show lower world/controls and console, not full model overview.",
+  "diagnosticLimit": "Recorded exact native Command Center error and raw readbacks; no blanket clean browser-console claim."
+}

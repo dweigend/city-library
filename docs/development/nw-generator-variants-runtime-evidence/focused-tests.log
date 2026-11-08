@@ -1,0 +1,87 @@
+bun test v1.4.2 (744846f84)
+
+tests/graph-generators.test.ts:
+(pass) native families obey degree, direction and tree invariants through canonical public edges [12.54ms]
+(pass) lattice matches an independent all-pairs coordinate-neighborhood oracle [2.31ms]
+(pass) preferential prefix selection agrees with exact rational CDF scans and preserves cached Gaussian continuation [7.44ms]
+(pass) small-world rank selection matches explicit eligible-pool rewiring on changing topology [4.37ms]
+(pass) Bernoulli candidate order, explicit stream and endpoint probabilities preserve the public schedule [1.74ms]
+(pass) closed descriptors, domains, membership and induced loops reject before callbacks or draws [1.45ms]
+(pass) batch snapshots, callback exceptions and enclosing guards preserve topology and automatic keys [1.09ms]
+(pass) cloned defaults recheck foreign reference liveness after callbacks and preserve cyclic aliases [0.92ms]
+(pass) geometric capture validates immediately and uses explicit finite topology for Agent/Field positions [2.26ms]
+(pass) known over-cap batches draw nothing; stochastic cap failure stops at first excess and publishes nothing [637.97ms]
+
+tests/graph-connectivity.test.ts:
+(pass) biconnected vertex blocks match cut-definition oracle for all five-node simple graphs plus loops/parallel edges [45.39ms]
+(pass) strong components match independent mutual-reachability oracle on directed and mixed structures [13.22ms]
+(pass) connectivity options reject malformed data without invoking accessors or mutating graphs [0.51ms]
+(pass) canonical query snapshots survive Agent edits and reflect membership lifecycle without clock/RNG effects [0.48ms]
+(pass) iterative connectivity handles a long chain without depending on call-stack depth [77.75ms]
+
+tests/graph-nw-variants.test.ts:
+(pass) legacy native-kind unions and narrowed tree branching keep their public TypeScript syntax [0.56ms]
+(pass) Kleinberg sampled targets match independent small integer distance-mass tables [4.59ms]
+(pass) extreme finite exponents preserve zero-weight plateaus and the inclusive zero-unit boundary [0.31ms]
+(pass) PA directed and undirected endpoints match independent endpoint-occurrence rejection traces [3.10ms]
+(pass) WS front-cursor rejection preserves saturated K3, singleton trials, k0 and probability0 schedules [0.77ms]
+(pass) profile wheel/lattice stored endpoints differ explicitly from unprofiled defaults [0.24ms]
+(pass) closed profile schemas and scalar domains reject before draws, including own undefined discriminants [0.39ms]
+(pass) owner guard and late clone failure keep topology/key atomicity while retaining scheduled units [0.27ms]
+(pass) profile operations preserve canonical lifecycle, defaults and World/RNG separation [0.25ms]
+(pass) known profile caps preflight; practical PA, WS and Kleinberg batches use actual owner publication [116.54ms]
+
+tests/graph-distance-precision.test.ts:
+(pass) single captured costs preserve binary64 bits across exponent and significand boundaries [3.97ms]
+(pass) fractional weighted paths match a fixed-lattice integer oracle in either insertion order [2.50ms]
+(pass) captured fractional binary64 values are summed exactly rather than as decimal rationals [0.19ms]
+(pass) rounding handles both signs, normal exponent carries and ties to even [0.52ms]
+(pass) tiny values survive large signed prefixes and the normal/subnormal boundary [0.23ms]
+(pass) a subnormal negative cycle stays detectable behind enormous prefixes [0.33ms]
+(pass) finite-rounded overflow includes discarded candidates and allows MAX_VALUE plus a tiny tail [0.48ms]
+(pass) summary sums published distances exactly, independent of summand order and before division [0.42ms]
+
+tests/graph-distances.test.ts:
+(pass) all algorithms agree with independent Floyd–Warshall on mixed multigraphs [74.55ms]
+(pass) signed acyclic distances agree with independent dynamic recurrence [3.38ms]
+(pass) negative cycles reject exactly the affected single sources and every all-pairs query [0.45ms]
+(pass) every query captures costs once in current insertion order and permits nested pure queries [0.31ms]
+(pass) invalid options and endpoints fail before callbacks, without reading accessors [0.27ms]
+(pass) bad callback values reject, exceptions retain identity and guards release after failure [0.16ms]
+(pass) cost callbacks cannot change graph structure, including canonical Agent deletion [0.32ms]
+(pass) distance arithmetic rejects overflow in every weighted algorithm and summaries [0.13ms]
+(pass) pure public observations preserve World/RNG authority and independent instances [0.14ms]
+(pass) iterative breadth and heap Dijkstra handle a long directed chain [56.46ms]
+
+tests/graph-analysis.test.ts:
+(pass) weighted mixed multigraph scores match independent exhaustive vertex-simple path fractions [20.08ms]
+(pass) spectral scores satisfy independent rank-one eigenpair and PageRank balance oracles [1.77ms]
+(pass) all five measures capture once, allow nested observations and preserve canonical lifecycle and RNG authority [1.69ms]
+(pass) measure-specific own-data validation executes before callbacks even on empty graphs [0.85ms]
+(pass) callback exceptions retain identity, malformed values reject and weights recapture after failure [0.65ms]
+(pass) loop incidences, edgeless distinctions and wholly-undirected normalization remain explicit [0.45ms]
+
+tests/graph-copy.test.ts:
+(pass) source-order filters and all direction transforms preserve every selected labeled edge independently [8.32ms]
+(pass) undirected promotion retains opposite arcs and uses a fresh automatic-key owner [0.73ms]
+(pass) state extraction preserves hidden data, null prototypes and framework backreferences without rebinding [0.43ms]
+(pass) late clone failures create no target Agent participants; recovery registers exactly one owner [0.53ms]
+(pass) final liveness validation catches foreign deletion from a later reflection, including Map/Set and defaults [0.85ms]
+(pass) source reflection rejects structural reentrancy and Agent deletion, permits reads and independent owners [0.61ms]
+(pass) array subclasses, strict own descriptors, complete validation and membership precede state reflection [0.53ms]
+(pass) shared Agent identities retain World positions, continuation and independent graph hooks [0.35ms]
+(pass) a large generated edge batch copies through the owner without public add scans or generator limits [180.18ms]
+
+tests/a5a-boundaries.test.ts:
+(pass) detached graph contracts > closed options and state validation precede duplicate return without getters [0.37ms]
+(pass) detached graph contracts > edge state keeps cyclic aliases, independent defaults and framework identities [0.21ms]
+(pass) detached graph contracts > active collection guards reject both kinds of structural mutation and release [0.11ms]
+(pass) detached graph contracts > Agent deletion preflights every graph before World detach or cleanup [0.16ms]
+(pass) detached graph contracts > node removal unregisters lifecycle participation and leaves other graphs alone [0.05ms]
+(pass) detached graph contracts > direction queries preserve insertion, loops once and frozen snapshots [0.20ms]
+(pass) detached graph contracts > parallel key allocation is monotonic and rejected insertions consume no key [0.07ms]
+
+ 65 pass
+ 0 fail
+ 21122 expect() calls
+Ran 65 tests across 8 files. [1320.00ms]

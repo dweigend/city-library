@@ -1,0 +1,113 @@
+{
+  "slug": "three-doors",
+  "name": "Three Doors",
+  "catalogPath": "Sample Models/Mathematics/Probability/Three Doors",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Three%20Doors.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "When does changing a choice improve its probability of success? NetLogo Three Doors repeatedly simulates the Monty Hall problem: a prize and initial choice are randomized, the knowledgeable host leaves an alternative closed door, and agents switch according to individual propensities. Morgan and colleagues [1] analyze the player's dilemma and the importance of the host protocol. Jaynes [2] provides conditional-probability reasoning, while Durrett [3] supplies a formal sample-space framework. The agent race turns repeated wins into visible evidence for comparing switching policies. The result depends on a host who avoids revealing the prize and always offers the specified alternative; different disclosure rules create different conditional problems. Finite races fluctuate, and mixed switching propensities are strategies rather than psychological estimates. The simulation illustrates conditioning under an explicit information-generating process.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Three%20Doors.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Three%20Doors.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 8788aa01450222b6e33d5bf5e5b50c0ea494160946f3051332a1bb2514a47d14",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/three-doors.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (1998).  NetLogo Three Doors model.  http://ccl.northwestern.edu/netlogo/models/ThreeDoors.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/three-doors.nlogox",
+    "evidenceFile": "evidence/computing/three-doors.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1080/00031305.1991.10475821",
+      "authors": [
+        "J. P. Morgan",
+        "N. R. Chaganty",
+        "R. C. Dahiya",
+        "M. J. Doviak"
+      ],
+      "title": "Let's Make a Deal: The Player's Dilemma",
+      "year": 1991,
+      "venue": "The American Statistician",
+      "doi": "10.1080/00031305.1991.10475821",
+      "url": "https://doi.org/10.1080/00031305.1991.10475821",
+      "relevance": "Direct scientific treatment of Monty Hall emphasizes the host’s selection protocol.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1080%2F00031305.1991.10475821",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1080_00031305_1991_10475821.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1080_00031305_1991_10475821.json"
+      },
+      "publisher": "Informa UK Limited",
+      "volume": "45",
+      "issue": "4",
+      "pages": "284-287",
+      "verified": true
+    },
+    {
+      "id": "10.1017/cbo9780511790423",
+      "authors": [
+        "E. T. Jaynes"
+      ],
+      "title": "Probability Theory: The Logic of Science",
+      "year": 2003,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/cbo9780511790423",
+      "url": "https://doi.org/10.1017/cbo9780511790423",
+      "relevance": "Conditional probability provides the logic for updating after an informed host opens a door.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2FCBO9780511790423",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_cbo9780511790423.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_cbo9780511790423.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9780521592710",
+        "9780511790423"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Formal probability spaces and repeated-trial sampling ground the strategy comparison.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

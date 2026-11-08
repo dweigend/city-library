@@ -1,0 +1,5922 @@
+{
+  "startedAt": "2026-11-05",
+  "completedAt": "2026-11-06",
+  "browser": "T3 configured Chromium156.0.0.0",
+  "seedPolicy": "Mulberry32 seed1 unless explicitly changed; no cross-RNG trajectory identity",
+  "models": [
+    {
+      "slug": "random-combinations-and-permutations",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+        "monitors": {
+          "Search attempts": "0",
+          "Steps in sample": "0",
+          "Samples": "0",
+          "Combination successes": "0",
+          "Permutation successes": "0",
+          "Mean combination": "N/A",
+          "Mean permutations": "N/A",
+          "Ratio": "N/A",
+          "Instructions": "OK, you have created a 3-by-1 block. Now press Create Combi."
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Create Combi",
+            "disabled": false
+          },
+          {
+            "text": "Finish Combi",
+            "disabled": true
+          },
+          {
+            "text": "Hide / Reveal",
+            "disabled": true
+          },
+          {
+            "text": "Edit combination",
+            "disabled": true
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+        "monitors": {
+          "Search attempts": "1",
+          "Steps in sample": "1",
+          "Samples": "0",
+          "Combination successes": "0",
+          "Permutation successes": "0",
+          "Mean combination": "N/A",
+          "Mean permutations": "N/A",
+          "Ratio": "N/A",
+          "Instructions": "The program guesses combinations randomly and tracks matches."
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Create Combi",
+            "disabled": true
+          },
+          {
+            "text": "Finish Combi",
+            "disabled": true
+          },
+          {
+            "text": "Hide / Reveal",
+            "disabled": false
+          },
+          {
+            "text": "Edit combination",
+            "disabled": true
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+        "monitors": {
+          "Search attempts": "5",
+          "Steps in sample": "5",
+          "Samples": "0",
+          "Combination successes": "1",
+          "Permutation successes": "1",
+          "Mean combination": "N/A",
+          "Mean permutations": "N/A",
+          "Ratio": "N/A",
+          "Instructions": "The program guesses combinations randomly and tracks matches."
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Create Combi",
+            "disabled": true
+          },
+          {
+            "text": "Finish Combi",
+            "disabled": true
+          },
+          {
+            "text": "Hide / Reveal",
+            "disabled": false
+          },
+          {
+            "text": "Edit combination",
+            "disabled": true
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+        "monitors": {
+          "Search attempts": "0",
+          "Steps in sample": "0",
+          "Samples": "0",
+          "Combination successes": "0",
+          "Permutation successes": "0",
+          "Mean combination": "N/A",
+          "Mean permutations": "N/A",
+          "Ratio": "N/A",
+          "Instructions": "OK, you have created a 3-by-1 block. Now press Create Combi."
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Create Combi",
+            "disabled": false
+          },
+          {
+            "text": "Finish Combi",
+            "disabled": true
+          },
+          {
+            "text": "Hide / Reveal",
+            "disabled": true
+          },
+          {
+            "text": "Edit combination",
+            "disabled": true
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+            "monitors": {
+              "Search attempts": "5",
+              "Steps in sample": "5",
+              "Samples": "0",
+              "Combination successes": "1",
+              "Permutation successes": "1",
+              "Mean combination": "N/A",
+              "Mean permutations": "N/A",
+              "Ratio": "N/A",
+              "Instructions": "The program guesses combinations randomly and tracks matches."
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create Combi",
+                "disabled": true
+              },
+              {
+                "text": "Finish Combi",
+                "disabled": true
+              },
+              {
+                "text": "Hide / Reveal",
+                "disabled": false
+              },
+              {
+                "text": "Edit combination",
+                "disabled": true
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+            "monitors": {
+              "Search attempts": "5",
+              "Steps in sample": "5",
+              "Samples": "0",
+              "Combination successes": "1",
+              "Permutation successes": "1",
+              "Mean combination": "N/A",
+              "Mean permutations": "N/A",
+              "Ratio": "N/A",
+              "Instructions": "The program guesses combinations randomly and tracks matches."
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create Combi",
+                "disabled": true
+              },
+              {
+                "text": "Finish Combi",
+                "disabled": true
+              },
+              {
+                "text": "Hide / Reveal",
+                "disabled": false
+              },
+              {
+                "text": "Edit combination",
+                "disabled": true
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+            "monitors": {
+              "Search attempts": "5",
+              "Steps in sample": "5",
+              "Samples": "0",
+              "Combination successes": "1",
+              "Permutation successes": "1",
+              "Mean combination": "N/A",
+              "Mean permutations": "N/A",
+              "Ratio": "N/A",
+              "Instructions": "The program guesses combinations randomly and tracks matches."
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create Combi",
+                "disabled": true
+              },
+              {
+                "text": "Finish Combi",
+                "disabled": true
+              },
+              {
+                "text": "Hide / Reveal",
+                "disabled": false
+              },
+              {
+                "text": "Edit combination",
+                "disabled": true
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+            "monitors": {
+              "Search attempts": "5",
+              "Steps in sample": "5",
+              "Samples": "0",
+              "Combination successes": "1",
+              "Permutation successes": "1",
+              "Mean combination": "N/A",
+              "Mean permutations": "N/A",
+              "Ratio": "N/A",
+              "Instructions": "The program guesses combinations randomly and tracks matches."
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create Combi",
+                "disabled": true
+              },
+              {
+                "text": "Finish Combi",
+                "disabled": true
+              },
+              {
+                "text": "Hide / Reveal",
+                "disabled": false
+              },
+              {
+                "text": "Edit combination",
+                "disabled": true
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Color mode with sample100 produces two samples after200 attempts; Hide/Reveal and bar/line controls preserve counts",
+          "result": {
+            "url": "http://localhost:3117/?experiment=random-combinations-and-permutations",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "width",
+                "value": "3"
+              },
+              {
+                "name": "height",
+                "value": "1"
+              },
+              {
+                "name": "choices",
+                "value": "2"
+              },
+              {
+                "name": "dice",
+                "value": false
+              },
+              {
+                "name": "live-singleSuccess",
+                "value": false
+              },
+              {
+                "name": "live-analysisType",
+                "value": "both"
+              },
+              {
+                "name": "live-bars",
+                "value": false
+              },
+              {
+                "name": "live-sampleSize",
+                "value": "100"
+              }
+            ],
+            "monitors": {
+              "Search attempts": "200",
+              "Steps in sample": "0",
+              "Samples": "2",
+              "Combination successes": "0",
+              "Permutation successes": "0",
+              "Mean combination": "11.500",
+              "Mean permutations": "11.500",
+              "Ratio": "1.00",
+              "Instructions": "The program guesses combinations randomly and tracks matches."
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create Combi",
+                "disabled": true
+              },
+              {
+                "text": "Finish Combi",
+                "disabled": true
+              },
+              {
+                "text": "Hide / Reveal",
+                "disabled": false
+              },
+              {
+                "text": "Edit combination",
+                "disabled": true
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "stochastic-patchwork",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+        "monitors": {
+          "Tick": "0",
+          "Target color": "0"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+        "monitors": {
+          "Tick": "1",
+          "Target color": "8"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+        "monitors": {
+          "Tick": "5",
+          "Target color": "5"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+        "monitors": {
+          "Tick": "0",
+          "Target color": "0"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+            "monitors": {
+              "Tick": "5",
+              "Target color": "5"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+            "monitors": {
+              "Tick": "5",
+              "Target color": "5"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+            "monitors": {
+              "Tick": "5",
+              "Target color": "5"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+            "monitors": {
+              "Tick": "5",
+              "Target color": "5"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Live probability100 yields all9 target patches",
+          "result": {
+            "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+            "monitors": {
+              "Tick": "1",
+              "Target color": "9"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        },
+        {
+          "label": "Live probability0 yields0 target patches while retaining history",
+          "result": {
+            "url": "http://localhost:3117/?experiment=stochastic-patchwork",
+            "monitors": {
+              "Tick": "2",
+              "Target color": "0"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "partition-permutation-distribution",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+        "monitors": {
+          "Tick": "0",
+          "Successes": "0",
+          "Running total": "0",
+          "Previous addends": "",
+          "Addend": "0"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+        "monitors": {
+          "Tick": "1",
+          "Successes": "0",
+          "Running total": "46",
+          "Previous addends": "",
+          "Addend": "46"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+        "monitors": {
+          "Tick": "5",
+          "Successes": "1",
+          "Running total": "57",
+          "Previous addends": "46 + 14 + 12",
+          "Addend": "12"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+        "monitors": {
+          "Tick": "0",
+          "Successes": "0",
+          "Running total": "0",
+          "Previous addends": "",
+          "Addend": "0"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+            "monitors": {
+              "Tick": "5",
+              "Successes": "1",
+              "Running total": "57",
+              "Previous addends": "46 + 14 + 12",
+              "Addend": "12"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+            "monitors": {
+              "Tick": "5",
+              "Successes": "1",
+              "Running total": "57",
+              "Previous addends": "46 + 14 + 12",
+              "Addend": "12"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+            "monitors": {
+              "Tick": "5",
+              "Successes": "1",
+              "Running total": "57",
+              "Previous addends": "46 + 14 + 12",
+              "Addend": "12"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+            "monitors": {
+              "Tick": "5",
+              "Successes": "1",
+              "Running total": "57",
+              "Previous addends": "46 + 14 + 12",
+              "Addend": "12"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Live target2 below current46 retains rejected signed draws and advances to tick11",
+          "result": {
+            "url": "http://localhost:3117/?experiment=partition-permutation-distribution",
+            "monitors": {
+              "Tick": "11",
+              "Successes": "0",
+              "Running total": "46",
+              "Previous addends": "",
+              "Addend": "-20"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "central-limit-theorem",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=central-limit-theorem",
+        "monitors": {
+          "Tick": "0",
+          "Population": "0",
+          "Samples": "0",
+          "Expected value": "N/A",
+          "Std dev means": "N/A",
+          "Std dev sums": "N/A",
+          "State": "Ready"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Create random people",
+            "disabled": false
+          },
+          {
+            "text": "Preset 1",
+            "disabled": false
+          },
+          {
+            "text": "Preset 2",
+            "disabled": false
+          },
+          {
+            "text": "Preset 3",
+            "disabled": false
+          },
+          {
+            "text": "Preset 4",
+            "disabled": false
+          },
+          {
+            "text": "Preset 5",
+            "disabled": false
+          },
+          {
+            "text": "Preset 6",
+            "disabled": false
+          },
+          {
+            "text": "Create my own people",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=central-limit-theorem",
+        "monitors": {
+          "Tick": "1",
+          "Population": "434",
+          "Samples": "1",
+          "Expected value": "15.000",
+          "Std dev means": "N/A",
+          "Std dev sums": "N/A",
+          "State": "Ready"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Create random people",
+            "disabled": false
+          },
+          {
+            "text": "Preset 1",
+            "disabled": false
+          },
+          {
+            "text": "Preset 2",
+            "disabled": false
+          },
+          {
+            "text": "Preset 3",
+            "disabled": false
+          },
+          {
+            "text": "Preset 4",
+            "disabled": false
+          },
+          {
+            "text": "Preset 5",
+            "disabled": false
+          },
+          {
+            "text": "Preset 6",
+            "disabled": false
+          },
+          {
+            "text": "Create my own people",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=central-limit-theorem",
+        "monitors": {
+          "Tick": "5",
+          "Population": "434",
+          "Samples": "5",
+          "Expected value": "15.000",
+          "Std dev means": "3.273",
+          "Std dev sums": "N/A",
+          "State": "Ready"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Create random people",
+            "disabled": false
+          },
+          {
+            "text": "Preset 1",
+            "disabled": false
+          },
+          {
+            "text": "Preset 2",
+            "disabled": false
+          },
+          {
+            "text": "Preset 3",
+            "disabled": false
+          },
+          {
+            "text": "Preset 4",
+            "disabled": false
+          },
+          {
+            "text": "Preset 5",
+            "disabled": false
+          },
+          {
+            "text": "Preset 6",
+            "disabled": false
+          },
+          {
+            "text": "Create my own people",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=central-limit-theorem",
+        "monitors": {
+          "Tick": "0",
+          "Population": "0",
+          "Samples": "0",
+          "Expected value": "N/A",
+          "Std dev means": "N/A",
+          "Std dev sums": "N/A",
+          "State": "Ready"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Create random people",
+            "disabled": false
+          },
+          {
+            "text": "Preset 1",
+            "disabled": false
+          },
+          {
+            "text": "Preset 2",
+            "disabled": false
+          },
+          {
+            "text": "Preset 3",
+            "disabled": false
+          },
+          {
+            "text": "Preset 4",
+            "disabled": false
+          },
+          {
+            "text": "Preset 5",
+            "disabled": false
+          },
+          {
+            "text": "Preset 6",
+            "disabled": false
+          },
+          {
+            "text": "Create my own people",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=central-limit-theorem",
+            "monitors": {
+              "Tick": "5",
+              "Population": "434",
+              "Samples": "5",
+              "Expected value": "15.000",
+              "Std dev means": "3.273",
+              "Std dev sums": "N/A",
+              "State": "Ready"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create random people",
+                "disabled": false
+              },
+              {
+                "text": "Preset 1",
+                "disabled": false
+              },
+              {
+                "text": "Preset 2",
+                "disabled": false
+              },
+              {
+                "text": "Preset 3",
+                "disabled": false
+              },
+              {
+                "text": "Preset 4",
+                "disabled": false
+              },
+              {
+                "text": "Preset 5",
+                "disabled": false
+              },
+              {
+                "text": "Preset 6",
+                "disabled": false
+              },
+              {
+                "text": "Create my own people",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=central-limit-theorem",
+            "monitors": {
+              "Tick": "5",
+              "Population": "434",
+              "Samples": "5",
+              "Expected value": "15.000",
+              "Std dev means": "3.273",
+              "Std dev sums": "N/A",
+              "State": "Ready"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create random people",
+                "disabled": false
+              },
+              {
+                "text": "Preset 1",
+                "disabled": false
+              },
+              {
+                "text": "Preset 2",
+                "disabled": false
+              },
+              {
+                "text": "Preset 3",
+                "disabled": false
+              },
+              {
+                "text": "Preset 4",
+                "disabled": false
+              },
+              {
+                "text": "Preset 5",
+                "disabled": false
+              },
+              {
+                "text": "Preset 6",
+                "disabled": false
+              },
+              {
+                "text": "Create my own people",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=central-limit-theorem",
+            "monitors": {
+              "Tick": "5",
+              "Population": "434",
+              "Samples": "5",
+              "Expected value": "15.000",
+              "Std dev means": "3.273",
+              "Std dev sums": "N/A",
+              "State": "Ready"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create random people",
+                "disabled": false
+              },
+              {
+                "text": "Preset 1",
+                "disabled": false
+              },
+              {
+                "text": "Preset 2",
+                "disabled": false
+              },
+              {
+                "text": "Preset 3",
+                "disabled": false
+              },
+              {
+                "text": "Preset 4",
+                "disabled": false
+              },
+              {
+                "text": "Preset 5",
+                "disabled": false
+              },
+              {
+                "text": "Preset 6",
+                "disabled": false
+              },
+              {
+                "text": "Create my own people",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=central-limit-theorem",
+            "monitors": {
+              "Tick": "5",
+              "Population": "434",
+              "Samples": "5",
+              "Expected value": "15.000",
+              "Std dev means": "3.273",
+              "Std dev sums": "N/A",
+              "State": "Ready"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create random people",
+                "disabled": false
+              },
+              {
+                "text": "Preset 1",
+                "disabled": false
+              },
+              {
+                "text": "Preset 2",
+                "disabled": false
+              },
+              {
+                "text": "Preset 3",
+                "disabled": false
+              },
+              {
+                "text": "Preset 4",
+                "disabled": false
+              },
+              {
+                "text": "Preset 5",
+                "disabled": false
+              },
+              {
+                "text": "Preset 6",
+                "disabled": false
+              },
+              {
+                "text": "Create my own people",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Empty Setup cannot sample; no tick, explicit insufficient-population message",
+          "result": {
+            "url": "http://localhost:3117/?experiment=central-limit-theorem",
+            "monitors": {
+              "Tick": "0",
+              "Population": "0",
+              "Samples": "0",
+              "Expected value": "N/A",
+              "Std dev means": "N/A",
+              "Std dev sums": "N/A",
+              "State": "There are not enough people to take a sample of this size."
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create random people",
+                "disabled": false
+              },
+              {
+                "text": "Preset 1",
+                "disabled": false
+              },
+              {
+                "text": "Preset 2",
+                "disabled": false
+              },
+              {
+                "text": "Preset 3",
+                "disabled": false
+              },
+              {
+                "text": "Preset 4",
+                "disabled": false
+              },
+              {
+                "text": "Preset 5",
+                "disabled": false
+              },
+              {
+                "text": "Preset 6",
+                "disabled": false
+              },
+              {
+                "text": "Create my own people",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        },
+        {
+          "label": "Keyboard drawing adds one person without advancing tick",
+          "result": {
+            "url": "http://localhost:3117/?experiment=central-limit-theorem",
+            "monitors": {
+              "Tick": "0",
+              "Population": "1",
+              "Samples": "0",
+              "Expected value": "15.000",
+              "Std dev means": "N/A",
+              "Std dev sums": "N/A",
+              "State": "There are not enough people to take a sample of this size."
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create random people",
+                "disabled": false
+              },
+              {
+                "text": "Preset 1",
+                "disabled": false
+              },
+              {
+                "text": "Preset 2",
+                "disabled": false
+              },
+              {
+                "text": "Preset 3",
+                "disabled": false
+              },
+              {
+                "text": "Preset 4",
+                "disabled": false
+              },
+              {
+                "text": "Preset 5",
+                "disabled": false
+              },
+              {
+                "text": "Preset 6",
+                "disabled": false
+              },
+              {
+                "text": "Create my own people",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        },
+        {
+          "label": "Random population action resets samples and populates columns",
+          "result": {
+            "url": "http://localhost:3117/?experiment=central-limit-theorem",
+            "monitors": {
+              "Tick": "0",
+              "Population": "407",
+              "Samples": "0",
+              "Expected value": "14.192",
+              "Std dev means": "N/A",
+              "Std dev sums": "N/A",
+              "State": "Ready"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create random people",
+                "disabled": false
+              },
+              {
+                "text": "Preset 1",
+                "disabled": false
+              },
+              {
+                "text": "Preset 2",
+                "disabled": false
+              },
+              {
+                "text": "Preset 3",
+                "disabled": false
+              },
+              {
+                "text": "Preset 4",
+                "disabled": false
+              },
+              {
+                "text": "Preset 5",
+                "disabled": false
+              },
+              {
+                "text": "Preset 6",
+                "disabled": false
+              },
+              {
+                "text": "Create my own people",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        },
+        {
+          "label": "Also sums enables sum standard deviation after10 samples",
+          "result": {
+            "url": "http://localhost:3117/?experiment=central-limit-theorem",
+            "monitors": {
+              "Tick": "10",
+              "Population": "407",
+              "Samples": "10",
+              "Expected value": "14.192",
+              "Std dev means": "3.367",
+              "Std dev sums": "33.667",
+              "State": "Ready"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Create random people",
+                "disabled": false
+              },
+              {
+                "text": "Preset 1",
+                "disabled": false
+              },
+              {
+                "text": "Preset 2",
+                "disabled": false
+              },
+              {
+                "text": "Preset 3",
+                "disabled": false
+              },
+              {
+                "text": "Preset 4",
+                "disabled": false
+              },
+              {
+                "text": "Preset 5",
+                "disabled": false
+              },
+              {
+                "text": "Preset 6",
+                "disabled": false
+              },
+              {
+                "text": "Create my own people",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "expected-value",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=expected-value",
+        "monitors": {
+          "Tick": "0",
+          "Expected value": "30.000",
+          "Runs": "1",
+          "This sample total": "0",
+          "Mean of samples": "0.000",
+          "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Clear selection",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=expected-value",
+        "monitors": {
+          "Tick": "1",
+          "Expected value": "30.000",
+          "Runs": "2",
+          "This sample total": "29",
+          "Mean of samples": "14.500",
+          "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Clear selection",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=expected-value",
+        "monitors": {
+          "Tick": "5",
+          "Expected value": "30.000",
+          "Runs": "6",
+          "This sample total": "26",
+          "Mean of samples": "25.000",
+          "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Clear selection",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=expected-value",
+        "monitors": {
+          "Tick": "0",
+          "Expected value": "30.000",
+          "Runs": "1",
+          "This sample total": "0",
+          "Mean of samples": "0.000",
+          "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Clear selection",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=expected-value",
+            "monitors": {
+              "Tick": "5",
+              "Expected value": "30.000",
+              "Runs": "6",
+              "This sample total": "26",
+              "Mean of samples": "25.000",
+              "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Clear selection",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=expected-value",
+            "monitors": {
+              "Tick": "5",
+              "Expected value": "30.000",
+              "Runs": "6",
+              "This sample total": "26",
+              "Mean of samples": "25.000",
+              "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Clear selection",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=expected-value",
+            "monitors": {
+              "Tick": "5",
+              "Expected value": "30.000",
+              "Runs": "6",
+              "This sample total": "26",
+              "Mean of samples": "25.000",
+              "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Clear selection",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=expected-value",
+            "monitors": {
+              "Tick": "5",
+              "Expected value": "30.000",
+              "Runs": "6",
+              "This sample total": "26",
+              "Mean of samples": "25.000",
+              "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Clear selection",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Black-out plus sample then Clear selection preserves tick1 and totals",
+          "result": {
+            "url": "http://localhost:3117/?experiment=expected-value",
+            "monitors": {
+              "Tick": "1",
+              "Expected value": "30.000",
+              "Runs": "2",
+              "This sample total": "29",
+              "Mean of samples": "14.500",
+              "Calculation": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Clear selection",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "binomial-rabbits",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=binomial-rabbits",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "number",
+            "value": "2400"
+          },
+          {
+            "name": "hop1",
+            "value": "1"
+          },
+          {
+            "name": "ratio1",
+            "value": "1"
+          },
+          {
+            "name": "hop2",
+            "value": "-1"
+          },
+          {
+            "name": "ratio2",
+            "value": "1"
+          },
+          {
+            "name": "hop3",
+            "value": "0"
+          },
+          {
+            "name": "ratio3",
+            "value": "0"
+          },
+          {
+            "name": "live-hops",
+            "value": "20"
+          },
+          {
+            "name": "live-xScaling",
+            "value": "1"
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "Mean": "0.000",
+          "X scale": "44",
+          "Y scale": "0.000"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Go one hop",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=binomial-rabbits",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "number",
+            "value": "2400"
+          },
+          {
+            "name": "hop1",
+            "value": "1"
+          },
+          {
+            "name": "ratio1",
+            "value": "1"
+          },
+          {
+            "name": "hop2",
+            "value": "-1"
+          },
+          {
+            "name": "ratio2",
+            "value": "1"
+          },
+          {
+            "name": "hop3",
+            "value": "0"
+          },
+          {
+            "name": "ratio3",
+            "value": "0"
+          },
+          {
+            "name": "live-hops",
+            "value": "20"
+          },
+          {
+            "name": "live-xScaling",
+            "value": "1"
+          }
+        ],
+        "monitors": {
+          "Tick": "1",
+          "Mean": "-0.025",
+          "X scale": "44",
+          "Y scale": "3416.667"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Go one hop",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=binomial-rabbits",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "number",
+            "value": "2400"
+          },
+          {
+            "name": "hop1",
+            "value": "1"
+          },
+          {
+            "name": "ratio1",
+            "value": "1"
+          },
+          {
+            "name": "hop2",
+            "value": "-1"
+          },
+          {
+            "name": "ratio2",
+            "value": "1"
+          },
+          {
+            "name": "hop3",
+            "value": "0"
+          },
+          {
+            "name": "ratio3",
+            "value": "0"
+          },
+          {
+            "name": "live-hops",
+            "value": "20"
+          },
+          {
+            "name": "live-xScaling",
+            "value": "1"
+          }
+        ],
+        "monitors": {
+          "Tick": "5",
+          "Mean": "-0.003",
+          "X scale": "44",
+          "Y scale": "2122.222"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Go one hop",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=binomial-rabbits",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "number",
+            "value": "2400"
+          },
+          {
+            "name": "hop1",
+            "value": "1"
+          },
+          {
+            "name": "ratio1",
+            "value": "1"
+          },
+          {
+            "name": "hop2",
+            "value": "-1"
+          },
+          {
+            "name": "ratio2",
+            "value": "1"
+          },
+          {
+            "name": "hop3",
+            "value": "0"
+          },
+          {
+            "name": "ratio3",
+            "value": "0"
+          },
+          {
+            "name": "live-hops",
+            "value": "20"
+          },
+          {
+            "name": "live-xScaling",
+            "value": "1"
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "Mean": "0.000",
+          "X scale": "44",
+          "Y scale": "0.000"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Go one hop",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=binomial-rabbits",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "2400"
+              },
+              {
+                "name": "hop1",
+                "value": "1"
+              },
+              {
+                "name": "ratio1",
+                "value": "1"
+              },
+              {
+                "name": "hop2",
+                "value": "-1"
+              },
+              {
+                "name": "ratio2",
+                "value": "1"
+              },
+              {
+                "name": "hop3",
+                "value": "0"
+              },
+              {
+                "name": "ratio3",
+                "value": "0"
+              },
+              {
+                "name": "live-hops",
+                "value": "20"
+              },
+              {
+                "name": "live-xScaling",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Mean": "-0.003",
+              "X scale": "44",
+              "Y scale": "2122.222"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Go one hop",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=binomial-rabbits",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "2400"
+              },
+              {
+                "name": "hop1",
+                "value": "1"
+              },
+              {
+                "name": "ratio1",
+                "value": "1"
+              },
+              {
+                "name": "hop2",
+                "value": "-1"
+              },
+              {
+                "name": "ratio2",
+                "value": "1"
+              },
+              {
+                "name": "hop3",
+                "value": "0"
+              },
+              {
+                "name": "ratio3",
+                "value": "0"
+              },
+              {
+                "name": "live-hops",
+                "value": "20"
+              },
+              {
+                "name": "live-xScaling",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Mean": "-0.003",
+              "X scale": "44",
+              "Y scale": "2122.222"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Go one hop",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=binomial-rabbits",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "2400"
+              },
+              {
+                "name": "hop1",
+                "value": "1"
+              },
+              {
+                "name": "ratio1",
+                "value": "1"
+              },
+              {
+                "name": "hop2",
+                "value": "-1"
+              },
+              {
+                "name": "ratio2",
+                "value": "1"
+              },
+              {
+                "name": "hop3",
+                "value": "0"
+              },
+              {
+                "name": "ratio3",
+                "value": "0"
+              },
+              {
+                "name": "live-hops",
+                "value": "20"
+              },
+              {
+                "name": "live-xScaling",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Mean": "-0.003",
+              "X scale": "44",
+              "Y scale": "2122.222"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Go one hop",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=binomial-rabbits",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "2400"
+              },
+              {
+                "name": "hop1",
+                "value": "1"
+              },
+              {
+                "name": "ratio1",
+                "value": "1"
+              },
+              {
+                "name": "hop2",
+                "value": "-1"
+              },
+              {
+                "name": "ratio2",
+                "value": "1"
+              },
+              {
+                "name": "hop3",
+                "value": "0"
+              },
+              {
+                "name": "ratio3",
+                "value": "0"
+              },
+              {
+                "name": "live-hops",
+                "value": "20"
+              },
+              {
+                "name": "live-xScaling",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Mean": "-0.003",
+              "X scale": "44",
+              "Y scale": "2122.222"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Go one hop",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Go preflight stops at original hops20",
+          "result": {
+            "url": "http://localhost:3117/?experiment=binomial-rabbits",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "2400"
+              },
+              {
+                "name": "hop1",
+                "value": "1"
+              },
+              {
+                "name": "ratio1",
+                "value": "1"
+              },
+              {
+                "name": "hop2",
+                "value": "-1"
+              },
+              {
+                "name": "ratio2",
+                "value": "1"
+              },
+              {
+                "name": "hop3",
+                "value": "0"
+              },
+              {
+                "name": "ratio3",
+                "value": "0"
+              },
+              {
+                "name": "live-hops",
+                "value": "20"
+              },
+              {
+                "name": "live-xScaling",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "20",
+              "Mean": "0.092",
+              "X scale": "44",
+              "Y scale": "1205.556"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": true
+              },
+              {
+                "text": "1 step",
+                "disabled": true
+              },
+              {
+                "text": "10 steps",
+                "disabled": true
+              },
+              {
+                "text": "100 steps",
+                "disabled": true
+              },
+              {
+                "text": "Go one hop",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        },
+        {
+          "label": "Go one hop bypasses equality stop and advances to21",
+          "result": {
+            "url": "http://localhost:3117/?experiment=binomial-rabbits",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "2400"
+              },
+              {
+                "name": "hop1",
+                "value": "1"
+              },
+              {
+                "name": "ratio1",
+                "value": "1"
+              },
+              {
+                "name": "hop2",
+                "value": "-1"
+              },
+              {
+                "name": "ratio2",
+                "value": "1"
+              },
+              {
+                "name": "hop3",
+                "value": "0"
+              },
+              {
+                "name": "ratio3",
+                "value": "0"
+              },
+              {
+                "name": "live-hops",
+                "value": "20"
+              },
+              {
+                "name": "live-xScaling",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "21",
+              "Mean": "0.077",
+              "X scale": "44",
+              "Y scale": "1105.556"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Go one hop",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        },
+        {
+          "label": "Live scaling2 gives xScale88 and Go resumes beyond equality",
+          "result": {
+            "url": "http://localhost:3117/?experiment=binomial-rabbits",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "2400"
+              },
+              {
+                "name": "hop1",
+                "value": "1"
+              },
+              {
+                "name": "ratio1",
+                "value": "1"
+              },
+              {
+                "name": "hop2",
+                "value": "-1"
+              },
+              {
+                "name": "ratio2",
+                "value": "1"
+              },
+              {
+                "name": "hop3",
+                "value": "0"
+              },
+              {
+                "name": "ratio3",
+                "value": "0"
+              },
+              {
+                "name": "live-hops",
+                "value": "20"
+              },
+              {
+                "name": "live-xScaling",
+                "value": "2"
+              }
+            ],
+            "monitors": {
+              "Tick": "22",
+              "Mean": "0.114",
+              "X scale": "88",
+              "Y scale": "1127.778"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Go one hop",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "birthdays",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=birthdays",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "Successes": "0",
+          "Success rate (%)": "0.00"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=birthdays",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          }
+        ],
+        "monitors": {
+          "Tick": "1",
+          "Successes": "1",
+          "Success rate (%)": "100.00"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=birthdays",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          }
+        ],
+        "monitors": {
+          "Tick": "5",
+          "Successes": "3",
+          "Success rate (%)": "60.00"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=birthdays",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "Successes": "0",
+          "Success rate (%)": "0.00"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=birthdays",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Successes": "3",
+              "Success rate (%)": "60.00"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=birthdays",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Successes": "3",
+              "Success rate (%)": "60.00"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=birthdays",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Successes": "3",
+              "Success rate (%)": "60.00"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=birthdays",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Successes": "3",
+              "Success rate (%)": "60.00"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Seed2 Setup and fresh sorted room",
+          "result": {
+            "url": "http://localhost:3117/?experiment=birthdays",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "2"
+              }
+            ],
+            "monitors": {
+              "Tick": "1",
+              "Successes": "0",
+              "Success rate (%)": "0.00"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "galton-box",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=galton-box",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numberOfRows",
+            "value": "11"
+          },
+          {
+            "name": "live-numberOfBalls",
+            "value": "75"
+          },
+          {
+            "name": "live-chanceOfBouncingRight",
+            "value": "50"
+          },
+          {
+            "name": "live-pileUp",
+            "value": true
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "Balls": "0",
+          "State": "Active"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=galton-box",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numberOfRows",
+            "value": "11"
+          },
+          {
+            "name": "live-numberOfBalls",
+            "value": "75"
+          },
+          {
+            "name": "live-chanceOfBouncingRight",
+            "value": "50"
+          },
+          {
+            "name": "live-pileUp",
+            "value": true
+          }
+        ],
+        "monitors": {
+          "Tick": "1",
+          "Balls": "1",
+          "State": "Active"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=galton-box",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numberOfRows",
+            "value": "11"
+          },
+          {
+            "name": "live-numberOfBalls",
+            "value": "75"
+          },
+          {
+            "name": "live-chanceOfBouncingRight",
+            "value": "50"
+          },
+          {
+            "name": "live-pileUp",
+            "value": true
+          }
+        ],
+        "monitors": {
+          "Tick": "5",
+          "Balls": "3",
+          "State": "Active"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=galton-box",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numberOfRows",
+            "value": "11"
+          },
+          {
+            "name": "live-numberOfBalls",
+            "value": "75"
+          },
+          {
+            "name": "live-chanceOfBouncingRight",
+            "value": "50"
+          },
+          {
+            "name": "live-pileUp",
+            "value": true
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "Balls": "0",
+          "State": "Active"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=galton-box",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numberOfRows",
+                "value": "11"
+              },
+              {
+                "name": "live-numberOfBalls",
+                "value": "75"
+              },
+              {
+                "name": "live-chanceOfBouncingRight",
+                "value": "50"
+              },
+              {
+                "name": "live-pileUp",
+                "value": true
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Balls": "3",
+              "State": "Active"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=galton-box",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numberOfRows",
+                "value": "11"
+              },
+              {
+                "name": "live-numberOfBalls",
+                "value": "75"
+              },
+              {
+                "name": "live-chanceOfBouncingRight",
+                "value": "50"
+              },
+              {
+                "name": "live-pileUp",
+                "value": true
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Balls": "3",
+              "State": "Active"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=galton-box",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numberOfRows",
+                "value": "11"
+              },
+              {
+                "name": "live-numberOfBalls",
+                "value": "75"
+              },
+              {
+                "name": "live-chanceOfBouncingRight",
+                "value": "50"
+              },
+              {
+                "name": "live-pileUp",
+                "value": true
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Balls": "3",
+              "State": "Active"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=galton-box",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numberOfRows",
+                "value": "11"
+              },
+              {
+                "name": "live-numberOfBalls",
+                "value": "75"
+              },
+              {
+                "name": "live-chanceOfBouncingRight",
+                "value": "50"
+              },
+              {
+                "name": "live-pileUp",
+                "value": true
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Balls": "3",
+              "State": "Active"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Live100% right with pile disabled;100actual motion steps",
+          "result": {
+            "url": "http://localhost:3117/?experiment=galton-box",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numberOfRows",
+                "value": "11"
+              },
+              {
+                "name": "live-numberOfBalls",
+                "value": "75"
+              },
+              {
+                "name": "live-chanceOfBouncingRight",
+                "value": "100"
+              },
+              {
+                "name": "live-pileUp",
+                "value": false
+              }
+            ],
+            "monitors": {
+              "Tick": "100",
+              "Balls": "50",
+              "State": "Active"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mandelbrot",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=mandelbrot",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numTurtles",
+            "value": "1500"
+          },
+          {
+            "name": "scaleFactor",
+            "value": "100"
+          },
+          {
+            "name": "live-throw",
+            "value": "10"
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "Computed patches": "0",
+          "Total iterations": "0"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Hide turtles",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=mandelbrot",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numTurtles",
+            "value": "1500"
+          },
+          {
+            "name": "scaleFactor",
+            "value": "100"
+          },
+          {
+            "name": "live-throw",
+            "value": "10"
+          }
+        ],
+        "monitors": {
+          "Tick": "1",
+          "Computed patches": "1491",
+          "Total iterations": "1500"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Hide turtles",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=mandelbrot",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numTurtles",
+            "value": "1500"
+          },
+          {
+            "name": "scaleFactor",
+            "value": "100"
+          },
+          {
+            "name": "live-throw",
+            "value": "10"
+          }
+        ],
+        "monitors": {
+          "Tick": "5",
+          "Computed patches": "7131",
+          "Total iterations": "7493"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Hide turtles",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=mandelbrot",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "numTurtles",
+            "value": "1500"
+          },
+          {
+            "name": "scaleFactor",
+            "value": "100"
+          },
+          {
+            "name": "live-throw",
+            "value": "10"
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "Computed patches": "0",
+          "Total iterations": "0"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          },
+          {
+            "text": "Hide turtles",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=mandelbrot",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numTurtles",
+                "value": "1500"
+              },
+              {
+                "name": "scaleFactor",
+                "value": "100"
+              },
+              {
+                "name": "live-throw",
+                "value": "10"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Computed patches": "7131",
+              "Total iterations": "7493"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Hide turtles",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=mandelbrot",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numTurtles",
+                "value": "1500"
+              },
+              {
+                "name": "scaleFactor",
+                "value": "100"
+              },
+              {
+                "name": "live-throw",
+                "value": "10"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Computed patches": "7131",
+              "Total iterations": "7493"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Hide turtles",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=mandelbrot",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numTurtles",
+                "value": "1500"
+              },
+              {
+                "name": "scaleFactor",
+                "value": "100"
+              },
+              {
+                "name": "live-throw",
+                "value": "10"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Computed patches": "7131",
+              "Total iterations": "7493"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Hide turtles",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=mandelbrot",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numTurtles",
+                "value": "1500"
+              },
+              {
+                "name": "scaleFactor",
+                "value": "100"
+              },
+              {
+                "name": "live-throw",
+                "value": "10"
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "Computed patches": "7131",
+              "Total iterations": "7493"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Hide turtles",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "200steps; Hide turtles preserves computation and tick",
+          "result": {
+            "url": "http://localhost:3117/?experiment=mandelbrot",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numTurtles",
+                "value": "1500"
+              },
+              {
+                "name": "scaleFactor",
+                "value": "100"
+              },
+              {
+                "name": "live-throw",
+                "value": "10"
+              }
+            ],
+            "monitors": {
+              "Tick": "200",
+              "Computed patches": "78044",
+              "Total iterations": "246167"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Hide turtles",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        },
+        {
+          "label": "Hidden turtles continue computing at live throw0, tick201",
+          "result": {
+            "url": "http://localhost:3117/?experiment=mandelbrot",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "numTurtles",
+                "value": "1500"
+              },
+              {
+                "name": "scaleFactor",
+                "value": "100"
+              },
+              {
+                "name": "live-throw",
+                "value": "0"
+              }
+            ],
+            "monitors": {
+              "Tick": "201",
+              "Computed patches": "78115",
+              "Total iterations": "247279"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              },
+              {
+                "text": "Hide turtles",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "three-doors",
+      "setup": {
+        "url": "http://localhost:3117/?experiment=three-doors",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "number",
+            "value": "300"
+          },
+          {
+            "name": "gradation",
+            "value": false
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "State": "Racing"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "singleStep": {
+        "url": "http://localhost:3117/?experiment=three-doors",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "number",
+            "value": "300"
+          },
+          {
+            "name": "gradation",
+            "value": false
+          }
+        ],
+        "monitors": {
+          "Tick": "1",
+          "State": "Racing"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "progress": {
+        "url": "http://localhost:3117/?experiment=three-doors",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "number",
+            "value": "300"
+          },
+          {
+            "name": "gradation",
+            "value": false
+          }
+        ],
+        "monitors": {
+          "Tick": "5",
+          "State": "Racing"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 1280,
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(255, 255, 255)"
+      },
+      "didPause": true,
+      "reset": {
+        "url": "http://localhost:3117/?experiment=three-doors",
+        "controls": [
+          {
+            "name": "seed",
+            "value": "1"
+          },
+          {
+            "name": "number",
+            "value": "300"
+          },
+          {
+            "name": "gradation",
+            "value": false
+          }
+        ],
+        "monitors": {
+          "Tick": "0",
+          "State": "Racing"
+        },
+        "status": "",
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "buttons": [
+          {
+            "text": "Setup",
+            "disabled": false
+          },
+          {
+            "text": "Run",
+            "disabled": false
+          },
+          {
+            "text": "1 step",
+            "disabled": false
+          },
+          {
+            "text": "10 steps",
+            "disabled": false
+          },
+          {
+            "text": "100 steps",
+            "disabled": false
+          }
+        ],
+        "theme": "rgb(24, 24, 24)"
+      },
+      "views": [
+        {
+          "name": "desktop-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=three-doors",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "300"
+              },
+              {
+                "name": "gradation",
+                "value": false
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "State": "Racing"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "desktop-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=three-doors",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "300"
+              },
+              {
+                "name": "gradation",
+                "value": false
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "State": "Racing"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 1280,
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-light",
+          "state": {
+            "url": "http://localhost:3117/?experiment=three-doors",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "300"
+              },
+              {
+                "name": "gradation",
+                "value": false
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "State": "Racing"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(255, 255, 255)"
+          },
+          "console": [],
+          "networkFailures": []
+        },
+        {
+          "name": "mobile-dark",
+          "state": {
+            "url": "http://localhost:3117/?experiment=three-doors",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "300"
+              },
+              {
+                "name": "gradation",
+                "value": false
+              }
+            ],
+            "monitors": {
+              "Tick": "5",
+              "State": "Racing"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": false
+              },
+              {
+                "text": "1 step",
+                "disabled": false
+              },
+              {
+                "text": "10 steps",
+                "disabled": false
+              },
+              {
+                "text": "100 steps",
+                "disabled": false
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          },
+          "console": [],
+          "networkFailures": []
+        }
+      ],
+      "extra": [
+        {
+          "label": "Race terminal source-style stop at tick90",
+          "result": {
+            "url": "http://localhost:3117/?experiment=three-doors",
+            "controls": [
+              {
+                "name": "seed",
+                "value": "1"
+              },
+              {
+                "name": "number",
+                "value": "300"
+              },
+              {
+                "name": "gradation",
+                "value": false
+              }
+            ],
+            "monitors": {
+              "Tick": "90",
+              "State": "Race finished"
+            },
+            "status": "",
+            "overflow": false,
+            "bodyWidth": 390,
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "buttons": [
+              {
+                "text": "Setup",
+                "disabled": false
+              },
+              {
+                "text": "Run",
+                "disabled": true
+              },
+              {
+                "text": "1 step",
+                "disabled": true
+              },
+              {
+                "text": "10 steps",
+                "disabled": true
+              },
+              {
+                "text": "100 steps",
+                "disabled": true
+              }
+            ],
+            "theme": "rgb(24, 24, 24)"
+          }
+        }
+      ]
+    }
+  ],
+  "sourceParameterRecheck": {
+    "title": "NetLogo Web: Partition Permutation Distribution",
+    "tick": 2,
+    "sha256": "d19201a4109c7314ad2dd2bf26c00ea4631a6ee5a3ce4d096a4d7a4680815aa3",
+    "version": "NetLogo 7.0.4 (archived source)",
+    "globals": {
+      "num-successes": 10000,
+      "diminishing-sample-space?": true,
+      "wait-at-full?": true,
+      "target-total": 2,
+      "the-short-list": {
+        "length": 1,
+        "first": [
+          48
+        ]
+      },
+      "previous-short-list": 0,
+      "the-long-list": {
+        "length": 2,
+        "first": [
+          48,
+          -25
+        ]
+      },
+      "addend": -25,
+      "successes-so-far": 0,
+      "#addends-so-far-in-this-series": 2,
+      "partition-series-list": {
+        "length": 0,
+        "first": []
+      }
+    },
+    "population": {
+      "success": true,
+      "value": 0
+    },
+    "buttons": [
+      {
+        "id": "netlogo-button-1",
+        "text": "Add Once"
+      },
+      {
+        "id": "netlogo-button-2",
+        "text": "Go"
+      },
+      {
+        "id": "netlogo-button-3",
+        "text": "Setup"
+      }
+    ],
+    "text": " powered by NetLogo\nPartition Permutation Distribution\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 2\n?\nfor shortcuts\nAdd Once\nGo\nSetup\nnum-successes\ndiminishing-sample-space?\nwait-at-full?\ntarget-total\nRunning Total\n48\nSuccesses So Far\n0\nAddend\n-25\nPrevious List of Included Addends\n0\n#Addends Per Total\n5\n10\n0\n10\nAddends\n50\n0\n10\nMean #Addends Per Total\nN/A\nCommand Center\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+}

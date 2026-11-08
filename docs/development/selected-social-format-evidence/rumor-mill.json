@@ -1,0 +1,68 @@
+{
+  "slug": "rumor-mill",
+  "codeCommit": "c8700ec",
+  "marker": "selected-social-b02:rumor-mill:4807e040a21562f9feaa2bf5a99c6819f26918b0cd76e0460af802d980521b63",
+  "sourceSHA256": "4807e040a21562f9feaa2bf5a99c6819f26918b0cd76e0460af802d980521b63",
+  "sourceHashBasis": "Unchanged pinned source.nlogox; fresh target chunk marker checked. Native session was not re-run for a formatting-only change.",
+  "buildVersion": "1793962848757",
+  "loadedModelChunk": "http://localhost:3112/chunks/ui-f7v1bmjb.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/ui-f7v1bmjb.js",
+      "sha256": "710c31c2bd21f4d7f4153462396110572c617e6a293493a7e82e692a5b898d8f"
+    },
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    }
+  ],
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "setup": {
+    "tick": 0,
+    "parameters": {
+      "seed": 1,
+      "setup": "one",
+      "initClique": 0.1,
+      "eightMode": false
+    },
+    "monitors": {
+      "Tick": "0",
+      "Clique (%)": "0.010",
+      "Times heard": "1"
+    },
+    "status": "Model initialized.",
+    "raster": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "sampledColors": 65
+      }
+    ]
+  },
+  "errors": [],
+  "step": {
+    "tick": 1,
+    "monitors": {
+      "Tick": "1",
+      "Clique (%)": "0.020",
+      "Times heard": "2"
+    },
+    "status": "Steps completed.",
+    "raster": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "sampledColors": 65
+      }
+    ],
+    "errors": []
+  },
+  "images": {
+    "setup": "rumor-mill-setup.png",
+    "step": "rumor-mill-step.png"
+  }
+}

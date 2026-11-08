@@ -1,0 +1,12 @@
+{
+  "name": "@city-library/agent-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "svelte-check --tsconfig ../../tsconfig.svelte.json"
+  },
+  "devDependencies": {
+    "svelte-check": "4.7.8",
+    "typescript": "6.0.3"
+  }
+}

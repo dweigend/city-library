@@ -1,0 +1,386 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature12939%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nature12939\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "24429637",
+          "source": "MED",
+          "pmid": "24429637",
+          "doi": "10.1038/nature12939",
+          "title": "Upwash exploitation and downwash avoidance by flap phasing in ibis formation flight.",
+          "authorString": "Portugal SJ, Hubel TY, Fritz J, Heese S, Trobe D, Voelkl B, Hailes S, Wilson AM, Usherwood JR.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Portugal SJ",
+                "lastName": "Portugal",
+                "firstName": "Steven J",
+                "initials": "SJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2438-2352"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Structure & Motion Laboratory, the Royal Veterinary College, University of London, Hatfield, Hertfordshire AL9 7TA, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hubel TY",
+                "lastName": "Hubel",
+                "firstName": "Tatjana Y",
+                "initials": "TY",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-6749-6747"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Structure & Motion Laboratory, the Royal Veterinary College, University of London, Hatfield, Hertfordshire AL9 7TA, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Fritz J",
+                "lastName": "Fritz",
+                "firstName": "Johannes",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4691-2892"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Waldrappteam, Schulgasse 28, 6162 Mutters, Austria."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Heese S",
+                "lastName": "Heese",
+                "firstName": "Stefanie",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Waldrappteam, Schulgasse 28, 6162 Mutters, Austria."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Trobe D",
+                "lastName": "Trobe",
+                "firstName": "Daniela",
+                "initials": "D",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Waldrappteam, Schulgasse 28, 6162 Mutters, Austria."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Voelkl B",
+                "lastName": "Voelkl",
+                "firstName": "Bernhard",
+                "initials": "B",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-5454-2508"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "1] Waldrappteam, Schulgasse 28, 6162 Mutters, Austria [2] Institute for Theoretical Biology, Humboldt University at Berlin, Invalidenstrasse 43, 10115 Berlin, Germany [3] Edward Grey Institute, Department of Zoology, University of Oxford, Oxford OX1 3PS, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hailes S",
+                "lastName": "Hailes",
+                "firstName": "Stephen",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "1] Structure & Motion Laboratory, the Royal Veterinary College, University of London, Hatfield, Hertfordshire AL9 7TA, UK [2] Department of Computer Science, University College London, Gower Street, London WC1E 6BT, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wilson AM",
+                "lastName": "Wilson",
+                "firstName": "Alan M",
+                "initials": "AM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9914-3455"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Structure & Motion Laboratory, the Royal Veterinary College, University of London, Hatfield, Hertfordshire AL9 7TA, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Usherwood JR",
+                "lastName": "Usherwood",
+                "firstName": "James R",
+                "initials": "JR",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Structure & Motion Laboratory, the Royal Veterinary College, University of London, Hatfield, Hertfordshire AL9 7TA, UK."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-5454-2508"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9914-3455"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2438-2352"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-6749-6747"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4691-2892"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "7483",
+            "volume": "505",
+            "journalIssueId": 2116028,
+            "dateOfPublication": "2014 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2014,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "nlmid": "0410462",
+              "isoabbreviation": "Nature"
+            },
+            "printPublicationDate": "2014-01-01"
+          },
+          "pubYear": "2014",
+          "pageInfo": "399-402",
+          "abstractText": "Many species travel in highly organized groups. The most quoted function of these configurations is to reduce energy expenditure and enhance locomotor performance of individuals in the assemblage. The distinctive V formation of bird flocks has long intrigued researchers and continues to attract both scientific and popular attention. The well-held belief is that such aggregations give an energetic benefit for those birds that are flying behind and to one side of another bird through using the regions of upwash generated by the wings of the preceding bird, although a definitive account of the aerodynamic implications of these formations has remained elusive. Here we show that individuals of northern bald ibises (Geronticus eremita) flying in a V flock position themselves in aerodynamically optimum positions, in that they agree with theoretical aerodynamic predictions. Furthermore, we demonstrate that birds show wingtip path coherence when flying in V positions, flapping spatially in phase and thus enabling upwash capture to be maximized throughout the entire flap cycle. In contrast, when birds fly immediately behind another bird--in a streamwise position--there is no wingtip path coherence; the wing-beats are in spatial anti-phase. This could potentially reduce the adverse effects of downwash for the following bird. These aerodynamic accomplishments were previously not thought possible for birds because of the complex flight dynamics and sensory feedback that would be required to perform such a feat. We conclude that the intricate mechanisms involved in V formation flight indicate awareness of the spatial wake structures of nearby flock-mates, and remarkable ability either to sense or predict it. We suggest that birds in V formation have phasing strategies to cope with the dynamic wakes produced by flapping wings.",
+          "affiliation": "Structure & Motion Laboratory, the Royal Veterinary College, University of London, Hatfield, Hertfordshire AL9 7TA, UK.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Wellcome Trust",
+                "grantId": "095061",
+                "orderIn": 0
+              },
+              {
+                "agency": "Engineering and Physical Sciences Research Council",
+                "grantId": "EP/H013016/1",
+                "orderIn": 0
+              },
+              {
+                "agency": "Wellcome Trust",
+                "acronym": "WT_",
+                "grantId": "095061/Z/10/Z",
+                "orderIn": 0
+              },
+              {
+                "agency": "Biotechnology and Biological Sciences Research Council",
+                "acronym": "BB_",
+                "grantId": "BB/J018007/1",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Birds",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Group Processes"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Movement",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Flight, Animal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biomechanical Phenomena"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Wings, Animal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://rvc-repository.worktribe.com/preview/1650598/Vet%20Record%20Case%20Reports%20-%202023%20-%20Lang.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nature12939"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "24429623",
+                "reference": "Nature. 2014 Jan 16;505(7483):295-6. doi: 10.1038/505295a",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 129,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2014-02-11",
+          "dateOfCreation": "2014-01-17",
+          "dateOfRevision": "2021-10-21",
+          "firstPublicationDate": "2014-01-01",
+          "firstIndexDate": "2014-01-17",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

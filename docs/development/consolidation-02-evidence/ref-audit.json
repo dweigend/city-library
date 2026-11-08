@@ -1,0 +1,433 @@
+{
+  "catalogHead": "49da93919367c8294f4135267dd1ba8e9ce8e013",
+  "refs": [
+    {
+      "ref": "refs/heads/experiment/cross-thread-coordination",
+      "sha": "dd36ad23927d8d188bb4a8f34c9741b56ee2d1e7"
+    },
+    {
+      "ref": "refs/heads/experiment/netlogo-web-catalog",
+      "sha": "49da93919367c8294f4135267dd1ba8e9ce8e013"
+    },
+    {
+      "ref": "refs/heads/main",
+      "sha": "dfd0584d6c72fd63dc7f68ba3f737559d57c0fab"
+    },
+    {
+      "ref": "refs/remotes/origin/HEAD",
+      "sha": "d9be5852f1c7e62fd2fffe9bffe21b8705a7a5ef"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/netlogo-web-catalog",
+      "sha": "49da93919367c8294f4135267dd1ba8e9ce8e013"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/planar-contains-bounds",
+      "sha": "1ce2a381546f527b08a82a143df6a7757fdcc679"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-biology-b07",
+      "sha": "56bd761acdd765e47d33ed1f19a81dbc1664ffe7"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-cellular-b19",
+      "sha": "823a72fc7b55ce03de55001e127a358bc206a4c0"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-computing-b18",
+      "sha": "a0181e3634ab6245834f9087277dd0e8846110e1"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-disease-gene-b09",
+      "sha": "80e3907a4ec621e451161a8bc5e4318a143111e6"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-ecology-b06",
+      "sha": "743a9b33cd74b62c0083dc5e28725817b27fafc4"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-economics-b03",
+      "sha": "c06aff11bf0f62c0621def6d04e22a9d803a3a92"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-evolution-b08",
+      "sha": "552a04b4989b2eb850b8ccbd4a34e34e467d2302"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-grid-batch",
+      "sha": "f06704109bb041642fff9930806dcd9826d07c72"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-materials-b11",
+      "sha": "6bddf8d3defb549aa6d0de98bf7ab5919dd7c214"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-probability-b17",
+      "sha": "c8dc7a7ea287a16f9858ea54fb2e914c4d71fd34"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-social-b02",
+      "sha": "d8c5e6630cca3e7ff6d1b4c1920437ece2457342"
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-transport-b04",
+      "sha": "11ca9fca9e9b3431f9c27df8d1f263f2ea315e03"
+    },
+    {
+      "ref": "refs/remotes/origin/main",
+      "sha": "d9be5852f1c7e62fd2fffe9bffe21b8705a7a5ef"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/city-library",
+      "sha": "dfd0584d6c72fd63dc7f68ba3f737559d57c0fab"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/ecology-parent-renderer-wip",
+      "sha": "1060683c2ebd4af397f55f662f0e3be4c8a17020"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-cross-thread-coordination",
+      "sha": "2340d8c8cd4a1473f227335b264cf82f7d3977f3"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-netlogo-web-catalog",
+      "sha": "2340d8c8cd4a1473f227335b264cf82f7d3977f3"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-planar-contains-bounds",
+      "sha": "1ce2a381546f527b08a82a143df6a7757fdcc679"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-biology-b07",
+      "sha": "56bd761acdd765e47d33ed1f19a81dbc1664ffe7"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-cellular-b19",
+      "sha": "823a72fc7b55ce03de55001e127a358bc206a4c0"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-computing-b18",
+      "sha": "a0181e3634ab6245834f9087277dd0e8846110e1"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-disease-gene-b09",
+      "sha": "80e3907a4ec621e451161a8bc5e4318a143111e6"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-ecology-b06",
+      "sha": "743a9b33cd74b62c0083dc5e28725817b27fafc4"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-economics-b03",
+      "sha": "c06aff11bf0f62c0621def6d04e22a9d803a3a92"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-evolution-b08",
+      "sha": "552a04b4989b2eb850b8ccbd4a34e34e467d2302"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-grid-batch",
+      "sha": "f06704109bb041642fff9930806dcd9826d07c72"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-materials-b11",
+      "sha": "6bddf8d3defb549aa6d0de98bf7ab5919dd7c214"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-probability-b17",
+      "sha": "c8dc7a7ea287a16f9858ea54fb2e914c4d71fd34"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-social-b02",
+      "sha": "d8c5e6630cca3e7ff6d1b4c1920437ece2457342"
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-transport-b04",
+      "sha": "11ca9fca9e9b3431f9c27df8d1f263f2ea315e03"
+    }
+  ],
+  "counts": {
+    "localBranches": 3,
+    "remoteRefsIncludingSymbolicHEAD": 16,
+    "archiveTags": 17,
+    "stashes": 1,
+    "worktrees": 3
+  },
+  "payloadMatrix": [
+    {
+      "ref": "refs/remotes/origin/experiment/netlogo-web-catalog",
+      "sha": "49da93919367c8294f4135267dd1ba8e9ce8e013",
+      "changedPaths": 0,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 0
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/planar-contains-bounds",
+      "sha": "1ce2a381546f527b08a82a143df6a7757fdcc679",
+      "changedPaths": 26,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 0
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-biology-b07",
+      "sha": "56bd761acdd765e47d33ed1f19a81dbc1664ffe7",
+      "changedPaths": 224,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 6
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-cellular-b19",
+      "sha": "823a72fc7b55ce03de55001e127a358bc206a4c0",
+      "changedPaths": 188,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 7
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-computing-b18",
+      "sha": "a0181e3634ab6245834f9087277dd0e8846110e1",
+      "changedPaths": 181,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 14
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-disease-gene-b09",
+      "sha": "80e3907a4ec621e451161a8bc5e4318a143111e6",
+      "changedPaths": 261,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 11
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-ecology-b06",
+      "sha": "743a9b33cd74b62c0083dc5e28725817b27fafc4",
+      "changedPaths": 328,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 6
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-economics-b03",
+      "sha": "c06aff11bf0f62c0621def6d04e22a9d803a3a92",
+      "changedPaths": 233,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 4
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-evolution-b08",
+      "sha": "552a04b4989b2eb850b8ccbd4a34e34e467d2302",
+      "changedPaths": 274,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 8
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-grid-batch",
+      "sha": "f06704109bb041642fff9930806dcd9826d07c72",
+      "changedPaths": 49,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 5
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-materials-b11",
+      "sha": "6bddf8d3defb549aa6d0de98bf7ab5919dd7c214",
+      "changedPaths": 150,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 16
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-probability-b17",
+      "sha": "c8dc7a7ea287a16f9858ea54fb2e914c4d71fd34",
+      "changedPaths": 259,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 17
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-social-b02",
+      "sha": "d8c5e6630cca3e7ff6d1b4c1920437ece2457342",
+      "changedPaths": 223,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 7
+    },
+    {
+      "ref": "refs/remotes/origin/experiment/selected-transport-b04",
+      "sha": "11ca9fca9e9b3431f9c27df8d1f263f2ea315e03",
+      "changedPaths": 126,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 9
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/city-library",
+      "sha": "dfd0584d6c72fd63dc7f68ba3f737559d57c0fab",
+      "changedPaths": 0,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 0
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-cross-thread-coordination",
+      "sha": "2340d8c8cd4a1473f227335b264cf82f7d3977f3",
+      "changedPaths": 0,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 0
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-netlogo-web-catalog",
+      "sha": "2340d8c8cd4a1473f227335b264cf82f7d3977f3",
+      "changedPaths": 0,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 0
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-planar-contains-bounds",
+      "sha": "1ce2a381546f527b08a82a143df6a7757fdcc679",
+      "changedPaths": 26,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 0
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-biology-b07",
+      "sha": "56bd761acdd765e47d33ed1f19a81dbc1664ffe7",
+      "changedPaths": 224,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 6
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-cellular-b19",
+      "sha": "823a72fc7b55ce03de55001e127a358bc206a4c0",
+      "changedPaths": 188,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 7
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-computing-b18",
+      "sha": "a0181e3634ab6245834f9087277dd0e8846110e1",
+      "changedPaths": 181,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 14
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-disease-gene-b09",
+      "sha": "80e3907a4ec621e451161a8bc5e4318a143111e6",
+      "changedPaths": 261,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 11
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-ecology-b06",
+      "sha": "743a9b33cd74b62c0083dc5e28725817b27fafc4",
+      "changedPaths": 328,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 6
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-economics-b03",
+      "sha": "c06aff11bf0f62c0621def6d04e22a9d803a3a92",
+      "changedPaths": 233,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 4
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-evolution-b08",
+      "sha": "552a04b4989b2eb850b8ccbd4a34e34e467d2302",
+      "changedPaths": 274,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 8
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-grid-batch",
+      "sha": "f06704109bb041642fff9930806dcd9826d07c72",
+      "changedPaths": 49,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 5
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-materials-b11",
+      "sha": "6bddf8d3defb549aa6d0de98bf7ab5919dd7c214",
+      "changedPaths": 150,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 16
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-probability-b17",
+      "sha": "c8dc7a7ea287a16f9858ea54fb2e914c4d71fd34",
+      "changedPaths": 259,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 17
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-social-b02",
+      "sha": "d8c5e6630cca3e7ff6d1b4c1920437ece2457342",
+      "changedPaths": 223,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 7
+    },
+    {
+      "ref": "refs/tags/archive/20261106-consolidation-01/experiment-selected-transport-b04",
+      "sha": "11ca9fca9e9b3431f9c27df8d1f263f2ea315e03",
+      "changedPaths": 126,
+      "missingPaths": [],
+      "missingCount": 0,
+      "differentFinalPaths": 9
+    }
+  ],
+  "missingCount": 0,
+  "modelExampleTestDifferences": {
+    "total": 91,
+    "exactDonorMatchesToPreTerminology2340d8c": 90,
+    "additionalDifferences": 1,
+    "additionalExplanation": "tests/selected-biology-a.test.ts: catalog adds a 20000ms timeout to the 1000-tick test; no lost assertion. All 91 paths belong to authorized ec97d52 terminology changes."
+  },
+  "coordination": {
+    "head": "dd36ad23927d8d188bb4a8f34c9741b56ee2d1e7",
+    "worktreeClean": true,
+    "exclusiveCommits": [
+      "9f94ccf",
+      "dd36ad2"
+    ],
+    "changedPath": "docs/development/cross-thread-coordination.md",
+    "payloadAlreadyIntegrated": true,
+    "catalogExtra": "215-script correction, malformed table row fix, Integrator execution outcome",
+    "recommendation": "Do not cherry-pick or overwrite. Optional ours merge may mark ancestry after exact tree verification; not needed for payload and not performed.",
+    "ownerScope": "Coordinator owns its document and separate bound worktree; no coordinator binding/removal release documented.",
+    "removalRecommendation": "Retain coordinator worktree until explicit owner handoff and binding release; document lines 109/179 protect active coordinator. Clean state and integrated content are insufficient removal authorization."
+  },
+  "stash": {
+    "ref": "stash@{0}",
+    "archiveTag": "archive/20261106-consolidation-01/ecology-parent-renderer-wip",
+    "paths": [
+      "ui/compose.ts",
+      "ui/views/chart.ts"
+    ],
+    "disposition": "Archived superseded parent renderer copies; do not replay over newer renderer."
+  },
+  "priorEvidence": [
+    "docs/development/consolidation-evidence/remaining-patch-audit.json",
+    "docs/development/consolidation-evidence/branch-payload-integrity.json"
+  ],
+  "limits": "Read-only Git/file audit. No fetch, merge, worktree mutation, runtime checks or independent approval. Shared infrastructure differences classified with prior consolidation audit; image/XML/gzip integrity uses prior recorded byte-level audit."
+}

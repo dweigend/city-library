@@ -1,16 +1,83 @@
 # City Library work plan
 
-Updated: 5 November 2026. Status: **A1, bounded A2a and the A5a non-spatial Graph kernel implemented and verified**. Fifteen frozen public scripts preceded their runtime changes. The current 83-test suite, type/build/package-consumer checks and lab browser acceptance pass. Network diffusion now demonstrates persistent contacts and topology-dependent propagation through the same headless model. A2b/A3/A4 and remaining A5–A8 contracts stay open; see [A5a evidence](docs/development/a5a-evidence.md).
+Updated: 7 November 2026. This plan describes the integration branch `experiment/netlogo-web-catalog`. The consolidation baseline is `49da939`; readable authoring and catalog migration include the independently rechecked callback correction `d069be3`. This work has not been merged into `main`. Status below separates implemented code, executed checks and independent acceptance.
 
 ## Reading order and ownership
 
-[README.md](README.md) introduces the product. This plan owns work areas, priorities, deliverables, and acceptance gates. [Design decisions](docs/DESIGN.md) owns current boundaries and authoring conventions. [AGENTS.md](AGENTS.md) contains stable working instructions.
+[README.md](README.md) introduces the product. This plan owns scope, priorities, sequencing and acceptance gates. [System architecture](docs/ARCHITECTURE.md) owns domain boundaries and contracts; [UI design](docs/DESIGN.md) owns UI rules. [AGENTS.md](AGENTS.md) contains working instructions. Historical slice assignments and evidence retain their original checkpoint context; they do not define today's Lab defaults or current test totals.
+
+## Current implementation and evidence
+
+- **Headless core:** Agent/World lifecycle and execution, seeded Random and continuation, bounded spatial movement/perception, Grid/Field neighborhoods/occupancy/diffusion, Graph kernel/copy/routing/analysis/generation, planar geometry and statistics. Public exports are defined in `index.ts`; implemented subsets do not establish full Agent Loom parity. See [Copy/Random integration](docs/development/copy-random-integration.md), [Tijuana integration](docs/development/tijuana-integration.md) and the [core API inventory](docs/development/coverage.md). The inventory still needs reconciliation with later slices.
+- **Catalog:** 125 paired experiment entries are present. The binding delivery scope remains exactly 200 selected models; no complex selected entry may be silently dropped. All 200 research dossiers are integrated. Entry count and research completion do not establish scientific or independent acceptance.
+- **UI:** the shared Svelte runtime, renderers and foundation are integrated as a WIP checkpoint. Existing public `defineUI` syntax is preserved. The legacy Bun host remains available. The user has authorized the missing shared authoring capabilities, including flat grouping; their frozen contract, runtime delivery and browser acceptance are tracked separately below. Taxi Cabs now uses public grouping and model reporters without a private mount patch or host exception.
+- **Consolidation:** accepted donor changes and evidence are integrated, archived heads preserve donor history, and 13 released donor worktrees were removed. `main` and its existing uncommitted work were preserved. See the [consolidation report](docs/development/consolidation-report.md).
+- **Recorded checks:** the syntax-extension source `1f48e05` passed the complete local workflow: 584 tests / 150791 expectations across 68 files, 229 public scripts, TypeScript projects, Svelte checking, library build and the packed Bun/Node/ambient-free TypeScript consumer. The Svelte production build passed with existing chunk-size warnings. A GitHub run then exposed the existing Sunflower scenario's five-second timeout; `944773a` changes only that test's time budget. Post-correction results and current remote-CI limits are in the [syntax report](docs/development/syntax-refactor-report.md) and its check record.
+- **Acceptance limits:** fresh actual-browser checks cover all 125 catalog setups and 124 enabled one-step actions, plus forty new both-host fixture flows and production Wealth/Taxi interactions. Twelve fixture screenshots received independent actual-pixel inspection. These technical and scoped visual results do not establish scientific model parity or complete accessibility. Earlier provider failures remain historical and supply no approval.
+
+The [progress summary](experiments/catalog/progress-summary.json) still records the older 105-model checkpoint: 103 headless-verified, 105 target-browser-verified/baseline-compared and one independently accepted model. Later batches are integrated, so these numbers must be reconciled from per-model evidence before publishing an updated acceptance total. Do not infer that all 125 entries have completed the recorded stages.
+
+## Immediate priorities
+
+1. **Reconcile the catalog ledger.** Incorporate the integrated B08/B09 evidence and remaining batch gates into the row-level ledger and summary. Resolve differences between present entries and recorded stages without raising counts from code presence alone. Preserve the fixed selection and all source/browser/review limitations.
+2. **Finish Svelte acceptance.** Verify remaining affected controls, renderer lifecycles and model switching in real Chromium. Retain setup/live separation, drawing/repeat behavior and scientific colors. The readable-authoring contract and Taxi migration are implemented; retain the verified behavior while resolving fresh review findings. Obtain independent review of actual desktop/narrow light/dark screenshots; document actual PNG dimensions and image-access blockers. Do not claim complete migration or visual approval from source review or smoke checks.
+3. **Complete the selected 200 models.** Deliver missing implementations and outstanding headless, source-baseline, target-browser and independent review gates. Use the [selected-model assignment](docs/development/netlogo-web-catalog-plan.md) for scope and the [per-model acceptance contract](docs/development/netlogo-model-acceptance.md) for required evidence; its historical checkpoint prose does not supersede current integration records.
+4. **Reconcile remaining documentation.** Update operation-level coverage and architecture export descriptions against delivered public contracts. Replace historical current-Lab instructions and broken legacy paths. Retain provenance and original evidence without presenting old assignments as active work.
+5. **Continue bounded core delivery.** Resolve remaining Agent Loom contracts through example-first slices. Agenda/advanced execution, full RNG compatibility, paths, generic Input/History, study execution, codecs and complete continuation remain broader targets. Inspect actual exports and evidence before declaring an operation missing or complete.
+
+## Pre-main readable-authoring checkpoint
+
+The [assignment](docs/development/pre-main-authoring-assignment.md) covers public model/UI readability, shared UI capabilities, encapsulation and motivation-led documentation. This work does not authorize a main merge, reduce the selected 200-model scope or raise scientific acceptance counts.
+
+- Reader documentation starts with city experiments and sustainability questions, then offers actual run/model-writing paths. The approved diagram is unchanged.
+- Four model factories show their execution flow upfront; Taxi exposes pure occupancy/income reporters. Their public examples preceded runtime and existing seeded behavior was preserved.
+- Five UI author tasks preceded implementation. Separate refreezes corrected browser helpers, asynchronous settling and compiler diagnostic placement while retaining historical manifests and expectations.
+- Typed keyed live bindings, concise setup, flat groups, monitor formatters and categorical/labelled charts work through common normalization in both adapters. All 125 entries were inspected/migrated; an already-simple entry needed no source change.
+- Both-host browser checks cover the five public examples, overlap/getter precedence and nine additional chart/error/recovery fixtures each. Real failures in reactive error reporting, restart ordering, narrow chart labels and live network themes were corrected and retested.
+- The fresh Svelte catalog smoke executed 125 setups and 124 valid one-step actions, with no per-model legacy fallback. Tijuana correctly retains its cityscape precondition. Six richer flows, lifecycle switching and desktop/narrow light/dark captures are retained in [catalog browser evidence](docs/development/authoring-catalog-browser/).
+- An independent agent actually inspected the captures and closed its three visual findings. Its [review](docs/development/authoring-review/independent-visual-review.md) approves only the inspected authoring states, not complete accessibility or scientific parity.
+- The [pre-boundary-correction local check](docs/development/authoring-final-checks/checks.json) passed 580 tests / 150783 assertions and all 224 public scripts, build and packed consumer. Astra then reproduced two uncovered session errors. Correction `d069be3` passes 11 targeted tests / 53 expectations, full typecheck, Svelte build and the new real-browser error matrix; the [complete post-correction check](docs/development/authoring-boundary-final-checks/checks.json) passed 583 tests / 150789 assertions, all 224 public scripts, typechecks, build and the actual packed consumer. The Svelte production build passed with retained chunk-size warnings. Independent source rechecks and remote CI remain separate gates.
+
+### Syntax extension delivery
+
+The cross-thread review was implemented through the [five new public examples](examples/ui-authoring-next/README.md), frozen in `2dacc27` before runtime `aa58643` and catalog refactor `1f48e05`. The [report](docs/development/syntax-refactor-report.md) records decisions, code samples, actual screenshots and evidence limits.
+
+- [x] **Correlate monitor formatter types.** Scalar annotations such as `format: (value: number) => value.toFixed(3)` avoid runtime guards and reject mismatched numeric, text and union getters, including optional formatters. Mixed arrays retain the old union context for unannotated callbacks. General automatic scalar inference was not established by compiler experiments and is not promised; fixed tuple overloads and another builder syntax were rejected. This is an explicit design decision, not delivery of the earlier unannotated proposal.
+- [x] **Expose readable observations.** Both UI entrypoints export `Observation<typeof model>` and `Observation<Instance>`. Ninety nested type expressions across 87 experiment files were replaced. Positive and negative public type examples verify concrete observation members and invalid input rejection.
+- [x] **Decide selection identity.** Keep compatible `string | null`, with one semantic projected ID per entity within a mounted experiment, consistent across views. Authors namespace overlapping source IDs. Actual-browser examples distinguish agent/cell source-ID collisions, reuse a cell ID across views, disable stale selection and clear it on restart. This is a presentation contract, not a second allocator or a claim that the host can infer semantic identity.
+- [x] **Adopt raw monitor values.** Forty-nine UI files separate display formatting from scalar reports, preserving precision, percentages, missing-value reasons and trailing-zero behavior. Old/new callbacks produced 1,353 identical monitor displays on 303 real observations. Scientific model rounding, table strings and network labels were not mechanically rewritten.
+- [x] **Improve projection readability.** Wealth, Three Doors and Language Change use named color mappings with identical view projections on nine actual observations. Wealth's typed agent projection no longer needs its shape assertion; meaningful literal tuples remain.
+- [x] **Keep one recommended authoring path.** Current entries use keyed live declarations; existing live arrays and broad extracted `UISpec` remain compatibility contracts. The public UI docs explain the scalar annotation and selection rules.
+
+Astra high granted scoped runtime/type source approval, a separate native reviewer approved the catalog source diff, and an independent browser reviewer passed 40 fixture flows and inspected twelve images. Source review does not establish universal TypeScript soundness under deliberate generic widening, scientific model parity or a main merge. Broader model-script readability remains below as a separate open task.
+
+### Remaining independent merge audit
+
+- [x] **P1 · callback-error ownership consistency.** Astra high reproduced owner/observation/epoch divergence when live `enabled` throws during restart. Correction `d069be3` validates the candidate and publishes callback-free current-owner state on failure. First setup, restart and post-preflight failure pass real-model tests and actual browser checks. Fresh targeted Astra high and Gemini high source rechecks close this correction.
+- [x] **P2 · presentation edits after formatter failure.** Correction `d069be3` protects publication during setup/speed edits and preserves primary error, current draft and recovery. Browser checks pass without PageErrors; the targeted independent source rechecks closed this correction.
+- [x] **Fresh implementation feedback.** Gemini and Astra high supplied independent feedback; both targeted source rechecks close the later callback corrections. Independent pixel reviews close the inspected visual findings. Exact approval scope is retained in the [slice evidence](docs/development/readable-authoring-evidence.md); scientific/model acceptance is separate.
+- [ ] **Final integrated verification.** The syntax source check passed 584 tests / 150791 expectations, 229 public scripts, typechecks, build and packed consumers. Svelte build passed with existing chunk-size warnings. A GitHub run exposed the existing Sunflower scenario exceeding the default five-second test timeout; `944773a` changes only its timeout to twenty seconds, with unchanged assertions. The affected file passes 10 tests / 74 expectations. The complete post-timeout rerun also passed with the same 584 tests / 150791 expectations and 229 scripts; final remote CI remains a separate gate recorded in the syntax evidence.
+- [ ] **Further model/readability coverage.** Continue targeted review of longer model scripts beyond the four reference refactors. Extract focused reusable operations only where actual examples justify them; preserve source rules and avoid a new model engine or a hard line limit.
+- [ ] **Documentation consistency.** Reconcile current UI availability and older assignment status with this implemented slice; keep historical evidence intact. Review remaining prose for a clear human explanation of the project's motivation rather than internal audit vocabulary.
+- [ ] **Public domain-function interpretation.** The [Tijuana procedure matrix](docs/development/model-function-encapsulation.md) distinguishes public action paths from private procedures. The normative breadth of direct procedure access remains an explicit decision; no arbitrary helper exports or silent weakening of the rule.
+- [ ] **Catalog ledger and complete scope.** Reconcile later batches with per-model evidence, preserve source/scientific/review limits, and fulfill the fixed 200-model delivery or obtain an explicit decision on a bounded main checkpoint. UI smoke checks do not complete these gates.
+- [ ] **Main authorization.** Keep the integration PR as draft until its agreed scope and remaining acceptance are ready. Merge requires explicit user approval.
+
+At each major checkpoint, obtain a fresh independent remaining-work audit and update these tasks. Implementation, browser behavior, scoped visual review, scientific acceptance and main-merge approval are separate states.
+
+## UI and model delivery rules
+
+The [UI specification](docs/ui/README.md), [API table](docs/ui/api-table.md) and [API reference](docs/ui/api-reference.md) distinguish implemented, experimental and candidate syntax. Unaccepted candidates are not delivered APIs. Keep public `ui.ts` declarations simple, projections readable and model changes behind defined actions.
+
+Follow the [binding UI system rules](docs/DESIGN.md#binding-ui-system-rules): Svelte/shadcn-svelte, encapsulated modules, shared components/tokens, external CSS and `app.css` at most 100 physical lines. Every UI slice requires shell checks, real-browser interactions and independent inspection of actual screenshots, with findings resolved and affected checks repeated. Preserve explicit scientific colors and existing author contracts. The [migration assignment](docs/development/svelte-ui-migration.md) retains the frozen compatibility examples and acceptance requirements; the consolidation report records the later runtime integration.
+
+Use Antigravity `gemini-4-argon` for independent substantial design/transfer reviews, matching the current AGENTS.md instruction, after confirming availability. Earlier Gemini 3.8 Flash reviews retain their original historical scope. Record findings, author responses and approval separately. Do not substitute silently or treat historical quota failures as approval.
 
 ## Six work areas
 
 The engine is one composable library organized into six recognizable areas. Agent Loom is the source of the Simulation authoring direction, not a second product to integrate. Graphs is a separate area, independent of spatial coordinates, grids and World. The work areas do not prescribe package boundaries or directory layers.
 
-All entries are planned. P0 = coherent preparation; P1 = first standalone capabilities; P2 = second variants and static composition; P3 = live city integration and broader models. Priority describes bounded slices rather than the delivery of an entire area.
+This table defines target scope and ownership, not completion of every listed capability. P0 = coherent preparation; P1 = first standalone capabilities; P2 = second variants and static composition; P3 = live city integration and broader models. Priority describes bounded slices rather than the delivery of an entire area.
 
 | ID | Area | Planned modules and tasks | Ownership and dependencies | First acceptance milestone | Priority |
 | --- | --- | --- | --- | --- | --- |
@@ -20,12 +87,6 @@ All entries are planned. P0 = coherent preparation; P1 = first standalone capabi
 | C04 | Generation | Terrain, street layouts/junctions/corridors, parcels, zoning/envelopes, alternative building generators, floors/parts, assemblies and architectural solver applications | Uses only selected C02/C03 tools and explicit random inputs. Returns descriptions without residents, rent or invented demand. Solver kinds remain distinct. Planning/feasibility is a research-led subtrack with explicit assumptions. | One standalone house, a second real variant, then a static neighborhood with reservation/setback and partial-result checks. Accept a separate feasibility scenario contract before implementing its solver. | P1 → P3 |
 | C05 | City Models | Traffic/following/queues/signals/travel, households, housing/jobs allocation, daily routines, relocation, economy/stocks/transfers/markets, decisions/society and infrastructure/supply | Owns domain assumptions and canonical allocations/balances/demand. Detached calculators need no World or geometry. Live models use C01, validated C03 routes and optional C04 descriptions. Street shape is not traffic; supply allocation is not physical simulation. | Bounded allocation with explicit unassigned households; one commuter on a validated spatial path; later two policies for the same task and a small capacity network with unmet demand. | P2 → P3 |
 | C06 | Data & Experiments | Parameters/input validation, model descriptions, metrics/statistics, bounded History, experiment series, one save/load area, versioned schemas/codecs and optional data targets | Input and loading are explicit writes; recording owns its buffer. Model time/identity remain C01's responsibility. A selected measurement record does not promise resumable model state. No UI definitions. | Validated model parameter, side-effect-free measurement and selected-data roundtrip; then two isolated experiment runs. Complete continuation requires its own state/behavior contract. | P2 → P3 |
-
-## Active UI refactor and reference-model validation
-
-The [binding UI specification](docs/ui/README.md), [API table](docs/ui/api-table.md) and [API reference](docs/ui/api-reference.md) own shared UI authoring contracts. Priorities are readability, defaults first, then necessary customization. Target syntax is not delivered until its public examples, implementation and checks pass; preserve the example-first gate and separate browser acceptance. Internal renderer and Svelte APIs are not public experiment-author contracts.
-
-The user authorized replacement of the historical Agend_Lab application. The [refactor assignment](docs/development/agent-lab-refactor.md) owns the shared top-level ui toolkit, ui/agent-lab application, automatically discovered experiments/*/{model.ts,ui.ts}, provenance and four NetLogo comparisons. This is active work, not completed acceptance. Existing frozen core examples and headless factories remain compatible. Required spatial/grid/observation capabilities must be explicit example-first core slices, not duplicate infrastructure hidden in experiments or UI. Runtime work follows consistency review and executable author examples; browser comparisons are separate evidence.
 
 ## Code quality
 
@@ -40,55 +101,6 @@ Random streams, numeric validation and focused solvers are independently usable 
 Kits are compositions within or across the six areas. A static neighborhood primarily composes C04 generators and C02 tools. A commuting kit combines C01/C03/C05; a supply kit uses C03/C05 and optional consumers. Every kit uses public APIs, canonical objects and caller-owned execution, with no hidden clock, population or shadow occupancy record.
 
 Description-to-live binding is an explicit integration task: C04 describes geometry; C01 coordinates lifecycle; C05 owns occupancy/travel consequences; C06 records supported state. The model composes those operations. Removing a building or entrance must resolve affected references and policies, not silently discard residents or preserve stale routes. Start with one bounded replacement case, not a universal registry framework.
-
-## Delivery sequence
-
-### Current focus: finish the agent modeling library incrementally
-
-Phase one delivers the complete [Agent Loom specification](docs/agent-loom/README.md) across C01, C02, C03 and C06. It takes priority over city generation. Agent/World/execution is the first delivery; completion covers all 309 operation/type entries in the 16 reference areas, including compatibility profiles, codecs, advanced algorithms, limits and shared types.
-
-| Step | Bounded result | Acceptance evidence | Status |
-| --- | --- | --- | --- |
-| A1 · First headless agent model | Direct typed Agent data, explicit World membership, caller-written step, Tick and synchronous run. Freeze creation/copy/delete and supported custom-state contracts before implementation; include only the Random closure actually required by World. | Small public script changes energy from 10 to 5 in five steps; a second World stays independent. Verify detach versus deletion, canonical identity, failed-step tick behavior, initial copy versus later reference assignment, reserved keys and invalid inputs. | Delivered bounded A1; see evidence |
-| A2 · Independent random streams | A2a delivers standard Mulberry uniform draws, sampling and continuation; A2b retains distributions, entropy and pinned MT compatibility. | Same continuation gives matching results; separate streams stay isolated; construction, observation and execution draw only when documented. | A2a delivered; independent review has no blockers; A2b remains open |
-| A3 · Spatial agents | Optional Space, geometry, movement/orientation and perception, followed by path continuation in a separate bounded slice. | Detached and world-owned agents obey declared dimensions, units and hard/wrapped boundaries. Queries preserve position, time and RNG. Non-spatial A1 model still runs. | Bounded spatial movement/perception delivered with reference-model slice; paths and broader A3 remain planned |
-| A4 · Grids and fields | Detached Grid/Field state, lookup and neighborhoods; then diffusion and explicit World participation. | Stable cell identities, declared boundary/order behavior, independent initial state and quantity conservation within a stated tolerance; occupancy queries use canonical agents. | Bounded Grid/Field lookup, neighborhoods, occupancy, diffusion and World membership delivered; broader A4 remains open |
-| A5 · Graphs | Non-spatial nodes/edges and membership first, then traversal/routing and selected analysis/generation families as separate slices. | Detached graph works without World/Space; nodes retain identity; detach/delete/copy rules hold; weighted costs and tie behavior are explicit. | Bounded A5a kernel and headless network diffusion delivered; remaining A5 planned |
-| A6 · Events and advanced execution | Agenda with caller dispatch; advanced activation only after its ordering contract is frozen. | Event tie order, horizon and budget behavior are verified; Agenda and World Tick remain distinct; no hidden clock. | Planned |
-| A7 · Inputs and observations | Bind validated inputs to existing properties; pure stats and bounded History. | Writes affect canonical state; observations do not mutate model/time/RNG; History owns detached samples with explicit eviction. | Histogram/Gini delivered; Input, remaining statistics and generic History remain planned |
-| A8 · Experiments and storage | Independent experiment runs and selected-data save/load first; declared model and study continuation require separate later slices. | Reordered runs preserve per-run results; validated roundtrip rejects unsupported data; exact continuation is accepted only against uninterrupted execution with a complete state inventory. | Planned |
-
-Before A1 implementation, record an operation-level inventory from the binding reference table, compare source algorithms with focused new work and external alternatives, and report any contract gaps or conflicts for explicit resolution. Build the runtime in this repository and verify its public behavior independently of source-project results. The first runtime slice also supplies its required toolchain, exports and tests. Do not create empty modules for later steps.
-
-Completion requires an explicit operation inventory covering every general reference area, including limits and public/shared types: each target operation/type must have a delivered public export, contract, executable example and target evidence. Deferred operations remain open work; exclusions and changes from the general reference scope require an explicit recorded decision. A small Agent implementation alone does not establish full Agent Loom completion. Compatibility profiles, broader graph algorithms, codecs and continuation specified by the reference remain target work, delivered in bounded slices. Substantial design or transfer work requires independent review; author checks do not count as independent approval.
-
-### Active A1 assignment
-
-The [A1 development assignment](docs/development/a1.md) freezes the public task, five example scripts, operation closure, supported-state rules, tests and a separate minimal HTML test host. The [complete delivery inventory](docs/development/coverage.md) tracks all 309 reference entries across 16 areas. Scripts were written and fingerprinted before runtime handoff; the initial public import failed as expected. Implementation must satisfy those scripts without adapting their accepted contracts.
-
-The root reference import `agent-loom` maps explicitly to the existing `city-library` package name for A1. Operation syntax and serialization identifiers remain unchanged. Future storage/Node subpaths remain open. The user explicitly requested the HTML test host; it consumes public operations outside the headless library and requires separate real-browser verification.
-
-A1 completion evidence: [checks, browser verification and review responses](docs/development/a1-evidence.md). The `gemini-4-argon` review found two copy-validation blockers, both fixed with regression tests; final author checks pass with 30 tests. This records remediation, not a second independent approval. A2a followed with five new scripts; A2b will likewise start with its own four or five scripts.
-
-The user-requested HTML visualization is an external test-host follow-up, not another library expansion phase. It renders selectable canonical-agent observations in an explicitly non-spatial layout and uses existing headless model actions only. See [visualization boundaries and evidence](docs/development/ui-visualization.md). Library code and the frozen A1 scripts remain unchanged.
-
-The subsequent user-authorized [Cytoscape visualization layer](docs/development/cytoscape.md) adds a network view to the external lab with separate application, DOM presentation, observation projection and renderer responsibilities. It visualizes existing agent observations and the last sampled Exchange pair only. Persistent relationships and A5 Graph remain future core work; view interactions must preserve model execution and RNG continuation.
-
-### Active A2a assignment
-
-The earlier bounded [A2a reproducible population dynamics](docs/development/a2a.md) expansion wrote five new public scripts and one reusable headless exchange composition before Random implementation. A2a covers numeric-seed Mulberry uniform draws, weighted/source-order/legacy sampling, in-place continuation, reseed/copy/local and raw double. Other distributions, entropy and the MT/NetLogo profile remain binding A2b work; the staged implementation must not advertise them as delivered.
-
-Author verification and remaining scope are recorded in [A2a evidence](docs/development/a2a-evidence.md); run bun run check for all ten public scripts and the current 60-test suite. The example starts 24 agents with 10 resource units each. Each caller-owned step samples two canonical World members and transfers one unit if the donor has any. Ordinary steps conserve total resources; explicit lifecycle edits are separate. The HTML test host imports this same composition and adds seed/population controls while preserving its layout. Selection and rendering are observations, not another simulation. Concurrent repository organization moved the existing host to Agend_Lab and its lifecycle model to models/agent-lab; this work preserves those paths and the existing six lifecycle tests.
-
-### Active A5a assignment
-
-The user requested substantial library progress and a real simulation with network effects. The [A5a assignment](docs/development/a5a.md) therefore brought forward an independent non-spatial Graph kernel and a headless network-diffusion composition. Five asserted public scripts were frozen before runtime implementation and now pass. Persistent graph contacts, synchronous propagation, disconnected communities, explicit bridges and hub-versus-ring effects are the default lab scenario. [Usage](docs/development/a5a-usage.md) and [acceptance evidence](docs/development/a5a-evidence.md) describe the delivered subset. A2b/A3/A4 remain open; graph algorithms, generators, spatial paths/ties and full World graph participation remain later work. The UI uses the same headless model and owns only presentation and explicit run controls.
-
-### Prepared domain layout
-
-The [domain layout and extension rules](docs/DESIGN.md#binding-domain-layout-and-extension-rules) define the source boundaries. All listed directories exist; empty leaf directories contain `.gitkeep`. Proposed TypeScript files are added only with working capabilities. The prepared layout itself delivered no runtime. A1 now adds working Agent/World/Random modules, explicit root exports, build/check commands and behavior tests within those boundaries; later domains remain prepared directories.
-
-Hexagonal topology remains a future extension. Phase one specifies square/cubic grids.
 
 ### Broader city milestones
 
@@ -116,18 +128,6 @@ Initially, examples may fail because their planned public exports do not exist. 
 
 A phase is complete only when all of its four or five scripts typecheck and run through public imports with their assertions enabled, alongside focused behavior and type tests. Keep earlier phases' examples passing as regression checks. Example execution does not replace edge-case tests or establish browser compatibility. Record actual commands and outcomes. Do not claim example acceptance while public entry-name mapping remains unresolved.
 
-### Historical A1 example briefs — subsequently delivered
-
-| Planned script | Author task and required result |
-| --- | --- |
-| `examples/a1/01-energy-model.ts` | Create an Agent with typed energy, attach it to a non-spatial World and run five steps: energy changes from 10 to 5 and tick from 0 to 5. |
-| `examples/a1/02-independent-worlds.ts` | Interleave two models; state, membership and clocks remain independent. Verify independent default Random identities and the accepted stream behavior, without construction-time draws. |
-| `examples/a1/03-membership-lifecycle.ts` | Attach original references, deduplicate a batch, reject foreign ownership atomically, detach without deleting, then explicitly delete an agent. Caller-owned collections retain their references. |
-| `examples/a1/04-copy-and-custom-state.ts` | Create agents from nested supported data, copy an agent into a detached living identity and verify the reference's copying rules; contrast initialization copying with later ordinary reference assignment. |
-| `examples/a1/05-execution-errors.ts` | Throw during a model step: earlier effects remain, the failed step adds no tick, and execution stops. Also demonstrate zero-step execution and same-World reentrancy rejection with explicit assertions. |
-
-These are the original task briefs. Their scripts and acceptance were subsequently delivered in A1; see the A1 assignment and evidence above. Their example-first ordering remains mandatory for new phases. Boundary/type tests cover reserved keys, iterator failures, thenables and numeric tick progress.
-
 ## Acceptance for every implementation slice
 
 1. Apply the example-first delivery gate: write and freeze the phase's four or five public scripts before runtime implementation; define the slice's author task and freeze inputs/results, units, bounds, defaults, mutation and failure behavior.
@@ -137,18 +137,13 @@ These are the original task briefs. Their scripts and acceptance were subsequent
 5. Use an independent agent review for substantial design/transfer work, record responses and distinguish author fixes from independent re-approval.
 6. Update implementation status, executable examples and remaining gaps. Old-source test reports do not count as target verification.
 
-## Technical setup and remaining backlog
+## Tooling and release boundaries
 
-| Setup task | When needed | Acceptance |
-| --- | --- | --- |
-| Deliver intentional exports within the accepted domain layout | First implementation slice | Domain directories and boundaries are already accepted and prepared. Export only delivered capabilities; add no empty module stubs or source-checkout paths. A1 maps the root name to city-library; future subpaths still require an explicit decision. |
-| Pin toolchain and development dependency policy | Before reproducible implementation checks | A1 pins Bun 1.4.2, TypeScript 7.0.2 and @types/bun 1.4.4 with a lockfile. Future upgrades require checks. |
-| Separate runtime and development typing | Before public library build | A1 separates ambient-free library types, Bun development scripts and DOM UI checking; the packed TypeScript consumer verifies no host ambient dependency. |
-| Add focused test/build/check commands and CI | As their real tasks arrive | Commands execute actual checks; no placeholder success scripts. A1 introduces typecheck/test/examples/build/consumer/check commands; CI remains open. |
-| Verify a packed downstream consumer | First distributable entry | Supported TypeScript/runtime/bundler consumers import the package rather than its checkout internals. A1 checks a packed archive on Bun 1.4.2, Node 26.8.2 and TypeScript 7.0.2; browser UI evidence is separate. |
-| Decide formatting/linting scope | First code slice | Reuse a small configured toolchain with meaningful checks; no speculative pipeline. |
+Use the pinned Bun workflow and lockfile. `bun run check` runs typechecks (including Svelte), behavior tests, registered public examples, the library build and the packed public consumer. `bun run build:ui:svelte` checks the separate production UI build. Run checks appropriate to each change and record actual results; browser evidence remains separate from shell checks.
 
-Keep the package publication guard (`private: true`) until release is explicitly in scope. Web-oriented is a target; browser/runtime compatibility must be demonstrated rather than inferred from TypeScript.
+Keep headless package exports free of UI/framework/host ambient dependencies and verify downstream consumers when public entries or packaging change. The root package is `city-library`; future subpaths require explicit contracts. GitHub CI is defined in `.github/workflows/check.yml` with stable Library checks and Svelte build jobs; a local command pass does not prove a hosted CI run or configured branch protection. Formatting/linting scope remains a separate tooling decision.
+
+Keep `private: true` until publication is explicitly authorized. Do not merge into `main`, publish or remove active worktrees as an incidental part of implementation or documentation updates.
 
 ## Scope boundaries and unresolved decisions
 
@@ -156,4 +151,4 @@ Rendering, materials, symbols, cameras, widgets, picking, browser editors and pr
 
 The first-generator contract and city-domain admission/replacement remain later slice decisions. Numerical precision, coordinate conversion, packaging, runtime support, rights/notices and checkpoint details require slice decisions only where the binding target leaves them unspecified; specified contracts remain mandatory. Geometric capabilities may use declared abstract units; city-domain admission must make metric conversion explicit. Shared infrastructure requires a concrete use case.
 
-The [Markdown API specification](docs/agent-loom/README.md) defines phase one. Track implementation status against public examples and behavior checks, not source-project results.
+The [Markdown API specification](docs/agent-loom/README.md) defines phase one: all 309 operation/type entries across 16 reference areas, including compatibility profiles, codecs, advanced algorithms, limits and shared types. Completion requires a delivered public export, contract, executable example and target evidence for each entry. Deferred operations remain open; exclusions or scope changes require an explicit recorded decision. Hexagonal topology remains a future extension; phase one specifies square/cubic grids. Track implementation status against public examples and behavior checks, not source-project results.

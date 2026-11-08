@@ -1,0 +1,102 @@
+{
+  "slug": "taxi-cabs",
+  "name": "Taxi Cabs",
+  "catalogPath": "Sample Models/Social Science/Taxi Cabs",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Taxi%20Cabs.nlogox",
+  "deliveryBatch": "B04",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether fleet size, spatial demand and fares change taxi utilization and profitability. In NetLogo's Taxi Cabs model, taxis cruise a zoned road grid, pick up waiting passengers and travel to requested destinations using Manhattan-distance routing. The selected literature connects this mechanism to spatial taxi-market supply and demand: network taxi modeling connects cruising and passenger service [1]; fare and fleet regulation interact with spatial demand equilibrium [2]; agent-based taxi simulation provides a directly comparable modeling approach [3]. Stylized districts, pickup encounters and routing omit dispatch platforms and many driver decisions; simulated earnings require local cost and demand calibration. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Taxi%20Cabs.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Taxi%20Cabs.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/taxi-cabs.nlogox",
+    "sha256": "150f739ec217fbb199d86eca783922a79acceeb6504e44add1921d934d3d4a30",
+    "citation": "For the model itself: * Dongping, Z. and Wilensky, U. (2019). NetLogo Taxi Cabs model. http://ccl.northwestern.edu/netlogo/models/TaxiCabs. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Info does not identify a scientific original; related publications below are contextual comparisons, not asserted source derivations.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/taxi-cabs.nlogox"
+  },
+  "publications": [
+    {
+      "id": "taxi",
+      "creatorRole": "author",
+      "authors": [
+        "Hai Yang",
+        "S.C Wong"
+      ],
+      "title": "A network model of urban taxi services",
+      "year": 1998,
+      "venue": "Transportation Research Part B: Methodological",
+      "doi": "10.1016/s0191-2615(97)00042-8",
+      "url": "https://doi.org/10.1016/s0191-2615(97)00042-8",
+      "relevance": "network taxi modeling connects cruising and passenger service",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2FS0191-2615%2897%2900042-8",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/taxi-verified.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/taxi-verified.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "yangtaxi",
+      "creatorRole": "author",
+      "authors": [
+        "Hai Yang",
+        "S.C. Wong",
+        "K.I. Wong"
+      ],
+      "title": "Demand–supply equilibrium of taxi services in a network under competition and regulation",
+      "year": 2002,
+      "venue": "Transportation Research Part B: Methodological",
+      "doi": "10.1016/s0191-2615(01)00031-5",
+      "url": "https://doi.org/10.1016/s0191-2615(01)00031-5",
+      "relevance": "fare and fleet regulation interact with spatial demand equilibrium",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2FS0191-2615%2801%2900031-5",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/yangtaxi-verified.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/yangtaxi-verified.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "taxiabm",
+      "creatorRole": "author",
+      "authors": [
+        "Josep Maria Salanova Grau",
+        "Miquel Angel Estrada Romeu"
+      ],
+      "title": "Agent Based Modelling for Simulating Taxi Services",
+      "year": 2015,
+      "venue": "Procedia Computer Science",
+      "doi": "10.1016/j.procs.2015.05.162",
+      "url": "https://doi.org/10.1016/j.procs.2015.05.162",
+      "relevance": "agent-based taxi simulation provides a directly comparable modeling approach",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.procs.2015.05.162",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/taxiabm-verified.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/taxiabm-verified.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

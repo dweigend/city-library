@@ -1,0 +1,1000 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Formation+flight+of+birds+Lissaman+Shollenberger+1970&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1130178,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                6
+              ]
+            ],
+            "date-time": "2026-05-06T03:01:43Z",
+            "timestamp": 1778036503573,
+            "version": "3.51.4"
+          },
+          "reference-count": 18,
+          "publisher": "The Company of Biologists",
+          "issue": "18",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    3,
+                    15
+                  ]
+                ],
+                "date-time": "2017-03-15T00:00:00Z",
+                "timestamp": 1489536000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 181,
+              "URL": "http://www.biologists.com/user-licence-1-1"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                9,
+                15
+              ]
+            ]
+          },
+          "DOI": "10.1242/jeb.148114",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                9,
+                21
+              ]
+            ],
+            "date-time": "2016-09-21T21:28:59Z",
+            "timestamp": 1474493339000
+          },
+          "page": "2778-2780",
+          "source": "Crossref",
+          "is-referenced-by-count": 6,
+          "title": [
+            "Lissaman, Shollenberger and formation flight in birds"
+          ],
+          "prefix": "10.1242",
+          "volume": "219",
+          "author": [
+            {
+              "given": "Steve",
+              "family": "Portugal",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Royal Holloway University of London"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "237",
+          "reference": [
+            {
+              "key": "2021042510242351500_JEB148114C1",
+              "doi-asserted-by": "publisher",
+              "first-page": "158",
+              "DOI": "10.1093/beheco/arg109",
+              "article-title": "Kin selection and reciprocity in flight formation?",
+              "volume": "15",
+              "author": "Andersson",
+              "year": "2004",
+              "journal-title": "Behav. Ecol"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C2",
+              "doi-asserted-by": "publisher",
+              "first-page": "41",
+              "DOI": "10.1016/0022-5193(81)90055-2",
+              "article-title": "Energy savings through formation flight? A re- examination of the vee formation",
+              "volume": "93",
+              "author": "Badgerow",
+              "year": "1981",
+              "journal-title": "J. Theor. Biol"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C3",
+              "doi-asserted-by": "publisher",
+              "first-page": "1146",
+              "DOI": "10.1126/science.193.4258.1146",
+              "article-title": "Drag reduction by formation movement in spiny lobsters",
+              "volume": "193",
+              "author": "Bill",
+              "year": "1976",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C4",
+              "doi-asserted-by": "publisher",
+              "first-page": "550",
+              "DOI": "10.1016/j.tree.2016.03.018",
+              "article-title": "Bringing a time-depth perspective to collective animal behaviour",
+              "volume": "31",
+              "author": "Biro",
+              "year": "2016",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "2021042510242351500_JEB148114C5",
+              "doi-asserted-by": "publisher",
+              "first-page": "513",
+              "DOI": "10.1038/nature03236",
+              "article-title": "Effective leadership and decision making in animal groups on the move",
+              "volume": "433",
+              "author": "Couzin",
+              "year": "2005",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C6",
+              "doi-asserted-by": "crossref",
+              "first-page": "251",
+              "DOI": "10.1242/jeb.189.1.251",
+              "article-title": "Energy savings information flight of pink-footed geese",
+              "volume": "189",
+              "author": "Cutts",
+              "year": "1994",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "2021042510242351500_JEB148114C7",
+              "doi-asserted-by": "publisher",
+              "first-page": "181",
+              "DOI": "10.1111/j.1365-2907.1991.tb00292.x",
+              "article-title": "Dolphin swimming\u2014a review",
+              "volume": "21",
+              "author": "Fish",
+              "year": "1991",
+              "journal-title": "Mammal Rev"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C8",
+              "doi-asserted-by": "publisher",
+              "first-page": "494",
+              "DOI": "10.2307/4084469",
+              "article-title": "The Vee formation of Canada geese",
+              "volume": "91",
+              "author": "Gould",
+              "year": "1974",
+              "journal-title": "Auk"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C9",
+              "doi-asserted-by": "publisher",
+              "first-page": "248",
+              "DOI": "10.1016/j.cub.2008.12.051",
+              "article-title": "Social feedback and the emergence of leaders and followers",
+              "volume": "19",
+              "author": "Harcourt",
+              "year": "2009",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "2021042510242351500_JEB148114C10",
+              "doi-asserted-by": "publisher",
+              "first-page": "321",
+              "DOI": "10.1016/0022-5193(83)90110-8",
+              "article-title": "Aerodynamic aspects of formation flight in birds",
+              "volume": "104",
+              "author": "Hummel",
+              "year": "1983",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "2021042510242351500_JEB148114C11",
+              "doi-asserted-by": "crossref",
+              "first-page": "1566",
+              "DOI": "10.1126/science.1088295",
+              "article-title": "Fish exploiting vortices decrease muscle activity",
+              "volume": "302",
+              "author": "Liao",
+              "year": "2003",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C12",
+              "doi-asserted-by": "publisher",
+              "first-page": "1003",
+              "DOI": "10.1126/science.168.3934.1003",
+              "article-title": "Formation flight of birds",
+              "volume": "168",
+              "author": "Lissaman",
+              "year": "1970",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C13",
+              "doi-asserted-by": "publisher",
+              "first-page": "778",
+              "DOI": "10.1038/282778a0",
+              "article-title": "Flight formations in geese and other birds",
+              "volume": "282",
+              "author": "May",
+              "year": "1979",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C14",
+              "doi-asserted-by": "publisher",
+              "first-page": "890",
+              "DOI": "10.1038/nature08891",
+              "article-title": "Hierarchical group dynamics in pigeon flocks",
+              "volume": "464",
+              "author": "Nagy",
+              "year": "2010",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C15",
+              "doi-asserted-by": "publisher",
+              "first-page": "399",
+              "DOI": "10.1038/nature12939",
+              "article-title": "Upwash exploitation and down- wash avoidance by flap phasing in ibis formation flight",
+              "volume": "505",
+              "author": "Portugal",
+              "year": "2014",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C16",
+              "doi-asserted-by": "publisher",
+              "first-page": "697",
+              "DOI": "10.1038/35099670",
+              "article-title": "Energy saving in flight formation",
+              "volume": "413",
+              "author": "Weimerskirch",
+              "year": "2001",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C17",
+              "doi-asserted-by": "publisher",
+              "first-page": "494",
+              "DOI": "10.1038/nature10164",
+              "article-title": "Flying in a flock comes at a cost in pigeons",
+              "volume": "474",
+              "author": "Usherwood",
+              "year": "2011",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2021042510242351500_JEB148114C18",
+              "doi-asserted-by": "publisher",
+              "first-page": "2115",
+              "DOI": "10.1073/pnas.1413589112",
+              "article-title": "Matching times of leading and following suggest cooperation through direct reciprocity during V-formation flight of northern bald ibis",
+              "volume": "112",
+              "author": "Voelkl",
+              "year": "2015",
+              "journal-title": "Proc. Nat. Acad. Sci USA"
+            }
+          ],
+          "container-title": [
+            "Journal of Experimental Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://journals.biologists.com/jeb/article-pdf/219/18/2778/1892500/jeb148114.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "http://journals.biologists.com/jeb/article-pdf/219/18/2778/1892500/jeb148114.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                4,
+                25
+              ]
+            ],
+            "date-time": "2021-04-25T11:52:55Z",
+            "timestamp": 1619351575000
+          },
+          "score": 60.837433,
+          "resource": {
+            "primary": {
+              "URL": "https://journals.biologists.com/jeb/article/219/18/2778/15470/Lissaman-Shollenberger-and-formation-flight-in"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                9,
+                15
+              ]
+            ]
+          },
+          "references-count": 18,
+          "journal-issue": {
+            "issue": "18",
+            "published-print": {
+              "date-parts": [
+                [
+                  2016,
+                  9,
+                  15
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1242/jeb.148114",
+          "ISSN": [
+            "1477-9145",
+            "0022-0949"
+          ],
+          "issn-type": [
+            {
+              "value": "1477-9145",
+              "type": "electronic"
+            },
+            {
+              "value": "0022-0949",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                9,
+                15
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T00:38:29Z",
+            "timestamp": 1793147909856,
+            "version": "4.5.0"
+          },
+          "reference-count": 2,
+          "publisher": "American Association for the Advancement of Science (AAAS)",
+          "issue": "3934",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1970,
+                5,
+                22
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Formation flight of birds improves aerodynamic efficiency. Theoretically, 25 birds could have a range increase of about 70 percent as compared with a lone bird, the advantage being more pronounced when there is a tail wind. A vee formation is required to equally distribute the drag saving, and, contrary to other statements, the lead bird does not necessarily have the most strenuous position. The angle of the predicted vee compares with that observed in nature; stability mechanisms are described which make it easy and natural for the bird to sense optimal formations.</jats:p>",
+          "DOI": "10.1126/science.168.3934.1003",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                10,
+                5
+              ]
+            ],
+            "date-time": "2006-10-05T08:56:56Z",
+            "timestamp": 1160038616000
+          },
+          "page": "1003-1005",
+          "source": "Crossref",
+          "is-referenced-by-count": 417,
+          "title": [
+            "Formation Flight of Birds"
+          ],
+          "prefix": "10.1126",
+          "volume": "168",
+          "author": [
+            {
+              "given": "P. B. S.",
+              "family": "Lissaman",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "California Institute of Technology, Pasadena"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Carl A.",
+              "family": "Shollenberger",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "California Institute of Technology, Pasadena"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "221",
+          "reference": [
+            {
+              "key": "e_1_2_1_1_1",
+              "unstructured": "Storer J. H. The Flight of Birds (1948)."
+            },
+            {
+              "key": "e_1_2_1_2_1",
+              "first-page": "225",
+              "volume": "5",
+              "year": "1914",
+              "unstructured": "WIESELSBERGER, C, ZEITSCHRIFT FUR FLUGTECHNIK UND MOTOR-LUFTSCHIFFAHRT 5: 225 (1914).",
+              "journal-title": "ZEITSCHRIFT FUR FLUGTECHNIK UND MOTOR-LUFTSCHIFFAHRT"
+            }
+          ],
+          "container-title": [
+            "Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.science.org/doi/pdf/10.1126/science.168.3934.1003",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                11
+              ]
+            ],
+            "date-time": "2024-01-11T09:56:46Z",
+            "timestamp": 1704967006000
+          },
+          "score": 28.028252,
+          "resource": {
+            "primary": {
+              "URL": "https://www.science.org/doi/10.1126/science.168.3934.1003"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1970,
+                5,
+                22
+              ]
+            ]
+          },
+          "references-count": 2,
+          "journal-issue": {
+            "issue": "3934",
+            "published-print": {
+              "date-parts": [
+                [
+                  1970,
+                  5,
+                  22
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1126/science.168.3934.1003"
+          ],
+          "URL": "https://doi.org/10.1126/science.168.3934.1003",
+          "ISSN": [
+            "0036-8075",
+            "1095-9203"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8075",
+              "type": "print"
+            },
+            {
+              "value": "1095-9203",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1970,
+                5,
+                22
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T00:38:31Z",
+            "timestamp": 1793147911885,
+            "version": "4.5.0"
+          },
+          "reference-count": 33,
+          "publisher": "Elsevier BV",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1983,
+                    10,
+                    1
+                  ]
+                ],
+                "date-time": "1983-10-01T00:00:00Z",
+                "timestamp": 433814400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1983,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.1016/0022-5193(83)90110-8",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                25
+              ]
+            ],
+            "date-time": "2006-03-25T07:16:45Z",
+            "timestamp": 1143271005000
+          },
+          "page": "321-347",
+          "source": "Crossref",
+          "is-referenced-by-count": 162,
+          "title": [
+            "Aerodynamic aspects of formation flight in birds"
+          ],
+          "prefix": "10.1016",
+          "volume": "104",
+          "author": [
+            {
+              "given": "D.",
+              "family": "Hummel",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB1",
+              "series-title": "Der Vogel und sein Leben",
+              "author": "Altum",
+              "year": "1898"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB2",
+              "doi-asserted-by": "crossref",
+              "first-page": "41",
+              "DOI": "10.1016/0022-5193(81)90055-2",
+              "volume": "93",
+              "author": "Badgerow",
+              "year": "1981",
+              "journal-title": "J. theor. Biology"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB3",
+              "doi-asserted-by": "crossref",
+              "first-page": "161",
+              "DOI": "10.1007/BF01640499",
+              "volume": "113",
+              "author": "Berger",
+              "year": "1972",
+              "journal-title": "J. Orn."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB4",
+              "first-page": "355",
+              "volume": "25",
+              "author": "Berndt",
+              "year": "1970",
+              "journal-title": "Vogelwarte"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB5",
+              "doi-asserted-by": "crossref",
+              "first-page": "382",
+              "DOI": "10.1007/BF00302374",
+              "volume": "71",
+              "author": "Bilo",
+              "year": "1971",
+              "journal-title": "Z. vergl. Physiol."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB6",
+              "doi-asserted-by": "crossref",
+              "first-page": "426",
+              "DOI": "10.1007/BF00337783",
+              "volume": "76",
+              "author": "Bilo",
+              "year": "1972",
+              "journal-title": "Z. vergl. Physiol."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB7",
+              "series-title": "La migration des oiseaux",
+              "author": "Dors",
+              "year": "1956"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB8",
+              "first-page": "45",
+              "volume": "27",
+              "author": "Eckardt",
+              "year": "1919",
+              "journal-title": "Orn. Monatsber."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB9",
+              "first-page": "48",
+              "volume": "16",
+              "author": "Franzisket",
+              "year": "1951",
+              "journal-title": "Vogelwarte"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB10",
+              "series-title": "Ornithologie afs biologische Wissenschaft",
+              "first-page": "261",
+              "author": "Geyr von Schweppenburg",
+              "year": "1949"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB11",
+              "first-page": "48",
+              "volume": "16",
+              "author": "Geyr von Schweppenburg",
+              "year": "1952",
+              "journal-title": "Vogelwarte"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB12",
+              "doi-asserted-by": "crossref",
+              "first-page": "494",
+              "DOI": "10.2307/4084469",
+              "volume": "91",
+              "author": "Gould",
+              "year": "1974",
+              "journal-title": "Auk"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB13",
+              "series-title": "Bird Migration",
+              "author": "Griffin",
+              "year": "1974"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB14",
+              "doi-asserted-by": "crossref",
+              "first-page": "160",
+              "DOI": "10.2307/4512025",
+              "volume": "45",
+              "author": "Heppner",
+              "year": "1974",
+              "journal-title": "Bird Banding"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB15",
+              "doi-asserted-by": "crossref",
+              "first-page": "727",
+              "DOI": "10.1086/283314",
+              "volume": "112",
+              "author": "Higdon",
+              "year": "1978",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB16",
+              "doi-asserted-by": "crossref",
+              "first-page": "259",
+              "DOI": "10.1007/BF01640336",
+              "volume": "114",
+              "author": "Hummel",
+              "year": "1973",
+              "journal-title": "J. Orn."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB17",
+              "doi-asserted-by": "crossref",
+              "first-page": "52",
+              "DOI": "10.1007/BF01642971",
+              "volume": "119",
+              "author": "Hummel",
+              "year": "1978",
+              "journal-title": "J. Orn."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB18",
+              "first-page": "115",
+              "volume": "Vol. 1",
+              "author": "Hummel",
+              "year": "1978"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB19",
+              "first-page": "148",
+              "volume": "5",
+              "author": "Hummel",
+              "year": "1981",
+              "journal-title": "Z. Flugwiss. Weltraumforsch."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB20",
+              "series-title": "Acta XVII Congressus Internationalis Ornithologici",
+              "first-page": "397",
+              "author": "Kokshaysky",
+              "year": "1980"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB21",
+              "doi-asserted-by": "crossref",
+              "first-page": "1003",
+              "DOI": "10.1126/science.168.3934.1003",
+              "volume": "168",
+              "author": "Lissaman",
+              "year": "1970",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB22",
+              "article-title": "Isoperimetrische Aufgaben aus der Theorie des Fluges",
+              "author": "Munk",
+              "year": "1919"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB23",
+              "doi-asserted-by": "crossref",
+              "first-page": "414",
+              "DOI": "10.1007/BF00297909",
+              "volume": "67",
+              "author": "Nachtigall",
+              "year": "1970",
+              "journal-title": "Z. vergl. Physiol."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB24",
+              "first-page": "18",
+              "volume": "38",
+              "author": "Poncy",
+              "year": "1941",
+              "journal-title": "Orn. Beob."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB25",
+              "first-page": "2",
+              "author": "Schindler",
+              "year": "1972",
+              "journal-title": "Celler Berichte z. Vogelkunde"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB26_1",
+              "first-page": "97",
+              "volume": "2",
+              "author": "Schlichting",
+              "year": "1942",
+              "journal-title": "Mitt. dt. Akad. Luftfahrtforsch."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB26_2",
+              "first-page": "546",
+              "author": "Schlichting",
+              "year": "1943",
+              "journal-title": "Jb. dt. Akad. Luftfahrtforsch."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB27",
+              "series-title": "Aerodynamics of the Airplane",
+              "author": "Schlichting",
+              "year": "1979"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB28",
+              "series-title": "Grundri\u03b2 der Vogelzugskunde",
+              "author": "Sch\u00fcz",
+              "year": "1971"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB29",
+              "series-title": "Der Vogelflug",
+              "author": "Stolpe",
+              "year": "1939"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB30",
+              "volume": "Vol. 7",
+              "author": "Stresemann",
+              "year": "1934"
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB31",
+              "first-page": "40",
+              "volume": "20",
+              "author": "Truckenbrodt",
+              "year": "1953",
+              "journal-title": "Jb. wiss. Ges. Luftf."
+            },
+            {
+              "key": "10.1016/0022-5193(83)90110-8_BIB32",
+              "first-page": "225",
+              "volume": "5",
+              "author": "Wieselsberger",
+              "year": "1914",
+              "journal-title": "Z. FTugtech. Motorluftschiff."
+            }
+          ],
+          "container-title": [
+            "Journal of Theoretical Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0022519383901108?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0022519383901108?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                1,
+                17
+              ]
+            ],
+            "date-time": "2019-01-17T08:55:33Z",
+            "timestamp": 1547715333000
+          },
+          "score": 24.470425,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0022519383901108"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1983,
+                10
+              ]
+            ]
+          },
+          "references-count": 33,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  1983,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0022519383901108"
+          ],
+          "URL": "https://doi.org/10.1016/0022-5193(83)90110-8",
+          "ISSN": [
+            "0022-5193"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-5193",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1983,
+                10
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "genevo-1-genetic-switch",
+  "actions": [
+    {
+      "action": "click",
+      "selector": "input[name=\"live-glucose\"]"
+    },
+    {
+      "action": "click",
+      "selector": "button:text-is(\"10 steps\")"
+    },
+    {
+      "action": "click",
+      "selector": "button:text-is(\"Reset parameters\")"
+    }
+  ],
+  "monitors": "Tick\n10\nEnergy\n995\nLacZ\n0\nLacY\n0\nMessage\nDivisions\n0",
+  "status": "Action completed.",
+  "statusState": "success"
+}

@@ -1,0 +1,7 @@
+$ tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json && tsc -p tsconfig.ui-examples.json
+tests/graph-nw-variants.test.ts(207,74): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Agent<{ index: number; }> | undefined' is not assignable to parameter of type 'Agent<{ index: number; }>'.
+      Type 'undefined' is not assignable to type 'Agent<{ index: number; }>'.
+        Type 'undefined' is not assignable to type '{ index: number; }'.
+error: script "typecheck" exited with code 1

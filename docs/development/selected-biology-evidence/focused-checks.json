@@ -1,0 +1,61 @@
+[
+  {
+    "command": [
+      "sha256sum",
+      "-c",
+      "docs/development/selected-biology-examples.sha256"
+    ],
+    "exitCode": 0,
+    "log": "focused-check-00.log"
+  },
+  {
+    "command": [
+      "bun",
+      "test",
+      "tests/selected-biology-a.test.ts",
+      "tests/selected-biology-b.test.ts"
+    ],
+    "exitCode": 1,
+    "log": "focused-check-01.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/01-photosynthesis-and-signaling.ts"
+    ],
+    "exitCode": 0,
+    "log": "focused-check-02.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/02-patterns-and-construction.ts"
+    ],
+    "exitCode": 0,
+    "log": "focused-check-03.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/03-homeostasis-and-exercise.ts"
+    ],
+    "exitCode": 1,
+    "log": "focused-check-04.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/04-season-and-self-assembly.ts"
+    ],
+    "exitCode": 0,
+    "log": "focused-check-05.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/05-phyllotaxis-and-turnover.ts"
+    ],
+    "exitCode": 0,
+    "log": "focused-check-06.log"
+  }
+]

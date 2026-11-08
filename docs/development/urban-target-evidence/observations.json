@@ -1,0 +1,759 @@
+{
+  "executedAt": "2026-11-05",
+  "tool": "T3 shared Chromium preview",
+  "port": 3110,
+  "seed": 1,
+  "desktop": {
+    "width": 1280,
+    "height": 800
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844
+  },
+  "observations": [
+    {
+      "model": "awareness",
+      "event": "default-setup",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "0",
+        "Unaware": "60",
+        "Aware": "0",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "20",
+        "Mean awareness": "0.000",
+        "Mean non-usage": "0.000"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Model initialized.",
+      "pressed": [],
+      "canvas": "Model view. 60 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "progress-tick112",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "112",
+        "Unaware": "59",
+        "Aware": "1",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "20",
+        "Mean awareness": "0.183",
+        "Mean non-usage": "26.700"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 60 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "run-pause",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "116",
+        "Unaware": "57",
+        "Aware": "3",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "20",
+        "Mean awareness": "0.417",
+        "Mean non-usage": "22.150"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Paused.",
+      "pressed": [],
+      "canvas": "Model view. 60 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "live-limit-zero-then10steps",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "126",
+        "Unaware": "60",
+        "Aware": "0",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "0",
+        "Mean awareness": "0.000",
+        "Mean non-usage": "—"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "0"
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 60 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "mouse-and-keyboard-center-placement-same-tick",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "126",
+        "Unaware": "60",
+        "Aware": "0",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "2",
+        "Mean awareness": "0.000",
+        "Mean non-usage": "0.000"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "0"
+      },
+      "status": "Drawing updated.",
+      "pressed": [
+        "Place centers"
+      ],
+      "canvas": "Model view. 60 agents. Arrow keys select an item. Space or Enter draws a cell. Selected cl_17izzbfuwx252",
+      "touchAction": "none",
+      "overflow": false,
+      "inspector": "id\ncl_17izzbfuwx252\nx\n-18\ny\n-18.5\ncenter\noriginal\nnonUsage\n0",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "reset-clears-mode-and-restores-defaults",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "0",
+        "Unaware": "60",
+        "Aware": "0",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "20",
+        "Mean awareness": "0.000",
+        "Mean non-usage": "0.000"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Model initialized.",
+      "pressed": [],
+      "canvas": "Model view. 60 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "mode-off-click-inspects-without-painting",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "0",
+        "Unaware": "60",
+        "Aware": "0",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "20",
+        "Mean awareness": "0.000",
+        "Mean non-usage": "0.000"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Model initialized.",
+      "pressed": [],
+      "canvas": "Model view. 60 agents. Arrow keys select an item. Selected cl_5c8h819mmg9y50v",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_5c8h819mmg9y50v\nx\n-1.6549682947807014\ny\n-0.42604393791407347\nheading\n358\nawareness\n0",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "empty-people-centers-continues",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "10",
+        "Unaware": "0",
+        "Aware": "0",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "0",
+        "Mean awareness": "—",
+        "Mean non-usage": "—"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "0",
+        "centers": "0",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 0 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "mobile-dark-inspection-brush",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "10",
+        "Unaware": "60",
+        "Aware": "0",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "22",
+        "Mean awareness": "0.117",
+        "Mean non-usage": "7.955"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Drawing updated.",
+      "pressed": [
+        "Place centers"
+      ],
+      "canvas": "Model view. 60 agents. Arrow keys select an item. Space or Enter draws a cell. Selected cl_81z31n6l70is1yk",
+      "touchAction": "none",
+      "overflow": false,
+      "inspector": "id\ncl_81z31n6l70is1yk\nx\n-18\ny\n-18.5\ncenter\noriginal\nnonUsage\n0",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "catalog-switch-disposes-mode-and-requires-setup",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {},
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Choose setup values, then Setup.",
+      "pressed": [],
+      "canvas": "Model view. Arrow keys select an item.",
+      "touchAction": "",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "fresh-session-mode-off",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "0",
+        "Unaware": "60",
+        "Aware": "0",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "20",
+        "Mean awareness": "0.000",
+        "Mean non-usage": "0.000"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Model initialized.",
+      "pressed": [],
+      "canvas": "Model view. 60 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "consoleEntries": [],
+      "failedRequests": []
+    },
+    {
+      "model": "recycling",
+      "event": "default-setup",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "0",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "100.00",
+        "Recycled (%)": "0.00",
+        "Waste (%)": "0.00"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "50",
+        "live-recyclingWasteCost": "0.5",
+        "live-resourceRegeneration": "25",
+        "live-agentsSeekResources": false,
+        "live-showEnergy": true
+      },
+      "status": "Model initialized.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "first-step-and-keyboard-inspection",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "1",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "97.96",
+        "Recycled (%)": "0.00",
+        "Waste (%)": "2.04"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "50",
+        "live-recyclingWasteCost": "0.5",
+        "live-resourceRegeneration": "25",
+        "live-agentsSeekResources": false,
+        "live-showEnergy": true
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_frqicdrzf2qrrhv",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_frqicdrzf2qrrhv\nkind\nrecycler\nx\n-16\ny\n1\nheading\n90\nenergy\n26",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "progress-tick102",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "102",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "65.63",
+        "Recycled (%)": "9.06",
+        "Waste (%)": "25.31"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "50",
+        "live-recyclingWasteCost": "0.5",
+        "live-resourceRegeneration": "25",
+        "live-agentsSeekResources": false,
+        "live-showEnergy": true
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_frqicdrzf2qrrhv",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_frqicdrzf2qrrhv\nkind\nrecycler\nx\n-5\ny\n12\nheading\n180\nenergy\n42",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "labels-off-without-tick",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "102",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "65.63",
+        "Recycled (%)": "9.06",
+        "Waste (%)": "25.31"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "50",
+        "live-recyclingWasteCost": "0.5",
+        "live-resourceRegeneration": "25",
+        "live-agentsSeekResources": false,
+        "live-showEnergy": false
+      },
+      "status": "Rule updated.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_frqicdrzf2qrrhv",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_frqicdrzf2qrrhv\nkind\nrecycler\nx\n-5\ny\n12\nheading\n180\nenergy\n42",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "live-seeking-after-step104",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "104",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "65.47",
+        "Recycled (%)": "8.82",
+        "Waste (%)": "25.71"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "50",
+        "live-recyclingWasteCost": "0.5",
+        "live-resourceRegeneration": "25",
+        "live-agentsSeekResources": true,
+        "live-showEnergy": false
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_frqicdrzf2qrrhv",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_frqicdrzf2qrrhv\nkind\nrecycler\nx\n-3\ny\n12\nheading\n135\nenergy\n43",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "paused-live-cap-cost-regeneration-edits",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "104",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "65.47",
+        "Recycled (%)": "8.82",
+        "Waste (%)": "25.71"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "10",
+        "live-recyclingWasteCost": "2",
+        "live-resourceRegeneration": "0",
+        "live-agentsSeekResources": true,
+        "live-showEnergy": false
+      },
+      "status": "Rule updated.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_frqicdrzf2qrrhv",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_frqicdrzf2qrrhv\nkind\nrecycler\nx\n-3\ny\n12\nheading\n135\nenergy\n43",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "next-step-applies-cap",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "105",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "65.47",
+        "Recycled (%)": "8.82",
+        "Waste (%)": "25.71"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "10",
+        "live-recyclingWasteCost": "2",
+        "live-resourceRegeneration": "0",
+        "live-agentsSeekResources": true,
+        "live-showEnergy": false
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_frqicdrzf2qrrhv",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_frqicdrzf2qrrhv\nkind\nrecycler\nx\n-4\ny\n13\nheading\n315\nenergy\n10",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "run-pause-under-live-rules",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "109",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "65.47",
+        "Recycled (%)": "8.82",
+        "Waste (%)": "25.71"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "10",
+        "live-recyclingWasteCost": "2",
+        "live-resourceRegeneration": "0",
+        "live-agentsSeekResources": true,
+        "live-showEnergy": false
+      },
+      "status": "Paused.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_frqicdrzf2qrrhv",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_frqicdrzf2qrrhv\nkind\nrecycler\nx\n-3\ny\n12\nheading\n270\nenergy\n8",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "invalid-setup-preserves-current-world",
+      "value": "-1",
+      "valid": false,
+      "message": "Value must be greater than or equal to 0.",
+      "monitors": "Tick\n109\nRecyclers\n25\nWastefuls\n25\nNew (%)\n65.47\nRecycled (%)\n8.82\nWaste (%)\n25.71"
+    },
+    {
+      "model": "recycling",
+      "event": "restored-defaults-reset",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "0",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "100.00",
+        "Recycled (%)": "0.00",
+        "Waste (%)": "0.00"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "50",
+        "live-recyclingWasteCost": "0.5",
+        "live-resourceRegeneration": "25",
+        "live-agentsSeekResources": false,
+        "live-showEnergy": true
+      },
+      "status": "Model initialized.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "event": "mobile-light-dark-inspection-restored-labels",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "0",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "100.00",
+        "Recycled (%)": "0.00",
+        "Waste (%)": "0.00"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "50",
+        "live-recyclingWasteCost": "0.5",
+        "live-resourceRegeneration": "25",
+        "live-agentsSeekResources": false,
+        "live-showEnergy": true
+      },
+      "status": "Model initialized.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_i4yourp034s6nic",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_i4yourp034s6nic\nkind\nrecycler\nx\n-17\ny\n1\nheading\n224.99999999999997\nenergy\n25",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "recycling",
+      "consoleEntries": [],
+      "failedRequests": []
+    },
+    {
+      "model": "recycling",
+      "event": "default-replay-tick102-charts-inspected",
+      "url": "http://localhost:3110/?experiment=urban-suite-recycling",
+      "monitors": {
+        "Tick": "102",
+        "Recyclers": "25",
+        "Wastefuls": "25",
+        "New (%)": "65.63",
+        "Recycled (%)": "9.06",
+        "Waste (%)": "25.31"
+      },
+      "inputs": {
+        "seed": "1",
+        "numRecyclers": "25",
+        "numWastefuls": "25",
+        "live-maxStoredEnergy": "50",
+        "live-recyclingWasteCost": "0.5",
+        "live-resourceRegeneration": "25",
+        "live-agentsSeekResources": false,
+        "live-showEnergy": true
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 50 agents. Arrow keys select an item. Selected cl_i4yourp034s6nic",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "id\ncl_i4yourp034s6nic\nkind\nrecycler\nx\n-5\ny\n12\nheading\n180\nenergy\n42",
+      "labelToggleHidden": true
+    },
+    {
+      "model": "awareness",
+      "event": "default-replay-tick112-charts-inspected",
+      "url": "http://localhost:3110/?experiment=urban-suite-awareness",
+      "monitors": {
+        "Tick": "112",
+        "Unaware": "59",
+        "Aware": "1",
+        "Well-informed": "0",
+        "Activists": "0",
+        "Centers": "20",
+        "Mean awareness": "0.183",
+        "Mean non-usage": "26.700"
+      },
+      "inputs": {
+        "seed": "1",
+        "people": "60",
+        "centers": "20",
+        "live-nonUsageLimit": "100"
+      },
+      "status": "Steps completed.",
+      "pressed": [],
+      "canvas": "Model view. 60 agents. Arrow keys select an item.",
+      "touchAction": "auto",
+      "overflow": false,
+      "inspector": "",
+      "labelToggleHidden": true
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/development/urban-target-evidence/awareness-target-setup.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46uo3y-8ba5b4d7.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/awareness-target-progress.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46uoib-3a6ce060.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/awareness-target-mobile-dark.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46vzh7-c1c3c209.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/awareness-target-mobile-light.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46vzjd-7565d868.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/awareness-target-charts.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46yb6j-d9e8b445.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/recycling-target-setup.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46wmb0-abedd56f.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/recycling-target-progress.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46wmqr-235a67f4.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/recycling-target-mobile-dark.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46xl96-b1031c2d.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/recycling-target-mobile-light.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46xlbf-1544fb0f.png",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/development/urban-target-evidence/recycling-target-charts.png",
+      "sourceArtifact": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw46yanv-8278004b.png",
+      "visuallyInspected": true
+    }
+  ],
+  "runtimeCommits": {
+    "headless": "b05174e",
+    "ui": "7e4d6db",
+    "reportCheckpoint": "2e089a4"
+  },
+  "referenceReport": "docs/development/urban-reference-browser.md",
+  "scopeLimits": [
+    "Only target sessions were performed by this agent; original sessions attributed to scoped reference-browser agent.",
+    "No target fixture was injected into the browser; public headless fixtures and original Command Center fixtures are separately recorded.",
+    "No cross-engine RNG identity, statistical equivalence, empirical validation or independent technical approval claimed.",
+    "Pointer-held Setup/disposal and touch-drag lifecycle were not directly exercised; native complete pointer clicks, keyboard painting, mode reset and catalog replacement were exercised."
+  ]
+}

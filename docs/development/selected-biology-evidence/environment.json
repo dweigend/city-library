@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-06",
+  "base": "154a085803c820ef902edcf54262a63fc670f54f",
+  "dependencyInstallation": "No local install. Ignored node_modules symlink uses existing /home/david/Projekte/city-library/node_modules, environment only. No dependencies or build outputs committed.",
+  "browser": "T3 server Chromium via preview_*; own original and target tabs only",
+  "port": 3147,
+  "review": "Argon/high task8194e842 quota-pending; no retry/substitution",
+  "fullIntegration": "Parent owns full integration; no global ledger/count edits.",
+  "versions": {
+    "bun": "1.4.2",
+    "node": "26.8.2",
+    "typescript": "7.0.2",
+    "@types/bun": "1.4.4"
+  },
+  "parentOwnedSync": [
+    {
+      "source": "428750fe899d2e4a4f94318cd8f20860e3e6c2c3",
+      "local": "19f98ba083f9d07f186b2d66911da1bdca29dce5"
+    },
+    {
+      "source": "b3db9b4af19b58141119657d6ff620e777ee36ff",
+      "local": "6dfc324756dae81564f5ec3af6390f2b17426fa1"
+    },
+    {
+      "original": "e1c4ae8c2940ebb66be299f81dedbd70d8c75706",
+      "local": "d76f454a8eb896d134f7766a705d14b96fca291c",
+      "ownership": "Parent-owned; omit from owned cherry-pick handoff."
+    }
+  ],
+  "finalSupplementBuildVersion": "1793970184720",
+  "cleanup": {
+    "ownOriginalTab": "closed",
+    "ownTargetTab": "closed",
+    "ownDevSession99046": "Ctrl-C, exit130; no other server stopped"
+  }
+}

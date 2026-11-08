@@ -1,0 +1,90 @@
+## WHAT IS IT?
+
+This model allows users to explore the rules of Mendelian Inheritance by breeding a pair of mice. There is a male parent and a female parent mouse. The genotype of the parents can be set to be homozygous recessive, heterozygous, or homozygous dominant. The genotype of their offspring is determined using Mendel’s laws of inheritance on the genotype of the parents. Users can breed different pairs of parent mice and observe patterns of fur colors in the resulting offspring in the first filial generation or F1 generation.
+
+This model is based on the work of Dr. Sean Carroll and Dr. David Kinsley that has been explained in an educational video by HHMI. (https://www.biointeractive.org/classroom-resources/making-fittest-natural-selection-and-adaptation). Based on the [underlying genetic mechanism of ‘Mc1r gene’] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC154334/) that determines the fur coat color in rock pocket mice, in this model, dark allele (A) is dominant over the light allele (a).
+
+## HOW IT WORKS
+
+The parent mice can have three different genotypes and two different phenotypes. The two phenotypes are light color and dark color. The three different genotypes are AA (dark), Aa (dark), aa (light). Each offspring gets one of their parent's alleles randomly which result in Mendelian Ratios over several trials. Users can use the “GENOTYPE READER” to know the genotype of a mouse by clicking on it.
+
+## HOW TO USE IT
+
+1. Select the color of the male parent and the female parent using the GENOTYPE-OF-MALE-PARENT and GENOTYPE-OF-FEMALE-PARENT chooser.
+2. Press the SETUP button. Two mice with the genotypes you have chosen should show up in the VIEW.
+3. Use the NUMBER-OF-OFFSPRING slider to select the number of offspring this generation will have.
+4. Press the MAKE-F1-GENERATION button and observe the color of the offspring. This button can be pressed multiple times to create more offspring. The maximum limit is set to be 50, to avoid crowding.
+5. Pressing the TURN-ON-GENOTYPE-READER button will allow you to click on any mouse to view their genotype.
+6. To clear the F1 generation before the VIEW gets too crowded, press the CLEAR-F1-GENERATION button. * This doesn't reset the offspring counter or trial number. *
+6. Look at the monitors to the right of the VIEW to see the number of light and dark offspring and the ratio between the two for this genotype cross. The ratio only appears when there are both light and dark offspring.
+
+GENOTYPE-OF-MALE-PARENT is a chooser for the color of the mouse on the top left of the view. It has two options, dark or light.
+GENOTYPE-OF-FEMALE-PARENT is a chooser for the color of the mouse on the top right of the view. It has two options, dark or light.
+NUMBER-OF-OFFSPRING is a slider which lets you choose the number of offspring the parent mice will have at a time. This can range from 0 to 10.
+
+## THINGS TO NOTICE
+
+Does fur color of mice offspring depend on the fur color of their parents?
+Are there any rules regarding the inheritance of the fur color, such as parents with light fur coat color always produce light colored offspring.
+
+In what scenarios do light colored mice show up in the offspring? What about dark colored mice? What genotypes do the parents have when this happens?
+
+## THINGS TO TRY
+
+What happens when you breed two dark homozygous mice together? What about two light homozygous mice?
+
+What happens when you cross a heterozygous mouse with a light homozygous mouse? Repeat this a few times, do you notice anything about the ratio of offspring?
+
+What happens when you cross a heterozygous mouse with another heterozygous mouse? Repeat this a few times, do you notice anything about the ratio of offspring?
+
+Does changing the number of offspring do anything?
+
+Can you find different combinations that give different ratios of dark and light-colored mice?
+
+## EXTENDING THE MODEL
+
+This is a very simple model so here are some ways that you may add to it to enhance your understanding.
+
+This model only has one gene modeled. Can you modify it to model mice passing two different genes? How about a gene for the eye color or the tail length?
+
+Can you modify the model to make the big A allele show incomplete dominance instead which means the Aa genotype will display as a lighter shade instead?
+
+## CURRICULAR USE
+
+This model is used in the lesson ["Mendelian Inheritance".](https://ct-stem.northwestern.edu/curriculum/preview/1009/) This lesson is about investigating the mechanism of Mendelian inheritance and is designed to be used after students are introduced to the basic ideas of Mendelian inheritance, such as homozygous and heterozygous. Using this lesson, students can learn about both a monohybrid cross and a dihybrid cross using computational models.
+
+## RELATED MODELS
+
+Check out GenEvo 2 Genetic Drift, Natural Selection and Rock Pocket Mouse Natural Selection
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Dabholkar, S. and Wilensky, U. (2020).  NetLogo Mendelian Inheritance model.  http://ccl.northwestern.edu/netlogo/models/MendelianInheritance.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+This model was developed as part of the CT-STEM Project at Northwestern University and was made possible through generous support from the National Science Foundation (grants CNS-1138461, CNS-1441041, DRL-1020101, DRL-1640201 and DRL-1842374) and the Spencer Foundation (Award #201600069). Any opinions, findings, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the funding organizations. For more information visit https://ct-stem.northwestern.edu/.
+
+Special thanks to the CT-STEM models team for preparing these models for inclusion
+in the Models Library including: Kelvin Lao, Jamie Lee, Sugat Dabholkar, Sally Wu,
+and Connor Bain.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2020 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2020 CTSTEM Cite: Dabholkar, S. -->

@@ -1,0 +1,23 @@
+{
+  "id": "directed-pa-2-seed",
+  "command": "setup random-seed 17 set links-to-use \"directed\" set nb-nodes 2 preferential-attachment",
+  "at": "2026-11-06T12:10:59.808Z",
+  "graph": {
+    "success": true,
+    "value": [
+      0,
+      2,
+      1,
+      1,
+      0,
+      [
+        [
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "console": "observer> setup random-seed 17 set links-to-use \"directed\" set nb-nodes 2 preferential-attachment\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear",
+  "bodyHead": " powered by NetLogo\nNW General Examples\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\n \n?\nfor shortcuts\nbetweenness\nClusterers & Cliques\nnb-nodes\nCentrality\npreferential attachment\neigenvector\ncloseness\nweak component clusters\nsave matrix\nload matrix\ncount turtles\n2\ncount links\n1\nbiggest maximal cliques\nring\nstar\nMean path length\nfalse\nhighlight bicomponents\nhighlight maximal cliques\nsave GraphML\nload GraphML\ndetect communities\nlayo"
+}

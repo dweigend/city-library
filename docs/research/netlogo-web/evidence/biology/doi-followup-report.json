@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "Follow-up DOI lookup for three already verified scientific works. Null means no DOI confirmed in consulted sources, not proof that no DOI exists.",
+  "resnick": {
+    "candidate": "10.7551/mitpress/6930.001.0001",
+    "candidateCheck": {
+      "consultedUrl": "https://api.crossref.org/works/10.7551%2Fmitpress%2F6930.001.0001",
+      "result": "HTTP 404: Not Found"
+    },
+    "handleCheck": {
+      "consultedUrl": "https://doi.org/api/handles/10.7551/mitpress/6930.001.0001",
+      "result": "HTTP 404: Not Found"
+    },
+    "primaryPage": "https://mitpress.mit.edu/9780262680936/turtles-termites-and-traffic-jams/",
+    "primaryPageResult": "Author/title/1994 hardcover and 1997 paperback confirmed; no DOI displayed.",
+    "crossrefEvidenceFile": "evidence/biology/resnick-doi-search.json",
+    "searchResult": "Returned same-title review records and other works. These review DOIs were rejected as identifiers of the book.",
+    "outcome": "Candidate not verified; retain DOI null and stable publisher URL."
+  },
+  "hinton": {
+    "primaryPages": [
+      "https://www.complex-systems.com/abstracts/v01_i03_a06/",
+      "https://www.cs.toronto.edu/~hinton/evolution.html"
+    ],
+    "primaryPageResult": "Publisher abstract and author-maintained university bibliography confirm original 1987 Complex Systems paper without a DOI.",
+    "crossrefEvidenceFile": "evidence/biology/hinton-doi-search.json",
+    "searchResult": "No exact original-paper DOI found; a 2025 commentary DOI is a different work and was rejected.",
+    "outcome": "Retain DOI null; original publisher URL is canonical."
+  },
+  "swarm": {
+    "primaryPage": "https://swarm.org/wiki/Swarm:Documentation_main_page",
+    "primaryPageResult": "Official project documentation recommends the 1996 Santa Fe Institute Working Paper 96-06-042 with four authors and no DOI.",
+    "institutionalPage": "https://www.santafe.edu/research/results/working-papers/the-swarm-simulation-system-a-toolkit-for-building",
+    "institutionalPageResult": "Previously downloaded institutional abstract retained; current web.open rendering exposes generic Working Papers shell.",
+    "crossrefEvidenceFile": "evidence/biology/swarm-doi-search.json",
+    "searchResult": "No exact report DOI found; later toolkit and modeling works are different publications and were rejected.",
+    "outcome": "Retain DOI null and stable institutional URL."
+  }
+}

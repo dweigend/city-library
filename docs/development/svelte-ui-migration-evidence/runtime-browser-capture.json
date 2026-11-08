@@ -1,0 +1,159 @@
+{
+  "captured_at": "2026-11-06T14:47:22.539Z",
+  "method": "Isolated Chromium CDP fallback after preview captures returned1280x720 regardless viewport and configured Playwright MCP SUID sandbox launch failed; actual trusted mouse/key interactions",
+  "checks": [
+    "Setup Virus and ten steps -> Tick10",
+    "Nodes draft200 preserves active150; pending restart visible",
+    "Run advances and Pause stops subsequent ticks",
+    "Explicit restart applies Nodes200",
+    "Live numeric edit7 committed by keyboard blur",
+    "Search and keyboard-accessible catalog select switches model; URL updated"
+  ],
+  "exceptions": [],
+  "states": [
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-desktop-light-empty.png",
+      "png_width": 1366,
+      "png_height": 768,
+      "state": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 1,
+        "theme": "light",
+        "model": "virus-on-a-network",
+        "modern": true,
+        "monitors": "",
+        "pending": "Setup",
+        "overflow": false
+      }
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-desktop-light-initialized.png",
+      "png_width": 1366,
+      "png_height": 768,
+      "state": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 1,
+        "theme": "light",
+        "model": "virus-on-a-network",
+        "modern": true,
+        "monitors": "Tick\n10\nSusceptible\n145\nInfected\n5\nResistant\n0",
+        "pending": "Setup",
+        "overflow": false
+      }
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-desktop-light-pending.png",
+      "png_width": 1366,
+      "png_height": 768,
+      "state": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 1,
+        "theme": "light",
+        "model": "virus-on-a-network",
+        "modern": true,
+        "monitors": "Tick\n10\nSusceptible\n145\nInfected\n5\nResistant\n0",
+        "pending": "Restart with changes",
+        "overflow": false
+      }
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-desktop-dark-pending.png",
+      "png_width": 1366,
+      "png_height": 768,
+      "state": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 1,
+        "theme": "dark",
+        "model": "virus-on-a-network",
+        "modern": true,
+        "monitors": "Tick\n10\nSusceptible\n145\nInfected\n5\nResistant\n0",
+        "pending": "Restart with changes",
+        "overflow": false
+      }
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-narrow-light-empty.png",
+      "png_width": 390,
+      "png_height": 844,
+      "state": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1,
+        "theme": "light",
+        "model": "anisogamy",
+        "modern": true,
+        "monitors": "",
+        "pending": "Setup",
+        "overflow": false
+      }
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-narrow-light-initialized.png",
+      "png_width": 390,
+      "png_height": 844,
+      "state": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1,
+        "theme": "light",
+        "model": "anisogamy",
+        "modern": true,
+        "monitors": "Tick\n10\nAdults\n100\nGametes\n25\nZygotes\n1\nTick advance\n1",
+        "pending": "Setup",
+        "overflow": false
+      }
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-narrow-dark-initialized.png",
+      "png_width": 390,
+      "png_height": 844,
+      "state": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1,
+        "theme": "dark",
+        "model": "anisogamy",
+        "modern": true,
+        "monitors": "Tick\n10\nAdults\n100\nGametes\n25\nZygotes\n1\nTick advance\n1",
+        "pending": "Setup",
+        "overflow": false
+      }
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-narrow-dark-parameters.png",
+      "png_width": 390,
+      "png_height": 844,
+      "state": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1,
+        "theme": "dark",
+        "model": "anisogamy",
+        "modern": true,
+        "monitors": "Tick\n10\nAdults\n100\nGametes\n25\nZygotes\n1\nTick advance\n1",
+        "pending": "Setup",
+        "overflow": false
+      }
+    },
+    {
+      "path": "/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/docs/development/svelte-ui-migration-evidence/runtime-desktop-dark-anisogamy.png",
+      "png_width": 1366,
+      "png_height": 768,
+      "state": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 1,
+        "theme": "dark",
+        "model": "anisogamy",
+        "modern": true,
+        "monitors": "Tick\n10\nAdults\n100\nGametes\n25\nZygotes\n1\nTick advance\n1",
+        "pending": "Setup",
+        "overflow": false
+      }
+    }
+  ]
+}

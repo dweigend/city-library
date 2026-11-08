@@ -1,0 +1,2024 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Wilensky+Rand+Introduction+Agent-Based+Modeling&rows=5",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 9206105,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                10
+              ]
+            ],
+            "date-time": "2026-02-10T12:05:01Z",
+            "timestamp": 1770725101906,
+            "version": "3.49.0"
+          },
+          "edition-number": "1",
+          "reference-count": 46,
+          "publisher": "Wiley",
+          "isbn-type": [
+            {
+              "value": "9781119484967",
+              "type": "print"
+            },
+            {
+              "value": "9781119485001",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2019,
+                    3,
+                    29
+                  ]
+                ],
+                "date-time": "2019-03-29T00:00:00Z",
+                "timestamp": 1553817600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2019,
+                4,
+                9
+              ]
+            ]
+          },
+          "DOI": "10.1002/9781119485001.ch15",
+          "type": "other",
+          "created": {
+            "date-parts": [
+              [
+                2019,
+                3,
+                29
+              ]
+            ],
+            "date-time": "2019-03-29T21:35:33Z",
+            "timestamp": 1553895333000
+          },
+          "page": "337-357",
+          "source": "Crossref",
+          "is-referenced-by-count": 16,
+          "title": [
+            "Theory\u2010Interpretable, Data\u2010Driven Agent\u2010Based Modeling"
+          ],
+          "prefix": "10.1002",
+          "author": [
+            {
+              "given": "William",
+              "family": "Rand",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2019,
+                3,
+                29
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_1_2_1",
+              "unstructured": "Ariyaratne A.(2016).Modeling agent behavior through past actions: simulating twitter users. Master's thesis.College Park MD:University of Maryland."
+            },
+            {
+              "key": "e_1_2_1_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.092080799"
+            },
+            {
+              "key": "e_1_2_1_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/1772690.1772698"
+            },
+            {
+              "key": "e_1_2_1_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1257/aer.91.2.67"
+            },
+            {
+              "key": "e_1_2_1_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.082080899"
+            },
+            {
+              "key": "e_1_2_1_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9780511790485"
+            },
+            {
+              "key": "e_1_2_1_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0023610"
+            },
+            {
+              "key": "e_1_2_1_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/SocialCom.2013.22"
+            },
+            {
+              "key": "e_1_2_1_10_1",
+              "first-page": "1",
+              "article-title": "Predicting depression via social media",
+              "volume": "13",
+              "author": "De Choudhury M.",
+              "year": "2013",
+              "journal-title": "ICWSM"
+            },
+            {
+              "key": "e_1_2_1_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00779-005-0046-3"
+            },
+            {
+              "key": "e_1_2_1_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/1978942.1979106"
+            },
+            {
+              "key": "e_1_2_1_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1011122126881"
+            },
+            {
+              "key": "e_1_2_1_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/0022250X.1983.9989941"
+            },
+            {
+              "key": "e_1_2_1_15_1",
+              "unstructured": "Grassegger H.andKrogerus M.(2017).The data that turned the world upside down. Vice Magazine (30 January). https://motherboard.vice.com/en_us/article/mg9vvn/how\u2010our\u2010likes\u2010helped\u2010trump\u2010win."
+            },
+            {
+              "key": "e_1_2_1_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/2808797.2809392"
+            },
+            {
+              "key": "e_1_2_1_17_1",
+              "first-page": "439",
+              "volume-title": "Adaptation in Natural and Artificial Systems: An Introductory Analysis with Application to Biology, Control, and Artificial Intelligence",
+              "author": "Holland J.H.",
+              "year": "1975"
+            },
+            {
+              "issue": "1",
+              "key": "e_1_2_1_18_1",
+              "first-page": "17",
+              "article-title": "Complex adaptive systems",
+              "volume": "121",
+              "author": "Holland J.H.",
+              "year": "1992",
+              "journal-title": "Daedalus"
+            },
+            {
+              "key": "e_1_2_1_19_1",
+              "volume-title": "Foundation",
+              "author": "Asimov I.",
+              "year": "1951"
+            },
+            {
+              "key": "e_1_2_1_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.220.4598.671"
+            },
+            {
+              "key": "e_1_2_1_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10708-013-9516-8"
+            },
+            {
+              "key": "e_1_2_1_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/345966.345982"
+            },
+            {
+              "key": "e_1_2_1_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature14539"
+            },
+            {
+              "key": "e_1_2_1_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3141/2082-16"
+            },
+            {
+              "key": "e_1_2_1_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0167-2231(76)80003-6"
+            },
+            {
+              "key": "e_1_2_1_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/2691195.2691240"
+            },
+            {
+              "key": "e_1_2_1_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/1122012.1122013"
+            },
+            {
+              "key": "e_1_2_1_28_1",
+              "volume-title": "Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy",
+              "author": "O'Neil C.",
+              "year": "2017"
+            },
+            {
+              "key": "e_1_2_1_29_1",
+              "unstructured": "Page L. Brin S. Motwani R. andWinograd T.(1999).The Pagerank Citation Ranking: Bringing Order to the Web. Tech. Rep. 422. Stanford InfoLab."
+            },
+            {
+              "key": "e_1_2_1_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ijresmar.2011.04.002"
+            },
+            {
+              "key": "e_1_2_1_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.18564/jasss.2616"
+            },
+            {
+              "key": "e_1_2_1_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/HICSS.2015.186"
+            },
+            {
+              "key": "e_1_2_1_33_1",
+              "unstructured": "Schmidt E.(2009).How Google can help newspapers. The Wall Street Journal (1 December).https://www.wsj.com/articles/SB10001424052748704107104574569570797550520."
+            },
+            {
+              "key": "e_1_2_1_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1010388907793"
+            },
+            {
+              "key": "e_1_2_1_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1214/10-STS330"
+            },
+            {
+              "key": "e_1_2_1_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1287/mnsc.2017.2877"
+            },
+            {
+              "key": "e_1_2_1_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/41166098"
+            },
+            {
+              "key": "e_1_2_1_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-4-431-54847-8_19"
+            },
+            {
+              "key": "e_1_2_1_39_1",
+              "volume-title": "Center for Connected Learning and Computer Based Modeling",
+              "author": "Stonedahl F.",
+              "year": "2010"
+            },
+            {
+              "key": "e_1_2_1_40_1",
+              "unstructured": "Ubaldi B.(2013).Open government data: Towards empirical analysis of open government data initiatives. OECD Working Papers on Public Governance (22):0_1."
+            },
+            {
+              "issue": "4",
+              "key": "e_1_2_1_41_1",
+              "first-page": "5",
+              "article-title": "Computational social science: exciting progress and future directions",
+              "volume": "43",
+              "author": "Watts D.J.",
+              "year": "2013",
+              "journal-title": "The Bridge on Frontiers of Engineering"
+            },
+            {
+              "key": "e_1_2_1_42_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0020-7101(71)90025-0"
+            },
+            {
+              "key": "e_1_2_1_43_1",
+              "volume-title": "NetLogo: Center for Connected Learning and Computer\u2010Based Modeling",
+              "author": "Wilensky U.",
+              "year": "1999"
+            },
+            {
+              "key": "e_1_2_1_44_1",
+              "volume-title": "An Introduction to Agent\u2010Based Modeling: Modeling Natural, Social, and Engineered Complex Systems with NetLogo",
+              "author": "Wilensky U.",
+              "year": "2015"
+            },
+            {
+              "key": "e_1_2_1_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jom.2016.05.007"
+            },
+            {
+              "key": "e_1_2_1_46_1",
+              "unstructured": "Yosinski J. Clune J. Fuchs T. andLipson H.(2015).Understanding neural networks through deep visualization. In:ICML Workshop on Deep Learning."
+            },
+            {
+              "key": "e_1_2_1_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10458-016-9326-8"
+            }
+          ],
+          "container-title": [
+            "Social\u2010Behavioral Modeling for Complex Systems"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F9781119485001.ch15",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119485001.ch15",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                9,
+                10
+              ]
+            ],
+            "date-time": "2023-09-10T03:09:14Z",
+            "timestamp": 1694315354000
+          },
+          "score": 29.688026,
+          "resource": {
+            "primary": {
+              "URL": "https://onlinelibrary.wiley.com/doi/10.1002/9781119485001.ch15"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2019,
+                3,
+                29
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781119484967",
+            "9781119485001"
+          ],
+          "references-count": 46,
+          "alternative-id": [
+            "10.1002/9781119485001.ch15",
+            "10.1002/9781119485001"
+          ],
+          "URL": "https://doi.org/10.1002/9781119485001.ch15",
+          "archive": [
+            "Portico"
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2019,
+                3,
+                29
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                24
+              ]
+            ],
+            "date-time": "2026-03-24T20:58:14Z",
+            "timestamp": 1774385894357,
+            "version": "3.50.1"
+          },
+          "publisher-location": "New York, NY, USA",
+          "reference-count": 4,
+          "publisher": "ACM",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    5,
+                    8
+                  ]
+                ],
+                "date-time": "2006-05-08T00:00:00Z",
+                "timestamp": 1147046400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "dl.acm.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                5,
+                8
+              ]
+            ]
+          },
+          "DOI": "10.1145/1160633.1160913",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                10,
+                18
+              ]
+            ],
+            "date-time": "2006-10-18T18:04:00Z",
+            "timestamp": 1161194640000
+          },
+          "page": "1457-1458",
+          "update-policy": "https://doi.org/10.1145/crossmark-policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Participatory, embodied, multi-agent simulation"
+          ],
+          "prefix": "10.1145",
+          "author": [
+            {
+              "given": "Paulo",
+              "family": "Blikstein",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Northwestern University, Evanston, IL"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "William",
+              "family": "Rand",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Northwestern University, Evanston, IL"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Uri",
+              "family": "Wilensky",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Northwestern University, Evanston, IL"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "320",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                5,
+                8
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_2_1_1_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5555/261181"
+            },
+            {
+              "key": "e_1_3_2_1_2_1",
+              "volume-title": "Presented at the Annual meeting of the American Research Education Association.",
+              "author": "Wilensky U.",
+              "year": "2002",
+              "unstructured": "Wilensky, U., & Stroup, W. Participatory Simulations: Envisioning the networked classroom as a way to support systems learning for all. In Presented at the Annual meeting of the American Research Education Association. 2002. New Orleans, LA, April 2002."
+            },
+            {
+              "key": "e_1_3_2_1_3_1",
+              "volume-title": "International Conference for the Learning Sciences.",
+              "author": "Blikstein P.",
+              "year": "2006",
+              "unstructured": "Blikstein, P. and U. Wilensky. 'Hybrid Modeling': Advanced Scientific Investigation Linking Computer Models and Real-World Sensing. in International Conference for the Learning Sciences. 2006. Bloomington, IN."
+            },
+            {
+              "key": "e_1_3_2_1_4_1",
+              "unstructured": "Wilensky U. NetLogo {Computer software}. 1999 Center for Connected Learning and Computer-Based Modeling: Evanston IL."
+            }
+          ],
+          "event": {
+            "name": "AAMAS06: AAMAS '06 - 5th International Joint Conference on Autonomous Agents and Multi-agent Systems 2006",
+            "location": "Hakodate Japan",
+            "acronym": "AAMAS06",
+            "sponsor": [
+              "IFMAS The International Foundation for Multiagent Systems",
+              "SIGAI ACM Special Interest Group on Artificial Intelligence",
+              "ATAL The International Workshop on Agent Theories, Architectures, and Languages"
+            ]
+          },
+          "container-title": [
+            "Proceedings of the fifth international joint conference on Autonomous agents and multiagent systems"
+          ],
+          "link": [
+            {
+              "URL": "https://dl.acm.org/doi/10.1145/1160633.1160913",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://dl.acm.org/doi/pdf/10.1145/1160633.1160913",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                24
+              ]
+            ],
+            "date-time": "2026-03-24T17:29:54Z",
+            "timestamp": 1774373394000
+          },
+          "score": 29.20177,
+          "resource": {
+            "primary": {
+              "URL": "https://dl.acm.org/doi/10.1145/1160633.1160913"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2006,
+                5,
+                8
+              ]
+            ]
+          },
+          "references-count": 4,
+          "alternative-id": [
+            "10.1145/1160633.1160913",
+            "10.1145/1160633"
+          ],
+          "URL": "https://doi.org/10.1145/1160633.1160913",
+          "published": {
+            "date-parts": [
+              [
+                2006,
+                5,
+                8
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2006-05-08",
+              "order": 3,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                27
+              ]
+            ],
+            "date-time": "2025-08-27T00:19:34Z",
+            "timestamp": 1756253974193,
+            "version": "3.44.0"
+          },
+          "publisher-location": "New York, NY, USA",
+          "reference-count": 52,
+          "publisher": "ACM",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    6,
+                    21
+                  ]
+                ],
+                "date-time": "2024-06-21T00:00:00Z",
+                "timestamp": 1718928000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/501100006374",
+              "name": "National Science Foundation",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "1842375"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "1842375"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100006374",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "dl.acm.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                21
+              ]
+            ]
+          },
+          "DOI": "10.1145/3663433.3663458",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                20
+              ]
+            ],
+            "date-time": "2024-06-20T18:22:19Z",
+            "timestamp": 1718907739000
+          },
+          "page": "38-46",
+          "update-policy": "https://doi.org/10.1145/crossmark-policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Meta-Theoretic Competence for Computational Agent-Based Modeling"
+          ],
+          "prefix": "10.1145",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0001-5953-6780",
+              "authenticated-orcid": false,
+              "given": "Hillary",
+              "family": "Swanson",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Utah State University, USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-9591-3109",
+              "authenticated-orcid": false,
+              "given": "Uri",
+              "family": "Wilensky",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Northwestern University, USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "320",
+          "published-online": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                21
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_2_1_1_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5951/jresematheduc.50.4.0401"
+            },
+            {
+              "key": "e_1_3_2_1_2_1",
+              "volume-title": "ACT: A simple theory of complex cognition. American psychologist, 51(4), 355",
+              "author": "Anderson J. R.",
+              "year": "1996",
+              "unstructured": "Anderson, J. R. (1996). ACT: A simple theory of complex cognition. American psychologist, 51(4), 355."
+            },
+            {
+              "key": "e_1_3_2_1_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/3392063.3394428"
+            },
+            {
+              "key": "e_1_3_2_1_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1159/000345322"
+            },
+            {
+              "key": "e_1_3_2_1_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10956-020-09869-x"
+            },
+            {
+              "key": "e_1_3_2_1_6_1",
+              "volume-title": "Epistemic forms and epistemic games: Structures and strategies to guide inquiry. Educational psychologist, 28(1), 25-42",
+              "author": "Collins A.",
+              "year": "1993",
+              "unstructured": "Collins, A., & Ferguson, W. (1993). Epistemic forms and epistemic games: Structures and strategies to guide inquiry. Educational psychologist, 28(1), 25-42."
+            },
+            {
+              "key": "e_1_3_2_1_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0304-3800(98)00073-8"
+            },
+            {
+              "key": "e_1_3_2_1_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2505/4/ss17_040_05_78"
+            },
+            {
+              "key": "e_1_3_2_1_9_1",
+              "volume-title": "Constructing Scientific Explanations for Chemical Phenomena through Drawings among 8th-Grade Students. Eurasia Journal of Mathematics, Science and Technology Education, 17(1)",
+              "author": "De Andrade V. F.",
+              "year": "2021",
+              "unstructured": "De Andrade, V. F., Freire, S., & Baptista, M. (2021). Constructing Scientific Explanations for Chemical Phenomena through Drawings among 8th-Grade Students. Eurasia Journal of Mathematics, Science and Technology Education, 17(1)."
+            },
+            {
+              "key": "e_1_3_2_1_10_1",
+              "volume-title": "Toward an epistemology of physics. Cognition and instruction, 10(2-3), 105-225",
+              "author": "diSessa A. A.",
+              "year": "1993",
+              "unstructured": "diSessa, A. A. (1993). Toward an epistemology of physics. Cognition and instruction, 10(2-3), 105-225."
+            },
+            {
+              "key": "e_1_3_2_1_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-642-57827-4_8"
+            },
+            {
+              "key": "e_1_3_2_1_12_1",
+              "volume-title": "Changing minds: Computers, learning, and literacy",
+              "author": "diSessa A.A.",
+              "year": "2001",
+              "unstructured": "diSessa, A.A. (2001). Changing minds: Computers, learning, and literacy. MIT Press."
+            },
+            {
+              "key": "e_1_3_2_1_13_1",
+              "volume-title": "M. Levin, & N",
+              "author": "diSessa A. A.",
+              "year": "2016",
+              "unstructured": "diSessa, A. A., Sherin, B., & Levin, M. (2016). Knowledge analysis: An introduction. A. diSessa, M. Levin, & N. Brown (Eds.), Knowledge and interaction: A synthetic agenda for the learning sciences, 30-71."
+            },
+            {
+              "key": "e_1_3_2_1_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11191-006-9045-7"
+            },
+            {
+              "key": "e_1_3_2_1_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/440419a"
+            },
+            {
+              "key": "e_1_3_2_1_16_1",
+              "volume-title": "S52-S59.",
+              "author": "Hammer D.",
+              "year": "2000",
+              "unstructured": "Hammer, D. (2000). Student resources for learning introductory physics. American journal of physics, 68(S1), S52-S59."
+            },
+            {
+              "key": "e_1_3_2_1_17_1",
+              "volume-title": "Personal epistemology (pp. 169-190)",
+              "author": "Hammer D.",
+              "year": "2012",
+              "unstructured": "Hammer, D., & Elby, A. (2012). On the form of a personal epistemology. In Personal epistemology (pp. 169-190). Routledge."
+            },
+            {
+              "key": "e_1_3_2_1_18_1",
+              "volume-title": "NetTango Web [Computer Software]",
+              "author": "Horn M.S.",
+              "year": "2020",
+              "unstructured": "Horn, M.S., Baker, J. & Wilensky, U. (2020). NetTango Web [Computer Software]. Evanston, IL: Center for Connected Learning and Computer-Based Modeling, Northwestern University.\u00a0"
+            },
+            {
+              "key": "e_1_3_2_1_19_1",
+              "volume-title": "meeting of the National Association for Research in Science Teaching",
+              "author": "Kenyon L.O.",
+              "year": "2008",
+              "unstructured": "Kenyon, L.O., Schwarz, C.V., Hug, B., & Baek, H. (2008). Incorporating modeling into elementary students\u2019 scientific investigations. Paper presented at the annual meeting of the National Association for Research in Science Teaching, Baltimore, MD."
+            },
+            {
+              "key": "e_1_3_2_1_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/10508406.2018.1510404"
+            },
+            {
+              "key": "e_1_3_2_1_21_1",
+              "volume-title": "Sixth International Conference on Teaching Statistics (ICOTS6), Cape Town.",
+              "author": "Lehrer R.",
+              "year": "2002",
+              "unstructured": "Lehrer, R., & Schauble, L. (2002). Distribution: A resource for understanding error and natural variation. In Sixth International Conference on Teaching Statistics (ICOTS6), Cape Town."
+            },
+            {
+              "key": "e_1_3_2_1_22_1",
+              "volume-title": "Supporting development of the epistemology of inquiry. Cognitive development, 23(4), 512-529",
+              "author": "Lehrer R.",
+              "year": "2008",
+              "unstructured": "Lehrer, R., Schauble, L., & Lucas, D. (2008). Supporting development of the epistemology of inquiry. Cognitive development, 23(4), 512-529."
+            },
+            {
+              "key": "e_1_3_2_1_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00958964.2021.1949569"
+            },
+            {
+              "key": "e_1_3_2_1_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00131911.2011.628748"
+            },
+            {
+              "key": "e_1_3_2_1_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/sce.21030"
+            },
+            {
+              "key": "e_1_3_2_1_26_1",
+              "volume-title": "NetTango Disease Spread and Prevention model",
+              "author": "Martin K.",
+              "year": "2020",
+              "unstructured": "Martin, K., Swanson, H., Sherin, B., Wilensky, U. (2020). NetTango Disease Spread and Prevention model. http://ccl.northwestern.edu/theorybuilding/Siyu-Intervention/Model5Disease.html.\u00a0 Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL."
+            },
+            {
+              "key": "e_1_3_2_1_27_1",
+              "volume-title": "Next generation science standards: for states, by states",
+              "author": "Lead States",
+              "year": "2013",
+              "unstructured": "NGSS Lead States (2013) Next generation science standards: for states, by states. The National Academies Press, Washington, DC."
+            },
+            {
+              "key": "e_1_3_2_1_28_1",
+              "volume-title": "R. A. Duschl & A",
+              "author": "Osborne J.",
+              "year": "2016",
+              "unstructured": "Osborne, J. (2016). Defining a knowledge base for reasoning in science: the role of procedural and epistemic knowledge. In R. A. Duschl & A. S. Bismack (Eds.) Reconceptualizing STEM education: The central role of practices. New York: Routledge."
+            },
+            {
+              "key": "e_1_3_2_1_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/tea.10020"
+            },
+            {
+              "key": "e_1_3_2_1_30_1",
+              "volume-title": "PhET: Interactive simulations for teaching and learning physics. The physics teacher, 44(1), 18-23",
+              "author": "Perkins K.",
+              "year": "2006",
+              "unstructured": "Perkins, K., Adams, W., Dubson, M., Finkelstein, N., Reid, S., Wieman, C., & LeMaster, R. (2006). PhET: Interactive simulations for teaching and learning physics. The physics teacher, 44(1), 18-23."
+            },
+            {
+              "key": "e_1_3_2_1_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/10508406.2010.491752"
+            },
+            {
+              "key": "e_1_3_2_1_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/sce.21301"
+            },
+            {
+              "key": "e_1_3_2_1_33_1",
+              "volume-title": "\u00a0Helping students make sense of the world using next generation science and engineering practices",
+              "author": "Schwarz C. V.",
+              "year": "2017",
+              "unstructured": "Schwarz, C. V., Passmore, C., & Reiser, B. J. (2017).\u00a0Helping students make sense of the world using next generation science and engineering practices. NSTA Press."
+            },
+            {
+              "key": "e_1_3_2_1_34_1",
+              "volume-title": "Proceedings of the 18th International Conference of the Learning Sciences - ICLS 2024 (4pgs). Buffalo, NY: International Society of the Learning Sciences.\u00a0",
+              "author": "Sinha R.",
+              "year": "2024",
+              "unstructured": "Sinha, R., Swanson, H., Date, G., & Chandrasekharan, S. (2024). Epistemic games at the frontier: A characterization of emerging STEM practices to design K12 makerspaces. Proceedings of the 18th International Conference of the Learning Sciences - ICLS 2024 (4pgs). Buffalo, NY: International Society of the Learning Sciences.\u00a0"
+            },
+            {
+              "key": "e_1_3_2_1_35_1",
+              "volume-title": "Misconceptions reconceived: A constructivist analysis of knowledge in transition. The journal of the learning sciences, 3(2), 115-163",
+              "author": "Smith III, J. P.",
+              "year": "1994",
+              "unstructured": "Smith III, J. P., diSessa, A. A., & Roschelle, J. (1994). Misconceptions reconceived: A constructivist analysis of knowledge in transition. The journal of the learning sciences, 3(2), 115-163."
+            },
+            {
+              "key": "e_1_3_2_1_36_1",
+              "volume-title": "Kuhn, T. S., & Suppe, F. (Eds.), The structure of scientific theories (p.244-254).",
+              "author": "Suppe F.",
+              "year": "1974",
+              "unstructured": "Suppe, F. (1974). The search for philosophic understanding of scientific theories: Introduction. In Kuhn, T. S., & Suppe, F. (Eds.), The structure of scientific theories (p.244-254). Chicago: University of Illinois Press."
+            },
+            {
+              "key": "e_1_3_2_1_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11191-011-9425-5"
+            },
+            {
+              "key": "e_1_3_2_1_38_1",
+              "volume-title": "Proceedings of the 16th International Conference of the Learning Sciences - ICLS 2022 (pp. 679-686)",
+              "author": "Swanson H.",
+              "year": "2022",
+              "unstructured": "Swanson, H. (2022). Meta-theoretic competence demonstrated by students in the Patterns class. In Chinn, C., Tan, E., Chan, C., & Kali, Y. (Eds.), Proceedings of the 16th International Conference of the Learning Sciences - ICLS 2022 (pp. 679-686). Hiroshima, Japan: International Society of the Learning Sciences."
+            },
+            {
+              "key": "e_1_3_2_1_39_1",
+              "volume-title": "13th International Conference of the Learning Sciences (ICLS",
+              "volume": "2",
+              "author": "Swanson H.",
+              "year": "2018",
+              "unstructured": "Swanson, H., Arastoopour Irgens, G. A., Bain, C., Hall, K., Woods, P., Rogge, C., Horn, M., & Wilensky, U. (2018). Characterizing computational thinking in high school science. In Kay, J. and Luckin, R. (Eds.), Rethinking Learning in the Digital Age: Making the Learning Sciences Count, 13th International Conference of the Learning Sciences (ICLS 2018), Volume 2, Short Papers, Symposia, and Selected Abstracts, (pp. 871-878). London, UK: International Society of the Learning Sciences."
+            },
+            {
+              "key": "e_1_3_2_1_40_1",
+              "volume-title": "15th International Conference of the Learning Sciences - ICLS 2021 (pp. 745-748)",
+              "author": "Swanson H.",
+              "year": "2021",
+              "unstructured": "Swanson, H., Sherin, B., & Wilensky, U. (2021). Characterizing student theory building in computational modeling. In de Vries, E., Ahn, J., & Hod, Y. (Eds.), 15th International Conference of the Learning Sciences - ICLS 2021 (pp. 745-748). Bochum, Germany: International Society of the Learning Sciences."
+            },
+            {
+              "key": "e_1_3_2_1_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/MCSE.2008.108"
+            },
+            {
+              "key": "e_1_3_2_1_42_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Wagh A. Cook\u2010Whitt K. & Wilensky U. (2017). Bridging inquiry\u2010based science and constructionism: Exploring the alignment between students tinkering with code of computational models and goals of inquiry.\u00a0Journal of Research in Science Teaching \u00a054(5) 615-641.\u00a0",
+              "DOI": "10.1002/tea.21379"
+            },
+            {
+              "key": "e_1_3_2_1_43_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/3501712.3529723"
+            },
+            {
+              "key": "e_1_3_2_1_44_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10956-015-9581-5"
+            },
+            {
+              "key": "e_1_3_2_1_45_1",
+              "volume-title": "NetLogo",
+              "author": "Wilensky U.",
+              "year": "1999",
+              "unstructured": "Wilensky, U. (1999a). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.\u00a0"
+            },
+            {
+              "key": "e_1_3_2_1_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-1-4612-1414-4_7"
+            },
+            {
+              "key": "e_1_3_2_1_47_1",
+              "volume-title": "NetLogo Disease Solo model",
+              "author": "Wilensky U.",
+              "year": "2005",
+              "unstructured": "Wilensky, U. (2005). NetLogo Disease Solo model. http://ccl.northwestern.edu/netlogo/models/DiseaseSolo. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL."
+            },
+            {
+              "key": "e_1_3_2_1_48_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1009421303064"
+            },
+            {
+              "key": "e_1_3_2_1_49_1",
+              "volume-title": "Thinking like a wolf, a sheep, or a firefly: Learning biology through constructing and testing computational theories\u2014an embodied modeling approach.\u00a0Cognition and instruction,\u00a024(2), 171-209",
+              "author": "Wilensky U.",
+              "year": "2006",
+              "unstructured": "Wilensky, U., & Reisman, K. (2006). Thinking like a wolf, a sheep, or a firefly: Learning biology through constructing and testing computational theories\u2014an embodied modeling approach.\u00a0Cognition and instruction,\u00a024(2), 171-209."
+            },
+            {
+              "key": "e_1_3_2_1_50_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10956-014-9497-5"
+            },
+            {
+              "key": "e_1_3_2_1_51_1",
+              "volume-title": "\u00a0Restructuring Change",
+              "author": "Wilkerson-Jerde M.",
+              "year": "2010",
+              "unstructured": "Wilkerson-Jerde, M., & Wilensky, U. (2010).\u00a0Restructuring Change, Interpreting Changes: The DeltaTick Modeling and Analysis Toolkit. Paper presented at the Constructionism 2010 Conference, Paris.\u00a0"
+            },
+            {
+              "key": "e_1_3_2_1_52_1",
+              "volume-title": "Proceedings of the 16th International Conference of the Learning Sciences - ICLS 2022 (pp. 1241-1244)",
+              "author": "Wu S.",
+              "year": "2022",
+              "unstructured": "Wu, S., Swanson, H., Sherin, B., & Wilensky, U. (2022). Students\u2019 prior knowledge of disease spread and prevention. In Chinn, C., Tan, E., Chan, C., & Kali, Y. (Eds.), Proceedings of the 16th International Conference of the Learning Sciences - ICLS 2022 (pp. 1241-1244). Hiroshima, Japan: International Society of the Learning Sciences."
+            }
+          ],
+          "event": {
+            "name": "LDT '24: Symposium on Learning, Design and Technology",
+            "acronym": "LDT '24",
+            "location": "Delft Netherlands"
+          },
+          "container-title": [
+            "Proceedings of the Symposium on Learning Design and Technology"
+          ],
+          "link": [
+            {
+              "URL": "https://dl.acm.org/doi/10.1145/3663433.3663458",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://dl.acm.org/doi/pdf/10.1145/3663433.3663458",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                26
+              ]
+            ],
+            "date-time": "2025-08-26T19:15:20Z",
+            "timestamp": 1756235720000
+          },
+          "score": 28.99309,
+          "resource": {
+            "primary": {
+              "URL": "https://dl.acm.org/doi/10.1145/3663433.3663458"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                21
+              ]
+            ]
+          },
+          "references-count": 52,
+          "alternative-id": [
+            "10.1145/3663433.3663458",
+            "10.1145/3663433"
+          ],
+          "URL": "https://doi.org/10.1145/3663433.3663458",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                21
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2024-06-21",
+              "order": 3,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                6
+              ]
+            ],
+            "date-time": "2024-09-06T02:42:09Z",
+            "timestamp": 1725590529547
+          },
+          "publisher-location": "Berlin/Heidelberg",
+          "reference-count": 0,
+          "publisher": "Springer-Verlag",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.1007/springerreference_60185",
+          "type": "reference-entry",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                8,
+                29
+              ]
+            ],
+            "date-time": "2011-08-29T16:20:21Z",
+            "timestamp": 1314634821000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Agent Based Modeling and Simulation, Introduction to"
+          ],
+          "prefix": "10.1007",
+          "member": "297",
+          "container-title": [
+            "SpringerReference"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2011,
+                8,
+                29
+              ]
+            ],
+            "date-time": "2011-08-29T16:20:35Z",
+            "timestamp": 1314634835000
+          },
+          "score": 28.790657,
+          "resource": {
+            "primary": {
+              "URL": "http://www.springerreference.com/index/doi/10.1007/SpringerReference_60185"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                null
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1007/springerreference_60185"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2026-05-18T16:14:50Z",
+            "timestamp": 1779120890896,
+            "version": "3.51.4"
+          },
+          "publisher-location": "Boston, MA",
+          "reference-count": 78,
+          "publisher": "Springer US",
+          "isbn-type": [
+            {
+              "value": "9780387882789",
+              "type": "print"
+            },
+            {
+              "value": "9780387882796",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2010
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-0-387-88279-6_2",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                2,
+                19
+              ]
+            ],
+            "date-time": "2010-02-19T16:54:59Z",
+            "timestamp": 1266598499000
+          },
+          "page": "17-60",
+          "source": "Crossref",
+          "is-referenced-by-count": 16,
+          "title": [
+            "MaterialSim: A Constructionist Agent-Based Modeling Approach to Engineering Education"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Paulo",
+              "family": "Blikstein",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Uri",
+              "family": "Wilensky",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2009,
+                12,
+                3
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "2_CR1_2",
+              "unstructured": "Abrahamson, D., & Wilensky, U. (2005). ProbLab goes to school: Design, teaching, and learning of probability with multi-agent interactive computer models. Paper presented at the Fourth Conference of the European Society for Research in Mathematics Education, San Feliu de Guixols, Spain"
+            },
+            {
+              "key": "2_CR2_2",
+              "unstructured": "American Society for Engineering Education. (2007). ASEE profiles of engineering and engineering technology colleges. Retrieved from http://www.asee.org/publications/profiles/upload/2007ProfileEng.pdf"
+            },
+            {
+              "key": "2_CR3_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "783",
+              "DOI": "10.1016/0001-6160(84)90151-2",
+              "volume": "32",
+              "author": "MP Anderson",
+              "year": "1984",
+              "unstructured": "Anderson, M. P., Srolovitz, D. J., Grest, G. S., & Sahni, P. S. (1984). Computer simulation of grain growth: I. Kinetics. Acta Metallurgica, 32, 783-792.",
+              "journal-title": "Acta Metallurgica"
+            },
+            {
+              "key": "2_CR4_2",
+              "unstructured": "Berland, M., & Wilensky, U. (2004, April 12-16). Virtual robotics in a collaborative constructionist learning environment. Paper presented at the Annual Meeting of the American Educationalt Research Association, San Diego, CA"
+            },
+            {
+              "key": "2_CR5_2",
+              "unstructured": "Berland, M., & Wilensky, U. (2005, April 11-15). Complex play systems -- Results from a classroom implementation of VBOT. In W. Stroup, U. Wilensky (Chairs), & C. D. Lee (Discussant), Patterns in group learning with next-generation network technology. Paper presented at the Annual Meeting of the American Educational Research Association, Montreal, Canada"
+            },
+            {
+              "key": "2_CR6_2",
+              "unstructured": "Blikstein, P. (2009). An atom is known by the company it keeps: Content, representation and pedagogy within the epistemic revolution of the complexity sciences. Unpublished doctoral dissertation, Northwestern University, Evanston, IL"
+            },
+            {
+              "issue": "3",
+              "key": "2_CR7_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "133",
+              "DOI": "10.1590/S1516-14391999000300004",
+              "volume": "2",
+              "author": "P Blikstein",
+              "year": "1999",
+              "unstructured": "Blikstein, P., & Tschiptschin, A. P. (1999). Monte Carlo simulation of grain growth. Materials Research, 2(3), 133-137.",
+              "journal-title": "Materials Research"
+            },
+            {
+              "key": "2_CR8_2",
+              "unstructured": "Blikstein, P., & Wilensky, U. (2004a). MaterialSim: an agent-based simulation toolkit for learning materials science. In M. Hoit & T. Anderson (Eds.), Proceedings of the International Conference on Engineering Education, Gainesville, Florida, USA"
+            },
+            {
+              "key": "2_CR9_2",
+              "unstructured": "Blikstein, P., & Wilensky, U. (2005a). Less is more: Agent-based simulation as a powerful learning tool in materials science. Proceedings of the IV International Joint Conference on Autonomous Agents and Multi-agent Systems (AAMAS 2005), Utrecht, Holland."
+            },
+            {
+              "key": "2_CR10_2",
+              "unstructured": "Blikstein, P., & Wilensky, U. (2006a). From inert to generative modeling: two case studies of multiagent-based simulation in undergraduate engineering education. Paper presented at the Annual Meeting of the American Educational Research Association, San Francisco, CA"
+            },
+            {
+              "key": "2_CR11_2",
+              "unstructured": "Blikstein, P., & Wilensky, U. (2006b). \u2018Hybrid modeling\u2019: Advanced scientific investigation linking computer models and real-world sensing. Proceedings of the Seventh International Conference of the Learning Sciences, Bloomington, USA."
+            },
+            {
+              "key": "2_CR12_2",
+              "unstructured": "Blikstein, P. & Wilensky, U. (2007). Bifocal modeling: a framework for combining computer modeling, robotics and real-world sensing. Paper presented at the annual meeting of the American Educational Research Association (AERA 2007), Chicago, USA."
+            },
+            {
+              "key": "2_CR13_2",
+              "unstructured": "Blikstein, P., & Wilensky, U. (2008). Implementing multi-agent modeling in the classroom: Lessons from empirical studies in undergraduate engineering education. In M. Jacobson (Chair) & R. Noss (Discussant), Complex systems & learning: Empirical research, issues & \u201cseeing\u201d scientific knowledge with new eyes.\u201d In G. Kanselaar, J. van Merri\u2018nboer, P. Kirschner, & T. de Jong (Eds.), Proceedings of the International Conference of the Learning Sciences (ICLS) (Vol. 3, pp. 266-267). Utrecht, The Netherlands"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR14_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "81",
+              "DOI": "10.1007/s10758-009-9148-8",
+              "volume": "14",
+              "author": "P. Blikstein",
+              "year": "2009",
+              "unstructured": "Blikstein, P. & Wilensky, U. (2009). An atom is known by the company it keeps: A constructionist learning environment for materials science using multi-agent modeling. International Journal of Computers for Mathematical Learning, 14(2), 81-119.",
+              "journal-title": "International Journal of Computers for Mathematical Learning"
+            },
+            {
+              "key": "2_CR84_2",
+              "unstructured": "Blikstein, P. (2009). An atom is known by the company it keeps: Content, representation and pedagogy within the epistemic revolution of the complexity sciences. Unpublished Doctoral Dissertation, Northwestern University, Evanston, IL."
+            },
+            {
+              "key": "2_CR15_2",
+              "first-page": "61",
+              "volume": "24",
+              "author": "JD Bransford",
+              "year": "1999",
+              "unstructured": "Bransford, J. D., & Schwartz, D. L. (1999). Rethinking transfer: A simple proposal with multiple implications. Review of Research in Education, 24, 61-100.",
+              "journal-title": "Review of Research in Education"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR16_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "48",
+              "DOI": "10.1109/TE.1961.4322183",
+              "volume": "E4",
+              "author": "GS Brown",
+              "year": "1961",
+              "unstructured": "Brown, G. S. (1961). Today\u2019s dilemma in engineering education. IRE Transactions on Education, E4(2), 48.",
+              "journal-title": "IRE Transactions on Education"
+            },
+            {
+              "key": "2_CR17_2",
+              "unstructured": "Burke, J. E. (1949). Some factors affecting the rate of grain growth in metals. Transactions of the American Institute of Mining Engineers (180), 73-91."
+            },
+            {
+              "key": "2_CR18_2",
+              "unstructured": "Centola, D., Wilensky, U., & McKenzie, E. (2000, June 14-17). A hands-on modeling approach to evolution: Learning about the evolution of cooperation and altruism through multi-agent modeling - The EACH Project. Proceedings of the Fourth Annual International Conference of the Learning Sciences, Ann Arbor, MI."
+            },
+            {
+              "issue": "3",
+              "key": "2_CR19_2",
+              "first-page": "405",
+              "volume": "20",
+              "author": "JE Colgate",
+              "year": "2004",
+              "unstructured": "Colgate, J. E., McKenna, A., & Ankenman, B. (2004). IDEA: Implementing Blikstein & Wilensky design throughout the curriculum at northwestern. International Journal of Engineering Education, 20(3), 405-411.",
+              "journal-title": "International Journal of Engineering Education"
+            },
+            {
+              "key": "2_CR20_2",
+              "unstructured": "Collier, N., & Sallach, D. (2001). Repast. Chicago: University of Chicago. Retrived from http://repast.sourceforge.net ."
+            },
+            {
+              "key": "2_CR21_2",
+              "volume-title": "Engineering education and practice in the United States: Foundations of our techno-economic future",
+              "author": "Committee on the Education and Utilization of the Engineering",
+              "year": "1985",
+              "unstructured": "Committee on the Education and Utilization of the Engineering. (1985). Engineering education and practice in the United States: Foundations of our techno-economic future. Washington, DC: National Research Council."
+            },
+            {
+              "key": "2_CR23_2",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.7551/mitpress/1786.001.0001",
+              "volume-title": "Changing minds: Computers, learning, and literacy",
+              "author": "AA diSessa",
+              "year": "2000",
+              "unstructured": "diSessa, A. A. (2000). Changing minds: Computers, learning, and literacy. Cambridge: MIT Press."
+            },
+            {
+              "key": "2_CR24_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "145",
+              "DOI": "10.1002/j.2168-9830.1999.tb00425.x",
+              "volume": "88",
+              "author": "CL Dym",
+              "year": "1999",
+              "unstructured": "Dym, C. L. (1999). Learning engineering: Design, languages, and experiences. Journal of Engineering Education, 88, 145-148.",
+              "journal-title": "Journal of Engineering Education"
+            },
+            {
+              "issue": "1",
+              "key": "2_CR25_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "103",
+              "DOI": "10.1002/j.2168-9830.2005.tb00832.x",
+              "volume": "94",
+              "author": "CL Dym",
+              "year": "2005",
+              "unstructured": "Dym, C. L., Agogino, A. M., Eris, O., Frey, D. D., & Leifer, L. J. (2005). Engineering design thinking, teaching, and learning. Journal of Engineering Education, 94(1), 103-120.",
+              "journal-title": "Journal of Engineering Education"
+            },
+            {
+              "key": "2_CR26_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "127",
+              "DOI": "10.1007/978-3-642-57799-4_8",
+              "volume-title": "Computers and Exploratory Learning",
+              "author": "Laurie D. Edwards",
+              "year": "1995",
+              "unstructured": "Edwards, L. (1995). Microworlds as representations. Proceedings of the 2nd International NATO Symposium on Advanced Technology and Education."
+            },
+            {
+              "issue": "10",
+              "key": "2_CR27_2",
+              "first-page": "62",
+              "volume": "72",
+              "author": "HH Einstein",
+              "year": "2002",
+              "unstructured": "Einstein, H. H. (2002). Engineering change at MIT. Civil Engineering, 72(10), 62-69.",
+              "journal-title": "Civil Engineering"
+            },
+            {
+              "key": "2_CR29_2",
+              "unstructured": "Gobert, J., Horwitz, P., Tinker, B., Buckley, B., Wilensky, U., Levy, S., et al. (2004, July 31-August 2). Modeling across the curriculum: Scaling up modeling using technology. Paper presented at the Proceedings of the Twenty-fifth Annual Meeting of the Cognitive Science Society, Boston, MA."
+            },
+            {
+              "key": "2_CR30_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "35",
+              "DOI": "10.1207/s15327809jls1501_5",
+              "volume": "15",
+              "author": "RL Goldstone",
+              "year": "2008",
+              "unstructured": "Goldstone, R. L., & Wilensky, U. (2008). Promoting transfer through complex systems principles. Journal of the Learning Sciences, 15, 35-43.",
+              "journal-title": "Journal of the Learning Sciences"
+            },
+            {
+              "issue": "4",
+              "key": "2_CR31_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "501",
+              "DOI": "10.1061/(ASCE)0733-9372(2005)131:4(501)",
+              "volume": "131",
+              "author": "K Haghighi",
+              "year": "2005",
+              "unstructured": "Haghighi, K. (2005). Systematic and sustainable reform in engineering education. Journal of Environmental Engineering-ASCE, 131(4), 501-502.",
+              "journal-title": "Journal of Environmental Engineering-ASCE"
+            },
+            {
+              "issue": "8",
+              "key": "2_CR33_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "26",
+              "DOI": "10.3102/0013189X032008026",
+              "volume": "32",
+              "author": "G Hatano",
+              "year": "2003",
+              "unstructured": "Hatano, G., & Oura, Y. (2003). Commentary: Reconceptualizing school learning using insight from expertise research. Educational Researcher, 32(8), 26-29.",
+              "journal-title": "Educational Researcher"
+            },
+            {
+              "key": "2_CR34_2",
+              "unstructured": "Horwitz, P., Gobert, J., Wilensky, U., & Dede, C. (2003). MAC: A longitudinal study of modeling technology in science classrooms. Paper presented at the National Educational Computing Conference (NECC), Seattle, WA"
+            },
+            {
+              "key": "2_CR35_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Hurst, K. D. (1995). A new paradigm for engineering education. Paper presented at the 25th Annual ASEE/IEEE Conference: Frontiers in Education \u201995, Atlanta, GA",
+              "DOI": "10.1109/FIE.1995.483049"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR36_2",
+              "first-page": "92",
+              "volume": "105",
+              "author": "S Jerath",
+              "year": "1983",
+              "unstructured": "Jerath, S. (1983). Engineering-education in perspective. Mechanical Engineering, 105(2), 92-93.",
+              "journal-title": "Mechanical Engineering"
+            },
+            {
+              "key": "2_CR37_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Katehi, L., Banks, K., Diefes-Dux, H., Follman, D., Gaunt, J., Haghighi, K., et al. (2004). A New Framework for Academic Reform in Engineering Education. Paper presented at the 2004 American Society for Engineering Education Conference, Salt Lake City, UT.",
+              "DOI": "10.18260/1-2--12897"
+            },
+            {
+              "key": "2_CR38_2",
+              "unstructured": "Krause, S. J., & Tasooji, A. (2007). Diagnosing students\u2019 misconceptions on solubility and saturation for understanding of phase diagrams. Paper presented at the American Society for Engineering Education Annual Conference, Portland, USA"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR39_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "105",
+              "DOI": "10.1023/B:TFCE.0000022478.56133.81",
+              "volume": "38",
+              "author": "NN Kulov",
+              "year": "2004",
+              "unstructured": "Kulov, N. N., & Slin\u2019ko, M. G. (2004). The state of the art in chemical engineering science and education. Theoretical Foundations of Chemical Engineering, 38(2), 105-111.",
+              "journal-title": "Theoretical Foundations of Chemical Engineering"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR40_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "119",
+              "DOI": "10.5957/mt1.1996.33.2.119",
+              "volume": "33",
+              "author": "RA Lamley",
+              "year": "1996",
+              "unstructured": "Lamley, R. A. (1996). A model for an engineering education. Marine Technology and Sname News, 33(2), 119-121.",
+              "journal-title": "Marine Technology and Sname News"
+            },
+            {
+              "key": "2_CR41_2",
+              "unstructured": "Levy, S. T., Kim, H., & Wilensky, U. (2004, April 12-16). Connected chemistry - A study of secondary students using agent-based models to learn chemistry. Paper presented at the Annual meeting of the American Educational Research Association, San Diego, CA"
+            },
+            {
+              "key": "2_CR42_2",
+              "unstructured": "Levy, S. T., Novak, M., & Wilensky, U. (2006). Students\u2019 foraging through the complexities of the particulate world: Scaffolding for independent inquiry in the connected chemistry (MAC) curriculum. Paper presented at the Annual Meeting of the American Educational Research Association, San Francisco, CA"
+            },
+            {
+              "key": "2_CR43_2",
+              "first-page": "297",
+              "volume-title": "Constructionism in practice",
+              "author": "F Martin",
+              "year": "1996",
+              "unstructured": "Martin, F. (1996). Ideal and real systems: A study of notions of control in undergraduates who design robots. In Y. Kafai & M. Resnick (Eds.), Constructionism in practice (pp. 297-332). Mahwah, NJ: Lawrence Erlbaum Associates Inc."
+            },
+            {
+              "issue": "5",
+              "key": "2_CR44_2",
+              "first-page": "382",
+              "volume": "65",
+              "author": "MIT Center for Policy Alternatives",
+              "year": "1975",
+              "unstructured": "MIT Center for Policy Alternatives. (1975). Future directions in engineering-education - system response to a changing world - report by center for policy alternatives for MIT School of Engineering. Engineering Education, 65(5), 382-382.",
+              "journal-title": "Engineering Education"
+            },
+            {
+              "key": "2_CR83_2",
+              "unstructured": "Minsky, M. (1986). The Society of Mind. New York: Simon & Schuster."
+            },
+            {
+              "key": "2_CR45_2",
+              "volume-title": "Design learning as conceptual change: A framework for developing a science of design learning. Conference of the American Society of Engineering Education",
+              "author": "WC Newstetter",
+              "year": "2000",
+              "unstructured": "Newstetter, W. C., & McCracken, M. (2000). Design learning as conceptual change: A framework for developing a science of design learning. Conference of the American Society of Engineering Education. St. Louis, MO: ASEE."
+            },
+            {
+              "issue": "3",
+              "key": "2_CR818_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1007",
+              "DOI": "10.1016/S1359-6454(98)00391-7",
+              "volume": "47",
+              "author": "N. Ono",
+              "year": "1999",
+              "unstructured": "Ono, N., Kimura, K., & Watanabe, T. (1999). Monte Carlo simulation of grain growth with the full spectra of grain orientation and grain boundary energy. Acta Materialia, 47(3), 1007-1017.",
+              "journal-title": "Acta Materialia"
+            },
+            {
+              "key": "2_CR46_2",
+              "volume-title": "The dreams of reason: The computer and the rise of the sciences of complexity",
+              "author": "HR Pagels",
+              "year": "1988",
+              "unstructured": "Pagels, H. R. (1988). The dreams of reason: The computer and the rise of the sciences of complexity. New York: Simon & Schuster."
+            },
+            {
+              "key": "2_CR47_2",
+              "volume-title": "Engineering undergraduate education",
+              "author": "Panel on Undergraduate Engineering Education",
+              "year": "1986",
+              "unstructured": "Panel on Undergraduate Engineering Education. (1986). Engineering undergraduate education. Washington, DC: National Research Council."
+            },
+            {
+              "key": "2_CR48_2",
+              "volume-title": "Mindstorms: children, computers, and powerful ideas",
+              "author": "S Papert",
+              "year": "1980",
+              "unstructured": "Papert, S. (1980). Mindstorms: children, computers, and powerful ideas. New York: Basic Books."
+            },
+            {
+              "key": "2_CR49_2",
+              "volume-title": "Constructionism",
+              "author": "S Papert",
+              "year": "1991",
+              "unstructured": "Papert, S. (1991). Situating constructionism. In S. Papert & I. Harel (Eds.), Constructionism. Cambridge, MA: MIT Press."
+            },
+            {
+              "key": "2_CR50_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "10",
+              "DOI": "10.1007/10692956_2",
+              "volume": "1534",
+              "author": "HVD Parunak",
+              "year": "1998",
+              "unstructured": "Parunak, H. V. D., Savit, R., & Riolo, R. L. (1998). Agent-based modeling vs equation-based modeling: A case study and users\u2019 guide. Lecture Notes in Computer Science, 1534, 10-25.",
+              "journal-title": "Lecture Notes in Computer Science"
+            },
+            {
+              "key": "2_CR51_2",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-1-4899-3051-4",
+              "volume-title": "Phase Transformations in Metals and Alloys",
+              "author": "D. A. Porter",
+              "year": "1992",
+              "unstructured": "Porter, D. A., & Easterling, K. E. (1992). Phase transformations in metals and alloys (2nd ed.). London; New York: Chapman & Hall"
+            },
+            {
+              "issue": "5",
+              "key": "2_CR52_2",
+              "first-page": "488",
+              "volume": "18",
+              "author": "MC Roco",
+              "year": "2002",
+              "unstructured": "Roco, M. C. (2002). Nanotechnology - A frontier for engineering education. International Journal of Engineering Education, 18(5), 488-497.",
+              "journal-title": "International Journal of Engineering Education"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR53_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "118",
+              "DOI": "10.1061/(ASCE)1052-3928(2005)131:2(118)",
+              "volume": "131",
+              "author": "JS Russell",
+              "year": "2005",
+              "unstructured": "Russell, J. S., & Stouffer, W. B. (2005). Survey of the national civil engineering curriculum. Journal of Professional Issues in Engineering Education and Practice, 131(2), 118-128.",
+              "journal-title": "Journal of Professional Issues in Engineering Education and Practice"
+            },
+            {
+              "key": "2_CR54_2",
+              "unstructured": "Sengupta, P. & Wilensky, U. (2008). On the learnability of electricity as a complex system. In M. Jacobson (Chair) & R. Noss (Discussant), Complex systems & learning: Empirical research, issues & \u201c\u2018seeing\u201d scientific knowledge with new eyes. In G. Kanselaar, J. van Merri\u2018nboer, P. Kirschner, & T. de Jong (Eds.), Proceedings of the International Conference of the Learning Sciences (ICLS) (Vol. 3, pp. 267-268). Utrecht, The Netherlands"
+            },
+            {
+              "issue": "1",
+              "key": "2_CR55_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1023/A:1011434026437",
+              "volume": "6",
+              "author": "BL Sherin",
+              "year": "2001",
+              "unstructured": "Sherin, B. L. (2001). A comparison of programming languages and algebraic notation as expressive languages for physics. International Journal of Computers for Mathematical Learning, 6(1), 1-61.",
+              "journal-title": "International Journal of Computers for Mathematical Learning"
+            },
+            {
+              "issue": "6",
+              "key": "2_CR56_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "606",
+              "DOI": "10.1037/0003-066X.46.6.606",
+              "volume": "46",
+              "author": "RS Siegler",
+              "year": "1991",
+              "unstructured": "Siegler, R. S., & Crowley, K. (1991). The microgenetic method: A direct means for studying cognitive development. American Psychologist, 46(6), 606-620.",
+              "journal-title": "American Psychologist"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR57_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "36",
+              "DOI": "10.1145/174809.174813",
+              "volume": "1",
+              "author": "E Soloway",
+              "year": "1994",
+              "unstructured": "Soloway, E., Guzdial, M., & Hay, K. E. (1994). Learner-centered design: the challenge for HCI in the 21st century. Interactions, 1(2), 36-48.",
+              "journal-title": "Interactions"
+            },
+            {
+              "key": "2_CR58_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "793",
+              "DOI": "10.1016/0001-6160(84)90152-4",
+              "volume": "32",
+              "author": "DJ Srolovitz",
+              "year": "1984",
+              "unstructured": "Srolovitz, D. J., Anderson, M. P., Grest, G. S., & Sahni, P. S. (1984). Computer simulation of grain growth - II. Grain size distribution, topology and local dynamics. Acta Metallurgica, 32, 793-801.",
+              "journal-title": "Acta Metallurgica"
+            },
+            {
+              "issue": "3",
+              "key": "2_CR59_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "285",
+              "DOI": "10.1023/A:1025085023936",
+              "volume": "12",
+              "author": "M Stieff",
+              "year": "2003",
+              "unstructured": "Stieff, M., & Wilensky, U. (2003). Connected chemistry: Incorporating interactive simulations into the chemistry classroom. Journal of Science Education and Technology, 12(3), 285-302.",
+              "journal-title": "Journal of Science Education and Technology"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR60_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "R53",
+              "DOI": "10.1088/0965-0393/13/2/R01",
+              "volume": "13",
+              "author": "K Thornton",
+              "year": "2005",
+              "unstructured": "Thornton, K., & Asta, M. (2005). Current status and outlook of computational materials science education in the US. Modelling and Simulation in Materials Science and Engineering, 13(2), R53.",
+              "journal-title": "Modelling and Simulation in Materials Science and Engineering"
+            },
+            {
+              "key": "2_CR61_2",
+              "unstructured": "Tisue, S., & Wilensky, U. (2004, May 16-21). NetLogo: A simple environment for modeling complexity. Paper presented at the International Conference on Complex Systems (ICCS 2004), Boston, MA"
+            },
+            {
+              "issue": "10",
+              "key": "2_CR62_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "14",
+              "DOI": "10.1007/s11837-006-0194-6",
+              "volume": "58",
+              "author": "G Tryggvason",
+              "year": "2006",
+              "unstructured": "Tryggvason, G., & Apelian, D. (2006). Re-engineering engineering education for the challenges of the 21 st century. JOM, 58(10), 14-17.",
+              "journal-title": "JOM"
+            },
+            {
+              "key": "2_CR63_2",
+              "volume-title": "Tinkering toward utopia: A century of public school reform",
+              "author": "DB Tyack",
+              "year": "1995",
+              "unstructured": "Tyack, D. B., & Cuban, L. (1995). Tinkering toward utopia: A century of public school reform. Cambridge, MA: Harvard University Press."
+            },
+            {
+              "key": "2_CR64_2",
+              "unstructured": "Wilensky, U. (1993). Connected mathematics: Building concrete relationships with mathematical knowledge. Unpublished doctoral dissertation, MIT, Cambridge, MA"
+            },
+            {
+              "issue": "2",
+              "key": "2_CR65_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "231",
+              "DOI": "10.1016/0732-3123(95)90010-1",
+              "volume": "14",
+              "author": "U Wilensky",
+              "year": "1995",
+              "unstructured": "Wilensky, U. (1995). Paradox, programming and learning probability. Journal of Mathematical Behavior, 14(2), 231-280.",
+              "journal-title": "Journal of Mathematical Behavior"
+            },
+            {
+              "key": "2_CR66_2",
+              "volume-title": "Computer modeling and simulation in science education",
+              "author": "U Wilensky",
+              "year": "1999",
+              "unstructured": "Wilensky, U. (1999a). GasLab-an extensible modeling toolkit for exploring micro-and-macro-views of gases. In N. Roberts, W. Feurzeig & B. Hunter (Eds.), Computer modeling and simulation in science education. Berlin: Springer Verlag."
+            },
+            {
+              "issue": "1",
+              "key": "2_CR67_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1023/A:1025651502936",
+              "volume": "8",
+              "author": "U Wilensky",
+              "year": "2003",
+              "unstructured": "Wilensky, U. (2003). Statistical mechanics for secondary school: The GasLab modeling toolkit. International Journal of Computers for Mathematical Learning, 8(1), 1-41. Special issue on agent-based modeling.",
+              "journal-title": "International Journal of Computers for Mathematical Learning"
+            },
+            {
+              "key": "2_CR68_2",
+              "unstructured": "Wilensky, U. (2006). Complex systems and restructuration of scientific disciplines: Implications for learning, analysis of social systems, and educational policy. In J. Kolodner (Chair), C. Bereiter (Discussant), & J.D. Bransford (Discussant), Complex systems, learning, and education: Conceptual principles, methodologies, and implications for educational research. Paper presented at the Annual Meeting of the American Educational Research Association, San Francisco, CA"
+            },
+            {
+              "key": "2_CR69_2",
+              "unstructured": "Wilensky, U., Hazzard, E., & Longenecker, S. (2000, October 11-13). A bale of turtles: A case study of a middle school science class studying complexity using StarLogoT. Paper presented at the meeting of the Spencer Foundation, New York"
+            },
+            {
+              "key": "2_CR70_2",
+              "unstructured": "Wilensky, U., & Papert, S. (in preparation). Restructurations: Reformulations of knowledge disciplines through new representational forms. Working Paper. Evanston, IL. Center for Connected Learning and Computer-Based Modeling, Northwestern University."
+            },
+            {
+              "key": "2_CR71_2",
+              "unstructured": "Wilensky, U., Papert, S., Sherin, B., diSessa, A., Kay, A., & Turkle, S. (2005). Center for Learning and Computation-Based Knowledge (CLiCK). Proposal to the National Science Foundation Science of Learning Centers."
+            },
+            {
+              "key": "2_CR72_2",
+              "volume-title": "An introduction to agent-based modeling: Modeling natural, social and engineered complex systems with NetLogo",
+              "author": "U Wilensky",
+              "year": "2009",
+              "unstructured": "Wilensky, U., & Rand, W. (2009). An introduction to agent-based modeling: Modeling natural, social and engineered complex systems with NetLogo. Cambridge, MA: MIT Press."
+            },
+            {
+              "issue": "2",
+              "key": "2_CR73_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "171",
+              "DOI": "10.1207/s1532690xci2402_1",
+              "volume": "24",
+              "author": "U Wilensky",
+              "year": "2006",
+              "unstructured": "Wilensky, U., & Reisman, K. (2006). Thinking like a wolf, a sheep or a firefly: Learning biology through constructing and testing computational theories. Cognition & Instruction, 24(2), 171-209.",
+              "journal-title": "Cognition & Instruction"
+            },
+            {
+              "issue": "1",
+              "key": "2_CR74_2",
+              "doi-asserted-by": "publisher",
+              "first-page": "3",
+              "DOI": "10.1023/A:1009421303064",
+              "volume": "8",
+              "author": "U Wilensky",
+              "year": "1999",
+              "unstructured": "Wilensky, U., & Resnick, M. (1999). Thinking in levels: A dynamic systems approach to making sense of the world. Journal of Science Education and Technology, 8(1), 3-19.",
+              "journal-title": "Journal of Science Education and Technology"
+            },
+            {
+              "key": "2_CR75_2",
+              "unstructured": "Wilkerson-Jerde, M., & Wilensky, U. (2009). Complementarity in equational and agent-based models: A pedagogical perspective. Paper presented at the Annual Meeting of the American Research Education Association, San Diego, CA"
+            },
+            {
+              "key": "2_CR82_2",
+              "unstructured": "Wilensky, U. (2006). Complex systems and reformulating scientific disciplines: Implications for learning, analysis of social systems, and educational policy. Paper presented at the American Educational Research Association, San Francisco, CA."
+            },
+            {
+              "key": "2_CR76_2",
+              "volume-title": "A new kind of science",
+              "author": "S Wolfram",
+              "year": "2002",
+              "unstructured": "Wolfram, S. (2002). A new kind of science. Champaign, IL: Wolfram Media."
+            },
+            {
+              "key": "2_CR77_2",
+              "unstructured": "Yamins, D. (2005). Towards a theory of \u201clocal to global\u201d in distributed multi-agent systems (I). Proceedings of the Fourth International Joint Conference on Autonomous Agents and Multiagent Systems, Utrecht, The Netherlands."
+            }
+          ],
+          "container-title": [
+            "Designs for Learning Environments of the Future"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-0-387-88279-6_2.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                30
+              ]
+            ],
+            "date-time": "2023-05-30T10:27:32Z",
+            "timestamp": 1685442452000
+          },
+          "score": 28.660973,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-0-387-88279-6_2"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                12,
+                3
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780387882789",
+            "9780387882796"
+          ],
+          "references-count": 78,
+          "URL": "https://doi.org/10.1007/978-0-387-88279-6_2",
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                12,
+                3
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 5,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

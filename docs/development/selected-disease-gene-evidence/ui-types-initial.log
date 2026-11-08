@@ -1,0 +1,7 @@
+experiments/dna-protein-synthesis/ui.ts(19,58): error TS2322: Type 'string' is not assignable to type '"deletion" | "insertion" | "substitution" | undefined'.
+experiments/virus/ui.ts(28,58): error TS2322: Type 'string' is not assignable to type '"circle" | "person" | undefined'.
+experiments/virus/ui.ts(50,9): error TS2322: Type '{ id: string; breed: string; x: number; y: number; heading: number; sick: boolean; remainingImmunity: number; sickTime: number; age: number; shape: "circle" | "person"; color: string; size: number; }[]' is not assignable to type 'readonly SpatialAgent[]'.
+  Type '{ id: string; breed: string; x: number; y: number; heading: number; sick: boolean; remainingImmunity: number; sickTime: number; age: number; shape: "circle" | "person"; color: string; size: number; }' is not assignable to type 'SpatialAgent'.
+    Types of property 'shape' are incompatible.
+      Type '"circle" | "person"' is not assignable to type '"circle" | "triangle" | undefined'.
+        Type '"person"' is not assignable to type '"circle" | "triangle" | undefined'.

@@ -1,0 +1,217 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1056%2Fnejm198106253042604%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1056/nejm198106253042604\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "7015135",
+          "source": "MED",
+          "pmid": "7015135",
+          "doi": "10.1056/nejm198106253042604",
+          "title": "Glucagon and the A cell: physiology and pathophysiology (second of two parts).",
+          "authorString": "Unger RH, Orci L.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Unger RH",
+                "lastName": "Unger",
+                "firstName": "R H",
+                "initials": "RH"
+              },
+              {
+                "fullName": "Orci L",
+                "lastName": "Orci",
+                "firstName": "L",
+                "initials": "L"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "26",
+            "volume": "304",
+            "journalIssueId": 403934,
+            "dateOfPublication": "1981 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 1981,
+            "journal": {
+              "medlineAbbreviation": "N Engl J Med",
+              "title": "The New England journal of medicine",
+              "essn": "1533-4406",
+              "issn": "0028-4793",
+              "nlmid": "0255562",
+              "isoabbreviation": "N Engl J Med"
+            },
+            "printPublicationDate": "1981-06-01"
+          },
+          "pubYear": "1981",
+          "pageInfo": "1575-1580",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Islets of Langerhans",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "CY",
+                      "qualifierName": "cytology"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PP",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Diabetes Mellitus",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PP",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Glucagon",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "BL",
+                      "qualifierName": "blood"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DF",
+                      "qualifierName": "deficiency"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Insulin",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Insulin Secretion"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Glucagon",
+                "registryNumber": "9007-92-5"
+              },
+              {
+                "name": "Insulin",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1056/NEJM198106253042604"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 76,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1981-07-23",
+          "dateOfCreation": "1981-06-25",
+          "dateOfRevision": "2018-12-17",
+          "firstPublicationDate": "1981-06-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

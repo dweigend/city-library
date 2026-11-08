@@ -1,0 +1,1 @@
+$ tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json && tsc -p tsconfig.ui-examples.json

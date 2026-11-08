@@ -1,0 +1,268 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1210361%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1126/science.1210361\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "22157081",
+          "source": "MED",
+          "pmid": "22157081",
+          "doi": "10.1126/science.1210361",
+          "title": "Stop signals provide cross inhibition in collective decision-making by honeybee swarms.",
+          "authorString": "Seeley TD, Visscher PK, Schlegel T, Hogan PM, Franks NR, Marshall JA.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Seeley TD",
+                "lastName": "Seeley",
+                "firstName": "Thomas D",
+                "initials": "TD",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurobiology and Behavior, Cornell University, Ithaca, NY 14853, USA. tds5@cornell.edu"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Visscher PK",
+                "lastName": "Visscher",
+                "firstName": "P Kirk",
+                "initials": "PK"
+              },
+              {
+                "fullName": "Schlegel T",
+                "lastName": "Schlegel",
+                "firstName": "Thomas",
+                "initials": "T"
+              },
+              {
+                "fullName": "Hogan PM",
+                "lastName": "Hogan",
+                "firstName": "Patrick M",
+                "initials": "PM"
+              },
+              {
+                "fullName": "Franks NR",
+                "lastName": "Franks",
+                "firstName": "Nigel R",
+                "initials": "NR"
+              },
+              {
+                "fullName": "Marshall JA",
+                "lastName": "Marshall",
+                "firstName": "James A R",
+                "initials": "JA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-1506-167X"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-1506-167X"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "recommended_reviews"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6064",
+            "volume": "335",
+            "journalIssueId": 1894021,
+            "dateOfPublication": "2012 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2012,
+            "journal": {
+              "medlineAbbreviation": "Science",
+              "title": "Science (New York, N.Y.)",
+              "essn": "1095-9203",
+              "issn": "0036-8075",
+              "nlmid": "0404511",
+              "isoabbreviation": "Science"
+            },
+            "printPublicationDate": "2012-01-01"
+          },
+          "pubYear": "2012",
+          "pageInfo": "108-111",
+          "abstractText": "Honeybee swarms and complex brains show many parallels in how they make decisions. In both, separate populations of units (bees or neurons) integrate noisy evidence for alternatives, and, when one population exceeds a threshold, the alternative it represents is chosen. We show that a key feature of a brain--cross inhibition between the evidence-accumulating populations--also exists in a swarm as it chooses its nesting site. Nest-site scouts send inhibitory stop signals to other scouts producing waggle dances, causing them to cease dancing, and each scout targets scouts' reporting sites other than her own. An analytic model shows that cross inhibition between populations of scout bees increases the reliability of swarm decision-making by solving the problem of deadlock over equal sites.",
+          "affiliation": "Department of Neurobiology and Behavior, Cornell University, Ithaca, NY 14853, USA. tds5@cornell.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Biotechnology and Biological Sciences Research Council",
+                "acronym": "BB_",
+                "grantId": "BB/G02166X/1",
+                "orderIn": 0
+              },
+              {
+                "agency": "Biotechnology and Biological Sciences Research Council",
+                "acronym": "BB_",
+                "grantId": "BB/G02166X/2",
+                "orderIn": 0
+              },
+              {
+                "agency": "Biotechnology and Biological Sciences Research Council",
+                "acronym": "BB_",
+                "grantId": "E19832",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Neurons",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bees",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Behavior, Animal"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Animal Communication"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Nesting Behavior"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Social Behavior"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Decision Making"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Movement"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Neural Inhibition"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Neurological"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1126/science.1210361"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "22157084",
+                "reference": "Science. 2012 Jan 6;335(6064):43-4. doi: 10.1126/science.1216563.",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 122,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2012-01-25",
+          "dateOfCreation": "2011-12-14",
+          "dateOfRevision": "2025-05-29",
+          "electronicPublicationDate": "2011-12-08",
+          "firstPublicationDate": "2011-12-08",
+          "firstIndexDate": "2011-12-15",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

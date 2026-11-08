@@ -1,0 +1,1960 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Changes+in+turbulent+mixing+shift+competition+for+light+between+phytoplankton+species+Huisman+2004&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 4988026,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                19
+              ]
+            ],
+            "date-time": "2026-10-19T17:42:21Z",
+            "timestamp": 1792431741762,
+            "version": "4.5.0"
+          },
+          "reference-count": 59,
+          "publisher": "Wiley",
+          "issue": "11",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "2015-09-01T00:00:00Z",
+                "timestamp": 1441065600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 3956,
+              "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Ecology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2004,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1890/03-0763",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                6,
+                4
+              ]
+            ],
+            "date-time": "2007-06-04T19:30:36Z",
+            "timestamp": 1180985436000
+          },
+          "page": "2960-2970",
+          "source": "Crossref",
+          "is-referenced-by-count": 583,
+          "title": [
+            "CHANGES IN TURBULENT MIXING SHIFT COMPETITION FOR LIGHT BETWEEN PHYTOPLANKTON SPECIES"
+          ],
+          "prefix": "10.1002",
+          "volume": "85",
+          "author": [
+            {
+              "given": "Jef",
+              "family": "Huisman",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jonathan",
+              "family": "Sharples",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jasper M.",
+              "family": "Stroom",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Petra M.",
+              "family": "Visser",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "W. Edwin A.",
+              "family": "Kardinaal",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jolanda M. H.",
+              "family": "Verspagen",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ben",
+              "family": "Sommeijer",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "reference": [
+            {
+              "key": "i0012-9658-85-11-2960-abraham1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35037555"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-baileywatts1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "A. E. Bailey-Watts, E. J. Wise, and A. Kirika .1987 .An experiment in phytoplankton ecology and applied fishery management: effects of artificial aeration on troublesome algal blooms in a small eutrophic loch .Aquaculture and Fisheries Management,\n                      18\n                      :259 -276 .",
+              "DOI": "10.1111/j.1365-2109.1987.tb00146.x"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-behrenfeld1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1997.42.7.1479"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-bormans1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1003103706305"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-bracco1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2000.1212"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-brown1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1137/0910062"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-chao1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.78.10.6324"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-chavez1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.286.5447.2126"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-codd1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/09670269910001736462"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-condie1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0967-0637(98)00085-5"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-diehl1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2002)083[0399:PLANIA]2.0.CO;2"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-durrett1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1996.0292"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-elliott1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2427.2002.00813.x"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-eppley1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-0981(78)90118-1"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-flameling1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/19.8.1011"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-harris1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2427.1996.00505.x"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-hassell1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/370290a0"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-huffaker1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "C. B. Huffaker, 1958 .Experimental studies on predation: dispersion factors and predator-prey oscillations .Hilgardia,\n                      27\n                      :343 -383 .",
+              "DOI": "10.3733/hilg.v27n14p343"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-huisman1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[0202:PDOLLP]2.0.CO;2"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-huisman2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/338511"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-huisman3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[0211:CFLBPS]2.0.CO;2"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-huisman4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1385-1101(02)00137-5"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-huisman5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1999.44.7.1781"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-huisman6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/303220"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-huisman7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939554"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-hulot1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.2004.49.4_part_2.1424"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-ibelings1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.0022-3646.1996.00549.x"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-ibelings2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-8137.1994.tb02987.x"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-imberger1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1175/1520-0485(1991)021<0659:OTNOTI>2.0.CO;2"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-irigoien1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/22.12.2367"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-jassby1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1976.21.4.0540"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-jones1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0272-7714(90)90092-6"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-kerr1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature00823"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-kierstead1",
+              "unstructured": "H. Kierstead, and L. B. Slobodkin .1953 .The size of water masses containing plankton blooms .Journal of Marine Research,\n                      12\n                      :141 -147 ."
+            },
+            {
+              "key": "i0012-9658-85-11-2960-klausmeier1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.2001.46.8.1998"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-kocsis1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0924-7963(99)00006-8"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-kononen1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1996.41.1.0098"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-lauria1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0924-7963(99)00013-5"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-levin1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/282900"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-litchman1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2427.2000.00559.x"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-macintyre1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1999.44.3.0512"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-powell1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/284352"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-reynolds2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/5.2.203"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-riley1",
+              "unstructured": "G. A. Riley, 1942 .The relationship of vertical turbulence and spring diatom flowerings .Journal of Marine Research,\n                      5\n                      :67 -87 ."
+            },
+            {
+              "key": "i0012-9658-85-11-2960-riley2",
+              "unstructured": "G. A. Riley, H. Stommel, and D. F. Bumpus .1949 .Quantitative ecology of the plankton of the western North Atlantic .Bulletin of the Bingham Oceanographic Collection,\n                      12\n                      :1 -169 ."
+            },
+            {
+              "key": "i0012-9658-85-11-2960-sharples1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1029/2000JC000604"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-sherman1",
+              "unstructured": "B. S. Sherman, I. T. Webster, G. J. Jones, and R. L. Oliver .1998 .Transitions between Aulacoseira and Anabaena dominance in a turbid river weir pool .Limnology and Oceanography,\n                      43\n                      :1902 -1915 ."
+            },
+            {
+              "key": "i0012-9658-85-11-2960-shigesada1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00276919"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-skellam1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "J. G. Skellam, 1951 .Random dispersal in theoretical populations .Biometrika,\n                      38\n                      :196 -218 .",
+              "DOI": "10.1093/biomet/38.1-2.196"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-spigel1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00288330.1987.9516233"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-stenseth1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1071281"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-sverdrup1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "H. U. Sverdrup, 1953 .On conditions for the vernal blooming of phytoplankton .Journal du Conseil, Conseil Permanent International pour l'Exploration de la Mer,\n                      18\n                      :287 -295 .",
+              "DOI": "10.1093/icesjms/18.3.287"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-villareal1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/17103"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-visser2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2427.1996.00093.x"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-visser3",
+              "unstructured": "P. M. Visser, L. Massaut, J. Huisman, and L. R. Mur .1996b .Sedimentation losses of Scenedesmus in relation to mixing depth .Archiv fur Hydrobiologie,\n                      136\n                      :289 -308 ."
+            },
+            {
+              "key": "i0012-9658-85-11-2960-walsby1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "A. E. Walsby, 1994 .Gas vesicles .Microbiological Reviews,\n                      58\n                      :94 -144 .",
+              "DOI": "10.1128/MMBR.58.1.94-144.1994"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-walsby2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.1997.00754.x"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-weissing1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1994.1113"
+            },
+            {
+              "key": "i0012-9658-85-11-2960-zohary1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/12.2.423"
+            }
+          ],
+          "container-title": [
+            "Ecology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1890%2F03-0763",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/full/10.1890/03-0763",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                22
+              ]
+            ],
+            "date-time": "2020-04-22T14:42:57Z",
+            "timestamp": 1587566577000
+          },
+          "score": 59.79145,
+          "resource": {
+            "primary": {
+              "URL": "http://doi.wiley.com/10.1890/03-0763"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                11
+              ]
+            ]
+          },
+          "references-count": 59,
+          "journal-issue": {
+            "issue": "11",
+            "published-print": {
+              "date-parts": [
+                [
+                  2004,
+                  11
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1890/03-0763"
+          ],
+          "URL": "https://doi.org/10.1890/03-0763",
+          "ISSN": [
+            "0012-9658"
+          ],
+          "issn-type": [
+            {
+              "value": "0012-9658",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                26
+              ]
+            ],
+            "date-time": "2026-09-26T06:48:29Z",
+            "timestamp": 1790405309661,
+            "version": "4.1.0"
+          },
+          "reference-count": 79,
+          "publisher": "Wiley",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    2,
+                    3
+                  ]
+                ],
+                "date-time": "2020-02-03T00:00:00Z",
+                "timestamp": 1580688000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "esajournals.onlinelibrary.wiley.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Ecology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2020,
+                3
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title><jats:p>The color of many lakes and seas is changing, which is likely to affect the species composition of freshwater and marine phytoplankton communities. For example, cyanobacteria with phycobilisomes as light\u2010harvesting antennae can effectively utilize green or orange\u2010red light. However, recent studies show that they use blue light much less efficiently than phytoplankton species with chlorophyll\u2010based light\u2010harvesting complexes, even though both phytoplankton groups may absorb blue light to a similar extent. Can we advance ecological theory to predict how these differences in light\u2010harvesting strategy affect competition between phytoplankton species? Here, we develop a new resource competition model in which the absorption and utilization efficiency of different colors of light are varied independently. The model was parameterized using monoculture experiments with a freshwater cyanobacterium and green alga, as representatives of phytoplankton with phycobilisome\u2010based vs. chlorophyll\u2010based light\u2010harvesting antennae. The parameterized model was subsequently tested in a series of competition experiments. In agreement with the model predictions, the green alga won the competition in blue light whereas the cyanobacterium won in red light, irrespective of the initial relative abundances of the species. These results are in line with observed changes in phytoplankton community structure in response to lake brownification. Similarly, in marine waters, the model predicts dominance of <jats:italic>Prochlorococcus</jats:italic> with chlorophyll\u2010based light\u2010harvesting complexes in blue light but dominance of <jats:italic>Synechococcus</jats:italic> with phycobilisomes in green light, with a broad range of coexistence in between. These predictions agree well with the known biogeographical distributions of these two highly abundant marine taxa. Our results offer a novel trait\u2010based approach to understand and predict competition between phytoplankton species with different photosynthetic pigments and light\u2010harvesting strategies.</jats:p>",
+          "DOI": "10.1002/ecy.2951",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2019,
+                12,
+                16
+              ]
+            ],
+            "date-time": "2019-12-16T08:50:20Z",
+            "timestamp": 1576486220000
+          },
+          "update-policy": "https://doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 57,
+          "title": [
+            "Changes in water color shift competition between phytoplankton species with contrasting light\u2010harvesting strategies"
+          ],
+          "prefix": "10.1002",
+          "volume": "101",
+          "author": [
+            {
+              "given": "Veerle M.",
+              "family": "Luimstra",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Freshwater and Marine Ecology Institute for Biodiversity and Ecosystem Dynamics University of Amsterdam PO Box 94240 Amsterdam 1090 GE The Netherlands"
+                },
+                {
+                  "name": "Wetsus European Centre of Excellence for Sustainable Water Technology Oostergoweg 9 Leeuwarden 8911 MA The Netherlands"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jolanda M. H.",
+              "family": "Verspagen",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Freshwater and Marine Ecology Institute for Biodiversity and Ecosystem Dynamics University of Amsterdam PO Box 94240 Amsterdam 1090 GE The Netherlands"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Tianshuo",
+              "family": "Xu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Freshwater and Marine Ecology Institute for Biodiversity and Ecosystem Dynamics University of Amsterdam PO Box 94240 Amsterdam 1090 GE The Netherlands"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J. Merijn",
+              "family": "Schuurmans",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Freshwater and Marine Ecology Institute for Biodiversity and Ecosystem Dynamics University of Amsterdam PO Box 94240 Amsterdam 1090 GE The Netherlands"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-9598-3211",
+              "authenticated-orcid": false,
+              "given": "Jef",
+              "family": "Huisman",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Freshwater and Marine Ecology Institute for Biodiversity and Ecosystem Dynamics University of Amsterdam PO Box 94240 Amsterdam 1090 GE The Netherlands"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2020,
+                2,
+                3
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_7_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrmicro3378"
+            },
+            {
+              "key": "e_1_2_7_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ecy.2187"
+            },
+            {
+              "key": "e_1_2_7_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ecy.2873"
+            },
+            {
+              "key": "e_1_2_7_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1105/tpc.18.00916"
+            },
+            {
+              "key": "e_1_2_7_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00245165"
+            },
+            {
+              "key": "e_1_2_7_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/srep14193"
+            },
+            {
+              "key": "e_1_2_7_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nchembio.1555"
+            },
+            {
+              "key": "e_1_2_7_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/jpy.12816"
+            },
+            {
+              "key": "e_1_2_7_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s12080-010-0094-9"
+            },
+            {
+              "key": "e_1_2_7_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ecy.1758"
+            },
+            {
+              "key": "e_1_2_7_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/s41467-019-08457-x"
+            },
+            {
+              "key": "e_1_2_7_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/11-0395.1"
+            },
+            {
+              "key": "e_1_2_7_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/lno.10033"
+            },
+            {
+              "key": "e_1_2_7_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/fwb.12220"
+            },
+            {
+              "key": "e_1_2_7_16_1",
+              "first-page": "1",
+              "article-title": "Farbe und Assimilation. I. Assimilation findet nur in den farbstoffhaltigen Plasmatheilchen statt. II. N\u00e4herer Zusammenhang zwischen Lichtabsorption und Assimilation. III",
+              "volume": "41",
+              "author": "Engelmann T. W",
+              "year": "1883",
+              "journal-title": "Weitere Folgerungen. Botanische Zeitung"
+            },
+            {
+              "key": "e_1_2_7_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/483S17a"
+            },
+            {
+              "key": "e_1_2_7_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.scitotenv.2019.04.105"
+            },
+            {
+              "key": "e_1_2_7_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.281.5374.237"
+            },
+            {
+              "key": "e_1_2_7_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.2001.46.1.0086"
+            },
+            {
+              "key": "e_1_2_7_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1307701110"
+            },
+            {
+              "key": "e_1_2_7_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/24.9.859"
+            },
+            {
+              "key": "e_1_2_7_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1717069115"
+            },
+            {
+              "key": "e_1_2_7_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2019.0655"
+            },
+            {
+              "key": "e_1_2_7_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1529-8817.1989.tb00138.x"
+            },
+            {
+              "key": "e_1_2_7_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-1-4615-6397-6"
+            },
+            {
+              "key": "e_1_2_7_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939554"
+            },
+            {
+              "key": "e_1_2_7_28_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285814"
+            },
+            {
+              "key": "e_1_2_7_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[0211:CFLBPS]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_7_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1020537928216"
+            },
+            {
+              "key": "e_1_2_7_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/s41579-018-0040-1"
+            },
+            {
+              "key": "e_1_2_7_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/13-0613.1"
+            },
+            {
+              "key": "e_1_2_7_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1462-2920.2009.02046.x"
+            },
+            {
+              "key": "e_1_2_7_34_1",
+              "volume-title": "Light and photosynthesis in aquatic ecosystems",
+              "author": "Kirk J. T. O.",
+              "year": "2011"
+            },
+            {
+              "key": "e_1_2_7_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/lol2.10041"
+            },
+            {
+              "key": "e_1_2_7_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2427.2009.02298.x"
+            },
+            {
+              "key": "e_1_2_7_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2486.2010.02257.x"
+            },
+            {
+              "key": "e_1_2_7_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3354/ame01858"
+            },
+            {
+              "key": "e_1_2_7_39_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/lno.10967"
+            },
+            {
+              "key": "e_1_2_7_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1099/00221287-115-1-153"
+            },
+            {
+              "key": "e_1_2_7_41_1",
+              "first-page": "430",
+              "article-title": "Light harvesting and state transitions in cyanobacteria",
+              "volume": "111",
+              "author": "Thor J. J.",
+              "year": "1998",
+              "journal-title": "Plant Biology"
+            },
+            {
+              "key": "e_1_2_7_42_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.ecolsys.39.110707.173549"
+            },
+            {
+              "key": "e_1_2_7_43_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10750-010-0341-5"
+            },
+            {
+              "key": "e_1_2_7_44_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11120-018-0561-5"
+            },
+            {
+              "key": "e_1_2_7_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11120-019-00630-z"
+            },
+            {
+              "key": "e_1_2_7_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev-marine-010814-015955"
+            },
+            {
+              "key": "e_1_2_7_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2745.2004.00838.x"
+            },
+            {
+              "key": "e_1_2_7_48_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ecolmodel.2009.05.005"
+            },
+            {
+              "key": "e_1_2_7_49_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature06316"
+            },
+            {
+              "key": "e_1_2_7_50_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/37157"
+            },
+            {
+              "key": "e_1_2_7_51_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.66.6.1144"
+            },
+            {
+              "key": "e_1_2_7_52_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0119211"
+            },
+            {
+              "key": "e_1_2_7_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nplants.2016.31"
+            },
+            {
+              "key": "e_1_2_7_54_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1083/jcb.97.3.713"
+            },
+            {
+              "key": "e_1_2_7_55_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.hal.2011.10.027"
+            },
+            {
+              "key": "e_1_2_7_56_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/MMBR.63.1.106-127.1999"
+            },
+            {
+              "key": "e_1_2_7_57_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/04-1824"
+            },
+            {
+              "key": "e_1_2_7_58_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00403069"
+            },
+            {
+              "key": "e_1_2_7_59_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.bbabio.2018.06.008"
+            },
+            {
+              "key": "e_1_2_7_60_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.bbabio.2015.01.007"
+            },
+            {
+              "key": "e_1_2_7_61_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/444283a"
+            },
+            {
+              "key": "e_1_2_7_62_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1574-6941.2002.tb00930.x"
+            },
+            {
+              "key": "e_1_2_7_63_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.2011.56.2.0589"
+            },
+            {
+              "key": "e_1_2_7_64_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/gb-2007-8-12-r259"
+            },
+            {
+              "key": "e_1_2_7_65_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/pcp/pcu065"
+            },
+            {
+              "key": "e_1_2_7_66_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.plaphy.2014.01.014"
+            },
+            {
+              "key": "e_1_2_7_67_1",
+              "volume-title": "Ecological stoichiometry: the biology of elements from molecules to the biosphere",
+              "author": "Sterner R. W.",
+              "year": "2002"
+            },
+            {
+              "key": "e_1_2_7_68_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature03044"
+            },
+            {
+              "key": "e_1_2_7_69_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1461-0248.2007.01026.x"
+            },
+            {
+              "key": "e_1_2_7_70_1",
+              "article-title": "Effects of light color on interspecific competition between microcystis aeruginosa and chlorella pyrenoidosa in batch experiment",
+              "author": "Tan X.",
+              "year": "2019",
+              "journal-title": "Environmental Science and Pollution Research"
+            },
+            {
+              "key": "e_1_2_7_71_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1024954911473"
+            },
+            {
+              "key": "e_1_2_7_72_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1935608"
+            },
+            {
+              "key": "e_1_2_7_73_1",
+              "volume-title": "Resource competition and community structure",
+              "author": "Tilman D",
+              "year": "1982"
+            },
+            {
+              "key": "e_1_2_7_74_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0966-842X(02)02319-3"
+            },
+            {
+              "key": "e_1_2_7_75_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/fwb.13027"
+            },
+            {
+              "key": "e_1_2_7_76_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11120-013-9905-3"
+            },
+            {
+              "key": "e_1_2_7_77_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/jp061546w"
+            },
+            {
+              "key": "e_1_2_7_78_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1994.1113"
+            },
+            {
+              "key": "e_1_2_7_79_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10584-015-1514-z"
+            },
+            {
+              "key": "e_1_2_7_80_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/lno.10728"
+            }
+          ],
+          "container-title": [
+            "Ecology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fecy.2951",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/ecy.2951",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/ecy.2951",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://esajournals.onlinelibrary.wiley.com/doi/pdf/10.1002/ecy.2951",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                9,
+                4
+              ]
+            ],
+            "date-time": "2023-09-04T17:11:56Z",
+            "timestamp": 1693847516000
+          },
+          "score": 40.211376,
+          "resource": {
+            "primary": {
+              "URL": "https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecy.2951"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                2,
+                3
+              ]
+            ]
+          },
+          "references-count": 79,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  2020,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1002/ecy.2951"
+          ],
+          "URL": "https://doi.org/10.1002/ecy.2951",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0012-9658",
+            "1939-9170"
+          ],
+          "issn-type": [
+            {
+              "value": "0012-9658",
+              "type": "print"
+            },
+            {
+              "value": "1939-9170",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                2,
+                3
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2019-05-13",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2019-11-11",
+              "order": 1,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2020-02-03",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ],
+          "article-number": "e02951"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2026-11-02T08:28:57Z",
+            "timestamp": 1793608137403,
+            "version": "4.5.0"
+          },
+          "reference-count": 100,
+          "publisher": "University of Chicago Press",
+          "issue": "1",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "The American Naturalist"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1999,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.1086/303220",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                26
+              ]
+            ],
+            "date-time": "2002-07-26T14:47:54Z",
+            "timestamp": 1027694874000
+          },
+          "page": "46-68",
+          "source": "Crossref",
+          "is-referenced-by-count": 187,
+          "title": [
+            "Species Dynamics in Phytoplankton Blooms: Incomplete Mixing and Competition for Light"
+          ],
+          "prefix": "10.1086",
+          "volume": "154",
+          "author": [
+            {
+              "given": "Jef",
+              "family": "Huisman",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Paul",
+              "family": "van Oostveen",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Franz J.",
+              "family": "Weissing",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "200",
+          "reference": [
+            {
+              "key": "rf1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1969.14.3.0386"
+            },
+            {
+              "key": "rf2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/283553"
+            },
+            {
+              "key": "rf3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/4067"
+            },
+            {
+              "key": "rf4",
+              "first-page": "259",
+              "volume": "18",
+              "author": "Bailey\u2010Watts A. E.",
+              "year": "1987",
+              "journal-title": "Aquaculture and Fisheries Management"
+            },
+            {
+              "key": "rf5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-0981(81)90093-9"
+            },
+            {
+              "key": "rf6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00007297"
+            },
+            {
+              "key": "rf7",
+              "first-page": "458",
+              "volume": "45",
+              "author": "Berger C.",
+              "year": "1983",
+              "journal-title": "Swiss Journal of Hydrology"
+            },
+            {
+              "key": "rf8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/20.4.709"
+            },
+            {
+              "key": "rf9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00393819"
+            },
+            {
+              "key": "rf10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00011954"
+            },
+            {
+              "key": "rf11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00288330.1987.9516202"
+            },
+            {
+              "key": "rf12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0022-5193(89)80189-4"
+            },
+            {
+              "key": "rf13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1992.37.2.0252"
+            },
+            {
+              "key": "rf14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3354/meps126285"
+            },
+            {
+              "key": "rf15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1998.43.1.0073"
+            },
+            {
+              "key": "rf16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00288330.1988.9516307"
+            },
+            {
+              "key": "rf17",
+              "first-page": "75",
+              "volume": "32",
+              "author": "Chellappa N. T.",
+              "year": "1990",
+              "journal-title": "Acta Hydrobiologica"
+            },
+            {
+              "key": "rf18",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1357/002224091784968611"
+            },
+            {
+              "key": "rf19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00018162"
+            },
+            {
+              "key": "rf20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1987.32.4.0840"
+            },
+            {
+              "key": "rf21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/f82-108"
+            },
+            {
+              "key": "rf22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.1998.00155.x"
+            },
+            {
+              "key": "rf23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1529-8817.1998.340467.x"
+            },
+            {
+              "key": "rf24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/363024a0"
+            },
+            {
+              "key": "rf25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2427.1989.tb01362.x"
+            },
+            {
+              "key": "rf26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1529-8817.1968.tb04704.x"
+            },
+            {
+              "key": "rf27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-0981(78)90118-1"
+            },
+            {
+              "key": "rf28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1976.21.6.0767"
+            },
+            {
+              "key": "rf29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1439-0485.1987.tb00175.x"
+            },
+            {
+              "key": "rf30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/14.11.1565"
+            },
+            {
+              "key": "rf31",
+              "first-page": "339",
+              "volume": "81",
+              "author": "Gelin C.",
+              "year": "1978",
+              "journal-title": "Sweden. Archiv f\u00fcr Hydrobiologie"
+            },
+            {
+              "key": "rf32",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/19.5.533"
+            },
+            {
+              "key": "rf33",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00240262"
+            },
+            {
+              "key": "rf34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285254"
+            },
+            {
+              "key": "rf35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285766"
+            },
+            {
+              "key": "rf36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/8.2.353"
+            },
+            {
+              "key": "rf37",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1002954311328"
+            },
+            {
+              "key": "rf38",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/370290a0"
+            },
+            {
+              "key": "rf39",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1977.22.1.0126"
+            },
+            {
+              "key": "rf40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/iroh.19840690603"
+            },
+            {
+              "key": "rf41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00013735"
+            },
+            {
+              "key": "rf42",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1137/0153051"
+            },
+            {
+              "key": "rf43",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[0202:PDOLLP]2.0.CO;2"
+            },
+            {
+              "key": "rf44",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939554"
+            },
+            {
+              "key": "rf45",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285814"
+            },
+            {
+              "key": "rf46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[0211:CFLBPS]2.0.CO;2"
+            },
+            {
+              "key": "rf47",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1974.19.2.360a"
+            },
+            {
+              "key": "rf48",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00275157"
+            },
+            {
+              "key": "rf49",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0022-5193(85)80007-2"
+            },
+            {
+              "key": "rf50",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00008838"
+            },
+            {
+              "key": "rf52",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0272-7714(90)90092-6"
+            },
+            {
+              "key": "rf53",
+              "volume-title": "Light and photosynthesis in aquatic ecosystems. 2d ed",
+              "author": "Kirk J. T. O."
+            },
+            {
+              "key": "rf54",
+              "first-page": "343",
+              "volume": "78",
+              "author": "Klemer A. R.",
+              "year": "1976",
+              "journal-title": "Archiv f\u00fcr Hydrobiologie"
+            },
+            {
+              "key": "rf55",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1998.43.6.1089"
+            },
+            {
+              "key": "rf56",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.ecolsys.28.1.467"
+            },
+            {
+              "key": "rf57",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/282900"
+            },
+            {
+              "key": "rf58",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0273-1223(98)00068-7"
+            },
+            {
+              "key": "rf59",
+              "doi-asserted-by": "crossref",
+              "volume-title": "Dynamics of marine ecosystems: biological\u2010physical interactions in the oceans. 2d ed",
+              "author": "Mann K. H.",
+              "DOI": "10.1002/9781118687901"
+            },
+            {
+              "key": "rf60",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/f94-258"
+            },
+            {
+              "key": "rf61",
+              "volume-title": "Mathematical biology",
+              "author": "Murray J. D."
+            },
+            {
+              "key": "rf62",
+              "volume-title": "Finite difference techniques for partial differential equations. Pages 95\u2013354 in J",
+              "author": "Noye J."
+            },
+            {
+              "key": "rf63",
+              "volume-title": "Diffusion and ecological problems: mathematical models",
+              "author": "Okubo A."
+            },
+            {
+              "key": "rf64",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00008839"
+            },
+            {
+              "key": "rf65",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/13.6.1313"
+            },
+            {
+              "key": "rf67",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00008850"
+            },
+            {
+              "key": "rf68",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.1991.0146"
+            },
+            {
+              "key": "rf69",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/284352"
+            },
+            {
+              "key": "rf70",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/ecss.1996.0042"
+            },
+            {
+              "key": "rf71",
+              "volume-title": "The ecology of freshwater phytoplankton",
+              "author": "Reynolds C. S."
+            },
+            {
+              "key": "rf72",
+              "volume-title": "Vegetation processes in the pelagic: a model for ecosystem theory",
+              "author": "Reynolds C. S."
+            },
+            {
+              "key": "rf73",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00877262"
+            },
+            {
+              "key": "rf74",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-185X.1975.tb01060.x"
+            },
+            {
+              "key": "rf75",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/5.2.203"
+            },
+            {
+              "key": "rf76",
+              "doi-asserted-by": "crossref",
+              "first-page": "363",
+              "DOI": "10.1127/archiv-hydrobiol/132/1995/363",
+              "volume": "132",
+              "author": "Romo S.",
+              "year": "1995",
+              "journal-title": "Archiv f\u00fcr Hydrobiologie"
+            },
+            {
+              "key": "rf77",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2265496"
+            },
+            {
+              "key": "rf78",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3354/meps161265"
+            },
+            {
+              "key": "rf79",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3565733"
+            },
+            {
+              "key": "rf80",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1998.43.8.1902"
+            },
+            {
+              "key": "rf81",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1529-8817.1988.tb04485.x"
+            },
+            {
+              "key": "rf82",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1985.30.2.0335"
+            },
+            {
+              "key": "rf83",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1986.31.3.0650"
+            },
+            {
+              "key": "rf84",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0272-7714(87)90078-3"
+            },
+            {
+              "key": "rf85",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/09593338809384575"
+            },
+            {
+              "key": "rf86",
+              "volume-title": "The role of grazers in phytoplankton succession. Pages 107\u2013170 in U",
+              "author": "Sterner R. W."
+            },
+            {
+              "key": "rf87",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/icesjms/18.3.287"
+            },
+            {
+              "key": "rf88",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00391371"
+            },
+            {
+              "key": "rf89",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1935608"
+            },
+            {
+              "key": "rf90",
+              "volume-title": "Resource competition and community structure",
+              "author": "Tilman D."
+            },
+            {
+              "key": "rf91",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939377"
+            },
+            {
+              "key": "rf92",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0362-546X(89)90024-2"
+            },
+            {
+              "key": "rf93",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/360059a0"
+            },
+            {
+              "key": "rf94",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00288330.1983.9516016"
+            },
+            {
+              "key": "rf95",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2427.1996.00093.x"
+            },
+            {
+              "key": "rf96",
+              "first-page": "375",
+              "volume": "74",
+              "author": "Walsby A. E.",
+              "year": "1974",
+              "journal-title": "Archiv f\u00fcr Hydrobiologie"
+            },
+            {
+              "key": "rf97",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1994.1113"
+            },
+            {
+              "key": "rf98",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1934927"
+            },
+            {
+              "key": "rf99",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3354/meps138255"
+            },
+            {
+              "key": "rf100",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4319/lo.1956.1.4.0286"
+            },
+            {
+              "key": "rf101",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/plankt/7.3.399"
+            },
+            {
+              "key": "rf102",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00006025"
+            }
+          ],
+          "container-title": [
+            "The American Naturalist"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.journals.uchicago.edu/doi/pdf/10.1086/303220",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                5,
+                17
+              ]
+            ],
+            "date-time": "2021-05-17T02:32:02Z",
+            "timestamp": 1621218722000
+          },
+          "score": 34.7736,
+          "resource": {
+            "primary": {
+              "URL": "https://www.journals.uchicago.edu/doi/10.1086/303220"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1999,
+                7
+              ]
+            ]
+          },
+          "references-count": 100,
+          "aliases": [
+            "10.2307/2463742"
+          ],
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1999,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1086/303220"
+          ],
+          "URL": "https://doi.org/10.1086/303220",
+          "ISSN": [
+            "0003-0147",
+            "1537-5323"
+          ],
+          "issn-type": [
+            {
+              "value": "0003-0147",
+              "type": "print"
+            },
+            {
+              "value": "1537-5323",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1999,
+                7
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

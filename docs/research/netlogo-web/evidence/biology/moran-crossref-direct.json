@@ -1,0 +1,204 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1017%2FS0305004100033193",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            4
+          ]
+        ],
+        "date-time": "2026-11-04T01:20:40Z",
+        "timestamp": 1793755240725,
+        "version": "4.6.1"
+      },
+      "reference-count": 3,
+      "publisher": "Cambridge University Press (CUP)",
+      "issue": "1",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2008,
+                10,
+                24
+              ]
+            ],
+            "date-time": "2008-10-24T00:00:00Z",
+            "timestamp": 1224806400000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 18559,
+          "URL": "https://www.cambridge.org/core/terms"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Math. Proc. Camb. Phil. Soc."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1958,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>\n                    Wright's model of a random process in genetica is modified by supposing that births and deaths occur individually at random so that the generations are no longer simultaneous. An exact solution is then obtained for the distribution of the number of\n                    <jats:italic>a</jats:italic>\n                    -genes in a haploid organism when mutation is occurring in both directions. When there is no mutation, the rate of approach to homozygosity is found in more complicated models with two sexes and diploid individuate. This rate is twice that occurring in Wright's models.\n                  </jats:p>",
+      "DOI": "10.1017/s0305004100033193",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2008,
+            11,
+            7
+          ]
+        ],
+        "date-time": "2008-11-07T10:46:15Z",
+        "timestamp": 1226054775000
+      },
+      "page": "60-71",
+      "source": "Crossref",
+      "is-referenced-by-count": 939,
+      "title": [
+        "Random processes in genetics"
+      ],
+      "prefix": "10.1017",
+      "volume": "54",
+      "author": [
+        {
+          "given": "P. A. P.",
+          "family": "Moran",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "56",
+      "published-online": {
+        "date-parts": [
+          [
+            2008,
+            10,
+            24
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "S0305004100033193_ref001",
+          "volume-title": "Proceedings of the Second Berkeley Symposium on Mathematical Statistics and Probability",
+          "author": "Feller",
+          "year": "1951"
+        },
+        {
+          "key": "S0305004100033193_ref002",
+          "volume-title": "Actualit\u00e9s Sci.",
+          "author": "Wright",
+          "year": "1939"
+        },
+        {
+          "key": "S0305004100033193_ref003",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1469-1809.1949.tb02451.x"
+        }
+      ],
+      "container-title": [
+        "Mathematical Proceedings of the Cambridge Philosophical Society"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0305004100033193",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2019,
+            6,
+            7
+          ]
+        ],
+        "date-time": "2019-06-07T00:28:33Z",
+        "timestamp": 1559867313000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.cambridge.org/core/product/identifier/S0305004100033193/type/journal_article"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1958,
+            1
+          ]
+        ]
+      },
+      "references-count": 3,
+      "journal-issue": {
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              1958,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "S0305004100033193"
+      ],
+      "URL": "https://doi.org/10.1017/s0305004100033193",
+      "relation": {},
+      "ISSN": [
+        "0305-0041",
+        "1469-8064"
+      ],
+      "issn-type": [
+        {
+          "value": "0305-0041",
+          "type": "print"
+        },
+        {
+          "value": "1469-8064",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1958,
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

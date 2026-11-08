@@ -1,0 +1,78 @@
+{
+  "setupClicked": true,
+  "setupTick": {
+    "success": true,
+    "value": 0
+  },
+  "nativeStepPresent": false,
+  "commandStepTick": {
+    "success": true,
+    "value": 1
+  },
+  "runTick": {
+    "success": true,
+    "value": 8
+  },
+  "pauseTick": {
+    "success": true,
+    "value": 8
+  },
+  "stableTick": {
+    "success": true,
+    "value": 8
+  },
+  "paused": true,
+  "setupResetClicked": true,
+  "resetTick": {
+    "success": true,
+    "value": 0
+  },
+  "actions": [],
+  "probe": {
+    "command": "set number 1 set memory 2 set strategies-per-agent 1 setup go",
+    "reporters": {
+      "ticks": {
+        "success": false,
+        "error": "Runtime error: [object Object]"
+      },
+      "avg-score": {
+        "success": true,
+        "value": 0
+      },
+      "[score] of turtles": {
+        "success": true,
+        "value": [
+          0
+        ]
+      }
+    }
+  },
+  "errors": [
+    [
+      "runtime",
+      "observer",
+      {
+        "message": "Can't find the standard deviation of a list without at least two numbers: [0]",
+        "toString": "[object Object]",
+        "keys": [
+          "message",
+          "stackTrace",
+          "stackTraceMessage",
+          "primitive",
+          "sourceStart",
+          "sourceEnd",
+          "messageKey"
+        ],
+        "details": {
+          "message": "Can't find the standard deviation of a list without at least two numbers: [0]",
+          "stackTraceMessage": "error while running STANDARD-DEVIATION\ncalled by procedure UPDATE-SYSTEM\ncalled by procedure SETUP",
+          "primitive": "standard-deviation",
+          "messageKey": "Can_t find the _ of a list without at least two numbers: __"
+        }
+      },
+      "set number 1 set memory 2 set strategies-per-agent 1 setup go",
+      "undefined"
+    ]
+  ],
+  "alertText": []
+}

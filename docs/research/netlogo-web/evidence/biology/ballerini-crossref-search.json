@@ -1,0 +1,1663 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Interaction+ruling+animal+collective+behavior+depends+on+topological+rather+than+metric+distance+evidence+from+a+field+study+2008&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 17529212,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T23:50:31Z",
+            "timestamp": 1793836231354,
+            "version": "4.6.1"
+          },
+          "reference-count": 39,
+          "publisher": "National Academy of Sciences",
+          "issue": "4",
+          "content-domain": {
+            "domain": [
+              "www.pnas.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Proc. Natl. Acad. Sci. U.S.A."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                29
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Numerical models indicate that collective animal behavior may emerge from simple local rules of interaction among the individuals. However, very little is known about the nature of such interaction, so that models and theories mostly rely on aprioristic assumptions. By reconstructing the three-dimensional positions of individual birds in airborne flocks of a few thousand members, we show that the interaction does not depend on the metric distance, as most current models and theories assume, but rather on the topological distance. In fact, we discovered that each bird interacts on average with a fixed number of neighbors (six to seven), rather than with all neighbors within a fixed metric distance. We argue that a topological interaction is indispensable to maintain a flock's cohesion against the large density changes caused by external perturbations, typically predation. We support this hypothesis by numerical simulations, showing that a topological interaction grants significantly higher cohesion of the aggregation compared with a standard metric one.</jats:p>",
+          "DOI": "10.1073/pnas.0711437105",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                28
+              ]
+            ],
+            "date-time": "2008-01-28T21:28:09Z",
+            "timestamp": 1201555689000
+          },
+          "page": "1232-1237",
+          "update-policy": "https://doi.org/10.1073/pnas.cm10313",
+          "source": "Crossref",
+          "is-referenced-by-count": 1886,
+          "title": [
+            "Interaction ruling animal collective behavior depends on topological rather than metric distance: Evidence from a field study"
+          ],
+          "prefix": "10.1073",
+          "volume": "105",
+          "author": [
+            {
+              "given": "M.",
+              "family": "Ballerini",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "*Centre for Statistical Mechanics and Complexity (SMC), Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia,"
+                },
+                {
+                  "name": "Istituto Superiore di Sanita', viale Regina Elena 299, 00161 Roma, Italy;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "N.",
+              "family": "Cabibbo",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Dipartimento di Fisica, and"
+                },
+                {
+                  "name": "Sezione Instituto Nazionale di Fisica Nucleare, Universita' di Roma \u201cLa Sapienza,\u201d Piazzale Aldo Moro 2, 00185 Roma, Italy;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "R.",
+              "family": "Candelier",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Dipartimento di Fisica, and"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "A.",
+              "family": "Cavagna",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "*Centre for Statistical Mechanics and Complexity (SMC), Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia,"
+                },
+                {
+                  "name": "Istituto dei Sistemi Complessi (ISC), Consiglio Nazionale delle Ricerche, via dei Taurini 19, 00185 Roma, Italy; and"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "E.",
+              "family": "Cisbani",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Istituto Superiore di Sanita', viale Regina Elena 299, 00161 Roma, Italy;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "I.",
+              "family": "Giardina",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "*Centre for Statistical Mechanics and Complexity (SMC), Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia,"
+                },
+                {
+                  "name": "Istituto dei Sistemi Complessi (ISC), Consiglio Nazionale delle Ricerche, via dei Taurini 19, 00185 Roma, Italy; and"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "V.",
+              "family": "Lecomte",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Laboratoire Mati\u00e8re et Syst\u00e8mes Complexes, (Centre National de la Recherche Scientifique Unite Mixte de Recherche 7057), Universit\u00e9 Paris VII, 10 rue Alice Domon et L\u00e9onie Duquet, 75205 Paris Cedex 13, France"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "A.",
+              "family": "Orlandi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "*Centre for Statistical Mechanics and Complexity (SMC), Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia,"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "G.",
+              "family": "Parisi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "*Centre for Statistical Mechanics and Complexity (SMC), Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia,"
+                },
+                {
+                  "name": "Dipartimento di Fisica, and"
+                },
+                {
+                  "name": "Sezione Instituto Nazionale di Fisica Nucleare, Universita' di Roma \u201cLa Sapienza,\u201d Piazzale Aldo Moro 2, 00185 Roma, Italy;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "A.",
+              "family": "Procaccini",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "*Centre for Statistical Mechanics and Complexity (SMC), Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia,"
+                },
+                {
+                  "name": "Dipartimento di Fisica, and"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "M.",
+              "family": "Viale",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Dipartimento di Fisica, and"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "V.",
+              "family": "Zdravkovic",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "*Centre for Statistical Mechanics and Complexity (SMC), Consiglio Nazionale delle Ricerche-Istituto Nazionale per la Fisica della Materia,"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "341",
+          "published-online": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                29
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_3_1_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.284.5411.99"
+            },
+            {
+              "key": "e_1_3_3_2_2",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/oso/9780198508175.001.0001",
+              "volume-title": "Living in Groups",
+              "author": "Krause J",
+              "year": "2002",
+              "unstructured": "J Krause, GD Ruxton Living in Groups (Oxford Univ Press, Oxford, 2002)."
+            },
+            {
+              "key": "e_1_3_3_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/4081266"
+            },
+            {
+              "key": "e_1_3_3_4_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "TJ Pitcher JK Parrish Behaviour of Teleost Fishes. ed TJ Pitcher (Chapman and Hall London 1993).",
+              "DOI": "10.1007/978-94-011-1578-0"
+            },
+            {
+              "key": "e_1_3_3_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1996.0144"
+            },
+            {
+              "key": "e_1_3_3_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/TAC.2003.812781"
+            },
+            {
+              "key": "e_1_3_3_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/S1365100500015029"
+            },
+            {
+              "key": "e_1_3_3_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35035023"
+            },
+            {
+              "key": "e_1_3_3_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2331/suisan.48.1081"
+            },
+            {
+              "key": "e_1_3_3_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/37402.37406"
+            },
+            {
+              "key": "e_1_3_3_11_2",
+              "volume-title": "The Ubiquity of Chaos",
+              "author": "Heppner FH",
+              "year": "1990",
+              "unstructured": "FH Heppner, U Grenander The Ubiquity of Chaos, ed S Krasner (Am Assoc Adv Sci, Washington, DC, 1990)."
+            },
+            {
+              "key": "e_1_3_3_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0022-5193(05)80681-2"
+            },
+            {
+              "key": "e_1_3_3_13_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.2002.3065"
+            },
+            {
+              "key": "e_1_3_3_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.2001.2449"
+            },
+            {
+              "key": "e_1_3_3_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1162/106454603322392451"
+            },
+            {
+              "key": "e_1_3_3_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.75.1226"
+            },
+            {
+              "key": "e_1_3_3_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.82.209"
+            },
+            {
+              "key": "e_1_3_3_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0167-2789(03)00102-7"
+            },
+            {
+              "key": "e_1_3_3_19_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.92.025702"
+            },
+            {
+              "key": "e_1_3_3_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1125142"
+            },
+            {
+              "key": "e_1_3_3_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0042-6989(90)90082-V"
+            },
+            {
+              "key": "e_1_3_3_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0003-3472(65)90117-X"
+            },
+            {
+              "key": "e_1_3_3_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00292770"
+            },
+            {
+              "key": "e_1_3_3_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00354974"
+            },
+            {
+              "key": "e_1_3_3_25_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/4088194"
+            },
+            {
+              "key": "e_1_3_3_26_2",
+              "first-page": "1",
+              "article-title": "An analysis of the schooling behavior of fish: Internalorganization and communication process.",
+              "volume": "12",
+              "author": "Aoki I",
+              "year": "1980",
+              "unstructured": "I Aoki, An analysis of the schooling behavior of fish: Internalorganization and communication process. Bull Ocean Res Inst Univ Tokyo 12, 1\u201365 (1980).",
+              "journal-title": "Bull Ocean Res Inst Univ Tokyo"
+            },
+            {
+              "key": "e_1_3_3_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1543482"
+            },
+            {
+              "key": "e_1_3_3_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.168.3934.1003"
+            },
+            {
+              "key": "e_1_3_3_29_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrn1626"
+            },
+            {
+              "key": "e_1_3_3_30_2",
+              "volume-title": "Vision, Brain and Behaviour",
+              "author": "Emmerton JD",
+              "year": "1993",
+              "unstructured": "JD Emmerton, J Delius, Beyond sensation: Visual cognition in pigeons. Vision, Brain and Behaviour, eds HP, Zeigler, HJ. Bischof (MIT Press, Cambridge, MA, 1993)."
+            },
+            {
+              "key": "e_1_3_3_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1995.0172"
+            },
+            {
+              "key": "e_1_3_3_32_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0065-3454(03)01001-5"
+            },
+            {
+              "key": "e_1_3_3_33_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/293133a0"
+            },
+            {
+              "key": "e_1_3_3_34_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0262-8856(02)00154-3"
+            },
+            {
+              "key": "e_1_3_3_35_2",
+              "volume-title": "Computer Vision: A Modern Approach",
+              "author": "Forsyth D",
+              "year": "2002",
+              "unstructured": "D Forsyth, J Ponce Computer Vision: A Modern Approach (Prentice Hall, Upper Saddle River, NJ, 2002)."
+            },
+            {
+              "key": "e_1_3_3_36_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1007936012022"
+            },
+            {
+              "key": "e_1_3_3_37_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/321941.321942"
+            },
+            {
+              "key": "e_1_3_3_38_2",
+              "first-page": "43",
+              "article-title": "Three-dimensional alpha shapes.",
+              "volume": "13",
+              "author": "Edelsbrunner H",
+              "year": "1994",
+              "unstructured": "H Edelsbrunner, EP Mucke, Three-dimensional alpha shapes. Assoc Comput Mach Trans Graphics 13, 43\u201372 (1994).",
+              "journal-title": "Assoc Comput Mach Trans Graphics"
+            },
+            {
+              "key": "e_1_3_3_39_2",
+              "volume-title": "Fractals, Random Shapes and Point Fields",
+              "author": "Stoyan D",
+              "year": "1994",
+              "unstructured": "D Stoyan, H Stoyan Fractals, Random Shapes and Point Fields (Wiley, Chichester, UK, 1994)."
+            }
+          ],
+          "container-title": [
+            "Proceedings of the National Academy of Sciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://pnas.org/doi/pdf/10.1073/pnas.0711437105",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                21
+              ]
+            ],
+            "date-time": "2024-02-21T14:19:02Z",
+            "timestamp": 1708525142000
+          },
+          "score": 82.958015,
+          "resource": {
+            "primary": {
+              "URL": "https://pnas.org/doi/full/10.1073/pnas.0711437105"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                29
+              ]
+            ]
+          },
+          "references-count": 39,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2008,
+                  1,
+                  29
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1073/pnas.0711437105"
+          ],
+          "URL": "https://doi.org/10.1073/pnas.0711437105",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1100158.556316",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "0027-8424",
+            "1091-6490"
+          ],
+          "issn-type": [
+            {
+              "value": "0027-8424",
+              "type": "print"
+            },
+            {
+              "value": "1091-6490",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                29
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2007-09-25",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2008-01-29",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                4
+              ]
+            ],
+            "date-time": "2024-03-04T04:14:42Z",
+            "timestamp": 1709525682558
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2008,
+                2,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.1100158.556316",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                18
+              ]
+            ],
+            "date-time": "2012-09-18T09:25:23Z",
+            "timestamp": 1347960323000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of Interaction ruling animal collective behavior depends on topological rather than metric distance: evidence from a field study."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "given": "Michael",
+              "family": "Bonsall",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Zoology, University of Oxford, UK"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                31
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                18
+              ]
+            ],
+            "date-time": "2020-04-18T16:51:34Z",
+            "timestamp": 1587228694000
+          },
+          "score": 74.21439,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/1100158#eval556316"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                31
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.1100158.556316",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1073/pnas.0711437105",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                31
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2026-03-01T09:39:43Z",
+            "timestamp": 1772357983251,
+            "version": "3.50.1"
+          },
+          "reference-count": 64,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    11,
+                    25
+                  ]
+                ],
+                "date-time": "2025-11-25T00:00:00Z",
+                "timestamp": 1764028800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    11,
+                    25
+                  ]
+                ],
+                "date-time": "2025-11-25T00:00:00Z",
+                "timestamp": 1764028800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Acta Biotheor"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1007/s10441-025-09511-6",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                25
+              ]
+            ],
+            "date-time": "2025-11-25T13:52:36Z",
+            "timestamp": 1764078756000
+          },
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "On a Physical Theory of Causation in Multiscale Analysis of Biological Systems",
+            "Interaction ruling animal collective behavior depends on topological rather than metric distance: evidence from a field study"
+          ],
+          "prefix": "10.1007",
+          "volume": "74",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0001-8582-003X",
+              "authenticated-orcid": false,
+              "given": "Sergey B.",
+              "family": "Yurchenko",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                25
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "9511_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "393",
+              "DOI": "10.1126/science.177.4047.393",
+              "volume": "177",
+              "author": "PW Anderson",
+              "year": "1972",
+              "unstructured": "Anderson PW (1972) More is different: broken symmetry and the nature of the hierarchical structure of science. Science 177:393\u2013396. https://doi.org/10.1126/science.177.4047.393",
+              "journal-title": "Science"
+            },
+            {
+              "key": "9511_CR2",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Ballerini M, Cabibbo N, Candelier R et al (2008) Interaction ruling animal collective behavior depends on topological rather than metric distance: evidence from a field study. Proc Natl Acad Sci USA 105:1232\u20131237. https://doi.org/10.1073/pnas.0711437105",
+              "DOI": "10.1073/pnas.0711437105"
+            },
+            {
+              "key": "9511_CR3",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Barbour JB (2017) Micro/Meso/Macrolevels of analysis. In: Scott CR, Barker JR, Kuhn T et al (eds) The international encyclopedia of organizational communication. Wiley, pp 1\u201315. https://doi.org/10.1002/9781118955567.wbieoc140",
+              "DOI": "10.1002/9781118955567.wbieoc140"
+            },
+            {
+              "key": "9511_CR4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.108.014304",
+              "volume": "108",
+              "author": "L Barnett",
+              "year": "2023",
+              "unstructured": "Barnett L, Seth AK (2023) Dynamical independence: discovering emergent macroscopic processes in complex dynamical systems. Phys Rev E 108:014304. https://doi.org/10.1103/PhysRevE.108.014304",
+              "journal-title": "Phys Rev E"
+            },
+            {
+              "key": "9511_CR5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspa.2016.0822",
+              "volume": "473",
+              "author": "JC Brookes",
+              "year": "2017",
+              "unstructured": "Brookes JC (2017) Quantum effects in biology: golden rule in enzymes, olfaction, photosynthesis and magnetodetection. Proc R Soc A 473:20160822. https://doi.org/10.1098/rspa.2016.0822",
+              "journal-title": "Proc R Soc A"
+            },
+            {
+              "issue": "26",
+              "key": "9511_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "11865",
+              "DOI": "10.1073/pnas.1005766107",
+              "volume": "107",
+              "author": "A Cavagna",
+              "year": "2010",
+              "unstructured": "Cavagna A, Cimarelli A, Giardina I et al (2010) Scale-free correlations in starling flocks. Proc Natl Acad Sci USA 107(26):11865\u201311870. https://doi.org/10.1073/pnas.1005766107",
+              "journal-title": "Proc Natl Acad Sci USA"
+            },
+            {
+              "key": "9511_CR7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/9781139046893",
+              "volume-title": "The quest for a universal theory of life: searching for life as we don\u2019t know it",
+              "author": "CE Cleland",
+              "year": "2019",
+              "unstructured": "Cleland CE (2019) The quest for a universal theory of life: searching for life as we don\u2019t know it. Cambridge University Press, Cambridge. https://doi.org/10.1017/9781139046893"
+            },
+            {
+              "key": "9511_CR8",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Corning PA, Kauffman SA, Noble D et al (2023) Evolution on purpose: teleonomy in living systems. MIT Press. https://doi.org/10.7551/mitpress/14642.001.0001",
+              "DOI": "10.7551/mitpress/14642.001.0001"
+            },
+            {
+              "key": "9511_CR9",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Davies PCW (2008) The Physics of Downward Causation. In: Clayton P, Davies P (eds) The Re-Emergence of Emergence: The Emergentist Hypothesis from Science to Religion. Oxford, pp. 34\u201352. https://doi.org/10.1093/acprof:oso/9780199544318.003.0002",
+              "DOI": "10.1093/acprof:oso/9780199544318.003.0002"
+            },
+            {
+              "key": "9511_CR10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/s41526-024-00357-9",
+              "volume": "10",
+              "author": "T Davis",
+              "year": "2024",
+              "unstructured": "Davis T, Tabury K, Zhu S et al (2024) How are cell and tissue structure and function influenced by gravity and what are the gravity perception mechanisms? NPJ Microgravity 10:16. https://doi.org/10.1038/s41526-024-00357-9",
+              "journal-title": "NPJ Microgravity"
+            },
+            {
+              "key": "9511_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "769",
+              "DOI": "10.1007/s10441-021-09422-2",
+              "volume": "69",
+              "author": "ST de Farias",
+              "year": "2021",
+              "unstructured": "de Farias ST, Prosdocimi F, Caponi G (2021) Organic codes: a unifying concept for life. Acta Biotheor 69:769\u2013782. https://doi.org/10.1007/s10441-021-09422-2",
+              "journal-title": "Acta Biotheor"
+            },
+            {
+              "key": "9511_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "158",
+              "DOI": "10.1002/tht3.489",
+              "volume": "10",
+              "author": "J Dewhurst",
+              "year": "2021",
+              "unstructured": "Dewhurst J (2021) Causal emergence from effective information: neither causal nor emergent? Thought J Philos 10:158\u2013168. https://doi.org/10.1002/tht3.489",
+              "journal-title": "Thought J Philos"
+            },
+            {
+              "issue": "2",
+              "key": "9511_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "143",
+              "DOI": "10.1093/jeb/voae153",
+              "volume": "38",
+              "author": "J DiFrisco",
+              "year": "2025",
+              "unstructured": "DiFrisco J, Gawne R (2025) Biological agency: a concept without a research program. J Evol Biol 38(2):143\u2013156. https://doi.org/10.1093/jeb/voae153",
+              "journal-title": "J Evol Biol"
+            },
+            {
+              "key": "9511_CR14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.neubiorev.2023.105070",
+              "volume": "146",
+              "author": "ED Fagerholm",
+              "year": "2023",
+              "unstructured": "Fagerholm ED, Dezhina Z, Moran RJ et al (2023) A primer on entropy in neuroscience. Neurosci Biobehav Rev 146:105070. https://doi.org/10.1016/j.neubiorev.2023.105070",
+              "journal-title": "Neurosci Biobehav Rev"
+            },
+            {
+              "key": "9511_CR15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsta.2016.0338",
+              "volume": "375",
+              "author": "JC Flack",
+              "year": "2017",
+              "unstructured": "Flack JC (2017) Coarse-graining as a downward causation mechanism. Phil Trans R Soc A 375:20160338. https://doi.org/10.1098/rsta.2016.0338",
+              "journal-title": "Phil Trans R Soc A"
+            },
+            {
+              "key": "9511_CR16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.71.1486",
+              "volume": "75",
+              "author": "JL Friedman",
+              "year": "1995",
+              "unstructured": "Friedman JL, Schleich K, Witt DM (1995) Topological censorship. Phys Rev Lett 75:1872. https://doi.org/10.1103/PhysRevLett.71.1486",
+              "journal-title": "Phys Rev Lett"
+            },
+            {
+              "key": "9511_CR17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/s44260-025-00031-5",
+              "volume": "2",
+              "author": "C Gershenson",
+              "year": "2025",
+              "unstructured": "Gershenson C (2025) Self-organizing systems: what how and why? NPJ Complexity 2:10. https://doi.org/10.1038/s44260-025-00031-5",
+              "journal-title": "NPJ Complexity"
+            },
+            {
+              "issue": "3",
+              "key": "9511_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "424",
+              "DOI": "10.2307/1912791",
+              "volume": "37",
+              "author": "CWJ Granger",
+              "year": "1969",
+              "unstructured": "Granger CWJ (1969) Investigating causal relations by econometric models and cross-spectral methods. Econometrica 37(3):424\u2013438. https://doi.org/10.2307/1912791",
+              "journal-title": "Econometrica"
+            },
+            {
+              "key": "9511_CR19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/bjps/axi147",
+              "author": "JY Halpern",
+              "year": "2005",
+              "unstructured": "Halpern JY, Pearl J (2005) Causes and explanations. A structural-model approach. Part I: causes. Br J Philos Sci. https://doi.org/10.1093/bjps/axi147",
+              "journal-title": "Br J Philos Sci"
+            },
+            {
+              "key": "9511_CR20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3390/app1401019",
+              "volume": "14",
+              "author": "J Hristov",
+              "year": "2024",
+              "unstructured": "Hristov J (2024) Energies of mechanical fractional-order elements: causal concept and kernel effects. Appl Sci 14:197. https://doi.org/10.3390/app1401019",
+              "journal-title": "Appl Sci"
+            },
+            {
+              "key": "9511_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "27",
+              "DOI": "10.1007/s10539-024-09965-x",
+              "volume": "39",
+              "author": "C Jeler",
+              "year": "2024",
+              "unstructured": "Jeler C (2024) Trait-centered vs. fitness-centered definitions of natural selection. Biol Philos 39:27. https://doi.org/10.1007/s10539-024-09965-x",
+              "journal-title": "Biol Philos"
+            },
+            {
+              "key": "9511_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "5759",
+              "DOI": "10.1021/acs.jctc.2c00643",
+              "volume": "18",
+              "author": "J Jin",
+              "year": "2022",
+              "unstructured": "Jin J, Pak AJ, Durumeric AEP et al (2022) Bottom-up coarse-graining: principles and perspectives. J Chem Theory Comput 18:5759\u20135791. https://doi.org/10.1021/acs.jctc.2c00643",
+              "journal-title": "J Chem Theory Comput"
+            },
+            {
+              "key": "9511_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "20220063",
+              "DOI": "10.1098/rsfs.2022.0063",
+              "volume": "13",
+              "author": "SA Kauffman",
+              "year": "2023",
+              "unstructured": "Kauffman SA, Roli A (2023) A third transition in science? Interface Focus 13:20220063. https://doi.org/10.1098/rsfs.2022.0063",
+              "journal-title": "Interface Focus"
+            },
+            {
+              "key": "9511_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "415",
+              "DOI": "10.1007/s00239-021-10016-2",
+              "volume": "89",
+              "author": "CP Kempes",
+              "year": "2021",
+              "unstructured": "Kempes CP, Krakauer DC (2021) The multiple paths to multiple life. J Mol Evol 89:415\u2013426. https://doi.org/10.1007/s00239-021-10016-2",
+              "journal-title": "J Mol Evol"
+            },
+            {
+              "issue": "6",
+              "key": "9511_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "497",
+              "DOI": "10.1016/j.tplants.2018.03.007",
+              "volume": "23",
+              "author": "N Keren",
+              "year": "2018",
+              "unstructured": "Keren N, Paltiel Y (2018) Photosynthetic energy transfer at the quantum/classical border. Trends Plant Sci 23(6):497\u2013506. https://doi.org/10.1016/j.tplants.2018.03.007",
+              "journal-title": "Trends Plant Sci"
+            },
+            {
+              "key": "9511_CR26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3390/systems12010029",
+              "volume": "12",
+              "author": "S Kesi\u0107",
+              "year": "2024",
+              "unstructured": "Kesi\u0107 S (2024) Universal complexity science and theory of everything: challenges and prospects. Systems 12:29. https://doi.org/10.3390/systems12010029",
+              "journal-title": "Systems"
+            },
+            {
+              "issue": "138",
+              "key": "9511_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "20170792",
+              "DOI": "10.1098/rsif.2017.0792",
+              "volume": "15",
+              "author": "K Kirchhoff",
+              "year": "2018",
+              "unstructured": "Kirchhoff K, Parr T, Palacios E et al (2018) The Markov blankets of life: autonomy active inference and the free energy principle. J R Soc Interface 15(138):20170792. https://doi.org/10.1098/rsif.2017.0792",
+              "journal-title": "J R Soc Interface"
+            },
+            {
+              "issue": "3",
+              "key": "9511_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "480",
+              "DOI": "10.1016/j.neuron.2016.12.041",
+              "volume": "93",
+              "author": "JW Krakauer",
+              "year": "2017",
+              "unstructured": "Krakauer JW, Ghazanfar AA, Gomez-Marin A et al (2017) Neuroscience needs behavior: correcting a reductionist bias. Neuron 93(3):480\u2013490. https://doi.org/10.1016/j.neuron.2016.12.041",
+              "journal-title": "Neuron"
+            },
+            {
+              "issue": "16",
+              "key": "9511_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "1459",
+              "DOI": "10.1016/j.cub.2012.06.007",
+              "volume": "22",
+              "author": "AC Kwan",
+              "year": "2012",
+              "unstructured": "Kwan AC, Dan Y (2012) Dissection of cortical microcircuits by single-neuron stimulation in vivo. Curr Biol 22(16):1459\u20131467. https://doi.org/10.1016/j.cub.2012.06.007",
+              "journal-title": "Curr Biol"
+            },
+            {
+              "key": "9511_CR30",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Lange M (1996) Life, Artificial Life, and Scientific Explanation. Phil Sci 63(2), 225\u2013244. Cambridge University Press",
+              "DOI": "10.1086/289910"
+            },
+            {
+              "key": "9511_CR31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.59717/j.xinn-life.2025.100153",
+              "volume": "3",
+              "author": "Q Liu",
+              "year": "2025",
+              "unstructured": "Liu Q, Wang C, Zhong Q et al (2025) Spatial transcriptomic profiling of neuronal adaptations to zero-magnetic field: alterations in Amygdala\u2013PVT\u2013Hypothalamus. The Innovation Life 3:100153. https://doi.org/10.59717/j.xinn-life.2025.100153",
+              "journal-title": "The Innovation Life"
+            },
+            {
+              "key": "9511_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "123",
+              "DOI": "10.1038/nature09086",
+              "volume": "466",
+              "author": "M London",
+              "year": "2010",
+              "unstructured": "London M, Roth A, Beeren L et al (2010) Sensitivity to perturbations in vivo implies high noise and suggests rate coding in cortex. Nature 466:123\u2013127. https://doi.org/10.1038/nature09086",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "9511_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "209",
+              "DOI": "10.1007/s13752-014-0161-3",
+              "volume": "9",
+              "author": "M Mart\u00ednez",
+              "year": "2014",
+              "unstructured": "Mart\u00ednez M, Esposito M (2014) Multilevel causation and the extended synthesis. Biol Theory 9:209\u2013220. https://doi.org/10.1007/s13752-014-0161-3",
+              "journal-title": "Biol Theory"
+            },
+            {
+              "key": "9511_CR34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsta.2021.0246",
+              "volume": "380",
+              "author": "PAM Mediano",
+              "year": "2022",
+              "unstructured": "Mediano PAM, Rosas FE, Luppi AI et al (2022) Greater than the parts: a review of the information decomposition approach to causal emergence. Phil Trans R Soc Lond A Math Phys Eng Sci 380:20210246. https://doi.org/10.1098/rsta.2021.0246",
+              "journal-title": "Phil Trans R Soc Lond A Math Phys Eng Sci"
+            },
+            {
+              "key": "9511_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "1199175",
+              "DOI": "10.3389/fphys.2023.1199175",
+              "volume": "14",
+              "author": "SA Narayanan",
+              "year": "2023",
+              "unstructured": "Narayanan SA (2023) Gravity\u2019s effect on biology. Front Physiol 14:1199175. https://doi.org/10.3389/fphys.2023.1199175",
+              "journal-title": "Front Physiol"
+            },
+            {
+              "key": "9511_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "117",
+              "DOI": "10.1007/978-3-030-71899-2_6",
+              "volume-title": "Top-Down causation and emergence",
+              "author": "D Noble",
+              "year": "2021",
+              "unstructured": "Noble D (2021) The principle of biological relativity: origins and current status. In: Voosholz J, Gabriel M (eds) Top-Down causation and emergence. Springer, Cham, pp 117\u2013133. https://doi.org/10.1007/978-3-030-71899-2_6"
+            },
+            {
+              "key": "9511_CR37",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.117.048101",
+              "volume": "117",
+              "author": "T Okada",
+              "year": "2016",
+              "unstructured": "Okada T, Mochizuki A (2016) Law of localization in chemical reaction networks. Phys Rev Lett 117:048101. https://doi.org/10.1103/PhysRevLett.117.048101",
+              "journal-title": "Phys Rev Lett"
+            },
+            {
+              "key": "9511_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "6",
+              "DOI": "10.1007/s13752-023-00439-z",
+              "volume": "19",
+              "author": "S Okasha",
+              "year": "2024",
+              "unstructured": "Okasha S (2024) The concept of agency in biology: motivations and meanings. Biol Theory 19:6\u201310. https://doi.org/10.1007/s13752-023-00439-z",
+              "journal-title": "Biol Theory"
+            },
+            {
+              "key": "9511_CR39",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsif.2016.0555",
+              "volume": "13",
+              "author": "G Pezzulo",
+              "year": "2016",
+              "unstructured": "Pezzulo G, Levin M (2016) Top-down models in biology: explanation and control of complex living systems above the molecular level. J R Soc Interface 13:20160555. https://doi.org/10.1098/rsif.2016.0555",
+              "journal-title": "J R Soc Interface"
+            },
+            {
+              "issue": "1",
+              "key": "9511_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "15",
+              "DOI": "10.1080/19475683.2022.2026466",
+              "volume": "28",
+              "author": "JD Phillips",
+              "year": "2022",
+              "unstructured": "Phillips JD (2022) The law of scale independence. Ann GIS 28(1):15\u201329. https://doi.org/10.1080/19475683.2022.2026466",
+              "journal-title": "Ann GIS"
+            },
+            {
+              "key": "9511_CR41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevD.61.024002",
+              "volume": "61",
+              "author": "DP Rideout",
+              "year": "2000",
+              "unstructured": "Rideout DP, Sorkin RD (2000) A classical sequential growth dynamics for causal sets. Phys Rev D 61:024002. https://doi.org/10.1103/PhysRevD.61.024002",
+              "journal-title": "Phys Rev D"
+            },
+            {
+              "key": "9511_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "647",
+              "DOI": "10.3390/e22060647",
+              "volume": "22",
+              "author": "R Riek",
+              "year": "2020",
+              "unstructured": "Riek R (2020) Entropy derived from causality. Entropy 22:647. https://doi.org/10.3390/e22060647",
+              "journal-title": "Entropy"
+            },
+            {
+              "key": "9511_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1008289",
+              "DOI": "10.1371/journal.pcbi.1008289",
+              "volume": "16",
+              "author": "FE Rosas",
+              "year": "2020",
+              "unstructured": "Rosas FE et al (2020) Reconciling emergences: an information-theoretic approach to identify causal emergence in multivariate data. PLoS Comput Biol 16:e1008289. https://doi.org/10.1371/journal.pcbi.1008289",
+              "journal-title": "PLoS Comput Biol"
+            },
+            {
+              "key": "9511_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "32",
+              "DOI": "10.1038/s41540-025-00499-w",
+              "volume": "11",
+              "author": "C Runfola",
+              "year": "2025",
+              "unstructured": "Runfola C, Petkoski S, Sheheitli H et al (2025) A mechanism for the emergence of low-dimensional structures in brain dynamics. Npj Syst Biol Appl 11:32. https://doi.org/10.1038/s41540-025-00499-w",
+              "journal-title": "Npj Syst Biol Appl"
+            },
+            {
+              "key": "9511_CR45",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Senn W, Dold D, Kungl AE et al (2023) A neuronal least-action principle for real-time learning in cortical circuits. eLife12. RP89674. https://doi.org/10.7554/eLife.89674.2",
+              "DOI": "10.7554/eLife.89674.2"
+            },
+            {
+              "key": "9511_CR46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/s41540-024-00477-8",
+              "volume": "10",
+              "author": "R Sol\u00e9",
+              "year": "2024",
+              "unstructured": "Sol\u00e9 R, Conde-Pueyo N, Pla-Mauri J et al (2024) Open problems in synthetic multicellularity. Npj Syst Biol Appl 10:151. https://doi.org/10.1038/s41540-024-00477-8",
+              "journal-title": "Npj Syst Biol Appl"
+            },
+            {
+              "key": "9511_CR47",
+              "unstructured": "Stephan S, Waldmann RM (2020) Causal scope and causal strength: the number of potential effects of a cause influences causal strength estimates. Proceed Annual Meet Cogn Sci Soc 42. https://escholarship.org/uc/item/0j4915s9"
+            },
+            {
+              "issue": "1",
+              "key": "9511_CR48",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s41114-019-0023-1",
+              "volume": "22",
+              "author": "S Surya",
+              "year": "2019",
+              "unstructured": "Surya S (2019) The causal set approach to quantum gravity. Living Rev Relativ 22(1):5. https://doi.org/10.1007/s41114-019-0023-1",
+              "journal-title": "Living Rev Relativ"
+            },
+            {
+              "key": "9511_CR49",
+              "doi-asserted-by": "publisher",
+              "first-page": "234",
+              "DOI": "10.2307/143141",
+              "volume": "46",
+              "author": "WRA Tobler",
+              "year": "1970",
+              "unstructured": "Tobler WRA (1970) Computer movie simulating urban growth in the Detroit region. Econ Geog 46:234\u2013240. https://doi.org/10.2307/143141",
+              "journal-title": "Econ Geog"
+            },
+            {
+              "issue": "3",
+              "key": "9511_CR50",
+              "doi-asserted-by": "publisher",
+              "first-page": "573",
+              "DOI": "10.3390/biology4030573",
+              "volume": "4",
+              "author": "JS Torday",
+              "year": "2015",
+              "unstructured": "Torday JS (2015) Homeostasis as the mechanism of evolution. Biology 4(3):573\u2013590. https://doi.org/10.3390/biology4030573",
+              "journal-title": "Biology"
+            },
+            {
+              "key": "9511_CR51",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsta.2021.0150",
+              "volume": "380",
+              "author": "TF Varley",
+              "year": "2022",
+              "unstructured": "Varley TF, Hoel E (2022) Emergence as the conversion of information: a unifying theory. Philos Trans R Soc A 380:20210150. https://doi.org/10.1098/rsta.2021.0150",
+              "journal-title": "Philos Trans R Soc A"
+            },
+            {
+              "key": "9511_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "11",
+              "DOI": "10.1007/s13752-023-00441-5",
+              "volume": "19",
+              "author": "L Virenque",
+              "year": "2024",
+              "unstructured": "Virenque L, Mossio M (2024) What is agency? A view from autonomy theory. Biol Theory 19:11\u201315. https://doi.org/10.1007/s13752-023-00441-5",
+              "journal-title": "Biol Theory"
+            },
+            {
+              "key": "9511_CR53",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsta.2016.0337",
+              "volume": "375",
+              "author": "SI Walker",
+              "year": "2017",
+              "unstructured": "Walker SI, Packard N, Cody GD (2017) Re-conceptualizing the origins of life. Philos Trans R Soc Lond A Math Phys Eng Sci 375:20160337. https://doi.org/10.1098/rsta.2016.0337",
+              "journal-title": "Philos Trans R Soc Lond A Math Phys Eng Sci"
+            },
+            {
+              "key": "9511_CR54",
+              "doi-asserted-by": "publisher",
+              "first-page": "43894",
+              "DOI": "10.1021/acsomega.4c07094",
+              "volume": "9",
+              "author": "J Wang",
+              "year": "2024",
+              "unstructured": "Wang J, Tang J, Chen F (2024) A study of the methane oxidation mechanism and reaction pathways using reactive molecular simulation and nonlinear manifold learning. ACS Omega 9:43894\u201343907. https://doi.org/10.1021/acsomega.4c07094",
+              "journal-title": "ACS Omega"
+            },
+            {
+              "issue": "6684",
+              "key": "9511_CR55",
+              "doi-asserted-by": "publisher",
+              "first-page": "440",
+              "DOI": "10.1038/30918",
+              "volume": "393",
+              "author": "DJ Watts",
+              "year": "1998",
+              "unstructured": "Watts DJ, Strogatz S (1998) Collective dynamics of \u201csmall-world\u201d networks. Nature 393(6684):440\u2013442. https://doi.org/10.1038/30918",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "9511_CR56",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/9781009234689",
+              "volume-title": "Causation in physics",
+              "author": "CG Weaver",
+              "year": "2025",
+              "unstructured": "Weaver CG (2025) Causation in physics. Cambridge University Press, Cambridge. https://doi.org/10.1017/9781009234689"
+            },
+            {
+              "key": "9511_CR57",
+              "volume-title": "Process and Reality: An Essay in Cosmology",
+              "author": "AN Whitehead",
+              "year": "1929",
+              "unstructured": "Whitehead AN (1929) Process and Reality: An Essay in Cosmology. Macmillan, New York"
+            },
+            {
+              "key": "9511_CR58",
+              "doi-asserted-by": "publisher",
+              "first-page": "287",
+              "DOI": "10.1007/s10539-010-9200-z",
+              "volume": "25",
+              "author": "J Woodward",
+              "year": "2010",
+              "unstructured": "Woodward J (2010) Causation in biology: stability, specificity, and the choice of levels of explanation. Biol Philos 25:287\u2013318. https://doi.org/10.1007/s10539-010-9200-z",
+              "journal-title": "Biol Philos"
+            },
+            {
+              "key": "9511_CR59",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1007/978-981-19-3079-9_71-1",
+              "volume-title": "Handbook of quantum gravity",
+              "author": "C W\u00fcthrich",
+              "year": "2024",
+              "unstructured": "W\u00fcthrich C (2024) The philosophy of causal set theory. In: Bambi C, Modesto L, Shapiro I (eds) Handbook of quantum gravity. Springer, Singapore, pp 1\u201328. https://doi.org/10.1007/978-981-19-3079-9_71-1"
+            },
+            {
+              "key": "9511_CR60",
+              "doi-asserted-by": "publisher",
+              "first-page": "108",
+              "DOI": "10.3390/e26020108",
+              "volume": "26",
+              "author": "B Yuan",
+              "year": "2024",
+              "unstructured": "Yuan B, Zhang J, Lyu A et al (2024) Emergence and causality in complex systems: a survey of causal emergence and related quantitative studies. Entropy 26:108. https://doi.org/10.3390/e26020108",
+              "journal-title": "Entropy"
+            },
+            {
+              "key": "9511_CR61",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.biosystems.2023.104925",
+              "volume": "229",
+              "author": "SB Yurchenko",
+              "year": "2023",
+              "unstructured": "Yurchenko SB (2023) Is information the other face of causation in biological systems? Biosystems 229:104925. https://doi.org/10.1016/j.biosystems.2023.104925",
+              "journal-title": "Biosystems"
+            },
+            {
+              "key": "9511_CR62",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Yurchenko SB (2024a) Time in a Quantum Sensitive Extension of Special Relativity. Preprints.org. https://doi.org/10.20944/preprints202411.1875.v1",
+              "DOI": "10.20944/preprints202411.1875.v1"
+            },
+            {
+              "key": "9511_CR63",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.neubiorev.2024.105845",
+              "volume": "165",
+              "author": "SB Yurchenko",
+              "year": "2024",
+              "unstructured": "Yurchenko SB (2024b) Panpsychism and dualism in the science of consciousness. Neurosci Biobehav Rev 165:105845. https://doi.org/10.1016/j.neubiorev.2024.105845",
+              "journal-title": "Neurosci Biobehav Rev"
+            },
+            {
+              "key": "9511_CR64",
+              "doi-asserted-by": "publisher",
+              "first-page": "3",
+              "DOI": "10.1038/s44260-025-00028-0",
+              "volume": "2",
+              "author": "J Zhang",
+              "year": "2025",
+              "unstructured": "Zhang J, Tao R, Leong KH et al (2025) Dynamical reversibility and a new theory of causal emergence based on SVD. Npj Complex 2:3. https://doi.org/10.1038/s44260-025-00028-0",
+              "journal-title": "Npj Complex"
+            }
+          ],
+          "container-title": [
+            "Acta Biotheoretica"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/s10441-025-09511-6.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://link.springer.com/article/10.1007/s10441-025-09511-6",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/s10441-025-09511-6.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2026-03-01T08:28:01Z",
+            "timestamp": 1772353681000
+          },
+          "score": 61.302536,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/s10441-025-09511-6"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                25
+              ]
+            ]
+          },
+          "references-count": 64,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2026,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "9511"
+          ],
+          "URL": "https://doi.org/10.1007/s10441-025-09511-6",
+          "ISSN": [
+            "0001-5342",
+            "1572-8358"
+          ],
+          "issn-type": [
+            {
+              "value": "0001-5342",
+              "type": "print"
+            },
+            {
+              "value": "1572-8358",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                25
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "8 July 2025",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "11 November 2025",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "25 November 2025",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Declarations"
+              }
+            },
+            {
+              "value": "The authors declare no competing interests.",
+              "order": 2,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing Interests"
+              }
+            },
+            {
+              "value": "The author has no conflict of interest to declare.",
+              "order": 3,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Conflict of interest"
+              }
+            }
+          ],
+          "article-number": "2"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

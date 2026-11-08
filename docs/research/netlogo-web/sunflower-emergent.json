@@ -1,0 +1,114 @@
+{
+  "slug": "sunflower-emergent",
+  "name": "Sunflower Emergent",
+  "catalogPath": "Sample Models/Biology/Sunflower Emergent",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Sunflower%20Emergent.nlogox",
+  "deliveryBatch": "B07",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can a spiral arrangement emerge without prescribing the golden angle? NetLogo Sunflower Emergent adds particles on successive rings and selects positions by minimizing an approximation of repulsive energy. The Info describes a Stenger-inspired construction and relates it to physical phyllotaxis [1]. A geometric sunflower model [2] and a developmental model [3] offer useful comparisons. The simulation treats growth as sequential point placement with chosen energy rules; it does not represent a complete plant meristem or auxin transport. Double spirals illustrate the consequences of spatial exclusion and growth under these assumptions. They do not establish that repulsion alone explains every plant pattern or that a matching image confirms a biological mechanism.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Sunflower%20Emergent.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Sunflower%20Emergent.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 0e0e3d39384a9b2cde33f248f46c0711cf2f7742f39405dc0907485ab1a67cd8",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/sunflower-emergent.nlogox",
+    "infoFile": "evidence/biology/sunflower-emergent-info.txt",
+    "originalModelCitation": "* Wilensky, U. (2009).  NetLogo Sunflower Emergent model.  http://ccl.northwestern.edu/netlogo/models/SunflowerEmergent.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "douady",
+      "authors": [
+        "S. Douady",
+        "Y. Couder"
+      ],
+      "title": "Phyllotaxis as a physical self-organized growth process",
+      "year": 1992,
+      "venue": "Physical Review Letters",
+      "doi": "10.1103/physrevlett.68.2098",
+      "url": "https://doi.org/10.1103/physrevlett.68.2098",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Phyllotaxis+as+a+physical+self-organized+growth+process+Douady+Couder+1992&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/douady-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1103%2Fphysrevlett.68.2098%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/douady-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "68",
+      "issue": "13",
+      "pages": "2098-2101",
+      "relevance": "Provides the physical self-organized phyllotaxis precedent named in the Info."
+    },
+    {
+      "id": "vogel",
+      "authors": [
+        "Helmut Vogel"
+      ],
+      "title": "A better way to construct the sunflower head",
+      "year": 1979,
+      "venue": "Mathematical Biosciences",
+      "doi": "10.1016/0025-5564(79)90080-4",
+      "url": "https://doi.org/10.1016/0025-5564(79)90080-4",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=A+better+way+to+construct+the+sunflower+head+Vogel+1979&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/vogel-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "44",
+      "issue": "3-4",
+      "pages": "179-189",
+      "relevance": "A mathematical sunflower construction gives a geometric comparison to repulsive-energy placement."
+    },
+    {
+      "id": "auxin",
+      "authors": [
+        "Richard S. Smith",
+        "Soazig Guyomarc'h",
+        "Therese Mandel",
+        "Didier Reinhardt",
+        "Cris Kuhlemeier",
+        "Przemyslaw Prusinkiewicz"
+      ],
+      "title": "A plausible model of phyllotaxis",
+      "year": 2006,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.0510457103",
+      "url": "https://doi.org/10.1073/pnas.0510457103",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=A+plausible+model+of+phyllotaxis+Smith+2006&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/auxin-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0510457103%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/auxin-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "103",
+      "issue": "5",
+      "pages": "1301-1306",
+      "relevance": "A biological phyllotaxis model highlights developmental mechanisms omitted by the purely physical illustration."
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,328 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature19841%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nature19841\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "27732583",
+          "source": "MED",
+          "pmid": "27732583",
+          "pmcid": "PMC5637407",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC5637407"
+            ]
+          },
+          "doi": "10.1038/nature19841",
+          "title": "Synchronous long-term oscillations in a synthetic gene circuit.",
+          "authorString": "Potvin-Trottier L, Lord ND, Vinnicombe G, Paulsson J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Potvin-Trottier L",
+                "lastName": "Potvin-Trottier",
+                "firstName": "Laurent",
+                "initials": "L",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Systems Biology, Harvard Medical School, 200 Longwood Avenue, Boston, Massachusetts 02115, USA."
+                    },
+                    {
+                      "affiliation": "Biophysics Program, Harvard University, Cambridge, Massachusetts 02138, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lord ND",
+                "lastName": "Lord",
+                "firstName": "Nathan D",
+                "initials": "ND",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9553-2779"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Systems Biology, Harvard Medical School, 200 Longwood Avenue, Boston, Massachusetts 02115, USA."
+                    },
+                    {
+                      "affiliation": "Department of Molecular and Cellular Biology, Harvard University, Cambridge, Massachusetts 02138, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Vinnicombe G",
+                "lastName": "Vinnicombe",
+                "firstName": "Glenn",
+                "initials": "G",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Engineering, University of Cambridge, Cambridge CB2 1PZ, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Paulsson J",
+                "lastName": "Paulsson",
+                "firstName": "Johan",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Systems Biology, Harvard Medical School, 200 Longwood Avenue, Boston, Massachusetts 02115, USA."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9553-2779"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "7626",
+            "volume": "538",
+            "journalIssueId": 2482491,
+            "dateOfPublication": "2016 Oct",
+            "monthOfPublication": 10,
+            "yearOfPublication": 2016,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "nlmid": "0410462",
+              "isoabbreviation": "Nature"
+            },
+            "printPublicationDate": "2016-10-01"
+          },
+          "pubYear": "2016",
+          "pageInfo": "514-517",
+          "abstractText": "Synthetically engineered genetic circuits can perform a wide variety of tasks but are generally less accurate than natural systems. Here we revisit the first synthetic genetic oscillator, the repressilator, and modify it using principles from stochastic chemistry in single cells. Specifically, we sought to reduce error propagation and information losses, not by adding control loops, but by simply removing existing features. We show that this modification created highly regular and robust oscillations. Furthermore, some streamlined circuits kept 14 generation periods over a range of growth conditions and kept phase for hundreds of generations in single cells, allowing cells in flasks and colonies to oscillate synchronously without any coupling between them. Our results suggest that even the simplest synthetic genetic networks can achieve a precision that rivals natural systems, and emphasize the importance of noise analyses for circuit design in synthetic biology.",
+          "affiliation": "Department of Systems Biology, Harvard Medical School, 200 Longwood Avenue, Boston, Massachusetts 02115, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article",
+              "Research Support, N.I.H., Extramural"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "National Institutes of Health",
+                "grantId": "GM081563",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Institutes of Health",
+                "grantId": "GM095784",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIGMS NIH HHS",
+                "acronym": "GM",
+                "grantId": "R01 GM081563",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIGMS NIH HHS",
+                "acronym": "GM",
+                "grantId": "R01 GM095784",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Escherichia coli",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Genetic Engineering"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Gene Expression Regulation, Bacterial"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Clocks",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genes, Synthetic",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Research Design"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Gene Regulatory Networks",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Synthetic Biology",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "MT",
+                      "qualifierName": "methods"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nature19841"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5637407"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5637407?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "27732579",
+                "reference": "Nature. 2016 Oct 27;538(7626):462-463. doi: 10.1038/nature19478",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 232,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "Y",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "Y",
+          "manuscriptId": "NIHMS816655",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2017-03-21",
+          "dateOfCreation": "2016-10-13",
+          "dateOfRevision": "2022-03-17",
+          "electronicPublicationDate": "2016-10-12",
+          "firstPublicationDate": "2016-10-12",
+          "firstIndexDate": "2016-10-13",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1098%2Frstb.1952.0012",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T15:11:28Z",
+        "timestamp": 1793891488335,
+        "version": "4.8.0"
+      },
+      "reference-count": 6,
+      "publisher": "The Royal Society",
+      "issue": "641",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1952,
+                8,
+                14
+              ]
+            ],
+            "date-time": "1952-08-14T00:00:00Z",
+            "timestamp": -548553600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://royalsociety.org/journals/ethics-policies/data-sharing-mining/"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            1952,
+            8,
+            14
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>It is suggested that a system of chemical substances, called morphogens, reacting together and diffusing through a tissue, is adequate to account for the main phenomena of morphogenesis. Such a system, although it may originally be quite homogeneous, may later develop a pattern or structure due to an instability of the homogeneous equilibrium, which is triggered off by random disturbances. Such reaction-diffusion systems are considered in some detail in the case of an isolated ring of cells, a mathematically convenient, though biologically unusual system. The investigation is chiefly concerned with the onset of instability. It is found that there are six essentially different forms which this may take. In the most interesting form stationary waves appear on the ring. It is suggested that this might account, for instance, for the tentacle patterns on Hydra and for whorled leaves. A system of reactions and diffusion on a sphere is also considered. Such a system appears to account for gastrulation. Another reaction system in two dimensions gives rise to patterns reminiscent of dappling. It is also suggested that stationary waves in two dimensions could account for the phenomena of phyllotaxis. The purpose of this paper is to discuss a possible mechanism by which the genes of a zygote may determine the anatomical structure of the resulting organism. The theory does not make any new hypotheses; it merely suggests that certain well-known physical laws are sufficient to account for many of the facts. The full understanding of the paper requires a good knowledge of mathematics, some biology, and some elementary chemistry. Since readers cannot be expected to be experts in all of these subjects, a number of elementary facts are explained, which can be found in text-books, but whose omission would make the paper difficult reading.</jats:p>",
+      "DOI": "10.1098/rstb.1952.0012",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2006,
+            12,
+            15
+          ]
+        ],
+        "date-time": "2006-12-15T14:52:39Z",
+        "timestamp": 1166194359000
+      },
+      "page": "37-72",
+      "source": "Crossref",
+      "is-referenced-by-count": 8518,
+      "title": [
+        "The chemical basis of morphogenesis"
+      ],
+      "prefix": "10.1098",
+      "volume": "237",
+      "author": [
+        {
+          "given": "Alan Mathison",
+          "family": "Turing",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Manchester"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "175",
+      "reference": [
+        {
+          "key": "p_1",
+          "unstructured": "Child C. M. 1941 Patterns andproblems of development. University of Chicago Press."
+        },
+        {
+          "key": "p_2",
+          "unstructured": "Davson H. & Danielli J. F. 1943 The permeability of natural membranes. Cambridge University Press."
+        },
+        {
+          "key": "p_3",
+          "unstructured": "Jeans J. H. 1927 The mathematical theory of elasticity and 5th ed. Cambridge University Press."
+        },
+        {
+          "key": "p_4",
+          "first-page": "333",
+          "article-title": "Die Kinetik der Invertinwirkung",
+          "volume": "49",
+          "author": "Michaelis L.",
+          "year": "1913",
+          "journal-title": "Biochem. Z."
+        },
+        {
+          "key": "p_5",
+          "unstructured": "Thompson Sir D'Arcy 1942 On growth and form 2nd ed. Cambridge University Press."
+        },
+        {
+          "key": "p_6",
+          "unstructured": "Waddington C. H. 1940 Organisers and genes. Cambridge University Press."
+        }
+      ],
+      "container-title": [
+        "Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.1952.0012",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://royalsocietypublishing.org/rstb/article-pdf/237/641/37/1331199/rstb.1952.0012.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "https://royalsocietypublishing.org/rstb/article-pdf/237/641/37/1331199/rstb.1952.0012.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            31
+          ]
+        ],
+        "date-time": "2025-12-31T05:48:10Z",
+        "timestamp": 1767160090000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://royalsocietypublishing.org/rstb/article/237/641/37/112910/The-chemical-basis-of-morphogenesis"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1952,
+            8,
+            14
+          ]
+        ]
+      },
+      "references-count": 6,
+      "journal-issue": {
+        "issue": "641",
+        "published-print": {
+          "date-parts": [
+            [
+              1952,
+              8,
+              14
+            ]
+          ]
+        }
+      },
+      "URL": "https://doi.org/10.1098/rstb.1952.0012",
+      "relation": {
+        "has-review": [
+          {
+            "id-type": "doi",
+            "id": "10.3410/f.718302185.793491864",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "ISSN": [
+        "0080-4622",
+        "2054-0280"
+      ],
+      "issn-type": [
+        {
+          "value": "0080-4622",
+          "type": "print"
+        },
+        {
+          "value": "2054-0280",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1952,
+            8,
+            14
+          ]
+        ]
+      }
+    }
+  }
+}

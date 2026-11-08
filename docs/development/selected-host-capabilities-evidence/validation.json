@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-06",
+  "checks": {
+    "allEvidenceJsonParses": true,
+    "localLinksAndExplicitApiAnchorsResolve": 31,
+    "procedureAndPrimitiveCounts": "NW28/24; GIS20/32",
+    "archiveSHAEqualsInventorySHA": true,
+    "selectedMembershipRetained": true
+  },
+  "executedShellOperations": [
+    "git status --short --branch",
+    "rg searches and sed/cat public API, PLAN, DESIGN and original XML reads",
+    "Python ElementTree extraction, hashlib SHA-256, JSON parsing, pinned inventory/tree/selection reconciliation",
+    "Python urllib primary manual archival attempt: HTTP403",
+    "Python local links/API anchors and source-count assertions",
+    "SHA256SUMS generation"
+  ],
+  "notRun": [
+    "typecheck/build/unit tests: no TypeScript/runtime changes",
+    "target browser acceptance: no target implementations",
+    "NW additional file buttons and GIS dataset/WMS actions",
+    "independent technical review: existing provider quota blocker"
+  ]
+}

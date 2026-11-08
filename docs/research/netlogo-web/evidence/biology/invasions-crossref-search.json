@@ -1,0 +1,2116 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+spatial+spread+of+invasions+new+developments+in+theory+and+evidence+Hastings+2005&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 6014545,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T01:22:04Z",
+            "timestamp": 1793755324602,
+            "version": "4.6.1"
+          },
+          "reference-count": 86,
+          "publisher": "Wiley",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2004,
+                    11,
+                    4
+                  ]
+                ],
+                "date-time": "2004-11-04T00:00:00Z",
+                "timestamp": 1099526400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "onlinelibrary.wiley.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Ecology Letters"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2005,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>We review and synthesize recent developments in the study of the spread of invasive species, emphasizing both empirical and theoretical approaches. Recent theoretical work has shown that invasive species spread is a much more complex process than the classical models suggested, as long range dispersal events can have a large influence on the rate of range expansion through time. Empirical work goes even further, emphasizing the role of spatial heterogeneity, temporal variability, other species, and evolution. As in some of the classic work on spread, the study of range expansion of invasive species provides unique opportunities to use differences between theory and data to determine the important underlying processes that control spread rates.</jats:p>",
+          "DOI": "10.1111/j.1461-0248.2004.00687.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                12,
+                15
+              ]
+            ],
+            "date-time": "2004-12-15T23:30:11Z",
+            "timestamp": 1103153411000
+          },
+          "page": "91-101",
+          "update-policy": "https://doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 757,
+          "title": [
+            "The spatial spread of invasions: new developments in theory and evidence"
+          ],
+          "prefix": "10.1111",
+          "volume": "8",
+          "author": [
+            {
+              "given": "Alan",
+              "family": "Hastings",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kim",
+              "family": "Cuddington",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kendi F.",
+              "family": "Davies",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Christopher J.",
+              "family": "Dugaw",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Sarah",
+              "family": "Elmendorf",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Amy",
+              "family": "Freestone",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Susan",
+              "family": "Harrison",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Matthew",
+              "family": "Holland",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "John",
+              "family": "Lambrinos",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Urmila",
+              "family": "Malvadkar",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Brett A.",
+              "family": "Melbourne",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kara",
+              "family": "Moore",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Caz",
+              "family": "Taylor",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Diane",
+              "family": "Thomson",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2004,
+                11,
+                4
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_12_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261103"
+            },
+            {
+              "key": "e_1_2_12_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00132860"
+            },
+            {
+              "key": "e_1_2_12_4_1",
+              "first-page": "219",
+              "volume-title": "Evolution of Insect Pests: The Pattern of Variations",
+              "author": "Andow D.A.",
+              "year": "1993"
+            },
+            {
+              "key": "e_1_2_12_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-294x.1999.00679.x"
+            },
+            {
+              "key": "e_1_2_12_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1469-8137.2000.00660.x"
+            },
+            {
+              "key": "e_1_2_12_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/4004006"
+            },
+            {
+              "key": "e_1_2_12_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1940470"
+            },
+            {
+              "key": "e_1_2_12_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2845208"
+            },
+            {
+              "key": "e_1_2_12_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2845500"
+            },
+            {
+              "key": "e_1_2_12_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/1051-0761(2001)011[1778:POLDDU]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_12_1",
+              "first-page": "1",
+              "article-title": "Convergence of solutions of the Kolmogorov equation to travelling waves",
+              "volume": "285",
+              "author": "Bramson M.",
+              "year": "1983",
+              "journal-title": "Mem. Am. Math. Soc."
+            },
+            {
+              "key": "e_1_2_12_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(1999)080[2385:SIOGRI]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/1051-0761(1999)009[0254:ETPOLD]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1896848"
+            },
+            {
+              "key": "e_1_2_12_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/286162"
+            },
+            {
+              "key": "e_1_2_12_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/319934"
+            },
+            {
+              "key": "e_1_2_12_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1744-7429.2001.tb00210.x"
+            },
+            {
+              "key": "e_1_2_12_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/tpbi.1996.0001"
+            },
+            {
+              "key": "e_1_2_12_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.1999.0731"
+            },
+            {
+              "key": "e_1_2_12_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1939503"
+            },
+            {
+              "key": "e_1_2_12_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2745.2000.00473.x"
+            },
+            {
+              "key": "e_1_2_12_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/286185"
+            },
+            {
+              "key": "e_1_2_12_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.97.13.7043"
+            },
+            {
+              "key": "e_1_2_12_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1461-0248.2002.0_285.x"
+            },
+            {
+              "key": "e_1_2_12_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-1809.1937.tb02153.x"
+            },
+            {
+              "key": "e_1_2_12_27_1",
+              "first-page": "119",
+              "article-title": "Spread of Filago arvensis L. (Compositae) in the United States",
+              "volume": "29",
+              "author": "Forcella F.",
+              "year": "1982",
+              "journal-title": "Madrono"
+            },
+            {
+              "key": "e_1_2_12_28_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1034/j.1600-0706.2001.950114.x"
+            },
+            {
+              "key": "e_1_2_12_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1554/0014-3820(2002)056[0661:ESOSI]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/1051-0761(2003)013[0404:RHARFN]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_31_1",
+              "first-page": "119",
+              "volume-title": "Molecular Zoology Advances, Strategies, and Protocols",
+              "author": "Geller J.B.",
+              "year": "1996"
+            },
+            {
+              "key": "e_1_2_12_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2265773"
+            },
+            {
+              "key": "e_1_2_12_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0169-5347(02)02644-7"
+            },
+            {
+              "key": "e_1_2_12_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002850050083"
+            },
+            {
+              "key": "e_1_2_12_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2002)083[3306:EDFPOS]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_36_1",
+              "volume-title": "Dynamics of Biological Invasions",
+              "author": "Hengeveld R.",
+              "year": "1989"
+            },
+            {
+              "key": "e_1_2_12_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2265699"
+            },
+            {
+              "key": "e_1_2_12_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1938902"
+            },
+            {
+              "key": "e_1_2_12_39_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285572"
+            },
+            {
+              "key": "e_1_2_12_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004420050509"
+            },
+            {
+              "key": "e_1_2_12_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/bulm.1997.0008"
+            },
+            {
+              "key": "e_1_2_12_42_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2002)083[3167:SOAIPO]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_43_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2265698"
+            },
+            {
+              "key": "e_1_2_12_44_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/5997"
+            },
+            {
+              "key": "e_1_2_12_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/tpbi.1993.1007"
+            },
+            {
+              "key": "e_1_2_12_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002850000050"
+            },
+            {
+              "key": "e_1_2_12_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002850200144"
+            },
+            {
+              "key": "e_1_2_12_48_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2845770"
+            },
+            {
+              "key": "e_1_2_12_49_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261529"
+            },
+            {
+              "key": "e_1_2_12_50_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/284804"
+            },
+            {
+              "key": "e_1_2_12_51_1",
+              "first-page": "127",
+              "volume-title": "Studies on Plant Demography: A Festschrift for John L. Harper",
+              "author": "Mack R.N.",
+              "year": "1985"
+            },
+            {
+              "key": "e_1_2_12_52_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1641/0006-3568(2001)051[0095:HAGPDG]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002670010098"
+            },
+            {
+              "key": "e_1_2_12_54_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00317626"
+            },
+            {
+              "key": "e_1_2_12_55_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-1-4899-3242-6"
+            },
+            {
+              "key": "e_1_2_12_56_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2699.2001.00574.x"
+            },
+            {
+              "key": "e_1_2_12_57_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0025-5564(91)90009-8"
+            },
+            {
+              "key": "e_1_2_12_58_1",
+              "first-page": "467",
+              "article-title": "Models from plant pathology on the movement and fate of new genotypes of microorganisms in the environment",
+              "volume": "33",
+              "author": "Mundt C.C.",
+              "year": "1995",
+              "journal-title": "Ann. Rev. Path."
+            },
+            {
+              "key": "e_1_2_12_59_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/5757"
+            },
+            {
+              "key": "e_1_2_12_60_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2000)081[1613:DADCAS]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_61_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1641/0006-3568(2001)051[0114:TPIASG]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_62_1",
+              "volume-title": "Diffusion and Ecological Problems: Modern Perspectives",
+              "author": "Okubo A.",
+              "year": "2002"
+            },
+            {
+              "key": "e_1_2_12_63_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.1989.0070"
+            },
+            {
+              "key": "e_1_2_12_64_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/bulm.2001.0239"
+            },
+            {
+              "key": "e_1_2_12_65_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1523-1739.2003.02019.x"
+            },
+            {
+              "key": "e_1_2_12_66_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2845737"
+            },
+            {
+              "key": "e_1_2_12_67_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2845589"
+            },
+            {
+              "key": "e_1_2_12_68_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0304-3800(89)90002-1"
+            },
+            {
+              "key": "e_1_2_12_69_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00328408"
+            },
+            {
+              "key": "e_1_2_12_70_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1469-185X.1999.tb00041.x"
+            },
+            {
+              "key": "e_1_2_12_71_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.032477999"
+            },
+            {
+              "key": "e_1_2_12_72_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/1051-0761(2002)012[1652:PAGDMA]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_73_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/1051-0761(1998)008[0833:BOMTSO]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_74_1",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/oso/9780198548522.001.0001",
+              "volume-title": "Biological Invasions: Theory and Practice",
+              "author": "Shigesada N.",
+              "year": "1997"
+            },
+            {
+              "key": "e_1_2_12_75_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0040-5809(86)90029-8"
+            },
+            {
+              "key": "e_1_2_12_76_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285796"
+            },
+            {
+              "key": "e_1_2_12_77_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/biomet/38.1-2.196"
+            },
+            {
+              "key": "e_1_2_12_78_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.042400799"
+            },
+            {
+              "key": "e_1_2_12_79_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0169-5347(02)00044-7"
+            },
+            {
+              "key": "e_1_2_12_80_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.98.3.1095"
+            },
+            {
+              "key": "e_1_2_12_81_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/341015"
+            },
+            {
+              "key": "e_1_2_12_82_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285924"
+            },
+            {
+              "key": "e_1_2_12_83_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1472-4642.2002.00159.x"
+            },
+            {
+              "key": "e_1_2_12_84_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2699.1998.251119.x"
+            },
+            {
+              "key": "e_1_2_12_85_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002850200145"
+            },
+            {
+              "key": "e_1_2_12_86_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/1051-0761(2002)012[0040:BAALTT]2.0.CO;2"
+            },
+            {
+              "key": "e_1_2_12_87_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1523-1739.2002.01064.x"
+            }
+          ],
+          "container-title": [
+            "Ecology Letters"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1461-0248.2004.00687.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1461-0248.2004.00687.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                16
+              ]
+            ],
+            "date-time": "2024-01-16T18:58:57Z",
+            "timestamp": 1705431537000
+          },
+          "score": 46.29279,
+          "resource": {
+            "primary": {
+              "URL": "https://onlinelibrary.wiley.com/doi/10.1111/j.1461-0248.2004.00687.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                11,
+                4
+              ]
+            ]
+          },
+          "references-count": 86,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2005,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/j.1461-0248.2004.00687.x"
+          ],
+          "URL": "https://doi.org/10.1111/j.1461-0248.2004.00687.x",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "1461-023X",
+            "1461-0248"
+          ],
+          "issn-type": [
+            {
+              "value": "1461-023X",
+              "type": "print"
+            },
+            {
+              "value": "1461-0248",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                11,
+                4
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2004-11-04",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "institution": [
+            {
+              "name": "bioRxiv"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                15
+              ]
+            ],
+            "date-time": "2026-01-15T19:20:31Z",
+            "timestamp": 1768504831233,
+            "version": "3.49.0"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2022,
+                12,
+                19
+              ]
+            ]
+          },
+          "group-title": "Ecology",
+          "reference-count": 54,
+          "publisher": "openRxiv",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "accepted": {
+            "date-parts": [
+              [
+                2022,
+                12,
+                19
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n                <jats:p>\n                  Describing and understanding spatiotemporal spread patterns in invasive species remains a longstanding interdisciplinary research goal. Here we show how a network-based top-down approach allows the efficient description of the ongoing invasion by\n                  <jats:italic>Drosophila suzukii</jats:italic>\n                  in Chile. To do so, we apply theoretical graph methods to calculate the minimum cost arborescence graph (MCA) to reconstruct and understand the invasion dynamics of\n                  <jats:italic>D. suzukii</jats:italic>\n                  since the first detection in 2017. This method estimates a directed rooted weighted graph by minimizing the total length of the resulting graph. To describe the temporal pattern of spread, we estimate three metrics of spread: the median dispersal rate, the median coefficient of diffusion, and the median dispersal acceleration. The estimated MCA shows that over four years,\n                  <jats:italic>D. suzukii</jats:italic>\n                  colonized a ~1,000 km long strip in the central valley of Chile, with an initial phase with long paths and connections and no clear direction pattern, folowed by a clearer north-east propagation pattern. The median dispersal rate for the entire period was 8.8 [7.4 \u2013 10.6,95% CI], while the median diffusion coefficient was 19.6 meters\n                  <jats:sup>2</jats:sup>\n                  /day [13.6 \u2013 27.9, 95% CI]. The observed spread dynamics and the log-normal distribution of accelerations are consistent with longdistance dispersal events. The complexities of real landscapes cannot be summarized in any model, but this study shows how an alternative top-down approach based on graph theory can facilitate the ecological analysis of the spread of an invasive species in a new territory.\n                </jats:p>",
+          "DOI": "10.1101/2022.12.15.520585",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                12,
+                19
+              ]
+            ],
+            "date-time": "2022-12-19T19:15:12Z",
+            "timestamp": 1671477312000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Disentangling the spread dynamics of insect invasions using spatial networks"
+          ],
+          "prefix": "10.64898",
+          "author": [
+            {
+              "given": "Sergio A.",
+              "family": "Estay",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Carmen P.",
+              "family": "Silva",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Daniela N.",
+              "family": "L\u00f3pez",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Fabio A.",
+              "family": "Labra",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "54368",
+          "reference": [
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00132860"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/ncomms11388"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.3",
+              "unstructured": "Broennimann, O. , Di Cola, .V , and Guisan, A. (2022). _ecospat: Spatial Ecology Miscellaneous Methods_. R package version 3.4, <https://CRAN.R-project.org/package=ecospat>."
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jema.2000.0373"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.5",
+              "unstructured": "CABI (2022) Drosophila suzukii (spotted wing drosophila) [original text by V. Rossi-Stacconi]. In: Invasive Species Compendium. Wallingford, UK: CAB International."
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1439-0418.2010.01583.x"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00125131"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ecolmodel.2010.05.012"
+            },
+            {
+              "issue": "10",
+              "key": "2022122103200466000_2022.12.15.520585v1.9",
+              "first-page": "1396",
+              "article-title": "On the shortest arborescence of a directed graph",
+              "volume": "XIV",
+              "year": "1965",
+              "journal-title": "Scientia Sinica: Chung-kuo k\u2019o hsueh"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2486.2009.01983.x"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.11",
+              "first-page": "43",
+              "article-title": "La mosca de alas manchadas suzukii a tres a\u00f1os de su detecci\u00f3n en Chile",
+              "volume": "113",
+              "year": "2020",
+              "journal-title": "Tierra Adentro"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevB.34.3528"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0022-5193(87)80063-2"
+            },
+            {
+              "issue": "4",
+              "key": "2022122103200466000_2022.12.15.520585v1.14",
+              "doi-asserted-by": "crossref",
+              "first-page": "233",
+              "DOI": "10.6028/jres.071B.032",
+              "article-title": "Optimum Branchings",
+              "volume": "71B",
+              "year": "1967",
+              "journal-title": "J. Res. Natl. Bur. Stand. (U.S.)"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jeem.2011.10.003"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1461-0248.2010.01440.x"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.17",
+              "doi-asserted-by": "crossref",
+              "first-page": "355",
+              "DOI": "10.1111/j.1469-1809.1937.tb02153.x",
+              "article-title": "The wave of advance of advantageous genes",
+              "volume": "7",
+              "year": "1937",
+              "journal-title": "Ann. Eugen"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.18",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jee/toac052"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1461-0248.2004.00687.x"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ps.2265"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2012.06.007"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.11169/bioimages.4.91"
+            },
+            {
+              "issue": "1",
+              "key": "2022122103200466000_2022.12.15.520585v1.23",
+              "doi-asserted-by": "crossref",
+              "first-page": "4",
+              "DOI": "10.5751/ES-00015-010104",
+              "article-title": "Detecting critical scales in fragmented landscapes",
+              "volume": "1",
+              "year": "1997",
+              "journal-title": "Conservation Ecology [online]"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2265698"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.25",
+              "unstructured": "Labra, F.A. , Abades S. R. and Marquet, P. A. (2005) \u201cScaling patterns in exotic species distribution and abundance.\u201d In: Species Invasions: Insights into Ecology, Evolution and Biogeography, edited by Sax, D.F. , Stachowicz J. J. , and Gaines, S.D. MA: Sinauer Associates."
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10530-013-0521-0"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/ee/nvz101"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.2013342118"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cub.2007.11.030"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002850000022"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002850000050"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.32",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jisesa/ieaa034"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.33",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/285480"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.ento.47.091201.145206"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.6092/issn.1973-9494/7119"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1176138"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.37",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.66.016128"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.38",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/j.1538-7305.1957.tb01515.x"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.39",
+              "unstructured": "R Core Team (2022). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/."
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10530-020-02298-2"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.41",
+              "unstructured": "Rojas, E. , Andrade, J. , Concha, C. , and Astudillo, F. (2019). Manual de reconocimiento. Estados de desarrollo de Drosophila suzukii (Diptera: Drosophilidae) y otras especies del g\u00e9nero, comunes en el sur de Chile. Ministerio de Agricultura, Servicio Agr\u00edcola y Ganadero."
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.42",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cub.2012.11.021"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.43",
+              "unstructured": "SAG (2017) RESOLUCI\u00d3N EXENTA N\u00b0:3672/2017. Ministerio de Agricultura, Servicio Agr\u00edcola y Ganadero. Chile."
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.44",
+              "unstructured": "SAG (2021) PLAN DE TRABAJO NACIONAL 2021-2022. Agricultural and Livestock Service, Ministerio de Agricultura, Chile."
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.45",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sattenspiel, L. , and Lloyd, A. (2009). The geographic spread of infectious diseases: models and applications (Vol. 5). Princeton University Press.",
+              "DOI": "10.1515/9781400831708"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/biomet/38.1-2.196"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.47"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.48",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Shigesada, N. , and Kawasaki, K. (1997). Biological invasions: theory and practice. Oxford University Press.",
+              "DOI": "10.1093/oso/9780198548522.001.0001"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.49",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/net.3230070103"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.50",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10340-018-0985-x"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.51",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1127/entomologia/2019/0876"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.52",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1890/0012-9658(2001)082[1205:LCAGTP]2.0.CO;2"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.53",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00164162"
+            },
+            {
+              "key": "2022122103200466000_2022.12.15.520585v1.54",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1997.0445"
+            }
+          ],
+          "link": [
+            {
+              "URL": "https://syndication.highwire.org/content/doi/10.1101/2022.12.15.520585",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                15
+              ]
+            ],
+            "date-time": "2026-01-15T04:01:21Z",
+            "timestamp": 1768449681000
+          },
+          "score": 25.323456,
+          "resource": {
+            "primary": {
+              "URL": "http://biorxiv.org/lookup/doi/10.1101/2022.12.15.520585"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2022,
+                12,
+                19
+              ]
+            ]
+          },
+          "references-count": 54,
+          "URL": "https://doi.org/10.1101/2022.12.15.520585",
+          "published": {
+            "date-parts": [
+              [
+                2022,
+                12,
+                19
+              ]
+            ]
+          },
+          "subtype": "preprint"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2026-11-02T04:00:07Z",
+            "timestamp": 1793592007735,
+            "version": "4.5.0"
+          },
+          "reference-count": 65,
+          "publisher": "Frontiers Media SA",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    5,
+                    19
+                  ]
+                ],
+                "date-time": "2023-05-19T00:00:00Z",
+                "timestamp": 1684454400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "frontiersin.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Front. Ecol. Evol."
+          ],
+          "abstract": "<jats:sec><jats:title>Introduction</jats:title><jats:p>Describing and understanding spatiotemporal spread patterns in invasive species remains a long-standing interdisciplinary research goal. Here we show how a network-based top-down approach allows the efficient description of the ongoing invasion by<jats:italic>Drosophila suzukii</jats:italic>in Chile.</jats:p></jats:sec><jats:sec><jats:title>Methods</jats:title><jats:p>To do so, we apply theoretical graph methods to calculate the minimum cost arborescence graph (MCA) to reconstruct and understand the invasion dynamics of<jats:italic>D. suzukii</jats:italic>since the first detection in 2017. This method estimates a directed rooted weighted graph by minimizing the total length of the resulting graph. To describe the temporal pattern of spread, we estimate three metrics of spread: the median dispersal rate, the median coefficient of diffusion, and the median dispersal acceleration.</jats:p></jats:sec><jats:sec><jats:title>Results</jats:title><jats:p>The estimated MCA shows that over four years,<jats:italic>D. suzukii</jats:italic>colonized a ~1,000km long strip in the central valley of Chile, with an initial phase with long paths and connections and no clear direction pattern, followed by a clearer north\u2013east propagation pattern. The median dispersal rate for the entire period was 8.8 (7.4\u201310.6, 95% CI), while the median diffusion coefficient was 19.6 meters<jats:sup>2</jats:sup>/day (13.6\u201327.9, 95% CI). The observed spread dynamics and the log-normal distribution of accelerations are consistent with long-distance dispersal events.</jats:p></jats:sec><jats:sec><jats:title>Discussion</jats:title><jats:p>The complexities of real landscapes cannot be summarized in any model, but this study shows how an alternative top-down approach based on graph theory can facilitate the ecological analysis of the spread of an invasive species in a new territory.</jats:p></jats:sec>",
+          "DOI": "10.3389/fevo.2023.1124890",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                19
+              ]
+            ],
+            "date-time": "2023-05-19T14:11:30Z",
+            "timestamp": 1684505490000
+          },
+          "update-policy": "https://doi.org/10.3389/crossmark-policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 9,
+          "title": [
+            "Disentangling the spread dynamics of insect invasions using spatial networks"
+          ],
+          "prefix": "10.3389",
+          "volume": "11",
+          "author": [
+            {
+              "given": "Sergio A.",
+              "family": "Estay",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Carmen P.",
+              "family": "Silva",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Daniela N.",
+              "family": "L\u00f3pez",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Fabio A.",
+              "family": "Labra",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1965",
+          "published-online": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                19
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "ref1",
+              "doi-asserted-by": "publisher",
+              "first-page": "765",
+              "DOI": "10.1007/s00285-019-01376-x",
+              "article-title": "Dating and localizing an invasion from post-introduction data and a coupled reaction\u2013diffusion\u2013absorption model",
+              "volume": "79",
+              "author": "Abboud",
+              "year": "2019",
+              "journal-title": "J. Math. Biol."
+            },
+            {
+              "key": "ref2",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-3-319-57072-3_52",
+              "article-title": "Mathematical models can predict the spread of an invasive species",
+              "volume-title": "Handbook of the mathematics of the arts and sciences",
+              "author": "Alford",
+              "year": "2021"
+            },
+            {
+              "key": "ref3",
+              "doi-asserted-by": "publisher",
+              "first-page": "177",
+              "DOI": "10.1007/BF00132860",
+              "article-title": "Spread of invading organisms",
+              "volume": "4",
+              "author": "Andow",
+              "year": "1990",
+              "journal-title": "Landsc. Ecol."
+            },
+            {
+              "key": "ref01",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-3-319-97487-3",
+              "volume-title": "Epidemics. Models and data using R",
+              "author": "Bj\u00f8rnstad",
+              "year": "2018"
+            },
+            {
+              "key": "ref4",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1038/ncomms12986",
+              "article-title": "Massive yet grossly underestimated global costs of invasive insects",
+              "volume": "7",
+              "author": "Bradshaw",
+              "year": "2016",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "ref5",
+              "volume-title": "Ecospat: spatial ecology miscellaneous methods",
+              "author": "Broennimann",
+              "year": "2022"
+            },
+            {
+              "key": "ref02",
+              "doi-asserted-by": "publisher",
+              "first-page": "65",
+              "DOI": "10.1007/s12080-022-00528-y",
+              "article-title": "Analysis of the invasion of a city by Aedes aegypti via mathematical models and Bayesian statistics",
+              "volume": "15",
+              "author": "Bruzzone",
+              "year": "2022",
+              "journal-title": "Theor. Ecol."
+            },
+            {
+              "key": "ref6",
+              "doi-asserted-by": "publisher",
+              "first-page": "265",
+              "DOI": "10.1006/jema.2000.0373",
+              "article-title": "Landscape connectivity: a conservation application of graph theory",
+              "volume": "59",
+              "author": "Bunn",
+              "year": "2000",
+              "journal-title": "J. Environ. Manag."
+            },
+            {
+              "key": "ref03",
+              "first-page": "1",
+              "article-title": "The spotted wing Drosophila in the south of the world: Chilean case and its first productive impacts",
+              "volume-title": "Invasive species: introduction pathways, economic impact, and possible management options",
+              "author": "Buzzetti",
+              "year": "2020"
+            },
+            {
+              "key": "ref7",
+              "article-title": "Drosophila suzukii (spotted wing drosophila) [original text by V. Rossi-Stacconi]",
+              "volume-title": "Invasive species compendium",
+              "year": "2022"
+            },
+            {
+              "key": "ref8",
+              "doi-asserted-by": "publisher",
+              "first-page": "139",
+              "DOI": "10.1111/j.1439-0418.2010.01583.x",
+              "article-title": "First records of the potential pest species Drosophila suzukii (Diptera: Drosophilidae) in Europe",
+              "volume": "136",
+              "author": "Calabria",
+              "year": "2012",
+              "journal-title": "J. Appl. Entomol."
+            },
+            {
+              "key": "ref9",
+              "doi-asserted-by": "publisher",
+              "first-page": "239",
+              "DOI": "10.1007/BF00125131",
+              "article-title": "Landscale graphs: ecological modeling with graph theory to detect configurations common to diverse landscapes",
+              "volume": "8",
+              "author": "Cantwell",
+              "year": "1993",
+              "journal-title": "Landsc. Ecol."
+            },
+            {
+              "key": "ref10",
+              "doi-asserted-by": "publisher",
+              "first-page": "2068",
+              "DOI": "10.1016/j.ecolmodel.2010.05.012",
+              "article-title": "Unveiling human-assisted dispersal mechanisms in invasive alien insects: integration of spatial stochastic simulation and phenology models",
+              "volume": "221",
+              "author": "Carrasco",
+              "year": "2010",
+              "journal-title": "Ecol. Model."
+            },
+            {
+              "key": "ref11",
+              "first-page": "1396",
+              "article-title": "On the shortest arborescence of a directed graph",
+              "author": "Chu",
+              "year": "1965",
+              "journal-title": "Sci. Sin."
+            },
+            {
+              "key": "ref12",
+              "doi-asserted-by": "publisher",
+              "first-page": "88",
+              "DOI": "10.1111/j.1365-2486.2009.01983.x",
+              "article-title": "Invasive insects impact forest carbon dynamics",
+              "volume": "16",
+              "author": "Clark",
+              "year": "2010",
+              "journal-title": "Glob. Chang. Biol."
+            },
+            {
+              "key": "ref13",
+              "first-page": "43",
+              "article-title": "La mosca de alas manchadas suzukii a tres a\u00f1os de su detecci\u00f3n en Chile",
+              "volume": "113",
+              "author": "Devotto",
+              "year": "2020",
+              "journal-title": "Tierra Adentro."
+            },
+            {
+              "key": "ref14",
+              "first-page": "7",
+              "volume-title": "Drosophila suzukii",
+              "year": "2020"
+            },
+            {
+              "key": "ref15",
+              "doi-asserted-by": "publisher",
+              "first-page": "3528",
+              "DOI": "10.1103/PhysRevB.34.3528",
+              "article-title": "Minimal spanning tree: a new approach for studying order and disorder",
+              "volume": "34",
+              "author": "Dussert",
+              "year": "1986",
+              "journal-title": "Phys. Rev. B"
+            },
+            {
+              "key": "ref16",
+              "doi-asserted-by": "publisher",
+              "first-page": "317",
+              "DOI": "10.1016/s0022-5193(87)80063-2",
+              "article-title": "Minimal spanning tree analysis of biological structures",
+              "volume": "125",
+              "author": "Dussert",
+              "year": "1987",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref17",
+              "doi-asserted-by": "publisher",
+              "first-page": "233",
+              "DOI": "10.6028/jres.071B.032",
+              "article-title": "Optimum branchings",
+              "author": "Edmonds",
+              "year": "1967",
+              "journal-title": "J. Res. Natl. Bur. Stand."
+            },
+            {
+              "key": "ref18",
+              "doi-asserted-by": "publisher",
+              "first-page": "528",
+              "DOI": "10.1111/j.1461-0248.2010.01440.x",
+              "article-title": "Controlling established invaders: integrating economics and spread dynamics to determine optimal management",
+              "volume": "13",
+              "author": "Epanchin-Niell",
+              "year": "2010",
+              "journal-title": "Ecol. Lett."
+            },
+            {
+              "key": "ref19",
+              "doi-asserted-by": "publisher",
+              "first-page": "260",
+              "DOI": "10.1016/j.jeem.2011.10.003",
+              "article-title": "Optimal spatial control of biological invasions",
+              "volume": "63",
+              "author": "Epanchin-Niell",
+              "year": "2012",
+              "journal-title": "J. Environ. Econ. Manag."
+            },
+            {
+              "key": "ref20",
+              "doi-asserted-by": "publisher",
+              "first-page": "99",
+              "DOI": "10.3390/f7050099",
+              "article-title": "The speed of invasion: rates of spread for thirteen exotic forest insects and diseases",
+              "volume": "7",
+              "author": "Evans",
+              "year": "2016",
+              "journal-title": "Forests"
+            },
+            {
+              "key": "ref21",
+              "doi-asserted-by": "publisher",
+              "first-page": "355",
+              "DOI": "10.1111/j.1469-1809.1937.tb02153.x",
+              "article-title": "The wave of advance of advantageous genes",
+              "volume": "7",
+              "author": "Fisher",
+              "year": "1937",
+              "journal-title": "Ann. Eugenics"
+            },
+            {
+              "key": "ref22",
+              "doi-asserted-by": "publisher",
+              "first-page": "1008",
+              "DOI": "10.1093/jee/toac052",
+              "article-title": "Drosophila suzukii management in Latin America: current status and perspectives",
+              "volume": "115",
+              "author": "Garcia",
+              "year": "2022",
+              "journal-title": "J. Econ. Entomol."
+            },
+            {
+              "key": "ref23",
+              "doi-asserted-by": "publisher",
+              "first-page": "91",
+              "DOI": "10.1111/j.1461-0248.2004.00687.x",
+              "article-title": "The spatial spread of invasions: new developments in theory and evidence",
+              "volume": "8",
+              "author": "Hastings",
+              "year": "2005",
+              "journal-title": "Ecol. Lett."
+            },
+            {
+              "key": "ref24",
+              "doi-asserted-by": "publisher",
+              "first-page": "1352",
+              "DOI": "10.1002/ps.2265",
+              "article-title": "A historic account of the invasion of Drosophila suzukii (Matsumura) (Diptera: Drosophilidae) in the continental United States, with remarks on their identification",
+              "volume": "67",
+              "author": "Hauser",
+              "year": "2011",
+              "journal-title": "Pest Manag. Sci."
+            },
+            {
+              "key": "ref25",
+              "doi-asserted-by": "publisher",
+              "first-page": "115",
+              "DOI": "10.1016/j.jtbi.2012.06.007",
+              "article-title": "Dispersal routes reconstruction and the minimum cost arborescence problem",
+              "volume": "308",
+              "author": "Hordijk",
+              "year": "2012",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref26",
+              "doi-asserted-by": "publisher",
+              "first-page": "91",
+              "DOI": "10.11169/bioimages.4.91",
+              "article-title": "Minimal spanning tree analysis of fungal spore spatial patterns",
+              "volume": "4",
+              "author": "Jones",
+              "year": "1996",
+              "journal-title": "Bioimages"
+            },
+            {
+              "key": "ref27",
+              "doi-asserted-by": "publisher",
+              "first-page": "4",
+              "DOI": "10.5751/ES-00015-010104",
+              "article-title": "Detecting critical scales in fragmented landscapes",
+              "volume": "1",
+              "author": "Keitt",
+              "year": "1997",
+              "journal-title": "Ecol. Soc."
+            },
+            {
+              "key": "ref28",
+              "doi-asserted-by": "publisher",
+              "first-page": "2027",
+              "DOI": "10.2307/2265698",
+              "article-title": "Dispersal data and the spread of invading organisms",
+              "volume": "77",
+              "author": "Kot",
+              "year": "1996",
+              "journal-title": "Ecology"
+            },
+            {
+              "key": "ref29",
+              "article-title": "Scaling patterns in exotic species distribution and abundance",
+              "volume-title": "Species invasions: insights into ecology, evolution and biogeography",
+              "author": "Labra",
+              "year": "2005"
+            },
+            {
+              "key": "ref30",
+              "doi-asserted-by": "publisher",
+              "first-page": "329",
+              "DOI": "10.1007/s10530-013-0521-0",
+              "article-title": "Temperature explains variable spread rates of the invasive woodwasp Sirex noctilio in the Southern Hemisphere",
+              "volume": "16",
+              "author": "Lantschner",
+              "year": "2014",
+              "journal-title": "Biol. Invasions"
+            },
+            {
+              "key": "ref31",
+              "doi-asserted-by": "publisher",
+              "first-page": "1223",
+              "DOI": "10.1093/ee/nvz101",
+              "article-title": "Predicting within-and between-year variation in activity of the invasive spotted wing drosophila (Diptera: Drosophilidae) in a temperate region",
+              "volume": "48",
+              "author": "Leach",
+              "year": "2019",
+              "journal-title": "Environ. Entomol."
+            },
+            {
+              "key": "ref32",
+              "doi-asserted-by": "publisher",
+              "first-page": "e2013342118",
+              "DOI": "10.1073/pnas.2013342118",
+              "article-title": "The long-distance flight behavior of Drosophila supports an agent-based model for wind-assisted dispersal in insects",
+              "volume": "118",
+              "author": "Leitch",
+              "year": "2021",
+              "journal-title": "Proc. Natl. Acad. Sci. U.S.A."
+            },
+            {
+              "key": "ref34",
+              "doi-asserted-by": "publisher",
+              "first-page": "430",
+              "DOI": "10.1007/s002850000022",
+              "article-title": "Spread rate for a nonlinear stochastic invasion",
+              "volume": "41",
+              "author": "Lewis",
+              "year": "2000",
+              "journal-title": "J. Math. Biol."
+            },
+            {
+              "key": "ref35",
+              "doi-asserted-by": "publisher",
+              "first-page": "387",
+              "DOI": "10.1007/s002850000050",
+              "article-title": "Modeling and analysis of stochastic invasion processes",
+              "volume": "41",
+              "author": "Lewis",
+              "year": "2000",
+              "journal-title": "J. Math. Biol."
+            },
+            {
+              "key": "ref36",
+              "doi-asserted-by": "publisher",
+              "first-page": "5",
+              "DOI": "10.1093/jisesa/ieaa034",
+              "article-title": "Plasticity is key to success of Drosophila suzukii (Diptera: Drosophilidae) invasion",
+              "volume": "20",
+              "author": "Little",
+              "year": "2020",
+              "journal-title": "J. Insect Sci."
+            },
+            {
+              "key": "ref37",
+              "doi-asserted-by": "publisher",
+              "first-page": "398",
+              "DOI": "10.1086/285480",
+              "article-title": "Morphological assortment and the assembly of communities of introduced passeriforms on oceanic islands: Tahiti versus Oahu",
+              "volume": "141",
+              "author": "Lockwood",
+              "year": "1993",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "ref38",
+              "doi-asserted-by": "publisher",
+              "first-page": "233",
+              "DOI": "10.1146/annurev.ento.47.091201.145206",
+              "article-title": "Invasions by insect vectors of human disease",
+              "volume": "47",
+              "author": "Lounibos",
+              "year": "2002",
+              "journal-title": "Annu. Rev. Entomol."
+            },
+            {
+              "key": "ref39",
+              "doi-asserted-by": "publisher",
+              "first-page": "61",
+              "DOI": "10.6092/issn.1973-9494/7119",
+              "article-title": "Alien insect impact on cultural heritage and landscape: an underestimated problem",
+              "volume": "15",
+              "author": "Manachini",
+              "year": "2015",
+              "journal-title": "Conserv. Sci. Cult. Herit."
+            },
+            {
+              "key": "ref40",
+              "doi-asserted-by": "publisher",
+              "first-page": "1536",
+              "DOI": "10.1126/science.1176138",
+              "article-title": "Highly variable spread rates in replicated biological invasions: fundamental limits to predictability",
+              "volume": "325",
+              "author": "Melbourne",
+              "year": "2009",
+              "journal-title": "Science"
+            },
+            {
+              "key": "ref41",
+              "doi-asserted-by": "publisher",
+              "first-page": "016128",
+              "DOI": "10.1103/PhysRevE.66.016128",
+              "article-title": "Spread of epidemic disease on networks",
+              "volume": "66",
+              "author": "Newman",
+              "year": "2002",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "ref42",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-1-4757-4978-6",
+              "volume-title": "Diffusion and ecological problems: Modern perspectives",
+              "author": "Okubo",
+              "year": "2001"
+            },
+            {
+              "key": "ref43",
+              "doi-asserted-by": "publisher",
+              "first-page": "1389",
+              "DOI": "10.1002/j.1538-7305.1957.tb01515.x",
+              "article-title": "Shortest connection network and some generalizations",
+              "volume": "36",
+              "author": "Prim",
+              "year": "1957",
+              "journal-title": "Bell Syst. Tech. J."
+            },
+            {
+              "key": "ref44",
+              "volume-title": "R: a language and environment for statistical computing",
+              "year": "2022"
+            },
+            {
+              "key": "ref45",
+              "doi-asserted-by": "publisher",
+              "first-page": "2633",
+              "DOI": "10.1007/s10530-020-02298-2",
+              "article-title": "A proposed unified framework to describe the management of biological invasions",
+              "volume": "22",
+              "author": "Robertson",
+              "year": "2020",
+              "journal-title": "Biol. Invasions"
+            },
+            {
+              "key": "ref46",
+              "volume-title": "Manual de reconocimiento. Estados de desarrollo de",
+              "author": "Rojas",
+              "year": "2019"
+            },
+            {
+              "key": "ref47",
+              "doi-asserted-by": "publisher",
+              "first-page": "R8",
+              "DOI": "10.1016/j.cub.2012.11.021",
+              "article-title": "Drosophila suzukii",
+              "volume": "23",
+              "author": "Rota-Stabelli",
+              "year": "2013",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "ref48",
+              "volume-title": "Resoluci\u00f3n Exenta No.: 3672/2017",
+              "year": "2017"
+            },
+            {
+              "key": "ref49",
+              "volume-title": "Plan de Trabajo Nacional 2021\u20132022",
+              "year": "2021"
+            },
+            {
+              "key": "ref50",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1515/9781400831708",
+              "volume-title": "The geographic spread of infectious diseases: models and applications",
+              "author": "Sattenspiel",
+              "year": "2009"
+            },
+            {
+              "key": "ref51",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1186/s12898-016-0070-3",
+              "article-title": "Seasonal cues induce phenotypic plasticity of Drosophila suzukii to enhance winter survival",
+              "volume": "16",
+              "author": "Shearer",
+              "year": "2016",
+              "journal-title": "BMC Ecol."
+            },
+            {
+              "key": "ref52",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/oso/9780198548522.001.0001",
+              "volume-title": "Biological invasions: theory and practice",
+              "author": "Shigesada",
+              "year": "1997"
+            },
+            {
+              "key": "ref53",
+              "doi-asserted-by": "publisher",
+              "first-page": "135",
+              "DOI": "10.1016/S0092-8240(05)80044-8",
+              "article-title": "Random dispersal in theoretical populations",
+              "volume": "53",
+              "author": "Skellam",
+              "year": "1951",
+              "journal-title": "Biometrika"
+            },
+            {
+              "key": "ref54",
+              "doi-asserted-by": "publisher",
+              "first-page": "427",
+              "DOI": "10.1007/s10144-013-0415-0",
+              "article-title": "Parameter estimation for reaction-diffusion models of biological invasions",
+              "volume": "56",
+              "author": "Soubeyrand",
+              "year": "2014",
+              "journal-title": "Popul. Ecol."
+            },
+            {
+              "key": "ref55",
+              "doi-asserted-by": "publisher",
+              "first-page": "25",
+              "DOI": "10.1127/entomologia/2019/0876",
+              "article-title": "Drosophila suzukii daily dispersal between distinctly different habitats",
+              "volume": "40",
+              "author": "Tait",
+              "year": "2020",
+              "journal-title": "Entomol. Gen."
+            },
+            {
+              "key": "ref56",
+              "doi-asserted-by": "publisher",
+              "first-page": "1213",
+              "DOI": "10.1007/s10340-018-0985-x",
+              "article-title": "Large-scale spatial dynamics of Drosophila suzukii in Trentino, Italy",
+              "volume": "91",
+              "author": "Tait",
+              "year": "2018",
+              "journal-title": "J. Pest Sci."
+            },
+            {
+              "key": "ref57",
+              "doi-asserted-by": "publisher",
+              "first-page": "25",
+              "DOI": "10.1002/net.3230070103",
+              "article-title": "Finding optimum branchings",
+              "volume": "7",
+              "author": "Tarjan",
+              "year": "1977",
+              "journal-title": "Networks"
+            },
+            {
+              "key": "ref04",
+              "doi-asserted-by": "publisher",
+              "first-page": "973",
+              "DOI": "10.1111/eea.13222",
+              "article-title": "Comparing Drosophila suzukii flight behavior using free\u2010flight and tethered flight assays",
+              "volume": "170",
+              "author": "Tran",
+              "year": "2022",
+              "journal-title": "Entomol Exp. Appl."
+            },
+            {
+              "key": "ref58",
+              "doi-asserted-by": "publisher",
+              "first-page": "1205",
+              "DOI": "10.1890/0012-9658(2001)082[1205:LCAGTP]2.0.CO;2",
+              "article-title": "Landscape connectedness: a graph theoretic perspective",
+              "volume": "82",
+              "author": "Urban",
+              "year": "2001",
+              "journal-title": "Ecology"
+            },
+            {
+              "key": "ref05",
+              "doi-asserted-by": "publisher",
+              "first-page": "268",
+              "DOI": "10.3390/insects10090268",
+              "article-title": "Survey on Drosophila suzukii natural short-term dispersal capacities using the mark\u2212release\u2212recapture technique",
+              "volume": "10",
+              "author": "Vacas",
+              "year": "2019",
+              "journal-title": "Insects"
+            },
+            {
+              "key": "ref59",
+              "doi-asserted-by": "publisher",
+              "first-page": "529",
+              "DOI": "10.1007/BF00164162",
+              "article-title": "The velocity of spatial population expansion",
+              "volume": "28",
+              "author": "van den Bosch",
+              "year": "1990",
+              "journal-title": "J. Math. Biol."
+            },
+            {
+              "key": "ref60",
+              "doi-asserted-by": "publisher",
+              "first-page": "437",
+              "DOI": "10.1006/jtbi.1997.0445",
+              "article-title": "Multifactorial comparative study of spatial point pattern analysis methods",
+              "volume": "187",
+              "author": "Wallet",
+              "year": "1997",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "ref06",
+              "doi-asserted-by": "publisher",
+              "first-page": "1269",
+              "DOI": "10.1007/s10340-018-1013-x",
+              "article-title": "Drosophila suzukii flight performance reduced by starvation but not affected by humidity",
+              "volume": "91",
+              "author": "Wong",
+              "year": "2018",
+              "journal-title": "J. Pest Sci."
+            }
+          ],
+          "container-title": [
+            "Frontiers in Ecology and Evolution"
+          ],
+          "link": [
+            {
+              "URL": "https://www.frontiersin.org/articles/10.3389/fevo.2023.1124890/full",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                12,
+                13
+              ]
+            ],
+            "date-time": "2023-12-13T12:04:40Z",
+            "timestamp": 1702469080000
+          },
+          "score": 25.13483,
+          "resource": {
+            "primary": {
+              "URL": "https://www.frontiersin.org/articles/10.3389/fevo.2023.1124890/full"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                19
+              ]
+            ]
+          },
+          "references-count": 65,
+          "alternative-id": [
+            "10.3389/fevo.2023.1124890"
+          ],
+          "URL": "https://doi.org/10.3389/fevo.2023.1124890",
+          "ISSN": [
+            "2296-701X"
+          ],
+          "issn-type": [
+            {
+              "value": "2296-701X",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                19
+              ]
+            ]
+          },
+          "article-number": "1124890"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

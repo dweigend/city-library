@@ -1,0 +1,217 @@
+{
+  "url": "http://localhost:3126/?experiment=daisyworld",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "dpr": 2
+  },
+  "appearance": "light",
+  "monitors": [
+    "Tick\n1\nGlobal temperature\n20.366\nBlack daisies\n0\nWhite daisies\n0"
+  ],
+  "inputs": [
+    {
+      "name": "",
+      "value": "daisyworld"
+    },
+    {
+      "name": "seed",
+      "value": "1"
+    },
+    {
+      "name": "startBlacks",
+      "value": "0"
+    },
+    {
+      "name": "startWhites",
+      "value": "0"
+    },
+    {
+      "name": "",
+      "value": "5"
+    },
+    {
+      "name": "live-scenario",
+      "value": "maintain current luminosity"
+    },
+    {
+      "name": "live-solarLuminosity",
+      "value": "0.8"
+    },
+    {
+      "name": "live-albedoSurface",
+      "value": "0.4"
+    },
+    {
+      "name": "live-albedoBlacks",
+      "value": "0.25"
+    },
+    {
+      "name": "live-albedoWhites",
+      "value": "0.75"
+    },
+    {
+      "name": "live-showTempMap",
+      "value": "on",
+      "checked": true
+    },
+    {
+      "name": "live-showDaisies",
+      "value": "on",
+      "checked": true
+    },
+    {
+      "name": "live-paintDaisiesAs",
+      "value": "add black"
+    },
+    {
+      "name": "",
+      "value": "on",
+      "checked": false
+    }
+  ],
+  "status": [
+    "",
+    "Action completed."
+  ],
+  "charts": [
+    {
+      "label": "solar luminosity: 0.8",
+      "rect": {
+        "x": 312,
+        "y": 838,
+        "width": 944,
+        "height": 224
+      }
+    },
+    {
+      "label": "temperature: 20.365664545668906",
+      "rect": {
+        "x": 312,
+        "y": 1132,
+        "width": 944,
+        "height": 224
+      }
+    },
+    {
+      "label": "black: 0; white: 0",
+      "rect": {
+        "x": 312,
+        "y": 1426,
+        "width": 944,
+        "height": 224
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Setup",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Run",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "1 step",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "10 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "100 steps",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Remove all daisies",
+      "aria": null,
+      "disabled": false,
+      "pressed": null
+    },
+    {
+      "text": "Paint daisies",
+      "aria": null,
+      "disabled": false,
+      "pressed": "true"
+    }
+  ],
+  "readback": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "nonblack": 1806336,
+      "rgbaFNV32": 1233955343,
+      "rect": {
+        "x": 312,
+        "y": 115,
+        "width": 672,
+        "height": 672
+      }
+    }
+  ],
+  "overflow": false,
+  "assets": [
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "0aef0855bf840692d0c84d656da5d8f2da849e2f31531ae7ea1a42e17e52ca6c"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-fsmmgzjb.js",
+      "sha256": "5b7c04f44a5f53ef259b390886f4490308c5fa537a050c80f6fa8166f938336c"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "0aef0855bf840692d0c84d656da5d8f2da849e2f31531ae7ea1a42e17e52ca6c"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-fsmmgzjb.js",
+      "sha256": "5b7c04f44a5f53ef259b390886f4490308c5fa537a050c80f6fa8166f938336c"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "0aef0855bf840692d0c84d656da5d8f2da849e2f31531ae7ea1a42e17e52ca6c"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-fsmmgzjb.js",
+      "sha256": "5b7c04f44a5f53ef259b390886f4490308c5fa537a050c80f6fa8166f938336c"
+    },
+    {
+      "url": "http://localhost:3126/app.js",
+      "sha256": "0aef0855bf840692d0c84d656da5d8f2da849e2f31531ae7ea1a42e17e52ca6c"
+    },
+    {
+      "url": "http://localhost:3126/chunks/app-8a7pm6aa.js",
+      "sha256": "113bc1e247ad34f22d329ab7f941586c70a29d03367c089b482dc414ef414b73"
+    },
+    {
+      "url": "http://localhost:3126/chunks/ui-fsmmgzjb.js",
+      "sha256": "5b7c04f44a5f53ef259b390886f4490308c5fa537a050c80f6fa8166f938336c"
+    }
+  ],
+  "text": "Skip to experiment\nAgent Lab\nExperiment\nAnts\nBinomial Rabbits\nBirthdays\nBrian's Brain\nCA 1D Elementary\nCA Continuous\nCA Stochastic\nCentral Limit Theorem\nCyclic CA\nDaisyworld\nDiffusion on a Directed Network\nExpected Value\nFire\nFireflies\nFlocking\nGalton Box\nHeatbugs\nHex Cell Aggregation\nInvasive Plants\nLife\nMandelbrot\nPartition Permutation Distribution\nPercolation\nPreferential Attachment\nRabbits Grass Weeds\nRandom Combinations and Permutations\nSegregation\nShepherds\nSimple Birth Rates\nSmoothLife\nStochastic Patchwork\nTermites\nThree Doors\nTuring Machine 2D\nUrban Suite - Awareness\nUrban Suite - Cells\nUrban Suite - Economic Disparity\nUrban Suite - Path Dependence\nUrban Suite - Pollution\nUrban Suite - Positive Feedback\nUrban Suite - Recycling\nUrban Suite - Sprawl Effect\nUrban Suite - Structure from Randomness 1\nUrban Suite - Structure from Randomness 2\nUrban Suite - Tijuana Bordertowns\nVants\nVirus on a Network\nVoting\nWealth Distribution\nWolf Sheep Predation\nSeed\nStart Blacks\nStart Whites\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nRemove all daisies\nPaint daisies\nTick\n1\nGlobal temperature\n20.366\nBlack daisies\n0\nWhite daisies\n0\nScenario\nramp-up-ramp-down\nmaintain current luminosity\nlow solar luminosity\nour solar luminosity\nhigh solar luminosity\nSolar Luminosity\nAlbedo Surface\nAlbedo Blacks\nAlbedo Whites\nShow Temp Map\nShow Daisies\nPaint Daisies As\nadd black\nadd white\nremove\n\nAction completed.\n\nModel info\nDaisyworld\nLuminosity\n1\n0\n1\nsolar luminosity\nGlobal temperature\n20.4\n0\n1\ntemperature\nPopulation\n1\n0\n1\nblack\nwhite"
+}
