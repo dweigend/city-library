@@ -11,8 +11,6 @@
 
 - Use the binding [Agent Loom terminology](docs/agent-loom/terminology.md) across APIs, code, examples, tests, UI and current documentation. Preserve source quotations and distinct tick/step semantics.
 
-- Use the binding [Agent Loom terminology](docs/agent-loom/terminology.md) across APIs, code, examples, tests, UI and current documentation. Preserve source quotations and distinct tick/step semantics.
-
 ## Code quality and refactoring
 
 - Follow [docs/CODING_STANDARDS.md](docs/CODING_STANDARDS.md) for all code changes. Model scripts are readable reference examples: clear syntax, meaningful names and visible flow take priority over brevity.
