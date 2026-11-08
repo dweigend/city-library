@@ -4,8 +4,14 @@ import { distance } from "./distance.ts";
 import { map } from "./mapping.ts";
 import { contains } from "./planar/contains.ts";
 import { bounds } from "./planar/bounds.ts";
+import { area } from "./planar/area.ts";
+import { merge } from "./planar/merge.ts";
+import { split } from "./planar/split.ts";
 export type { PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset } from "./planar/types.ts";
 export type { Bounds } from "./mapping.ts";
+export type { ParcelShape } from "./planar/parcel-input.ts";
+export type { MergeResult } from "./planar/merge.ts";
+export type { SplitResult } from "./planar/split.ts";
 
 /** Delivered pure spatial operations; broader geometry contracts remain separate slices. */
-export const geometry = Object.freeze({ direction, normalize, distance, map, contains, bounds });
+export const geometry = Object.freeze({ direction, normalize, distance, map, contains, bounds, area, merge, split });

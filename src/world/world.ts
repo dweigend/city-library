@@ -1,4 +1,4 @@
-import type { Grid, GridMembership } from "../grid/grid.ts";
+import type { Grid, GridMembership, LayoutGrid } from "../grid/grid.ts";
 import {
   normalizeSpace,
   dimension,
@@ -22,7 +22,7 @@ export interface World {
   readonly random: Random;
   readonly tick: Tick;
   readonly agents: readonly Agent[];
-  readonly grids: readonly Grid[];
+  readonly grids: readonly (Grid | LayoutGrid)[];
   add<T extends Agent | GridMembership>(component: T): T;
   add<T extends Agent | GridMembership>(components: Iterable<T>): readonly T[];
   delete(
@@ -102,7 +102,7 @@ function add(
     get grids() {
       return Object.freeze(
         [...members].filter(
-          (value): value is Grid => frameworkRecord(value)?.kind === "grid",
+          (value): value is Grid | LayoutGrid => frameworkRecord(value)?.kind === "grid",
         ),
       );
     },
@@ -136,20 +136,29 @@ function add(
             )
               throw new RangeError("Agent outside World Space.");
           } else {
-            const other = (agent as GridMembership).space;
-            if (
-              other.dimensions !== space.dimensions ||
-              axes
-                .slice(0, space.dimensions)
-                .some(
-                  (axis) =>
-                    other.boundary[axis] !== space.boundary[axis] ||
-                    (space.boundary[axis] === "wrap"
-                      ? other[axis] !== space[axis]
-                      : other[axis]! > space[axis]!),
-                )
-            )
-              throw new TypeError("Grid Space conflicts with World.");
+            const grid = agent as Grid | LayoutGrid;
+            if ("layout" in grid) {
+              if (space.dimensions !== 2 || space.boundary.x !== "hard" || space.boundary.y !== "hard")
+                throw new TypeError("Layout Grid requires a planar hard-boundary World or no World Space.");
+              for (const cell of grid.layout.cells) for (const ring of grid.layout.polygon({ cell }).coordinates)
+                for (const [x, y] of ring) if (x < -space.x / 2 || x > space.x / 2 || y < -space.y / 2 || y > space.y / 2)
+                  throw new TypeError("Layout Grid geometry conflicts with World Space.");
+            } else {
+              const other = grid.space;
+              if (
+                other.dimensions !== space.dimensions ||
+                axes
+                  .slice(0, space.dimensions)
+                  .some(
+                    (axis) =>
+                      other.boundary[axis] !== space.boundary[axis] ||
+                      (space.boundary[axis] === "wrap"
+                        ? other[axis] !== space[axis]
+                        : other[axis]! > space[axis]!),
+                  )
+              )
+                throw new TypeError("Grid Space conflicts with World.");
+            }
           }
         }
         if (record.world && record.world !== world)

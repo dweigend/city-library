@@ -1,5 +1,36 @@
 # City Library work plan
 
+## Accepted example-first city scripts — 8 November 2026
+
+The user accepted three flat city-simulation scripts as authoring references: household budget, neighborhood heat and generative quarter. [The extension plan](docs/development/example-first/PLAN.md) owns their executable acceptance and staged capability work. The first two use delivered APIs and join the standard examples/typecheck gates. The third is an explicitly unmet target: its dedicated execution and typecheck commands must remain red until corridor, subtract and bounded subdivision are delivered. No mocks, placeholder exports, skipped assertions or retrospective weakening of these scripts. This addition does not claim completion of the wider runtime catalogue or authorize a main merge.
+
+The same example-first plan now incorporates cross-domain research through two model-local integration probes: one scarce unit and a shared machine lifecycle. They use existing public APIs and explicit priorities/transitions, not a new resource framework. Geometry remains an independent track. Original three script contracts are unchanged; new probes and research alignment have their own verification/review record.
+
+The [target integration record](docs/development/example-first/TARGET-INTEGRATION.md)
+tracks checkpoint `04ac06e` on this finite-topology branch. It preserves the
+separately reviewed E3 runtime and keeps the quarter in its red target gates.
+
+## Finite quad topology — independent E3 track
+
+The [integrated source receipt](docs/grid-parcels/TOWNSCAPER-RECEIPT.md) preserves
+the complete 49-row grid/parcel roadmap and its 58 operation/property reference
+sections. The first new PR is limited to finite hex-patch quadrilaterals and
+separate square-target relaxation, using existing Layout, Random and Grid APIs.
+The [phase contract](docs/grid-parcels/TOWNSCAPER-CONTRACT.md) and
+[five public scripts](examples/townscaper-grid/README.md) received independent
+Gemini 4 Argon design approval and were frozen in `9fca840` before runtime
+commit `6726d7e`. The working slice is included in regular example/type gates.
+Actual
+checks and review boundaries belong in the
+[verification record](docs/grid-parcels/TOWNSCAPER-VERIFICATION.md).
+E1 corridor/subtract and E2 bounded OBB remain separate quarter prerequisites;
+E3 does not turn that target green. Dual mapping, chunks, architecture solving,
+arbitrary-boundary quads and Lloyd remain deferred without runtime stubs.
+
+## Grid and parcel foundations — locally completed phase
+
+The authorized headless first phase is tracked in [the scoped phase plan](docs/grid-parcels/PHASE-PLAN.md), with the full [saved target catalogue](docs/grid-parcels/API.md) and explicit [implementation/backlog ledger](docs/grid-parcels/STATUS.md). Five public scripts were frozen in `158b803` before runtime commits `aa824df`, `49ff219` and `c92289a`; their checksums remain unchanged. Square/hex/authored layouts, queries, area, bounded merge/split and typed layout Fields are implemented. [Verification](docs/grid-parcels/VERIFICATION.md) records the passing complete project check, packed consumer, additional conservation tests and independent Gemini scoped approval at `1fda843`. The user subsequently authorized pushing `feat/grid-parcel-foundations` and opening a detailed PR against `experiment/netlogo-web-catalog`. Package publication and main merge remain unauthorized. This additive phase preserves the existing regular Grid contract.
+
 Updated: 7 November 2026. This plan describes the integration branch `experiment/netlogo-web-catalog`. The consolidation baseline is `49da939`; readable authoring and catalog migration include the independently rechecked callback correction `d069be3`. This work has not been merged into `main`. Status below separates implemented code, executed checks and independent acceptance.
 
 ## Reading order and ownership
