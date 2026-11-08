@@ -1,4 +1,4 @@
-# Segregation vertical slice
+# Segregation model
 
 Source: official served `assets/modelslib/Sample Models/Social Science/Segregation.nlogox`, retrieved 2026-11-05; archived unchanged in experiments/segregation/source.nlogox. Source identifies NetLogo 7.0.4. Copyright 1997 Uri Wilensky, CC BY-NC-SA 3.0; retain complete source notices. This is a TypeScript adaptation, not a NetLogo runtime.
 
@@ -20,6 +20,6 @@ Go stops before tick if all residents happy. Freeze unhappy membership before ac
 
 Mulberry RNG and omitted display-only draws mean seeded trajectories differ from NetLogo. Neutral shared grid glyphs replace old/square-X visualizations; group color plus inspector happiness expose state. Empty population and zero neighbor denominator yield 0 metrics instead of the source division error. A full occupied grid with unhappy residents stops with `no-vacancy` before movement/tick rather than entering the source's unbounded recursion. Iterative random walk avoids JavaScript recursion depth; any safety budget must be explicit, reported, and must not silently select another relocation algorithm. No scientific equivalence is claimed from screenshots alone.
 
-## Frozen examples
+## Public examples
 
-Five asserted public model scripts under examples/segregation precede runtime implementation: setup/repeatability; known weighted neighbor metrics; terminal/intervention rules; movement invariants; validation and observation purity. Their syntax and expectations are frozen; runtime must satisfy them. This gate concerns a model composition and does not claim a new library phase.
+Public model scripts under `examples/segregation/` cover: setup/repeatability; known weighted neighbor metrics; terminal/intervention rules; movement invariants; validation and observation purity. Their syntax and expectations are frozen; runtime must satisfy them. These examples verify the model composition.

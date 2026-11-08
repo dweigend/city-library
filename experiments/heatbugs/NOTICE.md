@@ -36,6 +36,6 @@ This model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWO
 
 ## Adaptation
 
-Readable headless TypeScript composition, independent Mulberry RNG, detached observations and shared City Library UI. Detailed procedure/order and browser evidence are tracked in selected-ecology reports. No cross-engine seeded trajectory identity is claimed.
+Readable headless TypeScript composition, independent Mulberry RNG, detached observations and shared City Library UI. No cross-engine seeded trajectory identity is claimed.
 
-Executed procedure, adaptation and original/target browser evidence: [B06 comparison report](../../docs/development/selected-ecology-report.md).
+Source comparisons and adaptation details: [Comparison report](../../evidence/development/selected-ecology-report.md).

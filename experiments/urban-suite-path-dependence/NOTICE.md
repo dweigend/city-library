@@ -36,4 +36,4 @@ To inquire about commercial licenses for either NetLogo or specific models from 
 
 ## Adaptation status
 
-Only an unchanged source archive and pre-runtime proposed authoring contract are prepared. No runtime or browser equivalence is claimed. See [source and proposed contracts](../../docs/development/selected-urban-feedback-contracts.md). The full original Procedures, Widgets, Info and shapes remain in the XML. [Scientific dossier](../../docs/research/netlogo-web/urban-suite-path-dependence.md) is independently retained, not re-researched by this audit.
+The TypeScript model and UI adapt the original model under the [model contract](../../docs/development/selected-urban-feedback-contracts.md). The full original Procedures, Widgets, Info and shapes remain in `source.nlogox`. See the [scientific dossier](../../docs/research/netlogo-web/urban-suite-path-dependence.md) for sources and assumptions, and the [acceptance ledger](../catalog/progress.json) for verification status.

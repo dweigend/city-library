@@ -40,4 +40,4 @@ To inquire about commercial licenses for either NetLogo or specific models from 
 
 ## Adaptation
 
-Readable headless TypeScript composition using public City Library operations; independent Mulberry RNG, no cross-engine seeded trajectory identity. Native source is retained unchanged. Procedure/order and browser adaptations are tracked in selected-economics reports. Research is not empirical validation.
+Readable headless TypeScript composition using public City Library operations; independent Mulberry RNG, no cross-engine seeded trajectory identity. Native source is retained unchanged. Research is not empirical validation.

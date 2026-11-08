@@ -10,7 +10,7 @@ The scientific question is whether successful reinforcement can establish shared
 
 For the model itself: * Wilensky, U. (2016). NetLogo Signaling Game model. http://ccl.northwestern.edu/netlogo/models/SignalingGame. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
 
-Scientific origin recorded in Info: - Skyrms, B. (2006). [Signals](www.socsci.uci.edu/~bskyrms/bio/other/Presidential%20Address.pdf). Presidential Address, Philosophy of Science Association, for PSA 2006. - Lewis, D. (1969). Convention. Cambridge, MA: Harvard University Press. - https://en.wikipedia.org/wiki/Signaling_game Thanks to Ryan Muldoon for his help with this model.
+Scientific origin recorded in Info: - Skyrms, B. (2006). [Signals](https://www.socsci.uci.edu/~bskyrms/bio/other/Presidential%20Address.pdf). Presidential Address, Philosophy of Science Association, for PSA 2006. - Lewis, D. (1969). Convention. Cambridge, MA: Harvard University Press. - https://en.wikipedia.org/wiki/Signaling_game Thanks to Ryan Muldoon for his help with this model.
 
 Source revision: Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}. SHA-256: `399be72f527afb3d0e9ba27969d1a25e8a94364358aca2e707f0b01f24009bf5`.
 

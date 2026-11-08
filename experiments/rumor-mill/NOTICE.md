@@ -24,4 +24,4 @@ This model was converted to NetLogo as part of the projects: PARTICIPATORY SIMUL
 
 TypeScript composition uses City Library public APIs and independent RNG; no cross-RNG trajectory equivalence or empirical validation is claimed. Research context: [existing dossier](../../docs/research/netlogo-web/rumor-mill.md).
 
-Executed rules, adaptations and original/target Chromium evidence: [B02 comparison report](../../docs/development/selected-social-report.md#rumor-mill).
+Source comparisons and adaptation details: [Comparison report](../../evidence/development/selected-social-report.md#rumor-mill).

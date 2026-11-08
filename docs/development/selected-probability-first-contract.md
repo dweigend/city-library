@@ -1,8 +1,8 @@
-# B17 first five transfer contracts
+# Birthday, Galton, urn and probability model contracts
 
-The coordinator froze five public observation/example scripts at `160db6d`, before this runtime. These models introduce no new City Library capability or UI contract. Their named TypeScript procedures compose the existing public `Random`, `World` and `run` API; `create` performs the original Setup, `advance` calls Go, and `read` returns detached, frozen observations without advancing time or RNG. The world is the sole tick owner, local model records own their domain values, and UI adapters call only exposed actions. Importing modules does not create instances.
+These models introduce no new City Library capability or UI contract. Their named TypeScript procedures compose the existing public `Random`, `World` and `run` API; `create` performs the original Setup, `advance` calls Go, and `read` returns detached, frozen observations without advancing time or RNG. The world is the sole tick owner, local model records own their domain values, and UI adapters call only exposed actions. Importing modules does not create instances.
 
-The exact selected identity remains the original catalog path. Source bytes, full notices, widget inventories and hashes are retained separately in `experiments/<slug>/source.nlogox`, `NOTICE.md` and the B17 ledger. The existing five scientific dossiers were consulted for assumptions and limitations; those dossiers are not browser, technical or empirical acceptance.
+The exact selected identity remains the original catalog path. Source bytes, full notices, widget inventories and hashes are retained separately in `experiments/<slug>/source.nlogox`, `NOTICE.md` and the selected models ledger. Scientific dossiers describe assumptions and limitations; they do not establish browser, technical or empirical acceptance.
 
 | Exact selected path | Public model | Setup-only parameters | Live actions/parameters |
 | --- | --- | --- | --- |
@@ -29,12 +29,3 @@ Stochastic Patchwork retains the centered odd-sided block, `go`'s independent dr
 Target RNG is public Mulberry32 with an explicit seed; NetLogo uses a different RNG and consumes additional draws for agent creation, display defaults and ask ordering. No same-seed cross-engine trajectory identity or statistically validated distribution equivalence is claimed. Within-target replay at the same seed is deterministic. Complete-agent activation uses the public legacy-shuffle sampling option, which shuffles references without duplicating domain ownership. Models use no pending Graph capabilities.
 
 The target validates finite numeric/range/integer inputs using the existing descriptors and rejects negative/noninteger/out-of-budget advances before mutation. Source wait/display calls affect host pacing rather than scientific state and are replaced by the existing Play/Pause host. Target Setup/Reset creates a new canonical instance; Step advances the same procedures. Existing controls remain native and accessible through the shared UI shell. Original notices remain accessible through source links and versioned notice files.
-
-## Executed checks and remaining gates
-
-- `bun test tests/selected-probability-first.test.ts`: 9 tests, 324 assertions passed. Includes deterministic Galton bias, exact counters and pile-full stop; rabbit wrapping, equality stop and zero ratios; sorted matching birthdays; race finish; live patch probability and persistent histograms; pure reads and rejected invalid advance.
-- `bun run typecheck`: passed after the coordinator installed the pinned existing dependencies. An earlier pre-install attempt stopped at missing `bun` type definitions; this was an environment prerequisite, not a TypeScript finding.
-- Existing cached Prettier formatted the ten owned runtime/UI files and focused test; no dependency or manifest changed.
-- Latest Vercel Web Interface Guidelines fetched successfully on 2026-11-05. Source review of these adapters found no custom controls, gesture-only interactions, extra icons, animation, new theme tokens or duplicate domain writes. They reuse the existing accessible shell and renderers. Rendered desktop/mobile/theme verification is owned by the coordinator and must be recorded separately; this source inspection does not establish visual acceptance.
-
-Independent Antigravity gemini-4-argon/high technical review remains pending under the documented quota blocker. No independent approval or executed baseline/browser evidence is claimed by this contract document.

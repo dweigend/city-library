@@ -2,7 +2,7 @@
 
 This TypeScript model adapts the exact served NetLogo model archived in `original.nlogox`. Its complete Procedures, Info, widgets and notices are retained there. The model adaptation uses City Library public World, Agent, Grid and Random operations; it is headless and separately rendered. NetLogo MT and City Library Mulberry streams differ: no trajectory or statistical equivalence is asserted. Presentation colors and camera handling are adapted. Model equations, activation phases, parameter timing and boundaries follow the original.
 
-The original `min-one-of routes-that-take-me-closer [ distance self ]` evaluates zero for every patch candidate. This implementation preserves its random tie across all qualifying visible route patches, rather than substituting the intended nearest-walker route. This source bug was confirmed in actual NetLogo Web Chromium by the coordinator; no nearest-route claim is made.
+The original `min-one-of routes-that-take-me-closer [ distance self ]` evaluates zero for every patch candidate. This implementation preserves its random tie across all qualifying visible route patches, rather than substituting the intended nearest-walker route. This is the source behavior; no nearest-route claim is made.
 
 ## HOW TO CITE
 

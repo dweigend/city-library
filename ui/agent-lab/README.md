@@ -1,6 +1,6 @@
 # Agent Lab
 
-Agent Lab runs headless experiments through shared controls and views. Models own state, validation and time; the host owns playback, selection and rendering.
+Agent Lab runs City Library experiments in a browser. Choose a model, change its parameters and watch what happens. Models own state, validation and time; the host supplies controls, playback, selection and rendering.
 
 ## Start the Svelte runtime
 
@@ -27,10 +27,10 @@ The catalog discovers paired `experiments/<slug>/model.ts` and `ui.ts` files. Re
 
 Follow [model authoring](../../docs/development/model-authoring.md) for a real example. A headless `model.ts` exports metadata, canonical input descriptors and a factory. Its instance exposes explicit actions and detached observations. A separate `ui.ts` imports `defineUI` from the public repository UI entry and binds those operations to controls and views.
 
-Preserve accepted author syntax and use the [UI contract](../../docs/ui/README.md); the readable setup-string and keyed-live forms are implemented and exercised through public examples in both hosts. Shared infrastructure owns rendering and cleanup. Experiment files do not reach into host DOM or private Svelte components; Taxi grouping uses ordinary public control groups, with no private host patch.
+Use the [public UI contract](../../docs/ui/README.md). Setup-string and keyed-live forms are implemented and exercised through public examples in both hosts. Shared infrastructure owns rendering and cleanup; experiment files do not access host DOM or private Svelte components. Taxi uses the same public control groups as other experiments.
 
-## Verification and context
+## Verification
 
 Run `bun run check` and the relevant UI build from the root. UI changes also require actual browser interaction and independent screenshot review under the [UI design rules](../../docs/DESIGN.md). A source review does not establish visual acceptance.
 
-The [current plan](../../PLAN.md) tracks open work. [Consolidation evidence](../../docs/development/consolidation-report.md) records integrated checks and limitations. [Original refactor evidence](../../docs/development/agent-lab-evidence.md) and [reference provenance](../../docs/development/netlogo-reference-sources.md) retain historical checks and source notices. The core package excludes UI, reference archives and adapted experiments.
+The [work plan](../../PLAN.md) tracks open work, and [reference sources](../../docs/development/netlogo-reference-sources.md) describe model provenance. The core package excludes UI, reference archives and adapted experiments.

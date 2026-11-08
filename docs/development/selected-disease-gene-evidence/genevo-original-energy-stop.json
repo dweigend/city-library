@@ -1,8 +1,0 @@
-{
-  "model": "genevo-1-genetic-switch",
-  "command": "setup set glucose? false set energy 0 go",
-  "actualDialog": { "type": "confirm", "message": "The cell has run out of energy. It's dead!", "accepted": true },
-  "afterDialog": { "tick": 0, "energy": -0.5, "divisionNumber": 0 },
-  "screenshot": "genevo-original-energy-stop.png",
-  "automationNote": "Initial evaluate paused at the genuine browser confirm dialog and timed out. preview_status exposed the dialog; preview_dialog accepted it, then source reporters were read and an ordinary screenshot captured. This was an expected source stop, not a browser-start failure."
-}

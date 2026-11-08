@@ -1,6 +1,6 @@
-# Standard exponential and Poisson: accepted closure
+# Exponential and Poisson draws
 
-Root decision, 6 November 2026, before runtime delegation. The existing number-distributions binding defines these two overloads. [Reviewed proposal, source dependency, primary citation and validation](random-exponential-poisson-contract-proposal.md). Exactly five complete asserted public scripts were read and accepted unchanged; random-exponential-poisson-examples.sha256 freezes their bytes at this commit. Proposal labels remain historical. No implementation or independent approval is implied by this freeze.
+Exponential and Poisson draws use the same explicit random stream as the rest of a model. This contract defines the two existing `random.number` overloads for the standard Mulberry profile, including their exact draw schedules. Public examples in `examples/random-exponential-poisson-proposal/` assert the draw schedule and continuation behavior.
 
 ## Scope and shared owner
 
@@ -16,7 +16,7 @@ For positive Poisson mean below30, set threshold=Math.exp(-mean), product=1, cou
 
 ## High-mean PTRS closure
 
-For mean>=30 choose the printed **PTRS** recipe on p7 of Hörmann's April1992 WU preprint of the 1993 paper, DOI10.1016/0167-6687(93)90997-4. The primary source was visually checked and its source hashes/access limits are in the proposal. Explicitly choose **+mean+0.43**, rather than Table1/PTRD's +0.445. Independently write the implementation from this mathematical contract; do not copy third-party code or retain the paper. This is no native NetLogo RNG parity claim.
+For mean>=30 choose the printed **PTRS** recipe on p7 of Hörmann's April1992 WU preprint of the 1993 paper, DOI10.1016/0167-6687(93)90997-4. Primary source: [Hörmann, transformed rejection for Poisson variates](https://doi.org/10.1016/0167-6687(93)90997-4). Explicitly choose **+mean+0.43**, rather than Table1/PTRD's +0.445. Independently write the implementation from this mathematical contract; do not copy third-party code or retain the paper. This is no native NetLogo RNG parity claim.
 
 Compute b=0.931+2.53*Math.sqrt(mean), a=-0.059+0.02483*b, vr=0.9277-3.6224/(b-2), invAlpha=1.1239+1.1328/(b-3.4), logMean=Math.log(mean).
 
@@ -29,7 +29,3 @@ The paper's short Stirling approximation is not an exact factorial identity. Rec
 `(k+0.5)*Math.log(k)-k+0.9189385332046727 + z*(1/12+z2*(-1/360+z2*(1/1260+z2*(-1/1680))))`.
 
 This is a binary64 approximation to log(k!), not exact real arithmetic or a promise of platform-independent libm rounding. The omitted asymptotic term at this threshold is far below binary64 roundoff; focused independent tests must compare the table/large branch to separately evaluated finite-log sums and fixed mathematical fixtures. Test actual high-mean masses/mean/variance with declared deterministic sample sizes/tolerances, plus independent acceptance-boundary and endpoint/consumption fixtures. Do not weaken the five frozen scripts if their scientific assertions fail.
-
-## Evidence boundary
-
-Root accepted U1–U5 through the explicit recipe, do-first stopping, normal-cache independence, existing input conventions and no arbitrary rejection limit above. Prior proposed low-mean golden fixtures remain unchanged. High-mean frozen scripts intentionally assert support, analytical moments and exact self-continuation rather than invent a trace before implementation. Supplementary independent tests may pin the now-decided algorithm. These checks do not validate the complete biological model empirically. Blood Sugar and all other selected models still need actual source/target browser evidence. Required Argon/high approval remains quota-blocked; no retry or substitution.

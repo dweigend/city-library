@@ -1,11 +1,21 @@
-# Fixed native Mammoths terrain
+# Mammoths terrain data
 
-Root explicitly authorized static source-native preprocessing on 2026-11-06. This is pinned model input data, not a reusable import algorithm or runtime raster capability. The original has a fixed97×97 world, patch coordinates0…96 on both axes, no wrapping, one embedded americas PNG, and no image/resize interaction. Runtime uses canonical Grid with centered coordinates translated by48 and the literal rows in terrain.json. Unsupported custom images/resizing remain outside this delivered composition.
+Mammoths uses a fixed 97×97 terrain mask derived from the original model's embedded `americas.png`. The world has coordinates 0…96 on both axes, no wrapping and no image or resize controls. The TypeScript model reads the literal rows in `terrain.json` through the public Grid API, translating centered coordinates by 48. This data does not provide a general image-import capability; custom images and resizing remain unsupported.
 
-Source XML SHA-256:8473b9d79835f81c88cd266049789fb83db4dd218c3402730d8526d3df6f824c, independently observed from actually loaded session.nlogoSource.nlogo UTF-8. Embedded PNG bytes13754, SHA-2569d550543fb1da42a03624ffbf1f2358b726f60fc146963939de7e12555711293; copied verbatim as an embedded source resource. The XML Info contains a CC BY-NC-SA3.0 notice for the MODEL; no separate PNG author, map credit or resource-specific license was found in its Info, Procedures or resource element. This is not an independent blanket dataset-license determination. Resource rights remain limited to that source evidence; model attribution and resource provenance are separate. See ../NOTICE.md and full XML Info.
+## Source and rights
 
-Rows are ordered SOUTH to NORTH(y ascending0…96), each row WEST to EAST(x ascending0…96). '1' is native non-blue terrain after import, set green55 by setup; '0' is ocean. Total9409 patches,2505 land. Concatenated9409 ASCII bits SHA-256939f62e8e2ba22565d2515ffa35dbd73338eeaf0cc98ec70fcdf8c75919f9fd6.
+The [original source](../source.nlogox) has SHA-256 `8473b9d79835f81c88cd266049789fb83db4dd218c3402730d8526d3df6f824c`, matching the loaded NetLogo source. Its embedded PNG is retained byte-for-byte as `americas.png`: 13,754 bytes, SHA-256 `9d550543fb1da42a03624ffbf1f2358b726f60fc146963939de7e12555711293`.
 
-The evidence capture script native-capture.js runs in the same-origin loaded original iframe through T3 Chromium. It executes native compiled NetLogo Procedures; it does not implement image decoding, resampling or palette selection. Native `map [ p -> not shade-of? blue [pcolor] of p ] sort patches` is reordered from native north-first order to the documented south-first rows. It verifies every field against native full setup classification and the archived literal rows. Full row-major pcolor arrays from import and setup are retained in docs/development/selected-evolution-evidence/mammoths-full-native-colors.json. Ocean shades depend on source RNG; they do not change the mask. Native seed1 full arrays and separate digests preserve that fact rather than claiming cross-RNG trajectories.
+The source Info contains a CC BY-NC-SA 3.0 notice for the model. It supplies no separate PNG author, map credit or resource-specific license in its Info, Procedures or resource element. This does not establish a separate dataset license. Model attribution and resource provenance remain distinct; see the [model notice](../NOTICE.md) and original Info.
 
-Run `bun experiments/mammoths/data/verify.mjs` to verify all archived input hashes and every derived mask bit against both full native readbacks. For live recapture, load the pinned original in T3 Chromium, evaluate native-capture.js, retain the returned JSON and compare its digests/mismatch counts; a Node-only reimplementation is not native evidence. Full browser controls and paired target acceptance are tracked separately.
+## Data layout
+
+Rows run south to north (y ascending 0…96), and columns west to east (x ascending 0…96). `1` means native non-blue terrain, which setup colors green 55; `0` means ocean. The 9,409 fields contain 2,505 land fields. The concatenated ASCII bits have SHA-256 `939f62e8e2ba22565d2515ffa35dbd73338eeaf0cc98ec70fcdf8c75919f9fd6`.
+
+The [source comparison record](../../../evidence/development/selected-evolution-evidence/mammoths-full-native-colors.json) retains complete import and setup color arrays. Ocean shades depend on the source RNG; they do not change the land mask. These arrays support mask verification, not a claim of identical trajectories across random generators.
+
+## Verify or refresh the source data
+
+Run `bun experiments/mammoths/data/verify.mjs` to verify the input hashes and every mask bit against both full native readbacks.
+
+For a fresh source comparison, load the pinned original in T3 Chromium and evaluate `native-capture.js` in its same-origin iframe. The script calls compiled native NetLogo procedures and reorders native north-first fields into the south-first layout above; it does not implement a second decoder, resampler or palette. Retain the result and compare its digests and mismatch counts. A Node-only reimplementation cannot substitute for native source evidence. Model controls and rendered behavior require their own acceptance checks.

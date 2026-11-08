@@ -1,5 +1,7 @@
 # Binding terminology
 
+Use the same names in models, public APIs and the Lab so readers can follow an idea from script to screen. These terms describe different responsibilities; tick and step, for example, must stay distinct.
+
 The [API inventory](api-table.md) and [API reference](api-reference.md) define the vocabulary. This glossary applies to library code, public model APIs, examples, tests, UI labels and current documentation. It does not rename upstream models, source URLs, quoted procedures, compatibility formats or scientific concepts.
 
 | Meaning | Canonical language | Avoid as interchangeable aliases |
@@ -26,4 +28,4 @@ A successful `run` step increases the World tick by one; a failed step does not.
 
 Domain names such as resident, rabbit, vehicle, bacterium and biological cell are more informative than generic agent and remain valid. `ModelAgent` and `ModelField` may name local specialized types when `Agent` and `Field` are already imported. Mutable partial input objects are `changes`, not spatial fields. Source comments explicitly discussing NetLogo may retain turtles, patches and links so comparisons remain traceable; current local diagnostics and controls use agents, fields and edges.
 
-Migration examples: `numTurtles` → `numAgents`, `hideTurtles()` → `hideAgents()`, observation `turtles` → `agents`, `computedPatches` → `computedFields`, `clearPatches()` → `clearFields()`, `updatePatch(x, y)` → `updateFieldAt(x, y)`. Experimental consumers must migrate together; no second alias API is introduced. The accepted graph-generator option `links` (preferential attachment) and named compatibility profiles remain binding contracts; they are not silently renamed. Scientific titles, experiment slugs and upstream procedure quotations remain unchanged.
+Naming examples: `numTurtles` → `numAgents`, `hideTurtles()` → `hideAgents()`, observation `turtles` → `agents`, `computedPatches` → `computedFields`, `clearPatches()` → `clearFields()`, `updatePatch(x, y)` → `updateFieldAt(x, y)`. Experimental consumers must migrate together; no second alias API is introduced. The accepted graph-generator option `links` (preferential attachment) and named compatibility profiles remain binding contracts; they are not silently renamed. Scientific titles, experiment slugs and upstream procedure quotations remain unchanged.

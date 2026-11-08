@@ -1,8 +1,0 @@
-{
-  "extends": "../../../tsconfig.json",
-  "compilerOptions": {
-    "types": ["bun"],
-    "resolveJsonModule": true
-  },
-  "include": ["../../../examples/planar-geometry-proposal/*.ts"]
-}

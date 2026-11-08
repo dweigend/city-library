@@ -1,10 +1,8 @@
-# Selected Urban Suite source and proposed model contracts
-
-Prepared 2026-11-05 for the binding selected-200 experiment. The coordinator read all three complete source Procedures and all five public examples, checked the proposed contracts against existing bindings, and freezes these five scripts before runtime. No runtime implementation, scientific peer review or browser evidence is implied. No selected model is dropped. The selection remains [the supplied selection](../../experiments/catalog/selection/selection.json); this task makes no second selection. Scientific dossiers are complete in their separate research track and were read only for interpretive limits, not re-researched.
+# Awareness, Pollution and Recycling model contracts
 
 ## Provenance and scope
 
-All three canonical paths start `Curricular Models/Urban Suite/`. Each unchanged XML was copied from its existing research dossier's `modelSource.evidenceFile`; its bytes were checked against both the dossier and [served inventory](../../experiments/catalog/inventory.json). All three match Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`, served as NetLogo 7.0.4. No network retrieval was performed. The XML includes complete Procedures, Widgets, Info and shape data; no includes or extensions are declared. Per-folder notices preserve the original complete copyright/license notice, credits, citation, served URL and immutable upstream URL.
+All three canonical paths start `Curricular Models/Urban Suite/`. Each unchanged XML was copied from its existing research dossier's `modelSource.evidenceFile`; its bytes were checked against both the dossier and [served inventory](../../experiments/catalog/inventory.json). All three match Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`, served as NetLogo 7.0.4.  The XML includes complete Procedures, Widgets, Info and shape data; no includes or extensions are declared. Per-folder notices preserve the original complete copyright/license notice, credits, citation, served URL and immutable upstream URL.
 
 | Canonical final path component | Archive | SHA-256 |
 | --- | --- | --- |
@@ -14,7 +12,7 @@ All three canonical paths start `Curricular Models/Urban Suite/`. Each unchanged
 
 All are copyright 2007 Uri Wilensky, licensed **CC BY-NC-SA 3.0**, with Felsen and Wilensky (2007) model citations. Original student contributors are Eileen Pedersen, Brian Reif and Susana Odriozola (Awareness); Young Jang (Pollution); Anita Phetkhamphou and Tidza Causevic (Recycling). Preserve attribution and share-alike/noncommercial terms in adaptations; these archives are not relicensed as general library code. Source notice text also discusses NetLogo's separate license; that does not override the models' license.
 
-## Existing public capability closure
+## Shared core capabilities
 
 The reviewed implementation surfaces are `index.ts`, public `Agent`, `World/run`, `Grid` and `Random`, the existing Voting and Segregation compositions, `experiments/parameters.ts`, and the binding DESIGN/PLAN contracts. No new reusable domain capability is needed for these three models:
 
@@ -28,11 +26,11 @@ The reviewed implementation surfaces are `index.ts`, public `Agent`, `World/run`
 | Pollution diffusion | `grid.diffuse("pollution",{rate:0.8,neighborhood:"moore"})` is simultaneous conservative eight-direction diffusion. Do not use its faces default. |
 | Reports and histories | Pure reductions over canonical state, then detached frozen records; no missing generic statistics API is required for these sums/means and model-specific thresholds. |
 
-Graph/component operations are irrelevant here and their pending review is not a prerequisite. No routing, discrete event engine, Gaussian RNG, extension, external asset, host I/O or separate library runtime is required. Model-specific ecological equations and threshold rules remain explicit named headless procedures, not a reusable hidden simulation framework. If implementation discovers a genuinely reusable missing operation, stop and specify a separate public library phase with four/five asserted examples before implementing it; do not hide it inside a model.
+These three models need no graph/component operations. No routing, discrete event engine, Gaussian RNG, extension, external asset, host I/O or separate library runtime is required. Model-specific ecological equations and threshold rules remain explicit named headless procedures, not a reusable hidden simulation framework. If implementation discovers a genuinely reusable missing operation, stop and specify a separate public library phase with four/five asserted examples before implementing it; do not hide it inside a model.
 
-## Shared proposed authoring contract
+## Shared authoring contract
 
-Each future `experiments/<slug>/model.ts` exports `inputs`, `create(options={})` and `model` satisfying the existing `Definition` contract. `create` returns `advance(count=1)`, `read()`, the listed `setRules` and intervention functions. Import paths, syntax and assertions in the five examples are now frozen by coordinator review. No runtime file/stub is supplied by this audit.
+Each `experiments/<slug>/model.ts` exports `inputs`, `create(options={})` and `model` satisfying the existing `Definition` contract. `create` returns `advance(count=1)`, `read()`, the listed `setRules` and intervention functions. Public examples define required syntax and behavior.
 
 Each instance owns exactly one World, one attached Grid and one Random. World agents own position/orientation/kind/individual state; Grid fields own land state. Source-specific activation lists are temporary snapshots of canonical references. No persistent writable population/occupancy copy or independent tick. Procedures are named ordinary TypeScript (for example `wander`, `informOthers`, `createCenters`, `expireCenters`, `reproduce`, `plantTree`, `cleanup`, `processRecyclerPatch`, `processWastefulPatch`, `movePeople`, `regenerateResources`). Read is pure and consumes no RNG.
 
@@ -44,7 +42,7 @@ All inputs use existing `parameters` validation: finite values, source bounds/st
 
 Interventions are explicit deterministic **target additions**, not original widgets. They preserve tick/RNG, validate completely before mutation and refresh current measurement/history. Replacement people/trees create new canonical IDs; list order determines the subsequent stable observation order. Read order follows canonical World/Grid insertion order; no string-ID parsing. Position inputs must be finite and inside the half-open torus; heading finite and normalized by Agent. Numeric state must be finite. Lists may contain multiple people/trees per patch. Replacing land preserves field IDs. Do not impose an artificial pollution population cap to accommodate the UI.
 
-## Awareness: source mechanism and proposed contract
+## Awareness: source mechanism and contract
 
 World37×38, both axes wrap. Inputs: `people`60, 0..300 step10 (setup); `centers`20, 0..100 step5 (setup); `nonUsageLimit`100, 0..500 step5 (live, ticks). Setup creates people, source random headings, gray color, awareness0; source asks each to walk `random25` and then overwrites position with uniform continuous random-x/y. Select centers unique uniform patches, set original green and nonUsage0. All remaining fields black/nonUsage0. Reset-ticks records initial level counts and mean.
 
@@ -63,7 +61,7 @@ Proposed additional interventions: `setPeople(readonly {x,y,heading,awareness}[]
 
 Read people add `awareness`; cells add `center:"original"|"created"|null, nonUsage`. Counts include `activists,wellInformed,aware,unaware,centers`. The first four sum to people count. `meanAwareness` is points/person; `meanNonUsage` averages **only current centers**, units ticks. Both are `null` for empty denominators; source `mean []` plot/monitor can error at allowed zero-population/zero-center settings. This is an explicit finite-display adaptation, not source success evidence. Level-count and average-awareness histories correspond to the two original plots; original monitors count colors, which match predicates after normal source steps. Target fixtures refresh predicate-based projections immediately.
 
-## Pollution: source mechanism and proposed contract
+## Pollution: source mechanism and contract
 
 World71×63, source x=-35..35/y=-31..31, both axes wrap. Inputs: `initialPopulation`30, 0..100 step10 (setup); `powerPlants`2, 0..20 step1 (setup); live `birthRate`0.10, 0..0.20 step0.01; `plantingRate`0.05, 0..0.10 step0.01; `pollutingRate`3, 0..5 integer. Source view tick label is **years**. Setup clears land pollution0/powerPlant=false, selects unique plants, runs `pollute` on all fields (plants set pollution to rate), creates people on uniform integer patch centers with health5, source random headings, no trees. Initial total pollution is plants×rate.
 
@@ -80,7 +78,7 @@ Proposed `setRules` permits only birthRate, plantingRate, pollutingRate. Changin
 
 Read counts `{people,trees,powerPlants}`, all people/trees with health, cells `pollution,powerPlant`, totalPollution=sum of field values. World Status plot has three **different units**: counts of trees, counts of people and total abstract pollution. Do not call the third a population, mean concentration or pollution-agent count. Source Info's predator/prey framing does not describe moving pollutant agents: pollution is a scalar field. Source patch colors are stale after neighbor cleanup and sometimes show a tree's green cell despite pollution; target may color from actual latest pollution with tree/plant overlays. This is an explicit presentation improvement; field/health/order semantics stay functional baseline. Tree life is nominally50 steps but repeated binary subtraction0.1 can move its exact final death by floating roundoff; do not replace with an integer lifetime or promise an exact50-step death invariant.
 
-## Recycling: source mechanism and proposed contract
+## Recycling: source mechanism and contract
 
 World35×35, source x/y=-17..17, toroidal. Setup-only `numRecyclers`25 and `numWastefuls`25, each0..50 integer. Live inputs: `maxStoredEnergy`50, 10..100 step5; `recyclingWasteCost`0.5, 0..2 step0.25; `resourceRegeneration`25, 0..100 integer; `agentsSeekResources`false; `showEnergy`true. Setup creates the two kinds, positions each at a uniform integer patch center, retains source random headings, initializes energy=max/2 and every field resource="new".
 
@@ -102,9 +100,9 @@ Use target Mulberry32 with explicit seed, never claim NetLogo Mersenne Twister t
 
 No headless contract gap is identified. Host work remains: shared grid view must render multiple co-located people, Pollution trees/people and scalar fields, exact centered fractional cell positions for Awareness, and the Awareness center brush through a headless action. Recycling energy labels should be supplied as renderer data, never recomputed ecological state in UI. Do not silently omit original actions if existing view adapters are insufficient: scope a separate actual shared UI capability with frontend-design and web-design-guidelines, then real browser checks. These are future integrations, not a claim that every host feature already exists.
 
-## Five proposed public acceptance scripts and sequence
+## Public acceptance examples
 
-All scripts use only each proposed public model entry, ordinary assertions and detached observations; none imports private runtime, mocks, transcompiled NetLogo or disables checks. [SHA256SUMS](../../examples/selected-urban/SHA256SUMS) records their review candidate content.
+All scripts use only each public model entry, ordinary assertions and detached observations; none imports private runtime, mocks, transcompiled NetLogo or disables checks. [SHA256SUMS](../../examples/selected-urban/SHA256SUMS) records the required example content.
 
 1. [Awareness contact/expiry](../../examples/selected-urban/01-awareness-contact-and-expiry.ts): movement-before-contact, dynamic recipient exclusion at10, strict center expiry, stale age when painting, repeated activist creation, empty means and nonterminal empty population.
 2. [Pollution phases/stop](../../examples/selected-urban/02-pollution-phases-and-stop.ts): exact Moore impulse8 -> local1.6/neighbors0.8 followed by dying-tree cleanup -> total3; fixed plant reset -> totals3 then5.4; extinction step ticks, later steps freeze.
@@ -112,9 +110,9 @@ All scripts use only each proposed public model entry, ordinary assertions and d
 4. [Defaults/isolation/validation](../../examples/selected-urban/04-defaults-isolation-and-validation.ts): exact source dimensions/counts/initial totals, independent instances, detached frozen snapshots and atomic rejection of malformed fixtures/out-of-step rules.
 5. [Live seeking/cap](../../examples/selected-urban/05-live-seeking-and-cap.ts): seek new neighbor, process origin before movement, live cap does not rewrite state immediately, refuse over-cap harvest then clamp after moving.
 
-Coordinator must inspect/freeze these scripts before handing off runtime. Suggested order: Recycling (discrete patches and breeds), Awareness (same-cell contact and brush), Pollution (birth/death and two visual populations). They can be individually scoped implementations with nonoverlapping model files; source/contract evidence must be integrated before any runtime milestone. No generic library expansion is needed based on this audit. Additional behavior tests must cover wrap boundaries, strict exposure0.5/birth>4, new births excluded but new trees included, threshold-receiver transient negatives, exact stale ages, over-cap gates, regeneration quantization, repeated centers, no-RNG observations and zero-step/invalid counts. Five scripts deliberately do not exhaust these edge cases.
+Additional behavior tests must cover wrap boundaries, strict exposure0.5/birth>4, new births excluded but new trees included, threshold-receiver transient negatives, exact stale ages, over-cap gates, regeneration quantization, repeated centers, no-RNG observations and zero-step/invalid counts. Five scripts deliberately do not exhaust these edge cases.
 
-## Required baseline and target browser evidence — planned, not executed
+## Required browser acceptance
 
 Follow [per-model acceptance](netlogo-model-acceptance.md) for **each** model. Launch the exact pinned served XML in real Chromium, record actual launcher/runtime version and source hash, source controls/defaults and actual ticks. Capture reference setup and progressed screenshots, then paired target setup/progress screenshots at the same parameter settings with declared independent RNG policy. Keep compact final images/reports in Git. Source and target should run desktop; target also suitable mobile viewport and controls. Check console/runtime errors explicitly. Browser blockers leave baseline/target milestones pending, never substitute source inspection.
 
@@ -124,13 +122,4 @@ Pollution: default30/2, rates0.10/0.05/3; record actual people/trees/total pollu
 
 Recycling: default25+25/max50/cost0.5/regeneration25, seekingoff/labelson. Record population/land-percent values and ticks before/after progress; exercise go-once, play/pause, seeking and labels, live cap/regeneration/cost, reset. Use paired explicit fixtures for shared-patch ordering, zero-energy and seek-before-harvest distinctions. Use actual replicated-run quantitative evidence before any stochastic agreement claim; the discrete source regeneration probabilities can also be verified by source code plus deterministic integer-draw boundary unit tests but those alone are not browser baseline evidence.
 
-Report concrete observations and intentional UI improvements separately from functional differences. Pixel cloning is unnecessary. Link each report to its exact selected path, batch issue/PR/commit and scientific dossier, and obtain independent Argon design/transfer review and separate reapproval after fixes. This task does not perform that review.
-
-## Executed preparation checks
-
-- Parsed all three local original XML archives; read complete Procedures/Widgets plus mechanism, instructions, credits and license Info sections. Read the three existing scientific mini-texts for interpretation limits without changing/re-verifying literature.
-- Verified selected-path membership and exact archive SHA-256 against dossier and served inventory, then copied bytes unchanged. An initial lookup by inventory slug found no row because inventory slugs include the category prefix; canonical path lookup corrected the check before any archive was written.
-- `sha256sum -c examples/selected-urban/SHA256SUMS` passed for all five proposed scripts.
-- `bun examples/selected-urban/01-awareness-contact-and-expiry.ts` failed as expected because the future public `experiments/urban-suite-awareness/model.ts` module does not exist. No mock, stub or skipped assertion was introduced. Other examples were not executed: their model imports are likewise not implemented.
-- `bun run typecheck` passed for the current configured library/development/UI project. `examples/selected-urban/**` is not yet in `tsconfig.dev.json`, so this does **not** claim the proposed scripts with absent future imports typecheck. Runtime handoff must include them in an appropriate real example/typecheck gate after coordinator freeze.
-- No runtime implementation, target/source Chromium run, screenshots, scientific publication verification, commit/push or independent approval performed by this source-contract task.
+Report concrete observations and intentional UI improvements separately from functional differences. Pixel cloning is unnecessary. Link each report to its exact selected path, batch issue/PR/commit and scientific dossier, and obtain independent design/transfer review and reapproval after fixes.

@@ -1,12 +1,20 @@
 # City Library
 
-City Library is an open, composable system for experimenting with city simulations. It brings together agents, space, networks and measurements so different ideas about urban layouts, transport, resources and energy can be explored through explicit models.
+City Library is an open, modular library for building simulations and games about future cities. Try a rule, watch what happens, change it and try again.
 
-The motivation is to make room for alternatives to familiar city-building patterns, including questions about more sustainable cities. A simulation makes assumptions and consequences inspectable; it does not establish that a planning choice will have a particular real-world impact.
+## A toolkit for experiments
 
-The library uses ordinary TypeScript. Each capability can work independently, and applications choose how to visualize its results. Agent Loom is the modeling core within City Library.
+Cities face difficult questions about climate, biodiversity, mobility and resources. Simulations and games let us explore alternatives and learn through play. Fun is just another name for learning.
 
-> **Work in progress.** The integration branch includes a headless library and 125 experiment entries toward a fixed 200-model selection. Code presence, scientific comparison and independent acceptance are separate milestones. Both UI hosts support the readable authoring contract, and all 125 entries now run without a model-specific legacy fallback. Final implementation reviews are tracked separately. No package is published. See [PLAN](PLAN.md) for current scope and [consolidation evidence](docs/development/consolidation-report.md) for recorded checks and limits.
+Combine agents, space, networks and measurements in TypeScript. Use a graph on its own, add agents when needed, or pair a grid with a local rule. Each part should work independently and make its assumptions easy to inspect.
+
+TypeScript brings these experiments to the web, with an ecosystem of useful game libraries.
+
+NetLogo inspires the scripting approach: a short script should be enough to get an idea running. Bits UI and shadcn-svelte inspire the modular approach: small building blocks with useful defaults and room to make something your own.
+
+Agent Loom provides the headless modeling core. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
+
+The core and shared UI are usable, with 125 experiment entries toward a fixed selection of 200. The full specification and scientific model comparisons remain unfinished, and the package is not published. See [the work plan](PLAN.md) for progress and open checks.
 
 ## Run the Lab
 

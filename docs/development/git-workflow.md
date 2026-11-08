@@ -1,6 +1,6 @@
 # Git delivery workflow
 
-These rules apply to City Library task delivery. Preserve concurrent work and the example-first delivery history. A scoped implementation request does not by itself authorize publication or merging; use the user's existing authorization for the requested delivery actions. Once commit/push/PR delivery is authorized, complete it without introducing another approval gate for those ordinary actions.
+Deliver changes through owned branches and reviewable pull requests. Preserve other people's work and the history that shows public examples were agreed before implementation. Use the authorization already given for the task: a request to implement a change does not by itself authorize publication or a merge. Once commit, push and PR delivery are authorized, carry them through without asking again.
 
 ## Branches and ownership
 
@@ -26,6 +26,6 @@ Remove a task branch/worktree only after its required payload and evidence are i
 
 GitHub's active `Protect main delivery` ruleset requires PRs, resolved review conversations and the GitHub Actions checks `Library checks` and `Svelte build` against an up-to-date base. Force pushes and deletion of main are blocked. The approval count is zero for this individually maintained repository; agent review reports are not GitHub human approvals. The explicit user-authorization rule for merging still applies. Repository merges preserve commits; automatic branch deletion stays disabled to protect active T3 bindings.
 
-The versioned `t3.json` defines a worktree default and Setup/Check/UI build actions. T3 project settings currently mirror these actions, use worktrees for new threads and keep automatic pull off; explicit project overrides take precedence over repository defaults. Worktree setup uses the frozen lockfile. Project Codex configuration lives in `.codex/config.toml`; Git policy remains here and in AGENTS.md, and the delivery skill lives in `.agents/skills/git-delivery/`. No credentials or machine-specific paths belong in those files.
+The versioned `t3.json` defines a worktree default and Setup/Check/UI build actions. T3 project settings currently mirror these actions, use worktrees for new threads and keep automatic pull off; explicit project overrides take precedence over repository defaults. Worktree setup uses the frozen lockfile. Local Codex configuration and private skills stay in the ignored `.codex/` directory. Git policy remains here and in AGENTS.md, and the delivery skill lives in `.agents/skills/git-delivery/`. No credentials or machine-specific paths belong in those files.
 
 Local repository Git settings use `pull.ff=only` and `push.default=simple`. These settings are not cloned with Git; configure them for each new clone if needed. Do not weaken conflicts or force-push to make delivery succeed.
