@@ -1,0 +1,160 @@
+{
+  "case": {
+    "slug": "crispr-bacterium",
+    "name": "CRISPR Bacterium",
+    "path": "Sample Models/Biology/CRISPR/CRISPR Bacterium",
+    "setup": "setup",
+    "steps": 15,
+    "action": "common-infection",
+    "reports": [
+      "ticks",
+      "count RNAPs",
+      "count cas9s",
+      "count guide-RNAs",
+      "count viruses",
+      "infected?",
+      "array"
+    ]
+  },
+  "setup": {
+    "sourceSHA256": "e87977797048bf809aa58a41d6dc746c59d6d5e0ba94957db2996815725f4813",
+    "title": "CRISPR Bacterium",
+    "bytes": 80685,
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 0
+      },
+      "count RNAPs": {
+        "success": true,
+        "value": 25
+      },
+      "count cas9s": {
+        "success": true,
+        "value": 18
+      },
+      "count guide-RNAs": {
+        "success": true,
+        "value": 92
+      },
+      "count viruses": {
+        "success": true,
+        "value": 0
+      },
+      "infected?": {
+        "success": true,
+        "value": false
+      },
+      "array": {
+        "success": true,
+        "value": [
+          13,
+          25,
+          8,
+          6,
+          4,
+          24,
+          21,
+          9,
+          22,
+          22,
+          16,
+          8,
+          28,
+          21,
+          26
+        ]
+      }
+    },
+    "errors": [],
+    "viewport": [
+      1280,
+      800
+    ],
+    "canvas": [
+      {
+        "width": 1254,
+        "height": 646,
+        "rect": {
+          "x": 237,
+          "y": 170.984375,
+          "width": 627,
+          "height": 323,
+          "top": 170.984375,
+          "right": 864,
+          "bottom": 493.984375,
+          "left": 237
+        }
+      }
+    ]
+  },
+  "progress": {
+    "reports": {
+      "ticks": {
+        "success": true,
+        "value": 15
+      },
+      "count RNAPs": {
+        "success": true,
+        "value": 25
+      },
+      "count cas9s": {
+        "success": true,
+        "value": 18
+      },
+      "count guide-RNAs": {
+        "success": true,
+        "value": 91
+      },
+      "count viruses": {
+        "success": true,
+        "value": 1
+      },
+      "infected?": {
+        "success": true,
+        "value": false
+      },
+      "array": {
+        "success": true,
+        "value": [
+          13,
+          25,
+          8,
+          6,
+          4,
+          24,
+          21,
+          9,
+          22,
+          22,
+          16,
+          8,
+          28,
+          21,
+          26
+        ]
+      }
+    },
+    "errors": [],
+    "console": [],
+    "text": " powered by NetLogo\nCRISPR Bacterium\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 15\n?\nfor shortcuts\nsetup\ninitial-array-size\nmax-virus-types\nlabels?\nEven after a successful\ninfection, turn labels on\nand off by toggling\nthe switch and\npressing go.\nrandom-infection\ncommon-infection\nguide-unbind-chance\n %\nprocessivity\n %\ncrispr-function\n %\nCRISPR System Elements\nGuide RNAs\nTotal Cas9s\nBound Cas9s\nCas1/2s\n0\n5\n10\n15\n0\n92\nGuide RNAs\n91\nVirus event monitor\nVirus 25 invaded the cell.\nThe virus event monitor\nshows what interactions\nare taking place.\nGuide RNAs\nRNAs\nArray\n0\n10\n20\n30\n0\n25\n27\nCas1/2s\n3\nCas9s\n18\nViruses\n1\nLength\n15\n"
+  },
+  "interactions": {
+    "stepPresent": false,
+    "playPressed": "true",
+    "pausePressed": "false",
+    "afterPlay": {
+      "success": true,
+      "value": 21
+    },
+    "afterReset": {
+      "success": true,
+      "value": 0
+    },
+    "errors": []
+  },
+  "screenshots": [
+    "crispr-bacterium-original-setup.png",
+    "crispr-bacterium-original-progress.png"
+  ]
+}

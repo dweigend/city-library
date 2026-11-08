@@ -1,0 +1,46 @@
+{
+  "slug": "epidem-basic",
+  "actions": [
+    {
+      "action": "type",
+      "selector": "input[name=\"live-infectionChance\"]",
+      "text": "0",
+      "clear": true
+    },
+    {
+      "action": "press",
+      "key": "Tab"
+    },
+    {
+      "action": "type",
+      "selector": "input[name=\"live-recoveryChance\"]",
+      "text": "100",
+      "clear": true
+    },
+    {
+      "action": "press",
+      "key": "Tab"
+    },
+    {
+      "action": "type",
+      "selector": "input[name=\"live-averageRecoveryTime\"]",
+      "text": "1",
+      "clear": true
+    },
+    {
+      "action": "press",
+      "key": "Tab"
+    },
+    {
+      "action": "click",
+      "selector": "button:text-is(\"Setup\")"
+    },
+    {
+      "action": "click",
+      "selector": "button:text-is(\"10 steps\")"
+    }
+  ],
+  "monitors": "Tick\n2\nInfected\n0\nRecovered\n5\nR0\n0\nInfection rate\n0\nRecovery rate\n0",
+  "status": "Completed.",
+  "statusState": "success"
+}

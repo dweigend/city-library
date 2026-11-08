@@ -1,0 +1,899 @@
+{
+  "slug": "baldwin-effect",
+  "url": "http://127.0.0.1:3148/?experiment=baldwin-effect",
+  "errors": [],
+  "loadedAt": "2026-11-06T13:02:40.529Z",
+  "setup": {
+    "monitors": {
+      "Generation": "0"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0.5",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "0.15",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "step": {
+    "monitors": {
+      "Generation": "1"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0.5",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "0.15",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "running": {
+    "monitors": {
+      "Generation": "3"
+    },
+    "status": "Running.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0.5",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "0.15",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "paused": {
+    "monitors": {
+      "Generation": "3"
+    },
+    "status": "Paused.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0.5",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "0.15",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "reset": {
+    "monitors": {
+      "Generation": "0"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0.5",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "0.15",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "progress": {
+    "monitors": {
+      "Generation": "10"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0.5",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "0.15",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "mobileDark": {
+    "monitors": {
+      "Generation": "10"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0.5",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "0.15",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      442
+    ]
+  },
+  "mobileLight": {
+    "monitors": {
+      "Generation": "10"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0.5",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "0.15",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      442
+    ]
+  },
+  "parameterWrites": [
+    {
+      "id": "live-smoothness",
+      "value": "1",
+      "checked": false,
+      "status": "Rule updated."
+    },
+    {
+      "id": "live-plasticity",
+      "value": "0",
+      "checked": false,
+      "status": "Rule updated."
+    },
+    {
+      "id": "live-mutationRate",
+      "value": "0",
+      "checked": false,
+      "status": "Rule updated."
+    }
+  ],
+  "afterParameters": {
+    "monitors": {
+      "Generation": "11"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-numPop",
+        "type": "number",
+        "value": "200",
+        "checked": false,
+        "label": "Num Pop"
+      },
+      {
+        "id": "",
+        "name": "live-geneLength",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Gene Length"
+      },
+      {
+        "id": "",
+        "name": "live-plasticity",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Plasticity"
+      },
+      {
+        "id": "",
+        "name": "live-numTrials",
+        "type": "number",
+        "value": "20",
+        "checked": false,
+        "label": "Num Trials"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-smoothness",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Smoothness"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Genotype and learned phenotype",
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      442
+    ]
+  }
+}

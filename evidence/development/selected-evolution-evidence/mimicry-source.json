@@ -1,0 +1,792 @@
+{
+  "sourceSha256": "737fea7dbc34d83638384b83f35219d0862ad5919b26cba2c39dc59f6a9ab494",
+  "slug": "mimicry",
+  "setupControl": "native setup DOM click",
+  "settings": [
+    {
+      "variable": "memory-duration",
+      "value": {
+        "success": true,
+        "value": 30
+      }
+    },
+    {
+      "variable": "mutation-rate",
+      "value": {
+        "success": true,
+        "value": 5
+      }
+    },
+    {
+      "variable": "memory-size",
+      "value": {
+        "success": true,
+        "value": 3
+      }
+    }
+  ],
+  "setup": {
+    "tick": {
+      "success": true,
+      "value": 0
+    },
+    "turtles": {
+      "success": true,
+      "value": 525
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 20,
+      "maxPycor": 20,
+      "minPxcor": -20,
+      "minPycor": -20,
+      "nextWhoNumber": 525,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 0,
+      "codeGlobals": {
+        "carrying-capacity-birds": 75,
+        "carrying-capacity-monarchs": 225,
+        "carrying-capacity-viceroys": 225,
+        "color-range-begin": 15,
+        "color-range-end": 109,
+        "memory-duration": 30,
+        "memory-size": 3,
+        "mutation-rate": 5,
+        "reproduction-chance": 4
+      }
+    },
+    "monitors": [
+      {
+        "source": "count monarchs",
+        "value": {
+          "success": true,
+          "value": 225
+        }
+      },
+      {
+        "source": "count viceroys",
+        "value": {
+          "success": true,
+          "value": 225
+        }
+      },
+      {
+        "label": "average",
+        "source": "mean [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "minimum",
+        "source": "min [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "maximum",
+        "source": "max [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "average",
+        "source": "mean [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 105
+        }
+      },
+      {
+        "label": "maximum",
+        "source": "max [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 105
+        }
+      },
+      {
+        "label": "minimum",
+        "source": "min [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 105
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "runPause": {
+    "runningThen": true,
+    "pausedNow": true,
+    "after": {
+      "tick": {
+        "success": true,
+        "value": 6
+      },
+      "turtles": {
+        "success": true,
+        "value": 455
+      },
+      "globals": {
+        "linkDirectedness": "neither",
+        "maxPxcor": 20,
+        "maxPycor": 20,
+        "minPxcor": -20,
+        "minPycor": -20,
+        "nextWhoNumber": 532,
+        "perspective": "observe",
+        "subject": {
+          "referenceType": "nobody"
+        },
+        "ticks": 6,
+        "codeGlobals": {
+          "carrying-capacity-birds": 75,
+          "carrying-capacity-monarchs": 225,
+          "carrying-capacity-viceroys": 225,
+          "color-range-begin": 15,
+          "color-range-end": 109,
+          "memory-duration": 30,
+          "memory-size": 3,
+          "mutation-rate": 5,
+          "reproduction-chance": 4
+        }
+      },
+      "monitors": [
+        {
+          "source": "count monarchs",
+          "value": {
+            "success": true,
+            "value": 195
+          }
+        },
+        {
+          "source": "count viceroys",
+          "value": {
+            "success": true,
+            "value": 185
+          }
+        },
+        {
+          "label": "average",
+          "source": "mean [color] of monarchs",
+          "value": {
+            "success": true,
+            "value": 15.153846153846153
+          }
+        },
+        {
+          "label": "minimum",
+          "source": "min [color] of monarchs",
+          "value": {
+            "success": true,
+            "value": 15
+          }
+        },
+        {
+          "label": "maximum",
+          "source": "max [color] of monarchs",
+          "value": {
+            "success": true,
+            "value": 45
+          }
+        },
+        {
+          "label": "average",
+          "source": "mean [color] of viceroys",
+          "value": {
+            "success": true,
+            "value": 105
+          }
+        },
+        {
+          "label": "maximum",
+          "source": "max [color] of viceroys",
+          "value": {
+            "success": true,
+            "value": 105
+          }
+        },
+        {
+          "label": "minimum",
+          "source": "min [color] of viceroys",
+          "value": {
+            "success": true,
+            "value": 105
+          }
+        }
+      ]
+    }
+  },
+  "reset": {
+    "command": "random-seed 1 setup",
+    "success": true
+  },
+  "step": {
+    "command": "go",
+    "success": true
+  },
+  "stepState": {
+    "tick": {
+      "success": true,
+      "value": 1
+    },
+    "turtles": {
+      "success": true,
+      "value": 508
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 20,
+      "maxPycor": 20,
+      "minPxcor": -20,
+      "minPycor": -20,
+      "nextWhoNumber": 525,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 1,
+      "codeGlobals": {
+        "carrying-capacity-birds": 75,
+        "carrying-capacity-monarchs": 225,
+        "carrying-capacity-viceroys": 225,
+        "color-range-begin": 15,
+        "color-range-end": 109,
+        "memory-duration": 30,
+        "memory-size": 3,
+        "mutation-rate": 5,
+        "reproduction-chance": 4
+      }
+    },
+    "monitors": [
+      {
+        "source": "count monarchs",
+        "value": {
+          "success": true,
+          "value": 219
+        }
+      },
+      {
+        "source": "count viceroys",
+        "value": {
+          "success": true,
+          "value": 214
+        }
+      },
+      {
+        "label": "average",
+        "source": "mean [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "minimum",
+        "source": "min [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "maximum",
+        "source": "max [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "average",
+        "source": "mean [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 105
+        }
+      },
+      {
+        "label": "maximum",
+        "source": "max [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 105
+        }
+      },
+      {
+        "label": "minimum",
+        "source": "min [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 105
+        }
+      }
+    ]
+  },
+  "progressCommand": {
+    "command": "repeat 9 [ go ]",
+    "success": true
+  },
+  "progress": {
+    "tick": {
+      "success": true,
+      "value": 10
+    },
+    "turtles": {
+      "success": true,
+      "value": 430
+    },
+    "globals": {
+      "linkDirectedness": "neither",
+      "maxPxcor": 20,
+      "maxPycor": 20,
+      "minPxcor": -20,
+      "minPycor": -20,
+      "nextWhoNumber": 554,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 10,
+      "codeGlobals": {
+        "carrying-capacity-birds": 75,
+        "carrying-capacity-monarchs": 225,
+        "carrying-capacity-viceroys": 225,
+        "color-range-begin": 15,
+        "color-range-end": 109,
+        "memory-duration": 30,
+        "memory-size": 3,
+        "mutation-rate": 5,
+        "reproduction-chance": 4
+      }
+    },
+    "monitors": [
+      {
+        "source": "count monarchs",
+        "value": {
+          "success": true,
+          "value": 182
+        }
+      },
+      {
+        "source": "count viceroys",
+        "value": {
+          "success": true,
+          "value": 173
+        }
+      },
+      {
+        "label": "average",
+        "source": "mean [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "minimum",
+        "source": "min [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "maximum",
+        "source": "max [color] of monarchs",
+        "value": {
+          "success": true,
+          "value": 15
+        }
+      },
+      {
+        "label": "average",
+        "source": "mean [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 104.42196531791907
+        }
+      },
+      {
+        "label": "maximum",
+        "source": "max [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 105
+        }
+      },
+      {
+        "label": "minimum",
+        "source": "min [color] of viceroys",
+        "value": {
+          "success": true,
+          "value": 25
+        }
+      }
+    ]
+  },
+  "probes": {
+    "mutationColors": {
+      "success": true,
+      "value": [
+        15,
+        25,
+        35,
+        45,
+        55,
+        65,
+        75,
+        85,
+        95
+      ]
+    },
+    "memory": {
+      "command": "ask one-of birds [set memory [] remember-color 15 birds-forget]",
+      "success": true
+    },
+    "memoryRead": {
+      "success": true,
+      "value": [
+        [
+          [
+            15,
+            6
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            5
+          ]
+        ],
+        [
+          [
+            15,
+            2
+          ]
+        ],
+        [
+          [
+            15,
+            10
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            5
+          ]
+        ],
+        [
+          [
+            15,
+            8
+          ]
+        ],
+        [
+          [
+            15,
+            5
+          ]
+        ],
+        [
+          [
+            15,
+            4
+          ]
+        ],
+        [
+          [
+            15,
+            8
+          ]
+        ],
+        [
+          [
+            15,
+            8
+          ]
+        ],
+        [
+          [
+            15,
+            4
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            6
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            10
+          ]
+        ],
+        [
+          [
+            15,
+            3
+          ]
+        ],
+        [
+          [
+            15,
+            3
+          ]
+        ],
+        [
+          [
+            15,
+            4
+          ]
+        ],
+        [
+          [
+            15,
+            3
+          ]
+        ],
+        [
+          [
+            15,
+            10
+          ]
+        ],
+        [
+          [
+            15,
+            8
+          ]
+        ],
+        [
+          [
+            15,
+            8
+          ]
+        ],
+        [
+          [
+            15,
+            6
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            8
+          ]
+        ],
+        [
+          [
+            15,
+            4
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            3
+          ]
+        ],
+        [
+          [
+            15,
+            10
+          ]
+        ],
+        [
+          [
+            15,
+            10
+          ]
+        ],
+        [
+          [
+            15,
+            3
+          ]
+        ],
+        [
+          [
+            15,
+            8
+          ]
+        ],
+        [
+          [
+            15,
+            6
+          ]
+        ],
+        [
+          [
+            15,
+            6
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            1
+          ]
+        ],
+        [
+          [
+            15,
+            1
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            7
+          ]
+        ],
+        [
+          [
+            15,
+            1
+          ]
+        ],
+        [
+          [
+            15,
+            2
+          ]
+        ],
+        [
+          [
+            15,
+            6
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            2
+          ]
+        ],
+        [
+          [
+            15,
+            9
+          ]
+        ],
+        [
+          [
+            15,
+            10
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-06",
+  "results": {
+    "exactPinnedAssets": 22,
+    "totalAssetBytes": 1449413,
+    "allPinnedGitBlobSHA1AndSizeVerified": true,
+    "allOwnSHA256Verified": true,
+    "allJSONParsed": true,
+    "reportLinksAndAPIAnchorsResolved": 18,
+    "auditPythonSyntaxCompiledWithoutCache": true,
+    "shpShxDbfCardinalities": [
+      606,
+      98,
+      250
+    ],
+    "rastersValueCounts": [
+      38025,
+      64800
+    ]
+  },
+  "commands": [
+    "python3 docs/development/gis-data-audit-evidence/acquire.py",
+    "python3 docs/development/gis-data-audit-evidence/inspect-gis-data.py > docs/development/gis-data-audit-evidence/inspection-summary.json",
+    "Python hashlib/JSON/link/source-count/pinned-manifest assertions",
+    "sha256sum -c docs/development/gis-data-audit-evidence/SHA256SUMS"
+  ],
+  "toolingCorrections": [
+    "Initial repeat acquisition failed because one-off inspect.py shadowed Python stdlib inspect. Renamed to inspect-gis-data.py, removed its own bytecode, then acquisition and inspection reran successfully; source bytes unchanged.",
+    "First link check referenced not-yet-created validation.json; created it and repeated full checks successfully."
+  ],
+  "limits": [
+    "No target/runtime or browser checks",
+    "No projection/coverage/Sobel numeric implementation",
+    "No independent review",
+    "Explicit rights/source-encoding/trailer/bounds/hole-policy questions retained"
+  ]
+}

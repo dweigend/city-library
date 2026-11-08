@@ -1,0 +1,21 @@
+{
+  "model": "crispr-ecosystem",
+  "command": "set initial-viruses 0 setup go",
+  "title": "CRISPR Ecosystem",
+  "reports": {
+    "ticks": {
+      "success": true,
+      "value": 0
+    },
+    "count bacteria": {
+      "success": true,
+      "value": 50
+    },
+    "count viruses": {
+      "success": true,
+      "value": 0
+    }
+  },
+  "errors": [],
+  "text": " powered by NetLogo\nCRISPR Ecosystem\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks:\n?\nfor shortcuts\ninfection-chance\n %\ninitial-viruses\ngo\nmax-virus-types\ninitial-bacteria\nsetup\nspacer-loss-chance\n %\ncrispr?\n% Abundance\nCRISPR-Virus Coevolution\nViruses\n0\n5\n10\n0\n5\n10\nArray Length\nFrequency\nArray Histogram\n0\n5\n10\n0\n5\n10\nStd. Dev.\nN/A\nAvg. Array Length\nN/A\nMicrobe Populations\nBact"
+}

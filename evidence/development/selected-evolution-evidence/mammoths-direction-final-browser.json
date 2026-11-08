@@ -1,0 +1,1991 @@
+{
+  "slug": "mammoths",
+  "runtimeCommit": "624d82b",
+  "scope": "Fresh final public geometry composition; earlier diagnostic remains attributed to its own version.",
+  "variants": [
+    {
+      "name": "desktop-light",
+      "width": 1440,
+      "height": 1050,
+      "theme": "light",
+      "setup": {
+        "slug": "mammoths",
+        "setup": {
+          "monitors": {
+            "Months": "0",
+            "Years": "0",
+            "Mammoths": "900",
+            "Humans": "50",
+            "Hunting deaths": "0",
+            "Climate deaths": "0"
+          },
+          "status": "Model initialized.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        }
+      },
+      "progress": {
+        "read": {
+          "monitors": {
+            "Months": "20",
+            "Years": "1.6666666666666667",
+            "Mammoths": "801",
+            "Humans": "77",
+            "Hunting deaths": "33",
+            "Climate deaths": "1"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "step": {
+          "monitors": {
+            "Months": "1",
+            "Years": "0.08333333333333333",
+            "Mammoths": "880",
+            "Humans": "54",
+            "Hunting deaths": "3",
+            "Climate deaths": "0"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "pause": {
+          "monitors": {
+            "Months": "3",
+            "Years": "0.25",
+            "Mammoths": "869",
+            "Humans": "54",
+            "Hunting deaths": "9",
+            "Climate deaths": "0"
+          },
+          "status": "Paused.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "canvas": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 672,
+          "top": 115,
+          "right": 1000,
+          "bottom": 787,
+          "left": 328
+        },
+        "errors": []
+      },
+      "console": []
+    },
+    {
+      "name": "desktop-dark",
+      "width": 1440,
+      "height": 1050,
+      "theme": "dark",
+      "setup": {
+        "slug": "mammoths",
+        "setup": {
+          "monitors": {
+            "Months": "0",
+            "Years": "0",
+            "Mammoths": "900",
+            "Humans": "50",
+            "Hunting deaths": "0",
+            "Climate deaths": "0"
+          },
+          "status": "Model initialized.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        }
+      },
+      "progress": {
+        "read": {
+          "monitors": {
+            "Months": "20",
+            "Years": "1.6666666666666667",
+            "Mammoths": "801",
+            "Humans": "77",
+            "Hunting deaths": "33",
+            "Climate deaths": "1"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "step": {
+          "monitors": {
+            "Months": "1",
+            "Years": "0.08333333333333333",
+            "Mammoths": "880",
+            "Humans": "54",
+            "Hunting deaths": "3",
+            "Climate deaths": "0"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "pause": {
+          "monitors": {
+            "Months": "3",
+            "Years": "0.25",
+            "Mammoths": "869",
+            "Humans": "54",
+            "Hunting deaths": "9",
+            "Climate deaths": "0"
+          },
+          "status": "Paused.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            1440,
+            1050
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "canvas": {
+          "x": 328,
+          "y": 115,
+          "width": 672,
+          "height": 672,
+          "top": 115,
+          "right": 1000,
+          "bottom": 787,
+          "left": 328
+        },
+        "errors": []
+      },
+      "console": []
+    },
+    {
+      "name": "mobile-dark",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "setup": {
+        "slug": "mammoths",
+        "setup": {
+          "monitors": {
+            "Months": "0",
+            "Years": "0",
+            "Mammoths": "900",
+            "Humans": "50",
+            "Hunting deaths": "0",
+            "Climate deaths": "0"
+          },
+          "status": "Model initialized.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        }
+      },
+      "progress": {
+        "read": {
+          "monitors": {
+            "Months": "20",
+            "Years": "1.6666666666666667",
+            "Mammoths": "801",
+            "Humans": "77",
+            "Hunting deaths": "33",
+            "Climate deaths": "1"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            378.5
+          ]
+        },
+        "step": {
+          "monitors": {
+            "Months": "1",
+            "Years": "0.08333333333333333",
+            "Mammoths": "880",
+            "Humans": "54",
+            "Hunting deaths": "3",
+            "Climate deaths": "0"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "pause": {
+          "monitors": {
+            "Months": "3",
+            "Years": "0.25",
+            "Mammoths": "869",
+            "Humans": "54",
+            "Hunting deaths": "9",
+            "Climate deaths": "0"
+          },
+          "status": "Paused.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "canvas": {
+          "x": 16,
+          "y": 243.078125,
+          "width": 358,
+          "height": 358,
+          "top": 243.078125,
+          "right": 374,
+          "bottom": 601.078125,
+          "left": 16
+        },
+        "errors": []
+      },
+      "console": []
+    },
+    {
+      "name": "mobile-light",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "setup": {
+        "slug": "mammoths",
+        "setup": {
+          "monitors": {
+            "Months": "0",
+            "Years": "0",
+            "Mammoths": "900",
+            "Humans": "50",
+            "Hunting deaths": "0",
+            "Climate deaths": "0"
+          },
+          "status": "Model initialized.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        }
+      },
+      "progress": {
+        "read": {
+          "monitors": {
+            "Months": "20",
+            "Years": "1.6666666666666667",
+            "Mammoths": "801",
+            "Humans": "77",
+            "Hunting deaths": "33",
+            "Climate deaths": "1"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            378.5
+          ]
+        },
+        "step": {
+          "monitors": {
+            "Months": "1",
+            "Years": "0.08333333333333333",
+            "Mammoths": "880",
+            "Humans": "54",
+            "Hunting deaths": "3",
+            "Climate deaths": "0"
+          },
+          "status": "Steps completed.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "pause": {
+          "monitors": {
+            "Months": "3",
+            "Years": "0.25",
+            "Mammoths": "869",
+            "Humans": "54",
+            "Hunting deaths": "9",
+            "Climate deaths": "0"
+          },
+          "status": "Paused.",
+          "statusState": "success",
+          "controls": [
+            {
+              "id": "setup-seed",
+              "name": "seed",
+              "type": "number",
+              "value": "1",
+              "checked": false,
+              "label": "Seed"
+            },
+            {
+              "id": "setup-numberOfMammoths",
+              "name": "numberOfMammoths",
+              "type": "number",
+              "value": "900",
+              "checked": false,
+              "label": "Number Of Mammoths"
+            },
+            {
+              "id": "setup-numberOfHumans",
+              "name": "numberOfHumans",
+              "type": "number",
+              "value": "50",
+              "checked": false,
+              "label": "Number Of Humans"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "range",
+              "value": "5",
+              "checked": false,
+              "label": "Speed"
+            },
+            {
+              "id": "",
+              "name": "live-mammothBirthRate",
+              "type": "number",
+              "value": "2",
+              "checked": false,
+              "label": "Mammoth Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-humanBirthRate",
+              "type": "number",
+              "value": "10",
+              "checked": false,
+              "label": "Human Birth Rate"
+            },
+            {
+              "id": "",
+              "name": "live-mammothSpeed",
+              "type": "number",
+              "value": "0.2",
+              "checked": false,
+              "label": "Mammoth Speed"
+            },
+            {
+              "id": "",
+              "name": "live-humanSpeed",
+              "type": "number",
+              "value": "0.3",
+              "checked": false,
+              "label": "Human Speed"
+            },
+            {
+              "id": "",
+              "name": "live-oddsOfKilling",
+              "type": "number",
+              "value": "12",
+              "checked": false,
+              "label": "Odds Of Killing"
+            },
+            {
+              "id": "",
+              "name": "live-climateChangeDecayChance",
+              "type": "number",
+              "value": "0.003",
+              "checked": false,
+              "label": "Climate Change Decay Chance"
+            },
+            {
+              "id": "",
+              "name": "",
+              "type": "checkbox",
+              "value": "on",
+              "checked": false,
+              "label": "Labels"
+            }
+          ],
+          "figures": [
+            "Resident",
+            "Americas habitat",
+            "Populations",
+            "Cause of mammoth deaths"
+          ],
+          "overflow": false,
+          "viewport": [
+            390,
+            844
+          ],
+          "scroll": [
+            0,
+            0
+          ]
+        },
+        "canvas": {
+          "x": 16,
+          "y": 243.078125,
+          "width": 358,
+          "height": 358,
+          "top": 243.078125,
+          "right": 374,
+          "bottom": 601.078125,
+          "left": 16
+        },
+        "errors": []
+      },
+      "console": []
+    }
+  ],
+  "modules": [
+    {
+      "url": "http://127.0.0.1:3148/app.js",
+      "sha256": "1f906b83bbf0146d31dea8ad20d5c42c1d6136187f871419f3cb10913b37fd15",
+      "markers": []
+    },
+    {
+      "url": "http://127.0.0.1:3148/chunks/app-shg8ggtp.js",
+      "sha256": "51c2db44ec3165d6bcfc98de2e15a7a08a1ea9d0fe6b75479934fbc2748d4589",
+      "markers": []
+    },
+    {
+      "url": "http://127.0.0.1:3148/chunks/ui-92vp42d0.js",
+      "sha256": "daa5758091e2a7729d17d51f00a92208530bf4851ba831cd64468a528c83cd8e",
+      "markers": [
+        "B08-mammoths-native-mask-composition-v1"
+      ],
+      "archivedGzip": "chunks/ui-92vp42d0.js.gz"
+    }
+  ]
+}

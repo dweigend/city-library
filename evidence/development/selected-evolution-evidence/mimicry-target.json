@@ -1,0 +1,746 @@
+{
+  "slug": "mimicry",
+  "url": "http://127.0.0.1:3148/?experiment=mimicry",
+  "errors": [],
+  "loadedAt": "2026-11-06T13:02:35.766Z",
+  "setup": {
+    "monitors": {
+      "Tick": "0",
+      "Monarchs": "225",
+      "Viceroys": "225",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "105",
+      "Viceroy color mean": "105",
+      "Viceroy color max": "105"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "3",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "step": {
+    "monitors": {
+      "Tick": "1",
+      "Monarchs": "216",
+      "Viceroys": "218",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "105",
+      "Viceroy color mean": "105",
+      "Viceroy color max": "105"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "3",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "running": {
+    "monitors": {
+      "Tick": "3",
+      "Monarchs": "207",
+      "Viceroys": "203",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "105",
+      "Viceroy color mean": "105",
+      "Viceroy color max": "105"
+    },
+    "status": "Running.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "3",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "paused": {
+    "monitors": {
+      "Tick": "3",
+      "Monarchs": "207",
+      "Viceroys": "203",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "105",
+      "Viceroy color mean": "105",
+      "Viceroy color max": "105"
+    },
+    "status": "Paused.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "3",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "reset": {
+    "monitors": {
+      "Tick": "0",
+      "Monarchs": "225",
+      "Viceroys": "225",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "105",
+      "Viceroy color mean": "105",
+      "Viceroy color max": "105"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "3",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "progress": {
+    "monitors": {
+      "Tick": "10",
+      "Monarchs": "188",
+      "Viceroys": "157",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "75",
+      "Viceroy color mean": "104.80891719745223",
+      "Viceroy color max": "105"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "3",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "mobileDark": {
+    "monitors": {
+      "Tick": "10",
+      "Monarchs": "188",
+      "Viceroys": "157",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "75",
+      "Viceroy color mean": "104.80891719745223",
+      "Viceroy color max": "105"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "3",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      652.5
+    ]
+  },
+  "mobileLight": {
+    "monitors": {
+      "Tick": "10",
+      "Monarchs": "188",
+      "Viceroys": "157",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "75",
+      "Viceroy color mean": "104.80891719745223",
+      "Viceroy color max": "105"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "30",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "5",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "3",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      652.5
+    ]
+  },
+  "parameterWrites": [
+    {
+      "id": "live-memoryDuration",
+      "value": "0",
+      "checked": false,
+      "status": "Rule updated."
+    },
+    {
+      "id": "live-mutationRate",
+      "value": "0",
+      "checked": false,
+      "status": "Rule updated."
+    },
+    {
+      "id": "live-memorySize",
+      "value": "1",
+      "checked": false,
+      "status": "Rule updated."
+    }
+  ],
+  "afterParameters": {
+    "monitors": {
+      "Tick": "11",
+      "Monarchs": "186",
+      "Viceroys": "154",
+      "Monarch color min": "15",
+      "Monarch color mean": "15",
+      "Monarch color max": "15",
+      "Viceroy color min": "75",
+      "Viceroy color mean": "104.8051948051948",
+      "Viceroy color max": "105"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-memoryDuration",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Memory Duration"
+      },
+      {
+        "id": "",
+        "name": "live-mutationRate",
+        "type": "number",
+        "value": "0",
+        "checked": false,
+        "label": "Mutation Rate"
+      },
+      {
+        "id": "",
+        "name": "live-memorySize",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Memory Size"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Bird memory",
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      631
+    ]
+  }
+}
