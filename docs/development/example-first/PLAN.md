@@ -12,6 +12,14 @@ Keep state effects, RNG streams, units and update order explicit. Scripts own th
 
 The three [city scripts](../../../examples/city-simulation/README.md) are accepted author workflows. Their appended assertions define independent analytical outcomes. They are not comprehensive scientific models or a general European-city generator. Freeze their file hashes at this checkpoint. Any substantive later syntax or expectation change needs a recorded design reason and user agreement; implementation difficulty is not a reason. More assertions may be added without weakening the accepted task.
 
+## Research integration and semantic checks
+
+The [research integration guide](RESEARCH-INTEGRATION.md) relates Mesa and circular-economy findings to these exact scripts. It is subordinate to this plan and the binding architecture, not a new API or delivery sequence. Use its checklist when preparing each phase: state authority and units, identity/access, read state and ordering, joint feasibility, transition timing, rejection/cancellation/failure, and observation/comparison.
+
+The budget remains an open cash-flow example; heat assumes equal capacities; the quarter establishes neither transport access nor historic realism. Contrasting scripts should expose those limits rather than change the frozen files. Reservations, consumption and completion must have explicit meanings where a new task needs them; they do not mandate a pipeline or resource manager.
+
+Teach a small executable model, then measurement, rule/order variation, failure boundaries and independent comparison. Add Graph/Grid and a separate UI only when useful. Keep one canonical code source and show delivered-versus-target status. Later resource, machine and component-reuse briefs are proposed research cases only; they do not block E1/E2 or the independent E3 track and do not replace the four-or-five-script gate.
+
 ## Current gates
 
 | Command | Scope | Current required result |

@@ -10,6 +10,8 @@ These three user-accepted scripts are reference client code. Keep their flat Typ
 
 The quarter retains all subdivision results and diagnostics. Its zero-residual expectation applies to these four supported convex rectangles, not arbitrary city geometry. More difficult cases require explicit remaining land. No street-frontage or historical-realism claim is made by this minimal fixture. A future access example adds labelled intervals without silently changing this accepted task.
 
+For what these scripts teach together, their limits and future contrasting cases, see [research integration](../../docs/development/example-first/RESEARCH-INTEGRATION.md). It adds semantic questions and a documentation learning path; the three accepted source files and expectations remain unchanged.
+
 ## Run the scripts as tests
 
 ```sh
