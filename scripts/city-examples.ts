@@ -2,7 +2,12 @@ const arguments_ = Bun.argv.slice(2);
 const validArguments = arguments_.length === 0 || arguments_.join() === "--targets";
 if (!validArguments) throw new Error("Use no arguments or --targets.");
 
-const examples = ["01-household-budget", "02-neighborhood-heat"];
+const examples = [
+  "01-household-budget",
+  "02-neighborhood-heat",
+  "04-scarce-resource",
+  "05-shared-machine",
+];
 if (arguments_.length > 0) examples.push("03-generative-quarter");
 
 for (const example of examples) {
