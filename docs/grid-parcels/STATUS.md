@@ -2,12 +2,15 @@
 
 The complete approved target inventory remains unchanged in [API](API.md).
 This ledger separates the bounded first-phase implementation from the broader
-catalogue. Runtime and review evidence is recorded in [VERIFICATION](VERIFICATION.md).
+catalogue. Foundation evidence is recorded in [VERIFICATION](VERIFICATION.md);
+the finite quad extension has its own [contract](TOWNSCAPER-CONTRACT.md) and
+[verification record](TOWNSCAPER-VERIFICATION.md). The accepted
+[example-first plan](../development/example-first/PLAN.md) owns further stages.
 Nothing in this phase is published or merged into main.
 
-| Catalogue area | First-phase implementation | Explicit backlog |
+| Catalogue area | Bounded implementation | Explicit backlog |
 | --- | --- | --- |
-| Topology generation | `square`, `hex`, `fromPolygons` with finite, immutable, conforming hole-free cells | `triangle`, `trihex`, `rectangles`, `voronoi`, `quadrilaterals`, `relax`, `validate` |
+| Topology generation | `square`, `hex`, `fromPolygons`; finite `quadrilaterals({ rings, edgeLength?, random })`; separate `relax({ layout, method: "squareTarget", iterations })` for supported convex quads | `triangle`, `trihex`, `rectangles`, `voronoi`, arbitrary-boundary quadrilaterals, Lloyd relaxation, `validate`, dual mapping and chunks |
 | Layout queries | `cells`, `polygon`, `neighbors`, `cellAt`, `sharedBoundary`; local numeric keys, edge adjacency and lowest-key ties | Wrapping layouts, persistent parcel IDs, topology mutation |
 | Geometry measurements | `area({shape})` for Polygon and the MultiPolygon variant; existing dataset `bounds` and existing `contains` retain their contracts | `validate`, `perimeter`, shape `bounds` overload, `orientedBounds`, `centroid`, `interiorPoint`, `minimumWidth`, `compactness`, object `contains` overload, `contact`, geometry `sharedBoundary`, `boundaryOverlap` |
 | Geometry changes | `merge({shapes})`, `merge({layout,cells})` for conforming connected simple unions; `split` for guarded convex infinite-line cuts | General Boolean merge, `intersection`, `subtract`, `clip`, `offset`, `corridor` |

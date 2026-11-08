@@ -46,6 +46,36 @@ typecheck reported actual missing-export failures at this checkpoint.
 
 ## Runtime and delivery
 
-Pending: focused behavior/type checks, complete registered examples, build,
-packed Bun/Node/TypeScript consumers, full project check and fresh independent
-runtime review. No browser-facing flow is added by this headless slice.
+Runtime commit: `6726d7e627de11d2c01d727eb5e704035aee1f44`. Fresh independent
+[Gemini 4 Argon runtime review](TOWNSCAPER-RUNTIME-REVIEW.md): APPROVED, zero
+findings. The review verifies the two earlier design notes and the radius-seven
+rounding boundary. Findings, author responses and approval remain separate files.
+
+Coordinator checks on 8 November 2026, Bun 1.4.2 and Node 26.8.2:
+
+| Executed command | Result |
+| --- | --- |
+| `bun run typecheck:townscaper` | Passed, including mixed named-variable option and regular-only Grid negative type cases. |
+| `bun run examples:townscaper` | All five frozen public scripts passed unchanged. |
+| `bun test tests/townscaper-grid.test.ts tests/grid-parcels-topology.test.ts tests/grid-parcels-grid.test.ts` | 27 tests passed, 31815 expectations. |
+| `bun run check` | Exit 0: complete TypeScript/Svelte checking, 619 tests / 183339 expectations across 73 files, all 241 registered public scripts, library bundle/declarations and packed consumers. |
+| Packed consumer within `bun run check` | Bun, Node ESM and ambient-free strict TypeScript passed, exercising both new APIs, RNG purity, area, revision/incidence identity, explicit Field copy and mixed options. |
+| `bun run build:ui:svelte` | Exit 0; existing chunk-size warning remains. No UI source changed. |
+| Four `sha256sum -c` manifests | All E3 (5), foundation (5), E0 (3) scripts and 28 archived source files unchanged. |
+| `git diff --check` | Passed. |
+| `bun run examples:city:targets` | Exit 1 at absent corridor; ready budget/heat scripts still pass. |
+| `bun run typecheck:city:targets` | Exit 1: three missing E1/E2 methods and five dependent implicit-any diagnostics, unchanged from the accepted red checkpoint. |
+
+The separate reviewer ran 35 focused tests / 32548 expectations, the five
+foundation scripts, E3 scripts/types, ready city scripts/types and red target
+commands. That independent record does not claim the coordinator's full check.
+No maintained baseline check failed after dependency setup; the quarter remains
+an explicitly unmet target rather than an accepted failure or delivered feature.
+
+No dependency or lockfile changed. The focused runtime uses the existing exact
+predicates, Layout constructor and Random. The source prototype supplied context,
+not copied runtime code. The research archive retains its own attribution and
+rights limits. No browser-facing flow is added by this headless slice; no browser
+or original-Townscaper fidelity acceptance is claimed. Hosted CI, PR linkage and
+remote-head verification remain publication-time checks, separate from these
+local results. Merge is not authorized.

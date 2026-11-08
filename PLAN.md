@@ -11,8 +11,10 @@ the complete 49-row grid/parcel roadmap and its 58 operation/property reference
 sections. The first new PR is limited to finite hex-patch quadrilaterals and
 separate square-target relaxation, using existing Layout, Random and Grid APIs.
 The [phase contract](docs/grid-parcels/TOWNSCAPER-CONTRACT.md) and
-[five public scripts](examples/townscaper-grid/README.md) are design candidates
-until fresh independent review and a pre-runtime freeze checkpoint. Actual
+[five public scripts](examples/townscaper-grid/README.md) received independent
+Gemini 4 Argon design approval and were frozen in `9fca840` before runtime
+commit `6726d7e`. The working slice is included in regular example/type gates.
+Actual
 checks and review boundaries belong in the
 [verification record](docs/grid-parcels/TOWNSCAPER-VERIFICATION.md).
 E1 corridor/subtract and E2 bounded OBB remain separate quarter prerequisites;

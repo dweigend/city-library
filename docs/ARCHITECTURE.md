@@ -182,6 +182,16 @@ The original Agent Loom phase-one Grid remains square/cubic with `faces | moore`
 
 Treat topology as immutable for a delivered slice unless that slice explicitly defines topology mutation and revision/invalidated-cache behavior. A cached neighborhood must never silently outlive the topology it represents. Respect the extension boundary now, but establish a broader shared topology interface through real variants rather than speculative universal capabilities.
 
+The [finite quadrilateral extension](grid-parcels/TOWNSCAPER-CONTRACT.md) uses
+these same Layout/Polygon/Random contracts. Generation returns an unrelaxed
+hexagonal patch; `squareTarget` relaxation is a separate pure operation returning
+a fresh immutable Layout, including zero iterations. It preserves local cell
+correspondence and incidence while keeping exposed boundaries fixed. Each Grid
+still owns its own Fields; state transfer is explicit caller policy. The internal
+construction/incidence arrays are not a public mesh framework or a player-grid
+dual. Fixed finite boundaries do not establish seamless chunks or an architecture
+solver, and the older arbitrary-domain/Lloyd proposals remain research.
+
 ### State, hosts and verification
 
 - Preserve one authority per live value: Agent owns spatial state and path progress; Grid owns topology and Field identities; Graph owns topology and Edge identities; World owns membership and Tick. Shared references retain their canonical identities. Observation buffers own samples, not simulation state.

@@ -10,6 +10,7 @@ Start with the task you want to do. [PLAN](../PLAN.md) owns current progress and
 | Understand ownership and dependencies | [System architecture](ARCHITECTURE.md) |
 | Change UI components or styling | [UI design](DESIGN.md) |
 | Look up domain contracts | [Agent Loom](agent-loom/README.md), [API reference](agent-loom/api-reference.md), [terminology](agent-loom/terminology.md) |
+| Generate finite quad layouts | [Topology contract](grid-parcels/TOWNSCAPER-CONTRACT.md), [public examples](../examples/townscaper-grid/README.md), [catalogue status](grid-parcels/STATUS.md) |
 | Review delivered work | [Consolidation report](development/consolidation-report.md), [coverage inventory](development/coverage.md) |
 | Review model comparison requirements | [Model acceptance](development/netlogo-model-acceptance.md), [catalog progress](../experiments/catalog/progress-summary.json) |
 

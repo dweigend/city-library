@@ -1,7 +1,8 @@
 # Finite quadrilateral topology examples
 
 Status: E3 public scripts frozen before runtime, 8 November 2026. Independent
-Gemini 4 Argon design review approved this checkpoint; runtime remains pending.
+Gemini 4 Argon design and runtime reviews approved this bounded slice; all five
+scripts pass unchanged and are included in the standard example/typecheck gates.
 These replace the earlier stopped, unagreed drafts. The accepted E0 scripts and
 all previously frozen examples remain unchanged. The five scripts use public
 root imports, a flat author workflow and appended acceptance assertions; focused
@@ -24,6 +25,8 @@ assertions are permitted. Missing-export failures are expected before runtime.
 
 The [design review](../../docs/grid-parcels/TOWNSCAPER-DESIGN-REVIEW.md) approves
 the example-first checkpoint. `SHA256SUMS` pins the five scripts before runtime.
-Fresh runtime review and complete target checks remain separate requirements.
+The separate [runtime review](../../docs/grid-parcels/TOWNSCAPER-RUNTIME-REVIEW.md)
+and [verification](../../docs/grid-parcels/TOWNSCAPER-VERIFICATION.md) record
+the implemented scope and complete checks.
 The slice does not deliver arbitrary-domain quad meshing, Lloyd, dual mapping,
 seamless chunks, architecture solving or the remaining parcel catalogue.
